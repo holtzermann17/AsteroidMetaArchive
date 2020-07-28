@@ -1,0 +1,128 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some notes about a future lambda calculus based metamath system.
+
+#1: First the constants
+
+ $c L $. is for lambda
+
+ $c >>> $. will be used in M >>> N ( N is the reduction of M [immediate beta-reduction] )
+
+ $c >> $. will be used in M >> N  ( N is the reduction of M [beta-reduction] )
+
+ $c L $.
+
+#2: We define some variables:
+
+ M, N, O... will be term variables.
+
+ x, y, z will be individual variables.
+
+#3 : Then we define the terms:
+
+ An individual  variable is a term.
+
+ $a term x $.
+
+ An abstraction is a term.
+
+ $a term L M N $.
+
+ An application is a term.
+
+ $a term ( M N ) $.
+
+ A substitution is a term.
+
+ $a term [ M / x ] N $.
+
+#4 : We define immediate beta-reduction
+
+ ax-con $a ( L x M N ) >>> [ N / x ] M $.
+
+ ${
+  ax-L.1 $e M >>> N $.
+
+  ax-L L x M >>> L x N
+ $}
+
+
+ ${
+  ax-1.1 $e M >>> N $.
+  ax-1 $a MO >>> NO $.
+ $}
+
+ ${
+  ax-2 $e M >>> N $.
+  ax-2.1 $a OM >>> ON $.
+ $}
+
+#5 We define beta-reduction.
+
+ In my text-book, the system concerning immediate beta-reduction and the system concerning
+ beta-reduction are clearly separated but I can't guess why. In my opinion we should remove ax-in 
+ and make no difference between the >>> and the >> operator.
+
+ ${
+  ax-in.1 $e M >>> N $.
+  ax-in $a M >> N $.
+ $}
+
+ The other axioms are straightforward.
+
+ $a M >> M $.
+
+ ${
+  ax-tr.1 $e M >> N $.
+  ax-tr.2 $e N >> O $.
+  ax-tr $a M >> O $.
+ $}
+
+
+#6 The following axiom is added to the system to define beta-conversion
+
+ ${
+  ax-ref.1 $e M >> N $.
+  ax-ref $a N >> M $.
+ $}
+
+#7 Here we need some axioms to define substitution.
+
+#8 We need as well a way to define definition.
+
+ Is >> appropriate for definitions ?
+
+ For instance True would be defined this way:
+
+ true-df $a True >> L ( x y ) x $.
+
+**  Another axiomatic
+
+I have found another axiomatic for lambda calculus there:
+
+http://www.cip.physik.uni-muenchen.de/~tf/lambda/aei/lambda.html
+
+It seems appropriate to be used with metamath. It is very similar to the previous one. Except that eta reduction has been added. This axiomatic shows that we have to implement the notion of free variable. I wonder if the fact that variables are not independant in metamath is important.
+
+"The Lambda Calculus is then defined by the following axiom schemes and rules: 
+
+ (\x.M)N -> M[x/N] (beta reduction)
+
+ M -> M 
+
+ M -> N, N - > L => M -> L 
+
+ M -> N => ZM -> ZN 
+
+ M -> N => MZ -> NZ 
+
+ M -> N => \x.M -> \x.N 
+
+ Furthermore, the same set of rules applies with = substituted for ->, 
+ with the additional  rule M = N => N = M. 
+
+ Finally, we extend the Lambda Calculus by the rule of extensionality here: 
+ if Mx = Nx => M = N if x is neither in FV(M) nor in FV(N). This can be 
+ axiomatized by the additional reduction rule (eta-reduction) 
+ \x.Mx -> M if x not in FV(M). "

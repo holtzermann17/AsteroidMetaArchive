@@ -1,0 +1,284 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is inspired by thinking about PlanetMath, 
+[[file:literate programming.org][literate programming]], !WebMathematica, the recent discussion about
+[[file:Bibliographies and Amazon referrals.org][Bibliographies and Amazon referrals]] -- and about 
+whether it is cool to get 
+[[file:sources of funding for PM|funding from places like Google.org][sources of funding for PM|funding from places like Google]], Amazon, etc.
+(also about whether it is cool to use their no-cost services),
+as well as thoughts about 
+[[file:thoughts on the viability of free-software style business|free software business.org][thoughts on the viability of free-software style business|free software business]].
+
+The basic thesis of my argument is that non-free webservices are not different
+in a substantial way from non-free services used locally.
+
+If you think that it is OK to use non-free software locally, then I can't see
+any reason why you would object to using non-free software through a web
+interface.  But if you think that it is /not/ OK to use non-free software
+locally, then I have trouble understanding why you would think it was OK to use
+it through a web interface.
+
+* mini essay: software freedom in a distributed environment
+
+I can summarize my own position on this issue as follows:
+
+: "the free software movement should support free web services; to the extent
+that webservices are not free, we should seek to replace them; in particular,
+GNU should support the creation of a free alternative to Google."
+
+
+If Machine A and Machine B are connected by an internet link and are doing
+non-trivial information exchange, they have become parts of a new machine.  But
+users of the system are still individuals, and I think normal notions of freedom
+should continue to apply.
+
+Here's a simple example illustrating a potential pitfall associated with web
+services that are non-free in the usual sense of the word.  Take
+!WebMathematica.  I think someone operating a !WebMathematica client will end up
+having just as bad a time as a user of regular Mathematica.  !WebMathematica and
+regular Mathematica are, in fact, the same program, just with different
+interfaces.  Using this program when it is running elsewhere doesn't change
+matters for the better.
+
+Google of course can't be "trivialized" in this way, because it can't be made to
+run locally.  But, by the same token, one's freedoms as a Google user do not
+depend on what one can do on ones own machine; they depend on what one can or
+
+I really think that if Google was free, it would not be so different from a
+normal software package, the fact that it needs to run on a centralized,
+special, expensive, machine in order to work notwithstanding.  There would be
+package maintainers, filtered code-submission pipelines, user-level
+configurations, and so on; as it currently stands, there are none of these
+things (or, more precisely, they exist but aren't public), and I'd assume the Google product is the worse because of it.
+
+** Note: how expensive would it be?
+
+The (late) "Gnugle" project talked about the creation of a free p2p search
+engine.  Was this a pure fantasy?  Or could something like that be made to work?
+Alternatively, if a large centralized system was needed, how could free software
+hackers ramp up to being able to afford such a system?  Just how expensive would
+it be?
+
+**  Relationship to HDM project
+
+Note that the [[file:HDM.org][HDM]] project may have to do very significant search and
+processing operations on a corpus that may only be a few orders of magnitude
+smaller than the whole WWW.  I am interested in developing software that can
+handle this sort of data intensity.  But is something "like Google" really
+needed, or would a smaller supercomputing resource suffice?  My crystal ball is
+clouded over.  But anyway, hopefully this will partly explain where my interest
+is coming from.
+
+* Objections
+
+**  Contention for control
+
+ * The requirement of in situ modifiablity would set up contention for who gets
+to control the state of a single instance system. 
+
+I don't think this is a problem.  In some cases, it would even be a good thing.
+This sort of contention is resolved by social means that have little or nothing
+to do with the licensing model.  For example, CoopMart would have in situ
+modifiablity, and yes, there would be some struggle about who would control the
+individual pages.  This struggle could also be called "public debate".  The
+actual underlying software of a system like !CoopMart (or any free system -
+Noosphere, Emacs, !FreeSearch, whatever) would be maintained by people who know
+what they are doing and respond adequately to community feedback (including
+patches).  In a case of total social meltdown, the projects could fork, after
+all!
+
+* Discussion
+
+I think there is a place for both free and non-free software.   Same with web
+services.  However I think the "legitimate" sphere of non-free services is larger
+than that of software.  I think this has something to do with the service-vs-product
+dichotomy.  With a service, you aren't "getting" an artifact, you're having some work
+done for you.  Sometimes, as in Google, this is done by another party because you /can't/
+do it.  But it could also apply if that party can do it /more economically/ than you
+(by taking advantage of various economies of scale that come with applying the same
+service over and over again).  In that case, a lot of aggregate resources might be 
+wasted unless the closed implementation model is adopted.
+
+Noosphere is a good example of a project that has nothing to lose by also releasing
+the source to the web service.  However, we could hardly judge that a success as of
+yet, as contributions from those with whom I did not have personal connections have 
+been negligible.  Does this show that there simply is not the same open source 
+productive dynamic in the case of web services?   In that case, arguments about
+whether or not such software /should/ be free are kind of academic.  Perhaps payment
+for access to the web service (or the "torture" of having to look at ads) should
+be seen as punishment for situations where CBPP fails to produce the web service.
+
+But, I will switch sides again by pointing out a reason why more web services 
+/should/ be free in the free-software sense: it would make them more resistant
+to control by concentrated interests.  Just look at all of the bit torrent search engines.
+These monolithic web sites (which are first of all less useful for being fragmented)
+are easily shut down by Big Media interests, never mind that this is at best tantamount
+to banning a useful tool which /might/ be used to commit a crime.  Had these sites released
+their source, others would have been able to duplicate them, possibly in more resilient
+forms.
+
+There is another twist that I think bears on this discussion.   In a sense, things like
+the Bittorrent search engines and Noosphere aren't really web services, because they
+don't really have well-defined, machine-interpretable interfaces.  This is actually 
+what is meant when "web services" are referred to in internet architecture circles (in
+fact, the term can even be taken to mean a specific bundle of protocols).   Part of the
+web services "movement" is to "open up" the web by having more of the previously human-only
+services mirrored by machine interfaces.  Sometimes just putting some comments in HTML 
+output or at least ensuring it is formatted cleanly and in a way that /intentionally is 
+not changed/ is enough to "open" a web service.
+
+So, now we have a few levels of distinction:
+
+ * closed web services
+ * "opaque" web services (freely usable by humans but not machines)
+ * "transparent" web services (freely usable by all)
+
+These go from less to progressively more "free".  Note that the distinction between the
+latter two arises precisely because of the service nature of web services: you can keep
+the underlying software closed, but in a sense make the system quite open anyway, provided
+the interface is transparent.  Conversely, if you open the underlying system, you may be
+able to keep more of the interface opaque, since others may be able to set up services with
+customized versions of the interface.
+
+But with the architecture of the internet and transparent web services, you can in an
+imporant sense "modify" a web service without ever touching the source of the implementation
+itself.  This is actually analogous to scholia or superimposed information principles: you
+simply apply a transformation to the output of a web service before passing it along as 
+your different/enhanced version.  Utilizing this principle, a number of Google web service 
+hacks have arisen, including the "Cheap Gas" Google Maps hack I showed up.
+
+This principle is also the basis of much of the OCKHAM and MetaCombine projects, where we
+are building web services that can be piped together with existing or new services.  
+
+This is all turning out to be very nuanced and interesting, but I should cut myself off
+for now =)
+
+--[[file:akrowne.org][akrowne]] Tue Jun 7 04:35:24 UTC 2005
+
+I'd argue that even in cases with transparent interfaces, protocols, performance stats,
+etc., it is to the advantage of the public to see the code.  For one thing,
+there's the education/portability factor: how does Google work?  Are there
+algorithms that they use that I might be able to use as part of a theorem
+proving system?  You've mentioned before that most of the "Google algorithm" is
+known, but it would be easiest if one could simply get it from a centralized
+place.  Maybe I should stop whining about Google and just put together my own
+page giving a listing for their algorithm or the best approximation to it I can
+put together, together with discussion and ideas for related work.  The point is
+that such a resource has value independent of whether or not it can be
+used/changed in situ.  However, as we've been chatting about recently by email
+WRT something else, it is much more useful if it is /free/ as opposed to
+simply just published.  Thus, the code can be separated from the webservice to
+be an essentially unrelated good altogether.  Or it can be a related good: you
+read the code and get some ideas about how to submit better queries, for
+example.
+
+In situ modifiability is a whole 'nother can of worms.  Maybe later we can talk
+more about that.  The one (somewhat related) thing I want to say now is that I
+don't think we can conclude from the Noosphere experience so far that there "is
+not the same open source productive dynamic in the case of web services" - the
+only thing I can conclude about Noosphere is that it should be easier to
+install!  We've definitely been over that.  There are probably plenty of other
+things to say about it, but I'd need to know the code to say them.
+
+--[[file:jcorneli.org][jcorneli]] Tue Jun 07 05:15:32 2005 UTC
+
+I would say that this is the issue of "free as in beer" in another form.  Web
+services which can be freely used but whose source is closed seem to me a lot
+like closed source "freeware".  In addition to the points raised I would also
+point out that there is always the danger that the entity offering the product
+can always change its policy.  For instance, if Mathematica considers that use
+of the free web version is cutting into sales of the desktop version, they might
+very well decide to start charging for it as well and noone could do much more
+than make faces and moan about it.
+
+As for the web service hacks, they sound rather analagous to free Mathematica
+packages or free applications for non-free operating systems.
+
+There is a sense in which the latter analogy might be rather exact.  In Aaron's
+blog, there is an interesting suggestion that the web can be every bit as much a
+platform as an operting system.  If this is so, then these would be a reason for
+concern.  After all, GNU was founded exactly because of the issue of free
+operating systems and, if the web will complement or sometimes replace the
+operating system as a platform, it would be a pity if basic web services would
+not be available in free versions.  Under such circumstances, the victory of
+Linux/GNU would be rather hollow.
+
+I would like to point out that the fact that the Google search program runs on a
+computer of a size which few people have access to may not be very relevant.
+Remember that, as technology advances, features which were once only available
+on supercomputers tends to become standard feature of personal computers.  For
+instance, two or three decades ago, only a supercomuputer would have come with a
+gigabyte of memory, a terabyte of disk storage, and gigahertz processing speed,
+but now these are the specifications of a typical laptop!  It sems plausible
+that personal computers able to run the Google search program will come out in
+our lifetimes.  However, given that copyright protection lasts for 95 years, it
+seems quite likely that, when such computers come out, it will only be possible
+to run the Google program on them with permission, likely by paying a licensing
+fee and that, by the time the copyright runs out, the work will be a historical
+curiosity.
+
+I am not opposed to using and even promoting "free as in beer" content whether
+it be web services, computer applications, or electronic books *providing* that
+one makes it clear that, despite whatever the advertising hype may say, it is
+not really free.  I worry about the possibility that people may be lulled into a
+false sense of security and be content with "good enough for government work".
+When someone is being a jerk about squeezing every last drop of profit out of
+their copyrights, it is easy enough to see the desirability of a free, open
+source alternative, but when one is playing the benevolent dictator by allowing
+free access to closed (or even open) source content (but jealously reserving
+their intellectual property rights and maybe even making up a few new ones of
+dubious legality), most people will not care about the issue of free
+intellectual content (or maybe just intellectual content which is they use free
+of charge because their university or some other such entity is footing the
+bill).
+
+Finally, a crazy, silly thought just occurred to me.  I wonder if Google would
+fund development of Gnugle as a project for its "Summer of Code" programme?
+--[[file:rspuzio.org][rspuzio]] 7 June 2005
+
+Yes, if google runs on something 1000 times faster than today's PC, in maybe 2
+decades we'll have PC's that can do what Google does if Moore's law continues to
+hold.  Of course, by that time, Google and other computing supergiants will
+probably be on to even more interesting things that can only run on the
+supercomputers of 2025.  I have trouble imagining what sort of amazing things
+these supercomputers would be able to do, but if they still have source code in
+the future, I'd it to be something I can see and modify.  Maybe we'll all be
+living in The Matrix in 20 years, who knows, in which case user-level
+modifiability could give us important ways to hack our own lives and
+experiences.  But if that's all we have and the underlying code is centrally
+controlled... well, you've seen the movie, it ain't pretty.  Already there is
+something like this - the "social codes" that govern our behavior are often
+controlled by corporations and government, or at least we imagine them to be.
+!WalMart and the local co-op provide no-cost (or low-cost) services: basically,
+the right to shop.  But these things aren't really free as in freedom.  We only
+have user-level freedoms: the freedom to drink Coke, Pepsi, or water.
+
+When you guys talk about the "place for both free and non-free software" or
+being "not opposed to using and even promoting 'free as in beer' content", you
+aren't giving examples that say why non-free content is good.  I'll try to help
+you out.  I've seen "The Matrix" a couple of times.  I've seen all the Star Wars
+movies.  These things are proprietary and worth a lot of money.  I currently am
+running Mac OS X.  Even though I only use free user-level programs, I'm not a
+"software saint".  And yet, when I think about the things that are most valuable
+to me, and the things I'd like to support in the future, I'm not at all
+convinced that proprietary systems have a place; so, if they do, what is it?  Do
+we need copyright in order to have good movies to watch and interesting books to
+read?  Do we need proprietary operating systems or end-user programs in order to
+do the sorts of computing we'd like to do?  Do we need to have back offices
+where corporation-level decisions are made with "NO ENTRY" signs on the doors?
+
+The answer could be "we need organization-level control for some systems" -
+clearly for families, for example.  I don't think just anyone should be able to
+declare themself to be a part of my family and start changing the way the family
+works.  In general, individual freedoms are important.  But as systems become
+increasingly public - art, or internet, or shopping, or government, for example
+- I'm somewhat less convinced by a "freedom" argument.  The freedom to obfuscate
+is rather different from the freedom to create.  If !WalMart pleads that it
+needs a "NO ENTRY" back room because otherwise a bunch of hippies might come in
+and change the way they do business - I'd probably say, damn straight (noting,
+of course, that co-ops have many of the same problems that !WalMart has).
+
+Anyway, "free software" doesn't mean "lack of control".  These things are free
+but they aren't free-for-alls.  All in all, I guess I'm having trouble making a
+case for non-free systems and services.  Further input?

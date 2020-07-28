@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There is no possibility to write let v $123 = "( F " A )".
+May it be fixed ? -- [[file:fl.org][fl]] 22-Dec-2006
+
+ *Answer*
+
+This is not a bug, but the necessary information was 
+admittedly hard to find in the documentation.
+I made it clear in "help let" in version 0.07.28 22-Dec-2006 of the
+[http://us2.metamath.org:8888/index.html#mmprog metamath program],
+where I added the following information.
+
+You can use either single or double quotes to surround the math symbol
+string argument of a "let" command.  So for this case, you would type
+
+  MM-PA> let v $123 = '( F " A )'
+
+Note, by the way, that the trailing quote may be omitted for
+convenience, to save typing:
+
+  MM-PA> let v $123 = '( F " A )
+
+If the math symbol string has both single and double quotes, you need to
+use the prompted completion feature, where you press Return where the
+symbol string would go.  Quotes aren't needed (and shouldn't be used)
+around the answer to a prompted completion question.
+
+  MM-PA> let v $123
+  With what math symbol string? ( `' F " A )
+
+Quotes are optional around any math symbol string containing a
+single symbol and and /not/ containing "=", "/", a single quote,
+or a double quote:
+
+  MM-PA> let v $23 = ph
+
+Note, by the way, that unquoted "=" and "/" are special in a command line in
+that they are implicitly surrounded by white space:
+
+  MM-PA> let v $23=ph
+  MM-PA> show new_proof/unknown
+
+-- [[file:norm.org][norm]] 22 Dec 2006

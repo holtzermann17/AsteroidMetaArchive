@@ -1,0 +1,125 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a place to sketch out a day-in-the-life of a AM users.  Activities
+should be compared to [[file:Goals.org][Goals]] -- one should ask oneself how well one's
+strategies are suited to attaining ones goals.  This relationship should be
+re-evaluated fairly frequently, and either the activities and strategies should
+be changed, or the statement of the goals adjusted.
+
+*  jcorneli
+
+**  daily schedule during the week
+
+; Up at sunup or thereabouts :  If I'm up by 8:30 I get to listen
+to "evocation a la chapelle sixtine" by Franz Liszt, which is run
+by cron every morning at 8:30.  I also like to listen to
+the birds singing.  I like to eat some subset
+of: fried eggs, hashbrowns, pancakes, and leftover vegetables, and
+also certainly to drink some tea with my breakfast.
+; 9 : I am expected at the library; I may buy some fruit
+to eat on the way.
+; 12 : lunch
+; 1 : back to the library
+; 6 : dinner; evening officially begins
+
+This schedule is infrequently interupted by tutoring or
+lunch appointments, etc., but I hope to keep it more fixed in
+future months.  Unbilled interjections will of course be made
+up for.
+
+When I am at the library, I am to work on these tasks:
+; [[file:scholium system.org][scholium system]] : coding, writing
+; [[file:FEM.org][FEM]] : system development, editing
+; [[file:HDM parser.org][HDM parser]] : get through APM-Xi
+; [[file:GCIDE.org][GCIDE]] : Translate the GCIDE to Unicode/!LaTeX.
+
+This time is being billed to Hyperreal Enterprises,
+Ltd., at the rate of $0.00 / hr.  In case the
+arithmetic isn't transparent, this means a 40 hour
+a week, hands-on-the-keyboard, commitment to software
+development.
+
+(Note: Hyperreal Enterprises is currently a legal fiction,
+but this may all change at some point.)
+
+**  Evening time
+
+; professional & personal correspondence : CVS updates,
+wiki, newsgroups, email, telephony, letter-writing.
+(Note: all the time I spend on the wiki, FEM
+conversations, [[file:Grant planning.org][Grant planning]], reading books, etc.,
+I consider to be "unbilled".)
+
+; miscellaneous coding :
+improve the way I use, and
+patch if warranted --
+[[file:Emacs.org][Emacs]], XDarwin, fluidsynth, ratpoison, [[file:Noosphere.org][Noosphere]], NUT,
+etc.
+
+; live and in person :
+;; Tuesday :
+weekly discussion of "alternative education"
+;; Thursday :
+Go night at the Seward
+
+**  Weekend activities
+
+Note that the weekend officially begins on Thursday,
+not Friday, and the week officially begins on Monday,
+not Sunday.  In fact, officially, there is no "week
+end", there is only a "strong front", which I present
+to you now:
+
+; Work at a local group home for mentally ill or developmentally disabled adults :
+
+My job is to arrive, sleep, dispense medications,
+help the (high functioning) residents begin their day.
+Pretty easy job.
+;; Thursday night / Friday morning : 10 PM--9 AM
+;; Friday night / Saturday morning : 10 PM--12 PM
+;; Saturday night / Sunday morning : 12 AM--12 PM
+
+Friday is a work day for me (though I may take it
+as a summing-up or other somewhat unstructured day;
+e.g. it might be a good day to spend at the math
+library marking up my copy of the FEM).
+
+The rest of the time between Thursday night and Monday
+morning is not scheduled.
+
+**  Miscellaneous unbilled hours
+
+ * I was "supposed to" start going to more events at the University
+(like, seminars and talks and stuff).  Maybe these things will
+get interjected into the Evening... if there's anything interesting,
+and I don't need the time for other volunteer activities.
+
+**  Other job possibilities
+
+ 1. I am considering working overnights at a local cafe.
+This seems like it would enhance my Zen, but I'm not
+sure.  It would be compatible with my daily work, but
+might force me to sleep in the evenings.  I assume, by
+default, that I would write better code after sleeping
+all night than after cooking and cleaning all night,
+but one can't be too sure.  This job would be three
+nights a week or so, and perhaps it would be worth
+making the experiment to see how it affects my work.
+
+ 1. I am also considering working a research or admin job
+at the local university (I don't know the details yet,
+but a couple jobs have been sketched out a little bit).
+This would pay something more, and the research job
+might provide good cross-training.  However, less and
+less time appears in the budget.  I might be able to
+fit an additional 15-20 hours a week or so on top of
+the activities already described, but without
+re-ordering things significantly, it seems very hard to
+fit in an additional 35-40 hours a week.  I'm not going
+think any more about this until I know the details.
+
+[[file:Discussion of jcorneli's activities.org][Discussion of jcorneli's activities]]
+
+----
+[[file:the way of the asteroid.org][the way of the asteroid]]

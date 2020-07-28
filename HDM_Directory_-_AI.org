@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/This page is part of the [[file:HDM Directory.org][HDM Directory]]/
+
+/See also: [[file:Artificial_intelligence_work_particularly_relevant_to_HDM.org][Artificial_intelligence_work_particularly_relevant_to_HDM]],
+[[file:Representation language developments particularly relevant to HDM.org][Representation language developments particularly relevant to HDM]]./
+
+The AI sub-system is supposed to take care of everything "about math"
+that isn't dealt with by the formal system.  These issues include:
+
+ * issues of "quality", particularly as relevant to proof heuristics;
+ * information about the "real world" and the "informal" thinking of human 
+mathematicians; 
+ * drivers for all of the system's components.
+
+(For now, both HCI and AI work have been largely subsumed in one
+branch of the project, namely [[file:Arxana.org][Arxana]].)
+
+* References
+
+One particularly interesting /historical/ reference is Douglas
+[[file:Lenat's AM.org][Lenat's AM]].  It would be useful to have a program on hand that can
+do similar things.

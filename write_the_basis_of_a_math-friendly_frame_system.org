@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Probably the basis of this system will be KM.  I am less sure than
+I was whether anything major will need to be done to KM to make it
+work for our representation needs.  What is needed is some separate
+reasoning modules that can handle nested quantifiers.  Look into this,
+and get started.  Use previous work by [[file:jcorneli.org][jcorneli]] on representation of theorems and proofs.

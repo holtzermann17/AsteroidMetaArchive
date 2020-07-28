@@ -1,0 +1,94 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It would be good to have a common logo/banner that people could
+put on material that is "Free Math". That is, 
+if someone releases a paper or lecture note as Free Math (say GPL), 
+he could put that logo on the front page. In PDF:s, the logo could
+link to a manifesto page on PM describing why Free Math is 
+important. 
+One advantage of this is that it would be easier to find 
+GPL math content on the web using search engines. 
+
+Another thing to think about is creating a html-banner. For example, 
+a small button "Support Free Math" that links to the same manifesto. 
+If we could get enough people to put that onto their homepages, it could
+have an effect. 
+
+As a side effect, all this will generate more visitors to PM, 
+which is good since we need to find more regular contributers.
+
+The term "Free Math" is here aritrary, but I think it is quite good. 
+
+----
+* Discussion
+
+I'm concerned about the issue of the
+[[file:Free_Math_and_Potential_Bottlenecks_--_The_Fog_of_Copyleft|fog of copyleft.org][Free_Math_and_Potential_Bottlenecks_--_The_Fog_of_Copyleft|fog of copyleft]]
+and the issue of license incompatibility in particular.  Is GPL, FDL, or CC a
+"good" license for free math?  I'm a little frightened by any answer!  PM should
+be "the home for free math on the internet" in my opinion - maybe inclusion on
+PM, or a link to PM, should be a sufficient "logo"?  Doing things this way means
+that we get to define "free math" however we feel is most convenient for us,
+rather than having a bunch of people create their own ad hoc definitions.  On
+PM, we can reasonably expect community feedback and certification; out in the
+wild, people could stick the logo on anything and call it "free".
+--[[file:jcorneli.org][jcorneli]]
+
+Not necessarily --- one could twist the law the same way that one twists it to
+make free licenses.  The logo would be eligible for legal protection.  Planet
+Math Ltd. would own the rights to the logo and would only allow its use under a
+"Free Math Logo License" which would specify that this logo can only be affixed
+to documents and webpages which satisfy whatever definition of "free math" we
+feel is most convenient (which would be spelled out in the license).  To allow
+for changing circumstances, this license could contain a provision like the one
+found in the GNU licenses which would allow us to release new versions of the
+license.  Then wild people out there who stick the logo on anything and call it
+"free" according to their own ad hoc definitions might just wake up one morning
+and find "cease and desist" letters from Planet Math Ltd. in their mailboxes and
+be forced (by a judge, if necessary) to either remove the logo or else modify
+the document to make it conform to the definition of "free math" spelled out in
+the license.
+
+As I understand it, this would not be all that different from how "Good
+Housekeeping Seal of Approval" and "Underwriter's Laboratory" work --- one can't
+stick these organization's logos on one's product without the approval of the
+organizations who own the rights to the logo.  Have a look at
+[http://magazines.ivillage.com/goodhousekeeping/consumer/institute/articles/0,,284512_596441,00.html these]
+[http://www.ul.com/about/ references] for ideas.
+
+--[[file:rspuzio.org][rspuzio]]
+
+These are good points, and just because free math has a home at PM doesn't mean
+that it can't move around to other parts of the internet too.  But still, I'm
+concerned about how we would define it.  I think we should reflect on your essay
+(I'll need some time to think about it) and reconvene.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jul 07 14:56:56 2005 UTC
+
+I make a motion that the first item on the agenda when we reconvene be to update [[file:What is Free Math.org][What is Free Math]] in light of what we now know. --[[file:rspuzio.org][rspuzio]] 7 July 2005
+
+(Reply to Joe's first comment.)
+Currently it seems that with both PM and Wikipedia under the FDL, it 
+is becoming the de facto "free license" for math on the net. 
+Thus I think the FDL would be a suitable license for "Free Math" --- 
+from a purely practical point of view. If everything is under the FDL,
+it will make exchanging material easier. 
+At this point, however, I think a first step could be to raise
+awareness of the problems with copyrighted work in science and 
+math in particular. 
+This could be done with a "Support Free Math" button that
+people can put on their homepages to show support for Free Math. 
+To do this, we do not really need to define whether Free Math is
+CC, PD, or FDL. However, it would be nice to have a
+page with Recommendations for the averate user on what he/she can do to 
+support Free Math. That would probably involve some choise of 
+license.  
+-- [[file:matte.org][matte]] 7 July 2005
+
+Wikipedia is migrating away from FDL (they are working with Stallman
+directly to have the next FDL be compatible with more liberal creative
+commons licensing).  We might want to wait until this happens.  Dan 
+Mayer of Wikimedia will be present at the Emory FCDL conference,
+as will many AsteroidMeta users, so they can speak to him directly.
+--[[file:akrowne.org][akrowne]] Fri Jul 8 21:32:49 UTC 2005

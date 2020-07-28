@@ -1,0 +1,804 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page describes the existing extensible structure builder
+definition, df-struct, that is in set.mm now.  I would be
+interested in opinions on an alternate method I am proposing,
+described at [[file:Proposal for extensible structure builders.org][Proposal for extensible structure builders]].
+- [[file:norm.org][norm]] 16-Oct-2012
+
+
+** Introduction
+
+[[file:norm.org][norm]] 14-Oct-2012
+
+The structures we work with in mathematics often involve specialization
+of previously defined structures.  For example, in many textbooks, a
+group is defined as an ordered pair of a base set and a binary operation
+satisfying certain properties, and a ring is defined as an ordered
+triple consisting of the two (Abelian) group components along a binary
+multiplication operation as the third member, satisfying additional
+properties.  The informal statement "every ring is a group" is formally
+incorrect, because one is an ordered triple and the other an ordered
+pair, and no ordered triple is an ordered pair.  While informally we
+"understand" what is meant, the correct
+formalization of this statement is at best awkward.
+
+There are several ways to describe the relationships between related
+structures.  Category theory provides one way.  In particular, its
+diagrams allow a nice visualization of the relationships.
+However, category theory is difficult to formalize fully in the language
+of set theory.  In addition, the
+formalization of "every ring is a group" can be
+long, involving the existence of homomorphisms between
+the two structures.
+
+[I have been told that Bourbaki uses a structure builder that is simpler
+than category theory.  I haven't looked at it in detail yet, but at
+first glance it appears that it still is not as simple as the one we are
+proposing here.  If anyone is familiar with it, feel free to write
+about it.]
+
+Our goal is to allow formal statements that we prove about a less
+specialized structure to be reused immediately with a more specialized
+structure, in a way that is formally precise, unambiguous, and free of
+implicit context assumptions, yet not excessively cumbersome.  For this
+purpose, we will introduce a device called an extensible structure
+builder, df-struct below.  It does not appear in the literature as far
+as I know, so I will explain it in some detail.
+
+We will use n-tuples (finite sequences) to represent structures such
+as groups and rings.  For a given type of structure, we will adopt a
+fixed convention for the meaning of each component as required.  For
+example, for structures such as rings that specialize groups, the first
+component will be the base set, the second the group operation, and so
+on.
+
+In order to define the class of all structures of a given type, such as
+the class of all groups, we introduce a special class that will contain
+all possible members of the given class.  After defining a
+new constant "Struct" and a new class expression "Struct ( N , f , ph
+)", our primary definition is
+[http://us.metamath.org/mpegif/df-struct.html df-struct]:
+
+    df-struct $a |- Struct ( N , f , ph ) = { f | ( E. m e. NN ( N <_ m
+          /\ f Fn ( 1 ... m ) ) /\ ph ) } $.
+
+In the intended applications of this definition, N is a positive integer
+and ph (phi) is a wff containing f free in the form of occurrences of
+(f`1),...,(f`N).  The variable f is bound (not free) in the expression
+"Struct ( N , f , ph )".  As is required for sound definitions, the new
+bound variable m on the right-hand side is different from f and does not
+occur in N or ph.
+
+What this means is that a group (where N=2), for example, is
+any m-tuple with m >= 2 whose first two components satisfy
+the group axioms.  When we add a 3rd component to define rings,
+all rings are also groups, but specialized to those groups
+with (at least) a third component and that satisfy
+the additional ring axioms.  You can compare the
+df-struct-based definition
+[http://us.metamath.org/mpegif/df-grpNEW.html df-grpNEW]
+with the old one
+[http://us.metamath.org/mpegif/df-grp.html df-grp].
+An example of a theorem is
+[http://us.metamath.org/mpegif/grpassNEW.html grpassNEW]
+compared to
+[http://us.metamath.org/mpegif/grpass.html grpass]
+
+Using the extensible structure builder, the statement "every
+ring is a group"  is immediate:  see theorem
+[http://us.metamath.org/mpegif/ringgrpNEW.html ringgrpNEW].
+Using this theorem and an application of
+[http://us.metamath.org/mpegif/syl.html syl],
+all theorems about groups can be used immediately in the
+development of rings.  Compare this to the old (existing)
+method where we can't compare groups to rings directly
+but must first extract out the group part:
+[http://us.metamath.org/mpegif/ringgrp.html ringgrp].
+This becomes increasingly clumsy as structures grow
+in complexity, requiring somewhat cryptic $e hypotheses involving
+"ran G", "U. U. R", "( 1st ` ( 2nd ` R ) )", etc. to
+extract the base set, base set of subordinate structures, and
+so on.
+
+So far, set.mm has a hierarchy from groups all the way to generalized
+Hilbert spaces using df-struct.  (Some of these are currently
+in my mathbox.)  A theorem that we can easily prove (although it isn't in
+set.mm right now) is
+
+  Hil C_ PreHil C_ LVec* C_ LVec C_ DivRingNEW C_ RingNEW C_ GrpNEW
+
+meaning that any of these structure classes can make immediate use of
+the theorems for any other structure class to its right.  In other words,
+we don't have to redundantly re-prove them for more specialized
+structures, which is practically needed with the existing
+(old) method of defining structures as ordered pairs, triples, etc.
+
+This is somewhat analogous to the present
+[http://us.metamath.org/mpegif/nthruc.html nthruc]
+
+     NN C_ ZZ C_ QQ C_ RR C_ CC
+
+This makes re-use of a CC theorem for NN quite easy, compared
+to textbooks that construct QQ as ratios of members of NN, CC as
+pairs of members of RR, etc. so that the above inclusions do
+not hold formally.
+
+I have used df-struct extensively in my mathbox and find the re-use
+of theorems from more general structures quite natural.  Once
+the basic definitions are in place, I rarely even think of the
+df-struct that is behind it all.
+
+
+
+** Referencing structure components
+
+In general, it preferable not to reference members of a structure
+directly via the sequence values (which is highly dependent on the
+definition of Struct(N,f,ph) and the definition we choose for the
+specific class).  Instead, we can define "extractors" of
+the components.  This way, if in the future we decide on a different
+"scaffold" for df-struct (such as a sequence on finite ordinals instead
+of NN) most theorems will remain unchanged.  For example, for groups and
+rings, we define
+[http://us.metamath.org/mpegif/df-base.html df-base],
+[http://us.metamath.org/mpegif/df-plusg.html df-plusg],
+[http://us.metamath.org/mpegif/df-mulr.html df-mulr]:
+
+  df-base  $a |- Base = ( f e. _V |-> ( f ` 1 ) ) $.
+  df-plusg $a |-   +g = ( f e. _V |-> ( f ` 2 ) ) $.
+  df-mulr  $a |-   .r = ( f e. _V |-> ( f ` 3 ) ) $.
+
+Then we can reference "(base ` G)" rather than "(G ` 1)".
+
+
+
+** Working with specific concrete structures
+
+Suppose we want to show, for example, that the complex numbers in set.mm form
+an Abelian group.  We need to construct a specific finite sequence with
+two members, which we then show belongs to the structure
+builder class for all Abelian groups.
+
+There are two ways to do this.  The simplest method is to define
+a length-two sequence with the complex numbers as its first value
+and the addition operation as its second.  We use this approach
+in theorem [http://us.metamath.org/mpegif/cnaddablxNEW.html cnaddablxNEW]:
+
+  cnaddablx.1NEW $e |- G = { <. 1 , CC >. , <. 2 , + >. } $.
+  cnaddablxNEW $p |- G e. AbelNEW $= ... $.
+
+This has the advantage of being simple and transparent.  Its disadvantage
+is that it is dependent on the (arbitrary) order of components we chose
+to define Abelian groups.  So, if we changed that order in the future,
+all theorems such as the above would have to be changed.  We call
+the above method the "scaffold-dependent" approach.
+
+The other method relies on a new definition called a
+specific structure builder,
+[http://us.metamath.org/mpegif/df-strbldr.html df-strbldr].
+Using this method, called "scaffold-independent", the above theorem becomes
+[http://us.metamath.org/mpegif/cnaddablNEW.html cnaddablNEW]:
+
+  cnaddabl.1NEW $e |- G = StrBldr ( 2 , g , ( ( base ` g ) = CC /\ ( +g ` g ) = + ) ) $.
+  cnaddablNEW $p |- G e. AbelNEW $= ... $.
+
+As you can see, there is no direct reference to the ordering of the
+components in the Abelian group definition.  Instead, we refer only
+to the defined components.  So, if later we change the definitions
+for a different ordering of the structure components, no theorems
+will be affected.
+
+At this point, I am not advocating one method over the other.
+
+
+
+** Conversion of existing theorems
+
+Starting from groups, there are currently around 1500 theorems in set.mm
+that would have to be converted if we want to make use of df-struct
+throughout, including those in various mathboxes.  I have done the
+conversion for a handful of existing group and ring theorems, and while
+I found it relatively straightforward, it is still quite tedious.  I
+don't know what the long-term solution will be, or even if we should
+convert them and impose the unfamiliar df-struct on everyone.
+
+For an example of a theorem that I converted by hand to use df-struct,
+compare
+[http://us.metamath.org/mpegif/ringlzNEW.html ringlzNEW]
+with the old version
+[http://us.metamath.org/mpegif/ringlz.html ringlz].  As you can see,
+the two proofs are similar.
+
+
+** Issue:  the use of NN vs. ordinals in df-struct
+
+For for simplicity and familiarity, df-struct currently
+uses the complex number subset NN rather than
+ordinals.  This also makes available the many more
+theorems and definitions that we already have for NN.
+However, it becomes difficult to
+identify when the Axiom of Infinity is really needed, because it
+is also used for the construction of complex numbers, including
+the NN subset.  On the other
+hand, ordinals are rather obscure for the general user not familiar with
+them.
+
+One possibility is to replace the real number construction with the
+construction in Azriel Levy, Basic Set Theory, pp. 217-219.  In this
+construction, NN0 is identical to the ordinals, with ZZ, QQ, and RR
+added as additional disjoint supersets in stages.  [I've been told Bourbaki
+also uses this approach.]  This way, the Axiom of Infinity
+would not be needed for uses of NN.  Of course, developing a new real
+number construction is a big project, but at least in principle it shows
+we can solve the Infinity problem at some point in the future in the future
+and still keep the familiar NN.
+
+Another possibility is to isolate the postulates of complex numbers
+in the same way that we now isolate certain redundant axioms.  For
+example, currently we prove
+[http://us.metamath.org/mpegif/axsep.html axsep]
+from
+[http://us.metamath.org/mpegif/ax-rep.html ax-rep],
+then introduce
+[http://us.metamath.org/mpegif/ax-sep.html ax-sep]
+as a new axiom, in order to be able to identify where we don't need
+the additional strength of ax-rep.  Similarly, after proving
+[http://us.metamath.org/mpegif/axaddcom.html axaddcom]
+for complex numbers, we could introduce a new axiom 
+ax-addcom and
+reference only that in the complex number development.
+
+In any case, I don't anticipate that I will change df-struct to use
+ordinals but will use one of these methods if the Axiom of Infinity
+is perceived to be a problem.  But even if in the future we do go to
+ordinals, it
+should only affect a few initial definitions and theorems using
+df-struct use and be relatively easy to retrofit.
+
+
+** Issue:  branching structures
+
+[[file:fl.org][fl]] has brought up the issue of potential problems with a
+structure hierarchy that branches into two specializations
+rather then being a linear (monotonic) sequence of successive
+specializations
+like all of our examples so far.
+
+Below I have reproduced a discussion on Google groups as well
+as an email excerpt.  In my posts of 18-Nov-2011 and email of
+23-Nov-2011, I propose a new definition of df-struct that I believe
+will address [[file:fl.org][fl]]'s concerns.  
+
+I have not put these proposed new definitions into set.mm yet.
+I don't think that it would require a major effort to incorporate
+them.  My main concern is that as we expand the capabilities of
+df-struct, it becomes even more obscure and harder for a newcomer to
+grasp. 
+ 
+One user wrote about the /existing/ definition, 
+"Without Struct, writing a Metamath proof made me feel
+like I was removing all my sloppy logic errors.   With Struct, I'm
+less confident....
+One of Metamath's strengths is the certainty of the syntax, like
+assembly instructions.  Features from higher-level languages might be
+nice, but there's a price for such convenience."   
+
+I would like to hear other opinions.
+
+ From: [[file:fl.org][fl]]
+ Date: 11-Nov-2011
+ Subject: Improvement to the new structure pattern
+
+ The new structure pattern used by Norm might be a bit improved in my
+ opinion.
+
+ Let's recall a topological group is a group where the addition and the
+ inverse function
+ are continuous and a topological ring is a ring where the addition,
+ the multiplication
+ and the inverse function are continuous.
+
+ Thus a topological ring should be considered as a ring or as a
+ topological
+ group.
+
+ But with the current structure it is not possible to do this since at
+ the third poisition in the
+ sequence you put the multiplication in the case of the ring or a
+ topology in the case
+ of the topological group.
+
+ I suggest instead of a sequence we use distinct "symbolic" constants.
+ For instance the constants base, add, mult, top.
+
+ Then one might write things like:
+
+ G = { <. base, ZZ >. , <. add , + >. } and G e. GrpNEW
+
+ T = { <. base, ZZ >. , <. add , + >.  , <. top , ~P ZZ >. } and T e.
+ GrpTopNEW
+
+ R = { <. base, ZZ >. , <. add , + >. , <. mul , . >. } and R e.
+ RingNEW
+
+ U = { <. base, ZZ >. , <. add , + >. , <. mul , . >. , <. top , ~P ZZ
+ >. } and U e. RingTopNEW
+
+ and we would have the nice property that U e. RingNEW and U e.
+ GrpTopNEW
+
+ FL
+
+
+
+ From: [[file:norm.org][norm]]
+ Date: 15-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ ...
+ > I suggest instead of a sequence we use distinct "symbolic" constants.
+ > For instance the constants base, add, mult, top.
+
+ As I understand it, you are proposing to define base = 1,
+ add = 2, mult = 3, etc. - is that right?
+
+ Right now we are using "base" etc. to extract the components
+ rather than to specify them.  This makes them uniform with
+ other symbols that specify defined operations,
+ so that the base is specified in a hypothesis as
+ "$e |- B = ( base ` R )".  With your method, as I understand
+ it, we would instead say "$e |- B = ( R ` base )".
+
+ One issue is that the primitive operations of structures can
+ be different depending on how they are defined.  For
+ example, a lattice can be defined with either a partial
+ order or with join, meet operations.  In the first case,
+ join and meet would be defined; in the second case the
+ partial order would be defined.  With the current method,
+ though, regardless of the definition we can say
+
+    $e |- L = ( le ` K )
+    $e |- J = ( join ` K )
+    $e |- M = ( meet ` K )
+
+ and if the definition is changed, theorems would not have to
+ be changed (only some early proofs from the new definition).
+
+ With your method, as I understand it, we would say
+
+    $e |- L = ( K ` le )
+    $e |- J = ( join ` K )
+    $e |- M = ( meet ` K )
+
+ in the first case and
+
+    $e |- L = ( le ` K )
+    $e |- J = ( K ` join )
+    $e |- M = ( K ` meet )
+
+ in the second.  This seems a little confusing, and would
+ require all theorems to be changed if the definition was
+ changed in the future.
+
+ > Then one might write things like:
+ >
+ > G = { <. base, ZZ >. , <. add , + >. } and G e. GrpNEW
+ >
+ > T = { <. base, ZZ >. , <. add , + >.  , <. top , ~P ZZ >. } and T e.
+ > GrpTopNEW
+ >
+ > R = { <. base, ZZ >. , <. add , + >. , <. mul , . >. } and R e.
+ > RingNEW
+ >
+ > U = { <. base, ZZ >. , <. add , + >. , <. mul , . >. , <. top , ~P ZZ
+ >
+ > >. } and U e. RingTopNEW
+ >
+ > and we would have the nice property that U e. RingNEW and U e.
+ > GrpTopNEW
+
+ I don't see how this is any different from the current
+ method except that you are using names base, add,... to
+ represent numbers 1, 2,...  Perhaps I am misunderstanding.
+ Are you also proposing that df-struct be changed somehow?
+
+ Norm
+
+
+
+ From: [[file:norm.org][norm]]
+ Date: 16-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ ...
+
+ > >    $e |- L = ( le ` K )
+ > >    $e |- J = ( join ` K )
+ > >    $e |- M = ( meet ` K )
+ >
+ > But that means that le, join and meet are overloaded, aren't they.
+
+ I don't know what you mean by overloaded.  They aren't in the
+ usual sense; each has a single, specific definition.  What is
+ it that you mean, and why is it a problem?
+
+ ...
+
+ > But with the current method you couldn't say that
+ >
+ > |- ( U e. RingTopNew -> U e. RingNEW )
+ >
+ > and that
+ >
+ > |- ( U e. RingTopNew -> U e. GrpTopNEW )
+ >
+ > could you ?
+
+ You can't with your method either, unless you are proposing
+ a new definition of df-struct, which you haven't given.
+
+ Anyway, with the present definition this could be handled
+ (somewhat inelegantly) with a dummy operation in either
+ RingNEW or GrpTopNEW.  A question is how often does this
+ problem occur in practice.  Even if it does, this is only
+ an "issue" in the initial definition of the structure,
+ which goes away after the operations are abstracted out
+ for use with actual theorems later, as the ones in
+ my mathbox show.  Almost nothing references the original
+ structure directly.
+
+ Norm
+
+
+ From: [[file:fl.org][fl]]
+ Date: 16-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ > > But with the current method you couldn't say that
+ >
+ > > |- ( U e. RingTopNew -> U e. RingNEW )
+ >
+ > > and that
+ >
+ > > |- ( U e. RingTopNew -> U e. GrpTopNEW )
+ >
+ > > could you ?
+ >
+ > You can't with your method either, unless you are proposing
+ > a new definition of df-struct, which you haven't given.
+
+ Yes that's it we would have:
+
+ |- Struct(N, f, ph) = {f | (E.m e. N  f Fn N /\ ph)}
+
+
+ With N a finite set. For instance { base, top, plus, mul }
+ for a topological ring or {base, plus, top} for a topological
+ group.
+
+ > Anyway, with the present definition this could be handled
+ > (somewhat inelegantly) with a dummy operation in either
+ > RingNEW or GrpTopNEW.
+
+ That's the probleme with the current definition you need
+ to add "holes".
+
+ > A question is how often does this
+ > problem occur in practice.
+
+ I don't know but it is frequent to add a topology over an
+ algebraic structure or to mix orders with algebraic
+ structures.
+
+ I remember that there was somebody that had begun to give
+ a collection of all the structures that he had found but I
+ can't rememeber whom and on which site.
+
+
+ Here it is. His name is Chapman:
+
+ http://math.chapman.edu/cgi-bin/structures
+
+ 302 structures. Impressive. Geometries are missing. Things
+ such as grammars, automata, logics are missing,
+
+ > Even if it does, this is only
+ > an "issue" in the initial definition of the structure,
+ > which goes away after the operations are abstracted out
+ > for use with actual theorems later, as the ones in
+ > my mathbox show.  Almost nothing references the original
+ > structure directly.
+
+ Well I don't still understand the new definition very well. I had
+ understood that theorems such as:
+
+ |- ( U e. RingTopNew -> U e. RingNEW )
+
+ |- ( U e. RingTopNew -> U e. GrpTopNEW )
+
+ are those that you wanted when you decided to change the definition
+ of the structure. But Maybe I'm wrong.
+
+ FL
+
+
+ From: [[file:fl.org][fl]]
+ Date: 16-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ > |- Struct(N, f, ph) = {f | (E.m e. N  f Fn N /\ ph)}
+
+ Well the quantifier is useless:
+
+ |- Struct(N, f, ph) = {f | (f Fn N /\ ph)}
+
+ FL
+
+
+ From: [[file:fl.org][fl]]
+ Date: 16-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ > One issue is that the primitive operations of structures can
+ > be different depending on how they are defined.  For
+ > example, a lattice can be defined with either a partial
+ > order or with join, meet operations.  In the first case,
+ > join and meet would be defined; in the second case the
+ > partial order would be defined.  With the current method,
+ > though, regardless of the definition we can say
+ >
+ >    $e |- L = ( le ` K )
+ >    $e |- J = ( join ` K )
+ >    $e |- M = ( meet ` K )
+
+ Currently lattices are defined using posets.
+
+ http://us2.metamath.org:88/mpegif/df-lat.html
+
+ Could you give us the alternate definition with
+ the two operations meet and join so that I understand why
+ overloading is not used.
+
+ (Well I think I understand what you mean: one might replace
+ one definition by the other BUT not add both in the same file.)
+
+ FL
+
+
+ From: [[file:fl.org][fl]]
+ Date: 16-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ > Here it is. His name is Chapman:
+
+ Hi name is Peter Jipsen. (Chapman is the name is the university.)
+
+ FL
+
+
+ From: [[file:norm.org][norm]]
+ Date: 16-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ On Nov 16, 4:13 pm, fl <frederic.l...@laposte.net> wrote:
+
+ > Well I don't still understand the new definition very well. I had
+ > understood that theorems such as:
+ >
+ > |- ( U e. RingTopNew -> U e. RingNEW )
+ >
+ > |- ( U e. RingTopNew -> U e. GrpTopNEW )
+ >
+ > are those that you wanted when you decided to change the definition
+ > of the structure. But Maybe I'm wrong.
+
+ Yes, something like that is a goal.
+
+ When a series of successively more specialized structures
+ form a chain, the goal is accomplished:  any member of a
+ more specialized structure is also a member of any more
+ general structure.  For example, U e. Ring -> U e. Grp
+ (theorem ringgrpNEW).
+
+ Where there is branching back to two general
+ structures (i.e. not a chain) like in your example, the
+ existing definition does not accomplish that goal perfectly
+ without using a trick like a dummy operation to account for
+ the branching.
+
+ But with your definition,
+
+ > |- Struct(N, f, ph) = {f | (f Fn N /\ ph)}
+ >
+ > With N a finite set. For instance { base, top, plus, mul }
+ > for a topological ring or {base, plus, top} for a topological
+ > group.
+
+ each group would be a function on two members (a type of
+ ordered pair) and each ring would be a function on 3
+ members (ordered triple).
+
+ Thus, U e. Ring -> U e. Grp would be false with your
+ definition, since no ordered triple is an ordered pair.
+
+ ...
+
+ > >    $e |- L = ( le ` K )
+ > >    $e |- J = ( join ` K )
+ > >    $e |- M = ( meet ` K )
+ >
+ > Currently lattices are defined using posets.
+
+ Actually lattices and posets have the same structure, both
+ having a base set and an ordering operation.  The meet and
+ join in the definition are not new operations but are
+ defined from the base set and ordering.  Their appearance
+ in the lattice definition merely specializes the poset
+ definition further.  If desired, the meet and join could be
+ eliminated by expanding them out into base set and
+ ordering.
+
+ A third structure member (orthocomplement) is first
+ introduced in orthoposets (df-oposet).
+
+ > http://us2.metamath.org:88/mpegif/df-lat.html
+ >
+ > Could you give us the alternate definition with
+ > the two operations meet and join so that I understand why
+ > overloading is not used.
+
+ I could, but it would take time to work it out.
+
+ > (Well I think I understand what you mean: one might replace
+ > one definition by the other BUT not add both in the same file.)
+
+ That's correct, we would not use them both in the same
+ file, so there is no overloading.
+
+ Norm
+
+
+ From: [[file:fl.org][fl]]
+ Date: 18-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ > Thus, U e. Ring -> U e. Grp would be false with your
+ > definition, since no ordered triple is an ordered pair.
+
+ It is not fair from them I dare say.
+
+ FL
+
+
+ From: [[file:norm.org][norm]]
+ Date: 18-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ The current Struct definition is
+
+   df-struct $a |- Struct ( N , f , ph ) = { f | ( E. m e. NN
+       ( N <_ m /\ f Fn ( 1 ... m ) ) /\ ph ) } $.
+
+ This can be generalized to accomplish what you want:
+
+   df-structNEW $a |- StructNEW ( S , f , ph ) = { f | Fun f
+       /\ ( S C_ dom f /\ E. m e. NN dom f C_ ( 1 ... m ) )
+       /\ ph } $.
+
+ Essentially, the set S is an set of positive integers which
+ may have gaps in the numbering.  You could of course assign
+ names to the integers if you want.
+
+ By setting S = ( 1 ...  N ) i.e. a sequence of integers
+ without gaps, the current definition would be a special
+ case of this:
+
+   Struct ( N , f , ph ) = StructNEW ( ( 1 ... N ) , f , ph )
+
+ I haven't looked at the impact of StructNEW on the
+ subsequent theorems involving Struct and StrBldr, or how
+ StrBldr might have to be redefined.  (Do "MM> search *
+ Struct/j" and "sea * StrBldr/j" to see them.)  I fear some
+ of the "nice" theorems such as eustrdif, used to help out
+ the StrBldr, may become awkward.  Perhaps you would want to
+ look at how StructNEW would affect those theorems.
+
+ The StrBldr is useful for specifying structures
+ symbolically (rather than numbers) using (my) "base",
+ "+g", etc. component extractors as in cnaddablNEW.  We can
+ alternately specify structures as e.g.
+
+ "{ <. 1 , CC >. , < 2 , + >. }"
+
+ Or we could use
+
+ "{ <. base-index , CC >. , < +g-index , + >. }"
+
+ as you propose, but this requires _two_ sets of constant
+ symbols, the "base" and "+g" functions to extract the
+ structure components (used in hypotheses of most theorems)
+ and "base-index" and "+g-index" to represent the structure
+ entry integer indexes 1 and 2.  If possible, I think it
+ would be nicer to have only one set of new symbols.
+
+ Norm
+
+
+ From: [[file:norm.org][norm]]
+ Date: 18-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ I wrote:
+ > Or we could use
+ >
+ > "{ <. base-index , CC >. , < +g-index , + >. }"
+ >
+ > as you propose, but this requires _two_ sets of constant
+ > symbols, the "base" and "+g" functions to extract the
+ > structure components (used in hypotheses of most theorems)
+ > and "base-index" and "+g-index" to represent the structure
+ > entry integer indexes 1 and 2.  If possible, I think it
+ > would be nicer to have only one set of new symbols.
+
+ To avoid two sets of symbols, notice that
+
+   ( base ` ( _I |` NN ) ) = 1
+   ( +g ` ( _I |` NN ) ) = 2
+
+ etc.  We can define a single new symbol
+
+   ndx = ( _I |` NN )
+
+ Then the above becomes
+
+ "{ <. ( base ` ndx ) , CC >. , < ( +g ` ndx ) , + >. }"
+
+ so that maybe we can get by without StrBldr and without
+ having to have two sets of symbols, while maintaining
+ the goal of independence from the structure details
+ that could change in the future.  (An example of such
+ a change would be to use finite ordinals instead of NN,
+ in order to more clearly see what ZF axioms are
+ actually needed.  Or we might re-order the indices for
+ better compatibility with related structures.)  And we
+ would have automatic compatibility with a different
+ definition such as StructNEW.
+
+ Norm
+
+ From: [[file:norm.org][norm]] (from an email to FL)
+ Date: 23-Nov-2011
+ Subject: Re: Improvement to the new structure pattern
+
+ A minor worry is that we may decide to change df-struct in the way
+ proposed above to handle branching structures, it would be incompatible
+ with current theorems.  Fortunately it will only affect the initial
+ theorems for each structure.  It is incompatible with StrBldr, but I
+ can make StrBldr obsolete and use the "ndx" method I mentioned
+ to extract indices.  Fortunately I haven't used StrBldr very often.
+
+ We can eliminate the E. from the new proposed definition using:
+
+    df-structNEW $a |- StructNEW ( S , f , ph ) = { f | ( Fun f
+        /\ ( S C_ dom f /\ dom f C_ NN /\ dom f e. Fin ) /\ ph ) } $.
+
+ Also, I've wondered if there is any reason not to allow infinite
+ structures.  This would simplify the definition further (although
+ the existing df-struct is no longer a special case of it):
+
+    df-structNEW $a |- StructNEW ( S , f , ph ) = { f | ( ( Fun f
+        /\ S C_ dom f /\ dom f C_ NN ) /\ ph ) } $.
+
+ Finally, we could make it even simpler by having no restriction
+ on the structure format at all:
+
+    df-structNEW $a |- StructNEW ( S , f , ph ) = { f | ( Fun f
+        /\ S C_ dom f /\ ph ) } $.
+
+ This would make the definition of "ndx" problematic since there
+ is no longer a fixed set like NN to cut down the _I function
+ so it is not a proper class.
+
+ Norm

@@ -1,0 +1,54 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here is what I get -- after I replace
+the set.mm sandbox with your [[file:sandbox.org][sandbox]]
+and then -- some proofs have bad labels
+so I change the proofs to "?" and it
+works, and fires up the proof assistant...
+
+1) I copy your entire [[file:worksheet.org][worksheet]] into
+the Proof Text Area and hit Ctrl-U.
+
+2) The ">>> After Ctrl-U" and 
+">>> Before Ctrl-U" lines cause problems
+so I comment those out with "*" in column
+1, and hit Ctrl-U again.
+
+3) The cursor positions to step 19006 at
+the (blank) Ref field, and the following
+messages are shown (in the bottom window
+pane):
+
+    
+    I-PA-0403 Theorem dedNEW Step 7006: Proof incomplete for derivation proof step. The step was successfully unified with Ref syl, but one (or more) of the step's hypotheses has an incomplete Hyp value (='?').
+     --------------------------------------------------------- 
+    I-PA-0403 Theorem dedNEW Step 4006: Proof incomplete for derivation proof step. The step was successfully unified with Ref syl, but one (or more) of the step's hypotheses has an incomplete Hyp value (='?').
+     --------------------------------------------------------- 
+    I-PA-0403 Theorem dedNEW Step 10006: Proof incomplete for derivation proof step. The step was successfully unified with Ref biimp, but one (or more) of the step's hypotheses has an incomplete Hyp value (='?').
+     --------------------------------------------------------- 
+    I-PA-0403 Theorem dedNEW Step 5006: Proof incomplete for derivation proof step. The step was successfully unified with Ref syl, but one (or more) of the step's hypotheses has an incomplete Hyp value (='?').
+     --------------------------------------------------------- 
+    I-PA-0403 Theorem dedNEW Step 6006: Proof incomplete for derivation proof step. The step was successfully unified with Ref syl, but one (or more) of the step's hypotheses has an incomplete Hyp value (='?').
+     --------------------------------------------------------- 
+    
+
+So, it appears to me that mmj2 is /correctly/
+placing the cursor at 19006, which is the last
+"incomplete" proof step. 
+
+Note: I can't tell what you were doing in this
+proof, but it looks like you were either doing
+"top down" or "middle outwards". Right now the
+program always puts the cursor at the /last/
+incomplete proof step if there are no errors.
+I considered adding a RunParm and Menu Option
+to allow the user to specify his or her preferred
+method -- if "TopDown" then the cursor would go
+to the first incomplete step if no errors, otherwise
+it would go to the last. But I did not put that
+feature in. It seems like a good feature to have
+because "top down" is a legitimate approach
+and sometimes incomplete steps will be all over
+the place (as we see), so going to the /last/
+incomplete step is unhelpful. 

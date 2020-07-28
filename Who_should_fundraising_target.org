@@ -1,0 +1,210 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Who should fundraising target?
+On [[file:sources of funding for PM|another page.org][sources of funding for PM|another page]], the idea that members
+of the PM community may make a poor target for their own fundraising efforts
+was raised.
+
+I have to wonder, then, about who would be a better target.
+
+This (entirely honest) question has to do with a fairly abstract notion, namely
+the "creation and flow of value" in human societies.  It is fairly clear that
+fundraising must target persons who find value in PM.
+
+However, as the earlier conversation served to illustrate, not everyone who
+finds value in the resource is in a position to pay.  And, indeed, if the
+content/services are just given away, then no one is obliged to pay.  Some
+people may still want to pay - but even these people are probably recognizing
+that unless they pay, some things that they might like to have happen won't
+happen.
+
+That seems to be the fundamental principle of "payment" - you pay for things
+that you want and that won't happen /unless/ you pay, and you /don't/ pay
+for things that will happen whether or not you pay (and certainly not for things
+you don't want to happen).
+
+Well, we can loosen this up a little bit.  You might also pay for something if
+you thought that paying would only /increase the chances/ of the event that
+you are interested in occuring.  (As with lottery tickets, buying a drink for a
+hot person you meet at a bar, etc.)  Similarly, you won't pay for things that
+you are only fairly sure you won't need.  (Tornado insurance in Alaska?)
+
+In order to apply these general notions to !PlanetMath, we should look at how
+money flows through society already.
+
+Let's look briefly at academia.  Here, professors will frequently pay (out of
+their grant money) for /their/ students to do research that is related to
+/their own/ research.  This can enhance their reputation -- they become known
+for "producing" good students -- and it can enhance their research, too.
+Basically, these students are doing work on commission (though it is not clear
+how many of them see things this way).
+
+Thus, one /possible/ source of funding would be to "simulate" a team of grad
+students.
+
+The PROBLEM with this, though, is that professional academics /almost never/
+will give money to people who aren't /their own/ students, regardless of how
+qualified the people in question are are (at least, that is my experience).  So
+it goes.  Some exceptions may exist - and this is something we could look into.
+
+A similar situation obtains in industry, but substitute "employers" for
+"professional academics" and "employees" for "students".  Here, outsourcing and
+consulting is more of a standard part of business.  So we might look to
+/industry/ as being a potential source of funding for work done on commission.
+
+A second "economy" exists within academia - this one is typically not based on
+money, but (to cynics) on prestige, and (to the faithful) on knowledge.  Money
+can come into play, too.  This second economy has to do with research papers
+(and other discourse) published by the professional academics themselves.  Would
+people be willing to pay money to get ahead in this economy?  YES!  People pay
+money for this all the time.  Many of these people are called "grad students".
+(OK, sometimes they are actually paid, but they universally must pay time - and
+time is the one currency that universally matters.)  But really, everyone
+involved with academia "pays".  It is a second economy, but to expect it to be
+separate from the first would be silly.  Books, courses, student stipends,
+travel expenses, etc., etc..  I think that if one looked at the budget reports,
+one would find that a lot of money flows from academia to the "first economy".
+And, of course, it flows the other way, too - from grants (both governmental
+and corporate), from tax dollars, from tuition, and from investments.
+
+It is really quite complicated.
+
+: When bringing up the example of professors funding students, one needs to keep in mind not only the fact that they are being paid from grant money, but also the fact that a certain part of the grant is reserved for student support.  This makes the situation quite different from that of the donor to Planet Math or the company outsourcing work in a very important way --- in the latter case, if the individual or company chooses not to spend the money on Planet Math or on outsourcing wark, that person or company gets to keep the money or spend it elsewhere whilst, the professor can only use the money to support a student and could not, for instance, choose not to have a student and use that money to purchase apparatus.  Perhaps a closer analogy to student support would be if some entitiy were to approach a Planet Math member and offer to donate a certain sum to a non-profit organization of that person's choosing (but taking the money for oneself or spending it in any other way would not be an option).  I am quite sure that, were most active Planet Math members to be approached with such a deal, they would choose to have the money donated to Planet Math (and equally sure that, if professors had to pay for student support fronm their salaries, few students would be supported); however, the situation is such that we must not only persuade potential donors that it better furthers their interest to donate to Planet Math rather than to some organization, we must persuade them that it better furthers their interest to donate the money to Planet Math than to spend it for anyhting else or to save it.  --[[file:rspuzio.org][rspuzio]]
+
+**  where is this going?
+
+Well, one thing that I'm thinking is that maybe we should look at "membership"
+in PM as being like a "gym membership" or a "club membership".  Why would anyone
+pay to participate in a club that they can participate in at no cost?
+
+Maybe because they recognize that if they don't pay, the club will have crappy
+facilities, whereas if they do pay, the club will have nicer facilities.
+
+The concept and rhetoric of "white flight" may be related.  Briefly, the notion
+here is that if members of a somewhat economically privileged ethnic majority
+flee the inner city for the suburbs, the inner city will be increasingly
+impoverished.  If this same group was to invest an equivalent amount of money in
+the inner city, it might be as "nice" a place to live than the 'burbs, or nicer;
+however, it might not be as "white" a place to live.  Thus, "white flight" may
+be less about finding a "nice" place to live, and more about an effort to secure
+a position of social dominance and solidified economic privilege.
+
+If people take their dollars elsewhere -- whether for other sorts of
+mathematical materials, like expensive copies of Mathematica or
+nearly-as-expensive math books from Springer -- or unrelated goods, like pints
+of beer or new bicycles -- then that is money that ain't going (directly) to
+help out !PlanetMath.  Such investments could come around in the end, however.
+Maybe the person does some neat computations with Mathematica, and these get
+added, or they learn something from their expensive math books, and eventually
+add these things, or they feel relaxed because of the beer, and happy, and they
+learn more in class, or they ride their bicycles to the library where they pour
+over public domain math books and import lots of notes.
+
+But direct investments are going to help out... well, directly.
+
+Now, one thing is clear, that without some /division of labor/, financial
+investment as a whole is ridiculous.  It doesn't make sense to pay /oneself/
+to do anything.  It may not even make much sense to pay a (perfect) clone of
+oneself to do something, since one could just as easily do the task onself.
+(Well, OK, that is an interesting economics/distributed systems puzzle...)
+
+In a "closed" economic system, payment only makes sense in terms of exchange.
+If I pay drini to write articles, and he pays akrowne to host them, and akrowne
+pays me to... do whatever the hell I do... translate them to [[file:hcode.org][hcode]], say,
+then presumably we're all "happy".  Except that (in this closed system) the
+money can only go for more of the same.  Which makes this a very tricky system
+to imagine.  Perhaps we should also imagine that there is a 4th good, called
+"leisure" that any one of us can buy and enjoy to some extent.  Thus, if I grow
+tired of reading articles, I may opt to invest in leisure instead.  (Even this
+simple/stupid model might be worth exploring more.)
+
+All fine and good - I guess.  Because in a "non-closed" system, we can splinter
+the fourth dimension of the simple closed system into things like "food",
+"rent", "clothes", "beer", etc., and, happily, there is something called
+"anti-leisure" (AKA lucre) that can flow in from outside.
+
+Except, if we're going to make enough money in the system to buy our share of
+leisure, we want the lucre to be introduced by other agents.  In return, we are
+willing to sell our wares.  
+
+**  So what, exactly, was the point?
+
+Fundraising should target people who (a) have money; and (b) can use the money
+to get something they want out of the system.
+
+Like in the Turnbull quote above, we should ask: what can the system do for
+these people?
+
+We might take a look at lists of feature requests (whether for content or code
+features) and see if anyone who made the requests would be willing to pay to
+have them implemented.
+
+We should also look around at generic lists of requests (e.g. ones that are
+published by mathematical societies) and see which ones we can satisfy.
+
+A simple (but extreme) example would be millenium problems.  These things have a
+million dollar price tag.  They are in high demand.  But they are hard to solve.
+We might look for things that are more readily grasped.
+
+Thus, I would say that in our [[file:Letter writing campaign|letters asking for support.org][Letter writing campaign|letters asking for support]]
+we might also ask about commissions.
+
+When we think about membership stuff, we should ask PM people - what would 
+you be willing to pay to see happen (and how much would you pay)?
+
+Sometimes, we should be able to answer preliminary versions of these questions
+ourselves.  What are people looking for?  It might say on their web page.
+What would people buy?  Look at their shopping lists, see if the price
+can be undercut or the quality increased, then make your pitch.
+
+**  Conclusion
+
+Who should fundraising target?  The answer is: people who will pay.
+
+*  Matching Donations
+
+It occurred to me, as more of my friends go to work at corporations that 
+make /matching donations/, that it could be very productive to focus our
+efforts at individuals that work at such places.  
+
+What this means is that an employee at one of these companies makes a donation
+to a registered US 501(c)3 tax-exempt nonprofit public charity (soon to be 
+PM.org), and then the employer sends in a donation of the same dollar value.
+
+In short, each person in this situation who makes a donation yields twice 
+the benefit for us.  So our efforts at "marketing" to these people are 
+twice as effective.  We may even be able to exploit network effects to 
+"seed" our marketing with these companies and let the word spread via tight
+intra-company communications channels.
+
+Some companies I know of that do this (with per-employee limits):
+
+ * Microsoft ($12,000)
+ * Google ($3,000)
+
+We should maintain and expand this list!
+
+----
+
+* Who should contribute to PlanetMath
+
+Possibly in light of the above various blather, and also
+in light of any new insights we've had it was written,
+etc., I think it might be useful to write a document
+called "Who should contribute to !PlanetMath and why"
+and get it linked in to the site, probably near the
+main page.  This would take some thinking to design,
+as it relates to the topic [[file:What PlanetMath can offer to the math community.org][What PlanetMath can offer to the math community]]
+and also to our discussions about marketizing etc.
+One thesis is that people should contribute if they
+have a certain feature in mind and someone is offering
+to implement that feature and needs money to be able
+to do so.  This case is less of a contribution to
+PM than it is a transaction between these two people.
+A generic contribution to PM is fine too, and actually
+sort of similar to the above case, but in the case
+of a generic contribution, the contributor is trusting
+PM to come up with the best way to spend the money
+to further its generic goals.  Well, we can
+go into more detail later. --[[file:jcorneli.org][jcorneli]]

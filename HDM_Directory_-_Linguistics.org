@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/This page is part of the [[file:HDM Directory.org][HDM Directory]]./
+
+/See also: [[file:Linguistics research and programs particularly relevant to HDM.org][Linguistics research and programs particularly relevant to HDM]]./
+
+
+We need some programs that can read and understand mathematical
+writing. These programs can of course exist and operate at different
+levels of sophistication; in long run, we want "total coverage".
+
+ * We have some partial results on parsing mathematical formulas (/the stuff in-between dollar signs in !TeX/).  This isn't very heavy "linguistics", having more to do with
+straight-forward computer science, still, there may be some linguistical components
+to figuring some of this out. Cf. [[file:mathematical grammar.org][mathematical grammar]].
+ * Another thing that would be useful would be some linguistic/statistical ling. studies
+of "mathematical language" (/to first approximation, the stuff NOT in-betweeen dollar signs
+in !TeX/).  We have a little bit of that going on
+[[file:Let G be a group|here.org][Let G be a group|here]], but not enough to really be scientific.
+Some statistical analysis of the PM collection or similar
+[[file:analysis of a collection of prelim problems.org][analysis of a collection of prelim problems]] or of !ArXiv articles or something like that would
+be more interesting.  Note that the program WordHoard uses some
+algorithms that could come in handy.
+ * We need much more work on "discourse understanding".  In particular, note that
+the previous two items (what's inside and outside the dollar signs) are not really
+disjoint problems at the semantic level.

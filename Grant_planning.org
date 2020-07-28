@@ -1,0 +1,89 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is for planning for grant applications related to projects on this
+site. I'd like to organize each section as a discussion about a particular grant
+program (or any set of similar programs to which applications can be bundled),
+with discussion of ways in which the program could be used to fund work on our
+projects. Hopefully each section will converge on a nice list of objectives
+which fit within the scope of the grant program and get as much done as possible
+on our projects.
+
+(Note: More programs to come soon.  If anyone else sees anything that fits in with
+the scope of this site, please add them!  We are open to pretty much anything.)
+
+*  Demand
+
+Ideas for specific programs that would be nice to get funding for can go here.
+
+ * [[file:HDM SOC II.org][HDM SOC II]]
+ * [[file:PM math curriculum development.org][PM math curriculum development]]
+
+* Upcoming
+
+ * [http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5174&org=OCI&from=home NSF Software Development for Cyberinfrastructure] / [[file:grant planning--NSF Software Development for Cyberinfrastructure 2007.org][grant planning--NSF Software Development for Cyberinfrastructure 2007]]  / "This program supports software development across three major sectors: system software and tools for High Performance Computing (HPC) environments; software promoting NSF's strategic vision for digital data; and *software in the form of middleware capabilities and services to support distributed resource sharing and virtual organizations*. SDCI funds software activities for *enhancing scientific productivity and for facilitating research and education collaborations* through sharing of data, instruments, and computing and storage resources. The program requires *open source software development*."  / Due date (full proposal): January 22, 2007
+
+ * [http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=500066&org=OCI&from=home Strategic Technologies for Cyberinfrastructure] / [[file:grant planning--Strategic Technologies for Cyberinfrastructure 2007.org][grant planning--Strategic Technologies for Cyberinfrastructure 2007]] / "The primary purpose of the Strategic Technologies for Cyberinfrastructure Program (STCI) is to support work leading to the *development and / or demonstration of innovative cyberinfrastructure services for science and engineering research and education* that fill gaps left by more targeted funding opportunities.  In addition, it will *consider highly innovative cyberinfrastructure education, outreach and training* proposals that lie outside the scope of targeted solicitations." / Due date (full proposal): February 8, 2007 
+ 
+Comment on both of the above:  These both look very attractive.  The kind of things we 
+do could probably fit well under either one, because we are doing both software and 
+services (in fact software /as/ service, or service /qua/ software.).  One of most
+ encouraging points is how NSF specifically is reaching out to projects and initiatives that didn't fit well in any of the existing programs having a more targetted/disciplinary 
+character (they say so on the above pages).  I found this to create a mismatch in the past.  
+The NSF cyberinfrastructure programs seem to eliminate this mismatch.  --[[file:akrowne.org][akrowne]] Nov 13  2006
+
+* Ongoing
+
+(none, officially)
+
+* Passed
+
+** NSF IIS: Advancing Human-Centered Computing, Information Integration and Informatics, and Robust Intelligence 2006
+
+Result: *No submission*. 
+
+[http://www.nsf.gov/pubs/2006/nsf06572/nsf06572.htm web page].
+
+Original comments: A lot of this looks relevant; especially human-centered, info integration, information, and intelligence.  Things like the autolinker and HDM may be especially pertinent.
+
+Deadline: due Oct 19 - Dec 6 2006 (depending on request size)
+
+** NSF Advanced Learning Technologies
+
+Result: *Submitted*.
+
+An NSF program to improve learning in STEM fields by way of innovative computing 
+(including collaborative environments).  Can we get more work funded on PM and related 
+projects, positioning them as learning and teaching tools?  Can we extend their impact
+from specialists to lay learners?
+
+ * [[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]]
+
+** NSDL 2005
+
+Result: *No submission*.
+
+The 2005 round of funding for the National Science Digital Library (an NSF program).  
+The emphasis has shifted from building collections and infrastructure (in past years) to
+sustainability and impact.  In fact, this makes PlanetMath an especially good candidate, 
+since the community actually started off being more sustainable than a typical digital library.
+Now it would be nice to extend the impact of PlanetMath and Noosphere within the NSDL and 
+beyond.
+
+ * [[file:NSDL 2005 Grant Planning Page.org][NSDL 2005 Grant Planning Page]]
+
+
+* Dormant
+
+** Grants for PlanetMath/Quadrock Collaboration
+
+This item actually groups together a bunch of grant programs of private (mostly telecom)
+foundations which would be appropriate for a collaboration between PlanetMath and 
+Quadrock, Inc.  In sum, Quadrock seeks to foster the creation of materials usable within 
+its commercial "edutainment" system, while PlanetMath has the compatible goal of creating
+high-quality educational materials (for mathematics) and fostering systems that allow this
+to be done collaboratively in a sustainable fashion.  
+
+ * [[file:PlanetMath and Quadrock Grants.org][PlanetMath and Quadrock Grants]]
+----
+[[file:Discussion of Grant Planning.org][Discussion of Grant Planning]]

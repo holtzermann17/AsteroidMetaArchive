@@ -1,0 +1,514 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:GhilbertVsMetamathPart1.org][GhilbertVsMetamathPart1]]
+
+
+The rather informal, very preliminary survey of the
+differences between Metamath and Ghilbert continues.
+
+ *Metamath vs. Ghilbert - PART II*
+
+
+ *7. TERMINOLOGY*
+
+To avoid confusion it may be helpful to distinguish between
+"statements" such as the Metamath "$a" and "$p" statements
+and the logical statements contained in them. Likewise with
+Ghilbert "stmt" and "thm" statements.
+
+To make things absolutely clear "$a", "$p", "stmt", "ax",
+"thm" etc., will hereafter be termed "commands" while the
+formulas/theorems/statements expressed using those commands
+will be termed "statements", and sometimes "formulas"
+
+
+-----
+
+ *8. AXIOMATIC ASSERTIONS and PROVABLE ASSERTIONS*
+
+One of the more brilliant ideas in Ghilbert is separating
+the proofs from the theorems. In Ghilbert, there are two
+main types of files: "Interface Files" and "Proof Files".
+
+From the design document: 
+
+    "At the top level, there are two important types of
+    Ghilbert files: interface files, and proof files.
+    Interfaces are, at heart, simply a list of axioms or
+    theorems. Any given proof file imports a number of
+    interfaces, then exports a new interface
+    representing the theorems proved. It should be
+    straightforward to check the consistency of a proof
+    file, independent of whether the imported interfaces
+    represent true statements."
+
+In Metamath there are Axiomatic Assertions and Provable
+Assertions, as specified using the "$a" and "$p" commands,
+respectively. In Ghilbert there are Statements and
+Theorems, specified using the "stmt", and "thm"
+commands, respectively. 
+
+A Ghilbert Theorem is basically just a Statement with a
+proof! Ghilbert "thm" commands are stored in Ghilbert "Proof
+Files" while Ghilbert "stmt" commands are stored in Ghilbert
+"Interface Files".
+
+Inside a Ghilbert Interface File there is no difference
+between "axioms" and "theorems"; both are simply assertions,
+given as "True" for use in subsequent reasoning activities.
+
+[A design issue to investigate is just why the "thm"
+command should contain redundant information. Why not just
+list the theorem's name and its proof? Who will be double-
+checking for inconsistencies?. *Answer* from [[file:raph.org][raph]]: in most
+cases, including the conclusion in the "thm" command is purely
+redundant, but in the special case where the thm includes a
+definition expansion, it is not.]
+
+One reason why separating out the proofs is great is that
+once a theorem is proved, the content of its proof is not
+needed in subsequent proofs, so why re-process a proof just
+because the rest of a theorem's information is needed?
+
+Another nice thing about a separate proof file is that
+downstream, in later proofs, any previously defined
+statement can be used in a proof step -- which may be viewed
+as justification for an inference.  From the perspective of
+Theorem "Z" the question of whether Statement "A" is an
+Axiom or a Theorem is irrelevant; all Z cares about is that
+A is a given, and of course, any hypotheses upon which A
+depends.
+
+[Ghilbert does not explicitly mention having multiple
+different proofs for a single theorem but the capability
+exists -- just create a separate Proof File!]
+
+OK! So in one clean shot Ghilbert eliminates wasteful,
+redundant re-processing of long proofs, thus conserving
+computer resources, AND it eliminates an impediment to
+"proof portability", which amounts to freeing a proof from
+particular axiom scheme.
+
+[NOTE: Later, perhaps in Part III or CXIX, the intricacies
+and details of Ghilbert Interface Files and Proof Files
+will be discussed. The present discussion is intended
+to provide a context for discussing Ghilbert "stmt"
+and "thm" commands ... so that a context is available
+for delving into the fascinating differences between
+the Metamath and Ghilbert Proof Verification Engines!!!
+Wow! Good times. Fun stuff. :) *Response* from [[file:raph.org][raph]]:
+The details of the interface mechanism are, in fact,
+intricate. The discussion in my design document is a
+bit inadequate, and I hope to improve it soon.]
+ 
+    EXAMPLE: Theorem "a1i" in Ghilbert and Metamath
+    =====================================
+     
+    Ghilbert
+
+    # from zfc/set_mm.ghi (Interface File)
+    # note: the "( )" indicates that no Disjoint Variable
+    #       Restrictions apply to a1i.
+    stmt ( a1i ( ) ( ph ) ( -> ps ph ) )
+   
+    # from zfc/set_mm.gh (Proof File)
+    thm ( a1i ( ) ( ( a1i.1 ph ) ) ( -> ps ph ) ( a1i.1 ph ps ax-1 ax-mp ) )
+   
+    Metamath
+
+    $( from set.mm -- notice use of 4 different Metamath
+       commands to specify theorem a1i:
+        Begin Scope:        ${
+        Logical Hypothesis: $e
+        Provable Assertion: $p 
+        End Scope:          $}
+    $)
+    ${ 
+      $( Premise for ~ a1i . $)
+      a1i.1 $e |- ph $.
+      $( Inference derived from axiom ~ ax-1 .  See ~ a1d
+         for an explanation of our informal use of the terms
+         "inference" and "deduction". $)
+      a1i $p |- ( ps -> ph ) $
+        wph wps wph wi a1i.1 wph wps ax-1 ax-mp $.
+        $( [5-Aug-93] $)
+    $}
+
+-----
+
+
+ *9. THE GHILBERT PROOF SHORT-CUT*
+
+Excerpt from Ghilbert Design Document (bullet labels
+mine):
+ 
+    Proofs are very similar to Metamath's, with the
+    following exceptions:
+ 
+    A) In Metamath, $f statements assigning a "kind" to
+    a variable have labels. In Ghilbert, the
+    corresponding proof atom is simply the name of the
+    variable.
+  
+    B) In Metamath, new terms are introduced with $a
+    statements asserting the well-formedness of the
+    term, and proof steps refer to the label of that
+    statement. In Ghilbert, the corresponding proof
+    atom is the name of the term.
+  
+    C) In Metamath, invoking a statement requires well-
+    formedness assertions (mandatory hypotheses of the
+    $f flavor) on the proof stack for all variables.
+    Ghilbert omits these assertions for any variables
+    which appear in a hypothesis.
+ 
+    D) In Metamath, the well-formedness assertions ($f)
+    precede the $e hypotheses. In Ghilbert, they
+    follow. (thus, sequences of "structure-building"
+    steps are closer to the the RPN order
+    characteristic of most proofs)
+ 
+    E) In Metamath, the order of the well-formedness
+    assertions is determined by the order of the
+    corresponding $f statements for the variables. In
+    Ghilbert, the order is determined by the order of
+    appearance in the consequent. (this choice
+    facilitates cutting and pasting a theorem from one
+    file to another that may not have the same $f
+    ordering).
+ 
+    Once proved, the theorem name is introduced into
+    the joint namespace as a statement.
+
+
+Cursory Comments:
+
+- A) and B) represent a nice simplification. Very nice.
+
+- D) and E) resequence the Proof Work Stack and the
+corresponding entries in proofs, whether represented
+in Reverse Polish Notation (RPN) or in tree form. E)
+is particularly nice, I think; it is simpler for the user
+to order the hypotheses in order of appearance in the 
+formula. [Note: the order of hypotheses in Metamath is
+the order of their appearance in the Metamath file,
+and it is possible for $f's and $e's to be commingled,
+so the Ghilbert Design document is incorrect on this
+topic.]
+
+- C) OK, let's get into this, which I call THE GHILBERT
+PROOF SHORT-CUT (!) reiterated for the convenience of the 
+reader:
+ 
+    "C) In Metamath, invoking a statement requires
+    well-formedness assertions (mandatory hypotheses
+    of the $f flavor) on the proof stack for all
+    variables. Ghilbert omits these assertions for any
+    variables which appear in a hypothesis. "
+
+The explanation of this and its rationale seems important
+because of the last line of
+ 
+    \ghilbert\zfc\set_mm_ax.ghi:
+  
+    "# 738697 Metamath steps converted to 222565 Ghilbert
+    steps"
+
+That appears to indicate a rather massive reduction in
+proof lengths! Wow. How did he do that?!@#$
+ 
+Well...
+
+The reason Mandatory Variable Hypotheses do not need to
+be loaded onto the Proof Work Stack for Variables that
+appear in the Logical Hypotheses of the Assertion referenced
+by a proof step is ... since all substitutions must be
+simultaneous, each "missing" Variable Hypothesis will get
+its chance to be plugged into the proof when the Logical
+Hypothesis containing it is added to the stack. 
+
+  ==============================================
+  $( EXAMPLE: theorem a1i from set.mm in Metamath $)
+  ${ 
+    a1i.1 $e |- ph $.
+    a1i $p |- ( ps -> ph ) $
+      wph wps wph wi a1i.1 wph wps ax-1 ax-mp $.
+  $}
+  ==============================================
+ 
+
+A clear example of this is A1i's proof, which has 4
+entries on the stack for its final proof step in
+Metamath but only 2 in Ghilbert. The final step of the
+proof is ax-mp, so for Metamath the stack is loaded with
+these entries to prepare for ax-mp:
+
+    1. ph:  ph
+    2. ps:  ( ps -> ph )
+    3. min: |- ph                      via a1i.1
+    4. maj: |- ( ph -> ( ps -> ph ) )  via ax-1
+
+In Ghilbert only #3 and #4 are needed. #1 and #2, which
+specify the variable substitutions to be applied to the
+assertion, are not needed because the final substitutions
+are easily computed. Ghilbert stores the formulas in
+grammatical parse tree format (ala "sexp") and every
+notation "term" is unambiguous, so Ghilbert *knows* that
+"->" has two wff metavariables, and unification is simple.
+(This is more clear when drawn as a proof tree diagram...)
+ 
+-----
+
+ *PROOF TREE DIAGRAM for "a1i"*
+
+First we draw the root node of the proof tree for a1i, ax-mp,
+plus ax-mp's Logical Hypotheses (its Variable Hypotheses
+are not used because its Variables are referenced in its
+Logical Hypotheses). Then, underneath each child we create a
+substitution proof tree node (and the sub-tree's root must
+match the grammar rule of node it is replacing -- so a "a ->
+b" must be replaced by an expression of that same form).
+Finally, adjacent to the proof tree nodes we use "==>" to
+indicate the output after substitution.
+ 
+     Legend:
+     "*" indicates child hypothesis of parent assertion
+     "^" indicates the substitution to be made to a node
+     "==>" indicates derived formula after substitution
+     
+     Note: Formulas are shown in Metamath format but the
+           proof tree uses the Ghilbert Proof Short-Cut.
+ 
+               ********* ===> |- ( ph -> ps )
+               * ax-mp *
+               * |- ps *
+               *********
+              *         * 
+             *             *
+            * ==> |- ph      *   ==> |- ( ph -> ( ps -> ph ) )
+    *********                   *******************
+    * min:  *                   * maj:            *
+    * |- ph *                   * |- ( ph -> ps ) *
+    *********                   *******************
+        ^                        ^
+        ^                        ^ 
+        ^                        ^
+    *********              *****************************
+    * a1i.1 *              * ax-1:                     *
+    * |- ph *              * |- ( ph -> ( ps -> ph ) ) *
+    *********              *****************************
+                              *           * 
+                             *             * 
+                            * ==> wff ph    * ==> wff ps
+                           **********       **********
+                           * wph:   *       * wps:   *
+                           * wff ph *       * wff ps *
+                           **********       **********
+                               ^                ^ 
+                               ^                ^
+                               ^                ^ 
+                               ^                ^ 
+                             **********     **********
+                             * wph:   *     * wps:   *
+                             * wff ph *     * wff ps *
+                             **********     **********
+
+-----
+ 
+Metamath proof for a1i:
+
+    wph wps wph wi a1i.1 wph wps ax-1 ax-mp
+
+Ghilbert-style proof for a1i:
+
+    a1i.1 ph ps ax-1 ax-mp
+   
+That is a 44% reduction in proof length!
+
+[Comment from [[file:raph.org][raph]]: In fact, it's possible to get rid of *all*
+the mandatory hypotheses, if one is willing to do unification
+in the proof verifier. In fact, I'm still wrestling with this design
+decision. Unification is a lot harder than the very simple metalogic
+in the current Ghilbert design, but on the other hand the current
+design favors certain types of inference rules over others
+because of their proof-shortening potential. In particular, instantiating
+a theorem and then doing an ax-mp requires mandatory hypotheses
+for the theorem, but using the same theorem in inference rule form
+(commonly expressed in Metamath's set.mm database as an "i" suffix
+on the theorem name) eliminates this need. Doing straightforward
+conversion from other proof systems may result in proof blowup.
+Note also that Norm's Java "solitaire" implementation includes exactly
+such a unification engine.]
+
+[Re-comment by [[file:ocat.org][ocat]]: Doing unification inside the Proof Verification engine may have certain advantages but would seem to adversely affect the simplicity of the verification process, which is one of Metamath's strong points. Manual proof checking is (barely) feasible as is. I like the Ghilbert verifier the way it is, but will remain agnostic until I see the design :)]
+
+Ghilbert's proof is also easier to follow, I think
+(comprehension will probably require some work by the
+reader, this stuff does not *pop* into the noggin with speed
+reading.)
+
+[No, it doesn't, but as I gain more practice with Ghilbert
+proofs, I find myself more and more able to comprehend and write
+fragments of proof as phrases. -- [[file:raph.org][raph]]]
+
+[One thing that puzzles me about Ghilbert's proof design
+is its insistence on storing its proofs in RPN format.
+Everything else in Ghilbert is religiously written out
+as sexp's ... which can be represented as trees ... 
+so why not write the proofs as sexp trees? That is
+my ([[file:ocat.org][ocat]]'s) recommendation :) ]
+
+[Response by [[file:raph.org][raph]]: This is another subtle design decision,
+and an argument can certainly be made for the proof's tree
+structure to be explicitly parenthesized. Here are some arguments
+in favor of RPN:
+
+1. It is better for fragmentary or incomplete proofs. Most
+especially, it is common for an incomplete proof to leave
+multiple conclusions on the proof stack.
+
+2. It is better suited for incremental processing, as would be
+useful in interactive proof editing. For example, appending a
+proof step can be processed by simply applying that step to
+the proof stack. With s-exps, just recognizing that the edit
+represents such a small delta is nontrivial.
+
+3. For proofs which are long chains of equivalences, the RPN
+format seems more natural. Compare:
+
+[proof of A=B] [proof of B=C] eqtr [proof of C=D] eqtr [proof of D=E] eqtr
+
+(eqtr (eqtr (eqtr [proof of A=B] [proof of B=C]) [proof of C=D]) [proof of D=E])
+
+]
+
+[re-comment by [[file:ocat.org][ocat]]: One point is that an incomplete proof in Metamath is indicated with a "?" in one or more steps. In the event that the program finds an RPN step missing, re-creating the proof tree is either difficult or impossible, depending -- since the number of child nodes depends on the particular assertion, a missing assertion step takes away *structure*. FYI, as a discussion point, my humble *vision* for proof editing is a virtual blackboard on which I enter formulas and then draw arrowed lines to connect one formula to the next, along with hypotheses required for the derivation. Then the program figures out what theorem/axiom justifies the step...I am not forced to erase old results or clean up, I just keep going and deriving new formulas -- and let the program memorize the 6000 Metamath labels!]
+
+There are deep ancillary issues to consider here. Briefly:
+
+1) This proof short-cut depends on formulas being 
+represented as trees -- grammatical parse trees. In theory
+Metamath and/or mmj2 could be retrofitted to take 
+advantage of this innovation (but Metamath does not require
+grammatical parseability -- witness miu.mm.)
+
+2) Long Ghilbert proofs are even more incomprehensible than
+long Ghilbert style formulas. Gradually it begins to dawn
+that the Ghilbert file formats are meant for internal use by
+Ghilbert programs and that there must be a higher level
+language for use by people actually doing the math work. So,
+in a sense, the various savings and restrictions such as no
+overloaded operators, non-ambiguous sexp formulas, etc.
+simplify the programming but in the end simply move certain
+problems back up to the higher level language -- which 
+will require parsing, ambiguity checking, etc. (so that
+the mapping from higher language to lower language is
+guaranteed to be semantically correct.)
+
+--[[file:ocat.org][ocat]]
+
+[Response by [[file:raph.org][raph]]: having whitespace and indentation helps
+quite a bit with comprehensibility. An interactive browser that
+lets you visualize the proof stack at various stages of the proof
+would help even more (it's in development).
+
+Even so, you are absolutely correct that I envision the s-exp
+based Ghilbert language to be a low-level common format
+for use by many tools, and that proof authors will be able to
+benefit from a higher level language and a "compiler" that can
+translate these higher-level proofs into low-level, unambiguous
+s-exps. I think that there are many, many different valid
+approaches to such a high-level language, including translation
+from existing, established proof formats (HOL and Mizar being
+the two I consider by far the most important), sophisticated
+graphical, interactive tools, and automated theorem proving tools
+that can chew up gobs of CPU time searching for a proof. A central
+goal of Ghilbert is to provide a common language so that the
+ *results* of using these tools can be shared by all.
+
+]
+
+-----
+
+Idea: After more analysis, it is very
+clear in my mind that the Ghilbert style
+file format lacks notation (such as we see
+in Metamath's "syntax builder" axioms.) In
+a sense, if I am using the term correctly,
+Ghilbert stores a language in *canonical*
+form. 
+
+My idea (sic) is that there could be multiple 
+notations for a given logical system. Say
+that Metamath's set.mm is converted to Ghilbert,
+but another system wants to express the 
+language differently. No problem, just provide
+a different *notation interface*!
+
+Just as Ghilbert has interface files for
+assertions, it could have interface files
+for notations. These would be at the "term"
+level of Ghilbert, not "stmt".
+
+And, assuming that it is desired that a formula
+be able to make a round-trip without loss
+of information -- into Ghilbert and back
+out again, unchanged, such a "notation
+interface" could actually be considered
+a *grammar* interface. Then, additionally,
+"pretty-printing" output formatting 
+specifications could be provided in
+separate "interface" files -- with different
+flavors, such as Tex, MathML, etc. (these
+would be like the Metamath typesetting rules but at
+the syntax level instead of the symbol level.)
+
+--[[file:ocat.org][ocat]] 24-Sep-05
+-----
+
+Raph was interested in what I had to say to Dr. Conant
+about his system and Metamath, so I decided to put the
+text of my e-mail to Dr. Conant here:
+
+Dr. Conant, 
+
+There is a program called Ghilbert that is almost ready for release. I've noticed that although Metamath has some rather primitive definition and grammar systems (a definition is seen as an axiom in Metamath, as you may recall), its biggest problem is that only one person (namely, Norm) has the power to directly manipulate the material on the site. As it turns out, these problems will all be resolved in Ghilbert. From what I've been reading, Ghilbert will be a collaboration-based project, much like Wikipedia, except the Ghilbert guy may come up with some method for restricting the pool of potential editors (I hope he doesn't charge a subscription fee!). You may ask, "Why is being collaboration-based a good thing?" Well, there are a few reasons: 
+
+1) This one's the most obvious of them all. A single moderator or even two moderators can only increase the size of the site at a certain rate, and mathematics is probably growing in giant leaps compared to Norm's small steps. On the other hand, if hundreds of people are participating in the project, the rate of increase ought to be much more respectable. I believe that Mizar, another project attempting to strip mathematics to its foundations, is collaboration-based, unlike Metamath, and it boasts a large variety of theorems-perhaps this evidence backs both of my two claims. 
+
+2) A one-person project is inevitably going to show some bias. On several occasions, Norm has made it clear to me that he prefers adding Metamath articles that will improve his ability to do research in his particular field, making it so that other mathematics remains largely ignored. I wonder what Pokemon would look like if only one person were responsible for the designs of the characters. (For what may be an interesting example of lack of variety, check out www.homestarrunner.com -two people design everything on the site, and even though the main characters show a great deal of variation, the secondary characters are usually based somehow on the designs of the primary characters. If there were a collaboration-based Homestar Runner, it would be interesting to see what characters would turn up, in spite of the fact that a lot of the toons would probably look like crap.) 
+
+I hope that I have convinced you why someone would support Ghilbert and maybe even convinced you that Ghilbert is a noble cause. Perhaps Ghilbert will be like a cross between Metamath and Mizar-although it will be collaboration-based, it will probably be just as explicit as Metamath. (That would be the best of both worlds.) Speaking of Metamath, the Ghilbert creator may design a program to import theorems from Metamath, so when it is released, it may start out having all of the theorems that are in Metamath now. I doubt that Norm will try to create a program to go the other way. The Ghilbert guy mentions a program to allow a single theorem to be developed through multiple templates, unlike Metamath's system, where a proof can only be stored on a single template, so Ghilbert may be able to prove theorems without the clunky lemma development of Metamath. (ruc may be the Metamath theorem boasting the highest number of lemmas, and projlem may come in second.) It ought to be interesting to compare Metamath with Ghilbert in the future. Maybe Ghilbert will use a Mizar-like tree system to organize theorems, as opposed to Metamath's ordering of the theorems using numbers alone. (With a tree, not only would the organization be neater, but a theorem could simply be appended to the tree. With Metamath, the numbers have to be re-calculated whenever new theorems are added.) Wikipedia also uses a tree system, which is very efficient, even with the very large number of articles. (Of course, not all Wikipedia articles are appended to the tree.) Wikipedia's tree system has proved so interesting that category search engines have been created. One thing's for sure-if I'm allowed to contribute to Ghilbert, I probably will. 
+
+-Jeff
+
+: Hi, have you played around with mmj2 yet? It has a pure text
+mode Proof Assistant for Metamath with browsing capabilities
+and a few other neat things. Feel free to try it and critique --
+let us know what you think. --[[file:ocat.org][ocat]] 
+
+Jeff, welcome to the Asteroid!
+
+As you've mentioned, I do indeed intend Ghilbert to have a very open flavor, with both read and write
+access open to all. The only real requirement for contributing to Ghilbert will be coming up with valid
+proofs. I think you'll find Norm is quite open to accepting proofs in the set.mm axiomatic and definitional
+framework, but Ghilbert's module and definition mechanism is intended to open the door to a much wider
+range of axiom systems, and allow anybody to come up with their own towers of definitions, while making
+it at least possible for all these diverse modules to connect into a greater proof web.
+
+I have already written a tool to convert from Ghilbert to Metamath, and have used it "in anger" for my
+contributions to set.mm, so that doesn't depend on Norm. I don't seem to have posted that publicly yet,
+though.
+
+The idea of organizing theorems into a tree of lemmas, rather than having them all global, is something
+I've thought about, but haven't implemented anything specific. At least with the Ghilbert module system,
+these lemmas are only global to a single module, and don't appear in the .ghi interface file exporting
+the results of a module.
+
+Your more personal last paragraph would be appropriate for your own page here, but doesn't belong in
+a comparison of Ghilbert and Metamath. Please move it.
+
+-- [[file:raph.org][raph]] 20 Nov 2006
+
+-----

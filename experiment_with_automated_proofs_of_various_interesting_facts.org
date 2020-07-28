@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some facts that may be interesting to work on:
+
+ 1. prove that the sum of the interior angles of a triangle is 180 degrees
+ 1. The n'th triangular number == tri(n) == 1+2+3+4+5+6+....+(n-1)+n. Prove that tri(n) == n#(n+1)/2 == (n^2+n)/2.
+ 1. In the range 0..n (where n is any positive integer n), there are more prime numbers than square numbers.
+ 1. There are only 5 Platonic solids in 3 dimensions.
+ 1. The function sin(x), when given any rational fraction of the whole circle x=&pi;#c/d, returns a rational number only when x is a multiple of &pi;/6.
+ 1. The function tan(x), when given any rational fraction of the whole circle x=&pi;#c/d, returns a rational number only when x is a multiple of &pi;/4 or &pi;/6.
+ 1. [[file:closed form for sum of consecutive numbers.org][closed form for sum of consecutive numbers]]
+ 1. The Fundamental Theorem of Calculus (!)
+ 1. the completion of any metric space is a complete metric space
+ 1. add things here as they come up...
+
+* Discussion
+
+It might be relevant to think how we (as humans) might come up with a proof.
+For example, consider the fifth and sixth examples.  I just came up with a
+sketch of a possible proof, paying attention to how I think.  Since it is fresh
+in mind, let me give an account om my stream of conscousness as best as I can.
+
+[[file:Mathematical Stream of Consciousness.org][Mathematical Stream of Consciousness]]
+
+My main reason for this exercise was to see the sort of thought processes that
+go into finding a proof of a given statement in the hope that one might be able
+to implement some of these in a theorem proving system or that they might
+suggest something that a theorem prover could try.  In particular, I made no
+attempt to polish it up but put in the dead ends and the wrong statements which
+had to be corrected to make a legitimate proof since the point here is to give
+an accurate picture of the thought process not to write a sanitized, easy to
+read exposition with a half-fictitious account of how it could have been derived
+which is meant as a learning aid.  In particular, looking at the mistakes may
+also be of use in analyzing the procedure used. I see this account a some sort
+of raw data (and, as menioned above , it is *raw*) that might be of use in
+writing a theorem proving program.  --[[file:rspuzio.org][rspuzio]] 1 May 2005
+
+[[file:Discussion of Mathematical Stream of Consciousness.org][Discussion of Mathematical Stream of Consciousness]]
+
+** So far...
+So far, we can prove things like "10 is even" and "10^10^10 is even".  See the [[file:JACKYL.org][JACKYL]] page.
+
+** Spatial reasoning
+I think the geometry problems sound hard.  We should [[file:start working on a KB for geometry.org][start working on a KB for geometry]].
+(Actually I suppose you can probably prove the fact about Platonic solids using algebra, maybe it is only possible using algebra... but still, the basic definition of a Platonic solid is a geometric one.)
+
+** Primes
+A simpler task than the one stated would be to prove that 2, 3, 5 are prime numbers, and that 1 and 4 aren't.  (I've never been quite down with 1 not being prime, myself.)
+Eventually of course we will have a list of primes and we can just check the list.  Heck, maybe eventually we'll have a polytime primality checker, but let's not sit on our hands til then, OK? --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:hcode.org][hcode]]

@@ -1,0 +1,86 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page has two potential project descriptions... continue scrolling to see both.
+
+* Client-side, accessible rendering with NNexus and Noosphere
+By: Stephen Ingram
+(frowey@gmail.com)
+
+** Abstract
+
+This project will eliminate TeX formula 'rendering' from the Noosphere host.  The solution to this problem is move processing to the client.  More specifically, Noosphere must host jsMath javascript code and output the associated jsMath markup.  The project requires coding the solution, tweaking the performance and visual quality, and handling special cases and known jsMath bugs.
+
+** Summary
+
+The goal of this project is to shift any "rendering" to the client and not burden the server with processing graphics as with the current latex2html solution. jsMath appears at first blush to solve this problem although if proper fonts are not installed on the client, then either complex formulas are constructed with images pulled from the server or rendered using unicode fonts. It remains to be seen if these are acceptable alternatives to the presence of proper fonts.
+
+** Plan
+
+As developer I would begin by installing Noosphere locally, altering the code to produce jsMath type markup. Considerable work would be necessary to tweak the jsMath to produce comparable output to the existing output. Work would also be necessary to test the output on a variety of browser platforms/configurations and examining the behavior and fixing known jsMath bugs that violate known [[file:PlanetMath.org][PlanetMath]] articles.
+
+If users have js turned off, then the fallback would be latex2html.  A workaround is text-rendering of formula with fixed-width font.
+
+** Ideas/Discussion
+
+Please post any useful comments or ideas in this space.  I would love to get some feedback to improve this project.
+
+
+*** Multi?
+
+Hi Stephen,
+
+I don't know how much work this jsMath thing actually is to set up
+properly.  I think it would be nice to have (IIRC the output looks
+much better), however, I'm not completely sure it is a big enough
+project.  My thought would be to extend the project by (a) making both
+rendering and data-input in Noosphere more modular; (b) implementing
+several different rendering and input formats.  Of course, if time
+only permitted one additional renderer, jsMath might be the way to go.
+(ASCIImath is another interesting input format.)
+
+However, modularization of Noosphere in various ways is badly needed,
+and quite possibly this should take precedence over anything else
+([[file:NNexus.org][NNexus]] is the first step in this direction, modularizing the
+autolinker).
+
+My own preference would be to have better facilities for browserless
+interaction with Noosphere (e.g. through CVS or similar).
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Local Noosphere Link Topology Visualization
+
+By: Stephen Ingram
+(frowey@gmail.com)
+
+** Abstract
+
+This project would introduce a small visualization of the local link structure of a document to a specified depth.  For an example, see the visual thesaurus http://www.visualthesaurus.com/.  First a graph is constructed online where nodes are articles and edges are links between the the articles.  The graph represents the depth-limited local topology of the link space and facilitates the mental map of the Noosphere user.  The server quickly renders a static image layout the graph using a simple optimization strategy called stress majorization. The resulting graph is accompanied by an automatically generated image map for clicking to those articles.  This strategy requires little processing time and only a small screen real estate but improves the Noosphere user experience in a novel way.
+
+** Ideas/Discussion
+
+Please post any useful comments or ideas in this space.  I would love to get some feedback to improve this project.
+
+*** Two-way?
+
+Presumably it wouldn't be too hard to create a tool like this that
+would be useful for /data-gathering/ in addition to data display.
+(I've seen such a tool, developed by the knowledge representation
+group at University of Texas-Austin, but it wasn't free software.)
+
+I think that this would likely be both a useful and interesting
+project, however, I'd like to see more discussion of just how with
+some use-case scenarios.  If you want to really thrill me, take a look
+at the [[file:MUSN.org][MUSN]] page and talk about applications there.
+
+Cheers,
+--[[file:jcorneli.org][jcorneli]]
+
+* Biography
+
+I am a graduate student at the University of British Columbia. My work is in information visualization. More specifically I design and implement parallel algorithms for rapid, massive data layout on GPUs.
+
+Aside from computer graphics, I am also deeply interested in unsupervised learning, numerical simulation/algorithms, graph algorithms. Interested in using GPUs to provide cheap scalability to a variety of general purpose algorithms.
+
+I use planetmath as a regular resource so I have a vested interest in improving the quality of the underlying code. I am completely open to any ideas you may have or how you could best see my talents serve the list. To see more of my work check out my school webpage http://www.cs.ubc.ca/~sfingram

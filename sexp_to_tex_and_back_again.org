@@ -1,0 +1,19 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The first version this a program was designed as a prototype system for
+converting logic expressed as h-code into the more usual midfix notation and
+typesetting it.  On that head, so far, only sentential logic is supported, but
+predicates will come soon.  
+
+Shortly after this version was written, a parser that could turn the !TeX code
+back into h-code was added.  
+
+
+Future versions should support more !TeX and more h-code; hopefully the code for
+the two directions of translation will stay roughly in synch with one another.
+Also, in future versions there may be some be better documentation.
+
+
+; The code : 
+ http://www.ma.utexas.edu/~jcorneli/a/elisp/sttts.el

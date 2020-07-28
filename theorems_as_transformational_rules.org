@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Caveat lector*:  At the moment, this material presented here is rather rough.  The ideas are new (at least to the author) and are still in the process of being worked out.  Therefore, what is presented here should be taken with a lump of salt.
+
+[[file:Origin of this concept.org][Origin of this concept]]
+
+[[file:Formalization of this concept.org][Formalization of this concept]]
+
+[[file:Quantifiers in terms of input and output.org][Quantifiers in terms of input and output]]
+
+[[file:Discussion of theorems as transformational rules.org][Discussion of theorems as transformational rules]]
+
+
+Back to [[file:h-code.org][h-code]]

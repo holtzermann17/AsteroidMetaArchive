@@ -1,0 +1,188 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The title of this page ("the relationship of !PlanetMath and HDM") has
+become sort of a catch-all phrase in our discussions.  Perhaps this
+has something to do with HDM being a sort of catch-all project,
+sometimes signifying something as gargantuan as the sum total of all
+known mathematics put into a coherent form.
+
+Nevertheless, even with such mind-boggling concepts on the table, HDM
+has a number of concrete goals, and at least one large but readily
+conceivable instantiation: this is as the R&D wing of the !PlanetMath
+project.  This might be a bit of an exaggeration, but we can work with
+it at least for a little while.
+
+There might be some quibbling over whether a given research item is a
+"!PlanetMath" task or an "HDM" task.  And sometimes, no one will even
+think to quibble.  For example, if Aaron implements some given feature
+in Noosphere, he may never think "HDM", and probably he shouldn't.
+Similarly if we do some study on PM user habits.  On the other hand,
+it may be that a given "HDM" result or minor landmark won't be of much
+interest to anyone working on PM; and this is OK too.
+
+Nevertheless, I see many aspects of the two projects converging as
+time goes by; and particularly, as I mentioned, those aspects related
+to R&D.  HDM is about putting useful tools in the hands of users of
+mathematics, and !PlanetMath working together with HDM is a way of
+actually doing that.   
+
+As we look /forward/ in math history, many things are going to be
+changing: and both !PlanetMath and HDM want to be in the vanguard of
+these changes.  As movers and shakers, not passive hangers-on.  And we
+furthermore hope to leverage changes in mathematics and developments
+in CBPP to help bring about broader social change.
+
+We can take this basic agreement on first principles, and the benefits
+of organizational coherence, and move on boldly from there.
+Subsequent differences of opinion can be /useful/, points for
+discussion, learning, and enhancing our work towards shared basic
+goals.
+
+I think these points reflect the views of PM & HDM leadership to a
+reasonable degree of accuracy.  Now, the question comes as to the view
+of others in the !PlanetMath community, many of whom may not be
+interested in specific HDM tools or achievements.
+
+Assuming we can get past the purely nominal aspects of the debate
+(whether or not some development is an "HDM" development or a "PM"
+development) and on to semantic content: the point is yes, some tools
+won't be useful.  That is a good time for community review and
+critique (just like with other kinds of intellectual products).  Other
+tools will be useful, and this is a good time for community up-take
+and further development.
+
+There is always some /quid pro quo/ in a collaboration.  The one I
+see here is this: if PM allows itself to be a test bed for research,
+whether we call that HDM research, or MKM research, or content
+management research, or CBPP research, or anything else, there is a
+chance for the community to benefit.
+
+Certainly some firewalling will be necessary, to allow members not to
+have their lives dominated by change at the cost of productivity.
+Some form of compensation for the researchers is also going to be
+necessary; and, as they offer a net benefit to the PM community that
+the PM community can't provide /without/ research, I don't see why
+there would be argument against paying for research work.
+
+The question may come up if research comes at the cost of other things
+on the site -- which sometimes, no doubt, it will.  Still, just as
+inevitably, there typically is an even greater cost associated with
+not doing research.  Since we have people motivated to do research
+work, and others who are not, basic economic theory says we should use
+some division of labor.  If research is forbidden, what we see is a
+lost opportunity.  This is particularly the case when research dollars
+can be obtained in a way that is orthogonal to other sorts of income
+for the site.  When we're talking about drawing from a common pot to
+pay for /all/ bills, that will certainly take some prioritizing, and
+community involvement in figuring out where dollars are best spent
+would be wise (or necessary).  
+
+Given the long list of feature requests ("pure" development work) as
+well as research ideas -- both those that directly help with current
+feature requests, and those that promise other future benefits -- it
+seems likely that R&D will be an important part of PM's budget for a
+long time to come.  We may in fact get to the point where many R&D
+things are done in a purely CBPP way: but that will almost certainly
+take a while, at the current rate of maybe 50-100 person hours per
+week split between R&D stuff and Org stuff.
+
+Getting the community involved in both of these things is certainly
+one of our long-term goals.  Even then, we should bear in mind that
+being "self-sufficient" does not necessarily mean no one gets paid.
+It may be quite the opposite, more people getting paid in the future
+as the project(s) become more self-sufficient.  It really depends on
+the economics of the situation: what kind of offerings can we provide
+to the community, and what will the community offer in return?
+
+When things have been done by volunteer labor, that doesn't mean that
+volunteerism can carry us through forever.  Someone may need to write
+paychecks for there to be ongoing progress.  In turn, someone must be
+coming up with the dollars that back those paychecks.  Part of our job
+as a self-managed R&D team is to come up with those dollars.  Right
+now, we are exploring many avenues.  In the future, income to the
+organization may have a clearer algorithm associated to it.
+
+It just so happens that the same people pursuing income for R&D are
+also the people pursuing income for general purpose use.  That is OK,
+although this may change at some point in the future.  Figuring out
+how much money will go to what ends, where it will come from, and so
+on and so forth, is something that many people can be involved with,
+and maybe we'll be able to hire a specialist in this area too at some
+point.  For now, we're plowing through.  To us, it seems likely that
+investing fairly heavily in R&D in the near-term will be of
+significant use in the long term.  This doesn't mean there will be no
+other expenditures.  What it means is that we want to get the Org
+rolling as a self-sufficient entity that has some hope of meeting the
+above-stated goals.  And for that to happen, a minimal requirement is
+that some core aspects of the work (R&D, administration, probably some
+weak editorial oversight and some special writing work) need to be
+funded.  After that is taken care of, we'll reassess, and see what to
+do next.
+
+--[[file:jcorneli.org][jcorneli]]  March 2 19:53 Minneapolis
+
+----
+
+Sounds good to me and ready to go!  I can't think of anything I would 
+want to change or add.  --[[file:rspuzio.org][rspuzio]] March 3 24:24 New York
+
+I don't see in the text any explanation at all of what the
+relationship between PlanetMath and HDM is, I can only see
+self-justification for getting paid for HDM work. Could you elaborate
+on how PlanetMath will benefit from the HDM?--[[file:alozano.org][alozano]]
+
+For one, you recall the [[file:Nooxana.org][Nooxana]] page I mentioned in the PM
+forum.  To sum that up briefly, I am planning to help Aaron document
+and perhaps begin rewriting the Noosphere engine to make it easier
+for more people to collaborate on its development.  We are planning
+to do this soon, and will be using an HDM component, [[file:Arxana.org][Arxana]], to
+help with the work.  Furthermore, Arxana itself has a number of
+interesting features that could be useful on PM (I would be happy
+to go into more detail later, but briefly, the idea with Arxana
+is to explore ways in which side-comments can be made into a more
+viable way of editing and expanding a collaboratively written document),
+which is why we've tentatively called this collaboration "Nooxana".
+Like I said, this will all be taking place soon.  
+
+In future months, some of the collaborations we've talked about are:
+making some changes to the way !LaTeX headers are handled on PM
+(implementing ideas that came up with regard to FEM, but which are
+directly useful on PM, in terms of making notation consistent),
+using data mining & weak AI tools to find content that will fill holes
+in the PM collection, building a translation infrastructure into PM
+(which would include infrastructure for translation into
+machine-readable entries as well as between natural languages, but in
+a way that won't disrupt anyone's workflow), and (in the longer term)
+integration of more mathematical software, including already-existing
+computer algebra systems, as well as HDM stuff under development (like
+a proof checker for natural language proofs).
+
+These sorts of features run the gamut, from something we can probably
+get done fairly soon, to things that will take a long time.  They all
+have the common feature of requiring a lot of work!  That is why
+we're talking about getting paid to work on them; Aaron, Ray, and I
+envision ourselves working full time on this project, probably
+without any significant sources of outside income.
+
+The above mini-essay we're commenting on deals only with the
+non-technical aspects of the relationship, and as such, you're right,
+it is somewhat "content free".  The point of the essay, however, is
+important: it is that if we're going to see progress with the site
+infrastructure, someone is going to have to do the work.  In many
+cases it doesn't matter whether we call that work "HDM" work or
+"!PlanetMath" work.  In the list of specifics, you'll see some things
+that more clearly fall into one category or the other.  Certainly, the
+further off on the horizon a given work-item is, the more
+justification it would seem to need.  However, we'll have time to do
+that, since we'll be tackling the most immediate and concrete things
+first.
+
+I don't expect to be able to come up with a final answer in this
+paragraph, but I hope I have given you the sort of quick elaboration
+you hoped for.  We'll have significantly more in terms of enumerated
+tasks, dates, and so forth as time goes by.  I appreciate the fact
+that you are engaging with this discussion, since all such
+engagement will help us to see what's regarded as useful. --[[file:jcorneli.org][jcorneli]]
+
+: Thanks! That's exactly what I was looking for. I look forward to a more detailed explanation and enumeration of tasks. Please let me know when something of that sort is added, by email or PM message. --[[file:alozano.org][alozano]]

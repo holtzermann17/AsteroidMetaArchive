@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Broad layers are things like "the English version" and
+"the Spanish version".  Every page in the collection should be
+translated into both languages.  There are also clusters,
+which can be big, like [[file:PlanetMath.org][PlanetMath]] and [[file:PlanetPhysics.org][PlanetPhysics]],
+for example.  These clusters can intersect at various points,
+but the relationships (as I see them currently) are mostly
+local.  Local relationships also exist between related elements
+of the same collection (e.g. two [[file:PM.org][PM]] encyclopedia pages)
+or an element of one collection and its attachments (for instance,
+a PM page and the corrections that relate to that page).
+
+I'm finding that broad layers are important in a number of ways
+in the projects discussed here.  Sometimes they are important
+for building a project (e.g. collecting info for [[file:HDM.org][HDM]] by
+creating a computational layer of PM).  Sometimes we would want
+to make the layers less directly related, for example, if
+every page on [[file:PP.org][PP]] linked to the related pages on [[file:PM.org][PM]],
+or vice versa; we would have something resembling layers, but 
+they wouldn't lie right above one another.
+
+See also [[file:Literate programming and Free Math.org][Literate programming and Free Math]] for another
+take on this whole thing.
+
+----
+[[file:Discussions.org][Discussions]]

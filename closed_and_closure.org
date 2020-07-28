@@ -1,0 +1,32 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+When I read a proof in the Explorer I find it difficult to remember which of the two symbols ( Cls or cls ) means *closure* and which means *closed* . In my opinion, we should use clearer symbols (clu and cls for instance). -- [[file:fl.org][fl]] 9-Jun-2007
+
+I believe that both symbols are used in the literature (although not always
+both in the same book).  However, there is an "easy" way to remember these,
+as well as others.  An object starting with a capital letter usually denotes a
+collection that can be interpreted as a
+property, in the sense that A e. Obj means "A is an Obj".  An object 
+starting with a small letter usually denotes a function.  Now both Cls and
+cls are "functions" in the sense that they depend on the topology J, but
+in their final use, they conform to this standard.  Thus ( Cls ` J ) is the set of all closed sets and A e. ( Cls ` J ) means "A is a closed set".  On the
+other hand, ( cls ` J ) takes in a set and returns an image of it, i.e. its
+closure.  Thus ( ( cls ` J ) ` A ) returns the closure of A.
+
+I mention the above because this general convention of capital and small
+letters is used in several places and can help you recognize things easier.
+Of course there are exceptions you can find - I try to do whatever the
+literature does when there is a standard symbol - but when there is a
+choice, this is the convention that I try to follow.
+An easy way to remember the convention is to think of sin, cos, log, etc.
+which are functions and always begin  with a small letter.  On the other
+hand, things like RR and CC - collections - are often capital R and C in
+books, and it would be odd to see "r" and "c" for the sets of real and complex numbers.
+"A e. RR" means "A is a real number".
+Similarly, books use Top (not "top") for the collection of all topologies.
+
+That being said, I will think about changing "Cls" to "Clsd" for clarity. -- [[file:norm.org][norm]]
+9 Jun 2007
+
+Thank you Norm. -- [[file:fl.org][fl]]

@@ -1,0 +1,21 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+pp line 20:
+return "<img title=\"\$".qhtmlescape($math)."\$\" alt=\"\$".qhtmlescape($math)."\$\" align=\"$align\" border=\"0\" src=\"$url\" />";
+
+pm line 20:
+if (defined $url && defined $align) {
+		return "<img title=\"\$".qhtmlescape($math)."\$\" alt=\"\$".qhtmlescape($math)."\$\" align=\"$align\" border=\"0\" src=\"$url\" />";
+
+} else {
+		return "<img title=\"\$".qhtmlescape($math)."\$\" alt=\"\$".qhtmlescape($math)."\$\" border=\"0\"/>";
+	}
+
+
+pp/pm line 32:
+significant edit to sub getRenderedContentImageURL()
+
+pp/pm line 36:
+significant edit to sub getRenderedContentHtml()

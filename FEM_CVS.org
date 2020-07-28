@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+ setenv CVS_RSH "ssh"
+ setenv CVSROOT ":ext:fempub@planetmath.org:/var/lib/cvs"
+ 
+ cvs checkout fem
+ password: password
+
+
+Ask if you want write access! --[[file:jcorneli.org][jcorneli]] Tue Apr 19 22:27:34 2005 UTC

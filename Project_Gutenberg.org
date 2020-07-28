@@ -1,0 +1,114 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Note that the site isn't really about the creation (production) of
+content, but rather, about making that content accessible.
+But they are still an example of [[file:what is CBPP|CBPP.org][what is CBPP|CBPP]].
+
+See: 
+
+ * [http://www.promo.net/pg/ Gutenberg homepage]
+ * [http://www.dprice48.freeserve.co.uk/GutIP.html Books in progress]
+
+* Gutenberg school?
+
+In conversations with Ray about the [[file:scholium system.org][scholium system]], the idea of
+building a school around the Gutenberg collection came up.  I think it
+would be great to do something like this at some point!  Imagine being
+able to discuss some of the world's most important literature of all
+time with many of the world's most important thinkers of the current
+day.  That's what I'd like to shoot for at any rate.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Discussion
+
+PG is /very/ CBPP, actually.  It doesn't matter that the source of the content
+is extant works; what matters is that value (digitization) is /added/ by the
+commons.  This process even involves distributed spot-checking and correction of
+OCR results by human beings, if I understand correctly. Reminds me a lot of
+distributed checking for mathematical errors... --[[file:akrowne.org][akrowne]] Mon Mar 7 07:01:33
+UTC 2005
+
+: I was thinking that its description as a border case was earned through
+it not being a producer /of content/.   But then again, maybe they are
+a peer producer /of free content/ because they start with "non-free"
+content (public domain, but not transparent) and convert
+it into free (transparent) content.  Similarly, [[file:PM.org][PM]] isn't (currently)
+about the production of /new/ mathematics, but about the "freeing" of
+mathematical ideas.  --[[file:jcorneli.org][jcorneli]]
+
+This notion "adding values by digitization" has recently come back in spades to haunt us --- exactly the reasons you gave for Project Gutenberg being a producer of content are exactly why digital libraries claim they have a"thin copyright" which allows them to restrict copying of public domain material.  --[[file:rspuzio.org][rspuzio]] 26 June 2005
+
+One interesting point, which may be relevant in light of some of the discussions
+of the last few days about free vs. non-free content is that *not all* of
+what Project Gutenberg has to offer is free.  Quoting from their
+"[http://www.promo.net/pg/helpex.html#Allowed Help and FAQ]",
+
+: /Some Project Gutenberg e-texts have copyright restrictions. You can still
+download and read these, but you may not be allowed to reproduce, modify or
+distribute them./
+
+--[[file:rspuzio.org][rspuzio]] 14 March 2005
+
+Yes, that's true, but I'm quite sure that the vast majority of the PG content is
+free.  I don't know what their official policy is on the non public domain
+stuff, i.e., why they have it, how much of it they want, etc. --[[file:jcorneli.org][jcorneli]] Mon Mar 14 23:28:47 2005 UTC
+
+Another thing which would be nice is more effort in making public domain
+mathematical works available electronically.  So far, all I am aware of is the
+following, which only contains two books:
+
+: http://www.emis.de/classics/index.html
+
+Hopefully, they will keep at it and produce more books.  Also, it would be nice
+for more people to get in on this business.  At the very least, anyone with a
+scanner could scan in hunderd-year-old math books.  Later on, as the technology
+develops and becomes available, one could run OCR programs to convert them into
+!TeX.  Also, in the meanwhile, a few people might want to type the equations in
+!TeX by hand.  In the case of works with not too many equations (and older math
+books tend to have a higher proportion of text to equations) this would not be
+too big a deal.  With a bit of a concerted effort, it would be possible to get
+all of mathematics before 1900 in electronic form.  Remember, there was a
+ *lot* less mathematics then so this is not too unreasonable a goal for the
+near future if enought people would consider it worth doing and put some time
+into making it happen.  Among other reasons for doing it, let's not forget that
+books were printed on acid paper which will fall to dust soon and it would be a
+shameful scandal to lose old mathematical works simply because nobody bothered
+to scan them in! --[[file:rspuzio.org][rspuzio]] 14 march 2005
+
+[[file:Copyright renewals for math books.org][Copyright renewals for math books]]
+
+----
+
+Project Gutenberg is asking for volunteers to help;
+I think the simplest non-monetary way to help is to zip over to
+
+Project Gutenberg Distributed Proofreaders
+http://pgdp.net/
+
+and proofread a couple of pages.
+
+Perhaps the proofreading system they set up might be useful for a mathematics encylopedia.
+
+: That is a really fascinating point.  We could set up such a system in a
+modular fashion.  It would have its own database of PM entries and if and how
+many times they had been checked, and what the proofreader said the status was
+(in violation or not).  We could feed new entries into the system via RSS, and
+perhaps do the same to get entries likely in violation as output.  --[[file:akrowne.org][akrowne]]
+Sat Mar 19 01:19:36 UTC 2005
+
+:: A system like this could work... though I personally think that a
+PM proofreader would be likely to be someone who would generate /a
+lot/ of useful data, not just "yes or no" data, but also suggestions,
+questions, and so on.  --[[file:jcorneli.org][jcorneli]] Sat Mar 19 05:34:33 2005 UTC
+
+#+BEGIN_VERSE As a good example, one might remember that Chebyshev proved his
+celebrated result on the distribution of prime numbers while editing
+Euler's collected works.  Even such an apparently dry and mundane task
+as editing and proofreading old math books can lead to new insights.
+--[[file:rspuzio.org][rspuzio]] 23 January 2006
+
+
+----
+[[file:Projects.org][Projects]]

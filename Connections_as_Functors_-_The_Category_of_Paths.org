@@ -1,0 +1,17 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Let /M/ be a topological space.  Let the term *parameterized curve in M* denote a continuous map from the interval /[0,1]/ to /M/.  We can define several operations on  parameterized curves.  
+
+The first operation is reversal.  If /g/ is a parameterized curve, then the reversal of /g/, denoted /g' / is defined as the map given by
+: g' (x) = g (1 - x).
+
+The second operation is composition.  If we are given two parameterized curves /g / and /h/ such that /g/(1) = h/(0)/, then we define /g * h/ as follows:
+: /g/ * /h/ (x) = /g/ (2x)    when    0 &le; x &le; 1/2
+: /g/ * /h/ (x) = /g/ (2x - 1)    when    1/2 &le; x &le; 1
+
+We may define a path to be an equivalence class of paths under [[file:Connections as Functors - note on reparameterization | reparameterization.org][Connections as Functors - note on reparameterization | reparameterization]].  It is easy to check that the two operations defined above are compatible with the equivalence relation so these operations are also well-defined on the set of paths.
+
+When one quotients to obtain paths, the operation of composition becomes associative, as can be checked by explicitly writing a reparameterizatrion which takes /a*(b*c)/ to /(a*b)*c/ for any possible choice of /a/, /b/, and /c/.  Because of this fact, we can form a category whose objects are points of the topological space and whose morphisms are paths.  
+
+Back to [[file:Connections as Functors.org][Connections as Functors]]

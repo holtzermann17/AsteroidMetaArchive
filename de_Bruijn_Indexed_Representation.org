@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+See these
+[http://www.cs.cornell.edu/Info/Projects/NuPrl/cs611/fall94notes/cn14/section3_4.html class notes]
+for an accessible introduction to de Bruijn indices, and
+[http://math.boisestate.edu/~holmes/babydocs/node26.html here] for a discussion of
+their relevance to substitution. If there is a need for more discussion of de
+Bruin indices, it should probably factored into its own Wiki page.
+
+The following recursive algorithm converts a closed term into its de Bruijn indexed representation.
+Begin with an empty environment map. If the term is a quantifier, then construct a new
+environment map incrementing each index by one, then adding (or replacing) the quantified
+variable with 0, and apply the algorithm recursively to the body. If the term is a variable, then
+look up the index in the environment map. Otherwise (if the term is an operator with
+zero or more arguments), then apply the algorithm recursively to each argument.
+
+Iff two terms are alpha-equivalent, their de Bruijn indexed representations are identical.
+
+Some (but not all) implementations of HOL use a de Bruijn indexed representation internally.
+
+A few discussions on this wiki, namely [[file:U2ProofVerificationEngine.org][U2ProofVerificationEngine]] and
+[[file:Principal instances of metatheorems.org][Principal instances of metatheorems]] reference de Bruijn indexed representations.

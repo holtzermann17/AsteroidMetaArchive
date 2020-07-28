@@ -1,0 +1,39 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+So far, the development of the PM platform has been funded in
+the form of small contracts for specific tasks, such as 
+moving the server or making a donation-handling system.  This
+was pretty much forced by econonmic necessity --- there was 
+only enough money in the budget to pay people a few hundered
+dollars at a time for jobs that took a few days to do.
+
+Now, however, as we hope that our budget will grow, we may be
+able to do better than that.  While it might still be too early
+to think in terms of hiring anyone on a permanent basis, let
+alone underwriting a research and development division, it could
+be possible to pay someone to work on a project for a month or
+two.  As I see it, this could have two advantages:
+
+1.  It might be easier to find someone who is willing to work
+on a project for a month, as opposed to working for a few days
+and then having to find something else to do.
+
+2.  At present, there are a lot of feature requests, but looking
+more closely, one sees that many of them can be organized under
+several broader headings.  Rather than treating each as a separate
+job and spending a lot of time worrying how they fit together and
+administering lots of little contracts, it would be easier to have
+a few larger contracts.
+
+As for possible projects, here are some suggestions:
+
+ * Scholium system
+
+ * Autolinking
+
+ * User interface
+
+ * Forum
+
+--[[file:rspuzio.org][rspuzio]]

@@ -1,0 +1,474 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page describes a paper by Robert Milson and Aaron Krowne, to appear in the Emory "Free Culture and the Digital Library" symposium, October, 2005. --[[file:akrowne.org][akrowne]] Tue Apr 12 17:12:17 UTC 2005
+
+----
+
+ *Title:* Adapting CBPP platforms for  instructional use
+
+ *Status:* paper has been submitted. Preprint is available on arxiv as [http://arxiv.org/abs/cs.DL/0507028 cs.DL/0507028] (as of July 11, 2005)
+
+ *Abstract:*
+                                                                                                    
+: Commons based peer-production (CBPP) is the de-centralized, net-based                                                         
+approach to the creation and dissemination of knowledge.  Underlying                                                          
+every CBPP system is a virtual community brought together using                                                               
+internet tool (such as a web-site) and structured by a specific                                                               
+collaboration protocol.  In this talk we will argue that the value of                                                         
+such platforms can be leveraged by adapting them for pedagogical                                                              
+purposes.                                                                                                                     
+                                                                                                                             
+: We will report on one such recent adaptation. The noosphere system is                                                         
+a web-based collaboration environment that underlies the popular                                                              
+Planetmath website, a collaborative, open-source encyclopedia of                                                              
+mathematics.  Recently, the system was used to host a graduate-level                                                          
+mathematics course at Dalhousie University, in Halifax, Canada.  The                                                          
+course consisted of regular lectures and assignment problems.  The                                                            
+students in the course collaborated on a set of course notes,                                                                 
+encapsulating the lecture content and giving solutions of assigned                                                            
+problems.  The successful outcome of this experiment demonstrated that                                                        
+a dedicated noosphere system is ideally suited for classroom                                                                  
+applications.  This "proof of concept" experience also strongly                                                               
+indicates that every successful CBPP collaboration protocol and                                                               
+delivery platform possesses latent pedagogical value.
+
+
+* Discussion= 
+
+Very exciting!  I'd suggest "collaboratively written encyclopedia of mathematics
+licensed under the GNU FDL" instead of "collaborative, open source encyclopedia of
+mathematics".
+
+(Lectures could also be /given/ using a CBPP system, with lecture attendees
+adding scholia OTF... or if the lecturer didn't want to type up the lectures
+in advance, some listeners could take notes in class, and have them added to
+the system for others to mark up with scholia IRT.  Would only work with a
+group of people who was very willing to use computers... but for such a group,
+man, it would be pretty cool.)
+--[[file:jcorneli.org][jcorneli]] Tue Apr 12 21:30:40 2005 UTC
+
+I agree, that kind of system would be cool, though I'm not sure how much rmilson
+will want to get into hypothetical systems in his paper =) Its funny though, I
+find that I pretty much learn in a "scholium" mode already, even outside of
+collaborative systems.  My notes are less about copying than about adding
+commentary to what is lectured -- the commentary positions the material for my
+understanding, and makes it more memorable and useful to me.  And as I've said
+before, I mark up books like the dickens.  It seems that most people, students
+especially, don't realize the power of this approach towards learning.  I
+imagine that encouraging and facilitating this behavior more widely through
+scholium-based systems would help learning in general
+tremendously. --[[file:akrowne.org][akrowne]] Wed Apr 13 13:33:41 UTC 2005
+
+I think it would really take a team of at least 2 people to take "good" lecture
+notes on a math lecture.  1 to do most of the typing of what the person /said/
+and 1 to do most of the typing of what the person /wrote on the board/ and to
+make the two streams flow together.  People with your tastes could add
+notes/scholia or ask questions out loud; and at the end of the lecture, the
+group would have something that went beyond anything the lecturer might have
+come up with alone, and it would be "transparent" to boot.  Many's the time I
+wished I had more friends who were good typists (and who cared to try learning
+experiments like this) when I was sitting in math lectures, furiously trying to
+write everything down (as my own experiment & as a way to amuse myself).
+
+On that note, it is my sense that people writing things down are likely to be
+the sort who can't learn well from lectures and who need notes, but especially
+/discussion/ in order to make sense of the new material.  Such people may be
+somewhat rare in mathematics, since it is more of a "liberal arts" learning
+style.  Personally, I find lectures to be almost /impossible/ to learn from --
+but a "live" scholium system could make each lecture into a chance for
+/conversation/!  Conversations are one of the ways in which I think I learn
+best - they are a subset of my more general highly "hands on" learning
+style...  which, I think is partly native and partly cultivated.
+
+(BTW, I'm glad to hear that you mark up books!)
+--[[file:jcorneli.org][jcorneli]] Wed Apr 13 23:16:48 2005 UTC
+
+Of course, this is a place where voice recognition could come in handy -- with OCR for the written text and voice recognition for the spoken word, we can replace at least one of the two people with a machine.  As for the other guy, one thing I used to do When I was in Mississippi was to take photographs of the 
+blacboard --- mostly it was after working with a collaborator on some research project and filling the board full of equations, but is could be done with lessons as well.  Also, at the same time, I used to videotape colloquium speakers and posted the lectures on the web. --[[file:rspuzio.org][rspuzio]] 14 April 2005
+
+
+All this stuff sounds good... but it seems to require people
+to step out of their "business at usual" mode of thinking, and
+to be somewhat "radical" (in the sense of the
+[[file:NSF Advanced Learning Technologies Grant Planning Page|NSF ALT.org][NSF Advanced Learning Technologies Grant Planning Page|NSF ALT]],
+whatever sense that is).  Most people I've known in Higher Ed.
+didn't want to be radical, more's the pity, eh?
+
+I certainly considered taking pictures of the blackboard, but
+never had a camera at my disposal, and besides, I was interested
+in practicing typing.  The whole "lecture scene" makes me a bit
+depressed.  I guess it is really thinking about how "unradical"
+the school experiences I had were.  On the contrary, it is so
+run-of-the-mill!
+
+I commend the effort at doing something different and new that
+the paper we're (abstractly) discussing talks about.  In general,
+experimentation seems like a good thing - even if it isn't a very
+"out there" experiment.  Maybe the simple ones are the best.
+But sadly, the experimental viewpoint seems to be missing from
+much of higher ed.!  If I'm right about that, it is really too bad.
+--[[file:jcorneli.org][jcorneli]] Thu Apr 14 05:21:18 2005 UTC
+
+**  About the paper
+In the paper you say 
+
+: We suggest that it is reasonable to tap such free culture phenomena for
+purposes of academic instruction.  Indeed, nothing could be more natural,
+because of the inherent compatability between academic and free-culture goals
+and values.  (The open access movement illustrates this nicely, Suber "The
+Primacy of Authors in Achieving Open Access", Nature, June 10, 2004.)
+
+I think some of my goals and values are somewhat contrary to academic goals and
+values.  I've also tended to identify some of these goals and values with the
+goals of the free software and free math movements.  (To simplistically sum up
+my career in grad school: I incurred lots of bad grades because I spent my time
+working on HDM stuff.)
+
+Lately, since hashing over some of the issues on this page, I also think that my
+goals are coherent with my understanding of the term "free culture".  But in
+this case, I tend to think that there is a concrete difference with academic
+culture, that lay at the root of my problems with grad school.  Mainstream
+academic culture (like one encounters at a place like the University of Texas)
+is quite conservative, built with certain not-so-hackable structures firmly in
+mind (e.g., prelims, curricula, standards for publishability, standards for
+promotion).  I /thought/ prelims were "hackable" in some sense of the word,
+that's what my apmxi adventure was about.  But in fact, I think academic
+communities like the one found at UT work best for people who want to engage
+with them "in the normal way."
+
+In the context in which the quote above is found, you talk about a "do as we do"
+aspect of academic culture.  There is already a sliver of contradiction here,
+since as you say the ultimate goal is to transform the student into "an
+individual engaged in independent knowledge activities".  Creation, teaching,
+learning, and so on.  But only "independent" insofar as the individual's
+activities fit within the norms of academic culture.  Doing a lot of drugs to
+attempt self-discovery wouldn't cut it, for example, hence "turn on, tune in,
+/drop out/."  And the interactions I had with the school beaurocracy over the
+somewhat more "academic seeming" HDM are almost comical, in retrospect.  Timothy
+Leary might have had better luck, by the standards of the academic community,
+at least for a while.  
+
+But, anyway, to make a long story short, I think the academic community shares
+some goals (and methods) of free culture proponents.  But it itself is pretty
+conservative.
+
+Another issue with the quote above is that you take the "open access movement"
+as an illustration of inherent compatability between free culture and academic
+culture, but fail to point out (a) that there is a counter-movement against open
+access; (b) that open access is hardly representative of free culture as a
+whole.  In particular, open access articles need not be FAIF.  
+
+(You can find some strongly pro open access thinking at
+http://en.wikipedia.org/wiki/Open_access but see the article(s) by Ewing in
+Ray's bibliography for some words against.)
+
+So just to conclude, this quote seems to require some more reflection.  If we're
+thinking about what free math is, we might also do some further thinking about
+what free culture is.  My sense is that it can mean different things in
+different contexts, so your quoted statement above may be true WRT a certain way
+of thinking about free culture, but not necessarily WRT the whole shebang.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jul 09 22:55:13 2005 UTC
+
+----
+
+I think the statement in the paper wasn't completely honest... it isn't about 
+a match-up between free culture goals and academic goals (and values), but
+between free culture goals and what academic goals /should be/.   But, to 
+borrow a term [http://www.lessig.org/blog/archives/002936.shtml from Lessig], I think you want to "ambiguate" in this case.  That
+is, you want to re-introduce this kind of ambiguity as to what the goals and
+values of academia are, because that is the first step to getting people to 
+accept that they /should be/ something different than what they have become.
+In a way, this is like the ambiguity that RMS injected into the meaning of the
+term "free".  I happen to disagree with the precise meaning he is attempting 
+to overload into the word, but it certainly was an ingenious rhetorical move to
+do so.  He is doing with ambiguation what would be impossible with overt
+argument, and I think we have a similar challenge in getting tertiary education
+to become what it should be.  --[[file:akrowne.org][akrowne]] Sun Jul 10 00:00:46 UTC 2005
+----
+The post at the other end of the link was initially interesting (though I wish
+they had gotten a bit deeper into the actual definition of the term as created
+by Lessig). But I think I got the point. Then I got lost in the sea of comments
+at the bottom of the page... sigh. I guess the issue as I see it is that some
+things are ambiguous (e.g. I think the meaning of "free culture" is fairly
+ambiguous WRT the denizens of this wiki; "free software" is not, WRT the same
+group, however WRT the population at large it probably is), some things can be
+made to appear ambiguous (e.g. sexual orientation, political affiliation,
+commitment to work on a given task, etc.), and some things are flat-out
+unambiguous - and there are probably some other categories of things too.
+
+Incidentally, the scholiumific nature of signs of group membership is
+interesting. Change the sign, you change the identity of the person using the
+sign; change the sign a lot and you may end up changing the meaning of the sign.
+
+Anyway, as I understood the posting (the original reference was down), this
+rhetorical technique is conciously used for political purposes. But instead of
+having a clear political edge, the ambiguation you're talking about in the
+quoted paragraph just seems to make a muddle of a variety of things. That may
+just be "to my perception", specifically, because I'm not sure what "free
+culture goals" are. Just beware of overuse of terms that aren't specific. If the
+beginning of the paper clearly stated what is meant by "free culture" then maybe
+I wouldn't complain - but in fact as far as I can see this is the first mention
+of the term in the paper, so its meaning is largely inherited from its immediate
+context. Which in this case appears to be dominated by the "open access
+movement" and maybe CBPP. But this compounds ambiguity on ambiguity.
+
+My suggestion for how to make the point that you're talking about (uniting free
+culture goals and academic goals) is to be highly nonambiguous. What are the
+goals of each? Well, you've laid out a set of goals for academia. But how about
+for free culture?
+
+Admittedly, you could hope to rely on the broader context of the other papers
+and people's outside readings and so forth, but that seems a tad risky.
+
+I suppose my biggest red flag goes off in response to the "open access" stuff,
+and this is not a fault of your paper. Specifically, I worry that "open access"
+is what people usually think when they think "free culture". In working on the
+scholium stuff, I've tried to attach what I think is a considerably stronger
+meaning to this phrase. I also think that some people out there in the wide
+world (e.g. the CC people) recognize something similar to this stronger sense of
+the word (in particular they recognize something stronger than just "open
+access", which, by the way, is a somewhat underhanded use of that phrase since
+its traditional meaning would probably equate most closely to "public
+domain"!). But I think people too often get lost in the forest of hackable
+culture for the trees of hackable constructs. (Besides "open access" stuff need
+not be hackable at all.)
+
+So, just to make myself clear :) - I actually think the more risky ambiguation
+is in the meaning of "free culture". The rhetorical approach you're talking
+about might not be the best one to use here, but, IMO, especially not in the
+context of multiple compounded ambiguities.
+
+--[[file:jcorneli.org][jcorneli]]
+----
+No dishonesty was intended in the paper.   Of course it is impossible to pretend that there is _one_ academic voice, or a particularly coherent set of "academic" values.  I would also guess that there is no canonical definition of "free culture", either.  The basic point can be defended, however: free culture, as opposed to "permission culture", is based on the notion that knowledge and culture are to be held as a commons-based resource.  One can make use of, modify and extend without asking permission, or paying a royalty.  This is very compatible with the  goal-set of the academic scholar.  Academic researchers want the widest possible dissemination for their work and ideas.  The assignment of copyright to publishers, especially commercial entities, is viewed by many in a very problematic light.  
+
+The open access movement is how these ideals manifest in an academic setting.  The opensource and free software movements are how these ideals manifest in the world of software.  Free culture is a manifestation of these ideals in a broader cultural setting, especially as it pertains to copyright extensions issues.  Again, the phrase in question was not intended as some kind of rhetorical device.  The bottom line is that peer production and cultural assets held in common are basic academic values.  Of course, the way such values manifest, the institutions and the  traditions of scholarship, differ significantly from other free culture traditions.    Wikipedia, for example, is regarded with great doubt by many in the academic community (Those that have heard of it that is.  Most haven't, and wouldn't care or notice if they did).  
+
+As for "free math", this I think is a rather weak idea.  Math is already free, utterly, frighteningly free.  Sure, there are some journals that have predatory pricing and restrictive copyrights.  However, if one wanted access to a particular article, one could have it.  More to the point, the centre of gravity for mathematics isn't in the journals, it's in the books and these fill the shelves of the public and the university libraries.   However, reading and understanding those books isn't exactly easy.  In particular, it helps having someone to talk to.  If one likes mathematics and wants to grow mathematically, it helps greatly to have access to a community.  This means one of two things: either a mathematics institute like the IMA in Joe's Minneapolis, or a math department.
+
+So the real barrier for mathematics isn't royalties and copyright, its a low level of mathematical sophistication in the general public, and strong negative attitudes towards mathematics held by the general public.  A growing number of academic mathematicians expend considerable efforts in what is named "outreach activities": highschool math leagues, teacher seminars, mathdays, math camp, things like that.  To put it bluntly, outreach mathematicians are trying their hardest to "give math away"!  
+
+I think the term "accessible math" or maybe "community math" makes better sense for me.  When people type stuff into Wikipedia and Planetmath they are not making mathematics "free", they are making it more "accessible", and building a community in the bargain.   The real pity is that the people on
+the cutting edge in mathematics have little time for such efforts.  "Outreach mathematics" is not particularly well respected.  Very few appointments are made on the basis of outreach efforts.  Research is and has always been the dominant priority in mathematics.
+
+So if you like, think of the paper and the noosphere trial as a bridge-building effort.  My own specialty isn't outreach.  I regularly do outreach-type stuff and believe such efforts to be worthwhile, but it is not my bread and butter.  However, CBPP and internet value phenomena I find  quite fascinating, because therein I perceive genuine opportunities to do some things a little bit better.  Not a revolution, mind you, but some real progress in making math more accessible.  The trial with Math 5190 was an interesting experience.  I hope to be able to do it again.  Once the paper appears, perhaps it will convince other math instructors to attempt similar initiatives.  The paper was also kind of fun because it gave me a chance to broaden my horizons a bit.  Thanks to the paper I had a chance for a quick peek inside the world of CSLC, pedagogy, digital libraries, and the copyright debate.  It was fun, but I have to admit that it was an anomolous experience.  Still, perhaps something good will come of it.
+
+-- [[file:rmilson.org][rmilson]] Sat Jul  9 23:54:31 ADT 2005
+
+----
+
+I'll be curious to see what Ray makes of your statements about "free math" and
+the copyright issue.  Since we're in the midst of a (quiet) debate about what
+"free math" actually means, your view is coming in at a good time!  
+
+My (ongoing) experience trying to learn advanced math essentially "outside of
+academia" (although I was in school for part of this time) certainly seems to
+confirm your statements about it being helpful to have people to talk to.  But
+that's probably true for any subject (if you buy into the classical notions of
+discursive education, etc.).   Of course, at this point I'm not really
+focusing on math per se, but rather on a round-about path to help make it easier
+to learn math.  Copyright /is/ an issue for this endeavor.  And I think
+that copyright and royalties are an issue even for day-to-day students (e.g. when books are
+checked out of the library, they may have to be bought, and they are expensive!).
+
+Anyway, I do agree that /ideas/ (which are one of the main forms of currency for academia)
+are, for the most part, tied into a widely recognized sort of "free culture".
+
+In particular, the statement that "knowledge and culture are to be held as a
+commons-based resource" in "free culture" I completely agree with.
+
+The statement that "One can make use of, modify and extend without
+asking permission, or paying a royalty" /as applies to knowledge/ (or
+"information resources") makes sense.
+
+However, it doesn't make as much sense when applied to "culture", which is why I
+think the term "free culture" needs a somewhat more far-reaching interpretation.
+
+And going along with this, I think that it is too much of a reduction to say
+that "The open access movement is how [the ideals of free culture] manifest in
+an academic setting."  It may be the main way, but I think there may be other
+important ways.  These things may have to do with some of the more revolutionary
+possibilities on the horizon.
+
+--[[file:jcorneli.org][jcorneli]] Sun Jul 10 03:42:56 2005 UTC (tired!)
+
+----
+
+I don't see how shifting the centre of gravity from 
+journals to books is relevant as far as copyright goes.
+The copyright policies for books are every bit as restrictive as they are for journals.
+
+As I see it, freedom and accessibilty go hand in hand.  As you point out, mathematical knowledge is free --- one can't (yet, hopefully never) use copyright or patent protection to claim a theorem as one's own and charge for the right to use the theorem.  However, for this freedom to be meaningful, one needs to have access to the idea.  Since this is only possible by expressing the idea in a tangible form, one needs free access to a tangible expression of the idea in order to meaningfully exercise this freedom.  As I see it, the best way of ensuringe access to these ideas is by making them available in the form of articles and books which are released under free license terms.
+
+Perhaps there is a bit of verbal misunderstanding.  When we talk about, "free math", we are using the word "free" in the second sense, not the first --- we are referring primarily to the freedom to disseminate and reuse mathematical texts rather than the freedom to disseminate and use the mathematical ideas themselves.  If this usage is confusing, perhaps one could use a term like "freely accessible mathematics" instead of "free mathematics" to preclude confusion.  While the choice of terminology may have been weak, I think that the idea it was meant to convey is rather strong.
+
+As you say, if one wants to obtain a particular journal article, one could do so.  However, it would definitely have its costs in time, money, and effort.  If one is not near a library which has a copy of the journal, one would need to make an interlibrary loan, which can take a week or more to do.  Furthermore, if one wanted to have one's own personal copy of the article, one would need to pay the cost of copying and royalties.
+
+Before personal computers and the internet, this may have been the best one could do, but nowadays we have the technology which makes it possible to accomplish the same end much more easily.  Instead of paper libraries and interlibrary loan, we have digital libraries and the internet.  To obtain your paper using these technologies only costs a tiny fraction of what it would have cost to transmit it the old fashioned way.  However, if one tries to do this, one finds that it is typically not possible to obtain the article online and, when one does find it online, usually one needs to pay at least as much for the online version as for the paper version.  The only reason for this is that copyright law has been used to keep the price artificially high.
+
+As you mention, the open access movement seeks to remedy this situation.  I agree with them, but at the same time I do not think they are going far enough.  Typically, open access means that one only has the right to read a work online and no other rights to the work.  This is certainly adequate if all one wants to accomplish is the virtual equivalent of what can be done in a paper library.  In fact, it is an improvement insofar as one does not have to go to the library, let alone wait for an interlibrary loan to come in.  However, if one wants to go further and make full use of the possibilities which the new technology affords, such as adding hypertext annotations to a document or rearranging bits and pieces of different documents or adding automatic linking, or enter formulas from a paper into a symbolic algebra program or file them away in a database, then the rights typically granted in an open access license will not suffice.  This is why I think it is important to demand freer license terms which
+grant readers such rights as the right to create derivative works and to redistribute.
+
+A strong argument for freely accessible math is that it pretty much represents the de facto practise of mathematicians.  Most mathematicians use preprint servers to download copies of papers which are already in print and photocopy copies of journal articles and books for their own use (and even circulte these among colleagues).  To be sure, they may not yet use the technology to perform some of the operations I discussed in the last paragraph, but I find it hard to imagine that they will not once they learn how and the software necessary has been popularized so that a random user would find it easy to use.  (Of course, here too there is a legal glitch in the form of MGM vs. Grokster which my actually prevent programmers from writing these programs for fear of liability.)
+At present, these practises are illegal (at least in the United States; I am not familiar with the situion in Canada).  It is largely because the publishing industry looks the other way (but not always --- see American Geophysical Union vs. Texaco) that they are allowed to go on.  I am very uncomfortable with such a situation --- the potential for abuse is too great.
+
+I would say that both copyright issues and the public's low level of mathematical sophistication are real issues.  Perhaps one can quibble about the relative importance of these two issues, but I find such debates irelevant.  Rather, I think both issues need to be adressed.  As it happens, at the current time, I am primarily interested in the former issue and you in the latter.  I think we both need to keep up our efforts and encourage each others.  Likewise, I think that, in promoting Planet Math and discussing the progress of mathematics we need to keep both issues in mind if we are to paint an accurate picture and make real progress.  We need accessibility both in the legal sense and in the sense of understandable exposition and pedagogy.
+--[[file:rspuzio.org][rspuzio]] 9 July 2005
+
+----
+
+Leaving aside questions of terminology, the topic addressed by Ray's emory contribution is of great importance.  This debate is of great interest to mathematicians and academics.  Greg Kuperberg, for example, is a high-profile advocate of using the internet to increase accessibility of mathematics.   
+
+Over the last few years, I've been following this discussion in the pages of the Notices of the AMS, which is freely available, but requires registration:  http://www.ams.org/notices/
+I've rifled through the tables of contents and list articles on this topic below.
+
+; [http://www.ams.org/notices/200410/comm-biss.pdf The Elephant in the Internet, 
+Daniel K. Biss, Notices AMS, November 2004]  : a quality-based arguement against accessibility and open content.     Strong echoes of the the criticisms leveled against wikipedia.
+
+; [http://www.ams.org/notices/200308/comm-jackson.pdf The Digital Mathematics Library,
+Allyn Jackson, Notices AMS, August 2003]  : "The grand vision of the DML is to have all of the
+mathematical literature online and available
+through a central source to anyone who has a computer
+and an Internet connection."  An institutionalized expression of /the dream/
+
+; [http://www.ams.org/notices/200306/comm-peerreview.pdf Three Views of Peer Review
+Steven G. Krantz, Greg Kuperberg, Alf van der Poorten, Notices AMS, June/July 2003] :  a key issue in the open access debate is /quality/ and peer review.  These points are usually made in defense of proprietary models.  I include this, because of the interesting proposal by Greg Kuperberg of how to implement peer review in an open access setting.
+
+; [http://www.ams.org/notices/200201/fea-preprints.pdf From Preprints to E-prints: The Rise of Electronic Preprint Servers in Mathematics
+Allyn Jackson, Notices AMS, January 2002] : Allyn Jackson is another high-profile supporter of open access in the maths community.  The article is a useful survey and overview on the topic of preprints and open access servers.
+
+; [http://www.ams.org/notices/200009/fea-eljnl.pdf The Slow Revolution of the Free Electronic Journal, Allyn Jackson, Notices AMS, September 2000] : "Free electronic mathematics journals, which are run independently by mathematicians and are available for free on the Web, provide some important advantages over traditional print journals. This article examines how a number of such journals are run and discusses why there are not more such journals."
+
+; [http://www.ams.org/notices/199810/beschler.pdf  Pricing of Scientific Publications: A Commercial Publisher's Point of View, 
+Edwin F. Beschler, Notices AMS, November 1998] : The view from the commercial side.  Central argument: commercial publishers add value and doing scientific publication w/o them would degrade scholarly communication.  An attempted rebuttal to the article below.
+
+; [http://www.ams.org/notices/199804/branin.pdf Reforming Scholarly Publishing in the Sciences: A Librarian Perspective,
+Joseph J. Branin and Mary Case, Notices AMS, April 1998] : report on the academic journal pricing crisis.  
+
+: "As a result of the high cost and continuing double-
+digit annual price increases for scientific journals,
+research librarians have had to shift everlarger
+portions of their acquisitions budgets into
+science journal subscriptions, even as they cancel
+journal titles and buy fewer books. With growing
+frustration and boldness, librarians are blaming the
+scientific community, particularly the commercial
+publishers of scientific journals, for this unfortunate
+situation. ...
+
+: *The Barschall Study*
+In 1986 and again in 1988 Henry Barschall, now
+deceased but at the time a physics professor at the University of Wisconsin and an editor of Physical
+Review, published a series of studies on the cost
+and cost effectiveness of scholarly journals in several
+scientific disciplines ...  
+
+: *Blame the Commercial Publishers of Science
+Journals*
+Barschall's findings confirmed the experience of
+many research librarians: commercial publishers
+in the scientific disciplines were at the core of
+their economic woes. One commercial publisher,
+Gordon and Breach, who came out at the bottom
+of Barschall's survey of cost effectiveness, disagreed
+and sued Barschall, the American Physical
+Society (APS), and the American Institute of Physics
+(AIP) in West Germany, Switzerland, France, and the
+United States over the publication of the journal
+cost surveys"
+
+
+By relative measures the AMS is  a very progressive entity on the subject of copyrights and accessibility.   Here are a couple of representative editorials by two presidents of the AMS.
+
+; [http://www.ams.org/notices/199901/editorial.pdf Copyright Policies, Anthony W. Knapp, Notices AMS, January 2000] : The AMS position on copyrights
+
+; [[file:Archimedes and the Internet|Archimedes and the Internet, Harold P. Boas, Notices of the AMS, September 2001.org][Archimedes and the Internet|Archimedes and the Internet, Harold P. Boas, Notices of the AMS, September 2001]] (local link) : "I prefer to think of scientific knowledge as a shared public
+resource rather than as a commodity to be sold to the
+highest bidder." Another vocalization of the dream.  The above link
+is a fair use, local mirror.  Link to original (free, but registration required) is   http://www.ams.org/notices/200108/commentary.pdf
+
+
+--[[file:rmilson.org][rmilson]] Sun Jul 10 10:07:26 ADT 2005
+
+What immediately strikes me about these references and the one that ratboy
+posted to Planet Math this morning is that a good number of rank-and-file
+mathematicians, not just those who are directly involved in projects such as
+Planet Math and ArXiv, are speaking out for free access to mathematics.  To me
+this sounds like the basis for a very strong argument --- if you want to know
+what sort of copyright law promotes the progress of science, see what the
+scientist are saying.  It is unfortunate that copyright policy seems to be
+determined primarily by the entertainment industry with little consideration for
+the scientific community.
+
+The more I think of it, the more I am convinced that access in the legal sense
+goes hand-in-hand with access in the sense of understandibility by a wider
+audience.  Let me illustrate with some examples of how, using current technology
+one could easily make mathematical literature accessible to a wider audience.
+Oftentimes, I have had the experience that the greatest barrier to understanding
+an article or a treatise in an unfamiliar branch of mathematics has been
+unfamilirarity with terminology and with definitions and results which the
+author of the paper assumes known --- for instance, while the terms "Killing
+tensor", "geodesic deviation" and "Bianchi identity" are rather familiar to us,
+it might not be familiar to a number theorist.  If the paper is available in
+text form (as opposed to a graphic format) one could run the paper through the
+Noosphere automatic linker to produce a version in which these terms are version
+in which terms like "Bianchi identity" are linked to the appropriate entry in
+the Planet Math encyclopedia.  To be sure, simply looking up a few terms is no
+substitute for studying differential geometry, but it will make the article
+accessible to people whose acquiantance with differential geometry is marginal.
+Likewise, one could have a computer automatically look up references and add
+hyperlinks so that the reader can click on a button and pull up rerences in
+another browser window and look up notions there without being distracted from
+reading the original paper.
+
+Even more possibilities open up if we are willing to put in a little work.  For
+instance, using Joe's scholium system, mathematicians could add notes on
+difficult parts of the text or flesh out sketchy proofs.  This even might be a
+way to involve more research mathematicians --- while they may not have the time
+or the inclination for outreach and writing expository texts, they might be
+willing to take a little time to add such comments to the literature.
+--[[file:rspuzio.org][rspuzio]] 10 July 2005
+
+Nice post, and I absolutely agree, Ray!  When you say
+
+: /If the paper is available in text form (as opposed to a graphic format) one
+could run the paper through the Noosphere automatic linker to produce a version
+in which these terms are version in which terms like "Bianchi identity" are
+linked to the appropriate entry in the Planet Math encyclopedia./
+
+I think: people should be doing this!  That's why I think that we should have a
+robust integrated "papers" /authorship/ section on PM.  
+
+Without much work, instead of just having a /paper/, users would have access
+to a /book/ on the same subject as the paper.  It would take a bit of work to
+integrate all the entries and make the exposition "flow nicely", but the basic
+outline would be there completely automatically.  We could even offer these
+"reports" for sale via print-on-demand and provide a useful service to readers
+at the same time as generating some revenue for the site.  
+
+The HDM is very much about the same idea, but it is supposed to gather texts
+together on a "semantic" basis, not just on a "lexical" basis.  I'm reasonably
+sure that we'll get to this sort of thing fairly shortly with semantic metadata.
+
+I also wanted to mention that you've nicely connected the "free math" topic to
+Rob & Aaron's "instructional cbpp" topic.   The idea of making "documents" into
+"communities" and not just collections of facts relates very much to the pedagogy
+idea too.
+
+By the way, I agree with what you said on the
+page about [[file:coordinating free culture and digital library papers.org][coordinating free culture and digital library papers]]; and it makes
+some sense that more of the overt "coordination" would come after the papers had been
+written than before.  But of course our ongoing discussions have helped with
+the writing. --[[file:jcorneli.org][jcorneli]]
+
+
+
+----
+
+Aaron and I were working on a response to the "Elephant" paper 
+shortly after it came out.  We never really finished or tried to
+publish it, so this is the public debut: [[file:response to elephant.org][response to elephant]].
+
+--[[file:jcorneli.org][jcorneli]] Sun Jul 10 18:16:38 2005 UTC

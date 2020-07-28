@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Given two strings P and Q, we shall say that *Q follows from P in the grammar G* if there exist strings R, S, T, a non-terminal token N and a production /N -> S/ of the grammar G such that
+
+  P = R N T  
+
+and
+
+ Q = R S T
+
+Note that juxtaposition denotes concatenation.  We shall denote this by the notation /P -> Q (G)/.  If the choice of grammar is obvious from the context, we shall drop it from the notation and simply write /P -> Q/.
+
+An important generalization of the notion just discussed is that of a derivation.  We shall say that a sequence of strings is a *derivation in the grammar G* if each string in the sequence follows from the previous string in the grammar G.  Given two strings /P/ and /Q/, we shall say that /Q is derived from P in the grammar G/ if there exists a derivation /D/ in the grammar /G/ such that the first element of /D/ is /P/ and the last element is /Q/.  We shall denote this by the notation /P => Q (G)/.  If the choice of grammar is obvious from the context, we shall drop it from the notation and simply write /P => Q/.
+
+Back to [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]

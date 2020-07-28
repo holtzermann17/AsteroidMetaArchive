@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+month:+0
+
+----
+Unlike the [[file:Schedule.org][Schedule]], which is supposed to document upcoming events
+(at least, mainly), and the [[file:Bulletins.org][Bulletins]], which are supposed to be a
+log of important doings on the wiki, this calendar can be used for
+any purpose whatsoever.  I'm thinking about using it as a log to document
+my (actual) [[file:Activities.org][Activities]].  This page will always display the calendar
+for the current month.  If you need to look further into the future,
+use the [[file:Yearly Calendar.org][Yearly Calendar]].  For past events, best
+just to use the [http://planetx.cc.vt.edu/AsteroidMeta?action=index Index]
+or write some other calendar-access page using the other features of
+the oddmuse [http://www.oddmuse.org/cgi-bin/oddmuse/Calendar_Extension Calendar Extension].

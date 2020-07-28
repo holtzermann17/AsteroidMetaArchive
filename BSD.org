@@ -1,0 +1,103 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Is the Spirit of the BSD license the way to go?
+
+I say: what's not to like!  You get attributed, and you don't prevent
+any potentially-socially-useful modes of re-use!  At the very least, I
+think this model should appeal to academics.  --[[file:akrowne.org][akrowne]] Mon Jan 23
+19:25:24 UTC 2006
+
+I think BSD is near perfect for projects that intend to always have a
+presence.  Here would be a great place to list all the succesful
+projects that are under the BSD license --[[file:bloftin.org][bloftin]]
+
+I think credit can be cumbersome.  Ray at one point said something
+about creating written math works that are "as free as the content".
+But if I use a theorem or definition, I don't always have to cite the
+source.  Sometimes it would be very hard to come up with a relevant
+source to cite!  For example, derivatives, do I cite Newton or Leibniz
+or someone else?  And think of all the wasted ink, writing little "due
+to so-and-so" footnotes on every symbol and equation that had appeared
+in some previous writing.  No, that wouldn't do at all.  The practice
+of mathematics is supposed to be free like air.  I'd like it if we
+could make content that came with no strings attached. 
+
+As I've mentioned over on the [[file:Public Domain.org][Public Domain]] page (and elsewhere)
+there are ways to get a limited form of attribution and still do PD.
+(Again, [[file:Project Gutenberg.org][Project Gutenberg]] works as an example.)
+
+Now, recent conversation with [[file:djao.org][djao]] suggests that some people are
+opposed to PD on principle, namely, on the principle that they demand
+to get credit through a license like BSD.  I don't know whether the
+existence of this view can be used as a criterion for support of BSD;
+minimally, it would be worthwhile to see how many people prefer BSD vs
+the amped-up treatment of Public Domain I was talking about just
+above.  If it turned out that many people prefer one over the other,
+then I suppose for purely pragmatic reasons we might follow that
+popular choice.  But I would like to see the reasons for the
+preference spelled out (and djao did not want to spell them out for me).
+
+--[[file:jcorneli.org][jcorneli]]
+
+I'm starting to think that science takes care of its own when it comes to credit.  In fact they are forced to by our limited brain compacity.  We have to refer to things when we communicate like Newton's Law or Sierpinski Triangle.  So if you write something worthwhile, you will get your credit and the community should shun the vain contributors who demand credit for every little thing.  At least I think this would be the case for works of jargon, since the community who understands the stuff is relatively small. --[[file:bloftin.org][bloftin]]
+
+I think it would help to "relax" attribution-based licensing for
+massively-distributed projects like ours.  Instead of saying the specific
+former copyright notice must be preserved, say simply that attribution must
+be easy to find (so it can be in a common zone or localized with sub-modules
+of the content). --[[file:akrowne.org][akrowne]] Tue Jan 24 05:16:07 UTC 2006
+
+I think even this could be impractical in some cases; see discussion
+in mailing list. --[[file:jcorneli.org][jcorneli]]
+
+----
+
+* Comments from the Internet
+
+"by elleron - Jul 2nd 2000 02:25:31
+
+I, for one, am firmly on the other side of the coin from the FSF. That's not to say I agree with the QPL, or belittle the FSF. I do, however, feel that the BSD and MIT style licenses are far superior to the GPL. Compilcated licenses are counter-productive, and uneccesary.
+
+Look at the largest Berkley and MIT endevors, BSD and X11. Both have spawned succesful properitary products, without putting a dent in the juggernaut that the respective projects are. This is a compelling argument that none of these restrictive terms are neccesary.
+
+As to being counter-productive, the viral nature of the GPL makes it incompatible with just about every other license in existence. Amid cries of "GPL Eerywhere" people who actually publish compilations of code struggle to find out where they are legally.
+
+The FSF has started to remind me of the SPA the way they agressively rattle the sabre about license issues. To follow the static linkage argument as far as we can push it, every commerical program sold for Linux is violating the GPL. (The kernel headers are GPL). In fact, any binary built with gcc that doesn't use a GNU license is in violation of the GPL, since gcc links in gpl'd object files.
+
+I think everyone would agree, both of these examples are contrived, and not what and of the authors intended. What did the Troll Tech people intend? Simple, that they would be the only source for Qt and that it would only be free for non-commercial use. I personally feel they've gone above and beyond in taking steps to insure it will revert to the BSD license if anything happens to the company."
+
+http://freshmeat.net/articles/view/170/
+
+
+More interesting comments:
+
+
+
+"    spyretto wrote:
+
+    What if someone takes my BSD-licenced code and makes closed-source software?
+
+That's allowed. All source code retains comments unless expressly told not to - so looking at a compiled app with a hexeditor or a program andre once told me about (but I can't remember the name of it) that will strip out all the comments and display them on screen - will show you the developer credit that it deserves. You'll see that the FTP client in Windows is (or used to be) the BSD one - so hexdumping that you'll see the credit in there for Berkley Software Design wink
+
+    How can I take credit ?
+
+Use the BSD licence and add your name and year wink  OpenBSD has a sample licence file that tells you what to fill in and where
+
+    How do I benefit ?
+
+Well, if it's good code that people want to use - you and the code be forever immortalised in different apps - cool or what!?
+
+    How the rest of the people benefit ?
+
+Well, they get to utilise your hard work and experience of application written code and utilise it to learn from or to help them develop their own apps, much like tutorials and books, but you keep the credit for your hard works - which I personally think is cool. Where would *I* be without "daisy" and the *BSD source trees to look at code and ideas of ways to do things?
+
+    How this software remains free ?
+
+It doesn't - only your code is to remain free in the original format you wrote it - the BSD licence then says that people can do whatever they want with it as long as you have your name mentioned.
+
+    What's the difference from beeing exploited ?
+
+Don't understand that question.  sad"
+
+http://forums.bsdnexus.com/viewtopic.php?id=164&p=1

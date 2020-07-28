@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/logchange.pl
+
+pp line 3:
+$dir="/var/www/pp/noosphere/docs";
+
+pm line 3:
+$dir="/var/www/noosphere/docs";
+
+pp line 5:
+$changelogfile="/var/www/pp/noosphere/docs/ChangeLog";
+
+pm line 5:
+$changelogfile="/var/www/noosphere/docs/ChangeLog";
+
+pp line 6:
+$tempfile="/var/www/pp/noosphere/docs/ChangeLog.temp";
+
+pm line 6:
+$tempfile="/var/www/noosphere/docs/ChangeLog.temp";

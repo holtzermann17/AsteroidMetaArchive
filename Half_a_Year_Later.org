@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Introduction
+
+It's been about a half a year since I started becoming actively involved with HDM and Asteroid.  In that time, a lot has happened and my perspective on the issues involved has changed as I have learned more from experience and developed some understanding of things which were originally hazy (they may still be hazy but, at least, they are no longer  as hazy as when I first encountered them).
+
+As you all have noticed, I have been away from Asteroid the last month.  The reason for this has to do with June and July.  During those months, I was extremely busy, first with the summer intern applications (unfortunately, this did not work out, but it was nevertheless worth trying), then with the essay for the free culture meeting, then with my lecture on the HDM project.  For about two months, I was working overtime on these things.  As a consequence, other things had to be put to the side to make time and they piled up.  During the last month, therefore, I left Asteroid-related stuff on the side so that I could catch up with the rest of life.  Although there is still much that remains to be done, at least I now have enough time that I can again devote an hour a day or so to this and contribute regularly to Asteroid again.
+
+One of the advantages of taking such a break is that, when one returns from it, one can view one's subject in a detached manner, "at a distance" as it were, with a kind of clarity which is not attainable when one is in the middle of things actively working on the project, absorbed with details.  Therefore, I thought that I would take use of this occasion to compose some account of what it is that I see from this perspective before I again descend from my mountaintop retreat into the midst of the fray.
+
+I also think that such an essay can serve a useful purpose by clarifying some points which otherwise might not be mentioned for some time until they are worked out in detail.  As mentioned before, my thoughts about the project have changed since I started on it a half a year ago as a consequence of what I have learned from the experience of working on this project.  I think that this state of affairs if excellent because it suggests progress --- after all this is a somewhat open-ended research project so one would only expect such change as it moves forwards.  However, most of what I have written here (especially much of the h-code page) predates some of this new thinking, so one might be confused when reading what I have written on this site.  To be sure, I plan to go back and update things eventually, but that might not happen soon because (a) it will take some time before I explain these ideas properly and enrich my exposition with proofs, examples, and programs (b) time being limited, I have to choose between explaining what I already understand as opposed to exploring the yet unknown and (c) with things in flux, by the time I write something down, my understanding might already have been changed significantly so it does not pay to spend too much time writing it out carefully only to scrap it and start over again.  Therefore, it might be useful to have at least some sort of record of my current thoughts here which can serve as some sort of reference despite its shortcomings until I write a better description of these ideas or until they are replaced by the next version.  
+
+A lot of what I have to say here has been said before.  The reason for this is that I am starting from the beginning and rethinking things through.  I consider that a good way to organize my thoughts, get rid of accidental quirks of history, and come out with a more coherent and tightly-knit theory inb the end.  Also, this makes this essay useful to a newcomer looking for an overview of what I have been up to.
+
+** The Hyperreal Dictionary of Mathematics
+
+Basically, this project can be described as a dictionary of mathematical knowledge stored in a form which is understandable to machines and humans together with tools for entering information and for using it.  Since it is meant to encompass all of mathematics, it is naturally quite a large project, so I have only been able to focus my attention on part of it.  The places where I have paid the most attention are the representation language and verifying correctness of proofs.  Therefore, most of my remarks will be about those items and I will have much less to say about other issues.
+
+*** The Representation Language
+
+In order to make a dictionary of mathematical knowledge, one needs to represent this knowledge in some form.  To this end, we have been developing a LISP-inspired representation language which we have tentatively named "h-code".
+
+To come out with such a language, Joe used a somewhat empirical approach.  He started with examples of definitions, theorems, and proofs taken from the mathematical literature and made tentative translations into s-expressions.  While some, if not most, of these translations certainly can use improvement, they also provide an excellent starting point for studying mathematical notation.
+
+From this exercise in translation, I learned some valuable lessons about mathematical notation which should be of use and provide a foundation for future work.  Most importantly, it showed that mathematical notation in all branches of mathematics can be based on a few simple principles.  By ruthlessly insisting that the same thing always be represented by the same syntax, one can come out with a very simple representation for mathematics.
+
+*** Basic Principles of Notation
+
+In order to form mathematical expressions, one needs three basic ingredients: names for mathematical entities, a notation for functional evaluation, and dummy variables.
+
+****  Names
+
+The first element, names for mathematical entites, is the easiest to implement.  All one needs is a set of symbols.  Typically, one starts with letters of the alphabet and special symbols such as punctuation marks, then ranscks foreign alphabets in search of further symbols when necessarry.  Since my game is to notate mathematics in a LISP-like manner, I instead will use LISP atoms as my basic objects.
+
+There is really not much more to say about this topic.  To avoid confusion, one should not use the same symbol to denote two different things.  However, there are some subtleties and exceptions which need to be considered here.  First, it is harmeless in using the same symbol when the context prevents confusion.  For instance, one might use the same symbol to denote multiplication of scalars and multiplication of matrices.  While one could be careful and use two different symbols, it may not be necessary, since the information about which operation is intended is carried by the operands.  For instance, scalar multiplication is commutative whilst matrix multiplication is not.  However, there is no danger of reasoning incorrectly despite the fact that two operations are denoted by the same symbol but the commutative law applies to only one of them.  To apply the commutative law, one needs to first know that the two operands are scalars.  Unless one shown this precondition, one cannot apply the commutative law, so there is no danger of misapplying the commutative law to two matrices.  (Of course, it could turn out that two particular matrices commute; however, that is somewhat besides the point because here I am talking about applying the commutative law --- to show that some particular matrices commute, one would need to make a proof which applies to that particular case as opposed to invoking the general principle.)
+
+It might also be worth pointing out that this ability to use the same symbol for more than one object depends to a large extent on how one chooses to axiomatize things and set up definitions.  For the approach of the last paragraph to work, we need to take an approach in which the multiplication symbol is defined implicitly through its properties.  In such an approach, the multiplication symbol only appears between operands in the axioms, so in any statement one can prove, this symbol will always appear in a context which could, in principle, be used to determine whether it stands for the multiplication of scalars or the multiplication of vectors.  However, one could also define multiplication as a function set-theoretically, by giving its graph.  If one chooses this approach, then one cannot use the same symbol to denote both scalar multiplication as matrix multiplication since it would mean using the same symbol to denote two different sets, which leads to contradiction and confusion.  To finish this discussion, it might be worth pointing out that, in the first scheme, since the multiplication symbol by itself (as opposed to a multiplication system occurring between operands) has not been defined, the only way to refer to these functions would be to do something like use lambda notation to describe "the function which sends two scalars to their product" or "the function which sends two matrices to their product".  Since these are two different lambda expresions, there is no problem here.
+
+The only reason for putting in this hairsplitting discussion is because  stuff like this happens all the time.  Mathematicians routinely use the same symbol to denote different objects when context will keep one safe from contradiction.  Since this usage is common and allows for economy of notation by recycling symbols, I thought it might be worth examining.
+
+Conversely, sometimes one allows for more than one symbol to stand for the same mathematical entity.  This can easily be accomodated if one wants to allow this feature, so not much needs to be said about it.
+
+****  Functional Evaluation
+
+The next ingredient for a mathematical notation is a notation for function evaluation.   Function evaluation involves two elements, the function and its arguments.  The function and its argument(s) can be expressed either by single symbols or by more complicated expressions.  
+
+For a function evaluation notion to be unambiguous, one needs to be able to distinguish the function from its arguments.  There are many ways to do this, and more than one is used at the same time in the usual mathematical notation.  For instance, we find midfix notation for addition, prefix notation for trigonometric functions, for Bessel functions we have a prefix notation in which one of the arguments is written as a subscript and the other enclosed in parentheses, etc.  In some cases, the function is not even written, but implied by the graphical arrangement of the arguments, such as in exponentiation and binomial coefficients.
+
+There are several reasons for this.  To begin, there is the historical reason.  The concept of function only made its first appearance at the very end of the seventeenth century and did not come into general use for another century.  The concept of higher order function (originally called "function of a line" by Volterra) only made its debut in the early twentieth centtury.  By the time functions were understood, mathematical notations had already become established, so it is no surprise that they employ different, sometimes conflicting notations for functional evaluation.
+
+Despite its complexities, this practise of using different notations for different functions does have some advantages for the human reader.  For example, the peculiar way of writing the arguments to the Bessel function suggests that one of the arguments is more naturally to be thought of as a parameter.
+
+However, when it comes to manipulating with mathematical formulas on a computer, this variety of notations can be a liability rather than an asset since it requires the computer to keep track of all the different rules for writing different functions.  Therefore, it makes sense to write all functions evaluations using the same syntax.  We choose to use prefix syntax since that is a prety common choice and, in particular, it is what LISP uses.
+
+Before moving on to the next section, it might be worth pointing out thatwhat is important here is the syntax of functional evaluation, not the semantics.  It happens that there are instances where something is written as a function evaluation, but should not necessarily be interpreted as the evaluation of a function on an argument.
+
+Let me clarify this remark with two examples.  Strictly speaking, in logic, predicates are not functions.  To be sure, once we pick a model for a theory, we can interpret predicates as functions which take the truth values as their range.  However, in pure logic, we do not want to think of predicates as functions.  Nevertheless, syntactically predicates and connectives act like functions, so it only makes sense to use the same syntax for them.
+
+The other example is indices on tensors.  Syntactically, one can think of the kernel as a function of the index.  In fact, if one chooses a basis for one's vector space, one can think of the kernel as a function which gives the different components of the tensor as values.  However, one might prefer to think in a basis-independant fashion and simply regard the indices as a device for indicating what sort of tensor one has and keeping track of contractions.
+
+While we're at the subject of tensors, there is another wrinkle that ought to be mentioned --- covariant and contravariant indices.  (I'll get back to this)
+
+****  Bound Variables
+
+In addition to a notation for mathematical entities and functional evaluation, one needs to consider bound variables.  When dealing with bound variables, several issues arise --- scope, names for dummy variables, and syntax for indicating bound variables.
+
+As long as we will be using s-expressions, there is an obvious choice of scope --- limit the scope of a bound variable to within a pair of parentheses.
+
+As for names for dummy variables, we will simply use atoms as we use to denote dummy variables.  This raises the posibility that there could be conflicts between 
+
+***  The Expression Parser
+
+Of course, asking mathematicians to change their notation wholesale is rather unrealistic even if the new system is superior to existing notation.  If nothing else, becoming fluent in a new notation takes a 
+good amount of work.  Also, as mentioned above (in the example of the Bessel function), existing notation often has mnemonic values which are useful to the human mathematician.
+
+Therefore, a more resonable course of action is to automatically trnaslate between notations 
+
+* Comments

@@ -1,0 +1,286 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+"New College of Tahiti" or NCT is a fictional educational institution,
+and, accordingly, unaccredited -- but not quite non-existent.  We could say it is a "virtual college" in some suitably humorous sense.
+
+Mission-wise, NCT is about facilitating free association, free thinking, and free
+education.
+
+The founder and president ([[file:jcorneli.org][jcorneli]]) believes that it could serve
+a useful role for persons who find that traditional college education
+is either not what they want, not what they need, or just something
+that won't work for them.  The project is somewhere in between [[file:GNU.org][GNU]]
+and Montessori.  It's weird, it's wacky... maybe it will work,
+somehow?
+
+After all, computer-based colleges actually exist - and
+other fictional institutions have historically had some success.
+
+* Organization of NCT
+
+NCT makes no distinction between "teachers", "administrators", and "students".
+It is a student-run college.  Some of the students may be /older/ or more
+credentialized than others, but that isn't a big deal; learning is supposed to
+be a life-long thing.  The details of the leadership structure of NCT are still
+up in the air, but there is a college president, who is right now also the only
+known student.  If and when more people become involved in the college, the
+organization may become more developed.
+
+* General historical precident
+
+ * New College of Florida
+ * New College of Oxford
+ * The Situationist International
+ * The School of the South
+ * The Abbey of Theleme
+
+* On leaving school
+
+: "Those who fight and run away live to fight another day." - Trad. and Ubiq.
+
+* Other virtual institutions out there
+
+**  Roy Lisker's Council of Autonomous Scholarly Support
+
+ * The [http://www.fermentmagazine.org/cass.html CASS].
+
+I think that I learned about this after I invented NCT, but the principles are
+somewhat similar.  I corresponded briefly with the author about his
+[http://www.fermentmagazine.org/rands/recoltes1.html  Grothendieck translation].
+It might be worth working on reestablishing contact.
+
+**  The "Virtual School"
+
+This is a project by a fan (and friend?) of Robert M. Pirsig.
+I haven't had time to navigate the whole site (which isn't exactly
+structured in a Lynx-friendly way).  I think one of the main
+pages is http://www.virtualschool.edu/mon/ and it seems that the
+author has some interesting (and some very strange) ideas.
+Worth pursuing.
+
+** The Commonwealth of Learning
+
+An "oversight" organization for eductation in the British Commonwealth
+("[http://www.col.org/about/ The Commonwealth of Learning]") has worked on a
+[http://www.col.org/Consultancies/02virtualu.htm proposal] for a virtual
+university to serve small states.  i learned about the col because they are
+apparently also involved (somehow) with accreditation of educational
+institutions inside the Commonwealth.  They /also/ talk about some
+interesting-looking [[file:http://www.col.org/lor/index.htm educational material.org][http://www.col.org/lor/index.htm educational material]].
+I haven't checked this out in complete detail, but they also provide contact
+info for their Knowledge Manager and Education Specialist on this page (Paul
+West, pwest@col.org).  Could be worth asking for info and/or telling him about
+some of our Asteroid-affiliated projects.
+
+** The African Virtual University
+
+The page also mentions the [http://www.avu.org African Virtual University], which is
+a "live" project, based in Nairobi.  I'm experiencing network problems trying to
+access their site,
+but the [http://64.233.167.104/search?q=cache:Ccdr7w5AvGAJ:www.avu.org/+African+Virtual+University&hl=en&start=1&ie=UTF-8 google cache]
+reveals discussion of their digital library, and so on.
+
+My big thought here is that PM (as the Asteroid's financial star player) may
+want to get in touch with the COL and/or the AVU (or similar organizations), and
+see about setting up a partnership (possibly including some funding for PM
+efforts).
+
+**  The University of Planet Earth and the Self Education Foundation
+
+Here is a great [http://jato.hackvan.com/pub/stig/etext/how-i-got-my-diy-degree.html essay] by William Upski Wimsatt,
+who already [http://www.ma.utexas.edu/~jcorneli/q/no-show inspired me about this topic]
+with a [http://www.softskull.com/detailedbook.php?isbn=1-887128-44-5 book] he wrote on a different topic.
+
+That was a somewhat old essay,
+[http://www.selfeducation.org/html/life_learner_interview.html this interview]
+descibes is what came of it, and you can read more at
+ http://www.selfeducation.org/index.html
+including various links.  (I'm not sure how active these people are
+right now, but it could be worth trying to get in touch.)
+
+** More fiction on AM
+
+ * [[file:PCCC.org][PCCC]]
+
+
+* Other related systems
+
+The "Ooligan press", written up at http://www.apple.com/pro/design/ooliganpress/
+(Baudelaire /not/ Baudrillard... sigh.) --[[file:jcorneli.org][jcorneli]]
+
+
+* On possible accreditation of NCT
+
+It was my intention ta make this section started into an inquiry into whether
+NCT should seek accreditation.  Obviously I haven't gotten very far, and I'm
+certainly not sure what the answer is.  The "pro" is that accreditation might
+make it easier to get money coming in, an would allow official degrees to be
+administered.  The "con" is that (a) we almost surely couldn't get accredited
+without a bunch more work; and (b) it might not even be that great of an idea to
+get accredited anyway, since it would surely involve jumping through some
+bureaucratic hoops that could put a crimp in our style.
+
+Especially since I'm not sure what use NCT /has/ for money (yet), I think we
+should hold off on this.
+
+But of course, money /can/ be used for software development, infrastructure
+building, paying administrators, etc., etc. -- I don't know if we need any of
+that.  Any non-trivial course materials could be built by volunteers/students.
+We don't really need administrators (what good would they do anyway?).
+"Infrastructure" can probably be handled through existing no-cost resources,
+like this wiki.
+
+Sure, [[file:jcorneli|I.org][jcorneli|I]] could use more financial support - but is NCT a good way to
+get it?  One of the factors in considering this question is what other similar
+things are going on in the world already.  Maybe there is no "need" for an NCT.
+
+But let me note that NCT may fill a different niche from the one AVU or existing
+American distance/virtual higher educational and degree granting institutions.
+The main difference is that NCT has no fixed curriculum or even faculty.  It
+exists (virtually) only as a name, so far.  Maybe we should make an effort to
+have some actual events (college parties or something, to raise money?).  Who
+knows.  The basic point I'm making is that even if NCT was "real" - as opposed
+to virtual - it would be "weird".  Maybe it is sufficiently weird that it
+couldn't actually be non-virtual.  I.e., compared to having no curriculum,
+requirements, degrees, professors, etc. -- having no physical location is a
+pretty minor detail!
+
+:  Accreditation might be essentially impossible to achieve and even
+undesirable, as you say, but I wonder what the requirements for a .edu
+domain name are.  That might lend it a little credibility.  It is
+interesting that virtualschool.edu got an edu domain, so maybe the
+requirements aren't that strict. [[file:norm.org][norm]]
+
+
+
+* Brainstorming about activities NCT could organize
+
+** reading groups
+Since NCT focuses on student-directed learning, things like reading groups may
+not make the most sense in the world, because different students may have very
+different reading interests.  Besides, the student population is too low for
+such a thing to work right now.
+
+** access to educational material workshop
+Something like a "how to find educational materials you are looking for"
+Workshop could be good, though, because presumably all students are interested
+in educational materials.
+
+** access to funding workshop
+Also, a "how to get funding as a student in a non-accredited, non-existent,
+virtual college" could be very helpful, since everyone in the college could use
+some funding.  Presumably there are grants for individuals that can be sought
+regardless of ones academic affiliation, but learning how to find and win these
+grants could be tricky.  (Unlike students at "normal" colleges or universities,
+NCT students don't pay - but, at least at present, there are no merit /or/
+need-based scholarships administered by the college either, either.)  Note that
+it is all fine and good to get paid to do "entrepreneurial" things, but
+/basic/ (as opposed to business-oriented) research is something that students
+and academics do.  Besides, even entrepreneurs should have access to continuing
+education, IMO.
+
+But note, of course, that many students actually have to /work/ to put
+themselves through school.  NCT students may be no different in that
+respect. Woah...
+
+* The Name
+
+While I'm not sure what your ultimate goal is, I think the name has
+an image problem that might prevent people from ever taking it
+seriously.  New College of Tahiti sounds like a joke (as you probably
+intended), conjuring images of lying in a hammock and reading a book while sipping
+pina coladas in a tropical breeze.  None of the others you mention have
+great names either.  How many "real" colleges have "New", "Virtual",
+"(some exotic or far away place)", "International", "Learning", or "(a
+philosophy)" in their names?  Even "Institute" is marginal unless it is
+already well known - and I went to MIT. :)
+
+Traditional places have names like "(rich-sounding person's name)
+University/College" or "University of (place)" or "(place) College" or
+(shudder) a religion-based name.  E.g., Corneli University would sound
+good were it not for the fact that a misspelled version of that already
+exists.  Or even Megill University. :)
+
+If you think a traditional name is deceptive - encouraging people to
+make misleading claims on their resumes - some kind of non-traditional but
+still non-joke name might still be better if people are to take it
+seriously.
+
+Or maybe you mean this whole thing to be only a joke, in which case
+my comments are of course inapplicable.  I'm not sure whether by
+"fictional" you mean permanently so.
+
+[[file:norm.org][norm]] 5 Aug 2006
+
+What's in a name?
+
+I don't think of the thing as a permanent joke, but I do like the fact
+that the name raises eyebrows.  It is an "artfully chosen" name -
+and in particular, NCT is something of a "conceptual art" project.
+
+On the other hand, towards the concrete end of the spectrum, I've
+considered actually moving to Tahiti to start the college at some
+point.  Of course, until otherwise stated this "concrete" idea is
+itself pure fantasy!  But I've relatively recently learned that it is
+a good idea to "concretize" conceptual art projects -- otherwise they
+really aren't as interesting.
+
+The reason for choosing "Tahiti" is complex; it is evocative of the
+things you mentioned, yes, and other things.  Tahiti is, in
+particular, an /island/ -- and separated from the resources of the
+mainland, including the "knowledge resources" you find in places like
+Cambridge, Mass. or even Minneapolis, Minn.
+
+One of the main assertions underlying the project that one should be
+able get "full access" to knowledge resources even while situated in a
+remote, insular, location -- and this is one of the objectives of
+[[file:HDM.org][HDM]] and related projects.  The application here is that if there
+is no need to go to physical libraries or lecture halls, then the
+student is significantly less bound to Universities in their physical
+form.  Perhaps a hammock is as suitable a base of operations as any
+other.
+
+I'm entirely happy to be flexible on the name.  At this point,
+spelling out a clear vision for the project seems to be a more important concern -
+if this is going to be anything more than an ambiguous metaphor for some
+vague sentiment.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* The Logo
+
+I currently envision the logo as follows:
+
+A shield with three points on top and one point on bottom, divided
+into three sections, one with a star above palm trees on an ocean
+beach, one with a broken string of pearls and a sharpened pencil and other ephemera on a table-top, and one with a sheep at the
+bottom of a ha-ha.  It is embedded in a ring with two phrases going around it
+separated by dots.  Around the top is the college's name in latin, and around
+the bottom, its logo.
+
+Semi-schematically:
+ 
+     novum collegium tahitia
+
+   .           ..           .
+    ........................
+     .....            .....
+     .....    STAR    .....
+      ....................
+      ....................
+       ....          ....
+       ....  PEARLS  ....
+        ................
+        ................
+         ...        ...
+         ...  HAHA  ...
+          ............
+           ..........
+            ........
+             ......
+               ..
+   
+ plus quam bibliotheca et gymnasium
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,40 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+If /(x,y) elt A times (B union C)/ then /x elt A/ and /y elt (B union C)/
+
+If /x elt A/ and /y elt (B union C)/ then /x elt A/
+
+If /x elt A/ and /y elt (B union C)/ then /y elt (B union C)/
+
+If /y elt (B union C)/ then /y elt B or y elt C/
+
+If /x elt A and (y elt B or y elt C)/ then 
+/(x,y) elt (A times B) or (x,y) elt (A times C)/
+
+/(x,y) elt (A times B) union (A times C)/
+
+/A times (B union C) subset (A times B) union (A times C)/
+
+/(x,y) elt (A times B) union (A times C)/.
+
+/(x,y) elt (A times B)/ or /(x,y) elt (A times C)/.
+
+If /(x,y) elt (A times B)/ then /x elt A/ and /y elt B/.
+
+If /x elt A/ and /y elt B/ then /y elt B/.
+
+If /(x,y) elt (A times B)/ then /y elt B/.
+
+If /y elt B/ then /y elt (B union C)/.
+
+If /(x,y) elt (A times B)/ then /y elt (B union C)/
+
+If /x elt A/ and /y elt (B union C)/ then /(x,y) elt A times (B union C)/
+
+
+If /(x,y) elt (A times B)/ then /y in 
+
+ 
+
+Back to [[file:Example of structured proof.org][Example of structured proof]]

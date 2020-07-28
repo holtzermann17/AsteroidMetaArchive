@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One useful feature of a [[file:bidi system.org][bidi system]] is that it can automatically
+keep track of the [[file:FDL.org][FDL]] History requirements.  Please note
+that the instructions given on the Wikipedia article discussing
+their porting project do not seem to adequately conform to 
+FDL requirements (see the Quick Links section of
+[[file:Wikipedia-PlanetMath Content Exchange.org][Wikipedia-PlanetMath Content Exchange]] for a link to the aforementioned article).
+
+We need to make sure that whatever system we do build actually adheres
+to the requirements of the license(s) we're using.  Moreover, someone
+should make sure that any by-hand porting efforts that are taking
+place at present are not violating the GFDL, lest we end up with a
+terrible mess, having to throw away work, etc.

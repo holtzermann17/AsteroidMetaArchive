@@ -1,0 +1,4 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I had to delete some entries and enter them again because I could not make a change to an equation.  Tried cleaning entry cache and rerendering, but changes wouldn't show up in html.  They would show up in Latex and there would be a 'double' copy when you look at page images.  It seems to only affect old entries.

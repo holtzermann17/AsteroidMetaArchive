@@ -1,0 +1,160 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+After spending some time reading about online fundraising and looking
+at the PM homepage, it occured to me that the way things are now might
+not be making the best use of our fundraising potential and that there
+are some ways we could improve it.  Here are some ideas:
+
+ * Replace the "Donate" button with a thermometer.  The button is just
+  not compelling --- sure, everybody could use a little more cash and
+  it is good to support projects which one find useful.  By contrast,
+  the thermometer conveys a sense of progress and urgency.  This isn't
+  just a matter of throwing spare change into the collection box. we
+  have a purpose and are working towards a definite goal.
+
+ * Replace (or supplement) PayPal with a service more specifically
+  designed for fundraising.  There are several such services which
+  will not only collect the money and pass it on to us, but also do
+  things like list us in their directory of non-profit organizations
+  so that people who are looking for a cause to which to donate might
+  find us in the directory.
+
+ * Make a newsletter.  We have been doing quite a lot here, but a
+  person who has not been working with us or following us closely is
+  unlikely to know this.  If we have a newsletter outlining our
+  activities, progress towards our goals, and needs, then it is likely
+  that someone reading it will appreciate what we are trying to do and
+  consider supporting our efforts and previous donors will feel more
+  inclined to give again if they see that their money is being spent
+  wisely and that there is activity and progress going on.  So as not
+  to overload ourselves and have something significant to write about,
+  I propose that we come out with a newsletter every two months.
+
+ * Build a great wall of donors.  As a way of thanking our generous
+  benefactors, we should set up a page to list our donors and the
+  amounts given.  We could have different pages by year showing the
+  amount given in that year and a grand page with all donations for
+  all years.
+
+ * Have a field for donors to enter their name, e-mail, address and
+  post a comment.  Of course, this would be optional and people could
+  donate anonymously is they so desire.  Right next to this would
+  appear a prominent privacy statement assuring donors that their
+  address is confidential between us and them and will not be sold or
+  given away.  When someone donates, we would send them a thank-you
+  note via e-mail, subscribe them to the newsletter, and thank them
+  publicly on the great wall of donors.  There would also be check
+  boxes "Please do not subscribe me to the newsletter." and "I would
+  rather remain anonymous.".
+
+ * Have levels of donation.  While any size of donation is always
+  welcome and we recognize that not everybody can afford to give as
+  much, it helps to have levels of donation as a way of suggesting
+  what one might give and encouraging people to give more.  Instead of
+  the old, tired names, maybe we could come out with some novel names
+  refelcting our purpose.  For instance, we could have a "pi circle"
+  for people donating more that $314.15 or names like "friend of
+  math" or name levels of donation after famous patrons of the
+  sciences.
+
+ * Offer incentives.  Since we aren't having much luck selling PM
+  coffee cups, maybe we should give them away.  Maybe with a donation
+  of $60 or more, one gets a coffee cup.  In the future, we could
+  offer incentives like a CD of Noosphere (once we make it easy to
+  install) or a copy of the FEM (for $1000 dollar donation, one could
+  get a deluxe edition with fancy covers and gilt pages).  Perhaps
+  every level could come with some incentive.
+
+I think that if we were to proceed in this fashion, we would make the
+best of the hits we get on our webpage, especially from our Wikipedia
+click-through.  In particular, now that I am thinking of it, the worst
+thing we are doing is not thanking donors individually and following
+up on donations so as to build up relationships with our supporters.
+I would suspect that by doing this, we might double or triple the
+amount of donations we recieve online through our website.
+
+--[[file:rspuzio.org][rspuzio]]
+
+I generally agree.  Here are some critiques:
+
+ * If we outright replace the "donate" button with the thermometer, won't we 
+be pushing our luck in essence "claiming" that we're always in a funding drive?  From
+everything I've seen out there, it seems that most thermometer/drives are over a 
+very focused period.  Wikipedia does it this way too, having quarterly drives that last a 
+couple weeks (in fact, I think they keep the drive going until they get the amount of 
+money they want).
+
+ * I think we'd need to go the supplemental route.  If we were to ditch Paypal outright,
+I bet we'd lose at least half our donations.  I am interested in hearing more about
+the fundraising services!
+
+ * I like the idea of a newsletter.  Seems like we could "slow down" the former
+Asteroid Bulletin and use it for this purpose.  And hopefully be able to pay someone
+to put it together (Joe? Interested?)
+
+ * We should consider defining levels of knick-knacks (which of course the donor could 
+opt out of receiving).  E.g.,
+  * $20 - PM (bumper)sticker
+  * $50 - Coffee mug or t-shirt
+  * $100 - All of the above
+  * $500 - Something really cool (PM-etched klein bottle?)
+  * $1000 - copy of the FEM
+
+ * Any other cool ideas??
+
+ * All the other ideas are pretty good!  Some action items for me:
+## compile a list of last year's donors; email them, thank them, ask if they want to opt out of being listed on a "great wall"
+## make a "thank you" page and get it set up as a redirect from paypal donation
+## code up a simple thermometer for use in funding drives.
+## find out when next wiki funding drive is---i bet if we run our drive at an overlapping same time, we will seriously leverage the 
+whole thermometer effect.
+## set up a "sponsor" slot on the home page, for eventual use by large-scale institutional sponsors
+
+--[[file:akrowne.org][akrowne]]  Tue Feb 28 04:46:14 UTC 2006
+
+On the thermometer drive, I think you basically answered your own
+question: we create a reasonable goal, and put the thermometer up
+until we reach that goal, then take it down for a while.  But it has
+to be a reasonable goal.  Alternatively, we go into a new funddrive
+each month!  Weird but maybe OK (we could have a high-water-mark for
+top month, and justify our continual fund-drive with the fact that we
+have continual budgetary needs).
+
+As for the newsletter, let's talk more about what we want to see from
+it, then I'll decide whether or not I'd be a good candidate & what
+kind of support I'd need (money, other contributors).
+
+--[[file:jcorneli.org][jcorneli]]
+
+My proposal would be to put up the thermometer with a $10000 goal in
+the near future.  Once we acheve that goal, we could take it down and
+replace it with something else.  As I envisioned it, this would be
+some sort of annual appeal.  We set up a goal for the year and keep
+the thermometer up until we get there.  Ideally, we should have
+started this on New Year's day but now is good enough.  If (cross your
+fingers) we succeed in raising this sum before the end of the year, we
+could replace the thermometer with a picture of a broken themometer
+with mercury gushing out the top and a "Thank You" message for a week
+and brag about, how thanks to our donors' generosity, we have exceeded
+our expectations.  After that week, we could replace the thermometer
+with some other graphic, but I would hope that it would be more
+eye-catching than the present button.
+
+As for Wikimedia, I suspect that a $10000 thermometer will still be up
+(and have a ways to go to the top) by the time their next quarterly
+fund drive comes along.  In fact, I suspect it will be around for more
+than one of their fund drives.  Of course, to make sure, you could ask
+your Wikipedia buddies when exactly their next find drive will roll
+along.
+
+You don't need to code a thermometer because the entropy folks have
+already done this (look back on the timetable page for the link to
+them).
+
+Your scale of incentives sounds reasonable (although some of the
+incentives don't exist yet).
+--[[file:rspuzio.org][rspuzio]]
+
+As a bold measure, how about we replace the Google Ads with the
+thermometer ;)!  --[[file:jcorneli.org][jcorneli]]

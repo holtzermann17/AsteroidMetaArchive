@@ -1,0 +1,105 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(Warning: these comments are not authoritative
+or approved by the inventor of Metamath. In fact,
+everything I say is false :))
+
+Back in my early Metamath *daze* (bewilderment
+and confusion), I re-proved theorems from 
+scratch by manually typing in the assertion 
+statements and supplying Proof Assistant the 
+labels identifying hypotheses and previous 
+assertions to be used to derive the assertions
+to be proved.
+
+I discovered that a typo in the assertion to
+be proved, like a missing ")" would not be
+flagged as such, but rather, my "proof" would
+be rejected due to the fact that Proof
+Assistant does not perform syntactic analysis
+(grammatical parsing) of statements. That
+was one motivation for writing my own
+parser...
+
+Conversely, as we see in Metamath's miu.mm
+database, it is possible to "prove" an assertion
+for which there is no grammatical parse tree: 
+simply comment out this syntax axiom:
+
+    wxy  $a wff x y $. 
+
+like this:
+
+    $( wxy  $a wff x y $. $)
+
+Then rerun Metamath "verify proof *" and see if
+all of the proofs are still valid (yes.)
+
+Apparently we can "prove" a symbol sequence that
+is not "well defined". A sequence of symbols may
+not inhabit our frame of reference -- not be a
+"wff" -- and still be deriveable. What does it
+mean if there is no parse tree, no "type code"?
+And where did it come from? (Answer: it was
+latent or buried in a previous hypothesis or
+assertion.)
+
+Interestingly, in Metamath, notation schemes are
+entered as axioms ($a keyword statements.) These
+"syntax axioms" should have no associated logical
+hypotheses, disjoint variable restrictions or
+repeated use of a variable in the formula. *Those*
+qualifications come *after* the basic notation has
+been entered into play. For example:
+
+    wi $a wff ( ph -> ps ) $.
+
+defines the notation for "wff implication" (but
+"pretty-printing" for html is performed using
+different symbols). "ph" and "ps" are variables
+of type "wff", and in conjunction with "(", "->"
+and ")" generate a wff. So this is an "axiom",
+but it is also a notation definition describing
+how to *signify* logical implication.
+
+The situation is analogous to the topic of 
+"pink elephant". I can generate "pink elephant"
+very easily using the grammar of English,
+but whether anything "real" or "true" is
+described is another question altogether.
+The grammar rule allowing me to say "pink
+elephant" must allow me to make that formulation
+regardless of its reality or surreality.
+Otherwise I wouldn't even be able to talk
+about it directly (though I might write a 
+poem about albino pachyderms at dawn and allude
+to it, or sneak into the zoo with a digital
+camera and a can of pink paint and "construct"
+one.)
+
+My working assumption is that the *meaning* that
+is evoked by a formula derives from its grammatical
+construction. And in practice, we should be able to
+improve out output formatting of a formula using
+rules about how to format the item types in its parse
+tree -- that is, there may be special formatting
+I wish to do based on something being a "wff" if,
+say, the formula extends across several lines,
+or if it involves, say, exponentiation. I would
+also like to be able to actually compute or 
+"execute"/"run" a formula, not just derive it or
+format it. Again, execution seems to be based on
+the grammar rules -- computation of "( ph -> ps )"
+as true or false requires a function that 
+computes "wi", logical implication. (And this is
+an example of why an unambiguous grammar is
+useful and of how to justify whether an ambiguity
+is meaningful or can be defined away: do the
+computations yield the same answer? ... which is
+a separate matter from wanting unambiguous
+grammars so that recursion theorems can be used
+to prove things about statements in the language
+(I'm not deep into that part of it yet...))
+
+[[file:ocat.org][ocat]] Mon Aug 08 16:13:00 2005 EDT

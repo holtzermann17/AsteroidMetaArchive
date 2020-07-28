@@ -1,0 +1,174 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Brainstorming
+
+**  jcorneli
+
+Is it really supposed to be a "database"?
+
+What is meant by "simulation"?
+
+It should probably say "free, transparent, hypertext" since
+in theory hypertext need not be transparent. (Weird, yes,
+I know, but true.)
+
+The essay completely leaves out mention of AI - at least in
+the introduction!  That is sort of ridiculous.  Parsing
+/requires/ AI, as does hypertext generation - but this
+is not made explicit at all.
+
+"Human generated hypertext" is essentially "[[file:hcode.org][hcode]]" but
+this is not made explicit in the essay (hcode wasn't invented
+when the essay was written).  Also, the connection between
+hcode and hypertext is somewhat oblique.  The essay is /saying/
+that people could write articles that would go directly into
+the HDM, but this is certainly not the tack we are taking now.
+Current HDM development is focused on developing AI for math, period.
+All the stuff about teaching tools etc. etc. is really on hold
+along with OCR.  HDM has put rather a lot of things on hold.
+
+The business about being "modular" is interesting, but this
+is a /general/ point about knowledge, not about math.  Whitehead's
+papers on education relate to this "modularity" -- for him, it
+isn't modularity at all, but rather... something somewhat deeper,
+about the way we know things -- i.e. something epistemological -- 
+that says that one approaches knowledge first through generalities
+and then, later through specifics.  This even relates to our "debates"
+about writing vs code!  Further "philosophical" discussion of
+the modularity of knowledge may be valuable - on the other hand,
+I'm sure that there is more discussion of these things coming from
+cognitive science / epistemology.  So some reading and citations
+may be in order.
+
+Discussion of what the dictionary actually /is/ appears to
+be somewhat lacking.   I don't know if LISP is mentioned anywhere
+in the paper.  Of course, LISP is essentially irrelevant.  But
+still - HDM webpage is supposed to be about the question "What
+is the HDM?" - and I don't know if it really answers this question
+sufficiently.  I know, I know - it is hard to predict the future -
+but maybe we could say a bit more?  Or just be literal, and say
+that /yes/, the HDM /is/ a "dream" (is there anything wrong
+with that?).  Perhaps this could be tied in better with things
+like [[file:Personage_-_Gottfried_Leibniz|Leibnitz.org][Personage_-_Gottfried_Leibniz|Leibnitz]] and QED, etc. --
+i.e., with other dreams.  No reason to limit ourselves to dreams
+about math either.
+
+"Transparency" and "freedom" would be two good concepts to talk about (together)
+in greater depth.  The HDM project, interestingly, brings up the notion of
+different "degrees" of freedom.  And what does "freedom" really mean?  Very
+interesting (philosophical) questions.
+
+Some reviewers didn't like the idea of the "kernel".  They
+may have just been being sticks in the mud.  But perhaps
+some greater formalization of this concept would be useful.
+We could compare to Cyc -- when will Cyc be ready to learn
+on its own? -- or Emacs -- when will Emacs be ready to
+write itself?  The "kernel" is about /AI/!  (Maybe
+the reviewers were uncomfortable with this idea.)  
+
+(We shouldn't spend our time arguing with fuddie-duddies as 
+much as we should spend it doing our work... to a certain
+extent, what people have to say is insignificant - as long
+as we can get survival money from people who don't give a rat's ass,
+I mean.)
+
+On the topic of AI, maybe we should make an effort to
+respond to [[file:Jaron Lanier.org][Jaron Lanier]] and anyone else who doesn't
+believe in the possibility of a "singularity".  More on
+the topic of singularity and strong AI should be said -
+or (hell!) exhibited.  The brilliance of Baudrilliard...
+is to accept the evidence for strong AI.
+
+On that matter - more words should be said about "physical
+computation" and the "matrix" of real mathematics.
+I think that the orginial HDM essay did better with that
+topic than the current version. (But of course it had
+other problems.)
+
+Perhaps our compassion / regard / etc. for "normal mathematics"
+does not shine through in this essay sufficiently.  Its
+true, we say that "we will write software that will make
+it relatively easy for anyone to write for the HDM" but that
+doesn't necessarily make spell things out in sufficient detail.
+Assuming that people will understand the meaning of that statement
+"from context" is probably a bad thing.  (Experience tells
+me that people don't usually understand that many specifics
+"from context.")
+
+Distinctions between "AI" and "formal systems" are somewhat ridiculous.
+We should not depend on /words/ to make our point.  Code
+illustrates points things better than words.  Since I assume
+that by default I am mortal, I would rather have write code
+that proves a point than words that illustrate a point --
+if it is at all possible!
+
+(Note that the point about "learning the way people do" was a
+response to a specific critique -- i.e., wouldn't it be better
+to build a robot baby and let it lose on mathematical education
+materials!   I thought that this idea was complete bullshit,
+but the essay does not make /that/ fact clear.)
+
+It is interesting that OCR is considered separately.  The
+reason that it might be unnecessary is that perhaps people
+could be paid to type math into computers.  Fateman suggested
+this idea.  But /that/ point is not mentioned explicitly
+in the paper (because, at the time, I didn't like the idea).
+
+The stuff about "freedom" is really the key part
+of the essay.  See above, but, again, the "Baudrillardian" idea
+of mathematics as something that people can have computers do
+for them is important.  Not that this is necessarily a good idea.
+The whole debate over "hyperreality" is important -- Baudrilliard
+is totally under-appreciated and at the same time over-hyped.
+Probably a "good" HDM essay would talk about (or illustrate) 
+hyperreality more concretely - and face up to the negative issues
+as well as the positive ones (to the extent that facing up is
+valuable).
+
+Note in fact, I wouldn't mind putting the /current/ publishers out of
+business.  The HDM would completely transform the economic landscape of
+mathematics.  The extent of this shakeup should be more fully
+acknowledged/spelled out.
+
+Distributed computing in general seems to be underemphasized in the
+world of free software (i.e., to me).  The even more abstract notion
+of distributed processing by human beings /must/ be even less
+well understood.  Culture & computing are such interesting topics
+to tie together!  More discussion of culture and cultural anthropology
+would be good.
+
+The relationship between math and software could be made more
+concrete and immediate.  For example, how does CAS relate?  (How
+can computers be made to understand the output of CAS, including
+graphs?)
+
+Mention of "proofs are programs"  and "programs are proofs" papers
+and research would be good.  (This stuff would be worth reading
+up on.)
+
+"Mathematical capital" is an interesting idea, and should be tied
+in to our culture's valuations of knowledge production in general.
+Knowledge as capital should be explored.  Perhaps -- just maybe --
+some of the writings of S.V. of the Free Culture conference may
+be relevant.
+
+What does it mean to "make it"?  Does this essay offer false
+hope to students?  How does mathematical capital function in
+the real world?  
+
+Learning theory would be good to bring in (to the extent that
+this subject exists in today's world).  I know that it has
+been /studied/ by mathematicians - but I don't know whether
+any satisfactory results about /self-guided/ learning have
+been achieved.   Really, I'm not so sure that this is something
+that can be dealt with very nicely using theory.  Empiricism
+might be better.
+
+How important /are/ the legal questions?  Are there ways
+around things like HR3261 via Fair Use?  Can people working
+on some topic share information (non-publically) through
+Fair Use?  Is the HDM "transformative" enough to qualify
+automatically for fair use treatment?
+
+Back to [[file:Guide to the HDM.org][Guide to the HDM]]

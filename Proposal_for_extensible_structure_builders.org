@@ -1,0 +1,502 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** New proposal for extensible structure builder
+
+(See 21-Oct-2012 update at bottom of page.)
+
+[[file:norm.org][norm]] 16-Oct-2012
+
+The existing [[file:Extensible structure builder.org][Extensible structure builder]] df-struct has a somewhat
+complicated definition that can seem cryptic.  A user wrote, "Without
+Struct, writing a Metamath proof made me feel like I was removing all my
+sloppy logic errors.  With Struct, I'm less confident."  I can
+understand that:  it has always been my goal with Metamath to simplify
+the foundations and definitions for the
+development of mathematics to whatever extent
+possible.  
+Here I will propose a new scheme that completely
+removes the df-struct layer above elementary set theory.
+Retrofitting it into the existing set.mm is straightforward,
+and I will do that myself when it is agreed that this is a
+good idea.
+
+I would be interested to hear any comments on this proposal.
+(See the [[file:HomePage.org][HomePage]] for instructions for obtaining a
+password.)
+
+The existing
+[http://us.metamath.org/mpegif/df-struct.html df-struct] is
+
+    df-struct $a |- Struct ( N , f , ph ) = { f | ( E. m e. NN ( N <_ m
+          /\ f Fn ( 1 ... m ) ) /\ ph ) } $.
+
+The primary purpose of the complexity in this definition is to partially
+"tame" the possible structure members f so that each f will be a
+be a finite sequence.  This was my attempt to make it resemble, at least
+on a superficial level, textbook definitions of structures as tuples.
+
+Of course, this is not how textbooks define structures.  But an exact
+formalization of the textbook definition is impossible, since it is
+formally incorrect:  for example, it is not formally true that a ring
+(ordered triple) is a group (ordered pair).  In order to achieve this
+last property, we need to include as part of the group definition
+an open placeholder for a third member that we can later
+specialize to rings.
+
+But is this "taming" to restrict groups to sequences
+really necessary?  Is a restricted structure for f
+important in any way at all, or are we just imposing artificial
+complexity that offers no formal benefit?
+
+Let us look at an alternate definition, which I am proposing here, that
+completely ignores the /form/ of f (e.g. a finite
+sequence) and considers only its
+/properties./ The definition can then be very simple:
+
+    df-struct $a |- Struct ( f , ph ) = { f | ph ) } $.
+
+with no N parameter.  This definition doesn't abbreviate anything at
+all!  We can dispense with it completely, so there is one fewer
+definition to learn.  Instead, we just use the current class abstraction
+definition [http://us.metamath.org/mpegif/df-clab.html df-clab].
+
+As an example,  our definition of
+groups
+[http://us.metamath.org/mpegif/df-grpNEW.html df-grpNEW]
+is currently the following:
+
+    df-base $a |- Base = ( p e. _V |-> ( p ` 1 ) ) $.
+
+    df-plusg $a |- +g = ( g e. _V |-> ( g ` 2 ) ) $.
+
+    df-grpNEW $a |- GrpNEW = Struct ( 2 , f , E. g E. p ( g = ( Base ` f )
+       /\ p = ( +g ` f ) /\ [...properties required of g and p...] ) ) $.
+
+With the simplified definition above,
+[http://us.metamath.org/mpegif/df-base.html df-base]
+and
+[http://us.metamath.org/mpegif/df-plusg.html df-plusg]
+would remain the same,
+and df-grpNEW would become:
+
+    df-grpNEW $a |- GrpNEW = { f | E. g E. p ( g = ( Base ` f )
+       /\ p = ( +g ` f ) /\ [...properties required of g and p...] ) } $.
+
+Note that ( Base ` f ) = ( f ` 1 )
+and ( +g ` f ) = ( f ` 2 ).  Outside of the values of f at 1 and 2
+(where f is any set, function or not, evaluated per
+[http://us.metamath.org/mpegif/df-fv.html df-fv]), we don't
+care what f is as far as group properties are concerned.
+Mathematically, I can see no problem with this.
+
+Consider the current specialization of (Abelian) groups to rings
+[http://us.metamath.org/mpegif/df-ringNEW.html df-ringNEW]:
+
+  df-mulr $a |- .r = ( r e. _V |-> ( r ` 3 ) )
+
+  df-ringNEW $a |- RingNEW = Struct ( 3 , f , ( f e. AbelNEW /\ E. r E. p
+      E. t ( ( r = ( Base ` f ) /\ p = ( +g ` f ) /\ t = ( .r ` f ) )
+      /\ [...properties required of r, p, and t...] ) ) $.
+
+With the new proposed scheme,
+[http://us.metamath.org/mpegif/df-mulr.html df-mulr]
+would remain the same,
+and df-ringNEW would become:
+
+  df-ringNEW $a |- RingNEW = { f e. AbelNEW | E. r E. p E. t
+      ( ( r = ( Base ` f ) /\ p = ( +g ` f ) /\ t = ( .r ` f ) )
+      /\ [...properties required of r, p, and t...] ) } $.
+
+The theorem
+[http://us.metamath.org/mpegif/ringgrpNEW.html ringgrpNEW]
+
+   |- ( R e. RingNEW -> R e. GrpNEW )
+
+would still hold.
+
+
+** Instances of structures
+
+Occasionally we need to work with specific instances
+of a structure class.  For example, suppose we want to show
+the set of complex numbers with addition forms a group.
+
+There are two ways to construct specific structures for this purpose.
+
+The simplest but "scaffold-dependent" way is to use the
+arguments we chose for the df-base and df-plusg definitions.  The
+theorem to prove in this case would be
+
+  { <. 1 , CC >. , < 2 , + >. } e. GrpNEW
+
+The advantage is simplicity.  The disadvantage is that we have to know
+the assignments to 1 and 2, which are arbitrary and in principle could
+change in the future.
+
+Alternately, we can make such constructions "scaffold-independent".  But
+to do that we will need an additional definition.
+
+For the new definition, df-ndx below, we must know the domain of
+possible argument values.  We have chosen NN, but it could also be
+[http://us.metamath.org/mpegif/df-om.html om] if we want to use ordinal
+numbers or even ( CC u. om ) if we want more flexibility.  The important
+thing is that this domain be a set and not a proper class, so that our
+new definition can
+serve as a function argument.
+
+We define a new constant, the "index extraction function", as follows:
+
+  df-ndx $a |- Ndx = ( _I |` NN ) $.
+
+Formally, Ndx is just the identity function on NN.  It would be nicer
+if we could use _I itself, without restricting it, but unfortunately
+_I is a proper class so we must restrict it to a set.  We can now prove
+( Base ` Ndx ) = 1, ( +g ` Ndx ) = 2, etc., but we don't need to know
+what numbers they actually are.  Instead, we can refer to them in a
+scaffold-independent way and prove the following theorem:
+
+  { <. ( Base ` Ndx ) , CC >. , < ( +g ` Ndx ) , + >. } e. GrpNEW
+
+Note that [http://us.metamath.org/mpegifdf-strblr.html df-strblr] would
+go away and be replaced by the much simpler df-ndx.  In fact, df-ndx is
+the only new definition needed for the proposed structure scheme,
+since df-struct would go away.
+
+** Branching structures
+
+The new proposal also solves the
+problem with branching structures in [[file:fl.org][fl]]'s example.
+Recall the discussion:
+
+ Let's recall a topological group is a group where the addition and the
+ inverse function are continuous and a topological ring is a ring where
+ the addition, the multiplication and the inverse function are
+ continuous.
+
+ Thus a topological ring should be considered as a ring or as a
+ topological group.
+
+We can arbitrarily select the value ( f ` 9 ), say, to hold the topology
+component of a topological group or topological ring, as long as we are
+consistent about it.  We can define the topological component extractor
+
+  df-topextr $a |- .J = ( f e. _V |-> ( f ` 9 ) )
+
+The only important property we need for the arguments of ( f ` 1 ), ( f
+` 2 ), ( f ` 3 ), ( f ` 9 ) is that 1, 2, 3, 9 are non-identical sets.
+The fact that there is a "gap" between 3 and 9 has no effect.  The gap
+prevents interference with any anticipated further specializations of
+the underlying non-topological ring structure, allowing them to be
+made in a clean way using ( f ` 4 ), ( f ` 5 ), etc.
+
+All of [[file:fl.org][fl]]'s requirements would be met:  a topological ring is a
+ring, a topological ring is a group, a topological ring is a topological
+group, and a topological group is a group, all using simple subclass
+relationships.
+
+
+** Psychology
+
+With the proposed scheme, all kinds of sets will be called
+"groups", from standard textbook
+sequences with 2 values to weird function-like sets
+with an uncountable number of values.  I don't know if this
+will bother purists who might object that such strange sets
+shouldn't be considered groups.
+All we care about formally, though, are
+the values at 1 and 2 - which are the group properties of the structure
+- and everything else is irrelevant.
+
+I think any objection to this would be psychological and not
+mathematical, unless there is something I've overlooked.  The theorems of group theory derived from
+the proposed structure class are exactly the same.  But I would
+like to make sure that most people can accept such a
+radical departure from the simple ordered pairs in textbooks,
+before making a massive change to set.mm.
+
+** Possible issue: subgroups
+
+(This issue applies to both the existing structure builder and
+the new proposal.)
+
+Consider the following groups:
+
+ G1 = { <. 1 , RR >. , <. 2 , + >. , <. 3 , x. >. }
+ G2 = { <. 1 , RR >. , <. 2 , ( + |` ( RR X. RR ) ) >. , <. 3 , x. >. }
+ G3 = { <. 1 , QQ >. , <. 2 , + >. , <. 3 , x. >. }
+ G4 = { <. 1 , QQ >. , <. 2 , + >. , <. 3 , (/) >. }
+ G5 = { <. 1 , QQ >. , <. 2 , + >. }
+
+Call their base sets B1 = ( G1 ` 1 ), B2, B3, B4, B5.  Call their group
+operations P1 = ( G1 ` 2 ), P2, P3, P4, P5.
+
+Note that the first 3 groups are also rings, and the last 2 are not.
+
+My intuition is that we should call Gx a subgroup of Gy iff Bx C_ By and
+for all z,w in Bx we have ( z Gx w ) = ( z Gy w ).
+
+So we would have that G1 and G2 are subgroups of each other,
+as are G3, G4, and G5.  In addition, G3, G4, G5 are
+subgroups of G1 and G2.
+
+However, antisymmetry does not hold:  If Gx is a subgroup of
+Gy and vice-versa, it is not necessarily true that Gx = Gy but only that
+Gx is isomorphic to Gx via a group isomorphism.
+
+I don't anticipate that lack of antisymmetry will be a major problem,
+but I bring it up in case there are any comments on it. - [[file:norm.org][norm]] 18-Oct-2012
+  
+** Update
+
+[[file:norm.org][norm]] 19-Oct-2012
+
+I converted the 200 group, ring, division ring, poset, and
+lattice theorems in (the main) set.mm that were based on df-struct, so
+that they now use the new scheme proposed on this page.
+Most theorems didn't
+change, just the ones that derive the basic properties from
+the structure definitions.  (I didn't bother to re-date all
+the theorems I changed; too much trouble.)  df-struct itself is gone
+from the main set.mm and temporarily moved to my mathbox until I
+complete the conversion of the theorems there.
+
+The "toolbox" of utility theorems for df-struct and df-strbldr was
+reduced from 47 theorems to 4 theorems, taking 15 times less space.
+Compare the 47 theorems starting at
+[http://us.metamath.org/mpegif/dfstruct2.html dfstruct2] (old)
+with the 4 starting at
+[http://us2.metamath.org:88/mpegif/strcval.html strcval] (new).
+An advantage of this is that the reader no longer has to
+suffer through a long development of new, unfamiliar 
+technical definitions that aren't used in the literature
+and thus are useless outside of set.mm.  The only new definition
+is df-ndx, and that one is used only in one theorem,
+[http://us2.metamath.org:88/mpegif/cnaddablxNEW.html cnaddablxNEW],
+to illustrate
+how we can optionally describe specific structure instances
+in a way that does not reference the structure component indices.
+
+The only drawback I can see is psychological: the user will have to accept
+potentially 
+bizarre sets as groups, in addition to the simple ordered 
+pair of textbooks.
+
+The proofs of the main body of theorems are mostly the same size.
+For example, compare
+[http://us.metamath.org/mpegif/isgrpNEW.html isgrpNEW] (old)
+with the ones starting at
+[http://us2.metamath.org:88/mpegif/isgrpNEW.html isgrpNEW] (new).
+
+(The us.metamath.org links above will be updated in a week
+or so, so they will no longer be valid for comparing to the
+new and old.)
+
+
+
+** Topologies
+
+[[file:norm.org][norm]] 19-Oct-2012
+
+Here are my thoughts on how we should define topologies under the new
+structure framework.  There seems to be a fundamental difference
+between topologies as structures vs. groups and their specializations
+as structures.  For
+one thing, there is no "operation" component.
+
+Recall the present method of defining a topology
+[http://us.metamath.org/mpegif/df-top.html df-top]:
+
+    df-top $a |- Top = { x | ( A. y ( y C_ x -> U. y e. x ) /\
+                           A. y e. x A. z e. x ( y i^i z ) e. x ) } $.
+
+I think the simplicity of this is quite elegant.  Subsequent
+theorems can often be stated concisely with relatively short proofs.
+
+I think we should keep df-top as well as most of the development derived
+from it.   Putting the basic development into an extensible structure
+doesn't serve a very useful purpose but just adds unnecessary bloat.
+
+The usefulness of structures arises when we want to embed a topology
+into another structure, such as when we specialize groups to
+continuous groups.  To me, that is the logical point at which to
+introduce a structure.
+
+The correct structure analogy for topologies seems to be
+the "topological space"
+[http://us.metamath.org/mpegif/df-topsp.html df-topsp], currently
+defined as a textbook-like but inflexible class of ordered pairs,
+which we now have set.mm now but don't really use.  We
+can replace it  
+with an extensible structure class.  We already have the base set
+component as 
+[http://us.metamath.org/mpegif/df-base.html df-base],
+and we can define the topology component as the
+9th member:
+
+  $( Define the topology component of a topological space. $)
+  df-topset $a |- TopSet = { f e. _V |-> ( f ` 9 ) } $.
+
+I chose 9 because it is the largest 1-digit integer and it won't
+interfere with the present specializations of groups.  This isn't
+written in stone and would be easy to change in the future, but "9" seems
+relatively human-friendly.  And it resembles a j that's closed on the top. :)
+
+The definition of topological space would become:
+
+  ${
+    $d f b j $.
+    $( Define the class of all topological spaces. $)
+    df-topspNEW $a |- TopSpNEW = { f | E. b E. j ( ( b = ( Base ` f )
+        /\ j = ( TopSet ` f ) ) /\ ( U. j = b /\ j e. Top ) ) } $.
+  $}
+
+or equivalently:
+
+  $( Define the class of all topological spaces. $)
+  df-topspNEW $a |- TopSpNEW = { f | ( U. ( TopSet ` f ) = ( Base ` f )
+      /\ ( TopSet ` f ) e. Top ) } $.
+
+The class of topological groups would then be simply the intersection
+of GrpNEW and TopSpNEW, along with some additional properties to
+ensure the group's operation and inverse are continuous functions.
+
+We wouldn't ordinarily use the topological space structure in the main
+development of topologies, but as an example, the conversion of the
+present theorem [http://us.metamath.org/mpegif/topopn.html topopn]:
+
+  ${
+    topopn.1 $e |- X = U. J $.
+    $( The underlying set of a topology is an open set. $)
+    topopn $p |- ( J e. Top -> X e. J ) $= ... $.
+  $}
+
+would look like this:
+
+  ${
+    topopnsp.b $e |- B = ( Base ` K ) $.
+    topopnsp.j $e |- J = ( TopSet ` K ) $.
+    $( The underlying set of a topology is an open set. $)
+    topopnsp $p |- ( K e. TopSpNEW -> B e. J ) $= ... $.
+  $}
+
+We can add a simple conversion theorem that will take any theorem about
+Top and immediately convert it to a theorem of TopSpNEW, as follows.
+This is how we would tie in topology to say topological groups.
+
+  ${
+    topcvt.j $e |- J = ( TopSet ` K ) $.
+    topcvt.p $e |- ( J e. Top -> ph ) $. $( Any existing theorem about J $)
+    $( Convert a topology theorem to a topological space theorem. $)
+    topcvt $p |- ( K e. TopSpNEW -> ph ) $= ... $.
+  $}
+
+
+
+** Update on topological space structures
+
+[[file:norm.org][norm]] 21-Oct-2012
+
+The conversion of TopSp described above has been completed
+in set.mm.  The original TopSp token has been renamed to 
+TopSpOLD, and the new TopSpNEW is now the official
+TopSp.  See the theorems at today's
+[http://us2.metamath.org:88/mpegif/mmrecent.html recent proofs].
+
+Most of the following text is from a Google Metamath group
+post I made.  The indented text is from [[file:fl.org][fl]] to whom I'm
+responding.
+
+ > a) We continue to use Top as long as no heredity is involved.
+
+Correct.
+
+ > b) We use TopSp when there is a question of heredity (such as in a
+ > topological group, a topological vector space or even a metric space (if
+ > we consider the topology generated by the distance is assumed) or even
+ > in a normed space.
+
+Correct.  I have finished converting all
+[http://us2.metamath.org:88/mpegif/df-topsp.html TopSp]
+theorems in set.mm to use
+the new structure.  There were 74 theorems in 'show usage df-topsp
+/recursive', but only 17 (listed at the top of set.mm) had to be
+re-proved.
+
+The previous versions were renamed *OLD, and you may find it useful to
+compare their proofs to see what I did.  (BTW some of these are in your
+mathbox, so you may want to refresh your local copy.)
+
+In most cases the translation was straightforward, if somewhat tedious.
+In 3 cases 
+(e.g. [http://us2.metamath.org:88/mpegif/topindis.html topindis])
+I brute-forced the elimination of 'A e. _V' type hypotheses
+with
+[http://us2.metamath.org:88/mpegif/vtoclg.html vtoclg] or
+[http://us2.metamath.org:88/mpegif/vtoclga.html vtoclga]
+where TopSp was used in an unusual way.  I could
+eliminate vtoclg/ga with more general utility theorems but
+don't know how common such cases will be.  Anyway the TopSp conversion
+is finished, so maybe the future Grp etc. conversion will tell us more.
+
+ > c) There will be no " semi-automated scripts to help" with the
+ > translation as it had been suggested in:
+ >
+ > http://groups.google.com/group/metamath/browse_thread/thread/9ef7ad1a5f2930e4
+
+I have a script that generates a metamath command file to rebuild an
+(existing) proof.  I created these command files for the *OLD proofs,
+and in many cases, maybe 50%, I was able to lightly edit and reuse
+pieces of the old proofs.  In 5 or 6 theorems I was able to build the
+new proof almost completely automatically this way; 
+[http://us2.metamath.org:88/mpegif/istps2.html istps2] through
+[http://us2.metamath.org:88/mpegif/istps5.html istps5] were like 
+that.  But there was still a lot of manual work involved
+in many theorems.  Perhaps additional automation aids will become
+apparent with more experience.
+
+The proof rebuild script is similar to the import script that 
+[http://us2.metamath.org:88/index.html#eimm eimm]
+generates (although it has nothing to do with eimm).  I wonder whether
+[http://us2.metamath.org:88/index.html#mmj2 mmj2]
+and eimm could somehow be of assistance in the conversion.
+
+-
+
+BTW compare the 3 methods of
+[http://us2.metamath.org:88/mpegif/indistpsx.html indistpsx],
+[http://us2.metamath.org:88/mpegif/indistps.html indistps],
+and [[http://us2.metamath.org:88/mpegif/indistpsALT.html indistpsALT].
+(The old version is
+[http://us2.metamath.org:88/mpegif/indistpsOLD.html indistpsOLD].)
+I don't
+think I want to make much use of the explicit indices of indistpsx,
+since it is just as easy to use the ( Base ` ndx )-type indices of
+indistps.  Those are a little more verbose, but they are safe against
+changing definitional indices.  They also indicate mnemonically what the
+index is for e.g.  "( Base ` ndx )" is obviously the base set index, but the
+user would have to go back to find out what "1" means.
+
+I'm favoring the indistpsALT direct-assignment method for the majority
+of converted theorem, because it is even shorter and easier to read.  It
+is easy to convert it to indistps when needed, as described in the
+comment.
+
+-
+
+I might add that the old tpsex (now called
+[http://us2.metamath.org:88/mpegif/tpsexOLD.html tpsexOLD]) does not hold
+for the new structure and thus wasn't translated.  The old tpsexOLD
+exploited definitional-dependent quirks of proper classes, but these
+quirks don't hold anymore with the new structure.
+
+Such tricks were nice in the old development, leading to shorter proofs.
+But they were also the main cause of the complications, requiring
+the use of vtoclg/ga I mentioned.
+
+I anticipate this is also going to be an annoying obstacle for the other
+structure translations, since we (mostly I) have used
+definitional-dependent quirks wherever possible to obtain shorter proofs
+and briefer theorem statements.  I think this was the right thing to do
+at the time (and finding such quirks was fun), but not being able to
+predict the future has a price.

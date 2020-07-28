@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: July 31 2006.
+
+Status: *available*
+
+Time: 10 hrs (est.)
+
+Bounty Price: $500 (US est.)
+
+Objective:
+
+Donations (chiefly ad hoc) need to be handled better so people feel better about donating; more encouraged to do it.  This will chiefly be handled by a tracking program with a couple of interfaces (database, email?)
+
+Skills needed:
+
+ * CGI programming
+ * SQL databases
+ * email handling
+ * knowledge of PayPal payment processing a plus
+ * linux system admin
+
+* Background
+
+Currently we have a PayPal donation button, but when someone uses it to donate PlanetMath
+(a fairly unlikely event), then they are just left hanging.  Here is what we need to do to
+improve this situation:
+
+ * give people a nice "thank you" page + email when they donate (encourage them to do 
+yearly subscriptions, once we have that)
+ * track the donations in a database
+ * have a "thermometer" which tracks donations against a yearly target (entered in by an admin). this should be embeddable in pretty much any page, so it can be put in either the PM header (during finding drives), or the "donations" page, or both.
+ * maybe have a way for admins to add in donations that come from other sources (e.g., check)
+ * perhaps distinguish between yearly and drive-based funding goals (the former is the initial priority).
+
+Note that the contractor can do pretty much whatever language they want, as long as it is reasonably common and coded maintainably.
+
+Note 2: Deploying some pre-existing system would be fine too, perhaps with customizations.
+
+* Plan
+
+ 1. propose a design
+ 1. get approval, refine
+ 1. code application(s)
+ 1. test
+ 1. deploy (or give instructions to)
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for more on how bounties work.

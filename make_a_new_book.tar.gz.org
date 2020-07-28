@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Make a new archive containing the latest core files from Ross,
+for upload to my webpage (and probably to his too, since that
+way he can update the tar file as he needs to).  This will help
+automate future builds.
+
+I'm on it. --[[file:jcorneli.org][jcorneli]]

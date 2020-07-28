@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(first l)/, /(second l)/, /(third l)/
+
+ *Input:* A list /l/
+
+ *Output:*  An item of /l/. 
+
+ *Description:*  These names /first/, /second/, /third/ have been provided for the convenience of the reader as opposed to the more arcane names /car/, /cadr/, /caddr/.  They indicate that what the function returns is the /first/, /second/, or /third/ item of the list, respectively.
+
+ *Dependencies:* none
+
+ *Listing:*
+
+ (defun first (l) (car l))
+
+ (defun second (l) (car (cdr l)))
+
+ (defun third (l) (car (cdr (cdr l))))
+
+ *Discussion:*  The reason for doing things this way rather than using macros is so that we obtain honest functions (as opposed to macros or special forms) which can  be passed as arguments to other functions (such as /apply/ and /mapcar/).  Also, this way, we can make sure that these definitions will work with any LISP interpreter (even the original interpreter with 7 functions).  In particular, by taking care to only use these commands with lists that contain at least one, two, or three elements respectively, one can avoid even getting into trouble with the exceptional LISP interpreter that does not adopt the convention that /(car nil)/ and /(cdr nil)/ evaluate to /nil/.
+
+Back to 
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

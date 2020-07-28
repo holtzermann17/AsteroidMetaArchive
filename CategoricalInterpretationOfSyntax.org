@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It is worth noting that we can interpret the syntax of context-free languages in terms of category theory.  To this end, we set up a category as follows.  The objects of our category will be strings of terminal and non-terminal tokens.  The morphisms will be given by the relation "derived from". 
+
+It is not too hard to see that we obtain a bona-fide category --- the relation "derived from" has been constructed so as to be transitive.  The motivation for wanting to look at languages as categories will be seen presently when we see how a naturally occurring class of semantics on context-free grammars can be interprested in categorical terms.
+
+Back to [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]

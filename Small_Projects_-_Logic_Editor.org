@@ -1,0 +1,7 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Using the logic checking part of HDM, one could create a program for interactively constructing and editing proofs in formal logic much like DC Proof by Dan Chrisetensen.  The proposed project would differ from the existing program in at leat two significant ways.  While DC Proof is "free as in beer", it is not "free as in air".  The proposed program would be written as an Emacs mode, which is only natural since the routines (such as [[file:template utilities.org][template utilities]]) which it will use are written in [[file:LISP.org][LISP]].
+
+----
+[[file:Focused HDM subprojects.org][Focused HDM subprojects]]_

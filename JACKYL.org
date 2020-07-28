@@ -1,0 +1,212 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We've done a few proofs already... they aren't that formal, and for many more, more formal proofs,
+see [[file:metamath.org][metamath]].  But the proofs we've done might be worth thinking about how to port to [[file:hcode.org][hcode]].
+
+Credits: [[file:kschalm.org][kschalm]].
+
+* notes
+
+   ; ok enough messing around. now we're going to make this thing do
+   ; simple proofs.
+   
+   ; some suggestions: (easy to hard)
+   ; in what follows, all unknowns are integers
+   ;; 1. prove 1+1=2 (true by def.)
+   ;; 2. prove 1+1+1=3
+   ;; 3. prove 2*3=6
+   ;; 4. prove (x = 2) ==> (x^2 = 4)
+   ;; 5. prove (x^2 = 4 and x > 0) ==> (x = 2)
+   ;; 6. prove x+y = y+x and x*y = y*x
+   ;; 7. prove x*(-y) = (-x)*y = -(x*y) where -x := 0 - x
+   ;; 8.
+   ;; 9. be able to represent a proof that sqrt(2) is irrational.
+   
+   given:
+   (p | ab) ==> (p | a or p | b)
+   ??? (p | x^2) ==> (p^2 | x^2) ???
+   ??? def: (ord(p,x)=n) <==> (p^n | x and not (p^(n+1) | x))
+   substitution axiom [so obvious that one might forget to provide it]:
+     [statement[X] and [X=Y]] ==> [statement[Y]]
+     where "statement[X]" is just a statement containing some instances of the symbol X.
+     ex: [ord[x]=ord[x] and x=y] ==> [ord[x]=ord[y]]
+   identity axiom:
+     X=X where X is anything
+   
+   ;; outline of proof of #9:
+   [1] assume x^2 = 2*y^2
+   [2] state 2 is prime
+   [3] establish lemma (x,y integers and p prime) ==> ord[p,xy] = ord[p,x] + ord[p,y]
+   [4] from [3], establish lemma (x integer and p prime) ==> ord[p,x^2] = 2*ord[p,x]
+   [5] from [2] and [4], conclude ord[2,x^2] = 2*ord[2,x]
+   [6] from [2],[3] and [4], conclude ord[2,2y^2] = ord[2,2] + 2*ord[2,y]
+   [7] state that ord[2,2]=1
+   [8] from [1] and the substitution axiom, conclude ord[2,x^2] = ord[2,2y^2]
+   [9] from [8] and [5], conclude 2*ord[2,x] = ord[2,2y^2]
+   [10] from [9],[6] and [7], conclude 2*ord[2,x] = 1+2*ord[2,y]
+   [11] from [10] and [?] reduce mod 2 to conclude 0=1.
+   
+    this seems complicated. maybe we  could start with a proof of the
+    fundamental theorem of arithmetic.
+   
+   note: this is not the usual proof of irrationality of sqrt(2) that
+   people read in popular books, but it generalizes nicely to sqrt(d)
+   where d is any non-square integer, and it illustrates the fundamental
+   theorem of arithmetic. i like it. it is harder though, maybe we
+   should first focus on the proof by infinite descent. it seems to be
+   simpler (although that could be an illusion).
+
+* even
+
+   ; like version 3, but allow exponential expressions
+   ; such as (^ a b) meaning a to the b'th power. 
+   ; b must be non-negative. define 0^0 to be 1.
+   
+   (setq f nil)
+   
+   (defun odd? (x) (not (even? x)))
+   
+   ; improve the even-atom? function from version 3:
+   
+   ;; (defun even-atom? (x) 
+   ;;   (cond ((= x 0) t) 
+   ;;      ((= x 1) f)
+   ;;      (t (even-atom? (- x 2)))))
+   (defun even-atom? (x) 
+     (= 0 (mod x 2)))
+   
+   ; x is an expression of the form (+ a b)
+   (defun even-sum? (x) 
+     (or
+      (and (even? (second x)) (even? (third x)))
+      (and (odd? (second x)) (odd? (third x)))))
+   
+   ; x is an expression of the form (* a b)
+   (defun even-prod? (x)
+     (or (even? (second x)) (even? (third x))))
+   
+   ;; positive? (expr). used in even-power?
+   ;; we cannot use the built-in greater-than (>)
+   ;; function because it doesn't understand our
+   ;; expressions. 
+   ;; for now use a simple implementation. this must
+   ;; change when we expand the program to deal with
+   ;; negative numbers and subtraction. 
+   ;; for this implementation to work, we cannot allow
+   ;; expressions like (+ 0 0), (* 0 1) and more complicated
+   ;; versions of the same thing.
+   ;; the easiest thing is just to simplify 
+   ;; expressions when they first get parsed so those cases
+   ;; don't appear.
+
+   (defun positive? (x) 
+     (not (equal x 0)))
+   
+   ;; even-power? (^ expr expr)
+   ;; rule: a^b is even if b > 0 and a is even.
+   (defun even-power? (x) 
+     (and (positive? (third x)) (even? (second x))))
+   
+   (defun even? (x)
+     (if (atom x) 
+         (even-atom? x)
+       (case (first x) 
+             ('+ (even-sum? x))
+             ('* (even-prod? x))
+             ('^ (even-power? x))
+           (otherwise 'unknown))))
+   
+   ;; parsing functions below.
+   ;; perform trivial simplifications to make it easy
+   ;; to test expressions for positivity. (ie, something
+   ;; is zero iff it looks like zero, literally "0").
+   
+   ;; parse-sum (+ atom atom)
+   ;; rules: 
+   ;; a + 0 = a, 0 + a = a;
+   (defun parse-sum (x)
+     (if (equal (second x) 0)
+         (third x)
+       (if (equal (third x) 0)
+           (second x)
+         x)))
+   
+   ;; parse-prod (* atom atom)
+   ;; rules: 
+   ;; a * 0 = 0, 0 * a = 0, a * 1 = a, 1 * a = a;
+   (defun parse-prod (x)
+     (if (equal (second x) 1)
+         (third x)
+       (if (equal (third x) 1)
+           (second x)
+         (if (or (equal (second x) 0) (equal (third x) 0))
+             0
+           x))))
+   
+   ;; parse-power (^ atom atom)
+   ;; rules: 
+   ;; a ^ 0 = 1, a ^ 1 = a, 0 ^ b = 0 (if b != 0).
+   (defun parse-power (x)
+     (if (equal (third x) 0)
+         1
+       (if (equal (third x) 1)
+           (second x)
+         (if (equal (second x) 0)
+             0
+           x))))   
+   
+   ;; (parse x) returns a simplified version of the
+   ;; expression x. example:
+   ;; (parse '(+ (+ 2 (* 8 0)) (* (+ 0 4) (^ 3 0))))
+   ;; returns
+   ;; '(+ 2 4)
+   ;; this must proceed from the inside-out.
+   ;; note i should parse all the arguments once, not case by case.
+   ;; but conceivably different operations take different numbers of
+   ;; arguments.
+   (defun parse (x)
+     (if (atom x) x
+       (case (first x)
+             ('+ (parse-sum (list '+ (parse (second x)) (parse (third x)))))
+             ('* (parse-prod (list '* (parse (second x)) (parse (third x)))))
+             ('^ (parse-power (list '^ (parse (second x)) (parse (third x)))))
+             (otherwise x))))
+   
+   ;; test: (parse '(+ (^ 77 (* 3 0)) (* (+ 0 2) (^ 12 0))))
+   ;; result: (+ 1 2)
+   ;; yay!
+   
+* comments
+
+I really like this code, and hope to see more of [[file:kschalm.org][kschalm]]'s artistry before
+too long.  For some other ideas about things to prove, take a look at
+[[file:experiment with automated proofs of various interesting facts.org][experiment with automated proofs of various interesting facts]].  I hope to
+have more comments here before long. --[[file:jcorneli.org][jcorneli]] Wed Feb 9 19:24
+
+The nested "if's" in functions like /parse-power/ can be rewritten as "conds"
+which would make the code more readable.
+
+What do people think about proving that 10 is even by saying that ten equals
+zero mod 2?  I'd say: this isn't a proof in the sense of reducing to /axioms/,
+but it is fine for day-to-day mathematicians.  "Reducing to zero mod 2" is
+probably the /definition/ of "even".  One way to make the proof more formal
+would be to /check the code that does the reducing/.  (I.e. "if given an
+integer, this code correctly takes its modulus".)  We don't need to be too
+uptight /right now/, but eventually it would be nice to be able to check the
+correctness of algorithms.
+
+Note that Kyle's parser doesn't run into arithmetic problems, because it doesn't
+do arithmetic.  This:
+
+ (parse '(^ (^ 10 (^ 10 (^ 10 (^ 10 10)))) (^ 10 (^ 10 (^ 10 (^ 10 10))))))
+
+/doesn't reduce/.  And this:
+
+ (even? '(^ (^ 10 (^ 10 (^ 10 (^ 10 10)))) (^ 10 (^ 10 (^ 10 (^ 10 10))))))
+
+just uses recursion to prove that the base is even.  I would say that unless
+specifically instructed otherwise, our programs should always do things like
+this: its called symbolic processing for a reason.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 18 19:29:51 2005 UTC

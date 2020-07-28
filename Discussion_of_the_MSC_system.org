@@ -1,0 +1,106 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+My thoughts are that one should be careful not take the MSC classification too
+seriously nor feel obliged to force the content of Planet Math to fit this
+classification scheme in cases where there are discrepancies.  First and
+foremost, one needs to keep in mind that the MSC scheme was designed for
+classifying stand-alone works such as research articles and books, not for
+classifying individual definitions and theorems or encyclopaedia entries.
+Remember the reason why there are MSC classifications on Planet Math in the
+first place.  Originally, the idea was to develop a classification specifically
+for use on Planet Math.  Since a need for some classification scheme in order to
+organize the material and let the linker decide ambiguous cases was felt before
+such a classification scheme was developed, the MSC classification scheme was
+adopted as the best readily available solution.
+
+Let me point out some of the incongruities I see:
+
+Several headings, such as classifications with dashes in them, were intended to
+refer to whole works rather than to specific topics which might be found in such
+a work.  As suggested by [[file:jcorneli.org][jcorneli]] [[file:Role of sections | elsewhere.org][Role of sections | elsewhere]], one
+could reinterpret some of these.
+
+When it comes to basic definitions (such as the definition of a commutative ring
+or a local ring), there is often no good place to classify them.  While area
+13AXX is titled "General commutative ring theory" and area 13HXX is labelled
+"Local rings and semilocal rings", there is no specific category in which one
+could classify the definition of "commutative ring" or "local ring".  The reason
+for this lack is simple --- ordinarily, these definitions would occur in a
+textbook on algebra, not as the subject of a research paper.  The text book
+would be classified under 13-01 and there is no need for a separate
+classification which would be suitable for these definitions.
+
+The allotment of subject areas to main headings in the MSC scheme is highly
+uneven.  For instance: set theory logic, and the theory of computability all
+share the classification 03-XX; all branches of number theory are to be found
+under 11-XX, but ordinary differential equations (34-XX), partial differential
+equations (35-XX) and integral equations (45-XX) have seperate headings.  The
+reason for this is perfectly simple to understand in the context of the main use
+of the MSC classification scheme, which is to organize abstracts and reviews of
+mathematical articles in Math Reviews.  Since there are comparatively few
+articles published on the topics of logic and set theory, it makes sense to lump
+these areas together under one heading.  On the other hand, there are a huge
+number of articles published on the topic of integral and differetntial
+equations, and hence it makes sense to split that area up into several top-level
+headings.  However, these decisions may not make much sense in other contexts.
+They certainly do not reflect the way that mathematicians view their subject as
+being divided.  Ordinarily, logic, set theory, and theory of computability would
+be considered as separate disciplines while the theory of differential and
+integral equations would be considered as single discipline with the division
+into ordinary differential equations, partial differntial equations, and
+integral equations being a subdivision on the par of the subdivision of logic
+into sentential logic, frist order logic, and higher-order logic.
+
+Because of the requirements of backwards compatibility in print media, the MSC
+classification scheme contains historical fossils.  For instance, while lumping
+category theory and homological algebra together was natural in the 1950s and
+1960s when the subject was first being developed in the context of homology
+theory, later developments make this pairing seem rather quaint.  The
+contemporary view of category theory is that it is a general theory of
+mathematical structure, and therefore it would make more sense to associate it
+with foundational subjects such as logic and set theory.  The association with
+homological algebras only is relevant for abelian categories.  Likewise, having
+a separate main heading for potential theory is antiquated.  While this was a
+separate branch of analysis during the ninteenth century, circumstances have
+changed since and the the study of solutions of the Laplace equation is now
+considered part of the theory of elliptic partial differential equations and
+functional analysis.  While it makes sense to keeping the term "potential
+theory" to denote the study of properties of solutions of the Laplace equations,
+it no longer makes sense to consider this as a seperate subject area on a par
+with other main branches of analysis, especially since many of the main results
+are now known to be special cases of more general theorems.  --[[file:rspuzio.org][rspuzio]] 7
+March 2005
+
+I don't think the weaknesses in the MSC system that you're talking about here
+necessarily have much bearing on the possibility of making each section
+self-contained in the sense I was talking about "[[file:Role of sections|elsewhere.org][Role of sections|elsewhere]]".  
+
+The MSC system gives us a partition -- if some particular piece of mathematical
+writing does not fit anywhere in this partition, then yes, we may have a
+problem.  However, I'm not so convinced, for example, that there is no good
+place to put the definition of commutative ring -- 13Axx (assuming that we are
+in fact allowed to put things in little-x divisions, or 13A99 if we are not)
+seems to work fine (similarly, 16Lxx or 16L99 for local rings).
+
+The fact that some categories may be seen as "too big" (03-XX) and some as "too
+small" (35-XX) and some are "just weird" (31-XX, 18-XX) doesn't seem to me to
+put the kibosh on having these sections contain the needed definitions,
+exposition, and discussion of background material, etc., that I was talking
+about.  Furthermore, if we were to reorganize the collection to use some other
+classification system, my statements about the [[file:Role of sections.org][Role of sections]] would
+continue to apply - to the new sections.
+
+So, to sum up, I don't think I for one am inclined to take the MSC
+classification too seriously - but it seems OK, and I think that developing a
+new classification system at present would be an unneeded distraction (though
+perhaps later we might work on one).  I don't know about forcing the content of
+Planet Math to fit this classification scheme -- the best example you brought up
+was the Potential Theory example, where much of modern potential theory fits
+properly in other areas.  I would say it is certainly fine to put content
+exactly where it fits best, and if the Potential Theory section ends up being
+really short, or even empty, that would be OK.
+
+And if something seems particularly hard to classify, we can always talk it over
+and try to find a place on a case by case basis.  --[[file:jcorneli.org][jcorneli]] Tue Mar 08
+07:03:40 2005 UTC

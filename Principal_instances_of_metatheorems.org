@@ -1,0 +1,407 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In [[file:U2ProofVerificationEngine.org][U2ProofVerificationEngine]], I described how a single metatheorem in Metamath/Ghilbert
+may translate to a number of different instances in a target language equivalent to
+[[file:de Bruijn Indexed Representation|de Bruijn indexed.org][de Bruijn Indexed Representation|de Bruijn indexed]]
+ terms, and observed that the "principal instance," in which variables are maximally
+distinct, is usually the only such instance worth keeping. I posed the question of whether
+it was possible to develop an axiomatic framework in which only the principal instance could
+be proved.
+
+I believe the answer is "no." Consider this simple theorem, an instance of
+[http://us.metamath.org/mpegif/ax-4.html ax-4] followed by
+two applications of
+[http://us.metamath.org/mpegif/ax-gen.html ax-gen]:
+
+  A. x A. y ( A. x y = A -> y = A )
+
+I added the ax-gen steps just to avoid the issue of deciding de Bruijn indices for globally
+free variables. This shouldn't affect the substance of the argument.
+
+In the principal instance, x and y are distinct, so the translation into de Bruijn numbering
+is (note that A is translated from A(x, y) because it can be a term scheme with x and y free):
+
+  A. A. ( A. 1 = A(0, 1) -> 0 = A(1, 0) )
+
+However, unifying x and y is also valid, which results in this translation:
+
+  A. A. ( A. 0 = A(0, 0) -> 0 = A(0, 0) )
+
+Which, of course, isn't the same term at all. Therefore, I believe that a fully general
+translation from mm/gh into, say, HOL /has/ to deal with multiple instances of a
+theorem scheme, not just the principal one. This is more than a bit unsatisfying, because
+in practice it is likely that only the principal instances will be useful, which means
+that the the translator has excess complexity, unlikely to be tested at that.
+
+I was led astray in thinking that a principal instance only axiomatization was feasible
+because my [[file:Ghilbert Pax.org][Ghilbert Pax]] version of [http://us.metamath.org/mpegif/hbal.html hbal]
+(called nfi_al in Pax) has the constraint that x and y are distinct, which in turn has
+the consequence that the Ghilbert Pax versions of
+[http://us.metamath.org/mpegif/alcom.html alcom] and
+[http://us.metamath.org/mpegif/aaan.html aaan] admit only their principal instances, as
+opposed to the more general set.mm versions. But, as shown above, there are many theorems
+that can be proved without any distinct variable constraints at all, and I can't think
+of any simple way to express the idea that only the principal instances are provable.
+
+-- [[file:raph.org][raph]] 25 Nov 2006
+
+
+-----
+
+First, perhaps you can clarify what you mean by "maximally distinct."
+But for the purpose of discussion, I will assume that you mean that all
+set variables in a theorem are all in a single $d statement, but that
+the $d conditions on wff/class variables do not necessarily include all
+set variables (since wff/class variables sometimes need "holes").
+
+: Very close. But my concept of "maximally distinct" allows unification of
+variables when the resulting de Bruijn index representations are the same.
+For example, unifying x and y still leaves this theorem maximally distinct:
+
+  E. x x e. RR <-> E. y y e. RR
+
+: Either way, the de Bruijn index representation is:
+
+  E. 0 e. RR <-> E. 0 e. RR.
+
+Perhaps I am not grasping correctly
+ what you mean by "only the principal instance
+could be proved".  But as soon as we have 
+[http://us.metamath.org/mpegif/ax-gen.html ax-gen], it already seems obviously
+impossible, since it introduces a new variable with no restrictions.  Does this mean the hypothetical system you had in mind (if
+it existed) would not include 
+ax-gen?  Did you have an alternative in
+mind?
+
+: You're right that ax-gen is the problematic case. What I have in mind is not
+so much changing ax-gen itself as adding additional constraints to the metalogic
+that meet these goals: (1) only principal instance can be proved. (2) existing
+set.mm still verifies with only minimal changes. (3) the added constraints are
+simple and consistent with Metamath style.
+
+: .
+
+: It's possible that requiring all variable-variable pairs to be disjoint would
+satisfy these constraints. Probably it makes the most sense to try adding
+these and seeing how many set.mm theorems actually break. -- [[file:raph.org][raph]]
+
+While I don't understand the argument using de Bruijn indices (because I
+am not familiar with them), if you are saying that a restrictive
+substitution instance of a "bundled" theorem can be independent of the
+maximally distinct case, that also seems obvious:  for example, E. x x
+x is independent of E. x y = x with x and y distinct, as can be shown by
+e.g. a model where = is set membership.  Correct me if I am not
+understanding that correctly.
+
+: Exactly. These would be considered two different theorems, and would require
+two different proofs, as opposed to the current set.mm situation where a
+single proof could be instantiated to both cases.
+
+You can always (as a policy, possibly enforced as as option in the
+verifier) attach possibly unnecessary distinct variable requirements to
+each theorem so that it has maximally distinct variables, even though
+the proof might not demand it.  The axioms themselves can be also "unbundled"
+in that way, so that you would have a larger set, although many might be
+redundant and could be eliminated.  Would that accomplish what you are
+looking for?
+
+: Very possibly. But I want to avoid doing this as a "policy" if possible. For
+cleanliness, a translator into another system should handle /all/ valid theorems
+accepted by the verfier, not just those that pass the policy.
+
+Or perhaps you are talking about proofs that /force/ the final step to
+have maximally distinct variables, Metamath Solitaire style, where the
+"most general" possible theorem has maximally distinct variables.  It
+might be possible - and I would conjecture likely - that proofs could be
+constructed to force the maximally distinct case of any theorem, in the
+Metamath Solitaire applet using the existing axiom system.  This would be analogous to the
+"D-completeness" property that has already been proven for it, i.e. the
+applet can prove any specific substitution instance of a theorem up to
+variable renaming, e.g.  ( ph -> ( ph -> ph ) ) as well as the more
+general ( ph -> ( ps -> ph ) ).  Of course the proofs are usually longer.
+Would we call the analogous property for $d's,
+"$d-completeness"? :)
+
+: Again, possibly. I'd need to think about this in more detail. -- [[file:raph.org][raph]] 11 Dec 2006
+
+--[[file:norm.org][norm]] 26 Nov 2006
+
+-----
+
+Ok, I've run the experiment. The results are definitely interesting. However,
+I still don't clearly see any way to meet the goals above.
+
+I modified mm_verify.py to add $d constraints for all set variables appearing
+in the conclusion of an axiom or proof, then checked for disjoint violations.
+I could have done the test by transforming set.mm to add the $d's, but it was
+easier to code just doing add_d() methods to the frame stack while verifying.
+
+Only 63 theorems failed (of about 7900), which is certainly encouraging. Of those, the biggest
+single source disjoint violations was hbae and hbnae steps, which are of course
+specific to distinctors. A simple example is the first step of
+[http://us.metamath.org/mpegif/equs5.html equs5], which is an instance of
+[http://us.metamath.org/mpegif/hbnae.html hbnae].
+
+Not counting hbae and hbnae steps, only 34 theorems fail. The complete list is: ax6-67 ax4-467 ax6-467 equid equcomi equvini hbequid sbid dvelimf2 dvelimf dvelimdf sb9i ax16 equidALT sbal ax11el abid rgen2 ralcom2 nalset efrirr elrnopab eirrv ac6lem zorn2 nd1 nd2 nd3 axunnd axregndlem1 axregndlem2 axregnd nmopunt pjnmop.
+
+The first three of these are technical experiments in variant formulations of the axioms.
+In particular, the
+[http://us.metamath.org/mpegif/ax467.html ax467] step in
+[http://us.metamath.org/mpegif/ax4-467.html ax4-467] is a perfect example of a
+non-principal instance of a theorem. If a logician feels that free and bound variables
+should not be indiscriminately mixed, this theorem (and the other two ax467 theorems)
+are likely to make their head explode.
+
+Several others are technical theorems or variants designed to minimize the number
+of distinct variable constraints. For example,
+[http://us.metamath.org/mpegif/ralcom2.html ralcom2] proves the same theorem as
+[http://us.metamath.org/mpegif/ralcom.html ralcom] but without requiring x and y
+to be distinct. If there is a restriction to principal instances only, then this extra generality
+is of no use.
+
+The [http://us.metamath.org/mpegif/norm1hext.html norm1hext]
+step in
+[http://us.metamath.org/mpegif/nmopunt.html nmopunt]
+and
+[http://us.metamath.org/mpegif/pjnmop.html pjnmop] is a good example of the pattern
+described above where two quantifiers have separate scopes, so their bound variables
+don't need to be different for the instance to be considered "maximally distinct" by the
+de Bruijn index criterion. Since there are only a couple of instances, I'm sure the proofs
+could be easily fixed up, by adding an extra alpha-conversion, say.
+
+There are a couple more theorems in the list that would be harder to fix up. For example,
+[http://us.metamath.org/mpegif/equcomi.html equcomi] uses an instance of
+[http://us.metamath.org/mpegif/ax-8.html ax-8] in which two of the variables are unified.
+However, this axiom is written in terms of set variables solely because of their set nature,
+not because they're bindable variables. So adding distinct variable constraints makes little
+sense. Other similar cases are [http://us.metamath.org/mpegif/nalset.html nalset],
+and [http://us.metamath.org/mpegif/efrirr.html efrirr], which similarly exploits only
+the set nature of the variables in the [http://us.metamath.org/mpegif/epel.html epel]
+instance.
+
+The bottom line, I think, is that it is feasible to fix up set.mm so that it would verify if
+all set variables were required to be distinct, but there are also several cases where the
+constraint is artificially too strict, and it would be a burden to always make sure they're
+met.
+
+In practice, automated translators from set.mm to other systems can safely ignore
+the non-principal instances. I found no cases of these other than technical theorems at
+the very lowest level, and these are unlikely to be worth translating. It is of course
+possible to construct a contrived example where non-principal instances are required,
+but if these are important, or if a completeness meta-result guaranteeing the translation
+of all valid theorems is required, then it's certainly possible to implement a tool that
+splits off these other instances as separate theorems.
+
+I feel that I understand the distinct variable conditions a lot better after having done this
+experiment, which is alarming in a way considering that I've been playing with Metamath
+for four years or so. Hopefully we can write up this knowledge in a way that's more
+accessible for new users.
+
+-- [[file:raph.org][raph]] 11 Dec 2006
+
+-----
+
+I hope that that "we" includes "you". :)  What
+aspects did you find uncomfortable prior to this, and what is
+the final insight that makes you feel you understand them better
+now?  If you can communicate that it would probably help a
+lot of people. 
+I've rewritten the
+[http://us2.metamath.org:8888/mpegif/mmset.html#distinct Distinct
+Variable] appendix several times but I am still not certain that
+it conveys the concept adequately.  Most recently I added an
+example and also shortened it significantly in hopes that
+more people would at least read it.  I would appreciate any
+suggestion for that
+appendix (as a short readable introduction).
+-- [[file:norm.org][norm]] 12 Dec 2006
+
+-----
+
+The distinct variable mechanism, as a self-contained mechanism,
+is not that hard to grasp. What has proved more elusive is the relationship
+between distinct variables and traditional formulations of logic.
+
+There is no single "aha" final insight, but I'll just put forth a series
+of bullet points for things that I had to learn the hard way.
+
+ * The distinct variable information in the Metamath world maps to
+two different concepts in traditional logic: the proviso that a
+variable not occur free in a term, and (by omission) the abstraction
+of a term scheme, what is commonly written ph(x).
+
+ * The "maximally distinct" convention in traditional logic is represented
+by distinct variable constraints between the variable bound by
+a quantifier and all variables appearing in the body (I think).
+
+ * However, Metamath readily admits (meta-)theorems with fewer
+distinct variable constraints. These correspond to the "bundling"
+of non-principal instances of a theorem scheme.
+
+ * The axiomatization in set.mm is carefully designed to minimize
+the number of distinct variable conditions, in fact to isolate them
+so that ax-17 is the only axiom that requires them. In other words,
+the axiomatization allows the maximum generality of these
+non-principal instances. However, all that done in the foundations,
+the actual development of set theory uses only principal instances.
+
+ * The "distinctor" and related "identical variable specifier",
+and the various theorems designed to manipulate
+them (such as
+[http://us.metamath.org/mpegif/hbae.html hbae]), are not
+actually needed for the development of predicate calculus in the
+Tarski-Megill metalogic. The main role of the distinctor is to reduce
+the number of distinct variable constraints by serving as an in-logic
+substitute.
+
+ * It does not seem to be possible to design an axiomatization in
+the Tarski-Megill metalogic so that only principal instances
+are provable. In other words, the metalogic forces the existence
+of non-principal instances in the consequence relation.
+
+A lot of these observations came to light through trying to design
+alternate formulations of the predicate calculus. Especially in
+[[file:Ghilbert Pax.org][Ghilbert Pax]], I plan to follow traditional predicate calculus as
+much as possible, and make no effort to maximize the generality
+of these non-principal instances. Theorems analogous to hbae
+and [http://us.metamath.org/mpegif/dvelim.html dvelim] are not
+present in the theorem repository, and at this point it seems likely
+they will not be missed. When I started the project, it was not
+obvious whether this would be possible.
+
+-----
+
+At this point I need to go back to school. Distinct Metavariables
+boggle my mind -- I cannot attach /meaning/ to what happens
+in relation to assignments to members of the Universe of Discourse.
+That is my problem, not $d's. I think I get this:
+
+     
+    from Tarski's "A Simplified Formalization of
+    Predicate Logic With Identity" -- translated
+    into ASCII shorthand:
+     
+    Where x and y are distinct variables and
+    ph ( x / y ) denotes the proper substitution
+    of x by y
+     
+         ( A. x ( ( x = y ) -> ph ) -> ph ( x / y ) )
+     
+    and
+     
+         ( ph ( x / y ) -> A. x ( ( x = y ) -> ph ) )
+     
+    are universally valid. 
+     
+
+What I think /we/ need is a textbook that addresses the 
+Tarski-Megill approach. That may sound grandiose but 
+note that there are at least two textbooks in existence
+that are licensed under Creative Commons. For example
+
+[http://www.fecundity.com/logic/ "forall x" by P.D. Magnus],
+
+which has Creative Commons 2.0 license
+(Attribution-NonCommercial-ShareAlike 2.0)
+
+/feel free to remove this comment if it is not suitable for this page/
+
+--[[file:ocat.org][ocat]] 12-Dec-2006
+
+/ocat:  I cannot attach /meaning/ to what happens in relation to
+assignments to members of the Universe of Discourse.  That is my
+problem, not $d's.  /
+
+norm:  That is because there is no meaning, since Metamath variables and
+the Universe of Discourse have nothing to do with each other!  The
+members of the Universe of Discourse that logic talks about are /not/
+assigned to the x and y in the Metamath expression 
+[http://us.metamath.org/mpegif/a9e.html E. x x = y]. It is
+very important /not/ to think of it this way (whether in Metamath or
+in Tarski's paper, which uses alpha, beta,... for Metamath's x,y,...).
+
+The "universe of discourse" of Metamath is not the individuals that the
+logic in the /forall x/ book talks about.  Instead, it is the
+variables which that logic uses.  (And more generally, this universe
+includes the wffs that logic uses, when we consider wff metavariables.)
+
+Metamath is a language that describes (or "generates") formulas of
+first-order logic.  The "individuals" that this language talks about are
+the variables (and wffs) of first-order logic.  In Metamath's E. x x = y, x and y
+range over the variables of logic, which are called say v1, v2, v3,...
+So, one possible thing it generates is the first-order logic expression
+E. v1 v1 = v2.  Note that Metamath cannot actually produce
+E. v1 v1 = v2 using its existing language; that is something a human
+must imagine outside of Metamath, when looking at the Metamath formula
+E. x x = y.
+
+Formal first-order logic, such as that which you read about in the
+/forall x/ book, talks about universes of discourse, consisting of
+individuals say i1, i2, i3,....  It /starts/ with an expression that
+is the /output/ of Metamath, such as E. v1 v1 = v2.  Then it studies
+whether this expression holds or not when applied to the set of
+individuals i1, i2, i3,...  Metamath, directly, has absolutely nothing
+to say about the actual universe of discourse i1, i2, i3,...  It is not
+even "aware" that there is such a universe of discourse and has
+no way of talking about it.
+
+Think of a single Metamath formula as a dumb machine that spews out formulas
+in the language of first-order logic, constrained only by the
+pattern it specifies.  
+The purpose of the $d statement
+is to put a damper on the machine so that it doesn't generate too many
+formulas, in particular those that the /forall x/ book would call
+invalid.  The $d requirement on the set theory Metamath metatheorem 
+[http://us.metamath.org/mpegif/dtru.html -.
+A. x x = y] prevents it from spewing out -. A. v1 v1 = v1.
+
+Constantly keep in mind that Metamath is metalogic, not logic.
+
+-- [[file:norm.org][norm]] 13-Dec-2006
+
+
+
+-----
+     
+
+
+
+***  Feature or bug?
+
+Arguments can be made both for and against the existence of these
+non-principal instances. From a purely theoretical standpoint, it's
+a feature, as the resulting theorem schemes are more general. However,
+the practical value of this extra generality seems close to nil.
+
+One argument against is the significant extra complexity required
+for completeness in a translator to other systems based on more
+traditional metalogics. In practice, translators which lack theoretical
+completeness will work.
+
+But the strongest argument either way is whether they get in the
+way of understanding the metalogic, or explaining it to people.
+That's a fuzzier question, and I'll leave it for others to discuss.
+
+***  Another idea for getting rid of them
+
+I'm just "thinking out wiki" here, but I have another idea for a change
+to the metalogic to make only principal instances provable. Introduce
+a new kind of distinct variable condition that says, "x is distinct from
+each of the other variables (of the same kind) in ph". When a theorem
+with such a constraint is instantiated, extra distinct variable conditions
+are added between x and all variables (other than x) of the same kind
+in ph.
+
+I believe such a constraint would need to be added to ax-4 and ax-gen
+(as these are the two main axioms in which free and bound instances
+of variables are mixed). No extra distinct variable conditions would be
+added to [http://us.metamath.org/mpegif/ax-8.html ax-8] and friends.
+
+I'm still not sure this works, i.e. that the resulting system would have
+only principal instances in the consequent relation. Based on the
+experiment above, however, I'm pretty sure that if it did, the changes
+to set.mm would be quite minimal. I'd guess that only a handful of
+theorems would need to be modified.
+
+-- [[file:raph.org][raph]] 12 Dec 2006

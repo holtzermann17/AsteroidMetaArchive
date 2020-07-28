@@ -1,0 +1,164 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* About this file
+This is a very rough draft that is here to give
+you (the reader) an idea of what a KM file might look like.
+I have made no effort to actually check that the code
+works in KM, and as you will see if you glance at the comments,
+the even the [[file:hcode.org][hcode]] is pretty rough.
+
+* groups.km
+  
+  ;;; General comments:
+  
+  ;; Coding this up, right now *mainly* what you see is redundancy
+  ;; between the hcode and the KM wrappers.  I really don't know what to
+  ;; think about this redundancy exactly (it could provide typechecking,
+  ;; but our hcode predicates already do provide type-checking),
+  ;; however, I do think that later we would want to add lots of extra
+  ;; information that we wouldn't want in hcode, for example, the fact
+  ;; that a Ring is a specialization of Group, etc.
+  
+  ;;; KM questions:
+  
+  ;; I don't remember the difference between `a' and `must-be-a'.
+  ;; Nor between `has' and  `has-definition'.
+  
+  ;;; Code: 
+  
+  (Set has
+         (superclasses (MathematicalObject)))
+  
+  (every Set has-definition
+         (hcode-definition (defn set (X)
+                              ;; I definitely don't know about this!
+                              (satisfies-sethood-p X)))
+         (card (must-be-a CardinalNumber)))
+  
+  (Elt has
+       (superclasses (MathematicalProperty)))
+  
+  ;; This is supposed to describe the relationship an element
+  ;; of a set stands in to a set that contains it.
+  ;; Obviously there is more we could say, like $X\setminus x$
+  ;; could be smaller than $X$ but can not be bigger. Etc.
+  (every Elt has-definition
+         (hcode-definition (defn elt (x X)
+                              ;; nor this!
+                              (is-element-p x X)))
+         ;; I'm not sure this will work at all, KM-wise
+         (the-element (must-be-a (instance-of MathematicalObject)))
+         (the-containing-set (must-be-a Set)))
+  
+  (every Subset has-definition
+         (hcode-definition (defn subset (Y X)
+                             (set Y)
+                             (set X)
+                             (forall y :in Y :st (elt y X))))
+         (the-subset (must-be-a Set))
+         (the-containing-set (must-be-a Set)))
+  
+  ;; perhaps the superclass should be MathematicalPair, which would
+  ;; itself have superclass mathematical object.  The point being, we
+  ;; need *two* things to have a group (according to the non-quineian
+  ;; definition)
+  (Group has
+         (superclasses (MathematicalObject)))
+  
+  ;; this is the definition of a group; any element of
+  ;; the class of groups will satisfy this definition
+  ;; (up to rewriting so that the definition makes sense).
+  ;;
+  ;; It would be good to do say the trivial group, Z_2, and V_4 as
+  ;; examples (i.e. write them down and prove that they satisfy the
+  ;; definition of a group).
+  (every Group has-definition
+         (hcode-definition (defn group (G *)
+                              (set G)
+                              (operation * G)
+                              (associative *)
+                              (exists e :in G 
+                                        :st (forall a :in G 
+                                                       :st (eq (* e a)
+                                                               (* a e)
+                                                               a)))
+                              (forall a :in G
+                                         :st (exists a' :in G 
+                                                        :st (eq (* a a')
+                                                                (* a' a)
+                                                                e)))))
+         (operation (must-be-a Operation))
+         (set-acted-on (must-be-a Set)))
+  
+  ;; here at least we see that every Subgroup is a Group, that is
+  ;; something.  Though of course that is somewhat obvious from the
+  ;; hcode.
+  ;;
+  ;; However, something that isn't obvious from the hcode (at least, not
+  ;; the version of it we have here) is the way in which we're to
+  ;; accomplish the test `(group H)' when as we just saw, every
+  ;; group is made up of two things; a set, and an operation.
+  ;; Probably this is just bad hcode.
+  (Subgroup has
+            (superclasses (Group)))
+  
+  (every Subgroup has-definition
+         (hcode-definition (defn subgroup (H G)
+                             (group G)
+                             (group H)
+                             (subset H G)))
+         (the-subset (must-be-a Group))
+         (the-containing-set (must-be-a Group)))
+  
+  (Operation has
+             (superclasses (MathematicalObject)))
+  
+  (every Operation has-definition
+         (hcode-definition (defn operation (* X)
+                              (set X)
+                              (forall a b :in X :st (elt (* a b) X))))
+         (set-acted-on (must-be-a Set)))
+   
+  (AssociativeProperty has
+               (superclasses (MathematicalProperty)))
+  
+  (every AssociativeProperty has-definition
+         (hcode-definition (defn associative (* X)
+                             (operation * X)
+                             (forall a b c :in X :st (eq (* a b c)
+                                                         (* (* a b) c)
+                                                         (* a (* b c))))))
+         (operation (must-be-a Operation))
+         (set-acted-on (must-be-a Set)))
+  
+  (Coset has
+         (superclasses (MathematicalObject)))
+  
+  ;; This is a good example of a potential deficiency in our hcode.  The
+  ;; idea I was thinking of when I was working on version -1 of the
+  ;; language, was that the last thing that was cited in the definition
+  ;; that was defined.  Is that OK?  
+  ;;
+  ;; Maybe whatever problems this simple notation brings up can be
+  ;; remedied in the hyperreal (KM+hcode) code??
+  (every Coset has-definition
+         (hcode-definition (defn coset (a H G S)
+                             (group G)
+                             (subgroup H G)
+                             (elt a G)
+                             (eq S (setof (* a h) :st h :in H))))
+         (the-element (must-be-a (instance-of MathematicalObject)))
+         (the-subset (must-be-a Group))
+         (the-containing-set (must-be-a Group))
+         (the-set-itself (must-be-a Set)))
+  
+  ;; we want to make hcode accessible to LISP/HDM-server
+  (card has (instance-of (Slot)))
+  (operation has (instance-of (Slot)))
+  (set-acted-on has (instance-of (Slot)))
+  (the-containing-set has (instance-of (Slot)))
+  (the-element has (instance-of (Slot)))
+  (the-set-itself has (instance-of (Slot)))
+  (the-subset has (instance-of (Slot)))
+  

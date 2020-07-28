@@ -1,0 +1,102 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Third board meeting, Q1 2007.
+
+* Time and Place
+
+Semi-final date: *Saturday Feb 17 2007, 9pm EST* 
+
+The meeting will take place by IRC (Internet Relay Chat. Channel
+#planetmath, server irc.endernet.org), and simultaneously by
+long-distance telephone conference at 218-862-6100, access code
+2718281828# if enough people are interested in this extra option.
+
+(Don't know how to get on IRC? Check out [[file:PM Real Time Chat.org][PM Real Time Chat]])
+
+* Record
+
+Log and minutes will be posted here.
+
+* Agenda
+
+Major topics for discussion are:
+
+ * Words on Fire nonprofit strategizing/marketing contractors
+ * finalizing membership structure and "releasing" the subscription membership management system (now in beta, at http://planetx.cc.vt.edu/pmbilling/).
+ * finalizing bylaws
+ * discussion of membership-base voting 
+ * discussion of board elections
+ * grant, SoC, and general planning
+ * licensing discussion (e.g. can we get a go-ahead on allowing free license alternatives?)
+ * ...
+
+* Supporting documents
+
+ * [http://br.endernet.org/~akrowne/planetmath/documents/wof_proposal/planetmathanswers.doc answers to basic questions] (.doc) about what WoF would do
+for PlanetMath.
+ * [http://br.endernet.org/~akrowne/planetmath/documents/wof_proposal/planetmathproposal.doc more detailed proposal] from WoF on helping PlanetMath.
+ * [http://br.endernet.org/~akrowne/planetmath/documents/wof_proposal/planetmathproposal.doc WoF contract] (1st two pages have the main stuff)
+ * [[file:grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007.org][grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007]]
+ * [[file:PlanetMath ByLaws 2.0.org][PlanetMath ByLaws 2.0]]
+ * [[file:Second Draft of Pact.org][Second Draft of Pact]] (contributor pact)
+ * [[file:PM Licenses.org][PM Licenses]]
+
+* People
+
+Who plans to attend?
+
+ * [[file:akrowne.org][akrowne]]
+ * ...
+
+* Discussion
+
+I think we should hire Words of Fire but I am not sure we can handle doing anything until after Jan.  However, 
+they may be able to work largely independently until a later date.  I'll find out. --[[file:akrowne.org][akrowne]]
+
+Remember that after Jan 4, I'll be in Minneapolis, so if they need
+to be talking to someone, they could talk to me then.  --[[file:jcorneli.org][jcorneli]]
+
+Can we get some confirmation as to whether the meeting will actually
+happen on this date, or some other date?
+
+--[[file:jcorneli.org][jcorneli]]
+
+I agree that it doesn't make sense to try to handle all the items on the proposed
+agenda in this meeting.  Unless the background work has been done for some item, 
+there is no point in trying to work it out in the course of an hour or so of 
+meeting.  Given that the grant deadline is a week before the meeting date and that
+the board is not taking an active role, but that we would be the ones to do this
+background work, it is unrealistic to expect that this preparation would be done. 
+Threfore, I think a reasonable course of action would be to restrict the scope of 
+this board meeting to retaining the services of our fundraising consultant.
+
+As for the other items, perhaps we could schedule another meeting for 26 February 
+to deal with the items related to membership, such as the following:
+
+ * finalizing membership structure and "releasing" the subscription membership 
+management system (now in beta, at http://planetx.cc.vt.edu/pmbilling/).
+ * finalizing bylaws
+ * discussion of membership-base voting 
+ * discussion of board elections
+ * contributor pact
+
+This way, we would have a few weeks to sort out the details of membership and,
+where relevant, obtain expert opinions.  When the meeting date would roll along,
+we would have ample background information collected and distributed to the
+participants and complete drafts of documents for consideration.  The meeting 
+itself could then focus on the discussion about ratifying this plan or ammending
+it, as seen fit.  Also, in general, I am in favor of having several meetings
+focussed on various topics rather than trying to squeeze everything into one
+mega-meeting with the result that the meeting drags on and some topics get 
+slighted because everybody is too tired to pay them proper attention.
+--[[file:rspuzio.org][rspuzio]]
+
+
+** See also
+
+ * [[file:Discussion of copyright pact for PMB2.org][Discussion of copyright pact for PMB2]]
+
+
+----
+[[file:PM_Board_Meetings.org][PM_Board_Meetings]]

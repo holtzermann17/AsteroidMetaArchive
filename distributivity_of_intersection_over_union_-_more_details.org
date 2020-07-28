@@ -1,0 +1,52 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* The theorem (same as last time)
+
+ (defthm distributivity-of-intersection (A B C)
+   (set A)
+   (set B)
+   (set C)
+   (eq (intersect A (union B C))
+       (union (intersect A B)
+              (intersect A C))))
+
+* The proof
+
+ (defproof detailed-proof-of-distributivity-of-intersection (distributivity-of-intersection)
+   (since (and (since (suppose ((elt x (intersect A (union B C))))
+                        (then (and (elt x A) (elt x (union B C)))                      (defn-of intersect)
+                              (and (elt x A) (or (elt x B) (elt x C)))                 (defn-of union)
+                              (or (and (elt x A) (elt x B)) (and (elt x A) (elt x C))) distributivity-of-and-over-or
+                              (or (elt x (intersect A B)) (elt x (intersect A C)))     (defn-of intersect)
+                              (elt x (union (intersect A B) (intersect A C)))          (defn-of union))
+                        (subset (intersect A (union B C))
+                                (union (intersect A B) (intersect A C))))
+                      :by definition-of-subset)
+               (since (suppose ((elt y (union (intersect A B) (intersect A C))))
+                        (then (or (elt y (intersect A B)) (elt y (intersect A C)))     (defn-of union)
+                              (or (and (elt y A) (elt y B)) (and (elt y A) (elt y C))) (defn-of intersect)
+                              (and (elt y A) (or (elt y B) (elt y C)))                 distributivity-of-and-over-or
+                              (and (elt y A) (elt y (union B C)))                      (defn-of union)
+                              (elt y (intersect A (union B C)))                        (defn-of intersect))
+                        (subset (union (intersect A B) (intersect A C))
+                                (intersect A (union B C))))
+                      :by definition-of-subset)
+          (eq (union (intersect A B) (intersect A C))
+              (intersect A (union B C)))
+          :by definition-of-set-equality))
+
+Rather than just asserting each step to be true, this time a justification for
+each step is given, in the style of a [[file:Levels of Proof Checking|two-column proof.org][Levels of Proof Checking|two-column proof]] 
+- and, here, of /setq/, another two-column construct.
+
+Note that in the /then/ form, each item is supposed to follow from the previous one.
+In general the inference might be more complicated than this, which is something to
+watch out for.  (It would be good to look for examples of "non-linear" proofs.)
+
+This proof fixes a little error that was in the converse side of the previous one.
+(It is easier to catch errors when steps are justified, I guess.)  Incidentally,
+since the proof of the converse is symmetrical, a
+"running-this-proof-backwards" function would save a little bit of phosphor.
+
+--[[file:jcorneli.org][jcorneli]] Wed Jul 13 12:40:23 2005 UTC

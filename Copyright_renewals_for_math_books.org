@@ -1,0 +1,227 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As a help for determining which books are in the public domain, I am compiling a
+list of math books published from 1923 to 1963 whose copyright was renewed.
+This is being done by looking through
+[http://www.kingkong.demon.co.uk/ccer/ccer.htm the list of copyright renewals]
+and picking out the math books by hand.
+
+The reason for doing this is as follows: Under U.S. law, any work first
+published in the U.S. in those years required to have its copyright renewed
+after 28 years.  Hence, if a work which was copyrighted between 1923 and 1963 in
+the U.S. did not have its copyright renewed, the copyright will have expired.
+(Material published before 1923 has reverted to the public domain regardless.)
+
+With some exceptions having to do with forign authors and publishers which are
+explained [http://onlinebooks.library.upenn.edu/renewals.html here], books whose
+copyrights were not renewed have passed into the public domain.
+
+Hence, this list may be of assistance in determining if a math book published in
+the U.S. between 1923 and 1963 is in the public domain or is still under
+copyright protection.  In using this list, you need to keep in mind that simply
+because a book does not appear in the list does not mean that you should
+automatically assume that the book is in the public domain.  Rather, you should
+perform a proper search to determine whether the book is really in the public
+domain or not.  Rather this list is only meant as a quick test one can apply to
+exclude certain books and thereby spare yourself from having to perform a
+lenghty search in the case of some books which are known not to be in the public
+domain.
+
+ * [[file:Mathematical works whose copyrights were renewed - 1923.org][Mathematical works whose copyrights were renewed - 1923]]
+ * [[file:Mathematical works whose copyrights were renewed - 1924.org][Mathematical works whose copyrights were renewed - 1924]]
+ * [[file:Mathematical works whose copyrights were renewed - 1925.org][Mathematical works whose copyrights were renewed - 1925]]
+ * [[file:Mathematical works whose copyrights were renewed - 1926.org][Mathematical works whose copyrights were renewed - 1926]]
+ * [[file:Mathematical works whose copyrights were renewed - 1927.org][Mathematical works whose copyrights were renewed - 1927]]
+
+ * [[file:Mathematical works whose copyrights were renewed in 1976 - original copyright ca. 1948.org][Mathematical works whose copyrights were renewed in 1976 - original copyright ca. 1948]]
+
+
+* Note
+
+The best thing to complement these list with would be lists of math books that
+were published during the time period under consideration here.
+
+ * See http://planetx.cc.vt.edu/~jcorneli/marc/  (I think that completing this makes
+some of the information that was on this page [[file:old|old renewal records info.org][old|old renewal records info]], so I've moved it.) --[[file:jcorneli.org][jcorneli]]
+
+Using the Library of Congress's web interface, I found the following
+numbers of mathematical works published in differrent years:
+
+< 1699 268
+
+1700-1799 568 
+
+1800-1849 1407
+
+1850-1899 1801
+
+1900-1909 <2569 (some "19uu" bug in the system)
+
+1910-1919 1464
+
+1920-1929 2064
+
+1930-1939 2759
+
+1940-1949 3518
+
+1950-1959 5263
+
+1960-1969 13584
+
+1970-1979 20470
+
+1980-1989 25986
+
+1990-1999 35067
+
+2000-2007 26283
+
+Also, in the period of interest, 1923-1963, the library catalog lists 16313
+math books.  Using the figure that 85% of books did not have their copyright renewed,
+this suggest that there there are something like a myriad math books in the
+public domain from this period. (This, by the way, is more books than were 
+published prior to 1923 (!)) Using the rule of thumb that graduate level math
+is math in about this period, we should be able to come up with a library of
+graduate level math books in the public domain.
+
+--[[file:rspuzio.org][rspuzio]] 10 October 2007
+
+** MARC File Format
+
+The records of the Library of Congress and the Copyright office are stored in the
+MARC file format.  This format consists of a number of fields, each of which begin
+with a three number code stating the content of the field (title, author, etc.) 
+followed by the data divided into subfields by dividers of the form
+$a
+$b
+$c ...
+For instance, consider the following record:
+
+ 001 8264528
+ 005 20050715190526.0
+ 008 730103s1925    ilua     b    000 0 eng  
+ 035   $9(DLC)   25010087
+ 906   $a7$bcbc$coclcrpl$du$encip$f19$gy-gencatlg
+ 010   $a   25010087 
+ 035   $a(OCoLC)528073
+ 040   $aDLC$cODaWU$dOCoLC$dDLC
+ 042   $apremarc
+ 050 00$aQA315$b.B5
+ 100 1 $aBliss, Gilbert Ames,$d1876-1951.
+ 245 10$aCalculus of variations,$cby Gilbert Ames Bliss.
+ 260   $aChicago, Ill.,$bPub. for the Mathematical Association of America by the Open Court Publishing   Company$c[c1925]
+ 300   $axiii, 189 p.$bdiagrs.$c20 cm.
+ 440  4$aThe Carus mathematical monographs
+ 504   $a"A list of references": p. 180-181.
+ 650  0$aCalculus of variations.
+ 985   $eOCLC REPLACEMENT cdsdistr
+ 991   $bc-GenColl$hQA315$i.B5$p00004351174$tCopy 1$wOCLCREP
+
+It might be worth pointing out that every record has a field 008 --- looking at it, it
+might look like gibberish, but that is because each character in the string encodes
+something.  In particular, to tell whether a book was published in the United states, look
+at the 21-st character to see if it is a "u".  To locate the author, look at field
+100, subfield $a.
+
+The MARC records do not come nicely formatted as above from the Library of Congress;
+rather, they come in a communications format which needs to be unpacked.  This, however,
+is relatively easy to do.  A program to do this follows, but note that it has no error
+checking and does not make use of the redundancy in the format to make sure all is well
+so it can choke if fed corrupted data.
+
+ /* This is a simple program to unpack MARC-8 files. To use
+    it, type
+
+            unpack file
+ 
+    and the unpacked file will be written to standard output. */
+
+ #include <stdio.h>
+ #include <stdlib.h>
+
+ int main (int argc, char *argv[])
+ {
+   FILE *raw;  /* MARC-8 file in communications format. */
+   int size;  /* Place for size of record. */
+   int base; /* Base address of data. */
+   int done; /* Do we have more records to process? */
+
+   int tag[128]; /* Tags for data fields */
+   int len[128]; /* Lengths of data fields */
+   int start[128]; /* Starting points for data fields */
+
+   char foo[8], goo[8];
+
+   int tg, ln, st;
+   int j, k, m, n;
+   char c;
+
+
+   /* Open the file of raw data */
+
+  raw = fopen (argv[1],"r") ;
+  done = fscanf (raw, "%5d", &size);
+
+   while (done != EOF)
+     {
+
+       /* Read leader. */
+      
+      
+       fgets (foo, 8, raw);
+       fscanf (raw, "%5d", &base);
+       fgets (goo, 8, raw);
+      
+       /* Unpack tag and length information into their
+   	  respective arrays */
+      
+       m = 0;
+       n = 25;
+       while (n < base)
+    	 {
+	   fscanf (raw, "%3d %4d %5d", &tg, &ln, &st);
+	   tag[m] = tg;
+	   len[m] = ln;
+ 	   start[m] = st;
+	   m++;
+	   n += 12;
+	 }
+      
+       /* Unpack records. */
+      
+       for (j = 0; j < m; j++)
+	 {
+	   printf ("%03d ", tag[j]);
+	  
+	   getc (raw);
+	   n++;
+	   for (k = 1; k < len[j]; k++)
+	     {
+	       c =  getc(raw);
+	       n++;
+	       if (c == 31)
+		 putchar ('$');
+	       else
+		 putchar(c);
+	     }
+	   printf ("\n");
+	 }
+
+
+       printf ("\n");
+       getc(raw);
+       getc(raw);
+       done = fscanf (raw, "%5d", &size);
+     }
+ }
+
+For a proper account of this file format and for specifications, please see the 
+following documents from the Library of Congress.
+
+http://www.loc.gov/marc/umb/
+http://www.loc.gov/marc/
+
+For the other fork of this page please see
+[[file:Fork of Copyright renewals of math books.org][Fork of Copyright renewals of math books]]

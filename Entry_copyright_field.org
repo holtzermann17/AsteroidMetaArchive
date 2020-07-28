@@ -1,0 +1,487 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To help copyright screening and monitoring, it could be good to have one 
+field in each entry reserved to record copyright notes. For example, 
+when then entry is created, the user would write where this
+result comes from. Examples could be: 
+ 1. I wrote this entry from scratch with no references, and it represents
+my view of the topic.
+ 1. This is a technical result I needed in my research. 
+ 1. This is a well known result, it can be found in the below 10 sources,
+and then list these sources.
+ 1. This example occured to me while reading the entry "!DiagonalMatrix".
+
+In the second case, there is maybe no need to provide any references
+in the actual entry (at least, not 10 of them). 
+Sources can be found in the copyright field, which can be read by anyone. 
+Maybe we could even have users contribute references to more obscure results.
+
+The same copyright field could also exist for corrections (?). 
+
+It could be a good idea to have these notes displayed on the 
+front page (where currently new additions are placed) as a constant reminder
+of the importance of copyright awareness on PM. 
+
+While it is true that this makes it slightly more complicated to 
+add material to PM, it hopefully only makes it more difficult to add
+copyrighted material. This field would be particulary useful when
+entries change owners. 
+
+In general, IMHO the "Revision comment" for entries could be
+in more active use. Maybe this could be encouraged by also printing its content
+on the front page. This would make it easier to monitor the
+"Latest revisions" list.
+
+Having a central reference database on PM would help with this project, but
+this is not really a software feature, but rather a "culture" feature request. 
+--- [[file:matte.org][matte]] 10/2005
+
+Brilliant suggestion Matte, it has my strong support. --[[file:jcorneli.org][jcorneli]]
+
+I have started to implement this in my own new entries. I start these
+with a few commented lines that explain the background of the entry. 
+It seems to be working. 
+
+One alternative to the above separate field, would be to have a \PMCopyright
+command, which users should use to enter this data. It would probably
+be much easier to implement: Just two rendering modes, one with this info,
+and for the casual browser, one without the copyright information.
+It would also have the advantage that
+for very long entries, one could fill out this information in-place. 
+Like, \PMCopyright{The next corollary is written from scratch}. This would
+make the information easy to maintain.
+-- [[file:matte.org][matte]]
+
+Regardless of how it is displayed, the fact that it would be marked-up 
+explicitly would make it parseable, so we could do all kinds of things 
+with it (including figure out which entries need to be inspected further).
+However, it would still be freeform, whereas we could control the options 
+with a metadata field. --[[file:akrowne.org][akrowne]] Sun Oct 30 15:42:00 UTC 2005
+
+Yes. I agree. For example, 
+all new entries should have copyright information. 
+
+Currently PM has lots of ways to discuss and verify the mathematical 
+correctness of content. However, PM is not just about math, but about free math, 
+so just in the same way we need tools for checking the freeness of the 
+content. Having users fill out this info when creating new entries would
+be a good way to start. Combine this with the pact, the copyright guidelines
+and this would be a good tool for this. After that, some guidelines on "fair use"
+would be great. But, that is a much more difficult problem. 
+
+In addition to this, maybe the best
+way to encourage freeness is to try to cultivate a "culture" of freeness on PM.
+For example, if 
+we display the copyright info on the front page, there could also be a certain
+amount of prestigue when writing "I wrote this entry from scratch, and prooved it
+with no references." (This remains to be seen.)
+We could also have a "Recomended reading" list. Maybe citing some
+of Lessig's work.
+
+Having a pact is good, but in the worst case, it only gives us
+false ensuranse of the freeness of PM. The average user don't tend to read
+EULA:s/software licences or licences when joining a site. 
+Also, it might be years
+between joining PM (asking about homework) and contributing to PM.  
+Lastly, without a clear definition of what we mean by 
+"fair use" (or substantial copying), it can be interpreted quite broadly. 
+
+Technically, it should not be difficult to 
+create a \PMCopyright-command that (just for now) acts like a comment. 
+Rendering systems and 
+flags for problematic entries can always be added later. 
+-- [[file:matte.org][matte]]
+
+I agree that "I wrote this from scratch with no references" would carry
+some cache, but on the other hand, that doesn't mean using references is
+bad or that it should be avoided.  If I write an entry that says "This
+is adapted from definitions given in these three analysis books" that should
+be fine too.  However, I agree that understanding exactly what constitutes
+"fair use" in this case is hard.  If there is only one reference and the
+text is directly adapted from that, this should be fine too.  But I think
+we would do well to talk to a lawyer about what exactly is legal in this
+case. --[[file:jcorneli.org][jcorneli]]
+
+True. Some entries (for example longer proofs)
+will be impossible to write without consulting a reference. 
+However, many entries can be written without references such as short technical results. 
+Since we do not know precisely what fair use is, there always is a very small risk
+when adding references to PM. In particular if we want all the commonly used
+techincal results in all fields. This could add up to thousands of references. 
+
+Therefore it could be good, if at least these "small" results
+would be proven first without any references. Aftwards, another users could 
+add references where the result can be found. With the
+copyright information in place assuring that the first user wrote things from
+scratch, this should not in any way infringe on the 
+references right to the content. 
+-- [[file:matte.org][matte]]
+
+I worry about getting carried away too far in our attempts to make
+Planet Math safe from copyright problems and get swept away into a
+"Patriot Act Mentality" in which we are even willing to compromise our
+basic principles in order to gain some advantage in "fighting the
+copyright terrorists".
+
+While I think that the suggestion of accounting how one came up with a
+particular entry and carefully documenting what permission one has to
+adapt from sources is a good, I wonder if demanding that such
+documentation be attached to each and every contribution is not
+extreme to the point of being counter-productive.  My suggestion is
+that, while each user should clearly understand that he/she has an
+obligation to ensure that entries are fit for release under a GNU
+license and an obligation to perform due diligence and obtain proper
+permissions, submitting a written statement about how an entry was
+written with attachments documenting permission to use existing
+material should be an infrequent event.  When a particualrly suspect
+submission appears or there is confusion as to who can authorize
+permision to reuse a certain work or somebody complains that their
+have been infringed, then asking a contributor for an account of how
+the contribution came to be or explain exactly what permits reuse of
+material from a source might be in order.  The reason that I contend
+that requiring copyright information with every submission may be
+counterproductive is that "familiarity breeds contempt".  I suspect
+that if one were required to fill in a copyright field every time one
+contributed, the likely result would be that most users would soon not
+think very much of this, view it primarily a legalistic nuisance and
+typically fill the blank in with stock responses.  By contrast, were a
+user who is habitually sloppy in checking permissions to wake up one
+morning to a demand that he account for how an entries was written and
+provide documentation proving that he had a right to quote from
+sources, I think that the shock of this and the experience of having
+to scrounge around for the documentation in a panic and rewrite
+portions of the entry for which he could not properly justify copying
+would do much towards shaking such a user out of his complacent
+attitude towards a realization that copyright issues need to be taken
+seriously.
+
+While I believe that we in the free content business need to be
+extra-scrupulous in following the dictates of copyright law because we
+have neither the wealth nor the political power and influence nor the
+sanction of widespread popular opinion to get away with bending the
+rules, I also think that, as Aaron pointed out in earlier discussions,
+we need to be equally careful not to assume unnecessarry
+resposibilities or to place ourselves into impossible situations.  As
+guidance to what might constitute a suitable policy, maybe we could
+take the practise of conventional publishers of encyclopaediae and
+journals.  Based on this, I would suggest that we should be reasonably
+safe from copyright woes if we implement the following measures:
+
+ 1.  Post a submissions policy which makes it clear that contributions are expected to comply with copyright law.
+
+ 1.  Require users to assume legal responibility for copyright compliance of their submissions and indemnify the organization by means of a user agreement.
+
+ 1.  Make sure that permissions are in order when making use of existing material.
+
+ 1.  Educate users about copyright issues and clarify common misconceptions.
+
+ 1.  Get the community to monitor the corpus for copyright cleanliness.
+
+ 1.  Designate an agent for infringement complaints in a prominent place on the website.
+
+We are well on our way towards implementing these measures --- 1 and 4
+were dealt with in our revision of the new user guide, we are now
+working on 2, as more people participate in or at lest read these
+discussions, we are making progress on 4 and 5.
+
+To asess how well we are prepared should CRC press accuse us of
+infringement, maybe we could ask how well prepared our counterparts at
+Encyclopaedia Brittanica would be in similar circumstances.  Suppose
+that a contributor submitted a copy of an entry from Math World to
+Brittanica without informing them of this fact or asking for
+permission, nobody on the editorial board picked up on this, the entry
+appeared in the encyclopaedia, and CRC accused Brittanica of
+infringement.  What would Encyclopaedia Brittanica Inc. do in such a
+situation?  My guess is that they would whip out their submission form
+and point to the places (I am guessing that their submission form is
+typical in these regards since I have not seen it) where it states
+that the author represents that submissions are original work which
+has not been published elsewhere and the place where authors are
+supposed to inform the publisher if it is necessary to obtain
+permissions and argue that they took the author's assertions in good
+faith but that the author had misrepresented the submission.  With the
+precautions suggested above, I think we would equally prepared to
+defend ourselves; maybe we might even have a slight advantage because
+we would not own the copyright to the infringing entry.
+
+While it is rather clear that we cannot blithely disclaim all
+responsibility for what users post in light of the Grokster verdict,
+at the same time, we should be careful lest we play into our
+opponent's hands by overzealously assuming responsibilities and
+imposing safeguards.  I just got back from talking about copyright
+bottlenecks and how they choke progress and think it would be a crying
+shame if we created a whole new class of bottlenecks in our quest for
+a solution to the copyright problem.  Suppose, for the sake of
+argument, that we would implement all of the measures proposed here
+for guaranteeing copyright cleanliness --- mandatory copyright
+metadata, pipelines for new submissions, written user agreements,
+files of permission letters in the main office, etc.  While I am quite
+sure that such drastic measures would assure us certain victory in the
+war on copyright terrorism, I also think it would guarantee a Pyrrhic
+victory and show that we, in our fear of infringement liability, have
+played the part of the servant who hid in a treadmill.  As Aaron
+explained in his article "Building a Digital Library the Commons-based
+Peer Production Way", CBPP has definite advantages over the usual mode
+of scholarly production.  Self-imposed bottlenecks counteract this
+increase in efficiency and too many could even nullify it.  Therefore,
+we might avoid the threat of infringement suits not so much because we
+have virtually eliminated any reasonable possibility of having
+infringing content, but for the more ignominous reason that we have
+handicapped ourselves to the point that we can no longer run, much
+less compete in the race so why should our erstwhile competitors waste
+their valuable legal funds on us?
+
+This CBPP business being new, our practise could well be held up as an
+example of best industry practice in a most unfortunate fashion.
+Supposed that some fudslinger threatened another CBPP producer with a
+massive infringement suit unless they would implement measures to
+prevent future incidents of infringement comparable to those we (would
+hypothetically) have implemented.  The fudslinger would argue that the
+fact that we voluntarily imposed these guidelines and operate by them
+shows that it is perfectly reasonable for a CBPP operation to take
+such measures to prevent infringement, so any organization which does
+not act likewise is encouraging infringement.
+
+In dealing with this particular issue, we also need to balance the
+exigencies of this issue against our values and the ideals for which
+we stand.  In Lessig's terminology, we are an island of free culture
+in a sea of permission culture.  We are an egalitarian, anarchic
+knowledge community interacting with a hierarchical, rule-bound
+society.  In such circumstances, it is clear that some compromose will
+be needed to permit interaction; by conservation of social inertia, it
+is clear that we will have to do the brunt of the compromising.  We
+need to ask ourselves to what extent the compromises we impose
+interfere with the day-to-day operations of our community and whether
+they undermine the principles upon which we are based.  If so, then we
+may need to seriously rethink what we are doing.  As an
+eighteenth-century open-source pioneer
+[http://www.wisdomquotes.com/cat_security.html once put it], "They who
+would give up an essential liberty for temporary security, deserve
+neither liberty or security."  --[[file:rspuzio.org][rspuzio]]
+
+I think that
+
+ 1. Requiring references;
+
+ 1. allowing people to hit a "I wrote this entry off the top of my head
+without references" radio button in order to opt out of (1),
+
+/would not/ be an undue imposition.  But it doesn't really have a
+whole lot to do with /copyright/.  Matte has to understand that
+references are a non-issue when in comes to copyright.  The only
+"risk" is when there is an infringement.  As they say in football,
+"there's no defense against a perfect pass."
+
+: /[[file:http://www.captainsquartersblog.com/mt/archives/005653.php Sidelight from a recent Packers/Vikings contest.org][http://www.captainsquartersblog.com/mt/archives/005653.php Sidelight from a recent Packers/Vikings contest]]/: "Here's a new
+drinking game for everyone -- take a chug every time these fools in
+the press box say, 'There's no defense against a perfect pass.' I've
+heard it at least a half-dozen times in this game. Besides the fact
+that a perfect pass can't get to a  perfectly covered receiver, the
+defense is supposed to disrupt the quarterback's rhythm so that he
+can't throw the 'perfect pass' -- let alone a half-dozen of them or so."
+
+Er, the point being: as I said above, we need to try to understand
+what "infringement" means.  If an adequate definition for
+!PlanetMath-length entries (a local measurement) and !PlanetMath-depth
+coverage (a global measurement) is "outright copying", then that's all
+we have to worry about.  Let's not even think about legal requirements
+to impose on users until we understand this question more, except
+insofar as we have to think about these things some in order to come
+up with [[file:Good Questions to ask of a Good Lawyer | Good Questions^tm to ask of a Good Lawyer^tm.org][Good Questions to ask of a Good Lawyer | Good Questions^tm to ask of a Good Lawyer^tm]].  I still think
+that Matte's suggestion is a good idea, but I don't think that we can
+assume it would carry any legal meaning.  --[[file:jcorneli.org][jcorneli]]
+
+While I agree that it should be clear when an entry has been written
+from scratch vs. when it relies on sources, I do not think that
+requiring users to click on a radio button every time they edit an
+entry is the right way to implement this.
+
+My counterproposal is that we should instead implement a default
+presumption that all material is the original work of the contributors
+unless there is an explicit statement to the contrary.
+
+: References do not mean that the work is not "original".  The
+Encyclopedia does not feature "original work" in the sense of
+"original research"; rather, that's what the Papers section is
+supposed to be for.  If someone knows some topic well enough to write
+something off the top of his/her head, that's all fine and good.  But
+it doesn't mean that they shouldn't provide references.  More to the
+point, references don't imply that the work isn't "original" in the
+sense of copyright.  The fact that we are having this discussion on
+this page doesn't mean that it really has anything to do with
+copyright.  I thought I had made this clear, above.  I am now simply
+talking about a mechanism for adding references.  If there aren't any,
+the author should indicate that.  Full stop. --[[file:jcorneli.org][jcorneli]]
+
+As precondition to being allowed to contribute to the corpus, users
+agree to abide by the rules of the Planet Math community which, among
+other things, state that contributors agree to explicitly state when
+contributions derive from existing works (not just in the narrow legal
+sense of infringement, but in a broader scholarly sense of
+plagiarism), to give credit to others where credit is due, to carry
+out due diligence in making sure that their contributions are fit for
+inclusion, to take responsibility for their actions and to agree to
+repair any damage which is the result of other members of the
+community acting on good faith on implicit or explicit representations
+by a contributor.  Note that, although these rules definitely have a
+legal aspect, they extend further.  For instance, while
+indemnification has a legal aspect of reimbursing others for damages
+and court costs, it also has an aspect of rewriting entries or
+portions of entries so as to not leave a gaping hole in the corpus.
+
+While I disagreee with what I consider as overuse, I do not think that
+the idea of "copyright metadata" or "copyright markup" is a bad idea.
+To the contrary, I believe it could be useful for recording such
+things such as "This entry is adapted with permission from X".  Since
+we would prefer for contributions to be written from scratch when
+feasible, I think that it would be a useful incentive if one was only
+required to fill in metadata entries or use these markup commands when
+using existing works but not when writing from scratch.  At the same
+time, I would not want to go too far.  I think that it is enough for a
+user to say that a certain work was used with permision and not have
+to provide detailed documentation backing up this claim unless special
+circumstances arise which require this documentation.
+
+Legal technicalities aside, I believe that this suggestion is fair,
+reasonable, and practical.  While, in an ideal situation, one would
+want to check everything for oneself, in actual practise, this would
+require too much work, so one needs to compromise and take people's
+word at some point.  In particular, I think that it is reasonable to
+take contributors at their word when they say (or imply) that their
+contributions are their original work especially when they have
+affirmed that they understand that their word in this matter will be
+taken seriously.  Of course, there is the possibility but the
+contributor may be dishonest or not take obligations seriously, but
+this too is taken into account --- if users, by their actions show
+that they are dishonest or unreliable, the community can revoke or
+limit the offending user's permission to contribute and hold the user
+responsible for the consequences of this dishonesty or negligence.  I
+think that such an arrangement accords well with the basic ethical
+principles of fair play and "innocent until proven guilty" and and it
+should be possible to "sell" it to a court.
+
+As for "not even thinking about legal requirements", I find this a bit
+extreme and prefer a more middle-of-the-road approach.  There is no
+question that becoming an expert in law takes years of study but I
+have only put a few months into boning up on copyright law; therefore
+I would say, somewhat metaphorically, that the ratio of the weight of
+what an expert has to say to what I have to say is something like
+20:1.  While I do the best to inform myself about the law and try to
+check whatever I have to say against references, I also am ready to be
+corrected by more knowledgable people; just because I advocate doing
+things for oneself when possible does not mean that I ignore my
+limitations or expect others to rely on my conclusions any more than
+my experience warrants.  One the one hand, I definitely do not intend
+anything I say in this matter as authoritative advice but rather
+recommend that one first consult with a practising attorney before
+trying to carry out any of my suggestions.  On the other hand, I
+consider that I know enough about the matter to participate
+meaningfully in a dialogue on the subject (or even present a paper at
+a conference) and consider that, even if they should be double
+checked, my suggestions are worth considering.
+
+While reading up on copyright law, the various sources I examined
+seemed all to be unanimous on the issue of "what "infringement"
+means", or more precisely the issue of where the line between
+infringement and fair use may lie --- ultimately infringement is what
+the judge calls "infringement" and fair use is what the judge calls
+"fair use".  To be sure, this determination is not completely
+arbitrary since the court is bound to the four guidelines of copyright
+law and to precedent.  However, there is still much room for
+interpretation and this is done on a case-by-case basis.  Several
+times, different groups have tried to come out with more specific
+guidelines based on number of words copied or the like but, even when
+these groups have succeeded in agreeing on such guidelines, their
+conclusions have not acquired any official legal status.  Based on
+this, I would say that the proposals raised here about not referencing
+the same book more than a certain number of times and what not are not
+likely to be of much importance and may even lull unsuspecting users
+into a false sense of security.  As I understand it, only the extremes
+are fairly certain in our case --- on the one hand, copying an entire
+entry without permission is unacceptable; on the other hand expressing
+concepts entirely in one's own words is acceptable.  In-between cases
+are fuzzy and negotiable.  In light of this, I would suggest that the
+best course of action would be (a) to do our best to educate the user,
+(b) to make it clear that gray areas of the law are involved, (c) to
+urge the user to learn more about copyright law, (d) and to implement
+the policy that the adventurous user is on his own here --- basing
+contributions on existing material is risky, so users agree to assume
+all responsibility for the results of such risky behaviour and to hold
+others harmless from possible effects of these dangerous acts and
+Planet Math feels free to take measures to protect itself from harm by
+users who engage in3 such risky behaviour.
+
+As for consulting a Good Lawyer, especially one of the calibre of
+Moglen or Lessig, I would say that, since such a person's time is
+valuable and in demand, I think it is only fair that we do our
+homework first, especially if we hope to obtain legal advice on a pro
+bono basis.  For instance, we should not waste the expert's time with
+questions to which we could easily have obtained satisfactory answers
+by opening any book on the subject or by having the expert explain
+background material which we could have acquired otherwise or by
+making obviously impossible proposals.  I would say that, in this
+context, a Good Question is a specific question --- I would consider
+it better to ask the expert for an opinion on some specific proposals
+and documents rather than simply to describe our situation and expect
+the Good Lawyer to do all the rest of the work.  Therefore, I would
+suggest that we adopt the following plan of action:
+
+ 1. Continue our current discussions and come out with one or more
+concrete proposals which we all agree to and which, to the best of our
+knowledge, are feasible.
+
+ 1. Have Bonnie weigh in with her opinion on legal issues, in particular
+proofread drafts of proposed contracts.
+
+ 1. Go to the expert with our well-thought-out, concrete proposal(s) for
+advice.
+
+ 1. Revise accordingly to obtain something which we are comfortable with
+and which expert considers workable.
+
+ 1. Implement this plan.
+
+--[[file:rspuzio.org][rspuzio]]
+
+Ray, my impression from talking to Lisa Macklin is that we really are
+almost as far as we can get in understanding and applying extant copyright
+and contract law to this situation.  I don't think we'd be wasting Moglen
+or Lessig's time at this point with even the current Pact draft.  I think
+what we are really after is an "expert observer's" impression of how such
+a contract would play out /in practice/, as opposed to how solid it is /in
+theory/.  In law, this distinction is nontrivial (which I personally
+know all too well).
+
+The feel for how things will unfold is what we seek, and it is the part of 
+expertise that can only come from years of work and observation field in 
+question.  This is the part we can't just open up a reference book and use
+our logician instincts to master quickly.
+--[[file:akrowne.org][akrowne]] Tue Nov 1 05:03:11 UTC 2005
+
+We should remember that there are a few different cakes on the griddle
+here, notably:
+
+ * how to protect !PlanetMath.org
+ * how to protect !PlanetMath users
+
+The Pact's main purpose is to protect the Org.  
+Documentation of "what is fair use?" has the main purpose of protecting
+the users.
+
+But they both work together to protect both.  If users know that
+they are legally responsible for any infringements, and if they
+also know how to avoid infringements, no one can get in trouble.
+
+This business with references actually does have something to do
+with helping users avoid infringements, I'd say, since anyone can
+check the references and if they think that the treatment might be "too close" or whatever,
+they can suggest additions or modifications that will make the
+PM article sufficiently distinct.  I think that in addition
+to the draft of the Pact, we should come up with some succinct Fair-Use Guidelines,
+and run them both past the lawyer at the same time.
+
+Final note: I think it is good that if PM doesn't have "common carrier" status
+in the eyes of the law, it is very good that we adopt a position using contracts that effectively
+secures us that position.  If laws are later adjusted to the way people actually
+do things, this position will be solidified. --[[file:jcorneli.org][jcorneli]]

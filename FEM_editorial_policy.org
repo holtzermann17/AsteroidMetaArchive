@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a place to talk about the editorial policies we will use for
+the FEM.
+----
+** Broad content-related comments== 
+
+[[file:what to do with overview-style articles.org][what to do with overview-style articles]]
+
+[[file:Role of sections.org][Role of sections]]
+
+[[file:classification of entries.org][classification of entries]]
+
+[[file:scope and clarity.org][scope and clarity]]
+
+[[file:current high-volume issues.org][current high-volume issues]]
+
+[[file:Legal.org][Legal]]
+
+** Stylistic issues== 
+
+[[file:FEM style.org][FEM style]]
+
+[[file:Coding standards.org][Coding standards]]
+
+[[file:Headers and style files.org][Headers and style files]]
+** General
+
+[[file:Editing protocol.org][Editing protocol]]

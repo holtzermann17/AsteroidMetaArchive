@@ -1,0 +1,18 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * I'm trying to make a set of clear instructions for [[file:using GNU Arch.org][using GNU Arch]] for the
+  [[file:HDM.org][HDM]] project.  I imagine that GNU Arch could be useful for other projects
+  that are discussed on this site, but we should have a working test case
+  first. --[[file:jcorneli.org][jcorneli]] Mon Feb  7 03:31:43 2005
+
+ * [[file:KM.org][KM]] is the first thing to look at when thinking about the [[file:hdm's ai system.org][hdm's ai system]]. --[[file:jcorneli.org][jcorneli]] Thu Feb 10 12:27:45 2005
+
+ * [[file:LISP.org][LISP]] is a nice little programming language to learn to hack in. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 01:55:03 2005 UTC
+
+ * Most of the LISP stuff we write runs under [[file:Emacs.org][Emacs]]. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 01:00:25 2005 UTC
+
+ * [[file:Noösphere.org][Noösphere]] is written mostly in [[file:Perl.org][Perl]]. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 01:00:48 2005 UTC
+
+----
+[[file:Discussions.org][Discussions]]

@@ -1,0 +1,7 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+"KM" stands for "Knowledge Machine".  It is a GNU LGPL program written
+primarily by Bruce Porter and Peter Clark.  The program is available
+from the webpage http://www.cs.utexas.edu/users/mfkb/RKF/km.html,
+together with some useful documentation.

@@ -1,0 +1,21 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Describe the new page here.
+
+Duh... thought that writing [ [ marijke ] ] would link to my PlanetMath user details, but this wiki appears to want its own home page for me.
+
+Haven't got the time and energy (nor other pair of conjugate dynamical quantities :) to create a home page now. I will refer the interested reader to my existing home page at http://web.mat.bham.ac.uk/marijke/
+
+----
+
+Indeed: this Wiki uses a separate hypertext
+system; if you want to link to your PM profile, do it
+[http://planetmath.org/?op=getobj&from=users&id=8873 this way],
+and same for other URLs (or just add them directly as you did above).
+If you have time for further wikignoming, you can add a link to your
+handle on the [[file:Users.org][Users]] page.  Thanks for your contributions,
+keep the ideas coming as time, energy, spin, etc., permit.
+--[[file:jcorneli.org][jcorneli]]
+
+I'm glad to here that you have made your code for finite fields and other topics freely available.  As you might have noticed, free software is a big theme here on the Asteroid :) --[[file:rspuzio.org][rspuzio]]

@@ -1,0 +1,146 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Hi Norm,
+
+we have recently spoken by mail of open and closed intervals in RR. I have just come across a beautifully written manual about topology (http://uob-community.ballarat.edu.au/~smorris/topbookchap1-9.pdf). The chapter 2 is about "euclidean topology" and I think it may be interesting to add these theorems to have a concrete and useful example of a topology. You had proposed me to add open and closed intervals in set.mm and I think that in fact I have now a large set of theorems that use these notions so if you have found a solution to the problem of notation we had spoken of I would be pleased to use them.
+
+You had asked me it I had an example of the [ a , b [ notation. I have checked and you can find some in Bourbaki's volume dealing with set theory. I can find the exact reference if you need it.
+
+-- [[file:fl.org][fl]] 22-Dec-2006
+
+There would be 4 new definitions.  I don't like Bourbaki's "]1,5]"
+instead of "(1,5]" because it is hardly ever used 
+and is probably considered obsolete.  If we want to use 
+the operation notation (recommended because it already has a large collection 
+of theorems), offhand I can think of 5 possible notations for set.mm:
+
+  ( A (...) B )   ( A (..) B )   ( A (.) B )   ( A (,) B )   ( A () B )
+  ( A (...] B )   ( A (..] B )   ( A (.] B )   ( A (,] B )   ( A (] B )
+  ( A [...) B )   ( A [..) B )   ( A [.) B )   ( A [,) B )   ( A [) B )
+  ( A [...] B )   ( A [..] B )   ( A [.] B )   ( A [,] B )   ( A [] B )
+
+I would be interested in opinions as to what notation people like the best.
+Picking the first notation arbitrarily, the new operations would be
+defined as follows:
+
+ df-ioo $a |- (...) = { <. <. x , y >. , z >. | ( ( x e. RR* /\ y e. RR* )
+                /\ z = { w e. RR* | ( x < w /\ w < y ) } ) } $.
+
+ df-ioc $a |- (...] = { <. <. x , y >. , z >. | ( ( x e. RR* /\ y e. RR* )
+                /\ z = ( ( x (...) y ) u. { y } ) } $.
+
+ df-ico $a |- [...) = { <. <. x , y >. , z >. | ( ( x e. RR* /\ y e. RR* )
+                /\ z = ( ( x (...) y ) u. { x } ) } $.
+
+ df-icc $a |- [...] = { <. <. x , y >. , z >. | ( ( x e. RR* /\ y e. RR* )
+                /\ z = ( ( x (...] y ) u. { x } ) } $.
+
+Note that RR* includes +-oo, so we can have ( 1 [...) +oo ), etc.
+
+Some simple theorems would be
+
+  ( -oo (...) +oo ) = RR
+  ( -oo [...] +oo ) = RR*
+  ( A e. RR* -> ( A [...] A ) = { A } )
+  ( A e. RR* -> ( A (...) A ) = (/) )
+
+If we need intervals on QQ, we can intersect it with the RR* interval; I
+doubt they are sufficiently common to justify a separate notation.  Two
+theorems for the existing ZZ intervals
+[http://us.metamath.org/mpegif/df-uz.html df-uz] and
+[http://us.metamath.org/mpegif/df-fz.html df-fz] would be:
+
+   ( M e. ZZ -> ( ZZ> ` M ) = ( ( M [...) +oo ) i^i ZZ ) )
+   ( M e. ZZ /\ N e. ZZ ) -> ( M ... N ) = ( ( M [...] N ) i^i ZZ ) )
+
+-- [[file:norm.org][norm]] 22 Dec 2006
+
+P.S. Shouldn't this page be under [[file:set.mm_discussion.org][set.mm_discussion]] or has that
+page been abandoned as a lost cause?
+
+No obviously we can transfer everything in [[file:set.mm_discussion.org][set.mm_discussion]] (I had only thought
+of this page as a required feature and linked it accordingly). We can also slightly modify the name of [[file:set.mm_discussion.org][set.mm_discussion]] in case that our malicious reader is not a human but a script. 
+
+I think that in France the [ a , b [ notation is still widely used. But in fact I can change my habits. I like ( A (] B ). The simpler, the better. -- [[file:fl.org][fl]] 22-Dec-2006
+
+Parentheses are not allowed in identifiers in Ghilbert, because of their use in S-expressions. I also currently have [] for the quotient operation [ A ] R. So, if the choice were entirely up to me, I'd choose ]..[ ]..] [..[ and [..] for the operation names, with ],[ ],] [,[ and [,] a close second (to be consistent with Bourbaki notation). I'm certainly in favor of the new operations, exactly as defined above (domain RR*).
+
+P.S. I'm brewing up a wiki at [http://ghilbert.org/ ghilbert.org], so if the spam problem isn't solved here soon, we will have another viable alternative.
+
+-- [[file:raph.org][raph]] 22 Dec 2006
+
+I prefer ( A (] B ). If people complain that the former is confusing in the Metamath program or mmj2, then ( A (,] B ) is my second choice because it is a bit more reminiscent of (A,B].  -- [[file:steverod.org][steverod]] 22-Dec-2006
+
+-----
+
+Ooops. I see that "..." is already defined as a class in /cfz/.
+
+Also, I see that "(" is already used in /wss/ and /wpss/, so
+how does ghilbert handle those?
+
+Given everything I guess I agree with [[file:steverod.org][steverod]].
+
+--[[file:ocat.org][ocat]] 
+
+The names of wss and wpss have to be rewritten, and, in set<nowiki>_mm.gh, are C_</nowiki> and C: respectively. I can certainly do the same for the interval operators - it's just a few more entries in tables in the translation code. So I am not going to insist that new names be paren-free, just record my preference. -- [[file:raph.org][raph]]
+
+Me too, I replace (_ by C_ because emacs doesn't like extra parentheses. I wonder if there is a way to change its behaviour. It doesn't like ( A " B ) either but for other reasons. -- [[file:fl.org][fl]] 232-Dec-2006
+
+
+If I were doing set.mm for myself only, I might choose "(]" for its
+simplicity.  But I think "(,]" will be easier for some people to
+remember since it is more suggestive of the standard notation.  Another
+possibility I thought of is "(.,.]" that may be even more suggestive but
+is longer to type.  I am warming to the Bourbaki-inspired "],]" since it
+is compatible with Ghilbert and it has a certain elegance because it
+doesn't mix bracket types.  And I hate to think of [[file:fl.org][fl]] having to
+change "(" to "C" all the time, although isn't there a way to fix the
+annoyance in Emacs?  But I wish I had more than just the Bourbaki
+reference for its usage to better justify it.  Also, I have to think
+slightly harder to recognize that "],]" means "open,closed", whereas
+with "(,]" my
+recognition is instant - a matter of familiarity I suppose.  Bottom
+line, I haven't decided yet, but in a day or two I'll pick one just to
+get it into set.mm.  It is trivial to change with a simple global
+substitution, if further pro/con arguments merit.  Overall I don't feel
+too strongly about any particular choice as long as most people are OK
+with it.  By the way, I appreciate the opinions that have been
+offered. -- [[file:norm.org][norm]] 24 Dec 2006
+
+: Perhaps most interesting is that ],] and the like don't need
+the Shift key.  (non-US non-QWERTY keyboards may vary)  The American
+side of me still prefers (] though. :) --[[file:steverod.org][steverod]] 24 Dec 2006
+
+-----
+
+Although part of me likes the "[,[" notation, I have finally
+decided against it, for now, unless there is some strenous
+objection.  
+
+ * I couldn't find an
+English-language text that uses it (other than Bourbaki translated from
+French).  
+
+ * If we use "[,)", then Ghilbert will be "forced" to include
+a special-case exception for the set.mm translation, while the issue is
+still fresh in our minds, and presumably there will be no harm if we
+switch to "[,[" later.  On the other hand, if we use "[,[" now and
+switch to "[,)" later, then the Ghilbert translation will hiccup
+unexpectedly after this discussion has been long forgotten.  
+
+ * But the
+following was probably the deciding factor for me:  when I was putting
+"[,[" into set.mm to get a feel for it, I forgot whether it meant "[,)"
+or "(,]"!  Intuitively it seems that "[" on the right-hand side would
+indicate that the interval "goes further" than "]" would indicate, so
+one would think that the greater extent of the
+right-hand "[" means "includes the endpoint" and the lesser extent
+of right-hand "]" means "doesn't include the endpoint".  I became so confused I had to look it
+up to get it right, and some people (who don't have the advantage of
+a French or German education) might be similarly confused.  In contrast, it seems visually
+apparent that a right-hand "]" "includes more" than a right-hand ")".
+
+In a day or so, I'll put some starting theorems in set.mm.  From there,
+I will let other people add additional theorems, if they are interested.
+-- [[file:norm.org][norm]] 26 Dec 2006

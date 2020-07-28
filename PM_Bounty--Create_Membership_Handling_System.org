@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: July 31 2006.
+
+Status: *done*
+
+Time: 20 hrs (est.)
+
+Bounty Price: $1000 (US est.)
+
+Objective:
+
+Create a basic membership (subscriptions) handling system.
+
+Skills needed:
+
+ * software engineering, design
+ * CGI programming
+ * SQL data experience
+ * linux shell experience
+
+* Background
+
+PlanetMath.org is a nonprofit organization, and has thus far received many serendipitous donations.   However, thus far it has not done the usual thing nonprofits do, which is to
+have a regular (annual) membership that is by subscription.  This is useful in creating a 
+regular, predictable revenue stream, and booking a loyal base of supporters.  
+
+We need to do this, and since we're so internet-based (and have so little money), the natural
+place to start is via the web.  So, we propose building the membership management system 
+purely as software, with most interaction happening over the web (and some email).
+
+The system should have the following key components:
+
+ * way for people to join (register)
+ * way for people to commit to subscriptions at various levels
+ * handling of subscriptions based on PM score (which can be overruled by an admin if necessary)
+ * periodic email reminders about renewing
+ * alerts
+ * way for people to change their vital information
+ * way for people to subscribe to various information, collaboration services
+
+This system will be stand-alone (other than some connection to the PM user database) and could basically be coded in anything.  However, it should be something reasonably common and the code should be written maintainably.
+
+Payments would chiefly be handled through PayPal.  However, it would be nice to be able to have some facility for handling memberships that wait for funding until a check is received and entered in by an administrator.
+
+* Plan
+
+ 1. review the requirements
+ 1. propose a design
+ 1. refine, get design approved
+ 1. code system
+ 1. test system
+ 1. release system; launch
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for more on how bounties work.

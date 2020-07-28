@@ -1,0 +1,74 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Contributed by: jcorneli
+
+; !AsteroidMeta : http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/HomePage
+
+; HDM homepage : http://www.ma.utexas.edu/~jcorneli/d/
+
+; latest FEM : http://www-texdev.ics.mq.edu.au/FEM/book.pdf (caution: big!)
+
+; free culture (acc'd to Lessig) : http://free-culture.org/
+
+; References for !TeX and Friends : http://www.miwie.org/tex-refs/
+
+; FSF membership : http://member.fsf.org/
+
+; GNU Coding Standards : http://www.gnu.org/prep/standards.html
+
+; Internet Archive -- Million Book Project : http://www.archive.org/texts/collection.php?collection=millionbooks (not sure how useful, but maybe interesting?)
+
+; Software freedom law center :
+ http://www.softwarefreedom.org/
+
+; Stallman's legacy (projected) : http://www.laisen.dk/Continuing_the_Fight.1230.0.html
+
+---
+* A different Planetary system?
+
+ * /http://www.planetplanet.org// Planet Planet (the central command station),
+ * http://planet.lisp.org (Planet Lisp)
+ * http://planetruby.0x42.net (Planet Ruby),
+ * http://rplanet.technomancy.us (Planet !RubyConf),
+ * http://planetrubyonrails.org (Planet Rails),
+ * http://planet.ubuntu.com (Planet Ubuntu),
+ * http://planet.gnome.org (Planet Gnome),
+ * http://planet.mozilla.org (Planet Mozilla)
+ * ... and many more
+
+Can anyone say "brand dilution"?  (At least the "Planet Lisp" thing
+looks interesting! - and perhaps some of the others are nice too.)
+
+I have to say, I feel a little iffy about the choice of names.  --[[file:jcorneli.org][jcorneli]]
+
+
+
+----
+
+Umm... I created this page... where did my initial version go? --[[file:akrowne.org][akrowne]]
+
+: I never saw it, which I thought was weird; just the hanging link from PlanetMath.  Maybe check the version history? :( --[[file:jcorneli.org][jcorneli]]
+
+:: Its not there.  I don't know what happened.  I think you saw the link, then 
+made the page and checked it in before I got a chance to check in my initial page.
+Somehow, the system silently failed, I think.  Maybe we need a policy whereby 
+people don't create pages for dangling links for some grace period after the 
+author made the link.  --[[file:akrowne.org][akrowne]] Sun May 1 15:46:09 UTC 2005
+
+It looks like you had... an hour and 45 minutes,
+according to the revision history (between the
+time the link was created and the time I edited
+the page).  If there was a system failure, it
+probably occured within that time period.  I (almost)
+always check that the pages I've edited have
+been modified by reloading them... this is especial
+useful when there are overlapping edits.  If
+you did /that/ and the page still didn't make
+it into the revision history, then there's definitely
+a bug in the wiki software.
+--[[file:jcorneli.org][jcorneli]] Sun May 01 16:23:37 2005 UTC
+
+: I definitely created it within 1:45.  I don't know what happened.  Its possible 
+I screwed something up, but I wasn't doing anything different this time.  Anyway, I'll
+just re-add my content soon. --[[file:akrowne.org][akrowne]] Sun May 1 23:46:48 UTC 2005

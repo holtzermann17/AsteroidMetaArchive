@@ -1,0 +1,17 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Various wiki docs on Noosphere installation.  (There has been some effort to make
+Noosphere easier to install; I forget whether this effort has been documented
+anywhere but on the following pages. --[[file:jcorneli.org][jcorneli]])
+
+ * See the [[file:Noösphere installation guide.org][Noösphere installation guide]], and the [[file:walk through.org][walk through]] install of Noösphere on a local machine.
+ * For help with dependencies for OS X, see [[file:satisfying Noösphere dependencies with Fink.org][satisfying Noösphere dependencies with Fink]].
+ * For help getting semi-obscure perl modules, see [[file:installing needed perl modules.org][installing needed perl modules]].
+
+----
+
+Since [[file:mirroring_PlanetMath.org][mirroring_PlanetMath]] doesn't seem to be realistic yet, I was wondering how this project would be used.  Ease of administration for the core servers?  Easier development for would-be hackers?  If so, I would be interested in creating Gentoo ebuilds and !FreeBSD ports.  --[[file:itegebo.org][itegebo]]
+
+I think it is mainly for hacking.  (And after enough hacking, mirroring may become
+a more viable option!) --[[file:jcorneli.org][jcorneli]]

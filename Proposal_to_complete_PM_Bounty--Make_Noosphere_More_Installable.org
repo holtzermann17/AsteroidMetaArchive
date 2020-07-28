@@ -1,0 +1,122 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+http://gold-saucer.afraid.org/math/planetmath/proposal
+
+Because of formatting issues (HTML -> Wiki)
+pieces of the proposal will be migrated here.
+For now, please make your comments on this Wiki.
+
+**  Proposal text
+
+*  Motivation
+
+Recently, there has been demand by PlanetMath users and interest by programmers to implement certain enhancements to the PlanetMath Web site. Unfortunately, the current code base of the PlanetMath Web site, Noösphere is not easy to install, and so has been a strong disincentive for progress on PlanetMath Web site improvements; to date, not very many of listed the "to-do" items for Noösphere have been addressed. The goal of the current proposed project is to make an independent deployment of Noösphere easier, to attract more interest in the software.
+
+Understandably, as PlanetMath.org resources are not unlimited, there may be apprehension to spending money to developing the "old" Noösphere codebase, when there many members have expressed an intention that it should be rewritten. However, the rewrite has not been forthcoming, and should be treated as a long-term project. Moreover, it will be unlikely that the PlanetMath Web site will switch to running on the new codebase -- whatever it will be -- overnight; new features should be developed deployed first, if possible, on the old codebase. We should speed the development of new enhancements as much as possible, and this is done by re-using the existing, working code, even with its flaws.
+
+In summary, the result of the proposed project will be a much easier to install Noösphere package, with complete installation directions, that will have undergone extensive deployment testing. Details are described below.
+
+This author of the proposal asks for $950 to complete the tasks listed below, slightly lower than the original PM bounty asking price. It will take an estimated two to three weeks to complete the package along will all the testing.
+
+*  About the proposal author
+
+The author of this proposal is Steve Cheng, a PlanetMath user. At some point he may work on the features of Noösphere itself, but for now, it is imperative that Noösphere can be made to work well in a development environment first. For example, the author has developed a LaTeX-to-MathML translator that he wants to incorporate in PlanetMath.
+
+In the past, the author has worked on an inhouse C++ project and Web site design. He is also the maintainer of the open source package docbook2X. 
+(http://docbook2x.sourceforge.net/)
+More personal details are available on request. 
+
+*  Work items
+
+1. Write complete documentation on installation
+
+2. Noösphere should ship its own LaTeX2HTML
+
+3. Make a configuration script
+
+4. Ship a default Apache configuration for Noösphere
+
+5. Eliminate requirement for virtual hosts
+
+6. Test and fix database schemas
+
+7. Test use of Lucene
+
+8. Testing and deployment
+
+*  Progress reports
+
+I will give progress reports every one to three days on the AsteroidMeta Wiki, in a similar style to the [[file:Display LaTeX.org][Display LaTeX]] entry on the same Wiki.
+
+The Wiki is an ideal place to give reports, for comments and questions can be addressed to me easily and quickly. Although I will be directly answerable to PlanetMath.org only, having a public place for comments will be helpful, for other participants on AsteroidMeta also have an interest in the Noösphere software, and it may also attract more attention to Noösphere.
+
+Finally, the AsteroidMeta Wiki can be used to coordinate testing of the Noösphere software. 
+
+**  Additional obligations
+
+1. !LaTeX2HTML  should be split into own tarball
+
+
+**  Additional notes
+
+(From e-mail discussions, but not in proposal, yet.)
+
+1. Suggestion to build of distribution packages
+
+2. At the end, possibly abstract out mod_perl code, and replace with cgi/fastcgi
+
+
+**  Contractual details
+
+*  "what the completion criteria are"
+
+One or more tarballs, and associated documentation,
+that has been tested at least in two different set-ups to create a Noösphere instance.
+
+What about distribution packages?  Firstly, they will require some time to build, which could be one week or more.   
+(For example, it doesn't help that I don't have a Fedora development set-up to use right now.) Secondly, I would like a little compensation if this task is added to the plan.
+
+I propose we talk about the packages after everything else is mostly finished.
+
+
+As for the testing, I obviously will depend on feedback 
+during the development phase; the more the better.
+But in the absence of <i>any</i> feedback, I will 
+test myself in at least two configurations:
+
+ * one on my computer (Ubuntu Linux distribution)
+ * a server instance
+
+I would use the Noösphere development instance too, but it does not quite fit with the plan, because Noösphere is <i>already installed</i> there. (So how would one test an installation?)
+
+: This sounds fine.  Note also that some, or quite possibly all, of the SoC interns would like to test out the installation. This should help quite a bit.  --[[file:akrowne.org][akrowne]]
+
+*  "how long you will be willing to fix bugs that are found in the work."
+
+One month.  Two months at most (I will likely not be available after that.)
+
+: This sounds fine.  --[[file:akrowne.org][akrowne]]
+
+**  How should the development go?
+
+Actually, this is something that was missing from the plan.
+
+I suppose that I will commit to the SVN repository? 
+But I must warn that tinkering with the installation steps can be disruptive to other developers.  (e.g. Suppose I change a default configuration value.)
+
+If so, I amend my plan so that not only tarballs are produced,
+but there has to be a specific procedure to produce those tarballs
+from the SVN repository.
+
+Also, I drafted my plan according to the assumption that there will be few developers; is this assumption still valid?
+
+: That depends on what you consider "few".  There will be three other developers working on the Noosphere code base simultaneously; four if you count myself with periodic bug fixing.  I think we should try to "mainstream" changes as soon as possible; synching first the dev and then production instances to the new organization. Discussion to warn of commits and how to merge with them can take place on the noosphere-dev Google group "listserv". --[[file:akrowne.org][akrowne]]
+
+:: Do you have a link for that group? --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE Oh - see [[file:PlanetMath Mailing Lists and other Contact Information.org][PlanetMath Mailing Lists and other Contact Information]] or ([http://groups.google.com/group/noosphere-devel direct]) --[[file:jcorneli.org][jcorneli]]
+
+*  Log
+
+2006-08-02: Just posted to the mailing list. The results are available, and I am hoping for wider testing.

@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+APM-Xi was the second HDM prototype, written before anything that really
+resembled hcode existed.  It provides a fairly large quantity of mathematical content in its own semi-formal syntax (mostly definitions and theorems, very few proofs).  The third HDM prototype sketched what hcode
+would be like.  Now that we are starting to have a fairly rich sense of
+what hcode is going to look like, we can start thinking about "recovering"
+the APM-Xi content and giving it new life.  Porting APM-Xi to hcode should
+be easier than many other parsing problems, because APM-Xi has very little NL.
+The task would probably involve a combination of parsing and recoding by
+hand.  It is probably best to look at this as a chance to test the parser
+rather than recoding everything by hand! - but someone who likes typing
+better than parsing could try that laborious approach too.  (I don't
+encourage it.)
+
+[[file:jcorneli.org][jcorneli]] has set this task as first goal for the parser, which
+may shed some light on the parser's design.
+
+----
+[[file:Focused HDM subprojects.org][Focused HDM subprojects]]

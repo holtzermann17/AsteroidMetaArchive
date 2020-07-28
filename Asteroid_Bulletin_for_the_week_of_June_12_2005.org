@@ -1,0 +1,55 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* HDM and Lisp NYC
+
+The Hyperreal Dictionary of Mathematics project is now listed as an affiliated project of the LispNYC organization, funded through the Google Summer of Code.  
+
+For an overview of the HDM SOC project as given on the
+LispNYC page please see the follwing web page:
+
+http://www.lispnyc.org/summerofcode.html
+
+It should be noted that are several other interesting LISP-related projects described on the aforemention page as well, so keep that in mind (and if you haven't heard of "Summer of Code" yet you might check it out; there are 200 student grants available in total). 
+
+If you are or know a qualified and interested student who
+would like to have a shot at making $4500 for working on free software
+and math this summer, you're now invited to apply or ask them to apply.  However, time is running short --- the dealine is Tuesday.
+
+The actual application for students is on the web, here:
+
+http://code.google.com/soc_application.html
+
+Google asks for public discussion to take place here:
+
+http://groups-beta.google.com/group/summer-discuss
+
+* Editorial: The Bottom Line
+
+While we frequently advocate the benfits of free software and other open source content to society, we do not always take heed of the obverse of this issue -- the concomittant obligation of society to support and compensate those who make intellectual content freely available to the genral public.  Just because a certain piece of software is free does not mean that its author does not have to pay for the costs of living and does not have a legitimate claim to renumerated for these costs.
+
+Intellectual economies based on free content often rely on honor systems.  Perhaps the most explicit illustration of this and of what can happen when an honor system system fails is shareware.  In the early days of personal computers, it was common to allow software freely distributable and usable under the condition that, if one found the program useful, one would be honor-bound to make a donation to the developer.  Unfortunately, all too many people who used such programs on a routine basis and had the means to pay the developers chose not to honor this obligation.  In the end, many programmers who saw that they were not able to recuperate development costs when writing shareware felt justified trying to collect their payments by such expedients as making the program stop running after a free evaluation period if one did not pay the author.  Of course, such devices rely on keeping the source code closed for their effectiveness.
+
+Perhaps everyone who believes in open intellectual content should make a personal balance sheet of sorts, tabulating benefits derived from open intellectual content on one side and contributions made towards making such content available in the other column.  Should it turn out that the debts outwieigh the assets, then that person should seriously consider correcting this imbalance.  In a way, making use of free resources without contributing to their production can be tantamount to exploiting those who choose to release the fruits of their intellectual labors under a free license.  If you use GNU programs, consider making a donation to the Free Software Foundation.  If you are a mathematician who finds Planet Math to be a useful reference or a student who has obtained help through the fora, consider making a donation which reflects the value of the resource to you.  If Planet Math were to recieve $1 for every time a student recieved help, that would already be a considerable source of revenue.
+
+Supporting intellectual content can take various forms.  Even if one does not have funds to donate or the skill to produce worthwhile intellectual content, there are other forms of support which one can offer:
+
+ * Publicize free programs.  Whilst a software house which charges stiff licensing fees can afford to pay for advertising, most authors of free software cannot, so popularizing and advocating the benefits of free programs is a worthwhile activity which serves a useful purpose.
+
+ * Raise funds.  Even if you may not have much money to pay developers of free software, there are other entities such as businesses and governments which have money are are willing to donate some of that money to various causes.  Attempt to persuade them that the production of free intellectual content is a worthy object of their philanthropic endeavors.  Find grants and matching programs which may be applicable to various projects and help prepare the applications.
+
+ * Lobby for free content.  Restrictive intellectual property laws can hinder the production of free content in various ways --- see the Asteroid for details.  Help raise awareness of these issues and let legislators know that you would like to see intellectual property law reform and legislative initiatives to encourage and facilitate the production of free intellectual content.
+
+Remember, freedom of intellectual content is too important an issue to leave in the hands of a few enthusiastic supporters.  Likewise, complaints about the disadvantages of closed source content ring hollow unless they are backed up by meaningful support for a free alternative. --[[file:rspuzio.org][rspuzio]] 5 June 2005
+
+* Discussion
+
+A new week. --[[file:jcorneli.org][jcorneli]]
+
+I put the editorial which didn't quite make it into the previous bulletin here.  Also, because of the title, I would request that other content be added on top so that this editorial can stay att the bottom :)  I am sure that this editorial will be a fertile source of discussion both on this website and as part of the journal when it is sent off in a week. --[[file:rspuzio.org][rspuzio]] 5 June 2005
+
+Since Joe could not make it to a computer becuse of his trip, I took over the editorial duty for this week.  As it turned out, it was not the best time for me since my aunt just passed away and today is the funeral.  However, at least I have access to a computer so I adapted an announcement about the summer of code along with my editorial which didn't make it into the last edition to make a bulletin. --[[file:rspuzio.org][rspuzio]] 12 July 2005
+
+
+----
+[[file:Bulletins.org][Bulletins]]

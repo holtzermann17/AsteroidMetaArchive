@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Project: http://planetx.cc.vt.edu/AsteroidMeta/mmj2 
+
+-----
+
+* Resources
+
+[http://www.thereasoner.org/ The Reasoner]
+
+-----
+     
+"Alex, there are two kinds of people in this world.
+The people who don't wanna know, even if they /oughta/ know.
+And the people who just /have/ to know, even if it's not
+going to help them." 
+
+-- [http://www.amazon.com/Heavy-Weather-Bruce-Sterling/dp/055357292X "Heavy Weather", Bruce Sterling]
+
+
+"Live as if you were to die tomorrow. Learn as if you were to live forever."
+
+--[http://en.wikiquote.org/wiki/Mahatma_Gandhi Mahatma Gandhi]
+
+
+"Only he who attempts the absurd is capable of achieving the impossible."
+
+--[http://www.des.emory.edu/mfp/impossibleG.html Miguel de Unamuno]
+
+    
+        "To solve a problem, there has to be a problem or problems
+    to solve. So the solver must first create the problem, or more
+    often recreate it. And, of course, you have to replace any that
+    you actually get rid of. That's the usual function of 
+    organizations: to help one create new problems or take old 
+    ones out of mothballs. [...] Organizations carry it beyond that
+    level--to the point of engineering, promoting, and enforcing
+    problems. I'm sure you've noticed how their solutions provide 
+    a next generation of bigger and better problems. Call it a game
+    of posing and resolving problems." 
+    
+    -- John Dalmas, "The Playmasters".
+    
+
+
+"I think, therefore I possibly am." -- Quantum Descartes Principle
+(paraphrased from Red Dwarf).
+
+
+-----
+
+I have been playing with [Sagemath.org SageMath]. It has evolved 
+quite a bit since the last time I looked at it. 
+
+Now that I have
+highspeed internet, downloading the 400MB binaries is doable,
+so I decided to try it. 
+
+I'm running it on my iMac under OS-X
+because the Windows version requires downloading VM Player--
+and I decided to avoid additional complications. 
+
+SageMath has a "notebook()" feature which uses the browser for 
+user interactions. Output can be formatted using, what appears
+to be, MathML. 
+
+Here is the [http://sagemath.org/tour-graphics.html SageMath graphics demo page]. 
+Have a look!
+
+I think I'll be busy in my spare time playing with SageMath...for
+now, though I may get back to mmj2 and Metamath one day (perhaps
+with a SageMath interface to mmj2 :-) In the meantime if anyone
+has any mmj2 questions or topics of interest, I'll be happy to
+commo. You can reach me via  k900f73 (at) yahoo (dot) com. 
+
+--[[file:ocat.org][ocat]]
+
+: Hi ocat. Hope it's okay to spam your AM homepage. I just wanted to tell you that, in case you're still interested in [[file:Ghilbert.org][Ghilbert]] and [[file:JHilbert.org][JHilbert]] and the like, there's a lot of new discussion going on on the JHilbert wiki at http://www.wikiproofs.de with respect to a new definition mechanism.--[[file:GrafZahl.org][GrafZahl]], 25 Feb 2010

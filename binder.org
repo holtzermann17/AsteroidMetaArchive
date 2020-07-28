@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The term binder shall be used to denote any entity which causes one or more variables to be bound.  Familiar examples include quantifiers in logic and the integral sign in calculus.
+
+Note that there are some entities which can be used as operations and as binders.  For instance the summation sign is an operation when it is applied to a set, but a binder when it is subscripted with a variable and applied to an expression which contains that variable. 
+
+It is also possible to regard operations as degenerate cases of binders in which no variables are bound.  For the justification of this notation which involves a convention about the zero power of a set, please see the entry [[file:semantics of binders.org][semantics of binders]].  Sometimes this proves to be convenient because it allows one to deal with binders and operations at once rather than as separate objects.
+
+
+Back to [[file:h-code.org][h-code]]

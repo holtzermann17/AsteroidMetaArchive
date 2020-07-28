@@ -1,0 +1,75 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+It would be interesting to have more details.  Why is math OCR hard and exactly
+what are the difficulties?  In particular, I would be interested to know whether
+the difficulties are more difficulties of principle or practise.  If there are
+difficulties of principle, then presumably brainstorming and trying out ideas is
+in order.  On the other hand, if there are difficulties of practise (say, there
+are a lot of math symbols, so it will take plenty of effort to enter the data
+needed for a computer to understand them all) then the solution is to interest
+people in the problem organize a concerted effort to carry out the program (say,
+here's a list of mathematical characters; please pick one and code a description
+according to the guidelines and examples presented in the documentation).
+
+Although our efforts are concentrated on different parts of the HDM project, it
+would be nice to one day set up an OCR page and put up a more detailed
+explanation on what recognizing mathematical text entails and what is doable and
+where are the bottlenecks that need to be dealt with before we are able to scan
+in math books and convert the graphical data into a format which somehow
+represents the "meaning" rather than the "appearance" of the
+image. --[[file:rspuzio.org][rspuzio]] 27 March 2005
+
+
+----
+
+The basic difficulty with math OCR as opposed to text OCR is that math
+expressions are not "linear".  They are 2D.  Whereas the generic text OCR
+algorithm is "Identify the lines in the page, and then read letters across each
+line," you can't do that with math.  
+
+Even complicated linear languages like Chinese are easier to deal with than
+math.  Whereas you might think that Chinese was also 2D, in fact, there are only
+a few popular fonts that are used for printing Chinese, and training the
+computer to recognize each glyph returns us to the 1D environment of Latinate
+texts.
+
+A program to recognize hand-written Chinese would presumably be harder to
+develop.  Handwriting in general is harder to deal with than normal OCR.  But
+algorithms that work for handwriting OCR may prove to be not what is needed for
+dealing with math expressions, because with math expressions, symbols really can
+go all over the place.
+
+Fateman /did/ develop some software that could do math OCR, but it never got
+stably packaged, nor do I know how robust the software is at all.  He seemed to
+think that there was still a whole lot of work to do to make it robust.  He gave
+a copy of the software to me, and suggested that I could use it under a
+BSD-style (GPL compatible) license.  Which seemed fine to me, but he also
+effectively persuaded me to focus on other parts of the project.
+
+It might be good to post the code someplace (probably in my
+[http://www.ma.utexas.edu/~jcorneli/b/ ~/b] directory) and make sure that
+Fateman is really cool with it being BSD-licensed.  I'll look into doing this
+sometime soon.
+
+But I still think that it is probably a a good idea to focus on other things.
+
+Still, there is no particular reason to put it completely on hold - and having
+it on hold might be a bad idea.  What would be nice would be to find someone (or
+ones) who were interested in focusing primarily on that project.  When I talked
+to Fateman, I said that I would be willing to spend some time working on
+reorganizing his code, and he said that he might be able to find a student to
+work on this too.  It could be good to ask him whether anything has happened
+with his code since then.
+
+I met him a couple summers ago, and had very interesting conversations, but
+found him to be a somewhat staunch critic....
+
+*  Historical note
+
+When I first started thinking about the [[file:HDM.org][HDM]] project, I was inspired by
+[[file:Project Gutenberg.org][Project Gutenberg]], and OCR is one the things I thought about first.  The
+various ideas about HDM were quite interlinked with each other, but I know that
+I was interested in making a !TeX version of Carr's famous work.  (This
+book is mentioned in the original HDM essay.)

@@ -1,0 +1,97 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We begin with some descriptions of roles copied from "[[file:Vision_for_the_future_of_PlanetMath.org][Vision_for_the_future_of_PlanetMath]]".
+See below for discussion.
+
+* Administrative
+
+ * PM.Org president (Aaron P. Krowne):  Manage the various goings-on at
+  the Org.  Be involved with pretty much everything, in some measure.
+
+ * Grantwriting, outreach (Joseph A. Corneli): Strategic planning,
+  various partnerships, research grants, hitting up foundations
+  (collaborating chiefly with Aaron on these issues).
+
+ * Legal issues, various (Raymond S. Puzio): Collaborate with Bonnie and
+  others on legal stuff; work on relationships with other related interest
+  groups.  Misc. other admin stuff.
+
+ * Fundraiser, non-profit/co-op manager (we may want one of these): Take over
+  some of the tasks of fundraising, running meetings, being a liaison
+  between the Org and the community, etc.
+
+* Community service
+
+ * Developer (Aaron P. Krowne):  Continue to maintain 
+ Noosphere and the PM site.   Manage bounties.
+
+ * System Administrator (we may want one of these): Step in to take
+  over many of the basic tasks of Noosphere/PM maintenance.
+
+* Hacking
+
+ * Noosphere project manager (Aaron P. Krowne):  Lead development of Noosphere
+  engine; coordinate integration of services into PM; manage bounty program
+  and so forth.
+
+ * technical writing and editing, staff programmer (Joseph A. Corneli): Manage the FEM project;
+  help with Noosphere maintenance and documentation; service-ize HDM components.
+
+ * mathematician and staff programmer (Raymond S. Puzio): Collaborate with APK
+  and JAC on autolinker & variations on this theme; work on FEM; help
+  manage ingest of new material into PM; service-ize HDM components.
+
+* R&D
+
+ * Digital Library Science (Aaron P. Krowne):  Helping improve free culture
+  production and organization of knowledge using internet-based collaborative systems. 
+  Noosphere is of course the centroid of this work for PlanetMath, but there are other systems
+  that do and may continue to come into play (such as OAI tools).
+
+ * Artificial Intelligence (Joseph A. Corneli):  Current focus
+  is hypertext & collaborative authorship as a way of building AI systems.
+  I'm working on: a frontend (AI-building tool), backend (pre-ontology, reasoning), and
+  content (ontology, automatic learning).  I'll be responsible for helping
+  integrate other components of the research described here into the AI system.
+
+ * Formal Systems (Raymond S. Puzio): Lead development of a universal system of
+  mathematical notation uniformly applicable to all fields of
+  mathematics.  Formalizing the notion of metatheory in the context of
+  relational systems and the relation between theories and their
+  metatheories.  Studying examples of proofs in order to construct a
+  proof-checking framework which is based on the way human
+  mathematicians prove theorems.
+
+ * Linguistics (we may need a linguist):  Studying examples of mathematical
+  writing to determine a grammar of mathematical prose.  Devising
+  means of automatically translating natural language statements of
+  mathematical assertions into equivalent symbolic expressions.
+
+----
+* Discussion
+
+I don't know if this description of roles is either realistic or complete,
+but it is a place to start.
+
+I previously created a page talking about the "[[file:Role of Knowledge Management for PM.org][Role of Knowledge Management for PM]]",
+since I think that specializing in KM would be a good thing for me to do to help PM.
+
+Although there are many tasks and skills with my name on them in the
+sections above, perhaps not all of these tasks would be part of what
+I'd be getting paid to do.  This depends on the development priorities
+that the organization adopts, and what my actual role with the
+organization develops into.  I have been trying hard to contribute to
+the relevant organizational planning, particularly as I would like to
+get some clarity on these points.
+
+Please see [[file:Sketch_of_a_Possible_Organizational_Structure.org][Sketch_of_a_Possible_Organizational_Structure]] for
+mention of several other official organizational roles (the complete
+list so far is Chief Executive Officer, Chief Financial Officer, Chief
+Operations Officer, and Chief Knowledge Officer).  
+
+In general, spelling out what constitutes "billable hours" for persons
+with these titles seems like a good idea.  See also [[file:PlanetMath Salaries.org][PlanetMath Salaries]] for
+some relevant (but, so far, preliminary) discussion.
+
+--[[file:jcorneli.org][jcorneli]]

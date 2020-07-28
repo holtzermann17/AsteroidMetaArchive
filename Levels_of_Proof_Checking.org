@@ -1,0 +1,112 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Since checking proofs is not always an easy task, it might be worth
+splitting it into several stages of increasing difficulty.  This
+difficulty is primarily caused by the fact that most proofs written
+by mathematicians leave out details, trusting that the reader can
+provide the missing material and are often sketches of proofs rather
+than full proofs.
+
+*  Level 1: Two column proof
+
+This is the sort of proof one finds in logic books and elementary
+textbooks in geometry.  In such a proof, every step in the reasoning
+is provided and, furthermore, the justification for that statement
+(rule of inference used and antecedents) is also provided.
+Typically, such a proof is arranged in two columns with the
+statements in one column and the justification in the other column.
+
+Verifying the correctness of such a proof amounts to checking that
+each statement follows from its alleged antecedents by means of the
+alleged inference rule.  Thus, checking the proof is no harder than
+checking a single inference.  Since checking a single inference is an
+exercise in pattern matching, this level is relatively
+straightforward, if a bit tedious at times, to implement.
+
+*  Level 2: One column proof
+
+Typically, when a proof is presented, the justifications are left out
+--- one has a simple list of statements and need to provide the
+justifications for oneself.  Checking such a proof involves an extra
+element.  In addition to checking whether statements follow from
+their antecedents, one needs needs to first find the antecedents.
+
+To find the antecedents for a particular statement, one first need to
+consider the possible antecedents.  Any statement which has been
+assumed to be true or already proven is a candidate.  While, in a
+simple proof, there might be only a handful of possible antecedents,
+in a complicated proof of a non-trivial theorem, there might be
+hundreds or thousands of possibilities.
+
+In the simple case, one can try the possibilities systematically.  In
+more complicated cases, this can be impractical, so one needs to take
+some extra measures.  One technique is to employ some sort of triage
+which eliminates impossibilities before spending more time carefully
+verifying whether a statement is indeed a possible antecedent.  For
+instance, if a particular inference rule only applies to statements
+which have an "or", then it is pretty obvious that statements which
+do not contain "or"'s need not be considered.  Another technique is
+to rank statements so that statements which are more likely to be
+antecedents will be considered earlier.  For instance, the statement
+immediately preceding a statement is likely to be an antecedent so it
+makes sense to try it first.
+
+One can also make this task easier by organizing one's information.
+Presenting proofs in structured form rather than as lists of
+statements limits the search for antecedents by restricting the scope
+of the search to the current sub-proof and already demonstrated main
+statements, excluding statements which have already been used to
+prove a previous main statement.  Including metadata on which
+theorems are already used in the proof likewise makes the problem
+easier by limiting the scope of searches.
+
+*  Level 3: Obvious steps omitted = 
+
+In published proofs, not only are the justifications for statements
+typically omitted, but some steps are also omitted.  The
+verification of such proofs begins to involve an element of automatic
+theorem proving, since one must provide missing steps.
+
+As long as only a few steps are missing, one can try guessing
+possibilities for the missing step or two.  Based on the antecedents
+and the statement to be proven, one can limit the possibilities and
+rank possible statements by some sort of criterion of plausibility
+and then test the various possibilities, starting with the most
+plausible guesses and moving on to the less plusible ones if these do
+not work out.
+
+*  Level 4: Sketchy
+
+There is a continuum with automatic proof checking at one end and
+automatic theorem proving at the other.  Already the last level
+represents a first step in the direction of automatic theorem
+proving, but one can go much further.  Many so-called proofs one
+finds in the literature are really sketches of proofs, with the main
+steps outlined and perhaps a few words describing how the proof is
+constructed.  Verifying such proofs involves coming up with a
+significant portion of the proof.
+
+Since there already enough to be done in implementing the first three
+levels, I will not say much more about this level now.  However,
+thinking in terms of a continuum between proof checking and automatic
+theorem proving may make it easier to approach the problem.
+Presumably it is easier to come up with a proof when one already has
+been provided with hints and an outline.  Starting out with verifying
+already existing proofs and gradually working up to making up proofs
+some scratch by considering filling in missing material in sketchier
+and sketchier proof is a lot like how many people learn math, so it
+might be a reasonable approach to teaching computers to prove
+theorems as well.
+
+--[[file:rspuzio.org][rspuzio]] 18 June 2005
+
+We might add:
+
+*  Level 5: No proof sketch given, just a statement
+
+We might not even know if the statement is actually true - so in this
+case, coming up with /proof strategies/ and trying them out is
+important.  Sometimes you might be trying to prove the statement, and
+other times you might be trying to prove its negation.  

@@ -1,0 +1,608 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I have been considering opportunities for parallel processing
+during the proof search process. Several opportunities arise
+when the unification process is broken down according to
+geometric, syntactic and metalogical consistency checks.
+
+And, although unification of a proof step and its hypotheses
+with an assertion and its hypotheses involves "side-effects"
+among the hypotheses and the conclusion formula, as well as
+any previous proof steps deriving the proof step hypotheses,
+each individual formula may be separately subjected to a
+syntactic consistency check -- then the set of hypothesis
+formulas and the conclusion formula can be brought together
+later for a joint unification to show that together they are
+syntactically consistent at the assertion level in spite of
+side effects involving work variables.
+
+* CANDIDATE ASSERTION HYPOTHESIS UNIFICATIONS
+
+One opportunity for parallelism involves a proof step and a
+candidate assertion. Assume proof step "P" is passed to the
+Step Prover, with Givens X, Y and Z (these are "given" as
+hypotheses in the context of the sub-proof for use by the Step
+Prover as hypotheses and do not require proving inside the
+sub-proof.)
+
+Now, assume that Assertion "A" is selected as a candidate for
+unification to justify proof step P. Further, assume that the
+formulas of A and P are syntactically consistent. Then, that
+means that if P has N hypotheses, the Step Prover generates N
+new proof steps, which must then be proven using either the
+Givens or using further derivations involving the database of
+assertions.
+
+So, we have N new steps in the sub-proof, and each must be
+justified and proved or shown to be consistent with one of the
+Givens.
+
+In theory each of the N new steps could be tested for
+unifiability with each assertion in the database, and with
+each Given proof step. This can be performed in serial
+fashion. Alternatively, since we know in advance that each of
+the N proof steps generated from A's hypotheses must be
+unified, we could consult a database of precomputed values.
+
+For set.mm, I estimate that (approximately), a 99% reduction
+in the number of attempted formula unifications is achieved --
+and these are the full-blown, expensive unifications which
+must return sets of substitution values.
+
+Here is how the database would work. Assume that there are
+10,000 logical assertions and 12,000 logical hypotheses. For
+each hypothesis we would pre-compute and store a list of
+assertions whose formulas are syntactically consistent with
+the hypothesis formula.
+
+To do the computation, for all hypotheses, there would need to
+be 12,000 times 10,000 formula unifications -- or 120,000,000.
+I first had guesstimated that 1 in 100 assertions would be
+syntactically consistent with any given hypothesis, so for
+each hypothesis a list of 100 syntactically consistent
+assertions would result. The list of lists then, would have
+12000 * 100 = 1,200,000 assertion labels. I also assumed that
+100 pairs of formulas (conservative?) could be checked for
+syntactic consistency per second by my 7-year old single- core
+computer. Thus, the guesstimated time required for the
+computation would be 800,000 seconds, or 222 hours...
+
+Fortunately, I ran a test using highly optimized code which
+takes advantage of the fact that there are no work variables
+in the set.mm hypotheses or assertion formulas -- this yields
+much simpler unification logic (it is the "one way
+unification" we discussed previously.)
+
+Here are the test results as implemented using the mmj2
+Service feature to invoke a new helper class,
+mmj.pa.ComputeLogHypUnifications.java in single thread mode
+via Lazy Evaluation of logical hypothesis unifiers (the code
+includes locking to make it thread safe):
+
+    
+    Hello world, I am TSvcComputeLogHypUnifications3.java
+    Elapsed Milliseconds              = 20078
+    Total Nbr Assertions              = 10374
+    Total Nbr LogHyps                 = 12425
+    Total Nbr Unifications Attempted  = 128909375
+    Total Nbr Successful Unifications = 1058685
+    Unifications per second           = 6420429
+    Bye!
+    
+
+
+: *NOTE:* I discovered why the Unifications Per Second total
+jumped to 6.4 million from 3.4 when I transported the
+test code to the mmj2 development environment. I
+switched to "lazy evaluation" of the unifiers for
+each logical hypothesis -- and as it turns out, there
+are many theorems in set.mm which share logical
+hypotheses inside local scopes. So, the revised code
+avoids re-computation for shared logical hypotheses.
+That is a good thing and even though the speed statistic
+is wrong, the elapsed time is correctly showing a big
+speed up, from 34 seconds to 20 seconds.
+
+: .
+
+: By the way, I inserted a RunParm to allow the user
+to specify whether or not to do this set of computations
+at runtime, and also, how many threads to use. The
+drawback to pre-computation at start-up is that 
+it slows you down by 20 seconds. But if you stay in
+mmj2, which is now feasible given the new Theorem Loader
+feature, then it seems good to have the computations
+out of the way. On the other hand, if someone is 
+doing proofs for, say, propositional logic, then there
+is no need to do the computations for all logical
+hypotheses. I will add a menu option to the GUI to
+allow the user to trigger the computations, just as
+an option, and in any case, when the StepProver runs
+if will use the Lazy Evaluation method to do any
+computations which have not yet been performed.
+
+: .
+
+: . Also of interest, on a single core computer
+running multiple threads to perform this computation
+does not significantly increase the elapsed time to
+completion. So, I am leaning towards making the default
+number of threads equal to 2. That way, for a large
+proportion of users the speed-up is automatic.
+
+: .
+
+: A final note: I am less than 24 hours away from
+the first Step Prover tests to do "proof discovery"!
+I'll be doing lots of batch testing to figure out
+how well this thing performs in "reality" before
+I hook it into the Proof Assistant GUI. (I am not
+highly optimistic but I am very curious!!!)
+
+
+Assuming a dual-core computer, the build process for the
+precomputed database could be cut down to 10 seconds! 40! That
+is because this is what is technically called an
+"embarassingly parallel" problem -- each logical hypothesis
+can be processed simultaneously.
+
+Unfortunately, storing the precomputed database in RAM,
+perhaps inside the mmj2 Logical System requires lots of
+memory. To solve that problem a new class (actually an
+interface and family of classes) was developed:
+mmj.util.StingyIndexArray.java. What this does is store an
+array list of integers using the smallest atomic integer field
+available, based on the length of another list. The integer
+size determination is made at runtime on a case by case basis
+so that a list of indexes into an array list of 12000 elements
+can be stored using "short" integers which require only 2
+bytes per integer, instead of 4 which would be required for
+"int" values.
+
+The StingyIndexArray allows the precomputed logical hypothesis
+unifiers to be stored in about 2MB of RAM instead of 4MB
+(based on a recent version of set.mm.) And, in the future,
+when set.mm has more than 64K assertions, the code will
+dynamically switch to 4 byte integers -- by then we assume
+that mmj2 users will have more RAM available and that this
+sudden jump in storage requirements will not be a
+showstopper...
+
+Now, the precomputed answers remain valid for the originally
+input Metamath database except in the case of new theorems,
+changed formulas, and deleted or renamed theorems.
+Accordingly, mmj2 has been modified to "null" out pre-computed
+answers, when necessary, when the mmj2 Theorem Loader is run
+and inserts theorems inside the range of precomputed indexes
+into the mmj2 Assertion List.
+
+The benefits of having this database of pre-computed unifiable
+assertions for each hypothesis will be very significant for
+proof searching.
+
+Consider for just one proof step and an assertion with 2
+logical hypotheses which are not unifiable (an exhaustive
+search returns naught.)
+
+Assume a database of 10,000 assertions in which each logical
+hypothesis is unifiable, on average, with 100 assertions.
+Also, assume that proof search is proceeding bottom-up wherein
+the justifying assertion (Ref) for the proof step generates
+two hypothesis steps -- each requiring justification, either
+with one of the Given hypotheses or with an assertion from the
+mmj2 Assertion List.
+
+First, if the precomputed answers are not available, for the
+first hypothesis the unification search process must check
+each assertion in the Assertion List; and then if unification
+is successful, unify the second hypothesis against the
+Assertion List. This means, on average, 10000 unification
+attempts for the first hypothesis, and then for each
+successful unification of the first hypothesis another 10000
+unification attempts for the second hypothesis. Thus, 10000 +
+100 * 10000  = 1,010,000 unification attempts are required.
+And notice that these are the full- fledged unifications which
+require using "work variables" and returning the set of
+simultaneous substitutions, not just yes/no answers.
+
+On the other hand, in the same example, using the precomputed
+logical hypothesis unifiable assertion data, on average, only
+100 unification attempts are required for the first
+hypothesis, and then for each successful unification of the
+first hypothesis, another 100 unification attempts for the
+second. Thus, 100 + 100 * 100  = 10,100 unification attempts!
+
+These are approximations, but it is clear that the savings are
+immense, because this scenario must be repeated during the
+proof search for every proof step and its hypotheses!
+
+Obviously any "ignorant" exhaustive proof search is doomed by
+combinatorial explosion of possibilities once the search depth
+goes beyond two or three levels. However, given that the new
+mmj2 Step Prover is intended to aid the user in completing
+very short sub-proof sequences involving "easy" formula
+transformations involving simple things like propositional
+logic and basic predicate calculus, use of precomuted unifiers
+of logical hypotheses is an enabling invention -- without it
+the code performance would likely be intolerable!
+
+Here is the code to perform the computations for a single
+hypothesis/assertion pair. It uses "fast-fail" heuristics
+involving parse tree depth and signature (which are computed
+during mmj2's start-up formula parsing.)
+
+        
+    /**
+     *  Computes the list of indexes into the unifySearchList
+     *  of the unifiable assertions for a
+     *  single LogHyp.
+     *  <p>
+     *  The logical hypothesis is unified with assertions whose
+     *  indexes range from 0 through <code>nbrAssrtToSearch</code>
+     *  and the results are returned in an array encoded into
+     *  a StingyIndexArray object.
+     *  <p>
+     *  FYI, ParseTree.maxDepth and levelOneTwo are used in this
+     *  function to "fast-fail" a unification attempt. These
+     *  data elements are pre-computed at parsing time. Because
+     *  formulas in the LogicalSystem do not contain Work Variables
+     *  these heuristics can be used:
+     *  <ol>
+     *    <li>if the candidate assertion's parse tree's maximum
+     *        depth is greater than the logical hypothesis parse
+     *        tree max depth, then unification is impossible.
+     *    <li>if both parse trees have a non-zero length
+     *        "levelOneTwo" string, and the two strings are
+     *        not equal, then unification is impossible. LevelOneTwo
+     *        is computed if and only if there are no variable
+     *        hypotheses in the parse tree root and its child nodes.
+     *        LevelOneTwo is simply a space-delimited string of
+     *        the concatenated statement labels of the root and
+     *        its child nodes.
+     *  </ol>
+     *  <p>
+     *  Apparently, in <code>set.mm</code> something like 95% of
+     *  unifications are fast-failed by these two heuristics,
+     *  which really speeds up the computation process! The
+     *  speed-up, compared to the normal node-by-node unification
+     *  algorithm is extreme -- in many cases the only data
+     *  element checked is <code>maxDepth</code>. Test results
+     *  indicate 6.5 million unifications per second, approximately,
+     *  against a recent version of <code>set.mm</code> using
+     *  a 1.8GHz Intel Celeron (with one core). That equates to
+     *  a merge 300 clock cycles per unification attempt.
+     *  <p>
+     *  @param logHyp the logical hypothesis for which computations
+     *              will be performed.
+     *  @return StingyIndexArray holding an array of indexes into
+     *          the unifySearchList of assertions which can be
+     *          unified with the logical hypothesis formula -- the
+     *          array may have zero length if there are no unifiable
+     *          assertions.
+     */
+    public StingyIndexArray computeOneLogHypsUnifications(LogHyp logHyp) {
+    
+        logHypParseTree           = logHyp.getExprParseTree();
+        logHypRoot                = logHypParseTree.getRoot();
+        logHypMaxDepth            = logHypParseTree.getMaxDepth();
+        logHypLevelOneTwo         = logHypParseTree.getLevelOneTwo();
+    
+        tempUnifierCnt            = 0;
+    
+        for (int k = 0; k < nbrAssrtToSearch; k++) {
+    
+            candidateParseTree
+                ((Assrt)unifySearchList.get(k)).getExprParseTree();
+    
+            if (candidateParseTree.getMaxDepth() >
+                logHypMaxDepth) {
+                continue;
+            }
+    
+            if (logHypLevelOneTwo.length() > 0) {
+    
+                candidateLevelOneTwo
+
+                candidateParseTree.getLevelOneTwo();
+    
+                if (candidateLevelOneTwo.length() > 0) {
+    
+                    if (!logHypLevelOneTwo.equals(
+                         candidateLevelOneTwo)) {
+                        continue;
+                    }
+                }
+            }
+    
+            if (checkSyntacticConsistency(
+                                    logHypRoot,
+                                    candidateParseTree.getRoot())) {
+                tempUnifier[tempUnifierCnt++]
+                                  = k;
+            }
+        }
+    
+        return
+            StingyIndexArrayFactory.
+                make(nbrAssrtToSearch,  //targetArrayLength
+                     tempUnifier,       //indexArray
+                     tempUnifierCnt,    //indexArrayCnt
+                     false);            //rangeChecking
+    }
+    
+    /**
+     *  Attempt to unify logHyp (source) with candidate (target).
+     *  <p>
+     *  There are no work variables present so we can use all of
+     *  the shortcuts from ProofUnifier.
+     *  <p>
+     *  @param sourceNode the root node from the proof step parse tree.
+     *  @param targetNode the root node from the candidate assertion
+     *         to be unified with the source code.
+     */
+    public boolean checkSyntacticConsistency(
+                                    ParseNode sourceNode,
+                                    ParseNode targetNode) {
+    
+        substCnt                  = 0;
+        nodeStackCnt              = 0;
+    
+        unifyLoop: while (true) {
+    
+            if (targetNode.stmt.isAssrt()) {
+                if (targetNode.stmt != sourceNode.stmt) {
+                    return false;
+                }
+                if (targetNode.child.length == 0) {
+                    if (nodeStackCnt-- > 0) {
+                        targetNode
+                                  = targetNodeStack[nodeStackCnt];
+                        sourceNode
+                                  = sourceNodeStack[nodeStackCnt];
+                        continue unifyLoop;
+                    }
+                    return true;
+                }
+                for (int i = targetNode.child.length - 1; i > 0; i--) {
+                    targetNodeStack[nodeStackCnt]
+                                  = targetNode.child[i];
+                    sourceNodeStack[nodeStackCnt]
+                                  = sourceNode.child[i];
+                    ++nodeStackCnt;
+                }
+                targetNode        = targetNode.child[0];
+                sourceNode        = sourceNode.child[0];
+                continue unifyLoop;
+            }
+    
+            vH                    = (VarHyp)targetNode.stmt;
+    
+            for (int i = 0; i < substCnt; i++) {
+                if (vH == targetVarHyp[i]) {
+                    if (!sourceNode.isDeepDup(targetNode,
+                                              compareNodeStack)) {
+                        return false;
+                    }
+                    if (nodeStackCnt-- > 0) {
+                        targetNode
+                                  = targetNodeStack[nodeStackCnt];
+                        sourceNode
+                                  = sourceNodeStack[nodeStackCnt];
+                        continue unifyLoop;
+                    }
+                    return true;
+                }
+            } 
+    
+            // FYI, this "if" statement slows down the total
+            //      computation process for set.mm by about
+            //      1%, and yet, removing it does not alter
+            //      the output unification.
+            if (vH.getTyp() != sourceNode.stmt.getTyp()) {
+                return false;
+            }
+    
+            targetVarHyp[substCnt]
+                                  = vH;
+            sourceSubst[substCnt] = sourceNode;
+            ++substCnt;
+    
+            if (nodeStackCnt-- > 0) {
+                targetNode        = targetNodeStack[nodeStackCnt];
+                sourceNode        = sourceNodeStack[nodeStackCnt];
+                continue unifyLoop;
+            }
+            return true;
+        }
+    }
+    
+
+
+* Uh-oh
+
+The algorithm above does NOT treat the logical
+hypotheses' variables as Work Variables, and thus is falsely
+eliminating unifiable assertions from the output.
+I have rewritten it to just do a very minimal
+"geometric" syntactic consistency checking, but
+the output now includes many "false positives",
+which has resulted in needlessly long proof
+searches!
+
+As I mentioned in [[file:mmj2StepProver.org][mmj2StepProver]] the algorithm above
+does not serve its intended purpose. The problem is
+that the variables in the LogHyp formulas must be
+unified as if they were Work Variables -- which is to
+say, as unknown sub-expressions.
+
+The reason is that we want to know which assertions
+can be unified with a particual logical hypothesis
+after the logical hypothesis formula has been 
+substituted with the proof step formula's substitutions
+into a different assertion. So, assume proof step N
+is tenatively justified by assertion Y, then we 
+take the substitutions resulting from the unification
+of N and Y's conclusion formula to generate new
+proof steps, one for each of Y's logical hypotheses --
+it is those derived logical hypotheses which must
+be unified with other assertions and the Given
+hypotheses to complete the proof.
+
+So...my proposal to dynamically precompute the
+possible unifying assertions for each logical
+hypothesis would be great if the computations could
+be completed very swiftly. But, even then, the
+computations would need to be redone each time
+mmj2 is booted up -- and that might take one
+minute or even longer if we did the full 
+Work Variable unification process.
+
+So....instead, I am thinking about storing the
+results LogHyp unifier computations in a file,
+one record for each logical hypothesis. Then,
+at Proof Assistant/Step Prover run time, the
+file would be loaded into the system. I expect
+that if the file were written out as a "zip"
+format that it could be loaded into the mmj2
+logical system from disk in just a few seconds.
+The size would be, I think, one record for
+each logical hypothesis, and an average
+record length of approximately 600 bytes (assuming
+100 assertion labels per logical hypothesis) --
+unzipped. So this is really just 7 meg uncompressed.
+
+I would provide a separate mmj2 .bat file to
+re-compute that file data whenever needed.
+I expect that job would run, using the current
+version of set.mm, anywhere from 1 to 3 minutes,
+depending on the user's hardware. 
+
+Using perfectly selective screening of LogHyp
+unifiers is tremendously important in optimizing
+proof searches. By eliminating non-unifiable
+assertions from the scan at each level of the
+search tree will radically prune the tree
+and enhance the usefulness of Step Prover --
+to the point where it might be somewhat
+useful to expert users (I already know it
+will be very useful to beginners who are
+working at the Propositional Logic level... :-)
+
+
+* Oh S!
+
+I ran a test where each LogHyp had its 
+formula parse tree cloned to use WorkVarHyp
+instead of VarHyp -- to take into account
+the fact that formulas generated from the
+LogHyp using substitutions generated from
+the assertion justifying a proof step are
+what will be unified against other assertions.
+Here is the output of three tests...
+
+
+1) Stats unifying each LogHyp to each Assrt
+where LogHyp variables are not converted
+to WorkVar:
+
+    
+    Hello world, I am TSvcComputeLogHypUnifications3.java
+    Elapsed Milliseconds              = 33719
+    Total Nbr Assertions              = 10374
+    Total Nbr LogHyps                 = 12425
+    Total Nbr Unifications Attempted  = 128909375
+    Total Nbr Successful Unifications = 1058685
+    Unifications per second           = 3823048
+    Bye!
+    
+
+2) Stats unifying each LogHyp to each Assrt
+where LogHyp variables ARE converted to WorkVar:
+
+    
+    I-SP-0702 Results of precomputation of LogHyp unifiers:
+    Total Milliseconds elapsed    = 83813
+    Total Unification Attempts    = 128896950
+    Total Successful Unifications = 6136458
+    Total Logical Hypotheses      = 12425
+    Total Assertions              = 10374
+    Average Unifications / Second = 1537911
+    Elapsed Milliseconds              = 83828
+    
+
+3) Stats for basic syntactic consistency checking
+each LogHyp against each Assrt:
+
+    
+    I-PA-1102 Results of precomputation of LogHyp unifiers:
+    Total Milliseconds elapsed    = 44625
+    Total Unification Attempts    = 128896950
+    Total Successful Unifications = 6142016
+    Total Logical Hypotheses      = 12425
+    Total Assertions              = 10374
+    Average Unifications / Second = 2888447
+    Elapsed Milliseconds              = 44640
+    
+
+Shockingly, the full WorkVarHyp unification (#2)
+winnowed out the list of unifiable assertions
+for LogHyps by a mere 0.1% compared to #2!
+
+This does make some sense: the few that are weeded
+out likely have inconsistent substitutions -- that
+is, the same variable is updated twice with different,
+inconsistent substitutions. Most of the unifications
+fail, 99.9% of them, because of basic syntax
+inconsistencies and we don't need to do the full
+unification algorithm to weed them out!
+
+Compare to #1, which does a "one way" unification. 
+This weeds out the most assertions but is not
+valid for use in the Step Prover. Too bad.
+
+Another stat to look at is that the full two-way
+unification algorithm -- #2 -- is half as fast
+as the syntax checking algorithm -- #3. That's
+pretty good! But the bad news is that the 95%
+of the assertions which are rejected by both 
+algorithms are failed early in the process. That
+means that we cannot rely on the Unifications/Second
+statistic inside the Step Prover; it will not
+be processing the "easy" ones. 
+
+Bottom line: a depth 2 exhaustive search with
+10,000 assertions and the #2 results from above
+requires 10,000 * 600**2 = 360 million unifications,
+on average (some cases much worse.) Assuming
+1 million unifications per second (unlikely)
+and a single core processor, that means 6 minutes
+for an exhaustive search (and 3 minutes for
+an average "return first proof found" search.)
+Obviously, we need much faster computers, with
+many more cores!!!
+
+Also, it looks like the #2 method is best
+since #3 adds a neglible amount of benefit
+and takes twice as long to compute. I also
+seriously doubt whether pre-computation will
+have much benefit when done at start-up. It
+seems like there is either a 45 second 
+delay, or we have to go through the hassle
+of saving the results in a big-ass file
+(zipped) and explaining *that* to the user;
+better, maybe, to do Lazy Evaluation of
+the LogHyp Unifiers (and I now think the
+LogHyp Unifier idea itself has marginal 
+benefit -- just enough benefit to keep, but
+not a tremendous breakthrough, at least with
+set.mm, which is assumed to be representative.)
+
+P.S. This quest is starting to remind me of
+the computer in The Hitchhiker's Guide to the
+Galaxy. In search of the Answer to the Question,
+of "Life, the Universe, and Everything" 
+programmers proposed to spend a gazillion dollars
+and many, many years to build the fastest,
+smartest computer in the universe.....which
+would then design another computer...

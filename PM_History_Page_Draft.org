@@ -1,0 +1,151 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Comments
+
+This isn't quite done yet.  I suggest that when it is done, we replace
+the About page with a History page.  I've also drafted a "guide to
+copying" which is included below.
+
+----
+
+ *Draft of history.html*
+
+* History
+
+[Can this be shortened to about half of its current length? -Ed.]
+
+PlanetMath was conceived by Nathan Egge ("unlord" on PlanetMath) and
+Aaron Krowne ("akrowne" on PlanetMath) as a central repository for
+mathematical knowledge on the web, with a pedagogical slant.  But we
+realized that we could do it in a way that would make it a community,
+built by the users, and that the users would be just as valuable as
+the content itself. 
+
+There are now many grassroots-content sites like this (Wikipedia,
+Nupedia...), and PlanetMath represents a unique kind of hybrid of
+MathWorld, Wikipedia/Nupedia, and Slashdot concepts. We think that the
+end result will be very useful to many people who are interested in
+learning math, who are already students studying math, or who make
+their living in mathematical professions.
+
+The idea for the project was hatched by Egge, sometime around fall
+2000, in response to the unfortunate removal of "Eric Weisstein's
+World of Math" (or "MathWorld") from the internet. This incident left
+a void to be filled by a useful, comprehensive math encyclopedia
+freely available online, which we wanted to fill as quickly as
+possible.
+
+We wanted to make certain that the users of PlanetMath would never
+have to worry about the removal of the content they had contributed in
+favour of commercial sale.  We believe we have achieved this with the
+aid of the GNU FDL, or Free Documentation License.
+
+Development began slowly after the initial flash of inspiration; as
+both Nathan and myself were very busy with school. Finally in the
+summer of 2001 we both graduated, and work really picked up pace. The
+core of PlanetMath is essentially complete.  However, the site
+continues to expand in both scope and functionality.
+
+/PlanetMath derives in part from several other FDL'ed works, and
+their histories are given here, as per the FDL's requirements./
+
+** History of Wikipedia
+
+It is unclear whether or not http://en.wikipedia.org/wiki/History_of_Wikipedia is
+intended to be the page used here.  But it is /even more/ unclear whether or
+not PlanetMath derives from Wikipedia.  Can someone tell me whether or not this
+is the case?
+
+: I suppose the first thing for us to do would be to compile a list of
+PM entries which are derived from Wikipedia.  Even though we haven't
+begun any official bi-directional updating project (and maybe it's a
+good thing we haven't yet since there seem to be a few technical
+points like this which would better be straightedned out first) some
+users have taken the initiative of porting over entries or have based
+entries on Wikipedia content.  --[[file:rspuzio.org][rspuzio]]
+
+:: Searching for "Wikipedia" on PM gives 26 hits.  I flipped through
+most of them and seem to find Wikipedia being used only as a reference
+almost all the time.  One or two articles seemed directly derivative,
+but maybe different enough to pass under fair use.  Another question
+is whether we want to include a potentially long Wikipedia subsection
+in the PM history when there are just a couple of entries that are
+Wikipedia derivatives.  Since the "History of Wikipedia" page doesn't
+have official standing, we could probably get off with just a *short*
+(FDL-minimal) mention of Wikipedia here, if we do want to acknowledge
+PM as a derivative.  The broader question, do we want to pursue a
+policy of copying from Wikipedia is under discussion elsewhere.  For
+now I think that a stub on WP here won't hurt.
+
+** History of Data Analysis BriefBook
+
+History item for DAB would go here, if it was an FDL work.  But I
+don't see an FDL license on the DAB homepage... Huh?
+
+** History of ....
+
+/Anything else to declare?/
+
+** Copying
+
+The canonical location of PlanetMath's History section is
+http://planetmath.org/history.html.  If you are publishing a
+derivative version of PlanetMath under the terms given in the FDL,
+please check that location and use the version you find there, as it
+will be the one that is current.  For a complete, but succinct,
+description of the protocol you are obliged to follow when
+republishing PlanetMath content under the terms given in the FDL,
+please see http://planetmath.org/copying.html.
+
+----
+
+ *Draft of copying.html*
+
+This document attempts to summarize what you must do to copy
+PlanetMath under FDL terms.  For full details, consult the FDL.  For
+copying under fair use, consult your conscience, faith leaders, or
+legal team.
+
+When copying any portion of PlanetMath into your Document under FDL
+terms, you must add a subsection called the "History of PlanetMath"
+into your Document's History section.  If your Document does not have
+a History section, you'll have to create one.  The History of
+PlanetMath subsection must contain PlanetMath's History section
+(http://planetmath.org/history.html), in full unless the following
+applies.
+
+If your Document is one of the works that PlanetMath derives from, or
+if the History section of your Document already has a copy of the
+relevant history information coming from a work that both PlanetMath
+and your Document derive from, then you may omit the corresponding
+subsection(s) or subsubsection(s) or subsubsubsection(s)... from
+PlanetMath's History section in your History section (but only these,
+of course).
+
+We have provided all of the information you will need to add the
+History of PlanetMath subsection in PlanetMath's History section.
+
+You must also remember to add
+
+ Copyright (C) 2001-2005 individual PlanetMath.org authors
+
+to the list of copyrights you distribute with your work.  If you are
+only copying one or two articles, you may wish to list the specific
+authors individually.  That should be all.  Happy hacking.
+
+: We should ask the Lawyer about this "individual !PlanetMath.org
+authors" bit.  I think the FDL may actually require them all to be
+NAMED. --jc
+
+:: Backing off a step, do we even _have_ a list of all authors???  The
+closest thing, I know of is the "entries" column in the user list.
+While this may be "good enough for government work", it isn't an
+accurate list for two reasons --- 1.  Someone who wrote one or more
+entry might no longer own any of the entries they wrote. 2. Someone
+might have never owned an entry but only contrubuted material to
+already existing entries.  If this is an issue, we might need to come
+up with a list.  I'm not sure how easy this would be to pull off ---
+for all I know, it might be as easy as pushing the right buttons or it
+may involve dredging through the website, like recovering version
+histories. --[[file:rspuzio | rsp.org][rspuzio | rsp]]

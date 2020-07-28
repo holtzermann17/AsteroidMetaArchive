@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In logic, the term "schema" regers to an expression
+in which wildcards can appear.  These wildcards are
+characters which stand for as-yet-unspecified data.
+
+A schema may be defined as two-element list of the
+form
+
+  ( <wildcard-list> <expression> )
+
+The first element here is a list of atoms, which
+will serve as "wildcards", and the second item is a
+list that can include the wildcard atoms.
+
+A simple example of a schema is the rule of the
+arbitrary premise:
+
+ (defconst arbitrary-premise-rule 
+   '((x y) (if x (if y x))))
+
+Here "x" and "y" are wildcards.  In later sections,
+we will give some simple routines that can be used
+to substitute arbitrary expressions for each of x and y.
+
+Bear in mind that one or more of the wild cards may
+not appear in the expression:
+
+  (defconst foo-rule 
+     '((x y) (if x (if x x))))
+
+  (defconst bar-rule 
+     '((x y) (if p q)))
+
+Even a list of this form in which zero wildcards
+appears counts as an example:
+
+  (defconst baz-rule 
+     '(() (if p q)))
+
+----
+Am I correct that the baz-rule is an example?  And why must wildcards
+stand for lists, couldn't they also stand for atoms? --[[file:jcorneli.org][jcorneli]]
+
+That is correst --- it can be a list or an atom.  In fact the way lists are dealt with is by taking them apart into sublists until one arrives at atoms.  --[[file:rspuzio.org][rspuzio]]
+
+: OK, I've adjusted the text to reflect this info.  These comments are no longer necessary... ;) --[[file:jcorneli.org][jcorneli]]

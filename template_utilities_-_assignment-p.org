@@ -1,0 +1,33 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(assignment-p expr)/
+
+ *Input:* an s-expression /expr/
+
+ *Output:* /t/ or /nil/
+
+ *Description:* If /expr/ is a valid [[file:Definition of assignment | assignment.org][Definition of assignment | assignment]], then /assignment-p/ returns /t/, otherwise it returns /nil/.
+
+ *Dependencies:* none
+
+ *Listing:*
+
+ (defun assignment-p (expr) 
+   (cond ((null expr) nil)
+         ((atom expr) nil)
+         ((not (equal (length expr) 2)) nil)
+         ((not (atom (car expr))) nil)
+         (t t)))
+
+ *Discussion:*  This program works by systematically excluding every s-expression which is not an assignment and then certifying that whatever has not been excluded must be a bona fide assignment.  First, the program excludes nil, then atoms, then lists which do not have two elements, then lists with two elements whose first item is not an atom.
+
+ *Examples:*
+
+ *Navigation:*
+
+Back to [[file:template utilities - Operations on asignment lists | Operations on assignment lists.org][template utilities - Operations on asignment lists | Operations on assignment lists]]
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to [[file:template utilities - assignment-list-p | assignment-list-p.org][template utilities - assignment-list-p | assignment-list-p]]

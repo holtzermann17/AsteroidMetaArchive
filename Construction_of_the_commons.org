@@ -1,0 +1,187 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Frequently when we're talking about free math or free content in general,
+we almost seem to assume that we're talking about something "really real".
+It is important to bear in mind that ideas, for example, are only "common
+property" because the law says that they are.  In general, you could have
+a legal system that said that once a theorem had been published, no one
+else was allowed to publish the same theorem.  And indeed this idea might
+not be so unrealistic: even though people /can/ republish theorems,
+the extra-legal arrangements of mathematical culture say that you /can't/
+republish an existing theorem "as your own".  Legally, there's no problem;
+but if you got caught doing this knowingly, it could be as bad for your career as
+it would be if you were caught faking data in the biology lab.
+
+Or the law could say "if you publish it and it is mathematical, your text
+automatically becomes public domain."  The HDM would make it so that there would
+always be a free semantic equivalent available (even though it might not be
+obtainable as such); currently, formulas that only have trivial "expression"
+associated with them are public domain.  The "commons" depends on what is
+technologically possible and on what people want.  Do people really want
+non-free math?  Its a little hard to tell.  Sometimes it seems like there is
+some conflict of interest.  How is this conflict decided?  Currently it is
+decided along with other abstractly similar conflicts from other domains
+(e.g. Hollywood).
+
+As another example, while I don't think that the free software movement really
+wants to make non-free software /illegal/, the typical proponent of this
+movement will say that they wouldn't mind at all if no more non-free software
+was written.  Again, extra-legal forces would presumably be the ones at work to
+bring this about.  But you never know - science fiction has come up with some
+pretty weird ideas, and the idea of a world in which proprietary software was
+illegal is less weird than some.  It might be fun to try writing a short SF
+story about a world that goes the opposite direction of the world in
+"[http://www.gnu.org/philosophy/right-to-read.html The Right to Read]".
+
+
+
+The idea that expression is /not/ part of the commons is interesting - people
+have their own expressions, that they own.  In the current culture in the US,
+people actually own their expressions /by default/ (whereas previously they
+had to assert ownership by filing a copyright claim).
+
+When we talk about "Commons-Based Peer Production", we should probably
+acknowledge that the "commons" in question is /always/ a cultural construct.
+For example, in the current abstract of the [[file:scholium system.org][scholium system]] paper, I say
+that /modern science/ and /the state of human knowledge/ are candidates for
+CBPP domains.  But there's nothing particular that says that all worlds would
+have the property that "modern science" was common.  In some worlds, science
+could be owned by an elite group, and anyone outside of this group who was
+caught doing scientific things could be executed.  In some worlds, humans might
+be allotted a certain sphere of knowledge (their "specialty") and knowledge
+outside of this sphere would be the property of others.
+
+/Cults/, /guilds/ and /trade secrets/ make these weird ideas seem a little
+less weird.  There's nothing to guarantee that any particular kind of content is
+"common".  Practice law or medicine without a proper license and no matter how
+/good/ you are at what you're doing, you could go to jail.
+
+Why do we have the version of the "information commons" that we currently have?
+Clearly this question is complex; I'm not going to try to answer it tonight.
+I'm not even sure it is a good question to ask.  Maybe it is better to end with
+an assertion: that we should be aware of people thinking of the commons as
+something "essential".  No.  It is always dependent on other things - on laws or
+practices.  The same goes for "content hoarders" - their "right to hoard" is
+culturally constructed.  Similarly for the right to privacy (which may just be
+the right to hoard applied to a certain class of data).  
+
+Why do commonses come into being in the first place?  Maybe this is a better
+question.  More later.
+
+--[[file:jcorneli.org][jcorneli]] Tue Jun 07 06:32:19 2005 UTC 
+(inspired by a lecture I went to today that was given
+by my mentor from several years back, Luther Gerlach)
+
+One thing to note is the difference between "common property" and "open access
+resource" in the anthropological lingo.  The first generally denotes something
+that is /scarce/ and has to be managed, whereas the second denotes something
+that is a /free for all/.  For example, for a long time the sky was "open
+access" but now there are emission standards and so forth, and clean air is
+managed as a common resource.  Many resources are recognized as scarce and are
+managed as property, but a few open access things still exist.  Notably,
+mathematics and the historical record seem to be examples of resources that have
+more in common with the "open access" mentality than with the "commons"
+mentality.  Anyone can read any book they can find and say anything they want to
+about the content.  Copyright comes into play, so the contemporary sphere of
+discourse begins to have a few more commons-like aspects to it.  But copyright
+specifically does not apply to ideas or formulas or theorems or algorithms.  It
+applies to code, papers, letters, documents, and forms of speech or expression.
+Copyright says that while anyone can read the text in question, only the
+copyright holder can distribute it en masse.  Maybe the text is managed as a
+commons: you have to pay to get entry, but once you get entry, you can do what
+you like within certain reasonable limits.
+
+When we make the move to the internet, copyrighted works aren't "scarce" in the
+same sense of having limited copies printed up.  Evolving texts are limited in
+another way, however: there are limits to the amount of time that the producer
+has to expend on producing the text.  PlanetMath, for example, can be replicated
+without any theoretical limit, and it can be populated by a group of people of
+theoretically unlimited size.  But in the real world, the actual PM population
+does have some fixed number, and the number of copies of PM pages in circulation
+is finite too.  Scarcity of producers is obvious enough, but we can "dualize"
+and look at scarcity of consumers too.  Consumers are less scarce than
+producers, but the producers /are/ frequently involved with the process of
+looking for more consumers, i.e., ways of reaching more people.  Still, the
+actual web pages that make up PM are not "scarce" in the traditional sense.
+Nevertheless, it seems clear enough to me that PM is managed as a commons.
+There are rules to follow when you post, and so on.  Perhaps the scarce resource
+is again, attention (on the producer side), but also recognition (on the
+consumer side).  None of the producers wants PM to "look bad", because they want
+to have other people see PM as a valuable thing.  So they put a lot of effort
+into making it look good.
+
+With PM, academia, or the HDM, one can say that attention of the people who work
+on the project is a limited good.  When there is more than one person working on
+the project, "attention" may be managed as a commons, much more so than the
+actual mathematical content.  There are rules about going to class and getting
+degrees.  There are rules about publication standards and quantity of research
+output.  There are (often unwritten) rules about the sorts of content that can
+be produced that are independent of "mathematical quality", but relate more to
+"what people want to see."
+
+HDM might be asserting that we should manage /mathematics itself/ as a
+commons, while still retaining certain open access features.  In the HDM there
+would be standards for expression: the contents would be computer
+understandable.  But this rule has more to do with the computer system that
+underlies the HDM than anything else - if this system doesn't understand a given
+piece of mathematics, it is a shortcoming of the system, not of the math.  The
+/system itself/ is supposed to be a free software project, and that's maybe
+where the real "commons-like" features obtain.  For any free software project,
+there is a scarcity of skilled developers, a scarcity of namespace, a scarcity
+of time for maintenance, and so on.  The HDM software would structure the sorts
+of things you could do inside the system.  There would still be plenty of other
+things you could do outside the system, and some of these things would work
+their way back into the system.  (And presumably the system itself would be
+flexible enough to accomodate lots and lots of very creative things that people
+might like to do.)  
+
+Is there really a "drive" to make math into a commons?  Maybe: right now,
+mathematical content seems sort of like fallow land, and the HDM project would
+seek to make something more of this content.  But I'm not sure if this is the
+key motivation or not.  Certainly one motivation of the HDM project is to open
+mathematics up to more people; the HDM says, access to mathematics is limited by
+the technology, now it is pretty much only accessible to an elite, but in the
+future it could be accessible to everyone.  This is making it sound sort of like
+we'd be working on making a commons into an open access resource!  The
+distinctions grow fuzzy as the heat in my apartment increases... ah, the fan.
+
+The HDM project certainly says that there should be a new "job" - that of
+managing the existing mathematical resources.  When we talk about "managing
+resources" that's talk about a commons, plain and simple.  Right now, our
+mathematical history is probably managed for the most part by being warehoused
+in libraries.  (Note how I say /our/ mathematical history, there's some
+commons-speak for you.)  This is very similar to the /ecosystem/ idea:
+whenever ecosystems appear on the societal map, there are going to be people
+there talking about how to manage them.  Since the idea of top-down management
+is sometimes somewhat unpalatable (e.g. we would hate it if Elsevier took over
+some kind of extra-mojo rights in mathematics and meted it out to the rest of
+the world in $24.99 installments), we say that the HDM will be managed as a free
+software project, with active participation from anyone who wants to join in the
+fun (and passive participation from anyone who chooses to ignore us; we get them
+coming and going).  Rather than being managed by a cadre of professors and
+publishers, mathematical /knowledge/ would be managed by hackers and users.
+(We aren't just managing /information/ any more, we're managing knowledge.)
+
+Thus, I'd have to say that HDM /is/ about constructing a mathematical commons.
+Scarcity is relevant, not in terms of replicability, but primarily in terms of the
+commons-management infrastructure itself.  However, I would also say that "real
+mathematics" is about a mathematical commons too.  While these two systems have
+some similarities and some overlap, they seem to offer different interpretations
+of what mathematics is, and what, as a social practice, it has to offer.
+
+--[[file:jcorneli.org][jcorneli]] Tue Jun 07 20:35:23 2005 UTC (second installment following second lecture)
+
+Note: /good/ mathematical knowledge is often scarce; think of the Carr quote. --[[file:jcorneli.org][jcorneli]]
+
+Here is a little footnote.  The receipt for my copy of Marvin Minsky's "The Emotion
+Machine: Commonsense Thinking, Artificial Intelligence, and the Future of the Human Mind"
+abbreviated the title to "The Emotion
+Machine: Commons", which I thought was an interesting occurance.  Although I had talked
+about a commons-based approach to building a Cyc-like knowledgebase, and about
+the importance of "parallax", I don't know if I ever noticed the linguistic connection
+between "commons" and "commonsense".  So here it is, for the record!  Here's one
+group that found the same pun: ([https://secure.bioneers.org/node/651 spoken word for sale]) --
+but thinks about it in a different way.  You can also get some paronomasic value from this work written by Thomas Paine: http://en.wikipedia.org/wiki/Common_Sense
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Interesting. A bot managed to create a spam page from scratch. ([[file:akrowne.org][akrowne]])
+
+The standard banning for Oddwiki should work, I think; it
+operates on a page-content basis.  Maybe this bot is
+associated with new hosts.  I manually put in delete instructions.
+--[[file:jcorneli.org][jcorneli]]
+
+
+This is quickly becoming a serious annoyance.  Perhaps
+I should enquire with the oddwiki people to see if
+some solution is known?  Per the above, I'm surprised
+to see this spam appearing at all.  We are using the
+!EmacsWiki's banned hosts page, are we not?
+
+--[[file:jcorneli.org][jcorneli]]
+
+Alex says we must update our banned host page.  That wouldn't be /this/ page, would it? --[[file:jcorneli.org][jcorneli]]
+
+:I am guessing that banning IP addresses, or banning URLs in 
+the page content will do the job. If "bots" are doing
+this the bots may just be slave machines parasitized by
+a 3rd party's worm/virus. There could be a huge number
+of slave machines out there! They *own* this website
+now if the bots know how to do updates (I wonder if
+they have hacked the server in other ways too!) If
+the bots are using the existing wiki functions to
+do updates then adding new parameters may be necessary
+(such as the answer to a dynamically generated question...)
+--[[file:ocat.org][ocat]] 
+
+I cleaned up some more spam on this page. Doing this by hand
+is ok if it's only occasional, but knowing spammers once they
+find a successful attack, they automate it up the wazoo. It
+would be really nice to find a systematic solution.
+--[[file:raph.org][raph]]]

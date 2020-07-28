@@ -1,0 +1,62 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This infopack can be used to talk to potential publishers.
+It can be combined with stuff from the PM infopack to talk 
+to people who might be interested in both PM and FEM.
+
+* Attempt
+
+The Free Encyclopedia of Mathematics is a book version
+of the !PlanetMath online math encyclopedia.  This book
+is available in !TeX source format, as a PDF, or (soon) in print, 
+through an on-demand publishing house.  The book, including
+front-matter and index, is close to 2000 pages long.  It
+includes numerous figures.
+
+The book is available under the terms of the GNU Free
+Documentation License, which are the same "copyleft" 
+licensing terms that apply to !PlanetMath.
+
+Suggestions and edits originating with FEM editors are submitted through the
+PM correction system to the article's owners.  Owners that do not
+take up these suggestions without good explanation may find their
+works blocked from inclusion in the FEM.  In addition to working to
+ensure overall article quality, FEM editors are working to give the
+book (and thus, PM) a uniform look and feel.
+
+The currently has three lead editors and a handful of
+associate editors.  A small honoraria for editors may be
+available when the print version of the work goes on sale.
+
+----
+* Discussion
+
+You say that it will soon appear in print.  That is fine, but what
+about copyright issues.  In a discussion two months ago, we agreed
+that we need to take extra care in the print version to make sure
+that what we print does not, to the best of our knowledge infringe
+on anyone's copyright.  After all, we recently found (and removed)
+several plagarized entries from the website.  It would seem to me
+that we need to figure out what we are going to do about this issue
+before the book goes to press or we might be sorry later.  Simply
+hoping that contributors have only contributed what they had a right
+to contribute does not constitute due diligence, especially when
+contributors have not been careful on this point in the
+past. --[[file:rspuzio.org][rspuzio]] 3 May 2005
+
+Well -- I agree with what you're saying here.  We've already posted
+the draft PDF, but that's rather different from actively promoting
+sales of the book.  I suppose that "due diligence" might be implied
+by every article being "checked" by some editor.  But what does
+"checking" mean?  We had discussed a heuristic whereby articles
+could be safely created.  But I don't think we have spelled out any
+concrete heuristic for checking articles.  We should put some work
+in on that, definitely - and then we should run this check on all of
+the articles.  Presumably we can do some editing-for-quality at the
+same time, which will make the product much improved by the time it
+is released.  The "soon" above should really describe an "advance
+copy", not the book itself.  I don't think it would be wise to
+market the book until we've done checks for copyright & basic
+quality.
+--[[file:jcorneli.org][jcorneli]] Wed May 04 02:47:46 2005 UTC

@@ -1,0 +1,78 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+PlanetMath and PlanetPhysics both exist, whereas PlanetComputing,
+PlanetEconomics, PlanetEngineering, PlanetStatistics,
+PlanetLinguistics, PlanetChemistry, PlanetBiology, PlanetLiterature, PlanetLanguage,
+PlanetPhilosophy, PlanetHealth, PlanetPlanet, PlanetAstronomy,
+PlanetPolitics, PlanetLaw, PlanetHistory, PlanetMyth, PlanetFaith, PlanetBusiness, etc., don't seem to exist
+yet, as cool, useful, and imperative to future human existence, as they
+might appear to be.
+
+Of course, some of these fields aren't traditionally regarded as being
+"technical" in the sense in which !TeX support would be an important
+deciding factor for the creation of a corresponding Planet.  But we
+can offer !TeX support if it is desired, and starting with !TeX could
+certainly work.  Support for other languages and standards could come
+later.
+
+[[file:Noösphere.org][Noösphere]], after all, means something like the sum content of
+/all/ knowledge -- the whole world of ideas!  I think we should make
+it our long-term goal to actually cover that territory.  
+
+/What would distinguish Noösphere from projects like Wikipedia?/
+
+Our better support for technical content in general (both via !TeX and
+via any future languages or standards that seem helpful) seems to be a
+key distinguishing point.  With certain kinds of technical content, we
+can make knowledge "actionable" in ways not possible with less
+sophisticated systems.  It is neither technicality nor actionability
+alone that sets Noosphere apart, but the ability to switch to these
+levels (which is wholly missing in Wikipedia as it currently exists;
+and which seems likely to be missing in any meaningful way until
+Wikipedia begins to support more sophisticated tools and material).
+
+/Where should we get started?/
+
+Luckily, we are already well started, so this question doesn't exactly
+apply.  Nevertheless, there is a lot to be done, and I would suggest
+that we focus on developing good communication tools first, together
+with test applications.  [[file:Noösphere.org][Noösphere]] and [[file:Arxana.org][Arxana]] (and the so-called
+"[[file:Nooxana.org][Nooxana]]") are examples pointed in this direction.  The thought
+that should jump out here is that these tools can be used for their own
+future development, which is why I've put PlanetComputing next on the
+list above.  There is an important adjustment to our focus that comes
+in to play here: using !PlanetComputing to develop tools that will
+be useful to all Planets would involve an R&D effort, and not simply
+the reproduction of old content in a new place or form.  (This is another
+feature that sets Noösphere apart from Wikipedia; and although
+Wikimedia has been responsible for a limited R&D effort, we are now talking
+about a vastly broader effort, no matter which way you choose to slice it.)
+
+/What is the role of !PlanetMath in all this?/
+
+We've already got a lot of good content in !PlanetMath, and we expect
+PM's content to grow significantly.  From the point of view of the
+other Planets, this is good, since frequently (although of course not
+always) mathematical tools will be needed when doing analysis related
+to any of the other topics being examined.
+
+--[[file:jcorneli.org][jcorneli]] Sun Apr 9 2006
+
+Note: There is a theme that should in some sense cut across all of
+this, and that is the theme of Natural History.  To do a proper
+natural history of some element of our world requires skills and
+knowledge of all of the sciences.  
+
+I'm using the term 'natural history' because I like the
+anthropocentic and geocentric connotations.  It is 'our' knowledge that
+makes up our picture of some thing in the world, whether that thing is
+Alpha Centuri or Cannabis Sativa or Don Quixote.  
+
+The point is, I would like to see Noosphere evolve into a master
+dictionary, where you could look up and find the definition of
+anything.
+
+--[[file:jcorneli.org][jcorneli]]
+
+See also: [[file:On rebranding PM.org.org][On rebranding PM.org]]

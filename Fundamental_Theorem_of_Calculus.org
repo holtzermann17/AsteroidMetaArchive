@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is based on the [http://planetmath.org/encyclopedia/FundamentalTheoremOfCalculusClassicalVersion.html PlanetMath version of the theorem]
+and the [http://planetmath.org/?op=getobj&from=objects&id=4463 PlanetMath version of the proof].
+
+* Aside
+
+It is sort of curious that the URL for the theorem uses a name, and the URL for the proof uses a number.
+
+First we need:
+
+* The theorem
+
+ (defthm fundamental-theorem-of-calculus (f A c)
+   (suppose (exists a b :st (closed-interval-in-real-line-with-endpoints a b A))
+            (continuous-function f A)
+            (elt c A))
+   (let ((F (map :from A :to real-numbers :by x :goes-to (int :from c :to x :of (f t) :wrt t))))
+     (then (and (differentiable-in A F)
+                (forall x :in A :st (eq (total-derivative F :over A :at x)
+                                        (f x)))))))
+
+OK, so that seems a little choppy, but I haven't written any hcode for a while.
+
+I'm envisioning /suppose/ as being essentially a synonym for /and/ (but maybe
+doing some other special things too?).
+
+I'm not sure I like the form /(total-derivative F :over A :at x)/ but I guess
+it will do for now.  The use of /map/ also seems a bit overextended.  Anyway,
+it should be enough to go on, given that the focus is supposed to be on
+
+* The proof
+
+ (defproof proof-of-fundamental-theorem-of-calculus (fundamental-theorem-of-calculus f A c)
+   (since (since (continuous-function f A)
+                 (riemann-integrable f))
+          (well-defined (F x)))
+   (let ((D (- (F (+ x h))
+               (F x))))
+     (since (since (eq D (- (int :from c :to (+ x h) :of (f t) :wrt t)
+                            (int :from c :to x :of (f t) :wrt t)))
+                   :by 'definition)
+            (eq D (int :from x :to (+ x h) :of (f t) :wrt t))
+            :by (and linearity-of-the-integral
+                     additivity-of-the-domain))
+     (let* ((M (max f :on (closed-interval x (+ x h))))
+            (m (min f :on (closed-interval x (+ x h))))
+            (lemma-1 (since (leq (* m h)
+                                 (int :from x :to (+ x h) :of (f t) :wrt t)
+                                 (* M h))
+                            :by monotonicity-of-the-integral-with-respect-to-the-integrand))
+            (lemma-1' (rewrite lemma-1 (elt
+                                        (eq (/  (- (F (+ x h)) (F x))  h)
+                                            (/ (int :from x :to (+ x h) :of (f t) :wrt t))
+                                            h)
+                                        (closed-interval m M)))))
+       (since (and (continuous-function f A)
+                   (implies (tends-to h 0)
+                            (tends-to (sub xi h) x)))
+              (exists (sub xi h) :in (closed-interval x (+ x h)) :st (and (eq (f (sub xi h))
+                                                                              (/ (- (F (+ x h))
+                                                                                    (F x))
+                                                                                 h))
+                                                                          (eq (total-derivative F :at x)
+                                                                              (lim h :goesto 0 :of (/ (- (F (+ x h))
+                                                                                                         (F x))
+                                                                                                      h))
+                                                                              (lim h :goesto 0 :of (f (sub xi h)))
+                                                                              (f x))))))))
+
+Not exactly to be recognized for its beauty, but you can see the
+different parts of the proof sitting there.  I've made liberal
+use of the function /since/, but maybe not liberal enough,
+because there are some steps that haven't been justified.
+
+Anyway, it is an attempt... please discuss.
+
+--[[file:jcorneli.org][jcorneli]] Sun Jul 10 01:48:54 2005 UTC

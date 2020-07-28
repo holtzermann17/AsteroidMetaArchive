@@ -1,0 +1,80 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  This week's big doings
+
+; development of template utilities continued :
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/template_utilities
+
+; some constructive criticism and discussion of NSDL 2005 :
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/NSDLDARF
+
+It seems unlikely that we'll get a proposal in, given the time constraints.
+
+; work on a cultivating an appropriate AM mindset :
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/the_way_of_the_asteroid
+
+
+* Slides from talk at Wolfram Research
+
+Aaron gave his talk, entitled "How !PlanetMath Works," at Wolfram Research's
+headquarters in Urbana-Champaign, Illinois, on April 4, 2005.  The talk went off
+without a hitch, and the Wolfram folks were very interested.
+
+The slides for the talk and our follow-up discussion can be found here:
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Discussion_of_Wolfram_Talk
+
+* First Release of /Template Utilities/
+
+The library of programs /template utilities/ is complete, has been tested, and
+is working.  The purpose of this library is to provide a set of functions which
+can be used for substituting values for variables in mathematical expressions
+and, conversely, determining if one mathematical expression can be determined
+from another mathematical expression by substituting suitable values for the
+variables which appear in the other expression.  For instance, the expression
+
+ (+ (* x y) (* x z))
+
+could be obtained from the expression
+
+ (+ a b)
+
+by substituting /(* x y)/ for /a/ and /(* x z)/ for /b/.
+
+The reason for writing this library is that such substitution operations play a
+fundamental role in algebra and logic.  The next item on the agenda now that
+this library is written is to use these routines to verify proofs in logic.  For
+simplicity, we will start with propositional logic and gradually move on to
+predicate logic and set theory with the goal of verifying proofs of mathematical
+theorems from various branches of mathematics.  In next week's Bulletin, we will
+discuss some applications of these utilities to verifying proofs of propositions
+from /Principia Mathematica/.
+
+* Discussion of this week's Bulletin
+
+Well, last week seemed to go OK!  Thanks for your participation.
+This week, there's no content from me to kick things off...
+So please don't forget to log your activities here from time
+to time (or all at once towards the end of the week).
+Good luck, be productive, --[[file:jcorneli.org][jcorneli]] Sun Apr 03 15:11:33 2005 UTC
+
+We should probably have a page for [[file:Discussion of Wolfram Talk.org][Discussion of Wolfram Talk]], so I'm
+creating it.  The content of the talk may be worth adding to the wiki too?  I'll
+leave that up to Aaron. --[[file:jcorneli.org][jcorneli]] Fri Apr 08 18:31:48 2005 UTC
+
+Congrats on completing the [[file:template utilities.org][template utilities]]!  Is Principia Mathematica
+public domain?  The dates look right.  Also, one interesting thing about it is
+that since the text is mostly flat, normal OCR might actually work (as long as
+the symbols were recognized).  If it hasn't been done, maybe we should look
+around for an early edition and get the book added to [[file:PG.org][PG]]'s list of incoming
+works (with no obligation to do more...).
+
+Anyway, I look forward to seeing the denouement of the template utilities in the
+world of theorem proving.  I hope to be spending more time on the parser in
+coming days. --[[file:jcorneli.org][jcorneli]] Sun Apr 10 06:46:35 2005 UTC
+
+Since the metamath website contains a bunch of theorems from the good old Principia Mathematica I was simply thinking of using them to get started.  However, you have a good point.  Since Whitehead and Russell published their classic in 1913, it should be in the public domain as far as U.S. law goes, so this sounds like a feasible project.  By the way, Cambridge press is charging a whopping $675.00 for the paper version, so I think a lot of people would be happy to see a free version.  Also, it would definitely be good advertising for HDM if we managed to scan in the Principia, parse the formulas, and check them. --[[file:rspuzio.org][rspuzio]] 10 April 2005

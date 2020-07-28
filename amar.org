@@ -1,0 +1,245 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Hii! My name is Amar Kumar Dani. I am a 5th year dual degree student of Computer Science and Engineering, IIT Kharagpur. My research interests include Data Mining and Information Retrieval.
+
+My proposal for Synchronizing Wikipedia and PlanetMath content is as follows:
+
+Basic Idea:
+A seed set of Wikipedia mathematics articles is created (which can be done using the set of PM articles merged / copied to Wikipedia). A crawler can then be written to create a corpus of mathematics articles on Wikipedia.  A mapping is maintained to determine which set of Wikipedia articles have been copied / merged from PM articles.
+
+The Wikipedia articles not on PM shall be ingested into PM as it is and changes can be made to them by the PM users if need be. Any changes made to any Wikipedia article which is also on PM shall be communicated to the PM and for this a plugin has to be installed into Noosphere.
+Also, the crawler would track if any new mathematics page is inserted into Wikipedia and accordingly make the updates.
+
+The system can be made bidirectional, by virtue of which the changes made on PM shall be made available to Wikipedians who can include them into their pages if they want to.
+
+Kindly review the proposed idea and suggest any changes that can be made to the idea.
+
+ * Perhaps you should post a link to your proposal, or copy
+it entirely to the discussion area on Planet Math itself. The
+mathematicians of Planet Math rarely venture over to The Asteroid
+(for historical reasons), and I am confident that they would 
+like to discuss / critique your proposal. --[[file:ocat.org][ocat]]
+
+More details are needed.   A lot could be done with this system, and there are many "levels" of achievement that could be attained with corresponding degrees of work.
+
+The basic level is simply to copy over entries on one side that are not "present" (have no corresponding topic coverage).   This obviously would not do anything to handle subsequent updating.   However, it does contain some non-trivialities, like how to do the entry matching, and how to select just the math subset of Wikipedia.
+
+"Level two" could handle some synchronization of corresponding entries, but be very unsophisticated in terms of automation.  That is, authors/owners/stewards would be notified when the remote entry changed, and likely shown a diff, but there would be no tools to automate the application of the changes.
+
+"Level three" would attempt some automation, and would need to be intelligent as to whether a past diff was accepted or rejected.  The big challenge with this sort of automation is what to do about the different formats on each side (for example Wikipedia uses wiki syntax with some TeX for equation segments; PlanetMath uses full LaTeX 2e).
+
+--[[file:akrowne.org][akrowne]]
+
+
+ * @ocat: I have posted the idea on PlanetMath. 
+ * @akrowne: With reference to "Level three", do you think it is feasible to automate it completely? We can get the diff content, but how do we determine based on whether previous diff content was accepted/rejected, this diff should be accepted or rejected. Further, how do we determine automatically where the new content has to be included in the concerned article? Automating it completely, might also malform the concerned article. I suggest that we should not completely automate it, rather we should provide some recommendation to the user as to how "important" the content is and the final decision to include/reject the new content would be that of the user.
+
+--[[file:amar.org][amar]]
+
+I think you need to find a way to take into account the comment made on PM -- people
+will not want a mass-injest of WP content.  One idea would be to make a second
+"orphanage" for WP content that PM people could adopt if they wanted to.  The thing
+I like about your proposal is that it will help everyone know "what's out there". 
+But based on past experience, PM people will *insist* on very hands-on control of
+what goes into their encyclopedia.
+
+With "knowing what's out there" held as a "core feature", maybe you could build
+a system that is less WP-specific and that uses WP as ONE of several corpora to
+draw content from.  Ray Puzio has talked (I think on this wiki) about a "cross index"
+or "centralized bibliography" that would index concepts defined in various places,
+e.g. books.  If you can find his proposal, check it out and see if you can
+include these extended features.
+
+--[[file:jcorneli.org][jcorneli]]
+
+ 
+ * Thanks a lot for the suggestion. I have taken this into consideration while making the final proposal.
+
+--[[file:amar.org][amar]]
+
+
+
+Here is a brief overview of the final system proposal:
+ * Level 1 : Ingest Math content of Wikipedia into an Orphanage at PM and notify users at PM about the entry made into the orphanage. The users to be notified shall be selected based on which articles are similar to a particular wiki article and the owners of those articles shall be notified. It would be upto the users whether they want to inculcate the chanegs into the actual PM content or not.
+
+ * Level 2 : The orphanage content shall be synchronized with the corresponding Wiki pages and users can subscribe to a particular entry in orphanage to be notified about the changes made to those pages. Any change made shall be notified to the subscribed users. 
+
+--[[file:amar.org][amar]]
+
+We need to do this somehow with a minimum of specialized changes to Noosphere.  Not only will that keep Noosphere simpler, but it will make the system more modular and adaptable to other content systems.
+
+It also, as Joe says, has to avoid overwhelming the PM users.
+
+Perhaps the plan should be like this:
+
+ 1. the system should identify the relevant content base from each site (with appropriate plugins to locate/identify distinct entries and concepts).  note that the direct database of content should be used if possible (not web crawling/screen scraping).   
+ 1. the content base should be represented abstractly (something like a thesaurus)
+ 1. correspondence should be determined (using a variety of heuristics, including similar names/titles, topics, and whether entries hyperlink each other): 
+## which concepts/entries are in one corpus but not the other
+## which concepts/entries appear to be the same
+## which concepts/entries appear to partially overlap
+ 1. notifications should be produced, either to the system or a specific entry in the system (each can be mapped appropriately to a useful type of notification for that system; or even a full ingest of an entry if desired).  these would basically be a triplet: (corpusA_entry, corpusB_entry | NULL, correspondence_type)  
+ 1. the notifications should be propagated/processed in a way that makes sense for the system (using system-specific plugins).  for example, if the bidi system determines that there is a likely equivalence, then the PM user should be sent a notification with instructions on how to "subscribe" for ongoing updates (this could be re-sent every time the object changes owners).  another example: if the bidi system determines Wikipedia has an entry that isn't on PM, PM can "queue" the entry for inclusion in the orphanage.  A possible solution to an onslaught of Wikipedia content would be to just  place some limited number (say ten) such new entries in the orphanage per week.
+
+That paint a clearer picture?
+
+--[[file:akrowne.org][akrowne]]
+
+I don't see why 'ingest' needs to be automated in any way.
+Why not just build the cross-index/bibliography?  Then
+if the thing is NOT defined on PM, a user can copy the content
+over, if desired and if legal.  (And vice versa, WP people
+could use the same resource the opposite way.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+I, personally, would find the automation helpful, if only to remove the tedium of copying and converting the entry.  This suggests to me many others would also find this functionality useful.  Further, it is my experience that any little thing one can automate to "get the ball rolling" helps in a CBPP environment.
+
+But I'm not suggesting we DON'T have cross-index/bibliography capability.  In fact I just got off the phone discussing with James to improve the linker interface so that it is made clear to authors and readers when a term is only defined /outside/ PM -- to facilitate creating an entry on PM (aside from the obvious utility of allowing the user to navigate to that entry). --[[file:akrowne.org][akrowne]]
+
+
+Let us look at the following system:
+ 1. We have an orphanage at PM which consists of all math articles of Wikipedia converted into PM LaTeX format(I hope there are no legal issues involved in this!!)
+ 1. We have a cross index/bibliography with the correspondence mapping between the PM articles and articles in orphanage(i.e. WP articles). A similarity measure indicates the degree of similarity between the articles. The most similar article is shown and others can be generated on demand.
+ 1. Appropriate user can select an article for ingestion into the PM database in which case the article shall be ingested verbatim.
+ 1. Any user can search in the orphanage and find articles on a topic and then decide if the article is appropriate for ingestion into PM
+ 1. User can subscribe to a page to track for changes on wikipedia in which case any change made to that page in wikipedia shall be notified to the user. If any change is made in wikipedia corresponding to an entry in the orphanage, that version of the page shall be ingested into the orphanage.
+
+
+This system takes care of both not tampering the PM database automatically as well as automatic ingestion if need be!! --[[file:amar.org][amar]]
+
+-----
+
+Hi! Your proposal sounds excellent. I don't know if the
+mathematicians of P.M. will have any additions or changes,
+but here is my feedback:
+
+1) You focus on Wikipedia and PlanetMath, working to discover
+which articles are on both or on either site. What about
+subjects on neither? Your proposal does not identify a
+Master Subject Catalog. A specification/proposal might include
+some discussion of how one determines what part of Wikipedia
+is "math" so that it can be pulled into your process (this
+is a trick question -- personally speaking, I regard math and
+logic as subsets of computer programming :-)
+
+2) Perhaps the Wikipedia authors will be interested in your product!
+Can the notifications and conversions work the other way too? 
+
+3) Can the Wikipedia to P.M. comparison be coded as just one
+subroutine, with the potential to add other sources at a 
+later date? 
+
+4) What about images at Wikipedia? Will those be copied as-is,
+or just left in place and linked to?
+
+5) Is it possible to provide a feature so that if a subject
+entry is not present in PlanetMath, when requested by a user
+in response to a not found condition, your conversion 
+from Wikipedia -> P.M. can be invoked dynamically to display
+a "virtual" page inside P.M. (not actually stored in P.M.
+but re-created when needed)?
+
+Good hunting! --[[file:ocat.org][ocat]]
+
+-----
+@ocat: read the following points in reply to above points:
+
+ 1. Visit the classification page on Wikipedia: http://en.wikipedia.org/wiki/Category:Mathematics
+It has a list of Mathematics pages. Similarly there are classification pages for other topics including physics, etc. In the project I am thinking to cover the pages mentioned in the above link. 
+ * And the sub-categories and sub-sub-categories, ... I wonder if
+it is manually created or is based on the actual contents of Wikipedia. PlanetMath authors have wide interests and have created entries on a variety of things which aren't technically part of the narrow category of "Mathematics". It looks to me like an Authoritative category list
+is needed to show the gaps which are present in both systems, and
+to eliminate "false" gap report (present in P.M. not in W.P. and 
+vice-versa.) 
+
+ 1. The list of correspondence between PM and WP articles can be provided to them which would be of help to them as well. The system can be made bidirectional if need be.
+
+ 1. Great point!! I was thinking of making the system as scalable as possible so that Math articles from other sources be crawled as well. The only factor dependent on Wikipedia site is the way they present the Math articles. Some other site might be using a different format. The best solution to make the system scalable and easily extensible to other sources is to convert the page into an intermediate format and then convert it into the PM format. This would ensure that for other sites, minimal coding is required, i.e. only to generate the intermediate format from the site pages.
+
+ 1. The images can be copied. But I feel, the content in PM is more mathematical and importing images might not be a good idea! What do you suggest?
+ * Ask Aaron and the users. The images are very important in 
+Wikipedia entries. 
+
+ 1. Great idea!! If a match does not exist in PM main database, the query can definitely be passed onto the orphanage and corresponding results be provided to the user or some link that such page exist in the orphanage. Thanks for the idea. --[[file:amar.org][amar]]
+ * U.R. Welcome. If you can get this project done in one GSOC it
+will blow my mind. --[[file:ocat.org][ocat]] 
+
+6) Also, what about Keywords in the
+articles? I seem to recall that P.M. maintains an index of
+Keywords and links. When you copy a W.P. article it will contain
+a massive amount of links to other W.P. pages and those will
+provide an implied structure for the knowledge entries. But
+how will you convert from the Wikipedia keywords to P.M. keywords
+(this is a situation where a Master Category List -- from the
+math societies, say, might be helpful...) --[[file:ocat.org][ocat]]
+
+
+For updating WP diffs into PM, a 3-way diff/merge program might be
+useful.  We assume that a translator from WP to PM exists (handling the
+LaTeX changes, removal of non-math WP links, formatting for PM, etc.).
+The 3-way merge would input 3 files and output 1 file:
+
+: Input file 1:  original WP translated to PM
+: Input file 2:  updated WP translated to PM
+: Input file 3:  original PM (= PM-user-modified input file 1)
+: Output file:  input file 3 updated with WP changes
+
+This could be completely automated except when there are clashes that
+occur when the WP user and the PM user edit the same text in different
+ways.  Such clashes would have to be displayed to the user so that the
+correct change can be chosen manually.
+
+There is a diff3 program on Linux.  I also have a 3-way-diff/merge CLI C
+program that I wrote years ago in my pre-Unix days, that I find easier to
+use, but that is probably because I'm familiar with it (I used it for
+many years to keep customized software synchronized with official vendor
+updates).  If you don't like diff3 you're welcome to try mine.
+There are probably other things available such as GUI interfaces to
+diff3, but I'm not familiar with them.  -- [[file:norm.org][norm]] 2 Apr 2008
+
+
+
+-----
+@Ocat : 
+ 1. Regarding maintaining an authoritative master file for Math keywords, I feel that it would be a project in itself!! If I can get the system working for the Wikipedia pages, the system can be extended to other Math content sites as well. As for keyword matching, synonyms are provided for the search term on the WP page and matching between PM and WP article would inculcate the synonyms as well.
+ * Well...here is http://www.ams.org/msc/classification.pdf from
+the AMS. A browseable version is here: http://www.ams.org/msc/index.html#browse
+so that pretty much gives you /everything/. It is far more than
+the Wikipedia category listing. My point is that neither WP or PM
+is authoritative, so comparing their differences leaves much to be
+desired.
+ * .
+ * Here are reasons why using the [http://www.ams.org/msc/index.html#browse AMS index] is a great idea for
+your project: 1) it is more technically interesting (a real
+3-way merge!); 2) it provides information about Wikipedia itself,
+specifically its coverage of the subject matter; 3) it avoids
+any implication that P.M. /ought/ to copy Wikipeia entries --
+in fact, automation will be copying the mistakes while taking away
+the fun that P.M. mathematicians receive from creating their own
+entries; 4) it is more saleable as a project. --[[file:ocat.org][ocat]]
+ 1. Regarding the diff3 idea, there are two ways to implement it. One is to maintain different versions of the 2 WP pages and provide a 2 way diff to the user leaving it upto the user to inculcate the changes into the final PM page if need be. Other method would be a 3 way diff which is completely automatic but may lead to some malformed article. I feel the semi automatic 2 way diff is a more viable option!!
+
+@norm :
+Thanks for the suggestion. I shall definitely consult you if I require the code and If my project does get selected!!! --[[file: amar .org][ amar ]]
+
+
+-----
+@ocat :
+Thanks once again. Your idea is actually great :) Is there a correspondence between AMS and PM in any way as in are the classes mentioned in AMS the building blocks of PM?
+
+ * A random sample shows that PM uses the AMS classification
+scheme, but that PM is incomplete and not every single category
+name is absolutely identical (even though the numbers match).
+I believe the PM authors are required to manually categorize
+their articles. See [http://planetmath.org/browse/objects/20Bxx/ PM 20Bxx -- Permutation Groups] vs. [http://www.ams.org/msc/20Bxx.html AMS 20Bxx -- Permutation Groups].
+
+Do you have any idea about the coding platform Noosphere is built upon? I am planning to use Python for achieving the above tasks. Do you think it is a good option?
+
+ * I do not believe Noosphere is built on Python, but you could
+probably accomplish a lot of work in Python code and then hook
+that into PM, which obviously will need to be worked on a little
+bit. Ask Aaron Krowne what he wants. --[[file:ocat.org][ocat]]
+
+-- [[file: amar .org][ amar ]]

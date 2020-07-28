@@ -1,0 +1,33 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One aspect of the development of [[file:hcode.org][hcode]] is to be informed by real-world
+examples.  Indeed, most of the mathematics we encounter can be fairly easily
+translated into some form of hcode.  The question is, what is the "right"
+form?  Well, in many cases there may be many different "right" answers.
+"Your answer" is probably right, or at least, not terribly wrong.  A constant
+flow of translated proofs will help us define what hcode should be like.
+Presumably it will be easier to transform translated proofs into "canonical",
+"right", proofs, than it will be to transform the original untranslated proofs.
+
+This task is as big or small as you would like: you could try one proof
+or you could try several proofs each day.  You could be involved with dialog
+about translations, or you could simply choose your own proofs to translate
+and let other people worry about canonicalizing them.
+
+(The same goes for definitions, theorems, and other mathematical objects.)
+
+It can be fun to take a book and try to translate what it is saying into
+hcode.  It makes you think.   If we had several people working on this task,
+our KB would be steadily growing, and our language would be steadily improving.
+If people don't work on this task, we're left trying to do things abstractly,
+which could lead to mysteriously bad results that aren't properly grounded
+in reality.  When you work on something theoretical, you should try to provide
+some concrete examples!  Or you can just work on examples, and hope that the
+theory will emerge later.
+
+HDM developers should make examples of proofs a priority for now, because
+they have been neglected too long.  If we can even get [[file:a dozen proofs.org][a dozen proofs]] together, that would be instructive.
+
+----
+[[file:Focused HDM subprojects.org][Focused HDM subprojects]]

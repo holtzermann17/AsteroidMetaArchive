@@ -1,0 +1,81 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+For info, see -- http://www.ima.umn.edu/2006-2007/SW12.8-9.06/
+
+----
+
+I am on the list of confirmed participants. --[[file:jcorneli.org][jcorneli]]
+
+----
+
+Here is a list of the talks; I think it would be useful to familiarize
+ourselves with the topics here -- identify PDFs that exist to back
+up the titles, for example, and read them.  Would be good to do similar
+background research on the participants who aren't giving talks.
+
+ * Structured math on the web T. V. Raman (Google Inc.) EE/CS 3-180
+ * Relevance ranking and hit packaging in math search Abdou Youssef (George Washington University) EE/CS 3-180                   
+ * The !MathFind search engine Robert Miner (Design Science, Inc.) EE/CS 3-180
+ * Text-based input formats for mathematical formulas Peter Jipsen (Chapman University) EE/CS 3-180                              
+ * The current state and future of jsMath Davide P. Cervone (Union College-Union University) EE/CS 3-180                         
+ * Blogging with !MathML Jacques Distler (University of Texas) EE/CS 3-180
+ * Collaborative curriculum development in engineering and The sciences: The connexions 7 year experience with !MathML Ross Reedstrom (Rice University) EE/CS 3-180
+ * High performance mathematics and its management Jonathan Borwein (Dalhousie University) EE/CS 3-180
+ * The ellipsis in mathematical documents Alan P. Sexton (University of Birmingham), Volker Sorge (University of Birmingham) EE/CS 3-180
+ * The slow evolution of mathematical communication Andrew M. Odlyzko (University of Minnesota Twin Cities) EE/CS 3-180
+ *  Using metadata for the interlinking of digitized mathematics Thomas Fischer (State and University Library Goettingen) EE/CS 3-180
+ * DLMF, LaTeXML and some lessons learned Bruce R. Miller (National Institute of Standards and Technology) EE/CS 3-180
+ * Interfaces for mathematical communication Elena Smirnova (University of Western Ontario), Stephen M. Watt (University of Western Ontario) EE/CS 3-180
+ * A "Semantic Web" for science and technology communicating the content of mathematics "In the Large" Michael Kohlhase (International University Bremen) EE/CS 3-180
+ * How can we speak math? Richard Fateman (University of California) EE/CS 3-180
+ * Overview of accessible math Neil Soiffer (Design Science, Inc.) EE/CS 3-180
+ * E-document mathematical multilingual processing Azzeddine Lazrek (Cadi Ayyad University) EE/CS 3-180
+ * Advanced language technologies for mathematical markup Olga Caprotti (University of Helsinki) EE/CS 3-180                       
+
+Actually, I am feeling somewhat cynical about these talks.  The only one
+that jumped out at me as "relevant" was the one about communication "in the large".
+I guess we can go and see, but right now I don't have high hopes.  Anyone
+want to talk me out of this funk? --[[file:jcorneli.org][jcorneli]]
+
+: The *big* opportunity ahead lies in how mathematicians communicate
+with their computers. It's all very Stone Age now...charcoal sticks
+making marks on cave walls stuff :) And Nintendo has the new Wii
+with its wand interface but mathematicians have ... keyboards? Oy!
+I can buy an HP Core 2 Duo with 2GB of RAM for $1050, and the
+quad core just hit the market. We should be doing voice I/O and
+digital pens and virtual reality gloves by now. Everyone, not
+just mathematicians. I think the future looks very interesting...
+for the survivors :) --[[file:ocat.org][ocat]]
+
+Thanks for the positive, big picture view.  I think I get bummed
+when looking at lists like this because they make me imagine everyone
+is just working on some small problem.  And that may be true -
+if I was feeling optimistic I would say "maybe even minus the 'just'."
+Who knows, maybe some of these folks are aware of the big-picture
+issues (the one speaker I mentioned seems to be) and are just presenting
+minor research results because that's what the culture they are working
+in says to do.  Personally, I'd love it if conferences like this were
+for getting together and talking about the big dreams and visions, and
+the minor results part was left for email lists and subsequent discussion
+thereon.  --[[file:jcorneli.org][jcorneli]]
+
+Maybe we need to think in terms of looking to see if there are 
+conferences out there which devote some time to talking about the
+big picture.  As for me, I find talks about limited areas quite 
+useful because it is oftentimes easier for me to learn what 
+someone is up to by listening to a presentation and being able to
+ask questions than by reading a report.  However, I do agree that 
+this ought to be supplemented by some time spent discussing how 
+the details all fit together in a larger scheme.  If there aren't
+enough places that do this (as seems to be the case) then maybe we 
+should eventually think of organizing an event where due attention 
+is given to the global viewpoint. --[[file:rspuzio.org][rspuzio]]
+
+Yeah, I agree.  The ideal seems to be to build a structure
+where everything fits together rationally and transparently and
+so forth.  The problem with conferences focused on tiny issues
+is that there is no connection, and so, no real follow-through.  But
+a conference focused only on big-picture ideas (e.g. your
+standard meeting of futurists) may suffer an equal and opposite
+fate, no follow-through because there are no "legs".  --[[file:jcorneli.org][jcorneli]]

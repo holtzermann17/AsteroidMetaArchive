@@ -1,0 +1,137 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+PlanetComputing
+
+Charles Christopher Johnson
+
+ccjohnson@gmail.com
+
+Having double majored in computer science and applied mathematics as
+an undergrad, and working on a M.S. in applied mathematics currently,
+I've become familiar with what a great resource PlanetMath is.
+Unfortunately, there aren't as many quality, accessible sites for
+computer science.  For this reason, I'd like to work on a sister site
+to PlanetMath, PlanetComputing (or PlanetCode).
+
+I picture PlanetComputing as a resource for students, programmers and
+computer scientists that focuses on the more fundamental aspects of
+the field (complexity and computability theory, automata, algorithms,
+etc.), but my main goal for the project this summer would be to
+design, implement and set up a 'proof of concept' version of
+PlanetComputing.
+
+The existing Noosphere code that PlanetMath uses should be used as a
+basis for the code PlanetComputing would run on.  It would be
+preferred that all of the code I create be completely compatible with
+the existing Noosphere, so it could simply be plugged into future
+versions of Noosphere.  A large part of this is adding functionality
+through a module system.  This way new features can be added and
+removed easily without making major code revisions.
+
+A major difference between the existing Noosphere and what
+PlanetComputing needs is a convenient way of displaying code.
+Noosphere already features basic syntax highlighting, but features to
+support 'literate programming' could be added.  By 'literate
+programming' we mean programs that are easily understood by humans
+(i.e., without all the 'arcane' symbols and syntax a programming guru
+may use).  Part of this could be having 'footnotes' in sections of
+more complicated code that link to additional resources that may
+contain information relevant to a particular technique used, whereas
+the main article focuses on the program itself.
+
+A large part of literate programming is that program fragments have
+detailed descriptions.  Instead of having a single piece of
+documetation describing the whole program, the program is broken into
+chunks and each chunk has a corresponding description.  To facilitate
+writing such programs, PlanetComputing should be able to handle
+multiple input formats that can be used to differentiate a piece of
+code from its corresponding description.  This could be accomplished
+through the use of Wiki code for formatting descriptions, and having
+the actual code placed within [code]...[/code] blocks.  Optionally, a
+'larger' markup language that attaches semantics to code,
+descriptions, and an article's layout (similar to how LaTeX can
+separate a paper into chapters, sections, subsections, etc.) could be
+developed.
+
+In order for the site to be consistent, a unifited pseudo-code
+(similar to the pseudo-code used in the Cormen book 'Introduction to
+Algorithms') should be developed and used on the site.  This prevents
+having articles by different authors explain topics in different
+languages.  This pseudo-code should be used for smaller example pieces
+of code describing how a B-tree, for example, works, but complete
+programs should be developed in a 'real' language.  PlanetComputing's
+articles should have an attachment feature that allows authors to
+attach complete, working programs to an article that the user can
+download and play with.  For example, an article describing Quicksort
+could have attached sample programs written in C and Haskell.  This
+would allow a user to see how features of the language can be used to
+make the program cleaner in some way (writing Quicksort two lines of
+Haskell instead of maybe twenty lines of C, for example).
+
+An important part of education today, especially programming and
+computer science, is visualization of information.  I would like for
+PlanetComputing to have some built-in way of visualizing common themes
+that vary across different pages on the site.  For instance,
+animations describing the actions of a sorting algorithm could
+certainly enhance a student's understanding of that algorithm, but
+would be very painstaking to do by hand.  PlanetComputing could,
+through the use of JavaScript and perhaps techniques from AJAX, have a
+simple interface that a page author could use to describe steps of the
+algorithm in some language (presumably JavaScript) that
+PlanetComputing could then take and turn into some sort of animation.
+I don't think this is as unreasonably lofty as it may sound, but the
+exact details of how such an interface might work still need to be
+worked out.
+
+A final (but secondary) issue to be tackled is making Noosphere more
+easily deployable.  This can perhaps be accomplished by writing custom
+installation scripts for Unix-like systems that check for the
+necessary required software (Apache, MySQL, Perl).  Alternatively,
+custom packages could be created for various package systems (e.g.,
+dpkg, RPM, Portage, etc.).  I suspect creating a comparable
+installation system for Windows systems would be more involved, and
+view it as a tertiary priority.  Various other enhancements could be
+added to the installation such as an XML configuration that the user
+could use to specify configuration options that may be specific to
+their system (e.g., the paths to Perl, Apache or MySQL).
+
+In a nutshell, I would like to develop PlanetComputing by doing the
+following:
+
+ 1. Developing a module system for Noosphere
+ 1. Developing a unified pseudo-code
+ 1. Develop a mechanism for multiple input formats to be used when creating an article
+## Optional: Attaching semantics to an article's layout
+ 1. Develop a mechanism for attaching complete programs to articles
+ 1. Develop an interface for easily creating programmatic visualizations
+ 1. Optional: Making Noosphere more deployable.
+ 1. Optional: Allow articles across different Noosphere sites to be interchanged to help minimize duplication (as sites like PlanetMath, PlanetComputing and PlanetPhysics will likely overlap)
+
+My schedule for this project is to spend one to two weeks becoming
+familiar with the code in Noosphere and how to best extend this code
+for the needs of PlanetComputing.  Another week will be spent
+developing the unified pseudo-code and finding the best way to support
+multiple input formats.  Another week or two may be spent working on
+attachments for articles (I understand that Noosphere has some sort of
+attachment facility already, but I think this will need to be modified
+to support multiple languages).  I imagine the visualization interface
+will be the most difficult part of what I've described and am setting
+aside four weeks for that.  Any remaining time will first be used for
+testing and debugging the code I've developed, and then the optional
+items described above will be worked on last.
+
+The more I think about this project, the more interested in it I
+become.  It seems inevitable that over the course of the summer I'll
+have other ideas about how the site could be improved or features that
+could be added to make using the site a more pleasant experience.
+However, initially my main focus will be on creating a working site
+with the necessary features.
+
+I'm open to suggestions from mentors about features that should be
+added or removed because they may not be necessary.  I'm also aware of
+the security concerns a site such as this may bring, but having spent
+the last two summers writing similar code in a business environment
+that dealed with private customer data, I feel that I'm more than
+capable of dealing with anticipating security issues in advance and
+dealing with whatever may arise.

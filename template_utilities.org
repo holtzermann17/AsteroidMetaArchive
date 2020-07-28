@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ 1. Intoduction
+## [[file:Introduction to template utilities | An example .org][Introduction to template utilities | An example ]]
+## [[file:Overview of template utilities | Overview.org][Overview of template utilities | Overview]]
+## [[file:Organization of template utilities | Organization .org][Organization of template utilities | Organization ]]
+ 1. [[file:template utilities - Data structures | Data structures.org][template utilities - Data structures | Data structures]]
+## [[file:Definition of template | Template.org][Definition of template | Template]]
+## [[file:Definition of assignment | Assignment.org][Definition of assignment | Assignment]]
+## [[file:Definition of assignment list | Assignment list.org][Definition of assignment list | Assignment list]]
+ 1. [[file:template utilities - Operations on asignment lists | Operations on assignment lists.org][template utilities - Operations on asignment lists | Operations on assignment lists]]
+## [[file:template utilities - assignment-p | assignment-p.org][template utilities - assignment-p | assignment-p]]
+## [[file:template utilities - assignment-list-p | assignment-list-p.org][template utilities - assignment-list-p | assignment-list-p]]
+## [[file:template utilities - add-assignment | add-assignment.org][template utilities - add-assignment | add-assignment]]
+## [[file:template utilities - shift-assignments | shift-assignments.org][template utilities - shift-assignments | shift-assignments]]
+## [[file:template utilities - merge-assignments | merge-assignments.org][template utilities - merge-assignments | merge-assignments]]
+ 1. [[file:template utilities - Substituting values | Substituting values.org][template utilities - Substituting values | Substituting values]]
+## [[file:template utilities - substitute-assignment | substitute-assignment.org][template utilities - substitute-assignment | substitute-assignment]]
+## [[file:template utilities - substitute-assignment-helper | substitute-helper.org][template utilities - substitute-assignment-helper | substitute-helper]]
+## [[file:template utilities - substitute-in-template | substitute-in-template.org][template utilities - substitute-in-template | substitute-in-template]]
+ 1. [[file:template utilities - Matching to templates.org][template utilities - Matching to templates]]
+## [[file:template utilities - match-template | match-template.org][template utilities - match-template | match-template]]
+ 1. [[file:template utilities - Description of Miscellenea | Miscellanea.org][template utilities - Description of Miscellenea | Miscellanea]]
+## [[file:template utilities - first, second, third | first, second, third.org][template utilities - first, second, third | first, second, third]]
+## [[file:template utilities - repetition-p | repetition-p.org][template utilities - repetition-p | repetition-p]]
+## [[file:template utilities - same-length | same-length.org][template utilities - same-length | same-length]]
+ 1. [[file:template utilities - collected code | Collected code.org][template utilities - collected code | Collected code]]
+ 1. [[file:schema matching utilities | Older version.org][schema matching utilities | Older version]]
+ 1. [[file:Discussion of Template Utilities | Discussion.org][Discussion of Template Utilities | Discussion]]
+
+Back to [[file:h-code.org][h-code]]
+
+----
+
+Note: this section reimplements and improves upon [[file:schema matching utilities.org][schema matching utilities]].

@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Finding just the right calendar/"issue tracker"/"workflow manager" seems
+tricky.  Here are some things I've noticed so far:
+
+ * trac looks a little heavy-duty for our needs, but has some good attributes
+ * http://www.taskjuggler.org/docs.php for Gantt charts and more
+ * really simple, but maybe too simple http://www.eecs.umich.edu/~pelzlpj/wyrd/ (but
+comes with a great Flash demo!)  It's neat to see/show what can be done with simple tools.

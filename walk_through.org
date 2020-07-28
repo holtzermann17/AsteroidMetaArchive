@@ -1,0 +1,316 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+<B>Noosphere Install </B>
+
+Here is a detailed account of installing Noosphere on your local machine.  I will be using Ubuntu 5.04.
+
+<B> Step 1: Download Noosphere</B>
+
+There are 2 methods of getting Noosphere.  The first is the normal public way through CVS.  Simple instructions on this method is given <a href="http://aux.planetmath.org/noosphere"> here </a>.  The second is if you have access to the subversion repository.  If so you can retrieve the newest noosphere and lucene search engine with
+
+ svn checkout svn+ssh://nscvspub@planetmath.org/var/lib/svn/noosphere/trunk noosphere
+ svn checkout svn+ssh://nscvspub@planetmath.org/var/lib/svn/lucene_search_module/trunk lucene_search_module
+
+The password is "password".  (You may need to type it several times for some reason.)
+
+I think there are differences between cvs and svn and I will go through the svn install for now.  So once you have the two directories noosphere and  lucene_search_module in a temporary folder you need to set it up in a web directory.  The default config, which we will use here wants noosphere in the /var/www/pm directory, this can be viewed in the baseconf-example.pm file.  We will not change this for now to keep it simple.  Next copy the noosphere and lucene directories to this.  You most likely will need root privileges so su to root or execute the following:
+
+ sudo mv noosphere /var/www/pm
+ sudo mv lucene_search_module /var/www
+
+The privileges of these folders should stay the same as whoever downloaded them.
+
+Note: You don't actually need to run the search engine to use Noosphere; only the files need to be in the right place.
+
+<B> Step 2: Install Noosphere Dependencies</B>
+
+The reason this is step 2 is because a lot of details of the installation and dependencies can be found in the downloaded file in the noosphere directory under install/INSTALL.  Take a deep breath and relax since this will take awhile.  Ubuntu makes most of the installation straight forward.  Just open up the Add/Remove Programs under the System Tools menu.  From here you can search for packages and install with simple clicks.   Below is a list of what I have installed, Note you may get some extra installs based on other required packages:
+
+<B> Mysql </B>
+
+mysql-client  4.0.23-3 
+mysql-common 4.0.23-3 
+mysql-server 4.0.23-3 
+libdbd-mysql-perl 2.9003-3
+libmysqlclient12 4.0.23-3
+
+<B> Apache </B>
+
+apache2 2.053-5
+apache2-common
+apache2-mpm-worker
+apache2-utils
+openssl
+ssl-cert
+
+<B> mod_perl </B>
+libapache2-mod-perl2 1.99.14-4
+ * Important, do not use mod_perl 2 from their website 
+
+<B> Perl </B>
+perl 5.8.4-6
+perl-base 5.8.4-6
+perl-modules 5.8.4-6
+libdbi-perl 1.46-4
+libdbd-mysql-perl 2.9003-3
+libxml2 2.6.17-0
+libxml-parser-perl 2.34-4 (this is a maybe)
+libxml-sax-perl 0.12-5
+libxml-namespacessupport-perl 1.08-3
+libxslt1.1 1.1.12-3
+libunicode-string-perl 2.07-1
+
+ * NOTE, the following are not in Ubuntu but are asked for in the INSTALL file
+libxml-perl (this maybe in parser and sax)
+libxslt-perl
+libxml-dom-perl
+libdigest-sha1-perl
+Data::Denter (Probably need to get this from CPAN)
+
+<B> Vim </B>
+vim 6.3-046
+vim-common 6.3-046
+
+<B> Misc </B>
+ispell 3.1.20.0-4
+iamerican
+wget 1.9.1-10
+tidy 20040811-2
+livtidy0 20040811-2
+gs 8.01-5
+gs-gpl
+gs-common
+gs-esp
+gsfonts
+gsfonts-x11
+libmagick6
+libmagick6-dev (this has lots of dependencies)
+netpbm 10.0-8
+libnetpbm10
+
+<B> LaTeX </B>
+tetex-base 2.0.2c-3
+tetex-bin
+tetex-doc
+tetex-extra
+texi2html 1.66-1.2
+
+Now to install the packages that are not included in Ubuntu.
+
+<B> Data::Denter </B>
+
+Go the <a href="http://search.cpan.org/"> CPAN search webpage </a> and do a search on Denter.  Choose the 'deprecated' Denter package and download the tar file.  Untar it and follow the normal perl install method of:
+
+ perl Makefile.PL
+ make
+ make test
+ sudo make install
+
+ *Note you may fail some prerequisites so go back to CPAN and install the needed packages.
+
+(Do you need this module? This seems to be an optional dependency for Data::Denter, and I'm running without it. -- stevecheng)
+In my case I did not have YAML so download it and execute 
+ 
+ perl Makefile.PL
+ make
+ make test
+ sudo make install
+
+Yet another prerequisite is needed, Test::More, so go again to CPAN and download it and install.  It seems there no longer is a Test::More and it has been rolled into Test::Simple so just install this one.  Once this is done go back into the other directories in install YAML and then Denter.  Phew, all should be well with Denter now.
+
+<B> libxml-perl (libxml-libxml-perl) </B>
+
+You need to add more repositories so in the Synaptic Package Manager go to Settings->Repositories and add all possible (universe and multiverse for each drop down box.  Once this is done libxml-libxml-perl package will show up so install it.  It will need the prereq. libxml-libxml-common-perl.
+
+<B> libxslt-perl (libxml-libxslt-perl) </B>
+
+This package shows up in the manager after the above repositories are added.
+
+<B> libxml-dom-perl  </B>
+
+This package shows up in the manager after the above repositories are added.  It will need the prereqs. libxml-perl and libxml-regexp-perl.
+
+<B> libdigest-sha1-perl </B>
+
+This package shows up in the manager after the above repositories are added.  Finally also install
+
+libapache-dbi-perl
+libapache2-request-perl
+
+Allright, the only thing left is the correct latex2html, but we will wait on this one until it shows up in the INSTALL instructions.
+
+<B> Step 3: Create and setup database </B>
+
+A mysql database will be set up here.  You will need root access to mysql to do the following.  Since, I have not configured mysql yet I can connect as root without a password.
+
+ mysql -u root
+
+Set the password for root, if there was none
+
+ mysql> SET PASSWORD FOR 'root'@'localhost' = PASSWORD('******');
+
+Next create a database
+
+ mysql> CREATE DATABASE PlanetTest
+
+Setup a user account for PlanetTest with the following 2 commands
+
+ mysql> use PlanetTest;
+ mysql> GRANT ALL PRIVILEGES ON *.* TO 'bloftin'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION;
+
+Exit mysql and now it is time to initialize the database.  Hold your breath, as we are in uncharted territory with the new schema file.  Errors are expected, but do not worry.  The svn schema file is broken so use this <a href="http://www.phys-x.org/PlanetPhysics/pm_schema.sql"> one </a>.  Note that this will only work with mysql version greater than 4.
+
+ cd /var/www/pm/db
+ mysql -u bloftin -p PlanetTest < pm_schema.sql
+
+Next you need to edit the init.sql file to put in your own values.  Changes I made include
+administrator user:
+
+ username - bloftin
+ email - bloftin@phys-x.org
+ password - *******
+
+Then input into database with
+
+ mysql -u bloftin -p PlanetTest < init.sql
+
+Next comes your classification.  For now we will load the default MSC.
+
+ mysql -u bloftin -p PlanetTest < msc.sql
+
+<B> Step 4: Install and configure latex2html </B>
+
+Download the latex2html from www,latex2html.org.  Right now their website is down so install it for Ubuntu from the package manager
+
+ latex2html 2002-2-1-8
+
+Next edit the script in /usr/bin
+
+ sudo vi /usr/bin/pstoimg
+
+Around line 261 change the location of gs to
+
+ my $GS = '/var/www/pm/bin/gs
+
+For now we will forgo the latex2html patch as it causes some problems until we need it.  Now copy the latex2html file to noosphere directory.
+
+ cp /usr/bin/latex2html /var/www/pm/bin
+
+<B> Step 5:Build the page image hyperlink mapper </B>
+
+ cd /var/www/pm/bin/map
+ make
+
+ *Note: if gcc is not found, install a version (I've install gcc 3.3) and then create a symlink to gcc
+
+ sudo ln -s /usr/bin/gcc-3.3 /usr/bin/gcc
+
+<B> Step 6: Permissions </B>
+
+Make the data working directories writable to the user noosphere is running as so 
+
+ sudo chgrp -R bloftin /var/www/pm/data/cache
+ sudo chmod -R g+sw /var/www/pm/data/cache
+
+<B> Step 7: Install vim color </B>
+
+ sudo cp /var/www/pm/stemplates/pm.vim /usr/share/vim/vim63/colors
+
+More to come, writing this and doing the install at the same time has taken about 4 hours.  More to come tomorrow night on the configuration.
+
+<B> Step 8: Apache configuration </B>
+
+There are a couple ways to set up a localhost Planet, but I will use what I believe is the simplest which also allows easy conversion to a future domain.  Essentially, we set up the virtual host to answer to PlanetTest.org domain and then we will have our local machine's host file point the PlanetTest.org domain to the localhost.
+
+First edit the /var/www/pm/etc/httpd-examle.conf.  Anywhere you see planetmath replace it with planettest or your own variant.
+
+Next we need to tell the main apahce conf file to include our config file. In Ubuntu to keep included files standardized we drop the noosphere config file into the sites-available directory and symlink it in the sites-enabled directory and then it will automatically be included.  Also rename it to something more meaningful.
+
+ sudo cp /var/www/pm/etc/httpd-example.conf /etc/apache2/sites-available/planettest
+ ln -s /etc/apache2/sites-available/planettest /etc/apache2/sites-enabled/planettest
+
+Now let us start apache and see if there are any obvious errors.  Use the command to reset apache
+
+ sudo /usr/sbin/apache2ctl graceful
+
+The first error received is the Invalid command 'RewriteEngine' not found
+.  (Damnit the webpage reset and I lost a couple paragraphs).  In short we need to enable the mod_rewrite by creating a symlink in the mods-enabled directory to the mods-available.
+
+ sudo ln -s /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/rewrite.load
+
+After resetting apache we get an error about the PerlRequire statement not being allowed in the  Location directive so move it in the httpd-example.conf (planettest), but keep it in the <IfModule mod_perl.c> section.  The line is 
+ 
+ PerlRequire /var/www/pm/lib/startup.pl
+
+Reset apache and then there are more apache2 related errors.  The first is that we need to replace use Apache statements in the perl code with Apache2 so edit the startup.pl file and replace Apache with Apache2 on line ~4.
+
+ vi /var/www/pm/lib/startup.pl
+
+
+<B> Step 9: Noosphere configuration </B>
+
+Copy the baseconf-example.pm to baseconf.pm file and then edit it.
+
+ cp /var/www/pm/lib/Noosphere/baseconf-example.pm  /var/www/pm/lib/Noosphere/baseconf.pm
+ vi /var/www/pm/lib/Noosphere/baseconf.pm
+
+1. Fill HASH_SECRET with random junk
+2. Replace all planetmath with planettest or variant
+3. Change email to your own
+4. Add in the database config from ealier you should know name,user,pass,host
+5. Project Name (PlanetTest)
+6. SLOGAN
+7. Subject Domain
+
+Yeah, there are no more errors after restarting apache.  Next we just need to point our computer to the fake planettest domain.
+
+<B> Step 10: Domain Setup </B>
+
+All we need to do is add entries in the host file.  
+
+ sudo vi /etc/hosts
+
+Just add the following line to the host file
+
+ localhost www.planettest.org planettest.org images.planettest.org aux.planettest.org oai.planettest.org
+
+Test it with a ping statement and make sure you get a reply
+
+ ping www.planettest.org
+
+We are close, I notice an error in the apache log file /var/log/apache2/error.log that apache cannot open log files so edit the virtualhost and change the log file directories to /var/log/apache2 instead of the current /var/log/apache
+
+Yeah no apache errors, it is time to try it in your browser.  Go to www.planettest.org.  Unfortunately, the website just shows a directroy index but this is a good sign, we are almost there.
+
+Had too uncomment Namehost in the virtual host setup.
+Mod_perl2 has changed their API so the first thing affected is in Params.pm ~ line 144.  unescape is no longer in modperl and we must use CGI::Util so add the line at the beginning of the Params.pm
+
+ use CGI::Util;
+
+and then sub in for line 144
+
+ $val=CGI::Util::unescape($val);
+
+Next the biggest change needed is ~line 164, $req->content no longer exists.  I am trying to use Apache's Request read function.
+
+Another problem is in Cookies.pm ~line 37, replacing old header_in and ~line 16 of Login.pm
+
+commented out line 225 in Noosphere.pm because of content_language 'failed' a few lines down from this we have header_out change to headers_out, also send_http_header is no longer around or needed so it is commented out.  This shows up multiple times in this file.
+
+YEAH!! We have a PlanetTest frontpage.  There still is the issue that we bypassed some of the parameter read in which needs to be fixed asap.
+
+* Discussion
+Thanks Ben, this is helpful.  I wonder if we could encode most of this in a simple
+script so that people can do a one-step install.  Emacs is handy for writing scripts
+that need to send input to "inferior" programs (running inside the shell).  I can look into
+this at some point. [[file:jcorneli.org][jcorneli]]
+||||||| ancestor
+****
+Now we notice we get the error about not having baseconf.pm.  Well we need to edit the configuration files.
+
+||||||| ancestor
+
+Hopefully, this walk through will help me better understand what is needed for a script or a package.  Since Ubuntu has everything but the Denter package it should be fairly easy to create a Ubuntu package which should be easily to convert to a debian one.  I'm a big fan of packages because it helps greatly with dependency HELL!!!  [[file:bloftin.org][bloftin]]
+
+****

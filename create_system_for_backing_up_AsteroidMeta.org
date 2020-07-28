@@ -1,0 +1,19 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We want something that can be run by anyone to make a mirror
+copy.  I think there are some useful extensions and other
+ideas already available through Oddmuse.  So, I should check
+that stuff out. --[[file:jcorneli.org][jcorneli]] Mon Jan 31 23:50:50 2005
+
+This is mostly done (see [[file:Copying AsteroidMeta.org][Copying AsteroidMeta]], although there appears to be a bug in the program that does
+the copying (it messes up non-latin pages); I've reported the bug to Alex.
+Also, it would be good to have the backup process set up as a cron job somewhere --[[file:jcorneli.org][jcorneli]] Tue Feb  1 15:08:34 2005
+
+Copying is fixed up, the only thing that I'm still having trouble with is
+getting the Usemod extension to work on my machine --[[file:jcorneli.org][jcorneli]] Thu Feb  3 14:28:03 2005
+
+That is working too.  But the non-latin pages are still broken.  Awaiting tech
+support.  Note that to clear the cache, one needs to set an admin password in
+the wiki's script and then set by visiting a link, and then one to do the All
+Action.  Details will be provided once I get the other bugs fixed. --[[file:jcorneli.org][jcorneli]] Fri Feb  4 20:15:28 2005

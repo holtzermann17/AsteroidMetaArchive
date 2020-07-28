@@ -1,0 +1,797 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Planning for 2007 (and, where possible, beyond)
+
+These plans relate at least to PlanetMath and HDM for the year 2007.
+(Other organizations and other years will sometimes be involved.)
+
+Since there is a lot to do and relatively few of us to do it, careful
+strategic planning will be necessary in order to get things done
+efficiently without falling behind or being overloaded.  As a general
+impression, I think it would be good to be more proactive and less
+reative.  Therefore, I thought that it would be good to plan major
+undertakings in advance so that we could prepare for them and make
+sure that we have budgeted enough time and whatever other resources
+may be needed.  While we can't foresee everything, we should at least
+make an effort to accomodate whatever we know is coming or would like
+to have come.
+
+For now, /this/ is the top-level item on our agenda.  Various stuff
+can go here, like this:
+
+ * Obstacles
+ * Framework for organization
+ * How do we credit people's work on PM?
+
+If we can come up with some ideas of how to actually address the
+issues on this list, then they should be removed from the list and
+treated elsewhere on this page.  (And perhaps more extensively in
+other places.)
+
+See section below titled "Improvements to Workflow" for some ideas
+about the sorts of things we will likely want to document as part of
+the (sub-)strategy associated with each point we plan to address.
+
+Note that this page is getting long, and while it is a good place to
+sum up major points, we will need some additional side discussions.
+These will be indexed at [[file:Planning for 2007 - Discussions.org][Planning for 2007 - Discussions]].
+
+* Roadblocks!
+
+In a lot of strategic plans you might see a "roadmap".  That's OK, but
+I think it is honest, if the road ahead has roadblocks on it, to talk
+about those.  Then the strategy will include ways for getting past the
+roadblock, e.g. by presenting appropriate credentials or permissions
+(whether legitimate or stolen), by breaking through forcefully, or by
+going around the long way.  If some of the roadblocks or encumbrances
+along a given possible route are too impenetrable, we will have to
+find some other way to go.
+
+Notice that we can talk about "finding a way to go" without talking
+about "finding a way to get to our goal".  Ends-driven thinking is
+great, and you'll see a lot of that elsewhere in this plan.  But
+sometimes it is worthwhile to think in a means-driven way too.  Our
+means should have a healthy quality of fun, a reasonable balance
+between income and expenditures (in several dimensions), and so on.
+Goals that we talk about elsewhere are often pursuant to realizing a
+better way of life -- that is to say, a better means, even if it isn't
+always a better means to any particular end.
+
+Thus, several of the issues described here are "problems" that certain
+goals below are supposed to solve.  But, as we illustrated above with
+the roadblock metaphor, not every "problem" will have a solution in a
+direct sense.  For now we're just going to list some of these problems
+without worrying too much about whether the solutions are direct,
+indirect, or nonexistent.
+
+ 1. A transparent and functional organizational communication strategy
+  for PlanetMath does not seem to exist.
+
+ 1. Many mostly-volunteer participants are going to run out of money and
+  stamina before long unless the reward scheme associated with our
+  work changes.
+
+ 1. Attention and energy is limited, and if it gets dissipated working
+  on things that aren't satisfying or productive, it won't be
+  available for work on the things that could otherwise be satisfying
+  and productive.  (A related devilish "second-order" effect:
+  spreading oneself too thin can mean very little gets done.)
+
+ 1. Many times, our individual goals will not meet up directly with
+  goals shared by other individuals we're working with, and we have to
+  "go it alone" or hunt around for new people to collaborate with.
+
+ 1. We can't finish everything that we've identified as being worth
+  working on, quickly, without more helping hands.
+
+ 1. Working reactively rather than proactively is highly inefficient and,
+  when there is much to be done, one cannot afford inefficiency.  When
+  a situation is so vague and confused that one does not know how much
+  effort will be required or available and hence cannot make realistic
+  short-term plans or appropriately budget time between differrent
+  projects.  
+
+* "Group Goals"
+
+** The NSF CIO Grant ("retroactively planned" for January)
+
+This took up a good part of December and January and now is done.
+The question now is whether the proposal will be funded.  If so,
+we need to prepare to deliver what we promised.  If not, we will
+try elsewhere. 
+
+/And in general:/ There are many follow-up items from this grant
+that we should try to get scheduled in a strategic way.  (See next
+subheading.)  A few important items are:
+
+ * /a more functional project plan or "development roadmap"/
+-- integrating as much of our preparatory work on the application as seems relevant
+ * /fall-back strategies in case we don't get the grant/ - We should ask the NSF
+or some other knowlegeable body about what semantics apply to submitting applications
+to other places.
+ * /inital Atlas setup/
+ * /translation tools/
+ * /PlanetComputing/
+ * ...
+
+** Strategic planning, all the way down to implementation details (February)
+
+This will presumably be at least in part a refinement of the many
+planning documents we've put together over the past months.  In
+particular, this paragraph and its neighbors are part of the
+first phase of preparing the plan.
+
+/Relevant materials to draw from include:/
+
+ * the CIO grant proposal ([http://br.endernet.org/~akrowne/planetmath/proposals/nsf_cyberinf_2007/nsf/single-doc/pm_cyberinf_2007.pdf pdf file])
+ * Joe's version of the "work plan" section ([http://planetmath.org/~jcorneli/work-plan.tex tex file]) ([http://planetmath.org/~jcorneli/work-plan.pdf pdf file])
+ * the latest version of the "rough draft" scratch work and background material
+preparatory to the proposal
+([http://planetmath.org/~jcorneli/draft4-rc4.tex tex file]) ([http://planetmath.org/~jcorneli/draft4-rc4.pdf pdf file])
+ * our [[file:metacommons manifesto.org][metacommons manifesto]]
+ * the [[file:PlanetMath Development Agenda.org][PlanetMath Development Agenda]] that accompanied the above
+ * the [[file:HDM Directory.org][HDM Directory]], a high-level division of tasks
+associated with the HDM project
+ * other older PM strategic plans
+ * Atlas documents
+ * ...
+ * ...
+
+/The meta-schedule looks something like this:/
+
+ * Week of Jan 29: Initial rough draft and outline, human resources
+on-board.  Engage "science fiction" mode to plan distant future.
+ * Week of Feb 5: Connect in pre-existing materials, divy things up as
+appropriate, more work.  Prepare and circulate draft of [[file:PM 2006 Annual Report.org][PM 2006 Annual Report]],
+also a catalog of old discussions on PM membership.
+ * Week of Feb 12: Pair up objectives and expectation dates.  Get suitable
+calendar system set up to keep track of these.
+ * Week of Feb 19: Share with relevant stakeholders and contacts; refine based
+on any comments.  (Perhaps the PM board meeting should be Feb 17 or Feb 24 to mesh
+with this production schedule.)
+ * Week of Feb 26: deployment and postmortem
+
+** Improvements to Workflow
+
+This topic is very general, and it would be good to break it down
+somewhat and make it more specific for certain cases.  This paragraph
+is an introduction to the topic.  We'll start by noting the areas
+where we think it applies:
+
+ * among the meta-heads involved in administration and research around here
+ * among PlanetMath contributors 
+
+/Some generally desirable workflow/communication improvements:/
+
+ 1. More/better conversations.  (Better understanding of objectives, better
+connection of conversation to context, ...)
+ 1. More/better transitioning from conversations to finished products. (Explicit
+production guidelines and guidelines for discussions.  Are all the brainstormed
+ideas and other relevant details reflected in the products we are producing?)
+ 1. More/better finished products.  (These sorts of documents help with "outside"
+communication immensely.  We should know where to distribute them, details
+on expected contents, etc.)
+
+/Some strategies that may have broad application:/
+
+ 1. /Goals should be paired with realistic expectations./  One
+  strategy that we are talking about with regard to strategic planning
+  is to keep track of "expected dates of completion".  This is not
+  simply a relabeling for the term "deadline".  We are typically
+  working in a volunteer (or, more generally, "voluntary") framework,
+  where people adopt tasks not because they are told that they "have
+  to", but because they decide that they "want to".  Deadlines can
+  still exist, but we don't always need to set deadlines associated
+  with our own work. (*Sometimes* it may be wise to cut off or
+  transform the work on something if the effort isn't really going
+  where it was supposed to and nothing else useful is coming from the
+  effort, and deadlines may have a use associated with this fact.  In
+  general, however, deadlines are far less important than having
+  realistic goals paired with realistic expectations.)  In addition to
+  being "technically realistic", we should make sure that our
+  expectations are also "socially realistic", e.g. does everyone have
+  the same (or at least compatible) technical expectations?
+
+ 1. /Conceptual difficulties should be resolved promptly by doing
+  research and development./  We tend to have way too many conceptual
+  arguments.  Frequently we all agree that "yes, something should be
+  done about XYZ", but aren't sure what.  In cases like this, we
+  should switch to experiment mode, or to some other research mode,
+  and *stop talking at the conceptual level*.  Empirical results and
+  concrete plans are good.  Implementation of these things is also
+  good.
+
+ 1. /Pave the way for effective reuse./  Especially when it comes to
+  producing more and better deliverables, we want to make our
+  operations more efficient by being ready to e.g. convert our
+  discussions on Asteroid into research articles, grant applications,
+  or similar things.  Building reusability into discussions and other
+  "informal" artifacts is something of an art.  One handy thing to do
+  is to make some annotations describing likely future uses of the
+  material.
+
+** PM Organizational Restructuring
+
+ * /Membership for PM./ The program for keeping track of members is in
+place and tested.  We have already discussed things like membership
+levels, types of memberships, benefits of membership, and role of
+members.  But all of this still needs to be sorted out into a coherent
+plan of action and deployed.
+ * /PM board meeting./  The next meeting still hasn't happened.
+ * /PM board elections./  It would be good to get a sense of where new
+blood is going to come from for the board.
+ * /PM staff/officer appointments (even if at $0 pay rate)./  This would
+be convenient from a PR perspective (e.g. business cards might help us connect
+with people at conferences better).
+ * /PM staff salaries./  This is a goal that we want to create a reasonable
+expectation about.
+ * /Provide for revisions to PM mission and PM bylaws/ (See
+next section on PM policy, below.)
+ * /Legal issues/ (Such as user agreement and conformance with DMCA.)
+
+** PM Community Restructuring
+
+The "official business" stuff mentioned above will frequently impact
+the community at large.  For example, if every new user is confronted with
+a user agreement, a new user guide, and so on, that will likely change the
+user will interact with the site.  There are many different ways we would
+like to see community interactions change.
+
+ * Getting (and keeping) every on board with the style of work and
+  discussion that is accepted on PM.
+
+ * Placing guidelines and other valuable scholiumific
+  information into the right places.  (E.g. describing
+  the books area or the administrative contols.)
+
+ * It would be great to make some improvements to the way forum posting
+  works.  Rather than having everything aggregate into the same old
+  forums, separating things out by topic would be good.  Also, a
+  bi-directional email gateway would be nice after all these years.
+
+** PM Roles should be better understood
+Those of us working on "project administration" (and research)
+broadly considered frequently have to do things like:
+
+ * system administration
+ * site administration
+ * code maintenance
+ * fundraising and outreach
+ * ...
+
+It would be good to understand better how these things are actually
+done (rather than assume that they "just happen"). We could all make
+individual goals regarding these areas -- but we should also make sure
+such goals are actually strategic.
+If we are not going to hire a system administrator any time soon, it
+seems possible that several volunteers can learn the relevant skills
+and we won't need to hire one. We should consider options like this.
+Ideally, any user with an idea should be able to find the right place
+to submit that idea in order to have it acted upon quickly. (Which
+includes the possibility of the user simply implementing their idea on
+their own.) We have had way too many ideas that have been sitting
+around for years without going anywhere; time to do something about
+this.
+
+** Better interactions with various communities
+
+In addition to interactions within the PM community (which includes
+in some strange way the PM "meta" community), there are
+interactions with other groups like these to consider:
+
+ * math societies
+ * digital library research groups (DLib etc.)
+ * the anthropological community
+ * the rest of the MathWeb and similar "socio-technical metamathematics" groups
+ * our individual contacts (see below)
+ * ...
+
+** PM Policy Management
+
+The mission statements and bylaws of this organization neither write
+nor revise themselves.  However, they should say how they can be
+revised, and also how additional policy documents (and directives!)
+are to be put into effect.
+
+Note: The idea of coming up with realistic goals paired with expected
+dates of completion that we are pursuing in this document may be
+helpful to consider when thinking about mission statements, bylaws,
+and other policy items/documents.
+
+** PM Organizational Partnerships
+
+The old question "What is the relationship between !PlanetMath and the
+Hyperreal Dictionary of Mathematics?" will undoubtably come up some
+more.  We should do our best to answer it.  We should also answer
+similar questions about various organizations:
+
+ * PM
+ * PP
+ * PC ("Coming soon" should have a realistic expectation date associated with it.)
+ * HDM
+ * Atlas
+ * !ArXiv
+ * Wikipedia
+ * !MathWeb
+ * ...
+
+(Noting that in some cases these relationships may be defined with
+significant room or plans for "change" built in.)
+
+** PM business/support strategy
+
+There are many options available for ways to raise and ways to spend
+funds.  These range from high-level "conceptual organizations", as in e.g. the
+[[file:Metacommons Manifesto.org][Metacommons Manifesto]] and the [[file:Code Market.org][Code Market]]; to overall strategies,
+like looking for grants; to  practical details,
+like working with Words on Fire, paying for certain bounties; etc.
+
+At the high level, 
+
+ * we should offer things that people want
+ * further, if we want money, we should identify things people want which
+they will also be willing and able to pay for
+ * we should integrate the "paying part" into our production and distribution
+pipeline
+ * (presumably this goes hand in hand with integrating the "spending part")
+
+** PM fundraising
+
+*** Fundraising Consultant
+
+We have already discussed the possibility of having Words on Fire help
+PM raise funds and pretty much expect this to happen (although we still
+need the official approval from the board along with a contract).  
+Because of the grant application, we have put this item off.  To be sure, 
+Marnita will do most of the work in preparing the fundraising plan, but 
+there are still some things we will need to do --- if Marnita is to come 
+up with a plan which accurately fits the needs and abilities of our
+organization, we will have to probide her with information about the
+organization and participate in discussions.  Of course, once the plan
+is made, we will need to put tie into implementing it.  In addition to
+having the consultant design a campaign for us, we might also ask for
+advice on various points that have arisen:
+
+ * Thank-you letters to past donors
+ * How to make the online donations more effective
+ * ...???
+
+There is also the issue of following up on the consultant's work. 
+As we have discussed, what we will get for our consulting fee is a
+fundraising plan, but then it will be up to us to carry out this
+plan.  We need to budget sufficient time for this.
+
+*** Grants
+
+We already sent a grant application to NSF.  Given that recieving the
+grant is far from certain and that a lot of work went into preparing
+the proposal, it would only make sense to send similar proposals
+to other possible donors so as to increase the chances that we will
+succeed in getting a grant. 
+
+** Summer of Code
+
+This is becoming something of an annual event after two years already.
+Since it allows us to get 10 weeks of programming work donated (and
+small salaries to boot) it is something we woudl like to participate in
+again.  While, to the best of my knowledge, the dates for this year (or,
+for that matter, whether there will be a Summer of Code again) have not
+been announced, from the two known data points I would extrapolate that
+the application process would occur in June and that the oding would
+take place in July and August.  We would need to let Google know that we
+are interested in participating, come up with a list of project 
+descriptions, and rate applicants.  If we get any applicants, we then need
+to mentor and evaluate them.  It would be nice to have the project
+descriptions ready sufficiently far in advance that there is a chance to
+break down projects into detailed weekly schedules and prepare background
+information for potential participants.  Also, it might be worth identifying
+promising candidates and encouraging them to apply.
+
+Based on what we have been hearing, it looks like we ought to get our list
+of projects in order in the next few weeks (say, decide projects by the end
+of February, then work on descriptions in March). --[[file:rspuzio.org][rspuzio]]
+
+: The applications were in March, with decisions in early April, and coding 
+begins in earnest May 28th.  We had three internships awarded; one doing 
+reputations systems work, one doing scholium system work, and one doing more
+work on the autolinker.  All of the interns will be supervised in person (two
+at Emory, one in Minneapolis).  Here is [[file:2007_PM_Summer_of_Code_Coordination|the coordination page.org][2007_PM_Summer_of_Code_Coordination|the coordination page]].
+
+** PM fundraising (with Marnita & Carl and otherwise).
+
+ * One of the things we should do is be aware of all the different
+  venues where we can learn about grants that we might want to apply
+  for.
+
+** Some better collaboration platform(s) than the current AsteroidMeta
+
+Including a better way of maintaining schedules and strategic plans;
+excluding spam.  (It would be great to have a better way to deal with
+simultaneous edits too :).)
+
+ * We should look into Raph's offer on Bhargest. 
+
+ * But the wiki is only part of the picture however; this collaboration
+platform stuff is really a development programme unto itself.  E.g. it
+would be great to have tight bi-directional integration of a calendar,
+to say the least.  Cf. item about MUSNs below.
+
+** Something better than email, too
+
+Maybe we should be CCing our "business" email to a group blog.
+(Blogger would, I think, support this; but surely we could set up some
+simple similar thing on our own e.g. within Noosphere, too.)
+
+As we said in a recent conversation, our the e-mails we have sent each
+other in the past represent a rather formidable corpus with some
+literary merit on various topics. Right now, they are just sitting
+around in our e-mail accounts not doing much. I think we could do
+better than that and move them to some sort of interprersonal library
+where they could be decently indexed and searchable to make them
+useful in the future --- for instance, if we want to look back at a
+previous philosophical discussion on Kant's phenomenology and how it
+relates to goemetric intuition, ot would be nice to be able to pull it
+up at a glance without wading through mounds of stuff. Also, given
+that we have put a good deal of thought and effort into writing these
+letters, we should make better use of that sunk cost by making the
+fruits of these labors more accessible to ourselves and easy to reuse
+elsewhere. For instance, I would think that by combining excerpts form
+some of these e-mails on a philosophical topic with soem of the
+discussion here, we could form the basis of a nice essay. With a
+little more work, we could polish it up and publish the result.  Also,
+these e-mails form a valuable historical record of our activity which
+would be of great value in evaluating past accomplishements and
+planning for the future.  Since Aaron is the librarian around here,
+maybe he has some ideas on how we could best manage this collection.
+
+** Let's make some improvements to Noosphere
+
+There are many ideas we have had about how Noosphere could be
+improved.  Most of these have been sitting around for a long time.  It
+would be good to get these things moving forward.  One way to do this
+would be for one or more volunteers to run a concentrated
+feature implementation and documentation effort.
+
+Cf. [[file:Feature Requests.org][Feature Requests]] for a list of many contributed ideas.
+
+(It would be good to fill in a list of the specific improvements that are
+reasonable to think about doing this year, here!)
+
+** Various Projects
+
+During the course of discussing PM frature requests and other conversations,
+various ideas for projects have arisen.  We have agreed that these would be
+worth doing, so we might want to move some of these beyond the conceptual stage.
+
+ * Free digital editions
+
+Having seen that, while there is a certain amount of effort to retrodigitize
+old math books, most of the results are being released under restrictive 
+contracts, we thought that it would be useful to make free editions of at
+least some old math books.  Now that there is talk of reorganizing Project
+Gutenberg, it might be worth seeing whether something could be done with them.
+
+ * Bibliographic cross index
+
+Originally this was proposed as a tool for checking completeness of coverage
+of PM and similar projecs (it would likely serve Wikipedia well in a similar
+capacity if the Wikipedians woudl be interested).  More generally, it should
+advance the cause of scholarship in many fields by making it possible to point
+out precise connections between printed an online materials and also between
+differrent printed materials.
+
+ * Research support
+
+We have talked at various occassions of online facilities which could be of
+use to various classes of researchers --- students (e.g. R.E.U.), traditional
+researchers in universities, and non-traditional researchers.  We should 
+reconsider these ideas, see what market for them there might be, compare them
+with what is now available, then decide what to do.
+
+** Improved support for 3rd party software
+
+We could start with viable server-side installations of:
+
+ * !LaTeXML
+ * CMUCL
+ * ...
+
+** HDM strategic plan
+
+This plan should consider research (see below) and support structures
+(see further below), and, where necessary, the interrelations between
+the two.
+
+** HDM research
+
+Our research goals should be "strategic" in the following ways.
+
+ 1. They should be realistic, and should be accompanied by estimates
+  saying when we think they will be completed.
+
+ 1. They should be "backwards-efficient", i.e., our most active goals
+  should use our current abilities and interests.
+
+ 1. They should be "fowards-efficient", i.e., they should feed into and
+  make realizable our future goals.
+
+ 1. They should be "sideways-efficient", i.e. where possible they should
+  be synergistic with contemporaneous efforts.
+
+In order for this to work, a certain amount of self- and
+world-knowledge needs to be integrated into the plan.
+
+I've identified five broad areas  as being expressive enough to the
+describe the high levels of the HDM project.   These are:
+Math, AI, HCI, Linguistics, and General; see the [[file:HDM Directory.org][HDM Directory]].
+
+Reasonable effort by the HDM team has been going into all of these
+areas.  The formal training of the current team is mostly concentrated
+in the first two or three areas.  We are always learning from
+experience in all of these areas.  (E.g. there are many things to
+learn about general topics like "how to run a major research
+project").
+
+Given our skills, the kind of research we can do in e.g. Linguistics
+is going to be different from the kind of research we can do in AI or
+Math.  In Linguistics, we'll mostly be doing background reading and
+networking.  In Math and CI we're close to the point of coming out
+with research publications and experimental software systems.
+Furthermore, in these better-trod areas, we have a somewhat better
+developed set of goals.
+
+/Goal tree:/ A short goal tree indicating near-term goals on various
+tracks follows (this will be fleshed out with more detail, including
+expectation dates).
+
+ 1. Math
+## General theory of mathematical expressions
+## Relational systems and inference operators
+## Manifolds of theories
+## Scholium system (including clusions)
+## Proof checking
+## Parsing
+
+ 1. AI
+## Work on heuristics.
+
+ 1. CI
+## Improve SimpleNet in "single-user" mode.
+## Deploy test [[file:MUSN.org][MUSN]] (Multi-User Semantic Network).
+
+ 1. Linguistics
+## Background reading, networking.
+
+ 1. General
+## Strategic planning.
+
+/For another view of this stuff:/ 
+See [[file:Research and Development Tracks | Track-based view.org][Research and Development Tracks | Track-based view]].
+
+** Hyperreal Enterprises
+
+This could possibly be the name of a support structure for HDM.  Also
+it would be interesting to just do some business-style planning for
+the future (even though we don't have the technology all ready yet,
+many strategic ideas do already exist).
+
+** Staying in touch with contacts
+
+E.g. Seigrist, Miller, Kohlhase, many others (including our metamath
+neighbors and folks in various localities).
+
+** Keeping up with reading/references
+
+There are many URLs, books, and papers that we have heard about.  It
+would be a shame not to keep track of these things (and presumably
+read many of them).
+
+** Improvements to our physical infrastructure
+
+E.g. scanners, printers, computers, monitors, cameras.
+
+(This should be coordinated with our meeting with Borwein, because he
+could give us some tips on what might work best for setting up a
+conferencing and collaboration system.)
+
+** FEM
+
+This item has been sitting in storage for a while, so it might be nice
+to dust it off and resume progress.  In particular, the aspects of a
+superimposed layer of quality control have come up in the discussion
+following in the wake of the cyberinfrastructure grant application.
+
+We should also think about distribution and marketing methods.  (We've
+considered everything from working with Lulu to buying a printing
+press and binding things ourselves; there are probably other things to
+consider as well.)
+
+* "Physical events"
+
+/Quick introduction to physical events:/ Our approach to should be
+coordinated with our travel plans --- when planning trips, we should
+check which of our contacts happen to be in the same neighborhood or
+along the route and schedule meetings with them.
+
+** Mathematical Knowledge Management Workshop
+
+Jon Borwein will be hosting a workshop on mathematical knowledge
+management at Dalhousie University on 26-28 April.
+
+** MathFest
+
+San Jose, California; August 3-5, 2007
+
+Joe is giving an invited talk, tentatively about "PlanetMath.org and
+the Hyperreal Dictionary Project", but perhaps about geometric measure
+theory and/or category theoretic document geometry.
+
+At a nearby spacetime event, Joe and Ray will meet with Raph.  
+This meeting promises to improve collaborration between HDM and
+metamath and further the dialogue which began last October.
+
+The second PM summit will be concurrent with this meeting.
+
+* "Individual Goals"
+
+Some mostly individual-oriented goals that are relevant to our
+collaboration appear here.
+
+The things that are filed under "individual goals" are things that
+only a sufficiently motivated individual would do.  Nevertheless, they
+may bear on group goals, and they could be adopted by groups of
+individuals.
+
+(Ray often points out that groups are in fact made up of individuals,
+something to think about as we refine our ontology.)
+
+** Finish and polish pre-existing work (for our group projects or otherwise)
+
+There are a fair number of mathematical ideas on which I (R.S.P.) have
+been working, some for several years.  While there might not be definite
+dates attached to when these are due, at the same time I would like to
+make sure that whatever else is scheduled allows sufficient time to
+work on tying up the loose ends and writing them up for the benefit
+of others (and my personal glory).  All too often, it seems that this item 
+has been given two low priority because other items showed up which needed 
+to be done on some specific time.  Just because a work item may not have a
+definite date attached to it and works on a flexible schedule should not 
+mean that it automatically has a low priority.
+
+--[[file:rspuzio.org][rspuzio]]
+
+What you say about roving dates and flexible schedules is interesting
+in light of what we were talking about with goals and expected dates
+of completion.  Sometimes it is just too hard to say.  However, in
+cases like these it may be relatively easy to make specifications
+about "subgoals", e.g. to put in a certain average amount of time on
+the given project per week.  Eventually more clarity on the nature of
+the expected goal itself will come, and then these interesting details
+can be integrated into the more fixed master plan.  Keep yer eye on
+them waveforms!
+
+--[[file:jcorneli.org][jcorneli]]
+
+In my case, I've got a bit of software that's been published
+(e.g. Nero) that needs some ongoing maintenance.  I haven't been very
+responsive to requests for help on these things.  I'd like to stay on
+top of them better.
+
+--[[file:jcorneli.org][jcorneli]]
+
+** Personal praxis (and, where applicable, integration thereof)
+
+I have a few things I do regularly (like creative writing) and other
+things I'd like to be doing regularly but that I don't (like studying
+at the math library or going to the gym).  I'd really like to get some
+reasonable schedule put together that gets my agenda items covered.
+This isn't necessarily hugely relevant to other people here, except
+that it will indicate when I am likely to be available for
+conversation or various other kinds of work.  (Publishing a schedule
+of my available times would be how I would do this if I wanted to
+"anonymize" my other activities; generally I don't care, but sometimes
+I might, or perhaps others would sometimes prefer the anonymized
+versions.)  Perhaps the schedule will appear more in terms of summary
+statistics like total hours available, instead of saying specifically
+when the time will be available.
+
+There are other forms of "integration" to consider as well.
+(E.g. will any of my creative writing work ever get into a form that I
+want to share with people online?  I'm not sure yet.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+** "Possible daily events"
+
+These are things that people could agree to do every day.  
+
+ * Participants in HDM problem-of-the-day club should work on starred
+[[file:Focused HDM subprojects|subprojects.org][Focused HDM subprojects|subprojects]].  (Apparently no one is working
+on this right now.)
+
+** "Possible weekly events"
+ 
+These are things that people could agree to do every week.  
+
+ * Sunday - publication of [[file:Bulletins.org][Bulletins]].  (Apparently no one is
+working on this right now either.  We might have a better chance with
+this particular workflow item if we posted news events directly to the
+!PlanetMath "News" box.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+* "Future goals"
+
+This combines both group and individual goals (and activities pursuant
+to goals) which may be carried out in the future.
+
+Some of this is "science fiction", but it is a special sort of science
+fiction that is supposed to reflect our best guesses about what will
+really happen in the future.  Thinking about goals realistically (in
+the sense described in "Improvements to Workflow" above) is no less
+important when the goals are far in the future.  It's just that our
+expectations may have more uncertainty in them.
+
+One thing that can combat uncertainty is to build repeating patterns
+into our schedules, e.g. annual events that help ensure that planning
+and communication will take place between the various people working
+towards these future goals.
+
+** Possible annual event: Annual Strategic Planning Session
+
+Last January, we also had a planning session when Joe and I met in
+New Jersey and Aaron joined us by phone.  That directly led to the first 
+board meeting, the whitepaper, our going to the First Monday conference,
+and a lot of othertthings we did last year.  I am glad that this process
+is being repeated this year and, as I have stated numerous times, I
+would like to see our planning process and workflow management improved 
+so as not to keep running up against deadlines, missing opprtunities,
+and putting things off indefinitely.  I propose that a review of the 
+past performance and evaluation of the current situation leading to
+strategic planning for the next year continue as an annual event at 
+the beginning of the year.
+-[[file:rspuzio.org][rspuzio]]
+
+I'd view such things as being like a medical check-up or whatever.  In
+general, one expects that the user community would maintain a healthy
+strategy all the time (by continual updates).  However, thinking about
+how to engage a hypercritical mindset temporarily, for purposes of
+breaking through any sluggishness that is residual in the system would
+be helpful.  So, what tasks get filed under "routine maintenance" and which
+ones go under "annual checkup"?  Maybe the discriminating factor has
+to do more with /how/ things are done than with what is done.  I.e.,
+it may be efficient to spend the majority of time in in-person meetings
+working on high-bandwidth high-coordination tasks like planning, and save
+other sorts of tasks (whatever these happen to be) for individual time
+later.  So, combine these sorts of sessions with summits like you talk
+about below. --[[file:jcorneli.org][jcorneli]]
+
+** Possible annual event: PM Summit
+
+(This might be combined with the above.)
+
+The Emory digital library conference provided the occassion for our
+first PM summit, which led to such things as the code bounty program
+and FEM planning.  I think it would be good to have a summit every 
+year.  This would provide an opportunity for members of PM to meet 
+in person and get to know each other, thereby strengthening the sense
+of community, offerring an occasion to increase mutual understanding 
+and thereby make things work smoother online, as well as discuss ideas
+which could improve the project, such as happened at the first summit.
+
+As for localizing this proposal in spacetime, I suggest that we piggyback
+our summits on MAA meetings, starting with the one this August.  While in
+future years, we might want to schedule a conference workshop on some
+topic like "CBPP mathematics", this year it's too late for that, but we 
+still should plan for some sort of meeting at a local coffeeshop or some
+similar venue for PM members much as we did in Atlanta.
+--[[file:rspuzio.org][rspuzio]]
+
+** Science Fiction Future of AsteroidMeta
+
+See [[file:Science Fiction Future of AsteroidMeta.org][Science Fiction Future of AsteroidMeta]].
+
+** Science Fiction Future of HDM
+
+ * ...

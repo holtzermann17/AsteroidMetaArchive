@@ -1,0 +1,34 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since the topic is templates, it is only appropriate that there be a template for organising the presentatation of programs :)  In a more sophisticated implementation, there would be a specially designed editor in which one would fill in the blanks, a display program to generate the output page, and some further functionality which waould allow one to do things like extract the code, use the input/output data in a "lint" program to check code which uses these utilities, etc.  However, for the time being, these headings have simply been put in by hand according to the pattern described below:
+
+ *Usage:* This field shows how to use the function(s) being defined. [[file:[Note for C Programmers to Organization of template utilities.org][[Note for C Programmers to Organization of template utilities]]]
+
+ *Input:* What sort of input the function accepts.  While some of the functions  will accept any s-expression as input, others are designed with the assumption that the input is of a specific data type and their behavior is undefined if they are fed the wrong type of data.  Since there is no automatic checking of data type, the user should either make sure that inputs are of the right type or use suitable predicates to check data before feeding it to the function.
+
+ *Output:* What sort of output this function returns.
+
+ *Description:* A description of what the function does.  (i.e. how to use the black box, as opposed to what goes on underneath the lid, which comes later.)
+
+ *Dependencies:* Functions which are called from the function being defined excluding standard functions.
+
+ *Side effects:* /Not implemented yet/ --- I will have to go back and think about side effects and document them.  Most likely, most of the functions will be pure LISP without side effects.  We wouldn't want to computer to get indigestion chewing on the code :)
+
+ *Listing:*  The actual code behind the function.  For convenience, all the listings have been bundled together into a single file which is given at the end of *template utilities*.
+
+ *Discussion:*  A description of how and why the code works.
+
+ *Proof:*  /Not implemented yet/ --- this will contain a proof of correctness of the problem.  In the far future, this will be translated into h-code and checked mechanically.  Of course, since the proof checker will be based upon template utilities, this will be rather circular, but it will make for some good material to use in developing the proof checker.
+
+ *Examples:* Examples to illustrate the function at work.
+
+ *Comments:* A place for the authors and reader to talk about the program and make suggestions.
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

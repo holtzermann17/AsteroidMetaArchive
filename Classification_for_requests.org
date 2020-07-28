@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It would make sense to have the requests classified according
+to the MSC. First, this would enable users to browse requests from their
+own expertise, and second, it would make it easier to fill in 
+a request; the topic is already classified. --[[file:matte.org][matte]]
+
+Another way to classify requests would be to attach them 
+to entries in some way. This could act as a sort of TODO 
+list for an entry's subject. The good thing here is that when a requst is
+fullfilled it can be filed away and would not be shown anymore. 
+The same would not be true for a "Talk-forum" for an entry.
+--[[file:matte.org][matte]]
+
+Perhaps the TODO list could be optionally made public. --[[file:jcorneli.org][jcorneli]]
+
+Yes.
+The idea was that anyone could be able to file a todo-entry for an entry. 
+For example, for the product topology entry, todo-entries could
+be "Is what sense is this assosiative?" and "What kind of properties are not preserved
+under the product?". This would mean that a todo-entry
+would be very close to a correction, but of slightly different nature. 
+It would not expire and not necessarily require any
+change to the parent entry, but like requests, anyone could report it as fulfilled
+once the material is on PM. 
+
+When reading math, I think it is natural to ask questions. Having
+a todo-list would be one place one could write down these questions. It would also
+be a tool to identify what is missing on PM. Like Ray once put it, PM looks 
+like the Cantor set. It has a lot of holes that needs fixing.
+-- [[file:matte.org][matte]]
+
+
+I certainly think that anything which would make it easier to make requests and to point out holes in our coverage is a good thing and I like these suggestions.  In the meanwhile, let me remind everyone of an existing mechanism which can also be used towards some of these same ends: the index entries.  For instance, if there is a special functions which you would like to see covered, add it to the index of special functions.  Likewise, when looking for things to write about, Planet Math authors maybe could look at the index entries and pick out items which currently link nowhere as topics to write about.  Also, when writing up an advanced proof or something like that, I try to backtrack and make sure that the more elementary results and definitions which it uses have all been defined and, if not, add them or request them to be added. --[[file:rspuzio.org][rspuzio]]

@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Sometimes it would be nice to take a peek at how
+Noosphere is written. Having the sources browsable online would make this
+ a bit easier for the average user. They don't even have to be
+the absolute latest version. 
+--[[file:matte.org][matte]]
+
+I know this wasn't what you asked for, but the [[file:Arxana.org][Arxana]] sources
+are extremely well documented ;).  Maybe one day they will merge
+with Noosphere sources; see [[file:Nooxana.org][Nooxana]].
+
+--[[file:jcorneli.org][jcorneli]]

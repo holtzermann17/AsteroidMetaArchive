@@ -1,0 +1,25 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It is annoying to have to click through a "The search engine is out of service temporarily. We are working on resolving this as soon as possible." screen
+every time one searches PM.  I could just do the search directly with Nero, and anyone with any sense can do
+a site search, but some people might not think of it.  So maybe the search should be set up to use google
+whenever the native search is broken, or google should be provided as an option alongside the native search
+so that people can choose what service to use if they realize that the thing is broken.
+It would presumably be easy enough to get the query routed to google and display
+those results instead of showing the error page though!  I assume everyone who submits 
+a search query wants results and doesn't care too much where they come from.
+
+--[[file:jcorneli.org][jcorneli]]
+
+It is /supposed/ to provide a Google site search if it can't contact the native search
+system.  I'll have to look into why this isn't working.  However, I don't want to make it
+too "smooth", because then (1) I won't hear about the search engine breaking, and (2) it 
+won't be as important for me to fix it.
+
+As it happens, the only reason it was down in the past few days was because someone 
+rebooted PM without consulting me or Logan-- the old search engine used to crash frequently
+of its own effort.  I don't think the search engine going down is a frequent enough
+occurrence anymore to merit much attention (at least, not by me).
+
+--[[file:akrowne.org][akrowne]] Mon Jun 20 22:33:53 UTC 2005

@@ -1,0 +1,315 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ 1.  Know and use their model for the way things are; use their outline; understand
+the current population of projects they work with/serve.
+
+ 1. differences/relationships with "competing" groups
+
+ 1. difficulties with educational models: dynamic curricula; learn-at-your-own-pace;
+study educational methods (later, now; via high-level discovery method and research)
+
+ 1. reuse movement; what will we be doing to help the situation here; what are
+likely (re)uses of our materials?
+
+ 1. creating public goods; this is a research problem!; compare the blog-o-sphere as
+one potential interesting example.
+
+ 1. Arxana versus relational databases!
+
+ 1. interaction and coordination challenges/questions: WHERE to look for the answer to your question?; WHEN to search, and when to think on your own?!
+
+ 1. goals and success criteria (just different ways of looking at the same thing): long term goals, high level goals, "phase I" goals; and what are some "step-by-step" evaluation criteria?
+
+ 1. what funding's required for PM to exist/thrive/grow?
+
+ 1.  What are we doing/going to do that's unique in the infrastructure-development 
+world?  (talk deliverables AND methodology)
+
+ 1. "school" education: young people as peers (this is a form of outreach); possibilities in "alternative education" (compare point above about studying various educational models)
+
+ 1. hiring: long-term/ongoing needs; and, things we'll want or need "later".  Note that support staff will be critical for "operations" to progress.
+
+ 1. "integration" is key! -- make it easier and more worthwhile for people to contribute.  (Note the non-trivial relationship of "integration" and "data mining".)
+
+ 1.  possible exchanges between various groups as a means of facilitating future "outreach"
+
+ 1. governance for open platforms is key.  We'll probably want to do some research here (at some point) as well as "discovery".  (Potential for future hire.)
+
+ 1. Remember the LISP data/code model: they are two sides of the same coin!
+
+ 1. Remember also the Xanadu fluid data idea -- multiple interpretations, remixes,
+coordinations, etc., should always be possible.
+
+ 1. what's our "background" in this area? (resumes of principals, staff, and abstractly, projects)
+
+ 1. how about the "forwardground"?  It might even be worth seeking funding to assess
+the forwardground.  Consider education and research applications of our work.  Consider future/ongoing hiring (as mentioned above).
+
+ 1. social change: we want to guide it; we also want to see where things are trending.
+
+ 1. coordinate groups: bridge balkanized "banana republics"; explain why we are applying for THIS grant (and not some other grant, or other way of making money); "coordinating groups" is a challenging social problem that will require future research!
+
+ 1. there are several interesting and important communication "levels" to consider -- for example, "INSTRUCTIONS" and "ACTIONS".
+
+ 1. How many links are in PM?  (This should be an easy enough question
+  for me to answer using the FEM CVS repository)
+
+ 1. What are we going to be doing to educate CITIZENS of the NOOSPHERE?
+
+ 1. translation and "subinstances" are relevant for outreach! Translation opens up: international PARTNERSHIP possibilities; subinstances, generally, open the possibility for meaningful dialog between experts and interested students.  (Remember "integration" issue.)  Furthermore, a rich set of easily-overlapped subinstances would be expected to open up exciting interdisciplinary possibilities.
+
+ 1.  The "heaviest players" are bound to be the most reliable.  (But some players -- maybe all -- are "symbolic" in nature, e.g. "open source" or "the bloggers".)
+
+----
+
+And some responses, like a mid-term report card.  The numbering here is
+the same as the numbering above, so just flip back and forth if you want to
+see what exactly I'm responding to.  (I've tried to contextualize the remarks
+here so that they can be read stand-alone, but still the broader context may
+be interesting.)
+
+ 1. We are aware of the NSF's formats and the CIO's major topics of
+interest.  There are a few [[file:NSF CIO related funded project|related funded projects.org][NSF CIO related funded project|related funded projects]] that we've looked at some and can look at more.  One
+thing to watch out for is, in addition to responding to all of their
+points, let's make sure we covered all of our own major points, too!
+
+ 1. We've started to talk some of Jim's friends about relational
+  database systems.  We should keep this up!  I think we're actually
+  poised to build a wide partnership here, based on collaboration, not
+  so much on competition.  Also, for the grant, we should list some
+  specific tools we plan to use/try.  (Note: it might be good to talk
+  more with people in AI/KR communities before we get too deep into
+  things with the scholium system.)
+
+ 1. These issues of "student choice" and "learning at your own pace"
+  seem to be pretty central to what we've been talking about for the
+  last few years.  It seems that now, with the grant, we have the
+  chance to start impacting this area more.  I wonder if we could get
+  a letter of support from Aaron's famous alt.edu correspondent from
+  New York (his name escapes me now).  (Note: on the theory side,
+  learning at your own pace relates to my general questions about how
+  to linearize collections of documents; but I still don't have
+  anything concrete worked out here yet.)
+
+ 1. We could put in more work documenting our theory of "clusions",
+  since that theory describes the basics of reuse.  There are
+  certainly a variety of problems to consider, including legal issues
+  and licensing issues (both of which are obviously have strong social
+  components and won't likely have simple technological or theoretical
+  solutions).  How many links will we have?  How do we deal with
+  linking between different databases?  Will we admit
+  one-way-mirror-style observation (and so forth: consider other
+  issues related to "use of human subjects" and privacy, etc.)?
+
+ 1. I don't think we have mentioned anything explicit in the drafts of
+  the grant about creating public goods.  I think that might be a
+  problem.  For one thing, that's what the government's primary
+  function is, so that's what they are paying us to do.  In addition
+  to outreach as a way to deal with social things, I think that our
+  work will have some "policy" ramifications, whether that has to do
+  with state policy or the policies of scientific organizations.
+  (Talking with Jim, this issue of "business models" came up quickly.
+  Business models are essentially /dual/ to policy.)  One of the
+  interesting things about public goods is that they serve everyone
+  who wants to use them, and, a fortiori, they may mean different
+  things to different people.  (We've already seen that from a "data"
+  standpoint when talking to Jim, but still more questions remain
+  about "data interchange".)
+
+ 1. Arxana versus relational databases -- still basically an open
+  question.  I would like to get some more info from an expert on this
+  topic.  Maybe now that I've settled down in my usual habitat I'll
+  read a book on the subject.
+
+ 1. One basic fact about HCI, coordination of effort, and "integration"
+  is that scholia will help people know where to look.  I still don't
+  think we've gotten very far with distinguishing between cases where
+  you have to read, cases where you have to search, and cases where
+  you have to work/think.  However, one the idea occurs to me that if
+  we can identify areas where you simply /can't/ find answers by
+  reading or searching, then we're in a good place to facilitate
+  /job creation/.  In particular, figuring all of this stuff out
+  theoretically may matter less than building some kind of suitable
+  marketplace for question/answer exchange.  As I mentioned at the
+  beginning of this paragraph, scholia will help with this sort of thing.
+  (I don't know if we talked about Code Market in the current draft at all.)
+
+ 1. Goals and success criteria -- another still basically open question.
+  We have just recently started to talk more about explicit steps the
+  individuals working on the project are planning to take (e.g. see
+  page 20 of
+  [http://planetmath.org/~jcorneli/nk.pdf my new-age writings on this topic]).
+  In general I wonder if we've learned to think backwards about goals
+  and success criteria from our past educational experiences.  (An unhealthy
+  fear of deadlines might be a prototypical example of such backwards thinking.)
+  On the other hand, we have come up with some reasonable strategies for creating
+  expectation-of-arrival dates for some of our deliverables.  We should follow
+  through with finishing that.
+ 
+ 1. Funding for PM to /exist/ has not really been taken into account
+  in the grant per se.  Aaron said he would ask people at NSF if our
+  chances of success would increase if we started to fund a system
+  administrator for PM /now/.  (I personally think that they would!)
+  I don't know what happens if we extend this question to apply to
+  Math Atlas and other related projects that are part of the grant.  I
+  do think we have the thrive/grow stuff taken care of, but that won't
+  come to much if we foolishly drive ourselves into the ground first.
+  I'm "pro" hiring support staff for PM ASAP as insurance against
+  something like that happening.
+
+ 1. It appears that a /delivered/ scholium system is unique.  However,
+  it would be good to talk to some of the Semantic Web people before we
+  go promoting ourselves as the next hot thing.  It would be great to get
+  some insights from the Semantic Web people.  In general, getting a draft
+  out the door for scrutiny of our peers will help us decide what's special
+  about what we're going to produce.  Methodology-wise, one thing that comes
+  to mind is that we might want to have scanners and/or cameras on hand so
+  we can easily coordinate work on physical scholium-based documents.  Also
+  this business about working closely with an anthropologist or other social
+  scientist seems pretty unique for web development projects.  But we're
+  actually working with online communities here -- these have been around for
+  a while, but it seems previous research on them did  not look much at possible
+  connections with science (i.e. with scientific communities).  To the extent
+  that such research exists (e.g. research about ArXiv or usenet or scholarly
+  applications/aspects of Wikipedia), we should get familiar with it.  In
+  connection with this, the ability to get multi-dimensional ratings of scholarly
+  participation in an online community seems novel, and seems likely to be
+  something people will be interested in.
+
+ 1. The inherent anonymity of the web is one of our strong points.
+  Anyone who has read the "Ender's Game" series (for example) should
+  be getting excited when the chance for young people to become peers
+  in an "adult" community shows up.  We've talked in notes and
+  side-conversations about working with the NSF REU program as a
+  whole, and other ways of involving young people from the get go, but
+  these things have not made it into the Project Description yet.
+
+ 1. We haven't done a lot to break the project up into "phases" so it is
+  hard to say who we would want to hire "later".  Also, we haven't
+  done much to sketch the "future history" of this project (i.e. to
+  describe the anticipated state things will be in after our work is
+  complete).  Who do we expect to get involved working with us?  Who
+  will use the tools and participate in the communities that we'll be work on?
+  What are realistic "phase 2" projects to consider? (E.g. [[file:HDM.org][HDM]]?)
+
+ 1. The relationship of "integration" and "data mining" should probably
+  be discussed more.  The only place I've personally seen
+  "integration" talked about much is in Aaron's thesis; are there
+  other sources we could look at that would help us better understand
+  how to push this area forward (e.g. to identify new dimensions we
+  can mine for data)?  Note that some sort of "integration" --
+  watching what people do online -- is making various business groups
+  lots of money just at present.  Can we learn from them?
+
+ 1. I think it would be great to position PlanetComputing, PlanetPhysics, and
+  PlanetMath to be an example of an interdisciplinary consortium where we can
+  begin to study how different groups interact.  But we could also try to do
+  outreach to the corresponding "real world" organizations (ACM, Sourceforge;
+  APS; MAA, AMS) and see if we can get them to play.  (Note: a good first step
+  would be to pay someone to actually put up a PlanetComputing Noosphere
+  instance -- but we've talked about this several times, and actually doing
+  it right might be somewhat complicated.)
+
+ 1. Governance for open platforms is key -- how true, but this hasn't
+  been discussed sufficiently in the grant yet.  This definitely has
+  to do with later phases of the project.  Hopefully this is the sort
+  of thing our staff anthropologist could look at.
+
+ 1. I wonder if people will "get" the LISP idea.  For example, we were
+  talking about paying people to produce code for the project on
+  PlanetComputing.  (Whether you call these people Subject Matter
+  Experts or Undergraduate Research Assistants, doesn't much matter to
+  me, as long as the code gets written.)  This should be part of our
+  long-term sustainability model: getting people to do the work
+  ourselves is our condition for leaving through the back door.  (This
+  is approximately V's model for producing Anarchy, cf. "V for Vendetta".)
+
+ 1. Funnily enough, we're going to want to be able to talk concretely
+  about the fluid data idea!  Maybe we can use Free Software as an
+  example, since it seems somewhat close.  Anyone know any good
+  references?  (There's always ESR.)  On the other hand, it keeps
+  coming up for me these days that "freedom" with intellectual
+  materials is also part of science itself.  So it would be good to
+  talk about the "diffusion of innovation" thing (and related topics).
+  Beyond being rhetorically convincing, we should have some concrete
+  plans -- a specific production schedule related to producing and
+  dealing with fluid, multiinterpretable data.
+
+ 1. Background and resumes are supposed to go into a separate section
+  and/ or appendices.  It would probably be a good idea to start
+  working on them ASAP!
+
+ 1. One aspect of the "forwardground" is how this fits into our
+  (respective) professional development(s).  And this in turn relates
+  to the "phase 2" epilog stuff I talked about elsewhere.  Since they
+  have a whole "vision" document, I don't think it would hurt for us
+  to have a vision paragraph or so saying where we want to see things
+  go.  (Can we really achieve anything we set our minds to :)?)
+
+ 1. I think I've already blathered about social change enough in other
+  paragraphs.  It would be great if our anthropologist was an expert
+  in these areas.  I happen to know a Professor Emeritus in anthro who
+  is a pro in exactly that area -- probably I should try to get his
+  opinion on the grant!
+
+ 1. We haven't talked much in the grant about the "[[file:metacommons manifesto.org][metacommons manifesto]]"
+  ideas of sustainability.  Probably part of the issue is
+  that we're hesitant to face the scary non-self-sufficiency problem
+  head on.  I.e. the fact that, as much as free exchange takes place
+  between different groups, still, human systems are never really
+  closed systems.  We still have to get energy from the sun and so
+  forth.  In an earlier version of the grant, I was described as a
+  "systems analyst" (or you could say, "cyberneticist").  I 
+  think some serious work is going to have to be done on these exchange
+  issues -- I don't care so much if it is done by hippies or people
+  in suits, but it should be done.  (Perhaps best if we get the hippies and
+  the suits talking to each other... maybe start a hippy vs suit league for
+  [[file:Hipster The Gathering.org][Hipster The Gathering]].)
+
+ 1. At this point what we are doing is coming up with a program.  Later
+  we will become the hardware on which that program runs.  Where in the
+  grant application do we build in flexibility, etc.?
+
+ 1. I think there are about 50K links in PM (Ray looked it up for me).
+  How would this number be expected to grow with the introduction of
+  new scholiumific ways of writing.  (Also, if 50K is the number of
+  links from word to definition, can we get some information on the
+  number of logical links in the PM/Noosphere system itself?)
+
+ 1. I don't think we have talked enough in the grant about "Noosphere
+  citizen" education.  Sure we are going to document our programs, but
+  there is more to the university than just a library full of
+  documents.  People are going to have to be there (at least until we
+  have AI) to guide other people to the relevant documents to look at.
+  It is true that done right (i.e. using an appropriate scholium
+  formula), this act of guiding students will build reusable value
+  into the data collection, but nevertheless, we'll need participating
+  users who want to do that.  To say nothing of the students who we
+  will need to be guided around in the first place!  (Note: privacy
+  issues may come into play, also, if someone gets a low rating at
+  first, they may find the system discouraging -- that was the case
+  with the students who I TA'ed for.)  We should look some at other
+  online education systems.  (I'd say "online learning" but I'm afraid
+  that term has been co-opted.)  Absolutely the best community I can
+  think of to study in this respect is the online Go playing community
+  (see http://kgs.kiseido.com).  Cf. comments about "a game played with
+  marks made on paper" in the draft of the grant.  There may be a similar
+  community for chess.
+
+ 1. I think that in the draft of the grant I was working on, translation
+  did not get talked about enough.  This is a fairly specific deliverable,
+  and I think if we pitch it right, it could be a KO.   See my comments
+  in the corresponding numbered point above for some related matters.
+  Translation is all about building mutual understanding -- what's not to
+  like about that!  (Note: mathematics is about building right understanding;
+  you don't want everyone to have mutual incorrect understanding!)  Combine
+  translation with the ability to have dissenting viewpoints and you have
+  a Killer App.
+
+ 1. I've made a tentative list of partners or people to talk to on
+  [[file:NSF Cyberinf 2007 team|this page.org][NSF Cyberinf 2007 team|this page]]; it would be good to get more ideas
+  there.  Who are the people we are serving?  Who are the people who will
+  be serving us?
+
+--[[file:jcorneli.org][jcorneli]] Jan 7, 2007

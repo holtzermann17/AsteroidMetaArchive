@@ -1,0 +1,18 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In mathematics, one studies such entities as numbers and geometrical figures.  To discourse about these entities in a precise manner, one needs to define them in the framework of an axiomatic theory.  However, the same entity can be defined in rather different ways depending on one's choice of axiomatization.  The purpose of this essay in metamathematics is to explore how the same mathematical entity can be represented in different ways in different axiomatizations and attempt to frame a definition of the term "mathematical entity".
+
+To illustate these remarks, consider an elementary example: 2 + 2 = 4.  This is a statement involving the entities "2", "4", and "+".  While the statement "2 + 2 = 4" will be true no matter how one understands it, it may be true for different reasons
+depending on how one chooses to interpret the symbols "2", "4", and "+".  Here are
+several such possible interpretations:
+
+ * *Peano axioms:*  In this case "2" stands for "/SS0/", "4" stands for "/SSSS0/" and "+" is defined inductively by the conditions &lceil; /x + 0 = x/ &rceil; and &lceil; /x + Sy = S(x + y)/ &rceil;.
+
+ * *Von Neumann Ordinals* In this case, "2" stands for "{&empty;, {&empty;,}}" ,  "4" stands for "{&empty;, {&empty;,}, {&empty;, {&empty;,}}, {&empty;, {&empty;,}, {&empty;, {&empty;,}}}}", and "+" may be defined by the condition &lceil; /x + y = # (x &cup; y)/ &rceil;.
+
+ * *Dedekind cuts:* One can also choose to regard "2" and "4" as real numbers and define real numbers using Dedekind cuts.  In this case, "+" is defined as a suitable operation on cuts.
+
+This situation is somewhat remininscent of what happens in coordinate geometry.  There, one and the the same geometric object may be represented in different ways in different coordinate systems.  Since there are well developed frameworks for discussing this situation in geometry, we will take such ideas as sheaves and connections as our inspiration and try to develop metamathematical analogies of these geometric constructs.
+
+Back to [[file:What is a Mathematical Entity.org][What is a Mathematical Entity]]

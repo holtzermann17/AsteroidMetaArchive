@@ -1,0 +1,13 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is of course a non-issue in Lynx, but sometimes I use graphical
+browsers (and I assume most people use them most of the time), and
+with these browsers, redirected pages contain a big ugly red box.
+(See for example [[file:HDM.org][HDM]].)  Is it possible to adjust stylesheets or
+something like this to make the way redirected pages look somewhat less obtrusive?  
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:Feature Requests.org][Feature Requests]]

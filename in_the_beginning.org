@@ -1,0 +1,56 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* In the beginning, the were the LOGOs.
+
+A turtle is said to carry its home on its back.  I am interested in
+mathematical entities which carry with them a description of their
+future (and in understanding various degenerate versions of this
+property).
+
+We take a mathematicized turtle -- specifically, a variant on the LOGO
+turtle -- as a basic and perhaps canonical example.  We define T=(x,I)
+to be a /turtle/ if x is a geometric space, and I is a set of
+instructions for transforming this space.  T, x, and I may or may not
+be given in a time-dependent form.  (Nota bene: time may be NOT 'of
+the essence' - so there!)
+
+When envisioning the basic and intuitive turtle, we expect to see x
+embedded in some space y, and I as time-dependent.  However, I can be
+parameterized in terms of y, or in terms of other turtles ranging
+through y.
+
+For instance, if Tom and Tina are point-like turtles who are
+simultaneously at position p in y, I_Tom and I_Tina might indicate the
+event
+
+: Tina lays an an egg, Tony, at position p, defined so that
+I_Tony = do nothing for 5 seconds, and behave as I_Tom subsequently.
+
+I want to leave the general definition flexible for now.
+
+In order to make things somewhat more specific, I'll say that a turtle
+can have a /coloration/, which is a map c from x to R.  We could
+consider more general targets as well.  But even in the simple case,
+the I's for various turtles can depend on the coloration of turtles
+that they meet.  E.g. Tom (and hence Tony) may do something very
+different when they encounter a green turtle than they do when they
+encounter a red turtle.
+
+Note: if c is allowed to map to R^n, then I think that turtles are
+pretty similar to the "currents" of Geometric Measure Theory
+(something to check out) -- but I also think that they describe
+something more general, since they include e.g. computer programs.
+
+The reason for bringing this up in the context of a discussion of
+[[file:Arxana.org][Arxana]] is that a scholium-based document seems to provide a fairly
+general class of examples.  Specifically, which the "articles" include
+(freqently, as scholia) computer programs with instructions for how
+these articles are to interact with other articles, we can rewrite
+everything in the "turtle" formulation.
+
+In a fashion similar to the way which special kinds of Turing machines
+can simulate other Turing machines, we can build larger turtles whose
+futures are fully determined by the sub-turtles they are comprised of.
+
+--[[file:jcorneli.org][jcorneli]]

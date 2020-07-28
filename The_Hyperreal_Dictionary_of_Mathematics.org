@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is the Hyperreal Dictionary of Mathematics?
+
+You could read a whole essay about that question,
+[[file:original hdm essay|here.org][original hdm essay|here]].  To sum up, the Hyperreal
+Dictionary of Mathematics (HDM) is a virtual and at
+the same time immensely practical large-scale/long-term
+development project concerned with
+/[http://metameso.org/cgi-bin/wiki.pl/Reengineering_Mathematics reengineering mathematics]/
+using computers.
+
+* Quick Links
+ * [http://www.nongnu.org/hdm HDM homepage on Savannah]
+ * [[file:Obtaining the current HDM CVS archive.org][Obtaining the current HDM CVS archive]]
+
+* Discussion
+
+** Directory and Overview
+
+/For a relatively current and complete account of what we have
+accomplished and where we are headed, please refer to the [[file:HDM Directory.org][HDM Directory]]/.
+
+For a depreciated but still potentially interesting
+decomposition into subject areas, see 
+[[file:The important components of the HDM project.org][The important components of the HDM project]].
+Here, briefly, is an overview of four high-level
+areas of inquiry, discussed in detail in the Directory,
+which seem to cover the technical portions of the
+project:
+
+; Mathematics:  This is what the project is "about".  To target mathematical knowledge in the long run, we need to assemble some core (meta-)mathematical knowledge early on.
+; Linguistics: We would like to find automated ways of "ripping" mathematical knowledge from existing texts, in order to save time and effort associated with typing data into the computer.  Natural Language
+Processing is generally considered to be a Hard Problem(tm).  Our ansatz is that it is at least somewhat easier where mathematical language is concerned.
+; Artificial Intelligence:  Here we are concerned with all of the myriad issues related to managing and utilizing a body of knowledge about mathematics.
+; Human-Computer Interaction: This will be a relevant topic at all stages of the project (writing code, writing math, trying to access information stored in the computer, interacting with other project participants, etc.). We might say that this is the glue that holds this all together.
+
+** Related work
+
+A project this broad is necessarily related to lots and lots of other
+research, both completed and on-going.
+Integrating results and work-effort from other efforts will be
+of fundamental importance to the HDM project. (Integrative thinking is
+important for the HDM product, too, of course!)
+Accordingly, here is a fairly prominent link to a page with 
+/[[file:HDM-related things to check out.org][HDM-related things to check out]]/.
+
+** What will make HDM different from other computer-math systems?
+
+This is a question we frequently hear.  A quick answer is that HDM will be:
+
+ * Comprehensive;
+ * NL-compatible;
+ * Agential;
+ * Correct (wherever applicable); and,
+ * Free as in Freedom.
+
+**  Further discussion: Things to think about & discuss elsewhere!
+
+ * [[file:An explanation of HDM prototype numbers.org][An explanation of HDM prototype numbers]]
+ * [[file:HDM release timeline.org][HDM release timeline]]
+ * [[file:Updates to the HDM documentation.org][Updates to the HDM documentation]]
+ * [[file:Focused HDM subprojects.org][Focused HDM subprojects]]
+ * [[file:HDM and computer algebra systems.org][HDM and computer algebra systems]]
+ * [[file:HDM and mathematical AI.org][HDM and mathematical AI]]
+ * [[file:HDM funding.org][HDM funding]]
+ * [[file:Any reason this should work.org][Any reason this should work]]
+ * [[file:From here to there - HDM planning.org][From here to there - HDM planning]]
+ * [[file:From time to time - The HDM plan.org][From time to time - The HDM plan]]
+ * [[file:From me to you - Still more HDM planning.org][From me to you - Still more HDM planning]]
+ * [[file:metamathAndHdmPhaseI|Plans involving HDM together with Metamath.org][metamathAndHdmPhaseI|Plans involving HDM together with Metamath]]
+ * [[file:JACKYL|JACKYL - a foray into proving theorems.org][JACKYL|JACKYL - a foray into proving theorems]]
+ * [[file:HDM and logic agnosticism.org][HDM and logic agnosticism]]
+ * [[file:HDM and interdisciplinariness.org][HDM and interdisciplinariness]]
+ * [[file:Mathematical Theory of Mathematics.org][Mathematical Theory of Mathematics]]
+
+----
+[[file:Projects.org][Projects]]

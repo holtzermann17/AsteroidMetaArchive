@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+calendar:2005
+
+----
+We can also go further into the future... if you need to.
+Use, e.g. <nowiki>calendar:2010</nowiki>, or scroll the calendar
+using the built-in "previous" and "next" links.

@@ -1,0 +1,44 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* NSF ALT Grant Not Funded
+
+The NSF declined to fund our grant for the Advanced Learning
+Technologies Programme.  This was largely expected, due to a 
+very tight funding situation. For details and discussion, head 
+over to
+
+http://planetx.cc.vt.edu/AsteroidMeta/NSF_ALT_2005_Grant_Proposal_Rejection
+
+* Help for HDM project from a Speagram author= 
+
+Lukasz Kaiser, one of the authors of the Speagram parser, contributed
+some code showing how to use this parser to transform day-to-day
+math expressions into our version of computer-understandable code:
+
+http://planetx.cc.vt.edu/AsteroidMeta/using_a_powerful_standard_parser
+
+HDM project members plan to review the submission and see if Speagram
+really can be used as part of the HDM's parsing system.  Further help
+with this task and other parsing-related issues from new contributors
+would be entirely welcome!
+
+* Discussion
+
+Last week seemed abnormally quiet.  Maybe people are sick of working on
+wikis and want something better? ;)  Well, the scholium system has
+been coming along and I would encourage everyone to take a look at it in
+HDM CVS.  The document itself should be interesting, and the functionality
+in the code is steadily improving.  Not yet ready to deploy, but I may
+make an announcement about beta testing later this week.  In the mean time,
+I hope people are still going to put some time in on the wiki, even if it
+is just a few words about what else you're working on.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Actually I have reviewer comments for rejection of the NSF ALT proposal to post.
+--[[file:akrowne.org][akrowne]] Sun Jul 31 15:26:26 UTC 2005
+
+Too bad about the grant, but I liked the positive comments from
+many reviewers.  All in all it gives us some ideas for how to
+"grow".  Thanks for noting this event in the bulletin. --[[file:jcorneli.org][jcorneli]]

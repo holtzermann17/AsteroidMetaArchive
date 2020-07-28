@@ -1,0 +1,21 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+An atom is not necessarily in a list of course; they are just the
+elements of the set /S/ you were talking about in the [[file:list.org][list]]
+entry.
+
+Also, in lisp you can have atoms like 
+
+   atom.helium'
+
+I don't know exactly what the limits are, but I would think that
+the only rule is that the atoms can contain parens, or /be equal to/ one of quote, quasiquote, or period.  There may be more to it, lots
+of little rules that I don't understand.  I'm not sure, for example, why
+
+  't
+
+is an atom, but emacs says it is.  Also, different Lisps are probably
+going to have slightly different ideas of what is an atom and what is not.
+
+Back to [[file:atom.org][atom]]

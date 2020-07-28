@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here is a page to organize my javascripts and other ones I find useful, hopefully others can find them useful.
+
+Here is a link to a greasemonkey script for blocking Google ad sense.  Remember use with 'caution' (i.e. only block sites you want to), the more ads we 'block' and don't use means a possibility of different advertising methods evolving or lost revenue for our favorite sites.
+
+http://docs.g-blog.net/code/greasemonkey/hide_google_adsense.user.js
+
+----
+
+Can Google "tell" that a given site is being blocked?  --[[file:jcorneli.org][jcorneli]]

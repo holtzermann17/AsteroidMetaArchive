@@ -1,0 +1,81 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+On this page, users of PlanetMath who are interested in the future of
+the site can collaborate in the process of drafting a *roadmap for PlanetMath*.
+
+** Topics of Concern
+
+ * The fact that we don't have a clear roadmap already is, in some sense,
+a very serious concern.  However, this could be partly explained in
+light of one *positive* aspect of the site, which is that, apart from a
+small amount of "routine maintenance", !PlanetMath's status quo seems
+to be "functional"; indeed, the site as it currently exists is, in a sense,
+"self-maintaining".  And yet, for those of us who are interested in
+trends and progress, this is not exactly satisfying.  We would like
+to see different kinds of growth, achievement, and enhancements to
+the site; perhaps we're eager to play part in the evolution of mathematics on
+computers, or the internet, or just "mathematics as a human endeavor".
+
+ * A related problem to the one mentioned above is "saying what we mean
+by roadmap".  I propose that the roadmap should be "nonlinear" (this
+is why I'm starting with a bulleted list instead of a numbered list,
+for example).  I also propose that it should have some "buy in" from
+at least the current board of directors, if not also a significant
+portion of the current PM community.
+Indeed, a continually developing roadmap should be a way to create a /useful/ "institutional
+memory"; I hope that this document will therefore be of lasting
+value (both as an artifact and as a locus of an important community
+process).
+
+ * People who care about !PlanetMath should have a chance to see -- and,
+moreover, to say! -- where it is going.  Developing the roadmap
+should be open to everyone.  (See
+[http://metameso.org/cgi-bin/wiki.pl/Best_Practices this page] on "best practices".)
+
+ * Turning this bulleted list into a functional tool will take some
+time and effort.  In addition to distilling the topics of concern,
+we'll probably want to translate them into a set of
+ *deliverables, prices, estimated project durations, and dependencies*.
+
+ * /We need:/ A more heavily moderated version of the site with sub-areas outside
+  of the math encyclopedia for research, applications of mathematics
+  in science, and other topics.  (contact person: [[file:James.org][James]])
+
+ * /We need:/ Fundraising to build organizational capacity so that we can hire
+  operational and system administrators and additional programmers.  (contact person [[file:jcorneli.org][jcorneli]])
+
+ * /We need:/An interface redesign (contact person: kanwei/roger/aaron)
+
+  * A generally "cleaner" look. What do I mean by that? Part of it is softer colors, crisper type, and less clutter (for example, the large text block at the top, and the large number of frames with lots of entries in them).
+
+  * More emphasis on the encyclopedia content and less on the forums. Ideally I'd like to see the forum list in the center replaced by a scrolling list of newish content, with new and revised entries interspersed with some identification as to which is which.
+
+  * A thread-based forum browser.
+
+  * An integrated search screen that would allow searches by author, by keyword, or by MSC.
+
+  * An interface that pushes some of the content out of the main screen and into tabs, or into pages accessed by a link click - for example, the high scores list, the request list, the "members only" links - in order to provide more room for content on the home page.
+
+  * A revised interface for entry creation and editing.
+
+  * A revised interface for navigating the forums and corrections. Perhaps it's just me, but I really don't understand what the little red triangle does when I'm browsing a forum entry as opposed to the "top" link. Perhaps this would be better if we integrated a standard forum browser code base.
+
+ * /We need:/ general coding improvements and other design and planning issues
+(contact: the !PlanetMath board as a whole)
+
+  * Email integration with forums (contact persons: [[file:jcorneli.org][jcorneli]]/[[file:akrowne.org][akrowne]])
+
+  * CVS or similar backend, other aspects of a "PlanetMath CLI" (command-line interface)
+
+  * A PlanetMath Web API (which should be conceptually similar to the CLI)
+
+ * /We need:/ Educational enhancements
+
+  * Course-packet generation (contact persons: jcorneli/akrowne/ross moore)
+
+ * /We need:/ To be connected to other relevant projects that combine computers and math.
+
+  * We should start by maintaining a list of links to other projects (e.g. SAGE, ASCIIMath) and describe
+how these projects either are used by or with !PlanetMath or could be used by !PlanetMath or how !PlanetMath
+could be of use to these projects.

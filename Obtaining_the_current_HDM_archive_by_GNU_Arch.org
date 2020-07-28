@@ -1,0 +1,17 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+If you haven't used GNU Arch before, you will need to set up your identity in the system.
+
+  tla my-id "Your Name <your@email.address>"
+
+To build a local archive of the HDM project pages, use these commands:
+
+  tla register-archive hdm@math.utexas.edu--2005-main-SOURCE http://www.ma.utexas.edu/~hdm/2005-main
+  tla make-archive --mirror-from hdm@math.utexas.edu--2005-main-SOURCE ~/hdm-mirror
+  tla archive-mirror hdm@math.utexas.edu--2005-main
+  tla get -A hdm@math.utexas.edu--2005-main hdm--site--0.1 hdm-site
+
+Finally, if you aren't planning to use Arch for anything else, you might as well run this:
+
+  tla my-default-archive hdm@math.utexas.edu--2005-main

@@ -1,0 +1,19 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Right now, I don't think you really can create a mirror.  We would probably need a functional [[file:bidi system.org][bidi system]] 
+updating. --[[file:jcorneli.org][jcorneli]]
+
+You can create a clone instance (albeit one that will gradually diverge from the
+planetmath.org site) by restoring from our nightly backups.  I will provide
+these upon request.  --[[file:akrowne.org][akrowne]] Thu Feb 17 16:12:29 UTC 2005
+ 
+: Couldn't the clone instance have its code adjusted so that all /editing/
+requests were redirected to the main site, but all /viewing/ requests were
+handled locally?  I don't know if this would give us a huge advantage, but it
+might be something (??). --[[file:jcorneli.org][jcorneli]] Sun Feb 27 15:21:22 2005 UTC
+
+:: That would work, but there is no established system for database synchronization after the 
+initial setup.  Also, how to load balance such instances, I know not.  If someone wanted to set 
+up their own mirror with the caveat that the mirror would mostly be for their own use, they could
+go right ahead and do it this way. --[[file:akrowne.org][akrowne]] Sun Feb 27 16:26:38 UTC 2005

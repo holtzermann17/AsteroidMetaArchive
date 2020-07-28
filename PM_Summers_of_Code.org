@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is the central page for PlanetMath's official coordination with the Google "Summer of Code" program.
+
+*  Overview
+
+The Summer of Code (!SoC) program is put on generously by Google, and
+was begun in 2005.  In the program, students are paid to intern to
+write code for open source projects.  The students are paired with
+mentors on the projects.  Most of the pay goes to the interns, to
+support them, but a small honorarium goes to the open source project.
+
+ * link to the [http://code.google.com/summerofcode.html official Summer of Code page]
+
+*  PlanetMath.org's participation
+
+PlanetMath is an open source project, and [[file:PM.org.org][PM.org]] also hosts the
+development of a number of other open source projects.  These projects
+are in our opinion worthy of Google's support (and yours!), and so
+we've thrown in our lot with the !SoC program.
+
+ * [http://code.google.com/soc/plmath/about.html The official PlanetMath SoC page on code.google.com].
+ * We're coordinating this year's activities on this wiki, at [[file:2008 PM Summer of Code Coordination.org][2008 PM Summer of Code Coordination]].
+
+*  Who Can Participate?
+
+The program is intended for students.  According to Google:
+
+: In order to participate in the program, you must be a
+student. Google defines a student as an individual enrolled in or
+accepted into an accredited institution including but not necessarily
+limited to colleges, universities, masters programs, !PhD programs and
+undergraduate programs. You should be prepared, upon request, to
+provide Google with transcripts from your accredited institution as
+proof of enrollment or admission status. You must also be eligible to
+work in the country in which you'll reside throughout the
+duration of the program.
+
+See [http://code.google.com/soc/studentfaq.html Google's FAQ] for
+other important details.
+
+*  Historical
+
+ * [[file:2007 PM Summer of Code Coordination.org][2007 PM Summer of Code Coordination]]
+ * [[file:2006 PM Summer of Code Coordination.org][2006 PM Summer of Code Coordination]]
+ * [[file:Google_Summer_of_Code_2005_Programme|2005's SoC page.org][Google_Summer_of_Code_2005_Programme|2005's SoC page]].
+
+* Discussion
+
+ * [[file:What makes a good PM summer of code project.org][What makes a good PM summer of code project]]

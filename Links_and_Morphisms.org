@@ -1,0 +1,46 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+On the page [[file:Against Concepts.org][Against Concepts]], I talk about "vectorless contributions"
+in an off-handed and maybe even mildly disparaging way.  Please note
+that this is just evokative language.  Actually, in accordance with
+the ideas outlined at [[file:Arxana's linking model.org][Arxana's linking model]], I think every contribution
+is going to have some "vectors" -- in the form of "links" -- that are associated with it (at least implicitly).
+E.g. every word in the contributed text is somehow an implicit link to some definition
+of that word.
+
+Indeed, my sense these days is that everything is interpretable as a "vector" -- or, probably better put, a "link" or "link complex" --
+and when I think of this world, I am reminded of what little I know about morphisms.
+
+Since I don't know all the right language (which might not exist, although that would be weird), for
+now, it seems semi-appropriate to talk about vectors with additional vectors attached to them (moving them in some other direction), or decomposing
+into a set of sub-vectors (implementing the idea).  But this is just more
+evokative language.  Eventually I hope this can be clarified and become
+part of our collection of mathematical writeups (e.g. for August).
+
+--[[file:jcorneli.org][jcorneli]]
+
+The important fact about morphisms in a category is that the composition
+of two morphisms is again a morphism.  Without composition, what you have 
+is a [http://planetmath.org/encyclopedia/DiagramScheme.html precategory].
+By the way, I just made an 
+[http://planetmath.org/encyclopedia/IndexOfCategoryTheory.html index for category theory]
+on PM; I dream of one day filling it in with expository text and examples
+so it could serve as some sort of treastise on the subject.
+
+Next week, after the current round of organizational work settles down,
+I plan to put a quantity of quality time into the scholium system both
+on the theoretical end and the hacking end.
+--[[file:rspuzio.org][rspuzio]]
+
+Some examples with the property you describe:
+
+ * If A links to B, and B links to C, then A links to C /through B/,
+so the "composition of links", while probably not a "link" in the
+database, is still a pretty reasonable "linking object".
+
+ * if we look at articles as linking objects (say, via their bags of
+words), define "composition" of A and B to be concatenation into a new
+article (so, a linking object).
+
+--[[file:jcorneli.org][jcorneli]]

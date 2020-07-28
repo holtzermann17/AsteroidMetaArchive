@@ -1,0 +1,55 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Object Adaptation
+
+/Object adaptation/ is a technique of specifying how to transform an object
+supporting one protocol into an object supporting another protocol.
+
+A /protocol/ is simply an expectation of certain operations and behavior for an
+object, regardless of its implementation (much like an interface).  We specify
+an adapter by registering an object that can transform an object supporting one
+protocol into a new object supporting another protocol.  The adapter might
+modify the object itself, or wrap the object with another object, or construct a
+new one using the target object's data.
+
+In PlanetMath, we might specify object types as protocols.  Example protocols
+might be encyclopedia entries, requests, messages, corrections, etc.  There
+would probably be a class that corresponds to each protocol.  Where it makes
+sense, we could define adapters between particular protocols, such as an object
+that can transform messages into corrections.
+
+: I guess you mean that these are /objects/ that about which we could define
+protocols?  Or do you really mean to refer to them as "example protocols" (in
+which case I fear I'm terribly confused)? --[[file:jcorneli.org][jcorneli]] Tue Feb  8 22:49:00 2005
+
+Consider messages and corrections as protocols.  The message protocol is basically a definition
+of what makes an arbitrary object a message.  The message protocol might state that a message object
+has parent, author, subject, body attributes (the values of each of these attributes would each be
+expected to support particular protocols as well).  It might also specify that an operation exists
+to attach a new object supporting the message protocol to it (that is, a reply).  We would probably
+have a canonical class for creating objects that support the message protocol, but it would be possible
+to have objects of other types that also support this protocol.
+
+Similarly, the correction protocol is a definition of what makes an object a correction,
+and in our case would probably be a specialization of the message protocol.  A correction
+would specify the same attributes and operations as a message, but it would also specify operations
+for accepting or rejecting the correction (plus other behavior related to nagging, etc.).
+
+We could then define an adapter.  We would register it as supporting adaptation of objects of the canonical
+message type to objects supporting the correction protocol.  What this would mean is that the adapter can be called with
+any object of the canonical message type and it will return an object of some arbitrary type that supports the
+correction protocol.  The adapter might just use the canonical correction type and populate it with details from
+the message, or it might construct a wrapper, but in either case the result is, for all intents and purposes, a correction.
+
+Adaptation has many more uses beyond this simple example, but this particular example addresses one of the
+[http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/No%c3%b6sphere_Niggles Noösphere Niggles] that Aaron mentioned.
+
+*  Examples
+
+ * http://www.python.org/peps/pep-0246.html
+ * See NoösphereProtocols.
+
+---- 
+* Comments
+: To the person or persons updating this page: *Please* sign in, create a "homepage" and try to remember to sign your edits.  This will make communication much easier.  And please see the draft [[file:Policy.org][Policy]].  Thanks --[[file:jcorneli.org][jcorneli]] Wed Feb  9 10:16:57 2005

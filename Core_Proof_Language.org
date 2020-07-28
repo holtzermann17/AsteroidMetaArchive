@@ -1,0 +1,480 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(Original author: [[file:marnix.org][marnix]])
+
+**  Introduction
+
+There is nothing new here in essence, but the new form might be interesting
+to some of you.
+
+Let me start with a big /thank you/ to [[file:norm.org][norm]] and [[file:raph.org][raph]].  I'm just fiddling a bit with the great things they've done.
+
+This page describes an experiment in designing a core proof language that is
+essentially the same as that of [[file:Ghilbert.org][Ghilbert]] (and by extension, very similar
+to that of [[file:metamath | Metamath.org][metamath | Metamath]]).
+
+However, it only offers a *proof* language.
+
+It therefore removes four aspects from Ghilbert that are necessary
+for usefulness in practice, but not necessary for the theory: "typing", i.e.
+kinds and terms; "naming" statements, theorems, and hypotheses; module
+structure; and verification (including definitions).  All these can be layered
+on top of this simple proof description language.
+
+I consider the sparsity of this language a feature.  In my mind, this language
+comes even closer than Metamath and Ghilbert to the dream of an 'assembly
+language' for proofs, which can be used to do 'distributed mathematics'.  See
+also [[file:How to Check Proofs.org][How to Check Proofs]].
+
+Before I continue, let me point to a work-in-progress at
+[http://home.solcon.nl/mklooster/repos/hmm/HghCore.xhtml HghCore.xhtml],
+which attempts to implement the below description.  (Note that
+[http://home.solcon.nl/mklooster/repos/hmm/HghCore.lhs the .lhs source]
+is executable working code.  Well, at least I've written a couple of test
+cases.  Check out the entire
+[http://home.solcon.nl/mklooster/repos/hmm/ Hmm darcs repository]
+if you like.)
+
+(No, no fancy name yet.)
+
+**  The language
+
+The basis of the language is formed by Ghilbert expressions.  In Haskell notation:
+
+  data Expression = Var VarName | App ConstName [Expression]
+
+The square brackets here indicate a list of zero or more expressions.  (I'm not going to bother with a concrete representation here, but note that these expressions are trivially encoded as LISP S-expressions.  This is an abstract language, at least for now.)
+
+A Ghilbert axiom or theorem (stmt or thm) is basically an inference rule:
+
+  data InferenceRule = InferenceRule {
+              disjointVariableRestrictions :: [(VarName, VarName)],
+              hypotheses :: [Expression],
+              conclusion :: Expression
+          }
+
+Such a rule says: if we know all hypotheses to be true, we also know the conclusion to be true.  This holds for each consistent substitution of variables by expressions, as long as the 'disjoint variable restrictions' are obeyed.  (For brevity, I will ignore these restrictions in the rest of this description.)
+
+As an example, one simple inference rule is
+
+  for all P, Q, and R (without restriction),
+       if Q <-> R holds, then (P \/ Q) <-> (P \/ R) holds
+
+or in a picture:
+
+          Q <-> R
+  -----------------------
+   (P \/ Q) <-> (P \/ R)
+
+Nothing new so far: all this is standard Ghilbert (and Metamath) stuff.  As is what follows.
+
+Now for the definition of a proof: basically it is a description how inference rules can be 'clicked together' to form a new inference rule.  Or put differently, it is a 'program' built out of inference rules that can be executed, and results in a new inference rule.
+
+Or even simpler, a proof describes how a theorem follows from other theorems.  (Now, that makes it sound trivial, doesn't it?  That's intentional :-)  The structure of a proof is as follows:
+
+  data Proof
+          Hypothesis Expression
+        | ApplyRule [Proof] [Expression] InferenceRule
+
+Let me explain this by example.  Here is a possible proof:
+
+  ApplyRule
+       [Hypothesis {-. F \/ G}
+       ,ApplyRule
+            [Hypothesis {G <-> H}]
+            [{-. F}]
+            "        Q <-> R
+             -----------------------
+              (P \/ Q) <-> (P \/ R) "
+       ]
+       []
+       " P     P <-> Q
+        ---------------
+            Q          "     
+
+(Notational conveniences: I've used {...} and infix notiation for expressions, and "...picture..." for inference rules.)  For the initiated: the above proof format is essentially the same as the Ghilbert proof format.  The only things I did was make the proof tree structure explicit, and "inline" the inference rules and hypotheses instead of referring to them by name.
+
+This proof can also be visualized in the following inference tree:
+
+                            G <-> H
+                 ----------------------------- (with P := -. F)
+   -. F \/ G      (-. F \/ G) <-> (-. F \/ H)
+  --------------------------------------------------------------
+         -. F \/ H
+
+From this picture it is easy to see what inference rule this proof proves:
+
+   -. F \/ G      G <-> H
+  ------------------------
+         -. F \/ H
+
+or in words,
+
+  for all F, G, and H,
+       if both -. F \/ G and G <-> H hold, then -. F \/ H holds
+
+Actually, we haven't proven this inference rule, but rather that it follows from the two other inference rules.  That is important.  A proof determines a relationship between inference rules: it establishes that an inference rule can be derived from one or more others.
+
+In other words, a collection of proofs leads to a 'web' of inference rules (theorems) that follow from each other.
+
+Of course there are a number of restrictions for a valid Proof, and in particular for a valid !ApplyRule: the most important being that there is one sub-proof for each hypothesis of the inference rule that is applied.  Validating this correctness is the task of the proof 'interpreter'.
+
+**  Conclusion
+
+All I've done above, is to cut the proof language out of Ghilbert, and make it into a stand-alone language.
+
+What do I want with this?  My vision is to have a web-based database of proofs that anyone can contribute to.  These would be proofs in the above language.  The website can then show all proofs, just like the Metamath site does.  It can show all theorems (inference rules), and visualize how the proofs connect the theorems together.  And it can add features like naming, and 'modules' of related theorems (e.g., the collection of all axioms for the real numbers).
+
+(It would also be nice to have something to convert different formalizations of essentially the same mathematical theory, just like IMPS' 'little theories'.  But that's further into the future for me.)
+
+The nice thing about all this, is that we can have a database containing just proofs.  No names for theorems, no modularity, no decisions about is-this-an-axiom-or-a-definition-or-a-theorem.  Plain and simple and verifiable proofs.
+
+Enough writing for now.  Let me know what you think.
+
+**  Discussion
+
+Hi, I share your interest in providing math-like *activities* in a
+collaborative environment, but I am not sure if I understand the
+benefits and advantages of your specific proposal over, say,
+Ghilbert or Metamath.
+
+You say "The only things I did was make the proof tree structure
+explicit, and "inline" the inference rules and hypotheses instead of
+referring to them by name."
+
+Are you proposing to use total redundancy throughout your
+database? 
+
+How does your system provide "Plain and simple and verifiable 
+proofs."? It has not been my experience that real world proofs
+are simple or plain, simply due to their length and the 
+complexity of the formulas involved. 
+
+Also, have you swept the "metaphysical dirt" under a rug if your
+database consists of nothing but the structures you have provided
+here? What do the ASCII symbols mean? Where are the grammar and
+notation for your examples?
+
+I look forward to your continued greatness and leadership in
+achievement, so please do not take my questions as a negative
+inference. The work is important enough to discuss, that's all.
+
+--[[file:ocat.org][ocat]] 16-Jun-2006
+
+
+**  More discussion
+
+If I understand this, [[file:marnix.org][marnix]], you are trying to achieve complete modularity by
+making the proof independent of axioms and definitions.  And to do this,
+rather than refer to an earlier theorem by name (which in turn has its own
+proof naming even earlier theorems and eventually axioms), you simply
+state the hypotheses+assertion made by the earlier theorem in place of
+its name.
+
+: (Let me reply in-line per paragraph.)  Yes, that is a very good way to put it.
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+(While, as [[file:ocat.org][ocat]] suggests, it will eventually
+be important to pin
+down the exact grammar, etc., right now I just want to make sure I 
+understand the overall concept.  So no details of syntax or grammar
+are implied in my discussion.)
+
+: Nor in mine.  [[file:ocat.org][ocat]]: In my discussion above I purposely stayed
+away from a specific syntax.  Perhaps that made things less clear,
+but I didn't want to upset the people that dislike S-expressions, nor
+on the other hand those who cannot read anything else.  (I thought the
+Haskell syntax description was readable enough.  I may have been wrong.)
+That is also
+the reason why I haven't said anything about any implementation
+details such as efficient storage of proofs in this core language,
+doing unification and theorem lookup efficiently, or presenting
+formulas nicely for human consumption.  These are things that will be
+important for a practical implementation, but not for presenting
+the underlying idea.
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+Let's take a typical proof, say Cantor's theorem
+[http://us2.metamath.org:8888/mpegif/canth.html canth] which
+has one hypothesis canth.1:
+
+  canth.1:   A e. V      =>    canth:   -. F : A -onto-> P~ A
+
+There are 28 non-syntax theorems referenced in its proof:  forn fof id
+fveq2 eleq12d negbid elrab baibr nbbn eleq2 con3i sylbi syl rgen ffn
+fvelrn biimpd con3d ralnex syl5ib mpi ssrab rabex elpw mpbir mpbiri 3syl
+pm2.65i
+
+A couple of them are:
+
+ forn:   ( F : A -onto-> B -> ran F = B )
+ pm2.65i:  ( ph -> ps )  &  ( ph -> -. ps )  =>  -. ph
+
+So if I understand you correctly, basically, instead of "forn" you would
+say "( F :  A -onto-> B -> ran F = B )", which in effect becomes a kind
+of hypothesis for the canth theorem.  This would be different from the
+"real" hypothesis canth.1.  For example, pm2.65i has its own hypotheses,
+which then become "hypotheses of hypotheses" so to speak.  But I think
+what you are saying is that forn, pm2.65i, etc. are actually "local
+axioms" from which the proof is derived, and they are essentially
+different from the ordinary hypotheses (canth.1 in this case) of the
+theorem under proof.
+
+: Yes, that's precisely the idea.
+Basically the distinction between theorems
+and axioms is blurred.  A proof is saying, "If we assume
+these statements to be true, then we know that this other statement
+is also true."  And given a database/collection of proofs, one can
+say things like, "If we assume these statements as axioms, then those
+statements follow as theorems."  Which is precisely what you describe below.
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+I think you propose to indicate the substitution instances into
+these "local" axioms used for each
+proof step, although in principle that is automatically computable using
+the Metamath Solitaire's condensed-detachment-with-$d-checking
+algorithm.
+
+: Well, like Ghilbert, I only give the substitution instances for all
+variables that are in the conclusion of the used inference rule, but
+not in any of its hypotheses.  For example, when you apply the inference rule
+<nowiki>"from G <-> H follows (F \/ G) <-> (F \/ H)"</nowiki>
+to a subproof with a conclusion of the form
+<nowiki>"...A... <-> ...B..."</nowiki>,
+then it is not yet clear what the
+conclusion will be.  In Ghilbert one has to specify the expression that must
+be substituted for F.
+
+: The only thing other thing I see we could do, is to take the most
+general conclusion (in this case:
+<nowiki>(Q \/ ...A...) <-> (Q \/ ...B...)</nowiki>,
+where Q is a fresh variable).  I'm not sure whether this is feasible.  If it is,
+this is a simplicification that can also be applied to Ghilbert.  That's
+something worth looking in to.  Perhaps [[file:raph.org][raph]] investigated this already?
+
+: [[file:norm.org][norm]], I'm not familiar with the algorithm you're referring to, and I
+couldn't find anything.  Can you give me an additional pointer?
+--[[file:marnix.org][marnix]], 17-Jun-2006
+
+:: Essentially, it is the 'unify' method in the
+[http://us2.metamath.org:8888/mmsolitaire/mm.java mm.java]
+program for the
+[http://us2.metamath.org:8888/mmsolitaire/mms.html Metamath Solitaire applet].
+It is probably easier just to watch how it works,
+by entering the proof of x=x described under
+[http://us2.metamath.org:8888/mmsolitaire/mms.html#q7 Question 7],
+to see dummy and distinct variables appear then disappear as
+the proof is entered.  On the screen you see the most general theorem
+as you enter the proof, and the Proof Information screen will
+show the final proof with the necessary back substitutions.
+(The algorithm works with Polish-notation wffs internally, which are
+translated to infix, etc. notation for screen display.)
+
+:: . . . I discussed this algorithm with Raph during
+Ghilbert's initial design.  The advantage is that the proofs
+are much shorter - no "syntax building" steps are needed.  The
+disadvantage, Raph feels, is that the algorithm is potentially slower
+since you have to compute the substitutions rather than just being
+presented with them.  (I forgot the O() factor he mentioned.)  This
+could be problematic if you have a million proofs in a future Ghilbert
+db, but for a standalone proof it shouldn't be a problem.  I am not
+saying this is how it should be done, but that it's just an approach to
+be aware of as you explore the sea of possibilities.  I think it's kind
+of neat and at one point considered its use for a next generation of the
+Metamath language. --[[file:norm.org][norm]] 17-Jun-2006
+
+#+BEGIN_VERSE Indeed, the decision of unification vs. explicit syntax building steps is
+one that I feel is most likely to be revisited. And, while the speed of
+verification was one concern, a greater one is the complexity of the verifier.
+Even so, it is quite feasible to go back and forth between the two approaches
+mechanically, so it shouldn't be a huge interoperability problem. --[[file:raph.org][raph]]
+17-Jun-2006
+
+To translate back to a Ghilbert/Metamath database, you'd match the math
+symbol strings of previous statements in the database to these "local
+axioms".  If the development was complete, you'd be able to eliminate
+all "local axioms" and end up referencing only earlier theorems or
+actual axioms (Infinity, Choice, etc.).  If the development is
+incomplete, no harm done:  you would just have to add the unproved
+"local axioms" to some pool of temporary artificial axioms needed to
+satisfy Ghilbert/Metamath.  That pool would also provide the nitpicking
+formalizers of the world with a to-do list of things that eventually
+have to be proved from the real axioms.
+
+: ...and "the real axioms" is also something that can depend on the point
+of view of the end user.  For example, a constructionist/intuitionist
+would select a different set of "real axioms" for set theory, rendering
+some statements unprovable (i.e., not connectable to only the "real axioms"
+through a chain of proofs) that are provable using classical axioms.
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+But all along, your new language/database doesn't care about any of
+this.  People can work on proofs of even advanced theorems
+independently, without having to develop all the background theory from
+ZF axioms before they can even get started.  That sounds quite
+promising!
+
+: That is one motivation for the module system in Ghilbert, as well. --[[file:raph.org][raph]]
+
+::  What are the essential (conceptual) differences between this core
+proof language and Ghilbert's module system?  --[[file:norm.org][norm]]
+
+#+BEGIN_VERSE The central difference is that Ghilbert's module system is a way of managing
+namespaces, and this core proof language avoids the need for many (but not all)
+names. Mainly, it uses the theorem statement as the name of the theorem (or axiom).
+It also eliminates the need for kind names by not having kinds. It's not immediately
+clear to me whether this is safe or whether you can deduce an inconsistency from
+a poorly formed but provable expression such as ( A. { x } ( ph + ps ) -> ( ph + ps ) ).
+Of the remaining important names used in Ghilbert (variables don't count because
+they're locally alpha-convertible), that leaves terms (!ConstName in the syntax
+given above). It will be interesting to see if the need for term names is more
+stubborn than the others. --[[file:raph.org][raph]]
+
+#+BEGIN_VERSE: I recently came across two interesting bits
+of Metamath that may be of interest in
+Ghilbert, though you may already be aware
+of them. 
+
+#+BEGIN_VERSE: 1) Re: the issue of "kinds" (AKA "Type Codes")
+such as "wff", "set" and "class" in set.mm:
+
+#+BEGIN_VERSE: "set" has a very interesting role in set.mm --
+it has no grammar production rules other than
+variable hypotheses. This is a feature, not
+a grammar error because it prevents substitution
+of class expressions and "Named Typed Constants"
+(i.e. "c0" -- empty set) into set variables. 
+And there are notation rules such as "wral" 
+and "wrex" that have no equivalent for class 
+variables!
+
+#+BEGIN_VERSE: This feature seems to come into play and be
+important in set.mm with respect to distinct
+variable restrictions...if "set" is eliminated
+and everything is implicitly "class", then
+substitutions would be permitted of things
+that were previously not allowed, including
+Named Typed Constants.
+
+#+BEGIN_VERSE: 2) A rarely considered fact is that $d 
+restrictions only apply to variables substituted
+into variables; any constants inside the
+expressions substituted in are ignored, even
+if these are Named Typed Constants representing
+actual classes. 
+
+#+BEGIN_VERSE: I have not yet satisfied myself regarding the 
+rationale behind this. Obviously, it makes sense
+to ignore punctuation/delimiter constants such
+as "(", when verifying distinct variable
+restrictions, but the reasoning is not so clear
+when constants naming actual class objects
+are considered. In effect, a class object could be
+substituted into two variables subject to 
+distinct variable restrictions, and no error
+message would result. 
+
+#+BEGIN_VERSE::  Here is one way to think about it.  Whenever you have a theorem
+with $d x A, it is /logically/ correct to substitute for A any class expression
+in which all variables are bound (although Metamath won't let you do
+this directly when the expression contains x, even if x is bound.)
+
+#+BEGIN_VERSE:: .
+
+#+BEGIN_VERSE::  All set variables in the definition of a Named Typed
+Constant must be bound.  For example, "(/)" is defined as "{ x | x =/= x }",
+where x is bound.  Indeed, this is a requirement for the definition to
+be sound.
+
+#+BEGIN_VERSE:: .
+
+#+BEGIN_VERSE::  Now, consider the theorem "E. x x = { A }" (the singleton
+of any class exists).  We need $d x A for this to hold.  Now, replace A
+with (/), to obtain E. x x = { (/) } with no $d.  Then, replace (/) with
+{ x | x =/= x }, to obtain E. x x = { { x | x =/= x } }, again with no
+$d.  But no $d is necessary, since x is bound on the rhs of the =. In
+fact, this can be a useful trick to get rid of unnecessary $d's:  in the
+original theorem, we are not allowed to substitute { x | x =/= x } for
+A at all, and we are not allowed to substitute { y | y =/= y } for A
+unless we specify $d x y. --[[file:norm.org][norm]] 27-Jun-2006
+
+
+#+BEGIN_VERSE: The reason may have
+something to do with set.mm's "set" types: we 
+never generate inconsistencies because there
+are no set constants -- but I still don't
+know for sure. It is clear though that 
+"set" has an important role in set.mm...
+--[[file:ocat.org][ocat]] 22-Jun-2006
+
+-----
+
+Of course, we couldn't say with certainly whether or not Choice was used
+until all the "local axioms" are eliminated.  And until they are
+eliminated we can't even be sure they are consistent.  But the
+elimination can be done independently, and it might not even concern a
+confident and competent mathematician, who is content to let the
+formalizers of the world worry about such details.  We get much closer
+to the way that math is ordinarily done by mathematicians, but in a way that
+can ultimately be made fully rigorous by the formalizers.
+
+: I rather like your distinction between "mathematicians" and "formalizers".
+I hadn't realized it, but you're right that this model fits the real
+mathematical world much closer.  And of course, the "formalizer" could
+also be a piece of software, that tries to connect the "local axioms"
+of a proof to a given set of "real axioms".  (Hey, given a web database
+of proofs and /intended/ connections between them,
+we can make our mathematical
+version of [http://setiathome.berkeley.edu/ SETI@Home], with a lot of
+'software agents' worldwide working on such problems.)
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+:: Will it be called Hmm@Home? Perhaps with a sexy screen saver that
+goes "mmmm..." when a proof is found. :)
+
+It would be interesting to see what "local axioms" a typical
+mathematician would pick.  For example, in canth, I doubt that the 28
+referenced subtheorems would be picked to result in a 32-step proof.
+Instead, the mathematician would basically write down - or more likely
+generate with the assistance of a software tool - perhaps a half-dozen
+steps that he/she "sees" as the formal proof, corresponding roughly to
+the higher-level layers of the canth proof, and those would become the
+"local axioms".  More work for the formalization people, but much more
+efficient for the mathematician.
+
+: Interesting indeed.  Also, the core language makes it easy to 'click together'
+proofs into larger ones, or to 'break up' a proof at the place
+where an important lemma is used, to create proofs that match the level of
+detail that is most interesting to the mathematician.
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+Do I envision this correctly?
+
+: Yes!
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+--[[file:norm.org][norm]] 16-Jun-2006
+
+----
+Per Ray at [[file:How to Check Proofs.org][How to Check Proofs]], this issue seems somehow meta-linguistic.
+So, one proof language should be easy to translate to others.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Can you clarify what you mean here? What do you mean with "this issue"? The idea of this 'core' language is
+that it is 'basic' enough so that higher-level languages
+can be translated to this language; and perhaps (e.g.,
+with annotations) the core language can be translated
+back to higher-level languages.
+
+--[[file:marnix.org][marnix]] 17-Jun-2006
+
+This issue of devising a core proof language, of course.  My point is fairly
+trivial, but it is that there could be many different languages that would
+satisfy the property of being a core language with the properties you
+want your core language to have.  So, I'm not talking about translating
+between your core language and higher-level languages, but between your
+core language and other languages "at the same level". 
+
+--[[file:jcorneli.org][jcorneli]]

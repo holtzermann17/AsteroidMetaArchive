@@ -1,0 +1,81 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I statrted writing a !TeX format for the comference based on the template.  It
+should be done tomorrow.  Here it is as far as has been done.  It took a while
+measuring a printout of the original file to adjust the dimensions in the
+format, and will still require a bit of tuning as well as finishing the format.
+
+: Will this work with !LaTeX? --[[file:jcorneli.org][jcorneli]] Fri Jun 17 18:45:07 2005 UTC
+
+Since all the commands are written directly in terms of primitive functions, it should work with any format.  When using this with !LaTeX or any other package, there is a possibility that some of the names of macros conflict with macros defined in !LaTeX, so they might need to be renamed.  Also, there is a possibility that !LaTeX might introduce some formatting with the formatting done here, in which case the conflict will need to be resolved.  Other than these issues, I see no reason why it would not work. --[[file:rspuzio.org][rspuzio]] 17 June 2005
+
+-----
+
+ \font\topfont=cmss6
+ \font\titlefont=cmss12 scaled \magstep 3
+ \font\authorfont=cmss12 scaled \magstep 2
+ \font\sectionfont=cmss12
+ \font\ss=cmss10
+ \font\terminalfont=cmtt10
+ 
+ \def\title#1{ \vskip 2pt
+               \hrule
+               \vskip 17pt  % Skip between rule and title
+               \hbox to \hsize {\titlefont #1 \hfill}
+               \vskip 2pt}  % Skip between title and author
+ 
+ 
+ \def\author#1#2{ \vskip 4pt  % Skip between previous entity
+                  \hbox to \hsize {\authorfont #1
+                                   \if#2? {} \else \hskip 2pt (#2) \fi
+                                   \hfill}}
+ 
+ \def\abstract#1{ \vskip 36pt
+                  \vbox{ \hrule
+                         \hbox to \hsize
+                               {\vrule
+                                \vbox to 16pt{ \vskip 3.5pt
+                                               \hbox{\hskip 5pt
+                                                     \sectionfont
+                                                     Abstract}}
+                                \vrule width5.27in}
+                         \hrule}
+                  \vskip 12pt
+                  #1}
+ 
+ \def\section#1{ \vskip 5pt
+                 {\sectionfont #1 \hfill}
+                 \vskip 5pt}
+ 
+ \vsize 9in
+ \hsize 6in
+ \parindent=0pt
+ \everypar={\hangindent=0.75in \hangafter=0}
+ \ss
+ 
+ \title{A Paper Typeset in a Free Format}
+ \author{B. L. User}{Usersville}
+ \author{T. X. Lion}{?}
+ 
+ \abstract{Since the theme of the Emory conference is free intellectual
+  content, it would appropriate to submit contributions in a free,
+  open source format.  To make this feasible, R. S. Puzio has written
+  a \TeX\ format based upon the template proposed by the organizers.
+  This article describes how to use this package.  It should be of
+  special interest to authors whose submissions include mathematics or
+  other \TeX nical matter}
+ 
+ \section{Title, Authors, and Abstract}
+ 
+ The source file begins with the title and authors, which are entered
+ using the {\terminalfont \char92 title} and {\terminalfont \char92
+ author} commands, respectively.  The former command takes one argument,
+ the title of the paper, and the latter takes two arguments, the name
+ of an author and the affiliation, If one puts a question mark in the
+ place of the affiliation, the command will not print an affiliation,
+ otherwise it will place the affiliation in parentheses after the
+ author's name.  The usage of these commands is illustated by the
+ authors and affiliation for the current guide:
+ 
+ \end

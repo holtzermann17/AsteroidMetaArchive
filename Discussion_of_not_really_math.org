@@ -1,0 +1,163 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+So what?  To me, this sounds like a silly objection.  For me, the relevant
+question here is "Is it worthwhile?".  If so, then I will work on it.  I could
+care less whether it is officially classified as mathematics or metamathematics
+or logic or computer science or lexicography or linguistics or philosophy or
+none of the above or some of the above or all of the above.  If an authority on
+what math really is tells me that this is not really math, I will gladly concede
+the point since I never had a clear understanding of what math really is let
+alone a clear idea of the exact difference between algebra, logic, and geometry.
+
+Also, it might be worth recalling a few historical precedents.  A century ago,
+when Hilbert presented his solution to the problem to Gordan's problem to
+Gordan, Gordan replied that what Hilbert did was theology, not mathematics.
+Around the same time, Cantor's set theory was subject to similar criticism; in
+fact the critics were so severe in their criticism that they drove poor Cantor
+crazy.  Nonetheless, the edifice of modern commutative algebra is based on
+Hilbert's work in invariant theory and modern set theory is an extension of
+Cantor's work.  Forty years later, prominent mathematicians used said that
+Godel's theorem was not really mathematics and even quipped that Goedel belonged
+in the school of historical studies rather than in the mathematics department at
+Princeton.  Maybe Hilbert, Goedel, and Cantor weren't doing real mathematics.
+
+For an even more interesting precedent, I would go back another two centuries
+further.  Leibniz and several of his contemporaries were critical of the
+university system because, as G. M. Ross said in his biography of G. W. Leibniz,
+
+: "/He deliberately ignored boundaries between disciplines, and lack of
+qualifications never deterred him from contributing fresh insights to
+established specialisms. Indeed, one of the reasons why he was so hostile to
+universities as institutions was because their faculty structure prevented the
+cross-fertilization of ideas which he saw as essential to the advance of
+knowledge and of wisdom./"
+
+This attitude seems to me to be exactly the reason why the scientific revolution
+of the seventeenth century which gave us modern mathematics was so successful
+and why so much of it happened in non-university settings.  As Cornelius Lanczos
+once put it, 
+
+: "/The variational principles of mechanics are firmly rooted in the soil of
+that great century of Liberalism which starts with Descartes and ends with the
+French Revolution and witnessed the lives of Leibniz Spinoza, Goethe, and Johann
+Sebastian Bach.  It is the only period of cosmic thinking in the entire history
+of Europe since the Greeks./"
+
+Given that the Hyperreal Dictionary of Mathematics may be seen as a continuation
+of the ideas of Leibniz about logic, computing, and universal language, (which
+were later developed by the "theologian" Hilbert, among others) it is no
+surprise that it is open to the same criticisms now as then.
+
+To be sure, it might only have been meant as a rhetorical hyperbole, but I would
+also say that Lanczos' statement "/the *only* period of cosmic thinking
+.../" is not quite correct.  In particular, I would argue that there was a
+resurgence of this spirit at the beginning of the twentieth century at the hands
+of such visionaries as Cantor, Hilbert, Lukasiewicz, Einstein, Grossmann,
+Goedel, Schroedinger, von Neumann, Wigner, Ulam, Weyl, Lanczos, and Wheeler.
+
+Just as the universalism of the seventeenth century gave rise to variational
+mechanics and the concept of a computing machine and a universal language, so
+too, in the universalism of the twentieth century, variational mechanics
+blossomed into the theories of general relativity and quantum mechanics; the
+concept of a computing machine became a reality; the infinitessimal calculus
+blossomed into Cantor's paradise of infinite sets; Peano, Whitehead, and Russell
+showed that modern symbolic logic and set theory is a universal language capable
+of expressing all known mathematics; and Goedel succeeded in making a rigorous
+theorem out of Pythagoras' vague notion that the universe is based on whole
+numbers.  Note that most of the people I named as being associated with this
+movement a century ago felt little or no constraint to restrict their attention
+to a single narrow specialty and felt no compunction to observe the boundaries
+between academeic disciplines.
+
+Perhaps because of my background in theoretical physics, especially general
+relativity theory and quantum gravity, and my great admiration for J. A. Wheeler
+and his magnum opus (especially the apcocriphal *Part X: Frontiers* at the
+end), I find myself somewhat connected to this tradition of cosmic thought.  At
+the same time, this attitude is becoming less popular today (and is indeed
+discouraged) as the degree of specialization increases.  I think this is
+somewhat unfortunate.
+
+To me it seems the both the speculative, imaginative, universal, Dionysian
+attitude of the genralist and the critical, rational, detail-oriented Apollonian
+attitude of the specialist are needed for any science to flourish.  In
+particular, to get a project like HDM off the ground is going to require a good
+amount of general thought and speculation which is likely to trasgree carefully
+drawn borders between academic disciplines and defy easy classification.  Of
+course, once the project gets going, there will be plenty of detail work which
+will require the painstaking approach of the specialist to complete.
+
+(More to come, it's late and time for me to take a break and enjoy Easter with
+family.) --[[file:rspuzio.org][rspuzio]]
+
+----
+
+*  Comments
+Just to be clear about it -- I think that Hersh meant that /working on the
+HDM/ is not "math", not that the HDM is not math.  
+
+I don't think that this is at odds with what you're saying above.  And I don't
+think he really meant it to come across as an objection.  It just sounds a
+little negative when you hear it from a mathematician.  I heard essentially the
+same comment from my former advisor.  At that time, I was still in math grad
+school...  and I think maybe these guys were hinting at the fact that maybe math
+grad school was not the right place to work on developing the HDM.  History
+seems to have borne out that thesis.  
+
+This relates to Karen Uhlenbeck's comment mentioned in the [[file:Guide to the HDM.org][Guide to the HDM]],
+to Leibnitz's distaste for universities, as well as to your comment above about
+the growth of specialization in mathematical training (and in the profession too
+of course).
+
+To say that "working on the HDM is not math" is not so much a criticism of
+working on the HDM, I think, as it is a criticism of the university system! --
+in which work, especially work by students, must fit into certain well-worn
+pigeonholes, or it is devalued.
+
+Which is not to say that some students couldn't work on the HDM, or aspects of
+it.  But the somewhat voluptuous/explosive/obsessive and maybe even a bit
+bizarre process of "discovery" that I went through when I was conceptualizing
+the HDM project really didn't fit into the system well.
+
+And still, maybe there are some people level headed enough to be able to think a
+lot about new things (I should say /new to them/, not necessarily new to this
+earth) and be able to do things like go to school.  Einstein, for example, did
+manage to get a doctorate (with thesis topic: "On a new determination of
+molecular dimensions").  And (according to Wikipedia),
+
+: /That same year, he wrote four articles that provided the foundation of modern
+physics, without much scientific literature to which he could refer or many
+scientific colleagues with whom he could discuss the theories./
+
+(This comment does, I think, show a tinge of hero worship, and I think it
+slights the contributions of others, both to Einstein's thought and to the
+"foundation of modern physics" apart from Einstein -- the absence of citations
+in at least one of his key papers notwithstanding.)
+
+I think that I've sketched out the "so what" as I see it, but to summarize:
+
+ * First of all, "nothing to get too worried about".
+
+ * Secondly, HDM doesn't necessarily fit into university pigeonholes well.
+
+ * Third, to work on it in a university setting, one would want to be one of
+those lucky people who have the ability and/or prestige which enables them to
+float over or through departmental boundaries - or be working in a place where
+these boundaries are not so huge - or work on some component of the project that
+does sit nicely within one of the usual pigeonholes.
+
+And also:
+
+ * The "process of discovery" is somewhat at odds with the university system,
+unless one is also very level-headed.
+
+*  Questions
+
+I've heard before that many of the ideas of QED and HDM were anticipated by
+Leibnitz, but I haven't ever learned any of the specifics.  Can you tell me more
+about how Leibnitz relates to these things, or where I can read more about it?
+
+
+Do you know why they selected historical studies as the right department for
+Goedel?

@@ -1,0 +1,19 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As any student of mathematics soon learns, there are a bewildering number of
+notations and systems of notation in use in mathematics.  However, as the
+student also learns in time, what a mathematical expression denotes is invariant
+under changes in notation.  Of course, different notations may carry various
+connotations.  We do not wish to berate the importance of these connotations ---
+they often provide hints to the reader which make it easier to understand the
+author's intentions --- but we have relegated their study to a different part of
+the HDM project and only focus our attention on the denotation here.  Therefore,
+we may make our task simpler by assuming that our mathematical expressions have
+been rewritten in terms of a simple syntax.  If one ruthlessly prunes away
+nonuniformities in notation, one can arrive at an extremely simple, if somewhat
+austere syntax such as the one we build up in this article.
+
+To describe systems of notation systematically and make precise mathematical sense out of phrases like "invariant under changes in notation" , we shall require some notions from mathematical linguistics.  In particular, we shall use the notion of a context free language.  We shall now present a definition in a form which is suited to the purpose at hand.
+
+Back to [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]

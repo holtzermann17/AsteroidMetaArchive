@@ -1,0 +1,291 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: Bruce I want you to emphasize this point cause people need to understand this,
+what is protected under the copyright is the expression. These concepts have
+been around for thousand of years but what my copyright protects is the
+expression.  My story is a science fiction story, its created in a science
+fiction form and all the subliminal esoteric stuff is unique that is my
+expression, so the concepts may not be new, nobody can own a concept but it is
+how these ideas were presented, the expression which the law protects.  
+:: -- Sophia Stewart, author of "The Third Eye" (see [http://www.playahata.com/pages/interviews/interview_sophiastewartpt1.htm])
+
+If this quote from "the mother of The Matrix" is accurate, and I think it is,
+the issue of expression poses some not-inconsiderable challenges to a project
+like [[file:PM.org][PM]]/[[file:FEM.org][FEM]].  In short, my comment on the [[file:Good communication.org][Good communication]]
+discussion page suggesting that there is no law covering "plagiarism" would
+appear to have some exceptions.  Yes, /ideas/ can not be copyrighted, but the
+expression of some collection of ideas can be.  So, taking something someone
+said or wrote (e.g. "The Third Eye") and reworking it, even very considerably,
+into something different (e.g. "The Terminator" or "The Matrix") can still be
+copyright infringement.
+
+I'm not completely certain that Sophia Stewart's case hinges on a claim of
+copyright infringement rather than "something bigger" - anyway, the case seems
+very interesting - maybe someone still has time to cover it for the Free Culture
+and the DL conference, as an example of /non/-free culture.  It doesn't have a
+whole lot to do with digital libraries... /except/ - listen to me now - I'm
+trying to point out to everyone involved in the production of [[file:PM.org][PM]]/[[file:FEM.org][FEM]] that
+simply rewording a definition you find in a book does /not/ suffice as a
+"dodge" against the requirements of copyright law.  Just ask the Wachowskis how
+the Stewart case is going (well, OK, that might be hard to do -- and it might be
+going swimmingly for them, I have no idea; it would certainly be interesting to
+see some hard facts on the case).
+
+I'll note that the only reason that the [[file:HDM.org][HDM]] might be expected to work
+(legally), is that its software is supposed to be able to "extract" ideas from
+expressions, and rework them into new expressions.  This is not intended to be a
+matter of simply rewording things, but how exactly it would work is still up in
+the air.  Insofar as math is a subject of /expressions/, above and beyond
+ideas, HDM will have met its fatal limit.  If math is found to truely be a
+subject of ideas whose expressions are in the end inconsequential, then the HDM
+has a hope.
+
+A subject like math is palpably full of ideas, and one may sometimes lose
+sight of the forest for the trees.  It is my strong caution to all writers for
+the [[file:PM.org][PM]] project and editors for the [[file:FEM.org][FEM]] project that they pay careful
+attention to the difference between ideas and expressions.  Don't be caught in
+the rewording trap.  Authors should be prepared to document the process they use
+to come up with the expression given to ideas in an entry.  If the process is "I
+don't know anymore how I learned this definition, it is basically common
+knowledge," that is probably a good thing.  If the process is "I looked it up in
+this book and that's basically what they said," there are some serious
+questions: has the author of the entry identified the main ideas of the source
+document?  Has the author found a way to express those ideas independently of
+each other, and independently of the expressions (and cumulative expression)
+given in the original source?  If these questions can be answered in the
+affirmative, then it seems likely that the article is going to be OK.  But
+without documentation of this process, a reader or editor ought to be skeptical.
+Citing sources is not enough, the author should also describe her or his
+relationship to those sources.
+
+* Some Thoughts and Comments
+
+From the purely legal point of view, what allows such copying from a book is the
+doctrine of fair use, which is codified in
+[http://www.copyright.gov/title17/92chap1.html#107 section 107] of copyright
+law.  However, as the 
+[http://www.copyright.gov/fls/fl102.html U. S. Copyright office] 
+points out, there are no hard and fast guidelines as to what constitutes fair
+use.  Rather, it is decided on a case-by-case basis in accordance with the four
+general guidelines laid out in the law.
+
+Since I know next to nothing about copyright law, don't look to me for any
+advice on this subject but, in light of what of was mentioned, it certainly
+seems that caution is in order when dealing with commercial works (as opposed to
+works in the public domain or released under some form of free license).  
+  
+In particular, I noticed that one of the provisions of the law is that the
+effect on the marketability of a work is to be considered in determining fair
+use.  In connection with this guideline, let me remind everyone of what happened
+with Math World, especially since that indirectly led to the formation of Planet
+Math.
+
+Again, I have no idea of how relevant it is legally, but from the standpoint of
+common sense, the suggestions on the process used to write an entry seem
+reasonable.  Also, I like Aaron's suggestion that, when basing an entry on an
+existing work, one should consider improving the work and adding value and that
+that too could serve as some sort of defense against plagarism.
+
+Since ignorance of the law is no excuse, it might not be a bad idea for all of
+us involved with this business of Free Math to learn more about copyright law
+and how it has been interpreted.  A factor which complicates this is that
+contributors to Planet Math come from different countries.  Since the copyrights
+to the different entries belong to their respective authors, this might be a
+potential source for added complexity.
+
+Moving from law to language, I would say that, in mathematical writing, there is
+an important distinction to be made between formal and expository writing.  For
+the present purpose, let me define "formal mathematical writing" to mean
+something written in natural language which is equivalent to a purely symbolic
+expression.  For instance, consider the following excerpt:
+
+The notion of continuity plays an important role in analysis.  A real function
+is said to be continuous if and only if, for every open set, the preimage of
+that open set is an open set.
+
+In this excerpt, I would call the first sentence expository and the second
+sentence formal.  The second sentence means the same thing as the following
+symbolic formula:
+
+: /f/ &isin; C&#8304; (&#8477;, &#8477;) &harr; ( (&forall; /X/) &thinsp; /X/ &isin; /U/ (&#8477;) &rarr; f&#8315;&sup1; (/X/) &isin; /U/ (&#8477;))
+
+Moreover, in formal, as opposed to expository, mathematical writing, literary
+considerations and devices play little or no role.  Given a particular
+mathematical formula, an author does not have much leeway in choosing how to
+express it in words.  Rather, formal mathematical prose is standardized and
+abounds with idioms like "there exists", "if and only if", "the following are
+equivalent".  The only creativity on the part of the author in formal
+mathematical writing is the creativity that goes into coming up with the
+definitions and proofs and has nothing to do with creative writing.
+
+I would argue that, in assessing an author's reliance upon sources, one needs to
+keep this fact in mind.  Formal mathematical sentences expressing the same
+equation are bound to be identical or nearly identical in different sources
+whether or not they were copied from each other because of the nature of formal
+mathematical writing.  Therefore, it would seem to me, the concerns about
+expression of ideas would only apply to the expository parts of mathematical
+writing and to the manner in which the formal parts are presented. --[[file:rspuzio.org][rspuzio]]
+9 March 2005
+
+** A few quick points in response
+
+ * "Plagiarizing" from public domain works poses no legal problem at all, but
+"free license" works, by default, invoke just as much copyright mojo as no
+license or a non-free license works.  Therefore caution must be exercised with
+free license works.  In the case of the FDL (or any /FDL compatible/ license),
+one has some explicit added liberties laid out, but also some explicit added
+obligations.  In this case, care that the obligations are met must be exercised
+whenever the liberties are.
+
+ * "Adding value" seems more like garlic (homeopathic) or a crucifix (doesn't
+work uniformly on all vampire creeds) than like a silver bullet or stakes
+through the heart, however.  Compare the Matrix saga.
+
+ * Finally, "copyrights to the different entries belong to their respective
+  authors" only in the optimistic sense: we hope this is true.
+
+*  Copying or modifying formal writing
+
+The point about formal writing that Ray made above is particularly interesting
+and important.  This point, as far as I understand it, really ought to take the
+form of a question - does is the fact that something is written formally nullify
+its copyrightability?  I would say that the answer is "no".  Computer programs
+are written formally -- more formally than most mathematics, because they
+typically are designed to be run on computers.  Yet software is copyrightable,
+and copyright law is the "domain of enforcement" for the free software movement.
+
+However, that does not mean that formally written pieces of mathematics, once
+written down, can never be written again by anyone new.  (Words, once said, can
+never be un-said, however they can be said again, and again, and again... and
+they often are.)  Many formal sentences in mathematics assert facts, and facts
+are not copyrightable.  Moreover, these sentences are written in the language of
+mathematics, and I don't think that anyone can bar anyone else from using this
+language.  (Children and childish adults can say "don't say what I said", but I
+don't know if there are any cases in which someone said "you can't use the
+language I use."  Such a case would certainly be interesting, but I don't think
+it exists; anyway, languages are tools, and therefore are not subject to
+copyright - though they could be subject to patent.)  You might think that made
+them "basically public domain" -- but actually, I think issues of "expression"
+may /still/ come into play.  
+
+If the author lays down certain meta-rules for self-expression (whether tacitly
+or explicitly) then I think it should be easy for that author to show on a case
+by case basis how her or his writing conforms exactly to this personal writing
+spec.  This is my plan for HDM, which will have a style as horrifyingly clear
+and precisely defined as what you'd see if Russell, Bourbaki, Rudin, and Knuth
+were working together to write a monograph.
+
+And even still (!) there may be some difficulties.  The very collections of
+ideas or facts you find embodied in a work have some "expression" associated
+with them, simply by dint of being found together in the same place.  Also, one
+could argue that definitions are not statements of fact, that rather, that they
+are "expressive" labelings of certain mathematical objects.  
+
+The recourse I envision for the HDM lies in the view that mathematics,
+collections of mathematical facts, and mathematical definitions, are, in the
+end, essentially all tools (just like language and words) and that, as stated
+previously, tools are not subject to copyright.  In order to wield a
+mathematical tool, one must be able to build it.  If someone comes around
+complaining that the HDM has robbed them of their "expression", I hope to be
+able to say that, no, it only built a copy of the tool they exhibited plans for.
+
+Is this different from stealing "The Third Eye" and claiming that manuscripts
+are also simply tools?  Perhaps not in a certain view - but I think that there
+may be some philosophers wise (or clever) enough to be able to make
+the distinction.  --[[file:jcorneli.org][jcorneli]] Wed Mar 09 22:57:05 2005 UTC
+
+: I have no idea what would happen if someone rewrote GNU Emacs from scratch,
+for example, based on a purely functional description of the program (such as
+the one evidenced by the program itself) without looking at the code.  Could
+this be said to be a copyright violation?  Probabably not.  But still it is not
+so simple with mathematics: one is /confronted/ with the code, and it would be
+most challenging indeed to rewrite mathematics from scratch without looking at
+any more code.  Still, I suppose with an AI that was smart enough -- let's call
+it Ramanujan Prime -- one could start with a basic foundation (the analog of
+Carr's work) and progress from there purely by auto-didacticism.  This isn't the
+plan envisioned for the HDM project, but I suppose it is a route (however
+impassible-appearing) that might remain open to us if the current plan for the HDM
+proves to be illegal.  Alternatively, we could build a weak ("low matrix
+number") version of Ramanujan Prime by detatching enough people from the normal
+matrix of day-to-day mathematics and having them work in concert according to
+the Discovery Method.  This is /sort of/ like what GNU is doing currently, or
+it would be if everyone working on GNU followed RMS's advice and used only free
+software.  This would be a very extreme approach.  --[[file:jcorneli.org][jcorneli]] Wed Mar 09
+23:05:23 2005 UTC (PS.  Note that the human elements of the Matrix are better
+thought of as parallel processing elements than as batteries, darn those
+Hollywood types; my essay on The HDM Project talks about math as a
+"hyperreality" with a very Matrix-like parallel processing aspect to it.)
+
+:: I am currently much terrified by the extremity of this proposal. --[[file:jcorneli.org][jcorneli]] Wed Mar 09 23:30:33 2005 UTC
+
+In response to "Quick point no. 3", I would say that it is much more than hope.  Unless an author specifically says so, the copyright remains with the author.  I, for one, have not yet signed any documents transferring copyright of my entries to Planet Math.  While I have given Planet Math permission to distribute these entries by posting them to the website, that is quite a different matter from giving away my copyright.
+
+Perhaps I wasn't sufficiently clear on the point, but my argument not based on a principle that "the fact that something is written formally nullify
+its copyrightability".  I was basing my argument of the more specific premise that mathematical equations cannot be protected by law.  As you point out, there are types of formal expresssion, such as computer programs, which can be protected by law.  However, I would also maintain that it is a generally accepted principle that the author of a mathematical equation cannot claim legal protection for that equation.  It might be a good idea to double-check about the extent to which it is impossible to obtain legal protection for a mathematical formula; I am quite sure that this is correct, but I only know this second-hand and indirectly, so it wouldn't be a good idea to double-check before making anything important ride upon this principle.  If so, then my argument still holds.
+
+I am even more certain of the principle that mathematical ideas and objects cannot be legally protected by their discoverer or inventor.  I would agrue that, as far as the law goes (as opposed to philosophical principles involved), this principle would be the primary distinction between the matrix article on Planet Math and the Matrix film.  In the latter case, using the same plot and characters even if one changed the names constituted infringement whilst in the former case using the same definitions, theorems and proofs with the same names is legal.  --[[file:rspuzio.org][rspuzio]] 9 March 2005
+
+: /that is quite a different matter from giving away my copyright./  YES!
+Golly, I'm sorry!  I was not being clear.  What I meant was that we hope that PM
+authors will only contribute things that they actually can legally claim the
+copyrights to!  I thought that the context would carry my point home, but I see
+I was being a tad too ironical for that to work.
+
+: /However, I would also maintain that it is a generally accepted principle
+that the author of a mathematical equation cannot claim legal protection for
+that equation./ I agree that they can not claim rights in the equation, but
+that they can claim rights in the form of its expression.  It is really just an
+extension of the "you can't copyright a fact" thing.  If the equation is
+something like "1+1=2", no one's gonna get sued for writing "2=1+1" or "I+I=II"
+-- or even "1+1=2" (of course!).  But if the equation has 200 terms in it, it
+somehow begins to look more like a (non-trivial) program, and copyright begins
+to loom.  The actual equation is as free as the air we breathe, or freer, but
+its expression may be encumbered.
+
+: /I am even more certain of the principle that mathematical ideas and objects
+cannot be legally protected by their discoverer or inventor.  I would argue
+that, as far as the law goes (as opposed to philosophical principles involved),
+this principle would be the primary distinction between the matrix article on
+Planet Math and the Matrix film.  In the latter case, using the same plot and
+characters even if one changed the names constituted infringement whilst in the
+former case using the same definitions, theorems and proofs with the same names
+is legal./  On the one hand, it is indeed the case that individual mathematical
+ideas and objects have no form of "exclusive" rights awarded them (with what
+appear to be a few perplexing limits, or exceptions -- software patents being
+the number one example of such an exception).  On the other hand, a description
+of some mathematical objects certainly has some copyright mojo.  In particular,
+some of this potent juice is invested in the particular selection of facts,
+ideas, and objects that make up the description.  In this way, a description of
+mathematical objects is really not so different from a screenplay.  Now, it may
+be that to really properly "define" a matrix (in the sense of a dictionary
+definition), you need to sketch out /this/ definition, /these/ equivalent
+definitions, /these/ associated definitions, /this/ collection of results,
+etc. -- i.e. you need to fill the Matrix "frame".  But frames are not facts --
+they are collections of facts (with some additional structure) and are thus
+subject to copyright. 
+
+: To wrap this comment up -- using any /one/ of the same definitions,
+theorems, or proofs in an arbitrary context is fine -- not illegal -- /except/
+when, in fact, that /one/ appears in a context of a significant number of
+other otherwise-free objects from the same source.
+
+: But if the Wachowskis weren't sued by 1000 people already, it means one's work
+has to come really, really close to the original collection of objects in order
+to be potentially considered as a copyright violation.  'Cause "The Matrix" was
+already known to be highly derivative from other sources before this "Third Eye"
+came along.  Another thing that has to be shown is not only that the work is
+"close" but that the author of the overly-highly-derivative work actually was
+familiar with the so-called original work.  In cases of outright copying, it
+isn't too hard to prove.  In the case of "The Matrix", the evidence is
+(supposedly) in the bag.  For some random piece of mathematical writing... might
+be somewhat harder, especially if it actually derives from two or three other
+sources.
+
+Weird stuff, huh? --[[file:jcorneli.org][jcorneli]] Thu Mar 10 03:23:52 2005 UTC
+
+As a rather different example, consider the following:
+
+http://www.clwbar.org/resipsa/december-january02/article460.html
+
+Comparing annd contrasting these two examples rather dramatically points up the difference between "derivative works" vs. "transformative use".  I think that we need to be clear on this point since it may prove important in understanding what one may or may not do when writing math entries. --[[file:rspuzio.org][rspuzio]] 14 March 2005

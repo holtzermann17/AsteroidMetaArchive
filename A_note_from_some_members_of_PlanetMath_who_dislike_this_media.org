@@ -1,0 +1,272 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** A note from some members of PlanetMath who dislike this media
+
+This page is created as a reaction from some members of the PlanetMath community to this media, AsteroidMeta (or the Wiki). The Wiki by no means represents the view of the PlanetMath community and only one page has an official character ([[file:PlanetMath_Budget_and_Resources.org][PlanetMath_Budget_and_Resources]]) to the best of my knowledge. None of the pages that are linked to that one have official character. All other pages (including this one!), views, opinions and comments are of those individuals who sign them, and should not be taken as a view of the PlanetMath community.
+
+Some thoughts: developing documents in public is definitely a good thing, if everyone has a chance to collaborate. However, one must understand that some of us ([[file:drini.org][drini]] and [[file:alozano.org][alozano]] for example) have big issues with the way the Wiki is organized and handled, which draw us away from participating in the Wiki. My ([[file:alozano.org][alozano]]) main concern is the mix of official with unofficial pages. It is true, there is one single page that says "this is official" but even this one links to a pleiades of unofficial pages. Let me quote drini:
+
+"I gave up regularly tracking the wiki because it has a lot of fluf and unrelated content to planetmath. For every planetmath related content there would be 10 pages of hdm, fem metastuff, philosophical essays, personal writings, etc. And the only way of trackign the wiki is with recent changes which put everything mixed, it's certainly not easy and discouraging. And I think several other people feel the same....[...]...but again, most (and I mean truly most) pm users don't track the wiki and I don't think they will due to its excessive noise/signal ratio."
+
+I agree word by word with what Drini says. There is a huge mix of things in the Wiki. How can perspective funders of PM distinguish what is official from what is not, what is a personal view from what is a PM opinion, what is a personal goal from what is a PM goal?? To say the least, a disclaimer should be written in the front page of the wiki, and explicitly and clearly state what is official PM stuff. Otherwise PM may be liable for content in the wiki?!
+
+Most worrying of all, is the non-existent involvement of the rest of the board in the Wiki. This should really feel alarming to you, doesn't it? From what it transpires in the google group and the board meetings, the board itself is not very satisfied with the Wiki either, or reluctant to use it.
+
+I see benefits in the wiki: public development; a very quick and interactive environment. But these points seem trumped if the members do not use it, or do not agree with the way the wiki is organized to the point of refusing to use it. Moreover, in the recent discussions Joe has hinted that if you are not present in the wiki then you are out of the decision making. So even if we fundamentally disagree with the wiki, we are forced to use it?--[[file:alozano.org][alozano]]
+
+** Discussion
+
+We do have some empirical data that we can also use to understand the role of the wiki. Let me create right now a list of the most influential people in PlanetMath, up to date. This list may be constructed in different ways, but here is my own way: first, I will include the "gods" or creators or cofounders of PlanetMath (akrowne (Aaron), unlord (Nathan Egge), logan (Logan Hanks)). Then, I will include the members who have contributed more than 10000 points to the project (those are 18 members: pahio, matte, mathcam, drini, rspuzio, djao, akrowne, CWoo, alozano, rmilson, bwebste, yark, Koro, Henry, bbukh, mathwizard, jirka and Daume). Last but not least, I will include Joe Corneli who, no doubt, is one of the most influential people around and who has also contributed a great deal. So that's the full list. I am sure I am leaving important people out, but as I said this is just one way of making such a list. Now, I will write the list and write comments next to each name, to say whether the user is a Wiki-user
+or not. By user of the Wiki, I mean *contributor*. Some of them may be reading it, but not contributing, as far as I know (please correct me otherwise).
+
+: [[file:akrowne.org][akrowne]] - use it a lot
+: unlord - does not contribute
+: [[file:logan.org][logan]] - currently he does not contribute, he did some contributions in the past,
+
+: pahio - does not contribute,
+: [[file:matte.org][matte]] - uses the wiki frequently, coordinates the real number project in the wiki,
+: mathcam - does not contribute,
+: [[file:drini.org][drini]] - has contributed but explicitly expressed he does not like the wiki,
+: [[file:rspuzio.org][rspuzio]] - avid user,
+: djao - does not contribute,
+: [[file:CWoo.org][CWoo]] - does not contribute,
+: [[file:alozano.org][alozano]] - I read it sporadically and contribute to discussions sometimes, but dislike the wiki as it is,
+: [[file:rmilson.org][rmilson]] - has contributed sporadically,
+: bwebste - does not contribute,
+: yark - does not contribute,
+: Koro - does not contribute,
+: Henry -does not contribute,
+: bbukh - does not contribute,
+: mathwizard - does not contribute,
+: jirka - does not contribute
+: Daume - does not contribute.
+: [[file:jcorneli.org][jcorneli]] - avid user.
+
+So, out of the 20 "most influential" people, only 7 contribute to the wiki (to different degrees), and 2 of those have expressed mixed feelings about it. I will not attempt to say who of the above is actually involved or not in PlanetMath organization, because that is hard to say. Also, I do not know the reasons of the above to not contribute in the wiki. However, I still believe that the number of users who do contribute to the Wiki is rather low, even alarming, which is why I brought up the issue of the wiki in the first place. So we should investigate why people are not participating there and I invite everyone again to express their opinion of the wiki, so we can improve the community.--[[file:alozano.org][alozano]]
+
+** Constructive Ideas
+
+One partial solution that comes to mind is to split completely the official stuff from the rest of the Wiki. This amounts to building another wiki which only has official stuff, starting from the front page. That way the "recent changes page" would only archive changes in official stuff. --[[file:alozano.org][alozano]]
+
+I think thats a reasonable idea.  I will think about this and am open to this and other suggestions.  --[[file:akrowne.org][akrowne]] Sat Mar 18 19:51:22 UTC 2006
+
+There would be no problem with this, but bear in mind that there are only 3 or so "official" things at this point (articles of incorporation, bylaws, and the [[file:PlanetMath.org.org][PlanetMath.org]] page.  Most of the discussion is going to be "unofficial". --[[file:jcorneli.org][jcorneli]]
+
+That's only a reason in favor of the split in my opinion, because it is very hard to discern the 3 only official pages from the unofficial ones. --[[file:alozano.org][alozano]]
+
+There is very little to be lost in providing separate streams; those who want both can still combine them. --[[file:akrowne.org][akrowne]] Mon Mar 20 23:14:47 UTC 2006
+
+Let's come up with a concrete proposal that we can then debate.  First
+of all, let's start by being concrete about which pages are being
+thought of as "official". --[[file:jcorneli.org][jcorneli]]
+
+: A proposal: split pages dealing with Planetmath only (official or not, may be distinguished by some tag) from the rest of the peripheral things, so those who are only interested on PM (as encyclopedia) and not on AI and other things don't get discouraged my the everything-mixed approach --[[file:drini.org][drini]]
+
+:: Note: your PM-centric view of AM is not realistic.  No project here is any more "peripheral" than any other, i.e., this is supposed to be a wiki about free CBPP in general.  Now, certainly, if someone wants to start a PM-only wiki, I'm sure that wouldn't be a problem, or if someone wanted to go to the lengths of setting up an Oddwiki-style "motherwiki" for the various projects, we could do that too.  It doesn't really matter to me.  However, good luck figuring out which pages deal with !PlanetMath only!  Although the wiki is not PM-centric, I think all of the other projects are PM-related.  --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE How about the PlanetMath page?  Doesn't that already split the PM-related stuff from
+everything else?  If you only want to see the PM-related stuff on this, simply browse this
+website starting from that homepage.   Maybe the "Wiki" link on the PM homepage ought to
+be redireected to this page rather than to the overall AM homepage.--[[file:rspuzio.org][rspuzio]]
+
+I believe Drini used the term "peripheral" in a relative, not an
+absolute sense.  Since his vision is focussed on PM, anything else is
+peripheral to his field of view.  Likewise Ocat and Norm might regard
+PM as periheral and metamath as central.  As for me, I like having a
+periphery to my vision because it helps me to stay well-rounded and
+find out about things which I might not otherwise care to seek out.
+
+In recent conversations, Joe, Aaron, and I have considered the
+possiblity of setting up a wiki category system.  What that would
+allow is to add metatdata to pages in the form of backwards links so
+that we could, say, mark all the pages having to do with PM stuff or
+official PM pages as such and the computer would automatically compile
+a directory of PM-related stuff.  Then, if we were to redirect the
+link on the main page of PM to this directory of PM-related stuff on
+AM rather than to the AM homepage.  This way, someone who was
+interested in PM stuff could see a listing of just the pages directly
+related to PM (which would be broken into further subcategories such
+as "official", "organizational", "content", "discussion", "related
+interest" and "miscellaneous" for further ease of navigation).  So my
+questions to Alozano, Drini, and other critics of this media are:
+Would you consider such a system as adressing the complaints you
+raise?  Are there other problems which this would not adress?  Were
+such a system implemented, how would you feel about using the wiki for
+discussing PM-related stuff?  --[[file:rspuzio.org][rspuzio]]
+
+The most cost-effective approach would probably be to create
+a pure-PM wiki, and leave "the Asteroid" for non-PM discussions.
+I notice that the PM discussions using message threads are
+very popular, and it would seem that a wiki approach to
+some of those discussions would be beneficial. Likewise,
+having this wiki for non-PM discussions is beneficial for
+Friends of Metamath and HDM...
+
+...I remember way, way back in July(?) 2005 when I located
+Joe on google and found a home for mmj2. Since
+then we have made some really great progress, with nearly a dozen
+software works related to Metamath submitted by people all
+over the world. And mmj2 has benefited from the input by
+very smart people -- the 11/1 release is actually fairly decent,
+as these things go (Hilbert-style Proof Assistanting GUI's...)
+
+I think we're making progress in the software of math/logic -- which is
+not a trivial subject, and I think, of great potential benefit to 
+Planet Earth. Yes, there are other projects elsewhere, but building 
+expertise requires *doing*... Based on what we have done here and
+learned about what people like and don't like, the vision is a lot more
+clear now. God willing we'll all do great things in the future.
+
+The first release of mmj2, here on 8/29/2005 consisted of existing
+inventions, such as the Earley Parser and the Metamath Proof
+Verification algorithm. But a lot of actual *invention* has taken
+place since then with the help of the people at this wiki. For
+example, the mmj2 ProofUnifier.java program has some interesting
+ideas about computing a digital "signature" or "characteristic"
+for a parse tree and contains a series of tests enabling "fast
+failure" of candidates for unification (more work would be needed
+for a system containing 1 million assertions rather than a mere
+10,000). And the 11/1 release 
+contains formula formatting algorithms that were invented 
+specifically for mmj2 ("TwoColumnAlignment" and "AlignColumn"). Those
+can be adapted from TMFF (text mode formula formatting) to
+the future GMFF (graphics mode formula formatting). 
+
+This is progress, 1000+ mmj2 person hours of progress! But just a
+start. No matter how great mmj2 might be, it will always be 
+unpopular -- until the day comes when math/logicians can 
+input via digital pens, voice recognition, VR gloves, etc., and
+get their output back in graphic form in the Mathematical
+Vernacular they already know. When math/logicians can just
+write formulas on a virtual electronic blackboard, with the software
+simultaneously analyzing and unifying and validating in
+the background -- and conversing with the math/logician as
+needed for clarification -- then the system might become popular.
+And of course we'll need digital audio-visual training materials
+and textbooks to provide a framework...if we could hire that Buffy
+The Vampire Slayer girl to teach logic in videos, I bet the subject
+would become a lot more popular than it is now.
+
+--[[file:ocat.org][ocat]]
+
+I don't know if it was [[file:CWoo.org][CWoo]] himself who touched this page,
+indicating that he doesn't contribute to the wiki... but of course in
+either event, he has contributed at least a little.  And anyway, I'm
+glad someone did touch this page, since the issue here seems to be a
+worthwhile thing to talk about now.
+
+I think that /if the main point of contention for !PlanetMath people
+is having !PlanetMath stuff mixed in with everything else, not the
+more basic nature of having a wiki, then Ocat's suggestion, which
+others have had before, is a good one, and someone could just follow
+it./
+
+A while ago, I wrote a page comparing
+[[file:the_relative_merits_of_wiki_and_other_workflow_management_media.org][the_relative_merits_of_wiki_and_other_workflow_management_media]].
+I am not jumping up and down in excitement about wiki -- but it has
+been a reasonably helpful communication tool for a lot of people
+(including Ocat, as described above, and myself).  I think this issue
+of communication platform is really important -- important enough that
+after working on that page, I became very involved with looking for
+the new best thing since wikis.  (For information on this work in
+progress, see [[file:Arxana.org][Arxana]]/[[file:MUSN.org][MUSN]].)
+
+At the same time, I think the issue of "which communication platform
+to use and is it really the best?" shouldn't stop people from having
+useful and valuable communications.  In the same way Ocat has invested
+many hours into [[file:mmj2.org][mmj2]] with nary a digital pen in sight, those
+people who want to pioneer any new field will have to work with
+less-than-perfect conditions, fueled mainly by their vision of what
+/could/ be.
+
+This all leads me, in a somewhat round-about way, to ask a sort of
+reverse of the question in italics above: if the problem with Asteroid
+isn't its wiki-nature, maybe the problem is with !PlanetMath's nature.
+I don't mean that the problem is fatal: I think of it more as a
+problem of definition than a problem of logic.  What is central for
+people using !PlanetMath?  What is "peripheral"?  Actually, as has
+already been illustrated by the small bunch of people using this wiki,
+the answers will be widely different for different !PlanetMath users.
+
+This suggests that if we take a user-centric view of !PlanetMath, we
+are already involved with a somewhat strange geometry.  !PlanetMath is
+covered by "cells" and these cells bear gaussians on them; the
+covering map is the user's attention.  We could say that the most
+"central" thing is the thing that collects the most density under this
+collective attention-mapping function.  But this could be misleading,
+because it doesn't take into account the ambient space that
+!PlanetMath exists within.  For example, there's [[file:Noosphere.org][Noosphere]],
+there's [[file:LaTeX.org][LaTeX]], there's the [[file:ArXiv.org][ArXiv]], there's [[file:Metamath.org][Metamath]] and
+[[file:GNU.org][GNU]] and [[file:Wikipedia.org][Wikipedia]] and many other related things.  Maybe the
+central point of !PlanetMath doesn't actually lie in !PlanetMath at
+all.  The weighted average of everyone's attention might turn out to
+be some point that no one is giving much attention to.
+
+And this might turn out to be a real tragedy-of-the-commons situation.
+
+And if this isn't enough abstraction, let me add one more little
+layer of interest -- which is that in addition to this base
+manifold and its attention density, there is also an /activity
+density/ that causes the manifold to change over time.  We are
+not all just passive viewers.  As Ocat said above, "building
+expertise requires *doing*".  Really, building anything requires
+doing, but I still think expertise may be the ideal word-choice
+for people to use when talking about !PlanetMath, since we are all
+building our own expertise, and also impacting our ability
+to "learn better".  This is what math is all about, from the very
+beginning.  
+
+The [[file:HDM.org][HDM]] project says that we should be able to take all this
+effort and produce an "expert system" for mathematics out of it,
+so again the word expertise works.  Of course, the HDM requires
+more and different work from what is going on at !PlanetMath
+currently.  Nevertheless, there seems to be a reasonable overlap
+between the interests of "!PlanetMath people" and the interests
+of "HDM people" and the interests of third parties who have a bit
+of time to share with one or both of these projects.  Is HDM
+"central" for !PlanetMath?  Most likely not, if only because
+most people don't think about it that way.  Should it be supported by
+!PlanetMath?  Well, this is part of that problem of definition I
+was talking about.  I don't really know what the answer is, but
+I do want to put the question out there, as a paradigmatic question.
+There are many others that we should be asking and talking about
+as well.
+
+--[[file:jcorneli.org][jcorneli]] 4/4/07
+
+: A sci-fi book with great insight into the problems and
+practices of programming complex systems is "A Deepness In
+The Sky" by Vernor Vinge. It may not answer your question
+but it will certainly provide questions for any answers...
+And if you want *monetary* support from PM, then just
+ask -- whether they /should/ is not the question but whether
+or not it pleases TPTB in the organization. If it fits
+their risk profile and their application portfolio then
+maybe they will hand over some cash. If they decide no, then
+you need to find other funding sources. Do what pleases you
+at a basic level, that is the only way you will achieve the
+Focus necessary to achieve your great objectives. If you
+want to go in a certain direction and no one will follow then
+you need to lead from the front, even if that means walking
+alone in the desert for 40 years... --[[file:ocat.org][ocat]]
+
+Thanks for the reference, I'll plan to check it out.  
+
+As for HDM support --
+my new approach (thanks to Tom Lenius who has been working with me
+on [[file:MUSN.org][MUSN]]) is to try to satisfy the interests of one client/application
+at a time.  Sometimes that client might be me, sometimes it might be
+another group.  Anyway, if I can draw more people in this way, we'll
+likely see some network effects that will help HDM out a lot in the
+future.
+
+One of the groups in question is !PlanetMath; see especially
+[[file:Nooxana.org][Nooxana]] on that. I don't know what the powers that be at
+PM have in mind right now, but they are apparently undergoing
+a process of figuring that out, see http://planetmath.org/?op=getobj&from=forums&id=245
+-- the order of postings there is a bit weird, but the central
+point is to host discussions with some consultants that PM
+has hired to help sort itself out, see http://planetmath.org/?op=getobj&from=news&id=341
+
+Thanks for your encouragement, now and always! --[[file:jcorneli.org][jcorneli]]

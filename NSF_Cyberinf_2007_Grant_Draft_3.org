@@ -1,0 +1,201 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page continues the work we did on
+[[file:NSF Cyberinf 2007 Grant Draft 2.org][NSF Cyberinf 2007 Grant Draft 2]] and
+[[file:NSF Cyberinf 2007 Grant Draft 1.org][NSF Cyberinf 2007 Grant Draft 1]].
+
+main page for grant proposal: [[file:grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007.org][grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007]]
+
+----
+Here is a draft 3 "release candidate":
+
+ * ([http://planetmath.cc.vt.edu/~jcorneli/draft3.tex tex])
+([http://planetmath.cc.vt.edu/~jcorneli/draft3.dvi dvi]) 
+([http://planetmath.cc.vt.edu/~jcorneli/draft3.pdf pdf]) 
+([http://planetmath.cc.vt.edu/~jcorneli/draft3.ps ps])
+
+Assuming you're all ready, we can move on to "[[file:NSF Cyberinf 2007 Grant Draft 4|draft 4.org][NSF Cyberinf 2007 Grant Draft 4|draft 4]]" shortly.
+
+It is looking like "draft 4" will have some significant changes in the
+way the text is put together, even though it won't necessarily have
+the same features as a final release.  We should talk some about our
+specific goals for the next draft!  Aaron mentioned a few specific
+tweaks below, there are probably others (and I'm sure you'll have more
+comments when you look at this latest draft.)
+
+--[[file:jcorneli.org][jcorneli]]
+----
+
+That was a nice compilation.   In general, it could probably be made much tighter
+by tweaking the spacing in the boxes and for lists.  
+
+I think this document structure is fine for a working informational draft, but I assume
+you realize ultimately we'll have to render it into multiple documents that more precisely
+fit the NSF's format (in fact, one uploads individual sections to the "!FastLane" system)
+and probably lose some of the internal structure. 
+Which is fine.  But it's just something to keep in mind as we proceed over the next few days. 
+(For example, in the PM NSF ALT grant, the background on PM had to be an appendix).
+
+Another point is that I expect to render the budget and work schedule into charts/spreadsheets. 
+E.g., it is conventional to do a GANT chart for a work schedule.
+
+--[[file:akrowne.org][akrowne]]
+
+Thanks for the comments, and, absolutely, I understand this sort of writing
+to be only for the rough drafts: the format helps make sure we get everything
+down on paper, and from there the content can be smoothed out and made presentable.
+(In general, the distinction between content and presentation is an interesting one.)
+One of the issues is finding a good way to do "meta-discussion" along the
+way; I'm hoping this rough-draft format will help with that need, too.
+
+On that note: given that we don't have a lot of time until our self-chosen deadline
+of the 1st for a publicly broadcast release of this thing, we're going to
+have to come up with some good strategy for smoothing, refactoring, and reformatting
+soon.  And still, all the relevant content hasn't been recorded here yet!
+I'm glad we've got this on the agenda, but just now I'm going to try to get
+more of the vital data typed in!
+
+--[[file:jcorneli.org][jcorneli]]
+
+I propose upping the release date a few days.  We (Joe and I) are going to meet in
+person for two days, so we could spend a few hours then finalizing the first draft
+for distribuution to our beta teasters (was a misprint, is now a neologism).
+--[[file:rspuzio.org][rspuzio]]
+
+The 2nd would probably be OK, and if so, then the 3rd would probably
+be OK too, but that's maybe the last possible day.  It seems best to
+give people a couple weeks to read and respond, and then give
+ourselves enough time to evaluate what they send back to us.  Aaron
+mentioned that he is going to be busy after the 15th, so really what's
+likely to happen is we'll keep working on this after we send it out,
+and only use the feedback we get for relatively small tweaks.  I
+suppose we can do small tweaks between the 17th and the 22nd!
+
+--[[file:jcorneli.org][jcorneli]]
+
+I am fine with either date for the first complete draft "release".
+
+Here is a version 4 I just produced.  I filled in lots of things, including
+the budget items and roles (even got the budget down a few $k without taking
+anything away):
+
+Draft 4: [http://br.endernet.org/~akrowne/planetmath/proposals/nsf_cyberinf_2007/draft4.tex tex], [http://br.endernet.org/~akrowne/planetmath/proposals/nsf_cyberinf_2007/draft4.pdf pdf]
+
+--[[file:akrowne.org][akrowne]]
+
+I like the budget stuff, and the addition of architectural sketches,
+but I can't say I find the rest to be an unambiguous success.
+Probably this is largely because I don't understand the motivation
+behind the changes.  You've removed most of the "meta-discussion" I'd
+inserted without responding to it, so I don't really know what you
+think of what I had to say there.  On the other hand, it isn't
+completely clear that what's now written in these sections is closer
+to a condition of releasability: I mean that without value judgement,
+because without more meta-discussion, I won't know precisely what the
+goal of any specific revisions to these sections is (unless I make
+them myself, and even then I might not know).  Without more
+information, I just have to say... huh?
+
+--[[file:jcorneli.org][jcorneli]]
+
+I have to say "huh" as well.  I find it next to impossible to think
+about this document coherently in its haphazardly-linearized "virtual
+note cards" format -- the scholiumificness without a scholium system
+is becoming a problem (and even if we had the scholium system, I'm not
+sure how that would help us directly with any "for delivery" document
+rendering).
+
+If this is what I'm thinking, I suspect third parties would be thrown
+for even more of a loop, especially before this thing is chopped down
+to the ~10 pages of narrative required (plus relevant appendices).
+
+I am thinking I'll just have to absorb it as best as possible, write
+out a new outline from scratch, then populate it with new prose and
+items cherry-picked from this draft.
+
+--[[file:akrowne.org][akrowne]]
+
+No, in general, what you have to do is talk more with me and Ray about
+what's going on with things we're writing together.  This is why I
+wasn't thrilled when you deleted comments I had just typed into the
+previous draft.  On the other hand, we seem to be doing OK at staying
+in touch by phone and email, e.g., our discussion after Ray and I did
+reoutline the grant, and our email exchange over the last 24 hours in
+which we formulated a plan for the next 24 hours and beyond.
+
+Perhaps the inline comments were never explained well, or the
+notecards either.  Nevertheless, I am personally finding both to be
+useful as mnemonic aids (as for their usefulness as communication
+devices, to some extent that remains to be seen).
+
+Here are some things I can say about them: (1) these notecards aren't
+meant for public dissemination, but for internal processing, and as a
+way to help guide the writing of the external draft; (2) they are only
+haphazardly linearized because they were not intended to be consumed
+linearly in the first place (indeed, I cut a set of them out of paper
+so I could rearrange them graphically, so, for me, they aren't really
+"virtual" anymore, either); (3) the fact that these cards and their intended
+organization aren't self-explanatory only serves to emphasize the need
+for better communication about what we're doing, as I mentioned above.
+I was able to physically show Ray what I had been doing with these
+(and other) cards, but I could easily tell you more about it on the
+phone when we talk next.  Finally, (4), "the scholium system" is just
+an implementation of this scholium-based document model we've been
+talking about for a couple years already: even without a computer
+implementation, the model itself is still very useful.
+
+These things won't write the grant for us, but they'll help.  However,
+time is flying so I better get back to in-band writing myself.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Quite clearly there is an asymmetry here, because I cannot possibly
+know anything about your non-linearly-arranged notecards in
+real-space!
+
+If all the above you say is true, perhaps care should be taken in
+calling this thing a "draft of the grant proposal", which carries
+certain assumptions.
+
+Yes, I agree better communication is certainly needed.  I suppose I
+deleted the comments in question because everyone has the past copies
+of the drafts, and I anticipated that the output in the form of a
+"draft" containing all kinds of intermediate commentary would be
+unweildy (which I feel has been proven correct).
+
+I dispute the claimed utility of the "scholium model" without the
+"scholium system".  I am finding this difficult to manage and question
+whether it will be cheaper to translate this document into the actual
+NSF proposal, or simply write new prose from scratch with all this
+"brainstorming" under our belts.
+
+--[[file:akrowne.org][akrowne]] 
+
+My sense is that things are coming together in a much more traditional
+format in my proposed [[file:NSF Cyberinf 2007 Grant Draft 4|draft 4.org][NSF Cyberinf 2007 Grant Draft 4|draft 4]].
+(Specifically, a format geared towards the NSF's tradition, which is
+the perfect tradition to work within!)  
+
+What I've posted there so far I call a "release candidate", because I
+want to do more work on it before passing revision control to others.
+(I'd also be willing to do the next full editing pass once I think
+this one is over, if folks want that.)
+
+Whatever these things are called (drafts, notes towards a draft,
+brainstorming, or a virtual analog hypertext toolkit, or something
+else still more intense!), they are heading in the direction of
+submitability precisely as we refer to the collection of old material
+and write new prose, just as you said.  My issue with the comments was
+that even the things we're sure aren't going to wind up in the final
+version will likely be useful to look at from time to time, and
+continue to discuss, as we go along with the revision process.
+
+At this point, any difficulties you're having with the SBDM, or with
+applying it, or with understanding my ways of applying it, will, I'm
+pretty sure, have more to do with the fact that we haven't talked
+about any of this explicitly recently, than they do with inherent
+features of scholium-based documents or the art of writing per se.
+Let's plan to talk about this stuff soon!
+
+--[[file:jcorneli.org][jcorneli]]

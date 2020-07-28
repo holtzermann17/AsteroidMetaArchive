@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page for general Q&A about hcode topics.
+
+; /How to deal with set, elt predicates?/ :
+I have for some time been concerned about the set and element predicates that
+are used in the [[file:Group Cosets.org][Group Cosets]] page.  I assume that these predicates will be
+defined in a lower level [[file:Hcode libraries|library.org][Hcode libraries|library]] and I won't need to write
+their definition here.  Actually definining these predicates seems like a useful
+task to tackle. --[[file:jcorneli.org][jcorneli]]
+
+: These terms are simply the primitive terms of sets theory, which are impilitiy
+defined by the axioms of set theory (such as, for instance, the Zermelo-Fraenkel
+axioms).  I don't see that they would require any special treatment particularlu
+different from any other mathematical object.  In the case of group theory, the
+axioms axioms of set theory are already presupposed, so all your library would
+have to do is adjoin the axioms of set theory to those of group
+theory. --[[file:rspuzio.org][rspuzio]]
+
+: I'm not saying that they are /especially/ worrisome, but until we have the
+axioms laid out in hcode, they (and everything that depends on them) will be
+/somewhat/ worrisome.  I'll fix the group theory library so that the set
+theory requirement is explicit! --[[file:jcorneli.org][jcorneli]] Fri Jul 08 18:39:34 2005 UTC

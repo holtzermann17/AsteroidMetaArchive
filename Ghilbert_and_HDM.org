@@ -1,0 +1,666 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: /I would be happy to cooperate with The Hyperreal Dictionary of
+Mathematics project if they choose [[file:Ghilbert.org][Ghilbert]] for this role, perhaps
+adopting it instead of hcode, or perhaps developing hcode as a
+competing project to Ghilbert level 1 (as mentioned in Ghilbert syntax
+plans), but with a seamless bridge to Ghilbert level 0 so that it can
+interoperate with the Ghilbert world./
+
+This is a reasonable suggestion.  My understanding of the Ghilbert-0
+language and my understanding of the Hcode spec are such that I
+/think/ Hcode is aiming to be even simpler than Ghilbert-0 in some
+regards.  However there has not been significant development of Hcode
+for, what, a year?  So I don't know exactly how we were going to deal
+with higher-level aspects of proofs etc.
+
+: I would be /very/ interested to learn more about how Hcode might
+be simpler than Ghilbert. I've put a lot of thought into how to make
+Ghilbert as simple as possible given its requirements, which of course
+include robust definitions and a module system. I can easily imagine
+a simpler language that's missing chunks of functionality, but if it's
+going to be comparable in capabilities, then a simpler language would
+be very interesting indeed. --[[file:raph.org][raph]]
+
+:: Let me clarify, I meant "simpler" on a purely syntactic level.
+Hcode is 100% s-exps.  Moreover, these are to be interpreted roughly as in Lisp,
+with the car of an s-exp taking the other elements as arguments.  As for
+functionality, I expect you'd see similar things in any feature complete math
+language. --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE Ghilbert is also s-exps, and for the most part interpreted as in Lisp as
+you say. There are some lists that are just lists, like the distinct variable
+conditions, but terms in particular have their usual meaning. As for "any
+feature complete math language", there fundamental design decisions that have
+a huge impact on complexity.  Mizar requires sophisticated theorem proving
+technology just to verify proofs, and HOL embeds a full programming language.
+Ghilbert is vastly simpler than either, although one could definitely argue
+about whether it's "feature complete." I think a real discussion of complexity
+would be worthwhile, but it will take a bit more depth and precision than
+blanket statements like this. --[[file:raph.org][raph]]
+
+#+BEGIN_VERSE: I look forward to the final language design document for
+Ghilbert. And the hcode documentation, of course. The languages may do
+different things, besides proof verification. For example, metamath
+has "meta" information about typesetting in set.mm, and other features
+may be desireable in a full blown system. Perhaps the category of
+"pragmatics" should be added to the discusson of syntax and
+semantics. --[[file:ocat.org][ocat]]
+
+: I've moved this discussion downstairs, as I'm really disliking this
+indented paragraph style of managing threads. --[[file:raph.org][raph]]
+
+:: Why don't we continue it just below.  Way down below there is a
+massive discussion of various language features unfurling, which is
+interesting in its own right and supports this discussion, but which
+also ranges far from the topic stated in this page. --[[file:jcorneli.org][jcorneli]]
+
+* Hcode vs the Ghilbert language(s)
+
+Continuing the discussion above: Uniform syntax is particularly
+important for simplicity.  This is one place where Lisp rules supreme!
+Hcode follows this design; thus the its syntactic starting point is:
+
+ 1. Everything is enclosed in parenthesized lists;
+ 1. All operators (maps, functions, things that take input) are at the front of some parenthesized list.
+
+In terms of any actual featureful aspects of the language, remember,
+Hcode doesn't /exist/ yet, so it is too early to say definitively
+what aspects of the language are simple and which are complex and so
+on.  But I can say what I /want/ from the language, and perhaps that
+will help us make a prospective comparison.
+
+I want the language to accept more-or-less direct translations from
+"[[file:Mathematical_Vernacular|mathematical vernacular.org][Mathematical_Vernacular|mathematical vernacular]]" to computer code.  This means, in
+particular, that people can create Hcode objects that aren't formal
+proofs, but that are good as proof sketches.  In addition it should be
+capable of expressing fully formal proofs (and the systems that these
+proofs are expressed within).  Thusly (following the discussion
+below), it can express input useful to theorem provers and proof
+checkers.
+
+I also assume it will also be useful to provide Lamport-style
+"structure proof" environments (perhaps there is something similar in
+BOURBAKI's contexts?).
+
+There isn't a lot else I can think of to say about Hcode at this
+point!  Also, my understanding of the Ghilbert language is quite
+limited.  But others are welcome to fless out this very weak
+comparison.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+
+Coming up with a good language shouldn't be a point of contention,
+however, and I think one good way to collaborate would be to work on a
+"comparative linguistics" of various proof languages (including
+Ghilbert languages and Hcode, as well as other languages).
+
+: I've started a little thread on this in [[file:Notes on Various Proof Systems.org][Notes on Various Proof Systems]].
+What kinds of additional detail would you be most interested in? --[[file:raph.org][raph]]
+
+There are of course many extra-linguistic considerations, and there
+could also be useful collaborative work done on these matters.
+
+: /That said, there are some philosophical differences between my
+vision of Ghilbert and that of the HDM.  In particular, Ghilbert is
+not AI-complete./
+
+I don't think HDM is "AI-complete" either; my intention is to deal
+with a set of rather specific parsing problems and a set of rather
+specific theorem proving and inference algorithms.  From there, sure,
+we grow as AI itself grows.  But an HDM version could exist well
+before "true AI" (whatever that is).
+
+: Great, and sorry if "AI-complete" is too harsh an epithet. I think there's
+a lot of potential in implementing existing theorem proving technology
+well, and in future AI research. It is likely that my vision of a Ghilbert
+proof repository and your vision of a pre-"true AI" HDM overlap quite
+a bit.--[[file:raph.org][raph]]
+
+--[[file:jcorneli.org][jcorneli]] (replying to [[file:raph.org][raph]])
+
+***  Hcode syntax questions
+
+I have some questions about the Hcode syntax.  I have read the
+[[file:issues_in_hcode_development.org][issues_in_hcode_development]], but perhaps it would be helpful to
+look at actual examples.  I chose some excerpts from [[file:set-theory-lib.org][set-theory-lib]]
+and [[file:basic-group-theory-lib.org][basic-group-theory-lib]], with questions underneath them.  In
+particular, I would be interested in how a definition is determined to
+be syntactically correct and logically sound.
+
+ (defn set (X))
+
+I'm not sure what this "means".  Can anything whatsoever be substituted
+for X?  Could (x X) be a set?  (elt y X)?
+
+ (defn elt (x X))
+
+Why do we not have to specify that x and X are sets?
+
+ (defn subset (Y X)
+  (set Y)
+  (set X)
+  (forall y :in Y :st (elt y X)))
+
+It appears that juxtaposition of S-expressions means logical "AND", and
+the conjunction (and definition) terminates at the appearance of the
+closing ")".  Is that correct?  Are there provisions for "OR" and
+other logical connectives?
+
+ (defn operation (* X)
+  (set X)
+  (forall a b :in X :st (elt (* a b) X)))
+
+Here, what is *?  A set?  Why don't we say "(set *)"?
+
+If operation is defined as a 2-element list, how are we justified
+in using the 3-element list (* a b)?
+
+Also, in ordinary mathematics elt is a wff whereas your operation
+appears to be a set (ordered pair).  I guess they could both be objects
+to a computer, but is it not important to distinguish their "types"
+somehow?  What prevents intermixing them, e.g.  (* (elt a X) b)?
+Or is that syntactically legal?
+
+There also appears to be an incongruity in how elt and operation are
+used.  You always use (elt y X) - never (y X) where "(y X)" is defined as
+an elt object.  But for operations, you use "(* a b)" without the
+"operation" symbol, unlike elt.  You don't say (operation * a b).
+What determines whether we can or cannot use the latter?
+
+ (defn associative (* X)
+  (operation * X)
+  (forall a b c :in X :st (eq (* a b c)
+                              (* (* a b)
+                                 c)
+                              (* a
+                                 (* b c)))))
+
+Here, we have a 4-element list for operation, (* a b c).  What
+determines that we are allowed to do this?  What would be the rule
+preventing, say, (elt a b c)?
+
+I didn't see examples of theorems and proofs in Hcode.  Have either of
+these been defined yet?  --[[file:norm.org][norm]] 14 Aug 2006
+
+Bear in mind that stuff is all quite old and I haven't worked on it
+directly for a long time!  You shouldn't read any of it has having
+finality; it is more like an artist's first sketch.
+
+But, with that in mind, here are some answers to your questions,
+informed by my wide-beam hindsight:
+
+ *Can anything whatsoever be substituted for X?*
+
+Is any mathematical object a set?  At least in
+mainstream mathematics, no, some objects are not sets.
+
+  (set 1) => FALSE
+
+But these definitions are meant to be capable of
+being interpreted two ways, once as an "instantiator"
+and once as a "definition-check".  So if I assert
+
+  (set foo)
+
+within a certain context where this assertion makes sense (e.g.
+/foo/ hasn't been defined previously), then I can be assured
+that within that context /foo/ will be a set.
+
+ *Could (x X) be a set?*
+
+It seems unlikely.  In theory this could /name/ a set, but
+that is not the same thing as it /being/ a set.
+
+ *Why do we not have to specify that x and X are sets?*
+
+Built-in typechecking.
+
+ *(defn elt (x X)) ...*
+
+This definition is totally lame (i.e., it wasn't completed)!!
+In reality, it should be fleshed out with respect to some suitable
+(computational) theory of sets.  Absolutely /X/ will have to be
+a set in order for /elt/ to make sense.  (However /x/ need
+not be.)  The stand-in definition returns /nil/, which effectively
+says to future developers "you must finish this definition before
+you can get anywhere."
+
+ *It appears that juxtaposition of S-expressions means logical "AND",
+and the conjunction (and definition) terminates at the appearance of
+the closing ")".  Is that correct?*
+
+Within the /defn/ macro, yes.
+
+ *Are there provisions for "OR" and other logical connectives?*
+
+Sure.  It is just that definitions are typically presented
+as an ANDed list of assertions, so with an eye towards speed
+I used the above syntax.
+
+ *(defn operation (* X) ... Here, what is *?  A set?  Why don't we say "(set *)"?*
+
+It looks like "*" is notation for a binary operator.  Specifically, it
+is the symbol that stands for the operator.  You could assert that it
+is a map from /X^2/ to /X/, which is equivalent to the /forall/
+assertion in the definition.  I'm not regarding it as a set;
+perhaps some set-ness is inherited somewhere from the definition of
+map, but at any rate I don't thing I need to assert /(set *)/ in
+order to say what it means for /*/ to be an operator.
+
+ *If operation is defined as a 2-element list, how are we justified
+in using the 3-element list (* a b)?*
+
+The idea is that to /instantiate/ an operation, you need a set
+and a map satisifying the property I mentioned above.  After
+this map is appropriately instantiated, you can use a
+context-appropriate shorthand to work with it.  Within the
+body of definition we're discussing, the interpreter is
+being /implicitly instructed/ to treat /*/ as a map that accepts
+pairs drawn from X -- this is the justification for the choice
+of notation.
+
+ *Also, in ordinary mathematics elt is a wff whereas your operation
+appears to be a set (ordered pair).*
+
+In "definition-check" mode, /(elt x X)/ is true iff /x/ is an
+element of /X/, false otherwise.
+
+In "instantiation" mode, you can assert that /x/ is an element
+of /X/.
+
+In general, /elt/ is a function that accepts any two arguments, it
+/is not/ an object itself, at least not in the same way that things
+like /x/ or /X/ are.  Its use, will, however, effect the standing
+of the objects that are fed into it.
+
+Hopefully this answer clears up some questions about subsequent usage.
+
+ *(* (elt a X) b)?*
+
+That would only make sense if /*/ is defined to operate with /T/
+(or /F/) in its first slot.  But the form is certainly fine
+syntactically!
+
+ *Here, we have a 4-element list for operation, (* a b c).  What
+determines that we are allowed to do this?*
+
+The usage you are refering to is (probably) bogus!  In order to be
+mutually consistent, I could should create a variant of
+/operation/ with variable arity, instead of just the binary,
+and use that in the definition of /associative/ instead.  
+
+The only way to save this without doing what I just suggested
+is to insist that the interpreter has built-in rules for converting
+a binary operator into an n-ary one.  It isn't too much of a
+stretch of the imagination to believe that this rule might be
+available to the interpreter when /associative/ is defined,
+but I haven't written it up yet!
+
+ *I didn't see examples of theorems and proofs in Hcode.  Have either
+of these been defined yet?*
+
+There are a few examples floating around, but they're probably too
+preliminary to be worth looking at at this point in time.
+
+To summarize the idea: theorems are basically the same as definitions,
+and proofs should meet all the requirements I mentioned in the comments
+I made to Raph above.
+
+--[[file:jcorneli.org][jcorneli]] Aug 16  2006 (~0244 CDT)
+
+Thanks for this additional detail. Now I think it is possible to debate your
+assertion that your design sketch for hcode might be simpler in some significant
+way to Ghilbert.
+
+Here is a brief list of concepts present in hcode but seem to be
+absent from Ghilbert:
+
+ * variable arity
+ * built-in typechecking
+ * definition and instantiation-check modes
+
+Simplicity in proof languages is hard-won. Ghilbert may well suck in lots of ways, but a lot of effort went into making it simple. I systematically made design choices in favor of simplicity over other criteria, such as convenience. hcode may well turn out to be far better than Ghilbert in many ways, but I think it's fair to say that simplicity is not one of them.
+
+A number of the design ideas stated for hcode strike me as potential big cans of worms. Take typechecking, for instance. What underlying theory? Hindley-Milner? Will subtyping be allowed? There is a /vast/ literature on how to resolve the theoretical problems that arise from combining powerful higher-order types with subtyping in type inference. What about dependent types? As !OpenTheory shows (see discussion in [[file:Translation Systems.org][Translation Systems]], incompatible type systems can interfere with translating proofs from one system to another.
+
+Ghilbert's approach to this can of worms is to require well-typing of terms to be theorems complete with proof obligations, just like everything else in the system. That's vastly less convenient than having automatic type checking if you're writing proofs directly in Ghilbert, but overall I think it's a good tradeoff. After all, if it's convenience you're after, feel free to work in a system with automatic type checking (and automation for whatever else you like, as well), and translate that into Ghilbert.
+
+--[[file:raph.org][raph]] 18 Aug 2006
+
+I guess "simpler" isn't such a simple concept!  You're right about all
+these features in the Hcode interpreter being fairly complex.  I
+continue to imagine the language /itself/ to be simple, but maybe
+this is just me.
+
+As for the typechecking business: I haven't fully thought it through,
+certainly not at the level of formality associated with choosing a
+formal typing theory.  The basic model I'm working from is the
+"/is-a/" model from AI.  A set of definitions can typically be
+regarded as a semantic network ("a group /is-a/ set with an
+operation such that...") and informally speaking this is the typing
+system I have in mind.  That isn't much detail, but as I said I
+haven't thought tons about this issue.
+
+BTW, I don't understand exactly what you mean when you say "require
+well-typing of terms to be theorems complete with proof obligations";
+where do you suggest reading more about Ghilbert's system (or
+preliminaries)?
+
+--[[file:jcorneli.org][jcorneli]] Aug 19 06
+
+In answer to the last question, I probably should have been more
+precise. You can in fact represent both typed and untyped systems in
+Ghilbert. The hol.ghi axiomatization is a typed system, with pretty
+much exactly the same type system as HOL. set.mm is basically an
+untyped system, in which "everything is a set" (please allow me to
+gloss over the distinction between sets and classes here). The Pax
+framework is designed for interpretation in both typed and untyped
+systems, but is for the most part typed so that theorems can port to
+typed systems such as HOL.
+
+In typed systems, you typically have a predicate of the
+form A:T, or (: A T) in s-exp notation, which reads "A is of type T".
+These are quite ordinary predicates, and will often appear in the
+assumptions of theorems.
+
+For example, in peano.ghi, the axiom +:N states that if A and B are
+natural numbers, then their sum is as well.
+
+ stmt (+:N () () (-> (/\ (: A (N.T)) (: B (N.T))) (: (+ A B) (N.T))))
+
+Similarly, the theorem mulcom in peano-thms.gh (the commutativity of
+multiplication) has the correct type of the multiplicands as assumptions.
+
+ thm (mulcom () ()
+   (-> (/\ (: A (N.T)) (: B (N.T)))
+     (= (N.T) (* A B) (* B A)))
+   ( ...proof... )
+ )
+
+Imagine interpreting the peano axioms in a model ranging over quaternions.
+Then, you'd prove statements like +:N and the rest of the peano axioms as
+theorems that happen to hold over quaternions. Clearly, the type assumptions
+are needed for mulcom to hold - without them, the statement is meaningful
+but false over quaternions.
+
+Note the similarity to [http://us.metamath.org/mpegif/mulcom.html mulcom] in
+Metamath's set.mm. There, A and B range over classes (a generalization of
+sets), and the statement "A is a complex number" is written formally as
+"A e. CC", where CC is the set of all complex numbers. To make life more
+interesting, set.mm's mulcom would be provable even /without/ the type
+assumptions, because function application is defined to be the empty set when
+the argument is outside the domain of the function
+([http://us.metamath.org/mpegif/ndmfv.html ndmfv]) Thus, in the case that
+A or B is not an element of CC, then the proof obligation reduces to the
+equality of the empty set to itself, which is trivially provable
+([http://us.metamath.org/mpegif/eqid.html eqid]).
+
+An axiomatic system in which all variables and terms range over a single type,
+say, for example, Peano arithmetic, can be expressed without an explicit
+predicate for A:T. Such a system will not interpret syntactically to Pax, but
+it should be fairly straightforward to add the necessary type assumptions using
+strictly mechanical translation. I haven't built such a translator yet, but
+expect to soon.
+
+Here are some basic references on type systems (wiki gardeners, please feel
+free to refactor into a separate page).
+
+ * It's essential to understand the type system of HOL. I recommend reading John Harrison's thesis,
+[http://citeseer.ist.psu.edu/harrison96theorem.html Theorem Proving with the Real Numbers], but there are plenty of other sources for this as well.
+
+ * [http://www.cis.upenn.edu/~bcpierce/tapl/ Types and Programming Languages], a book by Benjamin Pierce. I don't have this book, but from looking over the table of contents, it seems like it does a great job introducing ML-style type inference, typing in lambda calculus, problems with subtyping and higher order types, and so on.
+
+ * [http://www.cs.man.ac.uk/~pt/stable/Proofs+Types.html Proofs and Types], the seminal book by Girard, Lafont, and Taylor. It's available for free download in PDF format, but I must confess I found the book fairly hard going.
+
+ * [http://coq.inria.fr/ Coq] is basically an implementation of constructive type theory. Co-creator Thierry Coquand has a very rich collection of
+[http://www.cs.chalmers.se/~coquand/type.html papers on type theory] linked from his website. The analysis of Girard's paradox should give a flavor as to why this stuff is difficult.
+
+ * The Wikipedia entry on
+[http://en.wikipedia.org/wiki/Typed_lambda_calculus Typed Lambda Calculus] isn't bad.
+
+--[[file:raph.org][raph]] 19 Aug 2006
+
+Thanks for the illustative info and references!  I'm afraid my
+question about the sentence I asked about might be more of a parsing
+problem, but perhaps I'll understand everything better if I come back
+to it after reading some of these things.
+
+--[[file:jcorneli.org][jcorneli]] 20 Aug 06
+
+This is an off-topic aside, but Harrison's thesis above probably has the
+first literature reference of Metamath (not that there are very many):
+"A construction [of the reals] in the very different Metamath system
+(Megill 1996) has just been completed at the time of this writing"  (p.
+29).  
+--[[file:norm.org][norm]] 21 Aug 2006
+
+
+***  Theorem proving vs. theorem verification
+
+Above, [[file:raph.org][raph]] wrote: /Ghilbert is vastly simpler than either (HOL or Mizar)/, which inspired this discussion (refactored here to avoid indented-paragraph discussionn style):
+
+-----
+
+As a language, Mizar and HOL on the one hand, and Metamath and Ghilbert on the other hand, are really different beasts.  In the terminology of [http://www.cs.rug.nl/~wim/fermat/wilesEnglish.html#a6 Hesselink], the former are theorem provers, and the latter are certifiers.  They have different requirements, hence different notions of feature completeness. -- [[file:marnix.org][marnix]]
+
+-----
+
+To me Hesselink's classification relates to (types of) software, not languages. But this is a very good point - the requirements are different for languages for theorem provers (proof assistants) and the languages that serve certification. Languages for proof assistants should make it easy for the proof writer to take large steps to be filled in by the software and facilitate creating readible views of the proof (as [http://tumb1.biblio.tu-muenchen.de/publ/diss/in/2002/wenzel.html Isar] does). Languages for certification should allow (relatively) easy implementation of alternative verifiers (as Metamath does). I am not sure that it is possible to design a language that would be good for both purposes. It would be probably easier to implement a theorem prover with an Isar-like language interface that can export a Metamath proof. Kind of like Java compiling to byte-code. --[[file:slawekk.org][slawekk]]
+
+-----
+
+I agree with the usefulness of Hesselink's classification, although I feel the term "verifier" may be clearer than "certifier"; some people may get the impression that the latter tool is involved in /creating/ the certificates. I also strongly agree with [[file:slawekk.org][slawekk]] about the need for both types of tools, and in particular of the value of having provers generate easily verifiable proofs in a common language such as Ghilbert.
+
+One of the points I'm trying to make is that there are many different approaches to automating the "small steps" of theorem proving, so that humans can concentrate on the large ones. So far, Metamath's approach is essentially not to bother. Norm has been surprisingly productive writing proofs with all the small steps filled in, and the resulting proofs are surprisingly short (see
+[[file:WhyAreMetamathProofsSoShort|Why Are Metamath Proofs So Short.org][WhyAreMetamathProofsSoShort|Why Are Metamath Proofs So Short]] for more discussion of the latter).
+
+But I'm not saying that what works for Norm will work for everybody.  My strong personal belief is that there should be a diversity of higher-level tools, all interoperating through a common lower-level language. My work so far (largely focussed on translations to and from HOL) suggests that such an approach is viable. At the very least, I think it's worth exploring that direction, to find out what kinds of higher-level techniques /won't/ translate to a language like Ghilbert, and why.
+
+--[[file:raph.org][raph]]
+
+-----
+
+Practically speaking, a proof assistant program that
+can generate missing proof steps for a Metamath-like
+language will be separate from the proof verification
+program.
+
+The reason is that Metamath is both logic and grammar
+"agnostic"; neither is built-in and a program that is
+capable of processing every valid Metamath file will
+typically fail to incorporate subject matter knowledge
+about the contents of the files it processes.
+
+It is true that a program can hardcode propositional
+logic, predicate logic and set theory knowledge and
+methods for generating truths using the associated
+axioms and symbol systems. However, "metamath" is not
+synonymous with "set.mm", and from a design perspective
+it might be preferable to build add-on "knowledge
+packs" for different areas of math and logic.
+
+Without specialized subject matter knowledge the
+difficulty of useful "proof assistanting" is a result
+of the combinatorial explosion of possible proof steps
+-- the number of which grows exponentially with the
+size of a .mm database. With subject matter expertise
+proof assistanting within the given body of knowledge
+may be feasible, with greater or lesser success
+depending on the quality of the design. And there may
+be a way to structure a program to employ generic add-
+on knowledge packs without that program actually
+knowing anything itself about math or logic.
+
+The [http://en.wikipedia.org/wiki/No-free-lunch_theorem No Free Lunch]
+theorem at wikipedia tends to support the assertion
+that addition of subject matter knowledge will improve the quality of proof assistanting (but the improvement will be specific
+to the given input knowledge...)
+
+Additionally, Metamath itself is based on the preprint
+of Megill, "A Finitely Axiomatized Formalization of
+Predicate Calculus with Equality," Notre Dame Journal
+of Formal Logic, 36:435-453, 1995 -- 
+[http://us.metamath.org/downloads/finiteaxiom.pdf finiteaxiom.pdf].
+
+This provides "a formalization of first-order predicate
+calculus with equality which, unlike traditional
+systems with axiom schemata or substitution rules, is
+finitely axiomatized in the sense that each step in a
+formal proof admits only finitely many choices."
+
+A proof in the Metamath system is simply an array of
+statement labels that which, when fed into a Metamath
+Proof Verification Engine, generates a proof stack
+containing a single item, the formula which was to be
+proved, while simultaneously satisfying and distinct
+variable restrictions for each proof step.
+
+However, as we have learned through intense study of
+Metamath.pdf, a Metamath proof has an internal
+structure. A Metamath proof is written in RPN format
+which can be translated into a tree structure, a "proof
+tree". And the final RPN step of a valid proof is
+always the label of the assertion justifying the final
+formula (except in the case of a trivial one-step proof
+consisting of just the label of a hypothesis.) This
+final RPN step corresponds to the root node of the
+proof tree, and the children of the root node
+correspond, one for one, to proof or parse trees for
+each of the logical and variable hypotheses uses in the
+referenced assertion. And, recursively, each of the
+child proof trees is a sub-proof. And so on, and so
+forth.
+
+What the Metamath proof assistant and the
+[http://planetx.cc.vt.edu/AsteroidMeta/mmj2ProofAssistantTutorial mmj2 Proof Assistant]
+do is assist the user in generating a valid RPN
+statement label array.
+
+mmj2 goes further than Metamath in that is completely
+eliminates the requirement that the user memorize any
+statement labels. mmj2's Proof Assistant requires
+simply that the user enter a numbered list of formulas,
+and providing for each proof step formula the step
+numbers of any hypothesis steps required for
+justification of the proof step. The mmj2 Proof
+Assistant then searches the input .mm database for
+existing assertions that can be unified with each proof
+step. Assuming that the .mm file's grammar is
+unambiguous, the unifying set of substitutions into an
+assertion that generates the formula of a given proof
+step is guaranteed to be unique.
+
+That is the essence of the mmj2 Proof Assistant, aside
+from other bells and whistles involving distinct
+variables and the "Derive" functions. The mmj2 Proof
+Assistant operates one level higher than the Metamath
+proof language. In fact, the code in mmj2 which
+translates a mmj2 Proof Worksheet set of formulas into
+a Metamath RPN format proof may be considered to be
+similar to a compiler generating assembly language from
+a high level language -- and the specific code which
+generates a Metamath RPN proof array hardcodes the
+requirements of the Metamath Proof Verification Engine
+with respect to the order of hypotheses. (Norm has also
+written import/export utilities for Metamath.exe to
+translate from/to a mmj2 Proof Worksheet.)
+
+The addition of built-in knowledge about 
+the required internal structure of a valid Metamath
+proof would greatly reduce the search time for
+a proof assistant attempting to create valid proofs --
+possibly by several orders of magnitude!
+
+What the mmj2 Proof Assistant does not do is fill in
+missing proof steps (thought the Derive Feature does
+generate proof steps). In theory an even higher level
+module could generate proof steps in the Proof
+Worksheet format and submit them to something like the
+ProofUnifier for *verification* within the context of a
+proof. For example, it might be not impossibly
+difficult to build an add-on propositional logic pack
+that fills in proof steps, given a Proof Worksheet that
+the user stipulates is missing only proof steps
+requiring propositional logic assertions.
+
+Building the code to handle an add-on predicate logic
+pack would be more difficult. However, there are
+numerous proving systems available today, and more
+under development, I believe. And the most advanced
+systems use an agent-based approach that interfaces
+with a network of provers and combines the returned
+results. I do not know how difficult it would be to
+interface Metamath with these other systems.
+
+One potential difficulty lies in Metamath's use of
+distinct variable restrictions rather than the more
+typical use of bound vs. free variable scope
+substitution restrictions. An interesting experiment
+would be to define an alternative Metamath Proof
+Verification Engine and a superset of the .mm language
+that incorporates free vs. bound variable scopes. Then
+set.mm would be converted to the new language and
+verified to see what, if any problems are encountered.
+
+: [[file:frl.org][frl]]'s [[file:Natural_deduction_based_metamath_system|nat.mm.org][Natural_deduction_based_metamath_system|nat.mm]]
+uses an explicit notation for bound variables,
+which in principle could be adopted in set.mm.  But this notation is
+"outside of the logic," so to speak.  My personal preference (or quirk
+if you wish) is not to do this, since the device of using ph -> A. x ph
+as a hypothesis effectively accomplishes the same thing within the logic
+itself, without the need for a separate concept.  In either case, unlike
+other proof languages, Metamath has no primitive predicate "x is bound
+(or free/not free/free for y) in ph" that it verifies in one step;
+instead, the wff has to be broken down into pieces until "x is bound" is
+eventually satisfied for the primitive (or previously proved) pieces of
+the wff.  The hb* theorems in set.mm serve this purpose.  Of course,
+such tedious proof steps could be automated if translating from another
+proof language.
+:: In fact it was (but it's no longer) true in previous versions of set.mm.
+I've come back to the ( ph -> A. x ph ). The reason to do this is that to use
+something outside of logic like the bound predicate means you have to design
+a complete separate set of axioms to manage it. In particular every time you
+enter a new definition (like y e. { x | ph }) you have to add new axioms to
+stipulate x is not free in the new formula. I think the usual recursive 
+definition of bondage can't deal with the problem of definition (but I'm not
+sure and I don't know why). -- [[file:frl.org][frl]] 22-Aug-2006
+
+
+: .
+
+: Another issue is the fact that set (meta)variables in Metamath don't have to
+be distinct from each other.  The predicate calculus axioms exploit this
+as much as possible, making them look very different from those of
+traditional predicate calculus.  I suppose I have been enamored with
+idea of doing math without distinct variables, and the axiom set
+reflects this.  However, set.mm could be modified so that set variables
+are always distinct from one another, in order to emulate the individual
+(and thus by definition distinct) variables of other proof languages.
+This might make translation to and from them easier.  While this would
+be a significant change to the predicate calculus part, the great bulk
+of set.mm would not be affected, since in set theory we almost always
+assume that set variables are distinct.  And even the predicate calculus
+part could be automatically converted, although its size would grow as a
+result.  I discussed this on the [[file:mmj2Feedback.org][mmj2Feedback]] page (search for "Here
+is an idea").
+
+: .
+
+: Often one encounters situations where a certain variable x is expected
+to be (or at least may be) free in a wff or class metavariable, but the
+other variables in the theorem must not occur in it.  Textbooks tend to
+denote this as phi(x) or A(x).  I discussed this issue in the file
+[http://us2.metamath.org:8888/mpegif/mmnotes.txt mmnotes.txt] under the
+"(11-May-06)" entry.  I'm not sure how other proof languages
+handle this. --[[file:norm.org][norm]] 13 Aug 2006
+
+
+Note: see [http://planetmath.cc.vt.edu/~mmj2/mmj2.html mmj2 doc]
+for more information about the mmj2 Proof Assistant.
+
+--[[file:ocat.org][ocat]]

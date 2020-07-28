@@ -1,0 +1,235 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Although I mentioned HDM research in this category (which is exactly
+where I think it belongs), I didn't really make clear that HDM may be
+of interest to a variety of other partners in artificial intelligence
+and mathematical knowledge management.  So, I think there are really
+three categories of people who might be interested in the "PM as
+E-institute" idea,
+
+ * math researchers
+ * digital library researchers
+ * artificial intelligence researchers
+
+Of course, as seen in the current crowd here on AM, there is some
+overlap between these areas, as well as fairly strong connections to
+metamathematics, social theory of collaboration, philosophy in
+general, etc.; but I think these three categories are sufficient as
+mooring-points for other connections.
+
+--[[file:jcorneli.org][jcorneli]]
+
+It is interesting that there are several "cultures" that can
+mutually subsist in the PM e-institute.  One could also
+say that several different overlapping /groups/ can
+work together in the institute, and that is true too --
+but the difference between people-overlap and subject-overlap
+should be noted.
+
+I think that the discussion on the [[file:PlanetMath and Bourbaki.org][PlanetMath and Bourbaki]]
+page is mainly focused on the "mathematical culture" of the
+e-institute.
+
+Switching horses in midstream, IMO, it could be worthwhile to think
+about how the "library culture" of the e-institute could be merged or
+networked with the culture of places like NSDL.  (Wikimedia might
+be another group to think of here.)  There is a fairly meager section
+on math-DL -- which is maybe all we need for now.  Still, I think
+it is worthwhile for us to put some effort in describing the
+aspects of "meta-culture" that relate to digital libraries, knowledge
+management, etc., in the current section of the document.  Again,
+this is the section on /community/, and (at least in the current
+model) specific comments about software will appear in subsequent sections;
+maybe some of it even in the same math-DL section I mentioned.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Special features of the library of the PM E-institute
+
+An important aspect of any research institute is the library.  In
+order to do their job, researchers need the right tools.  For
+mathematicians and other theorists, this means access to mathematical
+knowledge.  While the encyclopaedia section provides a source for
+well-known background material, it does not have much to offer in the
+way of topics of current reseach interest.  There are several things
+we could do to improve this situation.  
+
+We could add a 'current research topic" to the encyclopaedia to handle
+such material.  Maybe these things could even be put in a separate
+section by themselves and it could be arranged that encyclopedia
+entries do not link to current research topics (but, of course,
+current research topics do link back to the encyclopaedia).  If this
+takes off, it could prove a valuable addition to review papers as a
+way of explaining items of current research interest and providing an
+introduction to these subjects for non-specialists.
+
+Another thing to do would be to expand the digital library section.
+As we all know, the book, exposition, and paper sections are woefully
+neglected.  We really could use some concerted effort to add to them.
+Partnerships with several organizatios would help.
+
+We could collaborate with Project Gutenberg to provide transparent
+copies of books in the public domain.  Likewise, it would be nice to
+make some arrangement with companies like Google and Yahoo who are
+retro-digitizing older works; while we have had no luck with this in
+the past, it might be that we could make progress with some other
+approach in the future.  We could arrange with organizations like AMS
+to provide older issues of their journals and other publications.
+
+Nowadays, Arxiv is the de facto standardized central source for
+research articles.  There is no way our paper section could compete
+with them.  Since we can't beat them, we will have to join them, but
+we could choose to do so on our own terms.  Because of liability, we
+would likely not want to carry their content, only carry metadata and
+provide links to their site for the actual content.  However, we would
+add value to this material by allowing people to post comments on the
+material, provide reviews of the articles, and the like.
+
+Also, we could provide library resources specifically designed for
+these holdings.  For instance, Aaron is now working on improving
+search by means of metrics.  We might me able to design search metrics
+specifically suited to scientific literature and interfaces which take
+advantage of the structure of this literature (such as bibliographic
+references).  If we did this and combined the data obtained from
+various preprint servers with our own holdings, we might obtain a
+service which the scientific community finds useful.
+--[[file:rspuzio.org][rspuzio]]
+
+When you said "library", I thought you were talking about a physical
+library of non-free books.  Which could certainly come in handy too.
+But the nice thing about an e-institute is that we can make use of
+various extant physical libraries without having to invest in making
+a new one.
+
+As for the idea of establishing a good/useful electronic library --
+that is a big part of what PM is (or should be) about, as I see it.
+
+Specific suggestions will (of course) need to be evaluated in detail
+and followed up on.  E.g.  we've mentioned Arxiv all over the place;
+but I don't think we fully understand all the associated issues yet.
+Maybe we'd want a section of this plan called "Relationship of PM and
+Arxiv" or "Prospective relationship of PM and Arxiv".  We could then
+send a copy of this document to the lead devs at Arxiv and see what
+they think.
+
+What these suggestions mainly bring to mind for me is the following:
+(1) They underscore the idea of the PM E-institute as being a
+/mathematically productive/ place.  It isn't just about building
+a library, but building a library that is useful for research.
+Furthermore, mathematicians (and not "just librarians") will be
+the people doing a lot of the work on this library.  (2)
+They also underscore the need for [[file:Understanding free math.org][Understanding free math]],
+since being FAIF (in various ways) is, I think, a large part of
+what makes our library different from various other math libraries
+that one could imagine coming into existence in the future.
+
+--[[file:jcorneli.org][jcorneli]]
+
+The topic of an 'electronic library' is quite closely related with
+the centralized reference database idea. I think this would be a
+natural way to implement the library. Some entries will just be
+pointers to real books or articles. But, free material could be
+hosted from PM (like current expositions). 
+
+If we have a license field for each entry, the library will also provide 
+a list of free math (on the net). A collectively written review, errata
+sheets (either local or remote), related books, comments, and a forum would 
+all be helpful tools for people struggling with difficult papers/books. 
+
+In addition to talking to arXiv, I don't think it is  a bad idea to talk
+to traditional publishers. Maybe we could get a list of their math books.
+But, before doing that it could be good to have some momentum. 
+
+Maybe we could send a mail to the author
+when a book/paper is put on the database asking if he/she would 
+like email notifications of activities for the book.
+In this same email we could explain the goal of PM. This would be a good excuse
+to get in touch with a lot of mathematicians. However, this does border
+to spamming. I'm not quite sure.
+--[[file:matte.org][matte]]
+
+I place developing a "real" (e.g. containing materials from elsewhere)
+digital library section as a high priority.
+
+Technically and socially speaking, there is nothing stopping us.  Many
+collections (arXiv, Math Forum, Mathworld) already provide math
+content for free using Open Archives Repositories.  Harvesters are
+plentiful, or a new one can be created easily.  This content can be
+pulled in and made part of a PlanetMath "value add" (e.g. letting
+people comment on them, linking them to the encyclopedia, etc).
+
+Doing this would probably boost traffic to the site quite a bit, which
+(given the new server) we can probably handle and would only help our
+visibility and fundraising.
+
+A lot of benefit for relatively low cost!
+
+I think this should be all be done relatively modular from Noosphere,
+following the model of how harvester-portals are separate pieces of
+software.  We needn't complicate Noosphere with services that don't
+necessarily go hand-in-hand with building out a scientific
+encyclopedia.
+
+Such a system could be integrated with Noosphere at the interface
+layer; i.e., the search would get submitted to a search engine for the
+digital libary proper (perhaps with special default filtering
+options), and viewing results would take you either to the
+corresponding remote site, or to the Noosphere encyclopedia.
+
+I think we should bounty this up, in fact.  Comments?
+
+--[[file:akrowne.org][akrowne]] Tue Feb 28 15:12:17 UTC 2006
+
+I think we need to understand the fair use conditions associated with
+Open Archives data.  Also, I think rather than emailing Arxiv authors,
+perhaps we could encourage Arxive to get users to select a license to
+accompany their articles!
+
+I don't think we should host any content on PM that isn't FAIF.
+Fair use can of course be used as a start.  Pointing to non-FAIF
+materials elsewhere is obviously fine, and we should do this --
+it gives users a sense of the landscape we're trying to re-cover
+with FAIF materials. --[[file:jcorneli.org][jcorneli]]
+
+Could you give an estimate of how much work would be required to do
+this?  Is it a weekend-job? 10 person-hours? more like 100
+person-hours?
+
+When you say "relatively low cost", what sort of cost do you have in
+mind?  Could you give a ballpark estimate?
+
+As for the bounty, I would be leery of offering much more that a $200
+bounty unless siginificantly more cash flows in to pay for it.  While
+there is nothing wrong in spending the money in the budget, at the
+same time spending needs to be weighed against goal of building up the
+organization's finances.  When one has more money, more options for
+making money are available --- one can hire a fundraising consultant
+(a.k.a. professional fundraiser) and engage in forms of fundraising
+which require an initial outlay of money.  While offering a bounty now
+will get something done, not offering it might mean that one has more
+money to offer for bounties next year.  However, as you say, this
+might be worth an extra expenditure because of the potential to
+increase traffic (which could translate into extra hits on the
+"donation" link and otherwhise help fundraising efforts).  In short, I
+don't know if I consider it a good or a bad idea to offer a bounty for
+this and don't think I'll be able to make up my mind or offer any
+meaningful opinion until I have an idea of how much work would be
+necessarry and what size bounty might be ofered.
+--[[file:rspuzio.org][rspuzio]]
+
+* Word play
+
+Did anyone notice that if you remove the hypen, E-institute becomes
+"einstitute"?  As in one-thing-to-set-up (German+Latin etymology) --
+which fits just swell with the totalizing sub-theme.  Or, more playfully,
+(afraid this has been played to death) einste-tute, as in Albert.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Ah, so that's where the physics fits in!  I knew there had to be
+some place for PP and some excuse for me to study relativity 
+theory somewhere in this :) --[[file:rspuzio.org][rspuzio]]
+
+----
+[[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]]

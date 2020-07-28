@@ -1,0 +1,167 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Google, Inc.'s stated mission is to "organize the world's information"
+and (less often quoted) to "make it universally accessible and useful."
+We can fruitfully compare this mission to the HDM project's mission.
+In order to be somewhat concrete, this comparison should be grounded in comparing the technologies
+used by the two efforts.  Plans as well as deliverables should be
+taken into account, as should the other aspects of infrastructure that
+are relevant to achieving as-yet-unattained goals.
+
+The HDM project's mission is along the lines of /putting all extant
+mathematics in human and machine friendly electronic format./
+Actually, the goal isn't simply one of reformatting, since
+reformatting has associated with it the exciting new opportunity for
+the creation of sophisticated mathematical artificial intelligence.
+(And also, very likely, the need for somewhat less sophisticated AI
+tools to help with the reformatting process.)  So this is part of the
+goal too: roughly, /to make a machine you that will tell you the
+answers to math problems/ (open research questions, homework
+questions, pedagogical or conceptual questions, etc.).
+
+This goal doesn't /sound/ so different from a state of affairs
+already attained by Google, "the closest thing the web has
+to an ultimate answer machine" (often quoted, but I don't
+know the original source [1]).
+
+The difference has to do with the sort of answers one can get, which,
+in turn, has to do with the sort of questions one can ask.  If the web
+was actually a semantic web, then I suppose a "search engine" like
+Google might be expected to evolve into an artificially intelligent
+system that would come up with novel answers to novel questions.
+As it is, Google (from the point of view of a user)
+has got approximately the same computational power as a look-up table.
+Clearly, Google's sophistication lies in indexing and ranking pages,
+and otherwise managing this huge look-up table.
+
+The HDM project is at this point concerned largely with building new
+semantically charged documents, and thinking about how to use these
+documents to answer novel questions.  This approach is not at odds
+with Google's "start with search and get really good at that" way of
+doing things; it is, however, essentially orthogonal.  Both approaches
+have to do with organizing the world's information (although of course
+the HDM project is focusing on the world's /mathematical/
+information).
+
+The differences noted here are significant, but they don't make the
+two projects "incompatible".  A potentially more challenging
+difference has to do with the second part of Google's mission;
+certainly, more questions come to mind here.  
+
+Access to information good, but access to information or knowledge
+production is not the same thing (although it is related); and both
+seem to be important for the HDM project.  This has to do with
+technical issues associated with producing artificial intelligence,
+namely, that many subjective points of view need to be considered
+simultaneously, and, indeed, actively solicitated as the AI grows.
+Google, by contrast, doesn't need to "solicit" content; they exploit
+the public nature of the web, and the evidence suggests that as the
+web grows, Google tends to become more useful.  This is different from
+becoming more intelligent; Google would need new kinds of content (or
+new, sophisticated data reformatting) in order to do that.  One
+interesting result associated with the differences here is that HDM is
+emphasizing public domain production and free software, whereas Google
+gets by with fair use and a closed platform [2].
+
+As for "useful", this quality is very much in the eyes of the
+beholder.  Some of the recent developments with Google suggest that
+they are beginning to do rather more interesting, useful, things
+besides "search"; Google's side-projects include putting together
+nice-looking 2D and 3D maps, an email service, and so on.  Still, I
+don't really know what Google's vision of "useful" is.  With HDM,
+"useful" can be tentatively defined with somewhat exact specificity,
+to cover applications in problem solving, pedagogy, information
+look-up, etc.
+
+To sum up, HDM shares Google's goals and has some additional (usually
+more specific) goals.  These global differences between the two
+projects lead to significant differences in focus and productive
+technologies.
+
+If Google (the company) wanted to work with HDM, we'd certainly be
+interested in talking things over; since the two projects goal-sets
+are consonant, I'm sure there is plenty of common ground.  
+
+Incidentally, we, of course, work with Google (the program) daily.
+Good search (like good programming languages and good operating
+systems) is one of the "giant's shoulders" that the HDM seems to
+require as a preliminary.
+
+* Notes
+
+ 1. They don't mean /answering machine/, although I suppose that would
+be funny: /Hi, the Web isn't sentient right now.  Please enter your
+query into this search box and we will get back to you as soon as
+possible.  In the mean time, please feel free to select from the
+following 1000 odd pages that contain some or all of your search
+terms.  Beeeep./).
+
+ 1. I've heard that the Google algorithms are all known to the public.
+As to whether it would be possible to reproduce Google using free
+software and some sort of egalitarian production environment, that is
+presumably an essentially pragmatic problem.
+
+----
+** Discussion
+
+
+It would probably be useful for us to think about Google's
+[http://www.google.com/intl/en/corporate/tenthings.html basic philosophy] & critique it
+(I mean that in a philosophical sense, of course).  --[[file:jcorneli.org][jcorneli]]
+
+I think Google is definitely going the way of deeper semantics.  They 
+started with search, which is as you said, basically a huge look-up table. 
+They have since been expanding into deeper information integration--which
+involves being sensitive to contexts and understanding the user's inquiry
+as well as different information domains (i.e. figuring out a query is 
+regional and using Google Local and bringing in Google maps, or figuring
+out a query is a for a journal article and bringing in Google scholar).  
+This kind of transformation begins to blur the line between "look-up table"
+and "sentient"--the machine starts to /seem/ smarter.  I have no doubt 
+Google will start to integrate deeper machine learning and AI, as other 
+puzzle pieces fall into place.  After all, as a company based /entirely/
+upon "goodwill" assets, they must innovate continuously and take advantage
+of any opportunity that becomes available (for example, a sufficiently mature
+Semantic Web).
+
+As for the algorithms being public, in the general sense, for the basic
+web search, I think this is true.  I think they have done a lot of tweaking
+based on empirical data that basically only they have, which gives them a
+competitive advantage.  And I don't think they have released internal formulations
+of the other services they've created since (though to some extent they've had
+to disclose them to make them usuable to customers).
+
+I could see the HDM becoming a Google service except for one small detail:
+it doesn't seem to be general interest enough.  The difference for the bottom
+line is huge, as being a niche product drastically alters the economics of
+the situation.  Compare Wikipedia to PlanetMath--two web "services" that do
+essentially the same thing, except one is general interest and one is not.
+
+--[[file:akrowne.org][akrowne]] Tue Jan 3 19:35:42 UTC 2006
+
+Interesting things can be learned from the architecture
+of Google's search engine that might be applicable to
+HDM, one day. For example, there is the fact that Google
+is constantly trolling for new web pages and for changes
+to web pages. A "web search" with Google really means
+searching the Google database -- the original input is
+unchanged, and "cached" data is searched. Another example
+involves their ranking algorithm, which is a heuristic that only
+needs to be better than the heuristics of other search
+engines. Searches in math where HDM is liable to run into
+trouble may still benefit from a heuristic ranking, but
+in the end must be able to go through every logical 
+possibility, one by one -- and there might not be enough
+time left in the universe to do so. And, rather than
+Google using HDM, the obvious possibility is that HDM
+could use Google (like Wikipedia does...) 
+
+Another topic
+is Google providing what people actually want, and then
+letting the related success (such as $$$) happen. For HDM
+this would mean figuring out Use Cases of its "customers"
+so that whatever is engineered will end up providing
+satisfaction and joy. If your customer base is MIT PhD's
+then you will engineer something very different than if
+your customer base is 3rd graders...in Mexico.   --[[file:ocat.org][ocat]]

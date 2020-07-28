@@ -1,0 +1,165 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The name of this requested feature is a reference to the infamous
+APM-Xi and means "PlanetMath cross-index".  Whatever its usefulness
+with qualifying examinations, it should help with finding further
+reading to complement the treatment of a subject in a textbook.
+
+This feature is an extension of the centralized bibliographic
+database.  Knowing that a certain piece of information is to
+be found in a book can be of limited use because that might 
+only narrow down the location to one of 500 pages.  What PM-Xi
+would do would be to pinpoint the exact location so that one
+does not have to fumble around looking for needles in 
+literary haystacks.
+
+The core of this new feature would be an extensive database
+composed of records.  Each of these records would consist of
+four components:
+
+ 1. There would be an identifier of a record in the centralized 
+bibliographic database corresponding to the work within which
+a fact is to be found.
+
+ 1. There would be a specification of exactly where in that work
+the fact in question is to be found.  Examples might be 
+"theorem 17" or "example 42" or "chapter 4, section 3".
+
+ 1. There would be a links to PM entries which discuss this fact.
+
+ 1. There would be a place for comments.  In this field, one could
+note observations such as that the version in the PM entry is
+more or less general that that in a certain reference or that 
+a book uses different notational conventions than the PM entry.
+
+This feature could be used in several different ways.
+
+ * If one is reading a book and has a hard time understanding 
+something, one could look for other discussions of the item.
+
+ * A cross index would expedite the work of identifying lacks
+in the coverage of PM by comparing it with various works.
+
+-----------
+
+Looking back a year later, I see that the form of this proposal
+is too focussed on books and PM encyclopaedia, hence should be
+redone in a manner which is not biased towards certain works.
+Here is an updated version of the proposal:
+
+The basic notions underlying this database are factoids and loci.
+A factoid here is a piece of knowledge (specifically mathematical 
+knowledge for the current project, but one could just as well do
+a similar cross-index for physics, bicycle repair, gardening, or
+any other subject) such as the definition of a term, the statement
+of a theorem, a proof of a result, etc.   A locus is a portion of
+a work which mentions a single factoid.
+
+The cross-index can be implemented as two tables: a factoid table 
+and a locus table.  The contents of the table would be organized in
+columns as follows.
+
+*** Locus Table
+
+ * *Genre* --- This column describes the type of work in which the
+item occurs, e.g. book, journal article, web page, thesis, 
+lecture notes, conference proceeding, etc.
+
+ * *Work* --- The particular work in which the item occurs.
+
+ * *Location* --- Am indication of exactly where in the work to find
+the item.  The exact form of data in this slot will depend upon the
+genre.  As far as feasible, this should be in a form which enables a
+computer to select and highlight the locus in question from a
+digital version of the work.
+
+*** Factoid Table
+
+ * *Metadata* --- These fields will contain metadata describing the
+factoid in question.  As a starting point, one can take the metadata
+fields attached to PM entries.
+
+ * *Loci* --- A listing of the loci which mention this factoid.
+
+-----------
+
+Here is a more detailed description from the dreamlist:
+
+ *Goal:* To mutually reference as much of the mathematical literature as possible in a structure which cuts across mathematical works transversally to link portions which discuss the same subject material as well as to provide local metadata which helps index the various topics discussed in the literature for ease of retrieval. This would provide a directory to the literature in the form of a certain type of basic linking between works in a standardized for-
+mat which later could be augmented with descriptions of the links and other types of links as well as be of use in compiling more specialized directories such as annotated bibliographies as well as generally in accessing and using the literature.
+
+*** Ontology
+
+ * The cross-index consists of factoids, loci, and allusions.
+
+ * A factoid is an irreducible unit of mathematical exposition, e.g. 
+
+  * Statement of a definition.
+
+  * Statement of a theorem.
+
+  * Proof of a theorem.
+
+  * Example
+
+ * A locus is a portion of a mathematical text which expresses a factoid.
+
+ * An allusion is a portion of a mathematical text which refers to a factoid but does not state it because it is assumed to be known by the reader or the reader is referred elsewhere for an explanation.
+
+*** Tables
+
+ * Factoid table
+
+  *  *Metadata* — as a first approximation, we can take the metadata fields
+attached to PM entries.
+
+  * *Loci* — A list of loci in which the factoid in question is described.
+
+ * Locus table 
+
+  * *Genre* This column describes the type of work in which the item occurs,
+e.g. book, journal article, web page, thesis, lecture notes, conference proceeding, etc.
+
+  * *Work* The particular work in which the item occurs.
+
+  * *Location* An indication of exactly where in the work to find the item. The exact form of data in this slot will depend upon the genre. As far as feasible, this should be in a form which enables a computer to select and highlight the locus in question from a digital version of the work.
+
+ * Allusion table 
+
+  * *Genre* This column describes the type of work in which the item
+occurs, e.g. book, journal article, web page, thesis, lecture notes, conference proceeding, etc. 
+
+  * *Work* The particular work in which the item occurs. 
+
+  * *Factoid* — The factoid to which the allusion is made. 
+
+  * *Location* An indication of exactly where in the work to find the item. The exact form of data in this slot will depend upon the
+genre. As far as feasible, this should be in a form which enables a computer to select
+and highlight the locus in question from a digital version of the work.
+
+*** Workflow
+
+ * Where possible, work indexing into other activities. 
+
+  * Have loci automatically be generated from !TeX code, e.g. make a theorem locus automatically whenever a theorem
+environment is encountered. 
+  * Set up text viewer so that readers can add indexing on
+the fly. 
+  * Allusions are suggested on the fly by the autolinker; subsequently, readers
+will confirm whether they were chosen correctly and automatically add allusions to the
+database as appropriate.
+ * As they are found by users, loci and allusions could go into a pool for later attachment
+to factoids.
+ * Users would own and maintain factoids much as they already maintain entries.
+ * There would be an inbox for suggesting loci to be added to a factoid attached to that
+factoid.
+ * One could file a correction to a factoid to point out mistakes or omissions in metadata
+or inappropriate loci.
+ * The maintainer of a factoid will be expected to answer corrections and proopsals for
+extra loci in a timely fashion..
+ * There will be a place for associating unattached allusions with unattached loci; upon
+attaching the loci to factoids, the allusions associated to them would automatically be
+attached to the factoids in question,.
+ * Since it is possible that two users may inadvertantly create two copies of the same
+factoid with diffferent loci, there will be a mechanism for merging factoids.

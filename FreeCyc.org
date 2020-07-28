@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Please see the [http://en.wikipedia.org/wiki/Cyc Wikipedia page on Cyc] so that
+you will have some idea about the background for this project.  In fact, the
+goal of "enabling AI applications to perform human-like reasoning" attribuded
+there there is actually somewhat more modestly stated than the goal of the Cyc
+project (as ([[file:jcorneli|I.org][jcorneli|I]]) understand it), which is to build something with
+the same common sense knowledge of an arbitrary human from the USA.  This
+(fuzzier) goal is really monumental in size.  
+
+The words are all quite fuzzy, but the point of the Cyc/FC projects is (would
+be) to build a huge knowledge base and an AI system that is capable of using the
+knowledge base.
+
+!FreeCyc ("[[file:FC.org][FC]]") is meant to be a free implementation of the basic program
+being worked on by Cycorp.  There are a number of reasons to believe that even
+given the 20 year "head start" that Cycorp has, FC might actually have better
+chances of success.
+
+One reason (also recognized by Cycorp) is that a project of this magnitude
+should have the involvement of lots of people.  There have been thousands of
+person-hours (lots and lots of time, probably something between 200 and 500
+person-years) poured into Cyc so far, but this has only been done by hundreds of
+people.  Cycorp's current response is to provide "!OpenCyc", and produce tools
+that will let people who aren't working for Cycorp build knowledge bases that
+Cyc can read.  The idea seems good -- it decentralizes the effort.  However,
+there are various reasons that the effort may not really work out as hoped.
+(I'll go into these later.)
+
+The second reason is that FC would be, explicitly, and from its inception,
+/free/ in the sense of freedom.  For the generic reasons, this gives the
+project an overwhelming "strength" advantage.
+
+----
+* Applications
+
+FC has notable application (and interrelationship) to [[file:HDM.org][HDM]], and to other similar
+domain-specific artificial intelligence.
+
+* Relation to other projects
+
+I figure that if [[file:Wikipedia.org][Wikipedia]] can collaboratively build a huge encyclopedia for
+humans, we should be able to collaborativly build a huge encyclopedia for an AI
+system (and, as should go without saying, the AI system itself).
+
+The [[file:KM.org][KM]] project is working on tools that make it possible for anyone to
+easily add knowledge to their system.
+
+There /currently is/ a project called [[file:Open Mind Common Sense.org][Open Mind Common Sense]] that is being
+worked on at MIT.  Maybe the results/methods of this project would be useful to
+look into.  [[file:Mindpixel.org][Mindpixel]] is a similar effort (with some interesting
+collaborative filtering tools).  (I haven't checked out the licenses for these
+projects, but if they qualify, we should add them to the project list.)
+
+But (forgive me if I am mistaken!) it seems to me that these projects are
+lacking the /AI/ part.
+
+And this is interesting, because that is precisely the part that Cycorp is
+hanging onto most dearly.  I'm not saying that the Cycorp AI would be capable of
+doing all the things that these other projects are missing.  I'm just saying
+that /no one/ seems to have great AI right now - or if they do, they are
+keeping it to themselves.
+
+* Meta-game player
+
+I had some discussions with [[file:kschalm.org][kschalm]] in 2004 about building an AI system
+that would play (and learn about) any game you could present to it.  As a limited
+example, it should be possible to build an AI system that will play Go on a
+board of any size.  (Perhaps such a system exists, but to the best of my
+knowledge, competition between computer Go programs mainly focuses on the
+standard 19X19 board.)  Or, more generally, on any graph.  These programs
+would themselves be interesting - but a program that could play chess and
+go and othello and so on, using some kind of coherent representation for
+all of the games: that would be pretty cool.  Incidentally, the title
+of this section is sort of a pun: this system is a /meta-(game player)/,
+because it operates at a level "meta" to the games it plays; however,
+it is also a /metagame player/, insofar as hacking lots of games is
+itself a game, and insofar as the system is self-writing.  --[[file:jcorneli.org][jcorneli]]

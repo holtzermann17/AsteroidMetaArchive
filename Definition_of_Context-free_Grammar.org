@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Suppose that we have a set of objects which we call *tokens*.  What these objects are or mean is irrelevant to our present purpose, but we shall here represent them as words constructed from letters and special characters.  Define the term *string* to mean an /n/-tuple of these tokens.  We also allow the degenerate case /n=0/ and speak of the empty string in that case.  Define the operation of *concatenation* on our strings in the usual way.   Define a *language* to be a set of strings.
+
+We shall suppose that our tokens have been partitioned into two classes --- terminal and non-terminal tokens.  For typographical clarity, we shall represent non-terminal tokens as being bounded by angle-braces like so : <non-terminal-token>.   In a manner that we shall soon explain, the terminal tokens may be imagined as standing for sets of non-terminal tokens.
+
+Define a *context free grammar* to be a set of expressions of the form
+
+ A -> B
+
+where A is a non-terminal token and B is a string.  These exprssions will be termed the *productions* of the grammar.  
+
+Back to [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]

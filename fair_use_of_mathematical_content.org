@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I am concerned about what it means to copyright (and license) a relatively /short/
+piece of mathematical text, such as a definition, theorem, or proof.
+Not every proof /is/ short, of course!
+
+And also, note that even long math documents tend to be made up of short
+components.  I'm mainly concerned about the case of short texts because I think
+we can always reduce to that case.
+
+The question is: does copyright apply to a relatively short fragment
+of mathematical text (say, 300 words or less), and (since I assume it does...)
+what does that mean about /translations/ of that short text?
+
+The fact of the matter is that in very short texts, /expression/
+is almost entirely constrained by the basic semantics of the statement to
+be conveyed.  
+
+Thus, my claim is that short mathematical texts can be translated
+in some routine way (that gets rid of any residual expression other
+than the bare mathematical semantics) without violating copyright law.
+
+Am I wrong?
+
+--[[file:jcorneli.org][jcorneli]]

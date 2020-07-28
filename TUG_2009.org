@@ -1,0 +1,80 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+My main reason for going to the conference was to meet up
+with Ross Moore (http://www.maths.mq.edu.au/~ross/), hoping
+to re-boot our [[file:FEM.org][FEM]] project.  I missed his talk (which
+was the first one on the first day of the conference), but
+he showed me what he was working on lately -- "tagged PDF" --
+with features like these:
+
+ * substitution of Unicode characters, for glyph
+  combinations from fonts that use encodings other than
+  Unicode, via CMap;
+
+ * alternative text, to be read by screen-readers;
+
+ * extraction of text from PDFs in XML format;
+
+ * extraction of mathematical content, in MathML format.
+
+It looked pretty impressive -- and it is another good
+reason to offer PDF as a viewing format for PlanetMath
+(something we've talked about before).
+
+We also talked some about the FEM, and he is indeed
+prepared to help with the re-boot -- especially if
+the future FEM project can be combined with his tagging
+project.  I personally think this would be a great thing
+to do -- and as I see it, this intersects some of my
+ideas related to HDM, specifically, the idea of creating
+a "thesaurus" of "core mathematical expressions" and grammar
+of "core mathematical procedures" that will say what sorts
+of !LaTeX input should be marked up in what ways.
+
+One FEM-related thing I did at the conference was check
+out the latest snapshot and see how the content looked.
+Apart from some errors related to pictures -- !PlanetMath's
+!LaTeX source code is looking very good at present.
+(Only 4 errors apart from those having to do with pictures --
+in the whole thing!)
+
+Ross and I also talked with Frank Quinn of Virginia
+Tech (http://www.math.vt.edu/people/quinn/) who has
+started a new project called "!EduTeX"
+(http://edutex-wiki.tug.org/wiki/index.php?title=Main_Page).
+(The wiki is empty at the time of this writing, but
+I'm planning to do some work to help set it up!)
+Frank Quinn's interest with this project is to
+create "self-scoring and otherwise interactive PDF
+documents".  (The "!AcroTeX eDucation Bundle" is
+the start-point for this project, see
+http://www.math.uakron.edu/~dpstory/webeq.html)
+
+It seemed to me that this would be another good point
+for future collaboration with !PlanetMath -- but again,
+we'd want PDF as a view option.
+
+Other than that... I talked with Nelson Beebe, who
+has a bibliographic database project (with rather
+different implementation and goals from Pitman's
+BKN); I was entertained by quite a variety of other
+talks, particularly one on "class writing for
+wizard apprentices", whose bibliography is online
+http://www.tug.org/tug2009/abstracts/veytsman-classes.txt;
+and one on self-publishing by David Walden,
+who uses Ames On-Demand
+(which is near me at 30 Dane Street
+Somerville, MA 02143, 617.684.1100) and Lightning
+Source for several self-published books -- useful
+information if we get a good PDF of the FEM ready.
+
+That's about it for now -- I learned a lot about
+!TeX, but perhaps the most useful thing I learned
+is that TUG's journal has back-issues online:
+
+TUGboat back issues: http://www.tug.org/TUGboat/Contents/listtitle.html
+
+(There was also a talk by Paulo Ney de Souza about
+getting current issues into one of the for-pay
+electronic journal systems, so that's coming up...)

@@ -1,0 +1,227 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+JHilbert is a proof verifier for collaborative theorem proving in the spirit of [[file:Ghilbert.org][Ghilbert]].
+
+Visit the Wiki: http://www.wikiproofs.de
+
+Visit the development website: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/
+
+**  Goals
+The main goal is to get a JHilbert wiki alive in order to build a larger community.
+
+List of subgoals:
+ * We need a free font to display the various mathematical Unicode glyphs. There are some fonts which implement the mathematical BMP glyphs. Higher glyphs however, such as the alphanumeric characters starting at <code>U+1D400</code> are not implemented in most fonts. I've started such a font mainly by copying and slightly altering the glyphs from other free fonts. I'll post a link once I have worked out the copyright statement with proper acknowledgements.
+ * We need some method to input all those fancy mathematical symbols. There are already MediaWiki extensions for symbol input. Maybe we can build on top of them.
+ * Write a test suite to check whether some JHilbert server is implemented according to specification. For that matter, we need a formal specification and prove its soundness.
+ * Think about more natural input languages on top of the current JHilbert.
+ * A proof assistant strictly separate from the JHilbert core which would, among other things, fill in "simple" proof steps automatically.
+
+***  Already attained goals
+ * Experimental JHilbert-enabled wiki: http://www.wikiproofs.de
+ * MediaWiki extension: http://www.mediawiki.org/wiki/Extension:JHilbert
+ * Asynchronous request scheduler. A simple, multi-threaded server has been implemented.
+ * Unicode support (at least UTF-8 is supported).
+ * Standalone parsing of interfaces into a binary "library format".
+ * Definitions in interfaces.
+
+**  Download
+***  Version 7
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-7.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-7.tar.bz2
+
+Please update to version 7, as previous versions have a serious bug in the interface export code. The parameter loader contains a definition checker to ensure soundness across modules. Unfortunately, this checker was run at an inappropriate time (before unfolding the interface definition, instead of after), rendering it useless. This rather stupid bug has been fixed in this version.
+
+***  Version 6
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-6.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-6.tar.bz2
+
+Please update to version 6. Versions 4, 5, and perhaps earlier versions have a bug which caused the consequent equality checker to ignore non-dummy variables, leading to possibly wrong conclusions in theorems with hypotheses. Theorems without hypotheses are not affected.
+
+***  Version 5
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-5.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-5.tar.bz2
+
+***  Version 4
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-4.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-4.tar.bz2
+
+***  Version 3
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-3.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-3.tar.bz2
+
+JHilbert now has its own website: http://www.mathi.uni-heidelberg.de/~alex/jhilbert
+
+JHilbert is now mature enough so we can start thinking about MediaWiki integration. This means the next step is to develop a JHilbert MediaWiki extension and an accompanying asynchronous request scheduler simultaneously.
+
+This release is based on extensively rewritten code:
+ * There is complete support for the kindbind command now.
+ * Major disentanglement of the internal code structure.
+ * Internal data handling is much cleaner now, though the parameter loader is still a bit messy.
+ * It is now very easy for other developers to add alternative proof verifiers to JHilbert.
+ * Likewise, it is very easy now to add alternative storage methods. The current file serialisation method is quite usable, though probably still a little too bloaty for production use. The most natural method of storing data is some kind of relational database, I think.
+
+***  Version 2
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-2.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-2.tar.bz2
+
+This is somewhat of an intermittent release. Internal data handling is still an awful mess, and the kindbind command is currently broken when used in interfaces. But at least definitions are now working in interfaces, too.
+
+Furthermore, this release contains some rudimentary documentation and examples in the doc/ directory.
+
+***  Version 1
+ * Binary: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-1.jar
+ * Source: http://www.mathi.uni-heidelberg.de/~alex/jhilbert/jhilbert-1.tar.bz2
+
+**  Discussion
+
+/Please start discussion threads here by creating a new subsection./
+
+See also [[file:JHilbertDiscussion.org][JHilbertDiscussion]].
+
+***  Questions by ocat
+Hi! 
+
+1) What is an "interface"? Are you referring to 
+assertions which are "exported" (made available)
+outside of a module? 
+
+2) Why would a "definition" be in an interface
+(I know nothing...)
+
+3) I have seen Semantic Media Wiki and I like Wikis.
+Have you gauged the "fun factor" in all this for
+potential users? There don't seem to be millions
+of people just waiting to get into the theorem
+proving game -- but on the other hand, if you wrote
+an interface to a multi-user virtual reality 
+environment and rendered formulas as they would 
+normally be used in the mathematical vernacular
+it might be more fun (better yet would be an
+actual game involving theorem proving in a V/R
+environment.) I know you'll have fun writing the
+code though!
+
+4) I am not so keen on inputting math unicode symobls
+using a GUI. ASCII shorthand systems seem to work
+well once people assimilate the codes. And, as mentioned,
+I wonder, maybe, whether or not rendering math objects
+as 2D graphical objects is preferable to writing out
+Unicode Strings.  
+
+These are just off-the-cuff feedback/questions so
+don't take any of this as anything other than nervous but
+excited anticipation for the success of your project...
+and I hope to steal much of your code one day, hoho,
+so I would really prefer a V/R interface with graphic
+3D rendering of formulas (thx in advance :-) --[[file:ocat.org][ocat]]
+----
+Hi ocat, I'll answer your questions item by item:
+
+1) "Interface" means the same as in Ghilbert, i.e. the stuff that's in the <code>.ghi</code> files. These are not only assertions, but also kinds and terms. Moreover, interfaces can not only be exported but also imported, so
+ 
+2) definitions in interfaces make perfect sense. Of course, you don't /strictly/ need them. In metamath, definitions are just axioms with equivalence or equality as their leading symbols. However, separation of definition from axioms, apart from being esthetically more pleasing, saves those tedious extra steps of folding and unfolding definitions.
+
+3) We don't need millions of people. About a dozen should be enough for starters ;) And before we go 2D or even 3D, we need to get 1D right. Plus, there may be people for whom graphical interfaces are not suitable. Ascension to the grand dream of hyperreal mathematics comes in many small steps. Once 1D works, we can add all sorts of extensions, graphical or not (that's what I meant with "more natural input languages" above).
+
+4) I guess you're referring to the CharInsert extension of MediaWiki. That's what I call M$-word typesetting ;) You are absolutely right in that tediously selecting every single glyph from a menu is not the way to go. ASCII shorthands work well for special mathematical symbols, such as the TeX shorthands used in the blahtex extension (\in, \subset, \leq, etc.). These can be collated to unicode glyphs by the software. For alphanumerical symbols, however, it may help to select a symbol group from a GUI (which may be bound to a keyboard shortcut) and then capture regular keyboard strokes and transform them to the respective symbol. Let's say, you select "Math Fraktur symbols" from the menu and type the letter "F" into the edit window. Then, instead of a normal "F", the unicode glyph <code>U+1D509</code> would be rendered (if you have a very smart font, you can see it here: &#x1d509;). I have not yet investigated if this is possible with ECMAScript.
+
+--GrafZahl
+
+That is a beautiful website. I haven't yet studied your
+code but I am intrigued. FYI, note that the latest version
+of mmj2 includes three enhancements custom-made for 
+feeding data from/to Metamath and other systems such
+as jhilbert: the "mmj2 Service" feature, "Book Manager"
+and "Theorem Loader". With mmj2 Service you can treat
+a functioning active mmj2 instance as a "subroutine" --
+in "callee" or "caller" mode. The Book Manager imposes
+an ordering on a Metamath database, breaking it down
+into chapters and sections -- the sections are further
+arranged so that symbols, syntax, and logic are separated
+out. With Theorem Loader you can feed a theorem/proof
+back into mmj2 and use its proof checker, for instance,
+which may be helpful. The interface /to/ Metamath may
+be harder because the names must be converted to 7-bit
+ASCII and meet Metamath's naming conventions, but 
+that is doable I suppose, if someone is interested. 
+
+I look forward to seeing more of your great work on jhilbert.
+
+--[[file:ocat.org][ocat]] 11-Sep-2008
+
+The website was autogenerated with <code>maven</code>, basically a <code>make</code> on steroids, see http://maven.apache.org. The mmj2 capabilities you describe sound quite interesting: you could simply dump a wiki full of proofs etc. into a Metamath database, or load Metamath theorems into the wiki, use alternative proof verifiers, and so on. I haven't taken the time to delve deeply into mmj2 yet. But once we're in a position to create actual content with JHilbert, mmj2, or parts of it, might just be the tool to tap into the great store of knowledge of set.mm.
+
+--[[file:GrafZahl.org][GrafZahl]] 12-Sep-2008
+
+Yes, I wrote the latest enhancements with you in mind.
+The sample code for "mmj2 Service" shows how to check
+a proof, and it is easy to extract everything from a
+Metamath database -- completely parsed and proof-checked --
+using the mmj2 Service and the Book Manager. Going back
+to Metamath format (.mm files) it is simple to create
+a polish prefix notation grammar from jhilbert, except for
+extensions which may be present such as your aliases,
+and perhaps the definitions (which are just axioms
+in Metamath.) 
+
+P.S. Can you dump the source code to a tar.gz for
+me (my windows machine doesn't have .bz2 capabilities
+now -- it has winzip, doh...)
+
+P.P.S. Don't forget the ql.mm Metamath database with
+thousands of quantum logic proofs! Also, have you
+looked into the Mathweb efforts at U. of Bremen?
+Our friend Christoph Lange has a math media wiki
+and a formula editor is underway with OMDoc compatibility --
+I think that might be of use to you (I'm curious about
+building a cross-reference between your Unicode symbols
+and the OpenMath dictionaries anyway...) (Just thinking...)
+
+
+
+
+--[[file:ocat.org][ocat]]
+
+
+ocat, I feel honoured that you include JHilbert in your planning already at this point, when it's nowhere near ready.
+When JHilbert imports something from an .mm file through mmj2, it should of course be verifiable in JHilbert as well,
+and likewise the other way round. This means JHilbert's "locality of variables" might make some things difficult. In the
+worst case, all proofs showing that a metamath definiens is equivalent to its definiendum have to be rewritten. I've already
+stumbled into this problem when trying to convert some GHilbert files to JHilbert. In the other direction, you'd need to turn all defs
+into axioms and write equivalence proofs anyway. mmj2's search feature could be very helpful here.
+
+I've updated the website, you can now download the source code as a zip archive.
+
+The Mathweb and OpenMath stuff were news to me, thanks for calling them to my attention. To me, it looks basically like some kind of ontological project, with software and standards related to data exchange between mathematics and/or logics related applications. Imagine a standardised interface between programs like metamath, mmj2, JHilbert, and other proof verifiers such as Coq, Isabelle or HOL.
+
+Nevertheless, even with all that back in my mind, I'd like to concentrate my efforts on getting JHilbert ready for now, where "ready" means "online and usable for everyone", even if it's only an alpha version in the beginning. There were, and are, a lot of interesting projects sharing the goal of creating a comprehensive library of machine-verifiable knowledge, but none appears to be going in quite the direction in which I want JHilbert to go --- at least not fast enough. There is the MIZAR project, using the good old peer-review process for its publications. There is a bazillion of interactive proof-assistants, all using high-level languages. There is the QED project, which appears to be dead, there is Hilbert II, dredging along for years now, and, of course, there is metamath, with the first proof verifier where I felt, "yeah, that's the way you do it". Well, it shouldn't be so hard now to get JHilbert ready now, when I just had to pick up the thread where Raph left it, and with all kinds of helpful free software around that wasn't available five years ago. For example, I just found a software called "PHP/Java bridge". If that works, JHilbert integration into MediaWiki will be a breeze. I don't want to get anybody's hopes too high, but maybe we already have a working alpha version of a JHilbert wiki before the end of the year.
+
+--[[file:GrafZahl.org][GrafZahl]]
+
+Thanks for the .zip. I'm hoping you didn't write
+your Java code in German... Re: Mathweb -- the effort
+at Bremen splits off from project OMEGA, which is a
+distributed prover using 2nd order logic. OMDoc is
+incorporates the OpenMath spec as an allowed input
+source and attempts to provide a way to encode all
+of Mathematics. Free variables in formulas are discouraged
+and the intent seems to be to write them using Lambda 
+notation. There is no concept of Metamath or Ghilbert's
+"distinct variables" anywhere else in the mechanized
+math universe. Also, fyi, Hilbert style reasoning is
+uncommon -- natural deduction and other related techniques
+are used with [http://www.securedatarecovery.com/data-recovery-services.html professional data recovery] (plus most other systems seem to hardcode some
+mathematical knowledge into the programs at some level,
+higher or lower...) All that said, providing a cross-reference
+between OpenMath dictionaries and Metamath/JHilbert is
+definitely worthwhile, someday. And in theory Metamath/JHilbert
+can be coverted to/from other systems, but the job is
+far from trivial. --[[file:ocat.org][ocat]]
+
+P.S. I see your JHilbert code is in English Java, and
+that it contains many things of educational value for
+me. I hope that you will be available to answer questions
+so that I may learn the maximum amount from you. --[[file:ocat.org][ocat]]
+
+: You're welcome. But remember that it's my first project written Java.--[[file:GrafZahl.org][GrafZahl]]

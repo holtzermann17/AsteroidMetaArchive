@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Generally speaking, an atom is an item of a list which is not itself a list.
+
+In the case of s-expressions, an atom is a string of alphanumeric characters and punctuation marks other than parentheses, periods, semiclolons and quote signs (which have special meaning in LISP).  An s-expression is either an atom or the written representation of a list constructed from such atoms.
+
+
+ * [[file:Discussion of atom.org][Discussion of atom]]
+
+ * Back to [[file:h-code.org][h-code]]

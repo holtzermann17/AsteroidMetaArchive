@@ -1,0 +1,154 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+* Proposed fee schedule
+We should probably contrive to set site membership fees low for just about
+anyone who wants to join to join, first of all, and at several levels, second of
+all, so that people with more money can have some target to shoot for.  Here are
+some rough figures to illustrate what I mean.
+
+; "small" : $12 (with the idea of keeping it fairly low to get more student and low-income members)
+; "medium" : $60 (this is equivalent to the "student" membership level at FSF or AMS)
+; "large" : $120 (comparable to the normal membership at FSF or AMS)
+; "jumbo" : $200 and above
+
+Maybe we could set up some kind of reciprocity deal so that FSF or AMS members
+get a further reduced rate (i.e. if FSF or AMS was enlisted as a sponsor of
+sorts).  Contributions at each of the small, medium, and large levels should
+have full membership benefits (whatever those are) while contributions at the
+jumbo level should get that and something extra if desired (e.g. free
+publicity).  "Large" memberships might be geared towards tenure faculty (as Ray
+talks about above, it certainly would be good to get more people in that
+category on board), and maybe something special could be offered there too.
+
+I don't mean to be obsessed with this membership issue, but I continue to think
+that everyone who gets a lot of use from the site should share in its costs,
+even if they are only giving a little at a time.
+
+** Refererences
+ * http://www.ams.org/membership/05membdues.html
+ * http://www.fsf.org/associate/dues.html
+
+* General Discussion
+
+I think that your fee schedule seems about right.  Perhaps we could fine-tune
+the details some, I'm sure we will, but right now let's look at the big picture.
+I whole-heartedly approve of the idea of having a rather low basic membership
+package and it might be a good idea to make that a point of policy in keeping
+with the spirit of "math for the people by the people".  As for comparing our
+fee schedule with that of professional organizations. we need to keep in mind
+what they offer with their membership.  For instance, with my basic APS
+membership, I get a monthly copy of "Physics Today", the right to present papers
+at conferences and appear in the proceedings, discounted suscription rates to
+most physics journals, as well as more elusive benefits like the "prestige"
+conferred by membership which translates into career advancement in academia
+when one writes down that one is a member of a professional society and has
+presented papers at conferences on one's resume.  Unfortunately, as of yet, if I
+write down membership in Planet Math on my resume and list entries which I have
+contributed to the encyclpaedia on my list of publications, this is likely to be
+more of a liability than an asset --- too many of my colleagues are inclined not
+to take Planet Math seriously and would consider this as a sign I am some kind
+of crackpot or flake who should be avoided.  As far as I am concerned, this is
+not right and needs to change.  The topic entries I and others contribute to
+Planet Math take every bit as much effort to write and are of the same calibre
+as entries found in published mathematical encyclopaedias, yet one gets "resume
+points" for submitting the same article to a mathematical publisher. (but
+"resume points" are a more powerful incentive for most people than "Planet Math
+points") Maintaining Planet Math entries is just as much work and a comparable
+service to the mathematical community as submitting review articles to journals
+and one thefore should be able to recieve comparable recognition.  I think it is
+important for us to keep this point in mind and slowly work towards improving
+this situation.  In particular, I think that it would help us in getting people
+to contribute more sorely needed entries.  Most academic mathematicians,
+especially in today's "publish or prerish" climate, would not even consider
+writing an entry unless they could record the accomplishment on their resumes.
+Contrapositively, if contributing to Planet Math were considered a legitimate
+mode of mathematical publication and one needed a membership to contribute, I
+wouldn't be surprised if we would be rolling in dough even if we only offered $5
+memberships.  Enough said --- I guess I'm just as obsessed with the "prestige
+and respectability" issue as you are with getting members to contribute
+financially ;)
+
+Here are my suggestions for perks to go with higher membership levels.  1)
+Planet Math merchandise 2) Printed copies of documentation and of the
+encyclopedia, CD of noosphere and/or the website 3) For high-end memberships
+targeted at tenured professors, we should consider offering "handholding,
+babysitting, and pampering services".  With such a membership, one should
+automatically get acess to a "help hotline" where one of us would personally
+answer all technical questions, however trivial, debug TeX problems, straighten
+out bad links and set correct link policies for their entries, and the like.
+
+I think your suggestion of trying to make an arrangement with AMS, MAA, SIAM,
+APS, AIP, and similar professional organizations is an excellent idea.  From my
+perspective, I think that the most valuable feature of this is the
+"respectability" and publicity that this would give Planet Math.  The question
+is how to do it.  First, of course, we need to find out exactly what these
+organizations policy on these sorts of arrangements is and who decides.  Then,
+it would be a matter of working on our connections and getting to know the right
+people in these organizations so as to get our proposal
+considered. --[[file:rspuzio.org][rspuzio]]
+
+Although I see the value of this idea, first there are issued that need to be
+addressed. The possibility of paying and subscribing then should be made a lot
+easier, no matter what the country the person is (and I assume this adds heavy
+secretarial work). I confess I haven't followed this convo so closely, so I'm
+still a bit uncertain on what the membership is for. I don't think it's a good
+idea to charge (even if a little) so people can either contribute or send
+corrections, if anything because it would decrease the rate of
+contributions. --[[file:drini.org][drini]]
+
+: I would say that [[file:PM Membership Benefits.org][PM Membership Benefits]] is a topic for conversation more
+than anything else.  I don't think that any extra barriers would be created for
+non-members, rather, enhanced options would be offered to
+members. --[[file:jcorneli.org][jcorneli]]
+
+I personally think that any membership that restricts access is a big mistake
+and I would be completely against. All users should be able to access all
+entries in PlanetMath. I doubt people would pay to read 'some math' and the
+website would not reach nearly as many people. I would definitely become a
+member with a yearly fee, as long as there are no restrictions to other users. A
+membership that includes some extras, like merchandise would be a good
+idea. --[[file:alozano.org][alozano]]
+
+: I don't think anyone has suggested making a membership that restricts aspects
+of the current site.  It might be worthwhile to build some /new/ services that
+are assessable only to members.  But these would be rather different things from
+the Encyclopedia. --[[file:jcorneli.org][jcorneli]] Sat Feb 26 22:18:57 2005 UTC
+
+: As I understand it, the idea of membership has more to do with the
+organization behind Planet Math than with who gets to contribute to or access
+the current site.  The issue was first raised in connection with the
+incorporation of Planet Math Ltd.  For all it's flaws, the following analogy
+might prove useful.  Think of a regular corporation like a bookstore (a book
+co-op would be an even better analogy).  On the one hand, there are the
+shareholders who have a voice in how the store is run, what sorts of books it
+will sell, how money is to be spent and the like.  On the other hand, there are
+the customers and the suppliers.  To shop in the bookstore or have your book
+sold in the bookstore, you don't have to own a share in the store.
+
+: I see membership in Planet Math as something a lot like that, the main
+difference being that, this being a non-commercial operation, you don't get
+dividends on your share and you can't trade it in the stock market.  As I see
+it, the main benefit of membership in Planet Math would be that one has an
+official voice in decisions about the operations of Planet Math.  For instance,
+members would decide on such matters as how the budget should look, what the
+policies will be, and the like.  This right would be part and parcel of any
+membership, whether it is a $12 basic membership or a $200 de luxe membership.
+However, with the higher-end memberships, one would gain various extra perks.
+However, I would say that preferential treatment when it comes to submitting
+entries should not be one of them --- entries should be judged on their
+mathematical merit alone, not on who submitted them, otherwise this will become
+an inbred coffee clutch.  As I see it, membership is something of a separate
+issue from being able to contribute to or access the mathematical content of the
+website.  --[[file:rspuzio.org][rspuzio]] 26 February 2005
+
+:: I definitely agree with your idea of thinking of PM as being like a book
+co-op -- any other sort of co-op would be cool too.  I think the metaphor is
+quite apt.  We aren't "worker owner" (indeed, I don't know if there is anything
+to own...) but we're certainly kind of like a worker-owned co-op.  Maybe I'm
+just biased by my experience in the utterly bohemian neighborhood I live in.
+But based on what's going on at the food co-op, and the collectively-managed
+cafe, and the various bike co-ops in my neighborhood, I would say that for the
+right kind of people, a co-op can be a very good business model.  --[[file:jcorneli.org][jcorneli]] Sun Feb 27 00:21:21 2005 UTC

@@ -1,0 +1,52 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Non-free math (math that does not meet the terms of the definition
+given on the page [[file:What is Free Math.org][What is Free Math]]) is not as useful as math
+that does (see [[file:Why Free Math.org][Why Free Math]]).  
+
+But there are other problems with it as well.
+
+: But hold on -- non-free math seems all but inescapable!
+
+: /Books/ are (typically) non-free.  /Lectures/ are typically non-free.
+Heck, even popular /software/ like Mathematica is non-free.
+
+It is true that these things are often non-free, and we often don't have good free alternatives!
+
+That is precisely the reason why non-free math should be avoided.
+
+I am not (at this point) suggesting that people should stop reading books,
+or stop going to lectures.  I do suggest that you stop using Mathematica
+and other non-free software in its class, because we /do/ have free software alternatives
+already, thanks in a large part to the [[file:GNU.org][GNU]] project.
+
+I /would/ strongly suggest that you not develop further non-free books,
+lectures, or software.  I would also suggest that when you have a free option,
+to use it -- and help and improve it.
+
+Supporting free math is taking a stance in favor of freedom.  Supporting
+non-free math is taking a stance in favor of non-freedom.  Using non-free
+resources (books, lectures...) at this point does not necessarily mean you
+support non-freedom.  But you should only create free math, and when you use a
+non-free resource you should think about how you can most effectively work to
+replace it with a free resource!
+
+If you know people who are creating non-free math, encourage them to rethink
+what they are doing.  Have them read the [[file:Why Free Math.org][Why Free Math]] page.  Help update
+that page yourself.  
+
+And spend some time working with us on the [[file:PlanetMath.org][PlanetMath]], [[file:HDM.org][HDM]], and related
+projects, to help make more knowledge free in the sense of freedom.
+
+----
+
+See
+[[file:software we use.org][software we use]]
+and
+[[file:software we think is cool.org][software we think is cool]]
+for some free mathematics software.
+
+
+See [[file:merits and demerits of non-free webservices.org][merits and demerits of non-free webservices]] for a discussion
+about why (OK, and also whether) webservices should be free.

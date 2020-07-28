@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It would be nice to be able to expand all the messages in a thread
+below the current message; this would make getting up to speed
+on a discussion faster. --[[file:jcorneli.org][jcorneli]]
+
+/Here is a hack that does it: add &msgexpand=-1 to your PM url."
+
+----
+
+Oh, hey, what d'ya know? Great minds think alike...
+see this closely-related request:
+
+
+[[file:expand all for attached fora, corrections, other lists.org][expand all for attached fora, corrections, other lists]]

@@ -1,0 +1,97 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In accordance with our general practise and your specific comment, the discussion has been moved here. --[[file:rspuzio.org][rspuzio]]
+
+I've edited the first three sections.  I think the
+other sections will also need editing, and besides,
+I want to read them, but I am getting a little tired.
+
+My main comment for this article so far is: why not write
+it in a top-down way?  I have a hard time thinking about
+things that are not written in a top-down way.  The second-to-last
+section, [[file:Implementation of match-schema.org][Implementation of match-schema]], should, in
+my opinion, be the fourth section instead.  The various
+subroutines can be described in overview on the page
+that gives the code for match-schema, and their implementations
+can be given in later sections (or appendices or whatever).
+I think that I tend to program in a top-down way... anyway,
+if I am reading about a program, I like the text to be
+top-down.
+
+: This may have to do with the fact that when I wrote this I was primarily
+preoccupied with making sure the programs were correct and only introduced the
+theory as needed (a lot of the theory was developed on the fly as needed).  I
+basically wrote it in the same order that I worked it out.  For instance the
+main routine comes last simply because I happened to write and debug the
+subroutines first before I even started to write the main routine.  I make no
+claims that this order is necessarily any good from a pedagogical standpoint.  If
+you see a better order for presenting the material, feel free to rearrange and
+edit it as you see fit. --[[file:rspuzio.org][rspuzio]]
+
+:: I think top-down exposition is very important.  The actual order of the
+sections is not as important -- but the reader needs to have an idea of where
+things are headed.  Then when reading, certain sections can be skipped over and
+returned to later.  That's why the introduction is so important.  I'll revisit
+the section in which I felt my motivation flagging, but I expect that now that I
+have a sense of where everything is going, I'll feel better about it. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:34:30 2005 UTC
+
+My other comment is also programming-related, and this is
+just that it is nice to have /short/ sections in an
+article, each one reinforcing the others.  It is sort
+of like code: functions that take up more than one screen 
+are hard to read - it is nicer to read short functions
+that reference each other.
+
+Perhaps these comments can be moved later to some other
+part of the wiki where they can serve as (hopefully good)
+general advice.
+
+: They are in such a place now. --[[file:rspuzio.org][rspuzio]]
+
+:: Well, kind of -- more like, a place where they could potentially be converted
+into such advice. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:35:19 2005 UTC
+
+----
+
+I thought I should also explain what is going on with the proofs.  Te reason I
+put proofs after certain programs is that they are proofs tht the programs are
+correct.  Also, I used the notation /function: domain -> range/ familiar from
+mathematics to indicate what sort of input and output a program accepts.  If
+this is not so good, we can change to some other way of indicating the same
+information.
+
+The way I did this is somewhat haphazard and probably should be standardized.
+Perhaps a standardized template (or schema) for presenting the LISP routines
+would be something like so:
+
+ 1. name
+
+ 1. input and output
+
+ 1. description
+
+ 1. subroutines used -- in particular, it needs to be noted if certain
+  subroutines recursively call the routine being discribed
+
+ 1. listing of the definition of the routine
+
+ 1. proof that the routine works as advertised
+
+--[[file:rspuzio.org][rspuzio]] 28 February 2005
+
+: I don't think we necessarily need to do proofs at this point in the game, but
+if it comes naturally in a certain case, fine.  I think I probably took the
+function-domain-range notation out everywhere in this article, because it seemed
+a little bit like overkill.  I find it distracting to be told something that I'm
+doing a decent job of holding in my head (which does bring up the interesting
+question, could I have gotten the facts into my head without the notation? -
+probably).  I thought that the description of how the /substitute-in-schema/
+program works was quite good -- not exacly a proof, but a nice exposition of the
+program.  To my tastes, that is the sort of thing to shoot for now.  But I won't
+be bothered by proofs - as long as they fit into an article that seems clear in
+other respects ;). --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:41:15 2005 UTC
+
+----
+
+Back to [[file:schema matching utilities.org][schema matching utilities]]

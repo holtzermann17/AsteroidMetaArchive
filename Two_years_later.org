@@ -1,0 +1,2600 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is meant as a successor to [[file:Half a Year Later.org][Half a Year Later]].  Like its predecessor,
+it is a progress report on some of my interests.  Specifically, it is meant 
+to document the current state of my thoughts and understanding with respect 
+to formalization of mathematics.
+
+Much of the progress has been in the form of understanding things better,
+clarifying details, and filling in gaps.  Also, I have steadily moved 
+from the lower level of merely encoding knowledge to the higher levels
+of proof verification and relations between systems.  As far as major 
+new concepts, there have been two: the abstract, modular approach to 
+representation language and sheaf theory.  Alongside Makarov's D-logic
+and Quine's quotation, I add as influences !McCarthy's notions of 
+abstract syntax and proof checking and Grothendieck's categorical topology.
+
+Whereas in my earlier thinking on represenataion of mathematical knowledge,
+I had focussed on a particular language the so-called core h-code, I have
+now shifted my focus away from any particular syntax, however simple, to 
+working directly with the concepts and relations encoded in the grammar.
+
+Among other things, this has finally resoved a long-standing nuisance.
+Ever since my first correspondence with Joe on this subject two years ago,
+the issue of a notation for binders has ben problematic --- there seemed
+to be no particularly natural syntax for representing them uniformly in a
+core language.  Now, however, that I focus instead on the notion of binding
+and regard all languages, including this core language as representations
+of this abstract system, this is no longer a vexing issue --- there is no
+problem if different diaects of h-code represent binding in different ways,
+none of which is simpler or more natural than any other.
+
+To be sure, this is more a change of emphasis than of substance.  After all,
+a faithful representation is an isomorphism so one simply reproduces what one
+already had in a new setting.  The real importance of this is that one 
+setting might be more conducive to one's thought processes than another.  
+When thinking in terms of languages, no matter how simple or artfully 
+constructed, considerations of a grammatical sort always seemed to intrude in 
+seemingly distracting and only arginally important ways.  Now however, I feel 
+that I am working with something which is closer the actual concepts I employ 
+when examining a mathematical expression and trying to understand its 
+meaning. Given that a main goal of the HDM project is not just to represent 
+mathematical knowledge, but to do so in a way which is informed by how 
+mathematicians think, this is an advance.
+
+The influence of sheaf theory has poured in from various sources.  First and
+formost, having started my research career as an applied differential 
+geometer, it comes as no surprise that geometrical notions would come through 
+in my thinking on just about any subject.  For instance, consider how the 
+above discussion on embedding abstract systems in languages is informed by 
+the notion of intrinsic and extrinsic geometry.  Given that sites and sheaves 
+are a further abstraction of the notions of manifold and bundle central to 
+modern differential geometry, it comes as no surprise that I would embrace 
+them and find it possible to express things precisely in terms of the general 
+notion which I could only express metaphorically in terms of the more 
+specific notions, even look forward to a post-modern geometry based on these 
+endeavors which would make it possible to describe such things as the 
+geometry of information spaces, maybe even various mental spaces, in a 
+precise way.  (As the notion of cyberspace becomes more and more prominent, 
+it would be nice to see a post-modern geometry emerge which is applicable to 
+this new space within so much of post-modern life unfolds; how can one 
+possibly homestead the noosphere in a rational fashion if one cannot survey 
+the new frontier for want of a suitable geometry?) 
+Particular highlights in my affair with categorical geometry include the 
+following: 
+ * Early on, when I was a student who had just learned about manifolds but had 
+not yet gotten to sites, I concieved a notion of "manifold of theories".  
+This idea goes back to an old humanist notion that a truth in one subject 
+might not be a truth in another subject (I wish I could find the source for 
+that).  Just as a manifold is glued together from different charts so too I 
+thought maybe the way to describe the variety of experience, we would do well 
+to employ an atlas of theories describing different perspectives.  A 
+particular example which struck me was that of vectorial and variational 
+mechanics.  Both these theories describe the same realm of classical 
+mechanics, it can be shown that they agree completely as to prediction of 
+experimental result, yet the two theories are practically opposite
+as far as ontology and philosophical outlook!  In the former, the universe is 
+populated by forces and bodies; evolution is governed by local laws of 
+causation; in the latter, one instead has systems whose evolution is governed 
+by holistic, teleogical variational principles.
+
+ * In my work on constrained systems, starting with an examination of 
+constrained quantization in the algebraic approach and leading up to 
+non-standard constants of the motion, I noticed that it is possible to 
+quotient a phase space by an ergodic action in a meaningful way and that, 
+algebraically, the emergence of non-standard numbers could be explained by 
+the fact that, if one quotients an algebra of functions (like the C* algebra 
+of observables, i.e. continuous functions on phase space) by a prime ideal 
+(like an ideal generated by constraints, or perhaps a overideal of such an 
+ideal) one can obtain the ring of finite elements of the field of 
+non-standard real numbers.  This observation rang two bells.  First, it 
+reminded me of the situation in the moduli theory of algebraic curves and 
+geometric invariant theory where, in order to properly quotient by the action 
+of collineation groups, one needs to pass from the varieties of classical 
+algebraic geometry to the more general schemes of categorical geometry.  
+Second, it reminded me of the situation in arithmetic geometry, where one 
+applies the machinery of scheme theory to number fields in order to describe 
+the operations of algebraic number theory in geometrical terms and finds that 
+different points in these arithmetical spaces can have quite different rings 
+of values associated to them.  Hence, it seemed to me that perhaps the thing 
+to do was to move from manifolds to schemes of C* algebras as the arenas of 
+dynamics.  These more general spaces would contain, in addition to the usual 
+points of phase space, new points at which observables would assume 
+non-standard values.  Moreover, when one considers the evolution
+of a chaotic system in such a setting, it turns out that, whilst, when 
+quotienting by the action of he evolution semigroup, the regular points 
+collapse into an uninteresting blob, the non-standard points give rise to a 
+meaningful reduced phase space.  Perhaps part of the reason why chaotic 
+systems are so difficult to study and algebraic methods in mechanics seem 
+limited to integrable systems is that one is limited by the category of 
+manifolds, just as classical algebraic geometers were limited by the category 
+of projective varieties.  When one moves to the more general setting, the 
+powerful techniques, such as constants of motion, which one is accustomed to 
+in the study of integrable systems again become available in a new form.  In 
+a sense, chaotic systems are too cramped when we try to squeeze the into 
+manifolds, so we need to give them soom breathing room in a more ample space.
+
+ * In my musings on dialectical logic and the logico-linguistic approach to 
+Galois theory, I considered the relation between axiomatic systems and the 
+possibility of different observers consistently describing the same reality 
+in incompatible ways. To some extent, this grew out of my interest in 
+relativity theory.  Also, I found the particular sort of reasoning used in 
+Galois theory to prove the existance or non-existance of particular sorts of 
+roots intriguing and felt that I had not yet gotten to the bottom of this 
+idea but buried it among algebraic details.  Weyl's remark that Galois theory 
+is a sort of relativity theory for polynomials suggested that these issues 
+are somehow related.  Into this soup I threw in incompleteness
+and many-valued logic.  Out came a vision of towers of theories obtained by 
+adding axioms to incomplete theories.   Adding a formalized notion of 
+observer, one obtains situations in which different observers can be using 
+the same language and describing the same reality correctly yet disgree with 
+each other in their descriptions.  In order for two observers to communicate 
+properly, one must translate what they say, even if they use the same 
+language.  Thus the Galois group, like all relativity groups, may be seen as 
+a group of dictionaries.  Furthermore, while I would not have described it in 
+those terms then, perhaps the dialectic of Fichte and Hegel 
+can be described as a pushout construction.  Starting with a common idea, one 
+develops two conflicting ideas, the thesis and the antithesis.  The synthesis 
+is a fibered product of the two and, where fibered products are to be found, 
+sites and sheaves are likely to be waiting around the corner.
+
+ * When I first began corresponding with Joe about the HDM, I revived the idea 
+of manifold of theories.   I started thinking about the question "what is a 
+mathematical object?", one thought led to another, the ideas mentioned above
+regarding relativity and incompleteness entered into the mix, and I started
+seeing marked parallels between the situation with logic and that of geometry
+which led to the idea of introducing something like the notion of a manifold.
+In particular, I found a characterization of Goedel's work as coordinate 
+metamathematics apt, in the same vein viewed my theorem on integral 
+representations of recursive functions as differential metamathematics, and 
+where coordinates and diferential geometry appear, there should be manifolds 
+around.  I also considered Goedel's incompleteness theorem to be rather 
+similar to the proof of impossibility of squaring the circle and found myself 
+rather dismayed at the huff and puff, gloom and doom attitude with which the 
+incompleteness theorem has been recieved and felt that it would be better to 
+take a positive attitude and explore the host of new possibilities opened up 
+by coordinate metamathematics rather than get hung up over an impossibility 
+theorem --- after all, that is how mathematics usually proceeds.  To me, what 
+Goedel's theorem and related theorems of Post, Novikov, Branicky and others 
+suggest to me is is that there is a deep relation between seemingly disparate 
+theories based on the notion of computation and simulation.
+Following the idea of manifolds led to sites as a generalization of manifolds 
+as an appropriate structure and the idea of simulation has led to the precise 
+definition of what it means for one system to simulate another discussed 
+below. 
+ * A particularly tricky aspect of the scholium system is the business of 
+clusions. While it is no big deal if an occasional document includes material 
+from another document, things can get hairy when there are inclusions and 
+transculsions going on all over the place.  In particuar, one might have a 
+situation where document B includes material from document A which is then 
+trascluded on to document C which has an identification with A.  Such a 
+situation invites the possibility of inconsistency --- what if, after this 
+chain of clusions, document A no longer agrees with itself.  What is needed 
+here are some sort of consistency conditions to precude (yet another type of 
+clusion?) such inconsistent situations.  Hence, I thought about this business 
+of consistency conditions and the constraints they impose on a scholium-based 
+text.  In the end, this led me to view scholium-based text as sites and 
+scholia as sheaves over them.   Clusions form a category because, if we have 
+a clusion form document A to document B and a clusion from B to C, that 
+induces some sort of clusion from A to C (which had better not conflict with 
+any other clusions from A to C we might already have!).  If we have a clusion 
+from B to A and a clusion from C to A, then there exists a maximal document D 
+which has clusions to A and B such that the composition of these clusions 
+with the original clusions is consistent.  This is the fibred
+product of B and C over A.  Given a document, with enough clusions to it, we 
+could construct the document.  This is just the original idea of assembling 
+documents from index cards and is our notion of covering.  These definitions 
+of morphism, fibred product, and covering satisfy the relevant axioms, so we 
+have a site. 
+ * Inspiration came from Joe's idea of duality between queries and knowledge 
+bases and his admonition to consider this in an overly mathematical way.  In 
+our correspondence in this matter, I thought of algebraic geometry as an 
+example of such a dual relation with equations as queries and varieties as 
+knowledge bases. Upon thinking of the matter further, I considered both the 
+set of queries and the set of responses as closed systems under some 
+operations (say Boolean logic operations) and noticed that there was a 
+contravariant relationship between them. This reminded be quite a bit of the 
+contravariant functor between ideals and varieties which is central to 
+algebraic geometry; indeed in the aforementioned example, it is exactly that 
+functor.  That strongly suggested to me that there is a much more general 
+form of geometry based on closed systems.  After all, a ring is a closed 
+system with two operations and ideals may be viewed as sets of
+true propositions under two rules of inference: if $A$ and $B$ are true, 
+conclude $A + B$; if $A$ is true and $B$ is arbitrary, conclude $A \cdot B$.  
+Thinking this way, it seems that there ought to be a much more general form 
+of geometry in which one takes, instead of a ringed space, a site with a 
+sheaf of closed systems as one's notion of geometrical space.  In particular, 
+I hope that this construction will allow one to rigorously discuss various 
+information spaces and make good mathematical sense of the vague ideas of 
+manifolds of theories.  Also, I wonder if something like this may not be what 
+is needed to mathematicize subjects other than physical sciences.  In 
+describling physical reality, the sort of spaces which come from rings have 
+proved useful; to describe other domains of study, perhaps the sort of spaces 
+coming from logic-related closed systems may be more relevant.  If so, the 
+idea from the humanists which started this quest of mine would come full 
+circle. 
+ * Most recently, there is the progress I have made with algebraic 
+differential geometry.  Last week, I got a most interesting birthday present 
+in the form of an insight into how to frame a definition of cotangent module.  
+This is the last piece in something I have been thinking about for a good 
+while.  This should let me do things like put geometric flesh on the bones of 
+Sorkin's discrete spaces to make nanosuperspace models of quantum gravity and 
+formulate the differential geometry of the non-standard phase spaces 
+discussed above in a systematic way. Also, this definition makes sense for 
+non-commutative rings as well, so it seems one could start considering 
+non-commutative differential geometry.  In this direction, I wonder whether 
+it is possible to adapt this construction to Madore's niebelungen.  Granted 
+that non-commutative geometry may seem insipid (!!!!) in comparison with the 
+more radical visions of information geometry but, it is definitely worthwhile 
+and interesting.  Also, one could ask whether it would be possible to 
+generalize yet further past non-commutative spaces and niebelungen
+and have some sort of tangent bundles to the more general spaces described
+above but, for now, I get dizzy at the thought of such an exorbitant level of
+generality!  The only thought I have had along such lines so far is the idea
+of parallel transport of mathematical objects between theories via 
+connections as functors.
+
+** Three Levels
+
+My thinking on the formal mathematics has divided itself (like the land from 
+which Bourbaki hails --- "divide and conquer" is also a good strategy in 
+manthematics) into three parts.  Following Plato, we may call them the levels 
+of grammar, logic, and dialectic, although it should be borne in mind that 
+this contemporary trivium bears about the same relation to its ancient 
+counterpart in Plato's "Republic" as does the "Elements" of Grothendieck and 
+Dieudonne to the "Elements" of Euclid.  At the grammatical level, I consider 
+the structure of individual mathematical expressions. At the logical level, I 
+consider closed systems of such expressions.  At the dialectical level, I 
+consider the relations between such systems. 
+*** Grammar
+
+This is the level which is discussed at greatest length in the predecessor to 
+this document becasue it is the topic to which I had devoted the greatest 
+attention for, as any construction worker can tell you, one cannot start work 
+on upper stories until one the ground floor has been built to the point where 
+it can sustain the weight of the rest of the house.  As mentioned above, the 
+major change since the last update has been a change of decorating scheme --- 
+inspired by !McCarthy's ideas on abstract syntax, I have moved away from 
+considering a specific formal grammar to studying an abstract mathematical 
+structure which can be faithfully represented in a formal language.  The 
+basic ingredients of names, functions, and binders are still 
+here, just in a different guise.
+
+As I now think of it, the main focus of attention is a structure constructed 
+of links and nodes.  The nodes may be classified into three types, inputs 
+throughputs, and outputs.  The links are directional, having a source node 
+and a target node. 
+In order to attach links to them, the nodes come with sockets.  These sockets 
+come in two basic types, outgoing and ingoing sockets (or, if you prefer the 
+sexual terminology of the electricians, male and female sockets).  The input
+nodes have only outgoing feedforward sockets, the throughput nodes have both 
+outgoing and ingoing sockets with at least one of the outgoing sockets being 
+of feedforward type, and the output nodes have only ingoing sockets.  
+Furthermore, one of the ingoing sockets on a throughput node may be 
+designated as the control socket, the remaining ingoing sockets being 
+designated data sockets and one of the outgoing sockets is designated as 
+feedforward socket, the rest being designated feedback sockets.
+
+To make a valid network, the links must be attached to the nodes according to 
+the following electrical code (or else the hyperreal inspector will come 
+after you and you will forfeit the warranty on your nodes;) --- The Acme node 
+and link company does not assume any responsility for damage to nodes due to 
+improper connections nor for any disruptions to the space-time continuum or 
+the foundations of mathematics caused by self-referential paradoxa resulting 
+from the use of their general-purpose logical nodes in a manner not 
+consistent with the labelling on the package.): 
+ * Any number of links can be connected to an outgoing socket, but only one 
+link can connect to an ingoing socket.  Every socket must be connected to a 
+link. 
+ * If one considers only the links emanating from feedthrough sockets, there 
+should be no cycles.  This defines a partial ordering on the nodes.
+
+ * The feedback sockets must be connected in such a manner that any closed 
+loop returns to the node from which it started via a data socket.
+
+If we make the simplifying assumption that only one link is attached to each 
+feedforward socket and that there is but one output, these networks 
+correspond to s-expressions with a notion of binder.  Rather than try to give 
+a description of this correspondence, let me simply illustrate with a typical 
+example in the hope that ab uno dicses omnes.  Consider the mathematical 
+s-expression 
+<code>(sum (x) ((* f g) (f x)))</code>
+
+which corresponds to what a mathematician would normally write as
+$$\sum_x (f \cdot g) (f(x))$$
+
+To represent this, we will make use of four input nodes and four throughput 
+nodes. The four input nodes will be associated with the symbols "sum", "*", 
+"f", and "g" respectively.  As for the troughput nodes and the links between 
+them go as follows:
+
+ *Throughput node 1*:  This node has two ingoing sockets (one control and 
+one data) and a single feedforward output socket.  The control input socket 
+is linked to input node 3 (corresponding to "f").
+
+ *Throughput node 2*: This node has three input sockets, one being control 
+and the other two data and a single feedforward output socket.  The control 
+socket is linked to input node 2 (corresponding to "*"), the first data 
+socket is linked to input node 3 (corresponding to "f"), and the second data 
+socket is linked to input node 4 (corresponding to "g").
+
+ *Throughput node 3*:  This node has two ingoing sockets, one control and 
+one data and a single outgoing feedforward socket.  The control socket is 
+linked to the outgoing socket of throughput node 2 and the data socket is 
+linked to the outgoing socket of throughput node 1.
+
+ *Throughput node 4*:  This node has two ingoing sockets, one being 
+control and the other data and two outgoing sockets, one being feedforward 
+and the other feedback. The contol socket is linked to input node 1 
+(corresponding to "sum"), the data socket is linked to outgoing socket of 
+throughput node 3, the feedback socket is connected to the data socket of 
+throughput node 1 (correspoding to the dummy variable "x") and
+the outgoing socket is connected to the output node.
+
+Whether or not it is worth a thousand words, the following figure is worth at
+least as many words as the foregoing description:
+
+              <OUT>
+                ^
+                |
+                |    .--------------------------.
+                |    |                          |
+            .---+----+---.                      |
+            |      4     |                      |
+            |            |                      |
+            '------------'                      |
+                ^    ^                          |
+                |    |                          |
+    .-----------'    |                          |
+    |                |                          |
+    |                |                          |
+    |       .--------+---.                      |
+    |       |      3     |                      |
+    |       |            |                      |
+    |       '------------'                      |
+    |            ^    ^                         |
+    |            |    |                         |
+    |            |    `-------------.           |
+    |            |                  |           |
+    |            |                  |           |
+    |       .----+-------.    .-----+-----.     |
+    |       |     2      |    |     1     |     |
+    |       |            |    |           |     |
+    |       '------------'    '-----------'     |
+    |         ^   ^    ^        ^      ^        |
+    |         |   |    |        |      |        |
+    |         |   |    |        |      |        |
+    |         |   `----+--------+      `--------'
+    |         |        |        |
+    |         |        |        |
+ ( sum )    ( * )    ( g )    ( f )
+
+As this example shows, the inputs correspond to names, the throughput nodes 
+correspond to functional evaluation (represented by pairs of parentheses in
+s-expressions) and the feedback links to bound variables.  All of what was 
+said and done in the language of s-expressions can be translated into the
+new language of links and nodes.
+
+It is worth noting that these networks apply as readily to situations other
+than mathematical expressions; for instance, they can describe program
+flowcharts, schematic diagrams of electrical circuits and contractons of
+tensors just as well.  To such a general conception of these networks, we 
+may associate a general intuition:  The throughput nodes
+represent some sort of processes, exactly which process being specified by 
+the input to the control socket of the node.  There processes take what comes 
+in at the data ingoing sockets and spit out their reult from the outgoing 
+socket, where it can then be further processed.  The feedback outputs permit 
+one to have various feedback and loop processes.  It might be worth 
+mentioning that while usually the interpretation of a circuit will of this 
+sort, there is no reason it must be or that there must be any sort of 
+intepretation whatsoever present; a network is simply a certain sort of 
+link and node structure which one is free to interpret or not interpret 
+however one pleases.
+
+To do something useful with these networks, we define three operations on 
+them, substitution, superstitution and bifurcation.  Substitution is rather 
+familiar.  We replace a node by a network, its ingoing sockets being 
+connected to where the where some of the inputs used to go and its outgoing 
+sockets conected to where some outputs used to go. 
+Superstitution is the opposite of substitution.  We identify a subnetwork and 
+replace it with a single node.
+
+As for bifurcation, we duplicate all the nodes and links less than (in the
+order described previously) a given node, make a new node with twice as many 
+ingoing data sockets and twice as many outgoing feedback sockets, and link 
+one copy to one set of copies of the nodes and connect the other copy to the 
+other set of the nodes. 
+This strange-sounding operation is actually something rather familiar.  For 
+instance, consider the following identity which we could use to compute sums:
+
+$$\sum_{x \in A+B} f(x) = \sum_{x \in A} f(x) + \sum_{x \in B} f(x)$$
+
+Here we bifurcate the original sum into two sums.  Similar identites hold for 
+integrals and quantifiers.  In terms of our formalism, they can be described 
+as a bifurcation folowed by a substitution.  Such bifurcations are the key 
+step in defining such quantities by recursion --- we keep bifurcating until 
+we get to atomic pieces where the binder can be substituted with an 
+evaluation.  In the case of the sum, this would be the stage where we have 
+singleon sets and can use the identity 
+$$\sum_{x \in \{y\}} f(x) = f(y)$$
+
+to elimintate the binder "$\sum$". 
+
+Having proposed this graphical syntax, we can consider some semantics for it.  
+As earlier, one possibility is a set-theoretic semantics.  Here, we fix a 
+universe U and let the various inputs be elements of U.  Then we can define 
+procedures whereby, given our regenrative network, we can determine values 
+for the outputs by appropriate set-theoretic constructions corresponding to 
+throughput nodes.  This should work something like what I outlined in a 
+letter to Joe and in my work-in-progress on syntax and semantics (which I am 
+abandoning and reusing parts of because my more recent thoughts have rendered 
+the original plan obsolete). 
+*** Logic
+
+By the level of logic, I mean the study of systems of expressions.  Here, I 
+would like to use the word in a particularly broad sense which encompasses 
+not only such things as propsitional and predicate logic and generalitions 
+such as multi-valued logic and modal logic, but more generally any formal 
+system which is of use in reasoning (logismos) via calculation (logistike).  
+That could also include such thing as algebra of polynomials
+and tensor calculus.
+
+In this more general viewpoint, a system of logistic consists of a set of 
+entities which we may term statements and generative rules, which allow one 
+to generate conclusion statements from premise statements.  I use the term 
+"generative rule" rather than "rule of inference" here because the notion 
+used here may not always agree with the notion as usually understood by 
+logicians --- it could also include axiom schemata and, depending 
+on how one proceeds, even rules about types and well-formed formulae.
+
+In general, one should concieve of generative rules as relations rather than 
+functions because we may want to have rules which allow more than one 
+possible conclusion to be drawn from premises.  For instance, in good old 
+propositional logic, we not only have Barbara, which allows only the 
+conclusion "is p then r" from the premises "if p then q" and "if q then r", 
+but also the rule of arbitrary premise, which allows "if q then p"
+to be concluded from "p" for any choice of "q".   Therefore, our systems of 
+logistic is a relational system.
+
+While the elements of a relational system may be elements of any set 
+whatsoever, for the purpose at hand, they will be expressions of the sort 
+described in the last section. Likewise, the generative rules will be taken 
+to be computable relations, specifically relations which can be expressed as 
+LISP functions.  Remember that the general notion of networks of links and 
+nodes oroginated from s-expressions, so s-expressions, in particular LISP 
+programs, are a certain set of expressions of the sort under consideration.
+When restricting attention to systems of expressions, one can proceed much as 
+one is accustomed to in the axiomatic approach.  Namely, one can start with a 
+set of primitive symbols and consider expressions whose inputs nodes are 
+labelled with these symbols, then pick a subset of these as axioms and start 
+proving theorems using the generative rules.
+
+My reason for advocating this extension of the concept of logistic may be 
+illustrated with a pet examples which informs so much of my thinking, 
+algebraic geometry.  Suppose we want to describe a certain algebraic variety.  
+Typically, we would do it by giving a system of equations like the following:
+
+$$x y + 2 z^2 = 0$$
+$$x y + 2 y z + x z = 0$$
+
+
+Even more concisely, we might drop the "= 0"'s and simply specify polynomials 
+like so: 
+$$x y + 2 z^2$$
+$$x y + 2 y z + x z$$
+
+As we know, there are many other polynomials which describe the same variety.  
+For instance,
+
+$$2 y z + x z - 2 z^2$$
+
+and 
+
+$$x y z + 2 y z^2 + x z^2,$$
+
+the former of which is the difference of the two original polynomials and the 
+latter of which is the second original polynomial miltiplied by "z".  
+(Incidentally, the former polynomial factors, so we see that out variety is 
+the union of two conics.  As it turns out, one of those conics is degenrate 
+and the variety is in fact the union of two lines and an ).  What the 
+polynomials stand for are propositions about the coordinates of
+points:
+
+                                                       
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow  x y  + 2 
+z^2  = 0$$ 
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow  x y  + 2 
+y z + x z = 0$$ 
+From these we may derive other propositions such as
+
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  =>   2 y z + x z - 2 
+z^2  = 0.$$ 
+Now, one way to derive these propositions would be by using the rules of 
+logic and axioms of algebra.  However, that can get tedious!  A much easier 
+procedure is to first note that, given two propositions of the form 
+
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow P(x,y,z) = 
+0$$ 
+and 
+
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow Q(x,y,z) = 
+0,$$ 
+one can conclude
+
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow P(x,y,z) + 
+Q(x,y,z) = 0$$ 
+and
+
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow P(x,y,z) 
+\cdot R(x,y,z) = 0$$ 
+where R is an arbitrary polynomial.  Henceforth, one can work directly with 
+the polynomials, just as is usually done.  Another way of phrasing this is to 
+say that we work within a logistic system whose propositions are polynomials 
+with operations of addition and multiplication and the following two rules of
+generation: From $P$ and $Q$, conclude $P + Q$.  From $P$, conclude $P \cdot 
+Q$, where $Q$ is an arbitrary polynomial.  Of course, such a system is quite 
+familiar --- it is the ideal of the variety.  Moreover, we have the 
+Nullstellenzatz, which can be seen as a metatheorem of sorts, stating that a 
+proposition of the form 
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) \in V  \Rightarrow P(x,y,z) = 
+0$$ 
+is a theorem if and only if P is a theorem in our logistic system of 
+polynomials. With this remark, we move to the next level, which concerns 
+itself with metatheorems and relations between systems.
+
+Before doing so, however, we should say a few words on how a notion of truth 
+enters in the nore general scheme.  There are (at least) two ways to proceed: 
+one can introduce a subsystem of theorems or one can introduce a vlauation on 
+statements. 
+In the former approach, one considers two systems.  The statements of the 
+first system consist of well-formed formulas in whatever sense and its 
+generative rules are grammatical rules (in the appropriate sense) for 
+building up these expressions.  The statements of the second theory are a 
+subset of the statements of the first theory, which we may term theorems or 
+tautologies.  The rules of the second theory are a subset of the rules of the 
+first which only allow theorems to be derived from theorems.
+In the example above, the first system consisted of polymomials with the 
+rules of addition and multiplication and the second system consisted of an 
+ideal together with the two operations under which the ideal is closed.
+
+In the latter approach, one also considers two systems.  The first system is 
+much as before.  The second system, however, is different.  It is now a 
+system of truth values (or perhaps values of a more general sort) with 
+appropriate operations on those values. There is an evaluation map, which is 
+a coherent map of systems in the sense of the next section (all the more 
+reason to finish this section soon!), that maps statements to
+their values.  These values might be the usual "T" and "F", they may be a 
+larger set in some multi-valued logic, or they may be something altogether.  
+For instance, in the case of the polynomials, we might choose as values the 
+varieties cut out be the polynomials of the values of the polynomial at a 
+given point.  We might have the first system consist of queries to some class 
+of knowledge bases and the second system consist of possible answers to those 
+queries. 
+It is worth pointing out that in particular instantiations of the approach 
+with theorems, it is often useful to introduce further systems beyond the 
+system of well-formed formulae and of theorems.  I am thinking of a system of 
+formulae, not all of which may be well-formed or which contains auxiliary 
+entities such as propositional matrices which are not be judged true or 
+false.  In this case, the system of well-formed formulae would be selected 
+out of this bigger system by some rules.  In hindsight, this is the basis for 
+my earler objections to having the expression parser check types, although I 
+couldn't clearly articulate my objections then because I had not yet come up 
+with the framework presented here. I terms of this framework, my objection 
+translates into the design objective that the expression parser translate 
+into this system of formulae and that the type checking and conversion needed 
+to move up to the level of well-formed formulae instead be carried out as an 
+earlier stage of verification.  My reason for this is that I believe that it 
+makes for a cleaner break between translating between notations and 
+understanding what is being notated. 
+*** Dialectic
+
+At the level of dialectic, we consider relations between different systems.  
+As hinted in the example with the polynomials, this is important if we want 
+to deal with situations in which diferent portions of the reasoning are done 
+using different systems suited to the subject at hand --- in such 
+circumstances, we need to understand how to translate the results derived 
+using one system into the other system and be sure that the procedure is 
+consistent so we do not get into contradictions. 
+To that end, we consider morphisms of relational systems.  A morphism of 
+relational sytems consists of a mapping underlying sets together with a 
+relation between the rules of the systems which satisfy consistency 
+conditions.  As the composition of such beasts begets a beast of the same 
+species, these things form a category and the term "morphism" is justified.  
+
+An example of such a morphism was the mapping from polynomials to a 
+propositions discussed above.  Because it relates valid generation rules in 
+one system to valid generation rules in the other system, one is able to 
+arrive at correct assertions about varieties by manipulating polynomials.
+
+This morphism of systems also captures the notion of asbtraction in math.  
+For instance, when studying some theory, such as integers modulo some 
+modulus, one might notice that some objects in the theory (in this case the 
+integers relatively prime to the modulus) satisfy the axioms of a group.  
+Using this map, one can pull back theorems about groups to theorems about 
+integers (like the Euler-Fermat theorem).
+
+Given two systems, one might piggyback on the other.  By this I mean that the 
+generative rules of the first system form (or, perhaps, are a subset of) the 
+underlying set of the second system and that the generative rules of this 
+second system are such as to generate only valid new rules of the first 
+system. 
+Oftentimes, we may wish to talk about a system and prove metatheorems, which 
+can then be used to prove theorems in the original system en masse or to 
+introduce new rules of inference.  For instances, consider the genral 
+associative law in algebra or the duality principle in geometry.  To explain 
+this process to a computer, we need to formalize what it means for one system 
+to describe the workings of another system.  Here is an attempt based on the 
+notation of quotation: 
+A simulation of a relational system $(s,r)$ in a relational system $(S,R)$ is 
+specified by three maps, a quotation map $Q \colon s \to S$, a depiction map 
+$D \colon r -> S$, and an emulation map $E \colon r \to R$ which satisfy a 
+consistency condition which ensures that the action of a rule on statements 
+of the original theory is consistent with the emulation of the description of 
+the rule on the quotations of statements of the original theory.
+
+A simple example of this is the simulation of matrix multiplication by 
+tensors. Let s be the set of matrices, let r be generated by matrix 
+multiplication,  let R be the set of tensors, and let S consist of the usual 
+operations on tensors (tensor product, contraction, etc.).  Let the map Q be 
+a map which maps a matrix into a vector of its components.  Let D be the map 
+which sends the multiplication operation to its tensor of structure 
+constants.  Let E be the map which sends matrix multipliction to a 
+combination of tensor product and constraction. 
+A more important example is a metatheory of propositional logic.  Here, take 
+$s$ to be the set of taulologous propositions (constructed, say from 
+propositional variables "$p$", "$q$", ... and the connectives "$\Rightarrow 
+\lnot \land \lor$") and $r$ is the set of axiom schemata and inference rules 
+for propositional calculus.  Let $S$ be a system which contains strings of 
+symbols, the operation of concatenation on these symbols (denoted "$*$"), 
+quotation of strings (denoted "$\,`'$" a predicate "$\vdash$", and the usual 
+paraphrenalia of predicate calculus.  Let $R$ consist of 
+the axiomata and rules of inference of predicate calculus together with 
+suitable axiomata describing the string operations.
+
+Let $Q$ be the map which sends a tautology $x$ to the proposition $\vdash 
+\,`x'$ --- i.e. quotation followed by turnstiling.  Let $D$ be the map which, 
+say, sends the rule of modus ponens to the proposition
+
+$$(\forall p) (\forall q) \vdash p \land  \vdash (p * \,`\land' * q) 
+\Rightarrow \vdash q$$, 
+likewise for other rules of inference.  Let $E$ be the map which sends an 
+inference rule to the appropriate combination of universal specialization and 
+modus ponens needed to conclude the turnstiled quotation from the the 
+turnstiled quoted premises and the proposition of the metatheory 
+corresponding to the rule in question. 
+The simulation sketched above can be extended to a simultaion of predicate 
+calculus, not just propositional calculus.  To see how this proceeds, see the 
+chapter "Formality" in Quine's "Mathematical Logic".
+
+An even more profound example is Goedel's simulation of propositional logic 
+in number theory.  When combined with Whitehead and Russel's embedding of 
+number theory in logic, this leads the to famous incompleteness theorem --- 
+were the theory complete, one could derive within it the Liar paradox.  For a 
+discussion of such impossibility results from a general point of view see 
+Sereny's "Goedel, Tarski, Church, and the Liar".  In the intervening seven 
+decades, it has been found that a rather large range of mathematical
+systems can simulate logic.  While the main interest in these results has 
+been in the incompleteness theorems they imply, I think that it might be good 
+to consider the positive as well as the negative consequences.  To me, the 
+great variety of such results, involving all sorts of branches of 
+mathematics, suggests that we have here a new sort of unifying 
+principle or mathematics, which might yield unexpected results.  I like to 
+think of my work on integral representations of recursive functions as 
+reflecting this viewpoint. 
+Returning to the ground from this flight into hyperspace, simulations are 
+useful for proving new inference rules and proving relations between 
+theories.  To introduce a new rule, we prove a metatheorem to the effect that 
+appication of said rule to valid hypotheses will always yield valid 
+consequences.  To demonstrate a relation between theories, one considers
+a theory which can simulate both theories.  Within this third theory one can 
+then prove statements such as, say "if X is a true statement in the first 
+theory, then f(X) is a true statement in the second theory" or prove that a 
+relation is indeed a morphism of theories. 
+Launching again into the deep, I wonder whether this notion might not prove 
+useful in resolving some paradoxa of self-referernce.  In particular, I have 
+in mind Richard's paradox about the smallest unnameable number.  In order to 
+make sense of nameable numbers, one needs to pass to a metatheory which 
+describes the language within which the numbers are to be named.  Since 
+statements like "this number cannot be named within the theory"
+belong to the metatheory and not the orignal theory, there is no 
+contradiction.  Similarly, one might be able to make sense of Skolem's 
+paradox by arguing that within the system, there is no way to count the 
+elements of a certain set but, in the metatheory which describes
+the methods of counting one has in the theory, this is possible.  Likewise, 
+maybe one could understand Cantor's diagonal argument as the formation of the 
+diagonal counterexample in a metatheory where it is possible to enumerate all 
+the real numbers available within the theory.  To a hard-headed formalist, 
+the only infinity is the postential infinity of expressions formed from a 
+finite alphabet and actual infinities are just figure-eight's
+turned on their sides.
+
+Finally, it might be worth pointing out that what is being done here does not 
+really go against the sentiment one often hears that it is pointless to 
+formalize metalanguage.  Of course, to describe what it meant for one system 
+to simulate another language, I needed to make use of a metalanguage which 
+was natural language.  All that they really warn against is that one can't at 
+the same time formalize the language one is using because that would 
+require going outside of it to some other metalanguage (which, in turn, could 
+not be formalized without some metametalanguage, etc.).  So while the very 
+top level may be unformalizable because the very act of formalizing it would 
+entail a further level, that doesn't mean that we can't formalize a level 
+above our original object language and even formalize this notion of 
+simulation.  The first two lines of the Tao do not invalidate the
+ book :)  This situation is also somewhat reminiscent of the situation of
+observers in quantum mechanics where one can explain what an observer does as 
+a unitary evolution but, however often one pushes it further away, one cannot 
+get rid of a top level observer who collapses the state.
+
+** Miscellaneous topics
+
+In the course of thinking of this material, various topics have come up.  
+Here is an account of my thinking on some of them.
+
+*** Mathematical entites
+
+Intuitively, one thinks of mathematical expressions as denoting mathematical 
+entities and of the same entity as possibly being described different ways in 
+different theories. To come up with a theory of what is such an entity, I 
+employ a famailiar strategy of turning the problem on its head and defining 
+mathematical entites in terms of expression. 
+Inspired by Makarov's definition of "definition", I consider pairs $(e, T)$ 
+where $T$ is a system as above and $e$ is an expression.   Assumong our 
+theory has a notion of equality and of truth, we can make equivalence classes 
+of of these pairs --- $(a,T)$ is equivalent to $(b,T)$ if $`a = b'$ is a true 
+statement in $S$.  We can think of these equivalence classes as corresponding 
+to mathematical objects which can be named in $T$.  For instance, 
+if $N$ is number theory (in some suitable formalization), then one of our 
+equivalence classes might be $\{(`3',N), (`1+2',N), (`1+1+1',N), \ldots\}$.
+
+We would also like to think of different theories as describing the same 
+entities in different ways.  To formalize such a notion, suppose we have 
+theories $S$ and $T$ and a morphism $M \colon S -> T$ of the sort described 
+above.  If an expression a in $S$ maps to an expression $b$ in $T$, we can 
+consider that as a correspondence between the entities represented by these 
+expressions.  To repeat my favourite example, if $S$ is set theory,
+then the entity decribed above might be described by the von Neumann ordinal
+"$\{ \{\}, \{\{\}\}, \{\{\}, \{\{\}\}\}, \{\{\}, \{\{\}\}, \{\{\}, 
+\{\{\}\}\}\}\}$". In another theory, it might be described by the Church 
+integer "<code>(lambda (s z) (s (s (s z))))</code>" (in LISP s-expresion 
+syntax; in the more familiar m-espresssion syntax, it is 
+"$\mathop{\lambda}\limits_{s z} s (s (s (z)))$". We would like to think of 
+these as different ways of referring to the same entity, much as 
+"three", "trzy", and "shalosh" refer to the same thing in natural languages.
+
+It would seem, however, that simply making making equivalences betweem these 
+equivalence classes in different systems might not be the thing to do; the 
+situation being more subtle than that.  Consider a situation in which one 
+takes the description of a mathematical entity, then moves to a second 
+theory, then to a third theory, and so on.  To my geometric mentality, this 
+reminds me of parallel transport of a vector along a path or analytic 
+continuation of the germ of a complex function along a path.
+This viewpoint immediately suggests the issue of holonomy --- after being 
+transported full circle, something may not come back to itself.  Since 
+similar things happen in this setting as well, one cannot simply make 
+identifications lest one identify expressions $a$ and $b$ for which $`a = b'$ 
+is false but, for which there exists a series of morphisms that sends $a$ to 
+$b$. 
+Based on relativity theory, I wonder whether some notion of frame of 
+reference might not be in order.  The composition of the string of morphisms 
+from the original theory back to itself works out to an automorphism of the 
+original theory (a non-trivial one which sends $a$ to $b$).  Now, when 
+something similar happens in general relativity as we move around a spacetime 
+back to our starting point, what happens is that we have passed from one 
+reference frame to another and we are seeing the same physical object 
+from a different point of view after a round trip.  In his "Classical 
+Groups", Weyl introduces a quite general notion of reference frames; perhaps 
+it could be adopted here --- instead of considering pairs of an expression 
+and a system, we consider triplets consisting of an expression, a frame, and 
+a system.  Maybe it would be possible to identify these triplets consistently 
+across theories. 
+Also, two other phenomena have come to my attention which need to be adressed 
+in a theory of mathematical entities.  Firstly, there is the possibility of 
+necessarry indistinguishable objects vis-a-vis Kant's "Prologomena".  For 
+instance, consider the status of the positive and negative square roots of 2 
+in field theory (where we have available only the four basic operations of 
+addition, subtraction, multiplication, and division as well as the operations 
+of logic (connectives and quantifiers)).  All we can say about these two 
+roots in our theory is that they both satisfy the equation 
+"$x \cdot x = 2$" and that they are not equal, but one is the additive 
+inverse of the other.  Presumably, these would be distinct mathematical 
+entities even though any expression which decided one will automatically 
+describe the other as well.  It might be worth pointing out that, if we map 
+our theory to the theory of ordered fields, then we resolve this doublet --- 
+one element of the pair satisfies the inequality "$x < 0$" and 
+the other satisfies the equation "$x > 0$".
+
+Secondly, there is the possibility that what are two distinct entities in one 
+theory might collapse to one in another theory.  Here, too connectons provide 
+an example, but in a metamathematical fashion.  In the coordinate formulation 
+of geometry, connections and covariant derivatives are distinct entities 
+which are in a one-to-one correspondence. In the coordinate-free approach, 
+the two coincide as described in my Planet Math entry on connections.  
+Geometrically, this reminds me of some sort of branch point.
+this example, 
+
+This business of necessarily indistinguishable objects is one which I thought 
+about a good deal a few years back, as mentioned in an earlier section of 
+this essay under the heading of musings about dialectical logic.  The 
+particular example of the square root of two dates back to that time as well.  
+In particular, one of the things I noted then was a connection between 
+irrationality of the square root of two and undecidability of
+"$(\exists x) x \cdot x = 2$".  To understand this business of necessary 
+distinct objects, models, and undecidability better, I found a nice class of 
+finite toy systems in which one could see everything explicitly.  Perhaps it 
+would be a good time to dust off these models and put them to use again.  
+Also, when thinking of mathematical entities happening to be described in 
+some systems or models and not in others, that makes me think of 
+possible worlds and wonder whether modal logic might not show up as well as 
+many-valued logic.  It's been a while since I thought of this, and it might 
+be nice to get back to it. 
+*** Implicit Definitions
+
+Definitions are an important part of mathematical writing so any system which 
+purports to understand mathematics had better be able to deal with 
+definitions!  Moreover, since definitions are the staple of lexicograpy, we 
+might want to define "definition" before undertaking to write a hyperreal 
+dictionary :)  We may classify definitions into two types, 
+explicit and implicit definitions.  The former sort of definition is 
+relatively simple to deal with whilst the latter presents some subtleties.
+
+An explicit definition is one in which a term is defined in terms of a 
+replacement text. The meaning of these is staightforward; any occurrence of 
+the term defined may be substituted with its replacement text.  There are two 
+ways of implementing such definitions, metasyntactically and syntactically.  
+In the metasyntactic approach, one regards the term being defined as a 
+metasyntactic object and performs a preprocessing step in which one
+replaces all occurrences of it with its definition before attempting to 
+understand a statement.  In the syntactic approach, one augments one's 
+language by adding the term to one's list of primitive terms and adding 
+<term> * "=" * <definition text> to the list of axioms.
+
+An implcit definition is one in which one cannot simply extract a replacement 
+text.  In such a case, one cannot employ the metasyntactic approach and must 
+instead go by the syntactic route, adding the new term to the list of 
+primitive terms and adding its defining properties to the list of axioms.  
+However, in this case, one cannot always be sure that the procedure is 
+consistent.  Also, there are a few other wrinkles which can
+appear. It might be the case that more than one term is implicitly defined 
+together. Definitions might be accompanied by proofs to certify that terms 
+are well-defined. 
+There is a uniform principle which can be used to judge the validity of 
+implicit definitions and even treat explicit definitions as a special case:  
+A definition is justifiable if no statement in which the new term does not 
+appear has the same status as a theorem (or not a theorem) in the original 
+theory as in the theory augemented by the new term and its defining property.  
+Thus, in order for an implicit definition to be justifiable, it needs to be 
+accompanied by a suitable meatheorem.  In many cases, one can invoke a 
+standard metatheorem but, in more complicated or unusual circmstances, one 
+may need to prove an ad hoc metatheorem.  This is what the proofs that 
+accompany definitions are all about; they are either the proofs of such 
+metatheorems or proofs in the original system which are of use in 
+establishing such metatheorems. 
+Since I have been commenting throughout this essay on my intuition, I should 
+also mention what parallels help me think of this.  In algebra, one could 
+introduce a new variable directly by stating what it equals or implicitly by 
+providing an equation which involves that variable.  In the latter case, the 
+analogue of the consistency condition described above is provided by 
+elimination theory: If one eliminates the variable from the system gotten by 
+adding the new equation to the old system of equations, one should recover 
+the old system. 
+*** Polymorphism
+
+Mathematicians often recycle notations so as not to burden readers with too 
+many symbols by using the same symbol to denote analagous operations in 
+different settings.  For instance, the symbol "+" might be used to denote the 
+opertion of a certain group, addition of integers, and addition of rational 
+numbers.  This practise is harmless because there is no circumstance under 
+which it could lead to a contradiction.
+
+The question arises how to deal with this phenomenon when formalizing a 
+theory. One approach is to introduce some sort of typing which will 
+disambiguate usages based upon the types of symbols and replace an ambiguous 
+symbols like "+" in the exapmle with one of several unambiguous symbols (say 
+"group-operation", "integer-addition", and "rational-addition" in the 
+example). 
+While this approach is possible, it may not be necessary.  Even if one does
+not clarify in which sense a particular instance of the symbol is to be
+understood, the laws of inference may be such that no trouble will arise.
+For instance, a theorem about integers will explcitily contain a stipulation
+like "for all integers n ..." so, to apply this theorem, we first need to
+show that something is an integer, which would preclude us from applying it
+to a situation in which the plus sign denotes the operation on group 
+elements. In the case of integers versus rational numbers, the justification 
+is a bit different --- if it is possible to interpret the sign two ways, it 
+doesn't matter which way we pick because the result will be equivalent.  
+Hence we can get away with using the same symbol for three operations.
+
+As we did the last section for implicit definitions, we can formulate a 
+criterion for when it is permissible to use symbols ambiguously.  Namely, we 
+consider two systems.  In the first, one has multiple symbols and in the 
+second one has a single ambiguous symbol.  If one can show that the mapping 
+from the first theory to the second which maps the various symbols to the 
+same ambiguous symbol is a surjection onto the theorems of the second theory, 
+then the ambiguous usage is justifiable. Proving such an assertion will 
+typically involve the sort of reasoning sketched above. 
+*** Characterization of Formal Systems
+
+Above, we took a bottom-up approach in which we first constructed 
+expressions, then built formal systems out of them.  However, it is also 
+possible to approach this subject in a top-down fashion, starting with a 
+relational system which has some additional structure which can be used to 
+show that the elements of the underlying set are in fact expressions.
+
+The means whereby this would be accomplished is access functions.  To explain 
+the idea, consider s-expressions in LISP.  Basically, the structure of 
+s-expressions is completely specified by the functions "head", "tail", and 
+"cons" which may be used to break an s-expression down into its constituent 
+atoms and rebuild it. Abstractly, these functions may be characterized by the 
+following conditions: 
+<code>(cons (head foo) (tail foo)) => foo</code>
+ 
+<code>(head (cons fee fie)) => fee</code>
+
+<code>(tail (cons fee fie)) => fie</code>
+
+If we have any set with three functions which enjoy these properties, we can
+establish a correspondence between this set and s-expressions.  In fact, this
+is essentially what Julia Robinson did when she "invented LISP before LISP" 
+in her work on recursive functions where she treated the integers like
+s-expressions using pairing and unpairing functions.
+
+In our case, a slight generalization is needed since we have a notion of 
+binding as a native feature of our expressions.  While I haven't quite sorted 
+this all out yet, there is every reason to believe that this generalization 
+will work and that it will be possible to characterize it by relations 
+between the access functions.  Then, it will be possible to characterize 
+formal systems as relational systems which have the extra structure of these 
+access functions. 
+This reminds me of three approaches to logic.  There is the proof-theoretic 
+approach, in which one constructs true statements using formal procedures.  
+There is the model-theoretic approach, in which one assigns values to symbols 
+and evaluates logical operations as functions on these values.  There is the 
+Boolean algebra approach, in which one treats the set of propositions as a 
+whole and axiomatizes various operations on this set.  The construction of 
+expressions out of links and nodes is the analogue of proof theory.  The 
+interpretation of expressions as naming elements of a universal set is the 
+analogue of model theory.  The notion discussed here is the analogue of 
+Boolean algebra. 
+As a guide to sorting out access functions, I believe an analogue with 
+general relativity may be of use --- think of expressions as spacetimes.  In 
+particular, I have in mind the many-fingered time approach.  The commonality 
+between spacetimes and expressions is that both are acyclic directed graphs 
+(if one narrows one's attention to feedthroughs and ignores feedbacks for the 
+time being), hence techniques developed there should be of use here as well.  
+In particular, I have in mind viewing inputs as initial surface, outputs as 
+final surface and moving from the former to the latter by a type of 
+bubble-time evolution.  The individual steps in this evolution would 
+correspond to the access functions.  Hence, by starting with regenerative 
+networks and considering how one can describe them in terms of
+evolution of an achronal slice, it should be possible to systemantically 
+discover the correct access functions.
+
+*** Free Extensions and Substitution
+
+In algebra variables and substitution suggest free extensions.  Given an 
+algebra $A$, we could construct the polynomial algebra $A[y]$ and regard 
+substitution as a map $S : A x A[y] -> A$.  We can describe this abstractly; 
+the free extension to the polynomial algebra can be characterized 
+category-theoretically by a universal property and the substitution map by 
+the condition that it be a morphism which reduces to the identity on the copy 
+of the original algebra in its free extension. 
+I wonder whether something similar obtains for the more general relational 
+systems discussed here, or at least for formal systems.  Given a relational 
+system, it seems that there should br some notion of "adjoining a variable" 
+to make a larger system which is in some meaningful sense a free extension.  
+Further, it might be possible the relation of the original system to its 
+extension abstractly by some sort of universal property.  Then one could try 
+to characterize substitution as a morphism from the bigger system to the 
+smaller which reduces to the identity on the subset on the copy of the 
+original system.  Furter, it should then be possible to describe
+binders as mapping from the bigger to the smaller system.
+
+That is a whole bunch of "if"'s but if the answers to them are in the 
+affirmative, then we have yet another perspective on binding and sustitution.  
+I would suspect that this perspective would fit very nicely with the 
+axiomatic approach to systems of expressions described above.
+
+** Implementation
+
+Having spun all of this theory, the inevitable question arises: "What is this 
+all good for?".  To offer answer to this question, I will discuss application 
+to verification of mathematical reasoning.
+
+This topic of verifying the correctness mathematical arguments is what 
+interested me in this business in the first place and motivated developing 
+much of the theory, so it is only natural to ask how useful this theory would 
+be for this purpose.  As I saw it, whlist !TeX had taken care of the external 
+aspect of mathematical notation, the internal aspect of the meaning was left 
+untouched.  I thought that the next advance would be to have a system in 
+which one would mark up a piece of mathematical writing not merely to have it 
+display nicely, but so that the computer could understand enough of the 
+meaning to verify the soundness of the reasoning. 
+Early on, the way I concieved that the way this would proceed is that one 
+would initially translate the statements in the piece of mathematical writing 
+into an intermediate knowledge representation language, which could then be 
+compiled to logical propositions, which could be fed to one of any number of 
+proof verification packages.  This is the attitude I took in my first 
+correspondence with Joe on the topic.  However, it did not take long until I 
+repudiated this approach as naive. The difficulty was not one of feasibility, 
+but a deeper issue of faithful representation of knowledge.  Translate a 
+familiar theorem into formal logic and a mathematician may have a difficult 
+time recognising it.  Much mathematical writing is rife with algebraic 
+manipulations --- surely it would make more sense to verify these directly 
+with a symbolic algebra package than to first translate them into logical 
+propositions, then verify those?  Moreover, my experience as a
+mathematician has taught me that certain systems of notation have an inner 
+logic of their own.  In particular, I have in mind the Ricci calculus which, 
+in its rules for manipulating indices, encodes theorems of multilinear 
+algebra in such a way that, by a simple formal manipulation one can arrive at 
+results which otherwise would require lengthy proofs and explicit mention of 
+morphisms of vector spaces of tensors which are cleverly concealed within the 
+notational system. 
+Little by little, it became clearer to me that a translation of mathematics 
+into logic is not so much a translation as a paraphrase.  By no means do I 
+mean to suggest that mathematics is illogical or try to enshrine some murky, 
+mysterious idea of mathematical intuition as ghost in the machine --- I am 
+way too much of a formalist to entertain such notions!  Rather, I simply mean 
+that the various formalisms in use in mathematics encode various concepts 
+which get lost in the translation.  To me this seems the root of the two 
+difficulties.  Firstly, it can happen that the translation becomes bulky and 
+bloated.  Just because one has a gigahetrz computer at one's disposal is no 
+excuse for inefficient procedures! Secondly, not seeing the missing concepts 
+(which, at best, maybe can be read between the lines) makes it difficult to 
+understand or demonstrate the translated versions. 
+Hence, I began to think that it might be better to treat these various formal
+systems --- predicate calculus, algebra, Ricci calculus --- on a more equal 
+footing and that, rather than trying to squeeze everything into a single 
+axiomatic system, one should leave things in the systems where they were 
+found, and instead focus on undestanding the relations between these formal 
+systems.  This conception of an egalitarian, heterarchical community of 
+formal systems resonated beautifully with my sensibilities and seemed 
+intriguingly parallel to certain philosophical tenets, so I knew I had to 
+explore it further.  The result is the theory skectched above.
+
+After this historical digression, I now return to the present, looking 
+towards the future implementation of these ideas.  In a way, describing how 
+to implement these ideas reads backwards of the historical course described 
+above, something like a contravariant functor (perhaps an adjoint to a 
+forgetful functor of reverting to a previous level of knowledge).
+
+While in my first correspondence with Joe, I had concieved of the markup as 
+being some extension of !TeX markup, perhaps a new package designed with the 
+dual aims of typography and verification, a subsequent idea of Joe's has 
+completely changed my thinking on this matter.  I speak, of course, of the 
+scholium system.  Not only is this an incredibly flexible hypertext system, 
+but it also a semantic net for building knowledge bases.  Both Joe and I have 
+also agreed that perhaps the old suggestion of storing h-code inside of 
+Knowledge Machine frames should be upgraded to the use of Arxana as a data 
+management system. 
+Given a mathematical document, I now would mark it up by attaching scholia of 
+a type "formal-restatement" to the various statements of mathematical fact 
+found therein.  At first, I would do this by hand, but I envision that, as 
+time goes on and the expression parser and later natural language processing 
+are developed, the process would become automated.  Two particularly 
+beneficial features of this approach are incrementality and modularity.  
+Rather than have to develop a full-blown parser before it is of use, one can 
+take an incremental approach and add whatever parsing capabilities one has to 
+an interactive service for marking up literature. For instance, when one has 
+a parser which can understand a certain class of mathematical expressions, 
+one can add to one's user service a facility for automatically translating 
+highlighed expressions of that sort.  Even if the natural language processing 
+is not yet completely reliable, it might have advanced to a stage where it 
+worthwhile to have the computer offer the user a tentative translation which 
+should be double-checked and corrected as need be by the human.
+The auto-linker could also be a part of this, providing formal expressions 
+for technical terms.  This approach is modular insofar as all that matters to 
+other modules such as the verifier is that there be a semantic net of formal 
+statments, not how this net came to be.
+
+What was originally concieved of as the parser of HDM has matured into 
+something more profound in my thinking on the subject.  Using the geometrical 
+viewpoint which I find so congenial, I now concieve of the document as a base 
+space over which this system constructs a sheaf of knowledge bases which 
+mirror the mathematical ideas expressed therein.  Ideas and expression again!  
+Since I have not had the time to consider issues of parsing and natural 
+language for quite some time, I have little to say about exactly how this 
+procedure could be automated.  Rather, I shall proceed to a description of 
+the organization of this knowledge base and of verification of its 
+correctness. 
+The formalized expressions described above are by no means the whole story.
+Thinking geometrically, they are like the underlying point set of a manifold,
+dust which will somehow be glued together to form structures, dry bones upon
+which we shall drape geometrical flesh.  Here, the glue will take the form of 
+inferences, contextualization, and emigration.
+
+In order to be understood, a statement must be read in context.  In the 
+current setting, this means that an expression only can have meaning in the 
+context of a formal system.  This will be encoded in our semantic net by a 
+link of type "context" pointing to a formal system.  For this to make sense, 
+we need to fit formal systems into our knowledge base.  We do this as we 
+would with groups, by writing down a presentation.  Only, in this case this 
+presentation consists of three items: primitive terms, axiomata, and 
+generative rules.  Hence, in our knowledge base, we would have an entry in 
+which the three slots of this frame have been filled with appropriate values.  
+For primitve terms, this means a list of atoms, for axiomata, a list of 
+expressions and, for rules, a list of programs (also expressions in LISP!) 
+which verify whether hypotheses and conclusions stand in the proper realation 
+to one another for the generative rule in question applies.
+As discussed by !McCarthy, these programs may depend on auxiliary data.  As 
+one proceeds in one's investigations, one finds new theoremata which belong 
+to a system and new inference rules.  This state of affairs would be 
+reflected by adding links to those objects.
+
+In addition to systems, we need to indicate relations between systems.  As 
+mentioned before, these can take the form of coherent maps, piggybacking, and 
+simulation. Each of these can be indicated by a node carrying a suitable data 
+structure with links to the objects being mapped and a representation of the 
+map along the same lines as the representation of inferences discussed above.
+
+An inference is an operation in which one deduces a conclusion from 
+hypotheses via an inference rule.  Hence, it would be represented by a frame 
+with four slots which would be filled with links to the hypothesis 
+statements, the conclusion statements, the inference rule, and auxiliary 
+data. 
+Emigrations are events where a statement is moved from one context to 
+another. For instance, consider the earlier discussion of polynomials where 
+we associated to the polynomial
+
+           
+$$x y  + 2 z^2$$ 
+
+the proposition
+
+$$(\forall x) (\forall y) (\forall z)   (x,y,z) in V  \Rightarrow  x y  + 2 
+z^2  = 0.$$ 
+Such an event entails the application of a morphism of systems, in this case 
+a coherent map from a polynomial ideal to a geometric theory.   Emigrations 
+can be viewed as a generalization of inferences, except that the hypothesis 
+lies in one the theory and the conclusion in another.  This point of view 
+suggests that emigrations may be encoded analogously to inferences, by a 
+frame with slots for hypothesis, conclusion, morphism, and auxiliary data.
+
+In this setting, a verifier is a kind of webcrawler which traverses the 
+semantic net, ensuring the integrity of the knowlege base.  This verification 
+entails both a global aspect and a local aspect.  The global aspect involves 
+making sure that the reasoning is free of circularity.  The local aspect 
+involves checking that everything which has not been assumed true has a 
+justification and running the programs associated to inferences and 
+emigrations to verify that the reasoning is sound. 
+----
+
+Following along here (or at least, trying to).  I like the cliffhanger.  I 
+shall await on the edge of my seat! --[[file:akrowne.org][akrowne]]
+
+Basically, this is about the stuff we talked on the phone the other night.  
+My primary motivation in writing this is to get these notions written down 
+somehow because it might be a looooong time before I get them sorted out to 
+the point where I can make a carefully organized, rigorous presentation 
+(especially working on them part time!).  Along the way, I included a fair 
+amount of digression on motivation and intuition since I wanted to 
+document not only the finished product but where it came from and how one can 
+think of it. 
+While there is a certain risk of coming across as naive, flaky, or 
+pretentious by posting something like this publicly, I think there is no real 
+shame as long as this is understood for what it is and not for what it is 
+not.  Plus, there are some potential benefits.  If I am re-inventing some 
+wheels, maybe someone might let me know and spare me the unnecessarry
+effort.  If someone sees a mistake, the sooner I find out and fix it, the 
+better.  If what I am saying is obscure, maybe someone will ask questions and 
+the ensuing dialogue will lead to in a clearer exposition.  This is an 
+attempt at a more open research process.
+ ---[[file:rspuzio.org][rspuzio]]
+
+Scanning it, it looks good. I'll print it, read it, and talk about it with 
+you later. --[[file:jcorneli.org][jcorneli]] 
+You might want to wait a day or two before printing because I still have a 
+bit of stuff to add including something about how to apply this theory which 
+expands on what we were discussing about theorem verification this summer.  
+--[[file:rspuzio.org][rspuzio]] 
+Now, having written this, I realize that these ramblings could equally well 
+be considered as a successor to [[file:one week in october.org][one week in october]] in more than one 
+sense.  Literally, it took me a week in October to write this.  I didn't 
+expect this to be quite the undertaking it became, but it took something like 
+100 hours to come out with this piece.  A hundred hours for a
+half-baked sketch only makes me imagine how many thousands ouf hours will go 
+into sorting out the details, filling in gaps, and coming out with a polished 
+version.  The timeframe of a year from now seems about right.  Contentwise, 
+it represents a later stage of a process which had its origins in Joe's 
+APM-Xi project.  Moreover, this current sketch adresses various issues and 
+concerns which surfaced during that debate such as including formalized
+statements in a parallel layer distinguishable from human-oriented content.  
+It hopefully also adresses the objections that the project is mere science 
+fiction by describing some progress which has been made on important aspects 
+and sketching how to implement features. Naturally, there is still quite a 
+gap between a sketch and an implementation, an intuitive explorations and a 
+rigorous proof, so it is perfectly understandable that one might wish to
+wait for the completed work to form an opinion.  In the meanwhile, I offer 
+this account of my current thinking on these topics for what it may (or may 
+not) be worth. --[[file:rspuzio.org][rspuzio]] 
+-----
+
+**  Two communities talking past each other?
+
+One of the interesting experiences of being here at AsteroidMeta is that we 
+seem to have two fairly active communities, with at least overlapping goals, 
+but nonetheless not a lot of interaction between them. I'm not sure any of 
+the HDM'ers have met in person with any of the Ghilbertians / Metamathers, 
+which would I think help quite a bit to bring these commmunities together.
+
+From 10,000 feet, I see the HDM'ers tossing around a lot of beautiful 
+sounding philosophy and ideas, but have no real working sense of how 
+realistic they are as the basis for an actual system that works with formal 
+math. So, please forgive my asking some naive questions, essentially from the 
+perspective of an outsider who might like to become not so much of an 
+outsider over time. 
+What is the main problem to be solved here?
+
+More specifically, I see a fair amount of struggle to design a representation 
+language for mathematical statements which might be both human-readable and 
+machine-verifiable. The thing is, there are by now quite a few existing 
+systems that actually do encode a fair amount of real mathematics. In 
+addition to Metamath and friends, there's also HOL, Mizar, and, with much 
+less of a theorem-proving focus, the various forms of Mathematica syntax
+and [http://www.openmath.org/overview/om-mml.html OpenMath], which is 
+basically a variant of MathML.
+
+So, for each of the systems mentioned above, what is the main reason why you 
+don't want to simply adopt it for HDM?
+
+I will be happy to answer questions about these systems to the extent that 
+you (HDM'ers) are not familiar with them.
+
+: The long term objective of HDM as I understand it is to harvest
+all extant mathematics, including the math buried in books, papers,
+online encyclopedias such as PlanetMath, etc. Obviously this is
+a difficult assignment. It will most likely require a true AI because
+interpreting the "meaning" of an arbitrary expository communication
+requires figuring out the author's intended meaning (pragmatics),
+as well as syntax and semantics. Plus it would require the ability
+to handle inconsistencies in its input, and have expertise with various
+logic and reasoning systems, including the logic/math of reasoning
+about knowledge itself. --[[file:ocat.org][ocat]] 14-Oct-2006 
+
+--[[file:raph.org][raph]] 13 Oct 2006
+
+Some comments and answers to questions:
+
+ 1. I think Ocat has given a pretty good summary of the "main" high-level 
+problem to be solved.  There is the additional high-level problem of how to 
+effectively use the mathematical information when it is harvested, for
+example, to make teaching and learning mathematics easier, or to help promote
+the progress of mathematical research. To sum them up once further, I'd say 
+the highest-level problem is to use the computer to significantly enhance the 
+way mathematics is done.  (Ocat's goal-statement has the benefit of being 
+more directly "measurable" than either of these two more open-ended goals, 
+but both are important.) # As for adopting one or another system as the basis 
+for HDM, I think one simple answer is that ideally whatever we do adopt 
+should be capable of reading from any other existing system.  So, we are 
+currently concerned with designing a system that we can agree is suitably 
+general (on the theory end) and with building parsers or "readers" that will 
+translate from other encodings, including NL, into this formalism (on the 
+coding end). # I definitely think a meet-up between HDM and MM-etc. devotees 
+would be productive, perhaps with the inclusion of other groups with 
+abstractly similar motivations and/or ideas.  I think we should start 
+planning such a meet-up soon so as to most effectively get people on-board.
+
+--[[file:jcorneli.org][jcorneli]] 
+
+I think I finally figured out that by "NL encoding" above you
+just mean natural language (e.g. ordinary English) and not a
+computer proof language - correct me if I'm wrong.
+Sometimes it's hard to figure
+out all the acronyms here.  :)  Anyway, an interesting resource
+available on-line that I mentioned elsewhere is the 518-page
+/Handbook of Mathematical Discourse/ (hyperlink removed - see below)
+by Charles Wells.  It may be a work
+in progress - I don't know anything about it or its author - but it
+seems to have a goal of comprehensively documenting, with meticulous
+literature references, the nuances, ambiguities, and implicit meanings
+in the use of English in informal math.  It might be a useful resource
+for anyone considering a natural language translator, and at least it
+gives an idea of the scope of the kinds of things a natural language
+translator would have to deal with.  It might also save work
+compiling the so-far somewhat ad hoc
+[[file:list_of_formal_statements_in_natural_language.org][list_of_formal_statements_in_natural_language]].  --[[file:norm.org][norm]] 14 Oct 2006
+
+I looked into it some more, and it appears that the above reference
+may be an unauthorized draft copy of a commercially offered book, so
+I removed the hyperlink.  The author has a web site
+[http://www.abstractmath.org/MM/MMIntro.htm abstractmath.org]
+(which is apparently under construction, with
+several broken links)
+related to the book.
+It seems the book represents the author's meticulous
+work over a period of
+35 years, and I doubt it is something easily reproduced by a few
+non-expert
+volunteers adding new NL terms to an ad hoc list in their
+spare time.  I don't know
+whether the author would be open to allowing his work to be
+used as an information resource for a free software effort
+- someone else would have to approach him, if it seems to be of interest.  
+(NL encoding is not something I personally am focused on.  I mention it in 
+part to convey how huge an effort such a project would be.)
+--[[file:norm.org][norm]] 15 Oct 2006
+
+: Perhaps I should clarify what I had in mind when I compiled that list.
+I was primarily in obtaining some rough quantitative estimate of the
+complexity of mathematical language.  In particular, I was interested in
+computing the entropy of mathematical prose, specifically of the
+sublanguage used to convey mathmatical statements as opposed to, say,
+intuition or mortivation.  So what I did was to take a bunch of PM
+entries, extract from them those sentences which expressed something
+which equally well could be expressed by a purely symbolic expression.
+Then I took the further step of identifying the snippets of symbolic
+expressions and strictly technical terms occuring in these sentences.
+The symbolic snippets (easily spotted because they are enclosed in
+dollar signs) already are symbolic and we know how purely technical
+terms translate into symbols --- the issue is now to translate the
+text which holds together the formulas and the technical terms.  I
+don't remember the answer offhand, but the value of entropy, but it
+was encouragingly low, suggesting that the problem, while far from
+trivial, should be orders of magnitude simpler than that of natural
+language processing in general.
+
+: A linguist once explained to me that there are two main approaches
+to the subject nowadays, a top-down approach in which one starts with
+an understanding of language, then constructs grammars and the like,
+and a bottom up approach, in which one starts with a corpus and
+identifies regularities by statistical analysis.  The work you cite,
+to which I might add [http://www.emis.de/monographs/Trzeciak/ 
+Trzeciak's glossary] represent the former approach.  I agree with you
+that a few hours of spare-time adding to a list cannot compare with
+a lifetime of devoted effort, but that is far from what I had in
+mind.  Rather, I thought that, if one day we interested a linguist
+in the latter camp, we could undertake a project with two components
+something like follows:  The first component would be a CBPP project
+in which volunteers look through PlanetMath entries and, as I had
+done, identifying sentences which expressed formal mathematical ideas,
+then marking the snippets of symbolic expressions and the technical 
+terms.  This could be made easier by the autoliker to make a preliminary
+guess; however, exactly because we do not yet have NLP for math, the
+results still need to be checked by a human.  E.g., the term "set" should
+be marked up in the phrase "the set of all integers which can be expressed
+as the sum of two squares", but not be marked up in the sentence "Set n 
+equal to the least integer which cannot be expressed as the sum of four
+squares".  Once a sizable list was compiled, one would go to the second
+component in which the linguist would run statistical test on it.  As for
+an estimate of time involved, it took me something like a few hours to
+come up with my list.  With a suitable software platform which incorporated
+the autolinker, let one mark terms with a stroke of the mouse, and the
+like, one could be more productive; a guess might be that one could come
+up with something like a 100 sentences for the database in an hour.
+From experience with CBPP projects, it not implausible that one could
+obtain something like at least 100 person-hours of work this way over a 
+year or so (for that matter, one person could put the effort in through
+the course of a year alone --- it averages to 20 minutes a day).  This
+would generate a sizable datatbase of statements for analysis.  To be sure,
+this might still be small by the gargantuan proportions of the databases 
+used in statistical linguistics nowadays, but the lower entropy should
+compensate and make it possible to obtain meaningful statistics.  As far
+as I know (which is not saying too much here) such a statistical study
+of mathematical language has not been done yet, and I would guess that it
+would nicely complement the more traditional approach of the works cited
+earlier.  Perhaps combining these approaches with such a statistical
+analysis and something along the lines of Clifford's approach to translating
+natural language database queries into formal logic might make for headway 
+in the issue of natural language processing of mathematical text.
+--[[file:rspuzio.org][rspuzio]]
+
+
+Let me chime in with norm above. Being able to automatedly interpret
+math written in natural language seems to me to be an extraordinarily
+difficult problem. My sense is that there is much lower hanging fruit,
+goals that seem to be achievable using small incremental improvements
+of existing successful projects, as well as remixes of ideas from
+various sources. For example, !TeX has a winning formula for producing
+high quality typeset mathematics. The fact that it runs in batch mode
+rather than interactively is not inherent in the ideas behind !TeX. All
+you have to is understand the ideas (and there are several books), then
+an interactive implementation should just be a Small Matter Of Programming.
+
+So let me ask the question again, trying for better focus. Putting aside
+the question of translating from other systems (very hard) or from math
+written in natural language (AI complete), what are the properties that
+are most desirable in meeting the goals of the HDM? What misfeatures of
+the existing languages are most problematic for the HDM?
+
+Since I listed approximately five languages above, this is still a fairly big
+question. I'm happy to discuss them all, but in the interest of getting to 
+the concrete details rather than philosophical ideas, let's focus on 
+Ghilbert/MM first.
+
+We can also use indefinite integrals, and their associated constant of
+integration, as a difficult running example. What does "$\int 2x dx = x^2 + 
+C$" mean?  This construction is ubiquitous in the natural language 
+literature, but surprisingly slippery to translate into a rigorous formal 
+basis. 
+[http://mathworld.wolfram.com/IndefiniteIntegral.html Mathematica] simply 
+omits the integration constant.
+
+Mizar does not have binders, so it can't directly support syntax for 
+indefinite integrals, but Freek has 
+[http://www.cs.ru.nl/F.Wiedijk/mizar/binder.pdf proposed] such a mechanism. 
+In his presentation, he omits the constant of integration as well.
+
+Metamath does not yet have a development of integrals, so it's too early to 
+say. Hopefully Norm can chime in.
+
+I have not yet decided how to formalize the concept in Ghilbert either. I'm 
+leaning towards implementing a highly polymorphic type that includes both 
+functions and classes of functions. So, "$x^2$" is internally represented as 
+"$\lambda x x^2$", and $C$ is $\{f | (\exists C) f = \lambda x C\}$, in other 
+words the class of constant functions.  The cast from function to class of 
+functions could be written explicitly (in much the same way that Norm has a 
+dozen or so multiplication operators in set.mm). Another possibility that 
+intrigues me is to "tag" the type of objects, in effect making the type 
+"mathematical object" a disjoint union of all the wierd things you
+might see. Then, the + operator is defined with type "obj X obj -> obj", and, 
+internal to the definition, you have lots of cases to handle promoting 
+function to class of function, and so on.
+
+But note the profound effect that this type of choice has on the underlying 
+system. A highly polymorphic "obj" type has much more the flavor of Lisp or 
+Python than ML, even though you /can/ represent disjoint unions in HOL. The 
+fireworks begin in the interactions between the definition of the type and 
+the attempt to modularize the theories. A disjoint union in ML or HOL must 
+essentially list all the cases in the initial definition. It is
+difficult, if not impossible, to extend such a type after the fact.
+
+A /much/ simpler approach would be to treat indefinite integration as a 
+relation, rather than a function. It's essentially the inverse of 
+differentiation, in fact. Then, you'd write the above as something like
+"<code>IndefIntegral(\lambda x 2x, \lambda x x^2 + C)</code>". The gen rule 
+lets you wrap all this in a "<code>forall C</code>", as well. But the 
+downside of this is that you give up strictly equational reasoning, and have 
+to do all your algebraic manipulation using relations.
+
+So, in sum, I don't have very good confidence that I'll be able to develop a 
+notation within Ghilbert that is both powerful enough to represent natural 
+mathematics and practical to do formal manipulation. It wouldn't be 
+surprising that a compromise is needed, one that would favor one rather than 
+the other. 
+-- [[file:raph.org][raph]] 15 Oct 2006
+
+----- 
+
+The primary goal of HDM requires an automated intelligence
+of high order, or a large workforce to reformulate existing
+documents. Or both. For there is a major qualitative 
+difference between the nature of textbook expositions
+of mathematics that have been settled and crystallized
+for centuries, and that of research papers written by
+super-geniuses while in Hypergnostic Überwizard mode.
+
+In fact, the quality and nature of exposition in textbooks 
+varies according to the subject matter. This is true, for 
+example, in areas of inquiry such as logic, which is making the 
+transition from philosophy to science, and in topics which 
+involve a synthesis of knowledge from different subjects 
+(i.e. math + logic + linquistics + computation). In these
+areas the very words themselves are being invented and
+redefined, and formalisms may vary from one author to the
+next. A clue to this state of affairs may be seen in the
+titles of the textbooks, to which authors love to append
+"An Introduction", even for the most advanced subject matter.
+
+Furthermore, the task of reconciling and synthesizing 
+alternate but perhaps equivalent concepts requires intelligence
+of a high order. For example, I believe that a "Parallel
+Universe" version of Metamath and mmj2 could be written
+that uses Free/Bound Variables and "Textbook" Substitution
+Checking instead of Metamath's Distinct Variable Restrictions
+(<nowiki>$d</nowiki> statements.) Is this an easy task for a 
+human? Negative. And even after writing and testing the U2 code, 
+the task of writing a two-way conversion between set.mm and 
+setU2.mm would lurk. To give some insight into the magnitude 
+of such efforts, the elapsed development time of mmj2 is 
+slightly more than two calendar years, with actual work
+so far in excess of 1,000 hours...and it still does not
+accept or display graphic-mode math formulas or do any
+proving of its own!
+
+: -> please take this "parallel universe" discussion to [[Distinctors vs 
+binders]] 
+Therefore, an automated intelligence capable of accurately
+"harvesting" ALL extant mathematical papers would possess
+the intelligence -- at least -- of the stupidest human
+capable of comprehending and applying the MOST complicated
+and ambiguous mathematical document ever written. In other
+words, HDM is a fairly difficult project...
+
+I do believe that HDM is a worthwhile project. We learn by
+doing, and HDM can teach us a lot. Eventually. About ourselves.
+
+--[[file:ocat.org][ocat]] 15-Oct-2006
+
+I don't know where to weigh in exactly here, but here are
+a few brief responses.
+
+ 1. Raph, I have not evaluated any of the languages in detail
+anywhere close to enough to say which is good or bad for our purposes.  I'm 
+afraid that we're likely to stay in (natural) philosophy mode until we
+come up with or find some language that has the theoretical
+properties we need.  This can of course be informed by
+research into existing languages, so I don't rule that out
+by any means!  In terms of practical matters, both Ray and
+I like programming in lisp, so presumably anything that
+will work at all will have a (very) lisp-like syntax. AFAIK
+that sums up where we are at currently in terms of language
+choice/design.  Theoretical discussions like the one you
+sketched on integrals definitely need to happen.  My preference
+I think would be to have some suitably high-level language that
+can express both sides of every such dilemma.  This would appear
+to take at least part of the discussion into the realms "above"
+formalism (ontology or meta-formalism or AI -- I don't know
+any particularly good words to describe such languages/theories).
+ 1. Norm, thank you for the reference on math usage, it sounds
+super.
+ 1. Ocat, yes there will be a lot of work - but: (A) luckily much
+of the relevant work has already been done, and we learn about
+new relevant material every day (e.g. Norm's reference).  I don't
+know how much of the work required to complete HDM will be
+of the "integrative" sort required to utilize such gems, and how
+much will be minting-anew.  (B) Of whatever does fall into this
+latter category of new research, new code, "actual work" (which
+includes research on how to integrate in existing
+material better -- in a very core way, since this is in a sense
+what the project is all about), it is not clear how much of it
+needs to be "groundbreaking" and how much may simply be "routine".
+Accordingly it is unrealistic (at least until there is clarification
+on these issues) to put forth a real estimated time of completion
+or budget for the project as a whole.  However, just by the
+fact that yes, the project is hard, anyone who wants to work on
+it can be reasonably sure of finding plenty of interesting (and
+maybe even "relevant") work to do.
+
+ 1. On that note, I would say that there is "low-hanging fruit"
+all over the place -- perhaps is all anyone ever really reaches.
+This includes the fruits on the natural-language-oriented branches of
+the tree of knowledge (or any other branch associated with
+any problem generally regarded as difficult).  One assumption
+I've advanced for quite a while is that mathematical language is
+considerably more accessible than other sorts of language.  Anyway,
+in general what one considers to be low-hanging is of course an
+almost entirely relativistic quantity, depending on their situation,
+preferences, etc.!
+
+--[[file:jcorneli.org][jcorneli]]
+
+: Hi Joe, I believe the NL question is not amenable to anything
+less than a true AI -- or big teams of really smart humans :-) You
+might want to re-look at this. When super-geniuses are writing
+for their peers in research papers, they are in Überwizard Hypergnostic
+mode. They're writing using their own language, and it is language
+still under development. It may be that math and science are the only
+really valid fields for "true" AI's -- fields like "humanities" make
+sense to humans, not machines. But penetrating the meaning of a
+research paper will require intelligence and knowledge on par with
+that of the author. This is not something that one can even build
+a project schedule for because true AI has yet to be invented. 
+--[[file:ocat.org][ocat]] 16-Oct-2006
+
+There are a number of people doing research on the
+linguistics of mathematics (see the [[file:HDM refs.org][HDM refs]]).  I'm (obviously) hopeful
+that the envelope can be pushed quite far here.  Perhaps
+your concerns would be less pointed if we consider initially shifting to the 
+context of things like the Schuams series, or other textbooks
+(instead of immediately thinking about research articles)?  Certainly some 
+books are written in a very rigorous style! I think that an appropriately
+structured research program should eventually be able
+to take all rigorous texts within its compass.  However,
+this must go by baby steps.  Your statements about the
+intelligence required to read a research paper are probably
+(at least close to) correct.  (I say "close" because
+machine and human intelligences may be so different as
+to be largely incomparable, e.g. the machine may
+be bad at everything besides math, whereas the human
+mathematician may just be bad at most other things ;).)
+So we should start very small, with things like word problems.
+AFAIK, that's roughly where the state-of-the-art of math-linguistics
+has been for about 30 years.  My suspicion is that this is NOT due
+to "intrinsic difficulty" of the problem, but rather to other
+factors (perhaps I will attempt to write an essay fleshing out
+this view). --[[file:jcorneli.org][jcorneli]]
+
+I am very supportive of the HDM project. My view at this moment
+is that real/strong/complete AI is a prerequisite, and therefore
+that ought to be one of the key project sub-tasks. If you can
+do "real" AI then HDM is the low hanging fruit.
+
+--[[file:ocat.org][ocat]]
+
+I am also very supportive of HDM. But am personally much more
+interested in what can be done without strong AI as a prerequisite.
+I think that building a fully rigorous and fairly complete dictionary
+of mathematics is, in fact, within reach, with a team of smart,
+creative formalizers taking on the role of the AI. I've really
+enjoyed the bits and pieces I've done in set.mm (I'm proud that
+my construction of exponentiation by an integer is not only part
+of set.mm but is used as a building block for $e^x$). In fact, I'm
+really excited about what a collaborative effort, like Wikipedia, can
+do. Perhaps the grand plan is that Ghilbert/metamath will serve as
+the seed of the greater HDM project, building a good bed for the
+garden that the HDM bots will play in. If that's the case, then I
+would like to get a better sense of whether Ghilbert generally serves
+that need within the HDM project, and, if not, what kind of changes
+would be most helpful.
+
+-- [[file:raph.org][raph]]
+
+I do tend to think that this sort of work would be fruitful!
+Indeed, I had imagined a group of human authors collaborating
+on the core mathematical knowledge base being an early and
+foundational step in the development of the HDM.  I think that
+Ghilbert or something only slightly different could potentially
+serve in this role, yes.  I'd need to think more about the
+details.  But given the language-interoperability criterion
+for hcode, any work done in Ghilbert is already a contribution -
+so that is an automatic "win", assuming we are eventually able
+to write inter-language translators.  I'll think more about
+the language issues.  Partly I think the collaborative issues
+have to do with social platform design (hence [[file:arxana.org][arxana]] and [[file:noosphere.org][noosphere]]
+development) more-so than with language design.  But more
+reflection on these points would be good.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Certainly, social platform design is important, but I believe that
+language design also has a profound impact on collaboration. For
+example, given Metamath's lack of a safe definition mechanism,
+it is critically important that definitions be carefully considered,
+lest the entire system breaks. In practice, that means that [[file:norm.org][norm]]
+"holds the keys" regarding introduction of new definitions into the
+set.mm database. That's fine as long as Metamath has a handful of
+contributors, but is not really the Internet way. Note that Mizar has
+similar issues, where many such decisions must be cleared through
+a central committee.
+
+It remains to see how successful the Ghilbert design ideas are in
+practice, but in theory, at least, the combination of safe definitions
+and cleanly separated namespaces (with imports and exports between the
+modules) should mean that individuals or groups can feel a lot
+freer to introduce their own definitions and notation. Automatic tools
+for reworking theorems from one definitional framework to another will
+help tame the resulting anarchy, and should not be too difficult.
+A glimmer of this can be seen in my Ghilbert -> HOL translator, which
+uses the native HOL definitions of conjunction, disjunction, and
+biconditional, but expands out the ternary conjunction and disjunction
+connectives (inherited from set.mm).
+
+I'm going to /suggest/ that the design work for h-code be done within
+the Ghilbert framework, at least as an experiment. Some features, such
+as the fact that it's Lisp-like s-expressions, already seem like a good
+fit. In other ways, Ghilbert is going to be quite a bit stricter than
+some of the h-code discussion I've seen (no variadic terms, no polymorphism
+in the sense of C++ operator overloading), but, I think, at the very least,
+the strict discipline will be good for discovering which of these
+conveniences you really need. And, of course, should you decide that the
+Ghilbert strictures are indeed too confining, translating your h-code
+into Ghilbert should be a relatively easy start to your more ambitious
+universal translation project.
+
+--[[file:raph.org][raph]] 17 Oct 2006
+
+I have taken a close look at Ghilbert's draft spec and I like
+it. To accomodate a global audience of academicians and krewe members
+(ref: Bruce Sterling's "Distraction"), additional work "mainstreaming"
+<nowiki>$d</nowiki>'s may be necessary. Norm has mentioned Tarski's 1966 
+paper "A simplified formalization of predicate logic with identity" that 
+you could "go to town on". Otherwise(?), could Ghilbert
+accomodate "textbook" bound/free variables and substitution validity
+checking schemes we find in predicate logic textbooks ("x is free for
+y in z blahblah")? Also, I think the "core" Ghilbert language spec
+and database should be totally agnostic about syntax and notations.
+In fact, the abstract definition need not even mention "s-exps" but
+be a pure definition of Entities and Relations -- this would facilitate
+translation from files to databases as repositories. The next thing
+for using Ghilbert in HDM would be to define a logical framework for
+holding sets of Ghilbert databases in a common repository tied together
+by a global Ontology (like the Semantic Web definition of "Ontology".)
+The framework would also allow for multiple sets of syntax/notation
+schemes for a single Ghilbert database and as shared resources. Then
+other needs of HDM would be taken into account, such as data elements
+that humans want when using the maths -- for example, descriptions,
+dates, authors, citations, multiple proofs for a single theorem, etc.
+And these ancillary data items need to tie back via the Ontology to
+the math objects they describe. Also needed, ways to programatically
+relate different Ghilbert databases -- the framework should anticipate
+this and provide program interfaces specifying the mechanism types
+(translations, such as from set.m and Ghilbert are the
+type of thing I mean, except that there would need to be "intra-Ghilbert" 
+translations too.) Finally, to make this popular so that the proletariat 
+(like me) can join in the fun, we need textbooks and graphical user 
+interfaces, preferable with digital pen, VR, speech recognition input/output. 
+--[[file:ocat.org][ocat]] 
+: A lot of what you're saying here is that we need a flexible website
+that holds both Ghilbert proofs and human-readable metadata. I agree
+completely, and that's essentially the long term goal for ghilbert.org.
+I also agree with the need for intra-Ghilbert translations, and have
+at least one of those in the works (going from implicitly typed
+Peano arithmetic to explicitly typed Pax). -- [[file:raph.org][raph]]
+
+-----
+(here are a few more thought offered in the collegial manner :)
+
+Professor !McGee of MIT writes that 
+
+http://ocw.mit.edu/OcwWeb/Linguistics-and-Philosophy/24-241Logic-IFall2002/Co
+urseHome/index.htm
+a valid argument is one for which, if one accepts the
+premisses then one ought to accept the conclusion.
+
+Implicit in that "ought" is an accepted mode of
+reasoning -- and what constitutes a correct form of
+reasoning?
+
+In Hilbert style proofs the last formula in a list of
+formulas is the conclusion. The conclusion is derived
+by unifying the conclusion's formula and hypotheses
+with a previously proven theorem or an axiom.
+
+"Unification" means to find a consistent set of
+simultaneous substitutions for variables to make the
+two formulas (and their hypotheses) match. But are the
+substitutions "valid"?
+
+In Metamath <nowiki>$d</nowiki> validity checking is separate from the
+process of unification, and <nowiki>$d</nowiki> restrictions are
+inherited from the theorems and assertions used to
+prove a theorem. They "percolate" up from the bottom.
+
+Curiously, in Metamath <nowiki>$d</nowiki> restrictions are never
+applied at the level of Syntax Axioms. They belong at
+the level of "Logical" Axioms.
+
+Conversely -- correct me if I am wrong -- in the
+"textbook" free/bound variable substitution schemes,
+"binding" is a purely syntactic property. For example,
+"A. x ph" binds x within ph. Then, "proper
+substitution" is defined as a validity check of
+allowable transformations of formulas.
+
+Thus, both <nowiki>$d</nowiki>'s and bound/free/proper 
+substitions are mechanical mechanisms for disallowing 
+invalid formula transformations that could result in 
+invalid -- illogical -- concusions.
+
+Therefore, these mechanisms are within the province of
+the Proof Verification portion of a system (plus
+handling the necessary declarations to specify the
+restrictions.)
+
+There seems to be no technical reason why a globally
+inclusive system such as HDM should restrict itself to
+just one or the other of these systems for validating
+variable substitutions, regardless of which is deemed
+"superior". It is unreasonable to expect Planet
+Earth's Math/Logicians to abandon Free/Bound in favor
+of <nowiki>$d</nowiki>'s en masse. And in any event, the "legacy
+documents" of ye olden days cannot be simply abandoned
+by HDM simply because they do not conform to <nowiki>$d</nowiki>.
+
+Widespread -- global -- acceptance of Ghilbert and HDM
+require not just inclusiveness, but making the systems
+work the way math/logicians actually do their work. If
+math/logicians are accustomed to using Tex/PDF
+document formatting then whatever system is developed
+must, to win hearts and minds, provide support for
+conventional (graphical) typesetting seen in the
+Mathematical Vernacular. To demand that everyone
+abandon ship and switch to ASCII shorthand is to
+abandon 95% of the user base.
+
+--[[file:ocat.org][ocat]]
+-----
+
+(Reply to Raph follows.  This is getting too technical, and I will move
+it to [[file:set.mm_discussion.org][set.mm_discussion]] after sitting here for a day or two.  Or
+someone else may do that if I forget.  I'm not sure that
+[[file:rspuzio.org][rspuzio]] is thrilled that we've hijacked his page.)
+
+: IMO I think at least a link to the final destination should
+be maintained here, since this is interesting and helps contextualize
+the issues Ray has been talking about here. --[[file:jcorneli.org][jcorneli]]
+
+The "value" of an indefinite integral is, of course, not unique, and the
+Mathematica approach is a somewhat loose compromise.  Of course
+Mathematica has no concept of proof - you trust the writers of the
+modules and hope there aren't too many bugs - so lack of rigor is not a
+problem.  To be perfectly rigorous, an indefinite integral would
+probably have to be defined as something like an equivalence class of
+functions.  Ghilbert/MM would have no problem with this in principle,
+but the notation using equivalence classes might be awkward for a human
+to read easily.  Alternately, there might be some compact way to express
+"the equivalence class of functions a representative member of which is
+f(x)" (with the +C dropped).  But it doesn't give me a warm fuzzy
+feeling of elegance of human readability.  And you still can't drop it
+into a formula to instantiate an actual function variable.
+
+The use of a relation for indefinite integrals is certainly possible,
+but my gut feel is that it would be awkward for many things.  For
+example, I tried to live with the convergence relation for a long time,
+and in principle it suffices for everything.  But eventually it was
+getting too awkward to use it to deal with infinite sums, because it was
+far more convenient to work with the actual value that a series
+converged to rather than just the abstract existence of such a value.
+So, I introduced infinite sums.  On the other hand, so far I still
+haven't defined "the limit of sequence F" but still use "the unique
+value that sequence F converges to, if it converges", partly because the
+limit relation as an antecedent evaluates to false when the sequence
+doesn't converge, avoiding the messiness of undefined values.  (I still
+haven't "defined" undefined values - there are many ways to do it, but
+so far I've been able to completely evade the issue by framing theorems
+in the right way, so I keep putting it off.)
+
+My long-term plan for set.mm is to focus on definite and not indefinite
+integration, using either Lesbesgue or (ideally) Henstock-Kurzweil
+integrals.  An indefinite integral can be expressed as a definite
+integral with a variable for its upper bound.  I think in most actual
+applications, definite integrals are what people use, and indefinite
+integrals are just things you look up in an integral table
+knowing you're going to instantiate it - with a variable upper limit for
+more general theorems.
+
+A while back Roy Longton toyed with the beginnings of calculus for real
+functions.  When I saw that the whole development of limits, continuity,
+etc. would have to be done all over again for complex functions, and yet
+again for vector spaces, I decided it was the wrong approach.  Now I
+want to do as much as possible in a more general setting of arbitrary
+metric spaces, Borel sets, etc., where real functions will fall out as a
+special case.
+
+Already [[file:frl.org][frl]] has proved that the complex numbers are a metric space,
+so once I finish the development of limits and convergence for metric
+spaces, I hope to discard a large part of the ugly real/complex
+development for these and replace it with instances of the more general
+metric space version.  Similarly, I finished showing the open sets of
+metric spaces are a topology, letting me use topology theorems for
+metric spaces.  These are modest beginnings, but they are letting me
+play with notational ideas that seem to be working out well.  Doing
+these things in the most general way possible, then doing less general
+things only when the more general theory doesn't apply, seems very
+powerful, and I'm excited about it.
+
+Practically speaking, this means that "freshman calculus" will appear a
+little slower than if I just jumped in and quickly hacked out the
+special case of real Riemannian integration.  But I think the long-term
+payoff will be greater.
+
+I haven't decided on any particular notation for either integration or
+differentiation, but it is something I intend to think long and hard
+about.
+
+I try to make notation as natural as possible, within the constraints of
+syntactical simplicity that I have imposed on myself.  I'm not always
+happy with my choices.  A recent example is the notation for sums, which
+has gone through several iterations, with a massive rewrite of all
+relevant theorems at least twice over the past year.  The ones I
+abandoned just didn't feel right, even though formally they were
+correct.  The present notation
+[http://us.metamath.org/mpegif/df-sum.html df-sum] seems like a
+practical compromise, and I think the examples on that page wouldn't
+seem too unnatural to most people.  The definition is very complex, by
+the way, because I've "overloaded" it with both finite and infinite sums
+as disjoint sets, in the way Raph suggested.  I had mixed feelings about
+doing that because of the awkwardness of the resulting definition, but
+it has the advantage that the equality theorems, for example, need only
+one proof for both cases.
+
+--[[file:norm.org][norm]] 15 Oct 2006
+
+As regards the intepretation of calculus, specifically the issue of 
+indefinite integrals and constants of integration, I would add that there is 
+also a third approach, which seems close to what appears in calculus texts, 
+especially those intended for engineers.  In mathematics, the term "calculus" 
+as in, say "umbral calculus", "tensor calculus", or "binor calculus", means a 
+formalism suited to calculution.  Viewed this way, the integral calculus is a 
+formalism for manipulating expressions in which there appear integrals and 
+differentials. Things like "$$\int x^2 dx = x^3/3 + C$$" are statements in 
+this system, which may be manipulated using various rules such as the chain 
+rule and integration by parts.
+
+As for the issue of meaning, there are various ways of assigning an 
+interpretation to the statements of integral calculus in terms of set theory 
+as Norm's example shows.  However, even if one cannot assign an 
+interpretation to every statement, it may still be useful because, starting 
+with statements which one knows how to interpret and which one knows to be 
+true and applying the rules in the calculus book, one can obtain other 
+statements which we know how to interpret, whose interpretations will be 
+true, even if we have no idea what, if anything, the intermediate steps mean.
+
+To be sure, when Leibnitz introduced his notation of differential and 
+integral calculus three centuries ago, he was thinking in terms of an 
+interpretation in terms of infinitessimals, which has since been discredited.  
+(It ought to be mentioned that this interpretation has been rehabilitated by 
+Robinson via non-standard models of the real number system, but that is 
+somewhat besides the point because most of developments described here 
+predate Robinson and many analysts are still unfamiliar with non-standard 
+analysis.)  Nevertheless, mathematicians have clung to the old notation, even 
+though it might be based on incorrect ideas.  To some extent, this is on 
+account of backwards compatibility (it is nice to be able to read the works 
+of Euler, Poisson, and Fourier) but, I would argue, it is more a matter of 
+computational convenience.  Even if it is based on discredited ideas, it is 
+still convenient to apply the chain rule by cancelling terms in fractions or 
+compute derivatives of implicit functions by manipulating differentials.  (To 
+be sure, "$dx$" can be given a rigorous meaning in terms of Cartan's exterior 
+calculus or Robinson's non-standard numbers but, as before, this is besides 
+the main point.)  There is no real harm in this practise because one can 
+show, as Weierstrass did, using rigorous proofs with epsilons, that any 
+calculation carried out according to the rules in the calculus 
+book will only allow one to arrive at true conclusions from true premises.  
+Once one has grasped this fact, one can go on enjoying both computational 
+convenience of the old formalism and the assurance that the results one 
+obtains thereby meet the highest standards of mathematical rigour.  
+
+In short, the "$C$" in "$\int 2x dx = x^2 + C$", or the whole formula for 
+that matter, doesn't have to mean anything in order for the formula to be 
+valid and of use in deriving correct conclusions.  To be sure, in this case, 
+there is likely little or no point in putting a lot of time into formulating 
+rules which stipulate what sorts of operations one can perform on equations 
+which involve constants of integration since one can, as Norm points out, 
+sidestep the issue and not lose much by only considering definite integrals.  
+However, in other situations, there is more at stake, as the next example 
+shows. 
+A similar situation obtains in differential geometry.  There, one has the old
+Ricci calculus which, though very convenent computationally, was devised on 
+the assumption that one has chosen a basis for one's vector space, and the 
+new index-free notation which involves no such assumption but, generally 
+speaking, the statement of a fact in the index-free formalism is much more 
+verbose than the statement in index notation.  For instance, in my article 
+[http://xxx.lanl.gov/abs/gr-qc/9403012 "The Gauss Map and
+2+1 Gravity"] where equations 7 through 14 express substantially the same 
+thing as several pages of reasoning in the article of Ruh and Vilms 
+(reference 1 in my article).  One might think that this extra bulk is the 
+price one has to pay for the generality of not having to assume a basis, but 
+this is not the case. Penrose has introduced what he terms "abstract index 
+notation", which may be described as a semantic map from statements of Ricci 
+calculus to statements of the index-free formalism.  One could use this 
+technique to translate my proof into index-free notation, which would expand 
+it to several pages.  However, there is little point in such an exercise 
+since one can demonstrate a metatheorem to the effect that theorems of Ricci 
+calculus translate into theorems of the index-free formalism.  Hence there is 
+no point in translating equations 7 through 14; it suffices to translate the 
+hypothesis and the conclusion and rest assured that, were the intermediate 
+steps translated, they would translate into valid reasoning
+in the new context. 
+
+Situations like this happen all the time, such as in the umbral and binor
+calculi mentioned above, Cayley's hyperdeterminants, Aronhold's and 
+Weitzenbock's symbolic notation for invariants, and Bell's arithmetical 
+paraphrases.  Let me say a few words about one example, Landau's big-O 
+notation, [http://planetmath.org/?op=getobj&from=corrections&id=10442 which I 
+explained the other day] on PlanetMath.  Not only has this proved itself as a 
+practical tool in the hands of analytic number theorists, asymptotic 
+analysts, and computer scientists interested in the complexity of algorithms, 
+it can be as slipperry as constants of integration.  "$O(f)$" does not denote 
+really denote a function any more than "$C$" denotes a number; rather, it is 
+to be understood metasyntactically. An equation $E$ in which "$O(f)$" occurs 
+is to be understood as $<(\exists g) (\exists C) E' \land |g| < C |f|>$, 
+where E' is gotten from E by replacing all occurrences of "$O(f)$"
+by "$g$".  Also, and this is what makes the notation so useful in practice, 
+one can derive all sorts of rules for manipulating big O's, such as, say, 
+"$O(f) O(g) = O(fg)$". Once one has these rules in hand, one can then do as 
+the asymptotitc analysts do and manipulate expressions chock full of big O's 
+mechanically without having to think what this really means in terms of 
+statements about inequalities for functions. 
+These examples also serve well as background to my answer to Raph's question
+"What is the main problem to be solved here?".  Since the main document above
+was written as a working document with myself and those in close contact with 
+me as intended audience, I am sure that it must look confusing to anyone 
+else, especially since I mix a sketch of what I am working on with 
+autobiographical details of how I was lead to various notions and an account 
+of my intuition for these topics, the analogies and heuristics which guide my 
+thinking, related topics, and possible applications not strictly related to 
+computerized math.  Therefore, I will explain the programme I am working on 
+without such digressions below. 
+As Raph pointed out correctly, I do not have experience designing computer 
+systems for math.  However, I do have some experience with mathematics, in 
+particular differential geometry and complex analysis.  I have at least had 
+some experience as a user of computer math systems, not to mention experience 
+with various mathematical and logical formalisms as described above. 
+
+The main problem which I am trying to solve here is to frame a rigorous 
+mathematical theory which describes certain aspects of what mathematicians 
+do.  As Joe mentioned, this involves using and adapting existing material as 
+well as developing new theory.  Since there is still quite a bit of material 
+which still needs to be cast into a rigorous form and notations and 
+terminology which need to be made consistent, all I have to offer at this 
+time is a sketch (and some working notes, but I am not sure how useful they 
+would be to anyone other than myself).  In Joe's terminology, I have moved 
+beyond the stage of natural philosophy with respect to this aspect of the 
+project --- it is no longer an issue of coming up with more ideas, but of 
+clarifying and polishing what I already have. I believe that this what I say 
+is essentially correct based on circumstantial evidence --- proofs of some 
+assertions, special cases, parallels with other theories, consistency with 
+what is known --- but, of course, the proof is in the pudding so you all
+should be rightly skeptical until I come out with a rigorous, formal account 
+(and perhaps check it on a computer!).  As for when that will happen, I am 
+reluctant to hazard a date, not only because framing a definition or proving 
+a theorem may prove harder than expected but, because of other interests and 
+obligations I can't be sure when I'll work on it; weeks have gone on end 
+during which I was not able to devote more than a token amount of time to
+the project.  As a rough guess (keep your fingers crossed!), I would say that 
+a formal account should be forthcoming in a year and the first part should be 
+done in a few months. 
+Since this question was raised in the context of representation languages for 
+mathematics, let me start with that issue.  While that was what I originally 
+thought when I started working on HDM with Joe two years ago, I no longer see 
+the matter that way.  Rather, my interest has shifted towards the general 
+features mathematical languages.  Of course, such a description is
+provided by the theory of general syntax of formal languages such as is 
+described in, say, the fourth chapter of Rosenbloom's "Elements of 
+Mathematical Logic".  However, for the purpose I intend, I would like to 
+modify this theory in two ways. 
+As Rosenbloom says, the business of bound variables is tricky.  One approach 
+is to avoid the troublemakers, as in combinatory logic or Norm's approach via 
+metavariables.  [http://planetmath.org/encyclopedia/LogicalLanguage.html The 
+more typical approach] is to only have bound variables in limited roles --- 
+one singles out a handful of symbols which have the power to bind variables, 
+such as quantifiers or lambda.  (Logicians typically use the term 
+"functional" to refer to such beasts, but since this clashes with 
+the use of the term by analysts to mean "higher-order function", I prefer to 
+introduce the term "binder" to mean any syntactic entity which has the power 
+to bind variables.)  While this is more than adequate for most purposes and 
+all mathematics can be reexpressed within such languages, I would like to go 
+further.  Notational systems like that of integral calculus and Ricci 
+calculus described in the foregoing examples owe much of their power to 
+the sophisticated use of dummy variables.  Thus, it would be useful to 
+generalize general syntax so as to describe the complex behaviour found in 
+the wild.  It would be nice to have subexpressions be able to bind variables 
+and to be able to substitute suitable expressions for binders, even allow 
+anonymous binders.  Conceptually, this is not too hard to do, but 
+practically, a detailed description of binders in full generality can get 
+unwieldy. Right now, a lot of my time working on this goes into agonizing 
+over how to make the presentation as gainly as possible.
+
+In Rosenbloom's book and elsewhere, syntax is presented in terms of a 
+specific language. I would prefer to reformulate things in terms of 
+!McCarthy's abstract syntax for two reasons. Firstly, a single abstract 
+syntax can describe more than one language --- to accomodate
+different syntaxes, one simply uses different access functions which obey the 
+same abstract relations.  Secondly, from the perspective of AI, abstract 
+syntax is desirable insofar as the entities with which it deals tend to be 
+closer to the concepts one is trying to express.  As before, sorting out the 
+gory details can get hairy.  I have some ideas which I hope will help
+make for a cleaner approach but, rather than spend more time describing my 
+thoughts on the matter, I would consider it a better use of time to think 
+these things through, present a rigorous theory, and then carry on the 
+discussion from there.  I hope to have at least a draft ready for January.
+
+As suggested by the examples, much of the way mathematicians operate is by 
+working with different systems which may come with domain-specific 
+formalisms.  A comprehensive digital library of mathematics like HDM needs to 
+include results from these different theories and I would also
+consider it desirable for it to accomodate different formalizations both for 
+reasons of efficiency and because these different notations convey different 
+intuitions.  Along these lines, I agree very much with what Ocat said: "There 
+seems to be no technical reason why a globally inclusive system such as HDM 
+should restrict itself to just one or the other of these systems for 
+validating variable substitutions, regardless of which is deemed "superior". 
+... Widespread - global - acceptance of Ghilbert and HDM require not just 
+inclusiveness, but making the systems work the way math/logicians actually do 
+their work." Also, it might be noted that there already exist proof checkers 
+and even automatic theorem provers for these domain-specific formal systems, 
+such as Macaulay for ideal theory (cited above as an example) and GAP for 
+group theory.  This all suggests a "small theory" approach rather than
+trying to re-express everything in terms of a single formal system.
+
+However, simply having these theories in isolation is not enough.  As the 
+examples of integral calculus and Ricci calculus show, one wants to have some 
+way of translating statements of one theory to another theory.  While one 
+could proceed in an ad hoc fashion as Penrose did when introducing
+his abstract index notation, this is not really satisfactory --- one needs 
+some general theory of how different formal systems interact as a guide.
+
+The logicians were not of much help to me here --- while there is extensive 
+discussion of axiomatic theories including a wide variety of types of 
+theories, not much seems to be said on how to relate different theories to 
+each other.  Thus, I turned to the philosophers and geometers (myself 
+included :) ) for ideas.  From them, I got a pretty good picture of how 
+something which could accomodate different formal systems in a consistent 
+fachion would look and also how to go about formalizing this notion.  Hence 
+the clouds of philospophizing which obscured Raph's view from high up.
+
+The first thing to do in framing such a theory is to say what a formal system 
+is.  One could start, as Adamowicz and Zbierski do in the first chapter of 
+their treastise on mathematical logic, with the abstract notion of a 
+relational system or one could take a more specific concrete 
+standpoint such as formal languages together with recursive relations (which, 
+for further concreteness, could be described as LISP programs).  As often is 
+the case in mathematics, some things can be done in the more general setting 
+but others are limitied to the specific case, so it is convenient to be slide 
+between these levels of generality as circumstances warrant. 
+
+Having fixed some notion of formal system, one can now consider how formal 
+systems relate to one another.  Examining various examples lead to the notion 
+of a coherent map between systems.  Furthermore, these maps turn the class of 
+formal systems into a category.  Specific instances of these maps
+include things like abstract index notation.  Also, there is a notion of 
+simulation which allows one to say when one formal system represents, in a 
+certain sense, a metatheory of another formal system and systematically 
+interpret theorems of the former theory as metatheorems of the latter.  
+While there is more that could be said on this topic, I again would prefer to 
+wait and write it up in an organized fashion rather than as bits and pieces.
+
+In conclusion, one might characterize what we are currently working on as 
+building the infrastructure for a digital library of math (and eventually 
+other subjects!) --- I am working out a theory for consistently including 
+different systems of reasoning side-by-side, Joe is working on a flexible
+scheme for connecting disparate documents into a coherent knowledge base, and 
+Aaron is working on systems for organizing and retrieving information of the 
+collection.  I would view the relation of what we are doing and what you at 
+metatmath not as in any real way conflicting, but as complementary.
+I would like to discuss these topics with you further, but also think that 
+such a discussion might be more fruitful after I have had some chance to 
+organize my thoughts on the matter, work out the details, sort out the loose 
+ends, and illustrate with examples.  Hopefully, this will not be too
+long from now.  --[[file:rspuzio.org][rspuzio]]
+
+As a hopefully helpful footnote: I just wanted to mention that it is very 
+important to include all reasonable interpretations of even "discredited" 
+mathematical theories (like infinitetesimals). Insofar as these theories 
+provide instructions for how to compute or interpret mathematics,
+they are part of the body of known mathematics and must go into the HDM.  
+Some statement (like an integral) that can be made within each of several 
+different theories should be contextualized by all of these theories.
+
+--[[file:jcorneli.org][jcorneli]]
+
+To rspuzio (and all others who have participated): thanks for your thoughtful 
+comments. I was initially somewhat frustrated (you could probably pick up 
+some of that tone), but now I see some more of the depth behind some of your 
+thinking. Certainly your motivating examples of big-O notation, and the 
+question of the status of "nonstandard analysis" as a potential way to 
+justify traditional mathematical notation, are very interesting, and
+a systematic approach to them would be very useful. I look forward to what 
+you come up with after you re-emerge from your cave.
+
+-- [[file:raph.org][raph]] 21 Oct 2006
+
+A nice example (from my point of view, since I put so much work into
+deciphering it) of practical notation vs. its formal meaning is the
+Dirac bra-ket notation used by physicists.  Unlike what many or most
+physics books imply, it is not just a simple inner product.  For a long
+time I was quite troubled by it - books gave the rules, which I could
+perform mechanically, but the rules appeared to have no rigorous
+justification.  They didn't even make sense to me except for the
+finite-dimensional case, when the objects could be represented by
+matrices.  Finally, after some insight provided by a book by Prugovecki,
+I was able to figure it out.  It turns out the the operation of
+juxtaposition of bras and kets is actually 6 different operations with 8
+different cases depending on context.
+
+I describe this in my informal
+[http://us2.metamath.org:8888/mpegif/mmnotes.txt mmnotes.txt] (search
+for the 17-May-2006 entry called "Dirac bra-ket notation deciphered").
+I was rather pleased that I was able to fully work it out and finally
+"see" to my satisfaction what this mysterious thing in physics books
+means.
+
+It is possible to define a very complex operation involving 8 sets of
+disjoint domains, but that is rather messy (on the definitional level)
+and I decided not to do that yet.  Instead, what I am doing for now is
+providing a description of the Dirac notation in the comment above the
+actual theorem that it corresponds to.  Examples are the associative
+laws [http://us2.metamath.org:8888/mpegif/mmtheorems83.html#kbass1t kbass1t 
+-- kbass6t]. 
+-- [[file:norm.org][norm]] 22 Oct 2006
+
+
+
+Ivan Sutherland shall have the last word:
+
+: It seems to me the secret in research activities is to pick something easy 
+enough to do, ... but a lot of people pick projects that are too hard. I've 
+tried to pick easy ones to work on. And there are plenty of easy ones going 
+begging. 
+I have to say I disagree with ocat's assertion that current-research articles
+are particularly hard by virtue of them being written by "super-geniuses in
+Überwizard Hypergnostic mode".   I've read and written plenty of research 
+articles (albeit not in pure math) and it seems to me the only unique 
+property they have (besides being cutting-edge) is that new terminology and
+symbology are declared on-the-fly.  But any HDM-like system should be able 
+to ingest new terminology as a matter of course; it doesn't matter to the 
+system whether terminology is new to /it/ or new to /everyone/.  
+
+There certainly are no mystic properties of current-research papers.  If they 
+were not built by proceeding from a common basis of knowledge (relative to
+/some/ community), then they wouldn't be valid anyway.
+
+Thus I think there's a lot of legitimacy to Ray's claim that learning 
+mathematical language conventions (through which mathematical neologizing 
+happens) is likely to be a fruitful pursuit, which could lead to an automatic 
+system able to ingest and in a sense "grok" even research mathematics.
+
+--[[file:akrowne.org][akrowne]]
+
+i'm going to attempt here, ray, to express the gist of what you've said in my 
+own words.  please let me know how close i come to the broad intent and 
+strategy. 
+so what we are doing here is moving from a "constructivist" notion of 
+mathematics (or more specifically, math on computers), where basically all 
+understanding is built on reducing everything to "low-level" primitives, to a 
+metasymbolic notion, where understanding is based directly on the high-level 
+systems of reasoning, which happen to be embodied in symbolic conventions 
+that have already been implicitly used by humans for centuries.  this is 
+important because, while these symbolics have typically been considered 
+"shortcuts" because of their lack of rigorous connection to primitives and 
+first principles (or at least, the typical lack of realization of this by the 
+end-user), their accomodation of high-level reasoning has precisely been 
+their power. 
+it seems to me that this might crack a major barrier of formal AI: as long as 
+this AI is mired in the constructivist paradigm, it will be unable to perform 
+anything that resembles "high-level reasoning", and its "successes" may 
+remain almost entirely opaque to human beings.  on the other hand, if 
+computers can "reason" in the same high-level, "symbolitized" manner that 
+mathematicians do, they may actually get somewhere -- and much faster.  (and 
+be able to communicate their findings to humans to boot, essentially becoming 
+meaningful collaborators, rather than "conceptual slaves"!)
+
+this seems like the right track, or at least a promising track, to me.  i 
+have long felt that a major barrier to most in understanding "sophisticated" 
+mathematics actually lies in the symbolic representations of that mathematics 
+and is not and innate property of the concepts themselves.  i have an inkling 
+that one could show that any system of concepts can be abstracted to a 
+simpler system with the proper transformations, and this simpler system could 
+be almost comprehensible (simple) as is desired.  how is it that we can have 
+high school students do calculus when the derivation of that discipline from 
+first principles is so complicated?   it is because of the symbolic tools of 
+calculus that allow the construction of a higher-level system which is 
+simpler to the end user.  indeed, one can find other instances of this 
+"paradox", such as the fact we can have elementary-schoolars do arithmetic, 
+despite the fact that the derivation of the integers from set theory is at 
+least university-level.  so perhaps much of mathematics remains "arcane" 
+because of the lack of sufficient development of these higher-level 
+conceptual systems and the symbolism that goes along with them. (and of 
+course by way of explaining this decidedly-social phenomenon, one can invoke 
+here the various "homeland security for the noosphere" dynamics you have 
+mentioned elsewhere). 
+there's of course another aspect/benefit of the symbolic metamathematics 
+you're describing: that of translations to and from different systems, where 
+the underlying mathematical "entities" are assumed to be (or rather, are 
+provably) the same.  this is essentially translation between different symbol 
+languages and logic systems -- or in terms of the human end-user, conceptual 
+ontologies.  thus the door is opened to not just progressively higher-level 
+abstractions, but also to translations between "peer-level" abstractions 
+(alluding to some colloquial notion of complexity/sophistication).  i see 
+this as extremely valuable as well, if only for a socio-epistemological 
+reason: to bridge multiple languages describing the same thing expands the 
+universe of discourse and accelerates progress in building out new knowledge.  
+by way of analogy there is our observation of "copyright colleges", laid out 
+in the "fog of copyleft" paper, where it was pointed out that to "siloize" 
+content and productive communities is to dramatically lower the potential of 
+their production as well as the growth of the resultant pool of free culture 
+(to the tune of an exponential approximating factor). 
+--[[file:akrowne.org][akrowne]] Sun Oct 22 2006 6:50pm
+
+I would say that you've explained, clarified, and expanded upon what I have 
+been trying to convey by the motto  "formalizing mathematics as practised by 
+mathematicians" very well.  I also like your insight into why calculus has 
+made it to the high school curriculum.  Personally, I prefer a stronger 
+statement of this paradox --- in Euclid's
+day, geometry was an advanced subject, his "Elements" being essentially an 
+advanced graduate text and reference for researchers, yet today we teach 
+Euclidean geometry in elementary school.  (Note how the word
+"element" has undergone a concommitant semantic shift in 2000 years!)  The 
+reason is certainly not that people today are incredibly more intelligent 
+than the ancients --- a few minutes' comparison of Cicero and
+Demosthenes with what passes for political oratory nowadays will disabuse one 
+of any such notion.  (Which is not to say that moderns are stupider either; 
+Martin Luther King could easily hold his own against the the greatest of the 
+ancient rhetoricians.)  I always thought that the explanation of this paradox 
+had something to do with notation and systematization, but now I think you've 
+laid your finger on the exact point.
+
+(Will finish tomorrow --- as a reminder to myself, here is an outline:)
+
+ * Educational applications, critique of "new math"
+
+ * Extension to "grownups"
+
+ * Making peace between the camps of the physicists and of the mathematicians 
+--- each has a valid point, but those communities (we|a)re talking past each 
+other 
+ * How this notion of theories is apparrent in physics; effective Lagrangians 
+and phenomenology vs. TOE, Dyson's infinite in all directions
+
+ * Why this is important for me know what the heck I or anyone else is trying 
+to accomplish with "quantum gravity"
+
+ * Clarifying practise of mathematics for mathematicians vis-a-vis my post to 
+PM 
+ * Why I originally studied binders a year before meeting Joe
+
+ * Computer math is important, but by no means exclusive motivation and 
+application 
+ * Exactly which fruit I am harvesting, immediate vs, long-term goals
+
+--[[file:rspuzio.org][rspuzio]]
+  
+----
+
+** Various replies from Joe
+
+Ray, it took me a while to finish reading your initial posting.  I've
+already been doing some side-discussion of things that struck me as
+interesting from the follow-up conversation.  Here's some first-tier
+follow-up of my own:
+
+: Also, I have steadily moved from the lower level of merely encoding
+knowledge to the higher levels of proof verification and relations
+between systems.
+
+These two ways of thinking may in fact rely on each other in ways that
+are overlooked in day-to-day thinking.
+
+: I concieved a notion of "manifold of theories"...
+
+Interesting description.  I'll look forward to seeing this notion
+realized!  BTW, once more for the record - I was focusing on
+differential geometry in my studies as well.  I wonder if there is
+something about geometry that can predispose one to think about the
+HDM, or if the causation goes the other way, or if it's just a fluke,
+or if our small sample size is otherwise misleading.
+
+: Perhaps part of the reason why chaotic systems are so difficult to
+study and algebraic methods in mechanics seem limited to integrable
+systems is that one is limited by the category of manifolds...
+
+I'd like to better understand what one is trying to learn about these
+systems and why manifolds are limiting, how the additional structure
+you were talking about helps you answer the relevant questions.
+(Conversely, I also like to imagine the complicated mathematics you
+were talking about being made intuitive to my understanding -- perhaps
+an example of the levels of understanding Aaron was talking about
+above -- which process seems to go in some sense in the opposite
+direction to the apparently, though maybe not necessarily, intense
+mathematicization of the theory you've talked about.  In other words:
+hard problems seem to require tricky math.  But is the math itself
+tricky, or just the way it is being applied?)
+
+: In my musings on dialectical logic and the logico-linguistic
+approach to Galois theory...  Thus the Galois group, like all
+relativity groups, may be seen as a group of dictionaries.
+
+I'd appreciate an undergrad-friendly but math-included description of
+this theory.  (Perhaps Frankensteined out of PlanetMath articles?)
+
+: I also considered Goedel's incompleteness theorem to be rather
+similar to the proof of impossibility of squaring the circle and found
+myself rather dismayed at the huff and puff, gloom and doom attitude
+with which the incompleteness theorem has been recieved...
+
+Funny :).
+
+: [Clusions invite] the possibility of inconsistency -- what if, after
+this chain of clusions, document A no longer agrees with itself?
+
+It may be that in a "(x,t)" model there would be no inconsistency,
+rather, an article like the one you describe corresponds to a certain
+class of Turing's.  One option of Turing's was for the machine-head to
+simply wander off to infinity babbling; this was considered to be OK.
+The programs that weren't so OK were the ones where the machine-head
+keeps overwriting the same region of tape.  In our case, the
+(x)-inconsisent machine re-enshrined as an (x,t)-machine simply
+remixes the document forever.  Of course, we could build in stopping
+conditions and call these "contradictions" or "violations of
+consistency conditions", then we would be ensured of (x)-consistent
+machines/documents.
+
+: Clusions form a category... there exists a maximal document D...
+
+I'd like to make sure to design Arxana so that D (and other such
+documents) are naturally represented -- keep me in the loop.
+
+: Also, I wonder if something like this may not be what is needed to
+mathematicize subjects other than physical sciences.
+
+In addition to better understanding your theory, this claim makes me
+want to hurry up and finish reading Kant.
+
+And in addition: our discussion here, particularly what's been said or
+implied about translations between more mathematically-formal
+descriptions and more intuition-friendly descriptions, seems to fit
+right into your system.  The mathematically-formal descriptions would
+be IN SOME SENSE meta-theories of the intuition-friendly descriptions.
+However, as every math student knows, a mathematician's ability to do
+research does not always imply an equal ability at exposition, and
+vice versa; so just because you have a meta-theory (of the sort I'm
+talking about in this paragraph) at hand does not immediately imply
+you can recover the statements of the base theory.
+
+: My thinking on the formal mathematics has divided itself (like the
+land from which Bourbaki hails -- "divide and conquer" is also a good
+strategy in manthematics) into three parts.
+
+LOL!
+
+: At the grammatical level, I consider the structure of individual
+mathematical expressions. At the logical level, I consider closed
+systems of such expressions. At the dialectical level, I consider the
+relations between such systems.
+
+I almost hate to do this, but -- having just finished Robert
+M. Pirsig's "Zen and the Art of Motorcycle Maintenance", I've learned
+a little twitch, which is to ask, what appears at the "quality level"?
+
+In order to make this a polite question, I'm obliged to describe
+what's meant by "quality" in a somewhat math-appropriate sense.
+
+As a warm-up step: Towards the end of the "Zen" book, RMP points out
+that "quality" may be essentially the same as "arete".  The question,
+"can you teach virtue?" is dealt with in Plato partly by analogy to
+teaching mathematics.
+
+One aspect of "quality" in mathematics is the simple question, what
+makes a good mathematical statement?  Some things, like the
+Pythagorean theorem, for example, are real classics!  Zooming up to
+the present time, there's the question of what makes an interesting
+theorem, theory, or other result (and to whom).
+
+A rhetoritician might stop there, and say, that quality in mathematics
+at least includes those statements that bear on reality in such a way
+as to enhance our daily lives (e.g. to build better buildings) and
+those which titilate the mind or scratch some collective itch.
+
+However -- when I asked my question, I had in mind the possible
+existence of a properly metamathematical version of "quality".  I
+don't know if such a thing can be acheived, but let's see if RMP's
+ideas ring any bells.  He says that "quality" is something that is in
+some sense prior to either "object" or "subject".  It is not in the
+thing or in the viewer of the thing, but lies instead in the
+relationship between the two, in the moment of viewing.  You can't
+have an object without an "evaluating" subject.
+
+(This seemingly "cybernetic" notion of the primacy of the link between
+the perceived and the perceiver is interesting in its own right, even
+if we leave out the notion of quality judgements.  A physical or
+chemical system may certainly be thought of as a perceiving system
+without too great a leap of the imagination -- but it doesn't make
+abstract quality judgements.  It just reacts to different inputs in
+different ways.)
+
+So, whereever we find mathematical objects and mathematical subjects,
+we might, just possibly, find mathematical quality as well.  One
+common idea in mathematics is one of "elegance" -- that may have
+something to do with it.
+
+I'd possibly like to think of "mathematical theories" as subjects
+(caveat: "theories" aren't actually described in Ray's overview
+above).  Perhaps a theory approaches a given mathematical object and
+asks it to explain itself.  Perhaps one theory gives an elegant
+description of a certain model or phenomenon whereas another doesn't
+(e.g. cf. Ray's discussion of chaotic systems).
+
+Pretty heady stuff, so, I'll put it aside for now, get back to it
+later.
+
+: As this example shows, the inputs correspond to names, the
+throughput nodes correspond to functional evaluation (represented by
+pairs of parentheses in s- expressions) and the feedback links to
+bound variables. All of what was said and done in the language of
+s-expressions can be translated into the new language of links and
+nodes.
+
+Cool!  (I think there was something similar in one of the theses we
+found in the library here, but I never quite made sense of exactly
+what was going on in it.)
+
+: Superstitution is the opposite of substitution. We identify a
+subnetwork and replace it with a single node.
+
+Cf. superstition, from Latin /superstitio/, a standing still over or
+by a thing.  (This sort of works with the idea of reducing a
+complicated system to a certain token.)
+
+: As for bifurcation, we duplicate all the nodes and links less than
+(in the order described previously) a given node...
+
+I don't quite get the idea of "order" in the example that follows that
+definition.
+
+: Such bifurcations are the key step in defining such quantities by
+recursion -- we keep bifurcating until we get to atomic pieces where
+the binder can be substituted with an evaluation.
+
+OK, this is a good idea, but note this, I don't understand how
+ *definitions* are supposed to work in your abstract system.
+
+: My reason for advocating this extension of the concept of logistic ...
+
+I look forward to a (more) formal definition of your concept/extension
+(and a comparison with the regular flavor).
+
+: To me, the great variety of such [Goedelian] results, involving all
+sorts of branches of mathematics, suggests that we have here a new
+sort of unifying principle or mathematics, which might yield
+unexpected results. I like to think of my work on integral
+representations of recursive functions as reflecting this viewpoint.
+
+Makes sense to me.
+
+: Similarly, one might be able to make sense of Skolem's paradox by
+arguing that within the system, there is no way to count the elements
+of a certain set but, in the metatheory which describes the methods of
+counting one has in the theory, this is possible.
+
+I believe that the Liar paradox is resolved in modal logic by some
+very similar thinking.  (This was discussed in a talk on computational
+linguistics at the Joint Math Meetings, '05.)
+
+: So while the very top level may be unformalizable because the very
+act of formalizing it would entail a further level, that doesn't mean
+that we can't formalize a level above our original object language and
+even formalize this notion of simulation.
+
+I mentioned elsewhere that the real world is the ultimate simulating
+machine, since it is within the real world that all other simulations
+take place.  So instead of "formalizing", I think the last level may
+be associated with physical theories, which are empirical.
+
+: Presumably, these would be distinct mathematical entities even
+though any expression which decided one will automatically describe
+the other as well. It might be worth pointing out that, if we map our
+theory to the theory of ordered fields, then we resolve this doublet
+&#x2014; one element of the pair satisfies the inequality 
+"[$ x < 0$]" and the other satisfies the equation "[$ x > 0 $]".
+
+I know very little about physics, but I wonder if your relativistic
+frames don't tend to call for some field theory to fully resolve in
+this way.  (I know, two different uses of the word "field", but still,
+something to perhaps ponder a while!)
+
+: To understand this business of necessary distinct objects, models,
+and undecidability better, I found a nice class of finite toy systems
+in which one could see everything explicitly. Perhaps it would be a
+good time to dust off these models and put them to use again.
+
+Sounds good to me.
+
+: This is what the proofs that accompany definitions are all about;
+they are either the proofs of such metatheorems or proofs in the
+original system which are of use in establishing such metatheorems.
+
+I feel I almost get it -- looking forward to more examples and
+(high-level) definitions that will make this all clear.  (Interesting
+to consider your own theory of mathematical systems as a
+self-reflexive mathematical system!)
+
+: Even if one does not clarify in which sense a particular instance of
+the symbol is to be understood, the laws of inference may be such that
+no trouble will arise.
+
+I think it is a good (maybe even essential) idea to be able to select
+some unique representation at any time, rather than always rely on
+inference.  However, obviously in common use, symbols will be used
+correctly and ambiguously in the way you describe.
+
+: I have in mind viewing inputs as initial surface, outputs as final
+surface and moving from the former to the latter by a type of
+bubble-time evolution.
+
+Sounds fascinating.
+
+: Translate a familiar theorem into formal logic and a mathematician
+may have a difficult time recognising it.  Much mathematical writing
+is rife with algebraic manipulations -- surely it would make more
+sense to verify these directly with a symbolic algebra package than to
+first translate them into logical propositions, then verify those?
+
+This seems to sum up the problem with programs like ACL2.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+* Glossary and References?
+For a novice (e.g. me) approaching these topics, it would be handy to have a
+list of references to defititions and suggested readings.  Would it be possible
+to turn the main part of this essay into a PlanetMath document and get
+the autolinker to take care of some the the work?
+
+There may be a techno-social limitation here, namely I think the autolinker
+only runs in the encyclopedia currently, and that is reserved for standard
+results.  But I think also that work on a "stand-alone autolinker" has progressed
+to the point where maybe some easy solution can be cobbled together.
+
+Note: to produce the Glossary, I would want a little function that concatted
+all of the articles linked to from a certain article.  Presumably easy enough
+to cobble that together too?

@@ -1,0 +1,136 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *by Harold P. Boas*
+
+(/reproduced on a fair use basis from Notices of the AMS, September 2001/)
+
+/Gedanken sind zollfrei/, Martin Luther is supposed to have
+said—thoughts are toll-free. What about knowledge, in its
+modern electronic form? Should there be tolls on the information
+superhighway? Two recent experiences got me
+thinking about this question in the context of mathematical
+publication.
+
+A colleague wandered into my office the other day,
+scratching his head in puzzlement. “I just got an e-mail from
+someone in Romania who wants a reprint of my paper in
+[well-known journal]. But the paper isn’t published yet!
+How in the world did someone find out about it?” I clicked
+the left mouse button in my Web browser exactly six times.
+“Eureka!” I cried, echoing Archimedes, “I have found it. Although
+the text of that journal is not online, the table of
+contents of the next issue is, and it lists your forthcoming
+article.”
+
+The next day I received from Australia an e-mail request
+for an English translation that I published in 1983
+of an article in the Russian mathematical literature. No electronic
+copy of that paper exists: the back issues of the journal
+have never been digitized, and in 1983 I was still using
+a typewriter. I had to write back asking for a postal address
+to which I could send a photocopy of the article.
+These stories illustrate the state of electronic publication
+today. To locate scientific information by electronic
+means is typically straightforward, but to obtain the information
+electronically is often impossible. Sitting at the
+computer in my office, I can learn that my university holds
+a copy of Ver Eecke’s French translation of the works of
+Archimedes, but to read the text I must walk to the library
+and pull the physical book off the shelf. Will this situation
+soon change?
+
+Tantalizing hints of an affirmative answer are
+already visible in MathSciNet (http://www.ams.org/mathscinet/), 
+the electronic version of Mathematical Reviews,
+and in its European counterpart, the Zentralblatt
+MATH database (http://www.emis.de/ZMATH/). These
+compendia of reviews exploit the interconnectivity of the
+World Wide Web to provide links to the full text of many
+online articles at various publishers’ websites. Most publishers,
+however, restrict access to the articles to subscribers
+or to subscribing institutions.
+
+Another vision of the future of electronic availability of
+scientific publications is the arXiv (http://arXiv.org/).
+Many physics preprints of the past decade are available
+there, and the mathematics collection is growing rapidly.
+Several journals, notably including the Annals of Mathematics,
+now contribute their articles to the arXiv after publication,
+thus guaranteeing that their contents will remain
+permanently and freely available in electronic form. If a large
+number of journals were to follow this lead, the arXiv
+ could metamorphose from a preprint archive into a comprehensive
+digital library of the periodical mathematical
+literature.
+
+Is such a development a realistic possibility? Some believe
+that it is not only achievable but inevitable, not only
+in mathematics but in other sciences also. To increase the
+momentum, thousands of researchers have signed an open
+letter at http://www.plos.org/ 
+calling on publishers of scientific periodicals to allow the
+full text of articles that appear in their journals to be included
+in free online public libraries within six months of
+publication. The plea is backed by a threat that uncooperative
+publishers will lose not only the subscriptions of
+signatories but also their free services as authors, reviewers,
+and editors. Scientific researchers dedicate their lives
+to building up the edifice of human knowledge. Surely it
+is reasonable—so goes the argument—that once publishers
+recoup the expenses they incur in helping to paint the
+structure, they should then relinquish any claim to ownership
+of the building.
+
+The value of a public database of journal articles goes
+far beyond easy access to the literature. The “killer application”
+of such a database will be electronic searching of
+the full text of articles. For example, I recently became curious
+about the history of an old chestnut of integral calculus:
+Find the volume of the intersection of two right circular
+cylinders of equal radius whose axes meet at right
+angles. An electronic search at JSTOR (a subscription service
+at http://www.jstor.org/) located numerous variations
+of this problem in the American Mathematical
+Monthly, the earliest in 1895. But too little of the scientific
+literature is currently available in searchable electronic
+form to yield definitive answers to such historical questions.
+Indeed, the problem about the intersecting cylinders
+actually dates back over two millennia to the Method of
+Archimedes, the only extant source for which is a
+palimpsest auctioned at Christie’s in 1998 for $2 million.
+
+I prefer to think of scientific knowledge as a shared public
+resource rather than as a commodity to be sold to the
+highest bidder. The success of TEX, the freely available, highquality
+software that we mathematicians use to write our
+papers, provides a model for the triumph of generous collegiality
+over greedy commercialism. “Give me a place to
+stand,” Archimedes is supposed to have said, describing
+the principle of the lever, “and I will move the world.”
+How much leverage will we apply to move the world toward
+online public repositories of our common scientific
+knowledge?
+
+
+(/This is a particularly relevant essay, and so I reproduce it here for the convenience of the reader.  I don't believe that I am violating AMS copyright in doing so.  Just in case, here is the AMS copyright notice/ http://www.ams.org/ams/copyright.html --[[file:rmilson.org][rmilson]] Sun, July 10, 2005)
+
+: This website and American Mathematical Society  materials accessed from it are subject to copyright, database protection, and other rights of the AMS under the laws of the United States and the country of use.
+
+: Users may view, print, or temporarily store one copy of a limited amount of material from this site on an ad hoc basis provided that AMS copyright notices are not removed. Systematic recompiling, copying, publication or republication of the data, or any portion thereof, in any form or medium whatsoever, may be done only with specific written permission from the AMS.
+
+: The American Mathematical Society shall not be liable for special, incidental, consequential or other damages arising from the use of materials on this website. There is no warranty of any kind, express or implied with respect to the website and its contents, or its quality, reliability, title or performance, or its merchantability or fitness for any purpose.
+
+: All documents available on this server may be protected under the U.S. and Foreign Copyright Laws. Permission to reproduce may be required. The AMS reserves the right to remove material from this server for any reason whatsoever at its discretion. 
+
+
+*  Discussion
+
+Interestingly, he mentions the inavailability of historical texts
+in the context of the Method of Archimedes.   This is a segue into
+Ray's discussion of scanned texts and thin copyright in his paper.
+Thus, digitization and "open access" do not immediately lead to
+complete freedom-- i.e. freedom to derive and extend-- upon which free
+culture rests.  When this freedom is present, the Archimedian 
+lever is the longest, as it applies to all parts of the knowledge
+production process. --[[file:akrowne.org][akrowne]] Sun Jul 10 15:09:47 UTC 2005

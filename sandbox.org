@@ -1,0 +1,3000 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+!DeletedPage
+$(
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+                "Sandbox" for Frederic Line
+#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+$)
+
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Propositional and predicate calculus
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  ${
+    ahypfmbi.1 $e |- ( ps <-> ch ) $.
+    $( Add a hypothesis into the first member of a biimplication. $)
+    ahypfmbi $p |- ( ph -> ( ( ph /\ ps ) <-> ch ) ) $
+      ( wa anbi2i baib ) ABEACBCADFG $.
+      $( [20-Feb-2007] $) $( [30-Jan-2007] $)
+  $}
+
+  ${
+    ompfl2.1 $e |- ( ph -> ( ps <-> ( ph /\ ch ) ) ) $.
+    $( Remove a hypothesis from the second member of a biimplication. $)
+    ompfl2 $p |- ( ph -> ( ps <-> ch ) ) $
+      ( wi wa biimpd pm5.42 mpbir biimprd exp3a pm2.43i impbid ) ABCABCEEABACFZ
+      EEABNDGABCHIACBEAACBABNDJKLM $.
+      $( [20-Feb-2007] $) $( [15-Feb-2007] $)
+  $}
+
+  ${
+    $d x y $. $d ph x $. $d ph y $. $d ch x $. $d ps y $.
+    $d A x $. $d B x y $.
+    rexxfrd.1 $e |- ( ( ph /\ y e. B ) -> A e. B ) $.
+    rexxfrd.2 $e |- ( ( ph /\ x e. B ) -> E. y e. B x = A ) $.
+    rexxfrd.3 $e |- ( ( ph /\ x = A ) -> ( ps <-> ch ) ) $.
+    $( Transfer universal quantification from a variable ` x ` to another
+       variable ` y ` contained in expression ` A ` . $)
+    rexxfrd $p |- ( ph -> ( E. x e. B ps <-> E. y e. B ch ) ) $
+      ( wn wral wrex cv wceq wa negbid ralxfrd dfrex2 3bitr4g ) ABKZDGLZKCKZEGL
+      ZKBDGMCEGMAUBUDAUAUCDEFGHIADNFOPBCJQRQBDGSCEGST $.
+      $( [15-Apr-2007] $) $( [10-Apr-2007] $)
+  $}
+
+  ${
+    $d A x $. $d B x $. $d ph x $. $d ps x $.
+    rcla4dev.1 $e |- ( ( ph /\ x = A ) -> ( ps <-> ch ) ) $.
+    $( Restricted existential specialization with implicit substitution. $)
+    rcla4dev $p |- ( ( ph /\ A e. B ) -> ( ps -> E. x e. B ch ) ) $
+      ( wcel wrex wi wa cv wceq wb bicomd expcom pm5.74d rcla4ev r19.37av syl
+      ex pm2.86d impcom ) EFHZABCDFIZJUDABUEUDABJZAUEJZUDUFKACJZDFIUGUHUFDEFDLE
+      MZACBAUICBNAUIKBCGOPQRACDFSTUAUBUC $.
+      $( [19-May-2007] $) $( [17-Apr-2007] $)
+  $}
+
+
+  $( ` /\ ` associativity. $)
+  and4as $p |- ( ( ph /\ ps /\ ( ch /\ th ) ) <->
+    ( ( ph /\ ps /\ ch ) /\ th ) ) $
+    ( wa w3a wi pm3.2 3exp imp4a 3imp id exp4a 3imp1 impbi ) ABCDEZFZABCFZDEZAB
+    PSABCDSABCDSGRDHIJKABCDQABCDQABPQQLIMNO $.
+    $( [14-Jul-2007] $) $( [14-Jul-2007] $)
+
+  $( ` /\ ` associativity. $)
+  and4com $p |- ( ( ph /\ ( ps /\ ch /\ th ) ) <->
+    ( ( ph /\ ps /\ ch ) /\ th ) ) $
+    ( w3a wa wi pm3.2 3exp 3imp2 3expd 3imp1 impbi ) ABCDEZFZABCEZDFZABCDQABCDQ
+    GPDHIJABCDOABCDOANHKLM $.
+    $( [14-Jul-2007] $) $( [14-Jul-2007] $)
+
+  ${
+    $d w ps $. $d x ps $.  $d y ps $.  $d z ps $.
+    $( Theorem 19.41 of [Margaris] p. 90 with 4 quantifiers. $)
+    19.41vvvv $p |- ( E. w E. x E. y E. z ( ph /\ ps ) <->
+                     ( E. w E. x E. y E. z ph /\ ps ) ) $
+      ( wa wex 19.41vvv exbii 19.41v bitr ) ABGEHDHCHZFHAEHDHCHZBGZFHNFHBGMOFAB
+      CDEIJNBFKL $.
+      $( [14-Jul-2007] $) $( [14-Jul-2007] $)
+  $}
+
+  ${ $d ch w x z $. $d ph x y $. $d ph x z $. $d ps w y $.
+     $d ps w z $. $d th w x y $.
+    $( Rearrange existential quantifiers. $)
+    eeeeanv $p |- ( E. w E. x E. y E. z ( ( ph /\ ps /\ ch ) /\ th ) <->
+                 ( ( E. w ph /\ E. x ps /\ E. y ch ) /\ E. z th ) ) $
+      ( w3a wa wex 19.41vvv ancom eeeanv anbi2i 3bitr exbii 19.41v bitr
+      and4com 3exbi 3bitr3 ) BCDIZAJZGKFKEKZHKZAHKZBEKZCFKZDGKZIZJZABCIDJZGKFKE
+      KZHKUGUHUIIUJJUFAUKJZHKULUEUOHUEUCGKFKEKZAJAUPJUOUCAEFGLUPAMUPUKABCDEFGNO
+      PQAUKHRSUEUNHUDUMEFGUDAUCJUMUCAMABCDTSUAQUGUHUIUJTUB $.
+      $( [14-Jul-2007] $) $( [14-Jul-2007] $)
+$}
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Basic Set theory
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+
+  ${
+    $d A x y z $. $d B x y z $. $( ` z ` is dummy. $)
+    $( The intersection of a union ` U. A ` with a set ` B ` is equal to the
+       union of the intersections of each element of ` A ` with ` B ` . $)
+    ntunte $p |- ( U. A i^i B ) = U. { x | E. y e. A x = ( y i^i B ) } $
+      ( vz cuni cin cv wceq wrex cab wcel wel wa wex eluni2 anbi1i elin ancom
+      r19.41v bitr4 exbii rexcom4 visset inex1 eleq2 ceqsexv bitr rexbii 3bitr
+      3bitr4 eluniab eqriv ) ECFZDGZAHZBHZDGZIZBCJZAKFZEHZUOLZEAMZUTNZAOZVBVALV
+      BUNLZVBDLZNEBMZBCJZVHNZVCVFVGVJVHBVBCPQVBUNDRVFUSVDNZAOZBCJZVIVHNZBCJVKVF
+      VLBCJZAOVNVEVPAVEUTVDNVPVDUTSUSVDBCTUAUBVLBACUCUAVMVOBCVMVBURLZVOVDVQAURU
+      QDBUDUEUPURVBUFUGVBUQDRUHUIVIVHBCTUJUKUTAVBULUAUM $.
+      $( [24-Mar-2007] $) $( [24-Mar-2007] $)
+  $}
+
+  $(
+
+  @{
+    @( Subtraction from both sides of 'less than or equal to'. @)
+    ltsub1t @p |- ( ( A e. RR /\ B e. RR /\ C e. RR ) ->
+                ( A < B <-> ( A - C ) < ( B - C ) ) ) @= ? @.
+  @}
+
+  $)
+
+  ${
+    $d x y z A $.  $d x y z B $.  $d x y z C $.  $d x y z R $.  $d x y z S $.
+    $d x ps $.  $d x y ch $.  $d x y z th $.
+    oprabvaligg.1 $e |- ( x = A -> ( ph <-> ps ) ) $.
+    oprabvaligg.2 $e |- ( y = B -> ( ps <-> ch ) ) $.
+    oprabvaligg.3 $e |- ( z = C -> ( ch <-> th ) ) $.
+    oprabvaligg.4 $e |- E* z ph $.
+    oprabvaligg.5 $e |- F
+                  { <. <. x , y >. , z >. | ph } $.
+    $( The value of an operation class abstraction (weak version). $)
+    oprabvaligg $p |- ( ( A e. R /\ B e. S /\ C e. D ) ->
+                         ( th -> ( A F B ) = C ) ) $
+      ( wcel w3a cop copab2 cfv wceq co eloprabg wi wfun funoprab funopfvg
+      mpan2 3ad2ant3 sylbird df-opr fveq1i eqtr eqeq1i syl6ibr ) HLTZIMTZJKTZUA
+      ZDHIUBZAEFGUCZUDZJUEZHINUFZJUEVCDVDJUBVETZVGABCDEFGHIJLMKOPQUGVBUTVIVGUHZ
+      VAVBVEUIVJAEFGRUJVDJKVEUKULUMUNVHVFJVHVDNUDVFHINUOVDNVESUPUQURUS $.
+      $( [14-Sep-1999] $)
+  $}
+
+  ${
+    $d a b c x u v $. $d a b x C $. $d a b c x B $. $d a b x u v A $.
+    $d R a b u v x $. $d C a b c x $.
+    uninqs.1 $e |- Er R $.
+    $( The class union of the intersection of two subclasses of a
+       quotient space.  Compare ~ uniin . $)
+    uninqs  $p |- ( ( B (_ ( A /. R ) /\ C (_ ( A /. R ) ) ->
+      U. ( B i^i C ) = ( U. B i^i U. C ) ) $
+      ( vx vc vb va vu vv cqs wss wa cin cuni wceq cv wcel wel wex wi wal
+      dfss2 weq pm3.35 cec visset elqs c0 wne inelcm wn df-ne wo erdisj pm5.61
+      eqeq12 biimprcd adantr sylbi mpan syl eleq2 biimpa syl2an an4s exp32
+      com24 pm2.43i ex adantl 19.23aiv com3l com23 imp com13 imp31 eleq1 elin
+      elequ2 biimprd wb incom eleq2i syl6bb equcoms biimpd anim12d a4w expcom
+      sylbir syl6bi syl9 com3r pm2.43a com14 com4t a4s com12 eluni syl7ib
+      syl5ib imp3a 3imtr4g ssrdv uniin jctil eqss sylibr ) BADLZMZCXKMZNZBCOZPZ
+      BPZCPZOZMZXSXPMZNXPXSQXNYAXTXNFXSXPXNFRZXQSZYBXRSZNFGTZGRZXOSZNZGUAZYBXSS
+      YBXPSXNYCYDYIXNFHTZHRZBSZNZHUAZYDYIUBYCXNYNFITZIRZCSZNZIUAZYIYDYNXNYSYIUB
+      ZYMXNYTUBHYSXNYMYIYRXNYMYIUBZUBIXNYRUUAXLXMYRUUAUBZXLYLYKXKSZUBZHUCXMUUBU
+      BZHBXKUDUUDUUEHXMUUDUUBXMYQYPXKSZUBZIUCUUDUUBUBZICXKUDUUGUUHIYRYMUUGUUDYI
+      YOYQYMUUGUUDYIUBZUBZUBYMYQYOUUJYJYLYQYOUUJUBZUBZYJYLUULUBYLYJYJUULYJYLYJU
+      ULUBZYLYJYLUUMUBYQYLYJYLYJNZUUKYLYQYJUUNUUKUBZUBZYQYLYQUUPUBYQYLNZYJYQUUO
+      UUQYJYQUUOUBYQUUNUUQYJNZUUKYQUUNUURUUKUBYQUUNNZYOUURUUJUUSYOUURUUJUBUUSYO
+      NZUUGUURUUIUUTUUGUURUUIUBUUTUUGNUUDIHUEZUURYIUUSYOUUGUUDUVAUBUUSUUDUUGYOU
+      VAYQUUNUUDUUGYOUVAUBZUBUBYQUUGUUDUUNUVBYQUUGUUDUUNUVBUBUBZYQUUGNUUFUVCYQU
+      UFUFUUNUUDUUFUVBYLYJUUDUUFUVBUBZUBYLUUDYJUVDYLUUDYJUVDUBZYLUUDNUUCUVEYLUU
+      CUFUUCJRZASZYKUVFDUGZQZNZJUAUVEJAYKDHUHUIUVJUVEJUVIUVEUVGUUFUVIYJUVBUUFKR
+      ZASZYPUVKDUGZQZNZKUAUVIYJUVBUBZUBZKAYPDIUHUIUVOUVQKUVNUVQUVLUVNUVIUVPUVNU
+      VINZUVPUVRYOYJUVRUVAUVRYOYJUVRUVAUBZUVNYOUVIYJUVSYBUVMSZYBUVHSZUVSUVNYONU
+      VIYJNUVTUWANUVMUVHOZUJUKZUVSYBUVMUVHULUWCUWBUJQZUMZUVSUWBUJUNUVMUVHQZUWDU
+      OZUWEUVSUVKUVFDKUHJUHEUPUWGUWENUWFUWENUVSUWFUWDUQUWFUVSUWEUVRUVAUWFYPUVMY
+      KUVHURUSUTVAVBVAVCUVNYOUVTYPUVMYBVDVEUVIYJUWAYKUVHYBVDVEVFVGVHVIVJVKVLVMV
+      AVNVLVMVAVCVKVOVPVQVCVKVIVPVIVRUUQYJUVAYIUBUUQUVAYJYIYQYLUVAYJYIUBZUBUVAY
+      QYLUWHUVAYQYKCSZYLUWHUBYPYKCVSUWIYLUWHUWIYLNYKCBOZSZUWHYKCBVTYJUWKYIYJUWK
+      NYHGHGHUEZYJYEUWKYGUWLYEYJGHFWAWBUWLUWKYGUWKYGWCHGHGUEUWKYFUWJSYGYKYFUWJV
+      SUWJXOYFCBWDWEWFWGWHWIWJWKWLVKWMVNVPVOVPWNVKVOVKVOVKWOVKVOVKWPWQVKWPVQVJV
+      PVQVPWRWSVAWTWSVAVPWTVMVQVMWTIYBCXAXBHYBBXAXCXDYBXQXRVTGYBXOXAXEXFBCXGXHX
+      PXSXIXJ $.
+      $( [4-Jun-2007] $) $( [25-May-2007] $)
+  $}
+
+  ${
+    $d x A $.  $d x B $.  $d x R $.
+    erdisj2.1 $e |- A e. V $.
+    erdisj2.2 $e |- B e. V $.
+    $( Equivalence classes do not overlap. $)
+    erdisj2 $p |- ( Er R -> ( [ A ] R = [ B ] R \/
+      ( [ A ] R i^i [ B ] R ) = (/) ) ) $
+      ( wer cec wceq cin c0 wo cid cif eceq1 eqeq12d ineq12d eqeq1d orbi12d
+      ereq ider elimhyp erdisj dedth ) CFZACGZBCGZHZUEUFIZJHZKAUDCLMZGZBUJGZHZU
+      KULIZJHZKCLCUJHZUGUMUIUOUPUEUKUFULCUJANZCUJBNZOUPUHUNJUPUEUKUFULUQURPQRAB
+      UJDEUDUJFLFCLCUJSLUJSTUAUBUC $.
+      $( [4-Jun-2007] $) $( [1-Jun-2007] $)
+  $}
+
+  ${
+    $d A x y v z $. $d A x y u z $. $( ` u v ` are dummies. $)
+    $( We can make a double union from the inner to the outer or from
+    the outer to the inner. $)
+    unun $p |- U. U. A = U. { x | E. y ( x = U. y /\ y e. A ) } $
+      ( vz vu vv wel cv cuni wcel wa wex cab wceq eluni anbi2i exbii 19.42v
+      bicomi excom anass ancom bitr3 2exbii bitr exdistr 3bitr visset uniex
+      eleq2 ceqsexv exancom 3bitr2 weq eqeq1 anbi1d exbidv elab abbii df-uni
+      3eqtr4 ) DEGZEHZCIZJZKZELZDMDFGZFHZAHZBHZIZNZVKCJZKZBLZAMZJZKZFLZDMVDIVQI
+      VGVTDVGVBEBGZVNKZBLZKZELZVNDHZVLJZKZBLZVTVFWDEVEWCVBBVCCOPQWEVNVBWAKZELZK
+      ZBLZWIWEVBWBKZBLZELZVNWJKZELBLZWMWDWOEWOWDVBWBBRSQWPWNELBLWRWNEBTWNWQBEWN
+      WJVNKWQVBWAVNUAWJVNUBUCUDUEVNWJBEUFUGWLWHBWKWGVNWGWKEWFVKOSPQUEWIVHVIVLNZ
+      VNKZKZBLFLZVHWTBLZKZFLVTWIXAFLZBLXBWHXEBWHVNVHWSKZFLZKVNXFKZFLXEWGXGVNWGW
+      SVHKFLXGVHWGFVLVKBUHUIVIVLWFUJUKWSVHFULUCPVNXFFRXHXAFXHXFVNKXAVNXFUBVHWSV
+      NUAUEQUMQXABFTUEVHWTFBUFXDVSFXCVRVHVRXCVPXCAVIFUHAFUNZVOWTBXIVMWSVNVJVIVL
+      UOUPUQURSPQUGUGUSDEVDUTDFVQUTVA $.
+      $( [4-Jun-2007] $) $( [28-May-2007] $)
+  $}
+
+  ${
+    $d A x $. $d B x $. $d C x $.
+    $( Inference from membership to difference. $)
+    difeqri2 $p |- ( A. x ( ( x e. A /\ -. x e. B ) <-> x e. C )
+      -> ( A \ B ) = C ) $
+      ( cv wcel wn wa wb wal cab cdif wceq bicom albii biimp abeq2 sylibr
+      df-dif syl6reqr ) AEZBFUACFGHZUADFZIZAJZDUBAKZBCLUEUCUBIZAJZDUFMUEUHUDUGA
+      UBUCNOPUBADQRABCST $.
+      $( [18-Jun-2007] $) $( [6-Jun-2007] $)
+  $}
+
+  ${ $d A u v w y z $. $d B u v w y z $. $d C u v w y z $. $d D u v w y z $.
+     $d ph u x $. $d ta u v w y z $. $d v w x y z $.
+    elo.1 $e |-   ( y = A -> ( ph <-> ps ) ) $.
+    elo.2 $e |-   ( z = B -> ( ps <-> ch ) ) $.
+    elo.3 $e |-   ( v = C -> ( ch <-> th ) ) $.
+    elo.4 $e |-   ( w = D -> ( th <-> ta ) ) $.
+    $( See ~ eloprabg . Note: to be used with categories. $)
+    elo $p |- ( ( ( A e. Q /\ B e. R /\ C e. S ) /\ D e. T ) ->
+      ( <. <. A , B >. , <. C , D >. >. e. { x  | E. y E. z E. v E. w
+      ( x = <. <. y , z >. , <. v , w >. >. /\ ph ) } <-> ta ) ) $
+      ( vu cvv wcel w3a cop cv wceq wa wex cab wb wi opex eqeq1 eqcom syl6bb
+      cxp visset otthg 3adant3 opthg 3anbi3d and4as 3ad2ant3 bitrd 3simp2
+      adantr opelxpi 3ad2antl3 pm3.27 syl3anc sylan9bbr anbi1d syl3an9b
+      sylan9bb pm5.32i 4exbidv eleq1 weq elab syl5bbr adantl elex 3anim123i
+      anim12i eeeeanv sylibr biantrurd 19.41vvvv syl6rbbr 3bitr3d expcom
+      vtocle elisset syl2an ) KUDUEZLUDUEZMUDUEZUFZNUDUEZKLUGZMNUGZUGZFUHZGUHZH
+      UHZUGJUHZIUHZUGZUGZUIZAUJZIUKJUKHUKGUKZFULZUEZEUMZKOUEZLPUEZMQUEZUFNRUEXA
+      XBUJZXRUNUCXEXCXDUOYBUCUHZXEUIZXRYBYDUJZYCXLUIZAUJZIUKJUKHUKGUKZXGKUIZXHL
+      UIZXIMUIZUFZXJNUIZUJZEUJZIUKJUKHUKGUKZXQEYEYGYOGHJIYEYGYNAUJYOYEYFYNAYDYF
+      XLXEUIZYBYNYDYFXEXLUIYQYCXEXLUPXEXLUQURWSXDUDUDUSZUEZXBYQYNUMYBWSYSXBUFYQ
+      YIYJXKXDUIZUFZYNWSYSYQUUAUMXBXGXHKLXKXDUDYRGUTHUTXIXJUOVAVBXBWSUUAYNUMYSX
+      BUUAYIYJYKYMUJZUFYNXBYTUUBYIYJXIXJMNUDJUTIUTVCVDYIYJYKYMVEURVFVGXAWSXBWRW
+      SWTVHVIWTWRXBYSWSMNUDUDVJVKXAXBVLVMVNVOYNAEYLADYMEYIABYJCYKDSTUAVPUBVQVRU
+      RVSYDYHXQUMYBYDYCXPUEXQYHYCXEXPVTXOYHFYCUCUTFUCWAZXNYGGHJIUUCXMYFAXFYCXLU
+      PVOVSWBWCWDYBYPEUMYDYBEYNIUKJUKHUKGUKZEUJYPYBUUDEYBYIGUKZYJHUKZYKJUKZUFZY
+      MIUKZUJUUDXAUUHXBUUIWRUUEWSUUFWTUUGGKUDWEHLUDWEJMUDWEWFINUDWEWGYIYJYKYMHJ
+      IGWHWIWJYNEHJIGWKWLVIWMWNWOXSWRXTWSYAWTKOWPLPWPMQWPWFNRWPWQ $.
+      $( [14-Jul-2007] $) $( [14-Jul-2007] $)
+  $}
+
+  $(
+  @( A sort of relation. Note: To be used with categories. @)
+  relcat @p |- Rel { x  | E. y E. z E. v E. w
+      ( x = <. <. y , z >. , <. v , w >. >. /\ ph ) } @= ? @.
+  $)
+
+  $( Equality theorem for functions. $)
+  feq23 $p |- ( ( A = C /\ B = D ) -> ( F : A --> B <-> F : C --> D ) ) $
+    ( wceq wa wfn crn wss wf fneq2 sseq2 bi2anan9 df-f 3bitr4g ) ACFZBDFZGEAHZE
+    IZBJZGECHZTDJZGABEKCDEKQSUBRUAUCACELBDTMNABEOCDEOP $.
+    $( [14-Jul-2007] $) $( [14-Jul-2007] $)
+
+
+  $c fi $.
+  $( Extend class notation with the function returning all 
+  the finite intersections of the elements of a set. $)
+  cfi $a class fi $.
+
+  ${ $d x y z a u $.
+    $( Function returning the finite intersections of the 
+    elements of x. NEW $)
+    df-fi $a |- fi = { <. x , y >. | y = { u | E. z ( ( z (_ x /\ z =/= (/) /\ 
+      E. a e. om a ~~ z ) /\ u = |^| z ) } } $.
+
+    $( z =/= (/) is not needed because |^| (/) = V and u = |^| z is a condition. $)
+    df-fiNEW $a |- fi = { <. x , y >. | y = { u | E. z ( z (_ x /\ 
+      E. a e. om z ~~ a /\ u = |^| z ) } } $.
+
+  $}
+
+  $( The set of all the finite intersections of the element of ` A `. NEW $)
+  fiv $p |- ( A e. B -> ( fi ` A ) = { u | E. z ( ( z (_ A /\ z =/= (/) /\ 
+   E. a e. om z ~~ a ) /\ u = |^| z ) } ) $= ? $.
+
+  $( The set of all the finite intersections of the element of ` A `. NEW $)
+  fivNEW $p |- ( A e. B -> ( fi ` A ) = { u | E. z ( z (_ A /\ 
+   E. a e. om z ~~ a /\ u = |^| z ) } ) $= ? $.
+
+  $( Specific property of an element of ` ( fi `` C ) ` . NEW $)
+  sppfi $p |- ( C e. D -> ( A e. ( fi ` C ) <-> E. z ( ( z (_ C /\ z =/= (/) /\
+    E. a e. om z ~~ a ) /\ A = |^| z ) ) ) $= ? $.
+
+  $( Specific property of an element of ` ( fi `` C ) ` . NEW $)
+  sppfiNEW $p |- ( C e. D -> ( A e. ( fi ` C ) <-> E. z ( z (_ C /\
+    E. a e. om z ~~ a /\ A = |^| z ) ) ) $= ? $.
+
+  fisi $p |- ( fi ` { A } ) = { A } $= ? $.
+
+  ${  $d A x y z $. $d B x y z $. $d C x y z $. $d t x y $.
+  $d u x y $. $d v x y z $.
+  $( The intersection of two finite intersections is a finite intersection. 
+  NEW $)
+  infi $p |- ( C e. D -> ( ( A e. ( fi ` C ) /\  B e. ( fi ` C ) ) -> 
+    ( A i^i B ) e. ( fi ` C ) ) ) $
+    ( vx vt vy vu vz vv wcel cv wss c0 wne cen wbr com wrex w3a cint wceq wa 
+    wex cin cfi cfv sppfi wi cun an6 unss biimp un00 pm3.26 sylbir necon3i 
+    adantr csdm cdom wn unfi2 brsdom omex ensym visset impbi negbii anbi2i 
+    bitr syl2anbr rexbii isfinite1 syl2an isfinite2 r19.22si 3syl 3anim123i 
+    sylbi ex ineq12 intun syl6eqr im2anan9 unex sseq1 neeq1 breq2 rexbidv 
+    3anbi123d inteq eqeq2d anbi12d cla4ev syl6 19.23adv 19.23aiv imp syl5bir 
+    biimpd syl2and ) CDKZELZCMZXCNOZFLZXCPQZFRSZTZAXCUAZUBZUCZEUDZGLZCMZXNNOZHL
+    ZXNPQZHRSZTZBXNUAZUBZUCZGUDZABUEZCUFUGZKZAYFKZBYFKZXBYGILZCMZYJNOZJLZYJPQZJ
+    RSZTZYEYJUAZUBZUCZIUDZXMYDUCIYECDJUHXMYDYTXLYDYTUIEXLYCYTGXLYCXCXNUJZCMZUUA
+    NOZYMUUAPQZJRSZTZYEUUAUAZUBZUCZYTXIXTUUFXKYBUUHXIXTUUFXIXTUCXDXOUCZXEXPUCZX
+    HXSUCZTUUFXDXEXHXOXPXSUKUUJUUBUUKUUCUULUUEUUJUUBXCXNCULUMXEUUCXPUUANXCNUUAN
+    UBXCNUBZXNNUBZUCUUMXCXNUNUUMUUNUOUPUQURUULUUARUSQZUUAYMPQZJRSUUEXCRUTQZRXCP
+    QZVAZUCZXNRUTQZRXNPQZVAZUCZUUOXHXSXCRUSQZXNRUSQZUUOUUTUVDXCXNVBUVEUUQXCRPQZ
+    VAZUCUUTXCRVCUVHUUSUUQUVGUURUVGUURXCRVDVERXCEVFZVEVGVHVIVJUVFUVAXNRPQZVAZUC
+    UVDXNRVCUVKUVCUVAUVJUVBUVJUVBXNRVDVERXNGVFZVEVGVHVIVJVKXHXCXFPQZFRSUUTUVMXG
+    FRUVMXGXCXFFVFVEXFXCUVIVEVGVLFXCVMUPXSXNXQPQZHRSUVDUVNXRHRUVNXRXNXQHVFVEXQX
+    NUVLVEVGVLHXNVMUPVNJUUAVOUUPUUDJRUUAYMJVFVEVPVQVRVSVTXKYBUUHXKYBUCYEXJYAUEU
+    UGAXJBYAWAXCXNWBWCVTWDYSUUIIUUAXCXNUVIUVLWEYJUUAUBZYPUUFYRUUHUVOYKUUBYLUUCY
+    OUUEYJUUACWFYJUUANWGUVOYNUUDJRYJUUAYMPWHWIWJUVOYQUUGYEYJUUAWKWLWMWNWOWPWQWR
+    WSXBYHXMEACDFUHWTXBYIYDGBCDHUHWTXA $.
+    $( [?] $) $( [24-Sep-2007] $) 
+  $}
+
+  $( An intersection with a member of a powerset belongs to this powerset. 
+  NEW $)
+  inpws1 $p |- ( A e. P~ C -> ( A i^i B ) e. P~ C ) $
+    ( cin cvv wcel cpw inex1g wss elpwg elpwi ssinss1 syl syl5bir mpcom ) ABDZE
+    FZACGZFZPRFZABRHQTPCIZSPCEJSACIUAACKABCLMNO $.
+    $( [?] $) $( [25-Sep-2007] $) 
+
+  $( An intersection with a member of a powerset belongs to this powerset. 
+  NEW $)
+  inpws2 $p |- ( B e. P~ C -> ( A i^i B ) e. P~ C ) $
+    cB cC cpw wcel cB cA cin cC cpw wcel cA cB cin cC cpw wcel cB cA 
+    cC inpws1 cA cB cin cB cA cin cC cpw cA cB incom eleq1i sylibr $. 
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Intervals of reals and of extended reals
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  ${
+    $d A x $. $d B x $. $( ` x ` is dummy. $)
+    $( An open interval is included in ` RR ` if ` A ` and
+       ` B ` belong to ` RR* ` . $)
+    iooirrsa $p |- ( ( A e. RR* /\ B e. RR* ) -> ( A (,) B ) (_ RR ) $
+      ( cxr wcel wa cioo co cr cpw wss ioof foprcl elpwi syl ) ACDBCDEABFGZHIZD
+      OHJABPCCFKLOHMN $.
+      $( [3-Mar-2007] $) $( [3-Mar-2007] $)
+  $}
+
+$(
+
+  @{
+    @( Membership in a set of closed intervals of reals. @)
+    elicc1tb @p |- ( ( A e. RR /\ B e. RR ) -> ( C e. ( A [,] B ) <->
+                 ( C e. RR /\ A <_ C /\ C <_ B ) ) ) @
+      ( cr wcel wa cicc co cxr cle wbr w3a wb rexrt anim12i elicc1t syl wi
+      com12 exp3a 3expia 3impd imp 3simp2 adantl 3simp3 3jca ex id 3anim123i
+      a1i impbid bitrd ) ADEZBDEZFZCABGHEZCIEZACJKZCBJKZLZCDEZUSUTLZUPAIEZBIEZF
+      ZUQVAMUNVDUOVEANBNOZABCPQUPVAVCUPVAVCUPVAFVBUSUTUPVAVBUPVFVAVBRVGVFURUSUT
+      VBVDVEURUSUTVBRRVDVEURLZUSUTVBUSUTFZVHVBVI?VHVBRUS?UT???O?QSTUAUBQUCVAUSU
+      PURUSUTUDUEVAUTUPURUSUTUFUEUGUHVCVARUPVBURUSUSUTUTCNUSUIUTUIUJUKULUM @.
+      @( [ ?] @) @( [13-Jun-2007] @)
+  @}
+
+$)
+
+  ${
+    $d x A $. $d x B $.
+    $( A closed interval is a set of reals. $)
+    clsre $p |- ( ( A e. RR /\ B e. RR ) -> ( A [,] B ) (_ RR ) $
+      ( vx cr wcel wa cicc co cv cxr cle wbr w3a wb elicc1t rexrt syl2an cmnf
+      clt cpnf wi xrltletrt mnfxr a1i 3simp1 3simp2 syl3anc xrlelttrt 3simp3
+      pnfxr ancomsd anim12d an4 syl5ib exp3a 3exp com23 imp imp31 exp4b 3impd
+      ex mnfltt ltpnft syl2ani pm2.43i adantl xrrebndt syl mpbird sylbid ssrdv
+      ) ADEZBDEZFZCABGHZDVOCIZVPEZVQJEZAVQKLZVQBKLZMZVQDEZAJEZBJEZVRWBNVMVNABVQ
+      OAPZBPZQVOWBWCVOWBFZWCRVQSLZVQTSLZFZVOWBWKVOWBWKUAZVORASLZBTSLZWLVMVNWDWE
+      WMWNFZWLUAVMVNWDWEFZWOWLWPWOFZVSVTWAWKWQVSVTWAWKWPWOVSVTWAFZWKUAZWPVSWOWS
+      WDWEVSWOWSUAZUAWDVSWEWTWDVSWEWTWDVSWEMZWOWRWKXAWMVTFZWNWAFZFWKWOWRFXAXBWI
+      XCWJRJEZWDVSXBWIUAXARAVQUBXDXAUCUDWDVSWEUEWDVSWEUFZUGXAWAWNWJVSWETJEZWAWN
+      FWJUAXAVQBTUHXEWDVSWEUIXFXAUJUDUGUKULWMWNVTWAUMUNUOUPUQURUQUSUTVAVBWFWGQA
+      VCBVDVEVFURWHVSWCWKNWBVSVOVSVTWAUEVGVQVHVIVJVBVKVL $.
+      $( [18-Jun-2007] $) $( [6-Jun-2007] $)
+  $}
+
+  ${
+    $d x y z w $.
+    $( The closed interval as a function.  OBSOLETE - use ~ iccf . $)
+    icofOLD $p |- [,] : ( RR* X. RR* ) --> P~ RR* $
+      ( vx vw vy vz cv cle wbr wa cxr crab cpw wcel wral cxp cicc wf wss
+      ssrab2 a1i xrex rabex elpw sylibr rgen2 df-icc foprab2 mpbi ) AEZBEZFGUIC
+      EZFGHZBIJZIKZLZCIMAIMIINUMOPUNACIUHILUJILHZULIQZUNUPUOUKBIRSULIUKBITUAUBU
+      CUDACDIIULUMOACDBUEUFUG $.
+      $( [18-Jun-2007] $) $( [14-Jun-2007] $)
+  $}
+
+  ${
+    $d A x $. $d B x $.
+    $( A closed interval is a set of extended reals. $)
+    clsrebb $p |- ( B e. V -> ( A [,] B ) (_ RR* ) $
+      ( vx cvv wcel cxr wa cicc co wss wn c0 cxp cpw wf cdm wceq iccf fdm
+      ax-mp ndmoprg 0ss a1i eqsstrd ex cv cle wbr w3a elicc1t 3simp1 syl6bi
+      ssrdv pm2.61d2 ) BDEZAFEBFEGZABHIZFJZUOUPKZURUOUSGZUQLFABDFHFFMZFNZHOHPVA
+      QRVAVBHSTUALFJUTFUBUCUDUEUPCUQFUPCUFZUQEVCFEZAVCUGUHZVCBUGUHZUIVDABVCUJVD
+      VEVFUKULUMUN $.
+      $( [18-Jun-2007] $) $( [13-Jun-2007] $)
+  $}
+
+  ${
+    $d A x $. $d B x $.
+    $( The class difference of ` RR ` and a closed interval. $)
+    cdrci $p |- ( ( A e. RR /\ B e. RR ) -> ( RR \ ( A [,] B ) )
+      U. { ( -oo (,) A ) , ( B (,) +oo ) } ) $
+      ( vx cr wcel wa cv cicc co wn cmnf cioo cpnf cpr cuni wb wal cdif wceq
+      cun wo wi cxr cle wbr w3a elicc1t rexrt syl2an adantr negbid pm2.24d
+      adantl clt ad2antlr mnfltt ltnlet bicomd pm3.27 simpll sylanc biimpa
+      3jca ad2antrr mnfxr jctil elioo1t syl mpbird ex adantll ltpnft pnfxr
+      jctir sylbird orim12d ianor syl5ib jaod 3anass negbii sylbid imp3a elun
+      syl6ibr ioossre unssi sseli elioo2t syl5 ax-mp biimpd a1i com13 3impd
+      xrltnlet com3l com14 imp sylibr intnand anim12i jca impbid cvv oprex
+      pm3.2i uniprg eqcomd eleq2d bitrd 19.21aiv difeqri2 ) ADEZBDEZFZCGZDEZXQA
+      BHIZEZJZFZXQKALIZBMLIZNOZEZPZCQDXSRYESXPYGCXPYBXQYCYDTZEZYFXPYBYIXPYBXQYC
+      EZXQYDEZUAZYIXPXRYAYLXPXRYAYLUBXPXRFZYAXQUCEZAXQUDUEZXQBUDUEZUFZJZYLYMXTY
+      QXPXTYQPZXRAUCEZBUCEZYSXNXOABXQUGZAUHZBUHZUIUJUKYMYNYOYPFZFZJZYLYRYMYNJZU
+      UEJZUAYLUUGYMUUHYLUUIXRUUHYLUBXPXRYNYLXQUHZULUMYMYOJZYPJZUAZYLUUIYMUUKYJU
+      ULYKYMUUKYJYMUUKFZYJYNKXQUNUEZXQAUNUEZUFZUUNYNUUOUUPXRYNXPUUKUUJUOXRUUOXP
+      UUKXQUPUOYMUUKUUPXRXNUUKUUPPYMXRXNFZUUPUUKXQAUQZURXPXRUSXNXOXRUTVAVBVCUUN
+      KUCEZYTFYJUUQPUUNYTUUTXPYTXRUUKXNYTXOUUCUJVDVEVFKAXQVGVHVIVJYMUULBXQUNUEZ
+      YKXOXRUVAUULPXNBXQUQVKYMUVAYKYMUVAFZYKYNUVAXQMUNUEZUFZUVBYNUVAUVCXRYNXPUV
+      AUUJUOYMUVAUSXRUVCXPUVAXQVLUOVCUVBUUAMUCEZFZYKUVDPZUVBUUAUVEXPUUAXRUVAXOU
+      UAXNUUDUMZVDVMVNBMXQVGZVHVIVJVOVPYOYPVQZVRVSYNUUEVQVRYQUUFYNYOYPVTWAZVRWB
+      VJWCXQYCYDWDZWEXPYIYBXPYIFZXRYAYIXRXPYHDXQYCYDDKAWFBMWFWGWHUMUVMYAYRUVMUU
+      GYRUVMUUEYNUVMUUMUUIXPYIUUMXPYLUUMYIXPYJUUKYKUULXPYJXRUUOUUPUFZUUKXNYJUVN
+      PZXOUUTXNUVOUBVEUUTYTUVOXNUUTYTUVOKAXQWIVJUUCWJWKUJXPXRUUOUUPUUKXNXRUUOUU
+      PUUKUBZUBUBXOUUOXRXNUVPXRXNUVPUBUBUUOXRXNUVPUURUUPUUKUUSWLVJWMWNUJWOWBXPY
+      KUVDUULXPUVFUVGXPUUAUVEUVHVMVNUVIVHXPYNUVAUVCUULXOYNUVAUVCUULUBUBUBZXNXOU
+      UAUVQUUDUVCYNUVAUUAUULYNUVAUUAUULUBUBUBUVCUUAYNUVAUULUUAYNUVAUULUBUUAYNFU
+      VAUULBXQWPWLVJWQWMWRVHUMWOWBVPUVLVRWSUVJWTXAUVKWTUVMYTUUAFZYAYRPXPUVRYIXN
+      YTXOUUAUUCUUDXBUJUVRXTYQUUBUKVHVIXCVJXDXPYHYEXQXPYCXEEZYDXEEZFZYHYESUWAXP
+      UVSUVTKALXFBMLXFXGWMUWAYEYHYCYDXEXEXHXIVHXJXKXLCDXSYEXMVH $.
+      $( [18-Jun-2007] $) $( [7-Jun-2007] $)
+  $}
+
+  $(
+
+  @{
+    @d F C x A B y @.
+    imint.1 @e |- F : RR --> RR @.
+    imint.2 @e |- C e. RR @.
+    imint.3 @e |- A. x e. RR ( F ` x ) = ( x - C ) @.
+    imint.4 @e |- A e. RR @.
+    imint.5 @e |- B e. RR @.
+    @( The image of an interval by a translation is an interval.
+       Due to the fact that ` + ` is a homeomorphism of the topological group
+       ` RR ` . Bourbaki TG III.2. @)
+    imint @p |- ( F " ( A (,) B ) ) = ( ( A - C ) (,) ( B - C ) ) @
+      ( vy cioo co cima cv cfv wceq wrex cab cmin wfun cdm wss wa cr wf ffun
+      ax-mp pm3.2i dfimafn clt wbr crab wcel w3a wb cxr rexrt elioo2t biimp
+      3simp1 rspec eqeq1d syl rexbiia pm3.27 mpbid adantr eqbrtrrd jca ex
+      r19.23aiv caddc pm3.26 wi axaddrcl com12 a1i pm2.43i id 3jca ltsubaddt
+      3adant3 3expb ltaddsubt mpbird 3adant2 elioo1t bicomi equid eleq1a imp
+      imdistani cc recnt 3anim123i subaddt anim12i axaddcom 3adant1 bitrd
+      eqcom 3com23 bicomd biimpd 3exp com23 impbid rcla4dev impbi bitr abbii
+      df-rab eqcomi eqtr resubcl iooval2t ) EBCLMZNZAOZEPZKOZQZAXRRZKSZBDTMZCDT
+      MZLMZEUAZXREUBUCZUDXSYEQYIYJUEUEEUFYIFUEUEEUGUH?UIAKXREUJUHYEYFYBUKULZYBY
+      GUKULZUDZKUEUMZYHYEYBUEUNZYMUDZKSZYNYDYPKYDXTDTMZYBQZAXRRZYPYCYSAXRXTXRUN
+      ZXTUEUNZBXTUKULZXTCUKULZUOZYCYSUPZUUAUUEBUQUNZCUQUNZUDZUUAUUEUPUUGUUHBUEU
+      NZUUGIBURUHCUEUNZUUHJCURUHUIZBCXTUSUHUTZUUEUUBUUFUUBUUCUUDVAUUBYAYRYBYAYR
+      QAUEHVBVCVDVDVEYTYPYSYPAXRUUAYSYPUUAYSUDZYOYM?UUNYKYL?UUNYRYBYGUKUUAYSVFU
+      UAYRYGUKULZYSUUAUUEUUOUUMUUE?UUO??VGVDVHVIVJVJVKVLYPYOYBDVMMZXRUNZUDZYTYP
+      YOUUQYOYMVNYPUUPUQUNZBUUPUKULZUUPCUKULZUOZUUQYPUUSUUTUVAYPUUPUEUNZUUSYOUV
+      CYMDUEUNZYOUVCVOGYOUVDUVCYOUVDUVCYBDVPVKVQUHZVHUUPURVDYOYKYLUUTYOYKUUTYLY
+      OYKUDZYKUUTUVFYKUVFYKVOUVFYOYKVFVRVSUVFUUJUVDYOUOZYKUUTUPYOUVGYKYOUUJUVDY
+      OUUJYOIVRUVDYOGVRZYOVTZWAVHBDYBWBVDVGWCWDYOYKYLUVAYOYLUVAYKYOYLUDZUVAYLYO
+      YLVFUVJYOUVDUUKUOZUVAYLUPYOUVKYLYOYOUVDUUKUVIUVHUUKYOJVRWAVHYBDCWEVDWFWGW
+      DWAUVBUUQUUQUVBUUIUUQUVBUPUULBCUUPWHUHWIUTVDVJYBYBQZUURYTVOKWJZUURUVLYTYO
+      UVLYSAUUPXRYOXTUUPQZUDZUVLYSUPZUVOUVOUVPUVOUVOUDUVOUUBUDZUVPUVOUVOUUBUVOU
+      UBVOUVOYOUVNUUBYOUVCUVNUUBVOUVEUUPUEXTWKVDWLVRWMUVQUVLYSUVLUVQYSUVQYSVOUV
+      LUVOUUBYSYOUVNUUBYSVOYOUUBUVNYSUUBYOUVNYSVOZUVDUUBYOUVRVOZVOGUUBUVDUVSUUB
+      YOUVDUVRUUBYOUVDUVRUUBYOUVDUOZUVNYSUVTYSUVNUUBUVDYOYSUVNUPUUBUVDYOUOZYSUU
+      PXTQZUVNUWAYSDYBVMMZXTQZUWBUWAXTWNUNZDWNUNZYBWNUNZUOYSUWDUPUUBUWEUVDUWFYO
+      UWGXTWODWOZYBWOZWPXTDYBWQVDUWAUWCUUPXTUVDYOUWCUUPQZUUBUVDYOUDUWFUWGUDUWJU
+      VDUWFYOUWGUWHUWIWRDYBWSVDWTVCXAUWBUVNUPUWAUUPXTXBVRXAXCXDXEXFXGVQUHVQXGWL
+      WLVRVQYSUVLVOUVQUVLYSUVMVRVRXHVDVKVSXIVQUHVDXJXKXLYNYQYMKUEXMXNXOYHYNYFUQ
+      UNZYGUQUNZUDYHYNQUWKUWLYFUEUNUWKBDIGXPYFURUHYGUEUNUWLCDJGXPYGURUHUIKYFYGX
+      QUHXNXOXO @.
+      @( [ ? ] @) @( [17-Apr-2007] @)
+  @}
+  $)
+
+  ${ $d A x y z $. $d w x y z $.
+    bsiNEW.1 $e |- A e. V $.
+    $( Property of membership in the set of intervals.  Todo: Remove A e. V. $)
+    bsiNEW $p |- ( A e. ran (,) ->
+      E. x e. RR* E. y e. RR* A = ( x (,) y ) ) $
+      ( vw vz cv cxr wcel wa clt wbr crab wceq wex cioo co crn wrex ioovalt
+      eqcomd eqeq2d biimpd imdistani 19.22i2 cab copab2 df-ioo rneqi eleq2i
+      rnoprab bitr clelab eqeq1 anbi2d 2exbidv ceqsexv 3bitr r2ex 3imtr4 ) AGZH
+      IBGZHIJZCVAEGZKLVDVBKLJEHMZNZJZBOAOZVCCVAVBPQZNZJZBOAOCPRZIZVJBHSAHSVGVKA
+      BVCVFVJVCVFVJVCVEVICVCVIVEEVAVBTUAUBUCUDUEVMCVCFGZVENZJZBOAOZFUFZIZVNCNZV
+      QJFOVHVMCVPABFUGZRZIVSVLWBCPWAABFEUHUIUJWBVRCVPABFUKUJULVQFCUMVQVHFCDVTVP
+      VGABVTVOVFVCVNCVEUNUOUPUQURVJABHHUSUT $.
+      $( [14-Sep-2007] $) $( [12-Sep-2007] $)
+  $}
+
+  $( If an open interval has an element, then ` A < B ` . $)
+  elioo1t3 $p |- ( C e. ( A (,) B ) -> A < B ) $
+    ( cxr wcel wa cioo co clt wbr wi w3a elioo1t xrlttrt exp3a 3com23 3expia
+    3impd sylbid wn c0 wceq ndmioo eleq2 noel pm2.21i syl6bi syl pm2.61i ) ADEZ
+    BDEZFZCABGHZEZABIJZKZULUNCDEZACIJZCBIJZLUOABCMULUQURUSUOUJUKUQURUSUOKKZUJUQ
+    UKUTUJUQUKLURUSUOACBNOPQRSULTUMUAUBZUPABUCVAUNCUAEZUOUMUACUDVBUOCUEUFUGUHUI
+    $.
+    $( [14-Sep-2007] $) $( [14-Aug-2007] $)
+
+  $( An open interval with its upper bound equal to ` -oo ` is empty. $)
+  oisbmi $p |- ( A (,) -oo ) = (/) $
+    ( cxr wcel cmnf wa cioo co c0 wceq cle wbr mnflet adantr ioo0t mpbird
+    ndmioo pm2.61i ) ABCZDBCZEZADFGHIZTUADAJKZRUBSALMADNOADPQ $.
+    $( [14-Sep-2007] $) $( [12-Sep-2007] $)
+
+  $( An open interval with its lower bound equal to ` +oo ` is empty. $)
+  oisbmj $p |- ( +oo (,) A ) = (/) $
+    ( cpnf cxr wcel wa cioo co c0 wceq cle wbr pnfget adantl ioo0t mpbird
+    ndmioo pm2.61i ) BCDZACDZEZBAFGHIZTUAABJKZSUBRALMBANOBAPQ $.
+    $( [14-Sep-2007] $) $( [12-Sep-2007] $)
+
+  $( Translation in a half-infinite interval. $)
+  truni1 $p |- ( ( A e. RR* /\ D e. RR /\ 0 < D ) ->
+   ( C e. ( A (,) +oo ) -> ( C + D ) e. ( A (,) +oo ) ) ) $
+    ( cxr wcel cr cc0 clt wbr w3a cpnf caddc co cioo wa wi axaddrcl ex
+    3ad2ant1 com12 3ad2ant2 imp xrlttrt 3simp1 adantr rexrt adantl syl 3jca
+    3simp2 ltaddpos2t biimpd com23 imp31 cc wceq axaddcom recnt ad2antrr
+    sylanc breqtrrd expcom 3adant1 jca sylc ltpnft wb pnfxr jctir elioo2t
+    3imtr4d ) ADEZCFEZGCHIZJZBFEZABHIZBKHIZJZBCLMZFEZAVTHIZVTKHIZJZBAKNMZEZVTWE
+    EZVOVSWDVOVSOZWAWBWCVOVSWAVMVLVSWAPVNVSVMWAVPVQVMWAPVRVPVMWABCQZRSTUAUBVLBD
+    EZVTDEZJVQBVTHIZOWBWHABVTUCWHVLWJWKVOVLVSVLVMVNUDZUEVSWJVOVPVQWJVRBUFSUGVOV
+    SWKVMVLVSWKPVNVSVMWKVPVQVMWKPVRVPVMWKVPVMOZWAWKWIVTUFUHRSTUAUBUIWHVQWLVSVQV
+    OVPVQVRUJUGVOVSWLVMVNVSWLPVLVSVMVNOZWLVPVQWOWLPVRWOVPWLWOVPOZBCBLMZVTHVMVNV
+    PBWQHIZVMVPVNWRVMVPVNWRPVMVPOVNWRCBUKULRUMUNBUOEZCUOEZVTWQUPWPBCUQVPWSWOBUR
+    UGVMWTVNVPCURUSUTVAVBSTVCUBVDVEVOVSWCVMVLVSWCPVNVSVMWCVPVQVMWCPVRVPVMWCWNWA
+    WCWIVTVFUHRSTUAUBUIRVOVLKDEZOZWFVSVGVOVLXAWMVHVIZAKBVJUHVOXBWGWDVGXCAKVTVJU
+    HVK $.
+    $( [14-Sep-2007] $) $( [11-Sep-2007] $)
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Euclidean topology
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+
+  $(
+  @( Alternate definition of the standard topology of ` RR ` . Morris.
+  Topology without tears. p. 34. def. 2.1.1. Morris call the standard
+  topology of ` RR ` the euclidean topology. @)
+  altstop @p |- ( topGen ` ran (,) ) = { x |
+            (
+                 x (_ RR
+            /\   A. y e. x E. a e. RR E. b e. RR
+                  ( a < b /\ y e. ( a (,) b ) /\ ( a (,) b ) (_ x )
+            )
+       } @= ? @.
+  $)
+
+  $c EucTop $.
+
+  $( Extend class notation with the class of all euclidean topoligies. $)
+  ceuctop $a class EucTop $.
+
+  ${
+    $d x y a b $. $( Warning: not sure of that. $)
+    $( Definition of the euclidean topology (Morris. Def. 2.1.1 p. 34). $)
+    df-EucTop $a |- EucTop
+       { x |
+            (
+                 x (_ RR
+            /\   A. y e. x E. a e. RR E. b e. RR
+                  ( y e. ( a (,) b ) /\ ( a (,) b ) (_ x )
+            )
+       } $.
+  $}
+
+  ${
+    $d J a b x y $. $( ` x ` is dummy. $)
+    $( The predicate " ` J ` belongs to the euclidean topology." $)
+    iseuctopg $p |- (
+             J e. A -> ( J e. EucTop <->           (
+                 J (_ RR
+            /\   A. y e. J E. a e. RR E. b e. RR
+                  ( y e. ( a (,) b ) /\ ( a (,) b ) (_ J )
+            ) ) ) $
+      ( vx cv cr wss cioo co wcel wa wrex wral ceuctop wceq sseq1 sseq2 anbi2d
+      2rexbidv raleqd anbi12d df-EucTop elab2g ) FGZHIZAGDGEGJKZLZUHUFIZMZEHNDH
+      NZAUFOZMCHIZUIUHCIZMZEHNDHNZACOZMFCPBUFCQZUGUNUMURUFCHRULUQAUFCUSUKUPDEHH
+      USUJUOUIUFCUHSTUAUBUCFADEUDUE $.
+      $( [20-Feb-2007] $) $( [30-Jan-2007] $)
+  $}
+
+  ${
+    $d J a b x y $. $( ` x ` is dummy. $)
+    iseuctopgb.1 $e |- J e. A $.
+    $( The predicate " ` J ` belongs to the euclidean topology." $)
+    iseuctopgb $p |- ( J e. EucTop <->           (
+                 J (_ RR
+            /\   A. y e. J E. a e. RR E. b e. RR
+                  ( y e. ( a (,) b ) /\ ( a (,) b ) (_ J )
+            ) ) $
+      ( wcel ceuctop cr wss cv cioo co wa wrex wral wb iseuctopg ax-mp ) CBGCHG
+      CIJAKDKEKLMZGTCJNEIODIOACPNQFABCDERS $.
+      $( [20-Feb-2007] $) $( [30-Jan-2007] $)
+  $}
+
+  ${
+    $d J a b x $.
+    $( An open set of an euclidean topology is a subset of ` RR ` . $)
+    osbr $p |- ( J e. EucTop -> J (_ RR ) $
+      ( vx va vb ceuctop wcel cr wss cv cioo co wa wrex wral iseuctopg ibi
+      pm3.26d ) AEFZAGHZBICIDIJKZFTAHLDGMCGMBANZRSUALBEACDOPQ $.
+      $( [20-Feb-2007] $) $( [5-Feb-2007] $)
+
+  $}
+
+  ${
+    $d J y a b $.
+    $( Property of an open set of an euclidean topology. $)
+    osbs $p |- ( J e. EucTop -> A. y e. J E. a e. RR E. b e. RR
+                  ( y e. ( a (,) b ) /\ ( a (,) b ) (_ J ) ) $
+      ( ceuctop wcel cr wss cv cioo co wa wrex wral iseuctopg ibi pm3.27d ) BEF
+      ZBGHZAICIDIJKZFTBHLDGMCGMABNZRSUALAEBCDOPQ $.
+      $( [20-Feb-2007] $) $( [5-Feb-2007] $)
+  $}
+
+$(
+  @{
+    @d A B x y z @.
+    @( An open interval is an open set of the Euclidean topology. @)
+    oinops @p |- ( ( A e. RR /\ B e. RR ) -> ( A (,) B ) e. EucTop ) @
+      ( vx vy vz cr wcel wa cioo co ceuctop wss cv wrex wral ioossre a1i wceq
+      anbi12d rcla42ev syl ex r19.21aiv jca cpw wb cxr rexrt anim12i cxp wf
+      ioof foprrn mp3an1 iseuctopg mpbird ) AFGZBFGZHZABIJZKGZUTFLZCMZDMZEMIJZG
+      ZVEUTLZHZEFNDFNZCUTOZHZUSVBVJVBUSABPQUSVICUTUSVCUTGZVIUSVLH?VI?VH??DEA?FF
+      VDARVF?VG???S?TUAUBUCUDUSUTFUEZGZVAVKUFUSAUGGZBUGGZHVNUQVOURVPAUHBUHUIUGU
+      GUJVMIUKVOVPVNULABVMUGUGIUMUNUACVMUTDEUOUAUP $.
+      @( [ ?] @) @( [3-Mar-2007] @)
+  @}
+$)
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Neighborhoods
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  ${
+    $d J x $. $d S x $. $d X x $.
+    unnei.1 $e |- X = U. J $.
+    $( The union of the neighborhoods equal the topology underlying set. $)
+    unnei $p |- ( ( J e. Top /\ S (_ X ) -> U. ( ( nei ` J ) ` S ) = X ) $
+      ( vx cnei cfv cuni wss wcel wceq ctop wa unissel cv wral wi neii1 ex
+      adantr r19.21aiv unissb sylibr tpnei biimpa sylanc ) ABFGGZHZCIZCUGJZUHCK
+      BLJZACIZMZUGCNUMEOZCIZEUGPUIUMUOEUGUKUNUGJZUOQULUKUPUOABUNCDRSTUAEUGCUBUC
+      UKULUJABCDUDUEUF $.
+      $( [19-Sep-2007] $) $( [18-Sep-2007] $)
+  $}
+
+  $( The empty set is not a neighborhood of a non empty set. $)
+  esnnei $p |- ( ( J e. Top /\ S =/= (/) ) -> -. (/) e. ( ( nei ` J ) ` S ) ) $
+    ( ctop wcel c0 wne cnei cfv wn wceq wa wss ssnei ss0b sylib ex necon3ad
+    imp ) BCDZAEFEABGHHDZISTAESTAEJZSTKAELUAABEMANOPQR $.
+    $( [19-Sep-2007] $) $( [18-Sep-2007] $)
+
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Homeomorphisms
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c Homeo $. $( Class of all homeomorphisms. $)
+  $c ~= $. $( The relation "is homeomorph to." $)
+
+  $( Extend class notation with the class of all homeomorphisms. $)
+  chomeosm $a class Homeo $.
+
+  $( Extend class notation with the relation "is homeomorph to.". $)
+  chomeo $a class ~= $.
+
+  ${
+    $d j k z f x $.
+    $( Function returning all the  homeomorphisms from topology ` j `
+       to topology ` k ` .  $)
+    df-homeo $a |-  Homeo = { <. <. j , k >. , z >. | ( ( j e. Top /\
+     k e. Top ) /\  z = { f | ( f : U. j -1-1-onto-> U. k /\
+     A. x e. j ( f " x ) e. k /\
+     A. x e. k ( `' f " x ) e. j ) } ) } $.
+  $}
+
+  ${
+    $d J f x y j k z $. $d K f x y j k z $. $d X f j k z $.
+    $d Y f k z $. $( ` j k z ` are dummies. $)
+    homeofval.1 $e |- X = U. J $.
+    homeofval.2 $e |- Y = U. K $.
+    $( The set of all the homeomorphisms between two topologies. $)
+    homeofval $p |- ( ( J e. Top /\ K e. Top ) -> ( J Homeo K )
+    { f | ( f : X -1-1-onto-> Y /\ A. x e. J ( f " x ) e. K /\
+    A. x e. K ( `' f " x ) e. J ) } ) $
+      ( vj vk vz ctop wcel wa cv wf1o cima wral ccnv w3a cab cvv chomeosm co
+      wceq wf wss ssexg wi wal f1of 3ad2ant1 a1i 19.21aiv ss2ab sylibr mapex
+      cuni uniexg syl5eqel syl2an sylanc wb unieq syl6eqr f1oeq2 syl raleq1
+      eleq2 ralbidv 3anbi123d abbidv f1oeq3 df-homeo oprabval2g 3expa mpdan )
+      CLMZDLMZNZEFBOZPZWAAOZQZDMZACRZWASWCQZCMZADRZTZBUAZUBMZCDUCUDWKUEZWKEFWAU
+      FZBUAZUGZWOUBMZWLVTWKWOUBUHVTWJWNUIZBUJWPVTWRBWRVTWBWFWNWIEFWAUKULUMUNWJW
+      NBUOUPEUBMFUBMWQVRVSEFUBUBBUQVRCURZUBECLUSGUTVSDURZUBFDLUSHUTVAVBVRVSWLWM
+      IJKCDLLIOZURZJOZURZWAPZWDXCMZAXARZWGXAMZAXCRZTZBUAWKUCEXDWAPZXFACRZWHAXCR
+      ZTZBUAUBXACUEZXJXNBXOXEXKXGXLXIXMXOXBEUEXEXKVCXOXBWSEXACVDGVEXBEXDWAVFVGX
+      FAXACVHXOXHWHAXCXACWGVIVJVKVLXCDUEZXNWJBXPXKWBXLWFXMWIXPXDFUEXKWBVCXPXDWT
+      FXCDVDHVEXDFEWAVMVGXPXFWEACXCDWDVIVJWHAXCDVHVKVLAKBIJVNVOVPVQ $.
+      $( [20-Feb-2007] $) $( [14-Feb-2007] $)
+  $}
+
+  ${
+    $d J f x y $. $d K f x y $. $d X f $. $d Y f $.
+    $d F f x y $. $( ` f ` is dummy. $)
+    ishomeo.1 $e |- X = U. J $.
+    ishomeo.2 $e |- Y = U. K $.
+    $( The predicate F is a homeomorphism between topology ` J ` and
+       topology ` K ` .  Based on Bourbaki TG I.2. $)
+    ishomeo $p |- ( ( J e. Top /\ K e. Top /\ F e. A ) ->
+      ( F e. ( J Homeo K ) <-> ( F : X -1-1-onto-> Y /\
+        A. x e. J ( F " x ) e. K /\
+        A. x e. K ( `' F " x ) e. J ) ) ) $
+      ( vf ctop wcel w3a chomeosm co cv wf1o cima wral ccnv cab wceq homeofval
+      3adant3 eleq2d wb f1oeq1 imaeq1 eleq1d ralbidv cnveq imaeq1d 3anbi123d
+      elabg 3ad2ant3 bitrd ) DKLZEKLZCBLZMZCDENOZLCFGJPZQZVBAPZRZELZADSZVBTZVDR
+      ZDLZAESZMZJUAZLZFGCQZCVDRZELZADSZCTZVDRZDLZAESZMZUTVAVMCUQURVAVMUBUSAJDEF
+      GHIUCUDUEUSUQVNWCUFURVLWCJCBVBCUBZVCVOVGVRVKWBFGVBCUGWDVFVQADWDVEVPEVBCVD
+      UHUIUJWDVJWAAEWDVIVTDWDVHVSVDVBCUKULUIUJUMUNUOUP $.
+      $( [20-Feb-2007] $) $( [14-Feb-2007] $)
+  $}
+
+  ${
+    $d J x $. $d K x $. $d F x $. $( ` x ` is dummy. $)
+    hmeomap.1 $e |- X = U. J $.
+    hmeomap.2 $e |- Y = U. K $.
+    $( A homeomorphism is a 1-1-onto mapping. $)
+    hmeomap $p |- ( ( J e. Top /\ K e. Top ) ->
+      ( F e. ( J Homeo K ) -> F : X -1-1-onto-> Y  ) ) $
+      ( vx ctop wcel wa chomeosm co wf1o wi w3a cv cima wral ccnv ishomeo
+      biimpa 3simp1d 3exp1 imp pm2.43d ) BIJZCIJZKABCLMZJZDEANZUGUHUJUJUKOOUGUH
+      UJUJUKUGUHUJPZUJKUKAHQZRCJHBSZATUMRBJHCSZULUJUKUNUOPHUIABCDEFGUAUBUCUDUEU
+      F $.
+      $( [5-Mar-2007] $) $( [5-Mar-2007] $)
+  $}
+
+  ${
+    $d J x $. $d K x $. $d F x $. $( ` x ` is dummy. $)
+    $( The image of an open set by the converse of a homeomorphism is an open
+       set. $)
+    hmeocna $p |- ( ( J e. Top /\ K e. Top ) ->
+      ( F e. ( J Homeo K ) -> A. x e. K ( `' F " x ) e. J  ) ) $
+      ( ctop wcel wa chomeosm co ccnv cv cima wral wi w3a cuni wf1o eqid
+      ishomeo biimpa 3simp3d 3exp1 imp pm2.43d ) CEFZDEFZGBCDHIZFZBJAKZLCFADMZU
+      EUFUHUHUJNNUEUFUHUHUJUEUFUHOZUHGCPZDPZBQZBUILDFACMZUJUKUHUNUOUJOAUGBCDULU
+      MULRUMRSTUAUBUCUD $.
+      $( [5-Mar-2007] $) $( [5-Mar-2007] $)
+  $}
+
+  ${
+    $d J x $. $d K x $. $d F x $. $( ` x ` is dummy. $)
+    $( The image of an open set by a homeomorphism is an open set.  $)
+    hmeocnb $p |- ( ( J e. Top /\ K e. Top ) ->
+      ( F e. ( J Homeo K ) -> A. x e. J ( F " x ) e. K  ) ) $
+      ( ctop wcel wa chomeosm co cv cima wral wi w3a cuni wf1o ccnv eqid
+      ishomeo biimpa 3simp2d 3exp1 imp pm2.43d ) CEFZDEFZGBCDHIZFZBAJZKDFACLZUE
+      UFUHUHUJMMUEUFUHUHUJUEUFUHNZUHGCOZDOZBPZUJBQUIKCFADLZUKUHUNUJUONAUGBCDULU
+      MULRUMRSTUAUBUCUD $.
+      $( [5-Mar-2007] $) $( [5-Mar-2007] $)
+  $}
+
+  ${
+    $d F x y $.  $d G x y $. $d J x y $. $d K x y $. $d L x y $.
+    $( The composition of two homeomorphisms is a homeomorphism. $)
+    cmphmp $p |- ( ( J e. Top /\ K e. Top /\ L e. Top ) ->
+     ( ( F e. ( J Homeo K ) /\ G e. ( K Homeo L ) ) ->
+     ( G o. F ) e. ( J Homeo L ) ) ) $
+      ( vx vy ctop wcel w3a chomeosm co wa ccom cuni wf1o cv cima wral ccnv wi
+      eqid hmeomap 3adant3 3adant1 anim12d imp pm3.22 f1oco 3syl hmeocnb hbra1
+      ax-17 hbral hban wal df-ral pm3.35 wceq imaeq2 eleq1d rcla4v syl ex
+      imp3a imaco eqcomi eleq1i biimp syl6com a4s sylbi r19.21ai hmeocna cnvco
+      imaeq1 ax-mp eqtr2 impcom 3jca wb cvv ishomeo 3expia 3adant2 coexg
+      ancoms syl5 mpbird ) CHIZDHIZEHIZJZACDKLZIZBDEKLZIZMZBANZCEKLIZWMWRMZWTCO
+      ZEOZWSPZWSFQZRZEIZFCSZWSTZXERZCIZFESZJZXAXDXHXLXAXBDOZAPZXNXCBPZMZXPXOMXD
+      WMWRXQWMWOXOWQXPWJWKWOXOUAWLACDXBXNXBUBZXNUBZUCUDWKWLWQXPUAWJBDEXNXCXSXCU
+      BZUCUEUFUGXOXPUHXBXNXCBAUIUJXAAXERZDIZFCSZBGQZRZEIZGDSZMZXHWMWRYHWMWOYCWQ
+      YGWJWKWOYCUAWLFACDUKUDWKWLWQYGUAWJGBDEUKUEUFUGYHXGFCYCYGFYBFCULYFFGDYDDIF
+      UMYFFUMUNUOYCYGXECIZXGUAZYCYIYBUAZFUPYGYJUAZYBFCUQYKYLFYKYGYJYIYKYGMBYARZ
+      EIZXGYIYKYGYNYIYKYGYNUAZYIYKMYBYOYIYBURYFYNGYADYDYAUSYEYMEYDYABUTVAVBVCVD
+      VEYNXGYMXFEXFYMBAXEVFVGVHVIVJVDVKVLUGVMVCXAATZYDRZCIZGDSZBTZXERZDIZFESZMZ
+      XLWMWRUUDWMWOYSWQUUCWJWKWOYSUAWLGACDVNUDWKWLWQUUCUAWJFBDEVNUEUFUGUUDXKFEY
+      SUUCFYSFUMUUBFEULUOUUCYSXEEIZXKUAZUUCUUEUUBUAZFUPYSUUFUAZUUBFEUQUUGUUHFUU
+      GYSUUFUUEUUGYSMYPUUARZCIZXKUUEUUGYSUUJUUEUUGYSUUJUAZUUEUUGMUUBUUKUUEUUBUR
+      YRUUJGUUADYDUUAUSYQUUICYDUUAYPUTVAVBVCVDVEUUJXKUUIXJCXJYPYTNZXERZUUIXIUUL
+      USXJUUMUSBAVOXIUULXEVPVQYPYTXEVFVRVHVIVJVDVKVLVSVMVCVTWMWRWTXMWAZWMWSWBIZ
+      UUNWRWJWLUUOUUNUAWKWJWLUUOUUNFWBWSCEXBXCXRXTWCWDWEWQWOUUOBAWPWNWFWGWHUGWI
+      VD $.
+      $( [11-Mar-2007] $) $( [9-Mar-2007] $)
+  $}
+
+  ${
+    $d J x $. $d X x $. $( ` x ` is dummy. $)
+    idhme.1 $e |- X = U. J $.
+    $( The identity function is a homeomorphism. $)
+    idhme $p |- ( J e. Top -> ( I |` X ) e. ( J Homeo J ) ) $
+      ( vx ctop wcel cid cres cvv chomeosm co cuni uniexg syl5eqel resiexg syl
+      w3a wf1o cv cima wral ccnv f1oi a1i wss wceq elssuni id syl6ssr resiima
+      3syl eqeltrd rgen cnvresid imaeq1d eqtrd 3jca ishomeo mpbird 3expa
+      anabsan mpdan ) AEFZGBHZIFZVDAAJKFZVCBIFVEVCALZIBAEMCNBIOPVCVEVFVCVCVEVFV
+      CVCVEQZVFBBVDRZVDDSZTZAFZDAUAZVDUBZVJTZAFZDAUAZQVHVIVMVQVIVHBUCUDVMVHVLDA
+      VJAFZVKVJAVRVJVGUEZVJBUEZVKVJUFVJAUGZVSVJVGBVSUHCUIZBVJUJZUKVRUHZULUMUDVQ
+      VHVPDAVRVOVJAVRVSVOVJUFZWAVSVTWEWBVTVOVKVJVTVNVDVJVNVDUFVTBUNUDUOWCUPPPWD
+      ULUMUDUQDIVDAABBCCURUSUTVAVB $.
+      $( [20-Feb-2007] $) $( [14-Feb-2007] $)
+  $}
+
+  ${
+    $d x f $. $d y f $.
+    $( Formerly x and y had to be distinct but, I have removed this condition
+    because it seem too strong.  $)
+    $( Definition of the relation ` x ` is homeomorph to ` y ` . $)
+    df-hmph $a |- ~= = { <. x , y >. | ( x e. Top /\ y e. Top /\
+      E. f f e. ( x Homeo y ) ) } $.
+  $}
+
+  ${
+    $d J f j k $. $d K f j k $.
+    $( Express the predicate ` J ` is homeomorph to ` K ` . $)
+    hmph $p |- ( ( J e. Top /\ K e. Top ) -> ( J ~= K <->
+      E. f f e. ( J Homeo K ) ) ) $
+      ( vj vk ctop wcel wa chomeo wbr cv chomeosm co wex w3a wceq eleq1 opreq1
+      eleq2d exbidv 3anbi13d bicomd opreq2 eqcoms 3anbi23d df-3an syl5rbbr
+      df-hmph brabg ompfl2 ) BFGZCFGZHZBCIJAKZBCLMZGZANZDKZFGZEKZFGZUNURUTLMZGZ
+      ANZOUKVAUNBUTLMZGZANZOZUMUQHZDEBCFFIURBPZUSUKVDVGVAURBFQVJVCVFAVJVBVEUNUR
+      BUTLRSTUAUTCPZUKULUQOVHVIVKULVAUQVGUKVKVAULUTCFQUBVKUPVFAVKUOVEUNUOVEPCUT
+      CUTBLUCUDSTUEUKULUQUFUGDEAUHUIUJ $.
+      $( [20-Feb-2007] $) $( [14-Feb-2007] $)
+  $}
+
+  ${
+    $d J x $. $d K x $. $d F x $. $( ` x ` is dummy. $)
+    $( The converse of a homeomorphism is a homeomorphism. $)
+    cnvhmpha $p |- ( ( J e. Top /\ K e. Top ) ->
+      ( F e. ( J Homeo K ) -> `' F e. ( K Homeo J ) ) ) $
+      ( vx chomeosm co wcel ctop wa ccnv cvv wi cnvexg w3a cuni wf1o cv cima
+      wral eqid hmeomap f1ocnv syl6 imp hmeocna hmeocnb wceq wrel f1orel
+      dfrel2 sylib adantr imaeq1d eleq1d ralbidva mpbird 3jca ex ancoms
+      3adant3 ishomeo sylibrd 3exp impcom com3l mpcom com12 ) ABCEFZGZBHGZCHGZI
+      ZAJZCBEFGZVMKGZVIVLVNLAVHMVLVOVIVNVKVJVOVIVNLZLVKVJVOVPVKVJVONVICOZBOZVMP
+      ZVMDQZRBGDCSZVMJZVTRZCGZDBSZNZVNVKVJVIWFLZVOVJVKWGVLVIWFVLVIIZVSWAWEVLVIV
+      SVLVIVRVQAPZVSABCVRVQVRTZVQTZUAZVRVQAUBUCUDVLVIWADABCUEUDWHWEAVTRZCGZDBSZ
+      VLVIWODABCUFUDWHWDWNDBWHVTBGZIZWCWMCWQWBAVTWHWBAUGZWPVLVIWRVLVIWIWRWLWIAU
+      HWRVRVQAUIAUJUKUCUDULUMUNUOUPUQURUSUTDKVMCBVQVRWKWJVAVBVCVDVEVFVG $.
+      $( [5-Mar-2007] $) $( [5-Mar-2007] $)
+  $}
+
+  ${
+    $d J x $. $d K x $. $d F x $. $( ` x ` is dummy. $)
+    $( The converse of a homeomorphism is a homeomorphism. $)
+    cnvhmphb $p |- ( ( J e. Top /\ K e. Top /\ Rel F ) ->
+      ( `' F e. ( J Homeo K ) -> F e. ( K Homeo J ) ) ) $
+      ( vx ccnv chomeosm co wcel ctop wrel w3a cvv wi cnvexg wa wceq dfrel2
+      biimp eleq1d cuni wf1o cv cima wral eqid hmeomap f1ocnvb biimprd syl9
+      imp31 hmeocna imaeq1d ralbidv biimpd hmeocnb adantr imp 3jca exp31
+      ancoms 3adant3 wb ishomeo sylibrd 3exp1 impcom com3l syl6bi pm2.43a
+      com3r 3impia mpcom com12 ) AEZBCFGZHZBIHZCIHZAJZKZACBFGHZVNEZLHZVPVTWAMVN
+      VONVTWCVPWAVQVRVSWCVPWAMZMVSWCVQVROZWDWCVSWEWDMZVSWCALHZVSWFMVSWBALVSWBAP
+      AQRZSWEWGVSWDVRVQWGVSWDMMVRVQWGVSWDVRVQWGKZVSOVPCTZBTZAUAZADUBZUCZBHZDCUD
+      ZVNWMUCCHDBUDZKZWAWIVSVPWRMZVRVQVSWSMZWGVQVRWTWEVSVPWRWEVSOZVPOWLWPWQWEVS
+      VPWLWEVPWKWJVNUAZVSWLVNBCWKWJWKUEZWJUEZUFVSWLXBWJWKAUGUHUIUJWEVSVPWPWEVPW
+      BWMUCZBHZDCUDZVSWPDVNBCUKVSXGWPVSXFWODCVSXEWNBVSWBAWMWHULSUMUNUIUJXAVPWQW
+      EVPWQMVSDVNBCUOUPUQURUSUTVAUQWIWAWRVBVSDLACBWJWKXDXCVCUPVDVEVFVGVHVIVJVKV
+      GVLVM $.
+      $( [11-Mar-2007] $) $( [5-Mar-2007] $)
+  $}
+
+  ${
+    $d J j $. $d K j $. $d F j $. $( ` j ` is dummy. $)
+    $( The converse of a homeomorphism is a homeomorphism. $)
+    cnvhmph $p |- ( ( ( J e. Top /\ K e. Top /\ F e. A ) /\ Rel F ) ->
+      ( F e. ( J Homeo K ) <-> `' F e. ( K Homeo J ) ) ) $
+      ( vj ctop wcel w3a wrel wa cuni ccnv wf1o cv cima wral chomeosm co wb
+      f1ocnvb bicomd adantl wceq dfrel2 biimp imaeq1d eleq1d ralbidv 3anbi12d
+      3ancomb syl5bb cvv id cnvexg 3anim123i 3com12 adantr eqid ishomeo syl
+      3bitr4rd ) CFGZDFGZBAGZHZBIZJZDKZCKZBLZMZVJENZOCGEDPZVJLZVLOZDGZECPZHZVIV
+      HBMZBVLOZDGZECPZVMHZVJDCQRGZBCDQRGZVGVKVQVMHWCVRVGVKVSVQWBVMVFVKVSSVEVFVS
+      VKVIVHBTUAUBVFVQWBSVEVFVPWAECVFVOVTDVFVNBVLVFVNBUCBUDUEUFUGUHUBUIVKVMVQUJ
+      UKVGVCVBVJULGZHZWDVRSVEWGVFVCVBVDWGVCVCVBVBVDWFVCUMVBUMBAUNUOUPUQEULVJDCV
+      HVIVHURZVIURZUSUTVEWEWCSVFEABCDVIVHWIWHUSUQVA $.
+      $( [5-Mar-2007] $) $( [15-Feb-2007] $)
+  $}
+
+  ${
+    $d J x $. $d K x $. $d f x $.
+    $d J f g $. $d K f g $. $( ` x f g ` are dummies $)
+    $( "Is homeomorph to" is symmetric. $)
+    hmphsyma $p |- ( ( J e. Top /\ K e. Top ) ->
+        ( J ~= K -> K ~= J ) ) $
+      ( vf vg vx ctop wcel wa cv chomeosm co wex chomeo wbr cvv wi visset w3a
+      cuni wf1o cima wral ccnv eqid ishomeo eleq1 cla4egv cnvexg 3ad2ant3
+      adantr wrel f1orel 3ad2ant1 adantl f1ocnv a1i wceq dfrel2 biimp eqcomd
+      imaeq1d eleq1d biimpd ad2antrr r19.20dva idd 3anim123d ex imp3a mpcom
+      3ancomb sylib wb syl3an3 3com12 mpbird sylc sylbid mp3an3 19.23adv hmph
+      ancoms 3imtr4d ) AFGZBFGZHZCIZABJKGZCLDIZBAJKZGZDLZABMNBAMNZWFWHWLCWDWEWG
+      OGZWHWLPCQWDWEWNRZWHASZBSZWGTZWGEIZUAZBGZEAUBZWGUCZWSUAAGEBUBZRZWLEOWGABW
+      PWQWPUDZWQUDZUEWOXEWLXCOGZXCWJGZWLWOXEHZWKXIDXCOWIXCWJUFUGWOXHXEWNWDXHWEW
+      GOUHZUIUJXJXIWQWPXCTZXDXCUCZWSUAZBGZEAUBZRZXJXLXPXDRZXQWGUKZXJXRXEXSWOWRX
+      BXSXDWPWQWGULUMUNXSWOXEXRXSWOXEXRPXSWOHZWRXLXBXPXDXDWRXLPXTWPWQWGUOUPXTXA
+      XOEAXSXAXOPWOWSAGXSXAXOXSWTXNBXSWGXMWSXSXMWGXSXMWGUQWGURUSUTVAVBVCVDVEXTX
+      DVFVGVHVIVJXLXPXDVKVLWOXIXQVMZXEWEWDWNYAWEWDXHYAWNEOXCBAWQWPXGXFUEXKVNVOU
+      JVPVQVHVRVSVTCABWAWEWDWMWLVMDBAWAWBWC $.
+      $( [11-Mar-2007] $) $( [8-Mar-2007] $)
+  $}
+
+
+  ${
+    $( "Is homeomorph to" is symmetric. $)
+    hmphsym $p |- ( ( J e. Top /\ K e. Top ) ->
+        ( J ~= K <-> K ~= J ) ) $
+      ( ctop wcel wa chomeo wbr hmphsyma wi ancoms impbid ) ACDZBCDZEABFGZBAFGZ
+      ABHMLONIBAHJK $.
+      $( [11-Mar-2007] $) $( [22-Feb-2007] $)
+  $}
+
+  ${
+    $d J x $. $d J f $.
+    $( "Is homeomorph to" is reflexive. $)
+    hmphre $p |- ( J e. Top -> J ~= J ) $
+      ( vf vx ctop wcel chomeo wbr wa cv chomeosm co wex cuni cvv wi uniexg
+      cid cres resiexg w3a wf1o cima wral ccnv f1oi a1i wss elssuni resiima
+      eleq1d biimprcd mpd rgen wceq adantl pm3.26 eqeltrd cnvresid imaeq1
+      ax-mp syl5eqel mpdan 3jca eqid ishomeo mpbird 3exp pm2.43i com12 eleq1
+      imbi2d cla4egv 19.37v sylib syl imp hmph anidms ) ADEZAAFGZVSVSHVTBIZAAJK
+      ZEZBLZVSVSWDVSAMZNEZVSWDOZADPWFQWERZNEZWGWENSWIVSWCOZBLZWGWIVSWHWBEZOZWKV
+      SWIWLVSWIWLOVSVSWIWLVSVSWITZWLWEWEWHUAZWHCIZUBZAEZCAUCZWHUDZWPUBZAEZCAUCZ
+      TWNWOWSXCWOWNWEUEUFWSWNWRCAWPAEZWPWEUGZWRWPAUHZXEWRXDXEWQWPAWEWPUIZUJUKUL
+      UMUFXCWNXBCAXDXEXBXFXDXEHZWQAXAXHWQWPAXEWQWPUNXDXGUOXDXEUPUQWTWHUNXAWQUNW
+      EURWTWHWPUSUTVAVBUMUFVCCNWHAAWEWEWEVDZXIVEVFVGVHVIWJWMBWHNWAWHUNWCWLVSWAW
+      HWBVJVKVLULVSWCBVMVNVOVOVPBAAVQVFVR $.
+      $( [5-Mar-2007] $) $( [25-Feb-2007] $)
+  $}
+
+  ${
+    $d J f g h $. $d K f g h $. $d L f g h $.
+    $( ` f g h ` are dummies. $)
+    $( "Is homeomorph to" is transitive. $)
+    hmphtr $p |- ( ( J e. Top /\ K e. Top /\ L e. Top ) ->
+      ( ( J ~= K /\ K ~= L ) -> J ~= L ) ) $
+      ( vf vg vh ctop wcel w3a cv chomeosm co wex chomeo wbr wa wi ccom cvv
+      eleq1 cla4egv coexg adantl cmphmp ancomsd imp sylc exp32 19.23adv com23
+      imp3a wb hmph 3adant2 sylibrd biimpd 3adant3 3adant1 syl2and ) AGHZBGHZCG
+      HZIZDJZABKLZHZDMZEJZBCKLZHZEMZACNOZABNOZBCNOZVCVGVKPFJZACKLZHZFMZVLVCVGVK
+      VRVCVFVKVRQDVCVKVFVRVCVJVFVRQEVCVJVFVRVHVDRZSHZVSVPHZVRVCVJVFPZPVQWAFVSSV
+      OVSVPTUAWBVTVCVHVDVIVEUBUCVCWBWAVCVFVJWAVDVHABCUDUEUFUGUHUIUJUIUKUTVBVLVR
+      ULVAFACUMUNUOUTVAVMVGQVBUTVAPVMVGDABUMUPUQVAVBVNVKQUTVAVBPVNVKEBCUMUPURUS
+      $.
+      $( [24-Mar-2007] $) $( [9-Mar-2007] $)
+  $}
+
+  ${
+    $d x y z $.
+    $( ` ~= ` is a relation whose domain is included in Top. $)
+    dmhmph $p |- dom ~= (_ Top $
+      ( vx vy vz chomeo cdm ctop cxp wss cv wcel wa chomeosm co wex copab w3a
+      df-hmph df-3an opabbii eqtr opabssxp eqsstr dmss ax-mp dmxpid sseqtr ) DE
+      ZFFGZEZFDUHHUGUIHDAIZFJZBIZFJZKCIUJULLMJCNZKZABOZUHDUKUMUNPZABOUPABCQUQUO
+      ABUKUMUNRSTUNABFFUAUBDUHUCUDFUEUF $.
+      $( [24-Mar-2007] $) $( [23-Mar-2007] $)
+
+    $( ` ~= ` is a relation whose range is included in Top. $)
+    rnhmph $p |- ran ~= (_ Top $
+      ( vx vy vz chomeo crn ctop cxp wss cv wcel wa chomeosm co wex copab w3a
+      df-hmph df-3an opabbii eqtr opabssxp eqsstr rnss ax-mp rnxpss sstri ) DEZ
+      FFGZEZFDUHHUGUIHDAIZFJZBIZFJZKCIUJULLMJCNZKZABOZUHDUKUMUNPZABOUPABCQUQUOA
+      BUKUMUNRSTUNABFFUAUBDUHUCUDFFUEUF $.
+      $( [24-Mar-2007] $) $( [23-Mar-2007] $)
+  $}
+
+  ${
+    dmhmpha.1 $e |- A e. V $.
+    $( A simple consequence of ~ dmhmph . A sort of lemma for ~ hmpher since it
+       is used several times by it. $)
+    dmhmpha $p |- ( A ~= B -> A e. Top ) $
+      ( chomeo wbr cdm wcel ctop breldm dmhmph sseli syl ) ABDEADFZGAHGABDCIMHA
+      JKL $.
+      $( [24-Mar-2007] $) $( [23-Mar-2007] $)
+  $}
+
+  ${
+    rnhmpha.1 $e |- A e. V $.
+    rnhmpha.2 $e |- B e. V $.
+    $( A simple consequence of ~ rnhmph .  A sort of lemma for ~ hmpher since
+       it is used several times by it. $)
+    rnhmpha $p |- ( A ~= B -> B e. Top ) $
+      ( chomeo wbr crn wcel ctop brelrn rnhmph sseli syl ) ABEFBEGZHBIHABECDJNI
+      BKLM $.
+      $( [24-Mar-2007] $) $( [23-Mar-2007] $)
+  $}
+
+
+  ${
+    $d x y z $.
+    $( "Is homeomorph" to is an equivalence relation. $)
+    hmpher $p |- Er ~= $
+      ( vx vy vz chomeo cv ctop wcel wa wbr visset dmhmpha rnhmpha jca
+      hmphsyma mpcom w3a adantr adantl 3jca hmphtr ster ) ABCDAEZFGZBEZFGZHUBUD
+      DIZUDUBDIUFUCUEUBUDAJZKZUBUDUGBJZLMUBUDNOUCUECEZFGZPUFUDUJDIZHZUBUJDIUMUC
+      UEUKUFUCULUHQULUEUFUDUJUIKRULUKUFUDUJUICJLRSUBUDUJTOUA $.
+      $( [24-Mar-2007] $) $( [22-Mar-2007] $)
+  $}
+
+  ${
+    hmphsymv.1 $e |- A e. V $.
+    hmphsymv.2 $e |- B e. V $.
+    $( A more general version of ~ hmphsym .  Certainly not a useful proof
+       (since it's a simple consequence of ~ hmpher ) but it shows that the
+       conditions of ~ hmphsym could (and should) be weakened. $)
+    hmphsymv $p |- ( A ~= B <-> B ~= A ) $
+      ( chomeo hmpher ersymb ) ABECDFG $.
+      $( [24-Mar-2007] $) $( [23-Mar-2007] $)
+
+  $}
+
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Initial and final topologies
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c subSp $. $( Function returning a subspace topology. $)
+
+  $( Extend class notation with the function returning a subspace topology. $)
+  csubsp $a class subSp $.
+
+  ${
+    $d x y z u $. $d x y z v $.
+    $( Function returning the subspace topology induced by the topology
+     ` y ` and the set ` x ` . $)
+    df-subsp $a |- subSp = { <. <. x , y >. , z >. |
+       ( y e. Top /\ z = { u | E. v e. y u = ( v i^i x ) } ) } $.
+  $}
+
+  ${
+    $d A u v x y z $. $d J u v x y z $.
+    subsp.1 $e |- J e. Top $.
+    subsp.2 $e |- A e. V $.
+    $( The subspace topology induced by the topology ` J ` and the set ` A ` .
+       To Norm: there is no reason to consider that ` J e. Top ` and ` A e. V `
+       should be premises.  I will transform them into antecedents as soon as
+       possible. $)
+    subsp $p |- ( subSp ` <. A , J >. ) = { u | E. v e. J u = ( v i^i A ) }
+      $
+      ( vx vy vz csubsp co cv cvv wcel ctop wa cin wceq wrex cab copab2 cop
+      cfv df-subsp wb visset ibar anbi1d ax-mp oprabbii eqtr opreq df-opr wss
+      id inss2 a1i eqsstrd pm4.71ri rexbii r19.42v bitr abbii abssexg eqeltr
+      ineq2 eqeq2d rexbidv abbidv rexeq1 eqid oprabval2 mp2an 3eqtr3 ) CDJKZCDG
+      LZMNZHLZONZPZILBLZALZVPQZRZAVRSZBTZRZPZGHIUAZKZCDUBJUCWAWBCQZRZADSZBTZJWI
+      RVOWJRJVSWGPZGHIUAWIGHIABUDWOWHGHIVQWOWHUEGUFVQVSVTWGVQVSUGUHUIUJUKCDJWIU
+      LUICDJUMCMNZDONWJWNRFEGHICDMOWFWNWIWLAVRSZBTWNWACUNZWMPZBTZMWMWSBWMWRWLPZ
+      ADSWSWLXAADWLWRWLWAWKCWLUOWKCUNWLWBCUPUQURUSUTWRWLADVAVBVCWPWTMNFWMBCMVDU
+      IVEVPCRZWEWQBXBWDWLAVRXBWCWKWAVPCWBVFVGVHVIVRDRWQWMBWLAVRDVJVIWIVKVLVMVN
+      $.
+      $( [4-Jun-2007] $) $( [29-May-2007] $)
+  $}
+
+  $(
+
+  @{
+    @( Basis of an initial topology. Typically X is a set, A a set
+    of indices, F an indexed function and T an indexed topology.
+    Bourbaki TG I.12 prop. 4. @)
+    bsintop @p |- ( ( A. x e. A ( F : X --> U. T /\ T e. Top ) ->
+    |^| { z | ( { y | A. x e. A E. o e. T y = ( `' F " o ) } (_ z
+       /\ A. a e. z A. b e. z ( a i^i b ) e. z ) } e. Bases ) @= ? @.
+  @}
+
+
+
+  @{
+    @( An initial topology makes continuous the functions used to
+    generate it. See ~ bsintop. Bourbaki TG I.12 prop. 4. @)
+    intopcn @p |- ( A. x e. A ( Fun F /\ T e. Top ) ->
+      F e. ( ( inTop ` <. A , <. F , T >. >. ) Cn T ) ) @= ? @.
+  @}
+
+    @( final topology. Based on Bourbaki TG I.14 prop. 6. @)
+    fintop @p |- ... @= ? @.
+
+  $)
+
+  ${
+    $d X x y z $. $d J x y z $.  $d R x y z $.
+    qusp.1 $e |- X = U. J $.
+    qusp.2 $e |- Er R $.
+    $( A quotient space is a topology. $)
+    qusp $p |- ( J e. Top ->
+      { x | ( x (_ ( X /. R ) /\ U. x e. J ) } e. Top ) $
+      ( vy vz ctop wcel cv cqs wss cuni wa cab wi wal cin wral wel simplr wceq
+      wex uniopnt simpll df-ral hba1 ax-17 eleq1a imim2i com23 imp3a a4s
+      19.23ad 19.21aiv sylbi adantl abss sylibr sylanc unun syl5eqel jca exp31
+      unissb syl5ibr r19.26 syl5ib ssab visset uniex sseq1 unieq eleq1d
+      anbi12d elab 3imtr4g ssinss1 ad2antrr uninqs ad2antrl inopnt 3expib
+      com12 impcom eqeltrd ex an4 exp3a imp weq elabf inex1 r19.21aiv cvv wb
+      cpw elpw bicomi a1i anbi1d abbidv ssab2 uniexg qsexg pwexg 3syl ssexg
+      syldan mpan istopg syl mpbird ) CIJZAKZDBLZMZXPNZCJZOZAPZIJZGKZYBMZYDNZYB
+      JZQZGRZYDHKZSZYBJZHYBTZGYBTZOZXOYIYNXOYHGXOAGUAZYAQARZYFXQMZYFNZCJZOZYEYG
+      XOYAAYDTZUUAYQXOXRAYDTZXTAYDTZOUUAUUBXOUUCUUDUUAXOYRUUDUUAQUUCXOYRUUDUUAX
+      OYROZUUDOZYRYTXOYRUUDUBUUFYJXSUCZYPOZAUDZHPZNZCYSXOUUJCMZUUKCJUUFUUJCUEXO
+      YRUUDUFUUFUUIYJCJZQZHRZUULUUDUUOUUEUUDYPXTQZARZUUOXTAYDUGUUQUUNHUUQUUHUUM
+      AUUPAUHUUMAUIUUPUUHUUMQAUUPUUGYPUUMUUPYPUUGUUMXTUUGUUMQYPXSCYJUJUKULUMUNU
+      OUPUQURUUIHCUSUTVAHAYDVBVCVDVEAYDXQVFVGUMXRXTAYDVHVIYAAYDUGVGYAAYDVJYAUUA
+      AYFYDGVKZVLXPYFUCZXRYRXTYTXPYFXQVMUUSXSYSCXPYFVNVOVPVQVRUPXOYDYBJZYMQZGRY
+      NXOUVAGXOYDXQMZYFCJZOZYMUUTXOUVDYMXOUVDOZYLHYBUVEYJXQMZYJNZCJZOZYKXQMZYKN
+      ZCJZOZYJYBJYLXOUVDUVIUVMQXOUVDUVIUVMXOUVBUVFOZUVCUVHOZOZUVMUVDUVIOXOUVPUV
+      MXOUVPOZUVJUVLUVPUVJXOUVBUVJUVFUVOYDYJXQVSVTURUVQUVKYFUVGSZCUVNUVKUVRUCXO
+      UVODYDYJBFWAWBUVPXOUVRCJZUVOXOUVSQUVNXOUVOUVSXOUVCUVHUVSYFUVGCWCWDWEURWFW
+      GVDWHUVBUVCUVFUVHWIVIWJWKYAUVIAYJUVIAUIHVKAHWLZXRUVFXTUVHXPYJXQVMUVTXSUVG
+      CXPYJVNVOVPWMYAUVMAYKUVMAUIYDYJUURWNXPYKUCZXRUVJXTUVLXPYKXQVMUWAXSUVKCXPY
+      KVNVOVPWMVRWOWHYAUVDAYDUVDAUIUURAGWLZXRUVBXTUVCXPYDXQVMUWBXSYFCXPYDVNVOVP
+      WMVIUPYMGYBUGUTVDXOYBWPJYCYOWQXOYBXPXQWRZJZXTOZAPZWPXOYAUWEAXOXRUWDXTXRUW
+      DWQXOUWDXRXPXQAVKWSWTXAXBXCUWFUWCMZXOUWFWPJZXTAUWCXDUWGXOUWCWPJZUWHUWGXOO
+      DWPJZXQWPJUWIXOUWJUWGXOCNWPDCIXEEVCURDBXFXQWPXGXHUWFUWCWPXIXJXKWGGHWPYBXL
+      XMXN $.
+      $( [4-Jun-2007] $) $( [4-Jun-2007] $)
+  $}
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Filters
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c Fil $.
+
+  $( Extend class notation with the class of all filters. $)
+  cfil $a class Fil $.
+
+  ${
+    $d f x y $.
+    $( The class of all filters. Bourbaki TG I.36 def. 1 axioms FI, FIIa,
+    FIIb, FIII.  This concept is used to define the concept of limit in
+    the general case. The notion was invented by Cartan in 1937 and made
+    famous by Bourbaki in his treatise. A notion similar to the notion of
+    filter is the concept of net invented by Moore and Smith in 1922. $)
+    df-fil $a |- Fil = { f | ( ( -. (/) e. f /\ U. f e. f ) /\
+      A. x A. y ( ( x e. f /\ y (_ U. f  /\ x (_ y ) -> y e. f ) /\
+      A. x e. f A. y e. f ( x i^i y ) e. f ) } $.
+  $}
+
+  ${ $d F f x y $. $d X f $.
+    isfil.1 $e |- X = U. F $.
+    $( The predicate "is a filter." $)
+    isfil $p |- ( F e. A -> ( F e. Fil <-> ( ( -. (/) e. F /\ X e. F ) /\
+    A. x A. y ( ( x e. F /\ y (_ X /\ x (_ y ) -> y e. F ) /\
+    A. x e. F A. y e. F ( x i^i y ) e. F ) ) ) $
+      ( vf c0 cv wcel wn cuni wa wss w3a wi wal cin wral cfil wceq eleq2
+      negbid unieq eqcomi syl6eq id eleq12d anbi12d wb sseq2 syl 3anbi12d
+      imbi12d 2albidv raleqd 3anbi123d df-fil elab2g ) HGIZJZKZUTLZUTJZMZAIZUTJ
+      ZBIZVCNZVFVHNZOZVHUTJZPZBQAQZVFVHRZUTJZBUTSZAUTSZOHDJZKZEDJZMZVFDJZVHENZV
+      JOZVHDJZPZBQAQZVODJZBDSZADSZOGDTCUTDUAZVEWBVNWHVRWKWLVBVTVDWAWLVAVSUTDHUB
+      UCWLVCEUTDWLVCDLZEUTDUDEWMFUEUFZWLUGUHUIWLVMWGABWLVKWEVLWFWLVGWCVIWDVJUTD
+      VFUBWLVCEUAVIWDUJWNVCEVHUKULUMUTDVHUBUNUOVQWJAUTDVPWIBUTDUTDVOUBUPUPUQABG
+      URUS $.
+      $( [20-Jul-2007] $) $( [20-Jul-2007] $)
+  $}
+
+  ${
+    $d F x y $.
+    $( The empty set doesn't belong to a filter. $)
+    filesn $p |- ( F e. Fil -> -. (/) e. F ) $
+      ( vx vy cfil wcel c0 wn cuni wa cv wss w3a wi wal cin wral eqid isfil
+      ibi 3simp1d pm3.26d ) ADEZFAEGZAHZAEZUBUCUEIZBJZAECJZUDKUGUHKLUHAEMCNBNZU
+      GUHOAECAPBAPZUBUFUIUJLBCDAUDUDQRSTUA $.
+      $( [20-Jul-2007] $) $( [20-Jul-2007] $)
+  $}
+
+  ${ $d A x y $. $d B y $. $d F x y $. $d X x y $.
+    fillsb.1 $e |- X = U. F $.
+    $( A filter is closed under taking supersets. $)
+    fillsb $p |- ( F e. Fil -> ( ( A e. F /\
+      B (_ X /\ A (_ B ) -> B e. F ) ) $
+      ( vx vy cfil wcel wss w3a wi cvv cuni uniexg eqcomi eleq1i sylib cpw wa
+      elpw2g bicomd anbi2d biimpd 3simpa imim1i syl cv wceq eleq1 sseq1
+      3anbi13d imbi1d imbi2d sseq2 3anbi23d imbi12d wal c0 wn cin wral isfil
+      ibi 3simp2d 19.21bi vtocl2g syl6 com23 pm2.43i pm2.43d ) CHIZACIZBDJZABJZ
+      KZBCIZVLVPVPVQLZLZVLDMIZVLVSLVLCNZMIVTCHOWADMDWAEPQRVTVPVLVRVTVPVMBDSZIZT
+      ZVLVRLZVTVMVNTZWDLVPWDLVTWFWDVTVNWCVMVTWCVNBDMUAUBUCUDVPWFWDVMVNVOUEUFUGV
+      LFUHZCIZGUHZDJZWGWIJZKZWICIZLZLVLVMWJAWIJZKZWMLZLWEFGABCWBWGAUIZWNWQVLWRW
+      LWPWMWRWHVMWKWOWJWGACUJWGAWIUKULUMUNWIBUIZWQVRVLWSWPVPWMVQWSWJVNWOVOVMWIB
+      DUKWIBAUOUPWIBCUJUQUNVLWNGVLWNGURZFVLUSCIUTDCITZWTFURZWGWIVACIGCVBFCVBZVL
+      XAXBXCKFGHCDEVCVDVEVFVFVGVHVIUGVJVK $.
+      $( [20-Jul-2007] $) $( [20-Jul-2007] $)
+  $}
+
+  ${ $d F x y $.
+    filusb.1 $e |- X = U. F $.
+    $( The underlying set belongs to the filter. $)
+    filusb $p |- ( F e. Fil -> X e. F ) $
+      ( vx vy cfil wcel c0 wn wa cv wss w3a wi wal cin wral isfil ibi 3simp1d
+      pm3.27d ) AFGZHAGIZBAGZUBUCUDJZDKZAGEKZBLUFUGLMUGAGNEODOZUFUGPAGEAQDAQZUB
+      UEUHUIMDEFABCRSTUA $.
+      $( [20-Jul-2007] $) $( [20-Jul-2007] $)
+  $}
+
+  ${ $d A x y $. $d B y $. $d F x y $.
+  $( A filter is closed under taking intersections. $)
+  filint $p |- ( ( F e. Fil /\ A e. F /\ B e. F ) -> ( A i^i B ) e. F ) $
+    ( vx vy cfil wcel cin wa wi cv wral c0 wn cuni wss w3a wal eqid isfil
+    biimpd imp 3simp3d ex wceq wb ineq1 eleq1 syl ineq2 rcla42v com12 syl6
+    pm2.43i 3impib ) CFGZACGZBCGZABHZCGZUPUQURIZUTJZUPUPDKZEKZHZCGZECLDCLZVBUPU
+    PVGUPUPIMCGNCOZCGIZVCCGVDVHPVCVDPQVDCGJERDRZVGUPUPVIVJVGQZUPUPVKDEFCVHVHSTU
+    AUBUCUDVAVGUTVFUTAVDHZCGZDEABCCVCAUEVEVLUEVFVMUFVCAVDUGVEVLCUHUIVDBUEVLUSUE
+    VMUTUFVDBAUJVLUSCUHUIUKULUMUNUO $.
+    $( [20-Jul-2007] $) $( [20-Jul-2007] $)
+  $}
+
+  $( The intersection of two elements of a filter can't be empty. $)
+  fipfil $p |- ( F e. Fil -> ( ( A e. F /\ B e. F ) ->
+    ( A i^i B ) =/= (/) ) ) $
+    ( cfil wcel wa cin c0 wceq wn wne nelneq filint 3expb filesn adantr sylanc
+    ex df-ne syl6ibr ) CDEZACEZBCEZFZABGZHIJZUEHKUAUDUFUECEZHCEJZUFUAUDFUEHCLUA
+    UBUCUGABCMNUAUHUDCOPQRUEHST $.
+    $( [19-Sep-2007] $) $( [16-Sep-2007] $)
+
+  ${ $d A x y $. $d F x y $.
+    $( A filter has the finite intersection property. NEW Bourbaki TG I.36 note
+    of def. 1. $)
+    fipfil2 $p |- ( F e. Fil -> 
+    ( ( A (_ F /\ A =/= (/) /\ E. x e. om A ~~ x ) -> |^| A =/= (/) ) ) $
+      ( vy cfil wcel wss c0 wne cv cen wbr com wrex w3a cint wceq wn wi wa cvv 
+      ssexg wal sseq1 neeq1 breq1 rexbidv 3anbi123d wb inteq eqeq1 negbid syl 
+      imbi12d cla4gv nelneq cin wral cuni eqid isfil biimpa 3simp3d anidms 
+      fiint sylib 19.21bi imp filesn adantr sylanc ex 19.21aiv syl5 com23 
+      com14 pm2.43i com13 3ad2ant1 com12 df-ne syl6ibr ) CEFZBCGZBHIZBAJZKLZAMN
+      ZOZBPZHQZRZWJHIWIWCWLWIWCWLSZWDWEWIWMSZWHWCWIWDWLWCWIWDWLSSWDWCWIWCWLWDWC
+      WNWDWCTBUAFZWNBCEUBWOWCWIWLWODJZCGZWPHIZWPWFKLZAMNZOZWPPZHQZRZSZDUCWIWLSZ
+      WCXEXFDBUAWPBQZXAWIXDWLXGWQWDWRWEWTWHWPBCUDWPBHUEXGWSWGAMWPBWFKUFUGUHXGXB
+      WJQZXDWLUIWPBUJXHXCWKXBWJHUKULUMUNUOWCXEDWCXAXDXBCFZHCFRZXDWCXATXBHCUPWCX
+      AXIWCXAXISZDWCWPWFUQCFACURDCURZXKDUCWCXLWCWCTXJCUSZCFTZWPCFWFXMGWPWFGOWFC
+      FSAUCDUCZXLWCWCXNXOXLODAECXMXMUTVAVBVCVDDACVEVFVGVHWCXJXACVIVJVKVLVMVNVOU
+      MVLVPVQVRVSVQVTWJHWAWB $.
+      $( [?] $) $( [20-Sep-2007] $) 
+  $}
+
+
+  $( The empty set is not a filter. NEW Bourbaki TG I.36 def 1 note. $)
+  emnfil $p |- -. (/) e. Fil $
+    ( c0 cfil wcel cuni noel eqid filusb mto ) ABCADZACIEAIIFGH $.
+
+  ${ $d A x y $. $d B x y $.
+    $( A singleton is a filter. Bourbaki TG I.36, example 1.  $)
+    oefil2 $p |- ( ( A e. B /\ A =/= (/) ) -> { A } e. Fil ) $
+      ( vx vy wcel c0 wne wa csn wn cuni cv wss w3a wi wal cin wral cfil elsni
+      eqcomd necon3ai adantl wceq unisng adantr snidg eqeltrd jca sseq2d sseq1
+      eqss biimpr ancoms elsn sylibr ex syl6bi com3r com23 syl5ib 3impd
+      19.21aivv ineq12 inidm syl6eq visset inex1 elsnc syl2anb rgen2 a1i 3jca
+      cvv wb snex eqid isfil ax-mp ) ABEZAFGZHZFAIZEZJZWCKZWCEZHZCLZWCEZDLZWFMZ
+      WIWKMZNWKWCEZOZDPCPZWIWKQZWCEZDWCRCWCRZNZWCSEZWBWHWPWSWBWEWGWAWEVTWDAFWDF
+      AFATUAUBUCWBWFAWCVTWFAUDWAABUEZUFVTAWCEWAABUGUFUHUIVTWPWAVTWOCDVTWJWLWMWN
+      VTWIAUDZWLWMWNOZOWJVTWLXCXDVTWLWKAMZXCXDOVTWFAWKXBUJXCWMXEWNXCWMAWKMZXEWN
+      OWIAWKUKXFXEWNXFXEHWKAUDZWNXEXFXGXGXEXFHWKAULUMUNDAUOZUPUQURUSURUTCAUOZVA
+      VBVCUFWSWBWRCDWCXCXGWRWJWNXCXGHZWQAUDWRXJWQAAQAWIAWKAVDAVEVFWQAWIWKCVGVHV
+      IUPXIXHVJVKVLVMWCVNEXAWTVOAVPCDVNWCWFWFVQVRVSUP $.
+      $( [19-Sep-2007] $) $( [16-Sep-2007] $)
+  $}
+
+  ${
+    $d J x y $. $d S x y $. $d X x y $.
+    neifil.1 $e |- X = U. J $.
+    $( The neighborhoods of a non empty set is a filter. 
+    Bourbaki TG I.36, example 2. $)
+    neifil $p |- ( ( J e. Top /\ S (_ X /\ S =/= (/) ) -> 
+      ( ( nei ` J ) ` S ) e. Fil ) $
+      ( vx vy ctop wcel wss c0 wne w3a cnei cfv wn cuni wa cv wi wal cin wral
+      cfil esnnei 3adant2 unnei tpnei biimpa eqeltrd 3adant3 jca wceq sseq2
+      ssnei2 exp43 adantr com14 syl6bi com23 3impd mpcom 19.21aivv innei
+      3expib 3ad2ant1 r19.21aivv 3jca cvv wb fvex eqid isfil ax-mp sylibr ) BGH
+      ZACIZAJKZLZJABMNZNZHOZVTPZVTHZQZERZVTHZFRZWBIZWEWGIZLZWGVTHZSZFTETZWEWGUA
+      VTHZFVTUBEVTUBZLZVTUCHZVRWDWMWOVRWAWCVOVQWAVPABUDUEVOVPWCVQVOVPQZWBCVTABC
+      DUFZVOVPCVTHABCDUGUHUIUJUKVRWLEFVOVPWLVQWBCULZWRWLWSWTWJWRWKWTWFWHWIWRWKS
+      ZWTWHWFWIXASZWTWHWGCIZWFXBSWBCWGUMWRWFWIXCWKVOWFWIXCWKSSSVPVOWFWIXCWKABWG
+      WECDUNUOUPUQURUSUTUSVAUJVBVRWNEFVTVTVOVPWFWKQWNSVQVOWFWKWNABWGWEVCVDVEVFV
+      GVTVHHWQWPVIAVSVJEFVHVTWBWBVKVLVMVN $.
+      $( [19-Sep-2007] $) $( [18-Sep-2007] $)
+  $}
+
+
+  ${
+  $d F x y $. $d G x y $.
+  $( The intersection of two filters is a filter. Use  ~ fiint to extend this
+  property to the intersection of a finite set of filters. Bourbaki TG I.36
+  par. 3. $)
+  filintf $p |- ( ( F e. Fil /\ G e. Fil /\ U. F = U. G ) ->
+      ( F i^i G ) e. Fil ) $
+    ( vx vy cfil wcel cuni wceq w3a cin wi cvv c0 wn wa cv wss wal wral eqid
+    isfil filesn elin pm3.26bd nsyl 3ad2ant1 ineq2 inidm syl5eqr 3ad2ant3
+    filusb eleq1 biimpr expcom syl6bir com3l syl syl5com 3imp eqeltrrd elssuni
+    uniin jctil eqss sylibr eqeltrd jca fillsb 3ad2ant2 anim12d biimp sstr2
+    mpi ssin pm4.24 3anim123i an6 syl5 syl6ibr 19.21aivv filint 3expib
+    im2anan9 com12 an4s syl2anb 3adant3 r19.21aivv 3jca syl5cbir inex1g
+    pm2.43i ) AEFZBEFZAGZBGZHZIZABJZEFZWMWNWRWTKWQWRWSLFZWTWMXAWTMWSFZNZWSGZWSF
+    ZOZCPZWSFZDPZXDQZXGXIQZIZXIWSFZKZDRCRZXGXIJZWSFZDWSSCWSSZIWRCDLWSXDXDTUAWRX
+    FXOXRWRXCXEWMWNXCWQWMMAFZXBAUBXBXSMBFMABUCUDUEUFWRXDWOWPJZWSWRXDXTQZXTXDQZO
+    XDXTHWRYBYAWRXTWSFYBWRWOXTWSWQWMWOXTHWNWQWOWOJXTWOWOWPWOUGWOUHUIUJWMWNWQWOW
+    SFZWNWOAFZWQYCKZWMWNWPBFZYDYEKBWPWPTZUKWQYFYDYCWQYFWOBFZYDYCKWOWPBULYDYHYCY
+    CYDYHOWOABUCUMUNUOUPUQAWOWOTZUKURUSUTZXTWSVAUQABVBZVCXDXTVDVEYJVFVGWRXNCDWR
+    XLXIAFZXIBFZOZXMWRXGAFZXIWOQZXKIZXGBFZXIWPQZXKIZOZYNXLWRYQYLYTYMWMWNYQYLKWQ
+    XGXIAWOYIVHUFWNWMYTYMKWQXGXIBWPYGVHVIVJXLYOYROZYPYSOZXKXKOZIUUAXHUUBXJUUCXK
+    UUDXHUUBXGABUCZVKXJXIXTQZUUCXJYAUUFYKXIXDXTVLVMXIWOWPVNVEXKUUDXKVOVKVPYOYPX
+    KYRYSXKVQVEVRXIABUCZVSVTWRXQCDWSWSWMWNXHXMOZXQKWQUUHWMWNOZXQUUBYNUUIXQKZXHX
+    MYOYLYRYMUUJUUIYOYLOZYRYMOZOZXQUUIUUMXPAFZXPBFZOXQWMUUKUUNWNUULUUOWMYOYLUUN
+    XGXIAWAWBWNYRYMUUOXGXIBWAWBWCXPABUCVSWDWEUUEUUGWFWDWGWHWIWJABEWKURUFWL $.
+    $( [19-Sep-2007] $) $( [17-Sep-2007] $)
+  $}
+
+  $( Filter generated by a subbasis ` A `. NEW $)
+  fgsb2 $p |- ( ( A (_ P~ X /\ X e. B /\ -. (/) e. ( fi ` A ) ) -> 
+    { x e. P~ X | E. y e. ( fi ` A ) y (_ x } e. Fil ) $= ? $.
+
+  $( Filter generated by a subbasis ` A `. NEW $)
+  fgsb3 $p |- ( ( ( A (_ P~ X /\ X e. B /\ -. (/) e. ( fi ` A ) ) /\ X e. A ) 
+    -> { x e. P~ X | E. y e. ( fi ` A ) y (_ x } e. Fil ) $= ? $.
+
+
+  ${
+    $( Filter generated by a subbasis ` A `. NEW $)
+    fgsb4.1 $e |- A e. V $.
+    fgsb4.2 $e |- B = { x | E. y
+                  ( y (_ A /\ E. z e. om y ~~ z /\ x = |^| y ) } $.
+    fgsb4.3 $e |- A (_ P~ X $.
+    fgsb4.4 $e |- X e. V $.
+    fgsb4.5 $e |- -. (/) e. B $.
+    fgsb4.6 $e |- X e A $.
+    fgsb4 $p |- { x e. P~ X | E. y e. B y (_ x } e. Fil $= ? $.
+  $}
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Limits
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c fLim $.
+  cflim2 $a class fLim $.
+  ${
+    $d j x f y $.
+    $( Define a function on topologies whose value is a relation between
+       filters and their limits. $)
+    df-flim $a |- fLim = { <. j , x >. | ( j e. Top /\ x = { <. f , y >. |
+      ( f e. Fil /\ U. f = U. j /\ ( ( nei ` j ) ` y ) (_ f ) } ) } $.
+  $}
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Separated spaces: T0, T1, T2 (Hausdorff) ...
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c T0 $. $( The class of all the T0-spaces. $)
+  $c T1 $. $( The class of all the T1-spaces. $)
+
+  $( Extend class notation to include T0-spaces. $)
+  ct0 $a class T0 $.
+  $( Extend class notation to include T1-spaces. $)
+  ct1 $a class T1 $.
+
+  ${
+    $d a b x u $.
+    $( The class of all T0-spaces also called Kolmogorov spaces.
+    Morris. Topology without tears. p. 30 ex. 5. $)
+    df-t0 $a |- T0 = { x e. Top | A. a e. U. x A. b e. U. x E. u e. x
+      ( ( a e. u /\ -. b e. u ) \/ ( -. a e. u /\ b e. u ) ) } $.
+  $}
+
+$(
+
+  @{
+    ist0.1 @e |- X = U. J @.
+    @( The predicate ` J ` is T0. @)
+    ist0 @p |- ( J e. T1 <-> ( J e. Top /\ A. a e. X A. b e. X E. u e. J
+      ( ( a e. u /\ -. b e. u ) \/ ( -. a e. u ) /\ ( b e. u ) ) ) ) @= ? @.
+  @}
+
+$)
+
+  ${
+    $d x a $.
+    $( The class of all T1-spaces also called Frechet spaces.
+    Morris. Topology without tears. p. 30 ex. 3. $)
+    df-t1 $a |- T1 = { x e. Top | A. a e. U. x { a } e. ( Clsd ` x ) } $.
+  $}
+
+  ${
+    $d J a x $. $d X x $.
+    ist1.1 $e |- X = U. J $.
+    $( The predicate ` J ` is T1. $)
+    ist1 $p |- ( J e. T1 <->
+      ( J e. Top /\ A. a e. X { a } e. ( Clsd ` J ) ) ) $
+      ( vx cv csn ccld cfv wcel cuni wral ctop ct1 wceq unieq syl6eqr eleq2d
+      fveq2 imbi12d ralbidv2 df-t1 elrab2 ) CFZGZEFZHIZJZCUFKZLUEAHIZJZCBLEAMNU
+      FAOZUHUKCUIBULUDUIJUDBJUHUKULUIBUDULUIAKBUFAPDQRULUGUJUEUFAHSRTUAECUBUC
+      $.
+      $( [18-Jun-2007] $) $( [7-Jun-2007] $)
+  $}
+
+  ${
+    $d A x $.
+    dtopcl.1 $e |- A e. V $.
+    $( The open sets of a discrete topology are closed and its closed sets
+       are open. $)
+    dtopcl $p |- P~ A = ( Clsd ` P~ A ) $
+      ( vx cpw ccld cfv ctop wcel cv wb distop cuni wss cdif wa eqid isclsd
+      unipw sseq2i biimp visset elpw sylibr adantr elssuni difss sseqtr cvv
+      eqeltr difexg ax-mp mpbir jctir impbi syl6rbb eqriv ) CADZUQEFZUQGHZCIZUQ
+      HZUTURHZJABKUSVBUTUQLZMZVCUTNZUQHZOZVAUTUQVCVCPQVGVAVDVAVFVDUTAMZVAVDVHVC
+      AUTARZSTUTACUAUBUCUDVAVDVFUTUQUEVFVEAMVEVCAVCUTUFVIUGVEAVCUHHVEUHHVCAUHVI
+      BUIVCUTUHUJUKUBULUMUNUOUKUP $.
+      $( [18-Jun-2007] $) $( [7-Jun-2007] $)
+  $}
+
+  ${
+    $d J x $.
+    $( A Hausdorff space is a T1 space. $)
+    t2t1 $p |- ( J e. Haus -> J e. T1 ) $
+      ( vx cha wcel ctop cv csn ccld cfv cuni wral wa ct1 haustop eqid snclsd
+      r19.21aiva jca ist1 sylibr ) ACDZAEDZBFZGAHIDZBAJZKZLAMDUAUBUFANUAUDBUEUC
+      AUEUEOZPQRAUEBUGST $.
+      $( [18-Jun-2007] $) $( [11-Jun-2007] $)
+  $}
+
+  $( A Hausdorff space is a T1 space. $)
+  hst1 $p |- Haus (_ T1 $
+    ( vx cha ct1 wss cv wcel wi dfss2 t2t1 mpgbir ) BCDAEZBFKCFGAABCHKIJ $.
+    $( [20-Jul-2007] $) $( [18-Jun-2007] $)
+
+  ${
+    $d A u v x y $.
+    dtt2.1 $e |- A e. V $.
+    $( A discrete topology is Hausdorff. Morris. Topology without tears.
+       p.72. ex. 13. $)
+    dtt2 $p |- P~ A e. Haus $
+      ( vx vy vu vv cpw cha wcel ctop cv wne wel cin c0 wceq w3a wrex wi cuni
+      wral eqid ishaus distop wa csn visset snid a1i disjsn2 3jca eleq2 ineq1
+      eqeq1d 3anbi13d imbi2d ineq2 3anbi23d rcla42ev 3expia unipw eleq2i biimp
+      snelpw sylib syl2an mpi r19.37av r19.22si 3syl rgen2 mpbir2an ) AGZHIVMJI
+      CKZDKZLZCEMZDFMZEKZFKZNZOPZQZFVMRZEVMRSZDVMTZUACWFUACDFEVMWFWFUBUCABUDWEC
+      DWFVNWFIZVOWFIZUEZVPWCSZFVMRZEVMRZVPWDSZEVMRWEWIVPVNVNUFZIZVOVOUFZIZWNWPN
+      ZOPZQZSZWLVPWOWQWSWOVPVNCUGZUHUIWQVPVODUGZUHUIVNVOUJUKWNVMIZWPVMIZXAWLSWG
+      WHXDXEXAWLWJXAVPWOVRWNVTNZOPZQZSEFWNWPVMVMVSWNPZWCXHVPXIVQWOWBXGVRVSWNVNU
+      LXIWAXFOVSWNVTUMUNUOUPVTWPPZXHWTVPXJVRWQXGWSWOVTWPVOULXJXFWROVTWPWNUQUNUR
+      UPUSUTWGVNAIZXDWGXKWFAVNAVAZVBVCVNAXBVDVEWHVOAIZXEWHXMWFAVOXLVBVCVOAXCVDV
+      EVFVGWKWMEVMVPWCFVMVHVIVPWDEVMVHVJVKVL $.
+      $( [14-Jul-2007] $) $( [24-Jun-2007] $)
+  $}
+
+  ${
+    dtt1.1 $e |- A e. V $.
+    $( A discrete topology is T1. Morris. Topology without tears. $)
+    dtt1 $p |- P~ A e. T1 $
+      ( cpw cha wcel ct1 dtt2 t2t1 ax-mp ) ACZDEJFEABGJHI $.
+      $( [18-Jun-2007] $) $( [8-Jun-2007] $)
+   $}
+
+$(
+
+  @( A T1-space is a T0 space. @)
+  t1t0 @p |- T1 (_ T0 @= ? @.
+
+$)
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Connectedness
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c Con $.
+  ccon $a class Con $.
+  $( Connected spaces are topologies for which only ` (/) ` and ` U. j ` are
+     both open and closed. $)
+  df-con $a |- Con = { j e. Top | ( j i^i ( Clsd ` j ) ) = { (/) , U. j } } $.
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Standard topology on RR
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $( Closed intervals are closed sets of the standard topology on ` RR ` . $)
+  clicls $p |- ( ( A e. RR /\ B e. RR ) -> ( A [,] B ) e.
+  ( Clsd ` ( topGen ` ran (,) ) ) ) $
+    ( cr wcel wa cicc co cioo crn ctg cfv ccld cdif cmnf cpnf cpr cuni cdrci
+    ctop wss retop iooretop pm3.2i oprex prss mpbi a1i uniopnt syl eqeltrd wb
+    clsre jctil uniretop eqcomi isclsd2 mpbird ) ACDBCDEZABFGZHIJKZLKDZCUSMZUTD
+    ZURVBNAHGZBOHGZPZQZUTABRURUTSDZVFUTTZEZVGUTDVJURVHVIUAVDUTDZVEUTDZEVIVKVLNA
+    UBBOUBUCVDVEUTNAHUDBOHUDUEUFUCUGVFUTUHUIUJURVHUSCTZEVAVCUKURVMVHABULUAUMUSU
+    TCUTQCUNUOUPUIUQ $.
+    $( [14-Sep-2007] $) $( [14-Sep-2007] $)
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Calculus
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+ $(
+
+ @{
+   cnvtr.1 @e |- ( F ` A ) = ( A + B ) @.
+   @( converse of a translation. @)
+  cnvtr @p |- ( `' F ` A ) = ( A - B ) @= ? @.
+  @}
+
+  $)
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Standard topology of intervals of RR
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+
+  ${ $d A x y $. $d B x y $.
+    $( The underlying set of the standard topology on an open interval is the
+       open interval itself. $)
+    stoi $p |- <. ( A (,) B ) , ( subSp ` <. ( A (,) B ) ,
+      ( topGen ` ran (,) ) >. ) >. e. TopSp $
+      ( vy vx cioo co crn ctg cfv cop csubsp ctps wcel ctop cuni wceq istps cv
+      cin wrex cab retop oprex subsp subtop ax-mp eqeltr wss cr ioossre
+      uniretop sseqtr4 dfss mpbi incom ntunte 3eqtr unieqi eqtr4 mpbir2an ) ABE
+      FZVAEGHIZJKIZJLMVCNMVAVCOZPVAVCQVCCRDRVASPDVBTCUAZNDCVAVBUBABEUCUDZVBNMVE
+      NMUBCDVBVAUEUFUGVAVEOZVDVAVAVBOZSZVHVASVGVAVHUHVAVIPVAUIVHABUJUKULVAVHUMU
+      NVAVHUOCDVBVAUPUQVCVEVFURUSUT $.
+      $( [14-Sep-2007] $) $( [31-May-2007] $)
+  $}
+
+  $(
+
+   @( The subspace topology induced on an open interval ` ( A (,) B ) ` by
+      the standard topology of ` RR ` is the topology generated by the open
+      intervals included in ` ( A (,) B ) ` . Bourbaki TG IV.5 prop. 5. @)
+   sbtgno @p |- ( subSp ` <. ( A (,) B ) , ( topGen ` ran (,) ) >. )
+     ( topGen ` { x | ( x (_ ( A (,) B ) /\ x e. ran (,) ) } ) @= ? @.
+
+  @{
+    @d x A B F @.
+    hmpntlem1.1 @e |- A. x e. ( 0 (,) 1 ) ( F ` x ) = A ( 1 - x ) + B x @.
+    hmpntlem1.2 @e |- A e. RR @.
+    hmpntlem1.3 @e |- B e. RR @.
+    hmpntlem1.4 @e |- A < B @.
+    hmpntlem1.5 @e |- F Fn ( 0 (,) 1 ) @.
+    hmpntlem1 @p |- F : ( 0 (,) 1 ) -1-1-onto-> ( A (,) B ) @
+      ( cc0 c1 cioo co wf1o wfn ccnv wfun crn wceq w3a 3pm3.2i f1o2 mpbir ) JKL
+      MZBCLMZDNDUDOZDPQZDRUESZTUFUGUHI??UAUDUEDUBUC @.
+      @( [ ? ] @) @( [22-Apr-2007] @)
+  @}
+
+
+
+  @( Any open interval is homeomorph to ` ( 0 (,) 1 ) ` . @)
+  hmpnt @p |- ( ( A e. RR /\ B e. RR ) ->
+    ( subSp ` <. ( A (,) B ) , ( topGen ` ran (,) ) >. ) ~
+    ( subSp ` <. ( 0 (,) 1 ) , ( topGen ` ran (,) ) >. ) ) @
+    ( vf cr wcel wa hmph mpbird syl ) ADEBDEF???????C??GHI @.
+    @( [ ? ] @) @( [17-Apr-2007] @)
+
+
+  @( An open interval of ` RR ` is homeomorph to ` RR ` . @)
+
+  @{
+    @( A lemma @)
+    clhomrlem1 @p |- ( stdtop ` ( -oo (,) 0 ) ) ~
+      ( stdtop ` ( - 1 (,) 0 ) ) @= ? @.
+
+    clhomrlem2 @p |- ( stdtop ` ( 0 (,) +oo ) ) ~= ( stdtop ` ( 0 (,) 1 ) )
+      @= ? @.
+
+    clhomrlem3 @p |- ( stdtop ` ( -oo (,) +oo ) ) ~
+      ( stdtop ` ( - 1 (,) 1 ) ) @= ? @.
+
+    clhomrlem4 @p |- ( ( A e. RR /\ B e. RR ) ->
+      ( stdtop ` ( A (,) B ) ) ~= ( stdtop ` ( 0 (,) 1 ) ) ) @= ? @.
+  @}
+
+$)
+
+$(
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+              Categories
+* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+$)
+
+  $c Gra $. $( The class of all graphs. $)
+  $c Alg $. $( The class of all algebras used by Ded and Cat. $)
+  $c Ded $. $( The class of all deductive systems. $)
+  $c Cat $. $( The class of all categories. $)
+
+  $c dom_ $. $( Function returning the function domain of a category. Despite its name 
+  the domain of a category is not the same concept than the domain of a relation. $)
+  $c cod_ $. $( Function returning the function codomain of a category. $)
+  $c id_ $. $( Function returning the function identity of a category. $)
+  $c o_ $. $( Function returning the composition of morphisms of a category. $)
+
+  $c Epi $. $( The class of all epimorphisms. $)
+  $c Monic $. $( The class of all monomorphisms. $)
+  $c Iso $. $( The class of all isomorphisms. $)
+
+  $( Extend class notation with the class of  graphs. $)
+  cgra $a class Gra $.
+
+  $( Extend class notation with the class of  algebras used by ` Cat ` and ` Ded `. $)
+  calg $a class Alg $.
+
+  $( Extend class notation with the class of deductive systems. $)
+  cded $a class Ded $.
+
+  $( Extend class notation with the class of categories. $)
+  ccat $a class Cat $.
+
+  $( Extend class notation with the function returning the function dom of a
+     category. $)
+  cdom_ $a class dom_ $.
+
+  $( Extend class notation with the function returning the function cod of a
+     category. $)
+  ccod_ $a class cod_ $.
+
+  $( Extend class notation with the function returning the function id of a
+     category. $)
+  cid_ $a class id_ $.
+
+  $( Extend class notation with the function returning the composition of
+     morphisms of a category. $)
+  co_ $a class o_ $.
+
+  $( Extend class notation with the class of all epimorphisms. $)
+  cepi $a class Epi $.
+
+  $( Extend class notation with the class of all monomorphisms. $)
+  cmon $a class Monic $.
+
+  $( Extend class notation with the class of all isomorphisms. $)
+  ciso $a class Iso $.
+
+
+  ${
+    $d d c $.
+    $( Definition of a graph. A graph is a couple of function whose domains are equal. 
+    This definition is more appropriate to work with categories than df-sgra because 
+    with this definition the domain and the codomain mappings of a category can be viewed 
+    as a graph. $)
+    df-gra $a |- Gra = { <. d , c >. | ( Fun d /\ Fun c /\ dom d = dom c ) } $.
+  $}
+
+  ${ $d x d c j r $.
+    $( A subclass of the class of universal algebras. It is not very 
+    meaningful in itself but it is used to define ` Ded ` and ` Cat ` . 
+    That sort of trick is intended to help Metamath which doesn't like too 
+    large definitions. $)
+    df-alg $a |- Alg = { x | E. d E. c E. j E. r
+      ( x = <. <. d , c >. , <. j , r >. >. /\
+      ( d : ran r --> dom j /\ c : ran r --> dom j /\ j : dom j --> ran r ) /\
+      ( Fun r /\ dom r (_ ( ran r X. ran r ) ) ) } $.
+  $}
+
+  ${ $d x d c j r $.
+    $( A subclass of the class of universal algebras. It is not very 
+    meaningful in itself but it is used to define ` Ded ` and ` Cat ` . 
+    That sort of trick is intended to help Metamath which doesn't bear the
+    too large definition that a direct definition of ` Ded ` or ` Cat `
+    would imply. $)
+    df-algNEW $a |- Alg = { x | E. d E. c E. j E. r
+      ( x = <. <. d , c >. , <. j , r >. >. /\
+      ( d : dom d --> dom j /\ c : dom d --> dom j /\ j : dom j --> dom d ) /\
+      ( Fun r /\ dom r (_ ( dom d X. dom d ) /\ ran r (_ dom d ) ) } $.
+  $}
+
+  $( Definition of ` dom_ ` . $)
+  df-doma $a |- dom_ = ( 1st o. 1st ) $.
+
+  $( Definition of ` cod_ ` . $)
+  df-coda $a |- cod_ = ( 2nd o. 1st ) $.
+
+  $( Definition of ` id_ ` . $)
+  df-ida $a |- id_ = ( 1st o. 2nd ) $.
+
+  $( Definition of ` o_ ` . $)
+  df-cmpa $a |- o_ = ( 2nd o. 2nd ) $.
+
+
+  ${ $d C c d j r $. $d D c d j r $. $d J c d j r $. $d M c d j r $.
+     $d O c d j r $. $d R c d j r $. $d c d j r x $.
+    isalg.1 $e |- M = ran R $.
+    isalg.2 $e |- O = dom J $.
+    $( The predicate "is a category algebra." $)
+    isalg $p |- (  ( ( D e. A /\ C e. B /\ J e. F ) /\ R e. G )
+                      -> (   <. <. D , C >. , <. J , R >. >. e. Alg
+                         <-> (  ( D : M --> O /\ C : M --> O /\ J : O --> M )
+                             /\ ( Fun R /\ dom R (_ ( M X. M ) ) ) ) ) $
+      ( vx vd vc vj vr wcel w3a wa cop cv wceq crn cdm wf wfun cxp wss wex cab
+      calg feq1 3anbi1d anbi1d 3anbi2d wb dmeq feq3 syl feq2 bitrd 3anbi123d
+      rneq funeq xpid11 sylibr sseq12d anbi12d feq23 mp2an 3anbi123i mpbir
+      sseq2i anbi2i anbi12i syl6bbr elo 3anass exbii 3exbi abbii eleq2i syl5bb
+      df-alg ) DARCBRHFRSEGRTZDCUAHEUAUAZMUBNUBZOUBZUAPUBZQUBZUAUAUCZWKUDZWJUEZ
+      WHUFZWMWNWIUFZWNWMWJUFZSZWKUGZWKUEZWMWMUHZUIZTZSZQUJZPUJOUJNUJZMUKZRZIJDU
+      FZIJCUFZJIHUFZSZEUGZEUEZIIUHZUIZTZTZWGULRWFWGWLWRXCTZTZQUJZPUJOUJNUJZMUKZ
+      RXRXHXSWMWNDUFZWPWQSZXCTYDWMWNCUFZWQSZXCTWMHUEZDUFZWMYHCUFZYHWMHUFZSZXCTZ
+      XRMNOQPDCHEABFGWHDUCZWRYEXCYNWOYDWPWQWMWNWHDUMUNUOWICUCZYEYGXCYOWPYFYDWQW
+      MWNWICUMUPUOWJHUCZYGYLXCYPYDYIYFYJWQYKYPWNYHUCZYDYIUQWJHURZWNYHWMDUSUTYPY
+      QYFYJUQYRWNYHWMCUSUTYPWQYHWMWJUFZYKYPYQWQYSUQYRWNYHWMWJVAUTYHWMWJHUMVBVCU
+      OWKEUCZYMEUDZYHDUFZUUAYHCUFZYHUUAHUFZSZXMXNUUAUUAUHZUIZTZTXRYTYLUUEXCUUHY
+      TYIUUBYJUUCYKUUDYTWMUUAUCZYIUUBUQWKEVDZWMUUAYHDVAUTYTUUIYJUUCUQUUJWMUUAYH
+      CVAUTYTUUIYKUUDUQUUJWMUUAYHHUSUTVCYTWSXMXBUUGWKEVEYTWTXNXAUUFWKEURYTUUIXA
+      UUFUCUUJWMUUAVFVGVHVIVIXLUUEXQUUHXIUUBXJUUCXKUUDIUUAUCZJYHUCZXIUUBUQKLIJU
+      UAYHDVJVKUUKUULXJUUCUQKLIJUUAYHCVJVKUULUUKXKUUDUQLKJIYHUUAHVJVKVLXPUUGXMX
+      OUUFXNXOUUFUCUUKKIUUAVFVMVNVOVPVQVRXGYCWGXFYBMXEYANOPXDXTQWLWRXCVSVTWAWBW
+      CWDULXGWGMPQONWEWCWD $.
+      $( [14-Sep-2007] $) $( [14-Jul-2007] $)
+  $}
+
+  ${ $d C c d j r $. $d D c d j r $. $d J c d j r $. $d M c d j r $.
+     $d O c d j r $. $d R c d j r $. $d c d j r x $.
+    isalgNEW.1 $e |- M = dom D $.
+    isalgNEW.2 $e |- O = dom J $.
+    $( The predicate "is a category algebra." $)
+    isalgNEW $p |- (  ( ( D e. A /\ C e. B /\ J e. F ) /\ R e. G )
+                      -> (   <. <. D , C >. , <. J , R >. >. e. Alg
+                         <-> (  ( D : M --> O /\ C : M --> O /\ J : O --> M )
+                             /\ ( Fun R /\ dom R (_ ( M X. M ) /\ ran R (_ M ) ) ) ) $
+    cD cA wcel cC cB wcel cJ cF wcel w3a cR cG wcel wa cD cC cop cJ 
+    cR cop cop vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm
+    vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv 
+    cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr
+    cv crn vd cv cdm wss w3a w3a vr wex vj wex vc wex vd wex vx cab 
+    wcel cM cO cD wf cM cO cC wf cO cM cJ wf w3a cR wfun cR cdm cM cM cxp
+    wss cR crn cM wss w3a wa cD cC cop cJ cR cop cop calg wcel cD cA 
+    wcel cC cB wcel cJ cF wcel w3a cR cG wcel wa cD cC cop cJ cR cop cop 
+    vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm 
+    vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf 
+    w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv
+    cdm wss w3a wa wa vr wex vj wex vc wex vd wex vx cab wcel cM cO 
+    cD wf cM cO cC wf cO cM cJ wf w3a cR wfun cR cdm cM cM cxp wss cR 
+    crn cM wss w3a wa cD cC cop cJ cR cop cop vx cv vd cv vc cv cop vj 
+    cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv 
+    cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm 
+    vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a w3a vr wex 
+    vj wex vc wex vd wex vx cab wcel vd cv cdm vj cv cdm vd cv wf vd cv
+    cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv 
+    wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss 
+    w3a wa cM vj cv cdm cD wf cM vj cv cdm vc cv wf vj cv cdm cM vj cv 
+    wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a wa 
+    cM vj cv cdm cD wf cM vj cv cdm cC wf vj cv cdm cM vj cv wf w3a vr 
+    cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a wa cM cO cD wf
+    cM cO cC wf cO cM cJ wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr
+    cv crn cM wss w3a wa cM cO cD wf cM cO cC wf cO cM cJ wf w3a cR 
+    wfun cR cdm cM cM cxp wss cR crn cM wss w3a wa vx vd vc vr vj cD cC 
+    cJ cR cA cB cF cG vd cv cD wceq vd cv cdm vj cv cdm vd cv wf vd cv 
+    cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a cM vj cv cdm
+    cD wf cM vj cv cdm vc cv wf vj cv cdm cM vj cv wf w3a vr cv wfun 
+    vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a 
+    vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a vd cv cD 
+    wceq vd cv cdm vj cv cdm vd cv wf cM vj cv cdm cD wf vd cv cdm vj cv 
+    cdm vc cv wf cM vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf vj 
+    cv cdm cM vj cv wf vd cv cD wceq vd cv cdm vj cv cdm vd cv wf vd cv
+    cdm vj cv cdm cD wf cM vj cv cdm cD wf vd cv cdm vj cv cdm vd cv 
+    cD feq1 vd cv cD wceq vd cv cdm cD cdm wceq vd cv cdm vj cv cdm cD 
+    wf cM vj cv cdm cD wf wb vd cv cD dmeq vd cv cdm cD cdm wceq vd cv 
+    cdm cM wceq vd cv cdm vj cv cdm cD wf cM vj cv cdm cD wf wb vd cv 
+    cdm cD cdm wceq vd cv cdm cM wceq cD cdm cM vd cv cdm cM cD cdm 
+    isalgNEW.1 eqcomi eqeq2i biimp vd cv cdm cM vj cv cdm cD feq2 syl syl bitrd
+    vd cv cD wceq vd cv cdm cD cdm wceq vd cv cdm vj cv cdm vc cv wf 
+    cM vj cv cdm vc cv wf wb vd cv cD dmeq vd cv cdm cD cdm wceq vd cv 
+    cdm cM wceq vd cv cdm vj cv cdm vc cv wf cM vj cv cdm vc cv wf wb vd
+    cv cdm cD cdm wceq vd cv cdm cM wceq cD cdm cM vd cv cdm cM cD 
+    cdm isalgNEW.1 eqcomi eqeq2i biimp vd cv cdm cM vj cv cdm vc cv feq2
+    syl syl vd cv cD wceq vd cv cdm cD cdm wceq vj cv cdm vd cv cdm 
+    vj cv wf vj cv cdm cM vj cv wf wb vd cv cD dmeq vd cv cdm cD cdm 
+    wceq vd cv cdm cM wceq vj cv cdm vd cv cdm vj cv wf vj cv cdm cM vj 
+    cv wf wb vd cv cdm cD cdm wceq vd cv cdm cM wceq cD cdm cM vd cv 
+    cdm cM cD cdm isalgNEW.1 eqcomi eqeq2i biimp vd cv cdm cM vj cv cdm 
+    vj cv feq3 syl syl 3anbi123d vd cv cD wceq vr cv cdm vd cv cdm vd 
+    cv cdm cxp wss vr cv cdm cM cM cxp wss vr cv crn vd cv cdm wss vr 
+    cv crn cM wss vr cv wfun vd cv cD wceq vd cv cdm vd cv cdm cxp cM 
+    cM cxp wceq vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv cdm cM cM 
+    cxp wss wb vd cv cD wceq vd cv cdm cM wceq vd cv cdm vd cv cdm cxp 
+    cM cM cxp wceq vd cv cD wceq vd cv cdm cD cdm wceq vd cv cdm cM 
+    wceq vd cv cD dmeq vd cv cdm cD cdm wceq vd cv cdm cM wceq cD cdm cM 
+    vd cv cdm cM cD cdm isalgNEW.1 eqcomi eqeq2i biimp syl vd cv cdm cM
+    wceq vd cv cdm vd cv cdm cxp cM cM cxp wceq vd cv cdm vd cv cdm 
+    cxp cM cM cxp wceq vd cv cdm cM wceq vd cv cdm cM xpid11 bicomi 
+    biimp syl vd cv cdm vd cv cdm cxp cM cM cxp vr cv cdm sseq2 syl vd cv 
+    cD wceq vd cv cdm cD cdm wceq vr cv crn vd cv cdm wss vr cv crn cM 
+    wss wb vd cv cD dmeq vd cv cdm cD cdm wceq vd cv cdm cM wceq vr cv 
+    crn vd cv cdm wss vr cv crn cM wss wb vd cv cdm cD cdm wceq vd cv 
+    cdm cM wceq cD cdm cM vd cv cdm cM cD cdm isalgNEW.1 eqcomi eqeq2i 
+    biimp vd cv cdm cM vr cv crn sseq2 syl syl 3anbi23d anbi12d vc cv cC 
+    wceq cM vj cv cdm cD wf cM vj cv cdm vc cv wf vj cv cdm cM vj cv wf 
+    w3a cM vj cv cdm cD wf cM vj cv cdm cC wf vj cv cdm cM vj cv wf w3a 
+    vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a vc cv cC 
+    wceq cM vj cv cdm vc cv wf cM vj cv cdm cC wf cM vj cv cdm cD wf vj 
+    cv cdm cM vj cv wf cM vj cv cdm vc cv cC feq1 3anbi2d anbi1d vj cv 
+    cJ wceq cM vj cv cdm cD wf cM vj cv cdm cC wf vj cv cdm cM vj cv wf
+    w3a cM cO cD wf cM cO cC wf cO cM cJ wf w3a vr cv wfun vr cv cdm 
+    cM cM cxp wss vr cv crn cM wss w3a vj cv cJ wceq cM vj cv cdm cD wf
+    cM cO cD wf cM vj cv cdm cC wf cM cO cC wf vj cv cdm cM vj cv wf 
+    cO cM cJ wf vj cv cJ wceq vj cv cdm cO wceq cM vj cv cdm cD wf cM 
+    cO cD wf wb vj cv cJ wceq vj cv cdm cJ cdm wceq vj cv cdm cO wceq 
+    vj cv cJ dmeq vj cv cdm cJ cdm wceq vj cv cdm cO wceq cJ cdm cO vj 
+    cv cdm cO cJ cdm isalgNEW.2 eqcomi eqeq2i biimp syl vj cv cdm cO cM
+    cD feq3 syl vj cv cJ wceq vj cv cdm cO wceq cM vj cv cdm cC wf cM
+    cO cC wf wb vj cv cJ wceq vj cv cdm cJ cdm wceq vj cv cdm cO wceq
+    vj cv cJ dmeq vj cv cdm cJ cdm wceq vj cv cdm cO wceq cJ cdm cO 
+    vj cv cdm cO cJ cdm isalgNEW.2 eqcomi eqeq2i biimp syl vj cv cdm cO
+    cM cC feq3 syl vj cv cJ wceq vj cv cdm cM vj cv wf vj cv cdm cM 
+    cJ wf cO cM cJ wf vj cv cdm cM vj cv cJ feq1 vj cv cJ wceq vj cv 
+    cdm cO wceq vj cv cdm cM cJ wf cO cM cJ wf wb vj cv cJ wceq vj cv 
+    cdm cJ cdm wceq vj cv cdm cO wceq vj cv cJ dmeq vj cv cdm cJ cdm 
+    wceq vj cv cdm cO wceq cJ cdm cO vj cv cdm cO cJ cdm isalgNEW.2 
+    eqcomi eqeq2i biimp syl vj cv cdm cO cM cJ feq2 syl bitrd 3anbi123d 
+    anbi1d vr cv cR wceq vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM 
+    wss w3a cR wfun cR cdm cM cM cxp wss cR crn cM wss w3a cM cO cD wf 
+    cM cO cC wf cO cM cJ wf w3a vr cv cR wceq vr cv wfun cR wfun vr cv 
+    cdm cM cM cxp wss cR cdm cM cM cxp wss vr cv crn cM wss cR crn cM 
+    wss vr cv cR funeq vr cv cR wceq vr cv cdm cR cdm wceq vr cv cdm cM 
+    cM cxp wss cR cdm cM cM cxp wss wb vr cv cR dmeq vr cv cdm cR cdm 
+    cM cM cxp sseq1 syl vr cv cR wceq vr cv crn cR crn wceq vr cv crn 
+    cM wss cR crn cM wss wb vr cv cR rneq vr cv crn cR crn cM sseq1 syl
+    3anbi123d anbi2d elo vx cv vd cv vc cv cop vj cv vr cv cop cop 
+    wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv 
+    cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm 
+    cxp wss vr cv crn vd cv cdm wss w3a w3a vr wex vj wex vc wex vd wex 
+    vx cab vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj 
+    cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj
+    cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv 
+    crn vd cv cdm wss w3a wa wa vr wex vj wex vc wex vd wex vx cab cD cC
+    cop cJ cR cop cop vx cv vd cv vc cv cop vj cv vr cv cop cop wceq 
+    vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm
+    vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm 
+    cxp wss vr cv crn vd cv cdm wss w3a w3a vr wex vj wex vc wex vd wex 
+    vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm 
+    vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf 
+    w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv
+    cdm wss w3a wa wa vr wex vj wex vc wex vd wex vx vx cv vd cv vc 
+    cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv 
+    cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun 
+    vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a 
+    w3a vr wex vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm 
+    vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm
+    vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr 
+    cv crn vd cv cdm wss w3a wa wa vr wex vd vc vj vx cv vd cv vc cv 
+    cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm 
+    vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr 
+    cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a w3a 
+    vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm 
+    vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf 
+    w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv
+    cdm wss w3a wa wa vr vx cv vd cv vc cv cop vj cv vr cv cop cop 
+    wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv 
+    cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm 
+    cxp wss vr cv crn vd cv cdm wss w3a 3anass exbii 3exbi abbii eleq2i 
+    syl5bb calg vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj
+    cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm 
+    vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv
+    crn vd cv cdm wss w3a w3a vr wex vj wex vc wex vd wex vx cab cD 
+    cC cop cJ cR cop cop vx vj vr vc vd df-algNEW eleq2i syl5bb $. 
+  $}
+
+  ${
+    domval.1 $e |- D = ( dom_ ` T ) $.
+    domval $p |- D = ( 1st ` ( 1st ` T ) ) $= 
+    cD cT cdom_ cfv cT c1st cfv c1st cfv domval.1 cT cvv wcel cT 
+    cdom_ cfv cT c1st cfv c1st cfv wceq cT cvv wcel cT c1st c1st ccom cfv 
+    cT c1st cfv c1st cfv cT cdom_ cfv c1st wfun cvv cvv c1st wf cT cvv 
+    wcel cT c1st c1st ccom cfv cT c1st cfv c1st cfv wceq cvv cvv c1st wf 
+    c1st wfun cvv cvv c1st wfo cvv cvv c1st wf fo1st cvv cvv c1st fof 
+    ax-mp cvv cvv c1st ffun ax-mp cvv cvv c1st wfo cvv cvv c1st wf fo1st 
+    cvv cvv c1st fof ax-mp cvv cvv cT c1st c1st fvco3 mp3an12 cT cdom_ 
+    c1st c1st ccom df-doma fveq1i syl5eq cT cvv wcel wn cT cdom_ cfv c0 
+    cT c1st cfv c1st cfv cT cdom_ fvprc cT cvv wcel wn cT c1st cfv c1st
+    cfv c0 c1st cfv c0 cT cvv wcel wn cT c1st cfv c0 c1st cT c1st 
+    fvprc fveq2d 1st0 syl6req eqtrd pm2.61i eqtr $. 
+  $}
+
+  ${
+    codval.1 $e |- C = ( cod_ ` T ) $.
+    codval $p |- C = ( 2nd ` ( 1st ` T ) ) $= ? $.
+  $}
+
+  ${
+    idval.1 $e |- J = ( id_ ` T ) $.
+    idval $p |- J = ( 1st ` ( 2nd ` T ) ) $= ? $.
+  $}
+
+  ${
+    cmpval.1 $e |- G = ( o_ ` T ) $.
+    cmpval $p |- G = ( 2nd ` ( 2nd ` T ) ) $= ? $.
+  $}
+
+
+  ${ $d v w x y z A $.  $d x ph $.  $d v w y z ta $.
+    eloi.1 $e |- ( y = ( 1st ` ( 1st ` A ) ) -> ( ph <-> ps ) ) $.
+    eloi.2 $e |- ( z = ( 2nd ` ( 1st ` A ) ) -> ( ps <-> ch ) ) $.
+    eloi.3 $e |- ( v = ( 1st ` ( 2nd ` A ) ) -> ( ch <-> th ) ) $.
+    eloi.4 $e |- ( w = ( 2nd ` ( 2nd ` A ) ) -> ( th <-> ta ) ) $.
+    $( A consequence of membership in a class abstraction whose elements 
+    pertain to ` ( ( V X. V ) X. ( V X. V ) ) `  using ordered pair 
+    extractors. $)
+    eloi $p |- ( A e. { x | E. y E. z E. v E. w
+      ( x = <. <. y , z >. , <. v , w >. >. /\ ph ) } -> ta ) $
+      ( cv cop wceq wa wex cab wcel c1st cfv c2nd eqeq1 anbi1d 4exbidv elabg
+      ibi cvv cxp id opex opelxpi mp2an syl6eqel wrel relxp 1st2nd mpan syl
+      fveq2 op1st syl6eq visset op2nd opeq12d eqtrd adantr 19.23aivv eleq1 w3a
+      wb fvex 3pm3.2i elo syl6bb biimpcd mpd ) KFPZGPZHPZQZJPZIPZQZQZRZASZITJTH
+      TGTZFUAZUBZKKUCUDZUCUDZWNUEUDZQZKUEUDZUCUDZWRUEUDZQZQZRZEWMKWHRZASZITJTZH
+      TGTZXCWMXGWKXGFKWLWAKRZWJXEGHJIXHWIXDAWAKWHUFUGUHUIUJXFXCGHXEXCJIXDXCAXDK
+      WNWRQZXBXDKUKUKULZUBZKXIRZXDKWHXJXDUMWDUKUBWGUKUBWHXJUBWBWCUNZWEWFUNZWDWG
+      UKUKUOUPUQXJURZXKXLUKUKUSZKXJUTVAVBXDWNWQWRXAXDWNXJUBZWNWQRZXDWNWDXJXDWNW
+      HUCUDWDKWHUCVCWDWGXMVDVEWBUKUBWCUKUBWDXJUBGVFHVFWBWCUKUKUOUPUQXOXQXRXPWNX
+      JUTVAVBXDWRXJUBZWRXARZXDWRWGXJXDWRWHUEUDWGKWHUEVCWDWGXMXNVGVEWEUKUBWFUKUB
+      WGXJUBJVFIVFWEWFUKUKUOUPUQXOXSXTXPWRXJUTVAVBVHVIVJVKVKVBXCWMEXCWMXBWLUBZE
+      KXBWLVLWOUKUBZWPUKUBZWSUKUBZVMWTUKUBYAEVNYBYCYDWNUCVOWNUEVOWRUCVOVPWRUEVO
+      ABCDEFGHIJWOWPWSWTUKUKUKUKLMNOVQUPVRVSVT $.
+      $( [24-Sep-2007] $) $( [24-Sep-2007] $)
+  $}
+
+  ${
+     algi.1 $e |- D = ( dom_ ` T ) $.
+     algi.2 $e |- C = ( cod_ ` T ) $.
+     algi.3 $e |- J = ( id_ ` T ) $.
+     algi.4 $e |- R = ( o_ ` T ) $.
+     algi.5 $e |- M = ran R $.
+     algi.6 $e |- O = dom J $.
+     $( The properties of a "category algebra". $)
+     algi $p |- ( T e. Alg
+         -> (  ( D : M --> O /\ C : M --> O /\ J : O --> M )
+               /\ ( Fun R /\ dom R (_ ( M X. M ) ) ) ) $= ? $.
+  $}
+
+  ${
+     algiNEW.1 $e |- D = ( dom_ ` T ) $.
+     algiNEW.2 $e |- C = ( cod_ ` T ) $.
+     algiNEW.3 $e |- J = ( id_ ` T ) $.
+     algiNEW.4 $e |- R = ( o_ ` T ) $.
+     algiNEW.5 $e |- M = dom D $.
+     algiNEW.6 $e |- O = dom J $.
+     $( Properties of a "category algebra". $)
+     algiNEW $p |- ( T e. Alg
+         -> (  ( D : M --> O /\ C : M --> O /\ J : O --> M )
+               /\ ( Fun R /\ dom R (_ ( M X. M ) /\ ran R (_ M ) ) ) $
+    cT calg wcel cT vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd
+    cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm 
+    vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp
+    wss vr cv crn vd cv cdm wss w3a w3a vr wex vj wex vc wex vd wex 
+    vx cab wcel cM cO cD wf cM cO cC wf cO cM cJ wf w3a cR wfun cR cdm 
+    cM cM cxp wss cR crn cM wss w3a wa calg vx cv vd cv vc cv cop vj cv
+    vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv 
+    cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm 
+    vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a w3a vr wex 
+    vj wex vc wex vd wex vx cab cT vx vj vr vc vd df-algNEW eleq2i cT 
+    vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm 
+    vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf 
+    w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv
+    cdm wss w3a w3a vr wex vj wex vc wex vd wex vx cab wcel cT vx cv 
+    vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv 
+    wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr
+    cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm
+    wss w3a wa wa vr wex vj wex vc wex vd wex vx cab wcel cM cO cD wf
+    cM cO cC wf cO cM cJ wf w3a cR wfun cR cdm cM cM cxp wss cR crn 
+    cM wss w3a wa vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv 
+    cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv 
+    cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr
+    cv crn vd cv cdm wss w3a wa wa vr wex vj wex vc wex vd wex vx cab
+    vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv 
+    cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv 
+    wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn 
+    vd cv cdm wss w3a w3a vr wex vj wex vc wex vd wex vx cab cT vx cv 
+    vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv 
+    wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr
+    cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm
+    wss w3a wa wa vr wex vj wex vc wex vd wex vx cv vd cv vc cv cop 
+    vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj 
+    cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv 
+    cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a w3a vr 
+    wex vj wex vc wex vd wex vx vx cv vd cv vc cv cop vj cv vr cv cop 
+    cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf 
+    vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd 
+    cv cdm cxp wss vr cv crn vd cv cdm wss w3a wa wa vr wex vx cv vd cv
+    vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf 
+    vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv
+    wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm 
+    wss w3a w3a vr wex vd vc vj vx cv vd cv vc cv cop vj cv vr cv cop 
+    cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf 
+    vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd 
+    cv cdm cxp wss vr cv crn vd cv cdm wss w3a wa wa vx cv vd cv vc cv 
+    cop vj cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm 
+    vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr 
+    cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a w3a 
+    vr vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv cdm vj cv 
+    cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv 
+    wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn 
+    vd cv cdm wss w3a w3a vx cv vd cv vc cv cop vj cv vr cv cop cop 
+    wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv cdm vc cv wf vj cv 
+    cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm vd cv cdm vd cv cdm 
+    cxp wss vr cv crn vd cv cdm wss w3a wa wa vx cv vd cv vc cv cop vj 
+    cv vr cv cop cop wceq vd cv cdm vj cv cdm vd cv wf vd cv cdm vj cv 
+    cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr cv cdm 
+    vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a 3anass 
+    bicomi exbii 3exbi abbii eleq2i vd cv cdm vj cv cdm vd cv wf vd cv cdm 
+    vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr cv wfun vr 
+    cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a wa 
+    cM vj cv cdm cD wf cM vj cv cdm vc cv wf vj cv cdm cM vj cv wf w3a 
+    vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a wa cM vj cv
+    cdm cD wf cM vj cv cdm cC wf vj cv cdm cM vj cv wf w3a vr cv wfun
+    vr cv cdm cM cM cxp wss vr cv crn cM wss w3a wa cM cO cD wf cM cO
+    cC wf cO cM cJ wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv 
+    crn cM wss w3a wa cM cO cD wf cM cO cC wf cO cM cJ wf w3a cR wfun cR
+    cdm cM cM cxp wss cR crn cM wss w3a wa vx vd vc vr vj cT vd cv cT
+    c1st cfv c1st cfv wceq vd cv cD wceq vd cv cdm vj cv cdm vd cv wf
+    vd cv cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a vr 
+    cv wfun vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm 
+    wss w3a wa cM vj cv cdm cD wf cM vj cv cdm vc cv wf vj cv cdm cM vj 
+    cv wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a 
+    wa wb vd cv cT c1st cfv c1st cfv wceq vd cv cD wceq cT c1st cfv 
+    c1st cfv cD vd cv cD cT c1st cfv c1st cfv cD cT algiNEW.1 domval 
+    eqcomi eqeq2i biimp vd cv cD wceq vd cv cdm vj cv cdm vd cv wf vd cv 
+    cdm vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf w3a cM vj cv cdm
+    cD wf cM vj cv cdm vc cv wf vj cv cdm cM vj cv wf w3a vr cv wfun 
+    vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv crn vd cv cdm wss w3a 
+    vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a vd cv cD 
+    wceq vd cv cdm vj cv cdm vd cv wf cM vj cv cdm cD wf vd cv cdm vj cv 
+    cdm vc cv wf cM vj cv cdm vc cv wf vj cv cdm vd cv cdm vj cv wf vj 
+    cv cdm cM vj cv wf vd cv cD wceq vd cv cdm vj cv cdm vd cv wf vd cv
+    cdm vj cv cdm cD wf cM vj cv cdm cD wf vd cv cdm vj cv cdm vd cv 
+    cD feq1 vd cv cD wceq vd cv cdm vj cv cdm cD wf cD cdm vj cv cdm cD
+    wf cM vj cv cdm cD wf vd cv cD wceq vd cv cdm cD cdm wceq vd cv 
+    cdm vj cv cdm cD wf cD cdm vj cv cdm cD wf wb vd cv cD dmeq vd cv 
+    cdm cD cdm vj cv cdm cD feq2 syl cD cdm vj cv cdm cD wf cM vj cv cdm
+    cD wf wb vd cv cD wceq cM vj cv cdm cD wf cD cdm vj cv cdm cD wf 
+    cM cD cdm wceq cM vj cv cdm cD wf cD cdm vj cv cdm cD wf wb 
+    algiNEW.5 cM cD cdm vj cv cdm cD feq2 ax-mp bicomi a1i bitrd bitrd vd cv 
+    cD wceq vd cv cdm cD cdm wceq vd cv cdm vj cv cdm vc cv wf cM vj cv
+    cdm vc cv wf wb vd cv cD dmeq vd cv cdm cD cdm wceq vd cv cdm vj 
+    cv cdm vc cv wf cD cdm vj cv cdm vc cv wf cM vj cv cdm vc cv wf vd 
+    cv cdm cD cdm vj cv cdm vc cv feq2 cD cdm vj cv cdm vc cv wf cM vj 
+    cv cdm vc cv wf wb vd cv cdm cD cdm wceq cM vj cv cdm vc cv wf cD 
+    cdm vj cv cdm vc cv wf cM cD cdm wceq cM vj cv cdm vc cv wf cD cdm 
+    vj cv cdm vc cv wf wb algiNEW.5 cM cD cdm vj cv cdm vc cv feq2 
+    ax-mp bicomi a1i bitrd syl vd cv cD wceq vd cv cdm cM wceq vj cv cdm 
+    vd cv cdm vj cv wf vj cv cdm cM vj cv wf wb vd cv cD wceq vd cv cdm
+    cD cdm wceq vd cv cdm cM wceq vd cv cD dmeq vd cv cdm cD cdm wceq
+    vd cv cdm cM wceq cD cdm cM vd cv cdm cM cD cdm algiNEW.5 eqcomi 
+    eqeq2i biimp syl vd cv cdm cM vj cv cdm vj cv feq3 syl 3anbi123d vd cv 
+    cD wceq vd cv cdm cM wceq vr cv wfun vr cv cdm vd cv cdm vd cv cdm 
+    cxp wss vr cv crn vd cv cdm wss w3a vr cv wfun vr cv cdm cM cM cxp 
+    wss vr cv crn cM wss w3a wb vd cv cD wceq vd cv cdm cD cdm wceq vd 
+    cv cdm cM wceq vd cv cD dmeq vd cv cdm cD cdm wceq vd cv cdm cM 
+    wceq cD cdm cM vd cv cdm cM cD cdm algiNEW.5 eqcomi eqeq2i biimp syl 
+    vd cv cdm cM wceq vr cv cdm vd cv cdm vd cv cdm cxp wss vr cv cdm 
+    cM cM cxp wss vr cv crn vd cv cdm wss vr cv crn cM wss vr cv wfun 
+    vd cv cdm cM wceq vd cv cdm vd cv cdm cxp cM cM cxp wceq vr cv cdm 
+    vd cv cdm vd cv cdm cxp wss vr cv cdm cM cM cxp wss wb vd cv cdm cM
+    wceq vd cv cdm vd cv cdm cxp cM cM cxp wceq vd cv cdm vd cv cdm 
+    cxp cM cM cxp wceq vd cv cdm cM wceq vd cv cdm cM xpid11 bicomi 
+    biimp vd cv cdm vd cv cdm cxp cM cM cxp vr cv cdm sseq2 syl vd cv cdm 
+    cM vr cv crn sseq2 3anbi23d syl anbi12d syl vc cv cT c1st cfv c2nd 
+    cfv wceq vc cv cC wceq cM vj cv cdm cD wf cM vj cv cdm vc cv wf vj 
+    cv cdm cM vj cv wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv crn
+    cM wss w3a wa cM vj cv cdm cD wf cM vj cv cdm cC wf vj cv cdm cM 
+    vj cv wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss 
+    w3a wa wb vc cv cT c1st cfv c2nd cfv wceq vc cv cC wceq cT c1st cfv 
+    c2nd cfv cC vc cv cC cT c1st cfv c2nd cfv cC cT algiNEW.2 codval 
+    eqcomi eqeq2i biimp vc cv cC wceq cM vj cv cdm cD wf cM vj cv cdm vc cv
+    wf vj cv cdm cM vj cv wf w3a cM vj cv cdm cD wf cM vj cv cdm cC 
+    wf vj cv cdm cM vj cv wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr 
+    cv crn cM wss w3a vc cv cC wceq cM vj cv cdm vc cv wf cM vj cv cdm 
+    cC wf cM vj cv cdm cD wf vj cv cdm cM vj cv wf cM vj cv cdm vc cv 
+    cC feq1 3anbi2d anbi1d syl vj cv cT c2nd cfv c1st cfv wceq vj cv cJ
+    wceq cM vj cv cdm cD wf cM vj cv cdm cC wf vj cv cdm cM vj cv wf 
+    w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a wa cM cO
+    cD wf cM cO cC wf cO cM cJ wf w3a vr cv wfun vr cv cdm cM cM cxp 
+    wss vr cv crn cM wss w3a wa wb vj cv cT c2nd cfv c1st cfv wceq vj cv
+    cJ wceq cT c2nd cfv c1st cfv cJ vj cv cJ cT c2nd cfv c1st cfv cT 
+    cJ algiNEW.3 idval eqcomi eqeq2i biimp vj cv cJ wceq cM vj cv cdm 
+    cD wf cM vj cv cdm cC wf vj cv cdm cM vj cv wf w3a cM cO cD wf cM 
+    cO cC wf cO cM cJ wf w3a vr cv wfun vr cv cdm cM cM cxp wss vr cv 
+    crn cM wss w3a vj cv cJ wceq cM vj cv cdm cD wf cM cO cD wf cM vj cv
+    cdm cC wf cM cO cC wf vj cv cdm cM vj cv wf cO cM cJ wf vj cv cJ 
+    wceq vj cv cdm cO wceq cM vj cv cdm cD wf cM cO cD wf wb vj cv cJ 
+    wceq vj cv cdm cJ cdm wceq vj cv cdm cO wceq vj cv cJ dmeq vj cv cdm 
+    cJ cdm wceq vj cv cdm cO wceq cJ cdm cO vj cv cdm cO cJ cdm 
+    algiNEW.6 eqcomi eqeq2i biimp syl vj cv cdm cO cM cD feq3 syl vj cv cJ 
+    wceq vj cv cdm cO wceq cM vj cv cdm cC wf cM cO cC wf wb vj cv cJ 
+    wceq vj cv cdm cJ cdm wceq vj cv cdm cO wceq vj cv cJ dmeq vj cv cdm 
+    cJ cdm wceq vj cv cdm cO wceq cJ cdm cO vj cv cdm cO cJ cdm 
+    algiNEW.6 eqcomi eqeq2i biimp syl vj cv cdm cO cM cC feq3 syl vj cv cJ 
+    wceq vj cv cdm cM vj cv wf vj cv cdm cM cJ wf cO cM cJ wf vj cv cdm 
+    cM vj cv cJ feq1 vj cv cJ wceq vj cv cdm cO wceq vj cv cdm cM cJ wf
+    cO cM cJ wf wb vj cv cJ wceq vj cv cdm cJ cdm wceq vj cv cdm cO 
+    wceq vj cv cJ dmeq vj cv cdm cJ cdm wceq vj cv cdm cO wceq cJ cdm cO 
+    vj cv cdm cO cJ cdm algiNEW.6 eqcomi eqeq2i biimp syl vj cv cdm cO 
+    cM cJ feq2 syl bitrd 3anbi123d anbi1d syl vr cv cT c2nd cfv c2nd 
+    cfv wceq vr cv cR wceq cM cO cD wf cM cO cC wf cO cM cJ wf w3a vr cv
+    wfun vr cv cdm cM cM cxp wss vr cv crn cM wss w3a wa cM cO cD wf 
+    cM cO cC wf cO cM cJ wf w3a cR wfun cR cdm cM cM cxp wss cR crn cM 
+    wss w3a wa wb vr cv cT c2nd cfv c2nd cfv wceq vr cv cR wceq cT c2nd 
+    cfv c2nd cfv cR vr cv cR cT c2nd cfv c2nd cfv cT cR algiNEW.4 cmpval
+    eqcomi eqeq2i biimp vr cv cR wceq vr cv wfun vr cv cdm cM cM cxp 
+    wss vr cv crn cM wss w3a cR wfun cR cdm cM cM cxp wss cR crn cM wss 
+    w3a cM cO cD wf cM cO cC wf cO cM cJ wf w3a vr cv cR wceq vr cv wfun
+    cR wfun vr cv cdm cM cM cxp wss cR cdm cM cM cxp wss vr cv crn cM
+    wss cR crn cM wss vr cv cR funeq vr cv cR wceq vr cv cdm cR cdm 
+    cM cM cxp vr cv cR dmeq sseq1d vr cv cR wceq vr cv crn cR crn cM vr
+    cv cR rneq sseq1d 3anbi123d anbi2d syl eloi sylbir sylbi $. 
+  $}
+
+  ${
+
+    alg.1 $e |- M = dom D $.
+    alg.3 $e |- D = ( dom_ ` T ) $.
+    ${
+      alg.2 $e |- O = dom J $.
+      alg.5 $e |- J = ( id_ ` T ) $.
+
+      ${
+        $( ` ( dom_ `` T ) ` is a mapping from the morphisms of ` T ` to
+           the objects of ` T ` . NEW $)
+        doma $p |- ( T e. Alg -> D : M --> O ) $
+       cT calg wcel cM cO cD wf cM cO cT ccod_ cfv wf cO cM cJ wf cT 
+    calg wcel cM cO cD wf cM cO cT ccod_ cfv wf cO cM cJ wf w3a cT co_ 
+    cfv wfun cT co_ cfv cdm cM cM cxp wss cT co_ cfv crn cM wss w3a cT 
+    ccod_ cfv cD cT co_ cfv cT cJ cM cO alg.3 cT ccod_ cfv eqid alg.5 cT 
+    co_ cfv eqid alg.1 alg.2 algiNEW pm3.26d 3simp1d $. 
+      $}
+
+      ${
+        alg.4 $e |- C = ( cod_ ` T ) $.
+        $( ` ( cod_ `` T ) ` is a mapping from the morphisms of
+           ` T ` to  the objects of ` T ` . $)
+        coda $p |- ( T e. Alg -> C : M --> O ) $= ? $.
+      $}
+
+      ${
+        $( ` id_ ` is a mapping from the objects of
+           ` T ` to  the morphisms of ` T ` . $)
+        ida $p |- ( T e. Alg -> J : O --> M ) $= ? $.
+      $} $}
+
+      ${
+        alg.6 $e |- R = ( o_ ` T ) $.
+        alg.7 $e |- C = ( cod_ ` T ) $.
+        $( ` ( o_ `` T )  ` is a partial operation from the morphisms of ` T `
+           to the morphisms of ` T ` . $)
+        cmppfa $p |- ( ( T e. Alg /\ F e. M /\ G e. M ) ->
+        ( Fun R /\ dom R (_ ( M x. M ) /\ ran R (_ M ) ) $= ? $. $}
+  $}
+
+
+  ${ $d x d c j r a f g $.
+  $( Definition of a deductive system. Lambeck and Scott. Introduction
+     to higher order categorical logic. 1986. A deductive system is a graph
+     where for each object a specific morphism called identity of the object
+     exists and where for a morphism M : O --> P and N : P --> Q then
+     N o_ P : O --> Q. Deductive system are named so because we can
+     interpret morphisms as logical deductions and objects as sets of
+     formulas. $)
+  df-ded $a |- Ded = { x | E. d E. c E. j E. r
+    ( x = <. <. d , c >. , <. j , r >. >. /\ ( (
+      <. <. d , c >. , <. j , r >. >. e. Alg /\
+      A. a e. dom j
+         ( ( d ` ( j ` a ) ) = a /\ ( c ` ( j ` a ) ) = a ) /\
+
+      A. f e. ran r A. g e. ran r ( <. g , f >. e. dom r
+        <-> ( d ` g ) = ( c ` f ) ) ) /\ (
+
+      A. f e. ran r A. g e. ran r
+         ( ( d ` g ) = ( c ` f ) -> ( d ` ( g r f ) ) = ( d ` f ) ) /\
+
+      A. f e. ran r A. g e. ran r
+         ( ( d ` g ) = ( c ` f ) -> ( c ` ( g r f ) ) = ( c ` g ) ) ) ) ) } $.
+  $}
+
+  ${ $d x d c j r a f g $.
+  $( Definition of a deductive system. Lambeck and Scott. Introduction
+     to higher order categorical logic. 1986. A deductive system is a graph
+     where for each object a specific morphism called identity of the object
+     exists and where for a morphism M : O --> P and N : P --> Q then
+     N o_ P : O --> Q. Deductive system are named so because we can
+     interpret morphisms as logical deductions and objects as sets of
+     formulas. $)
+  df-dedNEW $a |- Ded = { x | E. d E. c E. j E. r
+    ( x = <. <. d , c >. , <. j , r >. >. /\ ( (
+      <. <. d , c >. , <. j , r >. >. e. Alg /\
+      A. a e. dom j
+         ( ( d ` ( j ` a ) ) = a /\ ( c ` ( j ` a ) ) = a ) /\
+
+      A. f e. dom d A. g e. dom d ( <. g , f >. e. dom r
+        <-> ( d ` g ) = ( c ` f ) ) ) /\ (
+
+      A. f e. dom d A. g e. dom d
+         ( ( d ` g ) = ( c ` f ) -> ( d ` ( g r f ) ) = ( d ` f ) ) /\
+
+      A. f e. dom d A. g e. dom d
+         ( ( d ` g ) = ( c ` f ) -> ( c ` ( g r f ) ) = ( c ` g ) ) ) ) ) } $.
+  $}
+
+
+  ${ $d C a f g v w y z $. $d D a f g v w y z $. $d J a v w y z $.
+     $d M v w y z $. $d O v w y z $. $d R f g v w y z $. $d a f g v w x y z $.
+    isded.1 $e |- M = ran R $.
+    isded.2 $e |- O = dom J $.
+    $( The predicate "is a deductive system". NEW  $)
+    isded $p |- ( ( ( D e. A /\ C e. B /\ J e. F ) /\ R e. G )
+      -> ( <. <. D , C >. , <. J , R >. >. e. Ded
+        <-> ( ( <. <. D , C >. , <. J , R >. >. e. Alg /\
+      A. a e. O
+         ( ( D ` ( J ` a ) ) = a /\ ( C ` ( J ` a ) ) = a ) /\
+
+      A. f e. M A. g e. M ( <. g , f >. e. dom R
+        <-> ( D ` g ) = ( C ` f ) ) ) /\ (
+
+      A. f e. M A. g e. M
+         ( ( D ` g ) = ( C ` f ) -> ( D ` ( g R f ) ) = ( D ` f ) ) /\
+
+      A. f e. M A. g e. M
+         ( ( D ` g ) = ( C ` f ) -> ( C ` ( g R f ) ) = ( C ` g ) ) ) ) ) ) $
+      ( vx vy vz vv vw wcel w3a wa cop cv wceq calg cfv cdm wral wb crn co wi 
+      wex cab cded opeq1 opeq1d eleq1d fveq1 eqeq1d anbi1d ralbidv bibi2d 
+      2ralbidv 3anbi123d eqeq12d imbi12d imbi1d anbi12d opeq2 anbi2d eqeq2d 
+      opeq2d dmeq syl6eqr eleq2d fveq2d ralbidv2 3anbi12d rneq bibi1d 3anbi13d 
+      opreq imbi2d elo df-ded eleq2i syl5bb ) DAUACBUAJHUAUBEIUAUCDCUDZJEUDZUDZ
+      PUEQUEZRUEZUDZSUEZTUEZUDZUDZUFWTUGUAZMUEZWQUHZWNUHZXBUFZXCWOUHZXBUFZUCZMW
+      QUIZUJZGUEZFUEZUDZWRUIZUAZXKWNUHZXLWOUHZUFZUKZGWRULZUJFXTUJZUBZXRXKXLWRUM
+      ZWNUHZXLWNUHZUFZUNZGXTUJFXTUJZXRYCWOUHZXKWOUHZUFZUNZGXTUJFXTUJZUCZUCZUCTU
+      OSUORUOQUOPUPZUAWMUGUAZXBJUHZDUHZXBUFZYRCUHZXBUFZUCZMLUJZXMEUIZUAZXKDUHZX
+      LCUHZUFZUKZGKUJZFKUJZUBZUUIXKXLEUMZDUHZXLDUHZUFZUNZGKUJZFKUJZUUIUUNCUHZXK
+      CUHZUFZUNZGKUJZFKUJZUCZUCZWMUQUAYODWOUDZWSUDZUGUAZXCDUHZXBUFZXGUCZMXIUJZX
+      OUUGXQUFZUKZGXTUJFXTUJZUBZUVPYCDUHZUUPUFZUNZGXTUJFXTUJZUVPYKUNZGXTUJFXTUJ
+      ZUCZUCWKWSUDZUGUAZUVMXCCUHZXBUFZUCZMXIUJZXOUUIUKZGXTUJZFXTUJZUBZUUIUWAUNZ
+      GXTUJZFXTUJZUUIYCCUHZUVBUFZUNZGXTUJZFXTUJZUCZUCWKJWRUDZUDZUGUAZUUDUWOUBZU
+      XEUCUVHPQRTSDCJEABHIWNDUFZYBUVSYNUWFUXJXAUVKXJUVOYAUVRUXJWTUVJUGUXJWPUVIW
+      SWNDWOURUSUTUXJXHUVNMXIUXJXEUVMXGUXJXDUVLXBXCWNDVAVBVCVDUXJXSUVQFGXTXTUXJ
+      XRUVPXOUXJXPUUGXQXKWNDVAVBZVEVFVGUXJYHUWCYMUWEUXJYGUWBFGXTXTUXJXRUVPYFUWA
+      UXKUXJYDUVTYEUUPYCWNDVAXLWNDVAVHVIVFUXJYLUWDFGXTXTUXJXRUVPYKUXKVJVFVKVKWO
+      CUFZUVSUWPUWFUXEUXLUVKUWHUVOUWLUVRUWOUXLUVJUWGUGUXLUVIWKWSWOCDVLUSUTUXLUV
+      NUWKMXIUXLXGUWJUVMUXLXFUWIXBXCWOCVAVBVMVDUXLUVQUWMFGXTXTUXLUVPUUIXOUXLXQU
+      UHUUGXLWOCVAVNZVEVFVGUXLUWCUWSUWEUXDUXLUWBUWQFGXTXTUXLUVPUUIUWAUXMVJVFUXL
+      UWDUXBFGXTXTUXLUVPUUIYKUXAUXMUXLYIUWTYJUVBYCWOCVAXKWOCVAVHVIVFVKVKWQJUFZU
+      WPUXIUXEUXNUWHUXHUWLUUDUWOUXNUWGUXGUGUXNWSUXFWKWQJWRURVOUTUXNUWKUUCMXILUX
+      NXBXIUAXBLUAUWKUUCUXNXILXBUXNXIJUILWQJVPOVQVRUXNUVMYTUWJUUBUXNUVLYSXBUXNX
+      CYRDXBWQJVAZVSVBUXNUWIUUAXBUXNXCYRCUXOVSVBVKVIVTWAVCWREUFZUXIUUMUXEUVGUXP
+      UXHYQUWOUULUUDUXPUXGWMUGUXPUXFWLWKWREJVLVOUTUXPUWNUUKFXTKUXPXLXTUAZXLKUAZ
+      UWNUUKUXPXTKXLUXPXTEULKWREWBNVQZVRZUXPUWMUUJGXTKUXPXKXTUAZXKKUAZUWMUUJUXP
+      XTKXKUXSVRZUXPXOUUFUUIUXPXNUUEXMWREVPVRWCVIVTVIVTWDUXPUWSUUTUXDUVFUXPUWRU
+      USFXTKUXPUXQUXRUWRUUSUXTUXPUWQUURGXTKUXPUYAUYBUWQUURUYCUXPUWAUUQUUIUXPUVT
+      UUOUUPUXPYCUUNDXKXLWREWEZVSVBWFVIVTVIVTUXPUXCUVEFXTKUXPUXQUXRUXCUVEUXTUXP
+      UXBUVDGXTKUXPUYAUYBUXBUVDUYCUXPUXAUVCUUIUXPUWTUVAUVBUXPYCUUNCUYDVSVBWFVIV
+      TVIVTVKVKWGUQYPWMPFGSTMRQWHWIWJ $.
+      $( [?] $) $( [24-Sep-2007] $) 
+
+  $}
+
+  ${ $d C a c d f g j r $. $d D a c d f g j r $. $d J a c d j r $. $d M c d j r $. $d O c d j r $. $d R c d f g j r $. $d a c d f g j r x $.
+    isdedNEW.1 $e |- M = dom D $.
+    isdedNEW.2 $e |- O = dom J $.
+    $( The predicate "is a deductive system". NEW  $)
+    isdedNEW $p |- ( ( ( D e. A /\ C e. B /\ J e. F ) /\ R e. G )
+      -> ( <. <. D , C >. , <. J , R >. >. e. Ded
+        <-> ( ( <. <. D , C >. , <. J , R >. >. e. Alg /\
+      A. a e. O
+         ( ( D ` ( J ` a ) ) = a /\ ( C ` ( J ` a ) ) = a ) /\
+
+      A. f e. M A. g e. M ( <. g , f >. e. dom R
+        <-> ( D ` g ) = ( C ` f ) ) ) /\ (
+
+      A. f e. M A. g e. M
+         ( ( D ` g ) = ( C ` f ) -> ( D ` ( g R f ) ) = ( D ` f ) ) /\
+
+      A. f e. M A. g e. M
+         ( ( D ` g ) = ( C ` f ) -> ( C ` ( g R f ) ) = ( C ` g ) ) ) ) ) ) $
+    cD cA wcel cC cB wcel cJ cF wcel w3a cR cG wcel wa cD cC cop cJ 
+    cR cop cop vx cv vd cv vc cv cop vj cv vr cv cop cop wceq vd cv vc 
+    cv cop vj cv vr cv cop cop calg wcel va cv vj cv cfv vd cv cfv va 
+    cv wceq va cv vj cv cfv vc cv cfv va cv wceq wa va vj cv cdm wral 
+    vg cv vf cv cop vr cv cdm wcel vg cv vd cv cfv vf cv vc cv cfv wceq
+    wb vg vd cv cdm wral vf vd cv cdm wral w3a vg cv vd cv cfv vf cv 
+    vc cv cfv wceq vg cv vf cv vr cv co vd cv cfv vf cv vd cv cfv wceq 
+    wi vg vd cv cdm wral vf vd cv cdm wral vg cv vd cv cfv vf cv vc cv 
+    cfv wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg 
+    vd cv cdm wral vf vd cv cdm wral wa wa wa vr wex vj wex vc wex vd 
+    wex vx cab wcel cD cC cop cJ cR cop cop calg wcel va cv cJ cfv cD 
+    cfv va cv wceq va cv cJ cfv cC cfv va cv wceq wa va cO wral vg cv vf
+    cv cop cR cdm wcel vg cv cD cfv vf cv cC cfv wceq wb vg cM wral 
+    vf cM wral w3a vg cv cD cfv vf cv cC cfv wceq vg cv vf cv cR co cD 
+    cfv vf cv cD cfv wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv cC
+    cfv wceq vg cv vf cv cR co cC cfv vg cv cC cfv wceq wi vg cM wral
+    vf cM wral wa wa cD cC cop cJ cR cop cop cded wcel vd cv vc cv 
+    cop vj cv vr cv cop cop calg wcel va cv vj cv cfv vd cv cfv va cv 
+    wceq va cv vj cv cfv vc cv cfv va cv wceq wa va vj cv cdm wral vg cv 
+    vf cv cop vr cv cdm wcel vg cv vd cv cfv vf cv vc cv cfv wceq wb vg
+    vd cv cdm wral vf vd cv cdm wral w3a vg cv vd cv cfv vf cv vc cv 
+    cfv wceq vg cv vf cv vr cv co vd cv cfv vf cv vd cv cfv wceq wi vg 
+    vd cv cdm wral vf vd cv cdm wral vg cv vd cv cfv vf cv vc cv cfv 
+    wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg vd cv 
+    cdm wral vf vd cv cdm wral wa wa cD vc cv cop vj cv vr cv cop cop 
+    calg wcel va cv vj cv cfv cD cfv va cv wceq va cv vj cv cfv vc cv cfv
+    va cv wceq wa va vj cv cdm wral vg cv vf cv cop vr cv cdm wcel vg
+    cv cD cfv vf cv vc cv cfv wceq wb vg cM wral vf cM wral w3a vg cv
+    cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD 
+    cfv wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv vc cv cfv wceq 
+    vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg cM wral 
+    vf cM wral wa wa cD cC cop vj cv vr cv cop cop calg wcel va cv vj 
+    cv cfv cD cfv va cv wceq va cv vj cv cfv cC cfv va cv wceq wa va vj
+    cv cdm wral vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv cC 
+    cfv wceq wb vg cM wral vf cM wral w3a vg cv cD cfv vf cv cC cfv wceq
+    vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vg cM wral vf cM
+    wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr cv co cC cfv 
+    vg cv cC cfv wceq wi vg cM wral vf cM wral wa wa cD cC cop cJ vr cv
+    cop cop calg wcel va cv cJ cfv cD cfv va cv wceq va cv cJ cfv cC 
+    cfv va cv wceq wa va cO wral vg cv vf cv cop vr cv cdm wcel vg cv cD
+    cfv vf cv cC cfv wceq wb vg cM wral vf cM wral w3a vg cv cD cfv 
+    vf cv cC cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi 
+    vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr
+    cv co cC cfv vg cv cC cfv wceq wi vg cM wral vf cM wral wa wa cD 
+    cC cop cJ cR cop cop calg wcel va cv cJ cfv cD cfv va cv wceq va cv
+    cJ cfv cC cfv va cv wceq wa va cO wral vg cv vf cv cop cR cdm 
+    wcel vg cv cD cfv vf cv cC cfv wceq wb vg cM wral vf cM wral w3a vg 
+    cv cD cfv vf cv cC cfv wceq vg cv vf cv cR co cD cfv vf cv cD cfv 
+    wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf
+    cv cR co cC cfv vg cv cC cfv wceq wi vg cM wral vf cM wral wa wa 
+    vx vd vc vr vj cD cC cJ cR cA cB cF cG vd cv cD wceq vd cv vc cv 
+    cop vj cv vr cv cop cop calg wcel va cv vj cv cfv vd cv cfv va cv 
+    wceq va cv vj cv cfv vc cv cfv va cv wceq wa va vj cv cdm wral vg cv 
+    vf cv cop vr cv cdm wcel vg cv vd cv cfv vf cv vc cv cfv wceq wb vg
+    vd cv cdm wral vf vd cv cdm wral w3a cD vc cv cop vj cv vr cv cop
+    cop calg wcel va cv vj cv cfv cD cfv va cv wceq va cv vj cv cfv 
+    vc cv cfv va cv wceq wa va vj cv cdm wral vg cv vf cv cop vr cv cdm
+    wcel vg cv cD cfv vf cv vc cv cfv wceq wb vg cM wral vf cM wral 
+    w3a vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vd cv 
+    cfv vf cv vd cv cfv wceq wi vg vd cv cdm wral vf vd cv cdm wral vg 
+    cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc cv cfv vg
+    cv vc cv cfv wceq wi vg vd cv cdm wral vf vd cv cdm wral wa vg cv
+    cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD 
+    cfv wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv vc cv cfv wceq 
+    vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg cM wral 
+    vf cM wral wa vd cv cD wceq vd cv vc cv cop vj cv vr cv cop cop 
+    calg wcel cD vc cv cop vj cv vr cv cop cop calg wcel va cv vj cv cfv 
+    vd cv cfv va cv wceq va cv vj cv cfv vc cv cfv va cv wceq wa va vj 
+    cv cdm wral va cv vj cv cfv cD cfv va cv wceq va cv vj cv cfv vc cv
+    cfv va cv wceq wa va vj cv cdm wral vg cv vf cv cop vr cv cdm 
+    wcel vg cv vd cv cfv vf cv vc cv cfv wceq wb vg vd cv cdm wral vf vd 
+    cv cdm wral vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv vc cv
+    cfv wceq wb vg cM wral vf cM wral vd cv cD wceq vd cv vc cv cop 
+    vj cv vr cv cop cop cD vc cv cop vj cv vr cv cop cop calg vd cv cD 
+    wceq vd cv vc cv cop cD vc cv cop vj cv vr cv cop vd cv cD vc cv 
+    opeq1 opeq1d eleq1d vd cv cD wceq va cv vj cv cfv vd cv cfv va cv wceq
+    va cv vj cv cfv vc cv cfv va cv wceq wa va cv vj cv cfv cD cfv va
+    cv wceq va cv vj cv cfv vc cv cfv va cv wceq wa va vj cv cdm vd 
+    cv cD wceq va cv vj cv cfv vd cv cfv va cv wceq va cv vj cv cfv cD 
+    cfv va cv wceq va cv vj cv cfv vc cv cfv va cv wceq vd cv cD wceq va
+    cv vj cv cfv vd cv cfv va cv vj cv cfv cD cfv va cv va cv vj cv 
+    cfv vd cv cD fveq1 eqeq1d anbi1d ralbidv vd cv cD wceq vg cv vf cv 
+    cop vr cv cdm wcel vg cv vd cv cfv vf cv vc cv cfv wceq wb vg vd cv 
+    cdm wral vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv vc cv cfv
+    wceq wb vg cM wral vf vd cv cdm cM vd cv cD wceq vf cv vd cv cdm 
+    wcel vf cv cM wcel vg cv vf cv cop vr cv cdm wcel vg cv vd cv cfv vf 
+    cv vc cv cfv wceq wb vg vd cv cdm wral vg cv vf cv cop vr cv cdm 
+    wcel vg cv cD cfv vf cv vc cv cfv wceq wb vg cM wral vd cv cD wceq vd
+    cv cdm cM vf cv vd cv cD wceq vd cv cdm cD cdm cM vd cv cD dmeq 
+    cD cdm cM wceq vd cv cD wceq cM cD cdm isdedNEW.1 eqcomi a1i eqtrd 
+    eleq2d vd cv cD wceq vg cv vf cv cop vr cv cdm wcel vg cv vd cv cfv vf 
+    cv vc cv cfv wceq wb vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf
+    cv vc cv cfv wceq wb vg vd cv cdm cM vd cv cD wceq vg cv vd cv 
+    cdm wcel vg cv cM wcel vg cv vf cv cop vr cv cdm wcel vg cv vd cv 
+    cfv vf cv vc cv cfv wceq wb vg cv vf cv cop vr cv cdm wcel vg cv cD 
+    cfv vf cv vc cv cfv wceq wb vd cv cD wceq vd cv cdm cM vg cv vd cv 
+    cD wceq vd cv cdm cD cdm cM vd cv cD dmeq cD cdm cM wceq vd cv cD 
+    wceq cM cD cdm isdedNEW.1 eqcomi a1i eqtrd eleq2d vd cv cD wceq vg cv
+    vd cv cfv vf cv vc cv cfv wceq vg cv cD cfv vf cv vc cv cfv wceq 
+    vg cv vf cv cop vr cv cdm wcel vd cv cD wceq vg cv vd cv cfv vg cv 
+    cD cfv vf cv vc cv cfv vg cv vd cv cD fveq1 eqeq1d bibi2d imbi12d 
+    ralbidv2 imbi12d ralbidv2 3anbi123d vd cv cD wceq vg cv vd cv cfv vf cv 
+    vc cv cfv wceq vg cv vf cv vr cv co vd cv cfv vf cv vd cv cfv wceq 
+    wi vg vd cv cdm wral vf vd cv cdm wral vg cv cD cfv vf cv vc cv cfv
+    wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vg cM wral 
+    vf cM wral vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv 
+    co vc cv cfv vg cv vc cv cfv wceq wi vg vd cv cdm wral vf vd cv cdm
+    wral vg cv cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc cv
+    cfv vg cv vc cv cfv wceq wi vg cM wral vf cM wral vd cv cD wceq 
+    vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vd cv cfv
+    vf cv vd cv cfv wceq wi vg vd cv cdm wral vg cv cD cfv vf cv vc 
+    cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vg cM 
+    wral vf vd cv cdm cM vd cv cD wceq vf cv vd cv cdm wcel vf cv cM wcel
+    vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vd cv 
+    cfv vf cv vd cv cfv wceq wi vg vd cv cdm wral vg cv cD cfv vf cv vc 
+    cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vg cM 
+    wral vd cv cD wceq vd cv cdm cM vf cv vd cv cD wceq vd cv cdm cD cdm 
+    cM vd cv cD dmeq cD cdm cM wceq vd cv cD wceq cM cD cdm isdedNEW.1 
+    eqcomi a1i eqtrd eleq2d vd cv cD wceq vg cv vd cv cfv vf cv vc cv cfv 
+    wceq vg cv vf cv vr cv co vd cv cfv vf cv vd cv cfv wceq wi vg cv cD 
+    cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv 
+    wceq wi vg vd cv cdm cM vd cv cD wceq vg cv vd cv cdm wcel vg cv cM 
+    wcel vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vd cv 
+    cfv vf cv vd cv cfv wceq wi vg cv cD cfv vf cv vc cv cfv wceq vg cv 
+    vf cv vr cv co cD cfv vf cv cD cfv wceq wi vd cv cD wceq vd cv cdm 
+    cM vg cv vd cv cD wceq vd cv cdm cD cdm cM vd cv cD dmeq cD cdm cM 
+    wceq vd cv cD wceq cM cD cdm isdedNEW.1 eqcomi a1i eqtrd eleq2d vd cv
+    cD wceq vg cv vd cv cfv vf cv vc cv cfv wceq vg cv cD cfv vf cv 
+    vc cv cfv wceq vg cv vf cv vr cv co vd cv cfv vf cv vd cv cfv wceq 
+    vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq vd cv cD wceq vg cv 
+    vd cv cfv vg cv cD cfv vf cv vc cv cfv vg cv vd cv cD fveq1 eqeq1d 
+    vd cv cD wceq vg cv vf cv vr cv co vd cv cfv vg cv vf cv vr cv co 
+    cD cfv vf cv vd cv cfv vf cv cD cfv vg cv vf cv vr cv co vd cv cD 
+    fveq1 vf cv vd cv cD fveq1 eqeq12d imbi12d imbi12d ralbidv2 imbi12d 
+    ralbidv2 vd cv cD wceq vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv 
+    vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg vd cv cdm wral vg cv 
+    cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc cv cfv vg cv vc
+    cv cfv wceq wi vg cM wral vf vd cv cdm cM vd cv cD wceq vf cv vd 
+    cv cdm wcel vf cv cM wcel vg cv vd cv cfv vf cv vc cv cfv wceq vg 
+    cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg vd cv cdm 
+    wral vg cv cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc cv cfv
+    vg cv vc cv cfv wceq wi vg cM wral vd cv cD wceq vd cv cdm cM vf 
+    cv vd cv cD wceq vd cv cdm cD cdm cM vd cv cD dmeq cD cdm cM wceq 
+    vd cv cD wceq cM cD cdm isdedNEW.1 eqcomi a1i eqtrd eleq2d vd cv cD
+    wceq vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc
+    cv cfv vg cv vc cv cfv wceq wi vg cv cD cfv vf cv vc cv cfv wceq 
+    vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg vd cv cdm
+    cM vd cv cD wceq vg cv vd cv cdm wcel vg cv cM wcel vg cv vd cv 
+    cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv 
+    cfv wceq wi vg cv cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co 
+    vc cv cfv vg cv vc cv cfv wceq wi vd cv cD wceq vd cv cdm cM vg cv 
+    vd cv cD wceq vd cv cdm cD cdm cM vd cv cD dmeq cD cdm cM wceq vd 
+    cv cD wceq cM cD cdm isdedNEW.1 eqcomi a1i eqtrd eleq2d vd cv cD 
+    wceq vg cv vd cv cfv vf cv vc cv cfv wceq vg cv cD cfv vf cv vc cv 
+    cfv wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq vd cv 
+    cD wceq vg cv vd cv cfv vg cv cD cfv vf cv vc cv cfv vg cv vd cv cD
+    fveq1 eqeq1d imbi1d imbi12d ralbidv2 imbi12d ralbidv2 anbi12d 
+    anbi12d vc cv cC wceq cD vc cv cop vj cv vr cv cop cop calg wcel va cv 
+    vj cv cfv cD cfv va cv wceq va cv vj cv cfv vc cv cfv va cv wceq wa
+    va vj cv cdm wral vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf 
+    cv vc cv cfv wceq wb vg cM wral vf cM wral w3a cD cC cop vj cv vr 
+    cv cop cop calg wcel va cv vj cv cfv cD cfv va cv wceq va cv vj cv 
+    cfv cC cfv va cv wceq wa va vj cv cdm wral vg cv vf cv cop vr cv cdm
+    wcel vg cv cD cfv vf cv cC cfv wceq wb vg cM wral vf cM wral w3a 
+    vg cv cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv
+    cD cfv wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv vc cv cfv
+    wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg cM
+    wral vf cM wral wa vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr 
+    cv co cD cfv vf cv cD cfv wceq wi vg cM wral vf cM wral vg cv cD 
+    cfv vf cv cC cfv wceq vg cv vf cv vr cv co cC cfv vg cv cC cfv wceq 
+    wi vg cM wral vf cM wral wa vc cv cC wceq cD vc cv cop vj cv vr cv 
+    cop cop calg wcel cD cC cop vj cv vr cv cop cop calg wcel va cv vj 
+    cv cfv cD cfv va cv wceq va cv vj cv cfv vc cv cfv va cv wceq wa va
+    vj cv cdm wral va cv vj cv cfv cD cfv va cv wceq va cv vj cv cfv 
+    cC cfv va cv wceq wa va vj cv cdm wral vg cv vf cv cop vr cv cdm 
+    wcel vg cv cD cfv vf cv vc cv cfv wceq wb vg cM wral vf cM wral vg cv
+    vf cv cop vr cv cdm wcel vg cv cD cfv vf cv cC cfv wceq wb vg cM 
+    wral vf cM wral vc cv cC wceq cD vc cv cop vj cv vr cv cop cop cD cC 
+    cop vj cv vr cv cop cop calg vc cv cC wceq cD vc cv cop cD cC cop vj
+    cv vr cv cop vc cv cC cD opeq2 opeq1d eleq1d vc cv cC wceq va cv 
+    vj cv cfv cD cfv va cv wceq va cv vj cv cfv vc cv cfv va cv wceq wa
+    va cv vj cv cfv cD cfv va cv wceq va cv vj cv cfv cC cfv va cv 
+    wceq wa va vj cv cdm vc cv cC wceq va cv vj cv cfv vc cv cfv va cv 
+    wceq va cv vj cv cfv cC cfv va cv wceq va cv vj cv cfv cD cfv va cv 
+    wceq vc cv cC wceq va cv vj cv cfv vc cv cfv va cv vj cv cfv cC cfv 
+    va cv va cv vj cv cfv vc cv cC fveq1 eqeq1d anbi2d ralbidv vc cv cC
+    wceq vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv vc cv cfv 
+    wceq wb vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv cC cfv wceq
+    wb vf vg cM cM vc cv cC wceq vg cv cD cfv vf cv vc cv cfv wceq vg
+    cv cD cfv vf cv cC cfv wceq vg cv vf cv cop vr cv cdm wcel vc cv 
+    cC wceq vf cv vc cv cfv vf cv cC cfv vg cv cD cfv vf cv vc cv cC 
+    fveq1 eqeq2d bibi2d 2ralbidv 3anbi123d vc cv cC wceq vg cv cD cfv vf 
+    cv vc cv cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi 
+    vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr
+    cv co cD cfv vf cv cD cfv wceq wi vg cM wral vf cM wral vg cv cD 
+    cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv 
+    cfv wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg 
+    cv vf cv vr cv co cC cfv vg cv cC cfv wceq wi vg cM wral vf cM wral
+    vc cv cC wceq vg cv cD cfv vf cv vc cv cfv wceq vg cv vf cv vr cv
+    co cD cfv vf cv cD cfv wceq wi vg cv cD cfv vf cv cC cfv wceq vg 
+    cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vf vg cM cM vc cv cC 
+    wceq vg cv cD cfv vf cv vc cv cfv wceq vg cv cD cfv vf cv cC cfv wceq
+    vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq vc cv cC wceq vf cv
+    vc cv cfv vf cv cC cfv vg cv cD cfv vf cv vc cv cC fveq1 eqeq2d 
+    imbi1d 2ralbidv vc cv cC wceq vg cv cD cfv vf cv vc cv cfv wceq vg cv 
+    vf cv vr cv co vc cv cfv vg cv vc cv cfv wceq wi vg cv cD cfv vf cv
+    cC cfv wceq vg cv vf cv vr cv co cC cfv vg cv cC cfv wceq wi vf 
+    vg cM cM vc cv cC wceq vg cv cD cfv vf cv vc cv cfv wceq vg cv cD 
+    cfv vf cv cC cfv wceq vg cv vf cv vr cv co vc cv cfv vg cv vc cv cfv
+    wceq vg cv vf cv vr cv co cC cfv vg cv cC cfv wceq vc cv cC wceq 
+    vf cv vc cv cfv vf cv cC cfv vg cv cD cfv vf cv vc cv cC fveq1 
+    eqeq2d vc cv cC wceq vg cv vf cv vr cv co vc cv cfv vg cv vf cv vr cv 
+    co cC cfv vg cv vc cv cfv vg cv cC cfv vg cv vf cv vr cv co vc cv 
+    cC fveq1 vg cv vc cv cC fveq1 eqeq12d imbi12d 2ralbidv anbi12d 
+    anbi12d vj cv cJ wceq cD cC cop vj cv vr cv cop cop calg wcel va cv vj 
+    cv cfv cD cfv va cv wceq va cv vj cv cfv cC cfv va cv wceq wa va vj
+    cv cdm wral vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv cC 
+    cfv wceq wb vg cM wral vf cM wral w3a cD cC cop cJ vr cv cop cop 
+    calg wcel va cv cJ cfv cD cfv va cv wceq va cv cJ cfv cC cfv va cv 
+    wceq wa va cO wral vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv 
+    cC cfv wceq wb vg cM wral vf cM wral w3a vg cv cD cfv vf cv cC cfv 
+    wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vg cM wral vf 
+    cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr cv co cC cfv 
+    vg cv cC cfv wceq wi vg cM wral vf cM wral wa vj cv cJ wceq cD cC 
+    cop vj cv vr cv cop cop calg wcel cD cC cop cJ vr cv cop cop calg 
+    wcel va cv vj cv cfv cD cfv va cv wceq va cv vj cv cfv cC cfv va cv 
+    wceq wa va vj cv cdm wral va cv cJ cfv cD cfv va cv wceq va cv cJ cfv
+    cC cfv va cv wceq wa va cO wral vg cv vf cv cop vr cv cdm wcel vg
+    cv cD cfv vf cv cC cfv wceq wb vg cM wral vf cM wral vj cv cJ 
+    wceq cD cC cop vj cv vr cv cop cop cD cC cop cJ vr cv cop cop calg vj
+    cv cJ wceq vj cv vr cv cop cJ vr cv cop cD cC cop vj cv cJ vr cv 
+    opeq1 opeq2d eleq1d vj cv cJ wceq va cv vj cv cfv cD cfv va cv wceq va
+    cv vj cv cfv cC cfv va cv wceq wa va cv cJ cfv cD cfv va cv wceq 
+    va cv cJ cfv cC cfv va cv wceq wa va vj cv cdm cO vj cv cJ wceq va 
+    cv vj cv cdm wcel va cv cO wcel va cv vj cv cfv cD cfv va cv wceq 
+    va cv vj cv cfv cC cfv va cv wceq wa va cv cJ cfv cD cfv va cv wceq
+    va cv cJ cfv cC cfv va cv wceq wa vj cv cJ wceq vj cv cdm cO va 
+    cv vj cv cJ wceq vj cv cdm cJ cdm cO vj cv cJ dmeq cJ cdm cO wceq 
+    vj cv cJ wceq cO cJ cdm isdedNEW.2 eqcomi a1i eqtrd eleq2d vj cv cJ
+    wceq va cv vj cv cfv cD cfv va cv wceq va cv cJ cfv cD cfv va cv 
+    wceq va cv vj cv cfv cC cfv va cv wceq va cv cJ cfv cC cfv va cv wceq
+    vj cv cJ wceq va cv vj cv cfv cD cfv va cv cJ cfv cD cfv va cv vj
+    cv cJ wceq va cv vj cv cfv va cv cJ cfv wceq va cv vj cv cfv cD 
+    cfv va cv cJ cfv cD cfv wceq va cv vj cv cJ fveq1 va cv vj cv cfv va
+    cv cJ cfv cD fveq2 syl eqeq1d vj cv cJ wceq va cv vj cv cfv cC 
+    cfv va cv cJ cfv cC cfv va cv vj cv cJ wceq va cv vj cv cfv va cv cJ
+    cfv wceq va cv vj cv cfv cC cfv va cv cJ cfv cC cfv wceq va cv vj
+    cv cJ fveq1 va cv vj cv cfv va cv cJ cfv cC fveq2 syl eqeq1d 
+    anbi12d imbi12d ralbidv2 3anbi12d anbi1d vr cv cR wceq cD cC cop cJ vr 
+    cv cop cop calg wcel va cv cJ cfv cD cfv va cv wceq va cv cJ cfv cC
+    cfv va cv wceq wa va cO wral vg cv vf cv cop vr cv cdm wcel vg cv
+    cD cfv vf cv cC cfv wceq wb vg cM wral vf cM wral w3a cD cC cop 
+    cJ cR cop cop calg wcel va cv cJ cfv cD cfv va cv wceq va cv cJ cfv
+    cC cfv va cv wceq wa va cO wral vg cv vf cv cop cR cdm wcel vg cv
+    cD cfv vf cv cC cfv wceq wb vg cM wral vf cM wral w3a vg cv cD 
+    cfv vf cv cC cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq 
+    wi vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv
+    vr cv co cC cfv vg cv cC cfv wceq wi vg cM wral vf cM wral wa vg 
+    cv cD cfv vf cv cC cfv wceq vg cv vf cv cR co cD cfv vf cv cD cfv 
+    wceq wi vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf
+    cv cR co cC cfv vg cv cC cfv wceq wi vg cM wral vf cM wral wa vr 
+    cv cR wceq cD cC cop cJ vr cv cop cop calg wcel cD cC cop cJ cR cop
+    cop calg wcel vg cv vf cv cop vr cv cdm wcel vg cv cD cfv vf cv 
+    cC cfv wceq wb vg cM wral vf cM wral vg cv vf cv cop cR cdm wcel vg
+    cv cD cfv vf cv cC cfv wceq wb vg cM wral vf cM wral va cv cJ cfv
+    cD cfv va cv wceq va cv cJ cfv cC cfv va cv wceq wa va cO wral vr
+    cv cR wceq cD cC cop cJ vr cv cop cop cD cC cop cJ cR cop cop 
+    calg vr cv cR wceq cJ vr cv cop cJ cR cop cD cC cop vr cv cR cJ opeq2
+    opeq2d eleq1d vr cv cR wceq vg cv vf cv cop vr cv cdm wcel vg cv 
+    cD cfv vf cv cC cfv wceq wb vg cv vf cv cop cR cdm wcel vg cv cD 
+    cfv vf cv cC cfv wceq wb vf vg cM cM vr cv cR wceq vg cv vf cv cop 
+    vr cv cdm wcel vg cv vf cv cop cR cdm wcel vg cv cD cfv vf cv cC 
+    cfv wceq vr cv cR wceq vr cv cdm cR cdm vg cv vf cv cop vr cv cR 
+    dmeq eleq2d bibi1d 2ralbidv 3anbi13d vr cv cR wceq vg cv cD cfv vf cv
+    cC cfv wceq vg cv vf cv vr cv co cD cfv vf cv cD cfv wceq wi vg 
+    cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv cR co
+    cD cfv vf cv cD cfv wceq wi vg cM wral vf cM wral vg cv cD cfv vf
+    cv cC cfv wceq vg cv vf cv vr cv co cC cfv vg cv cC cfv wceq wi 
+    vg cM wral vf cM wral vg cv cD cfv vf cv cC cfv wceq vg cv vf cv cR
+    co cC cfv vg cv cC cfv wceq wi vg cM wral vf cM wral vr cv cR 
+    wceq vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr cv co cD cfv vf cv
+    cD cfv wceq wi vg cv cD cfv vf cv cC cfv wceq vg cv vf cv cR co 
+    cD cfv vf cv cD cfv wceq wi vf vg cM cM vr cv cR wceq vg cv vf cv 
+    vr cv co cD cfv vf cv cD cfv wceq vg cv vf cv cR co cD cfv vf cv cD
+    cfv wceq vg cv cD cfv vf cv cC cfv wceq vr cv cR wceq vg cv vf cv
+    vr cv co cD cfv vg cv vf cv cR co cD cfv vf cv cD cfv vr cv cR 
+    wceq vg cv vf cv vr cv co vg cv vf cv cR co wceq vg cv vf cv vr cv co
+    cD cfv vg cv vf cv cR co cD cfv wceq vg cv vf cv vr cv cR opreq 
+    vg cv vf cv vr cv co vg cv vf cv cR co cD fveq2 syl eqeq1d imbi2d 
+    2ralbidv vr cv cR wceq vg cv cD cfv vf cv cC cfv wceq vg cv vf cv vr cv 
+    co cC cfv vg cv cC cfv wceq wi vg cv cD cfv vf cv cC cfv wceq vg cv
+    vf cv cR co cC cfv vg cv cC cfv wceq wi vf vg cM cM vr cv cR wceq
+    vg cv vf cv vr cv co cC cfv vg cv cC cfv wceq vg cv vf cv cR co 
+    cC cfv vg cv cC cfv wceq vg cv cD cfv vf cv cC cfv wceq vr cv cR 
+    wceq vg cv vf cv vr cv co cC cfv vg cv vf cv cR co cC cfv vg cv cC 
+    cfv vr cv cR wceq vg cv vf cv vr cv co vg cv vf cv cR co wceq vg cv 
+    vf cv vr cv co cC cfv vg cv vf cv cR co cC cfv wceq vg cv vf cv vr 
+    cv cR opreq vg cv vf cv vr cv co vg cv vf cv cR co cC fveq2 syl 
+    eqeq1d imbi2d 2ralbidv anbi12d anbi12d elo cded vx cv vd cv vc cv cop 
+    vj cv vr cv cop cop wceq vd cv vc cv cop vj cv vr cv cop cop calg 
+    wcel va cv vj cv cfv vd cv cfv va cv wceq va cv vj cv cfv vc cv cfv 
+    va cv wceq wa va vj cv cdm wral vg cv vf cv cop vr cv cdm wcel vg 
+    cv vd cv cfv vf cv vc cv cfv wceq wb vg vd cv cdm wral vf vd cv cdm
+    wral w3a vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv 
+    co vd cv cfv vf cv vd cv cfv wceq wi vg vd cv cdm wral vf vd cv cdm
+    wral vg cv vd cv cfv vf cv vc cv cfv wceq vg cv vf cv vr cv co vc
+    cv cfv vg cv vc cv cfv wceq wi vg vd cv cdm wral vf vd cv cdm 
+    wral wa wa wa vr wex vj wex vc wex vd wex vx cab cD cC cop cJ cR cop 
+    cop vx vf vg vj vr va vc vd df-dedNEW eleq2i syl5bb $.
+  $}
+
+  ${
+     dedNEW.1 $e |- D = ( dom_ ` T ) $.
+     dedNEW.2 $e |- C = ( cod_ ` T ) $.
+     dedNEW.3 $e |- J = ( id_ ` T ) $.
+     dedNEW.4 $e |- R = ( o_ ` T ) $.
+     dedNEW.5 $e |- M = dom D $.
+     dedNEW.6 $e |- O = dom J $.
+     $( Properties of a "deductive system". $)
+     dedNEW $p |- ( T e. Ded
+        -> ( ( <. <. D , C >. , <. J , R >. >.  e. Alg /\
+      A. a e. O
+         ( ( D ` ( J ` a ) ) = a /\ ( C ` ( J ` a ) ) = a ) /\
+
+      A. f e. M A. g e. M ( <. g , f >. e. dom R
+        <-> ( D ` g ) = ( C ` f ) ) ) /\ (
+
+      A. f e. M A. g e. M
+         ( ( D ` g ) = ( C ` f ) -> ( D ` ( g R f ) ) = ( D ` f ) ) /\
+
+      A. f e. M A. g e. M
+         ( ( D ` g ) = ( C ` f ) -> ( C ` ( g R f ) ) = ( C ` g ) ) ) ) ) $= ? $.
+   $}
+
+  $( A category is a deductive system where the composition is associative,
+  and the identity a neutral element. $)
+  df-cat $a |- Cat = { x e. Ded | E. d E. c E. j E. r
+    ( ( x = <. d , <. c , <. j , r >. >. >. /\
+
+           A. f e. ran r A. g e. ran r A. h e. ran r
+              (
+                ( ( d ` h ) = ( c ` g ) /\ ( d ` g ) = ( c ` f ) )
+              ->
+                ( h r ( g r f ) ) = ( ( h r g ) r f )
+               ) ) /\
+
+          ( A. b e. p A. f e. ran r ( ( c ` f ) = b ->
+             ( ( j ` b ) r f ) = f ) /\
+
+          A. b e. p A. g e. ran r ( ( d ` g ) = b ->
+             ( g r ( j ` b ) ) = g ) ) ) } $.
+
+  $(
+    idos @a |- ( ( A e. O ) ->  ( ( D ` ( J ` A ) ) = A /\
+        ( C ` ( J ` A ) ) = A ) ) @.
+    dommo @a |- ( T e. Cat -> D : M --> O ) @.
+    codmo @a |- ( T e. Cat -> C : M --> O ) @.
+    idom @a |- ( T e. Cat -> J : O --> M ) @.
+    cmppf @a |- ( ( T e. Cat /\ F e. M /\ G e. M ) ->
+      ( Fun R /\ dom R (_ ( M x. M ) /\
+      ( <. G , F >. e. dom R <-> ( D ` G ) = ( C ` F ) ) ) ) @.
+    domcmp @a |- ( ( T e. Cat /\ F e. M /\ g e. M ) ->
+           ( ( D ` G ) = ( C ` F ) -> ( D ` ( G R F ) ) = ( D ` F ) ) ) @.
+    codcmp @a |- ( ( T e. Cat /\ F e. M /\ G e. M ) ->
+           ( ( D ` G ) = ( C ` F )
+           -> ( C ` ( G R F ) ) = ( C ` G ) ) ) @.
+    cmpasso @a |-  ( ( T e. Cat /\ ( F e. M /\ G e. M /\ H e. M ) ) ->
+              (
+                ( ( D ` H ) = ( C ` G ) /\
+                ( D ` G ) = ( C ` F ) )
+              ->
+                ( H R ( G R F ) )
+                  ( ( H R G ) R F )
+               ) ) @.
+    cmpida @a |- ( ( T e. Cat /\ A e. O /\ F e. M ) -> ( ( C ` F ) = A
+       -> ( ( J ` A ) R F ) = F ) ) @.
+    cmpidb @a |- ( ( T e. Cat /\ A e. O /\ F e. M ) -> ( ( D ` F ) = A
+       -> ( F R ( J ` A ) ) = F ) ) @.
+    iscat T e. Cat
+
+
+  <. <. D : { A } -> B , C : { A } -> B >. ,
+     <. R : <. A, A >. -> A , I : { B } -> A >. >.
+
+  ( dom_ ` 1Cat ) :
+  1Cat e. Cat @= ? @.
+  $)
+
+
+  $( 1 - The class of all categories exists. $)
+  catv $a |- Cat e. V $.
+
+  ${
+    $d O D J C M R T $.
+    idos.1 $e |- O = dom J $.
+    idos.2 $e |- D = ( dom_ ` T ) $.
+    idos.3 $e |- J = ( id_ ` T ) $.
+    idos.4 $e |- C = ( cod_ ` T ) $.
+    $( 2 - The identity is a mapping which has the same object as its domain
+    and its codomain. $)
+    idos $a |- ( ( T e. Cat /\ A e. O ) ->  ( ( D ` ( J ` A ) ) = A /\
+        ( C ` ( J ` A ) ) = A ) ) $.
+  $}
+
+  ${
+    cat.1 $e |- M = ran ( o_ ` T ) $.
+
+  ${
+    cat.2 $e |- O = dom ( id_ ` T ) $.
+
+  ${
+
+    dommo.3 $e |- D = ( dom_ ` T ) $.
+
+    $( 3 - ` ( dom_ `` T ) ` is a mapping from the morphisms of ` T ` to
+      the objects of ` T ` . $)
+    dommo $a |- ( T e. Cat -> D : M --> O ) $.
+
+  $}
+
+  ${
+    codmo.3 $e |- C = ( cod_ ` T ) $.
+
+    $( 4 - ` ( cod_ `` T ) ` is a mapping from the morphisms of
+     ` T ` to  the objects of ` T ` . $)
+    codmo $a |- ( T e. Cat -> C : M --> O ) $.
+  $}
+
+  ${
+    idom.3 $e |- J = ( id_ ` T ) $.
+    $( 5 - ` id_ ` is a mapping from the objects of
+     ` C ` to  the morphisms of C. $)
+    idom $a |- ( T e. Cat -> J : O --> M ) $.
+  $}
+
+  $}
+
+  ${
+    cat.3 $e |- R = ( o_ ` T ) $.
+    cat.4 $e |- C = ( cod_ ` T ) $.
+
+  ${
+    cat.5 $e |- D = ( dom_ ` T ) $.
+
+    $( 6 - ` ( g o_ f )  ` is only defined when the domain of ` f ` is the
+    codomain of ` g ` . $)
+    cmppf $a |- ( ( T e. Cat /\ F e. M /\ G e. M ) ->
+      ( Fun R /\ dom R (_ ( M x. M ) /\
+      ( <. G , F >. e. dom R <-> ( D ` G ) = ( C ` F ) ) ) ) $.
+
+    $( 7 - When ` ( F o_ G ) ` is defined its domain is the domain of
+       ` F ` . $)
+    domcmp $a |- ( ( T e. Cat /\ F e. M /\ g e. M ) ->
+           ( ( D ` G ) = ( C ` F ) -> ( D ` ( G R F ) ) = ( D ` F ) ) ) $.
+
+    $( 8 - When ` ( F o_ G ) ` is defined its codomain is the codomain
+    of ` G ` . $)
+    codcmp $a |- ( ( T e. Cat /\ F e. M /\ G e. M ) ->
+           ( ( D ` G ) = ( C ` F )
+           -> ( C ` ( G R F ) ) = ( C ` G ) ) ) $.
+
+    $( 9 - ` o_ ` is associative. $)
+    cmpasso $a |-  ( ( T e. Cat /\ ( F e. M /\ G e. M /\ H e. M ) ) ->
+              (
+                ( ( D ` H ) = ( C ` G ) /\
+                ( D ` G ) = ( C ` F ) )
+              ->
+                ( H R ( G R F ) )
+                  ( ( H R G ) R F )
+               ) ) $.
+  $}
+
+  ${
+    cat.6 $e |- O = dom J $.
+    cat.7 $e |- J = ( id_ ` T ) $.
+    $( 10 - composition of a mapping with the identity. $)
+    cmpida $a |- ( ( T e. Cat /\ A e. O /\ F e. M ) -> ( ( C ` F ) = A
+       -> ( ( J ` A ) R F ) = F ) ) $.
+
+    $( 11 - composition of a mapping with the identity. $)
+    cmpidb $a |- ( ( T e. Cat /\ A e. O /\ F e. M ) -> ( ( D ` F ) = A
+       -> ( F R ( J ` A ) ) = F ) ) $.
+  $}
+
+  $}
+
+  $}
+
+  $c hom $.
+
+  $( Extend class notation with the function returning all the morphisms
+     between two sets. $)
+  chom $a class hom $.
+
+  ${
+    $d x y a c f $. $d x y b c f $.
+    $( Function ( indexed by the category x ) returning all the morphisms
+       from the object ` a ` to the object ` b ` . $)
+    df-hom $a |- hom = { <. x , y >. | ( x e. Cat /\
+     y = { <. <. a , b >. , c >. | ( a e. dom ( id_ ` x ) /\
+       b e. dom ( id_ ` x ) /\
+       c = { f | ( f e. ran ( o_ ` x ) /\ ( ( dom_ ` x ) ` f ) = a /\
+                   ( ( cod_ ` x ) ` f ) = b ) } ) } ) } $.
+  $}
+
+  ${
+    $d T a b c x y f $. $d M c x y $. $d D c x y $.
+    $d C c x y $. $d O x y $.
+    ishoma.1 $e |- O = dom ( id_ ` T ) $.
+    ishoma.2 $e |- M = ran ( o_ ` T ) $.
+    ishoma.3 $e |- D = ( dom_ ` T ) $.
+    ishoma.4 $e |- C = ( cod_ ` T ) $.
+    $( Definition of ` hom ` . JFM p. 410 bottom. $)
+    ishoma $p |- ( T e. Cat ->  ( hom ` T ) = { <. <. a , b >. , c >. |
+      ( a e. O /\ b e. O /\ c = { f | ( f e. M /\ ( D ` f ) = a /\
+      ( C ` f ) = b ) } ) } ) $
+      ( vx vy cv cid_ cfv cdm wcel co_ crn cdom_ wceq ccod_ w3a cab copab2
+      ccat chom fveq2 dmeqd syl6eqr eleq2d rneqd fveq1d eqeq1d 3anbi123d
+      abbidv eqeq2d oprabbidv df-hom cvv fvex dmexg ax-mp wa eleq2i pm4.2
+      3anbi123i df-3an bitr oprabbii oprabex2 fvopab4 ) NOCGPZNPZQRZSZTZHPZVSTZ
+      IPZDPZVQUARZUBZTZWDVQUCRZRZVPUDZWDVQUERZRZWAUDZUFZDUGZUDZUFZGHIUHVPFTZWAF
+      TZWCWDETZWDBRZVPUDZWDARZWAUDZUFZDUGZUDZUFZGHIUHZUIUJVQCUDZWQXHGHIXJVTWRWB
+      WSWPXGXJVSFVPXJVSCQRZSZFXJVRXKVQCQUKULJUMZUNXJVSFWAXMUNXJWOXFWCXJWNXEDXJW
+      GWTWJXBWMXDXJWFEWDXJWFCUARZUBEXJWEXNVQCUAUKUOKUMUNXJWIXAVPXJWDWHBXJWHCUCR
+      BVQCUCUKLUMUPUQXJWLXCWAXJWDWKAXJWKCUERAVQCUEUKMUMUPUQURUSUTURVANODGHIVBGH
+      IXLXLXFXIXKVCTXLVCTCQVDXKVCVEVFZXOXHVPXLTZWAXLTZVGXGVGZGHIXHXPXQXGUFXRWRX
+      PWSXQXGXGFXLVPJVHFXLWAJVHXGVIVJXPXQXGVKVLVMVNVO $.
+      $( [19-May-2007] $) $( [6-May-2007] $)
+  $}
+
+  ${ $d A a b c f $. $d B a b c f $. $d O a b c $. $d T a b c f $.
+     $d M a b c f $. $d D a b c $. $d C a b c $.
+
+    ishomb.1 $e |- O = dom ( id_ ` T ) $.
+    ishomb.2 $e |- M = ran ( o_ ` T ) $.
+    ishomb.3 $e |- D = ( dom_ ` T ) $.
+    ishomb.4 $e |- C = ( cod_ ` T ) $.
+    ishomb.5 $e |- H = ( hom ` T ) $.
+    ishomb.6 $e |- T e. Cat $.
+    $( ` ( ( hom `` T ) `` <. A , B >. ) ` as a class. $)
+    ishomb $p |- ( ( A e. O /\ B e. O ) ->
+      ( H ` <. A , B >. ) = { f | ( f e. M /\ ( D ` f ) = A /\
+      ( C ` f ) = B ) } ) $
+      ( va vb vc wcel wa co cv cfv wceq w3a cab cop cvv 3anass abbii co_ crn
+      fvex rnexg ax-mp eqeltr zfausab pm4.2i id eqeq2d 3anbi123d abbidv eqeq2
+      chom copab2 ccat ishoma wb df-3an a1i oprabbidv eqtrd eqtr oprabval2
+      df-opr syl5eqr ) AISBISTABGUAFUBZHSZVQDUCZAUDZVQCUCZBUDZUEZFUFZABUGGUCPQR
+      ABIIVRVSPUBZUDZWAQUBZUDZUEZFUFZWDGVRVTWHUEZFUFWDVRVTWBTZTZFUFUHWCWMFVRVTW
+      BUIUJWLFHHEUKUCZULZUHKWNUHSWOUHSEUKUMWNUHUNUOUPUQUPWEAUDZWIWKFWPVRVRWFVTW
+      HWHWPVRURWPWEAVSWPUSUTWPWHURVAVBWGBUDZWKWCFWQVRVRVTVTWHWBWQVRURWQVTURWGBW
+      AVCVAVBGEVDUCZWEISZWGISZTRUBWJUDZTZPQRVEZNEVFSZWRXCUDOXDWRWSWTXAUEZPQRVEX
+      CCDEFHIPQRJKLMVGXDXEXBPQRXEXBVHXDWSWTXAVIVJVKVLUOVMVNABGVOVP $.
+      $( [19-May-2007] $) $( [18-May-2007] $)
+  $}
+
+  ${
+    $d A x $. $d B x $. $d M x $. $d D x $. $d C x $. $d T x $. $d F x $.
+    ishomc.1 $e |- O = dom ( id_ ` T ) $.
+    ishomc.2 $e |- M = ran ( o_ ` T ) $.
+    ishomc.3 $e |- D = ( dom_ ` T ) $.
+    ishomc.4 $e |- C = ( cod_ ` T ) $.
+    ishomc.5 $e |- H = ( hom ` T ) $.
+    ishomc.6 $e |- T e. Cat $.
+    $( The predicate ` F e. ( ( hom `` T ) `` <. A , B >. ) ` JFM vol. 1.2
+       p. 411 th. 18. $)
+    ishomc $p |- ( ( A e. O /\ B e. O ) ->
+      ( F e. ( H ` <. A , B >. ) <->
+        ( F e. M /\ ( D ` F ) = A /\ ( C ` F ) = B ) ) ) $
+      ( vx wcel wa cop cfv cv wceq w3a cab ishomb eleq2d wi wb 3simp1 eleq1
+      fveq2 eqeq1d 3anbi123d elab3g ax-mp syl6bb ) AIQBIQRZFABSGTZQFPUAZHQZUSDT
+      ZAUBZUSCTZBUBZUCZPUDZQZFHQZFDTZAUBZFCTZBUBZUCZUQURVFFABCDEPGHIJKLMNOUEUFV
+      MVHUGVGVMUHVHVJVLUIVEVMPFHUSFUBZUTVHVBVJVDVLUSFHUJVNVAVIAUSFDUKULVNVCVKBU
+      SFCUKULUMUNUOUP $.
+      $( [19-May-2007] $) $( [19-May-2007] $)
+  $}
+
+$(
+
+  @{
+    ishomd.1 @e |- O = dom ( id_ ` T ) @.
+    ishomd.2 @e |- M = ran ( o_ ` T ) @.
+    ishomd.3 @e |- D = ( dom_ ` T ) @.
+    ishomd.4 @e |- C = ( cod_ ` T ) @.
+    ishomd.5 @e |- H = ( hom ` T ) @.
+    @( The predicate ` F e. ( ( hom `` T ) `` <. A , B >. ) ` JFM vol. 1.2
+       p. 411 th. 18. @)
+    ishomd @p |- ( ( T e. Cat /\ A e. O /\ B e. O ) ->
+      ( F e. ( H ` <. A , B >. ) <->
+        ( F e. M /\ ( D ` F ) = A /\ ( C ` F ) = B ) ) ) @
+      ( ccat wcel cop cfv wceq w3a wb wa wi anbi12d imbi12d elimel ishomc
+      dedth 3impib ) EOPZAIPZBIPZFABQGRPFHPFDRASFCRBSTUAZUJUKULUBZUMUC?E??UN?UM
+      ??UK?UL???UD?UEAB???F????????E?O?UFUGUHUI @.
+      @( [ ?] @) @( [24-May-2007] @)
+  @}
+
+
+  @{
+    mrdmcd.1 @e |- M = ran ( o_ ` T ) @.
+    mrdmcd.2 @e |- H = ( hom ` T ) @.
+    mrdmcd.3 @e |- D = ( dom_ ` T ) @.
+    mrdmcd.4 @e |- C = ( cod_ ` T ) @.
+    mrdmcd.5 @e |- T e. Cat @.
+    @( A morphism belongs to the homset between its domain and its
+    codomain. @)
+    mrdmcd @p |- ( F e. M -> F e. ( H ` <. ( D ` F ) , ( C ` F ) >. ) ) @
+      ( wcel cfv wceq w3a cop id eqid a1i 3jca cid_ cdm wa wb ishomc ax-mp
+      sylibr ) DFLZUHDBMZUINZDAMZUKNZOZDUIUKPEMLZUHUHUJULUHQUJUHUIRSULUHUKRSTUI
+      CUAMUBZLUKUOLUCUNUMUD?UIUKABCDEFUOUORGIJHKUEUFUG @.
+      @( [ ?] @) @( [23-May-2007] @)
+  @}
+
+  @{
+    @d x y f g @.
+    @( Function returning the isomorphisms of a category. @)
+    df-Iso @a |- Iso = { <. x , y >. | ( x e. Cat /\ y = { f |
+     ( f e. ( mor_ ` x ) /\
+        E. g e. ( mor_ ` x )  ( ( ( cod_ ` x ) ` g ) = ( ( dom_ ` x ) ` f ) /\
+          ( ( cod_ ` x ) ` f ) = ( ( dom_ ` x ) ` g ) /\
+          ( f ( o_ ` x ) g ) = ( ( id_ ` x ) ` ( ( cod_ ` x ) ) ` f ) /\
+          ( g ( o_ ` x ) f ) = ( ( id_ ` x ) ` ( ( dom_ ` x ) ) ` f ) ) ) } ) }
+     @.
+  @}
+
+  @{
+    eqidob.1 @e |- O = dom J @.
+    eqidob.2 @e |- J = ( id_ ` C ) @.
+    @( When the identities are equal, the objects are equal. Journal of
+       formalized mathematics vol 1-2 p.413 th. 45. @)
+    eqidob @p |- ( ( C e. Cat /\ A e. O /\ B e. O ) -> ( ( J ` A )
+    ( J ` B ) -> A = B ) ) @
+      ( ccat wcel w3a cfv cdom_ wceq wa ccod_ eqid idos pm3.26d eqcomd 3adant3
+      adantr pm3.27 3adant2 3eqtrd ex fveq2 syl5 ) CHIZAEIZBEIZJZADKZCLKZKZBDKZ
+      UMKZMZABMZULUOMUKUQURUKUQNAUNUPBUKAUNMZUQUHUIUSUJUHUINZUNAUTUNAMULCOKZKAM
+      AVAUMCDEFUMPZGVAPZQRSTUAUKUQUBUKUPBMZUQUHUJVDUIUHUJNVDUOVAKBMBVAUMCDEFVBG
+      VCQRUCUAUDUEULUOUMUFUG @.
+      @( [19-May-2007] @) @( [24-Apr-2007] @)
+  @}
+
+
+
+  @{
+    cmphst.1 @e |- O = dom J @.
+    cmphst.2 @e |- H = ( hom ` T ) @.
+    cmphst.3 @e |- R = ( o_ ` T ) @.
+    @( Homset of composition of morphisms. JFM CAT_1 th. 51. @)
+    cmphst @p |- ( ( T e. Cat /\ ( A e. O /\ B e. O /\ C e. O ) )
+      -> ( ( F e. ( H ` <. A , B >. ) /\ G e. ( H ` <. B , C >. ) )
+        -> ( G R F ) e. ( H ` <. A , C >. ) ) ) @= ? @.
+  @}
+
+$)
+
+  ${
+    $d x y f $. $d x y g $. $d x y h $.
+    $( Function returning the monomorphisms of a category id-est the left
+       cancelable morphisms. The joy of cats def 7.32 p. 104. $)
+    df-mon $a |- Monic = { <. x , y >. |
+    ( x e. Cat /\ y = { f | ( f e. ran ( o_ ` x ) /\
+      A. g e. ran ( o_ ` x ) A. h e. ran ( o_ ` x )
+        ( ( ( ( dom_ ` x ) ` g ) = ( ( dom_ ` x ) ` h ) /\
+            ( ( cod_ ` x ) ` g ) = ( ( dom_ ` x ) ` f ) /\
+            ( ( cod_ ` x ) ` g ) = ( ( dom_ ` x ) ` f ) ) ->
+              ( ( f ( o_ ` x ) g ) = ( f ( o_ ` x ) h ) -> g = h ) ) ) } ) } $.
+  $}
+
+  ${
+    $d x y f $. $d x y g $. $d x y h $.
+    $( Function returning the epimorphisms of a category id-est the left
+       cancelable morphisms. The joy of cats def 7.39 p. 106. $)
+    df-epi $a |- Epi = { <. x , y >. |
+    ( x e. Cat /\ y = { f | ( f e. ran ( o_ ` x ) /\
+      A. g e. ran ( o_ ` x ) A. h e. ran ( o_ ` x )
+        ( ( ( ( cod_ ` x ) ` g ) = ( ( cod_ ` x ) ` h ) /\
+            ( ( dom_ ` x ) ` g ) = ( ( cod_ ` x ) ` f ) /\
+            ( ( dom_ ` x ) ` g ) = ( ( cod_ ` x ) ` f ) ) ->
+              ( ( g ( o_ ` x ) f ) = ( h ( o_ ` x ) f ) -> g = h ) ) ) } ) } $.
+  $}
+
+  $(
+
+  @{
+    @d T F @. @d U F @.
+    @( Function returning all the functors from a category ` T ` to a
+    category ` U ` . @)
+    df-func @a |- Func = { <. <. T , U >. F >. | ( T e. Cat /\ U e. Cat /\
+      F = { f | ( A. o e. dom ( id_ ` T )
+      E. p e. dom ( id_ ` T ) ( f ` ( ( id_ ` T ) ` o ) )
+        ( ( id_ ` T ) ` p ) /\
+      A. m e. ran ( o_ ` T )
+       ( f ` ( ( id_ ` T ) ` ( ( dom_ ` T ) ` m ) ) = ( ) )
+      A. m e. ran ( o_ ` T ) A. n e. ran ( o_ ` T )
+       ( ( ( dom_ ` T ) ` n ) = ( ( cod_ ` T ) ` m ) ->
+         ( f ` ( m ( o_ ` T ) n ) ) = ( ( f ` m ) ( o_ U ) ( f ` n ) ) ) ) }
+  @}
+
+  $)

@@ -1,0 +1,31 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Samuel Härgestam
+
+I am a last year student of mathematics (B.Sc.) and computer science (M.Sc.) at Stockholm University, Sweden. I have applied for Google's Summer of Code support to work on the HDM during the summer. I would like to work on the project even if I don't get the funding, but my financial situation might not permit it.
+
+I am interested in all parts of the HDM project, but my work will at least initially focus on the h-code specification and on the parser.
+
+/Update July 9th, 2005/: I am leaving, and as of today no longer consider myself a part of this project. 
+
+**  Projects
+
+ * [[file:HDM.org][HDM]]
+
+**  HDM Primary Tasks
+
+ * Improve/rewrite the [[file:write parser for LaTeX math to sexps|parser from LaTeX to sexp.org][write parser for LaTeX math to sexps|parser from LaTeX to sexp]]
+ * Work on the specification of the [[file:h-code.org][h-code]]
+
+**  HDM Secondary Tasks
+
+ * Work on [[file:structured proofs|structuring proofs.org][structured proofs|structuring proofs]]
+
+----
+Yay, hi Samuel!  Thanks for posting, and welcome. You and [[file:pekuja.org][pekuja]] are potentially in a conflict over money not of your own choosing,
+but I think you would make a great collaborators (with each other and with the rest of us). :)  I hope we can figure out a way to make this work for both of you.  I hope to see your thoughts, comments, and contributions as they develop.  --[[file:jcorneli.org][jcorneli]]
+
+: Hi Joe! Yes, I know that we are competing for the Google grant. I've met pekuja on irc, and he's a really nice guy, so I agree that it would be great if one of us didn't have to be singled out. As for now, I guess the only thing we can do is familiarize ourselves with the project. Personally I'm quite eager to dive in. --[[file:shargestam.org][shargestam]]
+
+I probably won't around that much from now on. Read [[file:HDM criticism.org][HDM criticism]] to see why (and, hopefully, persuade me otherwise). --[[file:shargestam.org][shargestam]] 2005-30-06

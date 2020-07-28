@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Nevow Framework
+
+The Nevow framework (http://nevow.org/) is a Python framework for constructing web applications.  It supports various methods of templating.  Even more interesting, it provides a framework for type annotation of interfaces, and provides a means of automatically generating web forms corresponding to those interfaces.  This greatly reduces some of the very repetitive work that is involved when adding or modifying functionality of a web application.  Nevow also supports rich integration between the server and JavaScript running in a user's browser (e.g., using XmlHttpRequest), which could be handy for supporting very responsive user interfaces.

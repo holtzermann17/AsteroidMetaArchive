@@ -1,0 +1,783 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* PlanetMath rocks!
+
+That's what I heard (literally) from several people at the Joint
+Mathematics Meeting I went to in San Antonio, Texas, in January. And
+I agree!
+
+It is cool to be affiliated with a site that is well-received by the
+public. One of the coolest things at the meeting was the fact that
+when people "tested" PM's coverage (to see if we had entries on some
+specialized topic coming from their research), at least one hit always
+turned up. I don't know if we were just being lucky, or if PM's basic
+coverage (for research material) is actually getting to be reasonably
+complete. Anyway, I was proud of the authors who made it possible to
+pull of those mini-demos successfully.
+
+After the conference, I started to write up a "whitepaper", detailing
+what we're doing with the site and where we're going with it; our
+initial discussions of this document are quickly turning into a draft.
+You're invited to take a look and contribute:
+
+http://planetx.cc.vt.edu/AsteroidMeta/PlanetMath_whitepaper_for_potential_partners
+
+One of the important things that has come up there is PM as a resource
+for "developing scholars" -- otherwise known as young mathematicians
+-- and in which category I would also like to include the young
+at heart. (After all, anyone who is truly a scholar is always developing
+in some way.) PM certainly has a healthy share of visionaries at
+many stages, ages, and situations in life, and I commend all of
+you! (Hey, I'll even commend myself on _that_!)
+
+Still, I think that PM may have a special place in "youth culture" --
+it would be interesting to get people's views on that. My own feeling
+is that PM is a little tiny bit like the rock'n'roll/zine/Burning
+Man <ducks>/etc. of the math universe. Not that we're in any way
+ *terminally* cool; but we do have at least a bit of "geek chic".
+
+Going along with the above examples it would probably be worthwhile to
+include (potentially even better) examples things like the Whole Earth
+Catalog, food co-ops, Wikipedia, free software -- all of which has at
+one point or another been considered to be somewhat "counter-culture",
+but which has not been too counter-culture to be adapted for
+mainstream use.
+
+If the general feeling here is one of agreement (I'd be interested to
+know if it isn't too!), then I think we should run with this.
+
+Just for example -- because this is part of what inspired this posting
+-- we could get the next PM poster to look something like a concert
+poster. There is almost nothing like this up on the walls at math
+conferences or math departments; but at least among the people I know,
+this sort of stuff is almost ubiquitously popular. (Yes, this is
+totally a matter of "image" I am talking about, sorry if I sound
+sleezy; at least I am trying to be *accurate* -- in that I think the
+specific image I am talking about cultivating is, in this case,
+entirely appropriate.)
+
+That said, I met a couple of guys from UMN at the conference (i.e. the
+University of Minnesota, which starts two blocks from my apartment)
+who looked very clean cut (they were there for job interviews) and who
+were quite ready to joke with me about my longish and rather wild
+hair. (Luckily I am comfortable enough with the counter-culturey
+image I cultivate to be able to withstand light-hearted teasing! I
+could have just as easily remarked that they looked like they were
+coming out of a "Leave it to Beaver" episode; but why bother.) Point
+being, I don't think we need to be "exclusive" in our counter-culture
+image. Anyway, insofar as PM really is counter-culture, it isn't so
+much *about* image.
+
+I'll close by rounding out that point. When I was a kid, I enjoyed
+math, and was relatively good at math, but even more than that I
+enjoyed learning in general and I enjoyed bucking the system. Which
+meant that if I could e.g. learn enough math on my own to skip a whole
+year of math classes, or if I could get into a special program, or if
+I could take classes at the university instead of at high school while
+I was still in high school -- I was all over it! Admittedly, I was
+(in some ways) a rather precocious youngster. But my experience
+e.g. with my friends is that I was far from being the only one. This
+sort of feeling can not really be called "counter-culture" in a
+ *broad* sense -- but that specific sense, of getting the most out of
+the system that it will support -- is, I think, modestly
+counter-culture. Specifically, it is about bending the system to suit
+yourself, rather than the other way around. In my case, this felt
+like a matter of personal enjoyment much more than a matter of image
+(presumably most people thought I was an irredeemable geek, and of
+course if they thought this, they were probably mostly right).
+
+I think -- and I expect this will be reflected heavily in the
+whitepaper I mentioned -- that PM is really well-suited to (and, I
+hope, will hopefully become *increasingly* well-suited to) the
+learn-at-your-own-pace culture and ideology that best supports the
+self-directed student.
+
+I'd be interested to get your thoughts on these matters!
+-[[file:jcorneli.org][jcorneli]]
+(Originally posted to the Math Pub forum on 15 February 2006:
+http://planetmath.org/?op=getmsg&id=9591)
+
+** A Lost Generation
+
+When re-rereading this post after having read
+"[http://www.invisibleadjunct.com The Invisible Adjunct]",
+it occurred to me that there is another sense in which PlanetMath
+could serve very as a focus for a youth counter-culture.  I am
+thinking of the lost generation of young scholars who has seen the
+traditional system disappear in front of their eyes and are left to
+fend alone as alienated vagabonds in a gray shadow land of academic
+nomadism.
+
+As an element of this set, my personal experiences can serve as a
+first-hand introduction to this phenomenon.  When I was an
+undergraduate, the old order was largely intact.  Whatever its
+shortcomings, at least it was functional.  As a student, I felt
+reasonably assured that, as long as I put a reasonable effort and
+produced decent work, I could be assured of steady progress along the
+cursus honorum from lowly freshman to distinguished tenured professor.
+While I might not wind up quite the institution I wanted and would
+have to put up with some unfair share of dues-paying and similar petty
+idiocy, at the same time I could expect a career similar in its genral
+outlines to those of my mentors.  By and large, around me, I saw the
+system working --- graduates were becoming post-doctoral fellows and,
+after a few years, being promoted to assistant professorships; junior
+faculty were regularly obtaining tenure.  By no means am I inclined to
+indulge in wishful nostalgia here --- the system certainly had it
+share of elitism and abusiveness, but it allowed the average
+participant to pursue a career path conducive to his scholarly
+interests.
+
+In the later part of my term as graduate student, I saw this order
+begining to unravel.  Just as I was accepted as a student by my
+advisor, the government decided not to give student support.  At
+first, all of us involved --- my advisor, the dean, and I --- thought
+that this was a temporary glitch and devised a workaround involving a
+temporary university scholarship, but it eventually became apparrent
+that this was a more serious issue.  In fact, the next student who was
+interested in studying general relativity theory had to be turned away
+despite his being sufficiently qualified.  As my advisor said to me
+and his previous advisee "You're the last of the Mohicans".
+
+At the same time, something rather unusual happened --- graduate
+students formed a union and went on strike.  They had too much of
+being burdened with an excessive (for students) teaching load.  This
+took people by surprise.  The physics department chairman called a
+meeting with the graduate students so that he and equally puzzled
+physics students could figure out what was going on.  At the time, I
+was representing the Physics Department on the Graduate and
+Professional Senate and remember how we tried to mediate some of the
+discussion and debate on this topic.
+
+Likewise, applications fared poorly.  I remember how one student
+mailed out 100 applications only to have all of them rejected!  A good
+number of students decided not to pursue academic careers and instead
+found jobs in various technical fields.  On my second round of
+applications, I succeeded in obtaining a post-doctoral appointment at
+the Center for Gravitational Physics and Geometry.  However, here too
+I saw more of the same --- students and post-doctoral scholars were
+having a hard time applying, often times coming up with only
+rejections.  As one student put it (quoting, likely paraphrasing as
+best as I remember), "What do they expect us to do?  Spend a few years
+here, then disappear off the face of the Earth?"  When one starts
+hearing things like this and seeing applicants getting no response to
+100 letters at world-renowned universities and research institutes,
+that suggests that something is not quite right with the picture!
+
+After that I moved South and was professor in Misssissippi and
+Memphis.  Unfortunately, given the trends of the times, both of these
+were "visiting professor" appointments, not tenure-track appointments.
+Also, one of the important lessons I learned from this experience in
+Dixie was just how great a chasm separates rich institutions from poor
+institutions.  Recently, we spoke of outreach to third-world
+countries.  At the same time, it is worth pointing out that we have
+third-world conditions even in the world's top nation.  While I was in
+Memphis, the paucity of the library's science collection was
+appalling.  Were it not for a combination of my 600-odd volume
+personal math library, my alumni library priveleges, Ginsparg's ArXiv,
+and interlibrary loan, I could easily have been cut off rather
+effectively from meaningful participation in the world of active
+research and the mathematical community at large.
+
+Perhaps I have gone on at too great length here about my own personal
+experience, but I think it is relevant as an example of the phenomenon
+of which I have first-hand experience.  Looking around, I have read
+that many others have had similar experiences and that the problems
+which I first noticed towareds the end of my graduate studies have
+only worsened in the intervening decade.  Graduate student
+unionization has beome a fact of life all throughout academia.  While
+not so long ago, a faculty appointment would usually last at least
+five years, nowadays one-year appointments (which were unheard of
+under ordinary circumstances) have become commonplace.  Terms like
+"visiting professor" and "adjunct professor" have been twisted into
+completely new meanings to describe these appointments.  Faculty have
+become split into a tenure-track and temporary group.  A large
+contingent of people who otherwise would have chosen academic careers
+are deciding to pursue non-academic occupations.  For more details,
+see the references.  Looking at them, one sees that there has arisen a
+subculture of young scholars as a response to this situation.
+
+It seems rather clear to me that this is a relevant issue to Planet
+Math because so much of our membership belongs to this lost
+generation.  While it would be nice to have some concrete data in the
+form of something like a user survey, looking generally at the nature
+of the postings to the site and specifically at the top contributors,
+who have disclosed a fair amount of information about themselves, I
+feel confident in asserting that a good-sized contingent, if not a
+sizable majority, of the members of our community are graduate
+students and recent graduates.  Therefore, it would be short-sighted
+to plan anything with respect to Planet Math witout taking into
+consideration the peculiar circumstances which attend on this
+particular group.
+
+One can view this state of affairs as a catastrophe or an opportunity
+depending on whether one casts one glance backwards or forwards.
+Naturally, if one is primarily concerned with the traditions of
+academia, this is an unqualified disaster.  However, if one is
+interested in exploring alternatives, such a crisis may be the
+decisive moment in which to act and implement a new paradigm.
+
+Being an optimist, I incline towards the latter view, regarding this
+situation as the occasion for a creative solution.  During my period
+of heavy involvement with meovements for social change I heard much
+talk of the distinction between revolution and reform.  I believe that
+this is an occasion where we have something positive to offer to both
+ends of the dichotomy without hindering the efforts of the other end.
+
+To reform-minded individuals who wish to operate within the existing
+system, we can offer a credible replacement for some of what has been
+lost.  In the trend towards musical chairs for young faculty and the
+divide between research and teaching faculty, one loss has been the
+opportunity for many people to develop some sort of relationship with
+colleagues that centres around discussing research issues.  Gone are
+the tea-time discussions and the colloquia when one is expected to
+simply teach one's section and move on to the next job.  This loss can
+be especially apparent for those who teach online or have left
+academia altogether.
+
+There can be quite a culture shock for recent graduates.  While they
+were graduate students, their main focus was on research, at least in
+connection with their thesis.  But when they encountered the real
+world either upon graduation or after a brief post-doctoral
+appointment, they encountered a pronounced shift in priorities.
+Research went from being the prime concern to an irrelevancy.  While
+some people may welcome this --- for them thesis research was solely a
+means whereby to attain a diploma needed to advance their careers ---
+not everyone has such a nihilistic attitude.  Even if one might not be
+interested in making mathematical research the main focus of one's
+life, one might at least have acquired enough of a fondness for the
+research one participated in that one might want to keep up on
+developments in the field if not continue one's research part-time
+after graduation.  While Weierstrass might have done it, carrying on a
+research programme without the benefit of interaction with and support
+of colleagues is draining and, unless one has the determination and
+the fortitude of Weierstrass, one is not likely to be able to keep it
+up for very long.  Just as the reference end of Planet Math could help
+independant researchers access the information they need, so too
+hopefully the social end can help them stay connected to a larger
+mathematical community with some sort of stability as opposed to the
+quickly-shifting or isolating circumstances which they find themselves
+in.
+
+This aspect could help give people who have had to accept teaching
+positions, especially at poorer institutions have a fairer chance of
+keeping up with their more fortunate colleagues.  One of the worst
+problems of getting out of the loop is that, the longer one is out of
+the loop, the harder it is to get back in.  To stay competitive and
+hope to land a research position in the future, one needs to keep up
+some sort of research.  Hopefully, if an online mathematical community
+can provide some of the social support which one might otherwise have
+found in one's department, this will allow more people in such
+situations to maintain some sort of research programme and,
+concommittantly, hope of moving into more desirable circumstances.
+
+For those with more revolutionary aims, Planet Math and the Hyperreal
+Dictionary of Mathematics may offer a different set of circumstances
+for the pursuit of mathematical knowledge than those usually found in
+universities.  I find this possibility especially attractive for
+individuals like myself who, in the terminology of
+[http://www.crosscurrents.org/miles.htm John Miles' essay] are more
+intellellectuals rather than academics.  While I can be (and
+frequently and) an academic and find the discipline of the academic
+style useful mental exercise and an important check against the
+dangers of naive unchecked generalism as well as an important support
+for speculative flights of intellectual fancy, at the same time, I
+would not see myself as living up to my full potential were I to
+confine myself exclusively to the academic modus operandi.  Since
+universities are not well suited to intellectuals, I long for a
+milleux which supports mathematical intellectuals.  While I carry out
+my academic investigations on Mittag-Leffler functions and fractional
+calculus successfully in a university environment, it would also be
+nice to have a different sort of cultural framework within which to
+pursue my intellectual ruminations on metamathetics(which easily
+extend to all sorts of subjects) and explore possible alternatives to
+the usual mathematical paradigms.  --[[file:rspuzio.org][rspuzio]]
+
+ * http://www.idiocentrism.com/squib.afford.htm
+ * http://www.adjunctnation.com/other/blog/
+ * http://www.invisibleadjunct.com
+ * http://concerns.youngmath.net/
+
+It seems like we need more "support structures" for essentially adrift
+scholars (I use this term instead of "intellectuals", because "scholarship"
+seems to be the salient part of the academy, and it also implies intellectual
+activity).  We should view !PlanetMath's mission and role as containing a major
+element of supporting this kind of person.   This kind of role should be expected
+anyway from a site and community which relies on self-driven scholarship, but now
+I am seeing that the prevalence of such activity is also driven by changes in
+the academy and research world.
+
+Perhaps we should create a "guide for independent scholars", which would act
+as kind of a "HOWTO" helping to explain how to live a scholarly and intellectually
+connected life when one cannot rely on universities, employers, the government,
+and other sorts of institutions and benefactors to support one's own scholarly
+pursuits.  Of course, this HOWTO would suggest using internet-based tools to
+support these activities and establish virtual communities, but it could also
+contain strategies for the non-intellectual problems: being able to live while
+independently pursuing scholarship, and attaining some balance.  Also, how to
+interact with the "establishment" system (which is very useful if not necessary)
+could use some explication.
+
+We all have a lot of experience with this.  It would be interesting to bring
+together others living this kind of life to learn more and "organize".
+
+Such a document might also help to convince people who are "stuck" in the
+system to leave it, or at least become agents of reform.
+
+--[[file:akrowne.org][akrowne]] Sun Feb 19 19:50:40 UTC 2006
+
+One of my motivations for working on logic and math software
+is to remedy certain shortcomings in our culture. I hope that
+people will learn logic so that when they hear a
+politician say something misleading and illogical, like "We
+fight them over there so we don't have to fight them over
+here!" they shudder in horror at the fallacious reasoning.
+
+I am not a big fan of the term "counter-culture". It
+seems like a false distinction, like liberal versus conservative.
+And I think it confuses the issues at hand. Too many
+connotations, especially with the 60's.
+
+Logic and mathematics are tools for those who want to
+reason effectively.  But other tools are also needed for those who
+want to live effectively. And I think that some of us need
+to take our old ideas and nostalgia for simpler, slower times with job
+security, 9 to 5 jobs, houses in the burbs, and two cars
+in the garage and go visit Reality.  Lifelong scholarship
+and training are more than niceties or hobbies, they are
+matters of survival in 21st century America.  --[[file:ocat.org][ocat]]
+
+Here is a quick HOWTO, for starters.
+
+ * Do not think dishonestly.
+ * The Way is in training.
+ * Become acquainted with every art.
+ * Know the Ways of professions.
+ * Distinguish between gain and loss in worldly matters.
+ * Develop intuitive judgement and understanding for everything.
+ * Perceive those things which cannot be seen.
+ * Pay attention even to trifles.
+ * Do nothing which is of no use.
+
+-- "Go Rin No Sho", Miyamoto Musashi
+
+The quote reminds me of the "[[file:the way of the asteroid|Way of the Asteroid.org][the way of the asteroid|Way of the Asteroid]]".
+
+As for "counter-culture"'s connotation of beatniks, hippies, punks,
+ravers and kindred spirits, anyone who has met me will know that this
+appeals to me.  At the same time, I agree that not everyone sees this
+connotation as positive, so one needs to be careful where one uses
+such terms --- talking about counter-culture and anarchy may not be
+the best way to to intrest the AMS in PM, but it might be a good way
+to get cyberpunks' participation in HDM.
+
+In fact, the only reservation I have with the terms "counter-culture"
+and "alternative culture" is that they are negative --- they define a
+movement in terms of what it is opposed to rather than by what it
+promotes.  Overuse of such terminology can be dangerous.  It can
+promote reactive rather than proactive thinking.  One can put oneself
+in the curious situation of the anti-war protester who found that
+success in stopping the war led to an identity crisis.  That is why I
+think it is good to balance this language with talk of free math.
+
+The guide for independant scholars would be a good idea but, at the
+same time, I am afraid it might be too short a document if written
+today.  We might need to first create some more opportunities for the
+independant mathematician in order to have more to write about.
+
+Just as I consider my case as a good typical example of how an
+academic career can be affected for the worse by recent changes, I
+would also not consider is as a not-so-good atypical example of
+mathematical research outside (or only loosely affiliated with)
+academia becasue I am unusually independant, autodidactic and
+intellectually self-sufficient.  Returning to my personal history, my
+experience as a graduate student was already different from the norm.
+While for most people, advising a graduate student is a process of
+holding someone's hand and slowly walking them through increasingly
+complex problems step-by-step as they slowly gain ability and
+confidence to carry out independant research, I was, in the words of
+my advisor, "a self-starter".  While taking his course, I solved a
+problem he suggested.  (I got a lot of mileage out of that solution ---
+not only did I submit the write-up for credit to two classes, it was
+also my debut publication.)  Afterwards, I was choosing research
+topics pretty much on my own and his advice was more in the way of
+general information about the field, how to manage a research
+programme and balance interests, useful mathematical techniques,
+introduction to various colleagues and the like rather than specific
+guidance on a particular project.
+
+For someone of my temprament, the proverbial desert island can be as
+good a setting as a university for mathematical research.  However,
+not everyone has the same sort of personality --- other people are
+more interdependant and want a more suporting collaborative
+environment in order to live up to their potential.  Unfortunately, I
+don't think we yet have such a situation online so we might need to do
+a bit more work before most people will find an alternative research
+situation congenial.
+
+As I see it, there are three basic reqiuirements for a successful
+research envoironment:
+
+ 1. Time to carry out the research.
+ 1. Access to mathematical knowledge.
+ 1. Colleagues with whom to discuss ideas and collaborate.
+
+In the traditional setting, the first need is provided by paying
+faculty to carry out research.  In the new order, mathematicians have
+done somewhat better thatn their humanist colleagues in the job market
+--- there are enough applications of mathematics to applied problems
+that mathematicians can typically find some line of work which
+utilizes their skills.  Of course, typically such work will involve
+the application of existing math as opposed to extending the frontiers
+of the subject, but at least it keeps one's mathematical skills from
+getting rusty and helps justify the expenditure of effort one put into
+studying the subject.
+
+The problem with such a situation, of course, is that it typically
+only leaves one spare time in which to pursue mathematical research.
+However, this may not be all that different from the situation of the
+typical professor.  As anyone who has held such a position knows all
+too well, a significant portion of one's time and energy goes into
+such tasks as preparing lectures, faculty meetings, writing and
+reading recommendations, office hours, advising, administrative
+paperwork, various committees, organizing lectures and conferences,
+grant applications, departmental events, open-houses, and what not, so
+research typically is at best a part-time activity.  With the recent
+increase in administration, there is even less time for research.  It
+is really sad when a department produces more pages of self-study for
+the administration than research publications for the scientific
+community.  I know professors who do the bulk of their reseach
+activity during the summer vacation.  So, in this regard, one may be
+just as well off inside or outside academia.
+
+As for the second point, that is the issue which our free math
+movement adresses.  As much has been written on that topic elsewhere,
+there is no point in restating it here.  Suffice it to say that
+although much remains to be done before we have universal access to
+all mathematical knowlege, we have made significant progress in this
+direction and can hope for a practicable online alternative to the
+departmental library in the near future.
+
+The third point is where, in my opinion, we are furthest lagging.
+While people use the Planet Math fora to obtain answers to specific
+research-related questions, it doesn't go much further than that.
+Asteroid seems to have been more successful in this respect --- Joe,
+Aaron, and I have collaborated on various scientific and humanistic
+projects here and had broad-ranging philosophical discussions.
+
+What I would love to be able to do is, for instance, post some of my
+thoughts on, say, differential geometry on finitary spaces or systems
+of differential equations as monotone covariant maps on ordered
+algebras of functionals or prime spectra of C* algebras and
+non-standard analysis or monotonic maps of rings and get some
+discussion going.  Perhaps someone will point out some relevant
+references --- for all I know someone has already thought these ideas
+through and worked them out,so I can read the answer somewhere.  Maybe
+other people will join in with further questions or thoughts and
+insights.  Pretty soon, we might make some progress on these issues
+and thereby expand mathematical knowledge.
+
+I suppose that the major obstacle here is more social than
+technological.  A good number of active members are also researchers,
+yet I don't see much discussion of current issue on which they are
+working.  I am not sure why this is the case.  Do people feel that
+this is somehow inappropriate in this setting?  Are they afraid of
+having their ideas scooped?  To be sure, there is a strong opposition
+to including new material in the encyclopaedia, but that can't be the
+whole story because there is more to PM than the encyclopaedia.
+
+Already, people could certainly be posting copies of their research to
+the papers section but this seems not to have caught on.  I have seen
+and downloaded online copies of their work from their homepages and
+other place.  Sure, an improved paper section would help but the
+existing section is just fine for the purpose of making work
+available.  Maybe people are put of by the questionable quality of
+some of what is to be found there and afraid that inclusion of their
+work would reflect badly on them?  I think that any such concern would
+be allayed if enough people put their work there that the questionable
+content would be overwhelmed by solid work of high quality.  Besides,
+one could post messages to alert readers to problems and inaccuracies
+in contributions.
+
+Once we can get people interested in discussing their research, we
+could think of expanding to include such things as virtual colloquia,
+whether synchronous or asynchronous.  As Joe pointed out, our recent
+discussion of my article on integral representations of recursive
+functions could serve as a first approximation to such an undertaking.
+
+If we can get enough fellow denizens of PM interested in discussing
+their research interests and collaborating online, then maybe we could
+start implementing infrastructure which makes this easier whenever we
+finally get around to redoing noosphere, begin building our
+e-institute, and offer mathematicians in non-tradiditonal settings a
+plausible alternative setting in which to parcipate in
+research. --[[file:rspuzio.org][rspuzio]]
+
+I would be happy to focus on the specific issues I had in mind when I
+said counter-culture and drop the term itself.
+
+These include, again (and possibly with redundancy while still leaving
+out some major points):
+
+ * learning at your own pace
+ * taking advantage of the system rather than the other way 'round
+ * being self-directed
+
+I announce that some of these may best be considered to be ideals.
+E.g. perhaps one can only be self-directed to within some approximation.
+Furthermore, pursuit of some of the ideals may sometimes be destructive to certain other
+goals.  E.g. if everyone takes advantage of the system in a greedy
+way, we might get a tragedy of the commons.
+
+So, these sorts of ideals are meant to be balanced with a degree
+of common sense.
+
+A few other major "counter-culture" issues are
+
+ * wanting to change the system
+ * wanting to create new, alternative, systems
+ * actually creating and using alternative systems
+
+Finally, one can cultivate a "counter-culture" /image/ by pure
+association -- although I don't know if one can actually /be/
+"counter-culture" just by cultivating such an image.  Perhaps to
+some degree.  Association can create symbols, and symbols can
+be very meaningful.
+
+I'm sure I haven't adequately defined the term at all!  Maybe
+my attempt at making some definition in terms of "issues"
+has only further confused these or other issues.  I hope
+not, but who knows!
+
+Again, in this second category, these things aren't meant
+as absolutes.  E.g. one can certainly try to change the system
+from within the system, which isn't really "counter-" at all;
+in addition, one can create and use alternative systems at
+the same time as continuing to use the standard system, and,
+again, that isn't really "counter-", it is actually just
+"co-".  In some ways and some contexts, I would be happy to describe my
+sentiments as "co-culture" instead of "counter-culture".
+
+The fact is, however, that, at least as I was coming up,
+I felt that things like "being self-directed" or even "learning
+at my own pace" were often very /radical/ things to do.
+They often made me different from my peers, and sometimes
+they caused problems for me with my teachers.  This was
+certainly the case in graduate school -- when I was
+being even more non-conformant than ever before, essentially
+breaking all of the unwritten rules I could handle, and a few
+of the written ones too.  I don't care if we describe
+that behavior as counter-culture or not; but I suppose that
+when I introduced that term into the discourse, it was because I /liked/ some of the associations that it holds.
+
+For me, scholarship and training have often been /in opposition/
+to established systems; either because "/they/" want something from
+me I don't want to give, or because they don't offer /me/ what
+I want from them.
+
+Perhaps I have a classic "attitude problem" -- but
+I like to think of myself as having an /attitude solution/.
+The attitude is: even the best systems are flawed, and if
+I can figure out what the flaws are, I can either find a
+work-around, or an exploit, or, sometimes, actually come up
+with a better system.
+
+Historically, I have been perfectly willing to be direct in what I say
+and do coming out of this attitude, with just about anyone.  I try to
+treat people with respect and typically they treat me with respect.
+My frustrations with the system are not the fault of any one
+individual, nor can any one individual typically resolve them.  (These
+points go for me as well as anyone else.)  Solving personal
+frustrations can sometimes be done on personal (i.e. individual) terms --
+however, sometimes they have to be done at the system level.
+
+In light of this, "system hacking" might work as a stand-in term for
+"counter-culture" in my usage.  If you prefer that.
+
+Final note: the Way of the Asteroid was meant to be a rubric for
+coming up with strategies that work at a certain time, and for
+oneself.  While there may be some global answers to questions about
+life (including "independent scholarship"), I would for the time being be
+more comfortable as case study in the "guide" you are talking about above than
+as an author; I'm not sure I can consider myself to be an authority on the topic of
+independent scholarship, even though I am happy to share my thoughts on
+the matter.  For example, I can tell you, this is roughly what went through
+my head when I set foot in my office at grad school:
+
+: The world is a vampire, sent to drain [...]
+Despite all my rage I am still just a rat in a cage
+
+:: -- (from "Bullet With Butterfly Wings", The Smashing Pumpkins)
+
+(It would appear that at this particular moment in my life, I had more of 
+an attitude problem than an attitude solution; but I think that changed
+to some degree as time passed, and I started to figure a few things
+out.)
+
+The song as a whole is analyzed by one "Sarah" out on the Internets, as follows
+
+: No matter what I do i'll never be good enough for you.  My efforts,
+and kindness, and everything I do for you goes unnoticed.  Everything
+has been stripped from me, even when i'm angry and hurt by what you
+said and did to me, it just doesnt matter. I just want to be the one,
+the one i'll never get to be.
+
+She has it more in terms of personal relationships than in terms of
+professional development.  But it could be applied without any
+terrible inaccuracy to my case.
+
+Luckily, like I said, I figured a few things out after that.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I like Smashing Pumpkins. That song is a favorite of mine :0)
+I also like Rage Against The Machine.
+
+"Counter-Culture" is imprecise, but not wholly wrong. For sure :)
+It may make more sense, maybe, in Ohio than Berkeley, unless
+you are *counter* counter-culture. 
+
+Still, if "culture" is what we see on TV in the action-drama
+shows and the "newsetainment", then by all means, go Counter. 
+
+I feel a great sense of urgency though, far beyond being
+against mere "culture" and the mental oppressions of "The
+System." We are now in a situation as a country where we
+have begun and failed to end two wars -- Afghanistan
+and Iraq -- and the probability of a new war involving
+Iran is greater than 33% within the next two years, IMO.
+Plans have been laid for the US to *nuke* Iran, pre-emptively.
+It is not beyond imagining that before 2009 the common description
+of the state of affairs is World War 3; later historians
+will mark 9/11/2001 as the technical start of WW3, but 
+mark the war with Iran as the Rubicon, the point of no
+return which required the involvement of the other great
+powers to deter the American government from further 
+nuclear attacks. 
+
+From today's commentaries:
+
+ * [http://www.antiwar.com/pat/?articleid=8574 Buchanan]
+ * [http://www.antiwar.com/orig/hirsch.php?articleid=8577 Paul]
+ * [http://www.antiwar.com/justin/?articleid=8578 Raimondo]
+ * [http://www.antiwar.com/orig/hirsch.php?articleid=8577 Hirsch]
+
+There is a little time left. Live wisely -- and fully. 
+
+And if you are going to Rage Against The Machine, then
+this is the time. 
+
+</End of counter-cultural PSYOP Rant>
+
+--[[file:ocat.org][ocat]]
+
+OK, I think I understand more about where you are coming from.
+Part of it is one expects cultural change to happen too slowly
+to matter much at the time scales that are forced on us,
+not so much by the system, but by the spectacular nature
+of the system (to borrow from my situationist buddies).
+
+: "The spectacle is not a collection of images but a social relation
+among people mediated by images... The spectacle in general, as the
+concrete inversion of life, is the autonomous movement of the
+non-living... The liar has lied to himself."  --Guy Debord, via
+[http://en.wikipedia.org/wiki/Situationist Wikipedia]
+
+Your emphasis on logic is perhaps about debugging things like that
+(on the fly, of course).
+
+As for the WW3-related urgency of which you speak; I am reminded of
+"Watchmen" by Alan Moore (yet another comic that deals with WW3
+possibilities; but this one is actually quite good).  You might not
+like the "answer" they give there (this answer being sort of like 9/11
+on steroids); nevertheless, I think that the spirit of the "masked
+hero" they get at in that book is something that would jive with your
+sensibilities!  
+
+A hero of that sort seems likely to always be /contra/ society's
+norms in some ways, even if the hero is a friend of society.
+
+I don't know whether the proposal I outline at [[file:social, political, and economic scholium systems.org][social, political, and economic scholium systems]]
+would actually make a sufficient difference if the time scale to apocalypse is sufficiently
+sped up.  The proposal is "counter culture" in a sense similar to that in which
+the Whole Earth Catalog is counter culture.  Specifically, it is counter to the !WalMarting
+of the world (both psychic and physical).  
+
+Assuming we have the opportunity to pull something like that off, I
+think we'd be wise to do it!  If exigencies of war etc. preclude that
+option, then we should try to have reasonably fall-back strategies in
+place (so far as that is possible).  The only thing along these lines
+that I can think of is to undertake a massive graffiti campaign, in
+which we physically attach scholia to various artifacts,
+saying things similar to what we would have hoped to say in the computer system I
+mentioned.
+
+--[[file:jcorneli.org][jcorneli]]
+
+While all you say is well and good and do not wish to come across as
+dismissing it, I don't have much to add on that topic and would like
+to get back to the issue of how to create an alternative research
+environment for those who are unable to or uninterested in
+participating in the usual academic research culture.  As I mentioned
+before, there are some of us here who have been acitvely using
+Asteroid in order to carry out discussions on research topics and
+write up our progress.  Hoewever, I am still puzzled by the fact that,
+although there are a good number of people on the Planet who are
+involved in mathematical research yet they say next to nothing about
+their research interests and typically I have only found out that they
+were researchers by following links to their home pages or incidental
+remarks in their posts.  What could be done to change this situation?
+
+The most obvious place for research on PM is the papers section but
+that is severly underused, despite the fact that the first paper was 
+submitted in 2002 (in the intervening 4 years, only 27 items have been
+submitted).  While improving the program would be nice, I can't
+believe that that is the sole reason for the underwhelming interest.
+As it stands, people could easily enough post preprints, reprints, or
+whatever of their research articles and comment on each others' work,
+but I don't see that happening.  When I posted a paper and asked for
+people to comment, the only reply I got was a remark to the effect
+that I should post to ArXiv since that is where people put preprints.
+My article vanished in a system crash and, as I wasn't able to put it
+up and noone was reading it anyway I took it down.  Now that the
+problem has been fixed, I plan to put a revised version up soon.  I
+would like to know why people are not interested in putting up copies
+of their articles here even though they distribute them from their
+home pages.
+
+The research forum is mainly used for posting specific quick questons
+arising from research problems.  I suspect that one can not expect
+much more from it since the lack of support for equations makes it
+difficult to discuss mathematics of any complexity.  This, of course,
+would be relatively easy to fix.  Maybe by doing this and other
+improvements to the system, one could come up with a platform which
+would be suited to longer, detailed conversations on topics of
+research interest.  In particular, I think it would be neat if some of
+these discussions would lead to new results.
+
+Speaking of research forum, it would be nice to have people talking
+about typical current research, not just famous milestones like the
+proof of Fermat's Last Theorem or the Four Colour Theorem, but less
+celebrated, more ordinary results as well.  I could also imagine
+discussions about the direction in which research in different fields
+is going, methods that are being used, and the like.
+
+Joe made a suggestion of an online colloquium and Aaron pointed out
+that there the IRC math channel has been doing such a thing for a
+while.  While their colloquia have a pedagogical slant, we could
+certainly have some sort of online colloquia for people to explain
+their research interests or current research by others followed by
+questions and discussion on these topics.
+
+We might have some sort of matchmaking service in which people could
+look for collaborators on projects which they might be interested in
+working on.
+
+It would be good to have something like a noosphere category for items 
+of current research or new results or a separate area for posting
+such things.
+
+It seems that there is more we could do to promote and support
+research (in the social as opposed to the financial sense) and provide
+an environment which is helpful to independant mathematicians.
+--[[file:rspuzio.org][rspuzio]]

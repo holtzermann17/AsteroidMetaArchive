@@ -1,0 +1,183 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+main page for grant: [[file:grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007.org][grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007]]
+
+This is the first draft of the project 1-page summary for NSF:
+
+Draft: ([http://br.endernet.org/~akrowne/planetmath/proposals/nsf_cyberinf_2007/nsf/summary.tex .tex]) ([http://br.endernet.org/~akrowne/planetmath/proposals/nsf_cyberinf_2007/nsf/summary.pdf .pdf])
+
+* Text Versions
+
+In this project we propose to develop and refine infrastructural
+facilities for open digital library information of a discursive and
+mathematics-rich nature. The impetus for the project arises from our
+observations about and experiences with the balkanization in scholarly
+information for mathematics and mathematical sciences online. There
+are many different variations on these disconnects which we propose to
+remedy: between the traditional scholarly environment and the world of
+free and open (commons-based and collaborative) information; between
+separate and distinct but "overlapping" productive communities; and
+between informal representations and knowledge about formal
+correctness. 
+
+Wikipedia is a useful example and focus for understanding
+our planned work. While the collaborative, community-produced site has
+become quite extensive and popular with information-seekers, we see
+opportunities to build facilities that improve Wikipedia and similar
+sites and extend their impact. One way we envision doing this is by
+improving content exchange with other encyclopedic sites, such as our
+PlanetMath, by providing infrastructural facilities to accommodate
+this activity. Another way has to do with the productive "dilemma"
+regarding information resources, whereby traditional forms of quality
+control excessively limit output and participation, but new forms of
+internet-based, largely-open collaboration (as in Wikipedia) make no
+guarantees in terms of quality and consistency. We believe this is in
+fact a central concern for society today, and think we could address
+it to a greater extent -- without giving up the open nature of the
+production -- by additively integrating content and quality-control
+feedback from trustworthy communities, individuals, and
+collections.
+
+Central to these and other interconnective activities are judgments
+about quality and credibility. Information cannot just be linked and
+combined haphazardly, as that would result in combinatorial explosion
+or at least information overload for the user. Rather, we plan to
+provide for quality control by building facilities to allow ranking
+and selectivity, integration of reputation metrics in productive
+communities, the utilization of real-world (e.g. academic) reputations
+whenever possible, allowing communities and individuals to utilize
+resource quality feedback (e.g. ratings) in selecting and sorting
+information resources (collaborative filtering), and allowing the
+individual to select who and which sources they trust as they
+integrate information into their local environments. 
+
+We propose to
+build infrastructural facilities that encourage the opening of
+mathematical information resources and beyond (both in terms of
+consumption and production), the extension of their impact, and the
+improvement in their utility, quality and quantity. Our activities
+will cover, and in fact connect, the domains of research, education,
+and practice. We envision conducting development under three main
+areas: (1) Development of an expert-based survey journal and
+open-access encylcopedia infrastructure ("The Math Atlas"); (2) The
+improvement of editorial and quality-control aspects of the Noosphere
+collaborative knowledge-base system ("PlanetMath"); and (3)
+development of content representation, interlinking, and interchange
+infrastructure for discursive mathematical information. 
+
+We plan to conduct development on these systems and deployed instances
+with a mind towards general applicability: we believe it is of
+paramount importance, and a measure of success, that the software be
+re-deployable by others in similar situations. We plan to develop open
+source software as outputs of these activities, divided into
+individual software packages based on their natural modularity. We
+also plan to work with the professional community and relevant
+organizations to encourage uptake and usage of the systems and
+deployed instances, and the formation of ongoing communities of
+interest and support for their continued development and maintenance.
+
+---- 
+
+JP: This is my edit of Aaron's Summary.
+
+Integration of Online Mathematical Exposition
+
+This is a proposal to build infrastructure to create and maintain an
+open digital library of expository material in mathematics and
+statistics, incuding subject classification and navigation, with
+glossary and encyclopedia items, survey articles, bibliographies, and
+scripted searches to the broader online environment.
+
+The impetus for the project arises from our observation and experience
+of the compartmentalization of online
+information in mathematical sciences. There are a several
+major components we would like to see better connected: the
+traditional scholarly environment and the world of free and open
+(commons-based and collaborative) information; the separate and
+distinct but "overlapping" productive communities; and the informal
+representations and knowledge about formal correctness.
+
+Wikipedia is a useful example and focus for understanding our planned
+work. While the collaborative, community-produced site has become
+quite extensive and popular with information-seekers, we see
+opportunities to build facilities that improve Wikipedia and similar
+sites and extend their impact. One way we envision doing this is by
+improving content exchange with other encyclopedic sites, such as
+PlanetMath, by providing infrastructure to accommodate this activity.
+
+While Wikipedia and PlanetMath have different emphases (Wikipedia is
+more general and usually omits proofs), both sites use free/open
+content licensing and have overlapping introductory content. Because
+of the inherent opportunity here, Wikipedia contributors have already
+ported hundreds of PlanetMath entries over to their site; but there is
+no faciity to support data transfer from
+Wikipedia to PlanetMath. We propose to provide such a
+facility, and to encourage opportunistic iteration of such
+data transfers on an ongoing basis. We believe this would
+integrate and enhance the value of these two expository
+resources in the field of mathematical sciences.
+
+Another aim of the project is to confront the productive "dilemma"
+regarding information resources, whereby traditional forms of quality
+control excessively limit output and participation, but new forms of
+internet-based, largely-open collaboration (as in Wikipedia) make no
+guarantees in terms of quality and consistency. We propose to find
+middle ground
+between these two approaches to content production, by
+enhancing the functionality of open access scholarly content
+with wiki-like linking systems, and
+by providing quality-control feedback from trustworthy expert
+communities and individuals to enhance the value of
+community based collections.
+
+Central to these and other connective activities are judgments about
+quality and credibility. Information cannot just be linked and
+combined haphazardly without
+combinatorial explosion and information overload on the user. Rather,
+we plan to provide quality control by building facilities to allow
+ranking and selectivity, integration of reputation metrics in
+productive communities, the utilization of academic reputations
+whenever possible, allowing communities and individuals to utilize
+resource quality feedback (e.g. ratings) in selecting and sorting
+information resources (collaborative filtering), and allowing the
+individual to select who and which sources they trust as they
+integrate information into their local environments.
+
+* Comments
+
+Hard to comment on a summary until I know what it is summarizing, but
+it seems a little light on scholium system stuff.  It would be
+interesting to super-summarize these summaries and see what tasks they
+actually say we're going to do.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I thought I mentioned quite a bit of scholium system aspects in my 
+writeup; though in an implicit and underlying manner rather than 
+explicitly.  I don't think saying "scholium system" all over the place 
+in the summary is going to help the reviewers to understand the project;
+if you have suggestions on how to tie it into such a super-compact 
+exposition please demonstrate.
+
+In fact for all of the planned work, I intentionally did little more
+than describe the themes and then mention the work areas/subprojects.  
+I don't see how space constraints allow for anything more.
+
+That said, I have some issues with Jim's writeup as well, though I 
+think overall it manages to be more compact and read better.  My 
+biggest niggle is perhaps that he starts out claiming that we are
+building /a/ digital library -- which may technically be true, 
+in the distributed sense -- but I think it detracts from the 
+interconnection and coordination emphases and makes this look like
+a content rather than an infrastructure proposal.
+
+--[[file:akrowne.org][akrowne]]
+
+I think that your last sentence above basically mirrors my concern;
+scholium system is something meaninful both within a given "library"
+and between libraries (and it really makes the whole library idea
+somewhat out dated). Before I comment further I'll wait to see what
+the main document is shaping up to look like.
+
+--[[file:jcorneli.org][jcorneli]]

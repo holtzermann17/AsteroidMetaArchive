@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a place to talk about what makes a good proof from a theoretical
+perspective.  Our conclusions will be mirrored in our hcode design;
+see [[file:designing proof structures for hcode.org][designing proof structures for hcode]]. --[[file:jcorneli.org][jcorneli]]

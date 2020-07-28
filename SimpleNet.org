@@ -1,0 +1,208 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here is a little code I wrote to cut to the core of what semantic
+networks are all about, without the 200+ page user interface and 
+philosophy stuff developed for [[file:Arxana.org][Arxana]].  The comments here
+illustrate key "Frustrations", which are actually interesting
+problems to solve.
+
+The current code hasn't been tested and I have some revisions in 
+mind already.  But it should be somewhat interesting as is.
+
+--[[file:jcorneli.org][jcorneli]] Jan 12, '07
+
+  ;;; simplenet.el -- a simplistic semantic network
+  
+  ;; This is a simple setup for creating semantic networks, designed to
+  ;; illustrate the issues associated with creating and working with
+  ;; semantic networks.
+  ;;
+  ;; You need a "back-end" -- someplace to store the nodes and links.
+  ;; The model we take here uses three hash tables: one for "articles",
+  ;; one for "forward links", and one for "backward links" (these are
+  ;; just two different indexes to the available information on links).
+  ;;
+  ;; You need a "front-end" -- some way to create and display network
+  ;; elements.  This may be as featureful as time permits.  The system
+  ;; presented here has had almost no time invested in its front-end;
+  ;; more front-end work can be found in my full Arxana write-up.
+  ;;
+  ;; For now, I'm interested in thinking about how to make a backend
+  ;; that can be made "distributed" or at least "sharable" in some
+  ;; useful way.
+  ;;
+  ;; This implementation doesn't produce a "sharable" backend.  What it
+  ;; does do, is illustrate the relationship between the front-end and
+  ;; the back-end, and point to dimensions of the problem in which
+  ;; parsing and (other forms of) user-friendliness will be relevant.
+  
+  ;;; Data Specifications:
+  
+  ;; (a b c)        : list
+  ;; a . b          : hash table entry
+  
+  ;; ARTICLE        : ID . VALUE
+  ;; ID             : a natural number
+  ;; VALUE          : (TEXT OUTGOING-LINKS)
+  ;; OUTGOING-LINKS : (list &rest LINKs)
+  ;; LINK           : SOURCE . SINK LINK-TYPE
+  ;; SOURCE         : ID
+  ;; SINK           : ID
+  ;; LINK-TYPE      : anything for now
+  
+  ;;; Very low level stuff:
+  
+  (defun setup-new-simplenet-system ()
+    (make-directory "~/simplenet/")
+    (with-temp-file "~/simplenet/article-counter" 
+      (insert "0"))
+    (defvar article-table
+      (make-hash-table :test 'equal))
+    (defvar simplenet-home "~/simplenet/"))
+  
+  (defun load-existing-simplenet-system ()
+    "This will require some sort of data storage structure.
+  Similar to `setup-new-simplenet-system', but article counter
+  will be > 0 and `article-table' will get populated."
+    (message "Not implemented yet."))
+  
+  (defun add-to-existing-simplenet-system-en-masse ()
+    "Similar to `load-existing-simplenet-system'.
+  Doesn't have to create `article-table'."
+    (message "Not implemented yet."))
+  
+  (defun put-article (id value)
+    (puthash id value article-table))
+  
+  (defun get-article (id)
+    (let ((content (gethash id article-table)))
+      (when content
+        (cons id content))))
+  
+  (defun next-unique-id ()
+    "Generate a new unique article id.
+  I am assuming articles are indexed by the natural numbers.  To
+  make this distributed, you should either prepend the unique host
+  identifier, or have some world-readable, world-writable number
+  maintained in some world-accessible version of `simplenet-home'."
+    (with-temp-buffer
+      (find-file (concat simplenet-home "article-counter"))
+      (let ((num (read (get-buffer (current-buffer)))))
+        (delete-region (point-min) (1- (point-max)))
+        (insert (int-to-string (1+ num)))
+        (save-buffer)
+        (kill-buffer nil)
+        num)))
+  
+  ;;; Mid-level stuff:
+  
+  (defvar new-scholium-hook nil)
+  
+  (defun enter-article (id value)
+    "Add or modify article identified as ID to hold VALUE.
+  Also runs maintenance code to ensure database is coherent."
+    (let ((old-version (get-article id)))
+      (put-article id value)
+      (interlink id (second value))
+      ;; Certain additional actions may be taken when an article is
+      ;; entered.
+      (run-hooks 'new-scholium-hook)))
+  
+  (defun interlink (id outgoing-links)
+    (dolist (link outgoing-links)
+      (enter-link id (car link) (cdr link))))
+  
+  ;; Note that if you wanted to simulate "link type" within the
+  ;; linking system itself, you could create more links to certain
+  ;; nodes rather than storing the type here.
+  (defun enter-link (source sink type)
+    "Create article that stands for a new link, and index link.
+  We index links separately in both forward and backward
+  directions (by source node and sink node, respectively)."
+    (let ((link-id (next-unique-id)))
+      (enter-article link-id `((,source ,sink ,type)))
+      (put-forward-link source link-id)
+      (put-backward-link sink link-id)))
+  
+  (defvar forward-links
+    (make-hash-table :test 'equal))
+  
+  (defvar backward-links
+      (make-hash-table :test 'equal))
+  
+  ;; If you ever wanted to delete links, you'd have
+  ;; to write a new function to do that.
+  (defun put-forward-link (source link-id)
+    (puthash source 
+             (let ((old-info (get-forward-links source)))
+               (if old-info
+                   (cons (cdr old-info)
+                         link-id)
+                 (list link-id)))
+             forward-links))
+  
+  (defun get-forward-links (id)
+    (let ((content (gethash id forward-links)))
+      (when content
+        (cons id content))))
+  
+  (defun put-backward-link (source link-id)
+    (puthash source 
+             (let ((old-info (get-backward-links source)))
+               (if old-info
+                   (cons (cdr old-info)
+                         link-id)
+                 (list link-id)))
+             backward-links))
+  
+  (defun get-backward-links (id)
+    (let ((content (gethash id backward-links)))
+      (when content
+        (cons id content))))
+  
+  ;;; User-level stuff:
+  
+  ;; Frustration 1: There are a million different ways to "autolink" an
+  ;; article, each one depends on a certain grammar for links.
+  
+  ;; Frustration 2: Articles are identified by ID number, but known by
+  ;; other means (names, for example, or other sorts of references).
+  
+  (defun create-article ()
+    "This is a simple way to create an article.
+  In general, you need some way to get the article's text, and some
+  way to read the things that the article links to.  Ideally there
+  would be some way to read the types of these links, but we don't
+  have that yet.  Furthermore, if the article itself is going to
+  \"have a type\" or any other metadata, then this has to be
+  specified somehow, and recorded in the semantic net."
+    (interactive)
+    (enter-article 
+     (next-unique-id)
+     (list (buffer-string)
+           (let ((space-separated-list
+                  (read-from-minibuffer "links to (list of ids): "))
+                 links-listed)
+             (while (and space-separated-list
+                         (not (equal space-separated-list "")))
+               (let ((new-bit (read-from-string space-separated-list)))
+                 (setq links-listed (cons (car new-bit) links-listed)
+                       space-separated-list (substring
+                                             space-separated-list
+                                             (cdr new-bit)))))
+             links-listed))))
+  
+  ;; "Display" seems to indicate human interface, but actually I mean it
+  ;; to be more general, for any kind of interface.
+  
+  (defun display-article (id)
+    "This is a simple way to display an article: just return it!
+  In general, you might want an interactive display that would
+  allow you to, say, click on various links and follow them to a
+  display of the article that they link to -- or some way(s) to
+  edit and saved the displayed article."
+    (interactive "n")
+    (get-article n))
+  
+  ;;; simplenet.el ends here

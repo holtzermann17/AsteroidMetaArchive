@@ -1,0 +1,373 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think that a proper Feasibility Study could secure funding and
+personnel for subsequent phases (Requirements Analysis, Design,
+...) The scope and scale of "HDM" is massive -- grandiose, even.
+
+What do I mean by "proper Feasibility Study"? An in-depth review
+of the problem(s) to be solved; the costs, both direct and 
+indirect of not solving those problems, including opportunity
+costs; the benefits to be gained by solving the problem(s); and
+a detailed approach that is likely to be successful, along with
+a rough cost estimate of performing the subsequent phases of
+the project. In the context of a system like HDM, it would be
+important also to identify the potential users of such a system,
+hardware requirements, and risk factors involving things that
+either must be invented or that would need to be addressed
+during later phases. And, a discussion of the criteria by which
+"success" could be measured would ensure that everyone would be
+able to agree if and when the project is "completed". Furthermore,
+in a massive system like HDM, that might require 100 man years of
+work, a feasibility study would need to identify phased deliverables,
+so that benefits can be realized along the way. And, various
+sub-systems that could be completed independently should be
+identified. 
+
+Naturally, the feasibility study would also include
+a review of the current situation so that "reinventing the wheel"
+could be avoided and so that known pitfalls could be addressed
+in advance. Nor can the pure theoretical considerations be
+ignored in the feasibility study. For example, the problem of
+natural language processing is far from complete, and even
+assuming that "raw" English text could be converted into 
+"pure" mathematical symbols, the problem of a "canonical" 
+mathematical form must be addressed -- i.e. how do you know
+that two different theorems are identical though represented
+differently symbolically (where is the metaphysical dust
+hidden?)
+
+Now, if you are asking for enough money to do the job -- or
+which is the same thing, enough people to volunteer -- then these
+critical topics present themselves simultaneously: salesmanship
+(see Tom Hopkins bestseller), formal system development
+methodologies, and project management techniques. If I were
+donating $1,000,000 for Phase I -- which would deliver a
+detailed Requirements Analysis -- then I would want to know
+that the logistics of the project were being handled in 
+a certain way, guaranteed to get me a satisfactory return
+on investment. And it is basically the same when you're asking
+people to "donate" man years of work. Anyone who has ever
+worked on an unsuccessful project that got cancelled knows
+the horrors and is likely to be reluctant to repeat the 
+experience. 
+
+--[[file:ocat.org][ocat]]
+
+This is a good suggestion, and I agree that we should spend some time
+working on something like this.  My focus has so far been more on
+proof-of-concept code.  To a pretty large extent, the "concept" has
+been either in my head or expressed in somewhat sketchy terms on this
+wiki.  Certainly not the sort of thing that I'd expect to be
+compelling to anyone who hadn't already drunk the HDM Kool-aid.  No
+doubt even HDM practitioners would be made somewhat more comfortable
+if a study of the sort you've described existed.  Both feasibility
+studies and proof-of-concept projects can exist on a number of
+different levels.  It would definitely be good to put some thought in
+on how to go about doing/writing a preliminary study.  --[[file:jcorneli.org][jcorneli]]
+
+
+While I think that a simple document listing goals we hope to
+accomplish and assessing how much work might be required to meet these
+goals would be worth having and that we should write one at a
+convenient time in the near future, I am also rather leery of getting
+too caught up in these sort of studies since one can easily wind up in
+a situation where a significant portion of the effort that could have
+went into advancing the project goes into talking about the project
+instead.
+
+The reason for this apprehension is some very negative experiences I
+have had, especially my experience with a departmental self-study five
+years ago.  To make a long story short, for a whole academic year, the
+main focus of the physics department was working on this evaluation.
+The faculty was so drained that very little research was done and the
+end result was the amount of documentation produced from the study
+outweighed scientific publications by something like a factor of 10 to 1.
+
+As for using such a study to apply for funding, I think a good
+strategy might be to first identify possible donors and then write the
+appropriate study.  Different agencies have different requirements
+(number of pages, topics that need to be covered, methods of
+evaluation to be used, and what not) so there might not be all that
+much point in making a generic feasibility study only to find out that
+one has to redo it.
+
+Also, I would rather focus on particular subprojects when it comes to
+interesting people in contributing effort and funds to the project.
+While mentioning the overall goals is good for motivating what we are
+doing and placing things in a broader context, I would prefer not to
+dwell too much on it but rather turn to specific projects such as (to
+make up some possible examples) porting APM-Xi to h-code, fixing up the expression parser,  making a user-friendly interface for one of our programs, or porting the scholium system to other platforms.  I would much rather have a feasibility study done for one or more of these subprojects than for the whole project since: 1. It would involve significantly less effort than trying to analyze the whole project 2. If someone wants to contribute time or labor, that would presumably go towards some particular aspect of the project, 3. Since these sub-projects are much more focussed in outlook, it would be possible to obtain more accurate estimates of what resources will be required, and 4. In estimating feasibility, the assumptions used would be more universally accepted, so one would steer clear of such debates as the issue of equivelance of theorems in different notations cited above; whilst such questions are interesting and worth puirsuing, this may not be the most suitable place for such discussion.
+
+Overall, I tend to agree with Joe about the proof-of-concept approach.
+I would much rather have results speak for themselves than having to
+speak for future results (especially when the time could be better spent
+working towards making said results appear).  While the goals of the project as a
+whole may be ambitious, there are certainly sub-goals which are within
+reach in the immediate future.  In particular, I have two
+demonstrations in mind which should be complete within a year --- a
+non-trivial application of Joe's scholium system and the automatic
+verification of proofs in the Schaum outline of abstract algebra along
+the lines I have been working on.  In this connection, I should mention that now my main focus has been on developing the tools and techniques necessary to carry out such a project rather than on worrying about how a large-scale effort could be coordinated.  As I see it, perhaps the time for a full-blown feasability study has not yet come; I would rather first build a small-scale working model of HDM (which might require something like 5 years of person-hours of work) and only then turn to the issue of how this could be expanded to a full-blown version (which, as you say, would easily require hundreds of person-hours to carry out), or even leave that to someone else.
+
+I guess that my mistrust for these sort of studies has to do with the
+fact that I am much more a scientist and inventor, even artist, at
+heart than a salesman, politician, manager, or bureaucrat.  While I have a wide
+range of interests, that is not a direction in which they
+run.  Experimentation and questioning come naturally to me, and this is the attitude I have taken towards the big picture.  In particular, my remarks regarding long-term goals should be taken in this light.  When I put forth arguments why the project should be possible or how they might be accomplished, I put them forth more in the spirit of heuristic arguments that the experiment is worth trying than as convincing proofs --- as I see it, the only real proof is the pudding and the rest is just a theoretical scaffold used to construct the final product; there is no real harm if this heuristic theory (which is to be carefully distinguished from the body of rigorous mathematical theory being developed) is erroneous, since the experiment will settle the matter.  You and other metamath folks are right to be highly skeptical of what I have to say.  Even when we disagree, your objections are useful since they point out difficulties which must either be overcome or circumvented by use of a technique which is not
+open to said objections.  
+
+To be sure, this attitude and midset does come with its downsides and likely has cost me dearly in some respects.  It is quite likely that my ineptitude in these areas has cost me dearly in terms of wealth and social status, but fortunately my demands in these areas are not too great either and I most definitely consider myself as far from destitute in my current circumstances.   Likewise, undertaking an ambitious project like this definitely has it pitfalls --- not so much the possibility of outright failure (this is largely compensated by the fact that, even if one makes no progress towards one's stated goal, it is almost certain that one will make valuable contributions along the way if one is conscioentous about one's work) but the loneliness of having to work alone against the obections of critics.  I accept that possibility as one of the rules of the game.  At the same time, I wouldn't want to give the impression that I am totally uncompromising in this quest or so idealistic in my stance that I refuse
+any practical concessions.  To the contrary, I definitely think it worth pursuing such things as publications, funding, and recognition as long as I take care to keep a healthy balance between the idealistic and the pragmatic and don't lose sight of my goals and priorities.
+--[[file:rspuzio | Ray.org][rspuzio | Ray]]
+
+There is no need to invent a format. There are many out there,
+and the problem boils down to following a cookbook recipe,
+adapted for the intended audience and project. If your experience
+is with small new projects (done from scratch), then it is
+probably time to go to the bookstore. Big projects are qualitatively
+different than something like the Scholium. Everything changes
+when you've got a million lines of code (or anything). And the
+investment might be repaid handsomely. One chap I know has been
+earning $1,000 an hour, on average, just for telling a corporation's
+employees the right way to do something. Not bad for telecommuting.
+There's a ton of money out there! And there are many brilliant
+people that just love this stuff. The trick is organizing the
+project in the right way. Here is how you ask for $1.8 billion:
+
+http://www.cap.bnl.gov/mumu/studyii/FS2-report.html
+
+Another here:
+http://www.fnal.gov/projects/muon_collider/
+
+I would not approach this as an academic project. Not for
+funding purposes. Look at it as a business project. Your
+feasibility project should take into account the people
+part of your system, and the supporting organization. What's
+it good for and what can be done with it. If it works, then
+it becomes valuable, even if it is open sourced. So you
+want to cover all the bases up front and figure out what
+the possibilities are -- the payoff. That means blue skying
+it, and potentially starting all over again from scratch,
+without preconceptions about *how* the thing is implemented
+but focusing on what it needs to do, and who will want to
+do what with it.
+
+P.S. Why is Metamath so excellent, so intriguing? It is
+supported by solid theory, and it is elegant, true. But
+it is "scientific". The Metamath.pdf specifies precisely
+how to recreate the results of metamath.exe. Anyone who
+wants can repeat the experiment, in whatever language
+they choose. It is verifiable, every step of the way.
+
+Now, why does the project designer write specifications?
+So she can get someone to write the programs. So she can
+multiply her efforts and "scale up". Why does the system
+designer document her design? So she doesn't have to
+write program specifications -- she can delegate. Why
+does the analyst write a requirements analysis? So she
+can delegate the grunt work of doing the detailed design!
+Why do a feasibility study? So that the requirements
+analysis can be delegated!
+
+There are pitfalls to this approach, but on a massive
+project like HDM something like "functional decomposition"
+will be needed. Break the system down into sub-systems
+and sub-sub-systems until the pieces become manageable.
+Each little piece needs to fit into the puzzle, but also
+be independent, capable of being developed on a standalone
+basis, verified and tested. 
+
+--[[file:ocat.org][ocat]]
+
+As with what Ray said above, I'd say "I've approached this problem
+like a hacker."  I don't expect that to change, much.  This approach
+has plenty in common with what you're suggesting: for example, /Break
+the system down into sub-systems and sub-sub-systems until the pieces
+become manageable./?  Its something I do every day.  I haven't done a
+full recursion to all but the leaves; rather, I've gone down about one
+level and kept going down maybe one or two branches far enough to get
+a few concrete things done there.  Its this step-by-step process that
+I think is most hackish.  I /do/ do design, but I work by sketching.
+
+In addition: HDM isn't Metamath; it isn't even clear if it is any kind
+of math.  I don't think it will ever be "excellent" in the same way
+that Metamath is to you.  It might at some point be "sufficient" which
+is all I'm personally after.  Still, /like/ a mathematical system,
+HDM starts with a simple enough premise (you could also call it a
+hypothesis or a mission statement): that we should be able to make a
+computer system that contains all extant mathematics in both human-
+and machine-readable forms, and tools to exploit this system for
+teaching and research purposes.
+
+If you think you can bring a new perspective to the project's plans
+and use it to bring us further towards this goal, I'd certainly
+encourage you to do this, and I'd be happy to help.  If you prefer to
+work on other things, that's A-OK too.  But I think what Ray and I are
+saying is that we'd need very convincing reasons for /us/ to go
+about things in a massively different way.  As I said, helping develop
+another perspective on the project is entirely consistent with my
+current way of doing things.
+
+I think you're as entitled to say things about the payoff of the HDM
+project as either Ray or I, or to conduct a basic feasibility study.
+Maybe even more so.  Furthermore, if you put your shoulder to this
+wheel (at least to get it rolling a little) you'll almost certainly
+get further with both the task and the encouragement than you will by
+simply encouraging us (to do something we're not so familiar with).
+
+Show me a real-life example of what you're looking for - an HDM
+feasibility study, even a small one (so that I can help extend it), or
+ask me questions (I'll certainly try to answer).  --[[file:jcorneli.org][jcorneli]]
+
+-----
+
+[[file:The_Hyperreal_Dictionary_of_Mathematics.org][The_Hyperreal_Dictionary_of_Mathematics]]: "the Hyperreal Dictionary of Mathematics (HDM) will contain all extant mathematics in human and machine friendly electronic format."
+
+This reminds me of the (apocryphal) story of how to sell a script in
+Hollywood: it must fit in one line! Here is an example: "Stewardesses
+share an apartment in Houston and the air-conditioning keeps breaking
+down." 
+
+That sounds like a winner!
+
+The question is not only what do the customers want, but what does
+the person holding the production money want. And is the proposal
+doable? Is the story line believable? 
+
+Regarding HDM holding *all* of mathematics...why? Who is asking for
+this and what would they do with it? With $1,000 I can go to 
+U.C. Berkeley and buy a lifetime's worth of math books -- no electricity
+required either, which is perfect for a post-Bush economic 
+environment!
+
+And it is natural to ask how do the components fit together to
+realize that vision. Are they suitable for the advertised purpose?
+Are there potential spin-offs that would justify developing
+these components on a standalone basis? 
+
+Look for example, at the new Leap Frog "pen top" computer system:
+
+http://news.com.com/LeapFrog+hopes+pentop+computer+has+write+stuff/2100-1041_3-5898300.html
+
+"a user can draw a calculator, touch the handwritten 
+digits and functions to perform an operation, and then 
+hear the answers announced."
+
+Since one of the main advertising points of HDM is using OCR
+to input math books, the potential donor wants to know, what
+customers want to use OCR? Wouldn't most people want to be
+able to just use a Leap Frog Pen? Or talk to the computer?
+Or have their Draw program connected to their math software?
+
+On the other hand, if you wait long enough most of the key
+components will be invented. Raph will have Ghilbert 8.0, with
+a nice GUI, and Leap Frog Pen 7.0 will be available with
+2GB RAM, and someone will have invented AI...yada yada.
+
+A lot can happen in 20 years. But, as Tom Hopkins says,
+"Failing to plan is planning to fail." Someone might write 
+the necessary components for something like HDM, someday...
+someone, somewhere. But they would have to be designed,
+they don't just happen. It's kind of sad, too, that after 
+more than 60 years of development of electronic computers, 
+and umpteen hundreds of billions of dollars spent, including the 
+Windows boondoggle, that the Leap Frog Pen is "state of the 
+art" while most of the rest of us are still struggling with
+ASCII versus UNICODE -- and our computers don't do much
+computing, but increasingly serve as glorified televisions,
+CD players and expensive phones. So yeah, if we don't *design*
+then this is what you get: a hodge-podge of components that
+still don't do what we want. 
+
+--[[file:ocat.org][ocat]]
+
+One minor point
+is that OCR isn't exactly one of the main advertising points,
+[http://www.ma.utexas.edu/~jcorneli/d/essay/ it is] (paraphrasing) "a
+stepping stone that I think could help achieve the main objective."
+If it turns out to be more economical (and simultaneously,
+economically feasible) to send all the math books in the world to Guam
+for re-typesetting, then we won't cling vainly to OCR.  
+
+The breakdown of the task into components is heuristic; I was
+surprised when I initially learned that math OCR doesn't exist in a
+robust form, and I'm assuming that it wouldn't be too hard to produce.
+That it would significantly help us towards the main goal is evidenced
+by the Gutenberg Project's use of OCR to get lots of texts online in
+free electronic form.
+
+But I think that your main question is /Who is asking for this main
+objective in the first place and what would they do with it?/
+
+Well, me, for one.  The QED people expressed a remarkably similar
+hope.  If you hunt around on the web, you can probably find a
+half-dozen or more references to universal mathematics encyclopedias
+or databases or whatever.  So, it seems like at least a few people are
+actively interested in a free comprehensive electronic math resource,
+but I think that many more would sit up and pay attention if one was
+unveiled.
+
+Why?  Well, it probably has less to do with the "global" nature of the
+resource and more to do with its assumed computational capabilities.
+HDM isn't just supposed to be a copy of all the books out there (a
+"Math Gutenberg", copyright issues notwithstanding), it is meant to be
+the sort of thing you could put on a handheld computer and, attaching
+a handheld scanner as an input device, get the answers to Math GRE or
+grad prelim problems in 5 minutes or thereabouts.  I'm not suggesting
+that people should use such a device to cheat on these exams.  I'm
+saying that the existence of such a device would call the existence of
+the exams themselves into question.  Because a device that can solve problems
+can probably also teach students.  Why would we bother going to school
+for math, if we could log on to the computer for three hours a day for
+no-cost customized tutoring, and spend the rest of the time hanging
+out, and still come out knowing more math in less time than any math
+student does these days?
+
+This is why I'm interested in the HDM.
+
+As to the question of spin offs, by an inductive step similar to the
+"solving problems -> teaching problem solving" inference above, I
+think HDM will be an example of (relatively) strong AI.  I don't plan
+to wait around for someone else to invent something to solve the AI
+problem: that's what this project is about; but we're limiting
+ourselves to the domain of mathematics.  This domain is arguably less
+of a "toy" than checkers or chess or blood diseases (as treated by
+old-school expert systems), but also easier to hack than "everything".
+From a math dictionary, it would be natural to move to physics,
+economics, linguistics, etc., using the same basic technology.
+
+I'm /not/ saying that the whole system needs to exist in order for
+spinoffs to exist.  I'm planning to use the scholium system to manage
+mathematical content /and/ to help me organize my kitchen.  I've
+talked in various places about numerous applications of the system
+(i.e., not just in math-science areas); and I can testify that the
+ideas behind the system have already been very useful in discussions
+about !PlanetMath and other related projects.
+
+I'm not going to say that all of the components will have spinoff
+applications, nor do I think they should.  Ray is working on something
+very theoretical; it will probably have fairly broad theoretical
+application.  But I don't expect it to be used in the kernel of a
+better mousetrap.  But if it is a vital part of the HDM project and
+the HDM project is a success, then rest assured that it will be
+involved in plenty of practical applications.
+
+To sum up: I don't have a comprehensive understanding of what most
+people want in life or even from their computers.  I know from
+personal experience that math is hard.  And life is hard.  If HDM can
+help with mathematical difficulties, and if it has spinoff
+applications that help with a broader variety of life's difficulties,
+then I think it will have a very broad natural market.  And if no-one
+else cares but the thing is still somehow brought into existence, the
+HDM team can presumably use the tool to personal advantage.  
+
+One thing I'm optimistic about is that the size of this "team" will
+grow as time goes by.  I think it is going to be important for aspects
+of the tool to be produced by CBPP, since as you've reminded us above,
+there is going to be a lot of time involved.  My guess is that for a
+variety of reasons the CBPP model will work better than the firm
+model.  Maybe we can go into this more later.  --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:HDM planning.org][HDM planning]]

@@ -1,0 +1,255 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Let me detail my thinking and in doing so provide some justification
+for settling on this theme.
+
+I think PlanetMath does something that the university system is now
+failing to do: make students into scholars by /actually engaging
+them/ in scholarly behavior.  Passively listening to lectures, doing
+homework and turning it in for a grade, and taking tests to see if
+you've "learned" what you've been force-fed is *not* enough to
+develop into a scholar.  To develop into a scholar, you must be
+engaged in teaching (making the process a /two-way/ communication
+avenue rather than the formal system's one-way), and optimally,
+engaged in creating the commonly-held culture of knowledge.
+
+And critically, you must see yourself as an /equal/ with other
+scholars, even if some particular scholar happens to be your
+"teacher".  Because you will /always/ be interacting with those who
+happen to have more knowledge than you in some area, a philosophy of
+egalitarianism is the only way to enable the continuous questioning
+necessary to be a scholar.  I think PlanetMath implements this
+egalitarianism more completely than the traditional setting.
+
+The university system now "promises" to produce scholars through some 
+pedagogical equivalent of the "Feynman algorithm": admit students, 
+throw information at them relentlessly, and hope scholars pop out the
+other end.  Needless to say, this doesn't work well, and we just end up
+with a bunch of people mathematical tradespersons.  We want to do it 
+for real.
+
+I said "promises" above because the university-industrial complex really
+doesn't have any need for scholars, so the system has evolved to produce
+certifications instead of scholars.  As this dynamic continues to play out,
+perhaps communities like PlanetMath will supplant formal learning environments
+as the breeding grounds of true scholars.
+
+Of course, this doesn't imply that PM/Noosphere are completely ready to handle
+such an important role.  But the realization that we want to be doing much of
+what the university system ideally would be doing should serve as a useful
+guiding principle.
+
+--[[file:akrowne.org][akrowne]] Sat Feb 11 05:22:37 UTC 2006
+
+While I agree wholeheartedly with the essentials of what you are
+saying, nevertheless I wold like to qualify and clarify some of these
+statements in the light of my experience with the university system
+both as student and professor.
+
+As for the university-industrial system not having any need for
+scholars, what I have seen in many places is a rift between the
+faculty and the administration and a further rift between teaching and
+research faculty.  The former rift seems to be pronounced in state
+universisites and much milder, sometimes non-existent in older private
+universities where a tradidtion of scholarship and liberal arts has
+done much to retard its encroachment and a system of funding which is
+conducive to scholarship has alleviated pressure to devalue
+scholarship.
+
+By and large, the situation I have seen is that the faculty has valued
+sholarship but the administration has not.  Rather, the latter party
+has been primarily concerned with raising funds to underwrite the
+university and, in doing so, has not always been reticent to employ
+means which are detrimental to promoting scholarship.  
+
+In almost any newspaper, one can find advertisements for universities
+which promote studies as a kind of investment --- in return for paying
+a certain tuition and investing a certain times in one's studies, one
+will recieve a diploma which confers on the holder an advantage in the
+job market and translates into a larger paycheck.  Naturally, students
+who have been recruited by such means will be primarily interested in
+"grabbing grades" and only doing what is required to obtain a degree.
+This poisons hope of making scholars out of them because they will
+tend to view talk of scholarly ideals and standards as at best
+irrelevant, one more hoop they must jump through on the way to the
+finish line, at worst as a kind of swindle --- they came here to learn
+how to make money, but instead they are being taught some irrelevant
+nonsense about scholarship.  Naturally, students in this latter class
+will be upset; while some will see through the scam at this point,
+many other will not and will find a ready ear in the administration
+building.  They will complain to the dean and the typical reaction
+will be that a professor will be taken to task for not following the
+syllabus or disrespecting the textbook or some such thing.
+
+With decreases in government support for education and research,
+universities have turned to the private sector for funding.  While
+there is nothing wrong per se with seeking private funding, the manner
+in which they hve chosen to do this is objectionable as it typically
+results in expolitation of labor (university faculty and industrial
+employees) at the hands of management (university administrators and
+industrial management) with any scholarly ideals thrown to the winds
+in the process.
+
+In particular, I have in mind some of the arrangements which
+universities have ented into with respect to research.  While a
+partnership with industry can be beneficial in that it gives students
+a chance to see how their subjects are applied in the outside world
+and faculty a chance to collaborate with their industrial colleagues
+and apply their expertise to practical problems, at the same time, it
+must be done right; otherwise, it can be an oppressive disaster.  When
+done wrong, what happens is that the university research laboratory
+becomes a cheap alternative to a proper industrial laboratory --- the
+company finds it cheaper to pay the university to do its research than
+to fund its own research lab; after all, you don't have to pay quite
+as much for a graduate student as for an employee (or even a
+professor, especially given that the university typically pays a base
+salary) and the university already provides the facilites.  While the
+company management gets a bargian on research and the university
+administration get money, everybody else loses.  Research in basic
+science is discouraged or marginalized.  Students and faculty are
+required to sign non-disclusure agreements which are ininmical to the
+ideals of academic freedom.  The pressure to make money and maintain a
+high rate of throughput in the lab makes standards of scholarship look
+like an unnecessarry frill which can be economized away.  Employees in
+the company become resentful of unfair competition with university
+outsourcing and attendant downsizing of the company lab.
+
+The latter rift arises as a kind of reaction to the former.  To the
+extent that a university is expected to maintain some sort of
+scholarly activity, an expedient which has been applied is to
+designate some portion of the faculty as research faculty and let the
+rest be teaching faculty.  While different people have different
+talents and hence it is wise to let people gravitate towards those
+endeavors to which they are most suited, at the same time such an
+arrangement seems not the be the way to accomplsh this goal.
+Officially designating some people as primarily resarchers who do not
+need to teach (or teach an occasional course as lackadaisically as
+they please) and others as teachers who, although not positively
+discouraged from undertaking research (the attitude being rather
+ambivalent) are not going to be rewarded for it either, in my
+experience, leads to resentment.
+
+I would say that, as far as math goes, the problem is not so much that
+universities are no longer encouraging scholarship as much as they may
+have in the past, but in the type of scholarship to which universities
+are conducive.  While universities were designed with theologians and
+humanists in mind and seem to cater to their needs rather well to this
+day, it is otherwhise with mathematical sciences.  Everywhere I have
+been, physics and math departments have felt themselves somewhat
+alienated from the mainstream of academic life.  I believe this is a
+reflection of a fundamental and long-standing difference between
+scientists and humanists.
+
+From its beginnings in the seventeenth century, the scientific
+revolution has been a decidedly anti-authoritarian movement.  It has
+rejected authority as a source of truth in no uncertain terms, taken a
+highly crirtical attitude towards established opinion, instead putting
+trust in reason and observation.
+
+Anti-authoritarianism does not mean disrespect of historical figures
+or contemporaries with more experience than oneself.  Rather, it
+simply means that, while respecting their acomplishments, one feel no
+compulsion to agree with them, but will subject their assertions to
+the same critical scrutiny as anyone else's assertions and only
+acceptthem to the degree that one finds them logically sound and in
+conformity with observed data.  This is as good a description of the
+egalitarianism you refer to as any which I am aware of --- if a
+teacher makes an erronious argument and a student points out the
+fallacy, the worse for the teacher (as with Archimedes, the mistake
+may have been delibrate, to keep students on their toes); if a student
+makes a better proof that the teacher, so much the better for both (it
+reflects well on a teacher to raise students of high calibre).  To be
+sure, it is not always practical for one to check everything for
+oneself, so one takes recourse to accepting, albeit tentatively,
+assertions of others and it is natural that one is inclined to put
+trust in people who have proven their ability to reason soundly many
+times over or whose results have withstood the test of time.  This,
+however, does not contradict anti-authoritarianism and egalitarianism
+in a fundamental way for, should some the validity of some results one
+has trusted be called into question, the appropiate scientific
+response is not to invoke the authority of one's sources, but to
+re-examine the reasoning of one's sources critically.
+
+That science can be a poor fit to the university system is ilustrated
+by history.  Many early scientists prefered to work outside the
+university system in such settings as scientific societies (which
+eventually became formalized into the professional societies of
+today).  Even today, some of the most advanced mathematical research
+takes place in research institutes which, while they may be affiliated
+with a university and their members might officially belong to the
+faculty of the university, nevertheless are relatively autonomous
+entities.
+
+Especially hard-hit are pioneering innovators.  The university system,
+with its hierarchy of scholars from undergraduate to full professor,
+its division between departments, and importance of the text is not
+well-suited to young upstarts whose work transgresses the boundaries
+between disciplines (or sets up entirely new disciplines) and calls
+for a change in viewpoint at a fundamental level.  Rather, it is
+better suited to a style of scholarship which prides itself on a
+comprehensive and meticulous understanding of a narrowly and precisely
+define domain of knowledge within an established discipline and seeks
+primarily to polish and clarify details rather than rethink things in
+general.
+
+In this respect, I see the potential relation between PlanetMath and
+academia as one of complementarity --- we provide for opportunities
+which are missing or not so well provided for in the university system
+and they can help us to improve our content.  Also, this has some
+bearing on Joe's ides of PlanetMath as e-institute --- we play a
+similar role to the socieites and institutes mentioned the paragraph
+before last as a locus for scientific activity. --[[file:rspuzio.org][rspuzio]]
+
+Thanks for the comments, Ray.  There are some good insights and clarifications
+here and I basically agree. --[[file:akrowne.org][akrowne]] Sun Feb 12 22:33:30 UTC 2006
+
+The main point I want to bring to this discussion is that PM isn't
+anti-university -- at least, not by default -- but rather, is an
+alternative to university.  However, it isn't an "exclusive" alternative.
+In particular, it can be "meta" to the university experience of
+many persons.
+
+To go into a little more detail.
+
+Reflecting Aaron's initial comments above brought to mind Kuhn's
+statements on the importance of examples and "textbook learning" for
+the practice of so-called normal mathematics.   It may be that
+this relatively "boring" sounding stuff doesn't conflict with
+the egalitarian situation Aaron and Ray are discussing.
+
+On that topic, I would rather say "you're best off if you can see
+yourself as a peer", instead of "you must see yourself as an equal".
+This is essentially a normative statement, so let's treat it that way
+-- as a suggestion.
+
+On the topic of scholarship: I was just talking to someone doing a
+post-doc who was talking about how research is more important than
+grades for grad students (as long as you maintain the minimum GPA!).
+In my personal experience in math, creativity /did/ often suffer
+(i.e. was devalued), due to the stictures of the degree program.  But
+that doesn't mean that research or scholarship as a whole is
+completely devalued in academia.  Just that you're supposed to play by
+the "rules".
+
+One thing I like about PM is that people can defined their own rules
+:).
+
+On the subject of the history of academia: Note that different
+colleges were commonly regarded as having vastly different attitudes.
+
+And on history of science: I'd assert that while the
+anti-authoritarianism is present on some level, science also provides
+an opportunity for new authorities, namely those who corner the market
+on defining (or judging) reason/observation.
+
+--[[file:jcorneli.org][jcorneli]]
+
+If I can sum up in a few words a few key aspects of two conversations w/
+Ray -- I'd say, PM can be "meta" to non-university experiences as
+well as to university experiences; and it can perhaps be especially helpful to people
+within academic settings who are nevertheless isolated from research
+peers (e.g. because of short appointments or remote locations).  Finally,
+reaching out to the right set of high school and middle school teachers
+could lead to a great chance to build involvment of high school and
+middle school students in PM. --[[file:jcorneli.org][jcorneli]]

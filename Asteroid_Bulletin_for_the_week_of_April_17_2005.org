@@ -1,0 +1,70 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Possible topics for essays
+
+ * Getting letters of support for grants
+ * Discussion of [[file:nested noosphere instances.org][nested noosphere instances]]
+ * Details on the [[file:Plans|timeline.org][Plans|timeline]] we see ahead of us
+
+* Discussion: links to books to buy
+
+[[file:marijke.org][marijke]] proposed adding Amazon links to bibliographies as a way to make
+money for the site.  A related proposal is the idea of creating "centralized"
+bibliographies for PM.
+
+The discussion:
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Bibliographies_and_Amazon_referrals
+
+
+* New AM project: New College of Tahiti
+
+If you find that "normal" school doesn't seem to work right for you, you might
+want to check out New College of Tahiti.
+
+Joe Corneli's education "side project" has become an official !AsteroidMeta
+project.  An approximate description of the purpose is: to facilitate higher
+education that is free in the sense of freedom.
+
+Some discussion of related projects (including the established African Virtual
+University) have been established.  Free free to submit your feedback here:
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/NCT
+
+* "Lost Ark Books"
+
+Ray Puzio had the smart idea trying to figure out what math books are in the
+public domain, not because their copyrights expired exactly, but because the
+copyright holders failed to RENEW their copyright within the alotted time.
+It appears that there may be a lot of books in this category.
+
+The relevant dates (1923 to 1963) include a lot of important
+developments in mathematics.  There could be many more public domain
+books from this era sitting on the shelves of YOUR math library
+than you might have thought.  If this all works out, it could
+constitute a big boon to !PlanetMath and related projects.
+
+Appeal to readers:  It takes a lot of work to search through the Library of Congess'
+catalogue to locate these books, especialy since their interface is somewhat limited. (For instance, you can't search by a combination of call number and a range of years.)  If you find this project worthwhile and would be interested in helping please let me know (through Asteroid or Planet Math mail) and we can figure out how to split the labor. -- Ray
+
+See:
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Copyright_renewals_for_math_books
+
+* Progress on HDM
+
+As announced in last week's bulletin, we are beginning to use the template utilities to check proofs.  To get started, we have been checking proofs in propositional logic from the metamath website (http://us.metamath.org/mpegif/mmtheorems.html).  Right now, we are stepping through the proofs by hand, one step at a time, to get started and understand how the process works.  Later on, we will automate the process so that the computer can take a proof in h-code as input and output whether or not the proof has been verified.  To see this work in progress, please loot at the following location: http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/using_template_utilities_to_check_proofs
+
+* Comments on this week's Bulletin
+
+I have the feeling that last week's bulletin left some somewhat 
+important things out, but I didn't make an effort to add more
+at the last minute.  Some of these discussions are just beginning,
+though, so maybe it is best to hold off for a little while.
+Thanks for participating in these bulletins!
+I do think that they are very helpful to have around, as
+a stimulus to our self-awareness.
+--[[file:jcorneli.org][jcorneli]] Sun Apr 10 19:20:29 2005 UTC
+
+And even more, as stimulating awareness of us among a wider audience! --[[file:rspuzio.org][rspuzio]] 10 April 2005

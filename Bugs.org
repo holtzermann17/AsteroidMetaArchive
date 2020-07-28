@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Links to pages for bugs in the current implementations of the [[file:Projects.org][Projects]] we're
+talking about on this wiki should be posted here (and perhaps elsewhere as
+well).  If you are working on fixing a bug, link to it from your
+[http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Users user page].  If the bug
+is huge, maybe it should be classified as a [[file:Tasks|Task.org][Tasks|Task]] instead.
+If a bug has been fixed, move it to the [[file:Case Closed.org][Case Closed]] page.  Also note that we
+have a /separate/ page for [[file:Feature Requests.org][Feature Requests]].  If you know what you're
+doing and you think it is /worth/ doing, feel free to reclassify the bugs as
+appropriate (i.e. move them to below a different project heading).
+
+ *metamath bugs* ([[file:metamath|project page.org][metamath|project page]])
+ * [[file:A metamath bug.org][A metamath bug]]
+ * [[file:let and double quote.org][let and double quote]]
+ * [[file:eimmimp and eimmexp.org][eimmimp and eimmexp]]
+
+ *Noösphere bugs*  ([[file:Noösphere|project page.org][Noösphere|project page]])
+Note: The preferred means of reporting bugs in Noösphere is to use the [http://bugs.planetmath.org/ Noösphere Bugzilla].
+ * [[file:Noösphere README documentation bug.org][Noösphere README documentation bug]]
+
+ *!PlanetMath bugs*  ([[file:PlanetMath|project page.org][PlanetMath|project page]])
+ * [[file:Can't create encyclopedia entry with Lynx.org][Can't create encyclopedia entry with Lynx]]
+ * [[file:Forums and other FDL content should be in tarball.org][Forums and other FDL content should be in tarball]]
+ * [[file:Bug in the forum's URL handler.org][Bug in the forum's URL handler]]
+ * [[file:help PlanetMath by donating home computers (doc bug).org][help PlanetMath by donating home computers (doc bug)]]
+ * [[file:google ads are distracting.org][google ads are distracting]]
+ * [[file:email notification should contain content.org][email notification should contain content]]
+ * [[file:when search is broken, link directly to google search.org][when search is broken, link directly to google search]]
+ * [[file:weird link in forum.org][weird link in forum]]
+
+ *!AsteroidMeta bugs*  ([[file:AsteroidMeta|project page.org][AsteroidMeta|project page]])
+ * [[file:Application of License.org][Application of License]]
+
+ *!PlanetPhysics bugs* ([[file:PlanetPhysics|project page.org][PlanetPhysics|project page]])
+ * [[file:equation images can't be changed.org][equation images can't be changed]]
+
+ *!PlanetComputing bugs* ([[file:PlanetComputing|project page.org][PlanetComputing|project page]])
+ * [[file:cannot get new password.org][cannot get new password]]
+
+ *!PlanetEconomics bugs* ([[file:PlanetEconomics|project page.org][PlanetEconomics|project page]])
+
+ *!PlanetLinguistics bugs* ([[file:PlanetLinguistics|project page.org][PlanetLinguistics|project page]])
+ 
+ *FEM bugs* ([[file:The Free Encyclopedia of Mathematics|project page.org][The Free Encyclopedia of Mathematics|project page]])
+
+ *HDM bugs* ([[file:The Hyperreal Dictionary of Mathematics|project page.org][The Hyperreal Dictionary of Mathematics|project page]])
+
+ *bidi system bugs* ([[file:bi-directional_content_exchange_and_updating|project page.org][bi-directional_content_exchange_and_updating|project page]])

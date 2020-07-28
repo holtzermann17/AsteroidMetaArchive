@@ -1,0 +1,68 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a fairly fundamental issue on this wiki.  How do various
+media and /media practices/ help or hinder communication?
+
+I just went to a talk that mentioned [http://www.ux1.eiu.edu/~cfbxb/class/1900/prag/grice.htm Grice's maxims], which
+look to be very useful ideas for communication in general (but don't seem
+to have any particular relevance to any particular medium).  They might possibly help
+a user choose between media, however (e.g. to help keep the discourse
+on-topic).  Note that these maxims form the basis of a linguistic theory, which is interesting!
+
+Are there any maxims like these that could be used to help choose
+useful "media practices" -- strategic choices that are "meta" to
+any conversational choices?  Presumably it wouldn't be hard
+to come up with some /suggestions/ along these lines (but I don't know how relevant they would
+be in light of the fact that many people appear to be quite [[file:PlanetMath Board Meeting--Q1 2006|set in their ways.org][PlanetMath Board Meeting--Q1 2006|set in their ways]]
+in terms of their media practices).  Presumably one of the
+most useful things to do would be to simply outline consequences
+of practices.  For example, if some people exclusively use one medium
+and others exclusively use another, they won't be able to communicate
+with each other!
+
+One interesting comment on the Grice theory (which I'm just learning
+about today, bear in mind), is that these are all maxims that are meant
+to apply to the /speaker/.  Is there some corresponding set of maxims
+that would apply to the /listener/, or to the /facilitator/ of
+a conversation?  Again, I assume the answer is yes, and that the
+best place to start with such a theory is to talk about the consequences
+of various practices.  For example, if as a listener, one is continually
+distracted by other goings on, one may tend to miss important things
+coming from the speaker.
+
+It is presumably the case that there are different goals for different
+people at different times (etc.); in order for communication and 
+media choices to be useful, the goals need to be mutually compatible,
+and the practices do as well.
+
+On [[file:the relative merits of wiki and other workflow management media|this wiki page.org][the relative merits of wiki and other workflow management media|this wiki page]],
+I began to critique the wiki medium and to spell out some features that
+I would like to see in a wiki replacement.  Many of these suggestions
+have been implemented or further discussed in my writings on the [[file:scholium system.org][scholium system]].
+One item that I think could be added to this critique page is "receipt acknowledgement".
+Yesterday I wrote or added to about 26 wiki pages, and I'm not sure
+whether these changes have been read by other people using the wiki.
+Maybe they have and maybe they haven't, maybe some of
+them will be read later, etc. -- and due to the nature of "wiki time" I certainly
+don't expect anyone to read everything I wrote right away (or ever, but presumably
+the "important" stuff will be read sometime -- that is how wiki's are _supposed_ to work, anyway).
+It might be helpful to know whether these things had been read, or at least
+to know what the default is.
+
+----
+Note that I wouldn't necessarily expect (or, in a broad calculation, even /want/)
+everyone associated with PM to read everything I write.  Rather, I'd like
+to have the people who want to read a lot to read a lot, and the people
+who want to read a little to read some distillation of the things
+I write; it doesn't so much matter who the distillation is written
+by.  Interesting.
+----
+
+Note (again) that /context is important/.  Wiki pages have the pleasant
+feature that discourse is rather well contextualized.  Discussions can
+even be re-contextualized, at least to some degree.  Of course, later
+I may become more critical of the wiki medium.  It actually
+[[file:Disfunctionality in PM interface|shouldn't be hard.org][Disfunctionality in PM interface|shouldn't be hard]] to add better contextualization into forums,
+but I have to say, I think that developing the overall ideas of the [[file:scholium system.org][scholium system]] would
+be the best way to go.

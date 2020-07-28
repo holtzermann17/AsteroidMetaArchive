@@ -1,0 +1,142 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* On Free Math and Copyright Bottlenecks
+
+* Proposal
+
+Describe what is meant by the phrase "free math", say a few words about different projects (such as Planet Math and HDM) and then discuss how copyright and patent protection (in particular the bill to protect datatbases) can create bottlenecks in the production of free math.  Say a few words on what might be done to ease the situation (if we figure some suggestions out) and end with a stirring peroration on balancing the rights of content producers versus those of the public.  I think that there ought to be enough material in the discussions we had on copyright recently that this essay will practically write itself.  Now that the deadlines have been extended, I will think this over and, if the assessment of the last sentence seems right and I think I will have the time and energy to pull this off, I might write this essay. --[[file:rspuzio.org][rspuzio]] 3 April 2005
+
+* Summary
+
+Technological advances have created a situation in which regulations 
+designed to promote the advance of science are impeding
+mathematical progress.  Free Math, attempting to remedy this
+situation, runs into difficulties.
+
+[[file:Free Math and Potential Bottlenecks - Abstract | Abstract.org][Free Math and Potential Bottlenecks - Abstract | Abstract]]
+
+Modern computing and storage technology makes it possible to manipulate
+mathematical information in novel, unprecedented ways.  For instance, one could
+store a library of several thousand volumes on a disk and have a computer search
+through it to find all references to a particular result or formula.  As the
+state of the programming art advances, it will become possible to have the
+computer do such things as check statements in different mathematical works
+against each other for consistency and arrive at new conclusions based upon
+known results in the literature.
+
+For this to be possible, one needs to enter mathematical information into a
+computer.  In attempting this, one runs into a somewhat paradoxical situation
+--- although mathematical knowledge is free, it cannot be conveyed apart from
+some form of expression, but this expression is subject to the strictest legal
+protection under copyright law.
+
+The Free Math movement seeks to address this disparity by making available
+mathematical works which are as free as the content they embody.  Unfortunately,
+in the process of doing this, we run into all sorts of bottlenecks having to do
+with copyright issues.  Fundamentally, the reason for these difficulties is that
+copyright laws were framed with the aim of regulating the printing trade and
+protecting authors.  Unfortunately, due to the drastic changes in technology
+alluded to above, regulations which were originally designed to promote the
+diffusion of knowledge and the advance of science seem to be having the opposite
+effect.  Unless this issue is dealt with, it threatens to slow down mathematical
+progress to a crawl by placing impediments which restrict the free flow of
+information which is vital for a thriving mathematical community.
+
+[[file:Free Math and Potential Bottlenecks -- Introduction | Introduction.org][Free Math and Potential Bottlenecks -- Introduction | Introduction]]
+
+[[file:Free Math and Potential Bottlenecks -- Historico-technological Background | Historico-technological Background.org][Free Math and Potential Bottlenecks -- Historico-technological Background | Historico-technological Background]]
+
+[[file:Free Math and Potential Bottlenecks -- Tensions Between Authors and Publishers | Tensions Between Authors and Publishers.org][Free Math and Potential Bottlenecks -- Tensions Between Authors and Publishers | Tensions Between Authors and Publishers]]
+
+[[file:Free Math and Potential Bottlenecks -- Access to Texts in the Public Domain | Access to Texts in the Public Domain.org][Free Math and Potential Bottlenecks -- Access to Texts in the Public Domain | Access to Texts in the Public Domain]]
+
+[[file:Free Math and Potential Bottlenecks -- The Fog of Copyleft | The Fog of Copyleft.org][Free Math and Potential Bottlenecks -- The Fog of Copyleft | The Fog of Copyleft]]
+
+[[file:Free Math and Potential Bottlenecks -- Permission to Adapt | Permission to Adapt.org][Free Math and Potential Bottlenecks -- Permission to Adapt | Permission to Adapt]]
+
+[[file:Free Math and Potential Bottlenecks -- Open-ended Collaborative Works | Open-ended Collaborative Works.org][Free Math and Potential Bottlenecks -- Open-ended Collaborative Works | Open-ended Collaborative Works]]
+
+[[file:Free Math and Potential Bottlenecks -- Novel Uses of Texts | Novel Uses of Texts.org][Free Math and Potential Bottlenecks -- Novel Uses of Texts | Novel Uses of Texts]]
+
+[[file:Free Math and Potential Bottlenecks -- Possible Remedies | Possible Remedies.org][Free Math and Potential Bottlenecks -- Possible Remedies | Possible Remedies]]
+
+[[file:Free Math and Potential Bottlenecks -- Bibliography | Bibliography.org][Free Math and Potential Bottlenecks -- Bibliography | Bibliography]]
+
+----
+
+* Discussion
+
+I like the HDM-y feel to the abstract and also the phrase "Free Math movement".
+It seems possible (though not necessarily recommended) to make this paper or
+sections thereof "gonzo" descriptions of the author's attempts to get people to
+share their already-electronic math under free use terms (e.g. the Cornell
+material, which is already in the public domain, would make a particularly funny
+episode).  Apparently we haven't heard back from them about this stuff yet?
+
+You might also mention how even some sources of computer-friendly math are not
+use-friendly (e.g. I think the Mizar stuff is not?) but how some /is/
+use-friendly (e.g. the metamath stuff).  The QED Manifesto would be a good thing
+to quote to establish the precedent for the importance of math being available
+for free use.  But then this can be contrasted with the actual behavior of
+projects that grew up under QED.
+
+The act of digitizing math without making it free seems fairly ironic to me.
+There are some reasons why people might do it anyway... !MathWorld comes to mind
+as an example... but one would somehow imagine that academics were motivated by
+different purposes.  However, it isn't clear whether this is the case, or not.
+
+That article by Gowers that I sent you a link to before (I think) might make
+another fun thing to reference when talking about the hopes people are
+entertaining for the usefulness of math-on-computers.  
+
+Also the Thurston article, if not immediately relevant to the discussion of Free
+Math, is certainly relevant to a discussion of Mathematical Culture, and also to
+bottlenecks inherent to contemporary mathematical culture.  Can Free Math
+overcome some of /Thurston's/ bottlenecks?  I think so, with things like the
+scholia system, or PM's forums, etc., but it seems like there is a lot of
+inertia that would have to be overcome.
+
+Finally, for general discussion of digitization, there is an article by John Ewing
+I referenced in my "The HDM Project" note (I think the link there is dead, but if
+you search AM for "Ewing", a more recent link will show up).  Other writings
+by Ewing critique Open Access, Author Pays, etc., and may be worth looking
+at. (There are plenty of things that could be published in Transparent
+format, at least, with free fora attached to them... but even this step
+would require a change in the way organizations like AMS, MAA, etc., do
+business.)
+--[[file:jcorneli.org][jcorneli]] Sun May 01 22:18:32 2005 UTC
+
+The section [[file:Free Math and Potential Bottlenecks -- Incompatible Licensing Terms | Incompatible Licensing Terms.org][Free Math and Potential Bottlenecks -- Incompatible Licensing Terms | Incompatible Licensing Terms]] has been deprecated in favor of the "Fog of Copyleft".
+
+I think you should re-title this article to "Bottlenecks to Free Math" to be more forceful
+and confident (or perhaps "Copyright Bottlenecks to Free Math" to make the essay more "portable" 
+to venues outside this symposium.  And perhaps "Impediments" instead of "Bottlenecks", to drive the
+point home). I think the examples show we are far beyond "potential", here--- we
+have and are dealing with the bottlenecks every day. --[[file:akrowne.org][akrowne]] Fri Jul 1 17:33:44 UTC 2005
+
+When I originally planned this essay, I thought that these bottlenecks were more an issue for the future than for the present because maybe technology had gotten to the point where these issues were serious concerns just yet, but now that it's pretty clear that this is definitely not the case, so I have changed the title accordingly, as you suggested.  However, I replaced the word "to" with "and" for the reason that I see the relation between free math and copyright bottlenecks as reciprocal --- on the one hand, the bottlenecks make life hard for people involved with free math; on the other hand, the free amth movement aims to remove these bottleneck.  Both aspects seem equally important to me, so I worded the title to make this clear. --[[file:rspuzio.org][rspuzio]] 5 July 2005
+
+** Copyleft corkscrews
+
+Let this
+
+  ////
+
+be the symbol.  What does it stand for?  I'm not completely
+sure, but the idea is to get rid of the worst problems
+appertaining to copyright bottlenecks.  Perhaps the [[file:scholium system.org][scholium system]]
+will help (how often I've been saying this over the past few
+months, in so many contexts!).  Specifically, the system will be
+useful for talking /about/ copyrighted works and sometimes
+this will be enough.  Of course, sometimes you actually need content.
+
+Take these comments for what you will.  Mainly I'm just fishing
+for immediately applicable ideas about things we can all do
+in our daily lives to make the copyright situation easier to beer
+(oops, I mean bear).  --[[file:jcorneli.org][jcorneli]]
+
+  
+
+----
+[[file:Emory Free Culture and the DL Symposium.org][Emory Free Culture and the DL Symposium]]

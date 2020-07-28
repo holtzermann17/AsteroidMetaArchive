@@ -1,0 +1,122 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introducing "Robustness"
+
+I am writing this as a follow-up to the [[file:Metacommons Manifesto.org][Metacommons Manifesto]],
+but the idea of "robustness" that has been growing on me since we
+wrote that document seems to cover a lot of different stuff.
+
+I'll start by talking about a simple notion of robustness -- related
+to the ability to answer questions.
+
+ 1. Consider person A, who is a generalist, and who can answer questions
+  about a wide range of things.
+
+ 1. Consider person B, who is a specialist, and who can only reliably
+  answer questions that pertain to area of specialty S.
+
+If you have a question that pertains directly to S, you would be
+better off asking person B.  On the other hand, if you have a question
+that loosely relates to S, and also relates to several other areas,
+you're probably going to be better off asking person A.
+
+One could say that person B is more robust on S than A, whereas A is
+more robust on general questions (in particular, questions away from
+S).  One could diagram the situation with two different gaussians, one
+that is mostly over S, and one that has some coverage of S and also
+some coverage of other stuff.  You might as well assume that the two
+gaussians really do have the same integral so that you can say that A
+and B are both equally robust, just in different ways.
+
+* The Metacommons Manifesto cast in the terms of Robustness
+
+In the Metacommons Manifesto, we said that !PlanetMath has associated
+with it a small group of people who are interested in administrative
+or "meta-level" involvement, and a large group of people who are
+interested in content-level involvement.  We talked about how the idea
+of "integration" was being applied (by people working at the
+meta-level) to make it easier for site contributors to add valuable
+content to the site.  We also pointed out that these effects are not
+immediately self-supporting -- the CBPP community isn't /paying/ the
+meta community -- and, by default, no one is.  Actually, everything is
+being done by everyone in a volunteer or close-to-volunteer fashion.
+
+We asserted that this situation can not continue forever for a couple
+of reasons.  The first (and the one most emphasized) is that the.
+burden of meta-level activities for which there is some demand by the
+user community at large is too much for the meta-community to handle
+at present.  In other words,
+
+ * /The meta-community as it currently exists is not sufficiently
+  robust with respect to the set of demands coming from the user
+  community at large for all of these demands to be easily and
+  speedily taken care of./
+
+The second (and I don't know how much we talked about this explicitly,
+but it is pretty important) is that the people in the meta-community
+have taken on a whole lot of work, in an effort to meet as much of the
+user community's demands as possible -- or to come up with effective
+strategies for meeting these demands -- but this can't go on forever
+because it is too taxing for the individuals involved.
+
+ * /The current meta-community is not particularly robust with
+  respect to time, given that the current rate at which they are
+  working does not line up well with the current rate at which
+  they are being paid./
+
+We proposed two (partial) solutions:
+
+ 1. Grow the meta-community by networking with other individuals and
+  organizations that are interested in helping to do the kinds of
+  things we are doing.
+
+ 1. Give the current meta-community a suitable rate of pay to facilitate
+  their work, with funding coming from individuals and organizations
+  that are interested in giving monetary support for our work.
+
+In other words, combat the two robustness issues mentioned above,
+primarily by networking with people, organizations and other
+communities outside the !PlanetMath community.  
+
+* Connection(s) to other current discussions
+
+** PM's robustness
+
+In Ray's recent note [[file:Focussing Inward.org][Focussing Inward]], he suggests that we can
+actually wring more meta-level support out of the !PlanetMath
+community itself if we are intelligent about it, and I agree with
+this.  "Outside support" and "inside support" will presumably stop
+being as meaningful as distinguishing terms as more "outsiders" get
+involved in the PM community, anyway.
+
+In connection with this idea, we might say that the curve defined by
+the two indicators "meta-community" and "user community" is way too
+chunky.  I.e., the real "robustness curve" of the PM community as a
+whole is presumably smoother than the curve we implicitly had in mind
+when we wrote the Metacommons Manifesto.
+
+Another area where improvement is always possible is in the area of
+"integration".  PM's support for mathematical practice is not as
+robust as it might be until all kinds of practice are being integrated
+into PM.  A simple example: if we had one or more areas of the site
+where it was appropriate to post research work or math-philosophy
+essays like the one you're reading now, PM as a whole would be more
+robust.
+
+** Robust strategies
+
+In our [[file:Schedule.org][Schedule]] and in my note [[file:Against Concepts.org][Against Concepts]], we're talking
+about building effective (i.e. robust) strategies for accomplishing
+various goals.  
+
+Which is to say: A "concept" alone is not likely to get accomplished,
+completed, or otherwise polished off.  However, if the concept gets
+coupled with a suitably strategic plan (including implementation
+details, a schedule, a suitably interested staff, and perhaps some
+back-up plans), then it is reasonably likely to be actualized,
+concretized, and (most importantly) made more multiply-usable.
+
+(Note connection to the original [[file:HDM.org][HDM]] essay: math is already
+"free", it is just stuck in a not-so-easily used form; closer to
+concepts, further from code.)

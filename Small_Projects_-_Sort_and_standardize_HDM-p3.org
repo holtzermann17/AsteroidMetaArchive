@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There are already 100 definitions in something similar to hcode
+written down in HDM-p3.  Someone could sort these definitions
+into [[file:Hcode libraries.org][Hcode libraries]], and in the process check that they match
+the [[file:Version Zero.org][Version Zero]] language standard.  Sometimes the standard may
+have to be expanded upon; this is a good chance to think about how to
+make the /language extensible/.
+
+At least a little work on this project may be a good warm-up for other
+porting projects (e.g. porting metamath or p2/APM-xi).
+
+--[[file:jcorneli.org][jcorneli]]

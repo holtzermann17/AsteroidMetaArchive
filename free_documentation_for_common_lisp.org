@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It would be nice to have some useful free documentation for Common Lisp --
+something that could be used as a manual or textbook, and something that
+could be used in "online help" in various implementations.
+
+I've made a very small start, with this
+[http://www.ma.utexas.edu/~jcorneli/a/elisp/elisp-intersect-clisp collection of emacs lisp docstrings].
+
+Note that the content above is only licensed under the [[file:GPL.org][GPL]], not the [[file:FDL.org][FDL]].
+If it was FDL licensed, I would move it to the "early bird content" section.
+Anyone who is interested in pursuing this task might wish to contact the FSF and
+ask about having this document relicensed. --[[file:jcorneli.org][jcorneli]] Mon Feb 21 00:37:21 2005 UTC

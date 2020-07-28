@@ -1,0 +1,511 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Note: this should probably have been called "comical tragedy intermission",
+but maybe there is some sort of wormhole between [[file:Tragical comedies of the info commons.org][Tragical comedies of the info commons]]
+and [[file:Comical tragedies of the info commons.org][Comical tragedies of the info commons]], so in order to better explore this
+possibility I will leave this intermission/wormhole just as it is. --[[file:jcorneli.org][jcorneli]]
+
+To sum up, it seems like the common questions concern the degree and
+quality of responsibility of the "leaders" of CBPP/media operations.
+It isn't even necessarily the case that identifiable leaders exist
+for some projects ("true hetrarchy" would have leaders working on small
+interconnected projects, but no one in charge of any big project).
+But many projects do have leaders; and besides, if they didn't,
+participants would still be asked "take me to your leader" and
+might have to do some explaining when it turned out that there
+wasn't one.  Frequently the "leaders" are those who are working on
+the (identifiable) "meta" aspects of the project.
+I argue in [[file:Comical tragedies of the info commons.org][Comical tragedies of the info commons]] that it is
+good to share this load out among many people.  A good follow-up
+question would be "what about the division of labor, isn't it
+'more efficient' to have specialists working on 'meta' things?"
+I can't give a complete answer to that question, but my sense is that
+built-in redundancy is a good thing.  Moreover, division of labor isn't
+efficient in and of itself; if the division results in some part of
+the system being too heavily loaded, it may need to get more resources
+or the tasks may have to be redivided.  Egalitarian, hetrarchical,
+DIY-oriented institutions aren't always the most intuitive to navigate - and
+they can be hard to bring about - CBPP projects may match these
+descriptions more than some other sorts of institutions out there,
+but it is almost always an imperfect match.  The idea that responsibility
+should be placed on the shoulders of leaders may at times be absurd
+(e.g. the idea that "Wikipedia" (the organization; actually Wikimedia) is responsible for
+editing the content of Wikipedia (the document) seems approximately as absurd
+as the idea that phone company should censor phone conversations);
+nevertheless, at some level, CBPP projects /as communities/ are
+"responsible" for their codes, culture, and content (insofar as
+any culture can be said to be responsible for itself; essentially, insofar as the
+term "responsible" means anything).  The sentiments
+expressed against users of new media which kicked off [[file:Tragical comedies of the info commons.org][Tragical comedies of the info commons]],
+although they are vitriolic, seem to be part of a process of defining the
+uses of these media.  If we "agree" that libel isn't OK (but vituperousness is, ahem?) then
+we must really ask, who is supposed to do the policing?  The easy answer, "the people in charge"
+doesn't work so well when the institution is fundamentally egalitarian.  
+Another simplistic idea is to create towers of
+(meta-)overseers, the first to police the content, the next to police the
+police, the third to police those police, and so on.  But a rigid division of labor along these lines quickly
+becomes ridiculous, and eventually it becomes clear that "everone
+must do a part" -- not just at the content level or the next level
+up, but at each of meta levels that turns out to be relevant.  
+Certainly there can be some division of labor too, but in light
+of the previous remarks, it should be an "efficient" and also a
+"/robust/" one.  I would argue that if the leaders of contemporary
+CBPP projects do have a responsibility, it is to take up this point.
+By so doing, their leadership role will change (if it hasn't already)
+as leadership tasks become more widely shouldered.  Sometimes there
+will be limits to how far this can or should go.  But understanding
+these limits is just part of a much broader investigation of CBPP culture
+that, I think, needs to be initiated if the promises of "information commonses"
+are to be fully realized.  --[[file:jcorneli.org][jcorneli]]
+
+
+
+
+----
+
+/O'cat and J. Corneli are strolling on plush carpets enjoying
+sorbets.  Both are very well dressed.  As they talk, they pass into
+the outer balconies of the Theater, which overlook a moonlit ocean./
+
+'I was glad you came to the performance, O'cat!  Didn't know we'd be
+seeing you again so soon.'
+
+/O'cat is looking out over the ocean and seems absorbed in thought;
+and presently, remarks,/
+
+'Engineering a system involves attempting to simultaneously optimize a
+number of variables while solving the given problem.  For every
+variable that can possibly be optimized there are trade-offs.  Now, if
+your "superusers" are overworked then they may need to write new code
+to reduce their workload.'
+
+'Well, of course, it isn't just that they are overworked, they are
+also frequently distracted by other things.  The end result is
+similar; when the superusers aren't sufficiently available, development of the
+system is either painfully slow or actually grinds to a halt.'
+
+'As I understand it, your point is that it is easier for the users to
+complain about "free" systems' flaws than to dig in and fix it
+themselves.  They would rather freeload on the shoulders of the
+"superusers".'
+
+'Yes certainly; except (although the users may not catch on for a
+while), not much can be obtained by such freeloading when the
+superuser is unavailable or preoccupied with other parts of system
+management.  In theory I suppose a highly dedicated and efficient
+superuser or superuser group could meet all of the demands of users,
+but superusers are only human.  When day-to-day users can take on some
+of the superuser's roles, the burden on the dedicated superuser is
+eased."
+
+'We certainly can't expect all of the users to be knowledgable about
+the inner workings of the systems they use, can we?  The only reason
+computing as we know it is possible is that everyone is not required
+to know everything about everything.'
+
+'Oh, I agree with you entirely!  Nevertheless, part of the problem is
+the dichotomy between users and superusers.  There can be some mixing
+of roles and some division of labor at the same time.  Dedicated
+superusers may be just fine; but if the users rely on them for
+everything related to the system, then I think we have a problem.'
+
+'Sometimes it may be preferable to use strict partitions and
+interfaces, hiding the internals from everyone except those with a
+need to know.'
+
+'Sure, but "hobbyist" users (volunteer firefighter types) may /want/
+to know very badly, and I think that should be enough (with free
+systems) for them to get access to the information.  Here we certainly
+see trade offs; if it is too hard for the hobbyist to find out
+information about the system or to make contributions, the hobbyist
+finds a new hobby.'
+
+'There is an old saying, "the documentation encapsulates the
+software."  That means that you can not only educate your users, but
+make stipulations and disclaimers about how the system should be used.'
+
+'Sure.'
+
+'Keep in mind, this isn't Dirk Gently's Holistic Detective Agency.'
+
+'Er, no.  Well, maybe not.  Probably better if it isn't.  Anyway,
+look, I think we were called a few minutes ago.  Shall we see if we
+can get to our seats?'
+
+
+
+
+
+----
+(Dialog based on this original commentary.)
+
+[[file:ocat.org][ocat]] discusses:
+
+jcorneli,
+
+I will take a refreshment break and
+discuss this topic with you.
+
+Engineering a system involves attempting
+to simultaneously optimize a number of
+variables while solving the given
+problem. Writing code to provide certain
+requested behaviors is just one facet of
+the engineering problem.
+
+Some of the Variables:
+- Development Cost and Elapsed Time
+- Lifecycle Maintenance Costs
+- Efficiency
+- Reliability
+- Accessibility and Uptime
+- Maintainability
+- Serviceability
+- Extensibility
+- Usability
+- Integrity
+- Auditability
+
+Back in the old days I found that
+development costs grew until management
+said "No", and then the product was
+completed, with some liabilities in the
+other variables.
+
+When I first started, back when the IBM
+model of the Cathedral was de rigeur,
+developers worked behind a Chinese Wall,
+with no direct access to the
+"production" environment. We had to turn
+over the new package to "Operations",
+who then assumed all day to day
+responsibility for running the system.
+Only a "bug" or "abend" or "service
+request" would get the programmer
+involved again -- with a fresh security
+authorization to touch the Holy Code
+(and sometimes the data late at
+night...)
+
+I developed a metric for quality after
+my first few projects. When the code is
+first delivered the programmer begins
+with a grade of "A", regardless of what
+had transpired previously. The first bug
+would reduce the grade to a "B", the
+second to a "C", and after that an "F".
+Eventually you will stop creating
+problems or you will be promoted into
+management. Very simple.
+
+For every variable that can possibly be
+optimized there are trade-offs. Time vs.
+Space vs. Cost vs. Complexity, etc.
+Unfortunately, too many wrong initial
+choices can result in a system that
+cannot be repaired or upgraded, it must
+be discarded and rewritten -- or be
+consigned to obsolescent oblivion in the
+backwaters of technology.
+
+Now, if your "superusers" are overworked
+then they may need to write new code to
+reduce their workload. We could study
+their time expenditures and come up with
+a priority list for them :) If they are
+spending most of their time doing
+maintenance instead of new development,
+that is actually fairly typical. It is
+"systemic", because few people or
+institutions are willing to invest up-
+front for hands-off, turnkey systems
+that rarely fail. In the most extreme
+environments, where changes happen so
+dynamically and catastrophically that
+ongoing maintenance by the High Priests
+is impossible, the system that is
+engineered should probably be a language
+-- let the users write their own code
+and take the hits.
+
+But, if I understand you, your point is
+that it is easier for the users to
+complain about "free" systems' flaws
+than to dig in and fix it themselves.
+They would rather freeload on the
+shoulders of the "superusers".
+
+The answer to this involves the contract
+between the system providers and the
+users. Are the users "customers" or
+programmers? Why should we expect the
+users to be knowledgable about the inner
+workings of the systems they use?
+
+Knowledge of internals should be
+optional, IMO. Some people just want to
+use a system, generally to accomplish
+something else. Others want to build a
+new layer on top of an older system,
+like the hierarchy of firmware, machine
+language, assembly language, kernel,
+OS environment, high-level compiler, application,
+script/macros, and so on. The only reason
+computing as we know is possible is that
+everyone is not required to know
+everything about everything. 
+
+In fact, it may be preferable to use
+strict partitions and interfaces, hiding
+the internals from everyone except those
+with a need to know. That is the secret
+to being able to write a program that is
+still running 20 years later after just
+a few recompiles into new environments.
+This isn't Dirk Gently's Holistic
+Detective Agency. We do not aspire to
+the interconnectedness of all things
+when engineering systems :)
+
+Another aspect of this is the old
+saying, "the documentation encapsulates
+the software". That means that you can
+not only educate your users, but make
+stipulations and disclaimers about how
+the system should be used. You can say,
+follow *these rules* or else the million
+pound shithammer will fall and don't
+come whining to me! And you can lower
+and shape expectations -- a bug is only
+a bug if a user says it is a bug! (One
+reason I released mmj2 as source only is
+to weed out users without the ability to
+compile the system. As a result I have
+only one user and no bug reports from
+him! Yay. P.S. The GUI front-end of the
+Proof Assistant is nearly ready, I just
+need to code the back-end thread
+subroutines now ... it is triggered at
+the end of the original mmj2 "BatchMMJ2"
+program if parsing and syntactical
+analysis are completed successfully ...
+target date for the new *source* release
+if February, 2006 :)
+
+
+---- 
+
+* Our Dumb Society
+
+/My latest outgoing mail in a discussion of the issue of education in
+the US, taking place between me & some family members./
+
+What does it mean for a society to be dumb (or, better, "ignorant",
+since now we're talking "knowledge", not "intelligence")?
+
+Is a society's knowledge the cumulative knowledge of its members?  Or
+could we just go by the top-most knowledgeable 10%?  One thing is
+certain, which is that to be a functioning society, we don't all need
+to be knowledgeable about everything.
+
+For example, I bet that far fewer than 13% of US citizens know how to
+fix a car engine.  But lots of us know how to drive cars.
+
+Point being, people in any society _know_ how to navigate the
+situations that they encounter in their day to day lives.  Given this,
+it is doubtful whether a cab driver (who knows a city's ins and outs)
+is any less "knowledgeable" than a botanist or a chemist.  Its
+anyone's guess who has the higher IQ.  (Here in Minneapolis, you'll
+find plenty of taxicab drivers who were doctors or whatever in
+Somalia.)
+
+Perhaps one day, knowledge of evolutionary biology, molecular
+chemistry, and advanced mathematics will be relevant to the day-to-day
+lives of many people in this country.  Til then, I wouldn't expect
+these subjects to be all that popular.
+
+Probably there will be some people who never have a chance to learn
+until it is too late.  Hate to say it, but that's life.
+
+What I wonder is whether the situation with knowledge is the same as
+the situation with other sorts of goods.  Do the knowledgeable become
+more knowledgeable while the ignorant become more ignorant?
+
+I think that there are studies that show at least part of this to be
+true on the individual level.  
+
+If we're seeing a severe knowledge concentration in this country,
+maybe the total knowledge of the top 10% is actually a pretty good
+approximation to the total knowledge of the society.
+
+(Interesting question would be, how many of these people can fix cars?
+And what does it mean to "fix" a car, given the on-board computers and
+all?)
+
+--[[file:jcorneli.org][jcorneli]], for Jay Leno and vertical hairstyles
+
+Something which seems important here is whether the knowledge is
+available whether or not many people actually will make use of it.
+Obviously, a given individual will only be able to access a small part
+of all knowledge simply because there is not enough time to learn
+everything.  However, one potentially might want or need to know quite
+a variety of things depending on circumstances so restrictions to
+knowledge can affect more people than one might expect at first sight,
+let alone indirect effects.
+
+Consider the example of automotive repair.  Likely only mechanics and
+car enthusiasts will spend the time to learn how automobiles work and
+how to repair them.  [Will finish this later --- am tired now]
+--[[file:rspuzio.org][rspuzio]]
+
+
+Amusing and educational story from Japan today. I am guessing that a
+new bug report will be generated as a result of the incident described
+by AP:
+
+[http://biz.yahoo.com/ap/051209/asian_markets.html?.v=1 Tokyo Recovers...]
+
+"... On Thursday, the Nikkei tumbled 1.95 percent amid market jitters
+over an erroneous sell order from Japanese brokerage Mizuho Securities
+Co., which lost at least 27 billion yen ($225 million) on a stock
+trade.
+
+In the incident, Mizuho mistakenly tried to sell 610,000 shares at 1
+yen (less than a penny) apiece in a job recruiting firm called J-Com
+Co., instead of its intention, which was to sell 1 share at 610,000
+yen ($5,041). ..."
+
+--[[file:ocat.org][ocat]]
+
+D'oh!  Reminds me of the film "Brazil" --
+
+: "Tuttle should have had thirty-one pounds and six-pence debited
+against his account, not Buttle...Expediting has put in for electrical
+procedures in respect of Buttle, Archibald, shoe repair operative, but
+Security has invoiced Admin for Tuttle, Archibald, heating engineer."
+
+Which ends up having a bigger effect than you might initially guess.
+Sort of.  --[[file:jcorneli.org][jcorneli]]
+
+-----
+
+jcorneli,
+
+Additional thoughts come to mind regarding your
+"Tragedy of the Commons" discussion.
+
+I suppose we could distinguish between joint
+undertakings to achieve specified objectives,
+and creating systems that facilitate and enable
+joint undertakings.
+
+This distinction may seem arbitrary because
+engineered systems can be viewed in two ways:
+1) as separate from the users, and 2) as
+composite artifacts that include the users of a
+system as components.
+
+Still, it is useful to consider a system as
+distinct from its users because it is often the
+case that a system seems to take on a life of
+its own, transcending its creators and users.
+Such a system becomes a universe complete with
+rules, concepts, vocabularies, activities --
+and manifesting, emergent properties.
+
+Users enter such a system and internalize *it*,
+shaping themselves in accordance with the
+system. To "System Creators" this point is
+often unappreciated -- at the start. With the
+passage of time though, it becomes clear that a
+small number of guiding rules and principles
+underlying a system's architecture can create
+an unlimited whole that must be internalized to
+be fully experienced.
+
+This is why it is important that, at the
+inception of System Creation, the Creator(s)
+view the system as an independent entity that
+will actually affect and effect its reality.
+
+When viewed in this way, modifications to a
+system, though expected in some quantity,
+reflect the inadequacies of the Creators. What
+some may call virtues, such as Rapid
+Application Development, Scrum, and iterative
+aspects of Extreme Programming are simply
+lipstick on the pig, fancy names for human
+System Creators being sub-godlike.
+
+Now, to bring this back into the world of
+reality, when we look at something like the
+recent Wikipedia debacle of libelous entries,
+we see that the design of Wikipedia may be
+faulted. Indeed, the system has now been
+modified. But lots of human monitoring has been
+going on for a long time -- the wiki cops have
+been on the beat, eh? So perhaps things along
+the lines of Slashdot modding, or Google
+heuristics, or your Scholium system can be
+considered as making contributions to the
+problem of unrestricted anarchy vs. making
+quality improvements without being a nazi about
+it.
+
+I can though, take contrary positions. I can
+point out that any system depending on humans
+is inherently unpredictable. Or that some
+systems contain the seeds of their own
+destruction -- by becoming so successful that
+they are ruined, or by being so immutable and
+unwieldly that they must be deconstructed,
+destroyed or discarded.
+
+But that is the nature of systems, there are
+always dualities, the push-me pull-yous. All
+variables cannot be simultaneously optimized!
+And never overestimate the benevolent qualities
+of large groups of people :)
+
+What is wanted -- in practice -- is a large
+amount of durability in a system. That is an
+ *attractive* quality because the amount of time
+people are willing to devote to learning a new
+system is diminished if they believe their
+skull sweat will be wasted on a system that
+changes so rapidly that investments cannot be
+realized. Durability also can mean systems that
+require minimal hand-holding and maintenance by
+the owners/super-users/PTB.
+
+Is it too much to ask that a system be
+"complete" or in a finished state? How 'bout if
+we just fire it up and it takes care of its
+business, and phones home if it runs into
+trouble? And who wants to keep revisiting the
+same old code, patching and tweaking with
+bubble gum, duct tape and crufty mods? What I
+mean by this is not a self-aware computer
+system but a system that fits its intended
+purpose. Do we expect a hammer to saw as well
+as to pound nails? Negative. We purchase a saw
+to complement our tool-kit!
+
+And this brings us back to the topic of
+feasibility studies, analysis and design. As
+the saying goes, "Failing to plan means
+planning to fail." These preparatory
+development activities share the common
+attribute of minimizing the initial amount of
+Entropy in a system. Too much entropy at the
+start and durability disappears...
+
+--[[file:ocat.org][ocat]] 26-Dec-2005
+
+Durability can be a good thing.  But change can also be.
+They have different applicability, and indeed, some sorts of
+changes can be implemented in a way that makes them orthogonal to
+other stable features.  This is the case that seems to apply
+with most (or all) of the various [[file:Feature Requests.org][Feature Requests]] for PlanetMath, for
+example.  Orthogonal changes give you the best of both worlds!  "Platforms" (as opposed to "applications") allow for (and typically, plan for) the development of orthogonal tools. --[[file:jcorneli.org][jcorneli]]

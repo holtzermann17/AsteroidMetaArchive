@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As far as h-code is concerned, atoms can be classified under four headings
+
+ 1. keywords
+
+ 1. constants
+
+ 1. unbound variables
+
+ 1. bound variables
+
+The distinction between these categories is partly syntactic, partly semantic.
+1) A certain number of atoms will be reserved for use as keywords and these
+particular atoms cannot be used as variables or constants.  Each keyword will
+play a certain grammatical role in the language, and we give them names like
+/:st/ which are unlikely to be picked for any other use.  2) A constant is a
+non-keyword atom which refers to a particular mathematical object.  3) An
+unbound variable is a non-keyword atom which need not been assigned to any
+particular mathematical object and is not bound by a binder.  4) A bound
+variable is a non-keyword atom which occurs in the list of variables associated
+to a binder.
+
+* Comments
+
+As I write this, I see more and more its inadequacies and ways in which it could
+be imporved in the future.  I still think it is worth writing down because one
+has to start somewhere.  For all its shortcomings, this classification still
+should be good enough for a "zeroth version" of h-code which could deal with
+some non-trivial, if somewhat elementary math.  [[file:rspuzio.org][rspuzio]]
+
+:  It doesn't seem particularly inadequate to me! --[[file:jcorneli.org][jcorneli]] Tue Mar 01 16:30:23 2005 UTC
+
+Back to [[file:h-code.org][h-code]]

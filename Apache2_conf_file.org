@@ -1,0 +1,108 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Listen 198.82.160.117:80
+
+NameVirtualHost 198.82.160.117:80
+
+<VirtualHost 198.82.160.117:80>
+  ServerAdmin feedback@planetmath.org
+  ServerName images.planetmath.org
+  ServerAlias aux.planetmath.org oai.planetmath.org
+
+  Alias /icons/ /usr/share/apache2/icons/
+  ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+  DocumentRoot /var/www/noosphere/data
+
+  ReadmeName README
+  HeaderName HEADER
+  IndexIgnore .??* *~ *# HEADER* README* RCS CVS *,v *,t
+			  
+  <Directory /usr/share/apache2/icons>
+    Options Indexes MultiViews
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  <Directory /var/www/noosphere/data/>
+    Options Indexes Includes FollowSymLinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    Allow from all
+  </Directory>
+  
+  <Directory /var/www/noosphere/data/oai/>
+    Options ExecCGI
+	AllowOverride None
+	Order allow,deny
+	Allow from all
+  </Directory>
+  
+  ErrorLog /var/log/apache2/pm-static-error.log
+  CustomLog /var/log/apache2/pm-static-access.log combined
+
+  <IfModule mod_userdir.c>
+      UserDir public_html
+  </IfModule>
+
+</VirtualHost>
+
+<VirtualHost 198.82.160.117:80>
+
+  ServerName www.planetmath.org
+  DocumentRoot /var/www/noosphere
+  
+  RewriteEngine on
+
+  RewriteRule ^/(.*)$ http://planetmath.org/$1 [R]
+</VirtualHost>
+
+<VirtualHost 198.82.160.117:80>
+  ServerName planetmath.org
+  DocumentRoot /var/www/noosphere
+
+  <Directory /var/www/noosphere>
+    Options Indexes Includes FollowSymLinks ExecCGI
+    AllowOverride None
+    Order allow,deny
+    Allow from all
+  </Directory>
+
+  <IfModule mod_perl.c>
+    PerlModule DBI
+    PerlModule Apache::compat
+	PerlModule Apache::Reload
+	PerlInitHandler Apache::Reload
+	PerlSetVar ReloadAll off
+	PerlSetVar ReloadModules "Noosphere::*"
+    <Perl>
+      use lib qw(/var/www/noosphere/lib);
+    </Perl>
+
+	PerlRequire /var/www/noosphere/lib/startup.pl
+	 
+    <Location />
+	  AuthType None
+	  SetEnvIf User-Agent ".*WebStripper.*" getout
+	  SetEnvIf User-Agent ".*e-SocietyRobot.*" getout
+	  SetEnvIf User-Agent ".*NaverBot.*" getout
+	  <Limit GET POST>
+		Order Allow,Deny
+		Deny from env=getout
+		Allow from all
+      </Limit>
+  
+
+	  PerlSetVar Noosphere::basedir /var/www/noosphere
+
+      SetHandler perl-script
+      PerlHandler Noosphere
+      
+    </Location>
+  </IfModule>
+
+  ErrorDocument 500 /?op=showise
+  ErrorLog /var/log/apache2/pm-error.log
+  CustomLog /var/log/apache2/pm-access.log combined
+</VirtualHost>

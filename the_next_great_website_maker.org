@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+During a conversation with Aaron, we discussed the relative merits of wiki vs Noosphere.  The upshot of this conversation was that, while wiki is flexible and makes it easy to put up content, it does not do the more sophisticated things like make automatics links which Noosphere does.  This conversation led me to aske the question "Can one devise a program which would combine the best features of wiki and Noosphere?"  From experience with both Planet Math and Asteroid Meta, I have formed opinions of what I consider to be the advantages and disadvantages of these two programs for making websites, and would like to put this experience to use by trying to devise a scheme which combines the longcomings of both systems but excludes their shortcomings (if this is possible).  In addition to these two programs, of course the scholium system has influenced my thinking.
+
+When I think of computer programs nowadays, LISP immediately comes to mind --- not so much the thought of writing the program in LISP as much as the thought of implementing the general philosophy behind LISP.  In a way, the flexibility of the wiki medium in creating pages reminds me of the flexibility of linked lists.  In both cases, the machine takes care of allocating and deallocating memory as needed behind the scenes.  Just as one can create a model of just about any data structure as a linked list, so too one can create a model of just about any hypertext document using a wiki.
+
+It seems that the analogy stops here.  Whereas LISP provides one with a means for performing all sorts of operations on linked lists, wiki programs do not let one do more much more than create and edit wikis.  What would be nice is a way to to allow for the implementation of higher level operations like automatic linking in a flexible way.  What I envision is a general system which, out of the box, is rather flexible but which could be used to emulate either Planet Math or Asteroid Meta by entering the right data.
+
+** Description
+
+This is the beginning of description of how I see such a system possibly working.
+
+For each document, there will be a directory of relevant files.  
+
+ * There will be a main file containing such relevant information as the title of the page, its canonical name, and owner. 
+
+ * There will be the files from which the document is constructed.  These could include text files, !TeX files, graphics files, and what not.  Also, metadata files would be included.  It doesn't seem to me to make sense to draw a sharp distinction between data and metadata for the purpose at hand.
+
+ * There will be a rendering file.  This file will contain a routine for producing a webpage from the various files mentioned above.  For instance, the routine might say to run the text file through an autolinking program, then send the file and the list of links produced through a program which produces an HTML file suitable for viewing.  Also, now that I think of it, there should be a possibility for multiple rendering flies so that one could, for instance, produce plain text and graphical versions of the webpage.  
+
+ * There would be  the rendered files for viewing.
+
+The system will automatically produce a canonical name and/or number when a new document is created.
+
+Everything will have an owner and an access control list.  In particular, some of the users may be programs.  This system will be as demon ridden as the typical UNIX implementation.  These demons could do things like autolinking and create tables of contents.
+
+Some of these demons will serve as waiters.  
+
+--[[file:rspuzio.org][rspuzio]] 23 July 2005
+
+** Discussion
+
+This still has a ways to go, maybe it's silly or redundant, but I thought that I would post it all the same. --[[file:rspuzio.org][rspuzio]] 23 July 2005
+
+Now that I see the way that my ideas are going, this system is going to be inspired even more by UNIX than by LISP.  As I now think of it, part of my idea is something like this.  UNIX is a multi-user operating system; this means that it is a system which allows many users to write and run programs on the same filesystem.  Likewise, this would be a system which would allow many users to write and view webpages on the same filesystem, so I am thinking that one might be able to base such a program on existing operating systems and thereby benefit from the reuse of the same ideas in a slightly differnt context. --[[file:rspuzio.org][rspuzio]] 24 July 2005
+
+Well, this sounds a lot like where I'd like to make the scholium system
+go - implementing specifics will take more work, but
+the current system is a good beginning.  Note that in place of "the web",
+the scholium system substitutes a collection of "CVS archives".  It
+works with the downloaded files locally, similar to what you say about
+using a filesystem.  I'm just uploading my latest draft [http://www.ma.utexas.edu/~jcorneli/a/lit/ to my webpage],
+maybe you should take a look at that and tell me what you think.  Personally, I believe I'll be able
+to get something that will do most of these things very soon and the
+rest would follow that before too long!  (Within, say, the next week,
+I think the scholium system itself should be usable for comments on
+said system, and perhaps in a not much larger time line, it should be
+possible to use it in place of AsteroidMeta...) --[[file:jcorneli.org][jcorneli]]

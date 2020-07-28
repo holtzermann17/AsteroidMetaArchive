@@ -1,0 +1,137 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/Note: this is not an official project page; it exists merely as a
+convenience for some participants to track the project and manage some
+of the work on it./
+
+ * Hi, there is a new wiki for discussing MathWeb [http://www.mathweb.org/wiki on the MathWeb home page]. It's now open to everybody, and there have already been the first contributions. The software features LaTeX formulae, Semantic Web extensions, user talk pages, and more. See you there, [[file:clange.org][clange]] 13-Feb-2007
+
+* About The Project
+
+MathWeb refers to a general initiative to improve the integration of
+mathematical information on the web.  The initiative is meant to span
+free/open mathematics information sources of all stripes; whether
+produced by open communities or gated ones, whether funded or
+voluntary (and all stages in between), and whether popular or
+expert/niche.  Basically, all resources that can be logically
+connected in a beneficial way to some degree /should/ be.  The
+initiative focuses on motivating progress by connecting people,
+projects, software tools, and to some extent finding funding streams,
+when such connections could bring about considerable benefit at a low
+cost.
+
+At this time, the initiative has no official organizational format.  
+
+For more information: [http://bibserver.berkeley.edu/proposals/mathweb.html Mathematics Web Development proposal]
+
+** People
+
+The following people are principals of the initiative:
+
+ * [http://www.stat.berkeley.edu/~pitman Jim Pitman]
+ * [[file:akrowne|Aaron Krowne.org][akrowne|Aaron Krowne]]
+ * [http://kwarc.eecs.iu-bremen.de/kohlhase Michael Kohlhase]
+ * ...
+
+Other "project-level" supporters include:
+
+ * [http://www.math.niu.edu/~rusin/ David Rusin]
+ * ...
+
+People doing implementation (in addition to most of the principals above) are:
+
+ * James Gardner (NNexus)
+ * ...
+
+General supporters include:
+
+ * (start list)
+
+** Sub-Projects
+
+These are sub-projects which have "grown" directly out of MathWeb.
+
+ * [http://bibserver.berkeley.edu/ Bibserver]
+ * [http://bibserver.berkeley.edu/proposals/atlas_proposal/atlas.html The Math Atlas]
+ * [http://aux.planetmath.org/nnexus/ The NNexus linking system] (as applied to IMS and !MathWeb tasks)
+ * ...
+
+** Allied Projects
+
+These projects already existed but share a high degree of goal overlap with
+MathWeb and have expressed interest or have otherwise made moves in support of it:
+
+ * [http://www.mth.kcl.ac.uk/MAO/Home.html Mathematics Online]
+ * [http://planetmath.org/ PlanetMath] (will supply content and linking; would like to benefit from generated free/open-licensed content)
+ * [http://www.math.niu.edu/~rusin/known-math/ The Mathematics Atlas] (Rusin's project will form the content and conceptual seed of the Math Atlas project above)
+ * ...
+
+** Allied Organizations
+
+These are organizations that are putting forward resources, endorsing, or otherwise 
+supporting the MathWeb initative or it's sub-projects:
+
+ * The IMS
+ * Berkeley Statistics Department
+ * PlanetMath.org, Ltd.
+ * ...
+
+* Documents
+
+Links to working and completed documents, presentations, and more can go here.
+
+* Discussion
+
+: /Basically, all resources that can be logically connected in a
+beneficial way to some degree should be./
+
+Reminds me of the Metacommons Manifesto more than anything else.
+However, it also reminds me of our discussion of licenses.  In my view
+it remains to be determined exactly how content from different license
+domains can be connected.
+
+: /General supporters include:/
+
+This is the same sort of language I've taken issue with before.  I
+think I support the idea of the project, but does my name go on the
+list?  I would suggest that you make this sub-heading more specific.
+Similarly with "Allied Projects" and "Allied Organizations".
+
+Indeed, rather than a list of alliances (which is the sort of vague
+thing you see way too much of on the IntarWeb), why not give specific
+details on the nature of the alliances?  How do the various
+organizations mentioned relate to this particular nexus.  The <nowiki>; :</nowiki>
+markup works good for that :).
+
+(As in fiction, specificity does wonders for nonfiction.  I can't say
+I find "share a high degree of goal overlap", for example, to be a
+particularly enlightening statement when the goalset is complex.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+Let me continue.  In addition to being linguistically vague, the format
+here has the potential to be misleading, particularly since "!MathWeb"
+was a pre-existing term (used by Michael) before it was used by Pitman.
+
+I throw my hands up in the air, and wave them like I just don't care -- will
+someone who knows what is going on please maintain this webpage?
+
+--[[file:jcorneli.org][jcorneli]]
+
+** Discussion of MathWeb material
+
+The information presented on the [http://www.mathweb.org/ MathWeb homepage]: 
+
+: MathWeb.org supplies an infrastructure for web-supported mathematics. It provides you with
+a software system that connects a wide-range of mathematical services by a common, mathematical software bus; 
+a set of mathematical services that support all aspects of doing mathematics on the web (see the spiral);
+an inter lingua for mathematical communication (OMDoc); 
+a portal for potential users and a discussion forum for developers 
+
+is not sufficiently connected with actual !MathWeb products or overviews
+thereof for it to be immediately useful (or even immediately believable).
+I'd like to see it replaced or supplemented by a more easily understandable
+encyclopedia-style survey of the project.
+
+--[[file:jcorneli.org][jcorneli]]

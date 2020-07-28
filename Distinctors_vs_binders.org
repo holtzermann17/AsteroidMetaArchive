@@ -1,0 +1,219 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[[file:metamath|Metamath.org][metamath|Metamath]] and friends use a metalogic based on distinct variable constraints, rather than an explicit notion of free and bound variables. This metalogic was first proposed by Alfred Tarski in his 1966 paper "[http://us.metamath.org/mpegif/mmset.html#Tarski A simplified formalization of predicate logic with identity]", then refined by [[file:norm.org][norm]], particularly to provide a cleaner separation of the predicate calculus and set theoretic axioms.
+
+: To clarify, my refinement was to simplify the metalogical notions needed
+to /prove/ theorem schemes, starting from axiom schemes equivalent to
+Tarski's.  The only rule that the set.mm system requires is direct substitution
+with distinct variable checking.  This rule is sufficient to derive all
+possible theorem schemes (of a prescribed form) from its axiom schemes.
+Tarski's system also has this
+rule in its metalogical toolkit, but starting from his axiom schemes, this rule is not
+metalogically complete:  additional set-theoretic machinery, such as
+induction on formula length, is needed to prove some theorem schemes.
+The important thing that Tarski did was to simplify the metalogical
+notions needed to /state/ the axiom schemes, and the set.mm axioms use
+these same notions (specifically, the only provisos that are needed are the distinct variable requirements
+attached to some of the axiom
+schemes). Any /object/ set theory added to the logic is the same in both the
+set.mm and Tarski cases and is unrelated to the set theory used for the
+metalogic.
+
+: .
+
+: Tarski's system is shown as system S3 on p. 11 (PDF p. 12) of my
+[http://us.metamath.org/downloads/finiteaxiom.pdf paper].
+As you can see, in sharp contrast to traditional systems,
+there is no mention of "not free in" or "free for" -
+just the provisos expressed as $d u ph and $d u v in set.mm.  The
+[http://us2.metamath.org:8888/mpegif/mmset.html#pcaxioms set.mm
+system] has exactly the same metalogical notions, although it has more
+axiom schemes in order to achieve metalogical completeness (and also
+to eliminate the English-language proviso on Tarski's axiom
+scheme C7
+by expanding it into the 4 proviso-free
+axiom schemes that it corresponds to).
+-- [[file:norm.org][norm]] 19 Oct 2006
+
+
+(As is common, [[file:norm.org][norm]] independently came up with the basic distinctor ideas, then discovered Tarski's work in a literature search). Thus, I propose the
+name "Tarski-Megill metalogic" to describe the distinctor-based metalogic in Metamath.
+
+: Just a technical nit on the terminology, so as to avoid any
+confusion.  In my [http://us.metamath.org/downloads/finiteaxiom.pdf
+Finitely axiomatized...] paper (PDF), I use the term "distinctor" (a
+made-up word not in the dictionary) to denote an assumption of the form
+"-.  A. x x = y", where x and y are /not/ necessarily distinct
+variables.  The wff "-.  A. x x = y" is true when x and y are distinct
+and false when they are not, so it provides a way to express $d x y in
+the logic itself rather than outside of the logic as a proviso.  Thus it
+allows us to do logic without any distinct variable restrictions, as
+discussed in that paper and also on my
+[http://us.metamath.org/mpegif/mmzfcnd.html ZFC axioms w/o distinct
+vars.] page.  -- [[file:norm.org][norm]] 18 Oct 2006
+
+
+The Metamath home page contains much discussion about
+[http://us.metamath.org/mpegif/mmset.html#distinct distinct variables],
+variables vs metavariables,
+[http://us.metamath.org/mpegif/mmset.html#axiomnote axioms vs axiom schemes],
+and in general the differences between
+[http://us.metamath.org/mpegif/mmset.html#traditional traditional] (binder-based) predicate calclus and Metamath.
+
+Most other formal systems use some kind of explicit binder concept. HOL is particularly clean and orthogonal in this respect: the only primitive binder is "lambda", and other concepts such as quantifiers, substitution, and even integration are composed of this primitive in combination with higher-order functions. Mizar has bound variables in quantifiers, but (currently) no mechanism for defining new binders. Freek Wiedijk has
+[http://www.cs.ru.nl/~freek/mizar/binder.pdf proposed] such a mechanism.
+
+Binders are much more familiar, and it seems that distinctors scare many newcomers away. However, the use of
+binders comes at a price. First, it makes the metalogic more complex. HOL Light contained a bug in the program
+that checks for alpha conversion for many years until Bob Solovay found it.
+
+More profoundly, HOL's metalogic imposes serious constraints on the logic it hosts, to the point where it
+cannot be considered "logically agnostic". In particular, the logic must support higher-order functions.
+This rules out Peano arithmetic altogether, and causes serious technical problems for encoding set theory.
+(John Harrison has some good [http://www.rbjones.com/rbjpub/logic/jrh0111.htm commentary] in his "Formalized
+Mathematics" on the choice of foundational system).
+
+Within the design space of logically agnostic metalogics, I find that the distinctor approach is extremely
+powerful, especially for constructing new definitions. This property is especially important in Ghilbert,
+which extends Metamath with a safe definition mechanism. It is of course possible to introduce arbitrary
+new definitions in Metamath, but a careless definition could introduce inconsistency, so most definitions
+in the set.mm database are quite conservatively formed.
+
+Here I will give a number of examples of nontrivial distinctor-based definitions. It may be challenging,
+or even perhaps impossible, to design a binder-based logic agnostic metalogic that retains sufficient power
+to express these definitions.
+
+**  Definitions in set.mm
+
+ * [http://us.metamath.org/mpegif/wal.html A. x ph]: the basic universal quantifier - an axiom, not a definition
+
+ * [http://us.metamath.org/mpegif/df-eu.html E! x ph]: unique existential quantification - a definition, based on A. and
+
+ * [http://us.metamath.org/mpegif/df-sb.html (df-sb)] [ x / y ] ph: substitution of one variable for another - again, a definition based on A. and =. Norm's definition is very cleverly constructed so that x and y need not be distinct.
+
+ * [http://us.metamath.org/mpegif/df-clab.html { x | ph }]: class abstraction - an axiom, not a definition
+
+ * [http://us.metamath.org/mpegif/df-sbc.html (df-sbc)] [ A / x ] ph: substitution of an expression for a variable - defined here in terms of class abstraction and predicate calculus. One notable property is that x may occur free in A; see
+[http://us.metamath.org/mpegif/findes.html findes] for a meaningful example.
+
+ * A dozen or so binders to represent [http://us.metamath.org/mpegif/df-ral.html
+restricted quantification], [http://us.metamath.org/mpegif/df-opab.html ordered pair abstraction], [http://us.metamath.org/mpegif/df-iun.html indexed union], and so on
+
+ * [http://us.metamath.org/mpegif/df-sum.html sum_ k e. A B]: summation - worth noting because the new notation is much more like traditional math than the [http://us.metamath.org/mpegif/df-seq1.html ( + seq1 F )] notation it replaced
+
+**  Definitions in hol-zfc.gh
+
+These are definitions in the set.mm universe ([http://ghilbert.org/repo/ghilbert/hol/hol-zfc.gh hol-zfc.gh] imports the set_mm.ghi interface) geared towards
+constructing an HOL logic.
+
+ * (lambda x T A): traditional typed lambda. untyped lambda in ZFC is no doubt possible, but requires a construction such as D_infty model of untyped lambda calculus.
+
+ * ($iota T): this implements iota (definite description) as a higher order function, i.e. the type of ($iota T) is (T -> bool) -> T.
+
+**  Definitions in Pax
+
+The [[file:Ghilbert Pax.org][Ghilbert Pax]] interfaces and theorems can be found in the
+[http://ghilbert.org/repo/ghilbert/pax/ pax/] directory on the ghilbert.org darcs repository.
+
+ * A. and friends much like in set.mm. The main difference is that they are typed.
+
+ * [:=] x T A ph: similar meaning to [ A / x ] ph in set.mm, but the Pax definition does not make use of class abstraction, so is less tied to the set-theory logic
+
+ * iota x T ph: definite description implemented without recourse to higher order logic - this is a primitive axiom in the Pax formulation of predicate calculus.
+
+***  Definitions that work in Peano arithmetic
+
+These definitions should be entirely practical within the Peano arithmetic universe, i.e. only importing the basic predicate calculus and peano axioms. I am currently working on constructing them.
+
+ * mu x ph: "the minimum x such that ph holds".
+
+ * prime A: an example of a simple predicate over numbers.
+
+ * primrec x A B C: equivalent to ( rec ( { < x , y > | y = A } , B ) ` C ) restricted to natural numbers, but defined without recourse to explicit functions.
+
+***  Definitions in Z2
+
+The fact that primrec can be expressed so cleanly in PA is (to me, at least), surprising and impressive. Z2
+has a reputation for being theoretically very tractable, but in practice difficult to work in directly,
+because of the need for coding advanced concepts in a manner compatible with the Z2 axioms. I think a
+serious test of the power of the Ghilbert definition mechanism will be to encode weakest precondition
+semantics in Z2. In HOL, the most natural type of "wp" is (program -> (env -> bool)) -> (env -> bool), where
+"env" is a finite map from variable names to values. This is obviously a fairly high order concept, so
+the ability to express it naturally in Z2 would be a fairly striking demonstration.
+
+-- [[file:raph.org][raph]] 17 Oct 2006
+
+-----
+
+...for what it's worth...
+
+Professor McGee of MIT writes that 
+
+http://ocw.mit.edu/OcwWeb/Linguistics-and-Philosophy/24-241Logic-IFall2002/CourseHome/index.htm
+a valid argument is one for which, if one accepts the
+premisses then one ought to accept the conclusion.
+
+Implicit in that "ought" is an accepted mode of
+reasoning -- and what constitutes a correct form of
+reasoning?
+
+In Hilbert style proofs the last formula in a list of
+formulas is the conclusion. The conclusion is derived
+by unifying the conclusion's formula and hypotheses
+with a previously proven theorem or an axiom.
+
+"Unification" means to find a consistent set of
+simultaneous substitutions for variables to make the
+two formulas (and their hypotheses) match. But are the
+substitutions "valid"?
+
+In Metamath $d validity checking is separate from the
+process of unification, and $d restrictions are
+inherited from the theorems and assertions used to
+prove a theorem. They "percolate" up from the bottom.
+
+Curiously, in Metamath $d restrictions are never
+applied at the level of Syntax Axioms. They belong at
+the level of "Logical" Axioms.
+
+Conversely -- correct me if I am wrong -- in the
+"textbook" free/bound variable substitution schemes,
+"binding" is a purely syntactic property. For example,
+"A. x ph" binds x within ph. Then, "proper
+substitution" is defined as a validity check of
+allowable transformations of formulas.
+
+Thus, both $d's and bound/free/proper substitions are
+mechanical mechanisms for disallowing invalid formula
+transformations that could result in invalid --
+illogical -- concusions.
+
+Therefore, these mechanisms are within the province of
+the Proof Verification portion of a system (plus
+handling the necessary declarations to specify the
+restrictions.)
+
+There seems to be no technical reason why a globally
+inclusive system such as HDM should restrict itself to
+just one or the other of these systems for validating
+variable substitutions, regardless of which is deemed
+"superior". It is unreasonable to expect Planet
+Earth's Math/Logicians to abandon Free/Bound in favor
+of $d's en masse. And in any event, the "legacy
+documents" of ye olden days cannot be simply abandoned
+by HDM simply because they do not conform to $d.
+
+Widespread -- global -- acceptance of Ghilbert and HDM
+require not just inclusiveness, but making the systems
+work the way math/logicians actually do their work. If
+math/logicians are accustomed to using Tex/PDF
+document formatting then whatever system is developed
+must, to win hearts and minds, provide support for
+conventional (graphical) typesetting seen in the
+Mathematical Vernacular. To demand that everyone
+abandon ship and switch to ASCII shorthand is to
+abandon 95% of the user base.
+
+--[[file:ocat.org][ocat]] 17-Oct-2006
+-----

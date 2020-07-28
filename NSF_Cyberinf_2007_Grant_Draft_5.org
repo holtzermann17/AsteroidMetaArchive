@@ -1,0 +1,293 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Main page for the grant: [[file:grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007.org][grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007]]
+
+----
+
+This is a copy of draft 5, which is based on our work on
+[[file:NSF Cyberinf 2007 Grant Draft 4.org][NSF Cyberinf 2007 Grant Draft 4]],
+[[file:NSF Cyberinf 2007 Grant Draft 3.org][NSF Cyberinf 2007 Grant Draft 3]],
+[[file:NSF Cyberinf 2007 Grant Draft 2.org][NSF Cyberinf 2007 Grant Draft 2]], and
+[[file:NSF Cyberinf 2007 Grant Draft 1.org][NSF Cyberinf 2007 Grant Draft 1]] (however, this draft
+does not include all of the supplementary materials found in Draft 4).
+
+ * ([http://planetmath.cc.vt.edu/~jcorneli/draft5-rc1.tex tex])
+([http://planetmath.cc.vt.edu/~jcorneli/draft5-rc1.pdf pdf])
+([http://planetmath.cc.vt.edu/~jcorneli/gant.png accompanying schedule as png file])
+
+(Aaron wrote this and sent it out by email, I'm posting this on the
+web at Jim's request.  Retitled this to draft5, rc1 just in case.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Comments
+
+Right away in sentence 1 you say "expository".  This is a reasonable
+way to describe PlanetMath and Math Atlas.  However, our work would
+partly be about integrating expository materials with research
+materials and research discussions (ArXiv, Usenet, research groups).
+Accordingly I think the thesis sentence should not restrict us to the
+world of "expository material".  Furthermore, in the same sentence you
+say this is expository material related to mathematics and statistics.
+Again, this is a correct but limited overview.  If I was to revise the
+thesis sentence, I would keep everything up to but not including the
+second appearance of the word "of" (which I think is a great summary)
+and then take everything after that word and develop it separately.
+To keep the science people involved, maybe say "science materials
+(period)" instead of "expository material (dot dot dot)".
+
+We don't want to lose people in "abstraction", but we don't want them
+to over-particularize either.
+
+Sentence 2 looks good.
+
+"Fragmentation" in Sentence 3 applies to online material, but so much
+isn't online, and the whole is accordingly even more fragmented!
+Delete or re-think Sentence 3.
+
+Sentence 4, I would use a comma instead of an "and" between "free" and
+"open", maybe skip the quotes on "commons-based", definitely skip the
+quotes on "overlapping", change "ad hoc content" into something
+non-obscure, use a semi-colon istead of a comma before the final
+"and".
+
+I don't like "example and focus" in Sentence 5 [Wikipedia is...];
+"example" would suffice.  In either event the sentence is actually
+agrammatical since it doesn't really have a subject.
+
+Wikipedia does indeed become a running example in the following text,
+but this is perhaps confusing, (1) since we don't represent Wikimedia,
+and (2) since we're proposing (from the first paragraph) to build a
+new network for science (or is that build anew?) -- not for popular
+reference.
+
+I suggest rethinking using Wikipedia as a such a central example.  If
+it is used, the terms on which it is used should be made clearer.  For
+example, the parenthetical remark in Paragraph 4 is bound to be
+confusing -- what does "Wikipedia" have to do with "proofs"?
+Furthermore, it WP is so much more "general" as to make your comment
+on its generality stick out like a sore thumb.
+
+The business with content licensing is confusing even to me (and I
+think all of us), and I have no idea how NSF is going to respond to
+it.
+
+The way the discussion of "porting content" this is mixed in with
+commentary on Wikipedia in general is confusing.  Furthermore, it
+seems like in Paragraph 4 we've zoomed in on the issue of porting (a
+limited form of bi-directional updating), leaving all the other
+related (and interesting) issues high and dry.
+
+In a one-page summary (and this one has some slimming up to do), it
+isn't clear that we have time to do any close-up shots.  Some mention
+of content exchange is certainly worthwhile, and sure, the WP/PM
+exchanges could be our example if we need an example.  But I'd like to
+see this subject dealt with more tersely and precisely (and, if
+possible, more generally).
+
+First paragraph on page 2 [Another important aim...], lose the quote
+marks and the parenthetical.  Don't say "whereby", because you aren't
+making a derivation.  Make all the constituent clauses shorter
+(e.g. "excessively limit output and participation" => "limit
+participation").  No one at NSF needs to experience things like
+"largely-open"; save the dashes for Alka-Seltzer (which is what people
+will need if they are forced to ingest too many other hyphenated
+doohickeys).
+
+Next sentence, "to" should be "two".  Lose the quote marks.  This
+"various free and open sources" thing sounds hand-wavy.
+
+Next paragraph [Thus our activities...].  If, in the first sentence,
+you think you want to use quote marks for emphasis when talking about
+"selective interconnection", consider using regular emphasis instead
+(as you do later in the paragraph).  But first, this sentence is just
+too verbose.
+
+In the next sentence [However, information...], I feel like you've
+switched into motivational speaker mode.  If this theme of "selective
+interconnection" is so important, people should know what it is by the
+time we get to the second to last paragraph.  Emphasizing the word
+"judgements" suggests to me that you're using a step-potential to
+convey an impression that would probably be better conveyed with a
+gradual build up.  But the sentence that contains this word
+"judgements" is a pretty good sentence otherwise.
+
+(I'm tempering judgement with mercy, which is an interesting classical
+theme to consider in juxtaposition to this paragraph.)
+
+Last paragraph of summary.  "Based on our experiences" doesn't refer
+directly to any experiences I've read about so far, and so, cut it.
+Similarly, "such facilities" is vague.
+
+I think it is very important that we come across as not merely wanting
+to "enhance the quality and usefulness of free and open scholarly
+content", the target of which the NSF probably doesn't care about
+(because it may not be aware that it exists); rather, we want to make
+free and open scholarship more realistic as a way of life.  We aren't
+going to go around polishing Wikipedia articles (or whatever qualifies
+as "free and open content").
+
+As for "making content production systems more effective and
+efficient", again it isn't completely clear which target systems
+you're talking about.
+
+The last sentence is pretty good (although I don't think you mean
+"expert-based survey journal"); I don't know about the last three
+words "discursive mathematical information", they seem to talk around
+the subject; this is the same sort of over-particularization problem I
+mentioned above.
+
+As I said on the wiki earlier, I wanted to delay commenting on the
+summary until I could comment also on what it is summarizing.  I did
+comment on the summary first, but now, on to the main text, and I'll
+get to see what the two things have to do with each other.
+
+As you saw above I had plenty of concerns about the summary.
+
+You say the introduction will be "like the summary but more detailed",
+so by way of reviewing the introduction, I'll just point to the above
+concerns for now.
+
+The first two paragraphs of the Math Atlas section could make their
+point faster, with less repetition, more concision.
+
+When you talk about the "totally open Wikispecies project" (and
+elsewhere when you use the word "open") I don't think you can yet
+assume that NSF people will know what you're talking about.  "Open"
+has many meanings, and our own jargony use of it won't necessarily
+work for NSF.
+
+Given that the two examples of distributed editorial effort that Math
+Atlas is supposed to learn from are either retarded in their growth or
+waning in importance, I hope that there is a bright idea floating
+around that can save the day.
+
+I'm considering liking the idea of having an appendix for each major
+technical part of the proposal.
+
+You start the Noosphere section off with background on the system
+coming from an earlier write-up.  Some background is excellent to
+have, but right now I get the feeling that less background and more
+forwardground should be given.  In other words, "what we propose to do
+with Noosphere" should be the most prominent thing in this section.
+Explanatory background details definitely need to be around; but what
+we critically need now is a punchier topic sentence and topic
+paragraph.
+
+Later in the section, I think the sentence [This system has served...]
+is somewhat problematic (as they say in critical theory).  Some
+questions people might ask: Is there really such a thing as
+intellectal ownership needs?  What are they?  How are they served by
+Noosphere's system?  Is there really any need for "compromise" between
+ownership and quality?  Mightn't some form of ownership be the best
+way to secure quality?  Etc.
+
+Anyway, the section continues with background that I think would
+probably be better in an appendix.  It never actually winds up saying
+what we want to do with Noosphere.  Now, if we are going to be asking
+for system-level support for PlanetMath and Noosphere (e.g. a system
+administrator), then background is maybe as important as
+forwardground.  But my sense is that a lot of what we have in mind
+relates to Noosphere development, e.g., as you say later on in the
+document, rewriting Noosphere with a scholiumific basis.  Whatever the
+emphasis is going to become, right now the Noosphere section lacks
+legs.  (I realize that you're writing in a subsection of the
+"Introduction" section, but still, you should introduce the content of
+this document, not just tell us about this preexisting character Mr.
+Noosphere.)
+
+The beginning of the NNexus section is overrun with passive
+constructions.  As you mention at the end, it isn't clear which
+directions development is supposed to go in under this grant.
+
+FYI, I never capticalize the "x" in "Arxana".  To me it is just a
+proper noun, and so doesn't come with any new capitalization rules.
+
+I'd get rid of the first paragraph of this section.  Whatever the idea
+behind the order of the paragraphs, what the reader needs to know
+about is what the system does: it's relationship to the other systems
+should be shown primarily with words, not with the order of these
+sections (the order is an interesting way to try to say things, but it
+might as well speak for itself).
+
+In the first sentence of the second paragraph, might as well leave out
+the word "many".
+
+The discussion of the scholium system (and model) here seems quite
+good!  There are a number of places where I would brush up little
+details in what you've said, but the big structures look good to me.
+(E.g., another big limit in the web is that it is not based on
+bi-directional links.)
+
+But good overall.
+
+I love the Gant chart, this is going to be an extremely helpful thing
+to work with as we refine our plans.  I'm not sure how the codes it
+uses relate to the two-letter codes from page 8 on in the draft.
+
+As usual, more details on what we're actually going to do would be
+great throughout, but we definitely seem to be getting there, that's
+good.
+
+In the project team section, obviously it will have to be more
+balanced.  Perhaps it would be better if you write all the
+biographies, since you're slated to be the team manager after all, and
+then we will comment on them.
+
+For the Supporting Ongoing Efforts section: I'm investigating funding
+and participation in the University of Minnesota's Institute for
+Advanced Study's upcoming symposium (on the subject of "Time").  This
+has somewhat more to do with my creative writing project than with my
+research projects, but these two things fit together like dovetails or
+a yin-yang for me and they certainly seem to support one another. 
+
+I could describe my proposal for them to you in more detail later,
+but, briefly, it has to do with the issue of linearizing documents
+from page 6 of that document "nk.pdf" that I pointed you to recently
+in the email "synthesis of an idea".  (Notably, this phase of the
+project actually has a significant research component, it isn't just
+more creative writing!)  Since the two applications are due at about
+the same time, I don't know whether it is worth commenting on the
+support (since I don't know if I'll get it), but the research project
+seems like something you and/or the NSF might conceivably want to know
+about.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Thanks for the feedback.  I plan on adding a lot more to the document today, and I'll try to address as much of this as possible.
+
+By the way, I think on quality, you are getting sidetracked by focusing on it as if it is some sort of objective issue.  My stance is
+that it is subjective, and hence the real goal is to expose sufficient "quality information" to allow the user to be selective in their
+own way.  I will probably have to be more clear about this.  But this is why the "dilemma" goes away: there is no "standardized" 
+selection (exclusion), as is used in traditional production settings.
+
+I was also thinking last night (when I couldn't get to sleep) that we should think more about achieving some of this by combining
+ideas from the quality metrics project with Arxana.   In quality metrics, the idea was to do something like what I described in the
+last paragraph, specifically for a search engine.   And we implemented an architecture for doing so: the "base" data and metadata would
+first be indexed, and then an "analysis" pass would be run that would add "quality metadata", some of which integrated information
+from the whole collection into each record (thus providing various relative notions of quality; e.g. citation scores).   This information
+could then be utilized for ranking and filtering in either standardized or personalized ways.  
+
+It seems like something like this could be layered onto Arxana, possibly with the analysis and storage of quality metadata being done 
+entirely in each user's local environment.
+
+--[[file:akrowne.org][akrowne]]
+
+These comments on quality are fascinating.  Looking back over my
+comments above, they do sound like they take an objectiv{e,ist} view
+on the subject, although I think that goes for both of us
+(e.g. "enhance the quality and usefulness of free and open scholarly
+content").  Robert M. Pirsig, who as far as I know is the Quality Guy,
+writes of quality being "pre" to both objectivity and subjectivity.
+Your formulation in terms of integrating quality judgements seems to
+fit in with this formula too.  (To put it in semantic terms, I might
+say quality is a link between object and subject.  But you can
+integrate collections of these links and come up with quality
+metrics.)
+
+As for enhancing the quality of the current document (apropos of the
+views of all parties involved) good luck with your revisions and I
+hope the comments do help!  I expect we'll talk later today.
+
+--[[file:jcorneli.org][jcorneli]]

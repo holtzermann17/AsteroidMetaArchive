@@ -1,0 +1,341 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  The problem
+
+Noosphere contains as its core feature a section called the "encyclopedia".  It
+consists of interlinked expository entries, written in LaTeX.  However, it
+appears that "encyclopedia" is a poor name for this thing.  The key reasons are
+that Noosphere supports knowledge communities, which are much more than "an
+encyclopedia", and that even "the encyclopedia" itself isn't much like what is
+classically envisioned when people use this term.
+
+Some ways in which the general site/software isn't an encyclopedia:
+
+ * It supports a user population.
+ * It contains discussion forums (external to the encyclopedia).
+ * It has other facilities for users to interact (like site mail).
+ * It has blog-like news functionality.
+ * It contains sections for other types of content objects (books, papers, expositions).
+ * It contains facilities (like the requests list) to update the encyclopedia but which are external to it.
+
+Some ways in which "the encyclopedia" really isn't:
+
+ 1. Its interlinked.
+ 1. It contains, and places a high emphasis, on all kinds of
+  contextually-appropriate attachments to a node.  For mathematics, the types
+  that go beyond the "vanilla" encyclopedia types (topic, theorem, definition)
+  are results, examples, proofs, and more (in fact, one might argue that a true
+  encyclopedia would only contain "topic" entries --- however, specialized
+  encyclopedias in some subject domain typically get more granular.)
+ 1. It allows and encourages discussion of encyclopedia nodes.
+ 1. It is fundamentally collaborative (therefore has things like corrections).
+ 1. It is changing continuously.
+ 1. It comes with its own change history (including history of corrections).
+ 1. There are no strict mechanisms for control of coverage.
+
+Initially I thought there would be little to no harm in co-opting this term to
+define Noosphere's main section.  However, now I think it is causing serious
+harm, because it seems to be limiting and altering people's conceptions of what
+Noosphere should be and what activity should take place within Noosphere sites.
+
+*  The solution (Rename the section)
+
+I think the best thing to do is simply re-name the section.  Here are some
+starter ideas:
+
+ * knowledge base (for PM, perhaps "mathbase")
+ * knowledge tree (for PM, "Mathematical Knowledge Tree".  courtesy of rspuzio).
+ * knowledge network
+ * concept network
+ * hyperpedia
+ * noosnet / noosbase
+ * ... please suggest more!
+
+I am leaning toward "knowledge base", since it is pretty clear that knowledge in
+some form is being stored in some other form, yet there is little restriction on
+either the type of knowledge or its format.  Variants with the term "network", I
+think, lead to confusion with computer networks.  And of course, "noosphere" is
+a nice way to describe a shared concept space, but there is potential for
+confusion with the software itself, and reducing this abstract term to a
+specific manifestation is unwieldy.  Also, "noos" is hard to say and cumbersome
+* )
+
+*  Discussion
+
+What do you think?  Please help!  A good name is important for both understanding and promotion!
+
+----
+
+"Knowledge Base", to me, typically means something that is computer-friendly.
+But PM is human friendly.  Even "concept network" is stretching it as a /name/
+for the resource (though as a way to think about the resource it could be just
+fine).
+
+I personally think that "Encyclopedia" is a fine name for the part
+of the site that is currently called "Encyclopedia".  In terms of
+"publicity" stuff, I think you are /quite right/ that discussion
+of the special advantages of [[file:Noosphere.org][Noosphere]] and PM are in order.
+
+But I think people accept the "Encyclopedia" aspect of PM /as/ an Encyclopedia
+-- which I think it is.  The special and "extra" things about PM are not an
+encyclopedia.  
+
+So, I would suggest focus on describing these features, which do, or anyway,
+should, describe the site as a whole.  No "Encyclopedia" that I know of has
+papers, books, expositions and traditional articles all linked together -- and
+this seems to be something that would "go beyond" the meaning of the word
+"Encyclopedia" more than any of the things you cited (to my sensibilities).
+
+If you extend what happens in the encyclopedia to the rest of the site, the
+result might well need a new name.
+
+I kind of like "hyperpedia" - and this /could/, I think, describe the expanded
+document.  But then you'd have both an Encyclopedia and a Hyperpedia, and that
+might be confusing for some.
+
+Personally, I guess I think that "Encyclopedia" is a fine name for that
+section... and if anything needs more description, it might be Nöosphere.  (Of
+course, we could call the encyclopedia a "Noeopedia" -- which would be accurate
+and rather nice, but unfortunately, people might get scared by all those
+vowels.)
+
+Anyway... I think the features are what are important, much more so than the
+name.  If the BPE was revised, then I think we could call the whole thing a
+"Digital Library" and call the Encycopedia the "Reference Section" ;).
+--[[file:jcorneli.org][jcorneli]] Wed Apr 27 03:45:36 2005 UTC
+
+I agree, The Encyclopaedia on PlanetMath (w. capital E) is a good name. 
+The average user will talk about Planetmath, anyway. Anyone who
+vists will get the idea. The only disadvantage is that it is a long name and 
+difficult to spell (greek). On the other hand, exactly that might give it a 
+more "authority". --[[file:matte.org][matte]] 27 April 2005
+
+I agree with [[file:akrowne | Aaron.org][akrowne | Aaron]] that the choice of name has psychological implications and that choosing a novel name can help people to think outside the box.  While the term encyclopaedia is a reasonable term to describe what is found there insofar as it is an attempt to account for the whole of mathematical knowledge, unforunately the term suggests that this website is meant to be like already existing encyclopaedias in other ways as well.
+
+However, this work differs in two fundamental ways: 1. While conventional encyclopaedias are linearly ordered, this work is organized in a more complicated way using hyperlinks.  (In particular, the traditional linear order is an option, but definitely not the only way of viewing the work.)  2. While conventional encyclopedias are static, this work is dynamic.
+
+These differences are primarily due to the nature of media.  Condition 1 is imposed by the nature of ink-on-paper writing (and is ultimately a relection of the linear nature of spoken language) but is lifted by computerized hypertext.  To be sure, one can include cross-references, but these still require the reader to turn the page, so do not go quite as far as their electronic counterparts.  Condition 2 is imposed in a rather sever form by the nature of printing.  It takes a large effort to typeset a book and this effort is only worthwhile if hundreds of copies are to be printed and there is no practical way to make changes once the typesetting is under way other than adding errata slips.  Thus one must regard works to be printed as essentially static.  However, with computers, one can easily type in changes on an ongoing basis.  As long as backups are available, there is little danger in this practise.
+
+Unfortunately, after 500 years of printing, the results of these limitations of the technology have become so familiar that people take the them for granted as the way things are done and it takes a considerable mental effort to unlearn these habits of thought and make full use of the capabilities which hypertext offers.  Sticking to the terminology of the printed era can reinforce this mental inertia and make it harder for people to realize that the constraints which were imposed by earlier technology no longer exist.  Using new terms alerts people to the fact that something is radically different and helps break up outdated thought patterns by not reinforcing existing associations.
+
+As [[file:jcorneli | Joe.org][jcorneli | Joe]] points out, simply changing terms will do nothing --- there certainly are enough cases of stale old wine in new bottles (or in the same bottles with different labels).  In fact, if one does not make an effort to make something new, new terminology can be downright misleading.  However, I do not see that being the case here.  Rather, what Planet Math has to offer is fundamentally different from a printed encyclopaedia, but people are having a hard time adjusting to the new features.  One sees users semi-consciously perpetuating practises from the world of print which are no longer relevant here.  The parable of the monastery cat which  [[file:drini | Drini.org][drini | Drini]] once suggested is relevant here.
+
+My proposal for a new name would be "Tree of Mathematical Knowledge".  The rationale behind this proposal is that it emphasizes the new features.  The term "tree" suggests a non-linear branched structure which is how Planet math is organized.  A tree is a living organism which grows and changes, suggesting the dynamic nature of this resource.
+--[[file:rspuzio.org][rspuzio]] 27 April 2005
+
+Oooh, the "tree" idea is really neat.  I see it being shortened in places to
+"knowledge tree" or "math knowledge tree".  I'll add this to the
+list. --[[file:akrowne.org][akrowne]] Wed Apr 27 19:45:31 UTC 2005
+
+I don't like the "tree" idea.  IMO, knowledge isn't very tree-like - and, less
+metaphysically, the idea that PM is organized as a tree is misleading.  "Web"
+might be somewhat better than tree.
+
+But it also seems potentially misleading to say that PM is a <anything> of
+knowledge, because it doesn't contain "pure knowledge"; it simply contains
+writing (in hypertext, but so what?).
+
+There is no law that says you can't have a "hypertext encyclopedia", just like
+there is no law that says you can't have a "hieroglyphic encyclopedia" or a
+"filmic encyclopedia".  When thinking about names, /my advice is to avoid
+getting caught get caught up in what words usually denote, and think instead
+about their etymologies/.  Etymologically, "encyclopedia" seems to work fine -
+and indeed, it seems like a good goal for PM's encyclopedia to become more
+"encyclopedic".
+
+More interesting to me than the debate over the name would be some of the questions
+that it raises.   For example:
+
+ 1. what habits "from the world of print" people are carrying around with them?
+ 1. how can we encourage behavior that better suits the medium?
+ 1. how should we descibe/name the "knowledge community" on PM? -- which I'll
+happily grant is a new sort of thing.
+
+--[[file:jcorneli.org][jcorneli]] Wed Apr 27 21:14:54 2005 UTC
+
+I agree that "web" would be a bit more accurate, but there is the practical matter
+that this term has been co-opted, and for a confusingly close context.  
+
+Actually, "web" doesn't really express the "living" nature that "tree" does, and I 
+think this is a useful aspect of PM to highlight.
+
+I don't agree what you said about thinking of etymologies all the time.  Etymologies
+are obscure things that normal people should be able to get by entirely without (I'm
+not denying that they can sometimes come in handy, though).  For typical use of 
+language, one should only need context and semantics.
+
+Besides, to command people to switch to an etymological interpretation is to argue 
+that "the world is wrong", not us.  That is a battle that is not worth fighting.  
+
+What it comes down to, I think, is whether it would be more clear to re-define 
+"encyclopedia" or to come up with a new term.  Both will be semantically laborious
+to some extent, but I think "encyclopedia" is somewhat jarring.
+
+Your questions are good, but here are some simple answers:
+
+ 1. For example, people seem to carry with them the classical encyclopedic expectation
+that something can't go in PM's collection unless "everyone agrees on it".  But in reality,
+this never happens, you just have that one party or the other asserts control over the
+final copy.  We don't need to do that on PM (the site --- doing it in the FEM is fine!)
+ 1. Well we could start by not naming our core service something which it is not =)
+ 1. I have no problem naming it "knowledge community".  Maybe you'd rather it be called 
+an "encyclopedia community"? =)
+
+Finally, I have a problem with your point about the "pure knowledge" vs. "mere writing" 
+distinction.  I think this blurs a useful distinction between information and information
+which is written and encoded for /ease of learning/.  And I think the hypertext
+is one of our extra-encyclopedic features that facilitates the learning of PM, hardly a
+"so what".   In fact, I'd say that there is a profound similarity between knowledge
+in-people's-heads and external information which is /highly organized and integrated/.
+In a sense, this is just what your brain does with information that makes it "true"
+knowledge.  I think knowledge bases like PM (beneficially) exert effort to do something 
+similar.
+
+--[[file:akrowne.org][akrowne]] Thu Apr 28 00:19:54 UTC 2005
+
+
+And maybe "education community" would work -- getting back to a point you made
+earlier to me (by email).  But "knowledge community" is also good.  (And it
+spreads the weight evenly over knowledge creation, knowledge exposure, knowledge
+assimilation, etc., all of which are part of PM, I think.)  "Knowledge
+ecosystem" or "information ecosystem" would also describe the living nature of
+the site (and probably do a better job than "tree" in certain respects).
+
+As for the "pure knowledge" vs. "writing" issue, what I'd say is that no written
+resource can become pure knowledge; it will always be "writing" - but that
+doesn't make it "mere".  ("And God said, let there be light, and there was
+light.")
+
+I objected to "knowledge base" because traditionally, knowledge bases are
+actionable in some sense.  I think PM is on its way to becoming actionable, and
+hypertext helps, clearly, but it does not suffice.  I also think PM is becoming
+increasingly well written, and increasingly oriented towards ease of learning.
+But I don't think I would call it a "knowledge base" until we have software that
+actually uses it as a knowledge base.  (It is a fluke of tradition that having
+people use it as a knowledge base "doesn't count"; etymology alone would
+probably say that the usage is fine.)
+
+As for "the world is wrong" - maybe I just don't spend much time thinking about
+what the world thinks.  If the world thinks that an encyclopedia is something
+that one finds on a (dusty) shelf in the reference section of a library, OK.
+Maybe they /are/ wrong.  Maybe not.  Does it matter?
+
+It is my opinion that PM's encyclopedia /is/ an encyclopedia, and a good (and
+increasingly good) one at that.  Am I wrong?  Does it matter?
+
+(You may also find "dictionary" in HDM to be jarring.  In this case, I enjoy
+taking the old word and giving it new life in a new context.  If it ends up
+making people think twice about "what is a dictionary?" then I'll probably be
+happy.  Indeed, "HDM" is designed to confuse people & make them think twice or
+thrice or more.)
+
+The "world-of-print habit" of requiring agreement might not be so bad.  E.g., it
+might be good that APM-Xi isn't in the PM encyclopedia.  (Here, however, I think
+that the relevant way to improve PM is already understood, and is fairly high
+tech: make parallel collections.)
+
+In general, we need to work on making both technology and culture that further
+the goals we have for the site.  (And culture may be just another technology.)
+Using aposite words to describe the site and portions thereof would have some
+cultural benefits.  But let's not lose sight of the forest for the trees :).
+--[[file:jcorneli.org][jcorneli]] Thu Apr 28 03:16:18 2005 UTC
+
+OK, how 'bout this idea to describe PM: "Learning community".  /This/ 
+captures the things I like about "education community" w/o some of the stuff
+I don't like, and it has a good bilingual (English-Greek) pun, in that
+"mathematics" is "learning", and finally, it can also be said "community of
+learning", which is, I think, an idiom of sorts.  See http://www.princeton.edu/~cbli/ for "Community Based Learning Initiative",
+and http://www.virginialearning.org/index2.htm for "Virgina's Community of Learning". --[[file:jcorneli.org][jcorneli]]
+
+You can call PM "learning community" if you like.  But I started this page to
+discuss what to call the encyclopedia section, not the entire site.  Getting back
+to that, you may have a point as to "knowledge base" typically being actionable.  I 
+didn't think this was a requirement or expectation, but this is at least an empirical
+question.  On the other hand, I like "knowledge tree" even more, so its not really 
+a relevant question.
+
+Oh by the way, when I explain HDM to people, I call it a /database/, not a 
+/dictionary/ (sorry??).  I think they understand it much better for it and it 
+makes it easier for me to explain.   But I do always mention that the precise form
+ of the acronym isn't important.  --[[file:akrowne.org][akrowne]] Thu Apr 28 15:26:46 UTC 2005
+
+OK, I think I just /might/ call PM a "learning community", so watchout!
+
+I can't really argue about "knowledge tree" any more.  (I've designated
+http://planetmath.org/encyclopedia/Tree.html as my proxy for any further
+discussion of this term.)
+
+You can call HDM a database, I don't mind that (because it is accurate).  In the
+past, I myself have substituted "database" for "knowledge base", to the dismay
+of some AI people who feel that there is a big/important difference.  But I
+don't think the difference is so important.
+
+To me, "dictionary" seems to be a beautiful term to use -- the idea of a
+structure that explains the meaning of every contained term & concept is exactly
+what I'm after.  The possibility for unlimited refactoring, and self-explanatory
+text at any level is implicit (for me) in the conjunction of "hyperreal" and
+"dictionary".
+
+I'm sure one could raise the same objections against "dictionary" that I've been
+raising against "tree" or you've been raising against "encyclopedia" -- namely
+that the datastructure is wrong.  But my thought is that it isn't: a dictionary
+is not a lookup-table, it is a hypertextual document (even if it appears in
+print form) that, at least in theory, reduces a lexicon -- or even a whole
+language -- by a more or less complex process, to its fundamental defining
+terms, whatever those may be, and also provides some useful "ideational
+landmarks" on the way up or down.  Sure, your day-to-day English dictionary may
+do a somewhat crummy job at this, but we're only human, after all - and the
+better dictionaries do a pretty good job!  The idea of a dictionary is a very
+powerful thing, but the power has yet to be completely realized in any
+existing implementation.  (Accordingly, I do think that if you say "database" to
+describe HDM, you should also say "together with tools for interacting with the
+database", because this is where most of the "power" lies.)
+
+But - yes - back to the "encyclopedia": just like HDM makes "transformative use"
+of the term "dictionary", I think that PM can (and does) make transformative use
+of the term "encyclopedia".  If I was to take PM's use of the term & try to come
+up with a synonym, I think I'd start with
+
+  PM Encyclopedia : HDM ::~ text : code
+
+In other words, the PM Encyclopedia is expository text, whereas HDM is just code
+(which may at some point be used for generating expository text, via some of
+as-yet-unwritten "tools").  If dictionaries are code for understanding written
+text, then perhaps the proposed analogy says that encyclopedias contain text to
+be understood.  If HDM is a "database", "codebase", or "knowledgebase", then
+maybe the PM encyclopedia is a "textbase".  Another more common term for this is
+"library" -- but an encyclopedia is different from a library in that the former
+summarizes and overviews things you might find in the full library.  If I'm
+allowed to use one of my favorite "Joeisms", then I might say that PM
+Encylopedia is a "summary-overview of mathematics".  But what is this?  Perhaps
+the best word is SYNOPTICON -- like Carr's "Synopsis of Elementary Results in
+Pure and Applied Mathematics", or like the Synopticon described here
+
+: The Synopticon comprises a new kind of reference work - accomplishing for
+ideas what the dictionary accomplishes for words and the encyclopaedia
+accomplishes for facts. (http://www.angelicum.net/html/great_books_set.html)
+
+Indeed, at one point I thought about using this term to describe HDM - but that
+was before I really understood the concept of a map covering the territory.
+
+So, we've reach base camp in our ascent; to summit, we'll need an appropriate
+modifier.
+
+  X : PM synopticon ::~ hyperreal : HDM dictionary
+
+Well, at first blush, this seems not too difficult: we can supply
+"collaborative" (like the [[file:GCIDE.org][GCIDE]]) or go one step further and use "commons"
+like in "commons-based peer production".  If you want a neologism, how about
+"synopticommons"?  But IMO, the PM Collaborative Synopticon of Mathematics is a
+little better.  You could also use the PM Common Synopticon of Mathematics --
+nice, because like the "D" in "HDM", people have some options about how to
+interpret the acronym.
+--[[file:jcorneli.org][jcorneli]] Thu Apr 28 17:43:19 2005 UTC
+
+Or PM Common/Collaborative Synopsis of Mathematics (which may have a bit of a
+better flow than Common/Collaborative Synopticon). --[[file:jcorneli.org][jcorneli]] Thu Apr 28 17:57:53 2005 UTC
+
+But "synopticon" rolls off the tongue better - you can just say, the "PM
+Synopticon" and people would know what you were talking about (more or less).
+--[[file:jcorneli.org][jcorneli]] Thu Apr 28 22:51:59 2005 UTC

@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Carefully speaking, a function of a pair is _not_ the same thing as a function of two arguments, but there is an identification going on.
+
+To understand this distinction, we need to go back to the set-theoretic definition of function.  A function of two arguments, is a set of ordered triples (simple lists of three elements)
+
+ { (s1,s1,v11), (s1,s2,v12), . . . }
+
+On the other hand a function of ordered pairs is actually a set of linked lists:
+
+ { ((s1,s1),v11), ((s1,s2),v12), . . . }
+
+So, to go from one to the other, we need to apply a transformation.  In LISP, this transformation which converts functions of two arguments to functions of pairs can be written as follows:
+
+ (lambda (f) mapcar '(lambda (x) (list (list (car x) (cadr x)) (caddr x))) f)
+
+and the transformation which turns functions of ordered pairs back into functions of two arguments can be written as follows:
+
+ (lambda (f) mapcar '(lambda (x)(list (caar x) (cadar x) (cadr x))) f)
+
+Similarly, one can deal with functions of more than two arguments.  Since functions are special cases of relations, everything we said here goes through similarly for realtaions as well.

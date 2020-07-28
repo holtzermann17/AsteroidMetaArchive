@@ -1,0 +1,78 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This proof is based on the proof given in Autexier and Fiedler, "Textbook Proofs
+Meet Formal Logic -- The Problem of Underspecification and Granularity"; see
+[[file:Serge Autexier's work on formalising text book proofs.org][Serge Autexier's work on formalising text book proofs]].
+
+Note also that Ray has worked on an essentially equivalent theorem at
+[[file:Example of structured proof.org][Example of structured proof]].
+
+* The theorem
+ (defthm distributivity-of-intersection (a b c)
+   (set a)
+   (set b)
+   (set c)
+   (eq (intersect a (union b c))
+       (union (intersect a b)
+              (intersect a c))))
+
+Note that we might want to be able to "map" predicates, e.g.
+with CL's /every/, thus the above might be modified to read
+
+ (every #'set '(a b c))
+
+This every would be somewhat different from our /forall/,
+though we could say the same thing with
+
+ (forall x :in (setof a b c) :st (set x))
+
+For only three operands, it doesn't really matter.  If we had a large
+(or infinite) number, then we would definitely need some (additional?) shorthand.
+ 
+* The proof
+
+ (defproof proof-of-distributivity-of-intersection (distributivity-of-intersection)
+   (since (and (since (suppose ((elt x (intersect A (union B C))))
+                        (and (elt x A) (elt x  (union B C)))
+                        (and (elt x A) (or (elt x B) (elt x C)))
+                        (or (and (elt x A) (elt x B))
+                            (and (elt x A) (elt x C)))
+                        (or (elt x (intersect A B))
+                            (elt x (intersect A C)))
+                        (elt x (union (intersect A B) (intersect A C))))
+                      (subset (intersect A (union B C))
+                              (union (intersect A B) (intersect A C))))
+               (since (suppose ((elt y (union (intersect A B) (intersect A C))))
+                        (or (elt y (intersect A B))
+                            (elt y (intersect A C)))
+                        (or (and (elt y A) (elt y B))
+                            (and (elt y A) (elt y C)))
+                        (and (elt y A) (or (elt y B) (elt y C)))
+                        (and (elt y A) (elt y (union B C)))
+                        (elt y (intersect A (union B C)))
+                        (and (elt y A) (elt y C)))
+                      (subset (union (intersect A B) (intersect A C))
+                              (intersect A (union B C)))))
+          (eq (union (intersect A B) (intersect A C))
+              (intersect A (union B C)))
+          :by definition-of-set-equality))
+
+Note that /suppose/ really comes into its own here, as a function
+similar to lisp's /let/, but instead of making a specific binding
+hold within the context, it makes a specific truth value hold within
+the context.
+
+The Autexier/Fiedler language allows one to indicate the
+antecedent and inference rule for each conclusion (compare the
+lowest level of [[file:Levels of Proof Checking.org][Levels of Proof Checking]]), but they do not
+/require/ you to supply this information, and, indeed, in
+the proof that I've "translated" above, the only time they do
+supply this data is at the end, where I've used the ":by" keyword.
+
+(Actually, to be more precise, what they say is that each step
+can have some an object that some rule is being applied to, it is
+somewhat more metamathematical than "antecedent and inference
+rule", but the basic idea is similar.)
+
+--[[file:jcorneli.org][jcorneli]] Mon Jul 11 16:36:42 2005 UTC

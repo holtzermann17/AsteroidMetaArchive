@@ -1,0 +1,85 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Perhaps useful here would be to draw an analogy between open code and
+open math.  Math, done in the HDM way, is much more like open code because
+it is /actionable/.   You get libraries of code you can use in various ways,
+plus the ability to "data mine" the very structure of mathematical knowledge
+itself.  
+
+Further, like literate programming, math "code" can be pedagogical.   We would
+love to move in the direction of having a parallel or foundational basis for
+PM that was more like this kind of "code", with various functional interfaces,
+plus the standard "human readable" pedagogical interface.
+
+--[[file:akrowne.org][akrowne]] Sun Feb 12 22:38:31 UTC 2006
+
+Another very useful point to make IMO is that we need regular old code
+to manage mathematical knowledge.  That was one of the things our [[file:OWIO.org][OWIO]] experience
+highlighted.  
+
+There, the fact that I was hoping to contribute something related to
+computer math was, in some sense, just a coincidence: I might have been
+trying to contribute hundreds of paragraphs coming from Project Gutenberg
+math texts instead, for example, and this would have still led to the
+mass-ingest problem, which was the source of about half of the sentiment
+against the apmxi entries.
+
+While I'm not completely sure how to position "actionable math code"
+(partly because I think the the idea itself is still shifting), I
+think we have some reasonably good and concrete ideas about
+"actionable code related to math".   Some of this stuff is properly
+the domain of Digital Libraries.  Some of it may be more
+math-specific.  The nice thing is that we can probably pitch this
+stuff /both/ ways -- as an advance in DL research and as a specific advance
+in knowledege management.
+
+Of course some stuff (like parsing or AI) is pretty far outside of
+the scope of DL, and I also think outside of the scope of /formal/
+math.  Perhaps, for purposes of organization, we should put any DL-related
+MKM stuff into the previous section and the more formal stuff into
+the subsequent section -- and, while we note that there are relationships
+between all of these sections -- leave this one for the topics that
+can't be slurped up by the others.
+
+--[[file:jcorneli.org][jcorneli]]
+
+This topic also relates to your quality metrics (which I might rather term
+"qualitative metrics", since they could in general address various
+qualitative aspects of the work, not just "how good" a given article
+is).  At some point, these stop being something indigenous to Digital
+Libraries, and start to look a lot more like AI.  (E.g. a program
+that can do a preliminary literature review for you, or a program
+that looks for answers or partial answers to novel math questions.)
+
+http://br.endernet.org/~akrowne/quality_metrics/conferences/code4lib_2006/slides/0.html
+
+As I mentioned to you, I am reminded of the fact that 
+"search" and "data organization" are approximately dual.
+Maybe the same people who are paying the bills for your quality
+metrics work would be interested in paying for further work
+that pushes the envelope further in the AI direction.
+
+When Ray and I were talking about these issues, one thing
+that came up was a potential for collaboration between
+PM and !ArXiv, which could take the form of a stand-alone
+autolinker that would not only link !ArXiv contents to
+PM contents, but also inter-link !ArXiv documents.  In some
+sense, make !ArXiv into the starter content for the PM research
+wing.  This is exciting, but also scary, in that the freedom
+and copyright issues associated with !ArXiv are really
+nothing short of a disaster (cf. Ray's notes at [[file:Mathematical_Counter-cultural_Appeal.org][Mathematical_Counter-cultural_Appeal]]
+for another interlinked opportunity & disaster).
+
+We also considered using !ArXiv and some relatively
+simple autolinker-like NLP/search (weak AI) tool to
+identify lots and lots of 
+terms to be defined.  If we can find the right legal
+stance, we might even be able to use the same program
+to come up with seed definitions -- I imagine that
+many of the definitions are short & could be quoted
+in PM under fair use.  These mini-definitions could
+then be used as a jumping off point for much
+deeper definitions.
+
+--[[file:jcorneli.org][jcorneli]]

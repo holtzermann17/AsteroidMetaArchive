@@ -1,0 +1,54 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Looking back at the history of the web and the social interactions which it has facilitated, I think of it in terms of three broad epochs coming at intervals of about five years.
+
+*** Epoch I: Individual Web Pages
+
+When the web first came out in the 1990's, it consisted of websites which were written and maintained by hand by their authors.  When there was automation, it was usually a matter of some simple scripts to implement a hit counter or a guest-book.
+
+Social interaction on the internet still was predominantly done using other protocols such as e-mail, listservers, and usenet.  For instance, when Paul Ginsparg first started xxx, it worked by a combination of e-mail and ftp --- one would use e-mail to issue commands and recieve notifications and use ftp to upload and download preprints.
+
+CBPP in those days was carried out using a combination of these protocols with the web as a central place to publish things.  Two examples with which I am personally familiar from then are the St. Pachomius library and the Treasure Trove of Mathematics.
+
+The St. Pachomius library was an online collection of works by the church fathers which were retrodigitized by volunteers.  The way it worked was that, in order to participate, one would send an e-mail to its founder and chief editor, Norman Redington and recieve a photocopy of a page of an old book by snail-mail.  One would then type in the text, proofread it, and e-mail the result back.  It would then be concatenated with other's transcriptions to make a text which would appear on the website with the various transcribers thanked at the end.
+
+The Treasure Trove of Mathematics started out as Eric Weisstein's personal notebooks, but soon started growing by adding entries e-mailed in by readers.  Of course, the flap which ensued when CRC published it led to PlanetMath, and so we move to the next epoch.
+
+*** Epoch II: Wikis and Fora
+
+When we get to the early 2000's, the scripting get more sophisticated to the point where we have such things as wikis, fora, and Noosphere where the pages are automatically generated from a database through which users interact via web forms.  Likewise, other protocols such as the e-mail and usenet mentioned above get supplemented, if not supplanted by web interfaces or web-based equivalents.
+
+This made possible an explosion in CBPP content.  Now that users could directly write content to the website rather than sending it to the webmaster, there was no longer that central bottleneck limiting the rate of growth of a website.
+
+The overall picture I get of this epoch is something like a coordinate atlas of a manifold.  Here the different patches are different websites, each of which covers its own subject area, has its own community, and its own body of content.  
+
+*** Epoch III: Social Media and Specalization
+
+Now, coming to the late 2000's and the present day, I am noticing a trend towards websites and web services which focus on doing one thing but at a large scale.  For instance, social media sites provide user pages and identities, photo sharing sites host pictures, q/a sites answer questions, etc.
+
+People are increasingly using a combination of these new types of sites where before they might have used a site of the sort described above.  For instance, whereas formerly someone with a question about how to configure a certain piece of software might seek out a community of users or developers of the program in question, now that person might instead turn to a general q/a site for assistance instead.
+
+The picture that emerges here is of a different pattern of organization.  Rather than overlapping coordinate patches, we instead have some sort of fibration.  An analogy closer to home might be UNIX which, instead of all-purpose programs, focuses instead on providing a suite of utilities each of which is designed to do one thing and do it well which can be combined to perform various tasks.
+
+The glue which holds these fibres together is some combination of API's and applets and (maybe more potentially than actually at this point) semantic web technology.  For instance, someone might embed a picture or video from a photo site in a social media site or use their social media account to log into a q/a site.
+
+This shift is also affecting the shape of the commons and commons production.  Rather than having a whole bunch of communities each centred about its town commons, what we are getting is a more diffused situation where bits and pieces of common ground are strewn all over the place.  Thus, one has free pictures on the file sharing site, free entries posted on blogs, and free answers on the q/a site.  The challenge is to link them up in some coherent way so that, for instance, one might aggregate pictures of a certain historical place with accounts of what happened there and answers to questions about the participants.
+
+~~rspuzio 
+
+** Comments
+
+In an [[file:Discussion of How Free Culture Will Save Digital Libraries|old post.org][Discussion of How Free Culture Will Save Digital Libraries|old post]], I wrote:
+
+: /In any event, "entrance to" the online community "market" seems somewhat difficult when compared with entrance to the WWW. I think this is a very interesting problem! One can easily start a blog, for example, but probably only 1% of all blogs actually get comments, and probably only .1% of all blogs are actually "popular". (Statistics made up to protect the innocent.)/
+
+If we are entering the new age of blogs, maybe it's because it's becoming easier to get seen when you start a blog.  It makes some sense: there are now more channels to use to promote the blogs, e.g. Google+ is mostly based around re-sharing content, not so much around original content.  If the network is more highly and more uniformly connected, I suppose the corresponding power laws have much flatter, fatter, and longer, tails.  
+
+They say that "addiction is a disease of exposure" - somehow this seems related.  Some old Wikipedia editors have probably moved on from Wikipedia (per [[file:Peak Commons Production.org][Peak Commons Production]]) because the low-hanging fruit has gone, and because the cabals are increasingly wicked.  But then newcomers don't have as much of an in-crowd to connect to, either.  It becomes less addicting, because there's less exposure to editing.  Besides, most people want to use Wikipedia as a reference tool -- and it's better than ever in that regard.
+
+For these reasons, the cost-to-entry as a Wikipedia editor is not lower than it once was.
+
+I guess the moral of the story is: whatever we're trying to do, if we want to interest a lot of people, it helps if there's a robust "core", actively doing stuff, so that people can easily get exposed to activity -- and simultaneously, it also helps if it's easy for new members start up a new activity, and selectively attach.  For example, this matches what Deyan was saying about engaging Planetary contributors.  You need to have a maintainer, and optimally, a full-time maintainer, otherwise people will think the project is in hibernation and won't want to contribute.
+
+--[[file:jcorneli.org][jcorneli]]

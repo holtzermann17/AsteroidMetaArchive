@@ -1,0 +1,214 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Aim*: This aim of this project is to chart, proofread, and improve the topic of real numbers on PM. 
+
+
+** Tasks
+
+ * File requests related to real numbers.
+ * Fill requests related to real numbers. See the 'Pending' list below. 
+ * Proofread entries. See [[file:real number entries ready for proofreading.org][real number entries ready for proofreading]]
+ * Find missing material, and brainstorm current entries (see below).
+
+** Entries
+
+
+ * Topic entry on real numbers[http://planetmath.org/encyclopedia/TopicEntryOnRealNumbers.html]:
+  * There should be a decent introduction. Maybe also some mentioning of the continuum hypothesis and cantor set. 
+
+ * Axiomatic definition of the real numbers [http://planetmath.org/encyclopedia/AxiomaticDefinitionOfTheRealNumbers.html]:
+  * Are the axioms in line with the usual definitions of real numbers given  in Rudin, Apostol, etc.? Once this is checked we can have the axioms in a separate entry and I can close it from public editing. Then there is some firm ground to stand on. -- [[file:matte.org][matte]]
+  * I moved material related to inequalities into 
+[http://planetmath.org/encyclopedia/InequalityForRealNumbers.html inequalities for real numbers ]. I have also mailed Mathcam and asked him to open the entry for public editing
+during the project. --[[file:matte.org][matte]]
+  * I think the definition of natural numbers (embedded in reals)
+should be made more rigorous.  See the correction filed on this entry.
+-- Steve
+
+**** Constructions of real numbers
+
+ * Dedekind cuts [http://planetmath.org/encyclopedia/DedekindCuts.html] 
+  * Here, a proof is missing.
+
+
+
+ * Real number, [http://planetmath.org/?op=getobj&from=objects&id=454]: This is where you get when you click on 'real number' in the encylopaedia. (32000 visits so far, and 20th most popular entry). This entry could be slightly reorganized. 
+  * The comment in the section The complete ordered field would be more suitable in this entry [http://planetmath.org/?op=getobj&from=objects&id=5602].
+
+**** Inequalities etc.
+
+ * inequalities for real numbers [http://planetmath.org/encyclopedia/InequalityForRealNumbers.html] 
+
+ * Archimedean property [http://planetmath.org/encyclopedia/ArchimedeanProperty.html]:
+  * Prove that there are no integers between 0 and 1. 
+  * Does this really require Archimedean property?  Isn't induction 
+   on the proposition n \neq 0 \implies n \geq 1
+   enough? -- Steve
+   * I would think not.  For instance, it also holds for non-standard numbers, which
+    form a  non-Archimedean field.
+
+ * The Interval entry [http://planetmath.org/encyclopedia/Interval.html]:
+  * the usual graphical representation of intervals is missing. For example, o------o is an open interval, and with filled circles it is a closed interval. Mostly done, with only some stylistic changes left. -- SteveCheng
+  * What notation does Bourbaki use for intervals? (If Bourbaki defines an interval). This would be good to mention in the disucssion about different notatons for the interval in the interval entry. 
+   * Checked this. Bourbaki uses notation ]0,1[, [0,1[, etc. and not the 
+   currently more common (0,1), [0,1), etc. --[[file:matte.org][matte]]
+
+ * Real numbers are uncountable [http://planetmath.org/encyclopedia/CantorsDiagonalArgument.html]
+  * Can we give a proof based on only the axioms of the real numbers?
+  * Think about it this way: the proof really shows that {0,1,2,3,...}^{\N} is uncountable.
+Decimal expansion is just the most obvious almost-surjective map from [0,1] to {0,1,2,3...}^{\N}. 
+Least upper bounds proves surjectivity.  Probably should file an addendum to explain this.
+-- Steve
+   * That is a good way to think about it. However, there is an alternative
+    proof at http://us.metamath.org/mpegif/mmcomplex.html . It is slightly more
+    formal (non-intuitive), but it could be good to have. I'll try to write 
+    up a correction about this. --[[file:matte.org][matte]]
+
+    * I hope you will include this link in the correction to benefit people interested in the actual proof, not only the romantic description of it. I am sure there are more such situations where theorems or even proofs on PM have their Metamath formalizations done already. Having links or at least references to formalizations would improve the content in a couple of ways. -[[file:slawekk.org][slawekk]]
+  * There is also a topological proof that R is uncountable. See request:
+ [http://planetmath.org/?op=getobj;from=requests;id=550], and the original 
+thread: [http://planetmath.org/?op=getmsg&id=9863]. This would be good to 
+  mention. But, the actual proof would be outside the scope of this 
+ project (which does not include topological properties of R). --[[file:matte.org][matte]]
+
+**** Operations on real numbers
+
+ * Infimum, supremum
+[http://planetmath.org/encyclopedia/Infimum.html],[http://planetmath.org/encyclopedia/Supremum.html]: 
+  * These are written in the setting partially ordered sets. This might also make this concept difficult to grasp for the beginner. What about combining these entries into one?
+  * What about writing an entry discussing inf and sup only in the case of real numbers. It would be the logical place to discuss properties like this: [http://planetmath.org/?op=getobj;from=requests;id=522]
+
+
+ * square root of real number
+[http://planetmath.org/encyclopedia/SquareRoot.html]:
+  * This could be slightly cleaned up. Properties should also be proven from definitions.
+
+ * square root of square root binomial [http://planetmath.org/?op=getobj&from=objects&id=7178]
+
+
+ * ceil and floor [http://planetmath.org/?op=getobj&from=objects&name=Ceiling],[http://planetmath.org/encyclopedia/Floor.html]
+  * Would it make sense to combine these entries? 
+  * Existence of floor and ceiling has to be shown with the Archimedean
+property.  (They don't exist if in the ordered but non-Archimedean field of real rational functions.)  This is partially done in
+[http://planetmath.org/encyclopedia/ExistenceAndUniquenessOfDecimalExpansion.html
+ existence and uniqueness of decimal expansion].
+
+ * minimal and maximal number [http://planetmath.org/encyclopedia/MinimalAndMaximalNumber.html]
+
+ * Absolute value [http://planetmath.org/encyclopedia/AbsoluteValue.html]
+  * Either create a new entry for the absolute value for reals, or start working from this one. In any case, the proof the the triangle inequalities should be easy to find from the topic entry for real numbers.
+
+**** Misc.
+ * [http://planetmath.org/?op=getobj&from=objects&id=6232 pseudoparadox in measure theory]
+ 
+
+
+**** Rational, Irrational, and Transcendental numbers
+ * topic entry on algebraic and transcendental numbers [http://planetmath.org/encyclopedia/TheoryOfAlgebraicNumbers.html]
+
+  * Algebraic [http://planetmath.org/encyclopedia/AlgebraicNumber.html]: 
+   * While this entry gives the basic definition, there is probably more to be said. For example, a brief summary of the attached results could be in place and some examples.
+
+  * Irrational [http://planetmath.org/encyclopedia/Irrational.html]:
+   * This entry has a lot of attachments that could be discussed in the parent entry. 
+
+  * Transcendental [http://planetmath.org/encyclopedia/TranscedentalNumber.html].
+
+**** Famous real numbers
+ * e [http://planetmath.org/encyclopedia/NapiersConstant.html]:
+  * [http://planetmath.org/encyclopedia/ProofThatEIsNotANaturalNumber.html e is not a natural number]
+   * The proof could be clearer. See message posted by dwasserm.
+   * The proof relies on the fact that there are no integers between 0 and 1. This needs to be proven.
+  * [http://planetmath.org/?op=getobj&from=objects&id=2795 e is irrational]
+   * Find the original reference to Euler's proof that e is irrational. See
+[http://planetmath.org/?op=getmsg&id=9576].
+  * [http://planetmath.org/encyclopedia/EIsTranscendental2.html e is transcendental]
+
+ * [http://planetmath.org/encyclopedia/Pi.html pi]:
+  * [http://planetmath.org/?op=getobj&from=objects&id=6365 pi and pi^2 are irrational ]
+
+ * [http://planetmath.org/encyclopedia/EulersConstant.html Mascheroni constant]
+ * [http://planetmath.org/encyclopedia/GoldenRatio.html golden ratio]
+
+** Activity
+If you participate in this project, please log your activity below. In particular, if you file corrections, this is good to record, so we can verify that owners make changes. By logging activity we will also be able judge the "impact" this
+project has had on the encyclopaedia.
+
+*** Threads
+
+ * [http://planetmath.org/?op=getmsg&id=9781 powers x^n]
+
+*** Corrections
+
+**** Pending
+
+**** Accepted
+ * alternative proof that [0,1] and (0,1) are bijective [http://planetmath.org/?op=getobj&from=corrections&id=7629] -- 4 March, 2006
+(accepted)
+
+*** New entries
+ * [http://planetmath.org/encyclopedia/AbsoluteValueInequalities.html Absolute value inequalities] June 12, 2006
+
+ * [http://planetmath.org/encyclopedia/ExistenceOfRoot.html existence of n:th root], April 25, 2006
+ * [http://planetmath.org/encyclopedia/InequalitiesForDifferencesAndQuotientsOfPowers.html
+ inequalities for differences of powers], March 26, 2006
+ * [http://planetmath.org/encyclopedia/RationalNumbersAreRealNumbers.html]
+  rational numbers are real numbers, March 13, 2006
+ * [http://planetmath.org/encyclopedia/ClosedOpen.html 
+open and closed intervals have the same cardinality ] by mps. 
+Entry based on thread: 
+  [http://planetmath.org/?op=getmsg&id=9800 closed and open interval bijective?], 4 March, 2006
+ * [http://planetmath.org/encyclopedia/ExistenceAndUniquenessOfDecimalExpansion.html
+ existence and uniqueness of decimal expansion], 22 Feb. , 2006
+ * [http://planetmath.org/encyclopedia/InfimumAndSupremumForRealNumbers.html
+Infimum and supremum for real numbers], 19 Feb. , 2006
+ * [http://planetmath.org/?op=getobj&from=objects&name=TopicEntryOnRealNumbers Topic entry on real numbers], 13 Feb., 2006 --[[file:matte.org][matte]]
+: Added famous real numbers to this entry. --[[file:rspuzio.org][rspuzio]]
+ * [http://planetmath.org/?op=getobj&from=objects&name=AxiomaticDefinitionOfTheRealNumbers axiomatic definition of real numbers]. 5 Feb., 2006, [[file:matte.org][matte]]
+ * Created this page. 4 Feb., 2006 [[file:matte.org][matte]]
+
+*** Requests
+
+**** Pending
+ * [http://planetmath.org/?op=getobj;from=requests;id=550 a topological condition for a set to be uncountable] March 2006
+ * [http://planetmath.org/?op=getobj;from=requests;id=541 continued fraction of pi]
+--Feb. 2006 [[file:matte.org][matte]]
+ * inf{ ( ceil(nr) -nr), n=1,2,...} = 0 when r is real
+[http://planetmath.org/?op=getobj;from=requests;id=522]. Feb. 4, [[file:matte.org][matte]]
+ * proof that pi is transcendental [http://planetmath.org/?op=getobj;from=requests;id=519] . Feb 4, 2006 [[file:matte.org][matte]]
+
+**** Filled
+ * [http://planetmath.org/?op=getobj;from=requests;id=543 subsets of countable set] Feb. 26 2006. [http://planetmath.org/encyclopedia/SubsetsOfCountableSets.html Filled]
+by beke, 14 March, 2006.
+ * (-a).b=-(a.b) [http://planetmath.org/?op=getobj;from=requests;id=533], Feb. 12, 2006, [[file:matte.org][matte]] Filled by cvalente [http://planetmath.org/?op=getobj&from=objects&id=7677] 11 March 2006
+ * -(a+b)=(-a) + (-b) in a ring [http://planetmath.org/?op=getobj;from=requests;id=537], Feb. 2006, --[[file:matte.org][matte]]
+Filled by aplant [http://planetmath.org/encyclopedia/AdditiveInverseOfASumInARing.html]
+11 March 2006
+ * -0=0 [http://planetmath.org/?op=getobj;from=requests;id=532], Feb. 12, 2006 [[file:matte.org][matte]] Filled by aplant 
+[http://planetmath.org/encyclopedia/AdditiveInverseOfTheZeroInARing.html]
+ 11 March 2006.
+ * --a = a [http://planetmath.org/?op=getobj;from=requests;id=535], Feb. 12, 2006 [[file:matte.org][matte]] Filled by aplant [http://planetmath.org/encyclopedia/AdditiveInverseOfAnInverseElement.html]
+ 11 March 2006.
+ * square root iteration converges [http://planetmath.org/?op=getobj;from=requests;id=528], Feb. 10, Filled by SteveCheng
+as part of general proof that Newton's method converges for convex functions. (Could use some comments.)
+ * [http://planetmath.org/?op=getobj;from=requests;id=405 x^2=-1 has no real solution
+]
+ * Q can be embedded into a field of characteristic 0 [http://planetmath.org/?op=getobj;from=requests;id=525], Feb. 6, 2006 [[file:matte.org][matte]] This result is needed to prove that the axiomatic definition is well defined. Filled by CWoo [http://planetmath.org/encyclopedia/GroundField.html], Feb. 6, 2006.
+ * 2<e<3 [http://planetmath.org/?op=getobj;from=requests;id=520]. Feb. 4, 2006  [[file:matte.org][matte]] --- Filled 
+[http://planetmath.org/encyclopedia/ProofThatEIsNotANaturalNumber.html] Feb. 6. 2006 by CWoo --[[file:matte.org][matte]]
+Refilled [http://planetmath.org/encyclopedia/BoundsForE.html] 26 March 2006 by R. Puzio --[[file:rspuzio.org][rspuzio]]
+ * [http://planetmath.org/?op=getobj;from=requests;id=540 Closure and interior of the Cantor set] --Feb. 17, 2006 [[file:matte.org][matte]]  [http://planetmath.org/encyclopedia/ClosureAndInteriorOfCantorSet.html] -- 3 March 2006 [[file:rspuzio.org][rspuzio]]
+ * inverse of inverse in group [http://planetmath.org/?op=getobj;from=requests;id=531], 
+Feb. 12, 2006. Filled: [http://planetmath.org/encyclopedia/InverseOfInverseInAGroup.html] by cvalente, 
+  4 March 2006
+ * [http://planetmath.org/?op=getobj;from=requests;id=534 Taylor series of sqrt(1+x)] 
+13 March, 2006.  Filled: [http://planetmath.org/?op=getobj&from=objects&id=7720] by stevecheng and bloftin
+
+** Proofreading entries
+ * [[file:real number entries ready for proofreading.org][real number entries ready for proofreading]]
+
+See also:
+[[file:User activities.org][User activities]], 
+[[file:FAQ on real numbers.org][FAQ on real numbers]], 
+[[file:MSC codes related to real numbers.org][MSC codes related to real numbers]]

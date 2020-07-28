@@ -1,0 +1,42 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+What makes a good PM summer of code project?  One that gets accepted by Google!
+
+Presumably any proposal that is going to get accepted must demonstrate
+its /usefulness/ and /feasibility/.  Presumably also there must be a degree
+of /originality/, in the sense that the project hasn't been accomplished
+somewhere else before.  (Otherwise, why bother?)
+
+Based on my ([[file:jcorneli.org][jcorneli]]) own experience, I'd suggest that a well-written and well-thought
+out proposal is going to be more likely to get accepted than one that is just
+slapped together at the last minute.  We'll probably be happy to discuss the details of
+your proposal with you, but it will be up to you to come up with something
+impressive.  
+
+Given the fact that these projects are 'open' and 'collaborative', you should
+demonstrate some ability to collaborate (which means, in this case, not
+just passively working with other people, but being part of a dynamic R&D team!).
+
+I'm sure that Google has somewhere some guidelines and ideas about things that
+they will be looking for in application materials.  Remember that we're
+trying to build a strong team for this summer's work: anything you can
+do to help your teammates (in a modular fashion) will be appreciated...
+
+--[[file:jcorneli.org][jcorneli]]
+
+[[file:logan.org][logan]]'s contributions in the area of Noosphere
+rewrite provide excellent clues:
+
+[[file:http://planetx.cc.vt.edu/AsteroidMeta/No%c3%b6sphere_Niggles.org][http://planetx.cc.vt.edu/AsteroidMeta/No%c3%b6sphere_Niggles]]
+
+A prototype of a rewrite could perhaps be accomplished in a
+few months.
+
+--[[file:ocat.org][ocat]] 17-Apr-2007
+
+
+I suppose that we students don't have to impress Google, because (as far as I understand) mentors rank students and Google picks the top ones. Is it so?
+--[[file:alih.org][alih]]
+
+Wrong!  We rank students, but Google may or may not pick anyone.  Therefore, if we want anyone to get hired, as a team, we must impress Google.  --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,121 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Essentials
+
+What: Ad hoc workshop at Dalhousie University "D-DRIVE", Halifax, NS, CA
+
+Official Title: "Mathematical Knowledge Management: Sustainability, Scalability and Interoperability"
+
+Official web page: http://projects.cs.dal.ca/ddrive/seminars/mkm.shtml
+
+Date: April 26-28
+
+Who: [[file:akrowne.org][akrowne]], [[file:jcorneli.org][jcorneli]], [[file:rspuzio.org][rspuzio]], Jim Pitman, Jon Borwein, Michael Kolhase, many others (see page above)
+
+Relevance for PM: learning stuff (esp. about services we can provide and utilize), evangelizing free math, evangelizing PM, looking for ideas and partners on sustaining and scaling up our project
+
+* Akrowne Talk/Workshop
+
+This is to be a workshop on "Building Meaningful Online Mathematical Communities".  To 
+focus this workshop, I assume I'll need to lead in with a brief talk.   Here are draft notes for such a talk, in a working but perhaps not final chronological order, with each top-level bullet point roughly corresponding to a section (small sections could be a "slide"):
+
+
+ * what goes into meaningful?
+  * sustainability
+  * impact (on communities, on daily lives)
+  * participation
+  * (subject) coverage
+  * pedagogy
+  * interaction 
+
+ * why online?
+  * limits of reach of traditional/formal institutions
+   * students and experts in one area braching into other areas
+   * exposing new people to math
+   * home schoolers, unschoolers, hobbyists, the curious
+   * too late: there's already math online (e.g. wikipedia); people are using it, are we "done"?
+   * provisional answer: "no", b/c of the following...
+
+ * applying "free and open source" to math
+  * "democratizing"? 
+   * well, maybe.... but also anarchizing; liberating, decentralizing, meritocratizing, etc.
+   * goals: increase quality, quantity, engagement, economy
+   * success is characterized by fewer "missed opportunities" because of lack of resources or connections to the right people
+   * dichotomy between "massified classrooms" and 1-on-1 yet static books is broken
+   * knowledgable participants can informally become "experts" and help their peers; students at more advanced levels can help students who are novices
+   * breaking out of traditional roles: in a sense, all of us are at times in either of these roles!
+
+  * creating content: engaging in the scholarly process creatively
+   * real scholars add to the commonly-held pool of knowledge
+   * "open source" learning 
+    
+  * free culture model: 
+   * with open access, content can reach more people
+   * with the right licensing, content can get re-used in novel ways
+   * the "base" of free culture content gradually builds-upon itself in re-use
+   * applying to scholarly work: we want systems that assist in "informating"; having interactions leave a "trail of represented knowledge" (e.g. learning objects) which others can benefit from
+    * re-inject  into free culture "virtuous cycle"
+    
+  * part-in-parcel of the free culture model: "society development"
+   * collaborators on free culture content have "out of band" communications that foster learning and future productive collaborations
+   * flourishing free culture does not happen "in a vacuum"!!
+
+  * CBPP systems bridge the content and society aspects of free culture; their development is very important
+   * e.g. wikipedia required mediawiki; linux required code management systems and mailing lists
+
+ * challenges going forward
+  * "completing the sustainability picture"
+   * grassroots projects need organizational support 
+   * organizational projects need grassroots participation
+   * why don't the two just join forces?
+    * grassroots projects don't want to be /controlled/ and /owned/
+    * official projects are worried about quality control
+    * might the solution lie in "additive evaluation"?
+   
+  * continuing to improve economy
+
+  * banding together to help CBPP systems evolve
+   * outside of software development, it is rare for communities to be able to mobilize the ability to do serious work on the very CBPP platforms they rely on
+   * better CBPP systems bear directly on economy
+   * be intentional and methodical about developing CBPP systems; don't wait for "accidents"
+
+  * there are never enough (if any) resources expressly to make the investments to help CBPP systems and communities grow and evolve
+
+ * connecting organizations and official projects, with grassroots efforts seems key to resolving the above challenges
+
+ * additive evaluation
+  * people's judgments, and "automatic" scoring, can be part of CBPP system
+  * but... these judgments and their influence on interfaces should be discardable, customizable, and reversible
+  * "superimposed" information: 
+   * "views" of content which are separate from the content itself, with additional information influencing the display, including quality-control information
+   * separate "virtual repositories" which take different slices of a pool of content, based on some criteria, but which doesn't prevent collaboration from being based on the entire pool (maximize free culture dynamics)
+
+ * what we are doing to bring the above about (centering around PlanetMath):
+  * working on CBPP development projects, especially funded by the Google summer of code program (autolinking, scholium system, reputations)
+  * working on grant-seeking and small development projects with Pitman/IMS, MathWeb
+  * talking to a lot of organizations, people connected to them
+   * corporations dealing in math software and math ed (Wolfram, MapleSoft, ...)
+   * professional orgs (MAA, AMS, Clay, IMS, ...)
+   * corporations dealing with research communications (iGroup)
+   * however: not much has panned out
+  * using our meagre funds to do organizational development methodically
+   * work on supporting a subscribing member base 
+
+ * tantalizing partnership possibilities (and roadblocks):
+  * DLMF/PlanetMath{/Wikipedia} (license, bureaucracy problems)
+  * IMS/Math Atlas/PlanetMath/Wikipedia (money problems)
+  * University Courses/PlanetMath/et. al (cultural acceptance problems)
+  * PlanetMath/MAA (cultural)
+  * PlanetMath/arXiv-math (money)
+  * creating a CBPP research center (all problems listed above, plus communication!)
+    
+ * discuss:
+  * critiques?
+  * ideas?
+  * partnerships?
+  * other projects/communities?
+
+* Comments
+
+...

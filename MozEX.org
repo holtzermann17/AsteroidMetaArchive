@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* MozEx
+
+Welcome to the coolest Firefox extension yet. This will allow you to do arbitary
+things when click, say, a mailto: link ... or even edit text boxes!
+
+** Caveats
+When you're specifying the subject, %s might be an empty string (in fact, it
+will be from most URLs). Placing it in quotes forces it to allocate a command
+argument, or shell word, so as not to confuse mutt with <tt>-s toaddress</tt>.
+
+Have they updated this yet?  Last I installed it (and rspuzio as well), it was broken
+in latest firefoxes, and you had to hack prefs.js to get it working.
+
+Incidentally, it makes a cool pairing with PM or ResearchCollab for editing text boxes in
+your favorite TeX-based editor. --[[file:akrowne.org][akrowne]] Fri Mar 10 02:30:47 UTC 2006
+
+* References
+
+ * [http://nic-nac-project.de/~kaosmos/mozex-1.07.1.xpi Download]
+ * [http://mozex.mozdev.org/arguments.html Options to configure]
+ * [http://mozex.mozdev.org/screenshots.html Screenshots]

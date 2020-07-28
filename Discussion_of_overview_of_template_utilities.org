@@ -1,0 +1,261 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Note that the particular example you've described
+here can be coded pretty easily using `defmacro'
+in LISP.
+
+ (defmacro template-example (a b c)
+   `(list 'times ,a '(plus ,b ,c)))
+ 
+ (template-example 2 y -1)
+ ;=> (times 2 (plus y -1))
+
+I'm not a big macros pro; they are subtle.  But I can at least say how they are
+different from functions, and say a few more words about them.
+
+The use of the backquote (i.e. the LISP quasiquote) is common in macros.  Recall
+that the backquote says "treat everything in the following form literally,
+unless it is unquoted."  `defmacro' adds the following useful element to the
+mix: arguments are not evaluated until the final return value is generated.
+Thus, if you feed the (undefined) variable "y" into a the above, macro, there's
+no problem - though there would be a problem if the macro was a defun.
+
+The unquote in front of "b" says "turn this b into whatever
+was entered for b" - which, in this case, is the /symbol/
+y.  
+
+This has some "pros" and "cons".  
+
+A /con/ is that if you want
+to feed in some value that may change -- y could be any integer
+for example -- you'd have to evaluate y and then feed the result
+into the macro.
+
+An (apparent) /pro/ is that we can do what we just did - and do some
+template-style operations very easily.
+
+Now, in fact, it turns out that, in this case, exactly the same thing can be
+accomplished with functions, too, in this case, and, indeed, the implementation
+is cleaner:
+
+ (defun template-example-f (a b c)
+   `(times ,a (plus ,b ,c)))
+
+ (template-example-f 2 y -1)
+ ;=> (times 2 (plus y -1))
+
+So why use macros at all?  Because macros always evaluate to the level of "what
+was fed in".  "Evaluate" is the key word here.  Backquote can be used to "delay"
+the ultimate evaluation, and, within them, unquote can be used to "speed up"
+evaluation.
+
+Here are some examples of "non-trivial" macros.
+
+This is a modified version of a macro from the Emacs Elisp manual. (Looking at
+the original version could also be instructive).
+
+ (defmacro inc (var)
+   `(setq ,var (1+ ,var)))
+ (setq x 1)
+ (inc x)
+ ;=> 2
+
+Following the unfolding,
+
+ (inc x)
+
+"expands" (which is the technical term for what's going on here)
+to 
+
+ (setq x (1+ x))
+
+And then the expanded construct is /evaluated/.  As I said above, this is key.
+"Evaluation" is the reason `inc' is written as a macro, not as a function.
+
+Suppose that we did try to implement the same thing as a function.
+
+ (defun inc-f (var)
+  (setq var (1+ var)))
+ (inc-f x)
+ ;=> 3
+
+Hey, it looks like we don't need macros, right?
+
+Except:
+
+ x
+ ;=> 2
+
+the "3" we saw was just the "return value"; the `setq' in the definition
+of `inc-f' just has a local effect.
+
+One more example, now, which turns out basically the same way.  (It is 
+here for didactic purposes and can be skipped if you like; it present a
+slightly different development of the same idea).
+
+Consider this example (from the same Emacs manual):
+
+ (defmacro t-becomes-nil (variable)
+   `(if (eq ,variable t)
+        (setq ,variable nil)))
+ 
+ (setq foo t)
+ (t-becomes-nil foo)
+ ;=> nil
+
+It works, as a macro, about the same way as `inc' did.
+
+Here's some code that gives another futile attempt at implementing a "real"
+macro as a function.  We try the backquote "strategy" we applied to
+`template-example-f', above.
+
+ (defun nil-becomes-t-f (variable)
+    `(if (eq ,variable nil)
+         (setq ,variable t)))
+
+ (nil-becomes-t-f foo)
+ ;=> (if (eq nil nil) (setq nil t))
+
+Oops, that wasn't quite right!  How about this?  We'll drop the backquote.
+
+ (defun nil-becomes-t-f (variable)
+     (if (eq variable nil)
+         (setq variable t)))
+
+But we already know from our exploration of `inc-f' that that won't really work:
+
+ (nil-becomes-t-f foo)
+ ;=> t
+ foo
+ ;=> nil
+
+The moral of the story: backquote can be used to do simple template operations,
+and macros can be used to do more - but the two things are related.
+
+Specifically, macros allow you define operators that act a class of variables.
+The reason that backquote (together with unquote) is common in macros is that it
+gives us a way to access both the variable and (using additional LISP functions)
+access and change the variable's value.  Thus, macros can be useful for (among
+other things) defining operators which can modify the values of variables in
+some class. --[[file:jcorneli.org][jcorneli]]
+
+While this allows you to substitute values into a template, how are you going to
+find out which (if any) values need to be substituted into a template in order
+to match a particular expression?  Remember, when checking or constructing
+proofs, one also needs to this.  For instance, given the expression "(times 2
+(plus y -1))" and the template "(times a (plus b c))", you need to be able to
+figure out that "a" should be replaced with "2"; "b" should be replaced with "y"
+and "c" should be replaced with "-1".  Substituting into templates is only half
+the story --- the other half is figuring which values to substitute.
+--[[file:rspuzio.org][rspuzio]]
+
+And I think the /other/ other half is figuring out which template to try in
+the first place!  Assuming I /knew/ that I was supposed to match "(times 2
+(plus y -1))" to "(times a (plus b c))", I suppose what I would do would be read
+off symbols in pairs until I came to one that didn't match, then add the pair to
+an alist.  Except, I suppose that "(times (+ 2 2) (plus y -1))" also matches, so
+instead of reading off symbols in pairs, I would read of s-exps in pairs.
+Accordingly, I would test for equality with `equal'.  You already wrote code
+that does this (for schema)... except, the code you wrote is somewhat more
+complicated, because there is consistency checking.  I.e., if you were supposed
+to match "(times 2 (plus y -1))" to "(times a (plus /a/ c))", then your
+consistency checking routine would say "actually, these things don't match!".  I
+haven't taken the time to completely understand the match-schema code, but I
+gather that this is what happens.  Is there a way to do this sort of matching
+faster or somehow better with backquote and macros?  Maybe, but I don't know,
+and optimizing (except maybe for code clarity) doesn't seem like something we
+really need to worry about that much.  I mentioned the use of backquote for
+doing template /substitution/ because it seems like the most perspicuous way
+to do the task.  (And note that one potential use of macros would be to create
+an easy way to define functions like `template-example-f' for doing
+substitutions.)  But more general template utilities, and their application in
+proof checking, are beyond me at present. 
+--[[file:jcorneli.org][jcorneli]] Wed Mar 30 01:43:26 2005 UTC
+
+Another pointer on doing substitutions (not that we need /that/ 
+many methods), but Emacs says:
+
+  sublis is a compiled Lisp function in `cl-seq'.
+  (sublis cl-alist cl-tree &rest cl-keys)
+  Perform substitutions indicated by ALIST in TREE (non-destructively).
+  Return a copy of TREE with all matching elements replaced.
+  Keywords supported:  :test :test-not :key
+--[[file:jcorneli.org][jcorneli]] Wed Mar 30 01:53:58 2005 UTC
+
+That is a good description of how the matching program works.  I will use it as
+the basis for the new improved description of the new improved matching program.
+As for the consistency checking, the idea is to make sure that the same symbol
+is always matched to the same replacement text.  This can either be done as one
+goes along or at the end.  The way I had it before, I did it as I went along,
+but now I think I will do it all at the end.  I have a feeling that this will
+not only make the program more efficient, but will also make thie program easier
+to read by making it a bit more modular.
+
+The routine I have for substituting into templates is a lot like the "sublis"
+function you mention.
+
+You have good point that there is the question of figuring what templates are to
+be tried.  I have thought about this also, but the answer will show up elsewhere
+because here I am restricting my attention to the nuts and bolts of matching and
+substituting and take it for granted that one already knows exactly what is to
+be done, and only is interested in how to do it.
+
+As for macros, my attitude is to use them for little tidbits which make the code
+easier to read by giving names to common combinations of functions rather than
+using them in any major way. --[[file:rspuzio.org][rspuzio]] 30 March 2005
+
+
+I think it is still a good idea to check consistency as you go along, because
+for large templates, this could end up saving time.  It doesn't make sense to
+keep building a list of substitutions if there is already a contradiction.  To
+make the code easier to read, just add more documentation - that's my usual
+strategy until it seems like there is too much documentation, then I start
+taking the documentation back out.  NL is usually easier for people to
+understand than code (which is part of the reason we need good systems for
+documenting the "kernel" of the hdm, by the way).
+
+In light of your statement about macros above, I don't know if this will 
+be useful or not.  But I had fun writing it, and it is a nice example
+to add to the collection here, because it shows how one can mix macros
+and functions.
+
+What we have is a a two-level substitution regime, created by calling `defun'
+inside of `defmacro'.  Basically speaking, the "macro" level tells you which
+places are supposed to have substitutions.  The "function defined by the macro"
+level tells you what the literal template is that you're matching against.
+
+Finally, the function call does the stated substitutions.
+
+ ;; do this if you haven't already.
+ (require 'cl)
+ ;; the macro
+ (defmacro def-template-subs (name template)
+   `(defun ,(intern 
+             (concat "template-subs-" name))
+      (match)
+      (sublis `((,(first template) . ,(first match))
+                (,(third template) . ,(third match))) template)))
+ ;; note that we don't need to quote the list arg,
+ ;; that's a little different.
+ (def-template-subs "simple-rule" (foo bar baz))
+ ;; basic:
+ (template-subs-simple-rule '(qux quux quuux))
+ ;; weird:
+ (template-subs-simple-rule '(1 2 3 4))
+
+Its sort of like saying that foo and baz are unquoted here, but bar is not.  The
+notation has the same problem as Quine's notation, in that this fact is not
+immediately obvious until you inspect the code.
+
+Note also that nsublis could have been used...
+
+All in all, this may not be at all optimal, but I wanted to show my idea for
+using macros to define functions for doing substitutions wasn't just idle
+talk...  --[[file:jcorneli.org][jcorneli]] Wed Mar 30 07:04:28 2005 UTC
+
+I think I will post all three possible codes to do this, since we can always later figure out which one is better based on what we will be doing later.  Although it is a bit irrelevant for our current purposes, it would be an interesting project (maybe it's already been done) for someone interested in complexity of algorithms to figure out an optimal way of matching and substituting into templates.  This goes back to what we were saying about getting more prople involved.  
+
+Right now, we basically have one person working on a major part of the project (I on the theorem checking, you on the parser, Kyle on the theorem proving) but it would be nice to have more people so that, for instance, a computer science guy might figure out how to optimize some of the algorithms, a whole bunch of people could be working on teaching the parser all the different syntaxes in use for mathematical expressions, etc.  At any rate, I plan to finish with this project for the time being this week and then write the theorem checker.  The latter project should go fast once I have good tools in hand, which is why I am now taking care to make such tools. --[[file:rspuzio.org][rspuzio]] 30 March 2005
+
+Back to [[file:Overview of template utilities.org][Overview of template utilities]]

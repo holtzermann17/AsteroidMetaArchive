@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A while ago the proliferation of options for joint editing of
+semantic networks seemed overwhelming to me.  There are many
+paths to the truth, they say, don't spend your life choosing between them!
+
+One of the options that looks best to me right now is to use 
+SimpleNet in combination with a shared REPL provided by
+qcmu 
+(this software is mentioned at http://www.cons.org/cmucl/doc/lispserver.html, and a link is given to sources that can be wget got).
+
+I'm still not completely sure how to set up qcmu.
+
+As for other options, the idea of doing something with a CMS - like
+CVS - still seems reasonable.  However, a shared REPL seems like
+something fun to play with.  If they can do it for MUDs, I should
+be able to do it with LISP...
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,7 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Sometimes in the HDM documentation, you will see "HDM-p#" or simply "p#" where
+the "#" is a low number.  These refer to the number of an HDM prototype.  We are
+currently working on prototype number 4.  See [[file:HDM CVS.org][HDM CVS]] for all past versions
+as well as current work.

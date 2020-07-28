@@ -1,0 +1,252 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+The [[file:FEM.org][FEM]] is an example of a project that tries to turn free content into
+something salable.  [[file:GNU.org][GNU]] and [[file:Project Gutenberg.org][Project Gutenberg]] are examples of projects
+that already are financially independent, in a sense, though they continue to
+rely heavily on volunteer participation and voluntary financial contributions
+from individual donors.
+
+[[file:thoughts on the viability of free-software style business|Free content business.org][thoughts on the viability of free-software style business|Free content business]]
+may not always /need/ volunteers or donors, for instance, if free content
+is produced on commission.  While I do think of [[file:Grant planning|grants.org][Grant planning|grants]] as a way
+to secure financial independence, we should remember that some grants, like 
+comissions, come with specific strings attached.  However, if we get the "right"
+grants, the strings will not pull us far out of [[file:the way of the asteroid|our way.org][the way of the asteroid|our way]]
+(or even at all).
+
+Generally speaking, "financial independence" in free content comes about in one
+of two ways (or a combination of the two).  These are: (1) to do something that
+you thought up and that people value enough to want to give you money; (2) to do
+something that someone else thought up & will pay you to carry out.
+
+The situation is not unlike the one film directors are in.  Sometimes a director
+will come up with an idea, and go around promoting it to various producers;
+sometimes a producer will come up with an idea, and pitch it to one or more
+directors.  Needless to say, both good and bad movies can be produced along
+either pathway.  And, moreover, as time goes by the difference between the two
+different things may become extremely insignificant.
+
+When we think about "things people do" we should also consider the meta-content,
+i.e., look not only at what they do ("content") but also how they do it
+("process").  Process, too, can be a commodity.  In some cases, it may not be
+useful to try to make a distinction between content and process.
+
+
+*  Pros and cons of some proposed money makers
+
+We've also talked about services that cost money (like for-pay question
+answering) but that result in the production of free content.
+
+It might be intellectually or aesthetically exciting just to try these projects
+and see whether and how they work, but some pre-facto analysis could come
+in handy too.
+
+Here I'll make a brief case FOR the salability of some of these projects.
+
+; [[file:for-pay question answering.org][for-pay question answering]] : There are other services out there on the
+  internet that do this.  (Google answers is an example.)  There are also
+  for-pay online tutors just for math (examples?), and
+  [http://mathforum.org/dr.math/abt.drmath.html Ask Dr Math] is an example of
+  a no-fee math question answering service. I think that !PlanetMath members
+  could provide high-quality answers to math questions, with guaranteed
+  satisfaction or your money back, and get lots of requests.  Students have lots
+  of math questions, and often a few extra bucks. (There's a huge industry built
+  up around subject-matter guides, tutors, test-prep, etc.)  I think that if
+  Google can do this for general Q&A, we can do it for subject-specific Q&A.
+
+; print encyclopedias : The !MathWorld site "has" a book (the CRC Concise
+  Encyclopedia of Mathematics), it sells pretty well.  GNU/FSF makes a lot of
+  its income from people buying printed versions of the manuals.  Put these two
+  datapoints together, and I think we come to the conclusion that there is a
+  market for the FEM and other subject-specific sequels.
+
+; membership drives and charitable contributions : PM already has rather a
+  lot of useful content, and to the extent that people like the /content/, the
+  /community/, and the /technology/ behind the site, they may be willing to
+  support the site financially.
+
+And some words AGAINST the salability of some of these projects (bearing in mind
+FWIW that I am personally biased in favor of "FOR"... but that I do want to try
+to be realistic).
+
+; for-pay question answering : People may be able to get perfectly adequate
+  answers to math questions at no cost from other sites on the internet, or
+  friends or teachers they know locally.  If they are willing to spend money,
+  they may prefer to spend it on in-person tutoring rather than the relatively
+  impersonal internet forum.  Finally, a motivated and intelligent person is
+  often entirely able to find out the answer to her or his math questions by
+  looking at books in the library, looking online, or thinking.
+
+; print encyclopedias : Other print encyclopedias have better reputations,
+  perhaps because of a long-standing history (the CRC Standard Mathematical
+  Tables and Formulae is in its 30th edition) or because of the degrees held by
+  the compilers (the EDM seems to practically drip with prestige) or because of
+  being developed by some centralized authority and traditional
+  editing/publishing channels (the CRC Concise Encyclopedia of Mathematics, for
+  all its legal difficulties, is inarguably traditional; and Weisstein, for all
+  his being had by contract, does do a good job of controlling/directing the
+  content of the work).  So why not buy one of these things instead?  Oh yeah,
+  and the FEM will be available as a free download too, so why not just buy
+  the paper and print it on your department's printer (assuming you don't get
+  caught...) and then have the thing bound at Kinko's for a few bucks.
+
+; membership drives and charitable contributions : The primary users of PM (as
+  it currently exists) may not be the best target for their own fundraising
+  efforts (see [[file:sources of funding for PM.org][sources of funding for PM]] for some discussion).  On the other
+  hand, other people who might be in a better financial position to make
+  charitable contributions to the site may be utterly uninterested in doing so.
+
+**  Comments
+Any final case FOR salability will have to /exhibit sales/ first and foremost,
+and that means that we may have to "respond to" the issues brought up AGAINST
+salability.  Well, of course, alternatively we could just try and see -- if it
+doesn't cost too much to set things up, we'd be justified to seek the proof of
+the pudding in the eating.
+
+Even so, theoretically, one has to wonder -- a lot -- about where the money is
+really going to come from.
+
+Out of the list of candidate funding sources discussed above, the /print
+encyclopedia/ item seems like the most likely candidate to me, because (a) the
+FEM is /different/ from any of the other resources out there already, and
+there will be some things that people like better about it; also it may be
+cheaper than any other published alternative; (b) a real bound copy of a book is
+typically much nicer to use than a cobbled-together one -- there is nothing to
+/stop/ people from making their own copies, but if they care about the
+quality, they will likely be interested in a published version.  They could,
+legally, go out and publish /their own/ version with hard covers and nice
+picture printing and so on, but culturally speaking most people aren't
+interested in doing that, or would at least be willing to give some of any
+proceeds back to the site.
+
+I'm more concerned about the membership and charity issues.  If PM users don't
+have money, and people with money aren't PM users, who is going to identify and
+solidify the interest that "the people who have money" might have in providing 
+a resource for "some other group of people"?  Public schools, public TV, public
+radio, and public libraries are all are examples of resources that have found
+relatively satisfactory answers to similar questions -- and the answer they have
+all come up with is "the government" (often in combination with other answers,
+like bake sales, membership, and community sponsors -- all often very
+important).
+
+But an even bigger question is: /assuming that we did generate revenue with
+products and services like these, where would we spend the money?/  Things to
+think about.
+
+* Can book sales make us money?
+
+When it comes to printing the thing yourself, I would argue that, if the price
+is not too high, making a printed copy vs. buying one is not economically
+feasible for the simple reason that, when it comes to mass reproduction,
+printers and copying machines are far more expensive than printing presses.  Let
+us look an example such as a GNU manual.  On the one hand, one can purchase a
+new manual for $12.50.  To produce one oneself would cost something like 5 cents
+a page.  Since the book is 528 pages long, this ammounts to $26.40 and that does
+not include the cost of binding.  Of course, it would cost even more to produce
+a version with nice printed covers and glossy pages and what not.  As for the
+departmental printer, in that case somebody else is paying the 5 cents per page.
+One could also steal a printed copy out of the library assuming one doesn't get
+caught.
+
+However, this does suggest to me another potential issue.  Suppose our book
+becomes popular and a different publisher decides to get in on the action,
+downloads a copy of our book on the website, sells it at a lower price than we
+can afford (and of course gives us none of the profits) thereby undercuts our
+sales or even puttting us out of business.  There is little we could do about
+this situation except make faces since we waived our right to control who gets
+to reproduce the book.  As I understand it, copyright law was originally
+intended to regulate the publishing industry and prevent such abuses.
+Therefore, I wounder if it might not be a good idea to add a clause in the
+license to the effect that mass reproduction on printed (as opposed to
+electornic) media involving more than 1000 copies requires the permission of
+Planet Math, Ltd.  This way, the student who wants to print the book on the
+department printer would have our (if not the university's) permission and
+blessing to do so, as would the math club if they felt inclined to make 30
+copies to distribute among their membership, but a commercial printing house
+would still have to ask us first.
+
+My answer to the dilemma about fundraising (PM users don't have money, and
+people with money aren't PM users) is that we actively need to work at making PM
+appealing to a larger class of people and bringing PM closer to the mathematical
+mainstream.  As I see it, this is going to take a lot of effort from all the
+members of Planet Math.  A starting point might be things like us citing Planet
+Math entries in our bibliographies so that it gradually gets recognzed as an
+"officially acceptable" source of information.  That alone is nowhere near
+enough, but I think that, if we put our heads together (as opposed to clashing
+them into each other) I believe we could come out with some innovative ideas.
+
+I suppose that the question of where to spend the money will depend to a certain
+degree on how much money there is to spend.  If we are talking about, a few
+thousand dollars or less, it is pretty clear where the money will go.  An order
+of magnitude higher and we're talking about hiring people to do programming,
+secreterial work, and what not.  Yet another order of magnitude is hard to
+imagine now but if, beyond our wildest dreams, the Free Encyclopaedia becomes a
+bestseller and no math library would be complete without one and we are rolling
+in dough with an annual income of millions, here is what I would suggest.  In
+recognition of the people who made Planet Math what it is, we could offer
+scholarships for math students and research grants for which only recent
+graduates would be eligible. --[[file:rspuzio.org][rspuzio]] 26 February 2005
+
+**  Cover texts
+
+Well of course we couldn't add things to the license even if we wanted to.  But
+I wouldn't want to change things even if we could -- the fact that anyone can
+publish this work is one of the key /freedoms/ that the FDL guarantees.
+Whether they want to give kick-backs to the site or original authors or not is
+up to the publisher.  That is one of the joys of free software business!
+
+More explicitly, one of the key points of the free software business model is
+that contributions should be voluntary.  If we're producing the lowest-cost FEM
+around and people want to buy the FEM, then they will buy it from us, no
+questions asked.  If someone else has a cheaper FEM because they've bound it
+more cheaply or because they don't put any of the proceeds back into the PM
+site, then the consumer is faced with a question.
+
+Now, the FDL /does/ allow for something much like what you are talking about
+with your 1000 copies, but actually the number they choose is 100.
+
+: /If you publish printed copies of the Document numbering more than 100, and
+the Document's license notice requires Cover Texts, you must enclose the copies
+in covers that carry, clearly and legibly, all these Cover Texts: Front-Cover
+Texts on the front cover, and Back-Cover Texts on the back cover./
+
+We could choose a font-cover text that encourages the buyer or seller to donate
+to PM: we would have to think about exactly how to word this.  But forcing
+people to ask permission is not something we can do.
+
+Now, there's one other thing I want to talk about, and that's where the money
+goes based on how much -- if the answer is 2 thousand dollars, then probably it
+should go to repay Aaron's loan.  If it is say 5 thousand dollars, then we're
+left with a predicament.  In terms of hiring people to do programming and
+secretarial work, I'm pro that, however we should make some /Plans/ (see the
+appropriate section of the [[file:PlanetMath Budget and Resources.org][PlanetMath Budget and Resources]] page) detailing
+where the money would go.  I like the idea about scholarships and research
+grants, though in a pre-millions phase, I think they would mostly reduce to
+"contracts" -- which I would be totally down with.  --[[file:jcorneli.org][jcorneli]] Sat Feb 26
+22:03:43 2005 UTC
+
+In this case, I seriously think we need to think about coming up with some front
+and back cover texts.  Even if we can't (and shouldn't even try to, as you
+argue) try to legally prevent someone from taking advantage of the Free
+Encyclopaedia, I think it would be alright to make people who do so look like
+irresponsible jerks.  For example, the cover text could point out that profits
+from sales of the book through publishers who agree to give us a portion of the
+proceeds form a source of the revenue that makes it possible for Planet Math
+Ltd. to provide mathematical knowledge available free of charge to the
+mathematical community by means of the website and the book.  Therefore, trying
+to save some money in the short run by not donating to Planet Math either
+directly or indirectly (by buying from a publisher who give us a portion of
+sales) is a short-sighted way of starving the goose that lays the golden eggs
+--- while we believe in free distribution of information, the fact of the matter
+is that if people distribute the Free Encyclopedia without giving at least
+something back to Planet Math, we will be left with no viable alternatives but
+to shut down our operations or charge for our work.  Put another way, we believe
+in freedom but freedom comes with reponsibilites.  I guess I'm now beginning to
+sound a bit like you did last week with respect to indignation towards people
+who benefit from Planet Math but do not think of supporting this resource :)
+--[[file:rspuzio.org][rspuzio]] 26 February 2005
+
+----
+Back to [[file:thoughts on the viability of free-software style business.org][thoughts on the viability of free-software style business]].

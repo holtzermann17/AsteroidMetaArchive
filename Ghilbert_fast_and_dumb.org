@@ -1,0 +1,92 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the things I've been musing over is the nature of the "fast and dumb" theorem prover for [[file:Ghilbert.org][Ghilbert]]. In this Wiki page, I'd like to discuss three things: the basics of implementing such a prover, how I think it's particularly useful in fostering communication between humans working toward a proof goal, and how the dumb prover might gradually become smarter over time.
+
+**  The search space of a proof in progress
+
+In this section, I briefly describe how to represent the proof goals and partial proof results, so that the fast and dumb prover can effectively search the space of proofs, ever expanding the frontier in the hope of reaching a complete proof for the theorem at hand.
+
+We start with the hypotheses and the conclusion to be proved, and of course of the library of statements (theorems and axioms) imported from other interfaces. The goal is a Ghilbert proof, which can be thought of either as a sequence or a tree of proof steps, 
+
+For the purpose of this solver, the "mandatory hypotheses" could perhaps be elided. As in the Metamath Solitaire applet, it's possible to omit them from the proof and reconstruct them, if necessary, with unification on the intermediate expressions arising in the proof tree. The great beauty of this approach is that these systems are all "finitely axiomatizable," meaning that, in principle, one could just step through all possible sequences of proof steps, and, if a proof exists, be guaranteed to eventually (perhaps some time around the heat death of the universe) be guaranteed to stumble across one that proves the goal.
+
+Let us color code the intermediate terms. Green means that the term follows from the axioms hypotheses (i.e. a proof for the term exists). Orange means that, if a proof were obtained for the term, then the goal is also proved. All other intermediate terms are gray. Initially, the hypotheses are green and the goal is orange. As the proof proceeds, the frontiers expand, with forward steps increasing the number of green terms, and backward steps increasing the number of orange terms. When green and orange meet, the proof is complete.
+
+Proof steps with exactly one hypothesis are particularly simple, so we'll consider those first. Starting from a green term, if that term matches the hypothesis of a proof step, then the conclusion of the proof step can also be marked green. For example, if "ph /\ ps -> ch" is green, then, using ancoms, "ps /\ ph -> ch" is also marked green.
+
+For proof steps with one hypothesis, backwards steps are entirely analogous. If an orange term matches the
+conclusion of a proof step, then the hypothesis can also be marked orange.
+
+There is one special case of a backwards step with more than one hypothesis that is almost as simple. If an orange term matches the conclusion, and all hypotheses other than one are green, then the remaining hypothesis can be marked orange.
+
+Forward steps with more than one hypothesis are not especially difficult conceptually. The problem comes from doing a fast search for n-tuples of green terms that match. This problem is not entirely unlike doing a SELECT in SQL databases, and I think similar techniques may be effective.
+
+Of course, the reason why all this is difficult is the huge branching factor of the search tree. Initially, this type of prover can only be expected to succeed in finding very short proofs.
+
+**  A reasonably simple but powerful prover
+
+In reading the papers on Waldmeister and other first-order provers, it's clear to me that one of the
+biggest challenges is managing the amount of memory. Waldmeister mostly works forward (i.e. green terms)
+from the given hypotheses, and much of its success comes from a clever trie representation of the _set_
+of green terms, rather than, say, a list of s-expressions.
+
+Yet, the process of scanning through all valid sequences of proof steps uses almost no memory whatsoever.
+The downside is that the prover will repeatedly consider the same substring of proof over and over again,
+then forgetting it. It's obvious that this wastes lots of work.
+
+Thus, I've come up with a compromise which is reasonably simple and, I think, considerably more efficient
+than either a pure forward or pure backward search strategy. It consists of two stages. The first stage
+consumes a lot of RAM, then terminates when a limit is reached. The second enumerates strings of proof
+steps much like the naive search strategy, and need not use significant RAM.
+
+In more detail, the first stage just repeatedly generates more green terms, working forward from the
+hypotheses. On an ordinary computer today, it's reasonable to expect memory capable of holding 10^8 terms
+or so. If the branching factor is approximately 100, then it's realistic to expect, say, most terms that
+can be proved with up to four proof steps.
+
+The second stage is basically a lexicographical enumeration of strings of proof steps, running backwards from
+the goal. At each stage, there is essentially a "reverse proof stack". To try a proof step, match the
+conclusion of the step with the top of this proof stack. If no match, then that branch of the search tree
+can be immediately culled. Then, push all non-green hypotheses onto the proof stack.
+
+Note that if the proof stack contains exactly one term, then that term is orange. Note also that if all
+hypotheses for trying a proof step are green, then the conclusion is also green, and can be added to the
+green pool. However, it's not clear to me that green terms resulting from this process will be more valuable
+than the ones resulting from the forward stage, so they may simply not be worth the memory to store them.
+
+Also note that some additional culling may be possible based on pushing terms onto the proof stack that
+have already been seen. That will eliminate valid but unhelpful sequences such as "ancoms ancoms".
+
+Using similar logic as for the first stage, if the branching factor is approximately 100, then in the space
+of a few seconds, this second stage should be able to search all strings up to around four proof steps.
+Thus, in combination with the first stage, if a proof of up to eight steps exists, it should be able to
+find it. By letting it run for hours or days, or with massive parallelism, or both, the size of proof
+attainable grows modestly.
+
+**  Cooperation between human and computer
+
+The general scheme mentioned above extends to collaboration between machine and human. This
+can be thought of fancifully as "cyborg proving."
+
+The interaction is simple. The user proposes a term which is hopefully both a simpler proof goal than the
+ultimate goal, and is also useful in proving that goal. The fast and dumb prover then tries to prove this
+new goal (note that the pool of green terms from the first stage can be reused). If and when it finds a
+proof, it (asynchronously) colors the term green on the screen. More importantly, it reruns the first stage
+(forward steps from green terms) giving significant priority to the user-suggested term.
+
+I'm also thinking that the user might be able to suggest a likely proof step. Intermediate terms resulting
+from applications of this proof step (both forward and backward) would be given priority as well.
+
+**  Cooperation between humans
+
+One intriguing and exciting direction for this scheme would bring the theorem proving process squarely
+into the Internet age. While a theorem is in the process of being proved, the pool of terms of all three
+colors, green, orange, and gray, is a shared resource attached to the theorem. Proposing a new term, or
+upgrading the color of an existing term, are events that would be published to all subscribers. The latter
+event would also be accompanied by the proof fragment.
+
+My gut feeling is that participating in this kind of online proving process would be fun and rewarding.
+Thus, I think this idea is worth implementing.
+
+: Linked from [[file:Ghilbert automation.org][Ghilbert automation]]

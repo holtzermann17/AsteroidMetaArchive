@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* (substitute-helper placeholder value text)
+
+ *Input:* an non-nil atom /placeholder/, s-expressions /value/ and /text/
+
+ *Output:* an s-expression
+
+ *Description:* This is meant as a helper function for substitute-assignment.  It substitutes /value/ for all occurrences of /placeholder/ in /text/.
+
+ *Dependencies:* none
+
+ *Listing:*
+
+ (defun substitute-helper (placeholder value text)
+   (cond ((null text) nil)
+         ((equal text placeholder) value)
+         ((atom text) text)
+         (t (cons (substitute-helper placeholder value (car text))
+		  (substitute-helper placeholder value (cdr text))))))
+
+ *Discussion:* If /text/ is empty, there is nothing to substitute.  If /text/ is an atom, we have two possibilities.  If it equals the placeholder, the we need to replace it with the value.  If it is any other sort of atom, we leave it alone.  Finally, if we have a non-nil list, we call ourselves recursively to make the same substitutions on both the /car/ and /cdr/ of that atom.
+
+ *Examples:*
+
+ ; (substitute-helper 'a nil nil)
+ ; => nil
+
+ ; (substitute-helper 'a nil '(a b c))
+ ; (nil b c)
+
+ ; (substitute-helper 'a 'b 'c)
+ ; => c
+
+ ; (substitute-helper 'a '(a a) '(a a))
+ ; => ((a a) (a a))
+
+ ; (substitute-helper 'a 'b '(a b))
+ ; (b b)
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

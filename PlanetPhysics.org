@@ -1,0 +1,29 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is PlanetPhysics?
+
+PlanetPhysics is the second [[file:Noösphere.org][Noösphere]]-based digital library project; it is
+currently in early stages of development. It is accessible at the URL
+http://planetphysics.org/.  
+
+We need some help testing functionality.  It would be great to have some PM
+veterans give it a go.  The most recent issue is a difficult to reproduce problem when an entry is edited and rerendered.  Some how images are not updated and old equations show up.  I've had to delete an entry and resubmit it to fix it.  This is not desirable, but not sure why it is happening.
+
+* PlanetPhysics Internal Projects
+ * [[file:Newton's Laws.org][Newton's Laws]]
+
+* Quick Links
+ * [[file:PlanetPhysics tasks.org][PlanetPhysics tasks]]
+ * [[file:PlanetPhysics bugs.org][PlanetPhysics bugs]]
+ * [[file:PlanetPhysics feature requests.org][PlanetPhysics feature requests]]
+ * [[file:early-bird content for PlanetPhysics.org][early-bird content for PlanetPhysics]]
+ * [[file:PlanetPhysics Sandbox.org][PlanetPhysics Sandbox]]
+* Discussion
+
+Cool.  I wish I knew something about physics; maybe [[file:rspuzio.org][rspuzio]] will have some
+contributions.  I'll also tell a couple of physics friends of mine about the
+site.  --[[file:jcorneli.org][jcorneli]] Sun Aug 14 18:00:16 2005 UTC
+
+----
+[[file:Projects.org][Projects]]

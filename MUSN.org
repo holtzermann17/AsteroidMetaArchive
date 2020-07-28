@@ -1,0 +1,383 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A Multi-User Semantic Network (or MUSN, for short) is one reasonably
+short-term objective in the [[file:Arxana.org][Arxana]] branch of the [[file:HDM.org][HDM]] project.
+This page will give more details on this effort.
+
+* What is a MUSN?
+
+A MUSN is a semantic network that can be modified by many users.
+
+* What is a semantic network? (optional)
+
+A semantic network is a set of /links/ and /nodes/, where both the
+links and nodes are labeled.  If you like graphs, you can think in
+terms of /edges/ and /vertices/.  (It is possible to define
+semantic networks where the "links" and "nodes" aren't easily
+interpretable as edges and vertices, but this generalization is not
+necessary to understand the basic definition.  See
+[[file:Arxana's_linking_model.org][Arxana's_linking_model]] for more information on links and nodes.)
+
+The network is "semantic" because it can be interpreted using its
+labels and interconnection.  For example, if /A/ and /B/ are nodes
+in the network, and /foo/ is an link from /A/ to /B/, then
+someone looking at the network can deduce the relation /A foo B/.
+With large networks and a deep understanding of the relationships
+between elements, the variety of inferences you can make about network
+contents is limited only by your imagination.
+
+Thus, a semantic network is a very versatile way to store data on a
+computer.  In particular, you can also store programs on nodes or
+links, or give certain kinds of network elements specific machine-code
+interpretations, and the class of such networks readily becomes a
+fully general computational model.
+
+* Why should we be interested in MUSNs?
+
+There are plenty of online collaborative systems, but virtually none
+of them are particularly good at storing fully general
+semantically-charged information.
+
+ * The Web, for example, is a great place to store all kinds of
+  information, but its contents are not usually related with clear
+  semantics.
+
+ * Same problem with Wikipedia and things like this.  Not that the
+  contents are not related by the implicit semantics of language, but
+  we can do way better.  (Incidentally, simple mechanisms like
+  "tagging" probably help, but they don't offer power of full-on
+  inference described above.)
+
+ * Online games are fun for a lot of people, but they don't typically
+  deal with very general kinds of information.  However, they'd likely
+  be even more fun if they did.
+
+ * Collaboratively-written computer programs are, in effect, simple
+  MUSNs -- but their nature as such is not very well exposed to the
+  world, and it tends to be more difficult to insert (or find)
+  commentary, tweaks, patches or add-ons than one might like.
+
+In sort, MUSNs are about exposing the semantics inherent in the world
+we live in.
+
+* What are the prospects for MUSNs?
+
+Great!  Semantic networks are very easy to build, and multi-user
+systems have been online for decades.  It seems to be high time to put
+these two ideas together.
+
+Indeed, the only question at this point is not "whether", but "how".
+There are many paths to the truth -- let's not spend a lifetime
+choosing between them -- but let's spend a little while looking at our
+options.
+
+ 1. We could use a system like GNU Arch to maintain a distributed
+  network of files that contain the information in the network.
+
+ 1. We could use a read/write database system to maintain shared lists
+  of nodes and links.
+
+ 1. We could use a programming language environment that supports
+  multiple user connections.
+
+Any or all of these would work, and each would provide a somewhat
+different user experience.
+
+* Where do we go from here?
+
+Without going too much into detail about why right now, I think option
+3 looks especially fun and reasonably do-able.  In particular, take a
+look at the docs on how CMUCL can operate as a lisp server, and the
+application qcmu linked from 
+[http://www.cons.org/cmucl/doc/lispserver.html this page].
+
+It would be great to get into more detail about why this looks like a
+good choice, but one way to investigate how good it really is is to
+try it.  If it works, then we'll have a brand new MUSN to use as we
+explore our subsequent options!
+
+* Epilogue: And what then?
+
+After we have some sort of MUSN set up, I would like to use it to run
+a simple wiki-based version of the [[file:scholium system.org][scholium system]].  E.g. this
+would be helpful in integrating the different sections of future versions of
+the [[file:Schedule.org][Schedule]] into one document, while keeping track of changes to
+each separately.  I expect that fairly soon after we have some such deployment
+together with a test application like this, we will be able to begin serious
+work reimplementing [[file:Noosphere.org][Noosphere]] in a collaborative-literate programming
+fashion.  If that isn't enough, write in with your own ideas :)!
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Progress Reports
+
+** April 30, 2007
+
+I am now using the [http://common-lisp.net/project/elephant/ Elephant]
+Lisp/!BerkeleyDB database.  My wrapper for this database is posted in
+the Monster Mountain (MMTN) ./contrib directory; please take a look!
+(This code relies on the .9RC1 version of Elephant, or later).  Nick
+Thomas has given some work-space to the project on his personal
+server, and a public (and persistent!) version of what we have should
+be online soon, although there are both minor and major improvements
+to be made still.  A shared "universal" network won't be available
+until approximately the end of this summer, until we figure out how to
+set this up securely.  (Tom's will be working on this, among other
+things, with support from Google Summer of Code this summer.)  In the
+mean time anyone is free to set up their own local MUSN and try it
+out, and of course feel free to help with development.  I want to get
+a non-vague description of the current development issues posted soon;
+I see among them: (1) a SLIME frontend to MMTN; (2) an [[file:Arxana.org][Arxana]]
+interface to that; (3) additional work to handle the case of massively
+large data collections; (4) continued work on process control.  I will
+be meeting with Elephant's maintainer Ian Eslick soon, and will
+hopefully get help with some of my technical questions then.  Our
+development work should ramp up considerably as the school year ends
+and Summer of Code gets rolling. --[[file:jcorneli.org][jcorneli]]
+
+** March 12, 2007
+
+I've been using the Monster Mountain [http://code.google.com/p/mmtn/ codebase].
+Monster Mountain's chief developer Nick Thomas was nice enough to give me commit access
+to the project, and a bunch of advice that helped me get started; and I'm
+starting to add things to the repository.  A local friend, Tom Lenius, has
+been helping me with the database backend.  For now, we're using postgresql.
+Note our database is comprised only of a couple of tables -- a data storage
+layer that the semantic network inhabits. Actual data management and process
+control, etc., still needs to be implemented.  I expect most of this will be
+done in the semantic net itself without being reflected in further structure
+in the database.  (However, fans of databases, do not despair, we'll keep
+thinking about them!)  It seems quite likely that I will have a version of
+the MUSN available for "trusted users" within the week.  Stay tuned! --[[file:jcorneli.org][jcorneli]]
+
+* Discussion/Free for all
+
+Note, a good earlier discussion of how to do this in LISP took place
+[http://groups.google.com/group/comp.lang.lisp/browse_thread/thread/b06dfaf44f03f97/ddf5bfd8ceb9c16e?lnk=st&q=joe+corneli+lisp&rnum=8&hl=en#ddf5bfd8ceb9c16e here].
+I did some [http://common-lisp.net/pipermail/slime-devel/2006-June/005033.html follow-up with the SLIME idea], but nothing much came of that.  Much earlier,
+there was a formal discussion of [http://www.lisp.org/mop/concepts.html#introduction  how to define objects] in LISP, which I mention here because object oriented
+programming and semantic network programming have some things in common.
+
+--[[file:jcorneli.org][jcorneli]] Feb 15, 2007
+
+I think you might want to consider a combination of 2 and 3.
+
+In the typical, real world situation a DBMS is used to provide scalability
+and various services for multiple users in a real-time environment. 
+It is possible to code your own database services, and all that implies,
+but that is labor intensive and potentially error prone. The benefits
+of a modern DBMS are significant. I have coded applications
+using a variety of access methods and databases, almost too many
+to recall now...there is not much joy in reinventing the
+wheel. Let a real DBMS do the work of guaranteeing the data integrity,
+backup, backout, recovery, locking, splicing, merging, joining, etc.
+
+
+Joe, here is some information you may find useful.
+
+1. The Semantic Media Wiki is a MUSN, as I understand your
+terminology. It may not have every feature you are interested
+in, but it makes sense to examine the design and underlying
+source code -- and to play with an implementation of it at
+
+http://mathweb.org/wiki/index.php/Main_Page
+
+2. It is easy to build a relational database with extensive
+features and not write any application code, just SQL (Structured
+Query Language, which is an ANSI standard.) I use such a system
+at home every day (I eat my own dog food :-) Object-oriented 
+extensions to these databases are common, though I am not 
+up to date on the field of OO-RDBMSes. 
+
+The easiest, best way to learn about RDBMSes is to obtain a
+student copy of Microsoft Access. There may be easier to use
+systems with the same power, but I have never seen one. It
+is *way* easier to use than MySQL...WAY, way, way. You install
+it and begin defining your tables, data elements, keys, relations,
+views and queries. Access allows you to define queries in ANSI
+format, as well as by click and point, and to convert between
+the two, which is very helpful to a novice. Access also provides
+Views, which generate "logical" tables that can be accessed
+system-wide by other queries and can be treated as subroutines,
+thus allowing reuse and data hiding. 
+
+The other helpful aspect of using Access or some similar system
+even if you plan to implement your code another way is that
+you can model your design and test your ideas without writing
+any code. It is best to model using pencil and paper first,
+but once you sketch a rough design you can work out the finer
+points in Access very quickly. 
+
+Semantic relationships are easy to model in a relational database.
+Look at this:
+
+http://en.wikipedia.org/wiki/Fourth_normal_form
+
+Your idea of generalized "relation" links is easily handled
+in a RDBMS. What makes your approach different than the standard
+usage is that sets of related database tables typically have
+fixed relations that are encoded using Foreign Keys. Your approach,
+as I understand it is to store as data the key of the relationship
+type itself. And this is exactly the difference between the
+now standard database technology and XML (and variants), wherein
+XML data elements each carry a name tag identifying the type of
+data element; this provides flexibility to XML for addition of
+new data elements and makes an XML document self-defining (assuming
+you know what the name tags mean.)
+
+Anyway, for your relational links we could create a table called
+"ObjectRelations":
+
+     
+     Entity1Key
+     ObjectRelationKey
+     Entity2Key
+     
+
+
+(For housekeeping one might want to add an auto-generated sequence
+number and an update date/timestamp.)
+
+Then we can add table entries such as "Joe childof Larry" and
+"Larry childof Doug", etc. 
+
+To find Joe's parents we could write the SQL command:
+
+     
+     Select Entity2Key 
+     From ObjectRelations     
+     Where Entity1Key = "Joe"
+       and ObjectRelationKey = "childof";
+      
+
+It is possible to nest the Select commands, or to
+join the ObjectRelations table to itself to find
+Joe's grandparents. Or the query above could be
+used to define a View which could then be queried.
+
+Note that the two-way linking aspect of your requirements
+is satisfied by the ObjectRelations table because it is
+possible to do the inverse query and obtain the list of
+Larry's children. 
+
+Furthermore, a SubjectRelations table could be created
+to hold the ObjectRelationKey items. Each table entry
+could hold hold information about the type of relation,
+such as whether it is commutative, transitive, etc. 
+Using the SubjectRelations table (and built-in referential
+integrity checking) we could then modify the above query
+to handle synonyms and related terms (i.e. sonof, childof,
+sibling, parentof, cousin, etc.) 
+
+The only problem with this is that, because the ObjectRelations
+table allows Many-to-Many relationships to be defined, the
+user may create "cycles" of relationships, and that might or
+not be allowed in your system. For example, the user could
+enter data showing that Lazarus Long is his own father...
+and it is at this point that custom application code may come
+in handy...
+
+Now, what the RDBMS gives you, among other things, is
+concurrency locking, referential integrity checking, 
+commit and rollback. For example, if "Joe" changes his name
+in the database to "Joseph", a single SQL command can update
+every occurrence of "Joe" in the database, and the RDBMS
+will "lock" the related information to prevent other users
+from inconsistent updates and queries -- plus, if the key
+is a duplicate (in error), and part of the update fails,
+the RDBMS rolls back the partial update leaving the database
+in its prior, consistent state. 
+
+So all of that is "free" in a DBMS, and the industrial
+strength systems like DB2 even provide distributed database
+support, allowing data to be accessed from many databases
+in different physical locations. 
+
+The other thing you get with a DBMS is application independence
+from the underlying implementation. A goal of software development
+is to facilitate future enhancements and modifications. In the
+event that your database needs "tuning" for efficiency, or if
+it needs modifications, with proper design your existing programs
+will not need modification. Contrast this to the situation where
+you have coded hash tables and internal pointers and then you
+find out that the system is too slow -- or worse, looping...
+
+To implement your MUSN, the above ObjectRelations table could
+be used to hold, redundantly, the links contained in external
+documents, such as HTML pages. The Entity1Key and Entity2Key
+fields could be URI's (as could ObjectRelationKey for that matter,
+which makes this similar to the Semantic Web.) 
+
+To learn more about this essential topic in Computer Science, and
+how to design databases you would need to spend some time. I
+recommend C.J. Date's book, though it is a bit /dated/. And read
+up on 1st, 2nd, 3rd and 4th Normal forms as well as Entity Relationship
+Analysis. All of this will be helpful regardless of the technology
+you use. You will find that relational database technology is
+theoretically grounded in set theory and that SQL is based on
+predicate and propositional logic. It is all well founded, sound
+and robust. 
+
+P.S. You may have noticed that /doing/ specific projects and learning
+new technologies requires a stupendous amount of time, and that
+experience may have caused you to wonder... Be assured that this
+is common. Each of these bits of technology is deep and mastery
+requires a lot of work. But once you have achieved a certain degree
+of mastery and fluency in something you will be able to reuse that
+skill in other areas. It is almost always the case that projects begin
+slowly and haltingly, making wrong turns too -- unless nothing
+new is being invented. To "master" a new language may require
+years even! This is the Way. So the fact that some person says
+"xyz is trivial" should not be taken the wrong way by the novice,
+any more than I would expect to intuitively comprehend what
+Bob Solovay regards as trivial. 
+ 
+--[[file:ocat.org][ocat]]
+ 
+My simple response to this informative posting is as follows:
+first, I want something that can be interacted with programmatically,
+so anything that describes itself as a "wiki" is probably not going
+to satisfy me; second, everything you say about database systems sounds
+great, but for the time being, I'm concerned with a "middle-ware" layer,
+something that users interact with and that pulls information from some
+info-store.  The actual structure of the info store isn't a particular
+concern right now; but certainly, it will be later.  So I'll think more
+about database systems then.
+
+(One question is: why a middleware at this point?  Simple, because I want
+people to be able to write and program in Lisp, and have this work.  So
+there needs to be a Lisp interpreter somewhere in the middle of the pathway
+between info-store and user.)
+
+-jcorneli
+
+A common interface "middleware" for access to databases is called ODBC. You can
+run a database server and connect via TCP-IP -- local or remote --
+and call ODBC from the language of your preference. I see two LISP-ODBC
+interface systems via google:
+
+http://clsql.b9.com/
+http://common-lisp.net/project/plain-odbc/
+
+--ocat
+
+I still (well, this is obvious isn't it!)
+want access to a Lisp somewhere.  It's true that that could be done on
+the client side completely, with the only shared space being the database
+itself.  However, it seems a bit more exciting to me to think about what
+happens if several people actually had the same Lisp environment.  But
+this is an "aesthetic" choice, and it might turn out to be a kind of
+crummy one; I don't know yet.  The subtle distinctions are too hard for
+me to think about right now.  As it stands, my notion of a shared Lisp
+server in the "middle" is entirely compatible with something like this LISP-ODBC
+interface being positioned towards the back end of the middle :).  For the time
+being, I'm most interested by the idea of getting a suitably shared Lisp environment
+put together.  That's already an MUSN in a reasonable sense of the word.  Subsequent
+hacking on the back-end and rear-middle end of the platform (as well as on the
+front end of course) ought to make the thing more fun and interesting.
+But I am entirely willing to think more about a MUSN that doesn't have Lisp
+in its middle at all -- but I'll probably think mainly about the other idea
+at least for a little while first.
+
+--[[file:jcorneli.org][jcorneli]]

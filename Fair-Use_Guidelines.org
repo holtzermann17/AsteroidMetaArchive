@@ -1,0 +1,272 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Good morning class!
+
+/Good morning, teacher!/
+
+(Teacher takes off clothes.)
+
+Today we are going to learn about Human Anatomy.
+
+(Class is visibly shocked.)
+
+Just kidding - its Fair-Use Guidelines time!
+
+(Class is still visibly shocked, and now also hopelessly confused...)
+
+
+* The Naked Truth about Fair Use in Mathematics
+
+This is a first draft, and the principles on which I base this draft are as follows.
+
+ * Fair use is what respectable people usually do.
+ * No one except "copyright puritans" will object to the liberties provided by fair use.
+ * No one except "copyright terrorists" will object to the limitations imposed by fair use.
+
+I use these terms (as much as possible) without judgement.
+
+Let us now gather some evidence.
+
+ * Respectable people rewrite known things in similar ways.  How many
+calculus books are there on the market? (Checks Amazon.) 175896.  'Nuf
+said, presumably.
+
+ * But, let's note, that ones ability to rewrite things is limited by
+the complexity of the things being rewritten and the expressiveness of
+the language in which those things are being expressed.  For example,
+one can only write 2 as a sum one way in natural numbers (/1+1=2/)
+but one can write it as a sum in an infinite number of ways in
+integers.  The point being, to write a given definition in
+comprehensible, elementary, English, one hasn't a whole lot of
+options.  There may a great many possible wordings that would be
+understood, but they must all express the same formal definition, and
+they typically be fairly close to one another in general flavor, too.
+While it is probably possible in some cases to come up with
+understandable and /outlandish/ definitions that are formally
+equivalent but otherwise very unlike the "standard" ones, this is
+typically /not/ what respectable people do.
+
+ * The number of times a given mathematical idea has been re-expressed
+(e.g. 175896) is actually irrelevant; thus adding multiple references
+to expressions of a given idea won't help your case, ever.  This may
+seem surprising from a "copyright puritan's" standpoint, but from a
+fair use standpoint, it makes perfect sense.  Out of these 175896
+works, one had to be first, and the second one had to be second.
+Ideas are not copyrighted.  'Nuf said, presumably.
+
+ * "Copyright terrorists" redistribute physically equivalent (to within
+some epsilon) re-expressions of copyrighted works.  This is different
+from redistributing /semantically equivalent/ versions of formal
+ideas.  If you were to redistribute "somewhat semantically equivalent" (but still
+not physically equivalent) versions of some story or other "creative"
+work, there might also be trouble; simulation is the most "gray" area out there.  (Compare the
+[[file:Ideas and Expression|mother of the Matrix.org][Ideas and Expression|mother of the Matrix]] case; contrast
+[http://www.theraider.net/films/raiders_adaptation/index.php Raiders: the Adaptation].)
+Luckily, respectable people do not consider formal ideas to be "creative".
+
+We now sum up and conclude.
+
+ * Math is different from other areas of human inquiry.
+ * Any published mathematics is considered to be "public knowledge" (which is
+why it doesn't matter how much penetration the given idea has within the literature;
+one copy is as good as 175896 copies).
+ * Respectable people make semantically equivalent copies of mathematical works all the time;
+it is essentially a necessary part of learning and doing mathematics.
+
+THUS, the claim is: if you can express a mathematical statement in
+your own words and write this down, you can distribute what you wrote.
+If you were to do this with many statements from the same book (a
+"shot-by-shot remake"), you'd be entering the gray area of simulation.
+However, the fact that some set of statements or definitions appear in
+some book does not mean that you can't write this set down; you're
+covering your bases if you make it part of some other semantic thrust,
+however (the "Counterexamples" example).
+
+TAFN.
+
+* Discussion
+
+Hmmm... a combined strip joint and university . . . you might be onto
+something there . . . I can even think of a potential customer =) I
+suppose it would work well for math, too --- as Edna St. Vincent
+Millay said, "Euclid alone saw beauty bare."
+
+: And one of its texts would be 
+[http://www.amazon.com/exec/obidos/tg/detail/-/B0006U6KIK/qid=1130957293/sr=8-3/ref=pd_bbs_3/102-2273286-8251330?v=glance&s=dvd&n=507846
+Bikini Calculus]?  :)  The reviews are interesting... --[[file:norm.org][norm]]
+
+I would say that you've given a well-reasoned account of how the
+situation ought to be.  However, as we have seen all too often, there
+can be a large disconnect between theory and practise in this area
+(and not just this department of the law, as Aaron has been quick to
+point out on several occasions).  Here are some of the ways that
+practise doesn't accord with principle:
+
+As Lessig pointed out quite nicely in his presentation, it is often
+the case that the electronic analogue of what was perfectly
+permissible in the paper world may be forbidden or at least suspect.
+Thus, while no will bat an eyelash at you if you bang away the
+175897th calculus book on your typewriter and send it to a printer for
+publication, you might get some suspicious stares if you instead type
+it on your computer and post it to the web.  I suppose that a lot of
+this has to do with a pessimistic attitude towards the new
+technology. ("Oh no! The machines are taking over!" --- your OWIO
+essay adresses particular aspects of this.)  Rather than embrace the
+new technology's potential for universal access to knowledge and work
+to forge new institutions and create (or revive) cultural milleus
+conducive to the possibilities this technology has to offer, some
+people tend instead to dwell on the potential misuse of the new
+technology to circumvent the means by which authors collect
+compensation for their work under the current state of affairs.  What
+worries me the most about this situation is that what we are seeing
+here with copyright may turn out to be a tempest in a teapot compared
+to what is to come.  If the powers that be have such a hard time
+coming to terms with the internet and grasping the true magnitude of
+the issues created by the mere distribution of texts, surely they will
+be totally loss with artificial intelligence --- what would happen if
+a robot were to walk into the courthouse and demand, as an
+intelligent, rational being, equal justice under the law?
+
+While we agree that math differs from other areas of inquiry in
+significant ways, all areas of inquiry are subject to the same
+copyright regulations.  To be sure, reasonable judges recognize the
+differences and take the nature of the subject of a work into account
+when applying the law, but there is only so much leeway in
+interpretation.  One can definitely question the wisdom of this "one
+size fits all approach".  If, as the Constitution asserts, the end of
+copyright is to promote progress in the sciences and the useful arts,
+then one may need to consider the possibility that different arts and
+sciences may be best promoted by different measures.  For instance,
+the RIAA asserts that longer copyright terms best promote their art
+whilst AMS pleads for shorter terms as more conducive to its science.
+Taking the statements of these organizations at face value, there is
+definitely a disparity here; so far, the resolution seems to have been
+that the more potically influential group (in this case the RIAA) gets
+what it asks for and everybody else has to live with this as best as
+they can.  To some extent, one can try to correct for this situation
+by having members of a certain artistic or scientific community to
+voluntarily agree to abide by a different set of rules --- this is
+part of what "free math", "free software", and "free culture"
+movements are attempting.
+
+While "Fair use is what respectable people usually do." sounds like a
+nice ideal, there are two problems.  First, there is the question of
+who is considered respectable?  Is it the free software hacker or the
+founder of a commercial software firm, is it a member of the staff of
+Planet Math or a member of the staff of Elsevier?  These people tend
+to do different things when it comes to copying but they all are
+respected in their respective social circles.  (Defining
+respectability as following the law begs the question here.)  Second,
+it is not hard to find cases in which uses which are widespread and
+considered as normal within a certain artistic or scientific
+discipline have been deemed as unfair use by the courts.  For
+instance, consider the Texaco case or the blurry televisions in the
+background.
+
+In conclusion, I would say that while it is good to present sane
+arguments from reasonable principles, it is also important to point
+out that, in the real world, principles are, as often as not, honoured
+in the breach and logic cedes to political expedience.  Given the
+extent to which the practise has diverged from principle, I think
+that, in offering fair-use guidelines to newbies, it is important to,
+at the same time, offer counterexamples showing how just about every
+guideline one could come up with has, at some time or another, been
+violated or interpreted in bizarre ways and how perfectly sound
+arguments don't always hold up in court.  While we don't want to make
+anyone paranoid or give the impression that guidelines are worthless,
+we don't want anyone lulled into false security, either.  As our
+experience checking Planet Math for copyright violations showed, the
+most common reason for copyright problems is that people trust to the
+common-sense interpretation without bothering (or even suspecting that
+it might be necessary) to find out if that is how the courts see the
+matter.  I would say that the right attitude here is neither fear nor
+obliviousness, but careful watchfulness.  Given the present state of
+affairs, perhaps, the best fair-use meta-guideline is "when in doubt,
+don't".  In non-obvious cases (as opposed to cases like when you've
+written something based on your own understanding without consulting
+sources, so there is no reason to worry about fair use for the reason
+that there is no use, fair or unfair, involved), if you've looked into
+the matter carefully and thoroughly and feel confident of your
+conclusions and/or spoken with an "expert observer" who is familiar
+with the latest verdicts and trends, then it is likely alright to go
+ahead and use a work without explicit permission.  Otherwise, it is
+better to hold off until you have researched the matter more
+thoroughly (or rewrite in your own words) lest you put yourself and
+everbody else involved in the project at risk.
+
+I wouldn't want to go away leaving the impression that I think what
+you wrote here is worthless --- on the contrary, I think it is a good
+illustration of a certain viewpoint.  There is definitely a notion of
+when one needs to give credit and when one can take credit in the
+scholarly community, what Aaron once called "a gentleman's copyright"
+in a conversation we had a few months back while we were writing our
+submissions for the Emory get-together.  I suppose that in an ideal
+Confucian society where the scholar is on top, the legal notion of
+"infringement" would correspond closely to the scholarly notion of
+"plagiarism".  However, we live in a society where the businessman,
+not the scholar, is boss, so it is no real surprise that the
+definition of fair use undergoes strange transformations
+incircumstances where profits are to be made and vested commercial
+interests are at stake.  However, there is no reason to be deterred
+(not that I consider you a particularly deterrable person) by the fact
+that your argument might not go far in the official court of law; you
+can always argue in the court of popular opinion instead.  If you make
+the case well, I think you easily will convince the jury to release
+mathematics from jail.  --[[file:rspuzio.org][rspuzio]]
+
+Respectable people, in this case, are the consumers and producers of
+mathematics and mathematical science.  Professors, researchers, grad
+students, undergrads, grade school kids, and even amateurs.  Probably
+in that order (gulp!).  
+
+In particular, we should recall that "the customer is always right."
+Except, of course, when the consumer is a copyright terrorist.  But we
+should also recall the fact that the writing and publishing of math
+books, articles, lectures, and reviews are not acts of copyright
+terrorism.
+
+The Texaco case you mention is plenty worrisome, at least in theory,
+but do remember that the specific kind of "fair use" we're talking
+about WRT !PlanetMath is quite different.  No copying from original
+sources is done.
+
+And while I think it is fine to think about this question "in
+general", we'll tend to come up with more counterexamples and things
+to worry about if we go that route.  I think that the main thing to
+remember for the discussion at hand is that /ideas are not subject
+to copyright, and that includes mathematical ideas./
+
+The reason that mathematics is "different" is that its trade in ideas
+is not subjective.  Unlike literature (or law), in math, once you've
+made your point, no one can argue with you.  Ideas are near the
+surface in mathematical writing, whereas in other kinds of writing,
+they often aren't.  This means that you can get to the
+non-copyrightable layer quickly in mathematics, and that re-expression
+of these ideas is therefore relatively easy, and also quite safe from
+a legal point of view.
+
+But you're right that logic can go out the window, so maybe what I'm
+saying here isn't as relevant as what I said before about "things
+respectable people do."  Now that I've more clearly identified who I'm
+talking about, I hope it is easier to see that posting things like
+what these people write or say elsewhere to PM isn't going to create
+much of a stir.  
+
+I don't think it is wise to give much credence to the anti-computer
+thinking that goes on out there.  If anti-computer thinking means that
+we're not to be allowed to do math CBPP along the lines of the PM or
+HDM models, then I think it should be rejected, even if that means
+breaking the law.  But more likely what it would mean is having a hand
+in shaping the law.  
+
+The guidelines are supposed to help people contribute more.  I think
+that what they really boil down to is "What you expect to be true
+here, is."  I myself think this statement to be true.  Again, this
+isn't just about reasoning from principles, but from experience.  But
+I want to capture this sentiment as explicitly as possible.
+
+I agree that we should look at specific cases (including the
+non-obvious ones), and try to be as precise about them as we can.  If
+we can establish that most cases are actually fairly obvious, then
+I'll be quite satisfied. --[[file:jcorneli.org][jcorneli]]

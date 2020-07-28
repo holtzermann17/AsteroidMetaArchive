@@ -1,0 +1,47 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+This is a fictitious project, i.e., it does not exist yet.  However, that hasn't
+stopped us [[file:Projects|before.org][Projects|before]] so I figure, why not go ahead and propose it.
+
+/PCCC/ stands for Programmers Commons/Co-op/Commune.  Here's the basic idea
+about how it would work.  To join the party, you must pay your /dues/.  Dues
+should be set on a sliding scale, based on your income (or calculated using some
+other less intuitive but universally-agreed-to-be-more-useful rubric).  Then you
+are allowed to /upload/ files to a certain space.  Files that have been
+uploaded are required to be licensed under the [[file:GPL.org][GPL]] (or some GPL-compatible
+free software license).  Projects that party members deem useful are then
+/certified/ as such.  You are then /paid/ some amount of money each month
+for each project you have uploaded, possibly equal to
+
+  ( number-certifications * payment-rate-for-certifications 
+   + number-downloads * payment-rate-for-downloads ) / money-in-PCCC-coffers
+
+Note that non-members can also /donate/ money to the PCCC, which increases the
+amount of money in the PCCC's coffers.  
+
+Rates of payment will be decided by using a (published) averaging system and
+each party member shall be given one vote, to be cast at a Monthly Meeting.
+
+The details of the averaging system, and all other algorithms used in the
+administration of the PCCC, will be decided by an Inner Party, and these
+algorithms will themselves be published under the GPL.
+
+*  Features of the system
+
+ * If no one certifies an uploaded project as useful people still get paid but
+only according to the number of downloads and the amount of money in the system.
+
+ * If no one becomes a member, no one gets paid, but the amount of money in the
+system can grow (according to the number and magnitude of contributions coming
+from outside the system).
+
+ * It is an example of a new and friendly form of communism ;).
+
+*  Discussion = 
+
+Is this the best idea ever or what? --[[file:jcorneli.org][jcorneli]] Tue Mar 22 20:08:05 2005 UTC
+
+----
+[[file:Projects.org][Projects]]

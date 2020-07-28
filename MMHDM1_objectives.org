@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A successful system need not deliver "Truth",
+but it must satisfy its users. A "bug" is whatever
+the users say it is. 
+
+Therefore the "system" must be extensible
+and flexible. It is preferable to allow the users
+to make changes and to modify the system, but
+someone, somewhere will be making changes.
+
+And for a system to be popular, control must be
+ceded to the users, even if they desire to do
+dumb things. 
+
+What the system must not do is to break the
+contract, and deliver bogus answers or lie to its
+users. Above all, the system must not anger or
+abuse its users by making them feel bad or by
+punishing them with unrecoverable errors after
+predictable mistakes.
+
+It is OK for a system to have a learning curve, but
+the initial steps up the Hill of Knowledge must
+provide immediate payback and be easy going.
+Everything from the very start must be explainable
+without too many words (there ought to be a law
+that every computer system come equipped with a AV-
+DVD of the software "engineers" explaining each jot
+and tittle of their work -- and maybe another
+"bloopers" DVD showing them explaining each bug and
+just what they were thinking about when they wrote
+those lines of code...)
+
+forward [[file:MMHDM1_design_issues.org][MMHDM1_design_issues]]

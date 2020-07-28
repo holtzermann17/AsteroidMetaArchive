@@ -1,0 +1,42 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+These are the talking points I dealt with in [[file:January 10 LispNYC Talk|my LispNYC talk.org][January 10 LispNYC Talk|my LispNYC talk]].
+The only one I feel very shakey on right now is the last
+one; explaining what [[file:arxana.org][arxana]] is in terms of math is
+easier than explaining what it is in terms of philosophy,
+technology, and magic.  But magic isn't very popular
+these days.  
+
+Note, there are presumably many connections of
+the points from this talk to things in [[file:The HDM Manifesto.org][The HDM Manifesto]].
+
+--[[file:jcorneli.org][jcorneli]]
+
+ * Make the computer into a mathematician.
+ * Ideas are free as in freedom.
+ * Information is only as available as it is easy to find.
+ * Knowledge is only as easy to obtain as it is to apply.
+ * Mathematics is mostly formal and contains metamathematics.
+ * Computers are designed for things like the HDM project!
+ * People provide intuition and multiple perspectives.
+ * Scholia are like K'nex for the mind.
+ * Meaning is a property of networks.
+ * Links stitch nodes together.
+ * Artificial intelligence and hypertext are two sides of one coin.
+ * Postmodern documents facilitate creative relationships.
+ * Evolution trumps canonicalism.
+ * Many perspectives, uses, and reuses, can function simultaneously.
+ * Consistency conditions are a social contract ("freedom's price").
+ * Documents are built out of atomic pieces (quintuplets).
+ * Metadata articles are owned by the system and maintain consistency.
+ * Masks are basic consistency maintainers.
+ * Version management can be done several different ways.
+ * Refactoring is a basic operation.
+ * Hcode: how do mathematicians write mathematics?
+ * Parsing: how do mathematicians communicate? (help wanted!)
+ * Proof checking: how do mathematicians prove things?
+ * Metasystems justify rules of inference.
+ * A more friendly theorem prover is a goal.
+ * As the project progresses, the computer takes a more active role.
+ * Arxana is black magic for good people.

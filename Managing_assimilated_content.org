@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Note that [[file:Managing unassimilated content.org][Managing unassimilated content]] isn't enough - we also will need to
+organize the stuff that has been assimilated.  Maybe it can all be stored in a
+giant unstructured database, but it could also be better to store it in a
+structured database.  We'll just have to see, once we have more content.
+
+(Also, content will always be at various stages of assimilation, so in some ways
+assimilated content isn't so different from unassimilated content.)

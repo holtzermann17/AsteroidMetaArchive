@@ -1,0 +1,132 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Below is a draft proposal for SOC 2007
+
+
+Finding experts in PlanetMath
+
+Pawel Jurczyk
+
+pjurczy@emory.edu
+
+* Abstract
+Popularity of portals where users generate contents is constantly growing. However, despite the increased popularity, the quality of contents is uneven, and while some users usually provide good content, many others often provide bad answers. Hence, estimating the authority, or the expected quality of users, is a crucial task for this emerging domain, with potential applications to answer ranking and to incentive mechanism design.
+
+* Proposal
+Current search algorithms for many portals with users-generated contents focus on textual features of posts. However, this approach does not take into account other features those can be used in ranking method. These non-textual features can include number of votes for given post, length of post, average length of posts for given user, total number of votes for given user or many other (see:	J. Jeon, W.B. Croft, J.H. Lee, and S. Park. A framework to predict the quality of answers with non-textual features. In Proceedings of SIGIR, 2006).
+The non-textual features (if available) were proven to increase the accuracy of ranking posts. However, in many cases these features are not as effective as they should be. Therefore, I propose a new non-textual feature that provides a clear rank of users that can be used in the process of ranking search results. 
+The idea behind providing rank of users is to adapt HITS algorithm. The HITS algorithm was developed to predict importance of web-pages by assigning each page a hub and authority value. A page is considered a good hub if it links to authoritative pages, and authoritative pages are linked to by good hubs. This idea has an intuitive parallel for user-generated content portals. Specifically, we can consider question authors as hubs, and answer authors as authorities (if posts can be divided into questions and answers groups) or initial authors as hubs and further editors as authorities etc. 
+
+When we would like to compute values of hub/authority for users, we start with building a graph which represents relations between them. Simply, edges in the graph connect two users which connect hub users with respective authority users. After the graph has been prepared, we can run HITS algorithm.
+Specifically, the algorithm can calculate the hub and authority value of all users using Kleinberg’s HITS algorithm formulation:
+               
+H(i) = sum(A(j)) and 
+
+A(j) = sum(H(i)) 	 
+
+where H(i) is the hub value of each user i and A(j) is the authority value of each user j. The vectors H and A are initialized to all 0s and 1s respectively, and are updated iteratively using the equation above. After each iteration, the values in the H and A vectors are normalized, so that the highest hub and the highest authority values are 1. This algorithm iterates until convergence, defined as total sum of changes in hub and authority values is less than some small ε (0.001 in our experiments).
+
+Initial research in this area has already been submitted to one of conferences (paper by me and Eugene Agichtein). You can check it at: http://mathcs.emory.edu/~pjurczy/authority-test.pdf
+
+* Expected result
+After the HITS algorithm has produced the results, the rank of users can be used as one of the non-textual features that helps produce better rank of query results. What is more, the algorithm described above can be extended, for instance edges between users in the graph can be directed or weighted basing on some features.
+
+* Deliverables
+1 week - develop a concrete idea for building the graph describing relations between users and applicable in PlanetMath
+
+1 week - get familiar with Noosphere
+
+4 weeks - initial implementation and evaluation of the solution
+
+3 weeks - implementation of extensions of initial solution
+
+2 weeks - testing and fine tuning
+
+* Qualifications
+My research includes information retrieval, finding experts in on-line communities, distributed databases and distributed systems. 
+
+Education: Emory University, Atlanta, GA, USA - PhD Candidate in Computer Science
+
+My full resume can be found at: http://mathcs.emory.edu/~pjurczy
+
+* Comments
+
+You should suggest some kinds of input data that could be used, besides explicit ratings (if we add those).  As discussed there is the co-authoring co-occurrence, the correction-corrector  relationship, scores, and perhaps other things that could be useful.  There would seem to be many possibilities and challenges.  I am not suggestion we figure it all out right now, but I'd like to hear your ideas on where and how we could glean the appropriate data. --[[file:akrowne.org][akrowne]]
+
+* Response
+The algorithm needs sufficient data to produce the graph as discussed above. Users in graph are classified into 2 groups (first of them are users having hub and the second are users having authority value). Of course one user can be in both groups as he can have hub and authority values together. Any edges in the graph always connect user from one group with user from the other group. By looking at the PlanetMath organization, one could use the following criteria for deciding about user’s group:
+
+1)	if user started some topic (has written some article), he is placed in hubs group
+
+2)	if user posted any correction to article and this correction was accepted, he is placed in the authority group
+
+Edges in the graph would connect users which started some topic and users which made some corrections. The meaning of hub/authority values for such a setup is as follows. If user makes many corrections and his corrections are accepted, it means his knowledge is ‘good’. Therefore, his authority value is going to be high. On the other hand, if anyone writes an article and is corrected by many users with high authority, he gets high hub value as he can gather in one place good users.
+Of course, the idea above is not the only one. It even makes perfect sense to reverse mapping completely – one could assume that authority value is assigned to people writing articles and hub values are assigned to people writing corrections. The right approach needs to be chosen in experimental way.
+Important is that, for setup above, we actually don’t need more information than currently available in PlanetMath. However, by using the algorithm, we are gaining an interesting feature that might be used to improve retrieval mechanism.
+
+----
+
+I think this idea has some good potential, but I don't think it is just
+about retrieval.  I think that these "hubs" actually are little seed
+sub-communities.  You should take a look at our writeups on
+[[file:Subchanneling.org][Subchanneling]] and [[file:Arxana's linking model.org][Arxana's linking model]].  Use this idea of
+hubs to make interesting objects/spaces/interactions.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+I completely agree with you. There might be a lot of different potential in the algorithm than discussed ranking of users. After implementing this solution, one should definitely take a closer look at the results. My scope was just ranking so far and your suggedtion about communities is quite interesting. Maybe one really could use the graph to present given user documents interesting from his/her point of view.
+
+--Pawel
+
+
+----
+I'd like to let you know that there is a documentation for the project I am working on. Currently, I am done with building a framework that helps to run various algorithms on PM data that produce rankings of users. You can find the documentation here:
+http://www.mathcs.emory.edu/~pjurczy/gsoc/documentation.pdf
+
+Also, the source code for the project is provided here:
+http://www.mathcs.emory.edu/~pjurczy/gsoc/gsoc-backup-07022007.rar
+
+If anyone has some comments, please let me know.
+
+--Pawel
+
+----
+The initial results of HITS algorithm on PM dataset
+
+To produce input graph for HITS algorithm we considered objects and corrections. The graph was produced from users owning objects and users posting corrections to objects. We are also considering changes in ownership of objects. E.g., when some user was an owner of given object for some time in the past, and during that time there were some corrections submitted, the historical user is connected with users posting corrections during that time (not the current object’s owner).
+
+The results we obtained are reported below. 
+
+The Pearson correlation for users ranking produced by HITS and produced by results of survey:
+
+Correlation at top-10 is: -0.018893515972784516
+
+Correlation at top-20 is: 0.1396823461991352
+
+Correlation at top-50 is: 0.3226457178826061
+
+Correlation at top-100 is: 0.5226492714365218
+
+
+The Pearson correlation for users ranking currently maintained by PM and produced by results of survey:
+
+Correlation at top-10 is: -0.601979027293016
+
+Correlation at top-20 is: -0.13616176005181876
+
+Correlation at top-50 is: 0.14862843094219816
+
+Correlation at top-100 is: 0.3955610626679516
+
+As you can see, the difference is quite significant. For top-10, top-20, top-50 and top-100 users, HITS produced ranking which agrees with a survey results much more than current PM ranking.
+If you would like to take a look at rankings, you can find here a ranking produced by survey:
+http://www.mathcs.emory.edu/~pjurczy/positions-survey.out
+
+And here ranking produced by HITS:
+http://www.mathcs.emory.edu/~pjurczy/positions.out
+
+Please note that, the survey ranks only users up to 88th position (all the users at the end have position #88). The reason is that, for the survey we have chosen only top-100 users from the current PM ranking. We were forced to do so in order to be able to produce reasonable ranking (otherwise, the survey would have to be taken by thousands of users).
+
+--Pawel

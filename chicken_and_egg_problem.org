@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+On the chicken side, since the h-code is still under development, one can't
+really translate into a language which doesn't exist.  On the egg side, to
+develop h-code properly, we need these examples to make sure that it is an
+adequate medium for expressing mathematics.  To get out of these impasse, we
+improvise.  Based on our ideas of h-code should be like and the definition or
+proof we are studying, we make a guess at to what an h-code version should look
+like.  Based on this, we work on our definition of h-code and improve the
+translations.  By this iterative process, we hope to arrive at a consistent
+symbolic representation which adequately represents mathematics.  However, as
+with any iterative process, we need an initial approximation to start the
+process, and so it would be nice to have a few more proofs.

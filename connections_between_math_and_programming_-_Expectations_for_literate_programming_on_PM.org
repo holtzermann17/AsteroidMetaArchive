@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+I did not mean by suggesting that literate programming features be added to
+Noosphere that PM should somehow switch to being /about/ programming.
+
+The idea is simply that with the addition of literate programming tools, PM
+could move to /include/ programming.  I wouldn't insist on teaching anyone how
+to program.
+
+Rather, I would hope that PM would add a subproject for creating a new/better
+Computer Algebra System (which would include web services).  I would expect that
+the literate programming tools would be /available/ to Encyclopedia
+contributors, book contributors, a whole new category of /program
+contributors/, and that they would be well-tested by the time
+[[file:PlanetComputing.org][PlanetComputing]] is created (where I think such tools would receive very
+heavy use).
+
+The tools would certainly be useful to me and Ray and anyone else who wants to
+work on HDM stuff.
+
+I would not expect the tools to be heavily used by many among the current
+population of mathematically inclined non-programmers who use PM.  Rather, we
+would be reaching out, for the most part, to a different population.
+
+I certainly do not mean to suggest that PM authors should be producing code
+caliber mathematical output.  The output they are producing is just fine.
+
+[[file:connections between math and programming | Back.org][connections between math and programming | Back]]

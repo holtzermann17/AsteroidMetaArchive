@@ -1,0 +1,365 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here is an essay I wrote a while ago that I think is interesting to reflect on
+again, after more than a year has gone by.  It relates to both the [[file:PM.org][PM]] and
+[[file:HDM.org][HDM]] projects.  Please feel free to add comments, either inline or below.
+Also, please fix any typos you spot... I had to reconstruct this document from a
+badly damaged postscript file.  I plan to revise it here on the wiki, to bring
+it somewhat more up to date.
+
+----
+
+* One Week in October
+
+or,
+
+** An Anthropologist on PlanetMath
+
+or maybe,
+
+*** The Rise of Hyperreality Among the Titans
+
+by Joe Corneli
+
+Original version written 2003.10.22
+(original version corresponds roughly to the 
+[http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta?action=browse;id=one_week_in_october;revision=3 Revision 3] 
+version of this wiki page)
+
+----
+
+For one week in October, I held the top score on PlanetMath.  Even without
+counting duplicates I had far more entries than any other single person.
+
+At a rate of 100 points per entry, my score was almost 59000.  The next highest
+score was around 26500.
+
+Math can't compare to pinball, but it was fun to have a high score for once,
+regardless of the venue.
+
+But the situation couldn't last. My entries were written in a "bare-bones"
+format, incompatible with the expository style preferred by the
+!PlanetMathlings. After much debate in the on-line forum, in which it was
+frequently asserted that my entries were not "human readable" and, by one
+person, that they were not "human written", a poll gave plurality to the "delete
+the APM Xi entries" contingent, and I decided to orphan the entries, giving each
+entry a week to be adopted by any !PlanetMath user who wanted to save it from
+being deleted from the collection.
+
+APM Xi is a project I began in the effort to combine my interest in computer
+understanding of mathematics with my desire to pass the mathematics prelims at
+the University of Texas at Austin. APM stands for Austin Problems in
+Mathematics, and Xi stands for Cross-Index; APM Xi contains numerous definitions
+and theorems (close to 800) related to the Austin prelims. The document is
+written in a sort of pseudocode based on the Lisp form "let*".  This form is
+described by Emacs as follows:
+
+  let* is a special form 
+  (let* varlist body...)
+  
+  Bind variables according to varlist then eval body.
+  The value of the last form in body is returned.
+  Each element of varlist is a symbol (which is bound to nil)
+  or a list (SYMBOL VALUEFORM) (which binds SYMBOL to the value of VALUEFORM).
+  Each VALUEFORM can refer to the symbols already bound by this varlist.
+
+A typical entry in the APM Xi might read something like this:
+
+  (lebesgue outer measure: fact: lebesgue outer measure is infimum of lebesgue
+  outer measures of open supersets) \defn{
+  \item $X\subset \Rn$
+  \item $L=\{O \openset \Rn: O \supset X\}$
+  \item $|X|_e=\inf_{O\in L}(\{|O|_e\})$}
+
+On !PlanetMath, this entry would have appeared as a section in a webpage about
+Lebesgue outer measure. This webpage would give little more than the definition,
+written in a similar style, and perhaps a few additional related facts (written
+in the same style too).
+
+Why was this style found by the !PlanetMath'ers to be so totally and completely
+incompatible with the !PlanetMath encyclopedia?  !PlanetMath contains in total
+some <number> entries, written in standard mathematical English, designed for
+use as reference works by human beings. Like APM Xi, !PlanetMath is released
+under the GNU Free Documentation License, or FDL, which gives anyone the right
+to copy , modify , and redistribute its content under certain terms, the most
+important being that the derivative work must itself be distributed under the
+terms of the FDL. Like its older sibling, the GNU Public License, FDL'ed works
+are published with the hope that they will be useful, but with the assertion
+(tacit, in the case of the FDL) that their contents are not fit for any
+particular purpose. In other words, it is essentially completely up to the
+reader to decide how to use the work. This open-to-interpretation model does not
+guarantee that the work will be found desirable or interesting to a given
+reader, of course, and that is what happened to the APM Xi entries on
+!PlanetMath. Indeed many !PlanetMath'ers objected quite vehemently to the style in
+which the APM Xi entries were written and especially to their continued presence
+on the site.  The primary fears !PlanetMath users expressed about the entries
+were the following: (1) that the entries could not be understood without reading an
+accompanying FAQ; and, (2) that the casual visitor to the !PlanetMath website might get
+the wrong impression about the nature of the !PlanetMath website when looking at
+the APM Xi entries. Other feelings of discontent were raised, in particular with
+the fact that the entries were all introduced onto !PlanetMath by the site's
+administrator in one day, in a "powerplay" that circumvented, at least in
+outward appearances, the site's usual model of careful review and collaborative
+editing of entries.
+
+However, at least one user delved deeper in his criticism, to the very heart of
+the APM Xi project, which, as I mentioned, is as much about computer
+understanding of mathematics as it is about the Austin prelims.  The core idea
+of APM Xi is to write about mathematical things in a pseudo code that can, I
+hope, be easily translated in to a computer-understandable language such as KM.
+I pointed out in the !PlanetMath forums that I saw this as a first step, or
+sketch, for a much larger undertaking in computer-aided mathematics, a project I
+call the Hyperreal Dictionary of Mathematics (HDM). 
+
+This hypothetical construct is the result of scanning and further processing all
+extant mathematics to get it in to a form that can be understood by computers,
+and from there again made accessible to humans over the internet and through
+other software. Possible applications that I envision for this dictionary
+include things ranging from machine tutoring in undergraduate-level mathematics
+to coaching research mathematicians on famous unsolved problems.  And of course
+the !PlanetMath user I am referring to thought that this research project was
+completely infeasible because the programs needed for its construction are, in
+his view, far beyond the research horizon of their respective branches of
+computer science.  He further went on to say that even if it was possible to
+create a dictionary of the kind I am envisioning, the object would be useless
+without the advanced AI that would make applications such as those mentioned
+above possible.  I argued with him that this is not the case, that the necessary
+programs are just in sight on the research horizon, and that the side-effects of
+work on the dictionary would be useful at any phase of its development. I guess
+these things are very much a matter of perspective.
+
+The question that concerns me now is whether the social climate of the internet
+is ready for hyperreality in the sense of the HDM. Do new social arrangements
+need to exist before such a thing can be created?  Is it possible for something
+like the HDM to evolve within the context of the GNU licenses and collaborative
+sites like !PlanetMath?  Also, what new social arrangements would the creation of
+the HDM lead to? We might get some clues about the social arrangements necessary
+for its development from theorizing about these.  Perhaps the most important
+thing to learn from this experiment is that the HDM and its precursors need to
+evolve in their own environment for a longer time before they can make a public
+appearance and be accepted by an outside audience. Moreover, to be accepted, a
+prototype would need to provide something that people want. At the most basic
+level, it needs to be made clear to potential users what the APM Xi/HDM is,
+otherwise they will be unable to make an informed decision about whether they
+want what it has to offer or not.  Before going public as Free Software, the HDM
+must evolve for a while in its own space.  That the HDM can how ever stand to
+gain tremendously by a collaborative model like that used on !PlanetMath is quite
+clear from this week's experiment, however it is equally clear that the
+collaborations would optimally be between people who shared the same, or at
+least more compatible, basic goals.  In thinking about how the future of society
+could be changed by a resource like the HDM, teachers, students, and scholars of
+mathematics come primarily to mind.  The lives of these mathematical people
+would change tremendously with the introduction of such a resource. To me, the
+free collaboration by hackers working on GNU software best models what I think
+the collaborations by future mathematical people would be like if the HDM
+existed.  But no doubt there will be many differences as well.  The conclusions
+that I draw from this week on !PlanetMath are that the HDM should exist as an
+independent free software project, and that I should be more careful with future
+attempts to establish connections with collaborative content sites. Before
+sharing content, I should make sure that the content that I'd like to share is
+actually desired on the other end. On my end, I should be sure to have things
+like FAQ's ready to go before presenting the content to any one, whether they
+are content or code oriented, or both, so that people know what they'd be
+getting.
+
+* Discussion
+
+I am thinking that another iteration of this paper, with less emphasis on the
+HDM and more on the aspects of the social situation, might be very good for the
+Emory conference this fall.  I don't think that the HDM is very far afield of a
+conference on "Free Culture and the DL", but I think that the problem of doing
+large-scale project mergings in CBPP is sufficiently large of a topic to merit
+its own paper.  Maybe such a paper could simply cite this paper. --[[file:akrowne.org][akrowne]]
+Tue Mar 1 22:25:13 UTC 2005
+
+I think the key fact, in this context, about HDM-p2 (as the APM-Xi collection
+is otherwise known) is that it is both 
+
+ * /very different/ from the contemporaneous PM collection; and,
+ * potentially /parallel to/ that collection.
+
+In both these respects, however, it is not very different from a translated
+version of the !PlanetMath collection.  Imagine trying to merge the 
+German and English Wikipedias.
+
+Except that... this seems like a rather bad characterization of what the APM-Xi
+collection actually is.  The content wasn't rejected because it was completely
+foreign, but it was "foreign enough" to be uncomfortable. I'm not sure what the
+best analogy is.  The point, though, is that PM people did not want that content
+in their encyclopedia (and they said so with some finality).
+
+I think the only way to "merge" these two collections would be to make two
+roughly-parallel layers - I feel pretty convinced about that at present.
+
+This is a rather interesting point.  It is also interesting that, in our hurry
+to add the APM-Xi collection to PM, we completely missed (or otherwise
+neglected) this point.  It looked so easy!  And yet, it turned out, it was not
+easy, it was, as a matter of fact, quite a boondoggle.  So this points to a
+third important fact about the APM-Xi experience:
+ * It looked easy to do it the way we did, but it was actually almost impossible
+  to make that way of doing things work out.
+
+Quite a surprise to us both.  Just about no one would really think it was a good
+idea to merge the German and English Wikipedias -- but we were pretty sure it
+would be a good idea to merge APM-Xi and PM.
+
+This seems to reflect interestingly on both the "social situation" and the
+content of the APM-Xi.  The judgement that APM-Xi did not belong on PM was
+definitely a "cultural" one.  If you have further thoughts about this topic, I'd
+be interested to know them.
+
+In the mean time, I think HDM is a /perfectly lovely/ topic for "Free Culture
+and the DL", but I don't feel that I have anything particularly new to say about
+it right now.  You or anyone else who wants to say stuff about it is quite free
+to, and I'd be quite happy to contribute to the discussion.  However, my current
+goals for HDM are all basically work-related; I think the philosophy has already
+been laid down pretty well.  It would certainly be exciting to see some of these
+ideas appear in print, but I'm tired of making myself deaf by talking
+incessantly.  I would rather have research results to report than just ideas,
+but, sadly, and to my considerable frustration, we aren't there yet.
+
+"Solving" the merging problem for APM-Xi and PM really amounts to figuring out
+(a) how to implement a parallel collection (this is, all things considered,
+probably not that hard); and, (b) figuring out how to discern when some
+candidate collection of articles had better go into a parallel collection,
+instead of the main collection (this part seems harder and is certainly more
+cultural and fuzzy).  I'm all for working on (a) when I get Noösphere installed,
+but somehow (b) is still in my blindspot.
+
+If we were to further generalize the merging problem (e.g. to include the
+[[file:Wikipedia-PlanetMath Content Exchange.org][Wikipedia-PlanetMath Content Exchange]]), then, yes indeed, it is a huge
+topic.  I'd be happy to talk more about it, but I don't think one month will be
+sufficient to create a full solution. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 00:34:41 2005 UTC
+
+First, I would like to congratulate Joe for his perspective and his hability to
+summarize the "APM-Xi event" at Planetmath in a very objective way. Bravo! On
+the other hand, I would like to apologize to Joe and Aaron, because I was one of
+the most vocal adversaries of APM-Xi entries at PM (as I remember), and I think
+I went too far in a couple of messages or at least I don't feel I was as calm as
+I should have been about the issue. I must admit that, at the time, I thought
+the inclusion of the APM-Xi entries was an atrocity and it was having a very
+negative impact in the whole collection. Today, I would still say that the
+APM-Xi wntries have no place in PlanetMath. However, as another whole different
+project, the HDM sounds fascinating to me. I have no knowledge of AI or CS
+(essentially) so I cannot distinguish what parts of the project are feasible and
+which are science-fiction. But the idea that computers could try to tackle
+proofs of theorems sounds like a very interesting question, from the computing
+point of view and the philosophycal or even mathematical point of view. So,
+again, I think the project (HDM) is worth it (I can't say I think it is doable)
+but it is not to be linked to Planetmath. -- [[file:alozano.org][alozano]]
+
+It might also be worth pointing out the role technical progress has in this
+issue.  At the time of the Apm-Xi entries, all there was is the language for
+representing mathematical knowledge.  Since then, there has been progress in
+deveolping computer programs to deal with this language.  In particular, there
+has been work on translating between this language and !TeX.  So far, we have
+only developed the code for dealing with propositional logic, but the methods
+used apply to more general mathematical expressions as well.  Therefore it is
+reasonble to say that, in the forseeable future, we will be able to translate
+h-code (the current successor to Apm-Xi) into a notation which is familiar to
+the typical mathematician.
+
+Therefore, if there would be a repeat of the Apm-Xi incident in the future, it
+would likely differ from the last attempt in that the entries would be run
+through a compiler before being posted to Planet Math.  This would have the
+efffect of casting them in a form which is comprhensible to humans who have not
+studied the Apm-Xi f.a.q. to learn the machine-readable notation.  Therefore,
+the complaint that the entries were written in an unreadable code would no
+longer apply.  Also, since symbolic logic notation is frowned upon on Planet
+Math, it would not be so hard a matter to have the computer output logical
+statements in a form like "If P and Q then R or Q".
+
+To be sure, the output might be somewhat monotonous and lacking in writing style
+from the perspective of a human reader.  I would think that advances in natural
+linguistics and artificial intelligence would help overcome these shortcomings
+in the long run, but right now let me not consider that issue and simply adress
+the question of whether such translations of h-code into a human readble form
+would be of use, even if one makes no attempt to improve them stylistically.
+
+I would say that the answer is "yes".  They would contain mathematical
+information in a form which the mathematician can understand.  I also think they
+would serve rather well as seed entries which a mathematician could rewrite and
+edit; the content would already be there and it would simply be a matter of
+adjusting the text surrounding the equations to make that content more readily
+apparrent to the human reader. --[[file:rspuzio.org][rspuzio]] 2 March 2005
+
+/Ray and Alvaro - thanks for your comments./  I agree with Alvaro that
+APM-Xi/HDM entries don't belong in the !PlanetMath encyclopedia -- however, I do
+hope that the HDM and PM projects can be linked up.  Here's how I imagine it
+working.
+
+HDM would exist as a separate project on PM, but anyone could "adopt" an HDM
+definition and include a version of it in the PM encyclopedia.  They would
+presumably press a button first, which would effect the translation to
+human-friendly format that Ray mentioned we're working on.  They would then
+improve this article however they saw fit.  Making the article /good/ would be
+the responsibility of whoever adopted it, not the responsibility of the HDM
+project.  In turn, the people working on the HDM would have a watch on the
+encyclopedia article, and would work to incorporate any additional ideas that
+came up there, so it would benefit HDM too.
+
+I think the main hurdle, one we still need to cross, is creating a "proof of
+concept" that this sort of relationship can work.  Once that is done, I think
+that HDM and PM could begin to work very nicely together.  That, at least, is my
+hope. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 23:55:37 2005 UTC
+
+As long as HDM is incorporated as a *separate* project, I can't see why people
+in PlanetMath would object to this. Remember that one of the main complains is
+that regular entries were linking to the APM-Xi entries, mixing both kind of
+entries in a messy way. If there is a clear barrier between the two, then it
+shouldn't be a big issue. I like the way you describe how it would happen, and
+how people could adopt entries from the HDM and modify them to their
+PM-liking. However, I can see that people would still take issue with HDM if
+they felt that HDM was taking too much relevance in the PM website. I recall
+somebody saying "if PM is going to become a computer science experiment, don't
+count with me". So I would suggest starting HDM in its own portal (PlanetHDM?)
+with links and easy access to planetmath. --[[file:alozano.org][alozano]]
+
+Planet Math *already is* a computer science experiment.  In particular,
+Noosphere is one of the first attempts at creating a computer system whereby
+different authors can contribute to an encyclopaedia and have their
+contributions automatically cross-linked and post corrections to each other.
+Therefore, if some people have a problem with computer science experiments, I
+wonder why they chose to contribute to Planet Math in the first place rather
+than write for a conventional printed journal or encyclopaedia.
+
+As for HDM taking too much relevance on Planet Math, I doubt that seriously.
+The HDM project has its own website here at Asteroid media and material relevant
+to the project goes there, not on Planet Math.  I also think Joe made it rather
+clear at the end of this article and elsewhere that HDM and PM would be separate
+projects with separate websites.  As for using HDM entries as the basis for PM
+entries, this would not be all that different than what happens nowadays when
+someone bases a PM entry on a math book or on an entry on Wikipedia or some
+other website.
+
+That said, I believe that HDM and PM can benefit from each other in various ways
+and hope that, in the future, there will be a symbiotic relation between the
+two.  For example, we are now finding Planet Math useful as a source of
+mathematical definitions and proofs to examine in order to come up with a
+computer representation of mathematical knowledge.  As the HDM project
+progresses, some of the lessons we learn might prove of use in improving PM and
+Noosphere.  As we develop a system for verifying corectness of proofs, Planet
+Math authors might want to make use of it for making sure that their proofs are
+correct and that definitions are not circular.  When we get to the the phase of
+studying natural language, perhaps some of the insights we gain will help to,
+say, improve the linker by allowing it to recognize when words are used in a
+technical sense as opposed to the everyday sense.  --[[file:rspuzio.org][rspuzio]] 2 March 2005
+
+: Sorry, I was not trying to start an argument, I think my words were misunderstood. I was trying to give some advice on how Planetmath people would react about HDM and I was trying to point out that I agree that it would be wise to keep the two projects apart (as Joe had already described he would do). I do think HDM is a fascinating project and I hope to see it take off soon. I do think, however, that there are many people who don't see planetmath as a computer science experiment. And there are others who realize that Planetmath is a computer science experiment but are more interested in the mathematics of it, like me. I wish I knew some more programming and computing (and time for that matter) so I could help in the noosphere project! Again, sorry if it felt like I was attacking, I was not.--[[file:alozano.org][alozano]]
+
+I think that if HDM became part of the PM website, it would be essentially
+invisible to people who weren't interested.  (Just like now there is a "Wiki"
+link in the main menu, but we don't see everyone writing stuff here!)  I only
+think HDM needs to be separate from PM until the "proof of concept" is ready.
+After that, it should only be added to PM if enough of the people
+involved/concerned felt that it would be useful to have it there.  I think the
+idea of "!PlanetHDM" is interesting -- but whether HDM was running inside of a
+separate Noösphere instance or just a separate part of the site may not make a
+big difference.  Aaron would be better qualified than me to talk about this.  In
+either case, you'd want to solve the problem of sharing information between two
+separate digital library resources in a nice way.  Anyway, this is all
+concerning stuff pretty far in the future -- HDM is still pretty far from having
+a genuine proof of concept.  On that note, I feel I really should get cracking
+on HDM-related stuff!  Please don't argue too much with one another about this
+topic!  Discussion is fine... but let's not have another feud! --[[file:jcorneli.org][jcorneli]] Thu Mar 03 02:36:25 2005 UTC

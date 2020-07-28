@@ -1,0 +1,139 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+PATCH 2006-07-25 :
+Modifications to c:\mmj2\src\mmj\pa\ProofUnifier.java
+
+1) replace line 2434 in doDeriveFormulaAndOrHyps()
+
+        if (proofWorksheet.getGreatestDummyVarNbr() > 0) {
+
+with
+
+      //PATCH 2006-07-25 SIMULTANEOUS DERIVES
+      //if (proofWorksheet.getGreatestDummyVarNbr() > 0) {
+        if (nbrDummyVarsAssigned > 0) {
+      //END-PATCH 2006-07-25 SIMULTANEOUS DERIVES
+ 
+----- 
+2) replace line 907 thru 909 
+   at end of stepLoop: while loop label
+   in unifyStepsHavingRefLabels()
+
+
+        }
+ 
+        dsa1Count                 = dsa1List.size();
+
+
+with
+
+            //PATCH 2006-07-25 prevent repeated Derive!
+            derivStep.deriveStepFormula
+                                  = false;
+            derivStep.deriveStepHyps
+                                  = false;
+            //END-PATCH 2006-07-25 prevent repeated Derive!
+        }
+    
+        dsa1Count                 = dsa1List.size();
+
+
+3) replace lines 873 thru 874
+   at start of hypLoop  
+   in unifyStepsHavingRefLabels():
+    
+                if (derivStep.hyp[i] != null &&
+                    derivStep.hyp[i].getStatus() <
+
+
+with
+
+                if (derivStep.hyp[i] != null &&
+                    //PATCH 2006-07-25 INSERT FOLLOWING TWO LINES:
+                    derivStep.hyp[i].getStatus() !
+                        PaConstants.PROOF_STMT_INCOMPLETE_HYPS &&
+                    //END-PATCH 2006-07-25
+                    derivStep.hyp[i].getStatus() <
+
+
+-----
+4) replace lines 9 thru 16
+
+    /*
+     *  ProofUnifier.java  0.02 04/01/2006
+     *
+     *  Version 0.02:
+     *      - extensive changes to incorporate new Proof Assistant
+     *        "Derive" Feature.
+     */
+
+with
+
+    /*
+     *  ProofUnifier.java  0.03 07/25/2006
+     *
+     *  Version 0.02:
+     *      - extensive changes to incorporate new Proof Assistant
+     *        "Derive" Feature.
+     *  Version 0.03:
+     *      - bug fixes for "Derive" feature
+     */
+
+-----
+
+#2 fixes the primary bug which results in a
+java.lang.NullPointerException when "Derive"
+is used with a blank input formula and no
+hypotheses, and the referenced assertion
+has $d specifications that are not satisfied
+by the theorem's (that is being proved) 
+$d specifications.
+
+To recreate the bug, copy the following
+ProofWorksheet into the mmj2ProofAssistant
+screen (with set.mm as the input file) and
+then press Ctrl-U (StartUnification):
+
+$( <MM> <PROOF_ASST> THEOREM=ZZZZZZZ  LOC_AFTER=?
+2::btwnz
+qed:?:    |- ph
+
+
+After successfully applying the fix and
+recompiling mmj2, step 2's btwnz formula 
+is generated and $d error messages appear.
+
+-----
+
+#3 fixes a bug reported by [[file:frl.org][frl]] and is 
+   included here for expediency. The bug was
+   added *by* the addition of the Derive
+   feature. It manifests when a Ref label
+   is present on a Derivation Proof Step, 
+   along with 1 or more Hyps and one of the
+   referenced Hyps is incomplete -- meaning
+   that the referenced Hyp itself has a "?"
+   in one of its Hyp fields. The bug is that
+   in this situation Unification is not 
+   attempted on the Derivation Proof Step
+   BUT had the Ref been left blank, Unification
+   would have been attempted. 
+   
+   A Hyp pointing to another Derivation Proof
+   Step which contains a "?" in one of its Hyps
+   is valid -- the Proof Assistant is designed
+   to allow this so that a proof can be written
+   bottom up and refer to previous steps as Hyps
+   that are not themselves yet proven. 
+
+   Unfortunately, the Derive feature introduces
+   complexities in the Unification process 
+   because it actually generates hypothesis 
+   steps. The bug was introduced accidentally
+   to cover the situation where a generated
+   Hypothesis step failed unification, perhaps
+   due to containing dummy variables. Perhaps
+   this is the last Derive-related bug :)
+
+ * * *

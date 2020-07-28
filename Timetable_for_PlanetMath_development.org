@@ -1,0 +1,304 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A journey of a thousand miles begins with a single step.
+--The Tao, Chapter 64
+
+During the last year, much has happened at PlanetMath.  For instance,
+we got official non-profit status, had our first board meeting, and
+Asteroid appeared.  Recently, we have been taking about PlanetMath
+goals, both in terms of the content of the site and the finincial
+support for the site.  As a step towards achieving those goals and a
+way of keeping the discussion grounded in reality, I thought it would
+be a good idea to sketch out a tentative timetable.
+
+A timetable like this needs to be taken with a grain of salt.  Given
+the circumstances, we have no assurance that things will go as
+planned --- too much depends on factors beyond our control and things
+about which we do not know enough.  Nevertheless, even if we expect to
+revise it continually and extensively as circumstances change, this
+should prove valuable for organizing and prioritizing so as to make
+progress in a timely fashion.
+
+As those of us who have been heavily involved in the project are
+keenly aware, we do not have all that much in the way of human and
+finacial resources to work with --- this is completely a volunteer
+effort, only a handful of people are able to put significant time
+towards the project, and we have a shoestring budget.  Under such
+circumstances, we might not be able to accomplish all we want and
+might need to make some tough choices.  Hopefully, collecting all our
+potential plans in one place and assigning times to them will help us
+make wise decisions and inspire us to make progress towards our goals.
+
+As it stands, this is my first attempt based on what we have discussed
+to date and efforts which are now going on.  This is meant more as a
+starting point for discussion than as anything approximating an
+authoritative statement.  Please discuss, suggest, move items, add
+items, and the like.
+--[[file:rspuzio.org][rspuzio]]
+
+* Future TimeTable
+
+What we want to do:
+
+** 2006-2007
+
+ * Raise $10000 (note: we probably are already at $3000-$4000, based on
+  recent levels---$7000 to go!)
+ * Establish relations with various mathematical societies and
+  organizations with similar interests and compatible goals.
+ * Get PM linked to on various websites.
+ * Identify suitable foundations and start applying for grants and
+  donations.
+ * Identify suitable businesses and start forming partnerships.
+ * Obtain letter of support from influential members of the mathematical
+  community.
+ * Document Noosphere and make it easy to deploy.
+ * Have 6000 entries in the encyclopaedia.
+ * Systematically fill in gaps, edit, and organize our coverage of
+  fundamental areas of mathematics.
+ * Rewrite the bylaws.
+ * Sanitize the licensing situation (get a legal expert to critique
+  proposed licenses)
+ * Institute a user agreement which positions us in the safe harbor.
+ * Make PM posters and put them up in various places.
+ * Have a publication-ready proof of the FEM.
+
+** 2007-2008
+
+ * Hire a systems administrator.
+ * Improve the editorial state of the FEM. Be selling copies.
+ * Plan for Noosphere rewrite (including design).
+ * Have a "Math Digital Library" containing materials from elsewhere
+  for community-ization on PM.
+ * Have a strong repository of unique math materials, such as
+  undergraduate research reports, and lots of math features found only
+  here.
+ * Have 7000 entries in the encyclopaedia.
+ * Systematically fill in gaps, edit, and organize our coverage of
+  key subjects in the (grade-school, undergraduate, and graduate)
+  mathematical curriculum. 
+ * Release the Free Encyclopaedia of Mathematics.
+ * Raise $15000-$25000 (Hopefully, at least some of the grant
+  applications and business sponsorhip offers made in the previous
+  year will pan out.
+
+** 2008-2009
+
+ * Rewrite Noosphere.
+ * Offer at least part-time financial compensation to people who are
+  putting a significant amount of time and effort into the project.
+ * Start offering online seminars and classes.
+ * Launch the PM e-institute.
+ * Begin multi-lingual support and translation platform.
+
+* 2009-2010
+
+ * Make contact with the intergalactic mathematical society and host an 
+  online colloquium live from Vulcan :)
+
+* 2010-2011
+
+?
+
+* Past Achievements
+
+What we've done---to serve as a historical record, and to give ourselves credit!
+
+See [[file:PM Past Achievements.org][PM Past Achievements]].
+
+
+* Discussion
+
+** Thermometer & other specific details
+
+Your idea of stretching the Noosphere rewrite timetable sounds
+pre-eminently reasonable to me, Aaron --- with so few hands and so
+much to be done, no reason to rush and do a half-baked job. One
+thought that occurred to me after putting up this page is that it
+might be nice to have some sort of "fundraising thermometer" on the
+website so that people could see how far we have to go to get to the
+goal of $10000.  A nice thing about such a display is that, by giving
+a definite goal, it will motivate people to give and give a sense of
+progress as regulars see the level rise from month to month.  Clicking
+on the thermometer could take one to a page which explains that, when
+we raise this amount of money, we will be in a position to hire a
+system administrator as opposed to the current state of affairs where
+this work is done on a volunteer basis by Aaron with some help in the
+form of ad hoc bounties for tasks. --[[file:rspuzio.org][rspuzio]]
+
+I think the thermometer is a good idea.   Its funny, but simply picking a reasonable 
+number for fundraising and going with it wasn't something that had occurred to me.  
+I think we should run with this, doing a funding drive soon, 
+and pick some top contenders for things to fund so we have things to name in conjunction with
+the money we want to raise (of course using this list and bounties and TODO as 
+sources). --[[file:akrowne.org][akrowne]] 
+
+One can get a thermometer at the following (appropriately themodynamically named) website:
+http://www.entropyfarm.org/software/thermo/
+also available at
+http://sourceforge.net/projects/phpfundthermo
+
+As for things which the $10000 will help finance, I would suggest:
+ * Hire a system administrator
+ * Make Noosphere more deployable
+ * Rederive version histories
+
+along with a short description of why each of these goals is important for
+potential donors who may not be familiar with our site.   I suppose one could add
+more, but I would advise against doing so.  Not only might it take away from the 
+main points (think KISS principle) but $10000 doesn't go that far, especially if 
+we are hoping to save some of that money and not just live hand to mouth.
+
+Also, I would suggest taking down the !PayPal button on the home page and instead putting up 
+this thermometer with a pharase like "Help us meet our annual goal!" underneath it.  The 
+!PayPal button would still appear on the donations page for people who want to make their
+donation that way.
+
+--[[file:rspuzio.org][rspuzio]]
+
+
+** Critique of structure of this timetable
+
+This discourse needs more attention to structure.  For example, if I
+think that we should raise 10 times as much money as you have written
+down for 2007-2008, what should I do?  I have many such revisions I
+would like to make.
+
+Furthermore, in this bullet-list format, the goals seem to be wholly
+disconnected from other documents we've produced, as well as from each
+other.  I would encourage you to try to work important features of
+this goal-list into the [[file:Detailed PM whitepaper outline.org][Detailed PM whitepaper outline]], and to
+make appropriate corresponding sections and pages for subsequent
+discussion part of the [[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]]
+itself.  In turn, we can use those discussions to come up with reasonable
+time-estimates, funding requirements, and so on.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Be patient!! One thing at a time! Yes, this is a bulleted list.  That
+is because it is a rough outline, a means for organizing thoughts and
+ideas.  This is much closer to the beginning of a thought process than
+the end.  Right now, I am brainstorming and simply trying to collect
+the different things we talked about into some sort of plausible
+time-frame.  Once I have them written down, only then will I go about
+structuring the discourse and worrying about connections between items
+and writing it up.  For me, if I try to worry about all these
+interconnected issues at once the likely result is that I will be lost
+and confused and not even no where to start, so I pick an arbitrary
+starting point fully aware that this is tenetative and quite likely to
+change significantly as it is re-examined.  Yes, in the end this will
+make it's way into the whitepaper and wherever else it needs to go but
+in order to write anything up in this case, I need some sort of
+outline as a starting point.
+--[[file:rspuzio.org][rspuzio]]
+
+I view this as complementary to the whitepaper activity.  I don't
+see why we need only one way to think about the future. --[[file:akrowne.org][akrowne]] Mon Feb 27 03:45:16 UTC 2006
+
+I didn't say "think only one way", that is silly.  I gave a very
+specific (meta-)critique, which says, given the format here,
+I don't know how I can contribute concrete feedback in a useful way.
+--[[file:jcorneli.org][jcorneli]]
+
+** Where's the formal math?
+
+I keep trying to figure out if PM is a project that plans to actively
+use formalized (machine verified) mathematics or not.  Metamath is
+discussed on this wiki, so that would indicate that the answer is yes,
+but then this roadmap does not mention formalized math, hence no. How
+about including the goal somewhere in 2007-2008: have 5% of proofs at
+PM hyperlinked to their formally verified version?  --[[file:slawekk.org][slawekk]]
+
+Bear in mind that, as it stands, PlanetMath does not have more than a
+token budget and runs entirely by volunteer effort (and some of these
+volunteers are putting part-time, if not full-time effort into the
+project).  The primary purpose of this this discussion is as part of
+our strategic planning --- we want to figure out how we can grow the
+organization to the point where we can hire people and go beyond the
+most pressing needs.
+
+As for formalized math, both Joe Corneli and myself are quite
+interested in formalize mathematics, so there is no question that we
+will work on this subject and try to introduce it into PlanetMath when
+a suitable time comes.  However, in order to do what you propose, we
+first would require infrastructure for handling formalized proofs,
+which we do not currently have.  Currently, there are plans to rewrite
+our basic software platform and maybe we cold add support for
+formalized proofs in the new version but, due to the fact that we are
+so short with respect to people and money, it seems that we will not
+be able to get around to rewriting Noosphere until next year so, by
+this estimate, it would not be until 2008-2009 that we could entertain
+a goal of having any formalized proofs.
+
+So the quick answer to your question is: yes, we are interested in
+formalized proofs, but we are not doing anything about incorporating
+formalized proofs at the current time and have leave this on the back
+burner until we handle more pressing issues and build up our
+resources and fill in gaps in what we already have to offer. 
+--[[file:rspuzio.org][rspuzio]]
+
+That is a very different answer from the one I would have given.
+For one thing, I would have said: this timetable is 
+unofficial.  If you want to spell out directions you want PM
+to go in, you are entirely free to do that -- either here or elsewhere
+(although I would suggest the whitepaper page [[file:PlanetMath and Formal Mathematics.org][PlanetMath and Formal Mathematics]]
+because that is much more conducive to discussion).
+In general, PM is basically a DIY place.  So, if you want 
+to make something like what you mentioned happen, you
+should do it, not wait for someone else to do it.
+This goes for matters of people & money, too, so
+I don't know what Ray is talking about with "we wil not be able
+to get around to...".  Actually, I do -- he is giving an
+estimate based on current involvement.  But that could change
+in the future.  Finally,  I think his timeline is rather off, and I would
+expect to see a significant effort towards formal math on PM
+within the next year.
+
+--[[file:jcorneli.org][jcorneli]]
+
+That's why you give your answer and I give my answer.  As you say,
+there is nothing official about this, it is only meant as a possible
+plan.
+
+As for my statement about not being able to get around to what was
+suggested (formal proofs for 5% of proofs), my rationale is quite
+simple.  As is stands, there is nowhere to attach a formal proof to a
+theorem in PM and the community is ill-disposed to mixing
+machine-readable content with human-readable content.   Therefore,
+before even starting to introduce formalized proofs, Noosphere will
+need to be significantly changed.  As it stands, there are plans to
+rewrite noosphere but, given the time commitments of the people
+involved in this project, it is likely to take 2 years or so.
+
+I agree that this is not fixed and open to change.  If someone is
+interested in automated proof checking and willing to work on
+implementing automated proofs on PM, that person is more than welcome
+to do so and then we would have formal proofs much earlier.
+
+Maybe I should have made it clear that this plan was designed as a
+conservative (under)estimate based on current involvement.  The
+question I was concerned about was "Given the interests and current
+level of involvement of the people presently working on the project,
+what might one expect to happen in the next few years?"  I would be
+alarmed, not if things got done ahead of this timetable, but if things
+lagged behind it.
+--[[file:rspuzio.org][rspuzio]]
+
+Your answer seemed to bespeak a presumed top-down development style.
+While so far not many people have been /heavily/ involved, many
+people have been /heavily enough/ involved to make a difference in a
+non-top-down fashion.  If formal math is really important to slawekk,
+and he wants to develop formal math on PM, then he can get involved.
+Finally, talking about "getting to" XY or Z just isn't my preferred
+style.  If something is important to us, we should try make it happen
+through continual work until we have accomplished the goal. --[[file:jcorneli.org][jcorneli]]
+
+** Break down next year into smaller components
+
+I continue to think that the details of the above estimates &
+proposals should be spelled out.  Perhaps we can kill (or at least
+maim) two birds with one stone, by also breaking the 2006-2007 list
+into smaller chunks, say, quarters.  (Of which we only have three left
+in 2006.)  In these smaller pieces it may be easier to find a place
+to attach my comments :) --[[file:jcorneli.org][jcorneli]]

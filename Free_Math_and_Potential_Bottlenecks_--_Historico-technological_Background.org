@@ -1,0 +1,66 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since the material cause of the difficulties to be discussed here is the change in the technology for disseminating texts, we shall begin this essay with an account of the relevant aspects of this technology and of the legal protections that regulate its use.
+
+From the late 15th century to the late 20th century, the primary means of disseminating texts was the printing press, which may be characterized as centralized and static.  On the one hand, a printing press is a rather large piece of machinery which individual authors are rather unlikely to own or operate.  To use it, one requires the services of several different types of craftsmen, such as typefounders and typesetters.  Thus, this technology is conducive to a centralized mode of distribution in which many authors submit their works to a publisher who arranges to have them printed and then distributes the results to booksellers for sale to the general public.  On the other hand, the process of typesetting a book is laborious and, once a work has been typeset and is ready to be printed from, there is no practical way to alter its contents.  The best one can do is to add sheets of errata and come out with a new edition every few years.  Thus, this technology encourages a static conception of works of literature in which the goal of writing is to produce a carefully edited final version which, if not fixed in stone, will at least be fixed in lead and is conducive to a sharp demarcation between authors, editors, publishers, and readers.
+
+By contrast, the computer networks which are now replacing the printing press as the primary mean of disseminating works of literature may be characterized as decentralized and dynamic.  Unlike printing presses, computers are now small and affordable enough that most authors own and operate computers.  Since a computer can perform the operations of typesetting and distribution, authors in the digital age find themselves taking over the role of publisher.  In particular, this means that authors now find themselves having to assume legal responsibilities which publishers would ordinarily discharge for their authors.  Just as was the case in the days of oral and handwritten literature, so too with computers it is not much harder to redistribute a modified copy of a work than to redistribute the work verbatim.  This stands in stark contrast to the static viewpoint described in the last paragraph --- in the digital age, one can again concieve of a work of literature as a living, growing entity.  When a reader can
+add comments or otherwise a redistribute a modified version, the distinction between authors, editors, and readers can become blurred.  This also leads to the revival of certain old forms of literature and the creation of new forms which are based on the ability of readers to interact with a work and add to it --- for a discussion of the technical and social aspects of this phenomenon please see Mr. Corneli's essay in this volume.  Finally, computers not only can store and transmit information, they can process it as well.  As the state of the art advances, machines are increasingly able to perform operations on texts which were once only possible by humans.  This too comes with legal ramifications which will be discussed.
+
+Copyright law is very much a result of the invention of printing. [[file:[Free Math and Potential Bottlenecks -- References for History of Copyright.org][[Free Math and Potential Bottlenecks -- References for History of Copyright]]] Before
+printing, there were no legal restrictions on the copying of books --- anyone
+with access to a book and writing materials was free to make a copy.  [[file:[Free Math and Potential Bottlenecks -- Ancient Scribes.org][[Free Math and Potential Bottlenecks -- Ancient Scribes]]] To be
+sure, one can find instances in which a text was considered the property of an
+individual or of a group, but the notion of intellectual property involved
+resembles trade secrets more than copyright since members of the general public were frobidden access to these texts.  [[file:[Free Math and Potential Bottlenecks --  Ownership of Ancient Texts.org][[Free Math and Potential Bottlenecks --  Ownership of Ancient Texts]]]  Soon after the invention of printing, the need to regulate the printing trade was felt.  At first, this took the form of ad hoc licenses and privileges granted to printers, but soon the practice became codified and standardrdized and served three ends: to check the spread of heretical, seditious and otherwise undesirable works; to regulate the printing industry and protects publishers from piracy; and to uphold authors' right to control dissemination of their works and obtain recompense for their labors.
+
+While United States copyright law is part of this historical evolution and resembles previous (specifically British) copyright law in many aspects, it also differs radically in outlook, if not in outward form from earlier conceptions of copyright.  In the new conception, the primary purpose of intellectual property law is to benefit the public by promoting the production and dissemination of intellectual content.  [[file:[Free Math and Potential Bottlenecks -- Constitutional basis of Copyright Law.org][[Free Math and Potential Bottlenecks -- Constitutional basis of Copyright Law]]] Censorship cannot play a role because it runs counter to the basic freedoms of speech and religion.  While the notions of regulating publishers and rewarding authors are still present, they are no longer regarded as the primary purpose of copyright but as secondary goals which are legitimate only insofar as they are consonant with the primary goal.
+
+Due to the fact that modern technology offers alternatives
+means of mass dissemination which do not require a centralized publisher, these ends have come into conflict; this conflict and its effects on the
+advance of knowledge form the subject of this essay.
+
+* Discussion
+
+I'm not sure if you really say it explicitly here or in other places, but it is
+important to note that the point of copyright as modernly formulated is
+primarily to /promote progress/ in "the useful arts".  This actually says
+nothing explicitly about granting authors royalties or publishers any sort of
+natural, permanent right to regulate copies.  Copyright is merely a /device/
+to make sure authors have an incentive to create (royalties) and publishers have
+an incentive to mass produce (exclusivity of copy).  However as observed by
+Lessig, in the past century the role of copyrights has been misunderstood such
+that royalties and copy-exclusivitiy have been thought to be natural, permanent
+rights.  When enacted legislatively, this view causes the door to swing too far
+the other way, placing a pall on the creativity of wider culture.  Understood
+properly, the point of copyright is /only/ to create the best public cultural
+environment possible.  I worry that by explaining copyright as "protecting
+publishers from piracy" and "upholding author's right to control", you are
+playing right into the misinterpretation we are trying to undo. --[[file:akrowne.org][akrowne]]
+Mon Jun 27 15:07:07 UTC 2005
+
+Another point (like we were just talking about on the other page) is that there
+may be plenty of motivation /for authors/ to publish without all of the
+protections of copyright.  Credit for ones work is typically sufficient in
+academia.
+
+I don't think there is anything particularly wrong with Ray's assertions about
+protecting publishers (and authors, as discussed elsewhere) from piracy, and
+about upholding the author's right to control.  The only thing that may need to
+be made more clear is that these are "constructed" rights, that work within a
+certain cultural context.
+
+Furthermore, I don't think there is any "misinterpretation", just a shift in
+power, and hence a shift in policy!  (I'm not saying this is a good thing, but I
+wouldn't call it a misinterpretation - more like, a reinterpretation.)
+
+--[[file:jcorneli.org][jcorneli]] Mon Jun 27 16:24:38 2005 UTC
+
+When I wrote this entry, I was primarily concerned with the history of copyright and these three principles were meant to describe early copyright law as it existed in the days of Gutenberg.  I have added a paragraph to clarify the way in which these principles have evolved to the foundatons of modern copyright law lest someone come away with the misimpression that it is based on the same principles and interpretations as Rennaissance copyright law.  This historical perspective is important because it makes it clear the relation of copyright law to printing and the fact that copyright protection is a "constructed" right which was not part of the legal system before the invention of printing.  
+
+However, the nature of copyright law will obviously depend on the political system within which it operastes.  In Guttenberg's day, the source of political authority was "I the king" (or perhaps "We the nobles" or "God, through His earthly representative") but definitely *not* "We the people" and writing was seen as a prerogative of the clergy also permitted to high-ranking individuals of other classes but definitely NOT given to the common person (this position was weakened through the efforts of the humanists (who secularized learning) and the reformers (who put scripture and other religious writings in the hands of the ordinary believer) and its demise was accelerated the use of the printing press but it would still be a long time before modern conceptions of universal literacy would become prevalent), and knowledge was seen as static, so the notions which inform modern copyright law were alien to the system and what one had was pretty much the state of affairs summarrized above.  The first copyright granted by the Venetian senate was for the exclusive right to print Cicero and Pliny's letters.  In eighteenth century Britain, the verdict of  Lord Chief Justice Mansfield in the case of Millar vs. Taylor stated "From what source, then, is the common law drawn, which is admitted to be so clear, in respect of the copy before publication? From this argument – because it is just, that an author should reap the pecuniary profits of his own ingenuity and labor." 
+
+Of course, the situation in the United States is much different because the basic principles mentioned above were repudiated during the Amercan Revolution and government was constructed on a rather different basis.  As a corollary, the older ideas about copyright were replaced with the new ideas that the purpose of copyright law was as an incentive to produce and disseminate intellectual content.  Keeping this in mind, one can see the nature of the misinterpretation Aaaron is concerned about --- this misinterpretation is a conservative (for clarification of this term, please see  http://polaris.gseis.ucla.edu/pagre/conservatism.html) throwback to an absolutist worlview.  --[[file:rspuzio.org][rspuzio]] 27 June 2005
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

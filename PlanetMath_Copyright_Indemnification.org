@@ -1,0 +1,539 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Purpose
+
+This page is to discuss how to "secure" PlanetMath (and its
+derivatives, such as the FEM) against potential copyright infringement
+(or more specifically, legal battles based on them).
+
+*  General Problem Description = 
+
+PlanetMath is a collaborative authoring project, with writing and revision tasks highly distributed among volunteer writers.  While we would like to think all of the writing is completely original, there are a number of reasons we can't operate under this assumption:
+
+ 1. In the past, we've had a few (relatively small) incidents of people including elsewhere-copyrighted content (these incidents were all remedied).
+ 1. We've had incidents where permission was sought to include content, and granted, but the granting parties didn't realize they weren't authorized to do so.  
+ 1. Also, we've had incidents where authors of content insisted that no formal license or permission was needed.
+ 1. Mathematics is by nature highly universal and conceptual, so care must be taken in its expression to avoid the appearance of copying some other expression.
+
+If elsewhere-copyrighted content is illegitimately included in PlanetMath, we could be in trouble.  Copyright law is silent on the issue of the culpability of an umbrella project which is organizing a CBPP collaborative authoring effort if a small part of that effort (meaning a usually small portion of the content and/or subset of the contributors) are though to have infringed on copyright as a part of their contributing activities.  
+
+Thus, it seems such CBPP efforts are at the mercy of (usually powerful) copyright owners, who could decide among any of the following: demand of notice-and-takedown of infringing portions, court action against the specific contributors, court action against the entire project, takedown of the entire project permanently, demand of royalty payments against the project or individuals, or even simply takedown of the project until it can be screened and guaranteed "free" of infringement (which could easily be defined to be intractible).
+
+It suffices to say, most  of these outcomes would be extremely disruptive, if not terminal, for the project.
+
+Because of reason #1, we know that the occasional (perhaps naive) user will end up infringing.  Because of reason #2, its difficult to get permission to copy legally.  Because of reason #3, we know we must be vigilant to get permission /formally/.  And because of reason #4, mathematics is probably more vulnerable to accusations of infringement than more purely literary areas.  
+
+*  Solutions
+
+**  Change the Law
+
+The law could, and should be changed to protect CBPP efforts.  This could be akin to the "common carrier" protections of ISPs with regards to web content.  The law need not /condone/ or /permit/ copyright violations within CBPP, but it could limit the legal exposure of the umbrella project or organization, and limit actions to basic due diligence and takedown upon notice.
+
+Of course, changing the law is easier said than done.
+
+**  Indemnification
+
+Something we could do right now is indemnify PlanetMath contractually.  We could require that users agree to an indemnification contract upon signing up with accounts, and promise to do their own due diligence as they add materials.   
+
+Here, we should develop such a contract, for placement on the sign-up pages.  Users already have to agree to license all their contributions under the FDL; we could simply expand this into a larger and more formal contract.
+
+Draft of the indemnification contract:
+
+ PlanetMath Contributor Copyright Pact
+  
+ I, the undersigned, agree to the following:
+ 
+ 1. I agree to license all of my contributions under the GNU FDL, version
+ 1.2 or later version.
+ 
+ 2. I will refrain from copying or substantially-copying in accordance with
+ international copyright law, the text of any content I directly author
+ within the context of 'PlanetMath encyclopedia entries', without 
+ permission from the copyright holder.
+ 
+ 3. I will perform due diligence in my use of portions of copyrighted 
+ content without permission, according to 'fair use' guidelines.
+ 
+ 4. I will perform due diligence in my securing of permission to use
+ copyrighted content with permission.  This includes
+ 
+  4.1. Determining the actual holder of copyright (author or publisher).
+  4.2. Securing explicit, written license to copy under terms compatible
+       with the FDL.
+  4.3. Explicitly marking copied content with source and permission 
+       information.
+    
+ 5. In the event of infringement or reasonable claims of such from a 
+ copyright holder with respect to my contribution, I will, in response
+ to the request of the PlanetMath staff, remove the offending content
+ by editing or deleting the corresponding PlanetMath entries owned by
+ me.  I understand that if I fail to do so, the staff may, at its sole
+ discretion, remove or alter any content that I have contributed, as
+ well as lock or delete my access account to the web site and ban me
+ from future participation there.
+ 
+ Check this box if you agree to the contract: [ ]
+ Type your name or mark here: [                  ]
+
+An open question is how legally binding these contracts would be if they are purely electronic.  We would start to face significant management overhead if we had to have people sign things and mail them to us.  This would probably also precipitiously limit the expansion of our pool of contributors.  Can someone advise on this?
+
+: As a working compromise, maybe there could be electronic contracts for the website, but paper contracts for the printed version. --[[file:rspuzio.org][rspuzio]]
+
+: For relevant precedents, click [http://www.phillipsnizer.com/library/topics/click_wrap.cfm here]. --[[file:rspuzio.org][rspuzio]]
+
+[[file:Second Draft of Pact.org][Second Draft of Pact]]
+
+**** Comments
+
+As you all know, this subject of copyrights, infringement, and liability is one I've thought about quite a bit, so it should come as no surprise that I have opinons and suggestions.  Here are some of them (with more to come later!).  I would love to hear your opinions and comments both on the original proposal as well as on these comments (by "you", I mean not just Joe and Aaron, who I expect to hear from, but also other people such as Planet Math board members and contributors).  In particular, I think that there needs to be some more thought, discussion, and research on this issue before we can come put with a sound plan of action or a good draft of this document.
+
+#+BEGIN_VERSE I.  International law?
+
+First of all, to the best of my knowledge, [http://www.ala.org/ala/washoff/WOissues/copyrightb/intlcopyright/Default2660.htm#intro there is no such beast] as "international copyright law" in the same sense as "U.S. copyright law" or "Chinese copyright law".  The phrase "international copyright law" is used to refer to the treaties and agreements by which different countries recognize each other's copyrights.  Therefore, I am not sure what section 2 in the draft would actually mean in practise in its current form.
+
+Second, there is the issue of what jurisdiction this document would potentially be applied.  Presumably, if there were an international copyright law in the relevant sense, then the idea behind the document would be that legal challenges would go to the world court.  Rather, since Planet Math is incorporated in the state of Virginia, I would assume that someone would bring an infringement suit in the United States.  Therefore, I would think that it would make more sense to say "in accordance with U.S. copyright law".  Also, one might consider stating that this particular document is to be interpreted according to the laws of the state of Virginia.  (The difference between laws in different states can be relevant in issues of copyright --- remember the example Lessig gave of the lawsuit about sound recordings in New York.)
+
+While on this topic, it might be pointed out that such an arrangement would automatically take international copyright law as it is into account --- according to the Constitution, all duly ratified treaties (in particular, copyright agreements) have the force of law.  One case where I know this is an issue is with works written between 1923 and 1963 by foreign authors who did not renew their copyrights.
+
+Presumably the motivation for citing international law was the fact that we have contributors from all around the world.  Potentially, there is room for complication if and author in one country sends a submission to a website in a second country and a publisher in a third country claims that this entry infringes their copyright.  In such a situation, there is the potential for the (possibly conflicting) laws of three countries as well as treaties between these countries to be relevant.  For some idea how to proceed, maybe we could look to Project Gutenberg for guidance since they are in a similar situation as us.  Their policy has been to go by the copyright law of the country in which the website is located (and hence mirrors in different countries may not all be able to distribute the same content --- the example they offer is "Peter Pan").
+
+#+BEGIN_VERSE II. Copying with permission
+
+Overall, I agree with the scenario suggested in section 4 of the draft.  My comments here are more in the form of considering details and raising some general questions germane to the issue.
+
+I would say that it is not enough that to ask that contributors do their homework and make sure that they have permission --- they need to provide us with a copy of the proof that what they are doing is legitimate so that we can have evidence in hand to defend ourselves if need should arise.  As I see it, in concrete form of  this proof will take one of three forms depending on the particular circumstance.
+
+ 1.  For source texts whose copyright has expired, one needs to be show that the text is indeed in the public domain.  In the case of Project Gutenberg, they do this by asking that contributors send in a copy of both recto and verso of the title page.  We could adopt a similar policy.  We could also make life easer without much risk by asking that this only be done once per work (once someone sends in proof that a workis indeeed in the public domain, the title of the work could be added to a list of works known to be in the public domain so anyone can use the work later without first sending in proof) and perhaps by automatically accepting entries based on books found on Project Gutenberg (since they already have done the work of checking and could provide the evidence (we need to check if they wold be willing) if it should be necessary.
+
+ 1. For source texts which have been released under the terms of a free license or released into the public domain, one needs a statement to the effect that such a work has been so released.  Also, as Joe has pointed out, certain free licenses require that a certain protocol be followed in using the work, so we will need to know about the license arrangement so that the history file can be properly updated and what not.
+
+ 1. For any other texts, one should obtain permission from the copyright holder in writing, as mentioned in the draft.  I would only add that a copy of this permission should be sent to us as well so we can keep it on record.
+
+As before, the question arises whether these title pages, statements about license, and permissions be sent by snail mail of by e-mail.  I would suggest the same compromise as proposed above --- for the electronic version, electronic documents will suffice but, for the printed version, we should demand paper versions.  Also, I would think it a good idea if a special area of planetmath.aux be set aside for these documents so that anyone who thinks that we have infringed on a copyright can easily enough check for her/himself.
+
+The question arises "What role will the staff play?"  Ideally, we would like to take a hands on approach, but this seems impossible under the current legal situation.  After all, if things were different, presumably we would not need to worry about contracts like this since the law would be our assurance of indemnity.  So the question boils down to "Exactly how much of a role is the staff _required_ to play?".  I don't have a good answer, but I assume that the way to find out would be to carefully examine similar situations and look through court decisions.  Until we know better, let me instead delineate some possibilities.  
+
+On the one hand, the staff could take a rather active role in checking permissions.  The policy could be that one first sends in the documentation that it is legal to use a certain work, the staff reviews this documentation, and the entry only appears when it has been cleared.  The advantage of this is that, by double-checking permissions, it would offer the maximum assurance against infringement.  The disadvantages are that it would mean that the staff would take on added work and that, by taking an active role, _might_ open itself to liability which it otherwhise would have avoided in the event of infringement.
+
+On the other hand, the staff could take a much more passive role in simply filing away the documentation of legality of copying and simply enforcing the policy that the documentation be sent in, but not checking it.  Whether or not this is possible presumably depends on the extent to which we can put the responsibility on the contributor in the event that the documentation sent in does not suffice to permit the contribution to be added.
+
+Again, the whole issue boils down to "How much liability is an orginazation running a CBPP project forced to assume?".  It is pretty clear that we can not write off all responsibility onto the backs of the contributors, but we would not want to assume any more resposibility than we are obliged to assume, either.
+
+#+BEGIN_VERSE III. Indemnity
+
+While the document is called "Draft of the indemnification contract", I don't see that it explicitly mentions indemnification.  To be sure, there is the idea that, should the author not abide by the guidelines, Planet Math could sue the contributor for breach of contract, but I think that some more specific statements might be in order.  In particular, I have two suggestion:
+
+ 1. There could be a specific statement to the effect that the author agrees  to hold Planet Math blameless in the event that a contribution infringes a copyright.  As it stands, a contributor could try to construe this document to imply that, as long as he follows the procedures outlined in the document, he somehow is clear and Planet Math is assuming responsibility.  This is the *exact opposite* of what we intend, so we had better close the loophole before it chokes us by stating explicitly that this document is in no wise to be construed in such a manner; while we require that contributors follow certain procedures, these is no implied guarantee offered that following these guidelines will suffice to guard against infringement and that we do not assume any responsibility in the case that they do not suffice.
+
+ 1. Further, there could be an explicit statement to the effect that the contributor agrees to reimburse Planet Math for damages for infringement.  Even as I write this, I balk at the idea --- I don't relish the possibility of paying thousands of dollars to a publisher should there be a problem with one of my entries.  However, it seems to follow inexorably from the principle of trying to stay as close to common carrier status as possible.  Ideally, we would not assume any responsibility as an organization, so it would follow that each contributor would be liable for paying damages in the event of infringement.
+  
+#+BEGIN_VERSE IV. Ownership
+
+Since there is a system of ownership in place, there arises the question of how responsibility for infringement and ownership of entries mix.  I'm not completely sure what to make of the issue, but I think it is an important one we need to consider.
+
+One feature of the ownership system is that it clearly puts a single person in charge of every entry.  Given that this person has rather complete control over the entry (even if one chooses to make the entry world editable, the fact of the matter is that the owner still has the sole control of the access control list, so can revoke this permission at any time), it makes sense that certain responsibilities go along with this privelege.  For instance, one is responsible for responding to corrections.  The question then arises whether this entails legal responsibilities as well.  
+
+For this position, one might argue that making the owner of the entry responsible legally means that there is never any doubt who to sue should a problem arise.  In the case of multiple authors, it could be messy figuring out exactly which author introduced the infringement and the issue arises whether the other authors share responsibility for allowing the infringement to persist.  However, with a "captain of the ship" approach, there are no such doubts; the organization is less likely to be sued if a single individual assumes responsibility.
+
+Against this position, I would point out that things are not as simple as one might wish them to be.  In particular, many entries have changed ownership several times.   As pointed out elsewhere on this page, it may not be fair for the owner of the entry to assume responsibilty for potential infringements due to the contributions of previous authours --- the owner typically can only take it on faith that previous owners and contributors have exercised due diligence and has no way of checking this claim so it might be unfair to dump responsibility on the shoulders of the owner when the owner.  Also, there is a converse situation to consider --- to what extent should an owner of an entry be held responsible because someone else choosed to abuse the privilege of being able to add to an entry.  Similarly, it would not be fair to hold a past owner (who is still on the author list) responsible for infringements that crept in after ownership changed hands.
+
+The dilemma is: it seems that the only fair arrangement is to have individual authors to assume responsibility for their particular additions to entries, but this can make it complicated to figure out exactly who is responsible in the case of an entry which has been around for a long time, has had many authors and has changed ownership numerous times.  I think that the reason that this is a problem is because copyright law grew up in the world of print, where situations like this do not arise and hence is ill-equipped to deal with them.  To be sure, sorting out tangled cases and determining culpability is no problem for courts, but unless the law states that, in the case of a commons-based project with multiple authors, the court must first determine which author is responsible for a particular act of infringement, I think we will be stuck with this dilemma.  (Maybe I need to add this to my essay as yet another bottleneck.)
+
+Also, while I'm rambling and digressing, I might as well bring up my thought that this business of qualms in holding owners legally responsible for their entries is related to the non-ideal situation of Planet Math.  As I see it, in a more ideal situation, there would be many more contributors (a significant fraction of the mathematical community) and maintaining an entry would be considered as a legitimate activity for mathematicians (just like publishing journal articles, making presentations at conferences, or contributing entries to print encyclopaediae nowadays).  In such a situation, the typical member might own only a dozen entries or so and would be able to work on maintaining them during business hours, so it would be more reasonable to ask that contributors take out the time to make sure that the entries they own are up to snuff and taking on a concommittant legal responsibility and rewrite any questionable portions in their own words.  Also, in such a situation, entries would be less likely to
+change hands simply because their owners are too busy to keep up with corrections to numerous entries.  Unfortunately, as it stands, Planet Math depends on contributors who own 100 or more entries and typically can only work on them in their spare time.  On top of that, the staff is in no better shape timewise of moneywise so every suggestion which requires work on someone's part inevitably runs into difficulties.
+
+#+BEGIN_VERSE V. Prerogatives of staff
+
+In the fifth section of the draft it is mentioned that the staff can, at its discretion, remove entries which, in its sole opinion, infringe on copyright.  It might be worth pointing out that this is a special case of a more general policy.  As I understand it, there is a general policy that the staff can take down contributions which are inappropriate for whatever reason --- infringing on copyright is but one of many ways a contribution could be inappropriate.  For instance, as I understand it, if a post or a contribution has nothing to do with math (say someone is spamming advertisements for their product to help fora or writing encyclopaedia entries advertising their new calculator and offering a special discount coupon as an attachment to said entry) or is inflammatory (say a post to a forum talks about the mathematical superiority of a certain race and goes on to say that therefore, entries by members belonging to inferior races should be ignored because their authours are genetically incapable of
+understanding mathematics or that someone posts offensive racial jokes to the humor forum), the staff can take it down and even revoke the user's account on account of misuse.
+
+I certainly don't see it as a problem that one explcitly states this special case.  Redundancy of this sort can be good.  However, let's also make sure that the general principle is announced equally authoratatively.  This particular document is intended to deal with issues of copyright, but it might be worth considering whether one doesn't also need to deal with other issues in a new user's agreement, in which case, the draft document might wind up being the copyright section of a larger document.  For instance, while we're on the topic of indemnification, it might also be worth considering whether to add a disclaimer to the effect that postings to fora and other contributions reflect the opinions of their authors and are not to be taken as expressing the opinion of the organization (so individual users would bear responsibility for libel as well as for infringement).
+--[[file:rspuzio.org][rspuzio]]
+
+***  Problem: Retroactive Indemnification
+
+So how do we get existing users to "sign" these contracts?  Maybe send them a mass email sending them to a contract page?  What do we do with their entries in the meantime?
+
+A valid point against worrying too much is that the bulk of the content is owned by a small group of people.
+
+/However/, how many of these people will be willing to sign the indemnification given that many of their entries are adopted and hence /may/ contain infringing portions from previous authors?
+
+***  Problem: The FEM
+
+The FEM is the Free Encyclopedia of Mathematics, a print book (and of course electronic manuscript) derived from PlanetMath entries, aiming to encompass the entirety of mathematics.  
+
+Other than the same above problems with handling retroactive indemnification, print works have a higher practical burden of copyright diligence.  In other words, while copyright holders may  slightly annoyed at seeing some of their content lifted on a website (which can be changed in one place so that everyone immediately sees the fixed version), infringing material, once printed, stays printed.  
+
+Printing a book which is later shown to contain infringing portions would also be throwing a bone to critics and competitors of the FEM.  We certainly don't need to do this.
+
+So do we hold back all FEM entries for which we cannot get the entry owners to agree to the indemnification contract?
+
+--[[file:akrowne.org][akrowne]] Mon Oct 24 20:45:21 UTC 2005
+
+: I think the answer to that question is /yes/.
+
+:: Ok, then I think the natural thing to do is start placing
+"copyright blessed" metadata in the exports, so that the build process
+can be selective.  We could also make builds conditional as to whether
+these items are included; that way we could proof the "entire" FEM
+internally, as compared to the "public" version for
+release. --[[file:akrowne.org][akrowne]] Tue Oct 25 03:03:22 UTC 2005
+
+#+BEGIN_VERSE Yes, good. --[[file:jcorneli.org][jcorneli]]
+
+***  Problem: Wikipedia &c.
+
+For a while I've supported a policy of not copying from Wikipedia.
+However, people seem to want to copy from Wikipedia, and if the
+licenses were all in order /and/ the original authors of the copied
+Wikipedia articles had not themselves copied their articles from
+elsewhere, then I'd be happy to say "go ahead".  The license issues
+aside (issues which I continue to think are serious and annoying and
+hope to discuss elsewhere at greater length), I don't think we have
+any legal guarantees of the sort Aaron mentioned above with stuff
+copied from outside sources (unless, of course, we did... which could
+presumably only happen if we knew who the copyright holder was).  It
+may, accordingly, be necessary to expand the Pact above with a note
+that says that "due diligence" can not possibly be practiced in the
+case of copying from Wikipedia, and therefore such copying is
+explicitly prohibited.  --[[file:jcorneli.org][jcorneli]]
+
+: Well, why just Wikipedia?  Ultimately, one can't even be too sure a "legitimate"
+single author didn't lift something that the something's source would consider
+infringement.  Or how about: should I delete all the DAB entries (after all, these were
+sourced from many contributors)?  No, I think we expressly need to get to the 
+point where we feel secure in copying Wikipedia.  It is a low-hanging fruit in
+terms of licensing, and I think we should seriously consider using it as a 
+"copyright benchmark".  The point of the indemnification isn't to spell out a kind of
+due diligence that will /eliminate/ all potential problems; it is to shrink the 
+universe of potential problems and then /make the contributor responsible for 
+any that might arise/.   My only worry about this strategy is how sound the contract
+would be before the law.  And I think we need to consult a lawyer on this question
+(as I believe Ray planned to do). --[[file:akrowne.org][akrowne]] Tue Oct 25 02:58:37 UTC 2005
+
+:: In answer to your question about the "single author": its quite
+different, I think, when the author (resp., copyright holder) is asked to certify that their own
+work is legal, than when they are asked to certify that the work of
+some other anonymous authors is legal.  I personally think that if we
+insist on across-the-board copyright certification, then it is a
+corollary that we can't use Wikipedia.  The converse is true as well.
+Unless Moglen or whomever has some tricks up their sleeve that I can't
+see, the only way to be comfortable using Wikipedia is to also be
+comfortable risking infringement.  Look at it this way: How do we know
+that Wikipedia isn't a [http://en.wikipedia.org/wiki/Honeypot honeypot]
+set up by Springer-Verlag in conjunction with the CIA? ;-)
+Maybe it would be OK to use Wikipedia stuff on PM (where we can use
+the "Google defense"), but Wikipedia-derivative articles (or, like you
+were getting at, /any/ uncertified articles) can't go into the FEM.
+Again, this discussion isn't even taking license issues into account:
+the point is that much in the same way future difficulties with the
+FDL weren't anticipated when Wikipedia was set up, this
+copyright-cleanliness issue wasn't either.  Or if it was, people went
+ahead anyway.  Now, not to be all pessimistic, /maybe/ there is a way
+to get common-carrier status for CBPP projects in general (including
+the dead-tree departments of the same), which would mean smooth sailing
+for everyone from Wikipedia to FEM.  I think it would be a good idea to
+talk this over with anyone in the legal field who will listen... partly
+just because it /makes sense/.  But even so, realistically speaking,
+it seems like a political long shot.  Anyway, I think we should definitely
+talk this whole thing over with Moglen or someone like that.  Until then
+(at least!) I don't think we can assume that it will be possible to use
+Wikipedia. --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE I still think you are erring by seeing this purely as an epistemological issue.
+The certification does not strictly require the PM contributor "know" there is no 
+infringement.  It simply requires they be willing to take responsibility for the
+content they add.  This is regardless of how many stages the content went through
+before they added it, or how many contributors were involved in those stages.  Don't
+forget, if a contributor is unsure, they can just rewrite all or part of the silly
+thing.  In fact, "certification" is probably too strong a word, because in the end, we
+aren't strictly changing what we /know/ about the copyright "cleanness" of any article.  
+We are just changing the network of responsibility relationships among our contributors, 
+with  likely a probabilistic effect on cleanness.  If Wikipedia has the courage to
+copy us, why shouldn't we be able to do the reverse? To paraphrase Lessig: let's not 
+let our thought get /too/ legalistic, now.  --[[file:akrowne.org][akrowne]] Tue Oct 25 13:27:24 UTC 2005
+
+#+BEGIN_VERSE: To elaborate a little, I believe a properly-indemnifying pact acts as a "firewall"
+which protects us from copyright uncertainty further down the pipe.  This border is set 
+at the boundaries of PM.  The pact is (or at least should) be designed so that we (PlanetMath
+the org) can be ignorant as to what is beyond that border.  Nothing else would be practical.
+However, the situation is different for the contributing user (or object owner).  Since they
+agree to take on culpability, for them, the issue is still an epistemological one---how much
+do they know about the copyright cleanliness of the content they are adding, and what can 
+they do to be more certain about it?  I don't think the function of the copyright pact
+can be understood without seeing this dichotomy between PM's perspective and the contributor's
+perspective.  In fact, applying this "firewalling" concept, we may not even need to become
+involved in the "copyright proof management" process (maintaining verso pages or letters of
+license), because the user has already agreed to culpability (whether the law would frown on
+not fostering these diligence practices by making requirements is another story). 
+--[[file:akrowne.org][akrowne]] Tue Oct 25 13:45:56 UTC 2005
+
+#+BEGIN_VERSE:: OK, you've made a good case, and I think I am convinced.  But
+just to be sure, I'd like to go over it briefly again.  My initial
+objection was that it wouldn't make sense to ask a user to vouch for
+something they didn't know. In court, they might say "First of all, I
+was mislead by Wikipedia. They said I had the right to use this
+material, whereas in fact they themselves did not have the right to give me permission.  Even though I signed
+that Pact, its not my fault, its really PM's fault: they should have
+told me to avoid copying from Wikipedia; I did the best I could when I
+checked that Wikipedia was available under the FDL!"  The point is,
+you can't build a strong foundation on the sand.  If the user can't
+logically speaking guarantee copyright cleanliness of Wikipedia
+content, then their (de-facto, at time of re-publication) pledge that it is clean would seems to have been
+reduced to an absurdity, see?  It is most likely /themselves/ who
+they'd be getting in trouble by saying something that isn't true,
+since that's what the paper dictates, after all.  But I still think we
+should do what we can to keep users from getting themselves in
+trouble.  After all, at the very least, it wastes their time, and if
+anyone else starts using their work, it wastes even /more/ time.
+Now, I'm not saying that Wikipedia-usage is guaranteed to mean legal
+trouble!  I'm just saying that it seems to me that it would be a fair
+amount of work to make sure that it wasn't.  Outright copying is
+anything but work.  If the concern is only to protect PM.org, then I
+think that /most likely/ a pact like the above would be fine; a
+user's claim that they were being asked to stand to something that was
+logically impossible probably wouldn't hold up in court as long as
+they signed the paper.  We could think this "sinking sands" question
+over further.  But in any event I think we owe it to users to warn
+them about possible pitfalls associated with derivative works.  In the
+end, from a pragmatic point of view, of course it makes sense to have
+a "responsibility checkstop" running at cross-angles with every
+potential "copyright ambiguity vector".  The pact is a good thing.
+The question as to whether it OK to use Wikipedia content or not? -
+still hasn't been resolved in my mind.  Probably we can use a strategy
+like the above to set things up so that such re-use doesn't cause
+legal trouble for PM.org.  But that still doesn't mean its a good
+idea.  The fact that Wikipedia is using PM content doesn't mean that's
+a good idea (on their part) either.  If the ultimate responsibility
+lies with the users, the "CBPP copyright conundrum" doesn't go away
+completely.  It just shifts the variables around a little bit.
+--[[file:jcorneli.org][jcorneli]]
+
+Maybe I'll say more after the protest (but I'm sure you'll both be relieved to see that something is constraining me from being my usual verbose self :) ) but I think that the primary issue here is one of making sure that fingers get pointed in the right direction.  I think we all agree that the blame for offending content should rest with whomever contrubuted that content, not with the organization with runs the website nor with other contributors who have contributed non-offending material to the same entry or simply edited content.
+
+The big question is how to make sure that the courts assign this blame to the right party.  Unfortunately, as we've seen in the Universal Studios case, the authors of information-sharing software and maintainers of websites tend to get blamed along with everybody else when infringement occurs.  Since it will take a lot of time and effort to change laws and institutions to correct this, in the meanwhile we will focus on changing our own laws and institutions to correct for this as best we can.
+
+As I see it, this change will involve two components (one of which is in place, but needs to be repaired) --- user contract and version histories.  The user contract which we are currently debating aims to delineate responsibilities ahead of time and make it clear that responsibility for infringing contributions lies solely with their contributor.  More specifically, each contributor represents that the content he/she is adding is, to the contributor's best knowledge, fit to be contributed and agrees to assume responsibility for the consequneces of others acting in good faith on this assertion by the contributor should it turn out that the assertion was incorrect.  The version histories allow one to determine, in the event of a claim of infringement, exactly who is responsible for introducing the questionable content so that fingers can be pointed in the right direction from the outset of the investigation.
+
+As for Wikipedia, perhaps a similar contract is in order --- it could state that Wikipedia (or Wikipedians) represents that its content is, to the best of its (their) knowledge fit for distribution under the GNU license and assumes responsibility for the consequences should this not be the case.  In other words, Wikipedia (or Wikipedians) could be treated pretty much like any other contributor.  Of course, we would presumably agree to a similar reciprocal contract so that responsibility for infringements in Wikipedia articles copied from Planet Math will ulitimately devolve on whomever contributed the content that they had no right to contribute.
+
+Since it seems rather clear that the common carrier argument will not work now, some compromise will be necessary.  The question is how much compromoise will be necessary.  In particular, my suggestion about keeping documents proving legitimacy of copying on file was meant in this spirit --- ideally, it would be entirely the user's business to ensure that contributions are alright but, given that such a complete disclaimer may not be possible, we might want to protect ourselves by having some evidence showing that the copying was permitted if we cannot shake off all responsibility to the contributor.  In general, we need to make a careful examinattion of exactly how far we can go in the direction of common-carrier status, be sure not compromise more than necessary, and be ready to revise our policies at the legal climate improves.
+
+As for the issue of keeping users from getting themseleves into trouble, I agree that responsibility to users and fairness in making demands on them is an important issue but, at the same time, I think that we need to not confuse the two issues (while acknowledging their interconnectedness).  First, I would say that the former issue is primarily one of legal obligation, whilst the latter is of one moral obligation.  Second, these ends are carried out through different instruments, each of which should not be used overstretched to accomplish an end towards which it is unsuited --- the former is accomplihed by means of the indemnification contract whilst the latter is accomplished through the new user agreement.  To be sure, we can offer no guarantees that the suggestions we recommend are sufficient to preclude infringement, but we can be rather sure that a conscientouous contributor who has taken the time to read through the new user guide will be cognizant of the sorts of dangers involved and will
+consequently make a reasonable effort to make sure that all contributions are up to snuff legally.
+
+Finally (it sems that I wound up being verbose in spite of the time constraint) I would like to reiterate that most of the difficulties we are encountering here stem from the fact that the current legal system is _not_ particularly well suited to CBPP projects and that, no matter what we do, there may be no completely practical solution within the existing legal and regulatory framework.  In particular, I am certainly not alone in thinking that the current copyright law is Draconian and unfair in its treatment of free projects.  However, much as one might like to, there is no way that Planet Math could protect erring users and soften the blow --- we simply to don't have the resources to pay the crippling fines and the likely result would be that everyone else would lose a valuable resource in any attempt to shield an infringing user.  Rather, I think the proper course of action in this case is to compromise as best as we can with the current state of affairs while, at the same time, recognizing that this is
+purely a pragmatic move and that we owe it to ourselves and our contributors to speak out about the situation and work towards reform, if not revolution in copyright policy.
+--[[file:rspuzio.org][rspuzio]]
+
+My caution against using Wikipedia contents can probably be summed up
+with the adage "haste makes waste."  Using Wikipedia may be a way to
+add content to PM quickly, but I certainly don't want to waste my time
+editing material infringing material.  Even if we manage to stay out
+of court (and !PlanetMath.org is secure), the introduction of
+infringing material could be a significant waste of time for PM users
+and FEM editors.  It basically becomes a cost-benefit situation -
+since as Ray has reminded us recently, it also takes significant time
+to prepare an article from scratch.  I think we should look further
+into the analysis here.  However, I also think it would be a good idea
+to remember the other part of what Ray was talking about in that
+conversation: the fact that there are lots of public domain works that
+we can copy from without risk.  (Well, to be fair, I'm not sure what
+happens to derivative works when copyright terms are extended? Yikes.)
+--[[file:jcorneli.org][jcorneli]]
+
+In response to Joe's immediate above, we have no /ex post facto/ laws, so 
+I would imagine if the accuser can't prove the infringement occurred after
+the terms were extended, they're out of luck.  Of course, that doesn't mean
+a court case wouldn't still happen, causing massive disruption to the 
+entry writer.
+
+In response to Ray's comments before that, we need not see the Grokster
+case (I assume you meant MGM, not Universal) as a loss, for our purposes.
+I think the Pact, as I drafted, makes it pretty darn clear we are not 
+inducing infringement.   We are two steps better than Grokster: not only do
+we not encourage infringement with promotional text, we have a contract 
+that says, in essence, "follow copyright law" (or else, you accept the
+consequences).  So we're discouraging it contractually.   The "culpability"
+clause is just practical: if you're dishonest OR you screwed up in checking
+provenance, we wash our hands.  By the standards of the Grokster case, I don't
+see how we could be held liable.  
+
+Of course, precedent, as we know, hasn't been consistent.  But here is one
+plausible legal basis, at least.   
+
+Finally, Ray's critique of the "Pact" draft is good.  I will revise accordingly,
+when I get the chance (or someone else can go ahead). 
+--[[file:akrowne.org][akrowne]] Thu Oct 27 02:42:42 UTC 2005
+
+As for copyright extension, here is what I know from researching my Emory talk:  Whenever Congress has extended terms of copyright, the law has applied only to works whose copyright was still in force at the time the law was passed --- that is to say, the expiration dates of yet unexpired copyrights were moved into the future, but no works already in the public domain were put back under copyright protection.  The only exception which I have encountered has to do with the GATT treaty.  Under this treaty,  works by foreign authors produced before 1964 and originally produced abroad are to be tretaed as if their copyright had been renewed in the United states if their foreign copyright was still in force in 1996.  So I suppose one could have a case of a derivative work based on such a foreign work authoured in the United States in, say 1990.  I agree with Aaron that the production of such a work could not possibly be deemed illegal after the fact; however, there still remains the question whether it is still
+legal to produce new copies of this work after 1996.  I have no idea what the answer to this question might be, but I assume it is of little immediate practical value to us.  In the event that we should encounter such a mathematical work or should a future treaty remove a larger class of works from the public domain, I am sure we could find an answer to the question and decide how to proceed; for the present, I will not worry  about this issue --- sufficient unto the day are the evils thereof.
+
+In a rental dispute, an attorney once gave me the sound advice "Judges love paper".  In other words, whenever legal action is a possibility, one should take care to  protect one's rear end with a paper trail (I am not referring to defective potty technique here :) ).  In our case, I think we would have a fighting chance in an infringement suit if we were to walk into a courtroom and present, as exhibit A, the version history of the disputed entry showing who contributed the questionable content  and when; as exhibit B, the contributor's user agreement; and, as exhibit C, either (depending upon the circumstances) documentation showing that the work from which the contribution was derived was in the public domain at when the contribution was submitted or permission form the copyrigiht owner to use a work, or an account of how the entry was written which demonstrates that the author did not make use of the work which was allegedly infringed.
+
+I agree with Aaron that our preventative measures should make us relatively safe, even by the standards of recent verdicts.  (At any rate, one would assume that a fudslinger out to attack information-sharing webservices would take aim at an easier target --- kind of like burglars not wasting time on houses which have better locks even if they think they could pick them.)  Indeed, it would be nice if we were sued for infringement under our arrangement and won since that would serve to enclose the point of dispute in a bounded interval --- at one endpoint, the practicse of Grokster is unacceptable but, at the other endpoint, our practise is acceptable.  Since this area of law is in flux, perhaps the best thing for us to do is to keep our eyes peeled for new developments and be prepared to act if need be but take care not to overreact to events which have not yet (and may not in the future have) happened.
+
+I am glad that you found my comments useful.  Today or tomorrow, I will post a second draft of the document incorporating these suggestions for you all to look at.  I am sure that it will have it's flaws and likely err in opposite direction on some points.  Hopefully, by a dialectical process we can combine the longcomings of both drafts and minimize the shortcomings to produce a sequence of successive approximations converging to a strong legal fortress.
+--[[file:rspuzio.org][rspuzio]]
+
+As I see it, one of the big problems here is what precisely is meant by
+"fair use" in mathematics on PM. 
+For example, I would see it quite difficult to sign a "pact" promising 
+that I have made only "fair use" of source material when ultimately, 
+this question is not something I can know precisely. 
+Another problem is the following: As of now, there are 
+17 references to "Counterexamples in topology" at PM distributed 
+among me, mathcam, igor, ray, drini, and Koro. 
+Even if each of us have only made fair use in 
+individual entries, there is no guarantee all of these entries 
+together represent a fair use of the book. 
+This is especially the case, when they all appear in sequence in FEM.
+
+Here is an idea: Would it be a bad idea to ask the publishing
+companies what they consider fair use. This should be quite easy since
+in our case, the question is quite specified (compared to wikipedia). 
+After all, publishing companies must have designated people to 
+answer these type of questions consering copyrights. 
+Having at least some guidelines from
+the publishers would make it much more easier to 
+address these questions. I also think that this would show good faith to
+approach publishers in terms of a dialogue instead of a lawsuit.
+
+IMHO references on PM would further increase its usefullness as these
+provide valuable further reading. They also fixes the scope of the 
+content. This is also in the publisher's interest, as this would 
+provide free advertisement for their 
+book --- assuming we can come to terms on what is meant with fair use. 
+One question to publishers could be the following: 
+/Suppose a theorem/definition/proof can be found in 5 books published during a
+time period spanning at least 20 years. Then PM is allowed to paraphrase it
+into PM provided references are given. No more than 20 references to 
+any book must appear on PM./
+
+This would make it much more harder to create entries based on references
+on PM. However, a good thing with this condition is that it 
+verifies that the content is standard material. Probably, this would 
+motivate people to contribute more basic material (which PM needs)
+as this is readily available. This is also easy to check. 
+
+Maybe publishers would agree that the above is reasonable fair use. 
+Another idea would be to have some kind of copyright field for each entry.
+If there is no reference in the entry, the author should be able to state
+where the content comes from. An answer could be: this question arose 
+during my research. If no such answer can be given, the entry should 
+not be accepted into PM. 
+-- [[file:matte.org][matte]]
+
+I think we can think this through ourselves.  (1) !PlanetMath's
+encyclopedia is not tangibly different from other encyclopedia
+projects on the market.  (2) Mathematics isn't copyrighted.  (3)
+Expression is what IS copyrighted; this subsumes "text verbatim" but
+is actually a bigger category.  (4) Collections of facts show
+expression, so, for example, the particular choice of entries in the
+"Counterexamples" book is probably copyrighted, so that even if each
+entry was rewritten from scratch, a work with exactly the same choice
+of entries might be pushing the limits.
+
+However, given (2), we should be able to talk about all of the
+counterexamples in the context of a /broader/ discussion of
+counterexamples than the one found in the book you mentioned, so long
+as it is clear that our choice is motivated by our own expression of
+some idea, and is not simply an excuse to mimic someone else's
+expression in a slighly noiser context.
+
+The number of references should be essentially irrelevant (compare
+!MathWorld, which is full of references, and often repeated between
+entries).
+
+An early claim behind the HDM project was that we should be able to
+reproduce any mathematical content that is out there.  The idea is
+that formal things don't represent expression, even if coming up with
+the proof was a creative act.  (I'm not sure if I believe this
+anymore; I'll have to check the details, but certainly /theorems/
+can't be copyrighted.)  If the claim is correct, all you really have
+to worry about is finding your own way to say things, whether they be
+theorems or proofs or definitions... and one thing that supports this
+claim is that this is what publishing mathematicians and
+encyclopedists already are doing (see 1 and 3 above).
+
+These are delicate legal issues, and I don't think you're going to get
+much help from publishers in understanding them.  --[[file:jcorneli.org][jcorneli]]
+
+With reference to "Counterxamples in Topology" business, may I remind you of the verdict in Feist vs. Rural Telephone.  As applied to our case, this precedent would say that we would be with in our rights to have an entry based on every single counterexample, definition, ant theorem  mentioned in that book and explicitly reference that book as the source of this information.
+
+The reason for this is often summarrized in the phrase "compilation copyright it thin".  That is to say, while one can claim legal protection for a compilation of facts, this protection basically only prohibits simple copying of this collection and does not extend to creative reuse of or reworking of this collection.  For instance, if we were to set up a website "Counterexamples in Topology" which included exactly the same material as contained in the book, we would surely be asking for trouble.  But if we were to add significantly more counterexamples culled from the mathematical literature, we should already be in the clear (this is essentially what Feist did in coming out with an improved phone book by combining the listings from several directories).  What we are doing goes far beyond this, since we are coming out with a reference for all of mathematics, not merely for counterexamples in topology or even for just topology.
+
+Furthermore, given the nature of our work, we have a powerful agrument for fair use of even all the material contained in "Counterexamples".  Not only are we rewriting it in our own words and not reproducing the arrangement to be found in the source, our work has a differnent charracter and purpose than the original work.  The original book was intended, in the words of its preface "not as a text, but as a course supplement and reference work".  While Planet Math does lend itself to such uses as well, I think that the difference in intended purpose and character between the two works is significant.  If the court considered "The Wind Done Gone" sufficiently transformative to qualify as fair use, I just don't see how we could plausibly get in trouble.
+--[[file:rspuzio.org][rspuzio]]
+
+Ok, here's what I think now:
+
+ 1. Matte has a point; we may need to go into more detail about what "fair use" functionally
+is in the contract, or regular non-lawyer people (our contributors) will get confused.
+ 1. He also has a good point about having metadata supporting copyright provenance, and 
+perhaps having reference metadata be explicit.  The presence of such fields alone would 
+inform and encourage users to supply this metadata; we could even forbid inclusion of the 
+entry until the user /at least/ selects "i wrote this entry from scratch".
+ 1. Joe has a point that references alone should not imply copying of portions, nor are they
+"incriminating" in any way.  References are a part of all scholarly writing.
+ 1. Ray's points about thin compilation copyright are also useful in shoring up our right to
+"comment" on other, coherent works, and "recompile" them.
+
+Out of these, #1 is a very near-term action item; we need to be more clear in the Pact.
+
+: I'm not sure how you got 2 from what Matte was saying, but I'd be
+curious to know more details about the scheme as they come
+up. --[[file:jcorneli.org][jcorneli]]
+
+Let me add something new to the discussion.  Today in the library we had a very interesting
+colloquium, entitled "Copyright or Contract?  EJAD and Library Services for eJournals", by
+Lisa Macklin.  Lisa is a law student who is almost done with her degree, and is the 
+Electronic Resources Team Leader in the library.  This talk caught my eye because this is 
+precisely the kind of issue we're discussing on this page: where we need contracts instead
+of copyright, where /can/ we use them, /how/ can we use them, and what form they must 
+take.  The difference is that our contracts concern the creation of works more than the 
+dissemination of existing works.
+
+I won't get into the details of the library situation with respect to access of e-journals.
+Generally speaking, I learned that the shortcomings of copyright law in the digital space 
+are causing (often quite flawed and/or exploitative) contracts to proliferate more than I 
+realized.  What matters for here is that I spoke to Lisa after her talk to see what she
+thought of our situation.
+
+Her first impulse was to suggest that the "notice and takedown" safe harbor of the DMCA 
+should absolve us of any further liability in the event of infringement.  However, I pointed
+out that we planned on producing a print compilation of the site, and that we also are not
+preventing the electronic content from propagating downstream (in fact, we actively encourage
+the copying of our content, under the terms of the FDL).   I think she agreed at this point
+that the DMCA's safe harbor (designed for ISPs) was not really sufficient. 
+
+After that, I think she was a bit out of her area of practice, though 
+I think we could
+correspond further, if we could come up with some specific questions.  But at any rate, she
+did not say that the idea of having a contributor pact was crazy or unenforceable, 
+so we may have something here.  
+--[[file:akrowne.org][akrowne]] Fri Oct 28 05:01:07 UTC 2005
+
+: Maybe she would be interested in a look at my "Bottleneck" essay, especially the section about how contracts can add to the fog of copyright in the context of present law?  If she does have a look, I would be very interested to hear her opinions on what I have to say there.  On another note, I am working on a second draft of the user pact and will soon have it ready to propose to a candid world.  --[[file:rspuzio.org][rspuzio]]
+
+I wonder if the "safe harbor" isn't really infested with sharks and sharp coral reefs just below the surface.  To be sure, it is comforting to know that, if one promptly takes down offending material from a website, then that is the end of the affair.  However, this is of no comfort if one disagrees with a request to remove content.
+
+There are numerous cases of questionable cease-and desist letters --- see the  [http://www.chillingeffects.org/cease_and_desist chilling effects clearinghouse] for examples or read [http://www.webtechniques.com/archives/2001/05/legal/ Bret A. Fausett's essay] for a description and analysis of this phenomenon.  [http://www.interz0ne.com/events/interz0ne_cease_order.html A particularly chilling case] touches upon issues of academic freedom --- it was directed at organizers of a conference (which also happened to be located in Atlanta!) and threatened to hold them liable of aiding and abetting and conspiracy unless the organizers censored contributions of their panelists!
+
+Given that a significant portion of cease-and-desist requests to website maintainers probably should be challenged, I wonder if an offer of safe harbor really is ameliorating the overall situation or making the threat of the stick more effective by counterbalancing it with the guarantee of a free carrot to those who comply.  ("Just do what we tell you and nobody gets hurt.")  Given a choice between facing (possibly criminal) charges or amnesty if one gives in, I assume that many people will feel even more pressure to give in to unreasoanble demands to remove content.
+--[[file:rspuzio.org][rspuzio]]
+
+Here is another example from PM: a search for "Krantz" on PM gives 36 entries all 
+having "Function Theory of Several Complex Variables" by S. Krantz as a
+reference. Also, one problem with the current formulation of the pact is that
+if one mearly edits an entry, the old version is still accessable and
+licenced under the FDL. 
+--- [[file:matte.org][matte]]
+
+: Yes, infringing articles would probably have to be pulled out at the
+root, usually easy, but much more problematic if significant revision
+took place afterwards.  This seems like positively murky stuff; remember
+the "mother of the Matrix" case discussed [[file:Ideas and Expression|elsewhere.org][Ideas and Expression|elsewhere]]
+on the wiki.  Even something that has been significantly changed could
+still become the basis of an infringement claim.  --[[file:jcorneli.org][jcorneli]]

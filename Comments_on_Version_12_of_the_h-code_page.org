@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Ray, I love the introduction, certainly couldn't have put it better myself.  It
+is a joy to hear you discourse on this topic.  I have a few more specific
+comments on the goals section, I'm adding them in as unsigned indented comments
+(together with a few minor changes to what you wrote, some editorial, some just
+to accommodate my comments); do what you'd like with them vis a vis
+maintenance. --[[file:jcorneli.org][jcorneli]] Wed Feb 9 01:23:54 2005
+
+I have copied the comments here and added a few words on how I dealt with them.
+Future readers, please note that they refer to version 12 of this web page.
+
+jac: (Re: goal 1) note that the Mizar people might say the same thing, but
+h-code is rather different from Mizar code, partly because it itself is not
+entirely formal; we're planning on writing something that is "linguistically
+clear", more than it is "mathematically formal."  The formalization will come in
+in the next phase down the pipeline.
+
+rsp: I changed the phrase to "linguistically clear" as you suggested.  That
+should put the emphasis in the right place; the formal aspect will be dealt with
+elsewhere so there was no point dragging it in here.
+
+jac: this is very similar to the goal I've labeled "Usage" above.  Maybe they
+should be combined into one goal labeled "Comprehensiveness".
+
+rsp: fait accomlpli
+
+jac: (Re: Simplicity) Well, yes, and I see your point -- some of the formal
+languages out there are so packed with extensions and kluges that they are hard
+to understand.  This is a problem suffered by some mathematical programming
+languages too (for me, Haskell comes to mind, but Common Lisp could maybe even
+more rightly be considered to be bloated).  However, despite having a simple
+logical basis, I hope that we won't rule out all coding conveniences out of
+hand.  But definitely the /basis/ of h-code should be as clean as possible.
+
+rsp: I added a few sentences of explanation to make it clear that we are not
+opposed to coding conveniences. (If we were, we could wind up just like some the
+formalists whose example we were trying to avoid!).  A good example comes from
+conversation about binders.  In the core language, maybe we would have something
+like
+
+ (int :wrt (x) :st ((real-number x) (< 1 x 2)) (+ (power x 2) (* 3 x) 1))
+
+as the "official" expression, but we should also allow the user to type
+
+ (int :wrt (x) :from 1 :to 2 (+ (power x 2) (* 3 x) 1))
+
+as an alternative notation.  I am also thinking that maybe we could implement
+this with a preprocessor that converts the convenient notation into the core
+notation, but that suggestion will require further thought, discussion, and
+experimentation.  I think that this touches upon the issue in your 100 examples
+where you point out that some of the h-code looks more like a parse of the
+natural language definition and some of it looks more like a translation of the
+definition.
+
+jac: (on "Uniformity") Note that, as with LISP, what you're saying here makes
+sense mainly for the language-definition and not so much for things written in
+this language; perhaps the wording could be more clear in this regard.
+Presumably many semantically-equivalent things can be written in using different
+h-code formulas.
+
+rsp: I added the example of function notations to clarify this point and removed
+the stuff that more properly belonged under the last point.
+
+jac: Is it technically correct to say that hcode sexps will be valid LISP sexps?
+I don't think so, if only because they won't work against a plain LISP.  (Will
+they?)  What I think will happen is that we will write our own programming
+language within LISP.  Also, I haven't read up on Lukasiewicz's logic notation
+yet, but I think I should mention that I would it like it if hcode could stay
+logic-agnostic in roughly the same way that [[file:metamath.org][metamath]] is (or claims to be).
+
+rsp: "Valid s-expression" was a poor choice of terminology, so I instead wrote
+"syntactically correct s-expression" to correct this oversight.  As for the
+logic-agnosticism, perhaps you could add something on this as another entry on
+the list of goals.
+
+Thanks for the suggestions.
+[[file:rspuzio.org][rspuzio]]

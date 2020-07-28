@@ -1,0 +1,29 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This list is meant to collect a FAQ on real numbers. I am 
+not sure if there are enough questions to motivate a FAQ entry
+on PM. Hence this survey first.
+
+* What is 0^0?
+
+See [http://planetmath.org/?op=getmsg&id=9781 this thread].
+
+* Why is (-1)(-1) equal to 1?
+
+How does one explain this in intuitive terms?
+
+* How does 0.99999.. and 1.0000.. differ?
+See
+ [http://planetmath.org/encyclopedia/ExistenceAndUniquenessOfDecimalExpansion.html  this entry].
+
+* What is the biggest number(s) with a name?
+
+
+* Is infinity a real number?
+
+No because...
+
+(Who came up with the infinity symbol? Need to check this.)
+
+It was introduced in 1655 by John Wallis in his book on conic sections.

@@ -1,0 +1,64 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: Sat May 6 2006
+
+Status: *available*
+
+Time: half week (20 hrs) (est.)
+
+Bounty Price: $500 (US est.)
+
+Objective:
+
+Make improvements to the editorial system in Noosphere.
+
+Skills needed:
+
+ * perl
+ * SQL
+ * HTML, XSL
+
+* Background
+
+Noosphere has a hybrid "authority model" system that uses ACLs to allow entry owners to determine who else can make edits to their
+entries.  This can be:
+
+ 1. nobody (only one author)
+ 1. a special editing group (co-authors)
+ 1. everybody (world-editable, like Wikipedia)
+
+For any of these models, "corrections" can also be filed to entries, which show up until they are addressed by someone with 
+write permission to the entry (for the first model, this would be just the author).
+
+More details on this stuff ("Authority Models") can be found here: http://planetmath.org/?op=getobj&from=collab&id=34
+
+Over the years a number of good improvements to this system have been suggested.  Some of these are:
+
+ 1. bifurcate the "forum" (discussion area) attached to every object into a general questions/comments forum and an /editorial/ forum (which wouldn't show up expanded by default).
+ 1. allow even those who don't have "commit" access to an entry to submit "patches" that the author can accept. 
+ 1. when a user creates a PlanetMath account, ask them how they want to set their default ACL, giving them the explicit choice of world-editable (currently it is felt this feature is under-used).
+ 1. (any other ideas?) ...
+
+* Plan
+
+Basically, implement some of the above stuff in Noosphere.  None of these would require much of a fundamental redefinition of Noosphere's internals.
+
+Some comments on the above features:
+
+ 1. It would be nice to give owners the ability to move messages between the general forum and the editorial forum, and to turn either of these into formal corrections.
+ 1. this could be implemented as a correction type and additional piece of data attached to a correction consisting of a patch or the new entry body.
+ 1. /(no comment)/
+ 1. ...
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for
+more on how bounties work.
+
+* Discussion
+
+I think the details of this bounty should be
+discussed more before being officially offered.  --[[file:jcorneli.org][jcorneli]]
+
+A very minor suggestion: "corrections" should be called something more accurate (maybe "suggestions"). Often "corrections" do not point out any error in the entry, and are therefore not corrections - this has caused some newcomers not to file "corrections" when they should. --yark

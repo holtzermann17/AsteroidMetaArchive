@@ -1,0 +1,286 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Very simple overview of mathematical grammar
+
+We parse to a LISP-like language, [[file:hcode.org][hcode]].  Everything is translated to s-exp
+notation.  See [[file:Version Zero|this spec.org][Version Zero|this spec]] for further details, and [[file:Let G be a group|this page.org][Let G be a group|this page]] 
+for a whole different class of examples.
+
+/Symbols/, which are either single letters or words with a backslash prefix,
+parse to symbols.
+
+  a
+   ==> a
+  
+  \wedge
+   ==> and
+  
+  \neg
+   ==> not
+  
+  *
+   ==> *
+
+/Operators/ and /Modifiers/ become functions.  Operators typically have
+higher precedence than modifiers.  Some symbols are both operators and modifiers.
+
+Parentheses can be used to explicitly specify precedence.  Some operators have a
+built-in right-to-left precedence.  (We might as well support left-to-right
+operators too.
+
+  a \wedge b
+   ==> (and a b)
+  
+  \neg q
+   ==> (not q)
+  
+  \neg a \wedge b
+   ==> (and (not a) b)
+  
+  (p \wedge (p \rightarrow q)) \rightarrow q
+   ==> (if (and p (if p q)) q)
+
+  (a \wedge b) \vee c
+   ==> (or (and a b) c)
+  
+  a \wedge (b \vee c)
+   ==> (and a (or b c))
+  
+  a \wedge b \vee c
+   ==> (and a (or b c))
+  
+  a \vee b \wedge c
+   ==> (or a (and b c))
+
+  -a+b
+   ==> (+ (- a) b)
+  
+  b-a
+   ==> (- b a)
+
+/Lists/ of arbitrary length are surrounded by parentheses and contain commas
+which separate the elements.  Lists can contain arbitrary elements, including
+other lists.
+
+  (a, b, c, d, e)
+   ==> (tuple a b c d e)
+
+  (a,b,(c,d,e))
+   ==> (tuple a b (tuple c d e))
+  
+  ((a,b,c),d,e)
+   ==> (tuple (tuple a b c) d e)
+
+Symbols with no operation between them are assumed to be part of an  /implicit multiplication/.
+
+  abcde
+   ==> (*~ a b c d e)
+
+/Repeated operators/ can frequently be simplified in the parse.
+  
+  a+b+c+d+e
+   ==> (+ a b c d e)
+
+Parentheses also indicate /function application/.
+  
+  f(x)
+   ==> (f x)
+
+/Equality/ is just another operator.
+    
+  a*b=b*a
+   ==> (eq (* a b) (* b a))
+
+/Quantifiers/, /Sums/, /Integrals/, /Maps/, and so forth, are somewhat
+complex, but follow specific forms.
+ 
+  \forall x\in X: P(x)
+   ==> (forall x :in X :st (P x))
+  
+  \forall a,b\in G: a*b=b*a
+   ==> (forall a b :in G :st (eq (* a b) (* b a)))
+  
+  \forall x\in X: P(x)
+   ==> (forall x :in X :st (P x))
+  
+  \forall y \in f(X) : P(y)
+   ==> (forall y :in (f X) :st (P y))
+  
+  \exists x: Q(x)
+   ==> (exists x :st (Q x))
+  
+  \forall x: \exists y: P(x,y)
+   ==> (forall x :st (exists y :st (P (tuple x y))))
+  
+  \forall x\in X: \exists y\in f(X): P(x,y)
+   ==> (forall x :in X :st (exists y :in (f X) :st (P (tuple x y))))
+  
+  f: X \rightarrow X
+   ==> (map f X X)
+  
+  g(x): X \rightarrow Y
+   ==> (map (g x) X Y)
+
+/Subscripts/ and /Superscripts/.
+
+  x^2
+   ==> (pow x 2)
+  
+  x_{23}
+   ==> (sub x 23)
+  
+  y_z + 23
+   ==> (+ (sub y z) 23)
+  
+  x^{y_z + 23}
+   ==> (pow x (+ (sub y z) 23))
+
+/Miscellaneous/...
+
+  Y \trianglelefteq X
+   ==> (normal-subgroup Y X)
+  
+  x \in X
+   ==> (elt x X)
+  
+  a=Ya
+   ==> (eq a (*~ Y a))
+  
+  aY=Ya
+   ==> (eq (*~ a Y) (*~ Y a))
+  
+  f(x)=g(x)
+   ==> (eq (f x) (g x))
+  
+  (x)(y)
+   ==> (*~ x y)
+  
+  (ab)H
+   ==> (*~ (*~ a b) H)
+  
+  aH\circ bH
+   ==> (circ (*~ a H) (*~ b H))
+  
+  f_1 =f_2
+   ==> (eq (sub f 1) (sub f 2))
+  
+  (X,M)
+   ==> (tuple X M)
+  
+  B\cap A =\phi
+   ==> (eq (intersect B A) emptyset)
+  
+  \mu_1
+   ==> (sub mu 1)
+  
+  f_1 (E)
+   ==> ((sub f 1) E)
+  
+  \mu_1 (E)
+   ==> ((sub mu 1) E)
+  
+  \mu_1 (A\cap E)
+   ==> ((sub mu 1) (intersect A E))
+  
+  f (E)=f (A\cap E)
+   ==> (eq (f E) (f (intersect A E)))
+  
+  f (E)=f_1 (A\cap E)
+   ==> (eq (f E) ((sub f 1) (intersect A E)))
+  
+  \forall E \in M: \mu_1 (E)=\mu_1 (A\cap E)
+   ==> (forall E :in M :st (eq ((sub mu 1) E) ((sub mu 1) (intersect A E))))
+  
+  a_kx^k
+   ==> (*~ (sub a k) (pow x k))
+  
+  q(x)=f(g(h(x)))
+   ==> (eq (q x) (f (g (h x))))
+  
+  (x-1)(x+1)
+   ==> (*~ (- x 1) (+ x 1))
+  
+  f(x)=xe^{-x}
+   ==> (eq (f x) (*~ x (pow e (- x))))
+  
+  f(x)=e^{-x}x
+   ==> (eq (f x) (*~ (pow e (- x)) x))
+  
+  bH=(ab)H
+   ==> (eq (*~ b H) (*~ (*~ a b) H))
+  
+  1*2*3
+   ==> (* 1 2 3)
+  
+  1*2+3
+   ==> (+ (* 1 2) 3)
+  
+  1+2*3
+   ==> (+ 1 (* 2 3))
+  
+  (1+2)*3
+   ==> (* (+ 1 2) 3)
+  
+  1+2*3*4
+   ==> (+ 1 (* 2 (3 4)))
+  
+  1+(2*3)+4
+   ==> (+ 1 * 2 3 4)
+  
+  (1+2)*3
+   ==> (* (+ 1 2) 3)
+  
+  1+2*3
+   ==> (+ 1 (* 2 3))
+  
+  1+(2+3)
+   ==> (+ 1 + 2 3)
+  
+  1*2+3
+   ==> (+ (* 1 2) 3)
+  
+  1+2*3
+   ==> (+ 1 (* 2 3))
+  
+  1*2*3
+   ==> (* 1 2 3)
+  
+  1*2+3*4=2+12=14
+   ==> (eq (+ (* 1 2) (* 3 4)) (+ 2 12) 14)
+  
+  2+3=1+4=5
+   ==> (eq (+ 2 3) (+ 1 4) 5)
+  
+  2+3=5=7-2
+   ==> (eq (+ 2 3) (- (5 7) 2))
+  
+  2+3=7-2
+   ==> (eq (+ 2 3) (- 7 2))
+  
+  2+7-2
+   ==> (+ 2 (- 7 2))
+  
+  2+7-2+3
+   ==> (+ 2 (- 7 2) 3)
+  
+  -2
+   ==> -2
+  
+  3
+   ==> 3
+  
+  -2+3
+   ==> (+ -2 3)
+  
+  3-2
+   ==> (- 3 2)
+
+* Discussion
+
+Is there any reason why some of these parse as dotted pairs, whilst others come out as ordinary lists?  Is that just a by-product of the algorithm or is there a deep reason why it should be that way?  --[[file:rspuzio.org][rspuzio]] 7 July 2005
+
+Proofreading error!  There shouldn't be any dotted pairs, but I didn't see them
+before - I'll certainly have to fix that in the parser.  For the sake of those
+reading at home, I've changed things here, but beware if using the parser.
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 14:27:05 2005 UTC

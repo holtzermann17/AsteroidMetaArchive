@@ -1,0 +1,119 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Does this relate to the [[file:Connections as Functors.org][Connections as Functors]] page you've been working on?
+Can you make any additional "big picture" comments on this stuff at present?
+
+--[[file:jcorneli.org][jcorneli]]
+
+Surprisingly enough, there is actually a very precise connection between the two
+concepts.  Here is the big picture as I see it now as well as some comments
+about what led me to these ideas.
+
+With mathematical objects, we can think of transporting an object from one
+theory to another.  To use my favorite example, the number 2 is originally
+defined one way in terms of Peano axioms, but we can turn it into a Von Neumann
+ordinal, a rational number, a real number, etc. in a systematic way.  In
+particular, if we want to operate on two objects, we have to transport them to
+the same axiomatic theory in order to be able to speak of them together
+consistently.  To use a simple example, think of the "typecasting" that needs to
+be done if we want to add an integer and a rational number.
+
+In differential geometry, we can take a vector defined at one point of the
+manifold and transport it to a different point.  If we want to add two vectors,
+we need to transport them to the same point on the manifold first.
+
+There is a certain similarity between the situation in logic and in differential
+geometry.  More amazingly, and this is what I am trying to do here, this analogy
+can be made exact.  Namely, one can define a general notion which, when
+specialized to one case, describes parallel transport in differential geoemetry
+and which, when specialized to some other cases, gives the transport of
+mathematical objects from one theory to another.
+
+Also, it is interesting how my thoughts on this arose from a combination of PM
+and HDM.  On the one hand, I was editing the PM entry on 
+"[http://planetmath.org/encyclopedia/Connection.html connection]".  I didn't
+simply want to write in the usual text book definition, but spent time thinking
+about the subject deeply with the hope of writing an entry which went beyond the
+usual (and oftentimes confusing) text-book treatment by offering an intuitive
+insight into what a connection is and giving a comprehensive account of the
+different definitions which have been proposed, show why they are all describing
+the same object, and guide the reader through the maze of notations that plague
+differential geometry.  I'm still not quite done with the entry but, as Aaron
+often points out, PM is a growing work under construction.
+
+On the other hand, thinking about HDM raised the question "What is a
+mathematical object?".  The essay on this page is about finding an formal answer
+to that question.  While thinking about this, it occurred to me that the process
+of transporting mathematical objects from one theory to another sounded a lot
+like parallel transport of vectors.  I am now making this analogy precise.
+
+I find this really interesting because connections play such a fundamental role
+in geometry and modern physics --- nowadays, forces such as electricity and
+gravity are all explained as connections on a suitable geometrical space.  So
+nature is telling us that connections are important and, if we wish to court her
+successfully, we must become intimately familiar with the notion of connections.
+
+When it comes to matters of natural philosophy, I am a great fan of John
+Archibald Wheeler.  Two of the leitmotifs in Wheeler's thought ae "pregeometry"
+and "the it from bit".  In brief, he is suggesting that, to understand the
+physical world, we must penetrate to a level more fundamental than geometry and
+that this level should be based on logic.  Since I could state it no better
+myself, let me quote the master:
+
+: "... the pursuit of reality seems always to take one away from reality.  Who
+would have imagined describing something so much a part of the here and now as
+gravitation in terms of curvature and the geometry of spacetime?  And later,
+when this geometry came to be recognized as dynamic, who would have deamt that
+geometrodynamics unfolds in an arena so ethereal as superspace?  Litle
+astonishment that there should be, therefore, if the description of nature
+carries one in the end to logic, the ethereal eyrie at the centre of
+mathemathics.  If, as one believes, all mathematics reduces to the mathematics
+of logic, and all physics reduces to mathematics, what alternative is there but
+for all physics to reduce to the mathematics of logic?  Logic is the only branch
+of mathematics that can "think about itself"."
+
+(This quote comes from box 44.5 of "Gravitation" -- the "big black book".  The
+last chapters of this book "beyond the end of time" is about as psychedelic as
+anything else written in 1969 --- not only will it twist your mind, it will
+simultaneously warp the space around you, suck you into a black hole, and spit
+you out the other end into a different universe :) )
+
+Therefore, I find this connection between connections in differential geometry
+and the fountations of mathematics fascinating because it seems to promise a
+realization of at least part of Wheeler's visions.  It is exciting to see logic,
+geometry, physics, and computation coming together.
+
+--[[file:rspuzio.org][rspuzio]] 20 May 2005
+
+At some point I tried to talk to an ex-advisor of mine about my interest in
+"mathematical structures".  I don't think I was able to adequately explain where
+I was coming from.  
+
+I knew that I had studied discretized versions of PDE that applied to graphs,
+and that I found the topic to be quite interesting (and I knew he did too).  I
+knew that our definitions and day-to-day descriptions of mathematical objects
+were all discrete, even if the objects themselves were continuous.  I was
+thinking about how these descriptions fit together in a complicated graph-like
+structure (say, the HDM).  I was wondering about potential applications of
+discrete PDE theory to this structure (ideas of flux, diffusion, boundary data,
+etc.).  It seemed neat to me, but I didn't have any examples (much less any
+coherent hypotheses) to show, which might be why I wasn't able to do anything
+but sound "flaky" when I said I was interested in studying "mathematical
+structures".
+
+Anyway, I'm glad that I know enough about differential geometry to be able to
+participate (some - anything technical will certainly require some review and
+effort on my part) in this discussion.  It seems quite interesting to look at a
+theory in which graphs, frames (in the AI sense), and geometry (in the
+math-science sense) can potentially work together.  Category theory seems to be
+the "glue" that holds this all together... and it is a topic that I don't know
+that much about.  But I do know that it has already found some applications in
+computing & the theory of programming - something to look into, perhaps.
+Assuming this broad-sweeping theory "grows well", it seems to me that its fruits
+might be of general appeal.  A neat application or example together with some
+good exposition of the underlying theory could be a breakthrough in popularizing
+category theory.  (If that hasn't already happened yet; I'm oblivious, if it
+has.)
+
+--[[file:jcorneli.org][jcorneli]] Sat May 21 18:20:47 2005 UTC

@@ -1,0 +1,81 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Title: How Free Culture Will Save Digital Libraries
+
+Author: Aaron Krowne
+
+What: A paper proposal for the [[file:Emory_Free_Culture_and_the_DL_Symposium.org][Emory_Free_Culture_and_the_DL_Symposium]] (2005).
+
+Synopsis:
+
+: Today, we are watching as web search engines -- especially Google -- push libraries further down the service provision hierarchy, towards anonymity and dimished importance.  The production of free culture in a digital libraries context will reverse this trend, making digital libaries themselves compelling, useful, intentionally-visited virtual places, and ensuring the continuing importance of libraries in the future, due to a novel provision of significant value to society.  We will see that this outcome largely follows from digital libraries /doing what we already expect libraries to do/ -- but translated into a digital context, where forces of commons-based peer production (CBPP) operate in a milieux of free culture.
+
+* Discussion
+
+See [[file:Discussion of How Free Culture Will Save Digital Libraries.org][Discussion of How Free Culture Will Save Digital Libraries]].
+
+*  Full proposal
+
+In recent years, the chagrin and frustration of librarians has been raised by web search engine Google.  The problem (which both direct experience and observation indicate, as well as studies show) is that library patrons are using web search engines, especially Google, as the primary means of meeting their research needs.  The reality is almost that every research undertaking starts at Google -- whether or not it ends up at a digital library record or a physical library.  Librarians want patrons to use their electronic library catalog search systems, their specialized domain database search interfaces, and their digital library search and browse services.  But patrons are staying away in droves.  [we will cite evidence on this]
+
+To add insult to injury, if a search starts on the internet, there's a good chance the research task will end there, completely bypassing the library or digital library.  But even when the research task continues on to some electronic library interface, it is usually because it is /mostly done/.  The user knows what "record" or records they want, the role of the library is simply to "serve it up".  This is a significantly diminished role for libraries, compared to their historical purpose and current aspirations.
+
+A large part of the explanation for this is that web search engines have essentially become /universal metasearch engines/.  These search engines are not limited by mere "kinds" of records; if its on the web and the typical web surfer can see it, the search engine can get them to it.   Google has provided the template for how this is to be done right: a single search text box, in which the user can enter keywords or even a freeform query string, with a minimalistic interface design, free for all to use, supported by low-key text advertisements, and *instantaneous response*.  By contrast, library search engines are still all-too-often split over disparate databases, utilize legacy, Boolean-based OPAC query syntax, have cluttered and unclear interfaces, and are slow.
+
+Libraries and digital libraries are beginning to respond with their own metasearch solutions.  But these may be a day late and a dollar short.  From the user's perspective, it is difficult to determine why they should go first to their local library's metasearch interface (possibly one of many local libraries) when they can simply "google it" and probably find all the information they need.
+
+Seeming to realize this reality, in the past few years, digital libraries have been working to find ways to make themselves important and useful to end users.  Digital library researchers have even embraced Google as a way to get users in "through the back door", as services such as DP9 illustrate.  But most effort has been in digital library architecture -- in essence coming up with reasons for users to show up (or at least, return) through "the front door".  This effort has been focused on two broad technical categories: (1) taking advantage of domain specificity, (2) and metadata-based services.
+
+
+Domain specificity refers to building digital libraries /for/ X, where X is some subject.   Metadata-based services refers to providing ways of retrieving and organizing information that web search engines /can't/, because the digital library has access to (and "understands") richer metadata.   These two categories are not unrelated, e.g., often most of the advantage in building domain-specific digital libraries is in the fact that such a library can support metadata elements which are unique to the domain.   But this need not be the case.
+
+Much progress has been made along both of these technical fronts.  However, it is unclear that these efforts are paying off in "front door" use of digital libraries.
+
+One problem is that digital library researchers and developers have an incredibly tough task: they must make these value-added technical services so compelling, so convenient, and so easy to use, that they will be as attractive and high-priority to users as Google.  But there is an inherent conflict here: there are many digital libraries, yet as a universal meta-search system, Google precisely /is/ a machine for avoiding the repetition of searches through many interfaces.  The problem is not just convenience, but the economics of attention and efficiency.
+
+A second problem is that the technical route to shoring up digital libraries implicitly expects to "out-innovate" Google in the areas of information retrieval and information integration systems in general.  One could call this a technical "arms race" with Google, but Google has such a warchest of resources and talent that it doesn't actually seem to be facing any serious challenge -- from the most established of tech companies, let alone digital libraries.
+
+Indeed, Google gets mentioned by name in this paper, by librarians, and even in vernacular verbiage, because it cannot be treated the same as "other" internet search services.  Google says, ever ambitiously, that its mission is "to organize the world's information", and it has proven it is very serious about this goal.  The problem is that this is basically the mission of libraries as well, so almost every step of progress Google makes toward this goal seems to shrink the universe of importance of libraries.  
+
+For example:
+
+ * The launch of Google Scholar in the past few months shows that Google is acting more like a universal metasearch service than any other entity.  The function of this service is to provide searching of scholarly materials -- from library and digital library catalogs -- through Google's interface.  If the scholarly materials don't happen to be available for free online, then the user, properly authenticated, can access it through a library interface.  Thus, the library's role here: filling in the blanks at the final step of the research process.
+ * The library world is also watching in slow motion as Google undertakes its audacious book digitization effort.  This venture demonstrates the power of Google's clout -- not only can they fund such a massive effort, but they are completely unafraid of the inevitable copyright issues.  Solutions will probably have to be found /purely to accommodate Google/.
+
+There are other reasons to have pause about pursuing technical "competition" with Google.  Google Local and some binding with the Open Directory web categorization hierarchy shows that the company can indeed provide domain-specific information services when it wants -- even over a generalized web search.  Binding with category hierarchies could be even tighter.  Link analysis could be used to automatically discover and guide searchers to subject domains.  And the nascent treatment of metadata -- at which Google Scholar hints -- could be extended.  
+
+Libraries and digital libraries can of course always rest assured that they will be required elements of the research process, inasmuch as patrons require access to copyrighted items which are distribution-restricted.  However, this may have to be in the most pedestrian of roles: doing nothing but delivering records, once found.  In fact, libraries may face an "identity-stripping", whereby tools meant innocently to interface web search with digital libraries have the unintended result of almost completely abstracting and black-boxing the source of the end artifact (i.e., the library or digital library).  This is an inevitable consequence of tools which make research easier for the user, which we can already see prototyped by the WAG localizer (which smoothly integrates library and digital library holdings with Google Scholar and other web sites).
+
+Aside from core revulsion from the library contingent at becoming anonymous provisioners of a commodity, I want to suggest that relying on distribution-restricted materials to give libraries a purpose runs completely counter to the philosophy of libraries: that of disseminating knowledge and furthering scholarly activities.  I claim here that the way out of this narrow future for digital libraries is to embrace free culture.  
+
+That a social concept like "culture" is part of the proposed solution signals a radical departure from the extant technical solutions outlined above.  The hint that culture is a part of the solution comes from perhaps the least likely of places one would expect to find inspiration for surviving in the future information age: classical, brick-and-mortar libraries.
+
+The key insight about classical libraries is that they are not seen as, or used as, information retrieval /machines/.  They are seen as social and cultural /places/.  People go there not only to retrieve information in the form of books, but to study it, to conduct work derived from the knowledge these books contain, to discuss with others the ramifications of what they are reading and researching, or to interact with the library staff to help give direction to their research activities.  In short, they go to /act in a scholastic way/, in a social context.
+
+This notion has been all but lost in digital libraries -- or at least, systems that self-consciously call themselves digital libraries.  I will argue in this paper that replacing this "lost" social notion is the key to adding compelling value to digital libraries, and sustaining them as a useful, meaningful institution.
+
+As someone who works in a library, I routinely observe that people will come to physical libraries to act studiously and scholastically, despite alternatives that let them stay at home -- /because/ of the social nature of the space.  In fact, for all intents and purposes, Starbucks and Borders benefit from the same phenomenon!  The practice of providing a social atmosphere for intellectual activities seems to be alive and well, and if anything, growing.
+
+The key, then, to "saving" digital libraries is to similarly re-establish a notion of a social /place/ -- within the context of the digital library.  In essence, this allows the patron to undertake intellectual, cultural activities, resulting in the actual /creation/ of culture.
+
+Momentarily, we define free culture as the milieux of information artifacts which may be disseminated and modified without permission (/libre/ free), as well as those for which there is zero /structural/ monetary cost to do so (/gratis/ free).
+
+The tie-in of /free/ culture to digital libraries as social, culture-producing places comes for two main reasons.  The first is that, in the digital context, all interaction is potentially subject to copyright.  That is, every communication is an artifact created, and the dissemination of such cultural communications by the digital library is likely reduced or ruled out entirely under the current, permission-default copyright regime.  
+
+The second, and most important reason, is that free culture both /enables/ and is /produced by/ commons-based peer production (CBPP).  Thus, making intellectual artifacts free /enables/ CBPP, which then /produces/ more free intellectual artifacts.  The upshot of this feedback loop is a powerful economics of cultural intellectual production, which we will explore in detail later.
+
+CBPP is then the /way/ digital libraries can become cultural spaces and create free culture.  Thus, digital libraries should strive to build in CBPP-type services.
+
+In the remainder of the paper, I will cover the following supporting topics:
+
+ * The many precedents for information services on the internet that are very popular, successful, and useful which are based on CBPP in various areas, such as:
+  * primary knowledge artifact creation (wikipedia, planetmath, kuro5hin)
+  * information integration services through collaborative filtering (okcupid, ircquotes, ...)
+  * commentary as the primary artifact (blogs, slashdot, furl, amazon...)
+  * aggregation as the primary function (amazon, citeulike?...)
+ * Integrating CBPP with digital libraries for free culture:
+  * the spectrum of CBPP (you can ADD CBPP to existing efforts, and use just a little to go a long way!)
+  * talk about what CBPP could do for digital libraries:
+   * bookmarking, highlighting, commentary, scholium systems, superimposed information, etc.
+   * give them a raison detre wrt/ born-free works.  important to provide superimposed and derived-works value-added services, since can't rely on distribution.

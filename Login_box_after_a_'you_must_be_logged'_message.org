@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It would be nice to have a login box which redirects you to the page you came from when you try to perform an action which can only be done by a logged user.
+ 
+---- 
+
+Dear [[file:AM.org][AM]] user: thanks for the contribution -- please log in /here/ next
+time (see the [[file:Policy.org][Policy]]) - thanks, --[[file:jcorneli.org][jcorneli]] Wed Feb 23 16:04:41 2005 UTC

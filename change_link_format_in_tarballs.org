@@ -1,0 +1,42 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think it would be great if the links that were saved in [[file:PM.org][PM]] tarballs looked
+like this:
+
+   \PMlinkname{Parseval's theorem}{PersevalEquality} 
+
+instead of like this:
+
+   \htmladdnormallink{observations}{http://planetmath.org/encyclopedia/DataTypesInStatistics.html}
+
+Presumably the only definition you'd need in the "global header" would be
+something like this (maybe it is already there; I got my copy from a note sent
+to me by [[file:rspuzio.org][rspuzio]]):
+
+  \def\PMlinkname#1#2{\special{html:<a
+  href="http://planetmath.org/encyclopedia/#2.html"}#1\special{html:</a>}}
+
+Changing the format to look like this would make things easier for the [[file:FEM.org][FEM]].
+If this isn't desireable for PM, then the links can just be rewritten for the
+FEM.  I do think that it would be nice if a standard link format could be used,
+though, because it would make for less confusion when creating diffs between FEM
+and PM sources.  My vote is for standardizing on the simpler form quoted above,
+because it makes the source easier to read and it makes redefinition of the
+behavior straightforward.
+
+----
+
+Does this request even apply anymore considering that we are now hooking PM up
+to the FEM through CVS?  --[[file:akrowne.org][akrowne]] Sat Apr 23 23:24:52 UTC 2005
+
+It continues to apply.  If you change the format of links, then that's one
+less piece of code I'll have to run!  In addition, the non-FEM application
+(since I know you want to know it) is that it makes the raw code much more
+readable to non-FEM folks.  My new suggestion is:
+
+  \pmxref{Parseval's theorem}{PersevalEquality} 
+
+(since that's the name we use in the FEM).  The 'pmxref' command should probably
+go into the shared/required headers we've been talking about.  --[[file:jcorneli.org][jcorneli]]
+Sat Apr 30 23:23:57 2005 UTC

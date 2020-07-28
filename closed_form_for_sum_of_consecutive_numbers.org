@@ -1,0 +1,71 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+  * **** ...
+  ** *** ...
+  *** ** ...
+  **** * ...
+  .... . .
+  .... .  .
+  .... .   .
+ 
+(sum k :from 1 :to n k) = (/ (* (+ n 1) n) 2)
+
+base case
+
+ sum from k=1 to k=1 of k is 1
+
+inductive hypothesis
+
+ suppose that sum from k=1 to k=n-1 of k is  (/ (* n (- n 1)) 2)
+
+prove: that sum from k=1 to k=n of k is  (/ (* (+ n 1) n) 2)
+
+By hypothesis,
+
+  sum from k=1 to k=n of k
+  
+
+  
+  sum from k=1 to k=n-1 of k 
+  +
+  n
+  
+
+  
+  (+ (/ (* n (- n 1)) 2) 
+     n)
+  
+  = 
+  
+  (+ (/ (* n (- n 1)) 2) 
+     (/ (* 2 n) 2))
+  
+
+  
+  (/ (+ (* n (- n 1)) 
+        (* 2 n)) 2)
+  
+
+  
+  (/ (+ (* n n) 
+        (* n -1)  
+        (* 2 n))
+     2)
+  
+
+  
+  (/ (+ (* n n) 
+        n)
+     2)
+  
+  = (/ (* (+ n 1) n) 2)
+
+Which is exactly what we want.
+
+----
+* Discussion
+It should be pretty easy to translate this either into an [[file:hcode.org][hcode]]
+proof or an NL proof.
+
+It looks good to me!  To make things 100% watertight, we could add a proof of the fact that sum from k=1 to k=n of k = sum from k=1 to k=n-1 of k, and the base case; this is a relatively simple consequence of the formal definition of sum.  Other than that, translating it into h-code should be relatively easy because you have already written your mathematical expressions in the same syntax.  Then, it is simply a matter of compiling the  h-code into formal logic.  When I write down these trivialities, I will post them down here so we can start translating into h-code and compiling.  --[[file:rspuzio.org][rspuzio]]

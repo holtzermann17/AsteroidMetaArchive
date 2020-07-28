@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here are a bunch of useful links. Among other things, we'll need a good first-order prover to translate [[file:Mathematical Vernacular.org][Mathematical Vernacular]] proofs into explicit form.
+
+ * [http://en.wikipedia.org/wiki/Automated_theorem_proving#First-order_theorem_proving Wikipedia section]
+
+ * [http://www4.informatik.tu-muenchen.de/~schulz/WORK/eprover.html E prover] (C, GPL).
+
+ * [http://www-unix.mcs.anl.gov/AR/otter/ Otter], a seminal prover. C, apparently public domain.
+
+ * [http://www.cl.cam.ac.uk/~jeh1004/software/metis/index.html Metis] (ML, HOL4, GPL)
+
+ * [http://www-unix.mcs.anl.gov/~mccune/prover9/ Prover9]
+
+[http://www.cs.miami.edu/~tptp/CASC/ CASC competition], in which many first-order provers compete.
+
+This page is a stub! Feel free to add more content.
+
+--[[file:raph.org][raph]]
+
+I had some experience with using ATPs to check proofs. I found Prover9 and Vampire to be the best; E needs too much memory. Otter seems to be the only one that produces "proof objects" with simple and documented semantics. Output of other provers may be fed to Otter in the form of "hints" to get a proof object. Unfortunately, Otter looks unsupported. I had some problems with its "auto" and "lrpo" options. -- [[file:alih.org][alih]]

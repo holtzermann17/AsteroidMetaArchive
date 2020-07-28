@@ -1,0 +1,59 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The following
+happened when I tried to add a feature request by editing the
+[http://planetx.cc.vt.edu/AsteroidMeta/?action=browse;anchor=0;id=metamath_feature_requests
+metamath_feature_requests] page, linked to from the
+[[file:Feature_Requests.org][Feature_Requests]] page in the comment "[the page
+metamath_feature_requests also exists]".  After I edited
+[http://planetx.cc.vt.edu/AsteroidMeta/?action=browse;anchor=0;id=metamath_feature_requests
+metamath_feature_requests] then looked at the diff in
+[[file:RecentChanges.org][RecentChanges]], my changes were not shown in the diff, and the diff
+page shown was [[file:Feature_Requests.org][Feature_Requests]] rather than
+[http://planetx.cc.vt.edu/AsteroidMeta/?action=browse;anchor=0;id=metamath_feature_requests
+metamath_feature_requests].  Finally I just added a new page for this
+feature request.  I'm not sure what I was doing wrong.
+
+There also seems to be an issue with the hyperlinks:
+
+  http://planetx.cc.vt.edu/AsteroidMeta/metamath_feature_requests 
+
+is apparently redirected to 
+
+ http://planetx.cc.vt.edu/AsteroidMeta/Feature_Requests#metamath_feature_requests
+
+To get the actual "metamath_feature_requests" page you have to use
+this hyperlink:
+
+   http://planetx.cc.vt.edu/AsteroidMeta/?action=browse;anchor=0;id=metamath_feature_requests
+    
+
+If this behavior is by design, perhaps it could be explained
+on the Feature Requests page along with the proper way to
+edit that page. 
+
+
+You can see this
+problem by clicking on the "metamath_feature_requests" change called "test" I made
+today - it doesn't go to the
+[http://planetx.cc.vt.edu/AsteroidMeta/?action=browse;anchor=0;id=metamath_feature_requests
+metamath_feature_requests] page but instead goes to the
+[[file:Feature_Requests.org][Feature_Requests]] page.  There apparently is no way to see the edit history
+of the actual [http://planetx.cc.vt.edu/AsteroidMeta/?action=browse;anchor=0;id=metamath_feature_requests
+metamath_feature_requests] page. --[[file:norm.org][norm]] 26-Nov-2005
+
+----
+
+I don't think you are doing anything wrong, I think that this is a bug in the /importing routine/
+that we used to port the old version of !AsteroidMeta to its new home.  The issue has to
+do with the way "page anchors" are ported over.  Since page anchors don't seem to be particularly useful,
+I'll just go ahead and get rid of them.  In the future, things like [[file:metamath feature requests.org][metamath feature requests]] will
+link to a wiki page, but you might as well link to [[file:Feature Requests.org][Feature Requests]] instead, since we're maintaining
+all of the feature requests for all of the projects on one page.  (If this seems too insane then we could
+change that around, but I think it should be fine for now.) --[[file:jcorneli.org][jcorneli]]
+
+
+----
+
+Thanks! --[[file:norm.org][norm]] 1-Dec-2005

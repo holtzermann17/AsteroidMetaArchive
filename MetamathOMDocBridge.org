@@ -1,0 +1,104 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[http://planetx.cc.vt.edu/AsteroidMeta/mmj2 mmj2]
+
+[http://www.mathweb.org/wiki/Metamath_to_OMDoc_Bridge OMDoc wiki page]
+
+[http://planetx.cc.vt.edu/AsteroidMeta/MetamathOMDocBridge20070304 Archive-Prev As Of 2007-03-04] 
+
+[[file:OMDocSchemaQuestions.org][OMDocSchemaQuestions]] 
+
+-----
+Status, 24-Mar-2007
+
+I have obtained sufficient insights to implement this project but
+decide that it is sufficient for me to treat the project as ein
+[http://www.weltderphysik.de/_img/article_large/philosophie_Katze.jpg  gedankenexperiment].
+
+I prefer that alternative version of Schrodinger's Cat, the one
+in which the researcher is installed in the box and the cat is placed outside in
+the lab with a saucer of milk. In this version of the experiment the researcher
+has demonstrated his unwavering commitment to the search for truth, and the
+cat is not annoyed. If the researcher is not willing to make the total commitment
+then it is best to just perform the gedankenexperiment...
+
+And that is where I am *at* today: the benefits to mankind obtained by 
+actually performing the implementation of MetaMathOMDoc Bridge
+are insufficiently different from those obtained by merely thinking about
+carrying out the technical activities.
+
+--[[file:ocat.org][ocat]]
+
+
+   
+-----
+
+** OMDoc Software -- open software that appears to work as advertised, ETC
+
+[http://dev.mysql.com/downloads/mysql/5.0.html MySQL 5.0.27] -- Works
+fine. Setup program = good! You will want the 
+[http://dev.mysql.com/downloads/gui-tools/5.0.html GUI Tools]
+also, which are very helpful (essential, actually). Warning: many
+hack attacks are directed at MySQL (I don't see any in my log today
+but the onslaught is daily, probably bots...) Therefore unless you
+really know what you are doing, with setting up SQL permissions and
+securing your system with a firewall, I advise using MySQL when your
+computer is disconnected from the net (start the mysql service
+manually.) And even then, with a firewall, unless you have nothing
+to secure -- you don't care about your system -- if you do not have
+a business purpose in allowing MySQL to talk to other computers, it
+is best to restrict it via your firewall to local TCP/IP access,
+to/from 127.0.0.1. (The only secure computer is one which is turned
+off, packed securely in its shipping box and stacked in a vault.) 
+
+-----
+
+[http://relaxng.org/ RELAX NG] Schema specification language for XML,
+preferred by many to "XML Schema". The Compact RELAX NG format (.rnc)
+is especially nice and can be converted to the RELAX NG XML format
+(.rng) -- and to XML Schema (.xsd) and XML DTD (.dtd). 
+
+[http://relaxng.org/compact-tutorial-20030326.html The tutorial for the compact syntax is a good read]
+
+[https://svn.omdoc.org/repos/omdoc/branches/omdoc-1.2/rnc/  The OMDoc 1.2 schema in .rnc, .rng and .xsd]
+
+-----
+
+[http://www.thaiopensource.com/relaxng/trang.html Trang] - Converts
+between schema languages, including .rnc, .rng, .xsd and .dtd. A
+nice feature is automatic generation of a schema *from* an XML
+document! Here is a generated .rnc schema for a MySQL Query output
+to an XML-formatted file:
+
+     
+    default namespace = ""
+    
+    start
+      element resultset {
+        attribute statement { text },
+        element row {
+          element field {
+            attribute name { xsd:NCName },
+            text
+           }+
+        }+
+      }
+    
+
+-----
+
+[http://www.thaiopensource.com/relaxng/jing.html Jing - validates
+XML files and schemas] - Jing is used by Trang. Primarily for
+validation using RELAX NG schemas but (reportedly) with "experimental"
+support for XML Schema (.xsd) and others.
+
+-----
+
+[http://www.xmloperator.net/ xmloperator - xml editor guided by DTD and RELAXNG schemas] - got it to work, somewhat, and it would possibly
+be helpful with an insanely complicated XML file with a schema
+like OMDoc :-0]
+
+[http://www.xerlin.org/ xerlin - xml editor guided by DTDs (dubious XSD schema support)] - ditto.
+
+-----

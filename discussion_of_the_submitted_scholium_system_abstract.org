@@ -1,0 +1,158 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+/Hi/: my name is Joseph A. Corneli.  You may know me better by my (other) nom de
+plume, [[file:jcorneli.org][jcorneli]].  
+[[file:A scholia-based document model for commons-based peer production|This.org][A scholia-based document model for commons-based peer production|This]]
+is my draft abstract for the digital library bla bla conference. 
+Your comments & criticisms will help me improve this thang.
+
+Free-form comments are /entirely/ welcome, but if you would like 
+to take a look at my 
+[http://www.ma.utexas.edu/~jcorneli/a/lit/scholium-rewrite.dvi draft article]
+too, that might be especially helpful.  This and several accompanying documents
+are also available through [[file:HDM CVS.org][HDM CVS]].  Thank you for your attention.
+
+Sounds good to me --- now be sure to get it in before the deadline runs out ;) --[[file:rspuzio.org][rspuzio]] 29 April 2005
+
+Good! I would like to see some more plugs about applications of this to Digital 
+Libraries.  If you want, I can join in writing the paper, to discuss some of this.
+I think more people at this conf. would be interested if you could express how 
+scholia ideas could enhance existing DLs or provide a new basis for them that 
+can do everything they already do (of course, I haven't read your full draft yet). --[[file:akrowne.org][akrowne]] Fri Apr 29 12:18:39 UTC 2005
+
+: And now that you have at least a scholia prototype program going, maybe you
+two could use it to draft the essay.  This way, not only will it be an essay
+about the scholia concept, but an example thereof :)
+
+OK guys, thanks for the comments.  Here's my back-at-cha: First, we
+have until the end of the day, presumably, to submit this abstract, i.e.,
+there is still a little time for editing and discussion 
+(if you're willing).  Second, co-authoring the paper certainly seems
+attractive... the more I think about it, the more work it seems to
+involve.  The system is supposed to track "ownership" to very remote
+levels - very intense metadata processing.  I think we can probably
+use some of the "GNU Arch theory" for this part, but I'm not
+totally sure yet.  If it turns out that GNU Arch has already "done"
+a scholia-like system, then (a) there are bound to be extensions
+that can be made; and, (b) YES, the discussion of implications
+for digital libraries seems useful/important.  One (fairly similar)
+option whereby we could achieve (b) would be for Aaron to make
+the scholia system an example in the paper he's already submitted
+an abstract for, and for us just to each write one paper, but
+co-operate and cross-reference.  Another issue is the 
+"writing-partly-in-common" topic I mentioned at the end of the
+abstract, which is supposed to be plainspeak for "bi-directional
+updates" (I don't know if its actually that clear).  Since Aaron
+kicked off the bidi discussion and has expressed ongoing interest
+in that topic, maybe we should write that section together.  But yet
+another option would be to write a "companion paper" that describes
+bidi updating using the scholia system.  That doesn't necessarily
+seem too wise, because in fact, the scholia system /is/ my
+response to the bidi question Aaron posed.  (It just isn't finished
+yet.)  On the other hand, the bidi question is potentially bigger
+than the treatment of it in this paper would be (if the topic
+was dealt with explicitly here), so maybe a 3rd paper on bidi
+stuff is in order for that reason.  Aaron: I would like you to consider these
+different ideas and give me your feedback. (And you can take a
+look at the DVI file, that will give you a sense of where things
+are at currently.)  Ray: the system is /almost/ going, but
+its going to take me a little more time to get it in fully-working order. :)
+I will check back in with you guys about this sometime around Noon.
+Thanks again, --[[file:jcorneli.org][jcorneli]] Fri Apr 29 14:05:27 2005 UTC
+
+I think you should ignore GNU Arch for now.  If you study it more 
+and find it has many good ideas or completely subsumes the scholia system,
+then you can write about it later in the actual /paper/.  But it needn't
+be in a preliminary abstract.  Also, I doubt GNU Arch will subsume 
+the scholia system, at least not for digital libraries, for the same reason
+CVS doesn't subsume Wiki or PlanetMath (that being: interfaces).  Perhaps 
+it could form the core of such a system.
+
+A second point: the scholia system isn't an "example" of anything, because
+it doesn't exist yet (I mean beyond your prototype).  People are going to want 
+to see discussion grounded in reality, especially for this conference.  We can't 
+endlessly theorize.  But conversely, existing systems are examples of the ideals 
+of the scholia system to varying extents, so the scholia paper might talk about
+/that/.  I think this would really help people understand and start to see the
+advantages.
+
+Talking about how the scholia system would facilitate bi-di updating
+is a good idea.   This would also help motivate it.  It might be tricky to 
+discuss this problem without blowing it into a huge paper itself, but it can
+probably be done. 
+
+I do think the scholia system is "bigger" than just bidi updating.  It
+is connected to things I will talk about in my "free culture" paper about 
+democratizing knowledge and culture (through building systems that facilitate
+contributions and decentralization and so forth).
+--[[file:akrowne.org][akrowne]] Fri Apr 29 14:26:15 UTC 2005
+
+I would say that even as a prototype, the system can be used as an example
+of "free culture".  (Just add water.)  In talking about how free culture can
+save the digital library, the draft paper certainly contain ideas you can draw
+on.  And, by the time July 1 rolls around, we may well be able to add some
+serious "scholium system-like" features to one or more "real world" digital
+libraries that don't have them yet.  While, in truth, I don't know how useful
+the model I'm proposing will be outside of my paper... /I/ do certainly plan
+to talk talk about existing systems.  But I don't feel particularly qualified to
+talk about implications for digital libraries.  That's one reason why I was
+thinking that it would be good for you to refer to the ideas behind the scholium
+system in your paper.  (Whereas I'll work to develop those ideas in a general
+CBPP context.)  Anyway, my sense is that some mutual interconnections between
+the two papers would be the best way to go in terms of getting implications for
+DL covered.
+
+If I was to require your help on the paper, as I'm currently envisioning
+it, it would probably be on mostly technical things, e.g., help writing code
+that can be used in high-traffic, high-impact sites (and then writing this up).
+But there might not be time to get to this (even if would be otherwise
+desireable).  I suspect it would be OK for me to submit the abstract solo, under
+the assumption that it is primarily going to be technical (and, yes,
+theoretical), and that I can handle both the technical stuff and associated
+discussions.  If either of these hypotheses fail and I get totally stuck, or you
+read my draft and come up with great additions that don't fit in your paper, or
+if we have time and decide to collaborate on some new code, theory, or
+exposition/discussion that goes beyond the basic system... then, I assume no one
+would have a problem with you being added as an author on the paper.  (And
+similarly, if I end up having great things to add to your paper based on
+insights from this one!)  I do hope we can talk over the technical stuff... and
+then we'll see just much I end up relying on your input in that area.  At this
+point, barring any catastrophe or flash of inspiration on my part, I think I'll
+probably end up submitting the thing just about as is, and that quite
+shortly. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 17:51:14 2005 UTC
+
+I don't mean to diminish the imporance of your prototype.  It is awesome
+that you have done one, and that you have a lot of momentum on implementing and
+studying it.  But this is not really a "computer science" conference or a
+"mathematics" conference.  The conference has a social focus.  So if ideas and
+systems that aren't /established/ yet are to be discussed, I think this is
+best approached as a venue to /motivate/ and /advocate/ them.  While it
+would be nice to have proven uptake of a scholia system in the wild, we don't
+have that now, and likely won't by the fall.  But what we do have now are the
+concepts, motivations, and partial-examples which /are/ established.  As for
+co-authoring, I offer my help on technical digital library things and in
+general.  But also, you may want to plan on a co-author who will be at the
+conference, just in case you can't attend to present.  I don't think there's a
+problem with submitting the abstract solo for now, however.  --[[file:akrowne.org][akrowne]] Fri
+Apr 29 19:12:38 UTC 2005
+
+Sounds good Aaron - I didn't think you were diminishing the prototype: there's a
+difference between a live system and one that's just been spelled out, even if
+it is spelled out in full actionable detail... which my protype version is only
+approaching.  By the time July rolls around, hopefully we'll have gotten some
+good testing in.
+
+Thanks for your offer to help with technical work: I hope my "if I require"
+above is interpreted literally (not as a sort of pompous sounding idiom) - I
+really may rely on your expertise here.  And thanks for the general feedback: I
+hope you agree it has had a positivie effect on the (now somewhat revised &
+submitted!) abstract.
+
+This is quite the involved process (writing a bio, abstract, and insert).
+Haven't seen anything quite like that before.
+
+If the paper's accepted, I'll definitely plan to come to the conference to talk
+(that usually the funnest part) & listen (looks like there are already several
+other talks I'd like to see :)).  --[[file:jcorneli.org][jcorneli]] Fri Apr 29 23:42:25 2005 UTC

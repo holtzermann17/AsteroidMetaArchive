@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: schema.mysql.sql
+
+pp line 351:
+) TYPE=InnoDB;
+
+pm line 351
+) TYPE=MyISAM;
+
+pp line 457:
+) TYPE=InnoDB;
+
+pm line 457:
+) TYPE=MyISAM;

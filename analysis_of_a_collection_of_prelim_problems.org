@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I have a copy of quite a few prelim problems that I made a
+fresh, corrected, typed copy of a few years ago:
+
+ * http://planetmath.cc.vt.edu/~jcorneli/everything/HDM/apm.pdf
+ * http://planetmath.cc.vt.edu/~jcorneli/everything/HDM/apm.tex
+
+ *Warning:* I'm not completely sure of the legal status of these works -- the
+copyright information stated on them currently is incorrect.  I'm
+currently investigating this matter and trying to get a written
+transfer-to-public-domain from the original copyright holder(s). The
+main problem is that I'm not sure who these copyright holders are.
+Of course, for research purposes it was always legal for me to make ONE
+copy. Basically this looks like a case where copyright law is just too
+dumb to be worth thinking much about, but use at your own risk (and
+mine too, presumably -- and by all means!).
+
+I think it would be a very good idea to commence analysis of this
+collection of problems (and we can compare to similar collections
+of problems that appear on the web).  Hand-translating the questions
+into hcode is one idea; analysing the text and figuring out how
+to mechanically translate to hcode is another; figuring out how to
+write code that solves the problems is a third.
+
+I think it is very good to set up a work effort so that it is
+goal oriented -- having some problems to solve is a good high-level
+goal in that it gives us lots of lower-level goals to work towards.
+
+--[[file:jcorneli.org][jcorneli]] 
+
+BTW -- Presumably a lot of the information needed to hack these particular
+problems is contained in the concordance at 
+
+ * http://planetmath.cc.vt.edu/~jcorneli/everything/HDM/Xi.pdf
+ * http://planetmath.cc.vt.edu/~jcorneli/everything/HDM/Xi.tex
+
+(but not all).
+
+--[[file:jcorneli.org][jcorneli]]
+* Other collections
+
+There are other collections online, I don't know if any of them
+are public domain.
+
+Examples:
+
+ * http://math.berkeley.edu/graduate_prelim.html
+ * ...

@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is based on http://us.metamath.org/mpegif/a2i.html
+
+ (setq a2i-pr1 '((p q r) (if p (if q r))))
+ => ((p q r) (if p (if q r)))
+
+ (setq a2i-ccl '((p q r) (if (if p q) (if p r))))
+ => ((p q r) (if (if p q) (if p r)))
+
+ (setq step-2.1 '(if p (if q r)))
+ => (if p (if q r))
+
+ (match-template a2i-pr1 step-2.1)
+ => ((q q) (r r) (p p))
+
+ (setq step-2.2 '(if (if p (if q r)) (if (if p q) (if p r))))
+ => (if (if p (if q r)) (if (if p q) (if p r)))
+
+ (match-template ax-2 step-2.2)
+ => ((q q) (r r) (p p))
+
+ (setq step-2.3 '(if (if p q) (if p r)))
+ => (if (if p q) (if p r))
+
+ (match-template a2i-ccl step-2.3)
+ => ((p p) (r r) (q q))
+
+ (merge-assignments
+  (match-template mp-pr1 step-2.1)
+  (match-template mp-pr2 step-2.2)
+  (match-template mp-ccl step-2.3))
+ => ((p (if p (if q r))) (q (if (if p q) (if p r))))
+
+Back to [[file:using template utilities to check proofs.org][using template utilities to check proofs]]

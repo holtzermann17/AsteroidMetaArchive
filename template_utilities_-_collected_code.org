@@ -1,0 +1,288 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ ;; Template Utilities
+ ;; Copyright (C) 2005 Ray Puzio
+
+ ;;   The content of this file is available under your choice of the
+ ;;   GNU Free Documentation License (FDL) and the GNU General Public
+ ;;   License (GPL). If the FDL is selected, be advised that this
+ ;;   document has no Invariant Sections, no Front-Cover Texts, and and
+ ;;   no Back-Cover Texts.
+
+ ;;   This is a library of utilites for dealing with templates intended
+ ;;   for use in theorem checking.  For documentation, please refer to
+ ;;   "template utilities" on Asteroid Meta.  Although this code was
+ ;;   developed for Emacs LISP, the style is rather generic, so it should
+ ;;   run under most LISP interpreters.  If you are using a different LISP
+ ;;   dialect, you might want to try the examples given in the documentation
+ ;;   to check that it works as intended.  Please report bugs in the HDM
+ ;;   section of the bugs page on Asteroid Meta.  Sugestions and comments
+ ;;   are welcome and should be posted in the appropriate place on
+ ;;   Asteroid Meta.
+ 
+ (defun first (l) (car l))
+
+ ; (first '(a b c))
+ ; => a
+
+ (defun second (l) (car (cdr l)))
+
+ ; (second '(a b c))
+ ; => b
+
+ (defun third (l) (car (cdr (cdr l))))
+
+ ; (third '(a b c))
+ ; => c
+
+ (defun repetition-p (x)
+   (cond ((null x) nil)
+ 	 ((atom x) nil)
+	 ((member (car x) (cdr x)) t)
+	 (t (repetition-p (cdr x)))))
+
+ ; (repetition-p '(a b c))
+ ;=> nil
+
+ ; (repetition-p '(a b a))
+ ; => t
+
+ (defun assignment-p (expr) 
+   (cond ((null expr) nil)
+         ((atom expr) nil)
+         ((not (equal (length expr) 2)) nil)
+         ((not (atom (car expr))) nil)
+         (t t)))
+
+ ; (assignment-p 'a)
+ ; => nil
+
+ ; (assignment-p '(a (b c)))
+ ; => t
+
+ ; (assignment-p '(a b c))
+ ; => nil
+
+ (defun assignment-list-p (expr)
+   (cond ((equal expr t) t)
+	 ((null expr) t)
+	 ((atom expr) nil)
+	 ((member nil (mapcar 'assignment-p expr)) nil)
+	 ((repetition-p (mapcar 'car expr)) nil)
+	 (t t)))
+
+ ; (assignment-list-p 't)
+ ; => t
+
+ ; (assignment-list-p nil)
+ ; => t
+
+ ; (assignment-list-p 'a)
+ ; => nil
+
+ ; (assignment-list-p '(a))
+ ; => nil
+
+ ; (assignment-list-p '((a x) (b y)))
+ ; => t
+
+ ; (assignment-list-p '((a x) (b y) (a x)))
+ ; => nil
+
+
+ (defun add-assignment (item assignments)
+  (cond ((null assignments) nil)
+        ((not (assignment-p item)) assignments)
+        ((equal assignments t) (list item))
+        ((not (member (car item) (mapcar 'car assignments)))
+         (cons item assignments))
+        ((member item assignments) assignments)
+        (t nil)))
+
+ ; (add-assignment '(a x) nil)
+ ; => nil
+
+ ; (add-assignment 'a t)
+ ; => t
+
+ ; (add-assignment '(a x) t)
+ ; => ((a x))
+
+ ; (add-assignment 'a '((b y)))
+ ; ((b y))
+
+ ; (add-assignment '(a x) '((b y)))
+ ; => ((a x) (b y))
+
+ ; (add-assignment '(a x) '((a x)))
+ ; => ((a x))
+
+ ; (add-assignment '(a x) '((a y)))
+ ; => nil
+
+ (defun shift-assignments (expr assignments)
+   (cond ((null expr) assignments)
+         ((atom expr) assignments)
+         (t (shift-assignments (cdr expr)
+               (add-assignment (car expr) assignments)))))
+
+ ; (shift-assignments '(b (b y) (c x y)) '((a x)))
+ ; => ((b y) (a x))
+
+ ; (shift-assignments '((a x) (b y)) nil)
+ ; => nil
+
+ ; (shift-assignments '((a x) (b y)) t)
+ ; => ((b y) (a x))
+
+ ; (shift-assignments '((a x) (b y)) '((a x) (c (x y))))
+ ; =>((b y) (a x) (c (x y)))
+
+ ; (shift-assignments '((a x) (b y)) '((a y) (c x)))
+ ; nil
+
+ (defun merge-assignments (&rest exprs)
+   (cond ((null exprs) t)
+	 ((null (car exprs)) nil)
+	 ((equal (car exprs) t)
+	  (apply 'merge-assignments (cdr exprs)))
+	 (t (shift-assignments
+	     (car exprs)
+	     (apply 'merge-assignments (cdr exprs))))))
+
+ ; (merge-assignments)
+ ; => t
+
+ ; (merge-assignments t)
+ ; => t
+
+ ; (merge-assignments t t)
+ ; => t
+
+ ; (merge-assignments t t nil)
+ ; => nil
+
+ ; (merge-assignments '((x a) (y a)))
+ ; => ((y a) (x a))
+
+ ; (merge-assignments '((x a)) '((y b)))
+ ; => ((x a) (y b))
+
+ ; (merge-assignments '(x a))
+ ; => t
+
+ ; (merge-assignments '((x a) (y b)) '((y b) (z (a b))))
+ ; => ((x a) (z (a b)) (y b))
+
+ ; (merge-assignments '((x a) (y b)) '((y a) (z b)))
+ ; => nil
+
+(defun substitute-assignment (assignment template) 
+   (if (member (first assignment) (first template))
+       (list
+        (remove (first assignment) (first template))
+        (substitute-helper (first assignment)
+                           (second assignment)
+                           (second template)))
+       template))
+
+ ; (substitute-assignment '(a x) '((a b) nil))
+ ; => ((b) nil)
+
+ ; (substitute-assignment '(a x) '((a b) (b a b)))
+ ; => ((b) (b x b))
+
+ ; (substitute-assignment '(a x) '((b) (b a b)))
+ ; ((b) (b a b))
+
+ (defun substitute-helper (placeholder value text)
+   (cond ((null text) nil)
+         ((equal text placeholder) value)
+         ((atom text) text)
+         (t (cons (substitute-helper placeholder value (car text))
+		  (substitute-helper placeholder value (cdr text))))))
+
+ ; (substitute-helper 'a nil nil)
+ ; => nil
+
+ ; (substitute-helper 'a nil '(a b c))
+ ; (nil b c)
+
+ ; (substitute-helper 'a 'b 'c)
+ ; => c
+
+ ; (substitute-helper 'a '(a a) '(a a))
+ ; => ((a a) (a a))
+
+ ; (substitute-helper 'a 'b '(a b))
+ ; (b b)
+
+ (defun substitute-in-template (assignments template)
+   (cond ((null assignments) nil)
+         ((equal assignments t) template)
+         ((null (cdr assignments))
+            (substitute-assignment (car assignments)
+                                    template))
+         (t (substitute-in-template
+              (cdr assignments)
+              (substitute-assignment (car assignments)
+                                    template)))))
+
+ ; (substitute-in-template nil '((a b) (a b (a c))))
+ ; nil
+
+ ; (substitute-in-template t '((a b) (a b (a c))))
+ ; ((a b) (a b (a c)))
+
+ ; (substitute-in-template '((a x)) '((a b) (a b (a c))))
+ ; ((b) (x b (x c)))
+
+ ; (substitute-in-template '((a x) (b (x y)) (c y)) '((a b) (a b (a c))))
+ ; (nil (x (x y) (x c)))
+
+ (defun match-template (template expr)
+   (cond ((null (second template)) (null expr))
+	 ((member (second template) (first template))
+	  (list (list (second template) expr)))
+	 ((atom (second template))
+	  (equal (second template) expr))
+	 ((null expr) nil)
+	 ((atom expr) nil)
+	 (t (merge-assignments
+	     (match-template
+	      (list (first template) (car (second template)))
+	      (car expr))
+	     (match-template
+	      (list (first template) (cdr (second template)))
+	      (cdr expr))))))
+
+ ; (match-template '(nil nil) nil)
+ ; => t
+
+ ; (match-template '((a) nil) '(a b))
+ ; => nil
+
+ ; (match-template '((a b) a) '(x y z))
+ ; ((a (x y z)))
+
+ ; (match-template '((a b) c) 'c)
+ ; => t
+
+ ; (match-template '((a b) c) '(x y z))
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) nil)
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) 'x)
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) '(x y))
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) '((x y) (y (x y))))
+ ; => ((b y) (a (x y)))
+
+
+Back to [[file:template utilities.org][template utilities]]

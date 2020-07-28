@@ -1,0 +1,145 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is PlanetEngineering
+
+At the moment, merely a concept which seeks to extend
+the idea of [[file:PlanetMath.org][PlanetMath]] (and now [[file:PlanetPhysics.org][PlanetPhysics]]) and the 
+concept of free learning/knowledge to that of the engineering 
+disciplines. 
+
+* Discussion
+
+I feel there are some unique challenges inherent in
+PlanetEngineering (PE) that have not, so far, been present
+in the other planets.  Because engineering is such a diverse
+discipline, which uses results from 'pure' sciences of math
+and physics, a much greater need exists to link between the
+multiple planets. Not only the various planets, but also
+to WP whose content is well suited to the average 
+engineering student, though maybe not researcher.
+
+I think there needs to be considerable discussion
+in this vein. Any comments would be appreciated.
+
+----
+
+What are the subfields of engineering?  Civil, electrical, chemical?
+What else have I left out?
+
+     Well I guess the typical ones are: civil, electrical, chemical
+     and mechanical. Though there are increasingly more offered as
+     specialization becomes the norm with environmental, mechatronics,
+     etc. 
+--[[file:aerringt.org][aerringt]]
+
+Thinking about putting all of these together into one Noosphere
+instance seems like a bit of a headache, at least if Noosphere stays
+as it is today; this is  similar to problem people are having
+with this wiki: it is 
+[[A note from some members of PlanetMath who dislike this media|not 
+easy to distinguish between different topics all coming in one 
+stream]]. 
+    I was also thinking about this and my solution would be to
+    create a separate planet for each of the major areas. And of 
+course,
+    I would start with something like PlanetEE.
+    --[[file:aerringt.org][aerringt]]
+
+Of course, Noosphere could be updated, and it will be, so this may not
+be a terrible problem in the long run.  It should be possible to
+examine a restricted version of a Noosphere instance, filtering out
+everything but the most relevant data to whatever is being considered
+at present.  (For an easy example from !PlanetMath, we could examine
+all articles within a graph distance of say 3 from any one of 5 given
+theorems.)
+
+Assuming that this technical question can be solved, the problem of
+integrating content from other Planets (and additional outside
+resources) still remains.  Perhaps to start with we can use the same
+approach: put all the data into one big Noosphere instance, and then
+call certain restricted views of this data "Planets".  Then if I see
+an article anywhere within this complex with a "blue" link, I know
+that link points to !PlanetMath, whereas a "green" link points to
+!PlanetEconomics, "brown" to Wikipedia; or whatever, you get the
+picture.
+
+So, these are some of the info management questions that come up.
+Here are a few additional, more content-oriented, questions.  Is
+!LaTeX a good tool to use?  Are other things (CAD?) necessary to
+support?  What is the dividing line between "engineering problems" and
+"pure science problems"?  Are there any particular issues that might
+come up in the engineering field when we think about how to do free
+delivery of content and free collaboration that are different from the
+ones in science?
+
+--[[file:jcorneli.org][jcorneli]]
+
+
+I will try to address your last two paragraphs here. As far as the
+linking between multiple planets, I think initially, we may have to
+put the data in one big Noosphere. This sounds, though, like a bit of
+a 'gong show'. Admittedly I have no understanding of the internals
+of Nooshpere, so maybe it is not quite as brutal as I think it may be.
+
+Now for the content oriented questions. I think !LaTeX is definitely
+my tool of choice and probably the choice for an engineering planet.
+It is still the tool used by all academics in the engineering field
+but, has probably not seen quite the same popularity at the undergrad
+level. Nevertheless, I still think it should be used as I cannot think
+of a reason not to. Especially one that produces such pretty results.
+For CAD I think the ability to upload figures (I assume this can be
+done in PM already?) as well as possibly some specific wrappers for
+PSTricks to do simple circuits (this may have already been done
+somewhere). 
+
+I don't know the dividing line between "engineering problems" and
+"pure science problems". Initially, I see an engineering planet
+as serving more as an educational service than anything which may
+serve as a collaboration point for researchers. To this end I expect
+the articles to reflect this, giving the information necessary to
+solve a particular problem and then, referencing the underlying 
+physics and math from which this solution was 'derived'.  This may
+go a bit against the grain of PM as truly rigorous, but if engineers
+are going to wish to use the service, then it is a necessity. There 
+are very few engineers that can, or want to know the underlying math 
+used to solve a particular problem. Rather, they want to know what
+tools to use in solving it.
+
+There is probably some issues which may arise from free content. At
+the moment I see this being more of an issue when sample programs or
+the inner workings of certain microprocessors are given out. On the 
+whole though, I think it will probably be necessary to cross that 
+bridge when we come to it, but also keep it in the back of our minds 
+as the project progresses.
+
+A very important question to ask is what services does 
+PlanetEngineering wish to provide that, say WP, does not? I see WP as 
+providing a very good level for engineers but I think the entries are 
+not geared towards them (engineers) as such. A venue to do this as 
+well as providing a base of expertise to answer specific questions 
+would be useful. What would be really neat would be to dynamically 
+create course content. Say 'Linear Circuits' and the system would 
+assembly the related pages into a document which provides the 
+necessary content to learn the subject area. Problems,
+with some solutions, would be a very important aspect of this, 
+especially considering the intended audience are engineers. Engineers 
+like problems. They learn by solving a problem and comparing it with a 
+solution. Once again, this might go against the PM philosophy of 
+rigorousness but, of course, engineering is far from rigorous. All 
+that is required is that it works. 
+
+--[[file:aerringt.org][aerringt]]
+
+It is good to see the engineering perspective!  I had no idea what the
+conventions and needs were in this field.  I would suggest starting to
+set up a Noosphere engineering planet or planets, to gain momentum, and we can cross
+the content-sharing bridge when we get to it.  There are already plans to
+explore linking from various "external" domains within the scope of the 
+Math Atlas project (assuming the necessary funding is acquired).  --[[file:akrowne.org][akrowne]] Thu Mar 23 14:10:44 UTC 2006
+
+And don't forget the PlanetTechnae proposal! --[[file:rspuzio.org][rspuzio]]
+
+* Quick Links
+
+ *[[file:bi-directional_content_exchange_and_updating.org][bi-directional_content_exchange_and_updating]] 

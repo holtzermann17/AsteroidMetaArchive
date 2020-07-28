@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+At least a few PlanetMath users have expressed
+a desire for PlanetMath in non-English
+languages.  Even the Wikipedia math section tends to be shallow for certain languages...
+
+Let me add myself to that set of users,
+and I will work towards that goal,
+even if very slowly.
+My personal interest is for the Chinese 
+language (which means I better brace myself
+for !TeX problems...! For anyone's who curious about how Chinese math expositions look like, here's one I typed out about "absolute value"
+and the "triangle inequality"
+http://gold-saucer.afraid.org/math/abs.pdf)
+
+(And an early draft of the manifesto: http://gold-saucer.afraid.org/writings/Chinese_PlanetMath.
+Somewhat political and patriotic though, so I’m holding off on translating it.)
+
+-- SteveCheng
+
+Thanks Steve!  One thing that comes to mind is the usefulness of
+establishing a math lexicon, so we get the basic terminology for
+for doing translations down.  --[[file:jcorneli.org][jcorneli]]
+
+**  Something that would make you jump out of your chair
+
+Chinese Python example:
+
+from http://www.chinesepython.org/doc/sample/ask.html
+
+ #!/usr/local/bin/cpython
+ 回答 = 讀入('你認為中文程式語言有存在價值嗎 ? (有/沒有)')
+ 如 回答 == '有':
+ 	寫 '好吧, 讓我們一起努力!'
+ 不然 回答 == '沒有':
+ 	寫 '好吧,中文並沒有作為程式語言的價值.'
+ 否則:
+ 	寫 '請認真考慮後再回答.'
+
+key:
+ * 回答 answer (variable name)
+ * 如 if
+ * 不然 elif
+ * 否則 else
+ * 讀入 input (“read”)
+ * 寫 print (“write”)
+
+However, no doubt it will be a pain in the a** to code
+(switching in and out of input methods for every subexpression)

@@ -1,0 +1,91 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The relation between author and publisher has traditionally been an amiable symbiosis with the publisher as agent and patron of the author.  Both shared a common economic interest in prosecuting infringements of copyright --- not only would a pirated edition represent a loss of income for the publisher, it would likewise represent a loss of royalties for the author.
+
+However, this is no longer always the case nowadays, especially in scientific publishing, where royalties have typically not amounted to a significant source of income for the author and the economic value of printing was and is primarily as a means for disseminating information to a wide audience.  Therefore, as soon as other technologies for dissemination became available, mathematicians and other scientists have shown little compunction in supplementing the distribution of information through the printing press with alternative means, even when this violates copyright law.  This has turned the relation of partnership into one of competition, putting scientists and their publishers on a collision course with occasionally disastrous results, as the following two examples illustrate.
+
+As soon as the copy machine became readily available, scientists made use of it to produce reprints of research articles (and even books) for personal use, since it is much more convenient to copy an article in a journal than to send a letter to the publisher or the author requesting a reprint.  In 1994, the American Geophysical Union sued Texaco [[file:[Free Math and Potential Bottlenecks -- American Geophysical Union vs. Texaco.org][[Free Math and Potential Bottlenecks -- American Geophysical Union vs. Texaco]]] because researchers in the company's labs photocopied atricles from the society's journal without permission.  The court ruled that the scientsts' copying of journal articles was not covered under the fair use provision of copyright law and that Texaco would have to pay the publisher back royalties.
+
+The other example involves Eric Weisstein's "Treasue Trove of Mathematics".  Originally, this was a website containing mathematical definitions and facts.  Mr. Weisstein decided that this resource would be of greater value to the mathematical community if it were also available in the form of a book, so he engaged a scientific publisher, CRC Press, to issue a printed version, the "CRC Concise Encyclopedia of Mathematics".  Soon thereafter, the publisher ordered the author to take down the website and theratened to sue him for infringement of copyright if he did not comply.  [[file:[Free Math and Potential Bottlenecks -- CRC Press vs. Weisstein.org][[Free Math and Potential Bottlenecks -- CRC Press vs. Weisstein]]] The author relented and closed the website.  A year later, the publisher relented and allowed the website to reappear, but on terms which make it clear that the publisher, not the author has the upper hand and the author only has those rights to the work which the pulisher deigns to bestow --- if *in the publisher's sole opinion* the online version causes a decrease in sales of the printed book, the author is to reimburse the publisher for such loss.
+
+
+* Discussion
+
+I agree with this. However, most scientists publish in journals not simply to make their information available but because of the prestige associated with the journal. Such things can be subtle and important. A paper published in "Journal of Computing" can be worth very little to a researcher, while having it published in "Computing Journal" can result in tenure (disclaimer: journal names selected at random). --[[file:shargestam.org][shargestam]] 24 June 2005
+
+That is a good observation, but it will have to wait for a later section where possible remedies to the situation wil be discussed. (or perhaps as a footnote here --- I will go back and add plenty of notes once the main text of th essay is written)  The focus of this section is on demonstrating different ways in which intellectual property law can stifle scientific activity.  --[[file:rspuzio.org][rspuzio]] 24 June 2005
+
+Some terminology: CRC = CRC Press, not CRC Publishing.  The printed version was called the "CRC Concise Encyclopedia of Mathematics".  The rest looks good.  I wonder if this is the place to talk about the tensions arising from the causes you describe, which don't necessarily go to court.  For instance, that it is so counter-intuitive to authors that they do not have the right to give people permission to copy or extend their works, as we've encountered many times now on PlanetMath, that they often give this permission illicitly anyway. --[[file:akrowne.org][akrowne]] Mon Jun 27 14:48:52 UTC 2005
+
+: CRC issue: Fixed. --[[file:jcorneli.org][jcorneli]] Mon Jun 27 15:38:21 2005 UTC
+
+
+I say something like this in the next section on permissions, where also I talk about exactly the incidents on Planet Math we've seen.  Also, I plan to say more about how one cannot reasonably demand that the average scientist or  writer invest a lot of time studying copyright law before publishing on the web in towards the end of this essay when I discuss ways of improving the situatiion.  Back in the day when copyright law only converned publishers who had specialsts on staff to sort out these niceties, complicated, sommetimes counter-intuitive regulation with plenty of exceptions and special cases may have been a reasonable way of balancing conflicting demands.  However, in this brave new world where authors become their own publishers by making webpages with their works, such complexities only perplex and confuse the non-specialist leading them to be become this "fog of copyright" you mention. --[[file:rspuzio.org][rspuzio]] 27 June 2005
+
+By the way as a useful mnemonic we might call the above situation the "fog of
+copyright" -- a situation whereby the rules are so counter-intuitive and out of
+touch with reality that the only ones who can afford to proceed with any sort of
+use of extant materials are those who can afford the lawyers.  Thus even if
+there is a solution within the bounds of the law, there is an invisible boundary
+induced by "the fog" which prevents most from getting through.  This is one
+thing Lessig went to lengths to try to emphasize in "Free Culture", because many
+analysists of the situation are obsessed with what is theoretically possible (in
+accordance with the letter of the law) and neglect the reality of what is
+economical. --[[file:akrowne.org][akrowne]] Mon Jun 27 15:38:54 UTC 2005
+
+[[file:shargestam.org][shargestam]]'s point fits in nicely with the theme here; but to apply it, I
+think the concept of "hyperreal capital" could comes in handy.  Point being:
+science authors aren't paid in royalties, they are paid in prestige (/real
+capital/); but they are also paid in (non-exclusive) knowledge (/hyperreal
+capital/).  Note, then, that copying restrictions tend to make a properly
+non-exclusive good into a more exclusive one!  By chilling the conversation,
+copying restrictions tend to promote specialization.  In a weird way, this is
+something that authors might like.  Their research may not be widely
+disseminated, but they remain the authority on their topic.  Thus, the publisher
+and a few colleagues can continue to convert their specific hyperreal capital
+into real capital.
+
+However, as Aaron points out, not every mathematician sees exclusivity as a good
+thing.  It not a particularly intuitive, but I think that (depending on the
+culture, which is currently exclusivity-oriented), many authors do tend to get
+benefits by being exclusive.
+
+Of course, free content would change matters - by making the result of the
+research open access, the knowledge-content would tend to flow into the
+community more.  There may be little or no loss in real capital (and actually
+maybe some gains), but the degree of exclusivity in the hyperreal component goes
+away.
+
+Free culture (e.g. non-free publications embedded in a scholium system) might
+have a somewhat similar effect, but I'm not sure.  It may be harder to make
+knowledge flow without freeness of content, it isn't exactly clear to me whether
+you can have free culture without free content. (Aside: Nelson's Xanadu system
+makes content FAIF, but lets authors set their own royalty that applies to all
+subsequent uses, sort of like publication on demand, but even more similar to
+pay-per-view.)  Whatever antecedents are necessary, free culture would lead to
+a shift in the way the hyperreal capital is managed.  
+
+(Since math already has a somewhat free culture, in that anyone is free to write
+about any idea, the difference mainly would be the threshold to publication.  A
+simple scholium currently is hard to publish, especially if you aren't a
+prestigious author.  If Thurston is right, mathematical progress would tend to
+benefit by being more free-flowing and discursive.  It isn't so much that the
+content is not managed as a commons now, but that a freer culture would drastically
+change the rules associated with the commons.)
+
+Anyway, I would say that in the hyperreal dimensions, the conflict is actually
+not between the author and the publisher, but between the author and other
+(potential) authors.  Authors and publishers seem to have a racket going
+together; authors accepting relative exclusivity along hyperreal dimensions,
+publishers accepting exclusivity along real dimensions; everyone else gets
+screwed.  However, it is entirely possible (and I think likely) that the current
+situation is a sub-optimal equilibrium for publishing authors, too.  The only
+question is whether it is sub-optimal for publishers.  Maybe they are the only
+ones who "really win" in the current situation, which, if true, would be a nice
+thing to note in this section. (Or a small section on Tensions between authors and other potential authors.)
+
+--[[file:jcorneli.org][jcorneli]] Mon Jun 27 16:09:22 2005 UTC
+
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

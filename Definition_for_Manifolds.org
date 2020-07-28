@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Let /M/ be a (finite-dimensional) manifold.  Let /C(M)/ denote the set of functions from the interval [0,1] to /M/ satisfying the following conditions:
+
+ 1. For every /f &isin; C(M)/, there does not exist a subinterval of [0,1] such that /f/ restricted to that subinterval is constant.
+
+ 1. For every /f &isin; C(M)/, there does not exist a subinterval of [0,1] such that /f/ restricted to that subinterval can be expressed as /g * (g' h) / for any function /g/ from half the subinterval to /M/ and any ismorphism /h/ of that half-subinterval.
+
+Let /P(M)/ denote the set of equivalence classes of elements of /C(M)/ under reparameterization.
+
+We may define a multiplication operation on /P(M)/ as follows:  Suppose that /A/ and /B/ belong to /P(M)/.  By definition, /A/ and /B/ are equivalence classes under reparameterization.  Let /a/ and /b/ be representatives of these classes.  
+
+
+Back to [[file:Connections as Functors.org][Connections as Functors]]

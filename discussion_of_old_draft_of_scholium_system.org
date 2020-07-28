@@ -1,0 +1,68 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+* Discussion
+
+If you liked [[file:one week in october.org][one week in october]], I'd be very curious to know what you think
+of this one? :) --[[file:jcorneli.org][jcorneli]] Wed Mar 02 01:05:04 2005 UTC
+----
+
+I've only quickly read this, but it would really help to have a full document
+example.  Also, it sounded like the generation of the presentation document was
+something pre-prepared.  Why?  Why not just assemble the document when viewed,
+in real time.  This eliminates the need to propagate updates.  Maybe I just
+don't understand, though. --[[file:akrowne.org][akrowne]] Fri Mar 4 22:39:24 UTC 2005
+
+I could rewrite (and extend) this
+[http://www.ma.utexas.edu/~jcorneli/d/essay/comments "discussion"] into an
+example, I suppose.  In answer to your question, generation of the presentation
+document would /absolutely/ be real time.
+
+There is never a "need" to propagate updates, and the foregoing fact is
+precisely the reason.  For example, If I was to rewrite what you said above as
+
+: "Why?" Aaron asked, feeling mildly confused, "Why not just assemble the
+document when viewed, in real time?"
+
+Then suppose you were to come along and change your comment to 
+
+: Why?  Why not just assemble the document whenever it is viewed, in real time.
+
+My document might have a "watch" on your document, and, if I had configured
+things to make this happen & the software was in place, the next time my
+document was rendered, it might read
+
+: "Why?" Aaron asked, feeling mildly confused, "Why?  Why not just assemble the
+document whenever it is viewed, in real time?"
+
+However, I might come along and change /this/ document to read:
+
+: Feeling mildly confused, but becoming more confident, Aaron asked "Aren't the
+documents assembled in real time whenever they are viewed?  Oh, I see, yes
+they are -- but an object owner can opt to either have a watch on an object
+that will keep quoted text in sync, or a simple scholium pointing to a certain
+version of an object from which it derives."
+
+Two additional things might then happen.  First, you might get a notification
+that said that /my/ derived version of your statement changed (again) and a
+dialog asking you whether you want to sync the relevant portions of your
+document to what I had written, and I might also get a dialog offering changed
+settings, from which, after doing so much work on the text, I might choose the
+option to change my an auto-updating mirror-style "watch" on your article into a
+simple "derives from such-and-such version of such-and-such article" scholium.
+
+The way I would put it is that there might be a desire to turn mirroring on or
+off.  Updates aren't really ever propagated -- metadata about updates is
+generated, and the system will have different behavior concerning this metadata,
+when it renders an entry in real time, depending on the values of certain other
+metadata (local settings).
+
+Maybe this seems overly complex - bear in mind that this part of the article is
+an attempt at understanding how a bidi system would work.  One could certainly
+build a scholium-based digital library without this added complexity.
+
+: In working on my example, I seem to be seeing my way clear to
+actually writing a basic implementation of these ideas.  I'm not
+sure how long it will take.  I'm not sure if the slight fever I have
+is helping or harming my progress. --[[file:jcorneli.org][jcorneli]] Sat Mar 05 00:57:28 2005 UTC

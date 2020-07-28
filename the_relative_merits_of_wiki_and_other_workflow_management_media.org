@@ -1,0 +1,175 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page started off as a conversation about the [[file:Bugs.org][Bugs]] page on
+[[file:AsteroidMeta.org][AsteroidMeta]], but I think it could grow into a bigger and more useful
+discussion of the features of an ideal collaboration tool.
+
+----
+
+Is it really necessary to use Bugzilla for Noösphere?  I'd personally like it if
+all the bugs could be tracked here.  But then again, I'm not a Noösphere
+developer, so I don't really get a vote. --[[file:jcorneli.org][jcorneli]]
+
+I find wiki to be a very poor platform for almost any workflow marginally more
+complex than document co-editing.  This especially includes bug/issue tracking.
+I only grudgingly use it for discussion functionality, even.  --[[file:akrowne.org][akrowne]]
+
+This makes me wonder why I'm such a big fan of wikis, and what the difference is
+between wiki and things you like better.  I think it would great if
+[[file:Noösphere.org][Noösphere]] had all the elements in it that would make it possible to use it
+as a workflow management tool, flexibly enough to handle lots of different
+workflow needs; at that point perhaps it would be worthwhile to make [[file:AM.org][AM]] into
+a Planet. But the specific elements of the design you and I imagine being useful
+might be pretty different.  I'd be interested to hear more of your thoughts on
+the matter!  --[[file:jcorneli.org][jcorneli]]
+
+----
+
+*  a vote for drastic simplicity
+
+Well, for one thing, I think it would be great if the tool could be interacted
+with through a non-web interface (say, email).  For example, I'd like to be able
+to send an email request that says "what are my objects?" and get back a list,
+then another email that says "send me object number 2" and get back an email
+with the source code for object number 2, or an email that says "send me all my
+objects" and get one email with all the objects in it.  I'd like there to be a
+"batch" mode for just about every action - so that I could create multiple
+objects, submit multiple corrections, update or create multiple webpages, assign
+multiple tasks to myself or change their status, rate other people's work, etc.
+
+I realize that "browsing" wouldn't necessarily be so easy, but then again...  it
+wouldn't take much for me to write a function in emacs that said "request the
+page linked to at point" and presto, I've followed a hyperlink.
+
+The reason for casting this vote for drastic simplicity is that that I don't
+like waiting for webpages to load or having to worry about interface issues.  I
+want to be able to use an interface that suits me.  With a text-based,
+email-facilitated interface, everything becomes eminently scriptable.  That
+means a lot of time savings and more productivity and more fun. --[[file:jcorneli.org][jcorneli]]
+
+: When I was working at A Major AI Firm, I learned about both their web
+interface to the system and their command-line (actually Lisp REPL) interface to
+the system.  The web interface was used primarily by "knowledge engineers" and
+"ontologists", whereas the REPL was used primarily by "programmers".  One of the
+interesting things about the system was that to learn how to do something
+programmatically, one thing to do was to look at the code that defined the web
+interface to that feature.  It was always a happy moment for me when I figured
+out how to do something that I previously could only do via the web interface
+through the program interface, because this meant I could be much more
+efficient.  --[[file:jcorneli.org][jcorneli]] Sun Feb 27 18:43:45 2005 UTC
+
+*  a vote for strong version control
+
+Another very useful thing is to have descriptions of what people are doing in
+the system.  Arch has this and Wikis have this -- you know, the summary line!
+But how many times have I forgotten what I was in the middle of coding, or
+over-written a working version of a program with an experimental version?  Way
+too many.  So I think the ideal system would strongly emphasize keeping track of
+this sort of metadata: when you check out a file, you should optionally say what
+you are thinking of doing with it; when you check it back in, you should
+definitely say what you did do with it.  --[[file:jcorneli.org][jcorneli]]
+
+*  a vote for powerful autolinking features
+
+Auto-linking and such is very important.  The wiki is fairly weak at that.  To
+assign a new task for myself, for example, I need to edit my user page, the
+[[file:Tasks.org][Tasks]] page, and and the task itself.  To clear out a finished task, I need
+to edit my user page, the [[file:Tasks.org][Tasks]] page, the [[file:Case Closed.org][Case Closed]] page and probably
+the task itself again too.  It would be much better if all this stuff could be
+accomplished through one action, with appropiate check-boxes or fields --
+"Assign-Task-To: (default self)", "Task-Status: (default open)",
+"Task-In-Project: (default Users-Main-Project)" -- and appropriate behavior; the
+task would be listed in the right place, people working on the task would be
+listed below the task description, etc. --[[file:jcorneli.org][jcorneli]] Wed Feb 23 16:02:28 2005 UTC
+
+*  a vote for having lots of cool features, whether in the core or in add-ons
+
+It is somewhat interesting that the [http://www.emacswiki.org/cw/ChoosingaWiki CommunityWiki:ChoosingAWiki]
+page says that /many people who think they want a wiki might actually prefer Noosphere./ (The full quote is worth 
+reading too, so check it out!)  This is interesting in part because !CommunityWiki uses the same wiki engine as !AsteroidMeta.
+
+The main thing that they talk about as an advantage of [[file:Noosphere.org][Noosphere]] is the
+"ownership" feature.  It is certainly a very noticeable feature, but there are
+plenty of other interesting features too -- including the highly notable
+autolinking feature.
+
+There is a huge list of wikis, though, and perhaps some of them also offer
+interesting worthwhile or novel features: here is the list --
+http://www.c2.com/cgi/wiki?WikiEngines -- maybe there isn't much excitement
+there, I can't say.
+
+Anyway, I have to agree that ownership has had an interesting, and probably
+overall-positive, effect on the course of PlanetMath so far.  But I think there
+are some other features that could *really* make people prefer Noosphere to
+wikis.  There are just so many good ideas out there - it would be great if
+Noosphere could incorporate them all.  Probably that is too much to ask - but it
+would be nice if the "Noosphere-based system" did incorporate all the useful
+things, in a very well integrated way. --[[file:jcorneli.org][jcorneli]] Mon Feb 28 05:30:51 2005 UTC
+
+** The list of neat things (please add or comment if you like)
+
+ * wiki
+ * bugzilla
+ * arch
+ * email
+
+Also:
+
+ * artificial intelligence
+ * latex
+ * emacs
+
+OK... that might have taken a bit of a personal turn.  
+
+*  a vote for intelligent namespace handling
+
+Here's another thing that would be good: intelligent name-space management.  On
+a wiki, everything shares the same namespace.  So if I create a page /proof of
+theorem 3/, everyone else who has a "theorem 3" is out of luck.  OK, maybe it
+would be better to give theorem 3 a name, and make the link say /proof of
+foobar theorem/ but still!  Sharing one namespace can be kind of lame.
+
+Oddwiki has hacked Oddmuse so that there is a different namespace and recent
+changes page for each of their child wikis.  That is cool.  I think it might be
+good if Noösphere had the same sort of feature.  But this is getting back into
+the mode of the [[file:A_scholium-based_document_model scholia.org][A_scholium-based_document_model scholia]] stuff I
+was talking about, where each page would have many attachments, to be handled
+with different behavior depending on their type.  In that model, there is only
+one namespace, but it is handled more automatically - /object159726/ might be
+something you'd see in that namespace, for example.  You would have to be able
+to "find" object159726 by looking at its metadata and the metadata of other
+objects that are near by.  --[[file:jcorneli.org][jcorneli]]
+
+*  a vote for fast syncing
+
+It would be nice (at least for the end user, at least I think so) to synch
+documents via /rsync/ instead of uploading and downloading the whole text you
+want to edit all at once (like wikis currently do).  This might get a little
+complicated in cases where multiple users can edit the same page, however, if
+there is just one object editor (the owner), then there is only one
+authoritative version of the file to sync to. --[[file:jcorneli.org][jcorneli]]
+
+How about using darcs (a revision control system: http://abridgegame.org/darcs/)?
+It supports managing fine-grained text patches,
+and we would get revision control for free.  Of course all Wikis and noosphere
+already have a primitive revision control, but it is worth consideration
+if you want to implement one from scratch.
+Unlike CVS or Subversion, darcs works with relatively dumb servers,
+and so I think can be modified to work over a Web service protocol.
+(i.e. HTTP POST)
+It already has a command-line interface, so that's good
+for power users.  I myself would prefer to (and already do) maintain copies
+of every PlanetMath entry I own on my local system, because it's easier
+to edit them that way.  (Better editors, can view graphics, not slow.)
+(And yes, one of the ambitious goals I have for my literate programming system
+is to support collaborative editing over the network.  Let's see if I can pull that one off.)
+-- SteveCheng
+
+I'm glad you're working on this; I'd also appreciate it if you'd talk about
+this literate programming system with us (me in particular) a bit more.
+Since I'm also working on something similar, it may be that we'll be
+able to collaborate.  --[[file:jcorneli.org][jcorneli]]
+
+Well, at this point I have little concrete to talk about, but
+I've noted by ideas in the [[file:Display LaTeX.org][Display LaTeX]] page. --SteveCheng

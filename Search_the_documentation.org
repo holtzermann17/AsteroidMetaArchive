@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+See also [[file:Search the forums.org][Search the forums]].  Indeed, it would be good if every different
+subcollection could be searched.  Corrections, forums, documentation, books,
+papers, etc.!
+
+Note: I also wondered whether the site documentation shouldn't be depreciated in
+favor of AM versions of the same thing.  The answer right now is "no", since we
+need !LaTeX in PM documentation.  However, I think it would be swell if we could
+create new bits and pieces of documentation with the same ease with which new
+pages are created on the wiki.  So I would hope that the answer in the future
+will be "yes" (assuming that AM is ported into Noosphere at some point).
+--[[file:jcorneli.org][jcorneli]] Fri Apr 08 22:08:51 2005 UTC

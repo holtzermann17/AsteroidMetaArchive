@@ -1,0 +1,297 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Discussion of First Version
+
+Please include your comments in here.
+
+ * We also need a good title for the article. Maybe something simple:
+`PlanetMath: A free encyclopedia of mathematics', or something more provocative:
+`PlanetMath Needs You!' ...  --[[file:alozano.org][alozano]]
+
+I want to make sure people realize it is broader than just "an encyclopedia"
+(see the page at [[file:Renaming the Noosphere Encyclopedia Section.org][Renaming the Noosphere Encyclopedia Section]] for discussion
+of this point). It is tough to be brief, but maybe "PlanetMath: A Mathematics
+Knowledge Community" or "PlanetMath: A Collaborative Knowledge Resource and
+Community" (the "math" focus should be pretty obvious).
+
+I am making some minor edits for wording and terminology as well. --[[file:akrowne.org][akrowne]]
+Thu Apr 28 20:55:32 UTC 2005
+
+First, a question: when do you plan to submit this? 
+Second, another reference suggestion: to check out and maybe use
+the [[file:PlanetMath infopack.org][PlanetMath infopack]] I recently wrote.  I'll have
+more comments for you when I know the answer to the
+question.
+--[[file:jcorneli.org][jcorneli]] Thu Apr 28 22:47:15 2005 UTC
+
+: The article is to be submitted as soon as we reach an agreement on an article
+"we all" like. I had not seen the PlanetMath infopack before, so maybe we can
+use some of that stuff for the article. --[[file:alozano.org][alozano]]
+
+:: Maybe you can also help improve the infopack.  Note the missing
+statistics. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 17:01:06 2005 UTC
+
+I would suggest cutting down the details on how the review system works.  This
+is aimed at a general reader who is not familiar with Planet Math and wants a
+general idea.  I would say that it would suffice to say that members of Planet
+Math review each other's submissions to make sure they are correct.  If someone
+is interested, they can look at the documentation for details on exactly how
+this process works.
+
+Also, since the MAA is slanted towards education and pedagogy, maybe you could
+mention that Planet Math includes discussion fora where students regularly post
+questions about material they are studying and recieve answers and advice from
+Planet Math members, that many of the entries have a pedagogical slant, and that
+there are projects currently under way to create textbooks from Planet Math
+content (your number theory book) and to use Planet Math as a pedagogocal
+resource (Robert Milson's project). --[[file:rspuzio.org][rspuzio]] 29 April 2005
+
+: I included a good size paragraph describing the review process because I feel
+that mathematicians put significant emphasis on the peer-review process. I think
+the corrections system is very solid, and this will peace the minds of some
+mathematicians who would never dare to read or trust material contributed by an
+unknown author, and material which has not been reviewed properly (I
+wouldn't). So I thought it is important to make clear that the review system is
+solid, we just need more expert eyes supervising the entries. What do other
+people think about this issue? About the forums and pedagogy, I think you have a
+good point, and I will try to come up with some sentences which emphasize
+this. --[[file:alozano.org][alozano]]
+
+:: First of all, I would suggest copying the paragraph, verbatim, to the
+infopack, and adding a section there called The Correction System.  Since we're
+thinking about tailoring different information for different audiences, we might
+want to send something detailed about the correction system to people who would
+be really interested in it.  But I agree with Ray, the Focus readership doesn't
+need that much detail.  I'd suggest cutting that paragraph down to a couple of
+sentences that sum the whole thing up, and filling the extra space with
+interesting statistics about site use and anything else that could get people
+excited.  I think Ray's suggestions are good ones; you might also mention that
+the site is currently managed and maintained by volunteers, and specifically
+talk about /funding/ as a way to support the site.  (We will likely need to
+pay people to add the features we've been talking about adding, which will make
+PM more effective: the codebase is under evolution, just like the content, but
+slower.)  Again, one or two sentences on this topic should suffice.  A quick use
+examples (e.g. what are some Google terms that lead to PM pages, what sorts of
+questions come up in the forums, etc.) could be good. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 17:11:54 2005 UTC
+
+#+BEGIN_VERSE I heartily second Joe's motion.  Part of the motivation for wanting to make
+contact with professional organizations like the MAA was the hope that some
+older, established mathematicians who belong to such organizations might
+consider giving to Planet Math.  I think that, if they come to believe that
+Planet Math is a worthwile undertaking which will benefit the mathematical
+community and are made aware of the fact that it currently operates on a
+shoestring budget, there is a good chance that some of them will donate to keep
+what they consider a valuable resource from going bankrupt.  --[[file:rspuzio.org][rspuzio]]
+
+* Discussion of Second Version
+
+I have updated the article to a second version. I have reduced the description
+of the correction system to fewer words, although it still aims to peace the
+mind of the critical eyes. Also, I have included references to the forums, to
+collaborative entries, pedagogy and so on. Also I think we should come up with
+lists of examples of entries which are representative (please fill in the
+gaps!!). Let me know what you think. I am always wary of being too demanding on
+the reader (financially demanding in this case) so let me know if you can think
+of other phrasings we can use to encourage people to participate with
+funding. Remember that I was asked to write an article which describes
+Planetmath and how it may be useful, not a free advertisement.--[[file:alozano.org][alozano]]
+
+As I suggested before, it might be a good warm-up for you to put some work into
+improving the [[file:PlanetMath infopack.org][PlanetMath infopack]] which tries to take an NPOV approach to
+describing !PlanetMath.  If you want to talk about why PM is useful, why not
+interview some PM users, and include some quotes?  Emphasize quotes and specific
+statistics instead of overviews and it will sound less like you're advertising
+an online resort and more like you're describing something.  You should state
+your own bias(es).  Why do /you/ like the site?  Why are /you/ writing this
+article?  If you combine these things with a brief NPOV discription of the site,
+I think people will have a much easier time /getting the point/.  All of the
+stuff that comes from elsewhere -- seems sort of canned.  Some of the points you
+cover are well worth covering, but, personally, I would suggest writing a new
+outline /based on this draft and the comments it has received so far/ and then
+filling in the outline more or less from scratch.  As it stands, I'm really not
+so sure about the "inherent logic" of the article.  What is the "point"?  There
+should be a thesis statement, and each paragraph should have a micro thesis.  If
+the thesis is that "!PlanetMath makes mathematical knowledge more accessible",
+then every word in the article should support this thesis.  I.e., as you
+/describe/ the site, you would talk about how each feature enhances the
+accessibility of mathematical knowledge.  But I'm not entirely sure that this is
+the thesis of the article.
+
+To sum up, I'm suggesting three things: First, you /need/ an NPOV description
+of the site.  It can be very short, because people can find out about the site
+on their own once they know the URL.  But it must exist, or people who haven't
+visited the URL will be clueless.  You should not assume that readers will know
+what Wikipedia is, nor MathWorld.  Your job here is to describe PM in plain
+language that anyone can understand.  Second, I strongly suggest focusing for
+the rest of the article on describing how people feel about the site, why they
+care about it, why people put 15, 20, 30, 40, 50+ hours a week into making PM
+what it is.  There are a lot of passionate people involved in the PM project --
+you're one of them!  Don't be afraid to let your own bias, and the biases of
+others, show in the article - by the same token, do not try to absorb this bias
+into the NPOV statements, or both will loose their punch.  (Everything POV
+should be "owned" by someone, whether it is you or some other party.)  And
+third, you need to have some thesis statement or main idea that ties it all
+together.  You can be a bit subtle about this, but unless some thesis has been
+sufficently well demonstrated by the end of the article, everyone will feel like
+the article is a dud.
+
+If you can say what !PlanetMath is in 5 sentences, then you can use the rest of
+the paper to talk about how the site impacts the lives of real people.  In that
+part of the paper some more details about the site can slip in.  
+
+E.g. if someone says that "the corrections system makes me feel more secure that
+the content is legit"... then we know that that's one of the /purposes/ of the
+corrections system.  Personally, I think the corrections system needs work, but
+I'm glad it exists; and statistically speaking, it is probably does a lot of
+good... but I don't even know, for example, what percentage of corrections are
+rejected.  If it is only 1% or something, that would be interesting to know, and
+it would show what kind of community PM is.
+
+This kind of thing, that teaches me some things that I didn't already know about
+the site, is what would make the article most interesting to me.  To be honest,
+I am somewhat tired of hearing about !MathWorld and Weisstein and CRC.  That may
+have been the motivation four years ago, but as Aaron has said (somewhere or
+other), once !MathWorld came back on line, he realized that !PlanetMath wasn't a
+"replacement" for !MathWorld, but something almost completely different.  I'm
+not sure if the same motivation
+
+: to create a comprehensive mathematical resource which was not susceptible to
+the same legal pitfalls
+
+is even close to being the main driving force behind PM today.  Certainly,
+unless PM was /really valuable/ in ways that !MathWorld isn't (and probably
+can never be), the users wouldn't put the time into working on it.  Do any but a
+handful of users care about legal pitfalls?  And for the ones who do care, is it
+the "main thing"?  I really doubt it.
+
+The note you end on,
+
+: we need all forms of your support [...] which will make PlanetMath
+increasingly better source for generations of mathematicians to come.
+
+fits better with my personal motivation -- to help create the best and most
+useful math resource on the planet.
+--[[file:jcorneli.org][jcorneli]] Mon May 02 00:27:45 2005 UTC
+
+Along the lines of not assuming background, let me suggest a possible
+improvement.  In the beginning you allude the lawsuit between CRC press and Eric
+Weisstein.  For the benefit of those who are not familiar with this event, maybe
+you could reword the sentence to give a brief self-contained description.  For
+example "... when the Math World encyclopedia went offline because CRC Press
+sued its own author for maintaining an online version without their permission."
+This way, even a reader who has not heard of Math world or of the lawsuit can
+still have an idea of what is going on here.  For the further benefit of such a
+reader, you might want to provide a reference to an account of this
+event. --[[file:rspuzio.org][rspuzio]] 1 May 2005
+
+: That's a good point. I changed it. Thanks. --[[file:alozano.org][alozano]]
+
+I don't know what to say Joe, I am happy with the structure of the article as it
+is now. I think the thesis is clear, it is just a short description of the site
+and the different aspects that I think are relevant. Aaron, what do you think
+about the article? Should we start over as Joe suggests? --[[file:alozano.org][alozano]]
+
+: Its up to you.  I think we may be belaboring it at this point.  What Joe wrote as a 
+critique was certainly longer than a 600 word article... maybe he would like to offer 
+up a rewrite?  If so, it would be up to you to accept it (I consider that you "own" this
+article task).  Also, I don't think its our place to explain what happened to MathWorld. 
+I would be more in favor of removing references to MathWorld entirely (maybe saying "... 
+started when another popular mathematics reference site was taken down in a copyright 
+lawsuit".) --[[file:akrowne.org][akrowne]] Mon May 2 02:09:46 UTC 2005
+
+Although Joe suggests some major changes, it doesn't sound like you necesssarily
+need to start over to me.  As I see it, it is more a matter of shortening some
+sections, adding more elsewhrere, and changing the emphasis.  Also, let me
+ammend my last suggestion --- after mentionining the CRC lawsuit as the incident
+which led to the foundation of Planet Math, maybe you could say something like
+"Although this may have been the original motivation for founding Planet Math,
+we soon discovered that Planet Math was much more than simply a mathematical
+reference work --- it evolved into an online mathematical community ..."  That
+way, it no longer can give the impression that Planet Math is simply a
+low-budget replacement for an expensive book.  As for mentioning the lawsuit at
+all, I can think of two reasons for doing so: 1.  It is a great eye-opener for
+people who have comfortable miconceptions about benevolent mathematical
+publishers.  Although we know it quite well and may be sick of hearing it
+repeated, I would guess that a good portion of the intended audience has not
+heard of it.  By mentioning it and providing a reference for further reading,
+someone might read about it, be shocked and thereby appreciate why some people
+consider Free Math to be important and contribute in some way.  2.  It makes for
+a more interesting story when one finds out how something which was designed for
+one purpose turns out in the end into something entirely different than what its
+designer intended.  Good ideas often arise in unlikely contexts and great
+inventions have unlikely and seemingly unpromising beginnings.  Think of how
+penecillin was discovered as a mold that grew because a careless researcher
+forgot to put the lid back on a Pteri dish, or how Edison invented the vacuum
+tube as an attempt to keep the insides of light bulbs from turning black or how
+Cantor invented ordinal numbers as a way of keeping track of limits of Fourier
+series (or for that matter, how Fourier came out with his series in studying
+heat conduction).
+
+: By mentioning MathWorld we promote them.  I think this is the right situation
+to anonymize the "competitor", out of respect for them and so we can have our
+soapbox to ourself (we worked for it, we deserve it).  And the reference for 
+further reading is the PlanetMath site itself (if there isn't a clear link to
+Eric's write-up of the lawsuit saga, I can add one easily). --[[file:akrowne.org][akrowne]] Mon May 2 02:16:33 UTC 2005
+
+As a tangent: Above, Joe mused about what %age of PM corrections were rejected,
+saying if it was "only 1%, it would say something about what kind of community PM
+was".  Well, this data is a couple mysql queries away, so I checked on it. As 
+of my querying within the past half hour, there were 6071  /closed/ corrections 
+total, and 579 had been rejected.  This is a lot more than 1%.  In fact, it is 
+almost 10%.  I'm not sure what this "says about PM as a community", though.  A 
+rejected correction may just mean the filer made a mistake, not that there is any
+real disagreement or controversy.  Still, the positive side of this statistic does
+prove that the vast majority of corrections on PM are "productive", and likely 
+many of the rejected ones are "productive" as well (someone learned they were wrong
+about something).  --[[file:akrowne.org][akrowne]] Mon May 2 03:29:38 UTC 2005
+
+: Absolutely.  10% is a nice number.  It seems to assure us that there aren't
+very many "vmorarus", for one thing.  To get a measure of controversy, you would
+probably want to look at things like the distribution of corrections.  An
+article that has gotten more than 10 corrections is probably "controversial"
+(note that sometimes controversy can be good).  An article that has gotten 10
+corrections, all of which have been rejected, would be suspicious.
+--[[file:jcorneli.org][jcorneli]] Mon May 02 04:09:29 2005 UTC
+
+I think I agree about removing the name of MathWorld completely. Aaron, you said
+that I "own" this task, but yet I offered you to co-author this article so I do
+want to come to an agreement, with you most of all! I drafted the article
+considering it a collaboration, something that both of us would be happy to sign
+and submit (after remodelling and correcting and improving), and which tries to
+represent what I think is the general feeling of what PM is all about. Joe
+talked about including my own biases...If I was to write this article alone, if
+I really "owned" this task, the article would look completely different
+(something more like the goals in my wiki author-page). Would it serve
+PlanetMath better to have an article published from my biased perspective?
+--[[file:alozano.org][alozano]]
+
+On your Wiki-homepage, you say
+
+: "As I do research, I take mental notes of results that I think particularly
+   useful and then include them in PM."
+
+This is such a nice and useful statement, I think it would be a loss not to
+include it.
+
+But I also think you can include Aaron's own goals (he should "own" this
+sub-task) -- see [[file:Goals.org][Goals]].  And also sum up !PlanetMath.org's stated goals, see
+[[file:PlanetMath Goals.org][PlanetMath Goals]].  There are 6 top-level items on that page, not 5, but, still,
+expanding each major goal there into a sentence could make a good summary of what
+the site does. --[[file:jcorneli.org][jcorneli]] Mon May 02 14:12:45 2005 UTC
+----
+Hi Alozano, 
+
+Sorry for the delayed comments. I have just now become aware of the project.  The article is an excellent idea; I for one hope it sees the light of day.   I think that planetmath and wikipedia constitute an important new way to contribute to mathematics.  The standard contribution, of course is the research paper, but this is a slow process.  As well the purpose of research is to extend mathematical knowledge, but equally important is the goal of disseminating existing knowledge.  Sure, there are venues for expository writing, such as the Focus and the Bulletin of the AMS, but these are limited conduits, especially when compared to the large numbers of research oriented journals.  There is traditional teaching, of course, but this is more of an "act" rather than a publication.  The benefits of any particular course do not persist over time.  One can also write a book, but then publishing it and having it reach an audience is a stumbling block
+
+Planetmath and Wikipedia give us all a new way of writing and publishing at a "sub-book" level.  Again, the goal is to disseminate mathematical knowledge. PM is a whole new mechanism for accomplishing this, but with a start-up cost that is much lower than writing a book, or even contributing an expository paper.  One can contribute something as small as a 1 sentence definition, 
+and it still has the potential for reaching people and being useful.
+--[[file:rmilson.org][rmilson]] Tue Jul 26 22:12:55 ADT 2005
+
+: Thanks for the encouragement, I was thinking of retaking this project sometime soon. Do you have any opinions on the article itself ([[file:Article for FOCUS.org][Article for FOCUS]])? Any suggestions? --[[file:alozano.org][alozano]]
+
+How about a different kind of opening paragraph.  Instead of explaining about PM, start by enunciating a vision, and THEN introduce PM as an effort towards realizing that vision.  The [[file:Archimedes and the Internet.org][Archimedes and the Internet]] editorial by Boas gives a modern vision of a universal library of mathematics.  So one could begin with something like this (Forgive the poor choice of wording.  I am doing this off the top of my head)
+
+: Imagine a library of mathematics that is comprehensive, dynamic and groiwng, and freely and immediately  availble.  Given today's networking and computer technology it should finally be possible to realize this agelong dream (citations?) [maybe mention the open access movement]  Indeed, the contributors to a website called PlanetMath have taken the first steps towards realizing the grand vision of the universal library of mathematics.   The website bills itself as mathematical knowledge community with the goal of creating a comprehensive, online, freely available encyclopedia of mathematics.  The participants include mathematics students, professional mathematicians, and many other individuals united by their passion for mathematics.  In the last 4 years Planetmath has amassed <statistics>, but it needs your help.  The size and quality of  planetmath depends crucially on the number and quality of the participants.  Planetmath needs your help in order to achieve its vision.
+
+[[file:Article for FOCUS.org][Article for FOCUS]] / [[file:Further discussion of Article for FOCUS.org][Further discussion of Article for FOCUS]]

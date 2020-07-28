@@ -1,0 +1,133 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[http://www.cs.ru.nl/~freek/100/ "Formalizing 100 Theorems" by Freek Wiedijk] lists 100 mathematical theorems and the various systems that have formalized a nontrivial number of them.  This list is discussed in [http://www.ams.org/notices/200811/tx081101408p.pdf "Formal Proof - Getting Started" (Freek Wiedijk, Notices of the AMS, Volume 55, Number 11, December 2008)]. Rightly or wrongly, this list is used by others to judge proof systems.  Wiedijk's "getting started" picks as its primary examples HOL Light and Mizar, which at the time had the largest number of proofs.  Similarly, [http://www.cs.sjsu.edu/faculty/beeson/Masters/KamThesis.pdf "Case Studies in Proof Checking" by Robert C. Kam] says, "Judging by Dr. Wiedijk’s Formalizing 100 Theorems list, which gives an overview of the headway various proof systems have made in mathematics, Coq and Mizar are two of the most successful systems in use today (Wiedijk, 2007)".
+
+Currently there are 44 proofs proven by Metamath from this list of 100 (including #68, "Sum of an arithmetic series", per the notes below).   As of 2014-02-28 this number of proofs is more than NuPRL/MetaPRL (8), PVS (16), nqthm/ACL2 (18), and ProofPower (42).  However, this is far short of HOL Light (86), Mizar (62), Coq (60), or Isabelle (52). This is still pretty good considering that there had been no concerted effort to prove theorems from this list of 100 until very recently.
+
+Here is the list of the [http://www.metamath.org/ metamath] proofs that are available from this list of 100, along with credit to the individual(s) who created the Metamath formalization. Please add missing entries!
+
+ * [::1]. [http://us.metamath.org/mpegif/sqr2irr.html The Irrationality of the Square Root of 2 (sqr2irr, by Norman Megill, 2001-08-20)]
+ * [::2]. [http://us.metamath.org/mpegif/fta.html Fundamental Theorem of Algebra (fta, by Mario Carneiro, 2014-09-15)]
+ * [::3]. [http://us.metamath.org/mpegif/qnnen.html The Denumerability of the Rational Numbers (qnnen, revised by Mario Carneiro, 2013-03-03)]
+ * [::4]. [http://us.metamath.org/mpegif/pythi.html Pythagorean Theorem (pythi, by Norman Megill, 2008-04-17)]
+ * [::10]. [http://us.metamath.org/mpeuni/eulerth.html Euler's Generalization of Fermat's Little Theorem (eulerth, by Mario Carneiro, 2014-02-28)]
+ * [::11]. [http://us.metamath.org/mpegif/infpn2.html The Infinitude of Primes (infpn2, by Norman Megill, 2005-05-05)]
+ * [::14]. [http://us.metamath.org/mpegif/basel.html Euler's Summation of 1 + (1/2)^2 + (1/3)^2 + .... (basel, by Mario Carneiro, 2014-07-30)]
+ * [::15]. Fundamental Theorem of Integral Calculus ([http://us.metamath.org/mpegif/ftc1.html ftc1] and [http://us.metamath.org/mpegif/ftc2.html ftc2], by Mario Carneiro, 2014-09-02)
+ * [::17]. [http://us.metamath.org/mpegif/demoivre.html De Moivre's Theorem (demoivre, by Steve Rodriguez, 2006-11-1)]
+ * [::18]. Liouville's Theorem and the Construction of Transcendental Numbers ([http://us.metamath.org/mpegif/aaliou.html aaliou] and [http://us.metamath.org/mpegif/aaliou3.html aaliou3], by Stefan O'Rear, 2014-11-16)
+ * [::19]. [http://us.metamath.org/mpegif/4sq.html Four Squares Theorem (4sq, by Mario Carneiro, 2014-07-16)]
+ * [::22]. [http://us.metamath.org/mpegif/ruc.html The Non-Denumerability of the Continuum (ruc, by Norman Megill, 2004-08-13)]
+ * [::23]. [http://us.metamath.org/mpegif/pythagtrip.html Formula for Pythagorean Triples (pythagtrip, by Scott Fenton, 2014-04-19)]
+ * [::25]. [http://us.metamath.org/mpegif/sbth.html Schroeder-Bernstein Theorem (sbth, by Norman Megill, 1998-06-08 revised 2007-01-20)]
+ * [::27]. [http://us.metamath.org/mpegif/ang180.html Sum of the Angles of a Triangle (ang180, by Mario Carneiro, 2014-09-23)]
+ * [::34]. [http://us.metamath.org/mpegif/harmonic.html Divergence of the Harmonic Series (harmonic, by Mario Carneiro, 2014-07-11)]
+ * [::39]. [http://us.metamath.org/mpegif/pellex.html Solutions to Pell's Equation (pellex, by Stefan O'Rear, 2014-10-19)] (This is the general existence theorem.  For the structure theorem, see [http://us.metamath.org/mpegif/pellfund14b.html pellfund14b].  For a clear structure theorem which is stated extremely similarly to [http://www.cs.ru.nl/~freek/100/hol.html#39 John Harrison's HOL theorem], see [http://us.metamath.org/mpegif/rmxycomplete.html rmxycomplete])
+ * [::42]. [http://us.metamath.org/mpegif/trirecip.html Sum of the Reciprocals of the Triangular Numbers (trirecip, by Scott Fenton, 2014-05-02)]
+ * [::44]. [http://us.metamath.org/mpegif/binom.html The Binomial Theorem (binom, Norman Megill, 2005-12-07)]
+ * [::51]. [http://us.metamath.org/mpegif/wilth.html Wilson's Theorem (wilth, by Mario Carneiro, 2015-01-24)]
+ * [::52]. [http://us.metamath.org/mpegif/pw2en.html The Number of Subsets of a Set (pw2en, by Norman Megill, 2004-01-29)]
+ * [::58]. [http://us.metamath.org/mpegif/hashbc.html Formula for the Number of Combinations (hashbc, by Mario Carneiro, 2014-07-13)]
+ * [::60]. [http://us.metamath.org/mpeuni/bezout.html Bezout's Theorem (bezout, by Mario Carneiro, 2014-02-22)]
+ * [::63]. [http://us.metamath.org/mpegif/canth2.html Cantor's Theorem (canth2, by Norman Megill, 1994-08-07)]
+ * [::66]. [http://us.metamath.org/mpegif/geosum.html Sum of a Geometric Series (geosum, by Norman Megill, 2006-05-09)]
+ * [::68]. [http://us.metamath.org/mpegif/arisum.html Sum of an arithmetic series (arisum, by Norman Megill, 2006-11-16)] - arisumi is not fully general, but it would be straightforward to enhance.
+ * [::69]. [http://us.metamath.org/mpegif/eucalgval.html Greatest Common Divisor Algorithm (eucalgval, by Paul Chapman, 2011-03-31)]
+ * [::71]. [http://us.metamath.org/mpegif/lagsubg.html Order of a Subgroup (lagsubg, by Mario Carneiro, 2014-07-11)] - also see [http://us.metamath.org/mpegif/lagsubglem2.html lagsubglem2]
+ * [::72]. Sylow's Theorem ([http://us.metamath.org/mpegif/sylow1.html sylow1], [http://us.metamath.org/mpegif/sylow2.html sylow2], [http://us.metamath.org/mpegif/sylow3.html sylow3], by Mario Carneiro, 2015-01-19)
+ * [::73]. [http://us.metamath.org/mpegif/erdsze.html Ascending or Descending Sequences (erdsze, by Mario Carneiro, 2015-01-22)] - also see [http://us.metamath.org/mpegif/erdsze2.html erdsze2]
+ * [::74]. [http://us.metamath.org/mpegif/findes.html The Principle of Mathematical Induction (findes, by Raph Levien, 2003-07-09)] - there are many versions of Mathematical Induction in set.mm; another version is [http://us.metamath.org/mpegif/nnind.html nnind (by Norman Megill, 1997-01-10)].
+ * [::75]. [http://us.metamath.org/mpegif/mvth.html The Mean Value Theorem (mvth, by Mario Carneiro, 2014-09-01)]
+ * [::77]. [http://us.metamath.org/mpegif/fsumkthpow.html Sum of kth powers (fsumkthpow, by Scott Fenton, 2014-05-16)]
+ * [::78]. [http://us.metamath.org/mpegif/sii.html The Cauchy-Schwarz Inequality (sii, by Norman Megill, 2008-01-12)] - note that this is also called "Schwarz" by some authors and "Bunjakovaskij-Cauchy-Schwarz" by others.
+ * [::79]. [http://us.metamath.org/mpegif/ivth.html The Intermediate Value Theorem (ivth, by Paul Chapman, 2008-01-22)]
+ * [::80]. [http://us.metamath.org/mpegif/1arith2.html Fundamental Theorem of Arithmetic (1arith2, by Paul Chapman, 2012-11-17)]
+ * [::81]. [http://us.metamath.org/mpegif/prmrec.html Divergence of the Prime Reciprocal Series (prmrec, by Mario Carneiro, 2014-08-11)]
+ * [::85]. [http://us.metamath.org/mpegif/3dvds.html Divisibility by 3 Rule (3dvds, by Mario Carneiro, 2014-07-14)]
+ * [::86]. [http://us.metamath.org/mpegif/itgcl.html Lebesgue Measure and Integration (itgcl, by Mario Carneiro, 2014-06-29)]
+ * [::87]. [http://us.metamath.org/mpegif/dath.html Desargues's Theorem (dath, by Norman Megill, 2012-08-20)]
+ * [::88]. [http://us.metamath.org/mpegif/derangfmla.html Derangements Formula (derangfmla, by Mario Carneiro, 2015-01-23)]
+ * [::89]. The Factor and Remainder Theorems ([http://us.metamath.org/mpegif/facth.html facth] and [http://us.metamath.org/mpegif/plyrem.html plyrem], by Mario Carneiro, 2014-07-26)
+ * [::91]. [http://us.metamath.org/mpegif/abstrii.html The Triangle Inequality (abstrii, by Norman Megill, 1999-10-02)]
+ * [::98]. [http://us.metamath.org/mpegif/bpos.html Bertrand's Postulate (bpos, by Mario Carneiro, 2014-03-15)]
+
+The "Formalizing 100 Theorems" page also identifies "obvious omissions" from the list, which are additional theorems people have suggested *should* be on that list. Here are theorems on this second "obvious omissions" list that are proved with Metamath (there may be many more):
+
+ * [http://us2.metamath.org:88/mpegif/heibor.html Heine-Borel Theorem (heibor, by Jeff Madsen, 2009-09-02, revised by Mario Carneiro, 2014-01-28)], also see [http://us2.metamath.org:88/mpegif/reheibor.html reheibor], [http://us2.metamath.org:88/mpegif/cnheibor.html cnheibor]
+ * [http://us2.metamath.org:88/mpeuni/lbsex.html Every vector space is free (lbsex, by Mario Carneiro, 2014-06-25)]
+
+
+The following theorems are *not* known to be proven using Metamath, even though there are proofs of theorems with similar-sounding names:
+
+ * 5. Prime Number Theorem ([http://us.metamath.org/mpegif/prime.html prime] is not the same)
+
+David A. Wheeler, who helped create this page, would especially like to see these proven in Metamath:
+
+ * 9. The Area of a Circle (this can be proven using integrals)
+
+The following is the complete list of all theorems from the list of 100 that have *not* been proven. Please move these to the first list!
+
+ * 5. Prime Number Theorem
+ * 6. Gödel's Incompleteness Theorem
+ * 7. Law of Quadratic Reciprocity
+ * 8. The Impossibility of Trisecting the Angle and Doubling the Cube
+ * 9. The Area of a Circle
+ * 12. The Independence of the Parallel Postulate
+ * 13. Polyhedron Formula
+ * 16. Insolvability of General Higher Degree Equations
+ * 20. All Primes (1 mod 4) Equal the Sum of Two Squares
+ * 21. Green's Theorem
+ * 24. The Undecidability of the Continuum Hypothesis
+ * 26. Leibnitz's Series for Pi
+ * 28. Pascal's Hexagon Theorem
+ * 29. Feuerbach's Theorem
+ * 30. The Ballot Problem
+ * 31. Ramsey's Theorem
+ * 32. The Four Color Problem
+ * 33. Fermat's Last Theorem
+ * 35. Taylor's Theorem
+ * 36. Brouwer Fixed Point Theorem
+ * 37. The Solution of a Cubic
+ * 38. Arithmetic Mean/Geometric Mean
+ * 40. Minkowski's Fundamental Theorem
+ * 41. Puiseux's Theorem
+ * 43. The Isoperimetric Theorem
+ * 45. The Partition Theorem
+ * 46. The Solution of the General Quartic Equation
+ * 47. The Central Limit Theorem
+ * 48. Dirichlet's Theorem
+ * 49. The Cayley-Hamilton Theorem
+ * 50. The Number of Platonic Solids
+ * 53. Pi is Transcendental
+ * 54. Konigsberg Bridges Problem
+ * 55. Product of Segments of Chords
+ * 56. The Hermite-Lindemann Transcendence Theorem
+ * 57. Heron's Formula
+ * 59. The Laws of Large Numbers
+ * 61. Theorem of Ceva
+ * 62. Fair Games Theorem
+ * 64. L'Hôpital's Rule
+ * 65. Isosceles Triangle Theorem
+ * 67. e is Transcendental
+ * 70. The Perfect Number Theorem
+ * 76. Fourier Series
+ * 82. Dissection of Cubes (J.E. Littlewood's "elegant" proof)
+ * 83. The Friendship Theorem
+ * 84. Morley's Theorem
+ * 90. Stirling's Formula
+ * 92. Pick's Theorem
+ * 93. The Birthday Problem
+ * 94. The Law of Cosines
+ * 95. Ptolemy's Theorem
+ * 96. Principle of Inclusion/Exclusion
+ * 97. Cramer's Rule
+ * 99. Buffon Needle Problem
+ * 100. Descartes Rule of Signs
+
+You can see other proofs done with [http://us.metamath.org Metamath] and for traditional mathematics on the [http://us.metamath.org/mpegif/mmset.html Metamath Proof Explorer Home Page].  Note that there are pages similar to this one for other tools, such as these pages on [http://www.cs.ru.nl/~freek/100/hol.html HOL] and [http://www.cs.ru.nl/~freek/100/mizar.html Mizar].
+
+This metamath list was originally developed by [http://www.dwheeler.com/ David A. Wheeler] and Norman Megill; Mario Carneiro has since extensively added to it.  If you add new theorems to the list, please tell Freek Wiedijk (freek at cs dot ru dot nl)
+
+This page is available under the GFDL and GPLv2+, per this wiki's rules.  In addition, this specific page is also [https://creativecommons.org/choose/zero/
+ dedicated to the public domain through the Creative Commons license CC0], to maximize the availability of this page's information.

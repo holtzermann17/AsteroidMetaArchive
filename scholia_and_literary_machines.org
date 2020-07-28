@@ -1,0 +1,618 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I've been reading the book Literary Machines by Theodor Nelson - and
+I'm excited to find /bascially the whole scholium system laid out there/ -
+with figures and expository text and social commentary and even some technical details.
+
+The book is from 1993.  They called it Xanadu back then.  The project had actually
+been conceived of many years earlier - in 1981.  Xanadu (if it still exists) is
+almost as old as me.  /So why the hell am I not using it right now?/
+
+Some different possible explanations come to mind.
+
+ 1. Computers in the 80's weren't all that.  We got one in 1985.  It wasn't connected
+to the internet.  There wasn't really much of an internet to connect to.  There
+wasn't even a freakin' hard disk to connect to.  Since this date approximately
+bisects the Xanadu project /qua/ this book, we can assume that development of
+world wide networks and repositories and such was basically out of the question
+during this era.  (Leaving the 90's and early oughts to account for.)
+
+ 1. Also note that 1985 is immediately after GNU got started.  However, Xanadu was't
+free software - it was adopted by the makers of !AutoCAD.  They didn't write in
+LISP, they wrote in C - and it took them a long time to even put together a prototype
+they were happy with.  Admittedly, my prototype (which has similar "coverage" but a
+different angle - more later) is gonna need some work and some evangelizing before
+it could be world-dominan, but it only took me a few months to bring to a simmer.
+Presumably the benefits of a working GNU system (including things like Arch, which
+inspire and assure even if not being immediately useful) and that old saw, the
+efficiency of LISP, have something to do with it.  But...
+
+ 1. Their project is conceived of primarily as a server-side affair.  They were basically
+talking about building the whole internet in 2020 scholiumific vision.  But things
+don't work like that.  Worse is better (and getting better still).  The scholium
+system (again - the same system with a different angle) is userware.  The idea
+that it could be deployed in a distributed way is definitely there, but the details
+do still have to be hammered out (the basic idea is fairly simple: draw articles
+from the filesystem and save to the file system - then other users can draw from
+your filesystem using Arch or whatever - or maybe we write some integrated protocol
+that propagates changes to other user as you save - the point being, that making
+the system "distributed" and "universal" seems like it shouldn't be very hard - none
+of this seems very hard).  Either things are more efficient now or I've massively
+deluded myself about the nearness-to-completion or utility of my prototype.
+
+ 1. People might be worried about server-side operations.  People get uptight
+about Gmail and Desktop Search.  How about having most of your documents be public
+(even in a system that could give you royalties when anyone uses them)?  It
+sounds Orwellian.  Which is ironic given that this book is dedicated to 
+Eric Blair ("May his simple, honest, angry devotion to truth and human freedom live forever.")
+I see the irony.  The author saw the irony.  Maybe the public didn't.  Or
+maybe the truly-Orwellian powers that be have actively worked to squash this shit.
+I mean, if you look at the economic implications (those sketched in the CoopMart essay
+and presumably others), I might be worried about this regime if I was a corrupt
+information oligarch.  If you buy into the situationist-Minskyist "total revolution"
+stuff (of course I do) then... well, there are a number of reasons you might
+be fighting an uphill battle even when "naturally" the system wants to go downhill.
+
+ 1. There is also the fact that systems are "naturally" momentous - I'm typing
+on a QWERTY keyboard again, so typing this is taking forever! - it could be hard
+to see the difference between "evil oppression" and systemic momentum.  (Momentum
+isn't all bad, either, don't get me wrong.)  People think "this is it, good enough."
+
+ 1. Maybe people have been happy with the "scholium-like" stuff that's out on the
+market (including things like books, journals, etc.).  The "promise" of this
+system might only be clear to some specialists (e.g. computer/math people).
+Or maybe the alternatives - like Google in Aaron's essay - are actually "powerful enough" or possibly (but unlikely) "more powerful" so that no one  motivated to work on alternatives,
+especially not (again like in Aaron's essay) "local" alternatives that are threatened
+with being born-ghetto as opposed to born-free.  Trying to be "too big" is hard
+(re-inventing the internet) and trying to be "too small" comes across as lame (homebrewed
+systems) or just is lame - for everyone outside of the small niche of users.
+
+ 1. The way out? Free software, duh.  Why the delay?  Not enough freedom-talk?  Orwellian
+oppressors?  Who knows!
+
+ 1. (non explanation) The book and the guy who wrote it aren't famous enough.  No,
+actually, this is the guy credited with inventing the term "hypertext".  If you
+google for the book... well, I don't know what happens. I think I found the
+book's name in an article about Stallman's vision (as a point of comparison
+that of course caught my eye).  We'll see...
+
+--[[file:jcorneli.org][jcorneli]] Fri Jun 10, midday in Minneapolis
+
+----
+
+* Discussion
+
+Well, one thing you find via google is this:  http://www.iath.virginia.edu/elab/hfl0155.html
+They say
+
+: The Xanadu software is as mythic as the place after which it was named. 
+
+I hate to insult my own work, but the first thing I had to say is "but its
+[expletive deleted] trivial!".  Um, isn't it?  It sure is simple: everything is
+an article, it has a "type", it can be "about" other things.  So, why the 20
+year delay?  (Says someone who has been stalling on coding for a week or
+so... but that's "personal" and pretty minor; I just need some rest!)  I mean,
+its trivial /enough/... right?  Maybe the problem is bigger than I've been
+imagining - but better to solve a small instance of it than to get totally
+enmired in the full-blown system?  Isn't it?  Anyway, I have no doubt that
+Nelson's work will be inspiring as we go along.  I almost feel like it is the
+only citation we'll need.  OK, probably not.  But still, he does take a pretty
+comprehensive perspective.  Which is good... for literature.  Which this is.
+So, OK.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 11 00:01:34 2005 UTC
+
+You also find that Xanadu has released some code under the X license, http://xanadu.com/tech/index.html
+and some history of the project, http://xanadu.com/tech/index.html
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 11 00:15:48 2005 UTC
+
+And you also find links to the current code, etc.: http://udanax.com/ and http://udanax.com/green/download/index.html - 
+should be [http://www.gnu.org/philosophy/license-list.html GPL compatible code].  So maybe some of the
+more pessimistic ideas above are wrong.  But it /is/ written in C, not LISP, so I may find it tricky
+to read... well, we'll see.  Ah - broken pipe during the build.  Does anyone else what to try to build this?
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 11 00:18:56 2005 UTC
+
+At his JCDL keynote, Bud Tribble passed along a quote (from some other 70s-era computer
+research poineer) : "Everything in computers was invented in the 70s -- the world is 
+just now catching up."  Not exactly true but a huge chunk (perhaps most) good ideas 
+that need to catch on have already been thought of.  I think this is just a special case of
+how the research process works -- most research projects, while containing many worthwhile
+and novel ideas -- don't make it into "mass production".  Often later the ideas catch on 
+with wider society, when "the time is right". --[[file:akrowne.org][akrowne]] Sat Jun 11 19:12:21 UTC 2005
+
+A couple notes: I still think that if these people had done this as free software
+from the get-go, we might be seeing something different today.  But they wanted
+to make it into a viable business.  There is a lesson to be learned from this, for
+us.  Being "benevolent information oligarchs" may not be viable.  Systems need to
+be hackable to catch on.  I'm not talking about specific services (like search)
+but the much more comprehensive services of hosting and community building.  My
+experience in higher ed says: you have to let students build their own paths
+(not just find them).
+
+We already know that something like the HDM was envisioned a long time ago, but
+again more recently by the QED people.  And yet, their vision seems to have fragmented
+into a few somewhat parochial visions.   I think that part of the problem is an obsession
+with standards.  Hackers by contrast want systems that will work in extensible ways.
+The living word.  Stallman has claimed to be obsessed with foundations - I think that
+is a good way to go.  This book I'm looking at is a reasonable theoretical foundation
+for the system itself, but as a social manifesto it is missing something GNU has:
+the subculture.  Well, I'm going to read some about the semantic web next, maybe that
+is the relevant subculture.  But my fear is that those people are still obsessed
+with standards (and uptake).  I say: better to have a good demo system than a shiny
+standard, and if it is good enough, people will want to adopt.
+
+WRT "trivial" above, I'm realizing that Emacs has done a lot of the work already.
+Building a demo system quickly is only made "easy" because of the Emacs features.
+Other demos have been built in history - I don't know how good they are, but I do
+know (99.9% sure) that they haven't been widely adopted in the Emacs community,
+whereas I think my demo stands a decent chance of being so adopted when it is done,
+which is soon.  Again, the foundation is the key.
+
+One technical note on the system (I'm not quite done with the book but I've
+read the main part of it): they are very into the idea of "transclusion" (cool word,
+it means including-by-reference, basically).  They also talk about modified versions,
+but the content from the original is always supposed to be transcluded.  This
+makes sense coming from a "tracking copyright to its tiniest bits", but I had previously
+thought that it would be good to have both transclusion and plain-old inclusion.
+This is one difference between the scholium model and their model.
+
+Another is that I am taking a fairly AI oriented approach, whereas he seems to
+try to avoid that approach and emphasizes "human intelligence".  This makes
+me realize more clearly  the importance of the human/artificial axis for this
+system. (Along with subjective/intersubjective.)  Something else that goes along with
+this is actionable code-elements in the system.  Whereas he talks about various
+media (text, music, film) as being potential landing sites for scholia, he doesn't
+talk about game-like or MUD-like uses.  I think these are really important!  This
+stuff may be implicit to his system (or maybe it just looks like that to me because
+this is how I look at things)... in particular, if you think about the community that
+rises up around any particular topic area, it is a bit like a MUD.  The only thing
+wanting is a real-time hackable environment.
+
+--[[file:jcorneli.org][jcorneli]], at the library
+
+This also relates to the issue of the [[file:Difficulty of getting programmers|difficulty of getting programmers involved.org][Difficulty of getting programmers|difficulty of getting programmers involved]].  
+a quote from /Understanding Media/ goes as follows:
+
+: The passive consumer wants packages, but those, he suggested,
+who are concerned in pursuing knowledege and in seeking causes
+will resort to aphorisms, just because they are incomplete and
+require participation in depth.
+
+(The "he" in this quote is Francis Bacon.)  "Complete" theories
+are great for end users, the kinds of people who would wait for
+the Xanadu system to be available for download.  Hackers don't especially
+want complete systems (what would be the point?), although they do of course like working systems like everyone else.  There is this
+thing in Judaism about the world being "broken" in some small ways
+and humans (and Jews especially of course) being here to help fix
+things.  This is related to the "mitzvah" ("good deed", but etymologically, "commandment").
+Continuing along here, it is interesting and natural that the Talmud is, in some ways, collection
+of aphorisms, not a "unified" work.  (The scholium system seems to say
+that there aren't really any unified works, but some works posture as
+being unified.)  But it is ironic that this collection of aphorisms became
+"complete" in the sense of "defining" what one (as a Jew) is supposed to
+do in each part of one's life.  But of course, it isn't complete in the
+sense of simulation, and despite its reach, it might be considered to be
+a somewhat "cool" medium (by !McLuhan) because every reader has to
+be actively involved in figuring out how to apply its teachings in his/her
+own life.  (Unlike a film, for example, which is typically just meant to
+be absorbing, and to absorb the viewer for 2 hours, then let him/her go.)
+
+The main thing I wanted to say, though, is that building a system requires
+participation.  I'd almost want to turn the !McLuhan cool/hot around,
+and say that "hot" means active participation, and "cool" means chilled
+conversation.  Thurston talks about killing certain topics by saying too
+much about them and scaring people off.  (Probably this is an example of !McLuhan's ideas 
+"reversal", so likely there is no need to revise the language.)  Again,
+without a subculture, things won't be moving forward much.  !McLuhan: Media get their
+meaning by interaction with other media; "media" here includes "people"; Chomsky: be the media.
+
+--[[file:jcorneli.org][jcorneli]] 
+
+Not sure if I showed you this before, but it touches on your points about 
+standards vs. what may barely "work" but is hackable:  [http://www.adambosworth.net/archives/000031.html The Messy Web].
+--[[file:akrowne.org][akrowne]] Mon Jun 27 20:36:33 UTC 2005
+
+Yes, you showed me, but thanks for the reminder in this context --[[file:jcorneli.org][jcorneli]]
+
+Note that the
+[http://en.wikipedia.org/wiki/Project_Xanadu#Project_Xanadu_related_projects_under_development wikipedia article about Xanadu]
+contains a section on contemporary
+Xanadu-related projects.  (Got to this from Slashdot discussion about V. Bush
+that included a link to the "Serial Experiments Lain"
+[http://en.wikipedia.org/wiki/Serial_Experiments_Lain wikipedia page] which
+looks like really choice stuff for people in for mode SF xanadu-style stuff;
+curiously like "the matrix" but with more explicit references to the Xanadu
+milieu(x); cf. also "ghost in the shell".  Good cultural stuff for the culture heads.) --[[file:jcorneli.org][jcorneli]] Wed Jul 20 22:56:50 2005 UTC
+
+There is a nice FAQ on Xanadu maintained at [http://xanadu.com.au/general/faq.html Xanadu Australia].
+It mentions an interesting-sounding documentary:
+
+: Douglas Adams wrote a 1990 BBC Television documentary called "Hyperland" starring himself, former "Doctor Who" Tom Baker, Ted Nelson        
+and many computer industry luminaries. The documentary discussed the Xanadu system and quoted "Kubla Khan".
+
+I wonder where I could find a copy of that!
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+One of the major Xandu writeups is discussed at:
+http://www.wired.com/wired/archive/3.09/rants.html
+
+--[[file:jcorneli.org][jcorneli]]
+
+The write-up which is discussed in the rant is found at: http://www.wired.com/wired/archive/3.06/xanadu.html Also, note the list of errata in this entry compiled by Nelson: http://www.xanadu.com.au/ararat --[[file:rspuzio.org][rspuzio]]
+
+I looked into this,
+
+http://www.xanadu.com.au/ted/XUsurvey/xuDation.html
+
+which provides a description of the "Xanalogical Structure".
+It is interesting, but I think the 
+
+http://en.wikipedia.org/wiki/Semantic_web
+
+has more potential. Both Xanadu and Semantic Web provide
+for "Universal IDs"/Universal Resource Identifiers (URIs).
+But Xanalogical Structure links to character number ranges
+within the global address space rather than by *name*. That
+may be workable within some contexts with a high value per
+byte, like a legal contract, a /relational/ approach to
+versioning seems better to me. For example, if Author B
+comments on Clause 19 of Contract XYZ, then the appropriate
+link is "Clause 19 of Contract XYZ", not characters 12,203 ->
+12,901. I have spent a lot of time doing data comparisons,
+and in general, comparisons based on the intrinsic structure
+of the data rather than the relative byte addresses are
+superior. 
+
+Also, the Semantic Web provides meta-information providing
+addressability by meaning. That is explicit in the design
+of the Semantic Web. 
+
+I'm not saying Xanadu is not a good idea, but I like other
+things more. The reason why Xanadu never became the alternate
+universe WWW /may/ have to do with the closed nature of the
+development effort, as well as the content of their works...
+and their mindset. For example, 
+
+http://www.xanadu.com.au/ted/XUsurvey/xuDation.html
+"This underlying model is simple but generally not known, in part because our methods were under complex proprietary ownership, and thus trade secret, until the open source release of prior Xanadu code in August 1999.  However, these proprietary methods (especially enfilade theory and enfilade specifics (121)) were really for efficiency in carrying out methods like those to be described below.
+
+The central proprietary secret this all relied on-- which we considered whimsically obvious but never stated publicly-- was the freezing of content addresses into permanent universal IDs, below."
+
+That is troubling, on several levels. One of which is that
+the world is kicking out 5 exabytes or more of new data
+every year (much of it worthless garbage, no doubt...)
+
+And essentially what they're saying is that their system would
+account for the provenance of every byte. "Who typed the 'e' in
+document XYZ?" is not worth knowing in most cases. 
+
+The authors of Xanadu seem to feel that people are demanding
+this software service, and I just do not believe it,
+
+http://www.xanadu.com.au/ted/XUsurvey/xuDation.html
+"We believe that everyone needs transpointing windows to support analysis and detailed understanding-- by parallel commentary, precise annotation and the explication of contents; by the facilitation of pinpoint controversy."
+
+It just isn't true. Even in math. Assume that a formula has
+a typo. Wiki comment happens. Someone fixes the mistake. End of story,
+no need to maintain the historical record -- the error becomes
+uninteresting. 
+
+Go *relational*, is my advice young man. Semantic Web is the
+way to go (and I believe there is more money available in
+that area!)
+
+--[[file:ocat.org][ocat]] 22-Nov-2006
+
+Xanadu : WWW : Semantic Web :: QED : Ghilbert : HDM
+
+----
+
+I don't know about your analogy.  I think the previous
+version that compared HDM to Xanadu was more accurate, since
+AFAIK the Semantic Web is bogged down in "standardsism",
+whereas Xanadu was rather free-floating, like HDM.  However, I don't
+know enough about any of projects to say what the analogy
+means or why is should be taken to indicate "caution". --[[file:jcorneli.org][jcorneli]]
+
+I don't see things in a "Xanadu xor Semantic Web" fashion. Whilst I
+do agree that identifying subdocuments by semantic identifiers
+rather than absolute adresses is more spohisticated, and agree that
+for a specific application, one or the other approach might be more
+appropriate, I don't think it a good idea to turn such statements 
+into absolutes which apply regardless of context.  As far as a general
+system goes, I would want it to support both relative byte adressing 
+and relational adressing much as you once argued that a general proof
+checker ought to allow both distinctors and bound variables.  I think 
+that both Xanadu and Semantic Web have good ideas (we can add Noosphere 
+into the mix) and that, in making future programs, such as the Scholium 
+System, it is a good idea to sublate the systems of one's predecessors 
+by combining their insights in order to make real progress as oppsed to 
+progress on some fronts but regress on others.
+
+As for how to make such a general system, one way would be to make a
+clunky throw-in-the-kitchen-sink program, but that is not the approach
+I like.  Rather, I prefer a modular program based on abstract thinking.
+In this case, that means that the main program doesn't need to know 
+about exactly how the data pointed to by the link is to be located, 
+only that it be possible to pull up the data pointed to by a link to 
+a certain document.  The details of how this data are to be located,
+whether as an adress or relationally can safely be left to the subroutines
+which actually pull up the data and the user provided with a library
+of possible subroutines to use as seen fit for particular applcations.
+
+Also, it is worth pointing out that, whilst this business of enfilades
+is a feature of Xanadu, there is much more to Xanadu than the underlying
+system for storing and accessing data.  In addition to enfilade storage,
+Xanadu and friends also have transclusion, parallel documents, zigag 
+structures, multiple views, and multidimensional data structures with
+non-trivial geometry.
+
+In order to combine transclusions and different means of linking to 
+subdocuments in a logical, coherent fashion; to maintain consistency 
+of documents with multiple transclusions; and to support such 
+features as masking of links by multiple users, I believe one needs
+to have a solid theoretical foundation for one's undertaking.  I think
+that that could be provided in the form of a Clusion-based Document
+Model.  In this theory, the basic system is a category whose objects
+are documents and whose morphisms are clusions.  I guess this category 
+to be (finitely) 
+[http://planetmath.org/encyclopedia/CompleteCategory.html complete] 
+(or, at any rate, should be completed by adding suitable virtual documents).
+Then a text is a 
+[http://planetmath.org/encyclopedia/Site.html site] within this 
+category --- a collections of cluded texts covers a text when it is
+possible to completely reconstruct the covered text from the covering 
+texts and the clusions.  In order to allow for updating, we add an extra
+layer of structure in the form of something like a 
+[http://planetmath.org/encyclopedia/Sheaf2.html sheaf] over this site. 
+(It might not exactly be a sheaf because the 
+[http://planetmath.org/encyclopedia/ConcreteCategory.html additional structure]
+lies over the morphisms rather than the over the 
+objects; perhaps it is a sheaf over some closely related category as the 
+[http://planetmath.org/encyclopedia/ExampleOfCategory.html arrow category]
+of the text, but exactly how this goes can be sorted 
+out when the time comes.)  
+
+Once this business of clusions is understood in isolation, then it is
+time to reintruduce the scholia and see how they realte to each other.
+What will then come out is a structure which combines a category (for
+the clusions) with a directed graph (for the scholia).  I suspect it
+will resemble a non-associative ring insofar as composition of clusions
+is associative but scholia are not associative but somehow distribute
+over clusions.  However, it is really way too early to say much anything
+about this stage when I have not yet even begun real work on the 
+first stage.
+
+When described thus, texts can be regarded as geometric spaces in a
+rigorous sense.  I think this viewpoint is not just some abstract 
+nonsense novelty or a merely a way of making mathematical sense out
+of a metaphor, but as an applicable fact.  In particular, I have in mind
+using it to design user interfaces by treating graphical user interfaces
+as mappings between these textual spaces and Euclidean space much as
+graphics as is found in video games and elsewhere is founded upon
+classical algebraic geometry.  Another practical use would be to talk
+about scholia attached to regions of physical space or some other
+traditional geometrical space, such as notes on bulletin boards,
+pop-up menus in video games, or descriptions of physical objects;
+in this point of view, this is is simply a matter of building a sheaf
+of scholia over a manifold as opposed to an information space.  It
+should allow for extension of Ed Fox's ideas beyond the five types
+of spaces he considers.  Another exciting possibility is to consider
+the interaction of this space with the geometry of typesetting and
+the possibility of making a new friend for !TeX based upon this
+geometry of text, but I get dizzy just thining about such possibilities
+now, so I will leave it at that for now, until the theory is 
+further along in its development.
+
+As for when the time will come for developing this theory in earnest as
+opposed to thinking about it on and off here and there, it will have to
+wait until I put the finishing touches on some of the projects I am still
+working on such as integral representations of recursive functions and
+zeros of Mittag-Leffler functions.  I do not want to incur the sort of
+criticism Wolf heaped on Nelson (rather unjustly and sensationalistically, 
+since much of what only was vaporware and screen mockups in the 1970's has 
+[http://udanax.com/ since] [http://xanadu.com/cosmicbook/ finally] 
+[http://xanadu.com/zigzag/ been implemented], only it took thirty years
+and required more powerful computers) --- I suppose the 
+critics will always howl and bark, but I at least would like to satisfy 
+myself and convince reasonable people of the inappropriateness of their 
+attacks.  Seeing how I am only now finishing projects which I began three
+years ago, I suppose that is the timescale of my intellectual digestive
+process, so tentatively I may set 2010 as a delivery date for the finished
+product.  However, the viscera are somewhat transparent, so you can see
+the progress happening and I hope that it will be possible to produce
+nutrition along the way in the form of useful byproducts without getting
+agita from delaying the main project to dwell on producing minor deliverables
+based on partial results.
+--[[file:rspuzio.org][rspuzio]]
+
+My point was simply to look at all these systems through the lens of the question,
+"will it fly?" For historical systems, the question is "why or why not?" For
+whatever reason, Xanadu and QED contained process misfeatures that resulted
+in them not flying, and the WWW, for all its many infelicities, did fly. One
+piece of evidence for the latter assertion is the fact that I'm typing this in
+a web browser.
+
+I don't claim to know all the answers to why the WWW got off the ground while
+Xanadu has (for the most part) remained a vision. I suspect that the two big
+reasons were simplicity and incremental building on existing success.
+
+When the Web was getting established, you could write a functioning server or
+(text-mode) browser in a few hundred lines of code. Of course, that was assuming
+you had a good TCP/IP sockets library underneath. All of the complexity of
+doing a distributed database query to map the first half of a URL to a concrete
+address was accessible through a single gethostbyname() call. Almost all the
+pieces that were needed to build the web were already there. The genius lay
+in putting together the pieces the right way, and custom designing the parts
+that weren't really available off the shelf.
+
+Of course I could just be acting the curmudgeon here, but when I look at most of
+what gets written here about HDM, I sense the same kind of process misfeatures
+that grounded so many visionary projects, Xanadu included. I am being somewhat
+fanatical about keeping Ghilbert simple, and of course I am building heavily on
+the success of existing projects like Metamath. I'm also consciously following
+the template set by the Web by spending so much effort on translating between
+Ghilbert and other systems - I knew in my heart that the Web had won when I saw
+the Dutch Teletext Gateway.
+
+Of course, a great deal of the real technical innovation that gets done is by
+committed small teams acting in the face of skeptical people who don't believe
+it could possibly fly, but then again there are a lot of visionary projects that
+don't. If Ghilbert ends up being a "minor deliverable," but actually ships, I'll
+be more than happy with that outcome. -- [[file:raph.org][raph]]
+
+: I don't claim to know all the answers to why the WWW got off the ground while
+Xanadu has (for the most part) remained a vision.
+
+I don't claim to have all the answers either, but I think that one of them is
+socio-economical.  The other night, while reading about Ted Nelson, one thing
+that leapt out at me was how he and his team was wandering from place to place 
+looking for patronage and having to put the project in storage in between
+gigs.  Also, as Ocat mentioned, a particularly productive portion of their
+development effort occurred behind closed doors.  As for what they actually 
+accomplished there, when I had a closer look at this once proprietary stuff, 
+I realized that what they were describing with their enfilades and tumblers 
+was isomorphic to the the basic structure of LISP!  (The smug LISP weenie
+in me really wants to say "Those who don't learn LISP are doomed to 
+re-invent it!" at this point ;) )
+
+By contrast, what Berners-Lee did was to build a web consotrium which would
+support the development of his programme and made use of free open software.
+Likewise, a reason why GNU flew is because Stallman built the FSF and made
+use of free open software.
+
+More broadly, when I think of visionaries throughout history, from the
+days of Siddharta Gautama and Jesus ben Joseph long ago to contemporaries like 
+Richard Stallman and Tim Berners-Lee, I see a pattern emerge.  On the one hand, 
+the visionaries who succeed tend to be the ones who not only pursue their visions 
+but also succeed in building a community about their vision, welcoming and 
+encouraging people who share their vision, and building a sustainable organization
+to support themselves and fellow seekers on the quest.  By contrast, visionaries
+who try to pursue their visions within existing institutions tend to find themselves
+pushed around and marignalized by an establishment which is at best uninterested,
+at worst hostile to them and does not care for what they have to offer with the
+result that not much gets accomplished, the visionaries can burn out from frustration
+and find that they recieve little or no credit when their innovations finally
+make it into the mainstream.
+
+In this respect, it might be worth pointing out that much of what Joe, Aaron and
+I are up to nowadays is not so much working on HDM and PM proper as exactly this 
+business of building a sustainable organization to support our efforts.
+
+: I suspect that the two big reasons were simplicity and incremental building on existing success.
+
+: I am being somewhat fanatical about keeping Ghilbert simple, and of course I am building heavily 
+on the success of existing projects like Metamath.
+
+Same here!  The two successes which I am bulding on are LISP and category theory.  Both 
+owe their success and extreme generality precisely to fanatical simplicity.  I too value
+simplicity --- my insistence on generality is just another way of looking at insistence
+on simplicity.
+
+: "minor deliverable"
+
+I ment to imply nothing like a value judgement with this term "minor", I only used the 
+term in a relative sense with respect to the main goal.  For me the "major deliverable"
+was the article on geometry of infomation spaces whilst any spinoffs that might come along
+the way, however important they might be in their own right, were termed "minor deliverables".  
+In your case, ghilbert would be your major deliverable in the same sense of 
+the term.  My point there was about sticking to the main goal and not getting too
+distracted or delayed by other projects which might show up along the way.
+-- [[file:rspuzio.org][rspuzio]]
+
+-----
+
+For your consideration, the "relational database" has a strong
+theoretical foundation based on set theory, and it is very 
+powerful. The SQL language commonly used to query and manipulate
+relational databases uses predicate logic and set operators
+to produce "result sets". But as typical for industrial strength
+systems, complexity is piled on top of the foundations to support
+"real world" applications involving giga/terabytes of data and
+thousands upon thousands of simultaneous users in 24-7 realtime
+availability mode...where system failures are most unappreciated...
+In fact, a person could make an entire career as a
+specialist in designing and managing specific databases using only
+Oracle or IBM (or even !MySQL) /implementations/. Typically these
+full-power database systems provide for concurrency locking and access
+controls with dynamic transaction backout, dynamic restart,
+and logging. Hence, for the typical programmer, these are not
+"roll your own" projects; better to build upon existing 
+technology.
+
+http://en.wikipedia.org/wiki/Relational_model
+
+I think you may also find this interesting. When I investigated
+the Semantic Web I was very impressed with it. Perhaps it will
+stimulate your mind and assist in your future endeavors regarding
+Scholium System(s) and their theory.
+
+http://www.w3.org/TR/owl-semantics/
+
+"OWL Web Ontology Language
+Semantics and Abstract Syntax
+W3C Recommendation 10 February 2004"
+
+[...]
+
+"This document contains several interrelated normative specifications of the several styles of OWL, the Web Ontology Language being produced by the W3C Web Ontology Working Group (WebOnt). First, Section 2 contains a high-level, abstract syntax for both OWL Lite, a subset of OWL, and OWL DL, a fuller style of using OWL but one that still places some limitations on how OWL ontologies are constructed. Eliminating these limitations results in the full OWL language, called OWL Full, which has the same syntax as RDF. The normative exchange syntax for OWL is RDF/XML [RDF Syntax]; the OWL Reference document [OWL Reference] shows how the RDF syntax is used in OWL. A mapping from the OWL abstract syntax to RDF graphs [RDF Concepts] is, however, provided in Section 4.
+
+This document contains two formal semantics for OWL. One of these semantics, defined in Section 3, is a direct, standard model-theoretic semantics for OWL ontologies written in the abstract syntax. The other, defined in Section 5, is a vocabulary extension of the RDF semantics [RDF Semantics] that provides semantics for OWL ontologies in the form of RDF graphs. Two versions of this second semantics are provided, one that corresponds more closely to the direct semantics (and is thus a semantics for OWL DL) and one that can be used in cases where classes need to be treated as individuals or other situations that cannot be handled in the abstract syntax (and is thus a semantics for OWL Full). These two versions are actually very close, only differing in how they divide up the domain of discourse.
+
+Appendix A contains a proof that the direct and RDFS-compatible semantics have the same consequences on OWL ontologies that correspond to abstract OWL ontologies that separate OWL individuals, OWL classes, OWL properties, and the RDF, RDFS, and OWL structural vocabulary. Appendix A also contains the sketch of a proof that the entailments in the RDFS-compatible semantics for OWL Full include all the entailments in the RDFS-compatible semantics for OWL DL. Finally a few examples of the various concepts defined in the document are presented in Appendix B. "
+
+[...]
+
+--[[file:ocat.org][ocat]]
+
+Thank you for the references, Ocat.  I will have a look at them --- even if they turn out not to be
+immediately relevant to what I am doing, they will help to expand general background knowledge and 
+likely turn out to be a source of ideas.
+
+> For your consideration, the "relational database" has a strong theoretical foundation based on set 
+> theory, and it is very powerful. ...  Hence, for the typical programmer, these are not "roll your 
+> own" projects; better to build upon existing technology.
+
+Of course, we are not typical programmers.  The typical programmer is doing something which has been 
+done many times already, hence can reuse existing code and customize to the particular circumstances.
+However, in our case, while it has a lot of points of similarity to existing projects, there a fair
+number of novel aspects to what we are trying to do so we are going to have to roll a fair amount of
+things out on our own.  In particular, now I am finding myself rolling out my own theory since not
+everything is covered by existing theory.  As I see it, the immediate goal is to produce a protoype
+to prove the reasonableness of the concept, even if this prototye is not all that efficient.  Once we 
+have gotten to that point, then we can figure out how to improve its performance and capabilities
+by replacing simple hacks with more powerful existing progrms, make it more reliable, and figure out
+what sort of complexity to put on top of the foundations.
+-- [[file:rspuzio.org][rspuzio]]
+
+-----
+
+Thanks for your comments, ocat and rspuzio. Obviously, your idea of what constitutes incremental
+building is very different from mine, but that's fine.
+
+: By contrast, what Berners-Lee did was to build a web consotrium which would
+support the development of his programme and made use of free open software.
+Likewise, a reason why GNU flew is because Stallman built the FSF and made
+use of free open software.
+
+I agree quite a bit with your point about supportive communities, but in the case
+of the Web, I think you have your history backwards. The Web was /well/ on its way
+to massive success by the time Berners-Lee founded the W3C in 1994. Particularly strong
+evidence for this assertion is the development of the
+[http://www.ncsa.uiuc.edu/News/MosaicHistory/ NCSA Mosaic] browser, a fully graphical
+Web client. Development began in June 1993 and version 1.0 shipped six months later, a
+testament to the simplicity of the Web ideas.
+
+By contrast, even with a significant amount of publicity, academic and industrial support,
+and money, the W3C has had a mixed track record, especially when it comes to the more
+visionary goals such as the semantic Web.
+
+It's too bad we can't have this discussion in person, rather than through this very
+low-bandwidth pipe. Perhaps such a meetup can happen before too long.
+
+-- [[file:raph.org][raph]]

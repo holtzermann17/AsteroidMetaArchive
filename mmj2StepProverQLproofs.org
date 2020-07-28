@@ -1,0 +1,351 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Results for run of StepProver against ql.mm -- first 100+
+theorems. Shorter proofs found!
+
+    
+    *++++++++++++++++++++++++++++++++++++++++++++++++++
+    * StepProver options (but no executable StepProver
+    * RunParms until ProofAsst options set!)
+    *++++++++++++++++++++++++++++++++++++++++++++++++++
+    StepProverReturnShortest,Yes
+    StepProverDepthFirst,Yes
+    StepProverPrecomputeLogHypUnifiers,Yes
+    StepProverAuditMessages,Off
+    StepProverDebugMode,No
+    StepProverMaxAnswers,3
+    StepProverMaxDepth,1
+    StepProverMaxSeconds,15
+    StepProverMaxStmt,
+    StepProverSearchWith,
+    StepProverMaxThreads,1 
+    StepProverMaxSubproofSteps,25
+    StepProverSearchMaxHyps,99
+    StepProverMaxLogHyps,25
+    StepProverMaxVarHyps,25
+    StepProverMaxWorkVarHyps,300
+    StepProverMaxMessages,9999
+    StepProverImplementationClassName,mmj.provers.StepProver
+    StepProverFolder,c:\AMy\java\test\mmj\provers\myproofs
+  
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+    I-UT-1305 StepProverBatchTest1 Command Totals:
+        Total Proof Searches                 = 117
+        Total Milliseconds                   = 7189
+        Total Subproof Roots Searched        = 10461
+        Total Proofs Submitted               = 196
+        Total Proofs Accepted                = 66
+        Total Unifications Attempted         = 673246
+        Total Proofs Rejected--DjVars Errors = 0
+        Ave. Unifications / Second    = 93649
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=an32  LOC_AFTER=?
+    
+    1::ancom           |- ( b ^ c ) = ( c ^ b )
+    2:1:lan            |- ( a ^ ( b ^ c ) ) = ( a ^ ( c ^ b ) )
+    3::anass           |- ( ( a ^ b ) ^ c ) = ( a ^ ( b ^ c ) )
+    4::anass           |- ( ( a ^ c ) ^ b ) = ( a ^ ( c ^ b ) )
+    qed:2,3,4:3tr1     |- ( ( a ^ b ) ^ c ) = ( ( a ^ c ) ^ b )
+ 
+    $=  wva wvb wvc wa wa wva wvc wvb wa wa wva wvb wa wvc wa wva wvc wa 
+        wvb wa wvb wvc wa wvc wvb wa wva wvb wvc ancom lan wva wvb wvc anass
+        wva wvc wvb anass 3tr1 $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=an32  LOC_AFTER=?
+ 
+    1::an12            |- ( c ^ ( a ^ b ) ) = ( a ^ ( c ^ b ) )
+    2::ancom           |- ( ( a ^ b ) ^ c ) = ( c ^ ( a ^ b ) )
+    3::anass           |- ( ( a ^ c ) ^ b ) = ( a ^ ( c ^ b ) )
+    qed:1,2,3:3tr1     |- ( ( a ^ b ) ^ c ) = ( ( a ^ c ) ^ b )
+    $=  wvc wva wvb wa wa wva wvc wvb wa wa wva wvb wa wvc wa wva wvc wa 
+        wvb wa wvc wva wvb an12 wva wvb wa wvc ancom wva wvc wvb anass 3tr1 
+        $. 
+    $)
+ 
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=dff  LOC_AFTER=?
+ 
+    1::dff2            |-   0
+                          = ( a v a ' ) '
+    2::ancom           |- ( a ^ a ' ) = ( a ' ^ a )
+    3::anor2           |-   ( a ' ^ a )
+                          = ( a v a ' ) '
+    4:2,3:ax-r2        |-   ( a ^ a ' )
+                          = ( a v a ' ) '
+    5:4:ax-r1          |-   ( a v a ' ) '
+                          = ( a ^ a ' )
+    qed:1,5:ax-r2      |- 0 = ( a ^ a ' )
+ 
+    $=  wf wva wva wn wo wn wva wva wn wa wva dff2 wva wva wn wa wva wva 
+        wn wo wn wva wva wn wa wva wn wva wa wva wva wn wo wn wva wva wn 
+        ancom wva wva anor2 ax-r2 ax-r1 ax-r2 $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=dff  LOC_AFTER=?
+ 
+    1::dff2            |-   0
+                          =   ( a ' v a ' ' ) '
+    2::id              |- 0 = 0
+    3::df-a            |-   ( a ^ a ' )
+                          =   ( a ' v a ' ' ) '
+    qed:1,2,3:3tr1     |- 0 = ( a ^ a ' )
+    $=  wf wva wn wva wn wn wo wn wf wva wva wn wa wva wn dff2 wf id wva 
+        wva wn df-a 3tr1 $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+ 
+    $( <MM> <PROOF_ASST> THEOREM=le0  LOC_AFTER=?
+ 
+    1::ax-a2           |- ( 0 v a ) = ( a v 0 )
+    2::or0             |- ( a v 0 ) = a
+    3:1,2:ax-r2        |- ( 0 v a ) = a
+    qed:3:df-le1       |- 0 =< a
+ 
+    $=  wf wva wf wva wo wva wf wo wva wf wva ax-a2 wva or0 ax-r2 df-le1 
+        $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=le0  LOC_AFTER=?
+ 
+    1000::or0r         |- ( 0 v a ) = a
+    qed:1000:df-le1          |- 0 =< a
+ 
+    $=  wf wva wva or0r df-le1 $. 
+    $)
+ 
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=lea  LOC_AFTER=?
+ 
+    1::ax-a2           |- ( ( a ^ b ) v a ) = ( a v ( a ^ b ) )
+    2::a5b             |- ( a v ( a ^ b ) ) = a
+    3:1,2:ax-r2        |- ( ( a ^ b ) v a ) = a
+    qed:3:df-le1       |- ( a ^ b ) =< a
+ 
+    $=  wva wvb wa wva wva wvb wa wva wo wva wva wvb wa wo wva wva wvb wa
+        wva ax-a2 wva wvb a5b ax-r2 df-le1 $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=lea  LOC_AFTER=?
+ 
+    1::leid            |- a =< a
+    qed:1:lel          |- ( a ^ b ) =< a
+    $=  wva wva wvb wva leid lel $. 
+    $)
+ 
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=leao1  LOC_AFTER=?
+ 
+    1::lea             |- ( a ^ b ) =< a
+    2::leo             |- a =< ( a v c )
+    qed:1,2:letr       |- ( a ^ b ) =< ( a v c )
+ 
+    $=  wva wvb wa wva wva wvc wo wva wvb lea wva wvc leo letr $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=leao1  LOC_AFTER=?
+ 
+    1::lea             |- ( a ^ b ) =< a
+    qed:1:ler          |- ( a ^ b ) =< ( a v c )
+    $=  wva wvb wa wva wvc wva wvb lea ler $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=leao2  LOC_AFTER=?
+ 
+    1::lear            |- ( b ^ a ) =< a
+    2::leo             |- a =< ( a v c )
+    qed:1,2:letr       |- ( b ^ a ) =< ( a v c )
+ 
+    $=  wvb wva wa wva wva wvc wo wvb wva lear wva wvc leo letr $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=leao2  LOC_AFTER=?
+ 
+    1::lear            |- ( b ^ a ) =< a
+    qed:1:ler          |- ( b ^ a ) =< ( a v c )
+    $=  wvb wva wa wva wvc wvb wva lear ler $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=leao3  LOC_AFTER=?
+ 
+    1::lea             |- ( a ^ b ) =< a
+    2::leor            |- a =< ( c v a )
+    qed:1,2:letr       |- ( a ^ b ) =< ( c v a )
+ 
+    $=  wva wvb wa wva wvc wva wo wva wvb lea wva wvc leor letr $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=leao3  LOC_AFTER=?
+ 
+    1000::lea          |- ( a ^ b ) =< a
+    qed:1000:lerr      |- ( a ^ b ) =< ( c v a )
+    $=  wva wvb wa wva wvc wva wvb lea lerr $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=leao4  LOC_AFTER=?
+ 
+    1::lear            |- ( b ^ a ) =< a
+    2::leor            |- a =< ( c v a )
+    qed:1,2:letr       |- ( b ^ a ) =< ( c v a )
+ 
+    $=  wvb wva wa wva wvc wva wo wvb wva lear wva wvc leor letr $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=leao4  LOC_AFTER=?
+ 
+    1000::lear         |- ( b ^ a ) =< a
+    qed:1000:lerr      |- ( b ^ a ) =< ( c v a )
+    $=  wvb wva wa wva wvc wvb wva lear lerr $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=lel2an  LOC_AFTER=?
+ 
+    h1::lel2.1         |- a =< b
+    h2::lel2.2         |- c =< b
+    3:1,2:le2an        |- ( a ^ c ) =< ( b ^ b )
+    4::anidm           |- ( b ^ b ) = b
+    qed:3,4:lbtr       |- ( a ^ c ) =< b
+ 
+    $=  wva wvc wa wvb wvb wa wvb wva wvb wvc wvb lel2.1 lel2.2 le2an wvb
+        anidm lbtr $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=lel2an  LOC_AFTER=?
+ 
+    h1::lel2.1         |- a =< b
+    h2::lel2.2         |- c =< b
+    qed:1:lel             |- ( a ^ c ) =< b
+ 
+    $=  wva wvb wvc lel2.1 lel $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=leo  LOC_AFTER=?
+ 
+    1::a5c             |- ( a ^ ( a v b ) ) = a
+    qed:1:df2le1       |- a =< ( a v b )
+ 
+    $=  wva wva wvb wo wva wvb a5c df2le1 $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=leo  LOC_AFTER=?
+ 
+    1::leid            |- a =< a
+    qed:1:ler          |- a =< ( a v b )
+    $=  wva wva wvb wva leid ler $. 
+    $)
+ 
+    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=leor  LOC_AFTER=?
+ 
+    1::leo             |- a =< ( a v b )
+    2::ax-a2           |- ( a v b ) = ( b v a )
+    qed:1,2:lbtr       |- a =< ( b v a )
+ 
+    $=  wva wva wvb wo wvb wva wo wva wvb leo wva wvb ax-a2 lbtr $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=leor  LOC_AFTER=?
+ 
+    1::leid            |- a =< a
+    qed:1:lerr         |- a =< ( b v a )
+    $=  wva wva wvb wva leid lerr $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=ler2or  LOC_AFTER=?
+ 
+    h1::ler2.1         |- a =< b
+    h2::ler2.2         |- a =< c
+    3::oridm           |- ( a v a ) = a
+    4:3:ax-r1          |- a = ( a v a )
+    5:1,2:le2or        |- ( a v a ) =< ( b v c )
+    qed:4,5:bltr       |- a =< ( b v c )
+ 
+    $=  wva wva wva wo wvb wvc wo wva wva wo wva wva oridm ax-r1 wva wvb 
+        wva wvc ler2.1 ler2.2 le2or bltr $. 
+    $)
+  
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=ler2or  LOC_AFTER=?
+  
+    h1::ler2.1         |- a =< b
+    h2::ler2.2         |- a =< c
+    qed:1:ler          |- a =< ( b v c )
+    $=  wva wvb wvc ler2.1 ler $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 
+    OLD
+    $( <MM> <PROOF_ASST> THEOREM=or32  LOC_AFTER=?
+ 
+    1::ax-a2           |- ( b v c ) = ( c v b )
+    2:1:lor            |- ( a v ( b v c ) ) = ( a v ( c v b ) )
+    3::ax-a3           |- ( ( a v b ) v c ) = ( a v ( b v c ) )
+    4::ax-a3           |- ( ( a v c ) v b ) = ( a v ( c v b ) )
+    qed:2,3,4:3tr1     |- ( ( a v b ) v c ) = ( ( a v c ) v b )
+ 
+    $=  wva wvb wvc wo wo wva wvc wvb wo wo wva wvb wo wvc wo wva wvc wo 
+        wvb wo wvb wvc wo wvc wvb wo wva wvb wvc ax-a2 lor wva wvb wvc ax-a3
+        wva wvc wvb ax-a3 3tr1 $. 
+    $)
+ 
+    NEW
+    $( <MM> <PROOF_ASST> THEOREM=or32  LOC_AFTER=?
+ 
+    1::or12                 |- ( c v ( a v b ) ) = ( a v ( c v b ) )
+    2::ax-a2                |- ( ( a v b ) v c ) = ( c v ( a v b ) )
+    3::ax-a3                |- ( ( a v c ) v b ) = ( a v ( c v b ) )
+    qed:1,2,3:3tr1          |- ( ( a v b ) v c ) = ( ( a v c ) v b )
+ 
+    $=  wvc wva wvb wo wo wva wvc wvb wo wo wva wvb wo wvc wo wva wvc wo 
+        wvb wo wvc wva wvb or12 wva wvb wo wvc ax-a2 wva wvc wvb ax-a3 3tr1 
+        $. 
+    $)
+ 
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 

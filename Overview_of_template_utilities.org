@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to implement these substitution operations on a computer, we will
+require suitable code and data structures.  The purpose of the utilitites
+described here is to provide such code and data structures.
+
+The basic data structure we shall use is the /template/.  Although a more
+detailed description if coming later, perhaps it would be good to prepare the
+way by giving an informal introduction here.  A template may be described as an
+s-expression which contains placeholder.  A placeholder is a character which can
+be replaced by another s-expression.  To indicate which characters are to be
+regarded as placeholder as opposed to ordinary characters, the first item of the
+list will be a list of placeholder.  For instance, we might have the following
+template:
+
+ ((a b c) (times a (plus b c)))
+
+This would correspond to the quasi-quote ⌈a (b + c)⌉ of the previous entry.  It
+means that, in the expression
+
+ (times a (plus b c)) ,
+
+we are to understand that the letters "a", "b", and "c" are placeholders which
+stand for unspecified s-expressions.  By choosing particular values for "a",
+"b", and "c", we can obtain different expressions.  For instance, if we
+substitute "2" for "a", "y" for "b", and "-1" for "c", we obtain the expression
+
+ (times 2 (plus y -1)) .
+
+To implement the substitutions needed to prove the identity in our example, we could proceed as follows:  To begin, we substituted "(plus y -1)" for "x" in the template
+
+ ((x) (eq (plus (power x 2) (times 2 x) 1) (power (plus x 1) 2)))
+
+Next, we noticed that a subexpression of the resulting expression would match the template
+
+ ((a b c) (times a (plus b c)))
+
+if we replaced "a" with "2", "b" with "y" and "c" with "-1".  Therefore, by the associative law, we can replace this subexpression bt the expression obtained by substituting these values into the template
+
+ ((a b c) (plus (times a b) (times a c))) .
+
+etc.
+
+Notice that two operations played a role here --- substituting values for the placeholders in a given expression and matching an expression to a template to find if there exists a set of values for the placeholders which, when substituted into the template, reproduces the original expression.  These two operations will be carried out by the functions substitute-in-template and match-template.
+
+
+[[file:Discussion of overview of template utilities | Discussion.org][Discussion of overview of template utilities | Discussion]]
+
+Up to [[file:template utilities.org][template utilities]]

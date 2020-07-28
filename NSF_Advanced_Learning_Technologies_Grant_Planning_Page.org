@@ -1,0 +1,167 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:Grant_planning.org][Grant_planning]].
+
+* Notes About The Program
+
+Web link: http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=12834
+
+Deadline: May 26, 2005
+
+Synopsis (with especially relevant parts emphasized):
+
+: /Through the Advanced Learning Technologies (ALT) program, the CISE and EHR
+Directorates of NSF support research that (1) *enables radical improvements in
+learning through innovative computer and information technologies*, and (2)
+ *advances research in computer science, information technology, learning,
+and cognitive science* through the unique challenges posed by learning
+environments and learning technology platforms.  Integrative research approaches
+that build across disciplines and establish tight linkages among theory,
+experiment, and design are strongly encouraged.  Technology goals may include
+ *systems for tutoring* or assessment, modeling and sensing of cognitive or
+emotional states, context awareness, natural language interfaces,
+ *collaboration, knowledge management, and non-traditional goals that redefine
+the roles of technology in learning*. Educational foci for ALT projects must
+include an area of science, technology, engineering, or *mathematics (STEM),
+or general cross-cutting skills* directly relevant to STEM./
+
+ *Status*: 
+
+ * *July 28, 2005*: rejected, see [[file:NSF ALT 2005 Grant Proposal Rejection.org][NSF ALT 2005 Grant Proposal Rejection]]
+ * *May 26, 2005*: submitted, see [http://br.endernet.org/~akrowne/planetmath/proposals/nsf_alt_2005/FinalProposal.pdf Submitted proposal narrative].
+
+ *Early Wiki-based Draft*: [[file:NSF ALT 2005 Grant Proposal Draft.org][NSF ALT 2005 Grant Proposal Draft]]
+
+ *Initial discussion*: [[file:Initial discussion of NSF ALT grant.org][Initial discussion of NSF ALT grant]]
+
+*  Post-submission Report
+
+A link to the submitted grant proposal will be posted soon.  However, I will 
+summarize the proposal here in the meantime, and for brevity.
+
+Basically, we asked for about $350,000, to be split among Virginia Tech and 
+Emory.  This money will pay for one grad student at VT, one at Emory, and 
+1 PI person-month of time at both Emory and VT (per year).  Also at VT, some of money will
+go as consultancy fee to teachers that will be recruited for studies.
+
+The PIs are:
+
+ 1. Deborah Tatar (PI, VT)
+ 1. Dan Dunlap (co-PI, VT)
+ 1. Ed Fox (co-PI, VT)
+ 1. Aaron Krowne (co-PI, Emory)
+
+The core of what we are funding is development and educational impact studies.
+The development will be concentrated at Emory, where it will be supervised by
+akrowne, but this will only be for the first two years (the entire project is
+3-year), due to cost constraints.  So, the project will be front-loaded with
+development. 
+
+The main development items that made it into the proposal are:
+
+ 1. Improved Deployability of system (cleanup, abstraction, packaging, localization automation)
+ 1. Collaborative filtering (applied ratings, recommender, and reputation systems)
+ 1. Learning Object Metadata
+ 1. Collaborative (bi-directional) Content Sharing Framework
+ 1. Advanced Editorial Features (editorial discussion areas, object moving/transforming)
+ 1. Alternative Organizations (different classification schemes, more sorting/filtering)
+ 1. Filtering and Routing
+ 1. Email integration
+
+There is a lot of really important dev work here that we have wanted to get
+done, so this is good.  It is an ambitious list, so I'm not sure how much
+progress we'll actually be able to make with essentially one part-time,
+student-level coder.  But it should be much better than nothing.
+
+Due to the nature of the grant program and cost constraints, I was unable to
+secure a supplemental to go directly to PM.org, to pay for facilities and 
+labor connected to support.  This is unfortunate, as relatively little money
+could have funded important quality-of-service work, and even less could have
+been useful for overhead of running the site and nonprofit.  But, NSF doesn't
+like to fund operations, even when a grant project is centered around a "live"
+system, and operations are important. 
+
+Evaluation will be conducted in a few ways:
+
+ 1. having third parties try to deploy Noosphere and set up other communities 
+(PlanetPhysics, PlanetComputing, etc...)
+ 1. online surveying
+ 1. direct interaction with students and teachers
+ 1. controlled studies having students and teachers use Noosphere, and recording
+their activities in the system.
+
+Our chances of getting funded are quite slim.  Only about 10 awards will be made
+in NSF ALT, a $2.7 million program total.  I have a sense that the ratio of 
+submissions to awards has in past been in excess of 3 to 1.  Even worse, the 
+portion of NSF containing ALT has had its budget cut 60% this year, so I think
+the odds could be as bad as 7 or 8 to 1.
+
+So, keep your fingers crossed!  We should know in about two months.
+
+--[[file:akrowne.org][akrowne]] Sun May 29 15:44:32 UTC 2005
+
+*  Epilogue Discussion
+
+Not giving any money to PM.org seems sort of weird, but I guess that's how these
+academia/industry partnerships work?  Still, I think it is somewhat
+disappointing.  Of course, I do hope the grant is awarded, because enhancements
+to the system (wherever they come from) are good.  I also think it is good that
+these academic connections were made, since perhaps in the future similar
+applications could be made with less of a last-minute rush.
+
+I certainly think that writing the grant proposal could have been more
+coordinated if we had had more time and better planning.  I know I spent a fair
+amount of time on things that never got used.  Of course, I still don't know
+what was submitted.  I hope that whoever did participate in writing the final
+draft was able to craft an NSF-optimal document.  (I've basically been told that
+their ability to do so far outstrips my own, and I don't have any particular
+reason to doubt it, even though some of the text that I have seen on this wiki
+has given me pause.)
+
+Regardless of the skill-sets and credentials that these people are bringing to
+the grant proposal, and regardless of the actual outcome, I am not particularly
+happy with the process that went on here, and in the future I hope that I am
+able to emphazise other ways of getting things done.
+
+I'm going to pat myself on the back for contributing to the process at the
+beginning... and thanks of course to Aaron for seeing it through to the end.
+I'm just not particularly inclined to repeat the experience.
+
+For the future, I might suggest: know who the collaborators are further in
+advance, and get them to communicate with volunteers and others earlier /or/
+keep the two groups completely separate; similarly, don't use a public wiki to
+post things you don't want to be edited.  Otherwise what would otherwise be
+"free culture" in a broad sense becomes narrow, and a feeling of antagonism
+arises when cooperation would have been possible.
+
+--[[file:jcorneli.org][jcorneli]] Sun May 29 20:49:45 2005 UTC
+
+I dont think the problem was with using a public wiki as much as the fact that
+I failed to communicate that I didn't want the pages directly commented upon,
+as they were being used to "broadcast" a specific message about the proposal.
+I will certainly be better about this in the future.
+
+Of course, it would be my preference to use something more like !ResearchCollab
+(for instance, !ResearchCollab itself) in the future.  But in this case, time was 
+too short even for the learning curve this would entail for some participants
+(believe me, I brought it up).
+
+At any rate, I apologize for any inconvenience or confusion to you because of 
+the way I conducted the process.
+
+I think it certainly goes without saying that more time should be taken.  How
+I can guarantee this however, with my future showing no sign of having a less
+packed schedule, I don't know.  
+
+One thing to realize, though, is that this isn't really a democratic process.
+It doesn't at all resemble how PM /the site/ (or /the community/) is run.
+The PIs (especially the lead) basically run the show.  You'll find that you have to 
+do a lot of yielding to their vision and needs.  And if the set of PIs changes,
+so can the plan for the project, undermining long weeks or months of meticulous
+preparation.
+
+That is just the nature of the beast.  In exchange, we get some funding for
+project objectives, and much more work done than none.
+
+--[[file:akrowne.org][akrowne]] Mon May 30 01:15:36 UTC 2005

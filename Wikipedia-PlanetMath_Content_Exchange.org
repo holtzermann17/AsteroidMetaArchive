@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Wikipedia/PlanetMath Content Exchange
+
+Wikipedia and PlanetMath have significant content overlap.  Sometimes Wikipedia is missing coverage of maths topics that PlanetMath has, or vice versa.  Sometimes one has better treatment than the other, and sometimes both have some treatment that could use additions from the other.  Many Wikipedia math contributors are also PlanetMath contributors.  
+
+* Quick Links
+ * [http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/PlanetMath_Exchange Wikipedia page discussing the PM/WP port project]
+
+* Current Objective
+
+ * Do a one-time "port" of all Wikipedia entries we don't have on PM.  Later we can worry about combining content on topics both sites cover.
+
+* Discussion
+
+Can we import all at once, or would that be too overwhelming?  Maybe we need a
+new area for import-ready entries, that people can select to gain ownership of,
+separate from the orphanage.  It could be called an "import queue" or something.
+
+: We ran into something similar when we imported the apmxi collection in october of 2003.  One idea for how to deal with the potential for being overwhelming would be to require that entries be "certified" before they are included in the encyclopedia. See the item "Mass-uploading" on the [[file:PlanetMath Feature Requests.org][PlanetMath Feature Requests]] page. --[[file:jcorneli.org][jcorneli]]
+
+It seems like turning Wiki formatting into LaTeX will be easy, but what about
+turning WikiWords into plain text for auto-linking?
+
+* Tasks
+ * [[file:get the Wikipedia math content.org][get the Wikipedia math content]]
+ * [[file:get the content (both WikiMath and other entry metadata) converted to a form ready for import into PM.org][get the content (both WikiMath and other entry metadata) converted to a form ready for import into PM]]
+ * [[file:decide what to do about timing and volume of import.org][decide what to do about timing and volume of import]]
+
+
+----
+* Comments
+
+To whoever wrote this page: thanks -- and please log in, add your name to the
+list of users, and try to remember to sign your edits. --[[file:jcorneli.org][jcorneli]] Sun Jan 30 23:33:41 2005

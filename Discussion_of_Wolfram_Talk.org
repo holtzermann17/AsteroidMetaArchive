@@ -1,0 +1,171 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+See also the page on the [[file:Wolfram Visit.org][Wolfram Visit]].
+
+* The slides
+
+The slides for Aaron's April 4, 2005 talk at Wolfram Research can be found, in
+online-browsable HTML format, here:
+
+ * http://aux.planetmath.org/doc/presentations/wolfram_talk/slides/0.html
+
+And as a download, here:
+
+ * http://aux.planetmath.org/doc/presentations/wolfram_talk/slides.zip
+
+**  Summary
+
+The slides give a nice technical (but not too in-depth) overview of how
+PlanetMath and [[file:Noosphere.org][Noosphere]] work.  Until now, if you wanted this information,
+you'd have to read a lot of site documentation, or Aaron's thesis, which are
+very involved.  So, enjoy this brief alternative!
+
+
+* Discussion
+
+One of the things that jumps out it me is "Noosphere rewrite (Python, Logan
+Hanks?)"  from the "THE FUTURE" page.  What is the status of this project?
+
+Also, when you concluded, 
+
+ * Question on everyone's mind: is it/will it be as nice as !MathWorld?
+ * A: probably not, but PlanetMath is different and useful in its own right!
+
+that was sort of on down note, wouldn't you say?  (What is meant by "nice"?)
+
+Did they have any interesting questions about the system?  Any interesting
+financial or collaboration offers? --[[file:jcorneli.org][jcorneli]] Fri Apr 08 18:55:30 2005 UTC
+
+----
+
+I think it is unlikely !PlanetMath will ever be as "polished" as !MathWorld, at least
+not in the same way.  This goes for both presentation and content.  I'd like to 
+get a little bit of funding or volunteer work to improve the presentation of the
+site, but I'm basically OK with the fact that the content of the site won't be as 
+polished.  Any given entry might approach current publication standards of 
+quality, but the collection as a whole will always be a work in progress (like Wikipedia).
+So, someone will always be able to point to many entries on !PlanetMath and say "Ah, look,
+this is poor quality, its not as good as !MathWorld,... " (etc).  And they will be right.
+But I'm OK with this.  This points to a productive difference, which is what I was 
+really thinking of when I said "different", and I think the two types of efforts
+can co-exist and fill somewhat separate niches.
+
+We didn't get as much into plans for official connections between Wolfram projects
+and !PlanetMath as I would have liked.  Which is to say, not at all.  But that's OK too,
+because all of our time seemed to be occupied by my helping the Wolfram folks to understand
+what !PlanetMath is.  As I understand it, they are still deliberating about what, if any
+connections, they'd like to pursue between our efforts and organizations.  I've certainly
+expressed my own willingness. 
+
+Oh, and I'll try to get Logan to weigh in on the Noosphere rewrite project, soon.  He's in
+China right now, and will be directly thereafter moving to Mountain View, CA, to work at 
+Google (this happens later this month).  There he'll have some fraction of his time 
+(ten or twenty percent) to do any research work he wants, on Google's dime, and he is 
+interested in the possibility of doing !PlanetMath/Noosphere work for this.  This would
+of course be great for our project, because it'd be the equivalent of part-time hiring 
+a very  talented, personally-invested research programmer, on money we'd otherwise have 
+to get ourselves.  Logan has already set
+up a "traq" based project for the Noosphere rewrite,  and done some initial design, but 
+I'll let him link that up to this Wiki himself, soon.
+
+--[[file:akrowne.org][akrowne]] Fri Apr 8 20:21:33 UTC 2005
+
+I see nothing inherent to PM or MW that could be used to distinguish them in the
+categories of long-term niceness and polish.  Sure, they will be different!! -
+but maybe just means that they we shouldn't even try to compare them (apples and
+oranges, you know).
+
+On the topic of niceness as it relates to PM, I think part of my job as an FEM
+editor is to make PM fit together nicely as a whole.  I think that the PM<->FEM
+feedback loop has potential to produce many articles and article-collections
+that are of great quality - as long as we have a strong editorial staff working
+on the FEM, and as long as PM authors accept revisions coming back at them from
+the FEM project.
+
+If PM has a FEM-OK'ed subcollection, I would say that this collection is going
+to be as good as anything that the editors could write - which to me means,
+about as good as anything out there, at least in theory.
+
+MW has the "advantage" that their editor(s) are paid, but FEM people may begin
+to get paid too... and of course there is always the satisfaction of a job well
+done.
+
+As for the proposed Noosphere rewrite... I really, really hope we can have some
+public and serious conversations about the design before Logan digs in and
+starts coding.  IMO a full-fledged design document should be produced before any
+code is written.  Also, it should be written in such a way that I can understand
+it.  Which may be a challenge.  Anyway, as one part of the design, I think it is
+important that it be easy to integrate contributed non-Python modules
+(e.g. Common Lisp, Scheme).  And I have no idea what "traq" is...
+--[[file:jcorneli.org][jcorneli]] Fri Apr 08 21:13:15 2005 UTC
+
+"Niceness" is not a globally useful term to refer to what i was trying to say; it
+was definitely meant for the Wolfram audience.  I think (Wolfram co-founder) Theodore Gray illustrated 
+the governing dynamic well in my discussions with him when he pointed out that 
+different projects in the same domain may speak to different audiences, because of
+their different characteristics.  This doesn't make them incompatible, nor does it
+make one better than the other.  But of course, any given person will be a part of 
+one audience or the other, and to them, the differences have a mapping to a "niceness" 
+scale.  Given the audience the Wolfram folks are obviously in, I used the "niceness" 
+terminology.  But given the audience I am in, I think you know what my feelings are =)
+
+I pretty much agree with the rest of what you said.  However, on what the PM<->FEM 
+feedback loop will attain, I doubt the uniformity of "voice" you see with centrally-
+produced resources will be a result (at least not to the same extent).  In fact, I
+would suggest that producing this may stretch the collaborative model (with 
+decentralized control) too far.  This doesn't matter terribly much to me, but to 
+big fans of !MathWorld, it certainly might.
+--[[file:akrowne.org][akrowne]] Sat Apr 9 03:46:01 UTC 2005
+
+
+** FEM<->PM feedback loop
+
+My thought on the "unity" or "uniformity" thing is that it should be done in
+levels.  First of all, an article should be self-consistent (mainly the author's
+responsibility).  Secondly, the collection of articles within a given MSC should
+be consistent (mainly an associate editor's responsibility).  Finally, the
+collection as a whole should fit together nicely (the responsibility of the
+principal editors).  Each of these steps is a potential point of failure.  But
+we do have some checks and balances.  
+
+For example, some author might say ridiculous things in a given article.  If
+they refuse to respond to corrections, the article will be excluded.  Similarly,
+if it looks like a given section isn't coming together well, we might try
+swapping out associate editors, or asking them to work as a team either
+together, or with one of the principal editors.  The last problem is what
+happens if it is impossible to make different sections of the book fit together
+well.  I can't think of any scenarios off the top of my head... but anyway,
+I guess maybe we'll just have to cross that bridge if and when we come to it.
+
+The thing about being "centrally produced" doesn't seems like it may be a false
+advantage.  First of all, the "control" in the FEM project /is/ centralized.
+Secondly, having multiple points of view on a subject can be great (compare our
+discussion of the scholium system).  If the discussion isn't uniform, so what?
+It may be much more realistic and useful.
+
+Anyway, it isn't something I'm going to fret that much about.
+
+Now, WRT the feedback loop in general, I certainly am somewhat worried about
+authors who reject editorial suggestions.  It would be good if we could set up
+some metadata for the FEM project that would keep track of this behavior.  The
+"in" data could just be fed off of the secret pipeline, and the "out" data could
+similarly be set up to run through email (all I have to do is add one or two
+lines to my procmail file and feedback I get on corrections will get routed
+anywhere I like -- or there may be a way to make the circuit shorter).
+
+This data could be used to see which authors are being consistently pig-headed,
+and they can just be silently dropped.  
+
+If we stick to "good" authors and editors do their jobs, I think the product
+will be as uniform as is useful - without putting too much stress on the
+collaborative system.
+
+Problems could arise if editors get overly demanding.  My hope is that by having
+associate editors work fairly closely with the people who they are editing for,
+some rapport will be established, and authors will want to be accomodating &
+editors will want to be reasonable.  I think we can make it work.
+
+As for how it stacks up against !MathWorld, I may never know...  heck, I may
+even be fairly oblivious as to how it stacks up against !PlanetMath :).
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 04:15:13 2005 UTC

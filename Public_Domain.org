@@ -1,0 +1,158 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Introduction
+
+My instincts tell me Public Domain is not the ideal solution, but why?
+Hopefully,this page can help answer this question to help converge on
+a license that is good for freedom and at the same time foster
+productivity.
+
+Sometimes focusing on the extremes of a situation brings insight to a
+problem.  In the case of licensing, the extremes are /no restrictions
+at all/ and on the other hand /so many restrictions that your society is made up of 98%
+lawyers/ (I think that this was a Farscape episode).  I'm sure it has
+been mentioned somewhere, but I believe part of the problem is with
+lumping so many forms of work under one copyright law.  There is a
+distinction between patent and copyright, so why not more distinction
+between a more creative work such as a novel versus a scientific
+output or a rearrangment of scribbles on a page (isn't that the
+essence of math :)
+
+** Total Freedom
+
+Total Freedom, or as some might label it, Anarchy, would be copyright
+with no rules.  If anything could be copied instantly by pushing 'The
+Easy button' (Trademark Stables...) how would this affect author's
+work.  This is what the first law makers working with copyright had to
+deal with.  Essentially, going from monk copying to the press is about
+the same as going from current tech to the Easy Button (TM).  It seems
+clear that very few novels or movies would be made since you could
+make no money for all the effort spent writing the book/movie.  Of
+course the public could support writers and movie makers to just
+produce works.  I believe history has somewhat weighed in on this one.
+
+: Interj. - I think that artistic works done on commission are viable.
+It would be a very different "scene" from what we've got going on in
+Hollywood, New York, and London right now.  But nevertheless, my
+feeling is that a rich and fully PD creative landscape, perhaps in
+parallel with the current copyright-driven 'scape, hasn't been
+ruled out. --[[file:jcorneli.org][jcorneli]]
+
+So why is there such a difference between artists and scientists.  Is
+it because a single mom can go from zero to infinite wealth in a few
+years by writing 'children books' and a scientist goes from zero to
+infinite fame as soon as they are invited to Sweden?  How many
+scientists in history have gone from rags to Hollywood level riches?
+/It would be great to see a timeline of the average income of
+scientists and see if there is a correlation with Universities
+controlling more patents than the professors themselves./
+
+So the big question is this, would scientists stop producing works if
+(1) everything was instantly copyable AND (2) it went into a big
+repository where no one knew the author of the work unless they could
+deduce it from personal interactions?
+
+: Interj. - I think we could set things up so that we had (1) but not
+(2), if the works went into a repository where the author was
+credited.  If the work was based on PD, then some derivative works
+could copy without crediting, however, that might be discouraged by
+the culture -- or the culture says it is just fine.  I dunno.  But
+let's not assume the absolute worst about credit & recognition.  I
+assert that PD does not mean the end of credit and recognition -- and
+even may lead to more of this fine stuff, as more downstream users
+will have access to the work!  --[[file:jcorneli.org][jcorneli]]
+
+
+:  Good comments,  I think Wikipedia gives us some model to work with.  
+How many authors can you name?  Instead what happens, is that content gets tagged
+that it is from Wiki and Wiki gets most/all the credit (which isn't necessarily
+bad).  So are we blowing the concept of credit out of proportion and the
+community would self correct.  Clearly if someone tries to steal credit, it
+will bite them in the end (kind of like cheating on school work). --[[file:bloftin.org][bloftin]]
+
+:: One more thing I forgot, do we as humans really have the right to demand credit,
+since so much of our 'new' ideas are based on previous knowledge and/or educational 
+training that was developed through other people's work who will never receive credit
+or compensation. --[[file:bloftin.org][bloftin]]
+
+Even though most scientists are publicly funded in one way or another,
+I believe that without recognition, productivity would slow way down
+(would you stay that extra hour).  Could it be as simple as the
+orginal work has the author's name on it?  Someone copies the work and
+then puts his/her name on it, what happens?  An avalanch of disputes
+insues or so I predict.  The next baby step up would be to attach an
+author and a timestamp to a work as it goes into a controlled
+respository.  The next day publishers around the world put the work in
+their publication or would they?
+
+: Interj: - These are good questions, but I don't think we know the
+answers yet.  I can't imagine that disputes over /priority/ could
+exist if, as you suggest, works were timestamped when they enter the
+repository. --[[file:jcorneli.org][jcorneli]]
+
+At first blush, for scientific works adding just a recognition clause
+might be a decent 'minimal' solution (see [[file:BSD.org][BSD]]).  There still seems
+to be one more problem though, how are large collaborative works dealt
+with?  Let us start simple and make the realization that there is a
+big difference between new insightful research and a rehashing of the
+first law of thermodynamics.
+
+: Interj: - Thermodynamics??  I think it is likely that large
+collaborative works would pose some problems under the BSD
+model.  These problems might be solvable if we threw enough
+technology at the problem (the idea of [http://transcopyright.org/ Transcopyright] is similar
+and that link is recommended reading to anyone for whom this is a new idea!).
+Although I'm interested in the [[file:Arxana|relevant technology.org][Arxana|relevant technology]], I'm not a fan of using it
+this way. --[[file:jcorneli.org][jcorneli]]
+
+Is there a realistic way around the problem of the 'fact' that it
+takes money to do research and to get money you must have accomplished
+research or is being published the best solution (in other words the
+current method)?
+
+Finally, how is freedom maintained and can it really be taken away as
+long as the work is accessible to the public?
+
+: Interj: that is a very important question that gets right at the
+heart of the matter --[[file:jcorneli.org][jcorneli]]
+
+Somewhere the following things need to be mentioned
+
+ * is the value of instant copying/accessibility greater to an individual than author recognition
+ * economic impact on research if it was all in public domain
+ * impact on public education up to highschool
+ * timeframe of works going into public domain
+
+** Total Restrictions
+
+Pretty much the status quo, where the author retains all rights +
+restrictions AND there is no time restraints and copyright is passed
+on like inheritance/highest bidder.
+
+** Discussions
+
+First cut, this thing needs a lot of work.  --[[file:bloftin.org][bloftin]]
+
+
+I wonder about the "Library of Congress" copyright/authorship registry solution --
+pros and cons.
+Cf. http://en.wikipedia.org/wiki/Compulsory_licensing, which looks confusing.
+--[[file:jcorneli.org][jcorneli]]
+
+I consider this business of compulsory license to be a crock full of bureaucratuic baloney.  Upon recognizing that the current system of copyright law was too restrictive and that this was causing problems, I would condider that the correct response would be to limit the provisions of copyright so as to preclude these problems, not to erect another layer of complexity on top of this law and leave the problematic provisions intact.
+
+I will illutrate this with an example typically used to justify the practise.  As described in the Wikipedia article,
+
+: "someone finds a recording in a pawnshop or tag sale and can't find the copyright owner so they pay a filing fee to the copyright office and are free to use or incorperate it into another work without it being an infringement, only paying royalities if the original composer comes forward with a infringement lawsuit, then only paying royalties from the time the copyright claim is made, legal fees exceeding royalties."
+
+To begin, I don't like the way in which it turns registration topsy-turvy.  Instead of the copyright owner registering the work, now it is the user who has to register with the copyright office.  To me, this seems connected to the mistaken view of copyright as some sort of natural right of the author (such as the right to free speech) rather than as a monopolistic privelege granted to authors in order to encourage them to produce more works by being able to recover the costs of producing a work as royalties.
+
+Much of the reason this is problematic is the long terms of copyright protection.  The more time that goes by, the harder it is to track someone down.  If an author wrote a work 50 years ago, chances are quite good that in the meanwhile that person has moved at least once or even passed away.  Given that most of the orphan works problems I have heard of involve rather old works, I think that most of this orphaned works problem would not have arisen had the length of copyright protection been kept at 28 years.
+
+However, even so, I think that this could have been done differently.  Firstly, it could be made clearer that along with the privelege of a monopoly ove the publication of one's work comes the responsibility of being available to grant permission for use or distribution.  Rather than have potential users register with the copyright office, what about simply stating that, if someone becomes unreachable by some reasonable standard, that person forfeits copyright protection?  In practise, this would be much like the current scenraio --- one could successfully defend against infringement charges by demonstrating that one made an honest effort to locate the copyright owner but had no success.
+
+Secondly, one could reintroduce registration in the right-side-up form.  When the copyright law was rewritten, 99% of the registration requirement was abolished.  The small bit that remained was that, if an author registers a work, the official record in the copyright office serves as prima facie evidence in an infringement suit.  Even granting that it might be appropriate not to require registration in order to secure copyright protection on the grounds that, with today's technology for making copies, authors need to be protected from the moment they write something down and no loger can afford to wait until the registration process is complete, I still think there is a useful role for registration, deposit, and renewal.
+
+Here is one counterproposal to compulsory licenses.  As now, a work would be protected from the moment it is written down.  However, the bit about evidentiary value of registration would be expanded.  While one would be entitled to copyright protection from the moment the pen touches the paper, until one has registered a work, one has to make a stronger case that a would-be infringer knew who the copyright owner was and how to contact the owner (or could easily have found this out) but deliberately chose not to ask permission.  Such a higher standard would still be plenty enough to plug up the sort of cases that automatic copyrighting was intended to handle such as someone copying and posting copies of a manuscript of a book just written. 
+--[[file:rspuzio.org][rspuzio]]

@@ -1,0 +1,39 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page to keep track of high-volume, high-priority issues.
+
+Once we get these things resolved, they will just become usual
+parts of the editorial policy, but for now, they are major issues
+(even if each instance is minor).
+
+*  \newcommand, \newtheorem, etc. in the body of the document
+
+This is a no-no.  Declarations of commands and theorems should
+go in the header for portability -- it messes up the FEM build
+process if these things are encountered inside the document
+after having been already defined in our master header (as is 
+typical!).
+
+*  quotes
+
+Quotes should look like this
+
+ ``quote/
+
+not like
+
+  ``quote"
+
+(even if you've seen that work elsewhere) and /definitely/ not like
+
+ "quote" or /quote/ or ``quote``
+
+or anything else!
+
+*  -XX classification
+
+Entries should not be classified under -XX.  The abbreviation -XX was meant as a way for referring to a whole subject area, not for classifying specific entries.  Please find a specific subclass to file your entry under.  The MSC system isn't perfect, so if you can't find an exact match, don't worry; pick the closest match and use that rather than -XX.
+
+*  More to come...
+trust me.

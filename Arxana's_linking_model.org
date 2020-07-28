@@ -1,0 +1,139 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Last night after dosing myself with methylxanthines,
+I sat pondering Arxana's linking model, perhaps the most important theoretical part of the
+system.
+(Implementation details are fascinating,
+but they should not be theoretical!) There
+are a few features on which I feel I gained some
+illumination, which seems worth sharing:
+
+* Finding what you're looking for
+
+Link-like behavior can be direct or indirect: an article
+A can contain data S, or a link to another article B that
+contains S, or longer sets of instructions
+on how to find S...
+
+ "[The] plans were on display ..."
+ "On display? I eventually had to go down to the cellar to find them."
+ "That's the display department."
+ "With a torch."
+ "Ah, well the lights had probably gone."
+ "So had the stairs."
+ "But look, you found the notice didn't you?"
+ "Yes," said Arthur, "yes I did. It was on display in the bottom of a 
+ locked filing cabinet stuck in a disused lavatory with a sign on the door
+ saying Beware of the Leopard."  --HHGTG
+
+Or, this simpler example: A might contain the name of a link
+which you look up somewhere else, and then follow to find just what it links to.
+
+* Multiply-useful links
+
+If we are going to store links separately from the articles that
+use them, we might as well consider the possibility of links being
+used by multiple different articles -- possible with multiple
+different results!
+
+Hows that?  Well, suppose the link L is a matrix that maps A to B, B to C, and C to
+A, for example.  In order to "follow" L in this case, you need to know
+which article you are coming from -- but in general that shouldn't be
+hard to detect.
+
+So, there could be different kinds of free-floating links -- some that can be
+used to link to precisely one article, some that run some sort of program to
+figure out the result.  Do we /want/ these weird sorts of links? Probably in
+some form --
+what remains to be seen is whether or not we want them /as links/ or if we want
+to model them with collections of simple one-source-one-target links and embedded
+programs that effect certain results.
+
+* A equals A*?
+
+Now, here is something curious: supposing we are going to maintain a "link table"
+as hinted in the previous sections.  Is there any reason to keep it separate from
+the article table?  I say: no!  We might as well merge these two tables, and in
+this case, what is a link?  Just another kind of article.
+
+Whereas before we might have imagined links and articles being "dual" (according
+to some kind of "node-edge duality"), now the distinction between articles and
+links, nodes and edges, breaks down -- and we are left with "one undifferentiated
+field of data".  Which actually makes a certain amount of philosophical sense,
+since, what is an "article", but a collection of words -- words which indicate,
+individually and in collections, various concepts.  An article, in other words,
+is a complex linking object.
+
+* Inspirations
+
+ 1. [http://en.wikipedia.org/wiki/Sephirot_%28Kabbalah%29 Tree of Life]
+ 1. [http://en.wikipedia.org/wiki/Tarot Tarot]
+ 1. [http://www.boardgamegeek.com/game/4178 Psyche-paths] / [http://www.geocities.com/jaapsch/puzzles/tantrix.htm Tantrix] / [http://www.gamepuzzles.com/edgmtch3.htm#KO Kaliko]
+
+* Discussion
+
+I like this idea of a generalized link. How to implement it
+may depend on your specific objectives and real world usage
+characteristics (i.e. performance, data integrity, etc.) 
+
+A parallel concept is seen in URL's. Some are static links
+pointing to specific, fixed things. Others contain query 
+related parameters that instruct the server to perform some
+lookups/calculations and return the results; these are dynamic 
+links that may query a database or result a real-time stock
+chart, etc. Much of the web is invisible to search engines
+as a result of dynamic links! 
+
+It makes sense to externalize links and perhaps even to
+parameterize them for reuse with different arguments.
+
+Whether these are the /same/ as documents or "articles" 
+depends. If you consider links as pointing to /text/ then
+that may be a useful trick. 
+
+Another thought: you may recall the discussion about Summer
+of Code last year. I brought up an idea for a system that
+views the world as a set of Questions and Answers. The idea
+is to store the Questions in a database along with information
+about scheduling them for getting answered, so that the system
+runs continuously interrogating the world via the web, sensors,
+local data, etc. And a key point is that a Question may 
+invoke another Question; that is, to answer Question A I may
+need to know the Answer to Question B. You could regard the
+Question as similar to your generalized Link, except that an
+Answer may return an /object/ or non-text data element (i.e.
+boolean, integer, etc.) The beauty of this system is that
+additional Question answering modules can be plugged in,
+and an entire ecosystem of programming projects and users
+could be established around the system. In effect we would
+encapsulate the proficiency to answer certain sorts of
+questions and make that ability available to everyone 
+(via open source or servers running the code.) 
+
+An interesting aspect of the idea is recursion and 
+cycles of Questions, which may or may not be resolved
+by Questions being able to tolerate data that is
+out of date; a Question's Answer might not
+require instantaneously updated information, but simply
+the most recent Answer to a sub-Question. For example,
+the value of an asset may not require real-time price
+quotes and exchange rates -- in fact, it may require
+end of day input data. 
+
+P.S. Here is another thing to look at:
+[http://freemind.sourceforge.net/wiki/index.php/Main_Page FreeMind - free mind mapping software]
+
+--[[file:ocat.org][ocat]] 1-Dec-2006
+
+Thanks for the comments.  Actually, today I'm thinking about
+getting back to work on a certain set of Questions that
+very much motivated me, namely math prelim exam questions.  (Also thinking a little about
+[http://answers.google.com/answers/ Google Answers] which I notice
+has been retired, although I don't know why!)
+
+This might be an interesting test-case for your model.
+
+As for !FreeMind, I had heard of it before -- just touched [[file:Hypertext work particularly relevant to HDM|the related wikipage.org][Hypertext work particularly relevant to HDM|the related wikipage]].
+
+--[[file:jcorneli.org][jcorneli]]

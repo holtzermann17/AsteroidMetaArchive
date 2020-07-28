@@ -1,0 +1,162 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Sounds pretty good.  I'm a little concerned about references to this
+"the community" collective agent; as Ray said, the community is
+actually just made up of individuals.  Something to think about.  I
+think it is worth noting that the "commons" is often a response to
+"prisoner's dilemma"/"tragedy of the commons" situations, which are
+literally where every individual wants X but "the community" does
+indeed appear to want Y instead.  I'd be curious to know what you guys
+think about that!
+
+--[[file:jcorneli.org][jcorneli]]
+
+Sure, the community is "just made up of individuals", but it is also ...
+a community.  In other words, you cannot adequately model it without also
+having some group/collective behavior component.  In fact I think political/economic
+theorists have largely been treading water for the past century or two by 
+being excessively reductionist: social phenomenon have both individualistic
+and collectivistic components.  An analogy to this logical error would be
+saying that "chemistry is just physics", or worse, "biology is just physics".  
+It is true in some sense, but the higher-level emergent phenomenon cannot be
+understood from the low-level component analysis. 
+
+Anyway... my intent is to try to capture this dualistic nature in the 
+goals and this philosophical statement.  I think CBPP as a broad method of 
+social organization basically does this, but we still need to add some 
+specifics, and it might take more explicit phraseology perhaps not citing
+CBPP at all.  Suggestions welcome.
+
+--[[file:akrowne.org][akrowne]]
+
+I think the /solution of the prisoner's dilemma/ is the same as the
+/group/collective behavior component/.  Now, there are some prisoner's
+dilemma situations that aren't solved, and that leads to "tragedy
+of the commons". 
+
+I think the relevant questions for us are: what sorts of tragedies of
+the commons are possible on PM?  What steps do we need to take to
+preclude them from happening?
+
+I don't think that "the community" necessarily qualifies as an
+"emergent phenomenon"; if it does, then that is only of secondary
+importance in this top-down statement of organizational principles.
+(The top-down statement might specifically rely on bottom-up/emergent
+processes, but still, it is a top-down statement.)  This is all fine
+and good.  However, the statement is also very /high-level/ and
+abstract, so I don't know precisely:
+
+ * (a) what moral or cultural guidelines it is supposed to be laying
+down (i.e. guidelines which are supposed to avert tragedy of the commons);
+ * (b) (probably a special case of (a)) what the
+community-member-to-organization procedural interface looks like exactly.
+(This isn't quite spelled out in the current [[file:Sketch_of_a_Possible_Organizational_Structure.org][Sketch_of_a_Possible_Organizational_Structure]]
+either.)
+
+Presumably more nitty-gritty details will be available later. 
+In the mean time, I suggest making the high-level statement
+as succinct as possible.
+
+(BTW, another thing to note is that, as I have mentioned elsewhere,
+there are, or should be, many sub-communities, each of which will
+presumably have its own sub-culture.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+: /the higher-level emergent phenomenon cannot be
+understood from the low-level component analysis. /
+
+Time to scrap statistical mechanics, I suppose :)  To me, this sounds too much like discredited vitalist and caloric theories.  While it may not be easy to explain high-level phenomena from lower level components, the history of science has been one of success of such an approach.
+
+While you may say that chemistry is not physics, one can successfully and correctly predict the properties of chemicals by solving the many-body Scheroedinger equation and applying statistical mechanics to infer bulk properties.  To be sure, reactions are still something of an open problem but, as far as I know, there is every indication that the problem here is not that there are some chemical laws which are not part of physics, but the mathematical difficulties of handling the time-dependant many-body Schroedinger equation. 
+
+As for reducing biology to physics, while that has not happened, but there is progress (see the book on mathematics of biological time, for instance) and, as far as I know, noone has encountered any fundamental stumbling blocks which would suggest that some sort of vitalism is called for.
+--[[file:rspuzio.org][rspuzio]]
+
+I'm not really sure how to respond to what Joe is saying... all I was ever claiming was that the community is bottom-up emergent.  At least, that
+is how we should model this situation.
+
+Ray, I think the crux of what I was saying is captured in your "while it may not be easy..." disclaimer.  There is an economics of explication and
+understanding, and using high-level concepts/descriptions instead of the smallest-scale ones availble is a fairly elementary part of learning
+and knowing.  Yes it is true we are increasingly predicting more "high-level" phenomenon from "low-level" principles, but one does not really 
+substitute for the other at the conceptual level.  Evidence of this is that most of this work is done by computation and isn't really tractible for
+human minds; basically we have managed to surmount the human conceptual limitations by using computers as a crutch.  Also witness the need to "summarize" automated proofs in order to make any sense of them, which is basically a completely different task than generating an automated proof.  Another example
+would be the rise of Bayesian statistics as a complement to or often replacement for frequentist statistics, almost totally due to computers.
+--[[file:akrowne.org][akrowne]] 
+
+Of course, the reason that these higher-level theories are useful is that it is easier to use them than the lower-level theories.  However, the issue here is that there are no new laws of chemistry being added to the laws of physics or anything of the sort, rather the high-level principles are an approximation to the low-level principles which are applicable in a suitable limiting case (typically a limit of large numbers).  Insofar as these are easier to use and are justified, one should use them, but one must not forget what they are --- if something does not seem right, one should go back and make sure that the approximation is indeed justified.  In the case at hand, that means that, if one gets implausible conclusions thinking in terms of community, one should re-examine the affair from the standpoint of the people involved to make sure that the conclusion is correct and not an artefact of the process whereby one constructs the notion of the community from the behaviour of its members.
+
+As for "computer as crutch", I completely reject that sort of rhetoric.  As I see it, the limitation is with the human brain and, if one can devise technology to transcend human limitations, there is nothing wrong with that per se.   I suppose that one could in a like vein complain that the car I used to get from Atlanta to Roanoke is also a crutch as is the telescope I use to look at the details of distant galaxies.  To me, this crutch terminology suggests that there is something improper about making use of anything beyond one's native human abilities.  --[[file:rspuzio.org][rspuzio]]
+
+Being a computer scientist, I don't meant to suggest there is anything /improper/ about 
+utilizing computers.  But I think it is clear that computation from low-level principles
+is not necessarily a substitute for high-level understanding.  --[[file:akrowne.org][akrowne]] 
+
+Let me sum up what I said with one question, this may make it easier to
+respond:
+
+/What sorts of tragedies of the commons are we trying to avert?/
+
+For example:  APM-Xi was a 'tragedy of the commons' in that one person's
+view of what was appropriate content was not shared broadly, but nevertheless,
+this content came to be a significant portion of the corpus; or again,
+the view on how content could be added to the corpus that informed the
+apmxi-upload process was not shared by many people.  To avert such a 
+TOTC in the future, we would want (a) clearly stated guidelines on
+what sorts of content are appropriate; (a') some sort of 'content 
+committee' that one could go to to ask about a given bit of content
+that raised questions; (b) specific rules on how content is to be 
+added to the corpus.
+
+Now, since there may be some disagreement about these issues (e.g.
+I think computer-oriented math is fine to add, many others may not),
+there will hopefully be some sort of consensus-making strategy,
+e.g. we might resolve that this sort of content can be added in
+a portion of the site that is separate from the mainstream/default
+encyclopedia (and is clearly labeled as separate).  Since we can't
+expect all of these values to be negotiated immediately, we need
+some sort of infrastructure set up to negotiate them in the future.
+(And in a synchronous fashion, too, ideally.)
+
+This is just one example that readily comes to mind.  I would
+suggest that we come up with a /list of TOTC's/ together with
+our tentative responses.  These responses should align with our
+overall governing principles.
+
+Notice that if a governing principle is that it should be easy for people
+to add content, but it should also be easy for people to vet
+content, we may have a conflict of principles when automated 
+upload is involved.  So, what should be done to resolve this
+conflict?  Perhaps in such a case it is important to invent some
+new principle, rule, or strategem that solves the problem.  E.g.
+perhaps the rule is that content that is unvetted will be marked as such and
+will be dis-prefered in searches.  This rule speaks to a principle
+along the lines of 'provide people with the most accurate and
+well-reviewed material possible'.
+
+Thus, tracing through TOTC's is a way to guide/debug this whole process!
+
+--[[file:jcorneli.org][jcorneli]]
+
+Ok, I think this helps.  I am a bit worried about taking this kind of strategy
+too far and ending up with an overly-elaborate procedure-set for the organization.  This is why
+I prefer to emphasize a general petitioning process.  There is much the same
+knowability problem here as me and Ray are examining anew with our "Fog" paper, with
+respect to designing licenses.   To be more explicit with the analogy, you may think you're solving 
+more problems by putting more clauses in a license (to take care of more anticipated use cases), but 
+in actuality you may be making the license less usable and creating "bugs" in it.
+
+--[[file:akrowne.org][akrowne]] 
+
+I think the important thing is to expose knowledge in a reasonable way.
+I don't think the guiding ruleset needs to be complicated.  However, the
+site/project as a whole is fairly complicated.  If we can easily learn who the 'go-to guy'
+is for any given issue at any given point in time, then I think we'll be in good shape.
+I was suggesting examining TOTC as a step in building a simple, flexible, set of
+guiding principles, not as a proof-in-cases that the site will function perfectly
+at all times!  Certainly at some point the various rules (e.g. for adding
+content in an automated fashion) will have to be exposed, but this is not
+the time or place to go into that kind of extreme detail.
+
+--[[file:jcorneli.org][jcorneli]]

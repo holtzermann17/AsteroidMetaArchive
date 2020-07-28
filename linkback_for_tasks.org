@@ -1,0 +1,17 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think it would be nice if all the tasks appeared on one page, in a table
+format showing what project they were associated with and who was working on
+them.  In general, for optimum task management, we'd probably want something
+more powerful than a wiki engine.  But we should see what we can do with what we
+have (and the various extensions available for Oddmuse).
+
+* Update
+
+I have achieved something like the above, see [[file:Tasks.org][Tasks]].  The only missing piece
+is linkback for users who are working on a certain task.  But we can do this by
+hand pretty easily. --[[file:jcorneli.org][jcorneli]] Mon Feb 14 19:43:29 2005
+
+And see also [[file:the relative merits of wiki and other workflow management media.org][the relative merits of wiki and other workflow management media]].
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 04:17:42 2005 UTC

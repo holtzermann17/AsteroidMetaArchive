@@ -1,0 +1,25 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It is amazing how much power a simple idea can have.  I think this
+is an example.  Luckily, I can say with assurance that this idea
+isn't original to me, or I think I would be morally compelled to have my
+head sawed off and frozen for future study.
+
+The idea is simply to have "expanded views" of messages, corrections,
+and other collections of objects that are currently just viewed in
+a list format.  This should be pretty easy to do.  Note also that it
+is somewhat "scholium-like", whatever that means... OK, I'll say what
+it means, in this case: it means that commentators would be more likely to have their
+voices heard in the immediate context of the original thing they are
+commenting on.  This is a good thing, IMO, because it would help 
+authors (and maybe others) put together useful modified versions
+of the original articles.  Or, in the case of corrections, it would
+help users casually browse through the corrections looking for themes.
+
+(Expanded views probably aren't quite as powerful as the full
+scholium system, but they seem to have lots of "bang for your buck".)
+
+----
+
+See also: [[file:expand-all option when viewing messages.org][expand-all option when viewing messages]]

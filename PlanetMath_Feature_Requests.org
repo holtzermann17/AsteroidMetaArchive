@@ -1,0 +1,52 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Create a question-answering system like Google Answers
+
+A tip-based question-answering system sort of like
+[http://answers.google.com/answers/ Google Answers] would give users a chance to
+pick up some money by answering math questions.  The content of these answers
+would be available under the [[file:FDL.org][FDL]] and could be used in the encyclopedia.
+Furthermore, if [[file:PM.org][PM]] took some percentage of each tip, this could be a way to
+generate revenue for the site.
+
+We could combine this idea with a membership drive, so that only a member could
+collect tips by answering questions.
+
+* Site membership
+
+People should be able to pay money and become a "member" of PM.  We could give
+free memberships to people who earn over say 10000 points in the course of their
+editing activities.  Members would have certain perks (for example, see "Create
+a question-answering system like Google Answers", above).  If enough users
+became members, this would generate revenue for the site.
+
+* Mass-uploading
+
+How can mass-uploading and other useful programmatic actions on the encyclopedia
+can be facilitated in a way that doesn't result in "appropriation" of the PM
+system?  Perhaps the right way to go would be to require that entries be
+reviewed/certified before entering the encyclopedia (like
+[http://www.kuro5hin.org K5] does), this would definitely help.
+
+* Text-only webpage
+Make a version of the webpage that is streamlined for text-only browsing.
+Could also be useful for people who want to use PM on a PDA.
+
+* Page with threaded discussion
+Make a page that indents all recent discussion items according to the threads they are in.
+
+* Search the forums
+Be able to search just within the forum, or just within a particular forum.
+More generally, various contexual searches would be handy. (Of course,
+it is probably a priority to get the site-wide search engine working.)
+
+* Index the forum by date
+Make it possible to access past years and months quickly through a hierarchical
+menu (click on year to get list of months, click on month to bring up all messages)
+posted that month.
+
+* expand-all option when viewing messages
+It would be nice to be able to expand all the messages in a thread
+below the current message; this would make getting up to speed
+on a discussion faster.

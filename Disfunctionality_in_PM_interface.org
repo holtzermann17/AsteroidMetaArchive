@@ -1,0 +1,40 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I don't want to come across as a whiner, but -- I haven't used
+the PM interface much, and as a relative outsider to it, I find
+it confusing and somewhat frustrating.  I do think that things can be done to improve the situation.  Just for example, the "x" and
+"+" for corrections seems weird/tedious; but they could easily be replaced with "reject correction" and "accept correction".  I think it would be
+helpful to run an intense usability hackfest for PM.  I love to
+promote the project, but I am scared that some people will be turning
+away not because of !LaTeX, but because they find the interface to
+be non-self-explanatory.  --[[file:jcorneli.org][jcorneli]]
+
+While this sounds good, I think it would be a good idea to table motions for this and similar hackfests until we make noosphere more hackable --- otherwise, all we might do is simply make the already lengthy list of feature requests even longer.  As for the latter undertaking, Aaron will have to play a major role simply because now most of the noosphere documentation is in his head, but there should be ways for other people to help in producing the documentation, such as compiling, writing and editing manuals based on Aaron's notes.
+
+When we get to the point of being able to hack noosphere with ease, it would be nice to make multiple interfaces.  Even nicer would be a situation where people could cook up their own interfaces with ease.  People like us would be glad to use emacs as an interface, but people like Drini might prefer a different sort of interface.  To make this possible, it would be most helpful to make a clear distinction between front end and back end in the documentation and to standardize the way the two ends communicate.  In the context of your example, this might mean that the interface needs to have a mechanism for saying whether a correction is accepted or rejected and that there would be a standard  format for communicating this information between the interface and the rest of the program.  The benefits of such an arrangement would be that the front ends and the back end would be rather independent of each other and interchangable. --[[file:rspuzio.org][rspuzio]]
+
+: I think that we can work on both in parallel, or anyway, orthogonally.
+I agree that making Noosphere more hackable should be the #1
+dev priority.  
+However, the design of a good UI (or several of them) doesn't really depend (much)
+the backend or on backend/frontend communication.  I think your suggestions
+on /those/ topics are good -- but we might as well let our feature request list
+grow in the mean time -- and consider themes in the feature request list
+(like UI). --[[file:jcorneli.org][jcorneli]]
+
+I took a few minutes to act on this one.  I don't know if it will help, but I put link titles and div's on the "icons", which will cause tooltips with explanations to come up if you mouse-over them.  
+
+Of course, I don't think this will help in a text browser.  For that situation, graphical icons would be needed, so that the icons get replaced with their ALT tags.  That will have to wait for later...
+
+--[[file:akrowne.org][akrowne]] Sat Jan 14 16:54:35 UTC 2006
+
+As part of a wikitime hackfest, here's another point; this comes from Kyle.  The fact that we
+don't see a message's context when we view it is bad.  Listing the forum or object that a
+message is attached to would be very helpful.  I'd also like to see the thread context
+and to have the actual contextualizing text available.  But Kyle's suggestion could be
+incorporated as a simple hack: instead of just saying "top" (as a link), say "top: <link to top>"
+where link has the appropriate text.  (Similar in case of "up" when it would make
+sense.) --[[file:jcorneli.org][jcorneli]]
+
+: The same goes for math entries in the encyclopaedia. It is fustrating to see the little triangle before the name with no idea what the parent entry is. In particular when browsing random entries. When we now have meta-entries maybe each entry should also list which meta-entry/entries it belongs to. So meta-entries would be bi-directional. There would be links both from these into the encyclopaedia, but also from the encylopaedia to the meta-entries--[[file:matte.org][matte]]

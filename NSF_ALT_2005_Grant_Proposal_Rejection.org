@@ -1,0 +1,259 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The 2005 PlanetMath NSF ALT grant proposal (see [[file:NSF_Advanced_Learning_Technologies_Grant_Planning_Page.org][NSF_Advanced_Learning_Technologies_Grant_Planning_Page]]) has been rejected.  This page is for dissemination and discussion of the rejection, as well as regrouping/planning for other grants and "next time".
+
+*  Rejection Letter
+                                                                                                                                                                   
+Proposal Number:  0537225                                                                  
+Title:  Collaborative Research: Automating Online Communities for Infomating STEM Learning
+Dear Dr. Krowne,                                                                           
+                                                                                            
+I regret to inform you that the National Science Foundation is unable to support your proposal referenced above.                                                                 
+                                                                                            
+Your proposal was reviewed in accordance with the general merit review criteria established by the National Science Board that address the intellectual merit of the proposed activity and its broader impacts.  These criteria permit an evaluation of the proposal's technical merit, creativity, educational impact and its potential benefits to society.  If your proposal was submitted in response to a specific solicitation, additional review criteria may have been used to review your proposal as described in the solicitation.               
+                                                                                            
+The full text of the two merit review criteria and supporting explanations are available in Chapter III of the NSF Grant Proposal Guide, available electronically at http://www.nsf.gov/cgi-bin/getpub?gpg .                                                    
+    
+You may access the reviews of your proposal and any further analysis or statements at the URL referenced below.  This information may be helpful to you in understanding the Foundation's action and also in preparing any future submissions.  If you would like further information concerning the review of your proposal, please contact the cognizant program officer whose name, email address, and telephone number are provided below.        
+                                                                                            
+Although we are unable to support this proposal, we would be pleased to consider any future proposal you may wish to submit.                                                           
+                                                                                            
+Sincerely,                                                                                 
+                                                                                            
+Michael J. Pazzani                                                                         
+Division Director                                                                          
+Division of Information & Intelligent Systems                                              
+                                                                                            
+Program Officer:  Karen Kukich, kkukich@nsf.gov, (703) 292-8918                            
+Reviews and if applicable, the Panel Summary, Context Statement, and Site Visit Report may be found at:  https://www.fastlane.nsf.gov/jsp/homepage/proposals.jsp                      
+                                                                                            
+You will need your FastLane password to access this website.  If you do not have one or cannot remember your password, you will find instructions on resetting or obtaining a password at this location:  https://www.fastlane.nsf.gov/jsp/homepage/proposals.jsp 
+
+*  Reviewer Comments
+
+**  Panel Summary
+
+***  INTELLECTUAL MERIT (STRENGTHS AND WEAKNESSES)
+
+This proposal will enhance the ability of online educational                                
+communities to be self-sufficient.                                                          
+It will use enhancements to an existing online math community                               
+centered on educational aims to build communities in physics and                            
+math. Project will study the development of STEM related online                             
+education communities at three different levels of maturation.                              
+This is a creative proposal that promises to provide insights on how                        
+to create a "nearly" self-sustaining, pedagogically relevant online                         
+communities for STEM learning.                                                              
+                                                                                            
+***  BROADER IMPACTS (STRENGTHS AND WEAKNESSES)
+                                                                                            
+PIs have good expertise and experience with building on line                                
+communities for learning. This allows technology evolution in the                           
+right direction as relevant to ALT. A variety of users in different                         
+settings willow the creation of solutions that scale the system so                          
+that it can appeal to a wide range of users.                                                
+This project has strong potential to contribute to research in CS,                          
+education, user studies of online communities, and digital libraries                        
+while having a positive impact on teaching and learning in online                           
+communities. 
+
+***  RATIONALE FOR PANEL RECOMMENDATION
+
+The panel felt that the creativity and originality needs to go beyond                       
+Digital Libraries and current ongoing activities. The proposal will                         
+benefit from the discussion of prior findings of research conducted                         
+on learning in the context of community learning discussed in the                           
+proposal.    
+
+There is a need to address how proposal will enhance student skills                         
+and the need to provide evidence that this format is efficacious for                        
+student learning.                                                                           
+                                                                                            
+The panel rates the proposal as non-competitive.                                                                                                                                        
+                                                                                            
+Panel Recommendation: *Not Competitive                                                       *
+                                                                                            
+**  Reviewer #1
+                                                                                            
+***  What is the intellectual merit of the proposed activity?
+                                                                                            
+This is an interesting proposal which promise to create a "nearly"                          
+self-sustaining, pedagogically relevant online communities for STEM                         
+learning. The research team has presented a good research record in                         
+carrying out previously supported research projects. Therefore, I                           
+believe that they will be qualified for this proposed project. The                          
+creativity of this project lies in the possiblity of the long term                          
+success of online learning communities.                                                     
+                                                                                            
+***  What are the broader impacts of the proposed activity?
+                                                                                            
+The research outcome of this project will benefit both teachers and                         
+students. Two graduate students as well as teachers and their classes                       
+from "the second poorest region of the united states" will                                  
+participate in this research project, which enables underrepresented                        
+group in participation.                                                                                                                                                               
+                                                                                            
+***  Summary Statement
+
+This is an interesting proposal that promises to provide insights on                        
+how to create a "nearly" self-sustaining, pedagogically relevant                            
+online communities for STEM learning. It also tries to create such                          
+kind of community in different disciplines. The evaluation step of                          
+the research studies is not described in detail. Since phone-                               
+interviews will follow an online survey, an IRB might be needed.                            
+                                                                                                                                                                                       
+**  Reviewer #2
+                                                                                            
+***  What is the intellectual merit of the proposed activity?
+                                                                                            
+While this proposal has the potential to advance our understanding of                       
+how to design and build better support systems for on-line                                  
+communities, there is little evidence that the proposed activities                          
+will enhance the development of student skills and knowledge in STEM.                       
+This is because the proposal fails to respond to the ALT program                            
+requirements in three areas. Right now, the proposal is focused on                          
+the technology issues of self-sufficiency and scaling. It is not                            
+focused on any significant or well-defined learning STEM goals which                        
+can be measured as an outcome of using the system. Nor is there                             
+evidence in the cited literature that the investigators have used                           
+empirically-based learning research to ground their work. While their                       
+past activities have led to the design of learning communities, where                       
+is the evidence that these are real conduits for STEM learning? What                        
+assessment work has been done with PlanetMath for example, that                             
+demonstrates its value in STEM learning in terms of generalization,           
+transfer and learning of abstract concepts? Assessment data from                            
+these prior projects would have greatly enhanced the competitiveness                        
+of this proposal. Second, the proposal does not demonstrate a tight                         
+connection between theory, experiment and design. What learning                             
+theories are driving the development of on-line communities? How are                        
+self-sufficiency and scaling connected to learning? What are the                            
+specific research questions driving this work, what data will be                            
+needed to answer those questions and how are the proposed methods                           
+going to yield that data? These elements are not clearly articulated                        
+in the proposal. For this proposal to be competitive, tight and clear                       
+interactions between learning theory, research questions, experiment                        
+and design need to be articulated. Finally there are no carefully                           
+developed measures that can be applied to the newly designed learning                       
+communities. How will they know whether learning has been affected?                         
+What aspects of learning do they expect to change? These are some of                        
+the unanswered question.                                                                    
+                                                                                            
+***  What are the broader impacts of the proposed activity?
+                                                                                            
+Failure to articulate significant and well-defined learning goals, to                       
+develop a tight interplay between theory, experiment and design or                          
+identify learning measures call into question the potential for                             
+impacts of any magnitude. Perhaps researchers of on-line communities                        
+will benefit but it is unclear how this work will trickle down to                           
+teachers or students.                                                                       
+                                                                                            
+***  Summary Statement
+
+/None given/.
+
+**  Reviewer #3 ==                                                                           
+                                                                                            
+***  What is the intellectual merit of the proposed activity?
+                                                                                            
+Project seeks to enhance the ability of online educational                                  
+communities to be self-sufficient and to use enhancements to an                             
+existing online math community centered on educational aims to build                        
+communities in physics and math. Project will study the development                         
+of STEM related online education communities at three different                             
+levels of maturation. This project promotes knowledge sharing among                         
+individuals and across STEM communities where their interests                               
+overlap, improves accessibility for users, and decreases the                                
+maintenance required to sustain online communities, making them more                        
+self-sufficient and perhaps more sustainable. This project will make                        
+substantial contributions to research in several areas of specialty                         
+including CS, education, user studies of online communities, and                            
+digital libraries.                                                                          
+                                                                                            
+The team is extremely well qualified to do this work, demonstrating                         
+expertise in all the skills areas required to make this project                             
+successful as well as extensive experience managing funded research                         
+projects. The project plans are well thought out and sufficient                             
+resources appear to be available.                                                           
+                                                                                                                                                                                
+***  What are the broader impacts of the proposed activity?
+
+Project will affect students at both the high school and                                    
+undergraduate level promoting their participation in educational                            
+online communities and seeking their feedback concerning use of the                         
+system. Potential participants for this study include African                               
+American students and students from a variety of socio-economic                             
+backgrounds. In addition, teachers will benefit from their                                  
+participation in this project, as will the students who are part of  
+the research team. The sites are freely available on the internet and                       
+there are a number of current users (demographics unknown) who stand                        
+to benefit from this work.                                                                  
+                                                                                            
+The academic nature of these online communities, which includes a                           
+wide range of users from novice to expert, makes them a boon to                             
+teachers and students interested in these content areas. They provide                       
+the potential for meaningful intellectual exchanges that create a                           
+knowledge network that is generally accessible by interested parties.                       
+The nature of this intellectual exchange enhances research and                              
+education and increases the possibility of developing networks and                          
+partnerships.                                                                               
+                                                                                            
+Results will be disseminated through the normal channels of                                 
+presentations and peer reviewed publications. The impact of this has                        
+the potential to be quite broad to the extent that these sites are                          
+self-sustaining and attract users. Successful completion of this                            
+project could lead to the adoption of these approaches by others.                           
+                                                                                          
+***  Summary Statement
+                                                                                            
+This project is well conceived and operationalized in its objective                         
+to make online STEM communities more self-sufficient by improving                           
+quality control, making the system more transparent while improving                         
+accessibility for users. Further, this project has strong potential                         
+to contribute to research in CS, education, user studies of online                          
+communities, and digital libraries while having a positive impact on                        
+teaching and learning in online communities. Authors may want to                            
+consider ways to expand dissemination of project findings.                                  
+                                                                                            
+**  Reviewer #4 ==                 
+                                                                                           
+***  What is the intellectual merit of the proposed activity?
+                                                                                            
+The proposal does more of automatic data extraction and is a                                
+continuation of digital library research. It will combine this effort                       
+with online communities for learning such as Math Forum, Bridge and                         
+Teacher Bridge. The project builds on a partially demonstrated                              
+approach to solving self sufficiency and scaling. People can                                
+contribute the content a they wish and then variety of links will be                        
+facilitated to allow other users to give feedback.                                          
+                                                                                            
+***  What are the broader impacts of the proposed activity?
+                                                                                            
+PIs have good expertise and experience with building on line                                
+communities for learning. This allows technology evolution in the                           
+right direction as relevant to ALT. A variety of users in different                         
+settings willow the creation of solutions that scale the system so                          
+that it can appeal to a wide range of users.                                                
+                                                                                            
+***  Summary Statement
+                                                                                            
+Supporting ongoing efforts are very relevant. Project schedule is                           
+well presented. The effort will lead to improvements to the                                 
+underlying Noosphere structure (quality control basd on feedback),                          
+reputation system and advanced editorial features. Important user                           
+groups will be involved. The proposal is not presented well to gte a                        
+clear picture what new science or engineering will evolve.                                                                                                                              
+
+*  Discussion
+
+Looks like reviewer #2 won the battle; the other reviews were all 100% positive.
+However, I largely agree with reviewer #2: the proposal (and conceptualization)
+of the work's binding to learning theory, as well as specific learning objectives,
+was weak.  I think more theoretical groundwork must be laid about the tie in
+between CBPP and learning before anyone will believe us enough to give us money
+to undertake this work.
+
+I will say, however, it is unfair to ask that assessment be done without funding it.
+It would have been more reasonable (given the 3-to-1 support for the work) to give a
+small grant to do such assessment, rather than killing this kind of investigation 
+altogether. --[[file:akrowne.org][akrowne]] Sun Jul 31 20:10:33 UTC 2005

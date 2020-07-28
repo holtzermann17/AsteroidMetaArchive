@@ -1,0 +1,407 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The three parts of the paper:
+
+ 1. introduction to the model and overview of the implementation
+ 1. literature review and ramifications for DLs
+ 1. social implications of using this model to its fullest
+
+Parts 2 and 3 are mostly in my head or in pieces here on the wiki.
+Part 1 is currently fairly long.  Clearly something from each part
+will go into the final report; ideally, I'd like to submit 3 papers
+together with one that summarizes the three, to give the reviewers
+a couple options.  But I don't know if it will all come together
+in time to get all four documents in order (I sort of doubt it the
+way things have been going, but you never know).
+
+This is the outline of the current Part 1 only; well, actually it includes some
+topics that aren't in the current Part 1, but that should be added there
+shortly.  Some of this stuff might end up getting shoved into the other parts
+too.  Furthermore, it may be re-ordered within this part.
+
+* Introduction, DL, Motivation
+
+ * Say something about the freedom to modify works in an online setting.  There
+are many different kinds of freedom, each corresponding to the liberties and
+consequences of using these liberties.
+
+ * Introduce the scholium concept: why these are scholia based documents
+(undirected articles as degenerate scholia pointing at nil).  "All information
+is superimposed."
+
+  * "Everything is article" should be reconciled with "everything is list"
+(from TODL or Gopher).  The /about/ list is like the arg list to a function,
+the /text/ is the docstring, the /type/ implements (or points to) the semantics.
+
+  * Intersubjectively important topics will want many subjective marginal
+   digressions.
+
+ * Living in an online system without modifiability constrains freedom (social
+  contract).  Scholia provide a range of additional freedoms.
+
+ * Systems that are considered to be "free" have only certain notions of freedom;
+  to some extent this is a notian that works best with an "older" (but still
+  very much alive) technology, i.e., /software/. (We can describe briefly how
+  it works for software, with patches and so on.)
+
+ * Dissent and differing opinions should be welcomed (in my opinion).  They add
+  value to a document (this is one aspect of the thesis of the paper).
+
+ * Explain text ownership as one of the possible "freedoms".  Different ownership
+  models exist; note them.  In the end, text ownership in an online setting
+  comes down to physical control of a physical resource (disk space, IP
+  addresses); it is somewhat different in the normal "networked" setting.
+
+ * Be clear about how ownership and dissent balance each other.  Its a matter of
+  the alternative "permitted" uses of a resource.  The actual permissions, like
+  the ownership model, will depend on the nature of the online community.
+
+ * The ability to change the code of the system on the fly is a LISPian freedom.
+(This may be hard for non-programmers to "get" - MUDs are the best example I
+know of, but once an example is understood, it should be easy to transfer to
+other settings.  Consider the relevance of !McLuhan here.)  Come at this from an
+AI/MUD/VR point of view.
+
+ * Yes, AI is a motivation!
+
+* Scholia, adding articles, examples
+
+ * Indepth discussion of what scholia are, from an historical perspective,
+and from our perspective: scholia are directed.
+
+ * documents with closure require directed statements.  We could give an example,
+  say from mathematics, to show how information is superimposed.  (E.g. a
+  theorem about cauchy sequences points at several definitions; using cauchy
+  sequences as an example would be a little joke.)
+
+ * Comparison between the /experience/ of "culturally comprehensive" documents.
+
+  * Note that different kinds of comprehensive documents can exist, e.g. a
+   math-only comprehensive document (HDM).
+
+  * The world itself is like a "document": partially understood, not actionable,
+   not appropriated.
+
+ * Markup as a subspecies of scholia
+
+ * Expand on !McLuhan ref?
+
+ * The /scholium/ function is "foundational" for the system.
+
+  * describe its arguments
+  * describe how it works
+  * describe how it relates to the rest of the system (it is called by many other functions)
+  * describe how its arguments relate to the rest of the system
+
+ * give some basic examples of scholia that work in the implementation. (perhaps
+refer to other more complicated things that appear in supporting documents.)
+
+  * Maybe exhibit some "actionable" scholia in such documents?
+
+ * The order of the /about/ field matters.
+
+ * Exhibit "mixed" scholia and an example with /type/.
+
+ * Talk about extensibility and challenges (non-examples).
+
+* Overview of user interface
+
+ * Describe the Emacs environment: color for overlays, other details - but in
+  general: why is Emacs good to use for this kind of program?
+
+  * support for people who don't use fontlock: delimiters (assuming you can do
+   this with overlays)
+
+ * Two-windowed display and making it do various things:
+
+  * scrolling
+  * narrowing
+  * following (and browsing)
+  * selecting from a menu
+
+ * processing collections
+
+  * saving and restoring
+  * visiting files and displaying their attached scholia automatically
+
+
+* Displaying scholia
+
+ * Look up an article by name and display it.
+
+  * also display its attached scholia!
+
+  * selective displays are possible
+
+  * different styles of display (e.g. threaded) are possible
+
+ * Rendering a scholium as a a string can be done in different ways
+
+ * Talk about buffers as articles and why they are special.  (I.e. "The Emacs
+Gestalt".)
+
+ * Example showing behavior of an article associated with a buffer.
+(One of the examples in the previous section should be an example of a
+buffer-as-article).
+
+* Adding articles
+
+ * Adding existing articles
+
+ * creating articles from scratch
+
+ * choosing to store as a buffer, string, or file: this will depend on how you
+  want update to work... compare the discussion of derived versions and storing
+  "current" version in the /book/ arg (in section on editing documents).
+
+  * Support for non-default behavior vis a vis this choice should go in
+   supporting documents.
+
+ * Adding strings
+
+ * Adding text in buffers (as buffers)
+
+ * Adding text in files (as long as the files exist)
+
+ * interactively supplying new text
+
+ * different ways of specifying /about/.
+
+  * about the whole article
+  * about a part of the article
+  * about several parts of the article
+  * (for more, see section on browsing and then the supporting documents)
+
+ * specifying the /type/ interactively
+
+ * Note: this section is really about the interactive display - what it is like
+  to interact with a "location" in within the document.  What you can /do/ at
+  a location will depend on the type of document, e.g., in a MUD-like setting,
+  there will be more different kinds of actions than in a "normal" hypertext
+  document.
+
+ * interacting with the Scholia Display (creating followups)
+
+ * scholia appear only once in the Scholia Display buffer
+
+ * making a scholium about the current buffer (or file) (or part(s) of it)
+
+* Browsing articles
+
+ * Actionable associations between scholia and the regions they are about.
+
+ * navigating the current article WRT attached scholia
+
+ * navigating the current article WRT the regions associated with some particular attached scholium
+
+ * Browsing by catalog
+
+  * using a generic menu with a "control panel" (note connection to editing/adding)
+
+  * possibilities for doing more than just browsing by name
+
+ * transitions from "this" article or scholium to a neighbor
+
+  * reuses catalog browser as needed
+
+ * temporal browsing
+
+  * uses history list (or tree!)
+  * generic browser, configure with hooks
+  * use different history mechanisms interchangably (indeed, all of the different components are
+"modular")
+
+
+* Editing, deleting, saving, restoring
+
+ * Editing by catalog
+ * discussion of and motivation for versioned documents (it is actually quite simple)
+ * relate to ownership
+ * automatic updates
+ * address the issue of /moving/ documents (easy if it happens within the system, otherwise all but impossible)
+ * propagating changes
+  * relate to transclusion (I think /sometimes/ we don't need to propagate)
+ * editing metadata
+ * using diffs
+
+ * save work for later on, to share or to reuse
+ * saving selectively
+ * changing association of text fields (e.g. from buffer to file)
+ * reading files back in
+  * reading from a certain directory or being otherwise predicate-driven
+  * address the issue of name conflicts when reading in files
+ * reading comprehension: does metadata get saved along with files? YES, that is mainly what is saved.
+
+* Notes
+
+These things haven't even made it into the (real) outline yet - they are looking
+for a home.
+
+ * The conflict between nets and frames seems fundamental, but I don't know how
+  it resolves.
+
+ * Be sure to talk about the Emacs Gestalt
+
+ * talk about peer review being an ongoing process in the scholium model; and
+  about citations being typed; and about mixing science with popular culture and
+  vice versa.
+
+ * peer review poses challenges - compare "reviews of this book" by Hofstadter.
+  The challenges have to do with community.  If you insert your voice into a
+  community you already belong to, the criticisms are going to be different from
+  the criticisms you'd get in community in which you are the foreigner.  At
+  least I think so.  This makes for different kinds of "review".  (I'm vaguely
+  reminded of ergodic theory for some reason?)
+
+ * Locally stored ("amortized") data is cheapest.  But actual expense depends on
+  the size of the document, how it is stored, and how intelligent the search
+  heuristic is.
+
+ * note that /writing papers is definitely a scholia-based process/!
+
+ * One thing about the scholium system is that it is supposed to show you how to
+  get from one thing to the next.  Perhaps you think of one thing that you find
+  /distracting/, and this reminds you of why you engage with the distracting
+  thing in the first place.  In turn, this could associate with various past
+  experiences that lead you to believe that you will get good things out of such
+  engagement as well as bad things.  Maybe the /"marginal"/ goods make up for
+  the /"central"/ bad.  (Is that a possible exchange?)
+
+ * How to distinguish this system (and what it can do) from the "normal" web?
+
+ * the metadata system as a "map of the territory"... (sometimes with actionable
+  parts)
+
+**  Semantic Web etc.
+
+ * How can people expect to be able to come up with an ontology that will
+  adequately express all of the different complex relationships between/about
+  things in the world?  Doesn't the ontology have to be extensible?  Admitedly,
+  you can get pretty far with /is-a/ and /has-parts/, but then you want to
+  support /mathematics/, say, and maybe some other things, and suddenly things
+  become challenging.  (The semantic web only hopes to support some specific
+  things in its core; for there to be widespread uptake, probably everything
+  else has to be possible through extensions: I'm not sure whether it is or
+  not?)
+
+ * Can you expect "standards" to arise democratically (in the scholium model)
+  rather than from a central authority.
+
+ * Try to find Tim B. Lee's 2001 paper introducing the semantic web
+
+ * Is there a book about MUDs?
+
+ * Look for !McLuhan book.
+
+**  Namespaces
+
+ * instructions for accessing sublibraries, which may be in their own part of the
+  web (or filetree, or RAM).  E.g.: /send this query to that url and display
+  the output according to such-and-such a formula/.  (OTF scholium generation.)
+
+ * tentative example: /txt/ some-list, /type/ (sublibrary, <accessor-functions>).
+Maybe.  Suppose we want to store links on their own list, or all of the contents
+of your friend's website on its own list.  We'd just do a standard type that says 
+/treat this like you would a normal part of the normal list/.  Sort of.
+
+ * Hash tables don't really "help" if the list is /very/ long.
+
+ * I thought I had a great example to show why namespaces work; maybe it is the
+fact that you don't want to reassemble everything each time (so you store
+pre-assembled pages on a local server, say).  
+
+ * In order to make these things work, you take your knowledge about what you are
+  after, and use it to create the best possible search.  (The theory is quite
+  mathematical.)
+
+**  library books
+
+ * Strange: /The continual rapid growth of information volume makes it increasingly
+difficult to find, organize, access and maintain the information required by users./
+(/Towards.../).  Note that some people would say the opposite (cf. Aaron's FUD Encyclopedia
+paper).
+
+ * cool graphics: CCAviewer
+
+ * semantic web: standards instead of services.  Boo.
+
+ * not free?
+
+ * need an expressive standard to avoid parochialism (everyone coming up with
+  their own incompatible microstandards)
+
+ * communityware versus groupware
+
+  * assimilated content can be subscribe to too!  simplify your own processing by
+   NOT building from scratch!
+
+ * metadata is important for multimedia
+
+ * connectionism: parallel distributed information processing (networked neuron-like entities)
+
+ * Defense Department's Advanced Research Projects Agency.
+
+ * Don't limit the discussion only to things that can be demonstrated rigorously (anti-positivism)
+
+ * develop sensible critical methodology (compare Aaron's self-eval workshop complaint)
+
+ * judge systems by what they are good for, not by global judgements of whether
+  they "are good".
+
+ * Neural networks: no theory, but experience 
+
+  * semantic web NON-version of the above, maybe (there is a ground ontology)
+  * scholium system IS version of the above (there is no ground ontology, the
+ core of the system is extensible, though not nec. forwards-compatible)
+
+ * difficulty of constructing formal versions of reality!  phenomenology.
+/Making a mind versus modeling the brain: artificial intelligence back at a
+branch point/, Herbert L. Dreyfus & Stewart E. Dreyfus, p. 15-43 /AI debate/
+(should be required reading!)
+
+ * ontologies are important
+
+ * "higher forms" versus hyperreality
+
+ * should be required for HDM, others: Age of Spiritual Machines (and tell Andrew WH)
+
+ * adjusting agents and publishing the result right where people can use it
+  (example of relevance of online freedom)
+
+ * A viable system must embrace the social system
+
+ * think about "growing institutions" (like "growing a language")
+
+*  Editorial
+
+ * have all the basic functions working (list them)
+
+ * get this business about namespaces sorted out
+
+ * merge the 1st, 2nd, 3rd parts into one document
+
+ * treat the "implications for digital libraries" topic
+
+  * for one thing, the "margins" of an article - which may be more or less
+   "broad" depending on the freedoms that users are assigned - are usually going
+   to be /stitched together/ in this model (think topology); but the degree of
+   cohesiveness will change from library to library as the "amount of edge"
+   (and the "depth" of the linked-in scholia) changes.
+
+ * treat semantic web & nets, also MUDs
+
+ * make each section clear and concise
+
+  * we should be able to clearly state the goal of each section now!
+
+ * do and describe some experiments
+
+ * re-abstract
+
+ * probably should cite something by or about derrida, too bad all those books
+  are checked out!  (But that says something in and of itself.)
+
+ * do the "literature review" in general soon (I've gotten a ways with that now)
+
+ * work more on part 3!

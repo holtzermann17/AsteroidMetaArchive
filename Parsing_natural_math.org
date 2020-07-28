@@ -1,0 +1,82 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/Since everyone seems so ambitions to write a high level abstract, I thought I might do with one too./
+
+The purpose of this proposal is blatantly obvious – a way to convert human math to something you can use in your favorite c-compiler. The greatest difficulty is mathematical ambiguity, and perhaps somewhat tedious writing of the parsing code.
+
+** Methods
+
+My initial submission via Google included a brief introduction to the concept of encapsulation I intend to use. First of all, I want to build an intermediary parsing method. I do this by quantifying the different mathematical scopes in a given expression. I call the simplest mathematical expression a block. This block is already in a computer friendly language, but different modifiers (not necessarily computer friendly) could be assigned to the entire scope of the block. Two blocks can then be linked into a super block, with a simple mathematical relation, and again a set of scope modifiers could be attached to the super block.  I suggest, therefore first scanning the formula or expression for simple, already computer friendly blocks. Such maybe be
+
+X
+X+1
+Y+(X/Y)
+(etc)
+
+These are variables, or what appear to be variables. While in latex they may be in greek, and so may need ‘recasting’ before use, but generally they are in a simple relationship with each other. I want to note that the obvious simple relationships are + - / and *, along with brackets; but one may also consider the power relationships. The precise definitions aren’t that important at this point.
+
+When these simple blocks have been identified, they are wrapped in such a way, that their encapsulation is a parameter to a set of modifiers.
+
+\in(x) – Simple block x, encapsulating modifier sine.
+\sin(\sqrt(x+1)) –Simple block x+1, encapsulating modifiers square root and sine.
+
+While parsing the expression, you build these single blocks independently. Then, proceed to group them into super blocks. Superblocks have simple (as defined above) relationships with each other. Take for example the following expression:
+
+\int_0^\infty\frac{\sin^2 x}x\;dx
+
+There are two blocks in this example, and both of them are x.
+The numerator has modifiers squared and sin attached to it (in that order), and the denominator is modifier free. Then these blocks are put together in a super block with a computer friendly relationship '/'. The super block has a modifier integral and dx is a parameter of that integral.
+
+** Ambiguities and other problems
+In the example above I’ve purposefully demonstrated what one can perceive as ambiguity in latex – the definitions of modifiers aren’t strict, and many syntaxes display the same result. This isn’t that big if a problem, initially, but it gets a little worse. Consider the example:
+\sin x\cdot y
+
+Here, the mathematical interpretation might be sine of (x times y) or (sine of x) times y. These syntax ambiguities are to be considered, but one will inevitably have to rely on some common notation (y \cdot \sin x can’t be misunderstood). Otherwise, one should keep in mind that LaTeX offers many ways of writing the exact same thing (ex. \frac{1}{2} is \frac12).
+
+After the entire system is grouped, the parsing is complete. I think it could be of a considerable advantage to design a holding format that holds exactly this way of storing mathematical formulae, as it is easily “casted” from here on into any other considerable format such as c-friendly math.
+
+The biggest problem however, is the actual mathematical ambiguity. For a human it’s resolved by context, and since we can’t be parsing contexts the only solution is for a human to define a context in an interactive manner during the parsing process.
+
+A mathematical expression may represent a function or an equation. Variables may be variables, but could also be clearly defined constants. So for each unknown it would be prudent to enable the user to specify dependence – does a variable depend on something. And initially I suggest several depending options, such as ‘no’ and ‘yes on this variable here’ or define the variable as a constant.
+
+Since one would probably want to add method generating functionally for a programming language which would scientifically compute an integral or a sum, one should also consider ambiguities of procedural type. Consider the following sum:
+
+\sum_0^x y_i\cdot z
+
+First of all one has to consider the proper way of block grouping, and then the problem of procedural computation. Suppose the primary block is y_i * z, then the practical summation would have to include x mathematically unjustifiable multiplications with z. However, if the primary block would be \sum_0^x y, there is a possibility of poor conditioning at the machine precision level. The solution to such an ambiguity is a user defined sequence and a default parsing sequence. I find it alarmingly easy to find such scenarios – however, most of them seem to be related to problems with indexing, and there might be an elegant solution.
+
+** The Implementation
+To continue, a word on the implementation itself. I’m mostly skilled in C# programming language and I think it’s more than adequate to complete the task, so I’ll go ahead and suggest it. The front-end could be made with gtk#, and work fine in gnome, requiring only the mono library to run. It should have options to import latex files, scan these files for mathematics and allow user to parse, store and export the generated code as per projects specification.
+** Time Schedule
+Since I have exams up to the end of May, I want to start working in June. Initially I want to write a format specification document, with details the methods used and sound logical reasoning for choices made. I feel that this is the most important part of the work process, and is an unavoidable element in this particular case – after all, we are trying to transform an abstract human thought. Despite its importance, I don’t think that this document would take too much time to compile. But if done right, it might take up to two-three weeks. I would then continue to write a prototype, which would hopefully be fully functional by midsummer. I then plan to rewrite the prototype and arrange it neatly into dll’s and a flash GUI, which could take at most two weeks. The last month, I want to spend finalizing the product – adding whichever extensions and export formats my mentors see fit – including h-code and scientific computing libraries which help make the parsed code readily useful.
+
+** Diskussó
+Hello, Leno. I am a big fan of Sweden. Love the place, especially your "Kroner". And Per Jorner is great on the subject of dragons, coffee, science fiction...
+
+[http://user.tninet.se/~wcw454p/drak1.html Per Jorner Dragon Collection, Page 1, Annotated with drolleries]
+
+Also, I am a big fan of Dick Grune of the Netherlands, which is
+perhaps not so far away from you. His book on parsing is the most
+definitive *free* book on parsing I have seen. Definitely have a
+look because the "naive" approach will likely bog down in real
+world math when the "combinatorial explosion" of possibilities
+turns an algorithm into a programmer's coffin.
+
+[http://www.cs.vu.nl/%7Edick/PTAPG.html Parsing Techniques - A Practical Guide]
+
+--[[file:ocat.org][ocat]] 10-May-2006
+-----
+
+Those are some dragons! O_O
+
+I'm reading that book now, it's very enlightening I find. It illustrates the concepts of actual parsing - the realisation of element significance and value. I'm not sure what you are reffering to as the "naive" approach, but I've forgone this problem in my explanation, as its implimination would obviously be required. The book however, illustrates examples of ambiguity resolve, and defines means to compute and process actuall parsing. On a related topic, I'm going to consider exploring a diffenent parsing approach, which would in part rely on work already done by the !LaTeX group.
+
+The goal of this proposal is to make a practically useful tool, which utilizes parsing of LaTeX code. So there are actually three elements: parsing, storing mathematical expressions and reformatting the stored expressions for use in a programming language / and or h-code.
+
+Also, I've just read Shaneal's proposal, and it seems his work would also benefit from such a parsing tool.
+
+Thanks for pointing me in the right direction, ocat.
+:)
+
+--[Leno] 11-May-2006

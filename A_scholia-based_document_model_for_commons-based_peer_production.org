@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Submitted. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 23:34:07 2005 UTC
+----
+*  Document Metadata
+
+Primary Author: [[file:Joseph A. Corneli.org][Joseph A. Corneli]]
+
+** Document Abstract
+
+Commons-based peer production is a term that describes authorship of shared
+information resources. It is a term that could apply to several people working
+on a paper together, hundreds of people developing a complicated computer
+program, thousands of people writing Wikipedia, or millions of people producing
+and improving complex knowledge systems with impressive names like "modern
+science" (or even "the state of human knowledge").
+
+Without hoping to explain the complex and varied social phenomena that go on in
+commons-based peer production, in this paper we pursue the more modest goal of
+understanding the technical aspects of writing-in-common. We begin with a simple
+model: that of text and commentary -- and commentary on that commentary -- and
+so on.  This scholia-based model emphasizes /ownership of speech/ and
+/freedom of speech/. We then consider what happens when the /freedom to
+create derivative versions/ is added to the mix. The resulting model proves to
+be quite sophisticated, and flexible enough to describe many different
+commons-based peer production systems.
+
+We provide an overview of our implementation of this model and describe several
+popular existing systems in terms of the model. We discuss further experiments
+with the model, and based on these investigations, suggest certain deployment
+strategies which seem to offer some advantages over other commons-based peer
+production systems. Finally, we investigate the implications our model has for
+distributed authorship and writing-partly-in-common.
+
+**  Program Insert
+
+We describe a contemporary hypertext model, with classical roots, designed to
+balance the interests of subjectivity and freedom of speech with the interests
+of intersubjectivity and the growth of human knowledge. This presentation will
+be of interest to document creators and persons seeking to add value to existing
+texts.
+
+* Discussion
+
+Please add discussion pages to the main [[file:scholium system.org][scholium system]] page.
+
+----
+[[file:Emory Free Culture and the DL Symposium.org][Emory Free Culture and the DL Symposium]] / [[file:scholium system.org][scholium system]]

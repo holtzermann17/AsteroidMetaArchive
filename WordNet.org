@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A network of words, interestingly enough.
+
+See http://wordnet.princeton.edu/. 
+([http://wordnet.princeton.edu/license WordNet is free software.])
+It is [http://wordnet.princeton.edu/doc documented online]
+and with [http://mitpress.mit.edu/catalog/item/default.asp?ttype=2&tid=8106 a book].
+
+It has various interfaces and so on.  (I think it would be cool to write
+an interactive browsing interface for [[file:Arxana.org][Arxana]].)
+
+--[[file:jcorneli.org][jcorneli]]

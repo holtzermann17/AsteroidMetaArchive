@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page will contain links to posters that one can download or purchase or order in the mail. The posters should reflect (positively!) on the contents of PlanetMath and be exciting enough and accurate enough to be hanged on the walls of mathematics departments and other venues around the globe.
+
+** The Posters
+
+ * Theme: PlanetMath and Number Theory. Author: [[file:alozano.org][alozano]]. Can be found at: http://www.colby.edu/personal/a/alozano/PlanetMath/PMposter.pdf 
+
+
+----
+* Comments
+
+That's a nice looking poster.  I like the fact that it includes hyperlinks (it would be cool if the hyperlinks actually worked in the PDF file!).  Another idea that occured to me would be to make a "map" of PM like the
+famous "Map of the Internet" poster you can buy at thinkgeek, with a few of entries like this one as featured nodes.  (The nodes would have a special color and a line pointing from them to their text.)  Some other lines could be drawn from the periferal graphics to the entries that they appear in.
+http://www.graphviz.org/ and  http://www.graphviz.org/Gallery/undirected/softmaint.html might serve as some inspirations.--[[file:jcorneli.org][jcorneli]]
+
+: I have tried to do a graphviz rendering of PlanetMath, back when it didn't
+even have 3000 entries, and it failed.  The famous "Map of the Internet" was
+done with a different tool, which better handles huge graphs. If someone could
+find this tool and learn to work with it, I could provide the input from the
+PlanetMath database. --[[file:akrowne.org][akrowne]] Thu Mar 3 20:45:34 UTC 2005
+
+:: That sounds good in terms of the poster thing -- but I also think it would be
+/great/ to have a graph of the "network neighborhood" available for each node.
+Posters for presentations and advertising are fine and dandy... but I think a
+3-level (n-level) listing of the articles nearby any given article would also be
+highly utilitarian.  Maybe the same graphing tool could be used, or we could
+generate a plaintext hierarchy. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 05:16:07 2005 UTC
+
+: I have no idea how to make the hyperlinks work in the pdf. Maybe, if I owned
+adobe acrobat (full version) I could do it. Also, I just copied the image from
+PlanetMath, as a "jpg" (which already did not have links) and pasted it into a
+Word .Doc, and then made it into a pdf. I hate myself for using MSWord but I did
+not have any other choice, believe me :D.--[[file:alozano.org][alozano]]

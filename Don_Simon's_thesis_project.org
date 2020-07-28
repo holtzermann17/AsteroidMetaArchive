@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The code and thesis are [http://www.ma.utexas.edu/~jcorneli/b/Simon/ on my webpage].
+The effort was focused on one book whereas HDM is supposed to do all
+(math) books, but still, the research shows the basic style of work,
+with interplay between several different modules.  The code is some
+old dialect of lisp (mixed with prolog) that would probabyl be hard to revive.  The thesis is worth
+reading. --[[file:jcorneli.org][jcorneli]]

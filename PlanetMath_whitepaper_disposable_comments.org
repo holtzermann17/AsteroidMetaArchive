@@ -1,0 +1,247 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Hello Aaron,
+
+I read your comments concerning the "whitepaper"
+and I applaud you. Outstanding!!!
+
+There are several interesting events/trends
+happening that relate to your efforts at PM.
+
+The State of the Union speech contained 
+references to the need to develop math and
+science in the U.S.
+
+http://www.news-journalonline.com/NewsJournalOnline/Opinion/Editorials/opnOPN43021106.htm
+
+But at the same time, the prez' new budget
+cuts funds for education, and the interest
+rates for student loans will be rising -- 
+higher even than the interest rate on a
+30 year treasury note!!! Makes no sense...
+
+And students in the U.S. are often burdened
+by impossible amounts of debt upon graduation:
+
+http://www.msnbc.msn.com/id/11238227/
+
+...yet tragically, fail to find employment in
+their field. Anything less than a PhD may not
+be of much use to an American if the same
+knowledge/skillset is available in India or
+China for 1/10th the price! Our corporations
+are global and mobile but our labor force
+is trapped behind the new iron curtain of the
+border and visa/work-permit requirements!
+
+In the long run there may need to be cheaper
+and better alternatives to high priced
+university degrees that lead nowhere except
+bankruptcy court. Perhaps something like
+courses where the students show up on Day 1
+and receive a copy of the syllabus. Then
+they come to class at the end of the term
+and take the final. In between the syllabus
+and the final there would need to be some
+sort of community of student scholars...
+
+Which does not solve the problem of U.S.
+jobs during the ongoing global labor arbitrage
+and currency wars...But staying ignorant is
+not a viable option even if the money doesn't
+appear right away. People will need to take
+responsibility for their own education even
+if "the State" has officially abandoned them. In 
+fact, waiting until university is probably a 
+mistake, a big mistake, given the state of
+public education in America (shudder!)
+
+In addition to "community", I think that
+software supporting these activities is
+crucial. For example, automated validation of 
+work is extremely helpful; we do not need
+a professor to check a Metamath proof for
+correctness -- we have the Proof Verifier,
+and no one cares how the proof was developed
+or whether the proof developer is a member
+of the mathematical priesthood. Right? So
+computer validation can legitimize input
+data just as a language compiler legitimizes
+source code. 
+
+--[[file:ocat.org][ocat]] 11-Feb-2006
+
+I agree that proof veryfing software is very
+important for Free Math. Peer review as means
+of quality assurance does not work well for Free 
+Math due to its high cost. 
+
+Wikipedia works around 
+this by allowing correction to be made very easily.
+In addition, if nobody doesn't do anything after 
+a correction is made, the correction is accepted 
+(note that this is opposite to PM's model).
+However, while this works well for definitions 
+and facts, it does not work as well for proofs.
+
+Formalizing all of PM is not feasible, but I 
+believe many entries on PM would be better if
+they were based on existing formalizations instead
+of textbooks of varying quality. 
+
+--[[file:slawekk.org][slawekk]]
+
+The problem of automated validation of work is
+interesting, technically. A hard problem. I view
+it as a superset of proof verification that 
+includes syntactical analysis (grammar) as well
+as ontologies (as with the Semantic Web languages).
+
+The challenges are compounded by the fact that
+math and the notations need to be open ended,
+with the possibility of relating different
+entities in new ways. 
+
+Aaron's desire to provide Planet Math in different
+languages provides a motivation to break out the
+problem using ontologies and digitial library sciences.
+It is said that math is a universal language, and
+so the standard mathematical symbols provide a
+conceptual starting point. 
+
+Formalizing  *everything* -- potentially -- is
+a megaton of work, and beyond what I have time to even
+contemplate. I do think it is a worthwhile goal
+and one that is potentially doable given massive
+distribution of the work within a well grounded
+and organized effort with guidance from genius-level
+experts in several different fields (otherwise it would be
+possible to spend years before discovering the fatal 
+errors necessitating a complete do-over, and even
+then fail to hit the goal.)
+
+--[[file:ocat.org][ocat]]
+
+Here is something to look at:
+
+http://www.accelerating.org/roadmapping.html
+
+and an example:
+
+http://www.accelerating.org/metaverse.html
+
+
+which I found at:
+
+http://accelerating.org/articles/phevfuture.html
+
+"A roadmap is a structured document that includes some graphical representation of a plan to reach a future goal. Roadmaps differ from forecasts and strategic plans in the following three essential criteria: 1) they emerge in a collaboration network of multidisciplinary and competing experts, 2) they emphasize uncertainties and challenges as much as probable and preferred futures, and 3) they have long-term time horizons (commonly 2 to 10 years, even 15 or 20 years on occasion) by comparison to traditional forecasts and plans."
+--[[file:ocat.org][ocat]] 11-Feb-2006
+
+Ocat,
+
+Thanks for the kind words.
+
+I could not get excited about the president's claims to be committed
+to math and science education because, as you point out, he was simply
+being duplicitous.  He giveth with one hand and taketh with the other. 
+He is unwilling to make the tough cuts to eliminate truly-unneeded wastes 
+of public money in order to invest a reasonable amount in education and
+research.
+
+But this president and this administration's budget and priorities are
+a red herring.  If things are better next year in terms of public funding,
+there is no guarantee they will continue for the year after, or more than a
+few years, or across multiple administrations.
+
+My point is that political whim is a very poor basis for math and science 
+"infrastructure" (research and education).   I could go off on a long tirade
+about the grave error science has committed by allowing itself to become 
+mostly an extension of government and the military-industrial complex, but
+I think I'd be preaching to the choir here.  
+
+In sum, we should find other ways to support our effort (as we are), and we
+should not assume that the state will snap its fingers anytime soon and
+transform universities into a mecca of deep learning and profound scholarship.
+So I think there will continue to be a large, latent "market" for cheap (free)
+mathematical scholarship.  
+
+I think the roadmap idea is a good one.  I think the implicit goal in the
+whitepaper is to develop a roadmap for the PlanetMath of the future.
+
+--[[file:akrowne.org][akrowne]] Mon Feb 13 01:16:15 UTC 2006
+
+The situation will get much worse before it gets better
+with respect to the market in the U.S. Check this out:
+
+-----
+
+Nuking the Economy
+
+February 11/12, 2006
+
+By PAUL CRAIG ROBERTS
+
+http://www.counterpunch.org/roberts02112006.html
+
+-----
+
+There are a lot of specific implications, but the general outlook
+is not good for college educated Americans looking for work
+in their field. 
+
+But this should be viewed as an Opportunity for Achievement...
+
+--[[file:ocat.org][ocat]]
+
+P.S. There are many on-going collaborative efforts in
+the field of mathematics. A noteworthy collective is
+the "Infinite Cats" project:
+
+[http://mfrost.typepad.com/cute_overload/images/mike_f_cheesedoodle.jpg Infinite Cats Project]
+
+----
+
+Slawekk & Ocat: I think some of your comments on free math
+and formal math are somewhat pessimistic!  You may say, no,
+they are simply realistic.  But before we argue about it,
+let me point out the specific comments I have in mind.
+Then I think maybe we can clarify the terms and perhaps
+avoid any major argument entirely (that would be nice!).
+
+ * /Peer review as means of quality assurance does not work well for Free
+Math due to its high cost./
+
+ * /Formalizing *everything* [...] is a worthwhile goal and one that
+is potentially doable given massive distribution of the work within a
+well grounded and organized effort with guidance from genius-level
+experts in several different fields (otherwise it would be possible to
+spend years before discovering the fatal errors necessitating a
+complete do-over, and even then fail to hit the goal.)/
+
+First.  I think that the specific form of peer review used on
+!PlanetMath is actually very inexpensive.  Everyone contributes
+exactly what they care to.  The "cost" is thus purely a time cost,
+since the effort is contributed by volunteers, who /want/ to be
+doing peer review.
+
+The introduction of a formal math "peer" would certainly change the
+workload for human contributors.  But I don't necessarily see it as
+reducing the "cost".  What might be more likely is that the
+effectiveness (per unit cost) would be increased.
+
+Second.  I don't think we necessarily need to bring out the giant guns
+you mention here, Ocat.  I think a few dedicated individuals with
+sub-expert-level knowledge may be able to make a big enough
+first-order impact to allow for a relatively small second-string team
+to fill in the details.  But one should also bear in mind that the
+effort is /already/ distributed.  The team, whether it be a "few
+dedicated individuals" or "genius-level experts", can draw on many
+loosely-related efforts.  Thus, we may have "shoulder of giants"
+effect combined with a large-scale pyramid scheme.  
+
+So, I am optimistic about the feasibility of this goal, even
+without really big guns (or even lots of small ones).
+
+--[[file:jcorneli.org][jcorneli]]

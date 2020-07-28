@@ -1,0 +1,88 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+This page contains a list of major architectural problems in Noosphere, challenges faced in this domain (largely learned from the PlanetMath experience), and some suggestions for how to proceed in addressing them.  This is needed because Noosphere is growing unwieldy and performance/reliability is suffering. 
+
+This situation is mostly a result of the fact that Noosphere wasn't as much designed as "formed by accretion", since continuous interactions with the user community revealed more and more of what functionality was needed.  Now that most of the core functionality of Noosphere is known, we think it is time to start from scratch with an elegant, efficient, clean, extensible, and maintainable design.
+
+* The List
+
+Below is the list, split into sub-sections.
+
+** Backups and Historical Data
+
+Need a unified backup process and more elegant revision control system.
+
+** Authentication
+
+Need better handling of authentication for the Noosphere application-layer functions.  Currently authentication is hardcoded into the handler for each function (cgi 'op' variable).  A cleaner system to declare Noosphere userland operations and which users can exercise them would be nice.
+
+** Object-Orientation and Persistence of Data
+
+Need object-orentation and bundling of data, and transparent database persistence.  Current situation, with stitching together data from tables, is a mess.
+
+** Abstraction for Customization
+
+Need better abstraction of deployed instance specifics from sample configuration and interface layout.
+
+** Improved Configuration
+
+Need cleaner, more unified configuration, that isn't tightly bound with the code.  People shouldn't have to touch code unless they are hacking it.
+
+** Improved Installation Process
+
+Need nicer install process, even without Debian or Fedora packages.  Deployment will also be aided by the previous item, however, some basics needed to get the system running uncustomized could be integrated with the installation procedure (i.e., prompts for disk and web paths).
+
+** Fewer Dependencies
+
+Fewer Noosphere system dependencies.  /Note: this is a low priority item, contingent on how easy the installation process can be made.  However, some dependencies, such as vim, are just silly./
+
+** Access Control
+
+Need to better construct the access control system so that people can't do paradoxical things like make public objects unreadable (this is related to the "authentication" item, but is a bit more primary, as it establishes some of rules that manifest in 'op' behaviors).
+
+** Better Debugging
+
+Need a better debug mode for Noosphere.  $DEBUG and dwarn are stupid, because if you turn on a "debug mode", then you get too much garbage in the log.  Generally, you want to isolate something when you are debugging.  Maybe this should just be removed entirely, in favor of inserting "warns" on a case-by-case basis.
+
+** Better Testing
+
+Need some way to methodically (and automatically) test the system after changes.  Can we have automated clients hit some URLs?  Can we express functionality as state machines, pass some dummy data around, and see if it breaks?  How could we define all this without adding a crippling amount of development overhead?
+
+** Interface and I/O Architecture
+
+Greatly abstract the handling of I/O in the Noosphere interface, so that expressing functionality is much more concise, and adding new functionality is less laborious.  Can this still be done using XSL?
+
+[/How about the NevowFramework?/]
+
+** Notification and Universal Object Properties
+
+Need a unified, abstract interface and implementation of watches, notification, and discussions attached to objects.  A lot of this would probably come "for free" with object-orienting much of the data.
+
+: I think much of this can be provided by using ObjectAdaptation.  I've started a list of example NoösphereProtocols. --[[file:logan.org][logan]]
+
+** Object Transformations
+
+Need a framework for allowing those who have authority to transform certain objects into certain others, via predefined mappings (for instance, requests to messages, messages to corrections, etc)
+
+[/This sounds like ObjectAdaptation./]
+
+** Visibility Handling
+
+I think we need a way to express in what contexts objects are visible. For example, if we want to "sideline" objects, we'd want to make them non-visible in the encyclopedia indices, non-visible to the auto-linking system, but visible in the "penalty box".  Another example: currently messages for private projects are not globally visible purely by virtue of a hackish "visible" flag in the database.  Yet another example: it'd be great if there was a systemic handling of what objects should and shouldn't appear in the encyclopedia index, in specific, attached examples and results probably shouldn't be in the index, as they just clutter it.
+
+Maybe all of this just amounts to a more intelligent handling of attachments.
+
+** Generalized Discussions
+
+Discussions could be generalized a bit and made even more powerful.  An example of something I really think Noosphere needs, which has come out of recent discussions on PlanetMath (ironically), is an /editorial/ discussion area for each object.  However, this discussion area shouldn't behave the same as the "main" (or content) discussion area.  One difference is that it shouldn't be visible at first.  Thus, discussions need some property to determine how they will be treated for the various kinds of objects they are connected to. 
+
+----
+* Discussion
+
+For several additional ideas that might be worth including here (or discussing and ruling out there), see [[file:the relative merits of wiki and other workflow management media.org][the relative merits of wiki and other workflow management media]]! --[[file:jcorneli.org][jcorneli]] Thu Mar 03 04:04:21 2005 UTC
+
+
+Not sure if it deserves its own section, but what about multiple Noosphere instances.  My new approach is to bug SlashCode on how they would handle our situation and see if I can get a response.  It would be nice to work together so we can get a good question posted on their forums.  A similar question was posed with not so clear of a response, http://ask.slashcode.com/article.pl?sid=03/06/10/1543202&tid=4&tid=25.  --[[file:bloftin.org][bloftin]]

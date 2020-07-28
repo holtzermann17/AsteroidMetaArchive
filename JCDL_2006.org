@@ -1,0 +1,46 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* About
+
+PlanetMath.org is "at" the 2006 Joint Conference of Digital Libraries, being held at UNC in Chapel Hill, NC.   The first full day of the conference was June 12th.
+
+I, [[file:akrowne.org][akrowne]], am the only representative of PM at this conference.  I'm not presenting; so its mostly learning at networking for me.   I'm keeping relevant notes on this page.  
+
+I'll be attending the conference until the last full day, June 14th, then, it appears, I'll be driving home in Hurricane/Tropical storm remnants!
+
+* Notes
+
+** Misc Notes/Observations
+
+ * Lots of people are mining/want to mine/doing things with Wikipedia:
+  * Eric Morgan (notre dame) wants to use it to enhance library catalogs.
+  * Gabe Weaver (tufts) studied the accuracy of semantic links in Wikipedia, and found it was very high.  This is analogous to automatic linking in PM.
+  * Olena Medelyan (Waikato) is doing Wikipedia stuff which I don't recall at the moment.
+ * Met Andrew McCallum and David Minmo. They are doing really interesting stuff with clustering in Rexa.  Talked to them about collab with Pitman.  They mentioned that some of Pitman's work (Pitman-Yor Dirichlet priors) is actually the foundation of their clustering stuff (LDA).
+ * Talked to Greg Crane (Tufts) about the Open Content Alliance (OCA) stuff.  He said that he heard at least 900 math works had been scanned in, but wasn't sure when they (or any content) would be made available.  He was fairly sure full and free access would be provided.  I was a little worried after hearing Dan Greenstein mention something about contracts with OCA partners.
+  * He also thinks we should just go ahead with grabbing "thin copyright" math content, like at Cornell's DL.
+  * He mentioned a really cheap, ~$.10/page scanning service, which we might look into to create our own digitized content to work from.
+
+** Things to Follow-up On
+
+ * I talked to [http://www.law.harvard.edu/faculty/directory/facdir.php?id=106 Jonathan Zittrain] about infringement injection, safe-harboring, and a contributor pact.  He agrees there are serious issues here.  He said he'll write (or have written) a legal brief for us if we follow-up.  
+ * I spoke with Chris Jordan from Dhalousie (he's a computer science PhD student).  He knows Robert Milson and Jonathan Borwein.  I got him interested in PM internships/mentorships, and he recommended continuing to speak with Dr. Borwein about working together.   So, we should follow up with both.
+ * Olena Medelyan thinks that summarization methods could be useful in bi-directional synchronization.   Send her an inquiry about this later.
+ * Look into LDA clustering.  Send McCallum stuff on NMF and our work with it on MetaCombine (this is not PlanetMath.org per se).
+ * Email Dan Greenstein or some other OCA people on getting access to math OCA scanned works (for now, at least to find out when).
+ * Follow up with Greg Crane to find out about low-cost scanning service.
+
+----
+
+* Discussion
+
+Sounds like good stuff all around.  It reminds me, we probably
+should have 'blogged' (or 'wikied'?) more of the stuff from the
+First Monday conference.  Since the three of us were there in
+person it probably didn't come to mind so easily.  Anyway, when I
+get around to typing up my notes from that (assuming I can still
+find them) I'll put them on the wiki.  There are still a number
+of things we ought to follow up on from that trip.
+
+--[[file:jcorneli.org][jcorneli]]

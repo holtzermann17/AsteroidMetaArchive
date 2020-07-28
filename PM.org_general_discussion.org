@@ -1,0 +1,238 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Discussion
+
+This page is for general discussion about the PlanetMath nonprofit org.
+
+** Tax-Exempt Status and Unrelated Business Income
+
+So now that it looks pretty certain that PlanetMath.org, Ltd. will be granted 
+tax-exempt 501(c)3 status, we have a new thorny issue to grapple with: unrelated 
+business income (UBI).  UBI covers business activities of tax-exempt nonprofits
+which are not themselves exempt from taxation.  Why do we care?  Because the
+org's premier fundraising vehicle, Google AdSense Ads, would presumably be 
+considered UBI.  So, first of all, we'd have to pay taxes on them.  No major
+problem yet.  But...
+
+The real problem is that there is a limit to how much UBI a tax-exempt nonprofit
+can have.  And it gets worse: this limit is only *softly* defined.  Our agent
+told me that 10% of total revenue was a good rule, and that 30% would raise red flags.
+Of course, whether there is any automated check on these numbers is an unanswered
+question. 
+
+(Can you say "vague and complex tax laws increase transaction costs for doing business"?)
+
+And things get even worse: if we are to pursue referral fees from bibliographies,
+then this income would also be part of UBI.
+
+As it stands, the ads are already over 50% of income, not counting largest individual
+donation, which we can't expect to be repeated.  So, something will have to be done 
+to adjust this situation for the first tax year we have tax-exempt status.  
+
+Some ideas:
+
+ 1. discontinue the ads immediately after the 501(c)3 status is granted
+ 1. hold off on referral promotions
+ 1. be more aggressive about getting private funding from individuals
+ 1. be more aggressive about getting grant funding
+ 1. be more aggressive about getting corporate sponsorships (now that we know
+hyperlinks are OK in a non-business context).
+ 1. try to get some partnership arrangements going (for example, links from Wikipedia's
+funding drive "thank you" page).
+
+We can actually do all of these at the same time, but I'd like to leave out #s 1 and 2,
+as every little bit counts.  We'll probably be OK if we can raise 4-9 times ad
+and referral fee revenue.  
+
+Some useful references:
+
+ * [http://www.irs.gov/charities/article/0,,id=96104,00.html IRS page on UBI]
+ * [http://www.nationalgeographic.com/donate/ The National Geographic Society] - they 
+presumably have a ton of ad revenue.  What percentage is it of total income?
+
+Some points:
+
+ * Perhaps we could use this issue as an impetus to get people to donate.  It gets us closer
+to having a specific dollar threshold we must meet, which we could run funding drives for.
+ * Tax-exempt status lets donors write-off their contributions... will this accelerate our
+fundraising appreciably?
+ * Is ad revenue really /unrelated/ business income if the ads are targeted?  Our ads are
+largely about mathematics (educational and software programs, and the like).  Doesn't this 
+support the goal of "making mathematical knowledge more accessible"?  If we could argue this
+successfully to the IRS, there is no limit to our ad or referral income, as long as they
+were sufficiently targeted.
+
+Comments? 
+--[[file:akrowne.org][akrowne]] Sun Apr 17 00:19:12 UTC 2005
+
+I think we really need to think more about [[file:PlanetMath Membership.org][PlanetMath Membership]] and about
+funding figures & strategies, in general.  Perhaps making ads/referrals "opt in"
+or "opt out" would help make them OK for taxation, but I sort of doubt it.  I
+definitely would hold off on adding referral stuff until you've checked about
+it, specifically, with the IRS, as it sounds like it would be pushing the limit
+on what sort of linking is allowed (independent of the issue of how much money
+it might bring in).
+
+Even though the Google ads seem to provide "free money" to the site, they do
+have a certain annoyingness factor whether or not they are a tax problem.  Maybe
+we should design the budget so that if PM takes in more than such-and-such an
+amount of money from other sources, we will pull the ads, regardless of how much
+they are bringing in.  In order to do this, what we really need to do is sketch
+out some projected budgets.  (Purchase bundles will be different, depending on
+how much income the nonprofit gets, and maybe, from where the income is gotten.)
+--[[file:jcorneli.org][jcorneli]] Sun Apr 17 21:50:08 2005 UTC
+
+** Employees and Volunteers
+We really need a better sense of the tasks that we currently face in PM
+development.  We can assume that there is a fairly long list of bugs and an even
+longer list of feature requests.  Then there are a lot of projects, of various
+sizes, that will require some research, thought, or discussion before they can
+be implemented properly.
+
+We also need to understand better how we are going to address these lists of
+tasks.
+
+Money typically does not fall from the sky, so if we are to get money, we would
+either have to receive contributions or be awarded a grant.  Drumming up
+financial support of this nature takes work, and until further notice, is just
+another volunteer task.  Contributed volunteer effort is given naturally to a
+project like PM, but coordination of volunteer effort takes special work (and,
+again, requires a volunteer at this point in time).
+
+At this point, we can't do much of anything without relying on volunteer effort.
+In terms of the strategy for getting things on our list done, we should try to
+understand what we could do if we had paid hackers, or grant writers, or
+researchers, or volunteer coordinators, and what sort of effort should be put
+into creating these paid opportunities.  It is also essential to understand our
+volunteer staff and its capabilities, and to figure out where we can go in the 
+short run when volunteers are all we've got. --[[file:jcorneli.org][jcorneli]] Fri Feb  4 01:37:17 2005
+
+** Students
+
+It would be good to involve students (either undergraduate or graduate) in some
+of the research components of PM and Free Math more generally .  They get to do
+something useful, often with financial support, and we get no-cost contributions
+of effort. --[[file:jcorneli.org][jcorneli]] Fri Feb 4 01:37:30 2005
+
+: I have made a number of attempts to try to get some of Ed Fox's students to
+sign up for PM and Noosphere-based projects.  Ed has encouraged this, but we
+have simply been unlucky here.  --[[file:akrowne.org][akrowne]] Thu Feb 17 16:27:57 UTC 2005
+
+: We should try to widen the net / cast into other waters. --[[file:jcorneli.org][jcorneli]] Fri
+Feb 18 00:16:22 UTC 2005
+
+/Aaron - a discussion of that experiment with Noosphere as a class resource
+could go here. --[[file:jcorneli.org][jcorneli]] Sat Feb 26 22:14:24 2005 UTC/
+
+** Template for other projects
+
+PM is probably the most well-established project on our list (certainly true if
+we look at the business end of things).  But other independent projects may be
+able to use this page as a template, once it is more fleshed out. --[[file:jcorneli.org][jcorneli]]
+Sat Feb 5 12:41:59 2005
+
+** Question about Bylaws
+
+Cool.  Just to double check -- when it says "no part of the income of the
+corporation shall be distributed to its members, directors or officers" it
+doesn't mean "revenue", does it?  I assume that if it meant revenue, it would
+say revenue.  But there's nothing in there that would prevent PM from having
+paid employees, is there? --[[file:jcorneli.org][jcorneli]] Sun Feb 20 22:48:18 2005 UTC
+
+Firstly, I think "distribution" is a technical term in the context of a
+corporation that applies specifically to /dividends/, which we don't have, as
+a nonprofit, nonstock corporation.  Further, "income" is reasonably defined as
+"revenue minus expenses".  Expenses would include paid employees, which could be
+the officers.  But under this definition, "income" is free cash which should
+(for a nonprofit) be used purely for improvements and expansion.  So, all the
+bylaws are saying is that "extra" money earned by the corporation can't simply
+be given away to the members or officers.  Makes sense.  --[[file:akrowne.org][akrowne]] Sun Feb
+20 23:45:30 UTC 2005
+
+
+** Google ads and user contributions
+
+A long thread about [[file:sources of funding for PM.org][sources of funding for PM]].
+
+** Membership
+
+Here is a page discussing all aspects of [[file:PlanetMath Membership.org][PlanetMath Membership]].
+
+** How to Go About Fundraising
+
+In many places, we have discussed noncommercial fundraising ideas (membership, FEM 
+book sales, commission work, etc.).   However, unlike more "commercial" types of fundraising
+(ads, referrals, etc.), these methods don't really "sell themselves".  Basically, some sort
+of special /marketing/ is required to make them work.  We will have to think about how to go 
+about this.  
+
+One idea is to use a natural resource we already have: email addresses of lots of
+people interested in PlanetMath.  We get one of these every time someone registers, and
+have about 10,000 of them.   The issue is of course the classic one; the balance between
+getting the word out and spamming.   Luckily, as [http://it.slashdot.org/article.pl?sid=05/04/11/0157208&tid=111 PEW has discovered recently],
+people are relaxing a bit about unsolicited mail, and these messages would be especially 
+well targeted...
+
+But we should also kick around ideas for mailing lists and other internet venues for 
+promotion.   Maybe we should even think about outsourcing this work to someone who can
+do it more efficiently (is there any such entity for our area of interest??)  At any rate,
+we should have a specific plan of attack for every promotion we run and funding avenue
+we provide.
+
+--[[file:akrowne.org][akrowne]] Mon Apr 18 05:14:00 UTC 2005
+
+Marketing is hard.  It is hard to even advertise AsteroidMeta on PlanetMath,
+where you might think that a lot of people would be interested.  Similarly, one
+might think that [[file:HDM.org][HDM]] would be something every mathematician would want to
+chip in, say, $5, on - just to see whether anything interesting would happen.
+And maybe that's even true, but I think it would take a lot of coaxing.
+
+In terms of using PM's list of known email addresses, one problem that comes to
+mind is that I suspect that we don't really know how many of these email
+addresses correspond to active readers, nor how many active readers there are
+who aren't registered.  If we were going to write email to these 10,000 people,
+we'd damn well better have something good to say to them.  Maybe we could offer
+the FEM for sale when it is released, perhaps together with a membership; I
+don't know.
+
+As for "general advertising", two ideas occur to me: first, establish
+relationships with MAA and AMS, then they might do some advertising for us for
+free (at least word of mouth); second, do some press releases and try to get the
+word out about our project with people like NPR and others (and submit articles
+to Journal of Higher Education, etc.; [[file:alozano.org][alozano]]'s coming article is an example
+of this sort of thing).  I'd assume that Wikipedia has done some PR, so we could
+try to look at what they've done for a source of examples.
+
+As I've said about HDM, I do get tired of talking endlessly /about/ the
+project, and would like to spend more time just /working/ on the project.
+Sometimes its possible to combine the two, e.g., if you go to talk to someone
+new about your work to ask them questions about something they know about.
+Thus, office visits or even conference participation (in any of the subject
+areas that relates to what PM is doing - CS, math, education, libraries, online
+culture, etc.) may be a way to spread the word while also getting tangible
+things accomplished.  
+
+Talking to people locally (e.g. people in the math department at Emory) might
+help.  It would be important to think about what you'd have to offer them.
+Maybe you could offer to set up Noosphere systems for use in various classes
+(like the rmilson experiment), and see what they say.  If they got enthusiastic,
+it could lead to future grant support.  I don't really know how the
+PlanetComputing project is coming along, but it is at least a /potential/
+example of how connections like this can grow.
+
+In general, it seems important to have something to offer.  Asking for
+non-specific donations is basically like asking people to fund something they
+already get at no cost.  We can probably figure out ways to make a better
+"trade" available.
+--[[file:jcorneli.org][jcorneli]] Mon Apr 18 07:23:35 2005 UTC
+
+** Organizational Structure
+
+During the last week or two, there have been various discussions of how the organization might be structured.  Based on these disdcussions and much reading I have been doing on the subject of corporate structure, here is a sketch of one possibility. --[[file:rspuzio.org][rspuzio]]
+
+[[file:Sketch of a Possible Organizational Structure.org][Sketch of a Possible Organizational Structure]]
+
+
+
+[[file:References on Non-profit Organizations.org][References on Non-profit Organizations]]

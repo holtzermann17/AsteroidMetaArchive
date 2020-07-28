@@ -1,0 +1,133 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *CBPP* stands for /Commons-based peer production/, a term coined by Yale law professor 
+[http://www.benkler.org Yochai Benkler]  to describe a certain type of economic production. Key aspects of CBPP are summarized below.  A summary definition by Benkler is availabe via [[file:CBPP extract from Benklers Common Wisdom|this internal extract.org][CBPP extract from Benklers Common Wisdom|this internal extract]].
+
+* The break down.
+
+; Commons : This denotes a shared resource.  The archetypal example is a bit of
+  pasture that members of a pastoral community share access to.  Anyone in the
+  community can let their animals eat there.  Other common examples include
+  fisheries or other natural resources that are shared by some group. The
+  so-called "tragedy of the commons" describes the notion that an exhaustible
+  ("exclusive") common resource will always be destroyed or otherwise fouled up
+  by some greedy individual or set of individuals -- in the pasture example,
+  someone will let their animals eat all the grass; in the fishery example,
+  everyone will overfish until all the fish are dead and the fishery resource is
+  gone, or whatever.  The fact that commons do not always wind up tragically
+  shows that there is more going on.  Luckily, as illustrated by a simple model
+  like the iterated prisoners dilemma, it can be to the advantage of rational
+  actors not to overexploit an exhaustible commons, and for each commons and
+  each associated tragedy, social institutions have arisen which work against
+  the tragic forces.  (Tragically, they are not always successful.)
+
+; - : (Which both connects and separates.)
+
+; based : We're really going to focus on the "commons" aspect of whatever it is
+  we're talking about.  I.e., we're not just going to talk about a pastoral
+  community that has a commons, we're going to talk about things that come from
+  the commons -- maybe all the pastureland used by this community is held in
+  common.  One class of examples of things that are commons-based would be "the
+  economies of various small-scale fishing communities."
+
+; peer : A term that describes a member of a group of people who stand in a
+  somewhat egalitarian relationship to one another.  A somewhat stronger term
+  would be "equals" - peer just means "in the same general class."  The term
+  comes up a lot these days in the construct "peer-to-peer", which is usually
+  used to describe interactions between two or more consumer-grade (as opposed
+  to server-grade) computers over the internet, for purposes of sharing
+  information or computation or whatever.
+
+; production : Making stuff!
+
+
+So, putting it all together then. 
+
+We have some sort of shared resource -- which means that it is shared by some
+group of people.  Maybe it is open to anyone who comes along (like outer space)
+or maybe it is the exclusive property of some group (like tribal hunting lands).
+Moreover, use of the commons by members of the "in group" may or may not be
+further regulated (but probably they are).  We're going to look at a mode of
+production that is based in a fundamental way on this common resource.  For
+example, we might be looking at a widget workshop that is shared by several
+people.  But we are further going to constrain things and look at a situation in
+which the producers are a group of peers -- not a situation in which the common
+workshop has an outside manager who comes in and bosses everyone around.  An
+in-house manager who is considered to be a "peer" could be OK: after all,
+everyone has a role to play.  And actually it would be OK if an outside manager
+existed, but this person is not going to be a part of the picture as we consider
+it.
+
+Got it?  That's /commons-based peer production/! (Or "CBPP".)
+
+----
+
+* What commons-based peer production need not be (unless otherwise stated)
+
+ * It need not have anything in particular to do with information- or
+  knowledge-based commodities.
+ * It need not take place over the internet.
+ * It need not be distributed (each person in the workshop may be solely in
+control of their own widget production).
+
+I've read "Coase's Penguin" -- but I wanted to lay this all out there for people
+who are talking about "efficiency of CBPP" and "benefits of CBPP", as as
+motivation for spelling out in detail exactly what assumptions are being made
+about the nature of the peers, the nature of the commons, and the nature of
+production when they say "CBPP".  Some people might not know what is going on if
+you don't
+
+And also, efficiency with respect to what?  Benefits that accrue to whom?  Don't
+leave out these other fundamental issues.
+
+*  Ah, convenience!
+
+Despite the fact that it is not perhaps the world's best usage, on this wiki and
+throughout much of "the literature", people will /use/ "CBPP" to mean commons
+based peer production of knowledge-based commodities -- or put more plainly,
+collaborative writing.  
+
+The most significant word from the amalgam might be "peer" -- because on this
+word, I think even more than on the word "commons", hinges the fact that the
+mode of production in question is not firm-based.  
+
+To return again to a physical model, although different mom-n-pop fishing
+companies might all work the same fishery, the management of the fishery is not
+done in a top-down fashion by a firm.  It might be done by a fishery association
+or cooperative comprised of elected members -- if it is managed by a firm of
+some sort, that firm will very likely rely on community voices for guidance,
+even while it looks out for the interest of its members.
+
+In the "collaborative writing" scenarios described on [[file:AM.org][AM]], the situation is
+similar.  Individual authors make decisions about what to write, how much to
+write, and so forth.  There are some commons-management structures, including
+for example the [[file:PlanetMath.org][PlanetMath]].org nonprofit or the Free Software Foundation,
+but their guidance is fairly "meta".
+
+
+* Links and references
+
+Here is wikipedia's page about CBPP: http://en.wikipedia.org/wiki/Commons-based_peer_production
+(It currently looks like it could use some work!)
+
+Here is /another/ wikipedia page about CBPP: http://en.wikipedia.org/wiki/Commons-Based_Peer_Production
+(This one cites [[file:akrowne.org][akrowne]]'s "FUD Encyclopedia" paper for the definition.)  Get it together wikipedia, use a redirect!  (Maybe we should make an effort to fix these pages and add links to [[file:AM.org][AM]].)  
+
+As noted above and elsewhre, I think the "internet-based" thing is too
+restrictive (see for example
+[[file:A_scholia-based_document_model_for_commons-based_peer_production|the abstract for the SBDM paper.org][A_scholia-based_document_model_for_commons-based_peer_production|the abstract for the SBDM paper]],
+also note this quote from this paper: 
+
+: "By finding new ways to support freedom of speech within CBPP documents, we
+embrace subjectivity as a way to enhance the content of an intersubjectively
+valued corpus.  In the context of "hackable" media and maintenance protocols,
+the semantics with which scholia are handled can be improved upon indefinitely
+on a user-by-user basis and a resource-wide basis.  This is free culture in
+action."
+
+Nevertheless, "internet-based CBPP" is important and is, as Aaron mentioned,
+what most people think of when they think CBPP!
+
+In his [[file:How_Free_Culture_Will_Save_Digital_Libraries|Emory paper.org][How_Free_Culture_Will_Save_Digital_Libraries|Emory paper]], Aaron talks about the close relationship between free culture [http://en.wikipedia.org/wiki/Free_Culture (external: lessig according to wikipedia)], [[file:What is Free Culture|(local discussion).org][What is Free Culture|(local discussion)]] and CBPP.  This is one important part of the picture
+that should be explored more.  Even if [[file:towards a definition of freedom|different notions of freedom.org][towards a definition of freedom|different notions of freedom]] apply to different CBPP entities (e.g. local corporate wikis vs. wikipedia), this link between concepts seems important.  (And what's more the idea jives pretty well with the quote from the scholium paper above - though more can probably be said on this topic.)  --[[file:jcorneli.org][jcorneli]]

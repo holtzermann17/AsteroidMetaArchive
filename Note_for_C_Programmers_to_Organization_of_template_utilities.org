@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The three meta-data fields *Usage*, *Input*, and *Output* taken together present roughly the same information that would be found in a function prototype.  They can be used for roughly the same purposes, such as "lint-checking" routines which use these template utilities to make sure that the functions are fed the correct input.
+
+Back to [[file:Organization of template utilities.org][Organization of template utilities]]

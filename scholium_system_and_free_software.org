@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: /With a platform/ like GNU/Linux, on the community-origin side, or
+Eclipse, on the corporate-sponsored side, everybody can have it their
+way by contributing the module they want most.  Along the way they'll
+note and help fix bugs in the platform.  And because a platform is
+such a broad thing, there are plenty of shallow bugs, and of course
+"plug-in architecture" means most extensions have no more depth than
+the sheet of paper you print the API on.  /But in the case of a
+focused application/, the better it gets, the harder the bugs are,
+and the more satisfied the majority of community users are.  They are
+necessarily going to lose interest in working on a "good-enough"
+project and lag in the competence to do so.  --Stephen J. Turnbull in
+"Free Software Business" mailing list, 30 Nov 2005 (my emphasis)
+
+I thought that this quote was nice, and nicely sketches the
+"advantage" of CBPP for general platforms.  The dichotomy may be a
+little bit strongly stated, but it is an interesting point.  Thoughts,
+anyone? --[[file:jcorneli.org][jcorneli]] Nov 30 2005

@@ -1,0 +1,247 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The idea of this system is inspired in part by the penalty system in soccer.  I
+don't know much about soccer... anyway, this is all subject to revision.
+
+; Cards : cards are considered to be "active" for two weeks after they are
+  issued.  Any member can issue a card, however, the availability of cards is
+  limited by the number of points in the system.  One red card and two white
+  cards are available for every 10000 points, whereas one yellow card and one
+  green card are available for every 4000 points.  Cards are reissued at the
+  start of every week.  Thus, a [[file:PM.org][PM]] member with 40000 points would begin each
+  week with 4 red cards, 8 white cards, and 10 each of green and yellow.  Cards
+  cannot be issued to one's own articles, nor can the same member issue more
+  than one of the same color card to any article within a two week period.  No
+  user can adopt an article that she or he has issued a red, yellow, or white
+  card to for one month after the card has been issued.
+
+; the Bench : a holding area for articles that have incurred a sufficient
+  quantity of red or yellow cards.  Articles on the bench continue to earn
+  cards.
+
+; Best of : an honor roll of articles that have incurred a sufficient quantity
+  of green cards.  Articles on the honor roll continue to earn cards.
+
+; the Queue : new articles must wait here for two weeks before being added to
+  the encyclopedia.  Articles on the queue can not receive cards of any other
+  color but white, nor can they receive corrections.
+
+; White cards : An article needs to be awarded one or more white cards in order
+  to graduate from the Queue to the encyclopedia.  (A white card is in some
+  sense the reverse of a red card, see below.)  Only articles on the Queue can
+  earn white cards.  White cards can be recalled by the person who awarded them,
+  but only while the article to which the card has been awarded is on the queue.
+
+; Green cards : Articles that have been awarded 4 green cards within a period of
+  two weeks will be placed on the "best of" list for 2 weeks.  Rank on this list
+  is determined by total number of green cards current for that entry (otherwise
+  by recency of entry to the list).  Green cards can not be recalled.
+
+; Yellow cards : Yellow cards are similar to green cards, except instead of
+  being placed on the "Best of" list, an article that has accumulated 4 yellow
+  cards within a two week period will be placed on the bench for two weeks,
+  unless the cards are recalled.  Yellow cards can be recalled by the person who
+  awarded them for a two week period after the card was issued.  The effects of
+  a recalled card are all undone when it is recalled.
+
+; Red cards : 
+;; One red card : will result in an immediate benching of that article for two weeks.
+;; A second red card : issued within these two weeks to any other article owned
+    by the same person will result in benching and an extension by additional
+    week the time spent on the bench by any other currently benched articles
+    owned by this person.
+;; A third red card : issued within two weeks from the issuance of the first red
+    card will result in orphaning the article that incured the red card along
+    with any other articles owned by the same person that currently reside on
+    the bench.
+: Red cards can be recalled by the person who awarded them for a two week period
+after the card was issued. The effects of a recalled card are all undone when
+it is recalled.
+
+; Permanent record : A tally of cards earned by each user and each article will
+be kept; in this tally, white counts +1, green counts +5, yellow counts -3 and
+red counts -10.  Cards that have been recalled do not count in this tally;
+changes to the tally take place when the card becomes permanent, not when the
+card is first issued.  A user's tally only concerns cards that have both been
+issued and become permanently attached to an object while that object is owned
+by the user.
+
+----
+* Comments
+
+Maybe articles on the bench should automatically be made world-editable?  That
+seems like a drastic measure... but on the other hand, being on the bench to
+begin with is a drastic measure, and when an article is really crummy, some
+drastic measures may be needed. --[[file:jcorneli.org][jcorneli]] Sat Feb 19 10:43:56 2005 UTC
+
+: But that is probably too drastic.  I changed the policy, so that articles on
+the bench can continue to earn cards.  This means that if three people agree
+that an article is very offensive, it can be quickly orphaned, and if four
+people agree, the article can be quickly deleted.  --[[file:jcorneli.org][jcorneli]] Sun Mar 13 18:55:31 2005 UTC
+
+This is a pretty funny system, but it seems to me it might be a good idea. It
+includes some of the "certification" ideas (=green cards) I brought up some time
+ago and also some more drastic measures against terrible entries (=red cards). I
+like the general idea of it! -alozano.
+
+Note that the way white cards are set up, people with high scores become a sort
+of "review board" -- if they don't exercise this responsibility, the
+encyclopedia would grind to a halt.  Note also that the limitation on the number
+of white cards puts a strict limit on the rate of growth of the encyclopedia --
+the idea being that it shouldn't grow any faster than the review board can
+handle.  The review system could be made less "elitist" by awarding white cards
+along with the green and yellow cards instead of along with the red ones.  I
+chose the more elitist scheme, because I think that accepting an article should
+be a weighty decision -- and it isn't that I think that people with fewer points
+are incapable of making that decision, rather, I think the scarcity of white
+cards needs to be what makes the decision weighty.  Still, more "open"
+moderation schemes exist, e.g. /one/ white card could be available for every
+8000 points, or something like that. --[[file:jcorneli.org][jcorneli]] Mon Feb 28 15:03:53 2005 UTC
+
+: Also, all of the numbers in the system could be adjusted to be in terms of
+"total points in the system" so that future implementations could get off the
+ground from /zero points/ and still have things work.  E.g. it could be that
+the top 5% of all users gets 1 white card for each day of the week, or something
+like that.  But probably it is best to hand-tune the availability of cards,
+because the boundary cases are bound to behave oddly anyway. --[[file:jcorneli.org][jcorneli]] Mon
+Feb 28 15:15:57 2005 UTC
+
+Thanks for adding the white-card idea. I think it is an improvement. Maybe, the
+people with more points should have more responsibility, meaning that they MUST
+review new entries. Maybe each of us could choose a bunch of MSC
+classifications, and when an entry is entered, the entry is assigned to a person
+for review. This person can either (1) review it and give a white card, (2) if
+the person does not feel qualified can pass it to the next qualified reviewer,
+(3) declare that he doesn't want to approve the entry. Of course, any other
+author can jump in and give a white card while this process is going on. In this
+way, earning points give you rights and also responsibilities, as it should
+be. What do you think?. --[[file:alozano.org][alozano]]
+
+: I think that if white cards were required for entry to the encyclopedia and
+white cards are only given to people with high scores, then the responsibility
+you're talking about is automatic, without needing much further structure or
+enforcement. --[[file:jcorneli.org][jcorneli]] Mon Feb 28 16:54:38 2005 UTC
+
+:: Sure, there is a moral responsibility, but not a pressing one. There are not
+that many of us with 100 entries, so in order to keep the website alive we would
+all need more involvement. That is why I think we should be required to review
+entries as they come, or at least we should be reminded of the entries as they
+come in, with an email suggesting a reviewer.--[[file:alozano.org][alozano]]
+
+#+BEGIN_VERSE Well, in this model, any registered user would certainly be able to weigh in
+on the /discussion/ of entries on the queue - and indeed, it might not be
+wholly responsible to grant a white card to an entry of any sort of complexity
+without some discussion.  However, the final decision about whether to grant a
+white card would still lie with the high-scoring individuals.  If these people
+are lazy about it, the encyclopedia will not grow -- and in particular, none of
+the high scorers would get additional articles into the encyclopedia.  We could
+end up in a terrible situation if the high scorers decided only to grant white
+cards to other people with high scores -- but the "democratic" aspect of the
+certification process would deincentivize such behavior -- a perfectly good
+article that was written by a newbie and not given a white card would call into
+question the behavior of those "in power".  I think that the existence of
+features of a "meritocracy" would not do away with or undermine the "democratic"
+nature of the site at all.  It just shifts some of the more weighty issues to
+people who we are fairly confident can behave responsibly (though everyone would
+also recognize that just because one has a high score does not mean one has
+become infallible!) --[[file:jcorneli.org][jcorneli]] Mon Feb 28 20:29:48 2005 UTC
+
+Joe, could you elaborate on this? "No user can adopt an article that she or he
+has issued a red, yellow, or white card to for one month after the card has been
+issued." I am not very sure about this rule. Say I know about topic X and
+somebody writes an entry about topic X, which clearly contains a major
+mistake. I file corrections and the person is not responsive so I issue a red
+card. If nobody else knows about subject X, wouldn't I be the appropriate person
+to adopt the entry? I guess I would have to wait a month for
+this... --[[file:alozano.org][alozano]]
+
+: Yeah, you'd just have to wait a month :).  In the mean time, you are giving
+someone else a chance.  If no one else knows about the subject, you'll have to
+exercise some patience.  The idea behind the wait-a-month rule is that it is
+supposed to prevent people from abusing their power -- without a rule like this,
+someone could use white cards to approve entries, their red cards to orphan
+entries, and then adopt the entries to collect at tidy sum of points (and get
+more cards to use next time).  OK, the example might be sort of extreme and
+silly, but basically the idea here is that I wanted the red and yellow cards to
+be issued by "disinterested" persons -- i.e. people who don't stand to gain
+directly from issuing the cards, but who are doing it for altruistic, and
+basically non-biased, reasons.  Admittedly, there could be some other loopholes
+that this wait-a-month rule doesn't cover -- but I think it quells some of the
+worst possibilities for abuse. --[[file:jcorneli.org][jcorneli]] Mon Feb 28 16:59:41 2005 UTC
+
+:: Got it. I figured that was the idea. I can't agree more, as we both know some
+situations can get tense in planetmath and I wouldn't like to see people
+issueing red cards out of despite. --[[file:alozano.org][alozano]]
+
+Ok, so here is a question for you, Joe, and this is a tricky one. Suppose we
+want to introduce the cards system into planetmath. What do we do with the 4000
+existing entries? Should they all be given a white card?? But of course, there
+are many entries out there and we need to review them. Should all of them be
+reviewed?? Again, there are 4000 entries so this might take a looong time. --
+[[file:alozano.org][alozano]]
+
+: I would say no, just because it would be too time consuming.  White cards
+would just be for new entries.  The current entries have a sort of "first world"
+advantage, I guess ;) -- the international community was not crying out about
+environmental devastation when the forests of North America were cut down.  But
+in fact, the "advantage" is sort of an illusion -- any article in the current
+encyclopedia could be given a red card at any time.  It is worth bearing in mind
+that the card system is not meant to "certify" entries (remember, the cards are
+all temporary), rather, it is just meant to help catalyze the democratic
+peer-review process.  Another way to put it is that the current entries have
+/already/ been given the equivalent of a white card (they are in the
+encyclopedia) -- so they don't need another one (I'm adding a note to the draft
+to say that only articles on the queue can earn white cards :)). --[[file:jcorneli.org][jcorneli]] Mon Feb 28 20:18:28 2005 UTC
+
+:: Wait, but do the green cards disappear after some time? Does the entry itseld
+keep track of how many cards and what colors it has been awarded with? If the
+green cards stay in record (not necessarily active), and anyone can check the
+score of the entry, then this would be a way to certify. --[[file:alozano.org][alozano]]
+
+#+BEGIN_VERSE I've changed the description of the "permanent record" so that it applies to
+articles and people, both.  So an article that had earned a lot of green cards
+would be known to be well reputed -- still sort of like a certification, I
+suppose. --[[file:jcorneli.org][jcorneli]] Sun Mar 13 19:01:51 2005 UTC
+
+#+BEGIN_VERSE Yes, in this model, green cards disappear after two weeks, as do red and
+yellow.  (This means, an article would only stay on the best-of list if it was
+getting an ongoing stream of green cards.)  It certainly would be possible to
+keep track of how many cards a given entry had earned (thus, a user's tally
+would just be the sum of the tally's of her or his entries - not taking into
+account orphaning or adoption).  I don't know if it would be a good idea to save
+this information or not.  I didn't really mean for green cards to be
+"certifications" of the entries, rather, they would just be a little way to say
+"thanks for a job well done."  I'm not really sure what a certification would
+consist of.  People have mentioned things like saying "I've checked this entry
+and I think it is correct" on the forum -- but that isn't what the green cards
+are supposed to be used for.  The green cards are the complement of yellow
+cards: both are designed to highlight certain classes of articles -- yellow
+causes articles in need of improvement to be highlighted, and green causes
+"good" articles to be highlighted.  (It may turn out that the good articles also
+need some improvement, but it would likely be of a fairly different sort.)  If
+you or someone else can explain to me what "certification" really means, maybe
+we can figure out a way to add that into this model.  If keeping track of the
+card tally an article has earned would help people make their minds up in the
+long run, then maybe we should do that --- however, I don't particularly like
+the idea that some article that had been on the bench and was then much improved
+would start out its new life with the "taint" of having been punished before.
+So I sort of think that cumulative tallies for articles should be keep secret.
+(Hence the "temporary" part of the title of this page.)  But I don't know - more
+debate on the issue could make me think about it in a completely different way!
+--[[file:jcorneli.org][jcorneli]] Mon Feb 28 21:39:48 2005 UTC
+
+: Now I have changed my mind -- I would say that the answer is /basically/ yes
+-- existing articles should have to got through the "admittance" process.
+However, we would want to give this more than 2 weeks, because there are a lot
+of articles to get through.  A month might work.  The number of cards available
+in the system would be different from usual, and the queue behavior would be
+different from usual, but still, basically speaking, in my revised opinion,
+existing articles should have to go through the process.  --[[file:jcorneli.org][jcorneli]] Sun Mar
+13 18:59:32 2005 UTC
+
+: OK, I changed my mind /again/ - I think that it is better to just deal with
+offenses among current articles by using red/yellow cards and normal
+corrections.  The net effect will be approximately the same, but the operation
+should be more palatable.  The key thing is to come up with some description of
+the sorts of offenses that can earn an article red or yellow cards. --[[file:jcorneli.org][jcorneli]] Tue Mar 15 19:07:39 2005 UTC

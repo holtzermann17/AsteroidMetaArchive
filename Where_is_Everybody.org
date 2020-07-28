@@ -1,0 +1,121 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+*  Where is everybody?
+
+I am concerned about the lack of community involvement in
+!AsteroidMeta.
+
+For example, you might think that people on the [[file:PlanetMath.org][PlanetMath]] board
+would want to be involved, if not daily, then maybe
+on a once-a-week basis or something like that.  Perhaps we should
+suggest these people could treat it like they might treat the
+Sunday paper?  An RSS subscription is free - and as far as
+I know, the issues we're talking about and working on
+are of interest and/or importance to these people.  
+
+Are there others who might like to be involved?  
+Is this place somehow annoying?
+Do people just not have time?
+
+At the root of my frustration is some frustration that we haven't
+been getting enough work done in some of the projects that I
+care about, and that we haven't done as much "timelining" and
+planning in these projects as I'd like.  Some of this is my fault
+or, anyway, could be made my new responsibility.  But about some
+things, I think more community involvement really is the way to go.
+
+I'm curious to know why people who I might think would be more
+involved have not been.  The first step toward better involvement
+would be better communication.  So - what's up?
+--[[file:jcorneli.org][jcorneli]] Wed Mar 30 02:09:57 2005 UTC
+
+: I check out every day or so what's changed on the wiki, but the reason I don't
+do much else is manifold.  I decided not to participate in the FDM due to my
+large involvment with PM (I could get biased), About the HDM, It still doesn't
+click to me, but that's personal. About all the other projects, they seem a
+little alien to me. About the lack of information flux PM <-> AM, I think it's
+mainly a matter of convenience. Every post on PM gets to the frontpage, and
+anyone can see what's going on, check the old and parent posts. While AM has
+RecentChanges, it's not quite the same, and one of the problems is that you
+cannot see what "the parent" of a new item is. FOr instance, I see a new page
+about "template utilities", but since it's isolated, me not seeing it's related
+to HDM, makes it become puzzling were I be starting to use the wiki. Also, most
+of PM users are not programmers, and as I see on the Tasks page, the top 3
+priorities are relatd with software, not content.  ~~~~ --[[file:drini.org][drini]]
+
+:: Well thanks for checking in!  I think that what we should do is post weekly
+summaries of our activities on the Asteroid to the PM forums, and I am going to
+set things up to do this.  That will help people know what's going on, and get
+involved with the things they think are important.  As for code vs. content,
+please, if you have ideas about content improvements, by all means, feel free to
+mention them here on the Asteroid if you like!  I'm sure we'd all find them to
+be interesting.  Thanks for your note, drini. --[[file:jcorneli.org][jcorneli]] Thu Mar 31 01:47:34 2005 UTC
+
+#+BEGIN_VERSE Maybe we need to get an S.O.S. out to some forum which is primarily programmers, but 
+likely to contain many who are interested (or at least willing) to work with mathematics
+content. --[[file:akrowne.org][akrowne]] Thu Mar 31 16:44:14 UTC 2005
+
+**  SOS to programmers?
+
+Hm - it would be good to get more programmers involved, that's definitely true.
+But I feel sort of at a loss as to where we'd look for people matching the
+description you gave.  If we had a literate programming system, probably some
+people from the Maxima project could be interested in doing a literate rewrite.
+(Which is something I think I'd like to participate in).  But that's hardly the
+sort of foundational work we need right now.  If you have ideas about where to
+ask for the kind of help we need, please share them or just ask!  I think it
+would be /excellent/ to have a crack team of like 8-10 people who could put in
+some serious time on this stuff.
+
+Alternatively, we should work a /budget/ for this team into our ALT and DL
+grant proposals, and if it all works out, instead of putting up an SOS, put up a
+job posting.  (I know that the FSF has a page where you can advertise free
+software jobs.)
+
+However, that reminds me, the kind of involvement I was initially talking about
+was not just involvement of programmers.  People to help write and edit the
+grant proposal(s) would be good.
+
+Maybe I'll put some "ads" (asking for volunteer help) into the
+[[file:Bulletins|Asteroid Bulletin.org][Bulletins|Asteroid Bulletin]]. --[[file:jcorneli.org][jcorneli]] Thu Mar 31 17:37:38 2005 UTC
+
+----
+
+It looks to me like these ads would largely duplicate what is
+already in the tasks section.  However, that would be a good thing
+since not everyone looks in the tasks section, so perhaps stating
+essentially the same requests in a few places might not be a bad
+idea.  Also, some people may understand the tasks section as a
+statement projects which we intend to do and not pick up on the
+implication that, if someone else finds a project described in the
+tasks section interesting, that person is more than welcome to
+join on and work on that project.
+
+As for where to find programmers, maybe we need to do some web
+surfing and brainstorming to identify places (maybe some of them
+may be places we already know but haven't thought of in the right
+way) and get our message across.  On a related note, now that
+we've gotten started enough that we can at least give somebody an
+idea what we are trying to do, maybe it would be time to put out a
+few notices to linguistics newsgroups to see if we could interest
+a few people in working on the linguistic end of
+things. --[[file:rspuzio.org][rspuzio]] 31 March 2005
+
+Yes, the idea is definitely to duplicate.  Besides, these bulletins
+will be sent to PM, so they will probably have a different
+readership than the wiki itself.
+
+As for recruiting linguists... eventually it would be good to
+advertise, but maybe for now just talk to a few hand-picked people
+in person.  While I think we could describe our [[file:HDM.org][HDM]]-related
+activities, it would better to have a fairly clear write up of
+what we can actually do.
+
+Once the expression parser is working well, for instance, I'll
+definitely post it to gnu-emacs-sources, and potentially find some
+interested people there (at least get some feedback).  My work on
+this project has been a little delayed... but other than that, it
+seems to be coming along OK.
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 21:13:56 2005 UTC

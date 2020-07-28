@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In this section, we present several functions for deterning whether an expression is a valid assignment list and for making assignment lists.
+
+Back to [[file:Definition of assignment list | assignment list.org][Definition of assignment list | assignment list]]
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to [[file:template utilities - assignment-p | assignment-p.org][template utilities - assignment-p | assignment-p]]

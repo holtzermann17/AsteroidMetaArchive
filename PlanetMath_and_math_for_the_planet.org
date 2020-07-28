@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This idea came to the fore during the 
+[[file:PlanetMath Board Meeting--Q1 2006--After party and discussion|board meeting.org][PlanetMath Board Meeting--Q1 2006--After party and discussion|board meeting]] and I think it is a
+good thing to follow up on.
+
+The thought that we won't be able to get support from
+e.g. Spanish-speaking countries has been brought up by a couple of
+Spanish-speaking PM users.  While they may be entirely right about
+that, this is a whitepaper...  and we can use it to state our
+/intent/ to internationalize the site even before that becomes a
+practical thing to do.  --[[file:jcorneli.org][jcorneli]]
+
+We don't necessarily need support *from* said countries to
+undertake a grant project directed towards helping them.  For example,
+UNESCO funds the Greenstone digital library to bring information to
+the developing world (especially Africa).  However, it is difficult to
+pull off a funding arrangement like this.
+
+Why help the developing world?  Well, there is always the argument of
+charitability; bringing knowledge to the developing world in order to
+help it become better-off (or even just self-sufficient).
+
+But also there is a more "selfish" argument: we want to increase the
+number of mathematical scholars available to work with us and enrich
+the global mathematical community (and this community is already
+indisputably global).
+
+Probably the best way to get started on this would be to implement a
+multilingual infrastructure for the system.  At minimum Noosphere
+needs to be able to have multiple versions of entries, with each in a
+different language, and be able to handle the concomitant updating
+workflow.  There are some nontrivialities here, but I think this is
+actually a fairly low-hanging fruit.
+
+A multilingual infrastructure supporting communities should lead to
+value-added scenarios like entries migrating from language A to C
+through the fact that some people know languages A and B, and some
+know B and C, even though none may know A /and/ C.
+
+--[[file:akrowne.org][akrowne]] Sat Feb 11 05:27:21 UTC 2006
+
+I was just talking this evening with a local grade school teacher who
+has to teach math to students who speak very little English, here in
+Minneapolis!  (Specifically, her students are Spanish-speakers, but I
+know in the city there are a lot of other immigrant groups, notably
+lots of Somalian immigrants right in my neighborhood.)
+
+So, this issue of "internationalizing" PM also relates to the issue of
+making PM useful to developing scholars in the US who aren't native
+English speakers.  My sense is that this is an issue of growing
+importance in elementary & secondary education.
+
+--[[file:jcorneli.org][jcorneli]]
+
+We should find/generate a list of people who sponsor philanthropic
+efforts related to free content and/or education. --[[file:jcorneli.org][jcorneli]]

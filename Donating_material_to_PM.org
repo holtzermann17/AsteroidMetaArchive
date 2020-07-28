@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+When people donate material to PM, we need some protocol that
+legally gives PM the right to use the material. It might also be good
+to get the author's employer's consent. For example, in some universities
+all computer code researchers write is the university's property. 
+
+Another issue is citing the original material. 
+I think it is fair to cite the source. 
+It might also be easier to get material if we do this. 
+However, on the legal agreement there could be an option so that 
+there is no need to refer back to the original source. On the other hand,
+do we need to keep track of entries based on donated work? This could be good
+for copyright reasons. If it turns out that a donated work is, say, a translation
+of a copyrighted work, we can easily delete all entries based on that work. 
+--[[file:matte.org][matte]] 9 April 2005
+
+
+*  Legal form (draft)
+
+I <name> hereby grant PlanetMath the right to use, modify, incorporate the
+contents of <name of work> into the PlanetMath site under the terms of the FDL.
+
+Signature (author)
+
+
+Signature (Employer)
+
+
+*  Discussion
+
+I think this (note my slight revisions) might do it -- maybe.  But it may be a
+little easier, safer, and better if the original work was simply /released/
+under the terms of the FDL.  We could set it up so that this would be /done/
+upon submitting a copy of the work to PM (or otherwise publishing it) together
+with the FDL license and required copyright notice.
+
+If we required contributions to come in this form, we could easily check them
+for FDL compliance.  And a basic citation can then be taken care of (on a
+site-wide basis) by adding the required info to PM's History (see the [[file:FDL.org][FDL]]).
+Article-level citations could reference a static copy of the FDL'ed work that
+resides in the Books section.
+
+I think it would also be wise to require an additional legal statement of
+/copyright ownership/, since it is much harder for us to check whether or not
+a work is actually copyrighted by the author(s) involved than it is to check
+whether they have complied with the FDL's protocol.  (Something like this is
+required when submitting things to the site directly, right?)  If someone
+submits stuff they don't have the rights to, it ends up wasting our time.  It
+would definitely better to be sure of these things up front -- and to put the
+burden of proof on the submitter.
+--[[file:jcorneli.org][jcorneli]] Mon May 09 09:01:30 2005 UTC

@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here's an abstract from http://www.cs.nott.ac.uk/~lad/ciao/abstracts.html:
+
+: Unlike computer algebra systems, automated theorem provers have not yet
+achieved considerable recognition and relevance in mathematical practise. A
+significant shortcoming of mathematical proof assistance systems is that they
+require the fully formal representation of mathematical content, whereas in
+mathematical practise an informal, natural-language-like representation where
+obvious parts are omitted is common. We aim to support mathematical paper
+writing by integrating a scientific text editor and mathematical assistance
+systems such that mathematical derivations authored by human beings in a
+mathematical document can be automatically checked. To this end, we first define
+a calculus-independent representation language for formal mathematics that
+allows for under-specified parts. Then we provide two systems of rules that
+check if a proof is correct and at an acceptable level of granularity. These
+checks are done by decomposing the proof into basic steps that are then passed
+on to proof assistance systems for formal verification. We show the feasibility
+of our approach using a textbook example proof.
+
+* Discussion
+
+It would be good to follow this up.  Compare [[file:Don Simon's thesis project.org][Don Simon's thesis project]].  This is an important development that we need to research.
+
+I emailed the [http://www.dfki.de/~serge/ author] to ask for a copy of the paper. --[[file:jcorneli.org][jcorneli]]
+
+The paper is available at http://www.dfki.de/~serge/pub/MKM05-Underspecification.pdf. It has a slightly different title, but the abstract differs by only a few words in the final sentence. More publications by this author are available at http://www-ags.dfki.uni-sb.de/~serge/publications-list.php --[[file:omer.org][omer]]

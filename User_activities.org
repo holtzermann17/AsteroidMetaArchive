@@ -1,0 +1,204 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The aim of this page is to outline some alternative ways of contributing to the
+encylopaedia.
+
+*  Proofreading projects
+
+Currently there are many subjects on PM that are almost complete. For
+these it would make sense chart what is missing, and try to add it. In
+other words, to focus contributions on subjects that would benefit the
+most from it. This could be done by projects that take a holistic view
+of one subject at a time and during the project tries to imporove it
+the most. At minimum, we could check spelling and create a meta entry
+of missing material. At best, we could find that PM has all standard
+results in subject xyz.
+
+One approach could be something along these lines:
+
+ * Find a well defined topic that is almost complete.
+ * Make a list of all entries that are related to the topic. 
+ * Brainstorm a realistic goal. What is missing? What needs to be
+  verified? Proven? What subjects are "useful"? Should the subject be
+  reorganized? What should be left for later?
+ * Get to work.
+
+(This is just a first approximation.) I think the key here is to start
+slow, and pick very specific topics. Maybe something like:
+
+ * [[file:Real numbers on PM.org][Real numbers on PM]] 
+ * [[file:Basic set theory.org][Basic set theory]]
+ * [[file:Basic general topology.org][Basic general topology]]
+ * ...
+
+** Discussion
+
+I've been thinking (on and off for a while) that it would be a good
+idea to have many different guides to mathematical topics that use
+existing PM articles as learning modules.  The real numbers project
+could be a first example -- but unfortunately the
+[http://planetmath.org/encyclopedia/TopicEntryOnRealNumbers.html  main entry]
+for this project is not particularly easy to find!  It seems important to
+be able to browse the [http://planetmath.org/encyclopedia encyclopedia]
+by "article type", in order to identify all entries with "topic" type,
+or whatever type is relevant -- maybe a now "topic guide" type should be
+created.  Perhaps these guides should be further highlighted somehow --
+they seem important not just for learners, but also (as we've talked
+about WRT the real numbers project) as a way of making sure PM's coverage
+of the specific topic is complete.
+
+Once we know how to find the topic guides, another question is: are they
+actually set up in a way that would be useful to learners?  What do I gain
+by reading through the list of topics?  Is this supposed to replace what
+I'd learn in, say, a real analysis course?  Or is it a super-set of what
+I'd learn in such a course?  Or what?
+--[[file:jcorneli.org][jcorneli]]
+
+BTW. Another motivation for the real number project is that it tests how well Noosphere
+copes with closely knit together content. We already know that Noosphere can
+handle encyclopaedic content. But, a detailed development of properties of real 
+numbers poses somewhat different challenges for Noosphere. Identifying possible problems
+will be useful for the Noosphere rewrite project. 
+
+Currently there
+are two ways of organizing math in Noosphere. One is to put each theorem, definition,
+example, etc. in its own entry. The logical dependency of the entries is then
+implied by how entries are attached to each other, in topical entries
+like [http://planetmath.org/encyclopedia/TopicEntryOnRealNumbers.html this], and 
+using the auto-linker. 
+A second way is to have "topical" entries that develop
+a theory (see for example [http://planetmath.org/encyclopedia/InequalityForRealNumbers.html
+this page]). Both representations have their advantages. It is easier to refer
+to results if they are in separate entries, but it is easier to study a topic if
+it is presented in a linear order.  
+It is neither always clear how entries should be attached to each other. Say, [http://planetmath.org/?op=getobj&from=objects&id=7675 this entry]
+could be attached either to the interval entry as a result, or to the 
+Cantor-Schröder-Bernstein theorem as an example. 
+
+Many math books start out with a tree diagram showing how chapters are logically dependent
+on other chapters. Maybe each theorem on PM could somehow be part of such a logical tree. 
+Say, each proof could have a list of theorems that it depends on. If Noosphere would
+contain such data, maybe it could automatically generate
+"linear representations" for specific topics?
+
+One thing I have learned from the real number project is that new users read
+the request list. Well formulated requests do get filled. I highly recommend
+everyone to file request. It is an easy way to contribute and get
+new users onboard. --[[file:matte.org][matte]]
+
+
+* How do we get new users onboard?
+??
+
+* Planetmath weekend marathon
+PM weekend marathon (or some similar name). We gather a team and
+dedicate one weekend to contribute entries to PM. For example, with a
+dozen participants, we shouldn't trouble raising at least 100
+entries. Maybe 200 if we take it seriously. This could also be a good
+way to get new users involved. "Be sure to take part in the next
+weekend marathon!" If we would have these twice a year, it would be a
+constant input of new entries.
+
+* Content Importing
+
+Drives to find and import public domain/sufficiently free math
+content.  I think there is a lot released by profs on the web
+already. --[[file:akrowne.org][akrowne]] Sat Feb 4 09:52:28 UTC 2006
+
+Not to talk about old journals. Nevertheless, this does require some
+organization. IMO, Hyperbolic Functions by James McMahon, 1906
+[http://www.gutenberg.org/etext/13692] would make a really good
+addition. It is sufficiently elementary so that everyone can
+participate. There are also analysis books in progress on DP. The only
+problem is these is that they are only asserted to be public domain in
+the US.  --[[file:matte.org][matte]]
+
+As we have seen, there are problems with copyright law which can make
+this a risky business.  I certainly would not suggest that we
+should therefore not do this --- these risks are general enough that
+they pretty much everything we do, not just importing content, so the
+only completely safe course would be to shut PlanetMath down.  At the 
+same time, even if we can do nothing about these problems, we can at 
+least do things in a way so that unwelcome circumstances will have 
+minimal impact.
+
+The basic problem here is that one can't even be sure that works in
+the public domain stay in the public domain.  No matter how much due
+diligence we perform, no matter what licenses there may be, it is
+possible that a work which thought was accessible turns out not to be
+accessible at a future date.
+
+This is all the more reason why we need to prepare ourselves for the
+event that we find a work we imported becomes unavailable.  In such a
+case, we would have to do things like remove material based upon these
+works or maybe make it uneditable or rewrite it.  While this
+possibility may be unavoidable, at least we can lessen the damage by
+implementing a bookkeeping system which lets us identify what needs to
+be examined.
+
+For instance, suppose that the authors of the Data Analysis Briefbook
+were to terminate their permission to use their work.  In that case,
+we would have to lock the 100 entries based on this book.
+Fortunately, since Aaron marked them with a statement that they were
+adaptd from that book, this would not be so difficult.
+
+I would say that as a precondition to any importation, we need to
+first implement a bookkeeping system for keeping track of copyright
+dependencies.  Already, our system of version histories makes it
+possible to keep track of additions by members.  We might want to
+consider extending it to identify portions of texts which are copied
+from outside sources or based on outside sources.  In fact, the
+scholium system would come in very handy here because one could simply
+attach copyright scholia to portions of articles and transclude
+portions taken over from other works rather than copying them.
+
+Not only would such a bookkeeping system make it easy to identify
+entries in need of reconsideration, it could also provide for less
+drastic responses.  For instance, were the briefbook to become
+unavailable, this would certainly change the status of the portions of
+the entries which were based on it, but it would likely not affect
+unrelated material addedby other users later.  As long as we could
+distinguish the two, we might simply be able to remove the
+questionable portions of the entry, maybe rewrite a few things in our
+own words and go on with business as usual.
+
+There is also the issue of downstream users.  If someone got a copy of
+part of the forbidden work or something we based on this forbidden
+work, they would also have to delete or lock their copy.  While it is
+none of our business what they do, there are some things we could do
+to alleviate the problems of downstream use and make the situation
+a bit fairer for potential downstream users.
+
+First, we could educate downstream users.  For example, we could have
+a document "Using Content from PlanetMath".  This would explain to
+people that they are more than welcome to take content from PlanetMath
+and reuse it as they see fit (perhaps subject to the terms of a free
+license) but that, due to the nature of the law, there are some
+inherent risks.  We won't sue them, but someone else might.  While we
+are reasonably convinced that material on our website is free to use
+(otherwise we wouldn't be showing it!) we can't take responsibility in
+case we are mistaken and somebody else also becomes liable for
+infringement.  In other words, the standard "no warranty of fitness
+for any purpose" explained in terms that the average person can
+understand along with an explanation of why we have to do things this
+way because of the current legal situation.
+
+Second, we could provide source metadata.  At the very least, a
+potential downstream user should know who wrote an entry and on what
+sources it depends (in the legal sense of copyright, not the scholarly
+sense of references).  If one wants to know more, then they can use
+our bookkeeping system to find precise information on which parts were
+contributed by whom on what date and what is derived or copied from
+what book.  The guide for downstream users could explain how this is
+to be done.
+
+I suppose, Matte, that this is just your old idea of copyright
+metadata in a slightly different setting.
+--[[file:rspuzio.org][rspuzio]]
+
+Another thing to take into account is that if we import a book, we would coordinate this from a wiki page. This would also leave a trace of what has been added and where. The problem begins when content start to move around from one page into another. Then we would need some way of keeping track of this. I think this is a good even without copyright concerns. Pay credit where credit is due. 
+
+One of the reasons I think importing books would be good for PM is that it would give lots of routine work for new users. However, if there are these kinds of problems, it would not morally be right to dump the legal aspects of contributing onto them. To solve this, we could have is multiple "shades of freeness" within PM, but how to accomplish this I do not know. 
+
+My guess is that PM will not succeed in the long term without mass importing material from elsewhere. New users will inevitably ask why they can't copy from wikipedia. For this, one idea is to construct an algorithm for checking wikipedia articles for "originality". We would not like to import "Version 1" of a long article. But, if an article has slowly evolved under 2 years with contributions from 20 authors, chances are that it is fit for PM. This is also something we can document in case of trouble.  --[[file:matte.org][matte]]

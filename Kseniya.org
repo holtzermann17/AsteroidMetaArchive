@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+  
+ Hi! My name is Kseniya, I'm the student of University of St.Petersburg, Russia.
+ My site:   www.suwor.narod.ru      my mail:  suvor52@mail.ru
+
+ I like very much the idea of creating a bank of mathematical knowledge!
+ But I think it would much better if this knowledge was written in a form 
+ friendly not only for man but for computer also (bi-friendly form)!
+    In this case:
+ - it would possible to process this knowledge automatically for different purposes
+ - this knowledge would be of course more comfy for non-English users
+ - more so, I think it would be more comfy for everybody!
+ And I think it's possibly! (see attached example). The only problem is to do it!
+  
+ In this context I offer (in frame of SoC): 
+ -to duplicate a set of existing entries of PM-encyclopedia (the number can be discussed) 
+ or (if it isn't quite acceptably by ethical reasons) to create a set of new entries 
+ (the course of math of my university for example)  in a bi-friendly form
+ -to create some tools of automatic processing of the bi-friendly texts
+ - more than so, in the future I see some opportunity to create some tool  
+ of the PARTIAL checking of the proofs, based on the approach realized  
+ in my program of symbolic calculations "Differentiator", which you can find at my site.
+ (But it is a cloudy idea and I can't promise to realize it in this year)
+ An example:
+
+                              
+  SOURCE TEXT: http://planetmath.org/encyclopedia/Abelian.html
+
+  ===THE SAME TEXT IN BI-FRIENDLY FORM:
+ ---------------------------
+ Def: A Group G is AbelianGroup if:     a*b=b*a    for any a,b from G
+ ---------------------------
+ // Abelian groups are named after Niels Henrik Abel, 
+ //but the word abelian is commonly written in lowercase.
+ // Abelian groups are essentially the same thing as unitary Z-modules. 
+ //In fact, it is often more natural to treat abelian groups as modules rather than as groups, 
+ //and for this reason they are commonly written using additive notation.
+ ---------------------------
+ Theorem: Any SubGroupOf an AbelianGroup is NormalSubGroupOf. 
+ Proof:
+ Let: G -AbelianGroup, H -SubGroupOf G, g -ElementOf G, h -ElementOf H
+ Then      a*h=h*a 
+ And       g*H=H*g                  
+ Therefore H is NormalSubGroup.
+ ---------------------------
+ Theorem: Any QuotientGroupOf an AbelianGroup is AbelianGroup. 
+ Proof:
+ Let: G -AbelianGroup, H -NormalSubGroupOf G,  a,b -ElementOf G
+ Then       aH*bH=(a*b)H    
+ And        bH*aH=(b*a)H 
+ And        a*b=b*a        
+ And        aH*bH=bH*aH 
+ Therefore  G/H is AbelianGroup.
+ ----------------------------
+ Theorem: Let G -Group, F -AutoMorphismOf G, F:x->x*x.
+         If F -HomoMorphism then G -AbelianGroup.
+ Proof:
+ Let G -Group, a,b -Elements of G, F:x->x*x
+ Then   a*b*a*b = a*a*b*b            
+ And    b*a=1/a *a*b*a*b*1/b =1/a *a*a*b*b*1/b =a*b 
+ Therefore G is AbelianGroup.
+ ----------------------------
+
+ ===THE POSSIBLE RESULT of automatic processing of this text:
+ ---- SYSTEM OF TERMS ----------------------------------
+ INITIAL TERMS  : Def Theorem Proof Let If Then And Therefore 
+ SERVICE TERMS  : a an any is for from
+ COMMON  TERMS  : ElementOf
+ USED    TERMS  : Group, SubGroupOf, NormalSubGroupOf, QuotientGroupOf, AutoMorphismOf, HomoMorphism
+ DEFINED TERMS  : AbelianGroup
+ COMMON  SYMBOLS: * = / 1  : ->
+ LOCAL   NAMES  : G,H,a,b,g,h,x,F
+ -----TERM-ASSERTIONS SYSTEM---------------------------
+ D:(AbelianGroup/Group)
+ T:(AbelianGroup,SubGroupOf,NormalSubGroupOf)
+ T:(AbelianGroup,QuotientGroup)
+ T:(AbelianGroup,Group,AutoMorphism,HomoMorphism)
+ ------------------------------------------------------
+
+ NOTA BENE: 
+ If there is a problem with the mentor I can find some one in my University.
+ But I don't sure it will be OK for Google.

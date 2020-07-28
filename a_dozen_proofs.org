@@ -1,0 +1,46 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since the formalism for encoding knowledge in the hyperreal dictionary is to be
+based as much as possible on the practise of mathematicians, we need to examine
+samples of mathematical writing as the "raw data" from which to build our
+theories.  Already, there is a 
+[http://www.ma.utexas.edu/~jcorneli/d/p3/ collection]
+of a hundred definitions which Joe has translated into a mocked-up
+preview version of [[file:h-code.org][h-code]], by hand.
+
+In addition to definitions, it would be nice to have some similar examples of
+proofs which have been translated into h-code by hand.  We already have two such
+examples --- a proof of Beatty's theorem and a theorem on cosets, but it would
+be nice to have more.  Since proofs tend to be longer than definitions, not so
+many would be neeeded, perhaps a dozen or so proofs would be a good start.
+Naturally, more would be welcome, and, as the project advances, more proofs and
+definitions will surely be translated.
+
+Note, writing up proofs in a language still under development is something of a
+[[file:chicken and egg problem.org][chicken and egg problem]].  A reasonable way to start would be to write the
+proof as it would appear in a textbook or homework solution, then progressively
+formalize; see [[file:Levels of Proof Checking.org][Levels of Proof Checking]].  In a sense, you'll be simulating
+steps that the parser may take - so document your process!
+
+Note also that these proofs can use definitions from the [[file:Hcode libraries.org][Hcode libraries]]
+(even made up definitions that haven't been written yet).
+
+----
+
+ * [[file:Group Cosets.org][Group Cosets]] (two left cosets are either identical or disjoint)
+ * [[file:Fundamental Theorem of Calculus.org][Fundamental Theorem of Calculus]] (Classical version)
+ * [[file:distributivity of intersection over union.org][distributivity of intersection over union]] (after autexier and fiedler, figure 3)
+ * [[file:distributivity of intersection over union - more details.org][distributivity of intersection over union - more details]] (after autexier and fiedler, figure 6)
+
+----
+
+* Discussion
+
+See also "[[file:experiment with automated proofs of various interesting facts.org][experiment with automated proofs of various interesting facts]]" and
+other pages from [[file:JACKYL.org][JACKYL]] for ideas of things to work on writing up in
+[[file:hcode.org][hcode]].  The proof that ten is even seems like a reasonable start (remember,
+we're just trying to do the hcode). --[[file:jcorneli.org][jcorneli]] Thu Feb 10 12:08:20 2005
+
+----
+[[file:h-code.org][h-code]] / [[file:hcode examples.org][hcode examples]] / [[file:Focused HDM subprojects.org][Focused HDM subprojects]]

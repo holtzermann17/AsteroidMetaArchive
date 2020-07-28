@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Math Companion for Retired Elderly Enthusiastic Mathematicians
+
+Simple Illustration of the Math Companion for Retired Elderly Enthusiastic Mathematicians (MCREEM).  The GOAL is to create an AI entity to bounce ideas off of and help bring up and explore subjects in a very informal way similar to a reminiscing Mathematician.
+
+A secondary and long term goal is to 'revolutionize' (in quotes because there may be similar systems out there, please let me know) online learning.  Instead of searching, reading books, lecture notes or audio/video of a professor, I want to develop an interactive tool that brings the power of a personal tutor to a student's console.
+
+Of course this project would heavily rely on things like [[file:PlanetMath.org][PlanetMath]], [[file:PlanetPhysics.org][PlanetPhysics]] and [[file:HDM.org][HDM]] to build its knowledge base and meta links.
+
+The link below takes you to a lisp program that is meant only for a rough proof of concept and has a long way to go before being operational.
+
+ftp://ftp.phys-x.org/pub/mcreem.cl
+
+An example session with MCRREM is
+
+(mcreem)
+
+   WELCOME TO THE MATH LOUNGE!
+   PLEASE ENCLOSE YOUR INPUT IN PARENTHESES.
+
+(what is math)
+
+   Please only talk about prime numbers`,` nothing else matters!
+
+(what are prime numbers)
+
+   In mathematics, a prime number (or a prime) is a natural number that has exactly two distinct 
+   natural number divisors.  These 2 divisors are 1 and the prime number itself
+
+(can you give some examples of prime numbers)
+
+   2 3 5 7 11 13 17 19 23 29.
+
+(what is your favorite prime number)
+
+   GEE MY FAVORITE PRIME NUMBER IS 7919.
+
+(what is your favorite theorem relating to prime numbers)
+
+   GEE MY FAVORITE THEOREM IS THE PRIME NUMBER THEOREM.
+
+(what is the prime number theorem)
+
+   Define pi(x) as the number of primes less than or equal to x.  The prime number theorem asserts 
+   that as x->inf, pi(x)/(x/log x) tends to 1
+
+(list some theorems relating to prime numbers)
+
+   Prime Number Theorem
+   Wilson's Theorem for Prime Powers
+   Divisibilty by Prime Numbers
+   Fermat's Little Theorem
+   Dirichlet's Theorem.
+
+(bye)
+
+   GOODBYE
+
+
+
+COPYRIGHT:  In its current state, the program cannot be used for commercial use because parts are based on software from an AI book with a non-commercial license and will be replaced shortly with GPL compatible code.
+
+
+* Discussion
+
+The copyright situation sounds frustrating!  I'll be interested to know
+how you deal with it.  --[[file:jcorneli.org][jcorneli]]
+
+Well, it really is not an issue because 
+
+- (1) The MATCH function, which was copied verbatim has similar functionality as other match algorithms (such as given in the CMU AI repository), but I currently am not real familar with it and won't take long to switch.  My eye is on the one of the 'unification' algorithms given here, http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/match/0.html
+
+- (2)  The adapted response system in this version of MCREEM is an ordered production system which is a primitive implementation  for an AI system and this will be quickly updated to something more modern and will be much more specific for a 'tutor'.  Example systems I will play with next is a production-rule firing (PRF) (more database friendly and used in systems like MYCIN, AM and PROSPECTOR).  This is really only a partial solution and maybe a hybrid system using advantages of PRF combined with Frames.
+
+So really, the end product will look nothing like this first baby step and I am just using it as a refresher for going over all the basics of AI again, but with MCREEM as a central theme.  I hope that clears it up.  --[[file:bloftin.org][bloftin]]
+
+Cool.  If you want to make this into an "official" HDM subproject, feel free to add it to
+the list at [[file:HDM.org][HDM]].  We don't otherwise have anything specifically oriented towards tutoring or Q&A, and your exploration of traditional AI methods would certainly be good for us to keep in mind.  --[[file:jcorneli.org][jcorneli]]
+
+Have you tried http://www.alicebot.org/ ? It's a modern chatbot that can probably cover the basic needs of MCREEM. --[[file:alih.org][alih]]
+
+Thanks for the link, the alice bot looks like somehthing we can build on. --[[file:bloftin.org][bloftin]]

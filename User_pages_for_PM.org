@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think it would be handy to have user homepages for PM in the same
+style as other articles -- instead of HTML, use !LaTeX, for example.  But also supply some additional productivity tools.
+This would make it easier for people to use PM the way [[file:alozano.org][alozano]] does,
+which I think would be a good thing.
+
+I'm also noticing an interesting phenomenon of "labeling" or "categorization"
+taking place on the web; many blogs seem to have this feature, the idea being that
+pages or postings can belong to several user-supplied categories.  Perhaps
+a feature like this could be worked into the PM homepages.
+
+If there is some (not necessarily full) standardization in this user-supplied metadata,
+then these categorizations could be aggregated to give other users access to
+useful global information.
+
+More thoughts from other (and more hardcore) PM users about features they
+would like to see in such homepages would be valuable.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:Feature Requests.org][Feature Requests]]

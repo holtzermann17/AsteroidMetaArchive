@@ -1,0 +1,91 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Friday.  Also tired today.  I gave [[file:visions talk|the second.org][visions talk|the second]] of my two talks to a small
+audience (among the audience members were [http://monet.mercersburg.edu/henle/fred.html Fred Henle], who had been at the previous talk,
+and Evan Anderson (argent@google.com), a site reliability engineer at Google.
+There was another guy there who seemed to get what I was talking about (and nodded a lot),
+but I didn't get his name; I'll keep my eyes out for him.  I pinged Evan pretty
+heavily after the talk to see what he thought about Google's attitudes towards
+"stuff like HDM", and asked if he knew Logan.  The answers were (basically) that they might
+be, and no.  I'm planning to email for purposes of followup.
+
+I ran into an ex-professor of mine from New College, [http://www.ncf.edu/poimenidou/ Eirini Poimenidou], and filled
+her in on what I'm up to, what !PlanetMath is about, etc. (she was impressed that
+we have an entry on [http://planetmath.org/encyclopedia/QuasicyclicGroup.html quasicyclic group] (go [http://planetmath.org/?op=getuser&id=2760 yark]!).  I told her
+that I think New College and PM have a similar spirit; and she said I'd be welcome to give a talk there (and suggested that we might be able to coordinate some independent student projects related to the site).
+
+Earlier than all of this (it seems like a long time ago) I went to Keith
+Devlin's talk on the "Mathematics of Everyday Language".  That was fun,
+a nice introduction to mathematical linguistics.  I gathered that one
+of Devlin's books, "Goodbye Descartes", will have plenty of worthwhile
+references to check out.  He also spoke on an interesting "resolution"
+of the liar's paradox.  Roughly, consider that statements are only
+true or false within a certain context.  Thus if "I am lying",
+this is only true (or false) in some context C; we write
+
+ C |= P
+
+or
+
+ C |= ¬P
+
+accordingly.  But C |= P implies C |= ¬P, which is a contradiction.  Hence
+there is no context in which P is true.  I'm not at all sure that I
+have the details right here, but this was interesting for me, since
+I had just been reading about Turing and Godel, and about the fact
+that the liar's paradox is in some sense foundational for various theorems
+on self-representing systems.  So this provided grist for a good
+question for after the talk, namely, has the resolution discussed above
+prompted a reconsideration of the theorems of T & G.  Other
+folks chimed in to point out that at least with Godel's theorem,
+the context is always that of arithmetic, so the answer is that
+there probably isn't a need for a reconsideration.  The other answer
+is that this whole discussion comes out of something called "model
+theory", which has been around for a long time.  So, all of this was
+interesting.  
+
+But also interesting was that before I could ask my question, another
+person in the audience asked about whether the theory of mathematical
+linguistics had yet been applied to mathematics.  Devlin had a couple
+of references on that topic (I'll probably have to re-email to get them;
+one was something like "Mathematics is Semiotic").  The person,
+a Mrs Richmans (?) (richmans@midlandstech.edu) was interested in
+the question because she was curious about using the /meaning/
+of mathematical statements to help her students, who are currently
+just interested in understanding the symbol-processing required
+to get the answer, come to appreciate mathematics on another deeper
+level.  Richmans also told me that I should really consider learning
+Chinese (which, per usual, I have been considering somewhat!).  So that
+was interesting too.
+
+Towards the very end of the day, I went to a session for "young
+mathematicians", where I learned about the "young mathematicians network"
+(http://www.youngmath.net), which seems like something that PM could
+have  useful exchanges with, and I talked to some of the people
+who help run this network (David Kung (dtkung@smcm.edu) and Emil Volcheck (volcheck@acm.org)).
+Emil suggested (on the topic of PM fundraising and grants) that I talk
+some with the NSF and NSA representatives who are in the exhibit hall.
+Apparently I missed them on previous days; but I'll definitely plan
+to follow up on that.  He also thought that in the mean time I might want to consider
+getting some kind of paying job doing mathy stuff, say at the local
+university; since I had contact with someone who said he might be 
+able to help set me up with such a thing, I suppose I could look
+into it.
+
+And finally, towards the very end of that, I talked briefly with
+David Kephart, who has written a thesis on "Topology, Morphisms,
+and Randomness on the Space of Formal Languages" -- or "logic and
+languages" for short.  He gave me a several page abstract.
+
+--[[file:jcorneli.org][jcorneli]]
+
+PS.  After Devlin's talk, I also talked to Bob Palais in the
+hallway for a while; he demonstrated his software and mathematical
+tricks for me and another listener.  He seemed interested in 
+my suggestion that he might consider putting some of this stuff
+on PM (a first, interactive PM pages?).  I promised to email
+him if he doesn't email me.
+
+----
+[[file:2006 JMM.org][2006 JMM]]

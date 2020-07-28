@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+This section contains (or will contain) algorithms.  The entries here give a
+recipe for doing something as a list of instructions or a flow chart suitable
+for programmers, as opposed to discussing the why's and how's.  When possible,
+an entry in this section should point to one an explaination of the rationale
+behind a particular algorithm and an actual implementation in LISP.
+
+ * ...
+
+----
+[[file:hcode.org][hcode]]

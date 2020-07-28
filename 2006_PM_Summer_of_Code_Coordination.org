@@ -1,0 +1,119 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:PM_Summers_of_Code|main PM SoC page.org][PM_Summers_of_Code|main PM SoC page]].
+
+*  Intro
+
+Are you a student?  Do you want to help out PlanetMath /and/ get paid for it??  Well, perhaps you can,
+through this year's Google "Summer of Code" program.  Through !SoC, you can get a paid internship to work
+on a !PlanetMath project for the summer.   The projects are listed below (the detailed ones have links to
+more information).  Please sign up next to them (and on their individual pages, if they exist) if you are
+interested.
+
+Later when we resolve conflicts and so forth, people can apply at Google (alternatively, you can apply there
+first, but the real discussion will probably be happening here).
+
+*  Mentors
+
+ * [[file:akrowne.org][akrowne]]
+ * [[file:jcorneli.org][jcorneli]]
+ * ...
+
+/Note/: those who want to be mentors should [http://code.google.com/soc/mentor_step1.html sign up here].
+
+*  Funded Projects
+
+This section consists of projects which we have recieved confirmation (so far) will actually be funded by Google.
+
+ * [[file:SoC 2006 Project - Improvements to the autolinker.org][SoC 2006 Project - Improvements to the autolinker]] - James Gardner
+ * [[file:SoC 2006 Project - PlanetComputing.org][SoC 2006 Project - PlanetComputing]] - Chris Johnson
+ * [[file:Shaneal|Flexible LISP Proof Checker.org][Shaneal|Flexible LISP Proof Checker]] - Shaneal Marek
+ * Noosphere template system cleanup (essentially a larger-scale verison of [[file:PM_Bounty--Sanitize_Noosphere_Templates.org][PM_Bounty--Sanitize_Noosphere_Templates]]) - Anthony Becerra
+
+
+*  Project Ideas
+
+/Please feel free to add your own ideas!/
+See the [[file:Feature Requests.org][Feature Requests]] page if you're looking for some quick inspiration.
+
+** CBPP Hacking Track
+
+ * make Noosphere system more deployable and configurable
+ * apply a reputations system (e.g., Advogado) to Noosphere
+ * create a !PlanetMath "digital library" of papers, books etc.
+ * create a "code market" system for coordinating funded/semi-funded projects (Interested: [[file:Alex Lam.org][Alex Lam]])
+ * help complete/extend [[file:Arxana.org][Arxana]], the "scholium based" content management system, 
+e.g. get Arxana to a stage where it can re-implement a better version of !AsteroidMeta (this wiki)
+ * help re-write Noosphere (possibly based on Arxana)
+ * write a stand-alone, easy-to-use, scholium-based editor that interfaces with Arxana
+ * Noosphere interface nificiation (CSS, AJAX, better layout, better theme...) (Interested: [[file:Tiberiu Nagy.org][Tiberiu Nagy]])
+ * Set up PlanetComputing (PlanetEconomics, etc...)
+ * develop Noosphere translations/i18n infrastructure
+ * develop improved notifications/updating systems for Noosphere
+ * develop non-web (e.g. CVS-, email-based) interfaces to Noosphere (Interested: [[file:Arthur Huillet.org][Arthur Huillet]])
+ * credibility/community features: infrastructure for real names/real-world identities, people map (e.g. with Google Maps), etc.
+ * integrate maxima with !PlanetMath in some useful way (webMaxima?)
+ * create distributed/grid computing systems that can do useful things for PM (e.g., rendering, linking)
+ * ...
+
+** Math Hacking Track
+
+ * Any of the items above mentioning Arxana may involve math
+hacking, depending on what you want to do with it.
+ * Parsing "natural language" math, written in !LaTeX, into
+computer-friendly math written in LISP (see [[file:hcode.org][hcode]]). (interested [[file:Leno.org][Leno]], see [[file:Parsing_natural_math.org][Parsing_natural_math]])
+ * Developing proof-checking (and proof-authoring) tools that operate using the language mentioned above. (interested [[file:Shaneal.org][Shaneal]])
+ * Anything else related to [[file:HDM.org][HDM]] that strikes your fancy.
+ * ...
+
+** Content Hacking Track
+
+ * "ingest" Wikipedia content PlanetMath doesn't have.  build a system to automate this as much as possible.
+ * use focused crawling or other technologies to find math content on the web and get it on PM in some capacity
+
+** IR Hacking Track
+
+ * enhancement of Lucene (the search engine system PM is using).  Things that could be added: run-time field-based boosting, storing citation links to the index and scoring based on them.
+ * Add additional tokenizers and front-ends to allow search for text including mathematical symbols. (Interested: [[file:dan131m.org][dan131m]]; see also [[file:math-enabled search.org][math-enabled search]])
+
+** Other
+
+ * Optical character recognition, especially OCR that works for math content (Interested: [[file:alih.org][alih]]; see also [[file:Plasma OCR.org][Plasma OCR]])
+ * As a math student, I've always wanted a search engine that could search for mathematical notation; most existing engines are worthless if,
+for instance, you want to locate pages that contain, say, "f: B(0;1) -> B(0;1)" or "\Phi_\alpha(z)."  At best there is plaintext search for !LaTeX expressions, but then trying to locate something that could be written in multiple ways, i.e. "x_t^i" or "x^i_t" becomes nightmarish.  (Interested: [[file:dan131m.org][dan131m]]; See also [[file:math-enabled search.org][math-enabled search]])
+ * ...
+
+* Discussion
+
+It might be helpful to organize the projects along several different "tracks":
+
+ * collaborative digital library track ([[file:Noosphere.org][Noosphere]])
+ * editing track ([[file:The Free Encyclopedia of Mathematics.org][The Free Encyclopedia of Mathematics]])
+ * metamathematics/linguistics/AI track(s) ([[file:The Hyperreal Dictionary of Mathematics.org][The Hyperreal Dictionary of Mathematics]])
+
+I'd be interested to see if we can involve people at the 'math content' level --
+I'd be interested to see if anyone can come up with any proposals that
+blend mathematics (or statistics) and code.  Of course, the HDM has a
+number of projects available along these lines.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I like the idea of tracks.  I'm not quite sure how to separate all of these things out, though,
+ so feel free to take a crack at it. --[[file:akrowne.org][akrowne]]
+
+Well, for now pretty much everything falls (more or less) into the
+first category!  This category could itself be split up into smaller
+categories.  However, I'm sure I (or someone else) will eventually get
+around to listing projects in the other tracks, in which case, we can
+separate them out somewhat.  A long un-segmented list may be too
+overwhelming.  After we get many ideas written down, we may want to
+specially highlight those projects we think could be most useful.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I've named the OCR project [[file:Plasma OCR.org][Plasma OCR]] and took the liberty to move the discussion there. --[[file:alih.org][alih]]
+
+I added a section for 'HDM-related' projects (the so-called Math Hacking track).  (See [[file:HDM-related things to check out.org][HDM-related things to check out]] for more details.)
+The problems here range from relatively easy to extremely hard, so pick your project carefully :).  Please talk to me if you think you
+might be interested in any of these Math Hacking topics.  --[[file:jcorneli.org][jcorneli]]

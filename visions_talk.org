@@ -1,0 +1,157 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Metamathematical visions: metadata, learning, and knowledge communities.
+
+Let's define the terms, but let's also note that these things are all
+connected.
+
+* Metadata
+
+Metadata records information about information, or ideas about ideas.
+It can be used to connect ideas with other ideas.  (Math _is_ a web,
+not just math _on the_ web.)
+
+Example: An exit sign points to a building's exit.
+
+Typically, metadata gets attached to expressions of ideas.
+
+Example: the program that you can use to see the lectures in this
+conference.  If you want to learn about automorphic forms, you can use
+the program to find a suitable room number, and then you go there.
+
+Indeed, mathematics is in many ways a sort of calculus on
+metadata.  We can use mathematics to make deductions
+about the world from metadata:
+
+Example: 1576 Central Ave. is about 5 blocks from 1026 Central Ave.
+
+These sorts of calculations only work when the metadata system is
+known, and when it "works"; house numbers don't work the same way in
+all cities; thanks to my friends in New York for teaching me that
+fact!
+
+* Learning
+
+Learning is transforming information into knowledge.  So, how do
+you do that?
+
+There is also the fact that "mathesis" _means_ learning in latin.
+So, in some sense, "mathematics" _is_ "learning" and metamathematics
+is the study of learning.
+
+* Knowledge Communities
+
+Knowledge communities build common knowledge: knowledege held in common.
+
+One of the key ways they do this is that the members work together to
+make connections between different ideas, that is, to link separate
+knowledge resources together.
+
+Not everyone in a knowledge community knows everything about the
+content.  In mathematics, we work on some sort of "need to know"
+basis: if you need to know something in mathematics, you should be
+able to find it out.  Which means, you should know where to look, and
+once you look there, you should find the things you see there to be
+comprehensible.
+
+Mathematics has the distinction of being written in a fairly
+homogeneous medium of clear, logical writing.
+
+* Metamathematics
+
+Metamathematics is mathematics used to study mathematics.  [Wikipedia]
+
+In other words, theory of the systems used to do mathematics.
+The word seems to connote some arcane philosophical system,
+but the way I'm using it is broader.
+
+We've also used mathematics to study _language_ (mathematical
+linguistics) and _organizations_ (organizational theory, and to some
+extent operations theory), even _cultures_ and _societies_
+(mathematical anthropology, economics, statistics and sociology).
+
+When I talk about "metamathematics", I want you to think these things
+as well as the usual.  While usual metamathematics deals with
+capturing mathematical content (knowledge or information) in formal
+systems, I'm concerned with "capturing" (expressing, or re-expressing)
+it in any number of different systems; both formal and informal, but
+approaching both of these topics in a mathematical way.
+
+One of the things that metamathematics tells us about is these global
+foundations -- metamathematics _is_ (in a sense) the common linguistic
+factor in mathematics (cf. Noam Chomsky's theory of "universal
+grammar").  Standards of proof are the things that span mathematics;
+and metamathematics describes how mathematical objects relate to this
+substrate (within which they subsist).
+
+Metamathematics concerns the structures for learning and doing
+mathematics.  Not just structures of proof, but also structures
+of representation, and communication.  How can it be expressed
+so that it is not just logically correct, but easy to learn,
+or easy to apply, easy to communicate?  (And can it be made
+easy at all? - Some people find mathematics to be very hard.)
+I claim that it can be made much _easier_ and much more _accessible_
+than it is today.
+
+* Mathematical communities
+
+The JMM is one view into the mathematics community.  There are many
+sub-communities.  The overall objective is to further mathematical
+learning, extend mathematical knowledge, and find applications for
+mathematics in the real world -- in science, engineering, and teaching
+(a particularly self-referential application: applying mathematics to
+help build the mathematical community).
+
+PlanetMath.org is an example of a knowledge community (a community for
+learning and doing mathematics).
+
+Whether on the web or in person, members of mathematics communities
+communicate using symbol systems; mathematicians build common
+languages for communicating mathematical ideas to each other.
+Sometimes these languages have something immediately to do with the
+real world, and other times, they seem like abstractions piled upon
+abstractions (which is OK).
+
+* Visions for the future
+
+First, a small joke: "mathematical vision" is the theory of sight,
+related both to geometry (optics), and also to (artificial)
+intelligence -- once you've "seen" the thing, how do you "know" what it
+is?
+
+"Metamathematical vision", then, is the theory of seeing mathematical
+objects.
+
+What can you accomplish with metamathematics?  You can understand
+cultural perspectives, and linguistic perspectives on mathematical
+thinking.  We should bear in mind that thoughts and technology for
+expressing thoughts are connected.
+
+Part of the "vision" for "metamathematical visions" is: knowledge
+resources for helping you to find things that you are interested in
+finding.  How do you build either search tools or
+knowledge/information spaces that make it easier to build systems
+that make it easy to find the things that you are searching for?
+
+Example: If I know I'm staying at a given hotel, then I know I can
+find my room by first searching for the hotel, and then looking for my
+room in that hotel.
+
+The HDM project concerns the goal of getting all mathematics onto the
+web in a human- _and_ computer-useable form.  Which will involve not
+only advances in AI-building and communication of mathematics (the
+"scholium system"), but a great deal of both mathematics and
+metamathematics in my generalized sense.
+
+* Notes= 
+
+These topics relate somewhat to Hilbert's program and Godel's proof
+that showed that Hilbert's program couldn't really work.
+
+Aphorism: Context is important.
+
+We just saw in Keith Devlin's talk that "paradoxes" can be
+re-interpreted as mistaken interpretations of context.  The
+philisophico-mathematical field most closely related to this is "model
+theory" (which I don't currently know much about).

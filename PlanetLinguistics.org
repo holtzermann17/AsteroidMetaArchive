@@ -1,0 +1,46 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is PlanetLinguistics?
+A candybar in its daddy's pocket.
+
+* Quick Links
+ * [[file:PlanetLinguistics tasks.org][PlanetLinguistics tasks]]
+ * [[file:PlanetLinguistics bugs.org][PlanetLinguistics bugs]]
+ * [[file:PlanetLinguistics feature requests.org][PlanetLinguistics feature requests]]
+ * [[file:early-bird content for PlanetLinguistics.org][early-bird content for PlanetLinguistics]]
+
+----
+* Discussion
+
+** Why PlanetLinguistics?
+
+First of all, someone should work on documenting the uses of !LaTeX among
+linguists (probably a quick websearch would reveal the basics).  I know it is
+fairly popular, but how popular?  Does a [[file:Noösphere.org][Noösphere]]-based encyclopedia of
+linguistics even make sense?  
+
+Personally, it seems like having a good linguistics reference would be very
+valuable for the [[file:HDM.org][HDM]] project, as we think about developing parsers and text
+generators.  Indeed, the HDM should in theory make it possible to translate
+mathematical texts automatically between all human languages -- but we would
+need to know a lot about the languages that we were working with.  So I envision
+[[file:PL.org][PL]] not just as a reference work, but as a tool with which to
+build an "actionable" linguistics KB.  (The actionable layer should be released
+under the [[file:GPL.org][GPL]].)
+
+To me, creating something like this seems like a priority.  But I would like to
+get some more feedback about the idea from Noösphere people and anyone who knows
+more about linguistics than I do. --[[file:jcorneli.org][jcorneli]] Sun Feb 13 13:27:31 2005
+
+In addition, it would be nice to have something on formal linguistics here, since
+that is certainly an important component of the [[file:h-code.org][h-code]] subproject.  --[[file:rspuzio.org][rspuzio]]
+
+** Some links
+
+Easily found via websearch, but to save you the time:
+ * http://heim.ifi.uio.no/~dag/ling-tex.html
+
+
+----
+[[file:Projects.org][Projects]]

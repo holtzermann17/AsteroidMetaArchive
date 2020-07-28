@@ -1,0 +1,64 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This talk takes the form of call and response pairs, where
+the calls are coming from people who use or do mathematics,
+and the responses are coming from !PlanetMath.
+
+ * Mathematicians of all levels want easy access to relevant
+definitions, which can be hard to find if you're using traditional
+reference resources.
+
++ /Show how easy it is to follow a link from an autolinked term to
+the relevant definition./
+
+ * It is important that anyone be free to add new material to the
+common pool.
+
++ /Show how you can create a new entry, and have its terms autolinked
+and also have it autolinked from other entries./
+
+ * It is important that there be some form of peer review.
+
++ /Show/describe the correction process./
+
+ * Tools for collaborating between co-authors are needed, but you
+can't just have everything be world-editable.
+
++ /Show collaborations, explain difference between PM ACL's and
+Wikipedia's free for all (and how corrections still give everyone a
+chance to make corrections to the public part of the resource.)
+
+ * Can PM be used for pedagogy?
+
++ /Describe rmilson experiment./
+
+ * Can PM content be reused for new projects that haven't necessarily
+been envisioned by the PM creators (books, curriculum development)?
+
++ /Yes! That's a big part of what "free" is all about (FEM as an
+example)./
+
+ * Can PM be used for research?
+
++ /To some extent.  Collaborations can be used this way, and there
+are research mathematicians using the forums.  (Show example.)  We
+have some improvements planned for the infrastructure that will help
+make PM much more useful for research and research communications./
+
+ * Can we partner with PM to get features that we think are valuable
+implemented?
+
++ /Yes!  Talk to me or [http://br.endernet.org/~akrowne/ Aaron Krowne], or make your desires known via the
+[[file:Feature Requests.org][Feature Requests]] page on our wiki./
+
+
+--[[file:jcorneli.org][jcorneli]]
+
+PS. This outline could also become part of the
+[http://planetmath.org/?method=src&from=collab&id=35&op=getobj PlanetMath FAQ],
+which, incidentally, would be nice to have linked in from the main page (but transformed there into a standard list of
+linked questions pointing at linked-in answers). --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:2006 JMM.org][2006 JMM]]

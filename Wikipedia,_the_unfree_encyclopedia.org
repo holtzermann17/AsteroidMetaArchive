@@ -1,0 +1,467 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+This page was part of a discussion and critique of Wikipedia's use of
+the FDL.  It has since been suggested that if Wikipedia is "unfree",
+then so is !PlanetMath.  This and other related questions remain
+open for discussion.  In many ways this is more appropriately considered
+to be part of a critique of the FDL than a critique of Wikipedia
+per se (although the license can't be wholly separated from its users).
+For more specific discussion of license issues, see
+[[file:First Monday Paper--The Fog of Copyleft.org][First Monday Paper--The Fog of Copyleft]].
+
+
+* Discussion
+
+Certainly, if you look at their pages, they /say/ that they content is
+released under the terms of the GNU Free Documentation License.  But upon closer
+inspection, it seems that the FDL has been mis- or unthinkingly applied,
+nullifying the key freedoms that the FDL is supposed to provide.
+
+ 1. Wikipedia uses a huge global "History" file.  This means that anyone copying
+one page from Wikipedia must include a history section that is much longer than
+the page itself.  (Thus, one is free to use the content, but it would come with
+quite copious baggage.)
+
+ 1. It is never made entirely clear whether each individual page is supposed to be
+licensed under the FDL or whether the site as a whole is the one FDL'ed document
+to consider.  In the former case, scratch what I just said about "one page" in
+the previous item, and replace with a statement about wrongly-applied rules
+about combining documents.
+
+ 1. Amazingly, Wikipedia /uses/ FDL content without following the FDL's
+requirements for such use -- specifically, they use PlanetMath content without
+adding a "!PlanetMath item" to the global history file (in which one should
+appear whether or not there the individual documents are FDL'ed).
+
+That's all for now: there are a number of minor details, but these are the main
+ones.  Now that a Wikipedia person is using AM, I thought I'd put these things
+out there.
+
+It could expand to an interesting essay about the "difficulties" of applying the
+FDL to hypertext vs. the actual use of FDL for hypertext... but fundamentally it
+is just a question: why is Wikipedia not using the FDL properly?  What are the
+implications of this?
+
+--[[file:jcorneli.org][jcorneli]]
+
+I think this page is sensationalist.  The second section would be better titled
+"Wikipedia, the encyclopedia that is free as in beer and free as in speech but
+doesn't quite follow the letter of a license that was never intended for this
+kind of use."  Wikipedia provides all the disclosure information the FDL was
+meant to force for books and manuals.  Therefore I consider it compliant with
+the /spirit/ of the license.  The same goes for !PlanetMath.  I like the note
+you end on, though.  It is more helpful and less accusatory. --[[file:akrowne.org][akrowne]] Fri
+Apr 29 12:05:58 UTC 2005
+
+: /"Wikipedia, the encyclopedia that is free as in beer and free as in speech but
+doesn't quite follow the letter of a license that was never intended for this
+kind of use"/  -- sure, we can say that, but the point I'm making is that
+because of the particular ways that the terms of the license is followed
+and/or not followed, (a) using Wikipedia content under FDL terms may be a major,
+but technically entirely avoidable, pain (the extra-long history); (b)
+some or all of the content can't be used under FDL terms (omission of history
+items for derivative works, other details like no title page, no publisher information, etc.).
+My concern is with "free as in freedom" and specifically "freedom as defined by the GNU FDL".
+--[[file:jcorneli.org][jcorneli]] Fri Apr 29 13:07:05 2005 UTC
+
+: To me it seems that the answer to this would be to draft free licenses tailored
+to various situations --- free documentation license, free articl e license,
+free book license, free magazine licence, free website license, free essay
+license, free poem license, etc.  Basically, the essentials would be the same as
+the GNU license, but the specifics would be adapted to the type of work being
+issued.  For instance, one could avoid the pr oblem you mention by inserting a
+clause in the license which allows one to copy a certain fixed amount (maybe one
+entry, maybe one page, maybe 50 0 words) without having to bother with the
+history file.  Also, one might provide a clause that it is sufficient to provide
+a reference to the hu ge history file instead of providing a copy.  Something
+like this already exists in the world of print --- publishers can state that
+cataloguing data is available in lieu of providing the data.
+
+: To be sure, one can't change what's already been done --- now that Wikipedia has
+been released under a particular license, they must follow throu gh with the
+consequences of that license --- but one can learn for the future.  The GNU FDL
+was originally designed for documentation to computer programs and therefore it
+can lead to potential difficulties when applied to other sort of works.  As you
+point, it is not clear whether it appl ies to the site as a whole or also to
+individual entries.  Also, the history requirement seems to lead to difficulties
+in the form of extra burea ucracy when applied to other sorts of works.  In the
+case of computer programs, which normally come with history files to record
+different past v ersions, this is no big deal, but with other works requiring
+authors to maintain history files may impose extra work and unintentionally
+create y et another bottleneck in the way of free distribution of information
+and add an unwelcome layer of bureaucracy.  For other kinds of works, it mig ht
+be better to change the requirement to that of putting a statement to the effect
+that this work was based wholly or in part on a certain work and not making the
+requirement recursive.  In different cases, different methods of posting
+disclosure information may be more suitable and a wel l-designed license should
+allow for an appropriate mechanism for the work in question.
+
+: As Aaron said, the important thing is the spirit of the law.  However, if the
+letter of the law is getting in the way, perhaps the law needs to be reworded.
+At any rate, I don't think too many people have thought through the application
+of the GNU FDL to different kinds of works, so it is not too surprising that
+technical difficulties and loopholes would turn up and the next step might be to
+figure out a way of avoiding these shortcomings by rewording the
+license. --[[file:rspuzio.org][rspuzio]] 29 April 2005
+
+
+----
+
+Each article is its own document and each has its own history page. 
+
+: OK, that makes things clearer.  On PM, each article is /not/ considered to
+be its own document.  This presumably makes the task of compiling a shared
+history file for the Wikipedia site as a whole (comparatively) rather difficult,
+but it will presumably make using individual pages somewhat easier (although
+using several differet pages in combination will still require some non-trivial
+paperwork).  --[[file:jcorneli.org][jcorneli]] Fri Apr 29 13:15:06 2005 UTC
+
+Instead of listing 5 authors, Wikipedia lists them all - including work by
+copyeditors. If anything this is excessive compliance. Use of other FDLd work in
+Wikipedia should include a note in the history page /and/ a note in the
+references section of the article that explicitly says that article uses FDLd
+content (giving author info and publication info).
+
+: Here, "excessive compliance" may lead to some annoyances for downstream users,
+but is not "unfree", so that's fine.  However, let me just mention that
+including a note stating the origin of external FDL content in the history page
+is not sufficient: the source document's history must also be reproduced in the
+derived document. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 13:18:27 2005 UTC
+
+We only require third party users of Wikipedia content to mention that the text
+is licensed under the FDL, link to a copy of that license, and link to the
+original Wikipedia article (where all the author information is located).
+Requiring them to follow the letter of the FDL would result in very limited
+re-use of our content, given the fact that our format (an encyclopedia) is very
+different than that envisioned by the drafters of the FDL (who wrote that
+license to work best for manuals and textbooks written by a small set of
+authors). Things like a title page are absurdities in an encyclopedia where each
+article is its own document.
+
+: So, "What Wikipedia says will enforce" is a subset of what the FDL gives gives
+them license to enforce.  A downstream user who makes a non-FDL-compliant
+derivative work which fits within the compass of Wikipedia's non-legally-binding
+permission-set is running the risk that Wikipedia will change its policy later.
+A paranoid and law-abiding downstream user /must/ comply with FDL terms:
+however, if Wikipedia does not make the needed information available (in the
+proper form), such a person can not use Wikipedia content under any terms (other
+than those of Fair Use).  The issue is further complicated by the presence of
+non-Wikipedia-originating content in the Wikipedia: producers of this content
+may have very different ideas about what they would like to enforce.
+Wikipedia's (implicit) policy of not using FDL terms when it absorbs outside
+content combined with its (stated) policy of not enforcing FDL terms creates a
+"non-compliance amplifier".  I.e., we may encounter situations in which not only
+Wikipedia is in a state of non-compliance, but many users further downstream are
+as well.  As a provider of FDL content, I find this frightening: I chose to use
+FDL for my work because I wanted the FDL terms to be followed.  The current
+"breakpoint" is at Wikipedia.  Do you see what I'm saying?  The job of the
+upstream enforcer is essentially "depth first"; Wikipedia seems to be the first
+point of failure, that's why I'm bringing these things up.  The job of tracking
+down all violations in 3rd generation content seems much more challenging.
+--[[file:jcorneli.org][jcorneli]] Fri Apr 29 13:33:17 2005 UTC
+
+So one must look at the intent of why certain specific requirements were built
+into the FDL and try to follow that when it is not practical to follow the
+letter of the FDL. Making sure the content and all modifications to it remain
+free along with making sure the moral rights of authors are followed (credit
+mostly) are the main thrust of the FDL. Wikipedia provides for that. RMS know
+exactly how Wikipedia is using the FDL and knows our issues with that
+license. He, Jimmy Wales, and Larry Lessig are all working on a new license
+version that will hopefully put Wikipedia into explicit compliance. --[[Daniel
+Mayer]]
+
+: I have yet to understand why exactly it is impractical to follow the
+requirements of the FDL. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 13:33:53 2005 UTC
+
+:: It's interesting that now RMS has gotten now an account on wikipedia (as User:Rmstallman) and think it is fine, he's also in touch with Jimmy Wales and using wikipedia's mailing lists. I doubt he'd be using wikipedia if he thought the site wasn't following the GFDL and it being "unfree" as you call it. Moreover, from http://www.gnu.org/encyclopedia/ he seems to encourage the use of Wikipedia
+::From the mailing lists exchanges lately and from the it seems that Stallman is now supporting wikipedia instead of gnupedia (he seems to have originally confused Nupedia with Wikipedia). Moreover, Stallman lists Wikipedia as a free encyclopedia at http://www.gnu.org/encyclopedia/free-encyclopedia.html
+:: Now, I don't think that it's fair to call wikipedia the "unfree" encyclopedia since that puts it on the same level as Encarta. I think Stallman has a clear grasp on the GFDL enough so that if wikipedia were unfree, then he wouldn't be using it/recommending it. So please consider changing this tendentious title. -- [[file:drini.org][drini]]
+
+#+BEGIN_VERSE You can't solve this issue by proxy; Stallman could give a million
+dollars to Wikipedia and that wouldn't change the issues I've brought
+up above.  Hey, I even use wikipedia myself!  I also use Google, which
+I know isn't FAIF.  If Stallman happened to address the points I've
+brought up in his Wikipedia postings, then that's another story.  I
+don't have time to investigate this.  If you want to rewrite this
+page, go ahead, but I'd appreciate it if when doing so you applied
+some critical thinking to the points I brought up.  If I'm wrong
+that's fine, but I'm not going to be swayed by empty rhetoric.  Stallman,
+too, may be capable of overly wishful thinking.  My guess is that
+like me he thinks Wikipedia can be "saved" from being unfree.  But
+unless I learn some new things about the site, I'd say it is unfree (or close to it) as it stands. --[[file:jcorneli.org][jcorneli]]
+
+As I often tend to do, I shall take a position in the middle at the risk of being fired upon by both sides.
+
+I agree with Joe that one has an obligation to honour the letter and not just the spirit of contracts to which one is party.  In particular, if one agrees to the GNU license, then one should make an effort to follow the stipulations of said license, including those which pertain to maintaining updating history lists.  A cavalier attitude with respect to the provisions of free licenses may be detrimental the whole enterprise of free content since opponents may take such an attitude as evidence that free licenses are not be taken seriously and that portions which the user deems to be inconvenient or unnecessary may be safely ignored.
+
+I also agree with Aaron and Drini that using the term "unfree" to describe Wikipedia simply because it does not follow (and maybe does not place a high priority on following) the provisions of the GNU license to the letter is potentially misleading so a different term is in order.  As I understand it, "unfree" is being used here in a very specific sense --- according to a very literal reading of the license, one may forfeit the right to redistribute material if one does not followed the instructions about history lists.  However, this is definitely not the sense in which the term "unfree" is understood by most people in this context, hence this use of the term comes across as sensationalistic and is likely to only lead to misunderstanding which will only serve to alienate people who are working towards a common goal and thereby also harm the cause of free content.
+
+I find Daniel's reply satisfactory.  In an ideal world, one would be able to carefully create of update history files so at to make the work compliant under the current arrangement and then proceed to work out a new license version.  However, this all requires time and energy.  As I know all too well from personal experience with HDM, in this nonideal world, both time and energy are in extremely short supply in commons-based projects so I think it entirely reasonable for one to turn a blind eye to these issues of non-compliance for the time being while one concentrates on framing a new contract which will not require these partaicular provisions regarding history lists, especially since effort spent on writing history lists is effort which might have better been spent woring on the new license arrangement.  As long as someone at Wikpedia is aware of the problem and is working in earnest on a new agreement which will solve this problem in a differnt way, I am happy sweeping under the rug the fact that, for
+the time being, Wikpedia is not in strict compliance with its license arrangement.
+
+I would like to reiterate my position that this situation reflects badly, not on Wikipedia or on GNU, but on the current state of copyright law which makes little provision for commons-based production and even less provision for free content.  Therefore, while I understand the need to try to comply with the current state of the law as best as possible, I at the same time prefer to focus the brunt of my effort towards promoting change in laws and institutions and focussing on these incidents primarily as illustatrations of why such change is necessary.  In particular, I do not want to lose sight of the big picture here and be overly critical of others who are also trying to do their best in the same difficult circumstances rather than working together with them to improve said circumstances to our mutual benefit. --[[file:rspuzio.org][rspuzio]]
+
+That's I said "unfree" because I thought Wikipedia to be sufficiently
+non-compliant to make it impossible to use their material under FDL
+terms.  I was probably wrong, but that doesn't mean that Wikipedia
+shouldn't try to deal with my critique.  Probably "unfree" is also
+"unfair", so sorry if I hurt anyone's feelings with that.  But the
+situation is frustratingly confusing, and I think that should be
+changed ASAP.  In the mean time, we probably /can/ use Wikipedia
+content under FDL terms, and I'll say a bit more about that, and how
+everything can be easily brought into compliance, below.
+
+Since it isn't clear what part of Wikipedia is the "History Section"
+mentioned in the FDL, maybe we can follow the rules for dealing with
+documents without history sections.  OTOH, maybe
+http://en.wikipedia.org/wiki/History_of_Wikipedia is the relevant
+history page, in which case, we could use that and be compliant.  It
+simply isn't made clear.  This is the best candidate I've found in a
+quick search.  But until Wikipedia makes it clear that this is the
+History Section, I think we can assume there is no history section.
+
+The matter of "history lists" seems to be something that everyone
+initially misunderstands, for some reason.  It doesn't have anything
+to do with edit histories, rather, it has to to with derivative works.
+For example, Wikipedia is a derivative version of !PlanetMath, so
+there should be an item on Wikipedia's history page (whatever page
+that is) that is a copy of !PlanetMath's history page (but omitting
+the "History of Wikipedia" section of that page, in the case in which
+!PlanetMath is a derivative version of Wikipedia, which presumably it
+is despite my ranting & raving about license compliance).  This is not
+in any way hard to do, but no such item exists on the history.
+Indeed, !PlanetMath no longer has a history page, since Aaron changed
+what used to be called "History" to "About" at one point (I'm not sure
+why, but it had something to do with our FDL discussions).  If we are
+using Wikipedia content on PM, then we're making the same violation
+they are.
+
+Like I said above, it is actually just fine not to have a History
+section, if the work is not a derivative of any other FDL'ed work.
+But Wikipedia is a derivative work, so in theory, !PlanetMath.org
+could issue a "take down" notice about all the PM contents that are
+used there in a non-FDL-compliant fashion.  Similarly in reverse, if
+PM is using Wikipedia content.
+
+I can't sympathize with the /kvetching/ about how the FDL was not
+designed with websites or CBPP in mind, at least, not without
+specifics showing why it imposes an undue burden.  To me, it seems
+easy enough to bring Wikipedia and PM into compliance.  Why people
+prefer to "sweep this stuff under the rug" I don't know.  It may take
+months or years to put together a new version of the FDL that will
+suit Wikipedia's tastes.  It would probably take a small part of an
+afternoon to bring the site into compliance with the current FDL.  The
+only question there is whether all of the FDL'ed works that Wikipedia
+derives from can be identified.  I assume that isn't too hard to at
+least make a first draft of a History page that shows people how it is
+supposed to be done.  Finally, a section should be added to
+http://en.wikipedia.org/wiki/Wikipedia:About that talks about "Copying
+Wikipedia", and spells out how the FDL has been interpreted.
+
+Given the above, this business about "But Stallman and Wikipedia are
+friends" and "we're working on a new license" strikes me as being
+pretty bogus.  Probably it would take less time to fix the problems
+that it has taken me to write this note /if the edits weren't going
+to be rolled back./  But the sense I got from Daniel was that for
+some (unknown) reason may actually be actively resistant to the idea
+of working on becoming FDL compliant -- even though it would be almost
+trivial to do so.  My guess is that it stems from a sort of
+"legal-phobia", something like technophobia or mathphobia.  The reason
+I haven't undertaken action on Wikipedia about this matter is exactly
+because I think the admins wouldn't like what I was doing.  Getting
+!PlanetMath running in tight compliance with the FDL is more of a
+priority for me.  The steps to accomplish this are small, and if Aaron
+does them or if he spells out how I can get commit access to the
+webpages to carry the changes out, we'd be done with the chore in less
+than an hour.  We could then point out to Wikipedia how easy
+compliance is.  The only issue for PM's compliance is identifying the
+History pages of Wikipedia and any other FDL resources PM derives
+from.  Like I said above, the FDL provides for the case in which there
+is no History section in the parent work, and I think that this is the
+route we should take if the History section is hard to identify.  It
+would be easy enough to correct later.  --[[file:jcorneli.org][jcorneli]]
+
+Let me clarify that my contention was and still is is that that
+ *current copyright law* was neither designed with websites or CBPP in
+mind nor has been revised so as to accomodate them.  As for specifics
+why *this* imposes an undue burden, we may take the current discussion
+as an example --- if there were a law recognizing CBPP organizations
+as having common carrier status, we would not have to spend time
+worrying about this business of copyright indemnification because what
+we are trying to accomplish via a user contract would have been
+written into law.  As for more kvetching on _this_ point, see my
+"Bottlenecks" essay.
+
+: Sure, I agree with you on this. --[[file:jcorneli|JC.org][jcorneli|JC]]
+
+Regarding the GNU licenses, I still contend that it is unrealistic to
+expect that most contributors to CBPP projects such as Planet Math and
+Wikipedia will understand exactly what the GNU license states and
+therefore I expect that most of users will fail comply with its
+requirements out of ignorance.  While compliance with the license may
+be easy, reading and understanding the license itself is definitely
+_not_ easy for the average person who has not had experience of
+plowing through legalese.  This problem is compounded by the fact that
+the law is often counterintuitive so that, even if someone has taken
+the time to read through the license carefully several times, that
+person may still feel rather unsure about his/her understanding of the
+document and feel reluctant to take action based on this
+understanding.
+
+: Yes, but remember the principle of the wedge.  Scholia can be used
+to ramp people up to full understanding.  I might even say "artificial
+scholia", since I only feel I understand the FDL to a reasonable level
+after a few years of producing "natural scholia."  The CC people are
+pretty good with this; they discuss each of their licenses at several
+levels.  In the mean time, it is the responsibility of site
+maintainers to ensure that their sites are legal (esp. since we're
+quite far from common carrier status as can be in the current
+political atmosphere), and if the average user is going to blow it
+somehow, then steps need to be taken to counter act that.  For
+example, Matte's "copyright provenance" list could also come with
+instructions for what you must do before adding a piece of another
+FDL'ed document. --[[file:jcorneli|JC.org][jcorneli|JC]]
+
+Along these lines, I would say that what you term "legal-phobia",
+"technophobia" and "math-phobia" are symptoms of a malaise of
+inferiority and disempowerment which I shall term "experts only
+syndrome".  (If I had the time, it might be worth expanding this into
+an essay along the lines of Plutarch's essay on superstition but, for
+the time being, these few lines shall have to suffice.  Also
+interesting is the dialectic of experts only syndrome and it's
+antithesis, anti-scientism.)  Most people regard law, technology, and
+mathematics as topics which are beyond the capability of the ordinary
+person and which can only be properly understood by those whom society
+has officially accredited as experts in these fields and that it is
+not their place to presume anything more than a passing acquaintance
+at the level of popularization.  While it is true that these subjects
+are non-trivial and that one can spend a lifetime mastering just one
+facet of these subjects and that one does well to pay heed to what a
+person with more experience in a subject has to say about said subject
+and it is rational to presume that much of what one has to say about a
+subject which one has but passing acquiaintance is likely to be
+mistaken or not take into account some well-known fact which one has
+not yet encountered, at the same time I think that it is going too far
+to feel so disempowered that one does not even dare to do simple
+things for oneself based on the best of one's understanding and feels
+that anything less than complete deference to accredited experts in
+their fields of expertise constitutes unexcusable presumptuousness.  I
+really think that this attitude has gone too far but, unfortunately,
+it is widespread and deeply ingrained in our increasingly specialized,
+anti-DIY society.  Even in this small world of the Asteroid we, with
+our gallant disregard for official areas of specialization and our
+motto of "math by the people", have raised a few eyebrows.
+
+: /!/ Yes, this is certainly a problem, but you're right that it
+would probably be best part of a broader social critique.
+(Incidentally, the "Unabomber Manifesto" harps on specialization.)
+--[[file:jcorneli|JC.org][jcorneli|JC]]
+
+One consequence of this state of affairs is that, feeling neither
+empowered nor encouraged to chart their course of action based on the
+best of their understanding of specialized subjects, victims of
+"experts only syndrome" often succumb to the level of naive
+superstition and herd instinct rather than do better by trusting their
+limited understanding.  In general, this alarms me as a fundamentally
+undemocratic reversion to a pre-scientific state of affairs.  In
+specific, I could easily imagine someone dealing with the issue of GNU
+compliance vis-a-vis history lists as follows: If said person's
+attorney had told him that he needed to add a history file and update
+it, he would immediately and unquestioningly comply with this advice.
+On the other hand, if someone else who has no credentials in law makes
+the same sugestion, I could easily see him rationalize it away by
+saying "What does this person know about law?  Surely my attorney
+would have told me about this if it were the case.  Well, even if it
+happens that he's right, then I don't know enough to tell if this is
+the case.  At any rate, it would be foolish for me to stand up and
+assert that history files are needed when every other gnu in the herd
+doesn't bother with any such a requirement.  Surely that indicates
+that it in not really a requirement.  Even if it is required, there is
+safety in numbers so if I blend into the crowd and ignore the history
+requirement, why should I worry about being singled out for special
+treatment, but if I act contradiction to everybody else, then I might
+stand out and run a risk of getting into trouble."  It is certainly
+not hard to point out the fallacies in this line of quasi-reasoning
+--- for instance, just because you might not be an expert in law does
+not mean that you are not in accurate posession of knowledge regarding
+specific points of the law; while it is reasonable to be more
+skeptical of what a non-expert has to say, one should not go to nearly
+so far as to simply dismiss everything a non-expert might have to say
+without first testing the statement.  (This principle applies to more
+than just law.)
+
+: Indeed, not only "undemocratic" but even more so, "un-American" if
+you're willing to accept such nationalistic adjectives into the
+discussion briefly (op. "American ingenuity", "American know-how",
+"American dream", etc.)  --[[file:jcorneli|JC.org][jcorneli|JC]]
+
+Another point that just occurred to me is that it may not all that
+uncommon for people to take a cavalier attitude towards laws and
+contracts, perhaps especially so in this area, and not worry about
+details as long as they comply with the main points and with the
+general intent of the law.  While this is a common enough attitude and
+I would not be surprised if this particular non-compliance on the part
+of Wikipedia does not amount to a hill of beans, at the same time I
+think it might be prudent for us to pay attention to detail.
+Generally speaking, one's ability to play fast and loose with the law
+is proportional to one's power and the extent to which one's outlook
+approaches that of the mainstream of society.  Unfortunately, those of
+us involved in CBPP projects do not have much in the way of political
+power and are far from the mainstream of practise.  I don't know how
+justified this worry is, but I envision a scenario in which a
+fudslinger might turn around and say "Obviously, these so-called "free
+licenses" are unrealistic and it is clearly impossible for any normal
+person to abide by their terms.  I mean, if the free culture people
+find themselves not being able to fulfil the requirements of their own
+licenses, how can they seriously expect that anyone else will be able
+to do so.".  Again, I don't know how important a concern this is, but
+I would feel more comfortable erring on the side of caution especially
+if, as you say, complying with these particular points of the license
+is something which can be fixed in an afternoon.
+
+: My sense is that Wikipedia maintainers are already slinging that
+FUD.  We should do what we can to disperse the license fog, since fog
+& fud seem to go together.  Interestingly, it may be because the
+Wikipedia maintainers are in a position of local power that they feel
+comfortable "playing fast and loose".  --[[file:jcorneli|JC.org][jcorneli|JC]]
+
+I concur that "But Stallman and Wikipedia are friends" is at best
+marginally relevant to the issue at hand.  As for "we're working on a
+new license", my opinion depends on what they are actually doing.  On
+the one hand, if they already have a draft of a new license which
+adresses these issues and plan to implement it in the near future,
+then I am happy with the state of affairs.  On the other hand, if this
+new license is far in the indefinite future and noone involved takes
+this issue seriously, then I agree with you that this is a bogus
+excuse.  I simply have no idea what is actually going on at Wikipedia
+or how their group dynamics work so I cannot say anything meaningful
+on this point.
+
+However, I have a very good understanding of the dynamics underlying
+Planet Math, so I can make some meaningful suggestions.  Since, out of
+all of us, you seem to be the most knowledgable about the GNU license,
+I suggest that you take the hour or two to draft what the history page
+of Planet Math should say as well as make a detailed list of the exact
+steps to be taken to be taken to render Planet math fully GNU
+compliant and post it here.  Then Aaron, Drini, I, and whoever else
+may be interested could have a look at the proposal and comment on it
+and take appropriate action.  --[[file:rspuzio.org][rspuzio]]
+
+: Sure, I can come up with this & a short list of other suggestions
+and post it. Soon.  --[[file:jcorneli|JC.org][jcorneli|JC]]
+
+* Title
+I suggest moving to a more accurate title "Wikipedia - The non GFDL compliant encyclopedia" which is more accurate. Holding GFDL is not the only way of being "Free" and thus equating both concepts is misleading. --[[file:drini.org][drini]]
+
+While what you say about the license is true, I think the title of this
+page is fine.  The thing is not FAIF if it doesn't have some suitable
+licensing statement.  GFDL is the most reasonable hope for them, since
+it is the one they are currently using (or trying to use).  But I don't
+necessarily want to restrict the discussion to the issues associated
+with this license.  There are a number of issues that don't have
+anything particular to do with licenses, even, that could impact
+the ability of people to re-use Wikipedia content.  Eventually we
+can discuss all of these and hopefully find some solution... --[[file:jcorneli.org][jcorneli]]

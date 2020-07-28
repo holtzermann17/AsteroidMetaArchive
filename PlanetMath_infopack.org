@@ -1,0 +1,107 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+* Preliminary discussion
+
+This should be an overview of [[file:PM.org][PM]] for people who haven't heard of it before,
+but who might be interested in what we do there - maybe even interested enough
+to want to get involved in some way.  It should "sell" PM a little, but mostly
+it should just be descriptive.  If possible, I think we should separate the POV
+sections from the NPOV sections (at least in the first draft).  The contents may
+be cut & pasted together (with some further work); here we should look at
+several different ways people could get involved (e.g. writing content, doing
+R&D, donating money).  --[[file:jcorneli.org][jcorneli]] Thu Apr 21 04:25:42 2005 UTC
+
+Or, even better than cutting and pasting, use the scholium system :) --[[file:rspuzio.org][rspuzio]]
+
+Yes, that could work too - I'd have to write the features for inclusion (i.e.,
+maybe this is the analogue of ",@" from LISP!?), and I had "forgotten" about
+that feature while trying to get the other stuff sorted out.  But that can be
+added, at least after the rest is done - all assuming I actually get time to
+work on the system. --[[file:jcorneli.org][jcorneli]] Thu Apr 21 07:58:46 2005 UTC
+
+
+* Attempt at a basic description
+
+PlanetMath is a website about mathematics.
+Most of the content of the website has
+been submitted by volunteers, and this
+content is available to the public under
+the terms of the GNU Free Documentation
+License.  This license says, among other
+things, that anyone is free to publish
+works which derive, in whole or in part,
+from the PM content.
+
+PM's byline is "Math for the people,
+by the people."
+
+PM's underlying software platform,
+"Noosphere", facilitates automatic
+hyperlinking between webpages, supports
+!LaTeX markup, and provides various
+tools that support the interactions
+of the PM user community, including
+discussion forums and a system
+for filing corrections.
+
+Unlike Wikipedia, PM does not allow
+anonymous edits; furthermore, typical
+entries will have write access
+restrictions that limit access to
+one person (the object's "owner").
+Some owners have chosen to allow
+any other logged in user to edit
+their entries, and other times
+a select group of co-authors is
+given write permission.  (Statistics?)
+
+PM currently has in excess of 4000
+expository mathematical articles,
+which vary in subject matter, length,
+and (inevitably) in quality.  On a
+whole, these articles are accessed
+approximately X times per day by
+internet users.  The average rate of
+editing events is Y times per day,
+and recently, new entries have been
+added at a rate of Z per day.
+
+!PlanetMath maintains, and increases,
+article quality over time
+only through the ongoing effort
+of its authors and critiques offered
+by PM users.  An effort
+to turn the PM online encyclopedia
+into a printed, salable, work (the FEM)
+is also currently underway.  The editors
+of this work are using the PM
+correction system to communicate
+with authors.  The editors of the FEM
+have stated that they intend for their
+finished product to be of consistent
+high quality.
+
+The Noosphere system is also under
+ongoing development, again, with
+an all-volunteer staff, at present.
+Progress towards improving the system,
+both in terms of available features
+and portability/deployability is slow,
+though many ideas for improvements
+have been suggested by members of
+the PM community.  Increased funding
+for the PM would likely be used
+to support futher development of
+Noosphere.
+
+Currently PM managed, also, by volunteers.
+Management efforts related to the site are
+focused on grant-writing and networking, on
+the one hand, and exploration of research
+topics that relate to the PM project on the
+other.
+
+----
+[[file:AM Infopacks.org][AM Infopacks]]

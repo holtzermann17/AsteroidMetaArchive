@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This topic seems to be undergoing discussion in several places.
+At the risk of being repetitive, let me sum up what I think is
+the main point.  
+
+The issue is not simply one of logic or metamathematics, but also
+of linguistics and AI.  We would like to build software that can
+read and understand arbitrary mathematical texts.  Clearly such a
+program must have ongoing exposure to empirical evidence from which
+to form its understandings.  In other words, it will have to learn
+as it goes.  The hope is that the basic mathematical vernacular will
+carry the program pretty far into specialized sub-domains.  Being
+able to understand (and work with) various logics is just part of a
+general picture of flexible learning.  The challenging thing is to
+identify a foundation from which we can grow - again, the day-to-day
+language used by mathematical people is probably a good place to
+start, because we find just about everything from metamathematics
+to applied mathematics embedded in this language.  From there we can
+move to more specialized sub-languages, including various logical
+languages and sub-domain languages.  Needless to say, there will
+be a lot of hands-on-the-keyboard time all along the way.

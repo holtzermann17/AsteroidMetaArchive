@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Question from SteveCheng:
+
+<b>How do most other projects run things, and how should we run things?</b>
+
+For example, take Wikipedia and their MediaWiki software.
+It does seem like Wikipedia does periodically upgrade
+their MediaWiki installation:
+
+http://meta.wikimedia.org/wiki/MediaWiki_roadmap
+
+I believe there will be little interest in Noosphere unless we offer
+an opportunity for (incremental) improvements to be incorporated into PM
+timely.
+
+<b>Why do I bring this up?</b>
+
+Because I am seriously tempted to start a new PlanetMath
+viewer, after discovering that stupid misfeature from [[file:LaTeX2HTML.org][LaTeX2HTML]].
+It's annoying to me, because I'm developing that [[file:Display LaTeX.org][Display LaTeX]] greasemonkey
+script, and the script at a point where I can do lots of testing of it by 
+unleashing it on the images in PM entries.
+A lot of the formulae display acceptably, and the rest of the bugs I can swat
+one at a time fairly quickly. 
+
+So I might be taking one of the snapshots, and write a LaTeX-to-HTML/XML
+converter to view PM on my computer.  I believe in doing things one small step
+at a time, because <em>that gets things done</em>.
+So it would not surprise me if what I write would become an alternative to the
+current Noosphere.
+If and when that happens, I would make a request for a second
+publically-available test server for PM and the new software,
+because I don't have the resources to run one myself (at least not now).
+Yes, I realize that would be a big request and perhaps not possible
+given the resources of PM.
+But the alternative would be that Noosphere remains stagnant,
+and the PM interface remains unattractive for new users.
+
+On the same note, rsync for the snapshots would be nice --- realizing, of course
+that implementing rsync will take server resources, and more importantly, admins' resources.
+
+Steve, I suggest: take a couple deep breaths.  It is way easier to fix
+the [[file:LaTeX2HTML.org][LaTeX2HTML]] bug than it is to rewrite Noosphere.  OTOH, if you want
+to be involved with rewriting Noosphere, you're welcome to work
+on that.  But think about how to fit into existing work.  For example,
+if you want to commit incremental changes, I'm sure Aaron can get
+you commit access.  If you're motivated to do that, you could focus on building in rsync support for example.
+--[[file:jcorneli.org][jcorneli]]

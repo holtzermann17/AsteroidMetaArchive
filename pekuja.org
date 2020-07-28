@@ -1,0 +1,27 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Hello, my name is Pekka Kujansuu. I'm a mathematics student at the University of Turku in Finland. I can be contacted via the wiki or by e-mail: pekka dot kujansuu at iki dot fi. I can also be found on IRC (IRCNet, Freenode) as Vjaz.
+
+I found the project through Google's Summer of Code program. I'm going to help the [[file:HDM.org][HDM]] project on the formal system.
+
+My first task will be working on writing proofs in h-code. I'm currently looking for some good proofs at [[file:metamath.org][metamath]]. I will try to pick some simple proofs from different areas of mathematics, and then work on writing them in h-code, which of course requires me to extend h-code to handle the proofs.
+
+**  Projects
+
+ * [[file:HDM.org][HDM]]
+
+**  HDM Tasks
+
+ * [[file:a dozen proofs.org][a dozen proofs]]
+ * [[file:implement proof checking.org][implement proof checking]]
+ * [[file:designing proof structures for hcode.org][designing proof structures for hcode]]
+
+**  Links to interesting wiki pages
+
+ * [[file:Let G be a group.org][Let G be a group]]
+ * [[file:structured proofs.org][structured proofs]]
+ * [[file:hcode examples.org][hcode examples]]
+
+----
+Welcome to the wiki Pekka. --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,31 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+HDM could use $25,000 to hire 5 student developers in a group version of
+Google's "Summer of Code".  We had at least 5 interested applicants, and I would
+have liked it if we could have hired all of them.  All things considered, $25K
+is not a huge figure in the grant market.  Presumably the break down of the
+funds would be the same as the Google grant: $2,500 for project overhead (aka
+funding for HDM), $22500 for student stipends.  This is approximately the budget
+of an NSF REU program, so if someone out there could put together an HDM REU, we
+could work things that way.  However, it would be nice to be able to fund non-US
+participants and people in grad school, since several of the persons interested
+in SOC came from these categories.
+
+The deliverables of this grant would be those sketched out by the student
+participants - in the current situation, we have everything from a massively
+improved parser to a massively improved hcode to proof checkers and theorem
+provers on the table.  With five people, we'd be pretty likely to have a very
+solid prototype by the end of the summer.  (This of course gives whoever /is/
+active with the project a goal to reach for, but there are some limits to what
+we can do without additional personnel.)
+
+If anyone has ideas about where we could apply to get $25,000 that could be
+spent this way, please say something about it.  I'll be looking into the
+possibilities.
+
+I'll also note that one can probably extrapolate one workable operating budget
+for HDM from this figure: for $100K a year, we could probably keep 5 interns and
+two project leaders reasonably happy.
+
+--[[file:jcorneli.org][jcorneli]] Wed Jun 15 22:20:43 2005 UTC

@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Intro
+
+A bibliography of bi-directional content updating, with an eye towards one day actually building such a system.
+
+In short, a bi-directional content updating (or exchange) system would be useful to allow multiple knowledge bases (some potentially "virtual", such as the FEM) each being updated separately to keep /selectively/ synchronized with each other.
+
+Such a system could help keep PlanetMath and Wikipedia optimally updated, or PlanetMath and other "planets" (e.g. PlanetPhysics and PlanetComputing), or these planets among themselves, or PlanetMath and the FEM, etc.  The import would go beyond PlanetMath and friends; in essence, the problem of keeping seperate but overlapping collaborative knowledge bases meaningfully synchronized has not been solved (let alone recognized).
+
+A precendent for a uni-directional system, with metadata-record-level granularity, is OAI-PMH.  
+
+* References
+  
+/(Will clean up, provide more links later)/
+
+Haifeng Shen, Chengzheng Sun. Flexible notification for collaborative systems.  Proceedings of the 2002 ACM conference on Computer supported cooperative work. [http://portal.acm.org/citation.cfm?id=587078.587090&dl=portal&dl=ACM&type=series&idx=587078&part=Proceedings&WantType=Proceedings&title=Computer%20Supported%20Cooperative%20Work&CFID=11111111&CFTOKEN=2222222 Link to non-open access version].
+
+: This paper introduces a general system for keeping collaborative environments synchronized (whether synchronously or asynchronously).  It also accounts for selectivity of updates, which is very attractive for the bidi content application.   This system (or something like it) could potentially form the kernel of a bidi updater.  --[[file:akrowne.org][akrowne]]
+
+Felix Hupfield, et al.  Using Distributed Consistent Branching for Efficient Reconciliation of Mobile Workspaces.  CollaborateCom 2006. 
+
+: This paper (which describes open-source work) basically talks about making updating of collaborative workspaces more efficient by exploiting causal "branching" to limit the amount of updating information that needs to be exchanged.  This seems like it could be very relevant, especially to a scenario where you have a potentially arbitrary lineage of versions of documents shared between a network of sites. --[[file:akrowne.org][akrowne]]
+
+Hyunjoon Jung, et al.  View-Centric Operational Transformation for Collaborative Editing.  CollaborateCom 2006.
+
+: Describes a methodology and implementation which optimizes updates by allowing synchronization to be restricted to a critical region being "viewed" by each collaborating (e.g., one could limit frequent updates to just the current /section/ or /page/ one is working on, rather than needing to update an entire book manuscript).  This seems like it could have application to the bidi situation, but not necessarily because it'd allow closer to "real-time updates" (which I don't think applies much to this scenario), but rather because the notion of /views/ to me hints at a way to implement the /selectivity/ aspect of bidi updating.  In specific, all updating logic could take place on "complete" master documents, with selectivity implemented by having regions that are locally determined to be non-viewed (which would be tantamount to excluding them).  

@@ -1,0 +1,628 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is an outline of a formal organizational structure for PM based 
+upon varous discussions and
+reading on corporate structure.  To make the point clear, this outline
+is a draft for discussion and 
+has no official status --- it is merely a sketch of one possibility
+and is only intended as a point of reference for discussions on the
+topic.
+
+The organization shall be divided into three parts, the membership,
+the board, and the officers (with an implicit "fourth" part, being
+the generally community of non-members to the organization):
+
+ *Membership*:
+
+ * There are two ways one can become a member of the organization:
+
+  * Working Member --- Someone who has contributed at least 1000 points 
+   to the web site, or who has contributed code to the codebase (this 
+   will require commit privileges from the project admin.  In kind, points
+   acquired in an illegitimate way may be disregarded by the management and
+   result in refusal of a points-based working membership).
+
+  * Paying Member --- Someone who has donated at least $20 to the organization 
+   within the last year is eligible to become a member of the organization for 
+   the year following the last donation.
+
+ * These two classes of membership are not meant to be mutually
+  exclusive, rather they are a way of ensuring that, to be a member,
+  one needs to be committed the activities of the organization at some
+  level.
+
+ * Board elections take place every other year.  Members may propose
+  board nominees but board members or officers may also nominate themselves or 
+  other parties.
+
+ * Members ratify changes in the bylaws (unless there are no official members, in which
+  case the board ratifies).
+
+ * Members vote on formal referenda (informal polls or surveys may be open to all users
+  or even visitors of the web site, and have an informative rather than binding role).
+
+ * Members may bring forward referenda, and force a vote if a 2/3rds "critical mass"
+  is attained.  (However, it is at the board's option to follow the outcome of such
+  a referendum).
+
+ *Board of Directors*:
+
+ * The purpose of the Board of Directors is to oversee the operations of
+  the organization, make sure that they are consonant with the mission
+  of the organization, and set goals for the organization.  
+
+ * The board represents the interests of the members and the nonmember
+  "stakeholders" of the organization's activities (such as primary or
+  secondary mathematics students).
+
+ * The oversight provided by the board is at a high level, dealing
+  with the overall operation.  The board does not typically get
+  involved with the day-to-day details of how things are done, except
+  under extraordinary circumstances.
+
+ * The board periodically sets the allocation of the annual budget.  
+  This may be done at special budget meetings and may be supervised
+  by a committee.
+
+ * The board serves as a court of appeals for disputes within the
+  organization which cannot be settled by ordinary means and
+  investigates complaints of impropriety raised by members or
+  employees of the organization.
+
+ * The board creates and destroys permanent positions within the
+  organization. 
+
+ * The board creates and destroys committees to perform specific tasks
+  (be they limited term or ongoing).
+
+ * The board approves officers for the organization and reviews the
+  performance of officers on an annual basis (and can relieve officers
+  of their duties and replace them if it deems that they are not
+  carrying out these duties in a manner consonant with the mission of
+  the organization).
+
+ * The board can create arbitrary operational policy by a majority vote.  
+  This policy should be recorded in a uniquely-named document marked 
+  as official policy.
+
+ * The initial board shall consist of Aaron Krowne, David Jao, Logan Hanks, and
+  Nathan Egge.  Bonnie Rabichow shall serve as treasurer and registered agent.
+
+ *Officers*
+
+ * The officers serve to conduct the day-to-day operations of
+  the organization.  While the board sets the agenda in broad terms,
+  it is the officers who implement this agenda, deciding how it is to
+  be carried out and setting up subagendas and subgoals for that purpose.
+
+ * The president is also executive director and supervises the activites of the 
+  other officers and ad hoc and non-officer ongoing hires.  The president
+  has full discretion over hiring of non-officers, unless the board sets
+  forth special policy dictating otherwise.
+
+ * For accountability, there will be quarterly reports to the board, which 
+  will be also available publicly to the members.  The reports will be
+  coordinated by the President, who can delegate portions to other officers.
+
+ * The officers are to be responsive to the needs to the community and
+  their requests, but this does not necessarily compel them to do 
+  everything that community members or formal organization members
+  request.  Officers should engage in and encourage discussion 
+  within the community, but should be considered "experts" in their
+  official areas.
+
+ *Petitioning Policy*
+
+In addition to carrying out planned activities, the organization can react to
+ad hoc situations through /petitioning/.  As a general guideline, the organization
+should be petitioned in any case a community member or members thinks their actions
+(or those of another) will significantly alter the nature of the commons.  
+
+We define "commons" in this context to specifically mean the shared resources of the
+community and that which the organization directly supervises, including, but not
+limited to:
+
+ * the "meta" materials of the web site (documentation pages, etc.)
+ * the server or other facilities of the web site
+ * the overall kind or balance of content on the site
+ * the functionality of the web site (i.e. the Noosphere software itself)
+ * the planning wiki, especially sections marked "official"
+
+Petitioning should proceed logically up the "chain" of command: to the specific officer
+supervising the aspect of the commons in question, then to the executive (the president),
+then to the board itself.  
+
+The petitioned officer will then decide (possibly in congress with other officers or the
+board) if the issue merits a different course of action or wider input in order to reach a
+decision.  
+
+If more input is deemed necessary, generally one of three courses of action will be taken:
+
+ 1. informal commentary will be solicited on some public forum (such as the PM.org discussion board on
+the web site) and the official(s) at the petitioned level or above will make a decision based on the 
+feedback.
+ 1. a poll will be conducted of web site users and used to advise the decision-making as above.
+ 1. a referendum will be conducted amongst the organization's members and action will be binding
+based on the outcome.
+
+Which course of action is taken is at the discretion of the managment (and ultimately the
+board).
+
+Conversely, the officers of the organization may step in directly to initiate the 
+above process if they feel there is some need to re-evaluate an activity taking place
+or which has already taken place that has altered the commons.
+
+* Discussion
+
+This is shaping up nicely.  I have made some small tweaks.  On
+quarterly reports... do you think it would be enough for them to be
+informal, as long as they are recorded? (e.g. logged from the
+IRC-based board meeting)?  I would be satisfied with this.  More
+elaborate things can be delivered as documents.  --[[file:akrowne.org][akrowne]] Wed Mar
+15 15:31:28 UTC 2006
+
+I was thinking of something like a one-or two page summarry of what
+happened in that quarter.  For instance, a report for the present
+quarter might run something as follows:
+
+Expenses:
+
+$350 paid for code bounties
+
+Income:
+
+? from donations
+? from advertising
+
+Website:
+
+Migrated to new server.
+
+Recovered old version histories.
+
+Began planning for noosphere rewrite, in particular decided to use
+Scholium System as a basis for the next version of Noosphere and
+outlined how this might be done.
+
+Organizational:
+
+Drafted strategic planning document.
+
+Outreach:
+
+Spoke about PlanetMath at JMM comference and established relationships
+with important individuals in various mathematical organizations.
+
+Studied fundraising strategy, contacted council for non-profits
+w.r.t. professional fundraising, and developed plan for improving
+on-site donations page.
+
+The idea would be that someone could obtain a reasonable overview of
+what the organization is up to, what has been done and what sort of
+progress is being made towards long-term goals in a few minutes.  If
+someone wants more information, we could provide references to more
+detailed documents on these particular activities.  For instance,
+maybe if someone clicked on the item about migrating the server, they
+might be taken to the server migration page on Asteroid.
+
+Also, writing such a document could be done in a very efficient way.
+Every quarter, a blank page goes up.  Whenever something major
+happens, this page is updated.  At the end of the quarter, it would
+simply be a matter of editing the document, perhaps adding a few items
+like the total income from various sources, and shipping it off.  My
+suggestion would be to release the report a fortnight or so before the
+board meeting to give people time to read it, comment on it, and ask
+questions.
+
+This could also come in handy if we have outside members who, as we
+know are likely to be rather busy and have important commitments to
+universities, professional societies, and the like so their time needs
+to be respected.  One idea would be to send them a packet of documents
+a fortnight before the meeitng.  This packet would include this
+report, committee reports, the agenda for the upcoming meeting, texts
+of motions to be considered at the meeting, and relevant documents
+such as the draft of the strategic planning document.  This way, most
+of the work involved in being an outside trustee would be to review
+these documents and participate in the meeting, which should be kept
+at a time limit of an hour since many people, especially busy
+professionals, dread long, drawn-out meetings and view them as a sign
+of disfunctionality and of disrespect.  
+
+In reply to the main question, I would say that there is no reason
+that such reports need to be either formal or detailed.  As I
+understand it, the important thing is for the board to be kept abreast
+of the main activities of the oganization and that these updates
+should be made part of the public record.  Both your suggestion and
+mine would seem to meet these criteria. --[[file:rspuzio.org][rspuzio]]
+
+For voting purposes, one might want to limit Paying Members to
+1/4 of the total vote, with 1/2 reserved for Working Members and
+1/4 reserved for Founding Members. Otherwise, a hostile takeover
+might be engineered with just a bit of cash. --[[file:ocat.org][ocat]]
+
+Apparently the only power of members discussed in this draft
+is to vote on who is on the board.  I think it might
+be advantageous to expand the power of members significantly,
+especially considering that the board isn't likely to be
+active in day-to-day affairs.  Further discussion of decision-making
+processes in general would be advantageous.   I'd like to hear
+what our resident anarchist president has to say about the potential role
+of anarchism in the organizational structure.  --[[file:jcorneli.org][jcorneli]]
+
+As usual, Ocat, you raise an important point!  One definitely would
+not want a situation in which some outside entity wrests away control
+and some safeguards ought to be implemented to prevent this.  Some
+ideas that come to me in this regard are:
+
+ * A certain number of seats on the board would be reserved for
+  representatives of the community.  Their holders would need to
+  active members who meet cerain requirements (say have been members
+  for at least two years and have earned a certain number of score
+  points within the last year) and they would be elected by the
+  working members.
+
+ * Any changes to the bylaws would need to be ratified by the
+  community.  In particular, what would be the point of the bylaws
+  stating that the members choose the board if the board could
+  singlehandedly ammend such provisions out of the bylaws?
+
+As for Joe's point about the only powers of members mentioned here
+being the power to choose trustees, that was an oversight.  When I
+drafted this outline, I primarily had in mind the officers and the
+board and pretty much added members as an afterthought.  As for what
+sort of direct power the membership might exercise, here are some
+possibilities that come to my mind:
+
+ * There might be referenda.
+
+ * Members might be able to initiate petitions.  If a petition obtains
+  enough endorsers, it could perhaps automatically become the subject
+  of a referendum or an agenda item for the board.
+
+ * Members might be able to recall board members and impeach officers.
+
+ * As outlined above, membership approval might be necessarry in order
+  to change the bylaws.
+
+In addition to such direct powers, members might have a good amount of
+semidirect power when it comes to things like suggesting agenda
+items, participating in board meetings (even if they don't make the
+actual decisions they could participate in the discussion),
+participating in committees, and providing input to officers.
+
+I mostly put these forward mainly as food for thought than as things I
+necessarily endorse.  I think they will all need to be thought through
+carefully.  For instance, I am worried about "tyranny of the majority"
+issues and would prefer that majority vote be avoided and that serious
+consideration be given to alternative voting procedures and
+consensus-based decision procedures.  Also, this question of the power
+of members within the organization depends very much on the role of
+the organization w.r.t. the community and I believe that the answer to
+this queston of the role of community members within the organizaton
+depends strongly on the role of the organiation in the community.  I
+see the two issues as reciprocal.
+
+I would also be interested in hearing what Aaron has to say.  Even
+more, I would be interested in also hearing what other members of the
+PM community have to say about this (either here or in the PM fora or
+whatever venue they find most congenial) and discussing the matter
+with them. --[[file:rspuzio.org][rspuzio]]
+
+My idea was also that referenda would be the key day-to-day manifestation
+of the "people power".   For this to really have legs, probably referanda
+proposals coming from the community should be automatically voted upon if
+some proportion of members supports the call.  Otherwise, the board or 
+the president can activate referenda, whether at the behest of members or
+not. --[[file:akrowne.org][akrowne]] Thu Mar 16 12:36:25 UTC 2006
+
+IMO, Ray touched on the key point when he talked about whether or not the
+board could revise community power out of the bylaws.  In more generality, the key
+thing is what sort of provisions the bylaws provide for change to the
+bylaws.  I wonder how other organizations have handled these sorts of
+things in the past.  In some recent phone conversation, we cited
+Wikipedia and Debian as exemplars of CBPP organizations; but I would
+also like to suggest that we examine co-ops, whether for consumption
+or production, revolutionary groups, and anything else that comes
+up as relevant.  I'm not saying we need to invent a !PlanetPolitics
+before we can come up with some starting point (although it could
+be useful at some point).
+
+As for this issue with referenda, I agree it would be useful.  I'd
+like to see more discussion on the specific implementation.  For example,
+I can imagine that anything that needs to be decided by vote gets
+a "quorum number" attached to it (how many people must vote) and
+then the discussion proceeds at the same time as the vote.  Probably
+the actual number of pro and con votes should be kept hidden during
+the vote, but the total number of votes and total number left to go
+should be exposed.  (This would be a reasonably way to give people
+the feeling that votes actually matter.)  But how are referenda formulated/called in the first place?
+
+As for the idea of consensus-based decisions -- any thoughts or
+suggestions on how that might be done (and how it ought not be
+done)?  I think I may have a book waiting for me down at
+"May Day books", so I'll mosey over there and see what they have
+on these topics we're now discussing.  --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE Update a year later:  it might be worth noting that the
+board of Wikimedia *did* 
+[http://en.wikipedia.org/wiki/User:The_Thadman/Give_Back_Our_Membership revise community power out] of their bylaws recently (December of 2006; now it is February
+of 2007) so this is not at all a mere theoretical point. --[[file:rspuzio.org][rspuzio]]
+
+: First, these are very important issues, affecting all members at
+PlanetMath. Somebody should post a link and brief explanation in the
+main PlanetMath website. It is obvious that the affected members are
+actually not reading this! Also, I couldn't agree more with Ray's
+suggestion about sending a package of information and progress (in a
+brief report form, with links to useful information that expands on
+topics) out to members before board meetings. I would beg you to be
+brief so people actually have the time to read it. --[[file:alozano.org][alozano]]
+
+:: We'll post some sort of dossier this Friday (tomorrow) or
+thereabouts. --[[file:jcorneli.org][jcorneli]]
+
+I've used a little bit of "guided discovery" to see one potential
+way to get "consensus" into the organization; and I've realized
+that it has been an important part of the organization for at
+least a year.
+
+The relevant reference is http://planetmath.org/?op=getmsg&id=10038,
+but I'll explain briefly here what I mean.  Since AsteroidMeta
+is public and world-editable, I think we can reasonably state
+that its contents constitute some sort of consensus view.
+If someone doesn't participate in the discussions here, then of
+course they won't be part of that consensus.  And just because
+someone does participate in the discussion doesn't mean that
+they agree with everything that's been said; however, it does
+mean that they don't disagree strongly enough to change the
+things they don't like.  This is a sort of "moving consensus"
+idea, and I rather like it.  I think that even with officers,
+most documents should be drafted in public and the community as
+a whole should be invited to comment and change them.  Another
+thing I like about this is it gets us away from the "officialdom"
+of votes and polls and so on, and into the fuzzier category of
+debate and thoughtful discussion.  To me it seems that this
+is the best or maybe the only way to make very productive additions
+to the body of knowledge that makes up the organization's culture.
+--[[file:jcorneli.org][jcorneli]]
+
+: This "moving consensus" idea is non-sense. It would be rude of me to
+start erasing and changing everything I disagree about on this
+AsteroidMeta, and I don't have the time to go changing things
+everywhere I disagree. Just because something is written in here and
+hasn't been altered by no means it signifies that everyone is in
+consensus about it. On that nore, and for the record so Joe cannot
+accuse me later on of not participating in the Wiki, I oppose the
+creation of officers, specially if those will be paid positions. For
+my arguments, see the PlanetMath forums. --[[file:alozano.org][alozano]]
+
+:: I don't think it is nonsense at all; if it is anything, rather than
+being nonsense, perhaps in is NPOV, which doesn't mean non-POV, but
+rather neutral point of view.  Point being, people represent their
+points of view; and what emerges is neutral (in some appropriate
+sense) among those discussants.  So, I wasn't saying you should erase
+this or that, but that you should make your views known -- which is
+typically an additive rather than a subtractive operation.  Other
+times, with jointly written documents, it is entirely appropriate to
+edit something that someone else has written.  So, I don't see how
+you can assert that the moving consensus idea is nonsense.  --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE I'll say it again, since you didn't seem to read my post. I don't
+have the time to go changing things (i.e. expressing my views)
+everywhere I disagree, and that applies to many other community
+members who don't even bother looking at the Wiki, because of its
+arbitrary mix of official and unofficial stuff. Just because something
+is written in here and hasn't been altered by no means it signifies
+that everyone is in consensus about it. --[[file:alozano.org][alozano]]
+
+#+BEGIN_VERSE: I did read your post!  I never said everyone is in consensus.
+I said that AM represents the consensus of those who have been
+participating in the discussion.  I also said that they don't
+necessarily fully agree about everything.  What's there to disagree
+with about this?  --[[file:jcorneli.org][jcorneli]]
+
+Even in the case that officers are approved by the board, why is there
+the need of two (not one or three) officers (besides the president and
+treasurer, positions which already exist)? You are surely forgetting
+many other volunteers on the meta side. All of the following seem to
+be doing some helping:
+
+[[file:ocat.org][ocat]], !SteveCheng, [[file:frl.org][frl]], [[file:bloftin.org][bloftin]], [[file:norm.org][norm]], [[file:pekuja.org][pekuja]], [[file:shargestam.org][shargestam]], [[file:omasaveu.org][omasaveu]], [[file:matte.org][matte]]
+
+among others (see user's list). Are they all going to be paid or not?
+They are all doing things that "need to happen" in some way or
+another. So if we are going to pay some people, shouldn't we pay
+everyone who works on the meta side of things?--[[file:alozano.org][alozano]]
+
+I haven't forgotten about these people, but none of them suggested
+that they should get paid by PM.  If they want to get paid, then they
+should pursue it.  I'm happy to help with that when I can.  --[[file:jcorneli.org][jcorneli]]
+
+P.S. don't forget that some people are already getting paid in
+bounties (bloftin, herbling).  In fact, they have gotten paid "before"
+us salary-coveting folks. --[[file:akrowne.org][akrowne]] Thu Mar 16 23:34:50 UTC 2006
+
+Joe said:
+
+: This is a sort of "moving consensus" idea, and I rather like it. I
+think that even with officers, most documents should be drafted in
+public and the community as a whole should be invited to comment and
+change them. Another thing I like about this is it gets us away from
+the "officialdom" of votes and polls and so on, and into the fuzzier
+category of debate and thoughtful discussion.
+
+I second this sentiment.  I think alozono's comments suggest a
+different interpretation of "moving concensus" than I have.  Taken
+with the emphasis on delibration in joe's statement, I think this is a
+good thing.  It suggests an open and deep deliberative process, rather
+than the closed one most organizations have.  Even when they are for
+open communities (e.g. FSF, creative commons), they tend to have
+public commentary periods once in a while but only emerging out of
+closed discussions.  We are already more open than this---by putting
+things up for public comment and allowing anyone to shape the
+discussion.  I would like to continue more in this modus operandi,
+ultimately bringing in the board and official positions more in a
+finalization capacity.  And of course, we should try to increase the
+level of public involvement at the deliberative stages.  --[[file:akrowne.org][akrowne]]
+Thu Mar 16 23:34:07 UTC 2006
+
+Some comments on the draft itself. With all the ugly discussion about
+paid positions (I damn you -money-!) I never had the chance to express
+m y opinions about the rest of the draft of the organization.
+
+ * First, I like it! Thank you guys for working on this. But as I said
+  before, this is *important* stuff dudes, this should've been linked
+  to the main page from the get-go.
+
+ * Next, the membership: will it be revised annually? do you have to
+  earn x points every year to be a member of the first category? I
+  think any person who has contributed more than, say, 10000 points
+  should be a member for life and his status should not depend on the
+  yearly review.
+
+ * What about those who are non-members, non-trustees and non-officers
+  (i.e. users)? What are their rights? I would include that everyone
+  will be allowed to read/contribute and correct the encyclopedia. The
+  members (as opposed to users) will have voting rights and the above.
+
+ * About officers. I oppose the creation of paid officer
+  positions. However, the idea of elected officer may be ok. I would
+  definitely cut some of their powers. In particular the line "While
+  the board sets the agenda in broad terms, it is the officers who
+  implement this agenda, deciding how it is to be done and setting up
+  subagendas and subgoals for that purpose." I would recommend that we
+  add something like "However, if the board specifies a way to
+  implement the agenda or deciding how it is to be done, then the
+  officers will strictly follow the instructions of the board". That
+  way we avoid rogue-officers. I also changed "For accountability,
+  there will be quarterly reports to the board" to "For
+  accountability, there will be quarterly reports to the board, which
+  will be also available publicly to the members."
+
+ * There should be full descriptions of the capacities of each officer,
+  their job description, what areas are they responsible for, the
+  requirements to be elected for that office, and their particular
+  duties and rights if any. By the way, I would remove the word
+  "chief" from the description, as requested by matte.
+
+ * Given that most of our more pressing problems are bugs and
+  implementation of requests, it may be wiser to opt for a
+  "programming officer" (still non paid position) instead of the COO
+  and CKO, for the time being. There may be no candidates at the
+  moment (or yes, Ben Loftin?) but the position could be created in
+  case someone falls magically in our arms.--[[file:alozano.org][alozano]]
+
+I've linked this page to the Q2 board meeting page as a supporting
+document, so it should be more visible.
+
+Also I tend to agree on the "life member" point.  In fact I'd do away
+with the "contributed in the past year only" member cateogry.  We
+don't really have a way to track this, regardless.  --[[file:akrowne.org][akrowne]] Sat
+Mar 18 20:55:29 UTC 2006
+
+I disagree --- if someone no longer cares to be involved in the
+community, what business of theirs is it to decide issues that affect
+the present community?  To me a class of life members who have not
+kept up active participation in the community sounds like
+conservative deadwood.  If someone hasn't made an effort to
+participate in the community, I would not expect that that person is
+up on the issues that affect the current community and instead would
+make decisions (like vote for board members) based on how things were
+several years ago when they were active rather than upon the current
+isssues simply because that is all that person really knows.
+
+I would agree to making people who have made an extraordinary
+contribution in terms of content or financially or as founders could
+be rewarded with life membership.  At any rate, I would expect such
+people would be relatively few in number so, even if they were out of
+touch with present reality, the negative impact would be mnegligible.
+
+Also, I could understand choosing to lessen the criteria for someone
+to stay on the membership rolls.  To make up a possible example, maybe
+sombody would have to earn 5000 points in a year to become a working
+member in the first place, but only have to earn 1000 points a year to
+stay on the membership rolls.  However, I think it would be a mistake
+to simply keep them on the membership rolls for life if they don't
+continue at some minimal level of commitment like at least logging
+into the site on a regular basis, responding to corrections on their
+entries, and following discussions about the site.
+
+As for not being able to track this, would that be so hard to
+implement?  The sidebar already keeps track of points earned within
+the last two weeks; is there a reason one could not modify the program
+to track points earned in the last year?
+--[[file:rspuzio.org][rspuzio]]
+
+Whether or not we want "members for life" depends on what membership
+entails.  If we expect people to be paying yearly dues to be a member,
+I think that a priori it is also fair to expect that people would have
+to contribute some given number of pts per year as an alternative form
+of payment.  (I'm sure it is easy enough to change the
+point-recordkeeping infrastructure to accomodate various membership
+schemes.)
+
+I might point out that this issue is one of the more minor points
+that Alvaro brought up.  His stated opposition to paid officers seems
+much more important.  I don't understand this opposition, but he has
+stated it several times; I certainly don't see the point of preventing
+people from getting paid as officers to work on PM.  Most non-profits
+have employees, as far as I know!
+
+As for the idea of "programming officer", Alozano perhaps forgets that
+I do in fact know how to program, and that knowledge management can be
+done in a very programming-intensive way (as indicated by the very
+name of the Noosphere platform, for example).  Now, the idea of
+/hiring/ a staff programmer who is simply supposed to implement
+programming requests without being part of the non-profit management
+does seems eminently reasonanable, and I would support that idea.
+
+However, I think Alvaro is mistaken when he says "our more pressing
+problems are bugs and implementation of requests".  Indeed, if that
+was true, why would we even be having this conversation?--[[file:jcorneli.org][jcorneli]]
+
+About yearly membership or life-time membership, once a member has
+obtained more than, say, 10000 points, his contribution is quite
+significant and his contribution *is* for a lifetime. If the member
+has actually stopped taking care of his entries then that's a
+different story. But as long as the member is still responsive to
+corrections of his entries I think that suffices, his contribution
+still stands and his membership should still be up. The text above
+does not include those members which have 10000 points, visit PM
+everyday, but have not contributed entries again. They could still
+care very much but not find the time or maybe they don't have any
+other topics to which they could contribute. So I think we should at
+least cover for those, and any member who has done a considerable
+contribution in the past and still keeps up with corrections should be
+a "life-time" member, at least until the point that he/she becomes
+irresponsive. By the way, a user like Logan or Djao may be out of
+membership if we impose the rules proposed by Ray! We definitely don't
+want that to happen.
+
+About paid positions, I don't want to start another argument again. My
+position was detailed in the PlanetMath forum. In summary: given the
+current budget it is not the time to create paid positions, so this
+decision should be postponed until a later time. Even you Joe said
+that this is a N+1 step, so let us not concentrate on assaigning
+paychecks to positions when we don't even know if we will ever be able
+to write those checks. It could even become a liability for PM if at
+some point an officer starts claiming his money, when the budget is
+still not up for paying a position. So let us create the positions, if
+these are *needed*, but only ask the board for salaries when the
+budget is capable. --[[file:alozano.org][alozano]]
+
+By the way, users like Logan or David would *not* be out of
+membership according to what I propose!!  Please reread what I wrote
+in the second paragraph above about possible life membership for
+extraordiary contribution or founders.
+
+As for the point of officers claiming payment, I will reiterate for
+the N+2 nd time what I have already stated in various places.  The
+board decided the annual budget.   If there is no money for paying
+officers, the board would not allocate money for this in the budget,
+the officers would have to work on a volunteer basis (or resign if
+they found this unaceeptable).  To be doubly sure that there would be
+no liability, there could be an "Alozano's clause" in the bylaws which
+spells out that the amount of pay for officers needs to be approved by
+the board in the annual budget. --[[file:rspuzio.org][rspuzio]]
+
+: I believe we agree...because there is no money in the budget to allow the board to pay positions, so the board cannot allocate money to pay positions, and the officers, if the positions are created and members are elected as officers, will have to act in a volunteer basis until there is money in the budget. Then (only when there is enough money in the budget) and only then one can ask the board if the board agrees on paying for these positions. In any case, I still oppose the creation of paid positions even if there was money in the budget for it. I believe bounties, when needed, are more useful. And the rest of us should work as volunteers. There are many who volunteer in the meta side and in the content side, so it is rather arbitrary to pay some and no others, even if the others are not pursuing getting paid. If at some point all the other volunteers do pursue getting paid we will have a very difficult case to obstruct every one getting paid, which will be probably impossible to fit in the budget. --[[file:alozano.org][alozano]]

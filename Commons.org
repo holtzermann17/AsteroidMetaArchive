@@ -1,0 +1,56 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Miscellaneous comments, questions, and announcements can go here.
+Content may be moved to other pages or deleted though... mainly
+we'll treat this as an erasable message board.
+
+----
+
+The policy suggests I should "log in" before doing edits and "date" them.
+How do I do that? Writing the date in the username window does not work. 
+--[[file:slawekk.org][slawekk]]
+
+Writing your name in the username field is exactly what you're supposed
+to do to "log in", and the date of your change appears
+automatically on the recent changes page.  If sign your edits,
+you can add the date immediately behind your username, and that
+can be handy too.  It isn't really required.  If you think the policy
+page should change to be clearer, go ahead and change it! --[[file:jcorneli.org][jcorneli]] Nov 30 05
+
+I usually only add a date in cases where it is important to the matter at hand --- after all, if someone really needs to know the date of a post for some reason, one can always look through the version history.  --[[file:rspuzio.org][rspuzio]]
+
+
+
+*  Volunteers
+
+If you'd want to volunteer to help on something particular and want some
+guidance before diving in, go ahead and post here!
+
+* Note (transition from Taoriver)
+
+In case you were confused... old "recent changes" from the taoriver AM are
+still available... [http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta?action=rc;days=1;all=0;showedit=0 here].
+Also, /redirects/ have not been carried over in the port, so if you encounter a page
+that says "Please continue to bla bla bla [some URL]", just edit that page to say
+
+ #REDIRECT [[file:link to the wiki page.org][link to the wiki page]]
+
+and this will make the redirection work in the future.  Thank you!
+--[[file:jcorneli.org][jcorneli]] Sat May 07 22:35:26 2005 UTC
+
+* HDM subproject task: check documentation
+
+Since we're using the page [[file:HDM.org][HDM]] as a "public" entrypoint to the HDM
+project, we should make sure that the documentation there is clear:
+the links should all lead to informative pages, and so on.  In fact,
+this will require more than a "check" (I already know) - but I don't
+have time right now to fix all the issues.  This is something that we
+should be able to pick away at as time goes by.  General ideas about how to
+improve the documentation can go here, otherwise, please just dive in and make
+improvements as you see fit.  (No homesteading of the [[file:Noosphere.org][Noosphere]] allowed, sorry!)
+
+--[[file:jcorneli.org][jcorneli]]
+
+** Question on identity and I.P. logs
+Hello, I have troubles with a user in PlanetMath who accused me in playing identity game! So he requested me to post something in this forum somewhere, and since I am newcommer, I post my request here under section "misc". I hope some administrator may respond to this message and discuss with me what can be done, so that there is option for - registered user to display both his name, and his I.P. at the same time - of course if the user wants this. Now I have requested to post a message without loggin in, so that the mentioned user verifies my I.P. Of course there is NO any reason for why I should accept his request, it is absolutely enough if he just reads some of my published work since 2002 in order to verify that I am real person. Nevertheless I post here with the stupid question [because I don't have detailed knowledge], what I.P. will be registered at PlanetMath if I use a proxy server to hide my original I.P.? Danko D. Georgiev

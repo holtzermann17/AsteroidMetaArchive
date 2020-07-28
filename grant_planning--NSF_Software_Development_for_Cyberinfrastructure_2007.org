@@ -1,0 +1,268 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:Grant planning.org][Grant planning]].
+
+* Program
+
+Title: NSF Software Development for Cyberinfrastructure (in the NSF Office for Cyberinfrastructure)
+
+Link: [http://www.nsf.gov/funding/pgm_summ.jsp?pims_id=5174&org=OCI&from=home web site]
+
+Due date: January 22, 2007
+
+Basic description:
+
+his program supports software development across three major sectors: system software and tools for High Performance Computing (HPC) environments; software promoting NSF's strategic vision for digital data; and software in the form of middleware capabilities and services to support distributed resource sharing and virtual organizations. SDCI funds software activities for enhancing scientific productivity and for facilitating research and education collaborations through sharing of data, instruments, and computing and storage resources. The program requires open source software development.
+
+* Previous Awards
+
+ * [http://www.nsf.gov/awardsearch/progSearch.do?SearchType=progSearch&page=2&QueryText=&ProgOrganization=OCI&ProgOfficer=&ProgEleCode=&BooleanElement=false&ProgRefCode=&BooleanRef=false&ProgProgram=&ProgFoaCode=&RestrictActive=on&Search=Search#results previous awards] (note: these probably were just "ported" over from the NSDL program upon the creation of the Office of Cyberinfrastructure)
+
+BTW Regarding the previous awards: mostly very large amounts except in the
+case of "workshops".  It would be interesting to look through them and
+try to compare the scope of our proposal to some of the previous ones
+when coming up with a dollar amount.  Also, if anyone wanted to work
+on proposing a grant to fund, say, a PM/MM/MKM meet-up, now might be
+a good time...
+
+--[[file:jcorneli.org][jcorneli]]
+
+
+* Drafting
+
+ * Here is a rough draft/sketch of a grant proposal for this programme, with a generic structure: [[file:NSF Cyberinf 2007 Grant Draft 1.org][NSF Cyberinf 2007 Grant Draft 1]]
+ * draft 2 - [[file:NSF Cyberinf 2007 Grant Draft 2.org][NSF Cyberinf 2007 Grant Draft 2]]
+ * draft 3 - [[file:NSF Cyberinf 2007 Grant Draft 3.org][NSF Cyberinf 2007 Grant Draft 3]]
+ * draft 4 - [[file:NSF Cyberinf 2007 Grant Draft 4.org][NSF Cyberinf 2007 Grant Draft 4]] 
+ * draft 1 of 1 page project summary - [[file:NSF Cyberinf 2007 Summary Draft 1.org][NSF Cyberinf 2007 Summary Draft 1]]
+
+* Discussion
+
+Here are some initial notes of mine on this opportunity.
+
+I think we could go a number of ways:
+
+ * core Noosphere work (Noosphere itself as cyberinfrastructure)
+ * Noosphere/other site connections work (autolinking, entry mining and copying, bi-directional updating, etc.)
+ * MathWeb core work (overlaps considerably with the above)
+ * Scholium system work
+
+The theme could possibly be characterized as something like "facilitating learning by facilitating CBPP and free knowledge culture".   This includes aspects of connecting
+up information that should and could be connected, as well as facilitating the creation
+of new information, and contextualizing it with virtual community services to become
+/knowledge/ (scholarly activities).   Finally, I think the theme of /promoting quality/
+is very important.  This has become no less of an issue as time has gone on, despite (and 
+likely because of)  the increased importance of CBPP/free culture resources.
+
+Here is a task tree of potential things that could be worked on, for each of the above
+work-themes:
+
+ * core Noosphere work
+  * editorial/credibility improvements
+   * availability of real names
+   * recommender and ratings (replace/improve scores)
+   * editorium forums
+   * improve orphaning/transfer facilities
+   * ...
+  * better deployability
+   * clean up configuration
+   * make installer; possibly distro packages
+   * clean up templating
+   * possibly make a "one click Noosphere instance maker" web site/Noosphere farm
+  * survey efficacy
+ * connections work
+  * subject-based wikipedia mining
+  * bi-directional updating (maybe sell as "super-OAI")
+  * automatic linking system (nnexus)
+  * work on user-friendly licenses??
+  * ...
+ * MathWeb core work
+  * enhancing OJS to behave as mathematical sciences encyclopedia; applying as Math Atlas
+  * bibserver
+  * ...
+ * scholium system work
+  * build out the scholium system; re-deploy Noosphere on it
+  * ...
+
+Note: we may be able to take advantage of the [[file:NSF_Advanced_Learning_Technologies_Grant_Planning_Page|past work.org][NSF_Advanced_Learning_Technologies_Grant_Planning_Page|past work]] we already did for NSF ALT 2005.
+
+--[[file:akrowne.org][akrowne]] Nov 13, 2006.
+
+There are a number of different infrastructural
+elements described on your list above -- any of which could be
+a good proposal, and probably if it is possible to submit several
+separate applications, almost everything you describe above can
+be applied for.  (I think it would be too confusing to try  to
+fit a bunch of very heterogenious stuff into one proposal.)
+Certainly if every application received an award, that would
+be enough to keep many people busy for quite some time! 
+
+(Note: most likely everything on your list can fit into the broad category
+of "cyberinfrastructure" -- however, I'd say that the issues that are related to
+adding "features" or "extensions" to existing software packages
+seem qualitatively different from the issues related to developing
+new packages.  Just something to keep in mind!)
+
+All that said -- to my thinking, "core infrastructure"
+is the area that seems most interesting and useful at this point in
+time.  As we discussed by email, a good core infrastructure should
+have the following features, and it should do them all very well:
+
+ * user-created and automatic interlinking of pages and projects
+ * openness to collaboration with casual passers-by
+ * both source and any relevant "rendered" views
+ * synchable archives
+ * a codebase that is easy to understand, hack, and extend
+
+I think that *until we have something with these features*, working
+ *too much* on bi-directional linking could be
+getting ahead of ourselves, Wikipedia mining could be a content-greedy distraction,
+and Math Atlas development could end up being infrastructurally uninteresting. 
+I don't mean to discourage doing *any* work on these things -- but I want to strongly
+emphasize my view that core infrastructure should be given top priority.
+One simple piece of support for this claim is that a good core infrastructure
+of the sort we've been discussing ought to be helpful for any future development
+efforts.
+
+So, I suggest we focus on an application dealing with core infrastructure
+as described above, and create a cluster of smaller, lower-priority, applications
+dealing with various "one-off" infrastructure jobs.  
+
+(The bidi linking thing
+seems likely to be complicated and not "one-off"; I don't know if there is
+really time to prepare a good stand-alone application for bidi linking as
+you may have envisioned it -- however, I should probably note that as
+we've discussed, one form of bidirectional linking is basic to Arxana's design,
+and more advanced tools for partial updating and the like can probably be
+built as extensions of the clusion system.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+I don't remember ever saying bidi content exchange was "one-off"; but
+I certainly wouldn't agree with such a statement.  Sure, it's
+complicated, but I have a pretty good idea of how to proceed from
+reading some related research papers, thinking about how it would
+work, and sketching things out.  I also think the scholium system
+could be a major part of solving this problem, so that work isn't
+mutually exclusive with bidi system work.
+
+I also never intended Wikipedia mining to be anything but a minor
+subitem; the important question is what you do once you separate out
+and expose a subset of such a collection.
+
+And I think the Atlas is very compelling as a case study in many
+aspects of infrastructure: can a two-headed journal/online
+encyclopedia built on open source software work? Will automatic
+linking to other encyclopedias work well with it?  Will people be able
+to share the content and build upon it, even with the use of Creative
+Commons licensing?
+
+I personally wouldn't find the grant compelling if we were to put all
+of these real world case studies aside and purely go back to the
+drawing board, building out arxana, and maybe in the end, re-casting
+Noosphere based on arxana.  To me, arxana is most interesting in terms
+of the CBPP problems it promises to solve or make easier to solve with
+other tools; not because it is a big, dramatic rethinking of how
+databases and digital libraries work.
+
+Perhaps it would help to sketch out even further the basic gains from
+arxana or a similar system as CBPP core infrastructure basis, so we
+can convince the reader it is worth it as a core investment, if we are
+indeed going that route.
+
+But I think in your remarks there is also a deeper point about what
+constitutes "core infrastructure".  Perhaps the "grab bag" of
+interconnection applications other than arxana don't constitute "core
+infrastructure" in your mind (by the way I'm still questioning the
+fitness of that term to the present context), but in my mind, it
+doesn't matter.  There is a compelling case for these applications,
+and they'd certainly help build out (cyber)infrastructure.  How "core"
+it is seems to be a question that could lead to endless, religious
+debate.
+
+The operative question, in my mind, is: what activities best solve our
+"problems du jour", with as much applicability to the similar problems
+of others, and provide best for the future?
+
+I suspect the answer to that question is not "just work on arxana and
+nothing else".
+
+In fact, this talk reminds me of the discussions I always hear about
+"rebuilding the core of the internet", or building the "next
+generation internet", or building a "trustworthy and secure internet"
+(some of which NSF is actively pursuing on a large scale).  I wonder
+how the proponents of these things can know at such an early stage,
+with so little work done along these lines, if this path is really the
+"right one" for everyone to pursue -- throwing massive quantities of
+resources at the problem, at the expense of other things.  It seems to
+me unwise to rule out other things at early stages, for such a big,
+abstract and/or vague idea that has not yet been tested.
+
+Thus, I certainly would like to see considerable progress on arxana,
+and explore it's potential to facilitate handling and interconnecting
+these interrelated, intersubjective collections.  But I balk at
+cutting out or even deminishing the other projects based purely on
+some argument that arxana is "more core".
+
+I'm not sure if you're making more of an argument about development
+priorities or presentation, but in either case, I'm not yet convinced
+we should go the more abstract, radical route that I envision
+emphasizing arxana would be.
+
+--[[file:akrowne.org][akrowne]]
+
+Well, I think /not emphasizing the
+arxana-development-as-noosphere-rewrite type of development
+sufficiently/ would be a big mistake in the development programme.
+The relevant point is not that such development "is Arxana
+development", but that if Noosphere (or whatever platform we're trying
+to use) is going to have a healthy life, it really ought to be
+(re)cast as the specific kind of "core infrastructure" I defined
+above.
+
+And I think I'm going to stand by that statement pretty much until
+things look way different on the [[file:Feature Requests.org][Feature Requests]] page.
+
+Some important facts to contextualize this remark.
+
+ 1. I understand much better what the non-Arxana things you mentioned in
+  the preliminary writeup are about now that we've talked about them.
+  They no longer have the essense of "grab bag" for me, now that I've
+  begun to understand them elements of a fairly clearly defined set of
+  tools (for improved info sharing, exchange, and collaborative
+  development).
+
+ 1. I see that my usage of the word "core" has shifted dramatically
+  since I wrote the comments above -- on this page, I meant for "core"
+  to describe a specific kind of interactive development platform,
+  namely an extensible one with some basic, interesting, featureset.
+  Later I started using the word in a very different sense, namely, to
+  talk about a particular data structure, a "distributed semantic
+  network".  I have no interest in debating what is "more core" or
+  "less core"; the word has perhaps outlived its usefulness already.
+  What I do want to talk about is the development platform on the one
+  hand and the data structure on the other.  Of course, these things
+  are related; the point I'm making here is merely that I was using
+  one the word "core" differently to talk about them both.  I'd be
+  happy (especially in light of #1 above) if it became either a
+  "non-value-laden" word, or just fell out of use in our discussions
+  altogether.
+
+ 1. The rule about "a lot of room in cyberspace" basically applies here.
+  Anything we can clearly describe should go in the proposal!
+  (Aesthetically it would be best if everything fit together well, and
+  I think we've acheived that.)  When I wrote my earlier comments
+  about the relative priority of different projects, I was mainly just
+  trying to make sure that something I thought had high priority (this
+  development platform business) got sufficient attention at in the
+  grant-application-creation phase.  And, indeed, we ended up talking
+  about it; and I think we understand it better now -- like we (well,
+  speaking for myself) understand the ideas behind the bi-directional
+  exchange business much better now that we've had a chance to talk
+  about it.  The same with all the other parts of the proposal, as
+  mentioned above.  Anyway, to sum up, I no longer see it as an issue
+  of "priorities", but simply as one of integrating everything that
+  seems worthwhile into the proposal somehow.
+
+--[[file:jcorneli.org][jcorneli]]

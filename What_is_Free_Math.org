@@ -1,0 +1,77 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Following the [http://www.gnu.org/philosophy/free-sw.html definition of Free Software],
+we define Free Math as follows:
+
+Free Math refers to four kinds of freedom for the users of the mathematics involved:
+ * The freedom to use the math, for any purpose (freedom 0).
+ * The freedom to study how the mathematics works, and adapt it to your needs (freedom 1).  (Access to the math in some readable and understandable format is a precondition for this.)
+ * The freedom to redistribute copies so you can help your neighbor (freedom 2).
+ * The freedom to improve the mathematics or its exposition, and release your improvements to the public, so that the whole community benefits (freedom 3). (Again, access to the math in some readable and understandable format is a precondition.)
+
+
+* Note
+
+This page should be updated after reflections on Ray's article 
+[[file:On Free math and Copyright Bottlenecks.org][On Free math and Copyright Bottlenecks]].  --[[file:jcorneli.org][jcorneli]]
+
+Since it's been a while since I wrote that essay, I suppose it's high
+time for the update, especially given that this topic has arisen again
+in the context of the whitepaper discussion.  Here is my attempt at
+answering the question "What is Free Math?" in the light of what I now
+know:
+
+** Fundamental Ideas
+
+As a starting point for a discussion of free math, we may take the
+principle that ideas and concepts are free for all to use.  While one
+may lay some claim of ownership to a particular expression of an idea
+or claim priority in dicovering that idea, no one can claim ownership
+of the idea or prevent someone else from using a particular idea.
+This principle is widely accepted and enshrined in law.  If that was
+all there was to free math, then there wold not be much for a free
+math movement to do because math is already free in this respect.
+
+However, when one looks more closely at this issue, it becomes
+apparent that more may be needed.  To borrow a phrase from the
+constructivists, it is not enough that access to mathematical ideas
+is "free", it must be /effective/ --- it is cold comfort to know that one
+is free to use mathematical ideas if one does not have access to
+/mathematical knowledge/ [for whatever reason].
+
+Since mathematical knowledge cannot be
+transmitted without expressing it somehow and it occurs [(only)] within the
+context of mathematical activity, the issue of free math is concerned
+with the circumstances of publication and [more generally with] the practises of the
+mathematical community.  As a preliminary definition, we could take the
+goal of the free math movement to be universal access to mathematical
+knowledge and the ability of all to participate in mathematics.  To go
+further, it will be necessary to examine the context.
+
+--[[file:rspuzio.org][rspuzio]]
+
+Note, interesting contrast with Zen, which according to Bodhidarma, is
+transmitted without definitions ;).  --[[file:jcorneli.org][jcorneli]]
+
+I'm struck, in rereading, by the notion that "free" and "effective" applies
+not just to material things, but also to mental things.  If some free code is
+obfuscated, then it is less useful (for purposes of understanding) than
+code that achieves the same effect but is well-commented.
+
+(The obfuscated code may itself illustrate an interesting point, but without sufficient
+documentation, most people will get lost looking at it.  Obfuscated code
+could also be useful as a "puzzle", but perhaps less useful even in that
+capacity if it does not also come with an answer key.  Again a relationship
+to zen: a koan is perhaps the most obfuscated sort of code available,
+and some Zen folks find them very useful -- but there's a possible confusion
+of levels here, and this becomes less germane to the discussion at hand.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+** Relationship to Math, generally
+
+I was curious to think about what the definition of free software may or
+may not have to do with the [[file:definition of a definition.org][definition of a definition]].
+
+--[[file:jcorneli.org][jcorneli]]

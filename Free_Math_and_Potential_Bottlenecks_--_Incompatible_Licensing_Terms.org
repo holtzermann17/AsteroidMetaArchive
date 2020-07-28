@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to make works available to the public and to permit the creation of derivative works which will also be freely available, authors have released works under free licenses.  Unfortunately, these license schemes can sometimes defeat their own purpose by being worded in imcompatible ways.
+
+As an illustrative example, one might take the Creative Commons license, which states that derivative works may only be released under a license identical to the one under which the original work was released.  Suppose further that one is basing an article on two books, each of which have been released on different free licenses which contain a clause stipulating that derived works must be released under identical license terms.  Under such circumstances, one would not be able to relaease the article under any license terms.  As a similar example, suppose that one wants to base an entry for the Planet Math encyclopaedia on a book released under a Creative Commons license.  Since the contents of Planet Math are released under the GNU Free Documentation License, this would not be possible.
+
+To be sure, in either of these cases, one could license different portions of the work under different licenses or obtain the express permission of the author of the original work to release a derivative work under a different license.  However, either of these alternatives entail an expenditure of time, effort and paperwork and so defeat the intent of free licenses, which is to encourage the production of dervative works by making it easy to do.
+
+* Discussion
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

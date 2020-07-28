@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+  1  <expression> --> <name>
+
+  2  <expression> --> ( <expression> <arguments> )
+
+  3  <arguments>  --> <empty-string>
+
+  4  <arguments>  --> <argument> <arguments>
+
+  5  <argument>  -->  <expression>
+
+  6  <argument> --> :bind ( <bound-variables> ) ( <conditions> ) <expression>
+
+  7  <bound-variables> --> <empty-string>
+
+  8  <bound-variables> --> <symbol> <bound-variables>
+
+  9  <conditions>  --> <empty-string>
+
+ 10  <conditions>  --> <expression> <conditions>
+
+ 11  <name>  -->  <symbol>
+
+ 12  <name>  -->  ' <expresssion>

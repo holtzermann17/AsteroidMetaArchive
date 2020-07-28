@@ -1,0 +1,18 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Let /G/ be a context-free grammar.  Then a *parse* is a list which satisfies the following criteria:
+
+ 1. Every atom which appears in the list must be a token (terminal or non-termianal).
+ 1. The first item of every sublist must be an atom.
+ 1. Given a sublist L, let L' be the list obtained from L by replacing each item in L which is not an atom by its first item.  In LISP, L' could be constructed using the following command:
+
+ (mapcar '(lambda (x) (if (atom x) x (car x)) L)
+
+: Then, if /L' = (A B1 ... Bn)/ it must be the case that /A -> B1 ... Bn/ is a production of the grammar G.
+
+To represent parses, it in convenient to draw /parse trees/.
+
+
+
+Back to [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]

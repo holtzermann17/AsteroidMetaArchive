@@ -1,0 +1,486 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Note: this is only one page in a larger set of pages on this wiki that talk about
+copyright.  See also:
+
+ * [[file:revising copyright law.org][revising copyright law]]
+ * [[file:Termination of Copyright Transfer.org][Termination of Copyright Transfer]]
+ * [[file:Problems With Copyright Law We Can't Work Around.org][Problems With Copyright Law We Can't Work Around]]
+
+*  Introduction
+
+With a large project like [[file:PlanetMath.org][PlanetMath]] that actively accepts contributions
+from users around the globe, copyright concerns are bound to arise.  Especially
+this one: are the contributors actually contributing works that they have a
+right to contribute?
+
+The same issue applies to [[file:GNU.org][GNU]] and to [[file:Wikipedia.org][Wikipedia]] and other large projects
+(both free and non-free) and historically this issue has been resolved in
+different ways, depending on the size and nature of the project in question.
+[[file:Project Gutenberg.org][Project Gutenberg]] must do little beyond being certain of the publication
+date for books that contributors would like to add, but that is a particularly
+simple case.
+
+One of the key copyright concerns for most [[file:what is CBPP|CBPP.org][what is CBPP|CBPP]] projects is that
+some contributors may not understand the relevant parts of copyright law.
+Copyright law can be confusing, and even smart people whose backgrounds lie
+elsewhere will not necessarily be familiar with some important facts about
+copyright, like the difference between [[file:Ideas and Expression.org][Ideas and Expression]].  
+
+We might blame citizen education!  But rather than pointing fingers, on this
+page we're going to try to actually do something about the problem, by writing
+some about what /you/ need to know about copyright to be a good free CBPP
+contributor.  We will also discuss the steps that a project like [[file:PlanetMath.org][PlanetMath]]
+can take to limit its liability, while continuing to be a productive and
+socially responsible organization.
+
+Throughout the discussion presented here, our rhetorical focus will shift back
+and forth between PM and some general "theoretical" CBPP system.  The concerns
+we speak of are generally applicable, but they are made more immediate and
+concrete in the case of PM.  You may find these rhetorical shifts of perspective
+somewhat disorienting.  If the condition persists, you should speak with your
+physician.
+
+----
+
+*  Our concerns
+
+The number one copyright concern is that a user of a CBPP system may
+"contribute" work that they don't own the copyright to.  This might happen if
+the user was ignorant, incautious, or even malevolent.  
+
+The possible negative results of copyright infringements in CBPP are various.
+First, an ignorant user could get him or herself into trouble - there are always
+risks associated with ignorance!  Second, the maintainers of the CBPP system
+(and de facto publishers of the infringing work) could get in trouble - there
+are always risks associated with being "open".  Third, in the case of free
+content, persons making derivative works under the terms of the license could
+get in trouble or end up wasting time by working with something that they later
+learn is not really legal to work with - there are always risks associated with
+copying.
+
+I wish to emphasize that this complex of risks is never going to go away.  The
+best thing we can do is work to minimize the impact of problem situations that
+may arise.
+
+Our concerns about the copyright status of contributed content will remain
+nebulous until we have some documentation of the process used to create the
+content.  As the most basic example, unless users cite the references they used
+when working on a given article, looking for works that may have been used
+inappropriately would be somewhat like looking for a needle in a haystack.  If
+an article cites the references that were used, these references could, at least
+in theory, be checked for examples of outright copying and the like.  The more
+detail that a user provides about their process and methodology, the easier it
+will be for an independent content auditor to check the copyright status of the
+work.
+
+Unless we have a clear understanding of what makes a document legally OK, even
+good process documentation will not be that helpful.  We can make guesses and
+conjectures, and say "well, it looks like it is OK" when it does -- however,
+without guidelines for an auditor, he or she will find it harder to make good
+judgements.  Since responsible authors can be expected to apply the same sort of
+procedures to their own work (both during and after composition), clear
+guidelines for "copyright cleanliness" would also help authors avoid
+infringements in the first place.
+
+Finally, unless we have a clear understanding of the legal responsibilities of
+the parties involved, we will find it harder to respond to or prevent problems.
+Assuming an possible infringement is identified, how should the CBPP system
+respond?  In the unlikely event of a lawsuit, who would be implicated?
+
+**  How serious are the concerns?
+
+We would hope that users have so far only contributed content that they could
+contribute rightfully.  Certain instances of copying that have been assumed to
+be legal should be checked, and to the extent it is possible, the process that
+led to the creation of all of the (purportedly) original articles should be
+documented and checked.  Until these processes are complete, our understanding
+of the copyright status of the encyclopedia probably really is largely a matter
+of faith.  We can do better than this, and we should.
+
+Luckily for us, even if infringements were considerably more widespread than we
+would guess, it seems unlikely at that a lawsuit would be filed by anyone at
+this stage in the game.  As PM grows, our beginner's luck in this regard may
+fade.  Indeed, the more comprehensive the site becomes and the greater the range
+of services it provides, the more eyes will be on our work, and the greater
+chance there will be of legal difficulties if we don't keep our legal apparatus
+growing in scale with the rest of the site.
+
+Thus, the concerns should be thought of as long-term but of growing importance.
+In the long term, copyright problems could completely destabilize the site.  By
+contrast, good solutions to our concerns will help make the site a really great
+place.
+
+So, there you have it, the tell-tale mixture of danger and opportunity.  We
+should proceed with caution.
+
+*  Working to address the concerns
+
+**  For content contributors
+
+Add info here, but basically:
+
+ 1. understand what is and is not protected under copyright
+ 1. understand what is and is not protected under fair use
+ 1. document your sources and your relationship to those sources
+ 1. include only /ideas/, /facts/ or /concepts/ from any source - not /expression/
+ 1. go beyond the set of ideas/facts/concepts you find in any particular source
+
+**  For project facilitors
+
+Add info here, but basically:
+
+ 1. understand what is and is not protected under copyright
+ 1. understand what is and is not protected under fair use
+ 1. write some text that makes it clear that illegal behavior is the responsibility of contributors
+ 1. create/deploy a system that helps users check copyrights of new and existing articles
+ 1. such a system should help the contributing authors with the steps above!
+
+The (draft) [[file:card-based temporary rating system.org][card-based temporary rating system]] could contain some useful
+ideas to help with the mechanics of checking new contributions, and also for
+dealing with problem articles found in the current collection.  Since addressing
+copyright concerns is a big priority for [[file:PM.org][PM]], edits to that page that enhance
+its usefulness in this area are particularly welcome.  Feel free to discuss any
+related ideas here or on that page!
+
+**  On being a "common carrier"
+
+Phone companies are not responsible for illegal activities conducted by
+telephone.  However, if they evesdropped on conversations and reported some
+conversations to the police, they might end up being held responsible for all
+conversations (including ones that they didn't listen in on).  By adopting a
+completely hands-off policy, and letting anyone at all use their services, the
+phone companies secure a position in which they are not liable for activities
+carried out using their services.
+
+It would be good if PM could secure a position like this vis a vis the articles
+that are published on PM.  I don't know enough about the situation to be sure
+that we could successfully make the arrangements... but if we could, it would be
+pretty swell.  Anyway, it is something to add to the discussion.
+
+[[file:Discussion about common carriers.org][Discussion about common carriers]]
+
+**  Fair use
+
+The major reason why the issue of copyright infringement is discussed here at
+all is that most sources of mathematical information are decidedly not free ---
+this means not simply that they are protected by copyright, but that publishers
+and authors have chosen to reserve all or most of the rights which they can
+reserve under the law.  To understand the difference between copyrighted
+vs. non-free, consider the example of the GNU license.  A work released under
+the GNU license is *not* in the public domain.  It is copyrighted every bit
+as much as a book published by a commercial firm.  The difference lies in the
+fact that that, while the commercial publisher does not allow anyone else the
+right to reproduce the book, the author who releases a work under GNU license
+has granted everyone permission to reproduce the book and certain other rights
+provided certain conditions (such as reproducing the GNU license when copying
+the work) are met.  In fact, copyright law is what allows the free license to
+work --- if one simply relinquished all rights to the work and put it in the
+public domain, then there would be no grounds for requiring that the conditions
+of use be met!
+
+One day, we hope the situation will be different and one will be able to obtain
+all one's mathematical information from free sources or, at the very least,
+sources with relatively liberal license agreements, but now the situation is
+quite diffrerent.  Publishers require that authors surrender their rights to
+books and articles to the publisher and have jealously guarded their copyrights,
+even suing authors whose books they were printing.
+
+Given this situation, one is forced to rely on information which appears in
+books which have "all rights reserved" stamped on their title pages.  What can
+one do in such a situation?  Waiting for the copyright to expire is not very
+practical because, by the time a work passes into the public domain, it will be
+rather dated --- whilst one can freely reproduce works of nineteenth century
+mathematicians, most of twentieth-century mathematics is off-limits.  One can
+always ask for permission, but it is unlikely that a commercial publisher will
+allow a free encyclopedia permission to do something which may possibly impact
+on sales of their books.  Once a book is out of print, one can ask an author to
+consider releasing the book into the public domain or rereleasing the book under
+a free license.  However, a math book can stay in print for decades, so this,
+while certainly worth doing, is not necessarily going to keep one from having to
+refer to non-free material.
+
+In such a situation, one needs to tread carefully lest one run afoul of the law.
+In particular, this means that those of us involved in free math needs to become
+familiar with the doctrine of /fair use/.  Roughly speaking, it allows one to
+legally do things which would otherwise be considered infringement of copyright.
+That is the good news --- the bad news is that, as even the
+[http://www.copyright.gov/fls/fl102.html copyright office] itself states, this
+is a somewhat murky area of the law.  There are no clear-cut rules stating how
+much material may be copied without permission.  Rather, the law
+([http://www.copyright.gov/title17/92chap1.html#107 section 107 of the copyright
+law]) lays out four broad guidelines which the court is to use in determining
+whether or not an act constitutes fair use or infringement.
+
+Therefore, it should be imperative that those of us involved in free math take
+some time to familiarize ourselves with these guidelines and their
+interpretation as established by the courts.  Likewise, we need to be careful to
+avoid lulling ourselves into false security with popular misconceptions about
+copyright.  One can find a list of some such mistakes at the following website:
+[http://www.templetons.com/brad/copymyths.html]
+
+Among the misconceptions, the following way be worth pointing out as being of
+relevance to free math projects:
+
+ * Acknowledging sources is no substitute for obtaining the permission of the
+  copyright holder (/not necessarily the author!!/).
+  [http://www.copyright.gov/fls/fl102.html] Certainly, from the
+  scholarly point of view, one should acknowledge any sources one has used but,
+  from the legal perspective, it is not considered a valid defense.  Thus, one
+  should not be lulled to thinking that it alright to copy material from a math
+  book simply because one has thanked the author with a bibliographic reference.
+
+ * Just because something does not contain a copyright statement does not mean
+  that is it is not protected.  In particular, this means that just because one
+  sees a book or article available at a website one it does not automatically
+  follow that one is free to distribute it.  Likewise, it is *not* "fair
+  game" to copy material from mathematical webpages and newsgroup pages into a
+  resource like Planet Math without the permission of the owner.  This is
+  illegal and puts Planet Math at risk.
+
+ * Simply changing details does not save one from infringement.  There have been
+  cases in which people have been found guilty of infringement for copying a
+  story and changing the names of characters and places --- for a recent
+  example, see the discussion on the page [[file:Ideas and Expression.org][Ideas and Expression]] of this
+  website.  In fact, changing details while leaving the main outline might be
+  asking for trouble since it can suggest that the copier was conscious of the
+  fact that work was being plagarized and tried to conceal the crime by changing
+  around details.  At least, if one makes no deliberate attempt at concealment,
+  one can argue that the copying was due to an honest misunderstanding about the
+  limits of how much borrowing is legitimate.
+
+ * On the other hand, there is a doctrine of "transformative use" which allows
+  leeway when adapting a piece of work to a use different from the original
+  intent of the author.  It might be a good idea to keep in mind the distinction
+  between this and the trivial sort of transformation mentioned in the last
+  point and become clear on the difference between "transformatve use" and
+  "derivative work".
+
+ * Whether or not money is involved is not relevant.  While copyright law does
+  allow impact on the sales of a book as a factor in determining fair use and
+  has special exemptions for certain non-profit institutions, this by no means
+  implies that one can get away with disseminating copyrighted information
+  simply because one is not charging for it.  Also, it might be worth pointing
+  out that, when suing for infringement, the plaintiff may choose to sue for
+  statutory value, which means that the issue of whether the infringement
+  resulted in monetary loss need not be considered and, if it deemed that the
+  copyright was violated, then the court will decide on an award of more than
+  $750 but less than $30000.
+
+To finish on a more positive note, it might be worth remebering what the law
+ *does not and can not* protect.
+[http://www.copyright.gov/title17/92chap1.html#102 Section 102(b) of the copyright law]
+lays it down rather clearly:
+
+: /In no case does copyright protection for an original work of authorship
+extend to any idea, procedure, process, system, method of operation, concept,
+principle, or discovery, regardless of the form in which it is described,
+explained, illustrated, or embodied in such work./
+
+Since the subject matter of mathematics consists of "ideas, procedures,
+processes, systems, methods of operation, concepts, principles, and discoveries"
+and mathematical entities are suppsed to be invariant under isomorphism and
+independent of embedding, it is clear that mathematics is free for all to use
+according to the law.  Likewise, "laws of nature, natural phenomena, and
+abstract ideas" cannot be
+patented.[http://www.uspto.gov/web/offices/pac/doc/general/index.html#whatpat]
+To be sure, like all other freedoms, this freedom is subject to erosion (in
+particular, issues having to do with software copyrights come to mind) and must
+be defended.
+
+In particular, this means that there is a sure-fire way of being sure that one
+does not infringe on existing copyrights --- only write on material which one
+has already thought about at length to the point that one could rederive it from
+scratch and take care to write from one's understanding.  However, this may be
+asking too much, especially from younger contributors, so some sort of
+guidelines for extracting mathematical content from its textual presentation and
+cautions to keep away from potential legal difficulties may be in order.
+
+Finally, there is something of a paradox in this --- while mathematics is
+unquestionably free in principle, in practise it is inextricably bound with its
+verbal expression, which is subject to the strictest legal protection.  It is
+this disparity which the free math movement seeks to remedy by providing sources
+of mathematical knowledge which are as free as the ideas they embody.
+
+**  Going beyond
+
+Note that going beyond the particular set of ideas, facts, etc., that you find
+in a source is not in and of itself enough to solidify your case under fair use.
+The [[file:Ideas and Expression.org][Ideas and Expression]] page discusses a case where it seems that the core
+ideas were used again, and significantly expanded upon, but were also used
+together with some of the expression from the original work.  The case hasn't
+been decided, but the plaintiff certainly seems to have a point.  And,
+ironically, it may be the very way in which the defendants "went beyond" that
+gets them into trouble.  The claim is that they expanded upon an unpublished
+manuscript, retaining many of its core features while changing many others, and
+adding plenty of new things.  Still, the core is apparently there -- and this is
+a core of expression, not a core of facts.
+
+In the math world, similarly, someone basing an article on someone else's
+/expression/ might get themselves in trouble.  True, basing one or two
+paragraphs on one or two paragraphs from a book with hundreds of pages is not
+likely to be the same as incorporating the core of the book's expression.  (I
+assume that Fair Use is somewhat forgiving of minor trespasses like this? -
+maybe I'm wrong).  But if this same activity was carried out systematically
+throughout the pages of the book in question, then trouble would be almost
+certain.
+
+And even though fair use makes individual facts free, in general, even a bare
+collection of facts has some "expression" to it, simply by dint of those
+particular facts being collected together.  Thus even the driest work (a
+logarithm table, for example) is afforded some protection under copyright law.
+
+Just as an author of a screenplay who bases his or her work on the work of a
+previous author must be careful not to have "too much" of the expression in
+common, an author of a new mathematical guidebook that includes logarithm tables
+must be careful not to have "too much" of someone else's logarithm table.
+
+But "too much" here means too many /rows/ -- if you can compute even one more
+/column/ for all the rows you might be OK, because then it is clear that
+you're computing things for yourself.  (I actually don't know if this statement
+is mathematically correct, since maybe there are tricks you can use to compute
+more decimal places for your logarithms, but anyway hopefully you see where the
+comment is coming from in principle!)  Even so, if the actual choice of
+arguments to the log function (i.e. the pattern behind the rows) is at all
+"artful" or creative, you might also wish to choose some other pattern.
+
+Basically, copyright protection for the original work says that to the extent
+that it is reasonable to do so, anything new in the same area shouldn't be a
+"derivative work" unless it is written by the author of the original work.
+There is really a continuum of derivativeness, from being an outright copy
+to being just vaguely inspired by the other work.
+
+Finding some ideas in a source text does not immediately make your work a
+"derivative".  Going beyond the ideas you find in a source text does not
+immediately make your work /not/ a derivative.  The important thing is that
+your work should be your own -- by which I mean, it should contain your
+expression of the ideas you are writing about, not someone else's.  This makes
+good legal sense, and for a project like [[file:PM.org][PM]] it also makes good
+expository/pedagogical sense.
+
+**  Accountability of peers
+
+I don't necessarily want to advocate doing this... but... if the project
+facilitators do create a notice that "makes it clear that illegal behavior is
+the responsibility of contributors", then I wonder whether the project could
+prosecute persons who contribute infringing text?  It makes sense to me: first
+of all, it would be a breach of contract, since /by accepting the terms of this
+Contract and submitting text to this site, you guarantee that to the best of
+your knowledge you have the legal right to post this text, and that you have
+familiarized yourself with the [[file:Copyright Guidelines for CBPP.org][Copyright Guidelines for CBPP]] and that you
+will comply with the requirements listed there./  Second of all, there could be
+additional damages that have accrued to persons making derivative works.  These
+persons could, presumably, press charges on their own against the person who
+published the work under an illegitimate license.  But PM could also add to its
+contributor's contract something like /the Contributor agrees to be held solely
+responsible for damages caused to PM or other legal entities brought about
+through negligence in following the Copyright Guidelines./  Thus, even if a
+third party was to sue PM, PM could point to this contract and redirect the
+lawsuit (or, anyway, turn around and sue the person who contributed the
+non-legal content).  I don't know how effective any of these suits would be,
+especially if they involve crossing international borders.
+
+I don't suppose that PM would want to prosecute anyone who contributed
+infringing text right off the bat (unless they were clearly doing it just out of
+malevolence and a desire to try to get PM in trouble).  If no derivative works
+were made and the original owner of the copyright was oblivious, then its really
+no skin off PM's back.  But we would still want to reserve the right to delete
+the offending content before it did become a problem -- at least, contributors
+should know that [[file:card-based temporary rating system|red cards.org][card-based temporary rating system|red cards]] could be used
+by other site members to delete suspicious contributions and possibly to get the
+contributor blocked from using the site in the future.
+
+**  Public Domain and "Thin" Copyright
+
+Organizational entities are trying to assert copy rights over public domain materials
+simply because they have digitized, or otherwise captured or disseminated them.  We
+have heard this called "thin" copyright, and (1) it is not supported by the law, and
+(2) it has been opposed by courts (see [http://www.funnystrange.com/copyright/bridgeman.htm Corel v. Bridgeman]).
+
+It is important to pay attention to this issue, because the contemporary /sources/ 
+one might encounter of public domain material may be asserting restrictions which 
+would halt CBPP-style re-use, at least without burdensome release procedures.  In 
+addition, there is no statutory guarantee that a content user won't be sued in 
+this situation, so "thin" copyright still poses a real risk for content builders!
+In other words, if Bridgeman had been facing an organization like PlanetMath instead
+of Corel, it could have wiped us out financially, even if we won in court (more likely, 
+we probably would have to give up use of the content upon extra-legal threat).
+
+So far we know that Cornell's DL (which contains historical mathematics works) is asserting
+"thin" copyright over PD materials, and it is likely Google Print will attempt to
+do the same.    Stay tuned.
+
+* Disclaimer
+
+/The authors of AsteroidMeta (and this page in particular) are not attorneys or
+legal scholars.  The material presented here is simply general information
+presented in order to raise public awareness about issues of copyright and
+foster discussion of these issues and their impact on commons based
+peer-production of mathematical content.  While every attempt has been made to
+check that the information presented here is accurate, the opinions and
+suggestions presented are in no way intended as legal advice; for authoritative
+and reliable advice, the reader should consult a qualified expert in the field
+of copyright law./
+
+----
+
+* What Is Thin Copyright?
+
+ * An authority speaks:
+http://www.lessig.org/content/standard/0,1902,22914,00.html I was
+talking to someone at a conference on the evolution of mathematical
+communication, and this Adobe e-book of "Alice in Wonderland" came up
+as an example of someone successfully defending a "thin copyright" for
+a reproduction of something in the public domain.
+
+But I don't see evidence on the 'net that Adobe was actually
+/challenged/ over this thing, and I think it is quite likely that
+the guy I was talking to simply didn't know what the hell he was
+talking about.
+
+Lessig does know what he is talking about, and since he didn't seem to
+see a problem with Adobe put a license onto the thing in the first
+place, maybe they did have a copyright.
+
+Maybe time to turn to a different case.
+
+Here's one thing I've found:
+
+: To the dismay of many museums that sell photographs of their
+ collections, a federal court in New York determined that high quality
+ photographs of art do not merit copyright protection. The works at
+ issue were considered "slavish copies," without any additional
+ creativity. Thus the photographs, while new, were part of the public
+ domain. Bridgeman Art Library v. Corel Corp., 36 F. Supp. 2d 191,
+ 1999 (S.D.N.Y. 1999).
+
+And here's more info:
+
+: Museums have assumed they are protected because originality is a
+   very low threshold. A standard formulation is that a work is
+   original when it "owes its origin to the author, meaning it is
+   independently created and not copied from other works." You'd think
+   that the "not copied from other works" part of the definition would
+   automatically mean that the museum photograph of a Rembrandt is not
+   copyrightable because it is copied from another work. However, the
+   Copyright Act recognizes "art reproductions" as a type of
+   "pictorial, graphic, and sculptural work" that may be copyrighted.
+   So, what is an original reproduction?  /To answer this, you must
+   first understand that copyright protection in art reproductions is
+   known as a "thin copyright." The copyright act protects only those
+   elements of the reproduction that are not copied from the
+   underlying work. By limiting protection to the uncopied parts of
+   the reproduction, the Copyright Act explicitly seeks to keep
+   reproducers from using their copyrights in reproductions to affect
+   copyrights in or public-domain status of the works they have
+   reproduced./
+
+I mean, what could be more confusing?
+
+Oh, here you go! [http://homepages.law.asu.edu/~dkarjala/Articles/BrooklynLRev1998.html Copyright protection of computer program software].
+
+This thin copyright business seems to me to be a real tar baby of
+confusion.  Maybe time to [[file:minneapolis local law|turn to a local expert or something.org][minneapolis local law|turn to a local expert or something]]...
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,607 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* implementation independent specifications
+
+I wonder if, for example, it is an error -- in the long
+run -- to make "locator" in command "param" implementation
+dependent (e.g. "nicod/nicod-ax" being a name nicod-ax 
+within directory nicod.) 
+
+Would it be preferable in the long run to separate the
+informational content of JHilbert files from the
+implementation dependent storage mechanisms? 
+
+I can envision "modules" or "chapters", or whatever,
+being assigned names for use with import/export and
+a separate command being used to specify location.
+That would allow use of, say URI's. So a JHilbert
+program would be able to run a session with
+environment-settings to pull the module data from
+various locations, such as off the internet, or
+from a disk drive, or from a SQL database. 
+
+Another idea might be to encode the information as
+XML or as Semantic Web data. 
+
+The beauty of this is that there could be an arbitrary
+number of processors operating on the data and the
+location of the processors could be local and/or remote.
+
+I think the spec should be broken out into the abstract
+and concrete. The abstract spec is true regardless of
+where the data is located and how it is encoded in
+local terms. The concrete spec defines how it is encoded
+and stored in various (different) ways.
+
+: Yes, there is a lot which has to change in that "spec" in the long run.
+I wrote that spec within an hour to give the version 2 release somewhat more
+value and updated it only slightly for version 3.
+
+: In the code, the locator actually /is/ implementation independent. The spec merely spells out how the only implementation currently available does interpret the locator. So, yes, it doesn't actually belong there. It's just the lazy way to communicate to users how the files should be named.
+
+: In the wiki, I envision that the interface modules are placed in a special <code>Interface:</code>
+namespace while the proof modules remain in the main namespace. The interface names would then simply be natural names, such as you would name a Wikipedia page. Maybe it's possible to create standard naming conventions around that. That way, the storage implementation would not need to give implementation details to users.
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+:: In Semantic Web (OWL) each item has a global (Earth) unique
+name (URI). I'm thinking that the JHilbert repository could
+be distributed in the same way, and that a user could have
+a local copy of a "module" or use a mirrored copy, or the
+original -- and that different versions may need to be maintained
+so that updates can be made dynamically while people are using
+the system (thought must be given to updates in the design.)
+--[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE What you suggest sounds more like an svn repository than a wiki. In some kind, a wiki is an extension of an svn repository. But it's true that the concepts of local working copy and version locking work a little differently in a wiki than in an svn. The one advantage which I see in a wiki is that you can present an informal, textbook-style proof simultaneously with a machine-verifiable proof. But that doesn't mean, of course, that JHilbert cannot be used in an svn like environment, too. And the unique names would make sharing data between two such systems a lot easier. I hope these unique names can be chosen to appear "natural" to users of such systems.
+
+#+BEGIN_VERSE: Perhaps the wiki and the data repository(s) could
+be separate, with the wiki referring to items in the
+database and providing additional information. 
+
+* proof contents
+
+It appears that JHilbert is using RPN style (Metamath)
+proofs. This is a good way, but it is also true that
+a valid proof can be represented as a tree (so a 
+syntax parse tree and a proof tree are parallel concepts
+with same high-level format.) 
+
+Using proof trees insteads of RPN lists provides 
+a couple of benefits: 1) a proof can be checked for
+well-formedness without actually doing proof verification;
+2) a proof can be broken out into "main" proof steps,
+instead of being represented as a "blob" of micro-steps.
+
+An alternative proof verification method can also be
+used based on the tree structure: essentially we need
+to show that each proof step formula is a (valid)
+substitution instance of the assertion used to justify
+it. So the proof tree approach has the benefit of 
+clarity (as compared to the Metamath proof verification
+algorithm with is non-obvious.)
+
+: The current verifier is quite spartan and does not do much more than saying "verifies" or "does not verify". At some point we'll need a more user-friendly verifier, and a tree structure indeed seems to be the most user-friendly way to go. In a well-formed proof you can, for example, tell the user things like "in this sub-step you messed up, but if you fix it, the proof will check out" and similar, making error detection much easier for the user.
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+:: What I am saying is that the "thm" command proofs could
+be expressed in tree form -- or sexp -- in exactly the
+same way that expressions are written, instead of an array
+(long list) of labels. Metamath proofs, and (JHilbert as written)
+have a macro structure, RPN, and a micro structure which exists
+if the proof is valid, and as it turns out the RPN list is
+simply the tree written out left-to-right, bottom-to-top.
+--[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE OK, these are two equivalent representations of the same thing. RPNs have a forward-chaining nature, while proof trees are more backward-chaining. I've always seen the forward-chaining nature of metamath as an advantage over other systems if you already know the proof. It's a different story if you /don't/ know the proof. So maybe both methods should be allowed.--[[file:GrafZahl.org][GrafZahl]]
+
+
+* thm command redundancy
+
+I never really understood why the "thm" command
+has redundant "dvc" and "thmexpr". If the thm
+prove the stmt command, why restate the formula
+and distinct variable restrictions? 
+
+And is there some mechanism which checks to see
+that what is supposedly redundant is truly identical?
+
+(As an aside, in mmj2 the Proof Assistant has the
+capability to generate the DVC specification based
+on the proof. DVC restrictions follow bottom-up from
+the initial axioms with DVC's. In some cases Metamath
+theorems have unnecessary $d restictions, but unless
+the proof violates the $d's of the assertions it references,
+the user is likely to appreciate having the requisite
+DVC's generated.)
+
+: About the consequent (thmexpr): This is basically a hint for JHilbert what form of consequent to use. Yes, it probably should not be mandatory. The thing is, if the theorem is used in a proof of a subsequent theorem before JHilbert has had a chance to take a look at the intended consequent of the respective stmt (which only exists if the theorem in question is not just a local lemma), the consequent may appear not in it's most natural form, causing unnecessary internal unfolding. This is related to the definition discussion below. Think of it as if you close a proof with the words "hence, the assertion follows".
+
+: About the DVC: the current verifier is perfectly capable of calculating the required DVC, and actually does so, using the cartesian product feature of the <code>DVConstraints</code> class. If you run JHilbert in debug mode (<code>-lDEBUG</code>), it should print out the required DV constraints when a DVC violation is detected. Since JHilbert (as opposed to GHilbert) reduces the required DVC to the minimum necessary anyway, it might be OK to scrap them from the thm command. There is one thing that could be confusing to users: if a theorem is used in a proof farther down, and a DVC violation occurs, JHilbert has no way of knowing whether the current proof step requires too few DVC, or the previous theorem has been proven inexpertly and requires too many.
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+* def complications
+
+From the JHilbert command description for def: 
+"A definition may be unfolded at any time, whenever necessary or convenient."
+
+I wonder just how problematic this may become, both for
+users and for programmers. It is so open-ended that
+it is not clear how to write the code to do this. For
+example, Metamath (stack) proof verification has unification to see
+that the substituted expressions from the stack match.
+Is the program supposed to check for a match and then
+unfold any definitions to see if /that/ works?
+
+Also, the larger kind of unification (as defined in the
+literature) is not at all trivial even without the concept
+of attempting every possible folding/unfolding of all
+definitions whenever "necessary or convenient". For example,
+mmj2 does a "unification search" and a "step selector search"
+which look for assertions which may be unified with a
+given proof step. With a database of only 10,000 theorems
+this process is fairly doable, but would grow exponentially
+more difficult with the "def" mechanism in place -- and
+one day with 1,000,000 theorems, a unification search might
+turn out to be a major undertaking if definitions are 
+arbitrarily unfolded/folder looking for matches.
+
+At the user level it isn't clear that the program should
+be invisibly unfolding and re-folding definitions. Isn't that
+something that the proof should specify -- i.e. when
+to unfold something? Otherwise how will humans be able
+to check the computer's magical work? (Would it be possible
+to have a proof with zero steps if the theorem conclusion
+formula is equal to a definiens and the hypothesis is 
+equal to the definition?
+
+This may be the greatest feature in history but I am
+not comfortable with it so far...
+
+: The formulation "necessary or convenient" is obviously a product of my own laziness ;)
+
+: Within the <code>Substituter</code> class, definitions are only unfolded, /never/ refolded, forestalling any exponential dangers. I don't see where a unification or step selector search would need a refolding, except possibly refolding the results for user-friendliness. In principle, any unification search should work if you flatten (i.e. completely unfold) all expressions first and then do your search. That's the definition of a definition. In fact, without definitions, you may miss out on some unification possibilities because of a missing unfold step.
+
+: Why did I adopt this liberal notion of definition? I once tried to do Nicod (see https://secure.wikimedia.org/wikisource/en/wiki/A_Reduction_in_the_number_of_the_Primitive_Propositions_of_Logic) in both metamath and Ghilbert, using the definitions for the usual logical functors which Nicod gives. It is a pain! You have to do everything yourself: disassemble the expression, apply definitions on head symbols, reassemble the expression. Due to the inherent recursiveness there can be no single theorem applicable on all expressions unfolding all your definitions.
+
+: It's true that some of these comparisons may seem like magic (a zero step proof is not possible, but a one step proof consisting only of a hypothesis label is). But: when it does, there probably /is/ magic somewhere, as in some unexpected equality of expressions using definitions. I mean, if you, as a user, make a definition, you know the definiens, and you know what you can expect it to unfold to. An unexpected unification possibility may be an unexpected parallel between two theories.
+
+: One possible compromise would be if I could say somewhere in the proof: "Unfold that three levels deep", or "Unfold that until it matches this or that expression". That would, of course, require the user to keep track of the proof stack, not to mention the complication of the syntax. Maybe that's a feature for the "virtual reality mode" you mentioned earlier ;)
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+:: I'm not against the def command per se, but in practice
+things are complicated. set.mm has a formula that is 900
+symbols long. Imagine a formula that is syntactically 6
+levels deep. Now consider that definitions are piled on
+top of definitions on top of definitions and that instances
+of definiens occur at various levels and locations within
+the parse tree. Then, checking to see if two formulas are
+exactly identical when unfolded down to atoms may be doable,
+but ... in a proof step the Ref label which justifies the
+proof step is valid if the proof step formula and its
+hypotheses are a valid substitution instance of the Ref'd
+assertion. But the Ref'd assertion may have its own
+definiens, or not. So doing the "unification" (comparison)
+is not as simple as doing an unfold and string compare.
+And with really long formulas there is no way that 
+this can be done by a human by just inspecting the formulas --
+in Metamath the proof steps actually go through the laborious
+process of unfolding, replacing, etc., step by step. In short,
+searching the repository for "unifiable" assertions becomes
+an inconceivably arduous task if unfoldings may or may not
+be needed -- and with real world formulas in use I think
+the JHilbert processing would become sort of an unverificable
+black box doing stuff that no one can see or check by hand.
+(I could be wrong on this :-) --[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE It seems two different philosophies are clashing here. Metamath wants to be the assembly language of mathematics, and for that goal it accepts the failure of distinction between axiom and definition. The user is /forced/ to spell out everything. In JHilbert, I would like to keep the axiom/definition distinction. This requires definitions in interfaces, which in turn requires unfolding. Note that it's still possible to abate the effects, for example by requiring the user to specify what should be unfolded, etc., though it's probably not trivial to do so in a non-ugly way. But the thing is, this /should/ not be a problem. A formula with 900 symbols? Any referee would kill you if you submitted in such a monster. Any proof which requires six levels of unfolding in a step cannot be possibly a good proof, unless these six steps are somehow obvious. If we are to mimic published material, this simply should not happen. Or maybe I'm missing something.
+
+#+BEGIN_VERSE Another way to look at it is this: metamath and family give you two things which other proof assistants do not: complete theory agnosticity, and complete atomicity. I am most interested in the former but are willing to be lenient with the latter as far as expressions are concerned which are deemed equivalent by the current theory. In this respect, JHilbert takes a middle ground between high-level assistants, such as HOL, and metamath.
+
+#+BEGIN_VERSE I don't think it can be said with certainty which philosophy is better at this stage. It's probably application dependent. Since nobody forces you to use definitions, we can, I think, wait until we have a clearer picture. If liberal definitions turn out to be absolutely horrible in reality, we can still constrain the feature a bit.
+
+#+BEGIN_VERSE --[[file:GrafZahl.org][GrafZahl]]
+
+#+BEGIN_VERSE: I propose an experiment for you to find out fast
+what will work: convert set.mm replacing all "df-*" -- the
+definitions, coded as $a statements -- with jhilbert "def"
+commands. Specifically, there would be no df-* stmt 
+commands in the output, so the proofs would need to be
+converted as well. Write the code to do this conversion
+before proceeding to version 4 so that you know ASAP 
+how viable the spec really is. --[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE:: I went back to my Nicod/Sheffer calculus experiments. The reason /why/ it is such a pain to work with definitions in this setting is that neither <code>=</code> nor <code>&lt;-&gt;</code> are available. But these two are essential in emulating the "can be replaced with" notion inherent to a definition.
+
+#+BEGIN_VERSE:: One more thought: Wiki -> JHilbert is not a one way road. The verifier can give feedback the markup generator can use. So if a substituter unfolds definitions a lot in the process of verification, why not tell the user what it does? Thus, in the end we have something like an extended version of the metamath proof renderer, with unfolding steps inserted and displayed automatically.
+
+#+BEGIN_VERSE:: Since version 4 will not yet be concerned with feedback, I'll concentrate my efforts on further developing JHilbert for now. Your suggested experiment sounds interesting but I guess it's not quite trivial to implement it.
+
+#+BEGIN_VERSE:: --[[file:GrafZahl.org][GrafZahl]]
+
+* import/export command function and purpose (clarity)
+
+I find the documentation of "import" and "export" unclear.
+And it seems that they, especially export, mix functions
+which should be separate. 
+
+I think the intent of import is partly to specify the
+prerequisites for a "file", and to enable the imported
+information to be references. That part is somewhat clear.
+Export seems to be a command to check proofs, but why
+this should be needed for data stored in a "database"
+is not clear -- the timing of proof verification processing
+shouldn't be defined in a declarative document but 
+under user control. 
+
+Also, if you look deeply into set.mm you see that it
+is not monolithic. Even excluding the Hilbert Space
+and User Sandbox areas, set.mm is composed of some
+33 Sections and Sub-sections (in mmj2 Book Manager
+these are referred to as Chapters and Sections,
+respectively.) Each set.mm sub-section follows a pattern:
+declare new variables if needed, declare new syntax
+(terms in JHilbert terminology), introduce axioms
+and definitions, and then develop the theorems resulting
+from the new syntax, axioms and definitions. So 
+each sub-section is a unit. In the longer run for
+an ambitious JHilbert, where the massive repository
+of math stores boatloads of knowledge, there should
+be a defined way to organize collections of math/logic,
+similar to set.mm's sections and sub-sections. 
+
+The mmj2 Book Manager provides a way to pull out
+just a sub-section if needed, and of course the
+previous sections will likely be needed to do anything.
+What I tried to provide in Book Manager is to make
+it possible to add new theorems to the end of a sub-section
+without breaking the existing sequence numbers (maintaining
+precedence within the total collection of theorems.) 
+
+So in the massive JHilbert repository it will be necessary
+to perform dynamic updates while people are working with
+the data, and that is another reason for providing a
+mechanism to increase the granularity of the data while
+providing more structure (you probably don't want to
+granularize down to the theorem level -- unless there were
+a way to "tag" each theorem and dynamically collect
+them when needed.) I can envision a pseuod-update
+mechanism which uses versions of sub-sections: an update
+to the main (approved) repository for a sub-section
+writes out a new version of the data while leaving
+the old version in place. Then users which don't specify
+a version number/date on their "import" commands 
+will receive the latest version -- and if they run into
+verification errors while working they can pull back
+to the previous version temporarily. (This works well
+with distributed data repositories too as long as everyone
+uses similar mechanisms (which means that the version number/
+change date-timestamp must be part of the defined data
+and not just encoded in filenames.)
+
+: The storage interface already provides for versioned modules. It's just the current implementation that doesn't ;) The param, import, and export commands are intended to be just the tools to handle chapters, subchapters, etc. The export command is *not* a command to check proofs. Yes, the info in the "spec" is quite terse. Maybe it becomes clearer if I explain what the current implementation does:
+
+: *param*: Loads all kinds and terms (including defs) which are declared in the specified interface into the current interface (with certain sanity checks not so important right now). Those kinds and terms loaded into the specified interface in turn are /not/ loaded into the current. Instead, the respective interface parameters are checked for a compatible mapping. Maybe it's that last part that is a bit confusing. Let's start simple: most of the time, the interface parameters specified by the user and the params of an interface will have identical locators and no prefixes. In this case, the param command is just like java's <code>import</code> command, making all the kind and term names available. Now, let's have different interface parameters: for example, if you have an interface concerned with group theory which builds upon a parameter concerned with semigroup theory, you can specify /any/ interface providing the theory of semigroups for that parameter. Even if the names and expressions don't quite match, you can create an adapter interface. One final example: let's say you have an interface providing the theory of groups, monoids and semigroups. Suppose you want to create an interface providing the theory of rings and semirings, with or without unity. You can then param the group theory interface twice, with different prefixes, to provide the multiplicative and the additive structure of your ring.
+
+: *import*: The implementation does exactly the same thing as with the param command, just that, in addition, statements are also loaded/mapped as above.
+
+: *export*: Here, nothing is loaded. Instead, it is checked that if something /was/ loaded, it would match what is /already there/.
+
+: So the semantics are as follows: an interface using <code>param</code> says: "I'm parametrisable, with any interface satisfying the interface I specified in the param". A proof module using <code>import</code> says: "I prove my stuff accepting everything in the specified interface as given", and a proof module using <code>export</code> says: "See here, all the stuff in the specified interface I have, too".
+
+: Hopefully it's a little clearer now.
+
+:: Not so much. I'll have to look again... --[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE It seems I definitely have to expand that document a great deal. Meanwhile, I suggest you have a look at the <code>ParameterLoaderImpl</code> class.
+
+#+BEGIN_VERSE --[[file:GrafZahl.org][GrafZahl]]
+
+* general comments on JHilbert Command Documentation
+
+This is a good document but a deeper level specification
+document is needed spelling out every validation edit,
+both field-level (argument) and relational (validation
+across fields.) 
+
+Also, more discussion of motivations and examples for
+each of the commands and command parameters are needed.
+
+: I don't quite get what you mean by "field-level" and "relational". Stuff that happens within the module and the <code>ParameterLoader</code> stuff, respectively?
+
+: And, yes, the document needs to be fleshed out quite a bit.
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+:: "field level" means each individual data element (token).
+"relational edit" means that assuming the data element is valid
+taken alone, is it valid in relation to other data elements.
+For example, consider a purchase order. The PO Date field
+level edit may say "blank or a valid date". The relational
+edits for PO Date may say "must be less than the Ship Date".
+This stuff needs to be spelled out completely so that
+someone could write code or verify correctness. For example,
+above you mentioned that a "thm" may be a local lemma. Is
+that a result of the thm name not being found in the "stmt"
+namespace? And then, is a local lemma imported/exported? 
+How is "local lemma" identified in the proof file? 
+--[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE What the document needs is a precise description of concepts and underlying algorithms. This certainly includes your points. At the moment, there is simply too much undefined vocabulary in it.
+
+#+BEGIN_VERSE About the "local lemma": yes, that's precisely a theorem which is not exported with a matching stmt command. The question of importing/exporting a local lemma is ill-posed as thm commands cannot appear in interface files but only interface files can be exported or imported.
+
+#+BEGIN_VERSE --[[file:GrafZahl.org][GrafZahl]]
+
+* 'def' reconsidered. yea or nay?
+
+I understand not wanting to attempt the conversion
+of set.mm using "def" and eliminating all "df-*"
+axioms throughout, including the proofs. It would
+be very hard. 
+
+I'll make it easier: convert just the propositional
+calculus part of set.mm.
+
+Even that would be hard. But perhaps the difficulty
+level should tell us something. 
+
+Since set.mm represents 10+ years of content creation
+work, to say nothing of writing the Metamath book
+and code, to not be able to convert it to your new
+system using the 'def' command would represent a
+failure of sorts. With more than 10,000 theorems it
+is a serious piece of work which would lend JHilbert
+credibility -- and being able to convert back from
+JHilbert, def's and all, would provide a quality-control
+for JHilbert (since Metamath has three or more
+sets of code written by different programmers using
+different programming languages, being able to 
+check your theorems in Metamath makes it all but
+certain they are as correct as their axioms and
+assumptions.)
+
+Also, simply because Raph wrote 'def' into Ghilbert
+does not mean that the concept should be used as
+given. We must question and analyze, test and
+verify before spending thousands of hours writing
+code and inputting proofs! To build upon a shaky
+foundation means going homeless or having to
+build another house later.
+
+So let's reason about 'def', a little bit.
+
+For one thing, in set.mm we see that the definition
+axioms, such as df-bi, are used mostly when the
+new syntax items are introduced; once the critical
+"gateway" theorems are proven, which is typically
+difficult, the rest of the theorems have no need
+to refer directly to the definitions. 
+
+Also, typically mathematicians like to be able
+to write down a definition, recast using the variables
+in use locally. Then the definition statement is
+used in further derivations. But the 'def' command
+does not provide a label or a JHilbert stmt which
+can be used in further derivations -- it is unattached
+and unavailable to the humans, only the programmer
+can refer directly to the 'def'd things.
+
+Next, consider that definitions tyically involve
+'<->' for wff definitions and "=" for class or
+set definitions, so there are really two basic
+types of definitions (df-bi is tricky because
+it defines '<->' in terms of '->' and '~'). In
+a Metamath definition, which is coded as a $a
+statement, either side of the equivalency or
+equality expression can be referenced as a normal
+sub-expression. So there is implicitly an ability
+to unfold *and* refold a definition...
+
+Finally, most Metamath set.mm definitions are about
+defining a constant in terms of an expression 
+containing no free variables (e.g. "X = { x | blah-blah x }".
+So what is the benefit of using a 'def' in this
+case? Or any case, for that matter -- especially
+if we cannot explicitly describe an algorithm for
+converting a Metamath .mm file to a JHilbert file?
+
+So we have to ask just why Raph proposed using 'def'
+instead of axiomatic definitions as used in Metamath?
+
+You might (or not) have had the idea that the
+a great part of the difficulty in doing proof
+in Metamath was the result of not having an
+automatic definition unfolder built-in. Not
+so much. The difficulty level is a result of
+doing Hilbert-style derivations instead of
+the Natural Deduction style. Often in set.mm
+the hard part of doing a derivation is flipping
+a formula and tweaking it so that some other
+theorem can be brought to bear upon an inner
+sub-expression -- and then the flips and tweaks
+need to be reversed; there is no built in
+formula rewriting which replaces sub-expressions
+with their equivalents the way we do when writing
+on a blackboard!
+
+In my experience, an analysis/requirement error
+is at least 10 times more expensive than a
+design/specification error...which themselves are
+at least 10 times more expensive than coding
+errors (and some of those can be very expensive
+if there are real users and mass amounts of 
+data!) So it is really important to get the
+initial analysis right...it may not be complete,
+but the part that is present is valid.
+
+So I would say, why not drop 'def' from the
+JHilbert spec pending some mechanism for showing
+that it is useful, valid and necessary? What
+would be lost by not having it? The rest of
+JHilbert is pretty obviously valid because it
+merely extends and modularizes the Metamath 
+specification in ways that are intuitive. 
+
+: I believe you're overreacting. def is a feature, not a fork, nor a deviation from metamath principles that is forced upon the user. If you're that concerned, I can add a flag to JHilbert (which would be represented by a magic word on the wiki) to deactivate definitions.
+
+: So, why this feature? As I have said, I can't say for certain that it'll be much help, but it can't hurt to have it around. Definitions are one of the most important building blocks of mathematical thinking. You take a bunch of old ideas and flange them together to a structure, creating something new. So, you have to have definitions. How would you create a definition mechanism in metamath the straightforward way? You'd create a "Df" predicate or similar, with which you could mark two formulas interchangeable. In order to create a generic method to apply definitions recursively, your logical connectives would be in appropriate metasets for functors in one, two, or even more places. With that you can create a generic definition mechanism with just a handful of axioms. Now, if you were actually to do it that way, unification search and proof assistants would break even more mightily than they ever could with def. The metamath proof assistant, for one, would have to be told constantly which connective to use whenever a definition is to be used. Of course, you could overcome this limitation by giving your proof assistant a few simple theory-dependent hints, but there are equally simple methods to fix a def-enabled proof assistant. The <code>set.mm</code> database does it in a different way, anyway:
+
+     Unlike most traditional developments, we have chosen not to have a
+     separate symbol such as "Df." to mean "is defined as."  Instead, we will
+     later use the biconditional connective for this purpose (df-or is its
+     first use), as it allows us to use logic to manipulate definitions
+     directly.  This greatly simplifies many proofs since it eliminates the
+     need for a separate mechanism for introducing and eliminating
+     definitions.
+     (quotation from set.mm)
+
+: The establishment of the metamath definition mechanism is quite synthetic:
+
+ df-bi $a |- -. ( ( ( ph <-> ps ) -> -. ( ( ph -> ps ) -> -. ( ps -> ph ) ) )
+ -> -. ( -. ( ( ph -> ps ) -> -. ( ps -> ph ) ) -> ( ph <-> ps ) ) ) $.
+
+: accompanied by what you call "gateway theorems" with curious proofs. Clearly, in the case of the biconditional, set.mm abandons the idea of "definition as creation of a thought concept". (BTW, I wonder if one could interpret "traditional developments" that most authors are quite happy with a def mechanism.) Mind you, I don't mean to criticise set.mm. The definition of the biconditional is sacrificed for having quite natural step-by-step definitions everywhere else right in the database. This is a worthy cause. In JHilbert, you don't see the database directly in the end. So why not use def where it is natural and convenient?
+
+: About converting set.mm to def mode. I don't think it would be that hard to eliminate all definitions. To eliminate all definitions and the gateway theorems, now /that/ would be hard. With def, you'd probably define your biconditional
+
+ def ((<-> ph ps) (/\ (-> ph ps) (-> ps ph)))
+
+: and place the definition of <code>/\</code> before that of <code>&lt;-&gt;</code>, essentially leading to a different propositional calculus. Of course, if you /wanted/ to do it the set.mm way (which may be perfectly acceptable depending on your motives), you'd probably be better off treating the biconditional as a primitive symbol and use an axiom, as set.mm does. In most theories, there will be "proposition-definitions" with no clearly distinguished definiendum and definiens anyway. (I wonder if it would be easy to use def in set.mm everywhere /except/ for the biconditional.)
+
+: JHilbert may have a lot in common with metamath, but JHilbert is not just about set.mm. I'll leave the definition feature in for now. It won't really be testable before version 5 anyway.
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+In set.mm a more traditional version of df-bi is
+proven from df-bi, for example
+[http://us2.metamath.org:8888/mpegif/dfbi.html dfbi].
+
+One other thing to think about: syntax/grammar definitions
+versus logical definitions. The two are unified in Metamath,
+and definitions are treated, by design and philosophically, 
+as axioms. This is part of the Metamath approach: economy
+of features, but leads to some difficulties in practice
+(e.g. redundant parentheses are not tolerated.)
+
+At any rate, please keep in mind that I have spent a little
+bit of time providing you with feedback which I hope is
+constructive. This is supposed to benefit you, not me (hardly
+anyone looks at this wiki, it's almost as good as chatting
+over an encrypted ssh tunnel :-) I've spent about 4 years,
+part time though, working through a lot of questions 
+concerning Metamath (and even Ghilbert.) There are only 
+a handful of people who have as much knowledge about
+the Metamath system design. I'm thinking you might want
+to re-look at the entire project, and perhaps look into
+doing Natural Deduction instead of Hilbert style proving.
+And consider Mathweb, OpenMath, OMDoc and OMEGA -- it's
+going to be difficult to find a lot of users to do
+JHilbert unless you can interface with those systems
+and harvest some of their content. 
+
+--[[file:ocat.org][ocat]]
+
+: ocat, by all means, your input is greatly appreciated. I've read the metamath book and know the metamath system well enough but I have only very little knowlegde of the contents, internal workings and philosophy of set.mm. (BTW, your link above leads to an empty page, maybe you mean <code>dfbi2</code>?) Your feedback helps me, for example, understand set.mm better. Or it makes me contemplate the differences between Natural Deduction and Hilbert Reasoning more consciously. It would be quite foolish to attempt an undertaking such as JHilbert all alone, and in fact one reason why I push so hard for a preliminary wiki version before even the spec of JHilbert is finished is to widen the circle of discussion.
+
+: I don't intent JHilbert to be solely for Natural Deduction, or Hilbert, or any other style of proving, but, as far as it is practical, it should be suitable for all of these systems. I believe this is necessary in order to compile a library of extant mathematical thought. You surely have heard of this utopia in one or other form: that mathematicians have access to an artificial semi-intelligence encompassing all known mathematical thought (structure, methods, data, etc.) enabling them to explore theory space and create new mathematical thought much more efficiently than today. Unfortunately, utopias have the shortcoming of being utopian, but you have to start somewhere.
+
+: I'll tell you about my first attempt, before I even knew of metamath: to implement a kind of generic proof recorder and verifier based on the barest bones of the notion of model. Take some alphabet S (say, the set of printable characters) and define the set of Formulas to be simply S*, the set of all strings composed of the letters of S. There is a subset T of S*, which we call the set of Truths. You can think of Truths as a type which can be cast to Formula, but not vice versa. Finally, there is a set of maps {f_i}, each map of which takes zero or more parameters which can be Formulas, Truths or (possibly) some kind of metadata. Each application of such a map either yields an element of S* or the special symbol ERROR. The system (S*,T,{f_i}) is called sound, if the union of the codomains of the f_i, sans ERROR, is a subset of T, and complete if it is a superset of T. Quite standard fare so far. The idea was now to let users define the system (S*,T,{f_i}) simply by letting them define the {f_i} using a Turing complete script language and assuming the system to be sound. Whenever a parameter must be a Truth, the implementation would have to be convinced that an element of S* is in T by referring to an appropriate nesting of the {f_i}. Such a nesting would then be called a theorem.
+
+: Obviously, such an implementation would yield a maximally generic reasoning system, at the cost of leaving the onus of implementing details of the reasoning system of the current theory on the user. (I actually made a half-hearted attempt to write such a thing with a PCRE-enabled version of LUA but as you can imagine, no presentable result came of it.) But what's worse, there is no technical distinction between axioms, rules, definitions and prover AIs. I would really like JHilbert to retain much of the genericity while making a distinction between the types of objects used in a proof. Plus, it should remain user friendly despite all these features. When the wiki goes online for the first time, the codebase will still be small, yet sufficiently modular. Everything can still be changed. Let's wait and see what happens.
+
+: --[[file:GrafZahl.org][GrafZahl]]
+
+* New Implementation Idea For 'def' Command
+
+The idea is:
+
+ * Give each 'def' command a label so that it can be explicitly
+referred to in proof steps as the 'Ref' (justification).
+ * There will be no hidden unfolding/refolding
+of 'def's done automatically, these happen explicitly by user command
+except that a Proof Assistant may generate proof steps
+automatically which invoke a 'def' statement as a Ref (justification).
+ * Create a new hardwired math symbol, such as 'ReplaceBy' so that 
+definitions can be written as actual formulas (e.g. "blah Replaceby blech") and be parsed, etc.
+ * Create a new hardwired label, such as 'SUBST', which names the
+operation of applying a definition to a formula and generating
+a rewritten formula using definition's substitutions.
+ * Then, a proof step instantiates a 'def' statement specifying the 'def's label, zero hypotheses and valid substitutions into the left and
+right-hand sides of the def's expressions, so that the proof step
+formula may be said to "unify" with the definition -- the proof step formula is a valid substitution instance of the 'def' statement, and of course contains the 'def' symbol, 'ReplaceBy'.
+ * Then, proof verification of a proof step uses a 'def' statement
+by using the label "SUBST" as the Ref (justification) and specifying
+two hypotheses, one of which is the proof step formula to be
+rewritten and the second is the proof step which instantiates
+the 'def' statement. Checking is performed to see that the defined-by expression (left side of the def-labelled step) is identical to a sub-expression in the formula being re-written, and that after replacing all occurrences of that sub-expression with the defined expression (right side of the def-labelled step) that the hypothesis step formula is identical to the formula of the proof step being proven.
+
+Now to explain the motivations.
+
+1) The mechanism above is basically the method we use when
+writing on a blackboard to do a formula rewrite-with-substitutions.
+The difference is that somehow the mechanism needs metalogical
+justification :-) 
+
+2) In set.mm, '<->' is the equiv/equal operation for wffs and
+'=' applies to sets and classes. In systems I have seen there
+are always operators like these, but it may be that a system
+could be defined, say in quantum logic, where these concepts
+do not apply -- so in those systems the math-authors would 
+simply not use the 'def' command. In other words, it would be
+the math-author's responsibility to ensure that every 'def'
+is justified in relation to the way that JHilbert would use it.
+
+3) Going backwards from JHilbert to Metamath .mm proofs would
+mean somehow filling the gaps left by elimination of proof steps
+using 'def' statements as justification and replacing the
+'SUBST' labels with the appropriate derivations. That would mean that
+someone, perhaps an AI prover, would need to fill the gaps
+one by one (non-trivial).
+
+4) One good part of this is that you can apply a defined
+equivalency to a formula and obtain a new formula even if
+the sub-expression being transformed is deep within the
+parse tree. Also, it may be possible to figure out a way
+to relate '<->' and '=' to 'ReplaceBy' so that a formula
+whose root node is an equivalency can be converted into
+a 'ReplaceBy' formula, and then the substitution mechanism
+could be reused (this requires more analysis :0-)
+--[[file:ocat.org][ocat]]
+
+: I see you're still in the process of chiselling this out, so let me just sneak in one remark about relating '<->' and '=' to ReplaceBy:
+
+ It must not be supposed that two propositions which are
+ equivalent are in any sense identical or even remotely concerned
+ with the same topic. Thus "Newton was a man" and "the sun is hot"
+ are equivalent as being both true, and "Newton was not a man" and
+ "the sun is cold" are equivalent as being both false. [...]
+ Equivalence in its origin is merely mutual implication [...]
+ 
+ A. N. Whitehead, B. Russell, Principia Mathematica, pp. 7+8
+: So definitions are more than just mere equivalence, and generally allowing the conversion from '&lt;-&gt;' to ReplaceBy is a philosophical error, IMO. It might be OK to do it for selected formulas. It would mean adding some kind of meta information: "these two things have something to do with each other".
+: --[[file:GrafZahl.org][GrafZahl]]
+
+:: I'm pretty much done. Just a draft idea for you to fix
+to your liking :-) I think this is a Way. Better. 
+This would break the Metamath/your proof verification
+algorithm (e.g. RPN stack), but that isn't a problem as such. The tree-comparison
+(unification) algorithm I described earlier is equivalent,
+assuming that the distinct variable restrictions are obeyed
+and checked. 
+:: .
+
+:: P.S. Re: Converting '&lt;-&gt;' to 'ReplaceBy' -- Perhaps the semantics
+of the 'def' command don't hold up in the real world where
+we talk about "the sun is hot" and "newton is a man". I know
+that, at least, in set.mm, if "ph '&lt;-&gt;' ps" then ps can be 
+simultaneously substituted for ph in any wff as long as the
+distinct variable restrictions are obeyed. A similar argument
+can be made for "A = B" and substitutions involving class 
+expressions.  
+
+#+BEGIN_VERSE I'm a bit swamped currently and will respond in a few days.--[[file:GrafZahl.org][GrafZahl]] 19-Sep-08

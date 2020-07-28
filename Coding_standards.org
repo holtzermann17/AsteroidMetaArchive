@@ -1,0 +1,13 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Extra long lines in PM articles are a bad thing.  They make it very
+hard to read the source code.  PM should have an autofill function
+set up that keeps the articles within a reasonable width.
+
+Figures should come with whatever kind of source code makes
+the most sense (if there is any source code).  Code for
+Free Software systems is preferred to code that only works on non-free
+systems. 
+
+: just pointing that an EPS file it's a text file (which is source code in the PostScript language, thus it includes its own source code --[[file:drini.org][drini]]

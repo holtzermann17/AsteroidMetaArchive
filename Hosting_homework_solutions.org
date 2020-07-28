@@ -1,0 +1,42 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One "service" PM could offer to universities is hosting homework solutions. 
+That is, if someone has typed up homework solutions to a course, these could
+be hosted on PM (with links to the encyclopaedia). This would make these 
+much easier to read for the students and hopefully result in better grades. 
+
+This is probably way off in the future since PM runs on spare parts and the encyclopaedia
+has too many holes. Nevertheless, this could be a way to get money from 
+universities who maybe gladly would like to pay and support PM, but are not in position to 
+"donate" money in the usual sense. --[[file:matte.org][matte]]  26 April 2005
+
+This is a really interesting idea. Is there any value you can think of for 
+PM to add besides cross-linking to the encyclopedia? I feel like there'd 
+need to be more pedagogical "selling points".  --[[file:akrowne.org][akrowne]]  Wed Apr 27 01:24:27 UTC 2005
+
+Would the HW solutions be open to the public, or just to students with
+some registration?  And would they be up only after the HW had been turned
+in, or all the time?
+
+PM has the possibility (with some work) to host whole mathematics curricula
+and provide a framework for going through that curriculum, and could
+be used as a free distance learning course for just about any topic in
+mathematics.  (With the APM(-Xi), I was hoping to eventually create a
+book that would walk students through the first two years of the math grad
+curriculum; someone could pick up that project again.)  The notion of
+PM being a primary supplier of educational content (instead of a secondary
+form) is fairly "radical", but maybe could be relevant for some people.
+These people may be willing to pay a premium to have instructional 
+services rendered through the site.  Or organizations that cater to these
+sorts of individuals may be willing to pay for content or infrastructure
+development.  "Secondary" features (like using PM instead of !BlackBoard
+for a math class) may be worth looking into more -- and may be more 
+on topic wrt matte's original posting.  I.e., maybe something like
+R. Milson's experiment could be done on the "main" Noosphere instance
+rather than on home-grown ones.  Nested instances, or other ways of
+dealing with sub-collections, would be somewhat important here.  But
+certainly, a teacher could insist that students be involved in PM.
+Features to track the activities of individual contributors would 
+help here.  (Score is presumably a somewhat poor estimate.)
+--[[file:jcorneli.org][jcorneli]]

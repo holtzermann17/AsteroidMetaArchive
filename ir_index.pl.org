@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/ir_index.pl
+
+pp line 7:
+use lib  '/var/www/pp/noosphere/lib';
+
+pm line 7:
+use lib '/var/www/noosphere/lib';
+
+pp line 14:
+(empty)
+
+pm line 14:
+Noosphere::initNoosphere();

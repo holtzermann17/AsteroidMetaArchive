@@ -1,0 +1,321 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Below is a provisional proposal for SOC 2007
+
+
+Modularizing the Classification and Document Handling of NNexus
+James Gardner
+pebbler@gmail.com
+
+* Proposal
+
+Knowlege bases can be viewed as semantic network. For a user to learn
+about a particular topic in most cases requires reading other related
+articles. The planetmath.org auto-linking system, [[file:NNexus.org][NNexus]], tries to
+help users find related information. The auto-linking system performs
+the task of linking articles so that authors will not have to search
+to find related articles and manually link to them. The NNexus system
+is a one of kind process for a dynamic corpus. I propose to
+abstractify the handling of classification schemes to facilitate
+better link steering between documents in multiple corpora and
+modularize the document handling component of NNexus to allow for
+linking document types other than LaTeX. Details of the enhancements
+are outlined below.
+
+Abstractifying the handling of classification schemes in NNexus is
+necessary. During Summer of Code 2006 I pulled all linking code out of
+the Noosphere code base and developed the NNexus system to be a
+standalone linking server. Once NNexus was a stand-alone system I was
+able to import content from both MathWorld.com and PlanetMath.org. It
+is now possible to automatically link documents to both of these sites
+(even at the same time) based on user preferences. It is great to be
+able to link to multiple sources but NNexus uses the classification of
+objects to determine where to link. MathWorld.com uses the MSC
+classification scheme that PlanetMath.org uses for many of its
+articles, but not all. In order to automatically link documents among
+various corpora NNexus needs new classification-based steering
+functionality. I propose to develop a new classification handling
+module that can determine the distance among categories in multiple
+classification schemes. This new module will likely use a weighted
+directed graph model to determine the distance between the categories.
+
+
+One goal of the NNexus project is that NNexus be developed to a point
+where multiple sites and individuals will utilize the NNexus system to
+link their own documents to sources that they deem relevant. I have
+worked with one professor on linking his class notes to Planetmath.org
+and MathWorld.com. The NNexus system can successfully do this and
+gives promise to the idea that NNexus can be used in a context other
+than PlanetMath.org. The class notes are written in LaTeX and gives no
+trouble to the NNexus system. If more individuals outside of the realm
+of Mathematics would like to use NNexus it needs to support document
+types other than LaTeX.  I propose to separate the linking code from
+the LaTeX handling code in the cross referencing module in NNexus. A
+clean separation will allow for multiple document types to be
+linked. One possibility for handling multiple document types in NNexus
+is to define a NNexus XML documents schema and have NNexus link this
+type of document. We could then provide converters from LaTeX, HTML,
+etc. to this XML format and vice-versa.
+
+* Timeline of Development
+
+2 weeks - Develop the correct model and plan for abstractifying the classification handling.
+4 weeks - Implement the new classification module.
+1 week  - Plan the implementation of abstract document handling.
+2 weeks - Separate the document handling code from the linking module.
+3 weeks - Implement the abstract document handling module.
+1 week  - Perform thorough testing.
+
+* Qualifications
+My research Interests include Graph Theory, Optimization, Information Retrieval, and the intersection of these topics. 
+
+Education
+Emory University, Atlanta, GA, USA
+PhD Candidate in Computer Science
+Concentration in the intersection of Graph Theory, Optimization, Information Retrieval, and Data Mining.
+ 
+I am currently researching parallel frequent itemset algorithms, protein-protein interaction prediction, and data models.
+My advisor is Dr. Li Xiong.
+                . Li Xiong.
+I am Proficient in Perl, C, C++, and Java. I also have experience in C#, x86 Assembly, Visual Basic, and Python. I have experience 
+with Linux, Solaris, Mac OS X, and all Microsoft OS.
+
+My full resume can be found at http://mathcs.emory.edu/~jgardn3/jamescv.pdf
+
+
+* Comments
+
+Hi James, Sorry to be blunt, but I want to know: why should we care?
+
+ * Where is the demand for Nexus/XML interlinked documents coming from?
+ * How would this code be substantially different from the code that you
+already produced for working with !LaTeX?
+ * Can you say in plain language how your proposed classification handling
+module would work in practice to "determine the distance among categories
+in multiple classification schemes", and how this module ends up impacting
+user experience.
+ * How would any of this work benefit !PlanetMath?
+
+The proposal sketch may in fact be fine as is, but personally I don't get it yet.
+Answers to the above questions would help with that, and may help you
+frame your proposal on a more rhetorically sound basis.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Response
+Supporting multiple classification schemes helps PlanetMath with ingesting other
+content. Developing a more general classification steering mechanism allows for
+PlanetMath to ingest content from other web sources (namely Wikipedia) and
+correctly automatically link them, without having to assign MSC classifications
+to the ingest content. Of course, some sort of mapping must be provided between
+say MSC and whatever wikipedia uses for classification. I am still discussing the 
+details of the classification handling system with akrowne.
+
+Supporting multiple document types (txt, html, latex) will allow NNexus to link
+different types of documents. This will also aid in supporting and linking PlanetMath's 
+ingested content. It will allow ingesting of content into PlanetMath
+that is not strictly LaTeX. Of course, modifications to the Noosphere rendering
+system will have to be implemented, but the rendering system developed for NNexus
+could then be incorporated in the Noosphere code base.
+
+Note: This is proposal is not strictly for PlanetMath.org only. It is also a
+proposal to enhance NNexus.
+I believe that most of the enhancements to NNexus I have discussed at least
+indirectly benefit PlanetMath.org.
+
+--James
+
+Assuming we did want to mass-ingest things from wikipedia (which has never been
+clear to me), their content is already written in something that can be easily
+transformed into !LaTeX, so that obstacle is simple.  So you're talking about
+figuring out some correspondence between whatever wikipedia uses for classification,
+and whatever PlanetMath uses for classification, and steering links based on
+that.  This doesn't sound like a $5K project, it sounds like 
+a $500 project, maybe.
+
+Anyway, you still haven't answered the most important
+question above -- maybe I didn't ask it clearly enough --
+where is the demand for this project coming from?  How is this project going to
+enhance the lives of your fellow human beings?  Why should the benevolent Google
+give you thousands of dollars to work on this project?  Not only why should we
+care -- but why should we be excited about this project?
+
+If you can give good answers to questions like these, increasing the estimate
+of the value of the project, you will no doubt also increase the estimate of
+the difficulty of the project on the way.  So far, I'm just not getting it.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Actually, the obstacle is not quite so simple. It may be able to figure out some
+correspondence between Wikipedia and MathWorld, but this is only a temporary
+fix. The proposal this year, is actually more like a modularization of NNexus rather
+than just modularizing NNexus out of PlanetMath. As for the distance between
+categories question, I am looking into the multischeming literature (there is a lot
+of this research). There are simple techniques for this, but I think it would 
+be interesting to use something more powerful in NNexus.
+
+I will get you more details of why this is a long project and not just a $500 project,
+but I will have to delve into more of the coding details if you are interested.
+
+
+The proposed enhancements to NNexus will allow users to utilize automatic linking
+in domains other than Mathematics. I believe this is a good answer to your question
+of how does this help fellow human beings. I believe this also indirectly and
+directly helps PlanetMath. The modularization proposed will give a cleaner code base
+for other developers that are interested in helping with the Noosphere/NNexus effort.
+This work is also closely tied with the rendering work of Noosphere. Rendering is a major
+performance bottleneck for PlanetMath. Throughout this work (especially the support
+other document types) I will be testing rendering solutions other than latex2html (slow).
+akrowne and I have been talking for some time now about fixing the latex rendering, and
+one approach to solving this problem is to abstractify the document types that NNexus
+(and indirectly Noosphere) can support. This will allow us to look at rendering
+in a different light. Supporting a more abstract but sturctured language (XML) allows
+us to look at the linking process as a series of levels.
+
+1. Convert original document to an intermediate (more linkable) format (some sort of XML
+marked-up version of the document that indicates which tokens should be linked) 
+This would give us an easier to parse document, rather than having
+to iterate back and forth through the document adding \htmladdnormallink where necessary.
+Currently the CrossReference.pm module has to deal with tokenizing the LaTeX including checking
+which tags are visible \section those that shouldn't be \somearbitrarycommand and then these
+candidates are linked according to classification. This should be eliminated.
+
+2. During the linking stage we could then just add new tags to the tokens that are linked that
+include link information ( <linked><text>phrase in original</text><target where="URL"/><target
+where="ANOTHERURL"/></linked>. ) This format allows the linker to provide a list of target links
+and user preferences could then be used to determine which links should be included in the final
+rendering.
+
+3. After the automatic linking has completed we then transform the XML into LaTeX, MathML, or 
+jsMATH, etc.
+
+The above 3 steps are the way the automatic linking core should work, rather than the current
+hackish scheme that has to work directly with LaTeX.
+
+One example that comes to mind is the fact that NNexus now supports multilinking. See
+http://planetmath.cc.vt.edu/~pm/allnotes/Construction-Independence/ for an example.
+The javascript code to do this had been added to the crossRefernceLaTeX function. This code
+is now very messy because when rendering the LaTeX as PDF we can't use the javascript so there
+are conditional statements all throughout the function that add htmlonly and latexonly
+environments that are then passed to the latex2html for rendering. If the code that is specific
+to presentation and user interface was in a separate module this will speed the linking process,
+but it will also make the code cleaner. One thing that is interesting to consider is the possibility
+of using a simple xslt transformation of my proposed XML schema for converting directly to HTML with
+MathML or jsMath. This would certainly be a speed improvement, and is impossible using the current
+code base.
+
+Let me know if you desire more details.
+
+--James
+
+This enhancement appears to be a necessary step forward, especially if NNexus
+is now to be packaged and maintained as a separate software package, perhaps
+on Sourceforge. A potential user is [http://bibserver.berkeley.edu/proposals/mathweb.html  Mathweb]. The number of lines of code to be added may not be large (I don't know), but
+other tasks necessary to make NNexus a standalone, robust, documented, supported
+software package can easily fill a summer -- and the effort would be well spent, IMO.
+--[[file:ocat.org][ocat]] 
+
+Just wanted to say I've always seen a major piece of the benefit as the ability of others (third parties)
+to link /to/ PlanetMath concepts (and those of other support sites) relatively easily.   A system like
+the one we have been building which lets you "link your lecture notes to PlanetMath" clearly helps 
+get PlanetMath "out there", and into use in a major setting we'd like to see it used more. --[[file:akrowne.org][akrowne]]
+
+I'd like to see a clear roadmap for the project as a whole.  Things
+like packaging and deployment shouldn't be major milestones or
+mysteries located near the event horizon -- for these things, I say "I
+needed that yesterday."  Talking about people linking lecture notes or
+research articles or XML mondashes to !PlanetMath is cool and all, but
+it would be way cooler to see it in effect.  So, the roadmap should be
+retroactive back to the beginning of the project, and proactive, so
+other people (including me) have a sense of where it is really going
+and why.  As I said above, Demand and Design are two
+pillars... supporting a capstone Deliverable we're all interested in
+but that frankly I don't understand either as it exists at present, or
+as it is proposed to exist in the future.  /Documentation/ is
+another important thing for the developer to think about... it is like
+the threshold through which other folks will approach this Door to a
+new Dimension of experience. 
+
+--[[file:jcorneli.org][jcorneli]]
+
+Take a look at http://planetmath.cc.vt.edu/~pm/docs/ and [[file:NNexus.org][NNexus]] (note the
+publications at the end of the page). 
+I believe some of the information you are seeking is
+included in the documentation. I will be posting a roadmap of the project
+from beginning to end soon, but the end of the NNexus project is not
+near. There is much research that can be done on this type of automatic
+linking system, including link analysis and
+better metrics for link steering (combination of link structure,
+classification, and collaborative filtering techniques). But, in order
+for NNexus to go further I believe that the modularization of classification
+and handling multiple document types are important. 
+Making NNexus more powerful (above discussion and proposal) and increasing the user-base 
+will contribute to the continuation of and success of the NNexus project. 
+
+--James
+
+Excellent, this is the sort of thing I wanted to see.  Combined
+with the roadmap you've got in the works, I think you'll have the
+makings of a very strong proposal.  One thing we learned from the
+NSF grant that may be helpful -- make your pitch in terms of
+(a) a core deliverable you're sure you can produce; (b) one or
+more "bonus" items you'll get to if you have time, and which
+you'll maybe dabble in for fun as time goes by.  For a project
+like this, (a) would tend
+to be more "development" stuff, and (b) more "research" stuff.
+
+--[[file:jcorneli.org][jcorneli]]
+
+NNexus Roadmap
+
+The NNexus project started as a Summer of Code 2006 project to modularize
+the automatic linking component of Noosphere. The automatic linking system
+of Noosphere was developed by Aaron Krowne as a part of his Master's
+Thesis. The automatic linking system was developed to support
+linking between articles in a digital corpus without putting a burden
+on the authors of the articles. It was also developed to retroactively link between 
+articles when the corpus changed. The automatic linking system
+is facilitated by the meta-data provided in the corpus, a concept map, and an 
+invalidation index. More information on the data structures and operations of
+NNexus can be found at http://planetx.cc.vt.edu/AsteroidMeta/NNexus.
+
+The automatic linking system of Noosphere is one of a kind. During Summer 2006
+it was decided that we should develop a completely stand-alone linking server
+that can work across multiple domains, not just Noosphere sites. We decided
+to christen the new system NNexus (Noosphere Network Entry eXtension and 
+Unification System). The majority of the logic of the linking system in Noosphere
+is currently the same in NNexus, but we added a few important features.
+
+NNexus now has the ability to link between multiple domains, and also has
+the ability to provide multiple links for one concept. See 
+http://planetmath.cc.vt.edu/~pm/allnotes/Construction-Independence/. One other
+enhancement pertains to linking precision (which article should a concept link to
+when there are multiple choices). We implemented linking policies that can be
+used in the tough cases. See our introductory research paper 
+(http://www.mathcs.emory.edu/~lxiong/research/pub/gardner06nnexus.pdf)
+for a more detailed discussion of linking precision and the overall NNexus system.
+
+It is now necessary to re-architect NNexus for further improvements. Specifically
+the LaTeX document handling needs to be separated from the link processing
+code, and the classification module needs to be abstractified to support multiple
+classification hierarchies and mappings between these hierarchies to support
+better link steering across multiple sites. See 
+http://planetx.cc.vt.edu/AsteroidMeta/James for a discussion of these topics.
+
+After the separation of these important components in the NNexus system we plan
+to continually add features (some apparent to the user and some behind the scenes)
+to make NNexus a more powerful application from both a user perspective and a
+research perspective. The features that we are considering are link steering based
+on collaborative filtering and multischeming techniques, faster rendering, utilizing the
+link structure on a corpus to infer information about relationships in the corpus.
+I am considering using the link structure over protein literature to infer relationships
+between proteins. This project is definitely in the long term, but may be a possible
+application of NNexus.
+
+After each feature enhancement has been completed we plan to release a tarball
+version of NNexus. Almost all updates and bug fixes go into the CVS repository
+http://aux.planetmath.org/nnexus/. 
+
+
+--James

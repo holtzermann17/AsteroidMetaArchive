@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+The project FAQ (http://www.openmind.org/FAQs.html)
+claims that
+
+: The most important difference between traditional open source and Open Mind is
+that Open Mind relies on collecting, and exploiting large sets of data, such as
+the identities of millions of handwritten characters and spoken words, the names
+of objects in photographs, common sense about the world, and much, much more.
+
+I guess this means that the project is sort of like Benkler's NASA example.
+But I have some other questions, about the license.
+
+For example, I'm not yet sure what license  the project component
+[http://web.media.mit.edu/~hugo/conceptnet/ ConceptNet] 
+uses.
+
+The site doesn't seem to immediately offer a download.  I am going to email Hugo
+Liu (who wrote the page) and ask him what he can tell me about the software &
+whether he can provide a direct link.
+
+----
+
+One of the files is a /very large/ text file that has been released under the
+GPL; it is available [http://commonsense.media.mit.edu/cgi-bin/download.cgi here].  
+(This is the snapshot from December.)
+
+It contains things like the following 10 statements, which appear here with my
+comments:
+
+----
+
+; making a phone call requires a phone : It requires you to have a phone (or
+possibly some device that is capable of acting like a phone), and to be able to
+be able to use the phone.  Thus it also requires there to be an intelligent
+agent (well, typically - a phone call could, in theory, be made completely
+accidentally), with the right physical characteristics.
+
+; You would visit a museum because you want to do something interesting : 
+That is a reasonable response to the question, why would you visit a museum.
+As a statement out of the blue, it is a little bit weird sounding.
+
+; Sometimes holidaying shop causes one to spend too much money :
+Barring the typos, this sentence makes some sense.  Unless you
+think too much about final causes, in which case, it becomes
+rather preposterous.
+
+; You would eat in a restaurant because you want to avoid cooking :
+Similar to the museum entry about.
+
+; writing a term paper requires research, thought, and will :
+Typically, yes.  I'd say, writing a /good/ term paper requires
+these things.
+
+; a person can desire that you become friends :
+Weird grammar.  But, sure, and isn't it nice when that happens, too.  Um,
+usually.
+
+; a mathematician can prove theorems :
+If he or she (or it) is not too stoned, or preoccupied, or dead, or stupid,
+yes.  I guess.
+
+; Something you need to do before you watch a movie is get to the movie theater :
+Unless you are watching a video or DVD (these are also commonly called movies).
+
+; The last thing you do when you go on the stage is get into your part :
+Hmmm.  I'm not so sure this is a "fact".
+
+; The first thing you do when you score a home run is drop the bat : I don't
+know enough about baseball to know whether this is the case or not.  Again,
+there are some issues like the (final cause issue mentioned above), here
+associated with scale, identity, etc.  What does it mean to "do" something?
+
+---- 
+
+It would seem that understanding these common sense "facts" certainly takes some
+common sense -- and maybe some uncommon sense, like, philosophy.
+
+Maybe some of the simpler sentences like "yellow is a color" (which I saw in the
+list) can be used to bootstrap the system?  Well, maybe.  Still, it seems like
+there are going to be a lot of gaps.  Is all the required philosophical stuff
+supposed to be entered by random "netizens" too?

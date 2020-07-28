@@ -1,0 +1,74 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Feature
+
+Apparently nothing really exciting happened this week
+except the wiki moving to
+
+http://planetx.cc.vt.edu/AsteroidMeta/HomePage
+
+Sorry.  I guess everyone (including
+myself) has been on a mental vacation?
+
+* micro-feature: shared bibliographies and referrals
+
+Marijke added some further thoughts on how to implement
+shared bibliographies
+
+http://planetx.cc.vt.edu/AsteroidMeta/Bibliographies_and_Amazon_referrals
+
+* micro-feature: lisp coders wanted
+
+The HDM project could use some more help.  If you write
+LISP, get in touch.
+
+
+
+* Discussion of this week's bulletin
+
+I thought that last week's bulletin had some interesting 
+articles in it - and there was an interesting discussion
+about [[file:the way of the asteroid.org][the way of the asteroid]], which ended up not being
+featured in the bulletin.  Maybe this week we can do some more
+work on the WOA and write a better article about it.
+
+
+I thought that the May Day piece was quite provocative, but
+still we haven't gotten any responses to any of the bulletins
+from non-AMers.  Maybe the bulletins are helping spread awareness
+of the AM site, which is good.  Still, I'm sad that the PM culture
+doesn't seem to involve making comments on provocative/political
+pieces like that one.  Why might that be, I wonder?
+
+Anyway - I don't mean to live in the past with these comments,
+mainly I just wanted to say - thanks for the articles and
+discussions, and I hope this week's bulletin can be at least as
+thrilling -- to us, if not to anyone else.  --[[file:jcorneli.org][jcorneli]]
+
+
+So, um, nothing much happened this week.  Anyone know why?
+--[[file:jcorneli.org][jcorneli]] Tue May 10 04:27:32 2005 UTC
+
+Are people really busy or something?  Without updates in the bulletins or the 
+[[file:the way of the asteroid|WOA.org][the way of the asteroid|WOA]] or the [[file:Schedule.org][Schedule]] or anywhere else, I have
+no idea what people are up to.
+
+I'm currently in a somewhat foul mood, so I don't really want to go on about
+this, but I'm upset about my own lack of significant/tangible progress this past
+week (despite putting in quite a few hours of work), and as noted on the 
+[[file:hdm's parsing system.org][hdm's parsing system]] page, I feel I could use more help.  The parser /is/
+coming along, slowly, but many of the improvements this week have been code cleanup
+things to try to facilitate some cooperation -- and my own understanding
+of what the parser actually does.  I think I'm too frustrated at this point
+to say anything useful, so, I'll just ask again for some updates and feedback.
+--[[file:jcorneli.org][jcorneli]] Tue May 10 04:50:43 2005 UTC
+
+I was away this weekend.  Also, it is finals period, for many people.  Wouldn't take
+it personally =) --[[file:akrowne.org][akrowne]] Tue May 10 05:50:10 UTC 2005
+
+Don't worry, I was in a foul mood about my own work and some other (unrelated)
+stuff.  I'm feeling better now after getting some sleep.  And now, back to work.
+--[[file:jcorneli.org][jcorneli]] Tue May 10 14:02:23 2005 UTC
+
+In my case, I am really busy with one of your favorite art forms --- I am remodelling the bathroom.  For the last few days, I have been spending a *lot* of time painting, plumbing, plastering, machining, working wood, etc., so there hasn't been much time left for Asteroid or Planet Math.  I plan to finish this week, and then there will be more time.  I will be able to take a good look at the parser, contribute to the bulletin, write math papers, write the essay on bottlenecks, and the like. --[[file:rspuzio.org][rspuzio]] 10 May 2005

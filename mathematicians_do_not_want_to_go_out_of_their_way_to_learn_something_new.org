@@ -1,0 +1,62 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I suspect it's going to be a generational thing.  Many mathematicians who were
+active in the 1970's when !TeX came out stuck to writing their papers on
+typewriters and adding in mathematical symbols by hand.  (And a good number of
+them still haven't learned !TeX!)  However, by the 1990's, their students were
+learning how to use such mathematical tools as !TeX and symbolic manipulation
+packages on their own and, as a result, the current generation of mathematicians
+are so well versed in using this technology that journals are strongly
+encouraging (in some cases, even demanding) that all submissions be in !TeX.  I
+suspect it will be similar here. --[[file:rspuzio.org][rspuzio]] 26 March 2005
+
+
+----
+
+To the extent that we have to involve or train people (mathematicians or
+students or whomever) to get them to help build a knowledge base, we come up
+against the problem of teaching people new things right and I don't think we can
+realistically afford to wait a generation. (Nor will simply waiting work, of
+course.)
+
+Luckily, we can afford to be fairly gradual - really we don't seem to have any
+other choice.  Thus, a few people build the initial system and language, then a
+few who know the system get started coding, a few more will join, there will be
+some additions/refinements/changes that facilitate broader participation, more
+people will join, etc., and then eventually things really take off.
+
+I want to point out that the goal of being "backwards compatible" to !TeX is, in
+part, designed to give people an environment to work in that they are
+comfortable with.
+
+Actually, it might be better to say "forwards compatible" to !TeX, since
+!TeX/natural language is so darn sophisticated.  The point is that once the
+system can understand !TeX/NL, "backwards" or "forwards" is not really
+meaningful; at such a point, the two languages become increasingly
+interchangeable.  (This assertion is pending review.)
+
+One thing that seems clear is that we're catering to the "lowest common
+denominator" among mathematicians by building a system that works with !TeX and
+natural language.  HDM is different in this respect from projects that expect
+mathematicians to learn how to program (and who seem to be saying "there is
+something wrong with the mathematical community; they should adopt our better,
+more formal way of writing.").  It may well be that at some point in the future,
+all mathematicians will want to learn how to program.  But it could be that they
+will be programming in a language that looks more like !TeX than it does like
+[[file:hcode.org][hcode]].
+
+BTW, I want to say, that I don't think mathematicians (or others) are resistant
+to learning... still, most people do not want to (or can not) think outside the
+box.  The HDM project may (eventually) do something to help people overcome this
+natural resistence.  --[[file:jcorneli.org][jcorneli]] Sun Mar 27 06:16:15 2005 UTC
+
+
+----
+
+I want to stress that sometimes it is good (or at the very least, non-bad) to
+not learn some new things.  I have a certain amount of respect for people who
+won't do anything with the internet besides email, for example - at several
+different times in my life, I've wanted to be one of those people.  (The feeling
+comes and goes.)  Its good to learn both from new technologies and from
+resistance to new technologies! --[[file:jcorneli.org][jcorneli]]

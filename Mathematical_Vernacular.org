@@ -1,0 +1,162 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The term "mathematical vernacular" ("wiskundige omgangstaal" in the original Dutch) was introduced by de Bruijn in the 1980's, to describe the stylized language used by mathematicians to express proofs. Freek Wiedijk argues in a paper named
+[http://www.cs.ru.nl/~freek/notes/mv.pdf The Mathematical Vernacular] that the essence of this proof style is three ideas:
+
+ * Natural deduction, in essence a Gentzen-style proof structure.
+
+ * Big steps, more specifically steps asserting that a particular deduction is valid in first-order logic.
+
+ * A programming language style syntax (as opposed to natural language).
+
+At least three popular proof systems implement some form of the mathematical vernacular: Mizar, Isar, and Hyperproof. Freek is also designing a prover of his own,
+[http://www.cs.ru.nl/~freek/conproof/index.html Conproof], and plans to use MV as its basis.
+
+Because MV proofs use "big steps", a verifier must include a
+[[file:First_order_provers|first order prover.org][First_order_provers|first order prover]]. Thus, any translator from MV proofs into explicit proofs verifiable by [[file:metamath.org][metamath]] and friends must contain a first-order prover capable of outputting the low-level proof steps in such a language. While developers of first-order provers compete intensively on the basis of speed (for example, in the
+[http://www.cs.miami.edu/~tptp/CASC/ CASC competition]), for such translation use an additional goal would be conciseness of translated proofs.
+
+: In the early 90's I played with Otter on an 8MB Mac to find very short
+if not shortest first-order logic proofs from set.mm's $d-free axioms.
+Essentially, I defined the predicate "is provable", then gave its
+resolution prover the denial of the sentence "theorem xxx is provable."  (Search for "twist" on [[file:metamathMathQuestions.org][metamathMathQuestions]] for a
+description.)  It worked quite well - even better than a human (me) -
+when it found proofs, but it gave up when the proof required more than
+10 steps or so.  It might be interesting to see how it would perform on
+today's computers, along with intelligent hints rather than just the raw
+axioms. --[[file:norm.org][norm]] 15 Aug 2006
+
+The "natural deduction" aspect of MV should be relatively straightforward to translate into a metamath-like langauge. For one, [[file:frl.org][frl]] has proposed an axiomatization of
+[[file:Natural_deduction_based_metamath_system|natural deduction.org][Natural_deduction_based_metamath_system|natural deduction]] in metamath. Also, [[file:raph.org][raph]] has been finding empirically that natural deduction style proofs can be expressed fairly easily in metamath's existing Hilbert-style axiomatization, especially with the help of
+[http://ghilbert.org/repo/ghilbert/pax/assump.ghi assump.ghi], a library of propositional calculus statements designed to ease manipulation of large numbers of assumptions, represented as binary trees of conjunctions.
+
+Perhaps surprisingly, the proof steps enumerated in Chapter 5 of Freek's paper already have close correspondences in metamath's set.mm:
+
+ let or forall-introduction: 19.21aiv
+ 
+ assume (-> introduction): ex
+ assume (-. introduction): mto (mtod is deduction-form variant)
+ assume (reductio ad absurdum): mt3 (mt3d)
+ 
+ thus or and-introduction: jca
+ 
+ per cases or or-elimination: pm2.61i (pm2.61d) for boolean case
+ 
+ consider or exists-elimination: 19.23aiv
+ 
+ take or exists-introduction: vtocle
+
+: Note that "exp" above was changed to "ex" to avoid a clash with the
+exponential function, in order to satisfy the new disjoint namespace
+requirement of Metamath.  --[[file:norm.org][norm]]
+
+:: Yeah, yeah. I still haven't updated prop-full.gh to the recent set.mm.
+Back when Ghilbert required the names of constants and theorems to be
+disjoint, I resolved the collision by renaming the exponential function
+e^. But I guess I should just bring everything into sync with current
+set.mm naming practice. --[[file:raph.org][raph]]
+
+* Other usage
+
+Note, when I used this phrase on the [[file:Ghilbert and HDM.org][Ghilbert and HDM]] page, I
+wasn't thinking of any formal definition (perhaps de Bruijn also had a
+loose, informal understanding of the term?).  What I meant was,
+whatever language people communicate mathematics in.
+
+I'll be interested in reading what Freek has to say about it, but from
+the sketch above, I have my doubts.
+
+As with mainstream languages, it may be appropriate to talk about
+mathematical vernacular/s/ -- for one thing, people embed
+mathematical languages in many different natural languages, and for
+another, different branches of mathematics may have very different
+standards for mathematical communication (e.g. different standards for
+proof).
+
+--[[file:jcorneli.org][jcorneli]]
+
+-----
+
+Because of the widespread use of the term to mean the approach taken
+by Mizar (big steps, natural deduction, syntax roughly approximating
+natural language), I think you need to be very clear whether you mean
+Freek's sense, or a more informal sense. Geleijnse, in his thesis (see below),
+follows the terminology introduced by Kamareddine and Nederpelt's
+paper, "A refinement of de Bruijn's formal language of mathematics"
+([http://www.macs.hw.ac.uk/~fairouz/papers/journals-publications/kjour.pdf PDF])
+and uses the term "Common Mathematical Language", with the abbreviation CML
+(not to be confused with Concurrent ML or any of the
+[http://en.wikipedia.org/wiki/CML other expansions] of the acronym),
+to mean the informal natural language style used by mathematicians to present
+proofs.
+
+I /think/ de Bruijn's use was more formal than not, given what I've
+been able to glean from skimming his 1979 paper,
+[http://www.win.tue.nl/automath/archive/webversion/aut065/aut065.html Grammatica
+van WOT]. Perhaps one of our Dutch-speaking friends can shed some more light.
+
+When you say you have your doubts, what are you most doubtful of? To me, the biggest
+red flag with WTT is its complexity. I am also skeptical of the near-theological
+belief that types are the one true basis that should underly mathematics, as opposed
+to, say, sets. I am also skeptical of the assumption that the /best/ language for
+developing a library of automatically checkable proofs must closely resemble
+informal mathematical language (this is the "reliability" criterion introduced by
+Kamareddine and Nederpelt). But that's just me.
+
+--[[file:raph.org][raph]]
+
+Doubts - specifically, as to whether the Freek definition of "mathematical vernacular" 
+really expresses the jcorneli definition.  (It sounds more formal than the simple
+notion I have in mind.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+*  Geleijnse's masters thesis
+
+G. Geleijnse's masters thesis, [http://www.dse.nl/~gijsg/report.pdf
+Comparing two user-friendly formal languages for mathematics:  Weak Type
+Theory and Mizar], has some interesting discussion comparing computer
+proof languages (in particular the ones in the title) and informal mathematical proofs.
+Weak Type Theory (WTT) is a refinement of De Bruijn's
+Mathematical Vernacular (MV). --[[file:norm.org][norm]] 25 Aug 2006
+
+: People have different standards for what "user friendly" means too.
+I wonder if that is addressed in this thesis! --[[file:jcorneli.org][jcorneli]]
+
+:: It's a slippery concept. I'm reminded of the saying "Actually, unix is a very user-friendly system. It's just that it is particular about which users it chooses to be friendly with."
+I think the goal of making it friendly to people deeply steeped in math tradition but
+without much experience in formal systems is very different than that of making a good
+system for people willing to join a knowledge community organized around how to make
+proofs. I'm personally more interested in the latter, especially most of the proposals
+I've seen for "user-friendly" proof languages are quite complex. --[[file:raph.org][raph]]
+
+-----
+
+Thanks for posting that. It's very interesting, not least for its detailed discussion of Mizar.
+
+One immediate conclusion from this thesis is that there are many possible
+paths to "user-friendliness" in formal math. Personally, Mizar's use of
+pseudo-English reminds me of Cobol. It's nice to see that there are alternatives.
+
+WTT, like Coq and NuPRL, seems fundamentally based on type theory, although it
+seems to have a less constructive flavor than the latter. This raises a few questions
+for me:
+
+ * How hard would it be to formalize some version of type theory (constructive or
+otherwise) in a metamath/Ghilbert axiomatization? From the
+[http://en.wikipedia.org/wiki/Calculus_of_constructions Calculus of constructions]
+wikipedia entry, it doesn't look that hard. The only primitive that looks challenging
+to me is substitution, and we do have models for that in set.mm's sbc theory and the
+BETA[1-5] rules in
+[http://ghilbert.org/repo/ghilbert/hol/hol.ghi hol.ghi].
+
+ * What are the challenges in translating proofs between classical axiomatic systems
+and those based on type theory? My guess is that simple, small types will be straightforward, but that general WTT proofs will be quite challenging to translate into set.mm, even though (I think) the latter's proof theoretic strength is greater. Among other things, the Noun binder would seem to require an epsilon operator, which is of course a topic unto itself.
+
+--[[file:raph.org][raph]] 26 Aug 2006, Zurich
+
+**  The most general law of replacement
+
+When I try to think what I use when I try to write out a proof in English (well in French in
+fact but I adapt) I notice that I use what I would describe as meta-theorems. For instance supposing that I have a ( ph <-> ps) biimplication there are a lot of theorems in set.mm to replace ph by ps in a given formula. But when I write a vernacular proof I haven't these special cases in mind. In fact I informally use a more general theorem that I never write out in the eventual vernacular proof. This theorem could be described as following: in any propositional calculus formula I can replace ph by ps anywhere as soon as I know that ( ph <-> ps ) is a proved hypothesis. I would call this meta-theorem: the most general law of replacement. To tell the truth I wonder if there exists a system where this law can be proved. -- 27-Mar-2007 [[file:fl.org][fl]]

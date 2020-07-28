@@ -1,0 +1,173 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[http://www.computerworld.com/action/article.do?command=viewArticleBasic&articleId=9045078 Nanotech will replace disk drives in 10 years, researcher says]
+
+-----
+
+Nanotech storage devices, such as, say, fast terabyte
+thumb drives, could change the way we think about
+writing code, just as the advent of faster processing
+units informs our project ambitions. For example,
+consider Metamath databases, like set.mm which are
+intended to convey as much theory as possible in as
+little space as possible. What advantages might be
+obtained by transforming set.mm into a more expansive
+database form that contains additional and expanded
+information? What if, instead of performing certain
+lengthy computations to achieve final results -- like
+decompressed proofs, or mmj2 Proof Worksheets -- many
+intermediate results were saved, instead of being
+discarded?
+
+Consider the way formulas and proof steps are stored.
+Given that the particulars of the concrete syntax
+(Metamath's ASCII shorthand) are somewhat arbitrary,
+why not store the parse tree information instead of
+the rendered formulas? Is not "->" an /identifier/ of
+the symbol for implication, just as "wi" is an
+identifier of the wff implication syntax axiom? If we
+were planning to store set.mm in, say, a relational
+database, would there be more merit in repeating "->"
+a gazillion times than repeating "wi"? In fact, why
+not assign an integer number "key" to wi which maps to
+"wi"?
+
+Consider how in OMDoc formulas are represented, in
+lambda format, somewhat like this:
+
+     
+    \x,y.(x**2 + xy + y**2)
+    
+
+Now, also suppose that instead of embedding variable
+hypothesis labels into our DB parse tree
+representations, we stored an array of variable
+hypotheses alongside our parsed formula, thus
+simulating the lambda.
+
+For example, assume that we make an arbitrary but
+changeable restriction that there are at most 999
+variables in a single Metamath formula. And we assign
+the variables in a formula an index number according
+to the order of their appearance within the formula:
+001, 002, 003, etc. (leaving "000" to represent a
+null, say.)
+
+And let's assume that we have at most 900 syntax
+axioms and Named Typed Constants (e.g. c0) within our
+database, numbered 100, 101, 102, ... 999.
+
+Then we could recode
+
+     
+    "( ps -> ( ph -> ps ) )" 
+    
+    as
+          
+    [ps,ph] 100 001 100 002 001 
+     
+
+     
+    or...more compactly as
+     
+    [ps,ph]100001100002001
+     
+
+Then, a different formula with the same form will be
+encoded using the same formula number. For example:
+
+     
+    "( th -> ( ta -> th ) )"
+     
+    is encoded in the database as
+     
+    [th,ta]100001100002001
+     
+
+The same number, "100001100002001" is used in both
+cases, and anytime later when we have a formula of
+that form we can expeditiously find every other
+occurrence that is like it!
+
+Also, if every proof were stored in fully expanded
+form, with proof step formulas instead of being in
+Metamath RPN format, we would be able to easily search
+proof step formulas for matches to a formula in hand
+now. Thus, if we have "100001100002001" we can easily
+search the database to see if it is used anywhere else
+as an hypothesis or conclusion. This idea could also
+be used /across/ other databases, such as .mm or OMDoc
+(with translation code convering everything to this
+form.)
+
+I am /not/ saying that this specific example is
+particularly useful, but that it exemplifies the
+possibilities inherent in the future of molecular
+memory technology, where a device the size of a speck
+of sand could hold the entire Library of Congress! In
+cases where computations can be performed in advance
+and saved for later use, particularly in cases where
+updates are infrequent and search retrievals are
+common, this expansive approach to database design may
+have great merit for storing mathematical knowledge.
+
+There may be less merit in eliminating "redundancy" in
+stored mathematical data than in going the opposite
+direction and storing many seemingly redundant
+intermediate results. Pre-loading our database with
+information that will be helpful for subsequent
+searching may be very economical as the cost of
+storage decreases and the speed of retrieval increases
+(we can expect molecular memories to have speedy
+direct access.)
+
+Many other Metamath-specific examples can be imagined
+with little difficulty. Like storing, for each
+hypothesis, assertion and proof step formula the data
+about which other formulas can be unified with it (one
+way unification), and vice-versa. Or, we could perform
+frequency analysis to determine which expressions and
+sub-expressions occur most frequently, and how they
+are used -- in that way a logic agnostic software
+component could discover that "x e. V" is /highly/
+significant in set.mm and it could then conclude that
+an occurrence of that expression within a formula
+means that a number of other expressions (mathematical
+objects) are likely to be relevant.
+
+In one sense, and this is only partly true, a
+mathematical theorem is just the stored, abstracted
+result of a long, expensive chain of reasoning --
+essentially redundant and rederivable at any time, and
+destined for use in other chains of reasoning as an
+intermediate result. So in that sense, which ignores
+provably correct but incomputable results, a great
+deal of "math" is just redundant information.
+Therefore, as high-speed direct access molecular
+memory becomes cheap and ubiquitous, we may want to
+think again about our "ideology" of eliminating
+redundancies in our mathematical databases. What seems
+insightful today may seem redundant tomorrow but still
+be quite useful.
+
+ * I don't want to cool down your dreams my dear ocat but in
+my opinion the future of the technology is more or less that
+in 50 years there is no more petrol and that the Earth looks like
+a rubbish bin. Apparently great men in companies and state agencies
+didn't succeed in conceiving that before. So strange... They are well
+paid aren't they...
+
+ * It reminds me a French boss who had designed an inconceivable system of mails
+sent to employees to make them learn English. I didn't have the courage
+to explain him that it was no more than a gadget and that there was a
+very good way to learn English: a teacher more or less private. And what's
+more astonishing : he made money with his (lets' say) invention. Progress
+they call that... I had another boss whose passion was to send advertisements
+to faxes, a technology imported from the USA, yes sir and he made money with
+this. Yes sir. And he was never arrested by the police for that. So strange... 
+
+ * To tell the truth it's just like in cooking sometimes it's simply not good,
+even if the cook is fortunate...  [[file:fl.org][fl]] 2-Nov-2007
+
+ * At the root of our problems is Fear. There is saying I cannot quote exactly -- "For one who overcomes fear even a brief moment can be a triumph, but a long life ruled by fear can be a kind of tragedy." And, I think that in nanotechnology there is the possibility of facilitating advancement in every other science and technology, even in restoring the Earth's environment. 

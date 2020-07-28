@@ -1,0 +1,106 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: "Let your forcefield drop / sensors out / and try to communicate."
+:: --From "Communiqué" by Prick.
+
+* A few books on writing
+
+; One Continuous Mistake : Zen approach -- the four truths are: writers write;
+  writing is a process; you don't know what you will write until that process
+  has completed... and, damn, I forgot the last one.
+
+; Singular Texts/Plural Authors : looks like an interesting book about
+  collaborative writing (which of course is relevant to thinking about CBPP as
+  well as day to day life).
+
+; Writing as a Visual Art : I really recommend this book and am heading back to
+  the library tomorrow to try to finish it.  The forward by /Marvin Minsky/
+  was very interesting.  The book itself is written by an Italian linguist and
+  AI-ist, and from what I understand so far, the development promises to be
+  worth paying attention to.
+
+; The MLA Style Manual : An oft-referred to text with some reasonable advice,
+  even for people who aren't in the humanities.  MLA, by the way, stands for
+  Modern Language Association, to which one may add, of America.  The edition I
+  found seemed a little dated (much discussion of publisher relations, galley
+  proofs, the creation of indices, etc.).
+
+I'll post more when I think of them.  Of course, the book  [http://sut1.sut.ac.th/strunk/ Elements of Style]
+ought to be required reading.  The link is to a copy of a 1918 edition,
+which I believe is now in the public domain (I don't know of any reason
+why it wouldn't be, although it is not listed by [[file:Project Gutenberg.org][Project Gutenberg]]).
+
+* What the MLA Style Manual says
+
+Here's a quick summary of what the MLA style manual has to say.  (I haven't
+actually gotten to the section on Style yet, this is all just the preliminary
+material.)
+
+**  Basic points
+ * Identify the audience: is it general or scholarly?
+ * Use terminology that is appropriate to this audience (no jargon for non-specialists).
+ * Use non-discriminatory language.
+ * Understand the rules of English usage. Some books are recommended, a few
+that I noted are:
+## A dictionary of Modern English Usage, Fowler
+## American Style and Usage, Copperwood
+## Dictionary of Contemporary American Usage, Evans
+ * Understand "style".  Again, some books:
+## Thinking Straight: Principles of Reasoning for Readers and Writers, Beardsley
+## Writing without teachers, ELbow
+## Style: an anti-textbook, Lanham
+## Style: ten lessons in clarity and grace, Williams
+ * Know how to edit your own work.  The book:
+## Line by line: How to edit your own writing, Cook
+ * Don't plagiarize (Where plagiarization is, notably, rather different from 
+copyright infringement, and specifically means taking someone else's work
+and presenting it as your own, whether verbatim, or even through much 
+rewording.  Note that AFAIK there is no law covering plagiarism.)
+
+**  Specific thoughts for the editor of a compilation
+
+ * The editor bears ulitmate responsibility for the work's success or failure.
+(As a compilation, I'd add.)
+ * The editor must identify:
+## Objectives
+## Audience
+## Guidelines
+ * And the editor must /communicate to and with the contributors on an ongoing basis/.
+ * Other important things to do:
+## Figure out if there is a market for the book.
+## Spell out guidelines to everyone who is invited to participate.
+
+Note that some of these pieces of advice would apply somewhat differently to,
+say, the [[file:FEM.org][FEM]], which is based on an already existing compilation, and which
+is "run" in a somewhat peer-produced fashion, e.g., thoughts about guidelines
+are actively solicited at this point, not thought up in solititude and handed
+down.
+
+**  A few other interesting thoughts about the MLA Style Guide
+
+ * A "prospectus" to be submitted to a publisher is sort of like a grant
+  preproposal to be submitted to a potential funding agency.
+ * Copyeditors must think a lot about their work, and authors must make
+  all needed changes.  (Or else!)
+
+
+* On "Writing as a Visual Art"
+
+**  Quotes From the Forward
+
+"In my opinion, the very concept of grammar is perverse, because it suggests that
+we can understand what language is without any idea about how it works."
+
+"There's nothing wrong with a group of thoughts in which each lends meaning to
+the rest the way that each strand in a rope or a cloth keeps the others from
+falling apart."
+
+**  General reflections
+
+The notion that much better communication can take place through
+person-to-person interactions than in print is common in mathematical culture.
+Bill Thurston wrote a paper about this called 
+[http://arxiv.org/abs/math/9404236 On Proof and Progress in Mathematics].
+Interestingly, the paper came out right about the same time as 
+"Writing as a Visual Art" -- I guess this stuff was the zeitgeist of 1994.

@@ -1,0 +1,367 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We often add bibliographies (lists of references) to our !PlanetMath articles. I've been thinking that it would be useful to a reader if most or all of my references are active links -- to the text online if it is freely available, or to (e.g.) Amazon otherwise, if it's a book at least, and in print or available 2nd hand.
+
+But it seems a waste to just give a plain link to Amazon and let Jeff Bezos keep all the money :) Amazon (and perhaps other book sellers) run a "referral program": you register, get a unique identifier which you can make part of URL's that point to books on Amazon's site. If a user comes to Amazon through your link, you get up to 15% of the sale price if they buy that specific book (in that online session), and/or a smaller percentage on anything else they buy that same session.
+
+!PlanetMath is always looking for sources of funding. Well, here is one. I would be happy to make my references links, not using *my* amazon partner ID, but to make it a concerted fundraising exercise for !PlanetMath!
+
+With traffic i imagine PM must be getting, and with a motivated readership (which is on average probably not a stranger to the idea of buying a book or two from time to time) it will clock up. It seems a painless way to earn a bit of money for the site.
+
+Practical considerations... I'm familiar with the Amazon referral program the way it was a few years ago. Then (a) you could get actual cash rather than Amazon vouchers, (b) while referral partners were encouraged to download Amazon logo graphics, it was not mandatory, you did not need to place any adverts on your site. We (whoever would register with Amazon representing PM) might want to check this is still the case.
+
+Choice of bookshop... I happen to like Amazon and they had over 99% of books i ever looked for. Others may prefer other vendors.
+
+There are more issues. Akrowne identified the following in his initial response to the idea:
+
+: This seems worthy of further discussion.
+ 
+: It would be nice to have some concerted effort to use
+ bibliographies to earn PlanetMath some funds.  But
+ there are issues of
+ 
+ 1. How to organize this effort.
+ 1. If and how to divide the money between PM and the authors.
+ 1. Whether to allow paid referrals for individual authors
+ which exclude PM (certainly seems rude, seeing as we are
+ the publisher!)
+ 
+: Can someone start a discussion on this linked in
+ from an appropriate place on the Wiki (if you dont know
+ where the Wiki is, click the "Wiki" link on the main menu)?
+
+This is my first ever page here, hope it displays okay. For the organisation, i
+would suggest (after discussion, and assuming we decide to do it)
+
+ * Somebody registers and gets an ID. Suppose it's "planetmath" for the sake of this discussion
+
+ * Somebody who maintains the !LaTeX files where \PMlinkexternal and such are defined adds
+  \def\PMisbn#1#2{...}
+  such that it formats to the underlined anchor #1, and forms a link to an url of the form
+  http://www.amazon.com/exec/obidos/ASIN/#2/planetmath (or whatever the syntax is nowadays),
+  with #2 replaced by the book's ISBN.
+
+Then, whoever adds an article to the encyclop&#230;dia could choose to give references of the form
+
+ Claude E. Shannon, with introduction by Warren Weaver,
+ {\sl The Mathematical Theory of Communication},
+ Univ of Illinois Press 1948, finally reprinted again, ISBN 0-252-72548-4
+ \PMisbn{Buy it at Amazon}{0252725484} or
+ \PMlinkexternal{read the text for free at Bell
+ Labs}{http://cm.bell-labs.com/cm/ms/what/shannonday/paper.html}
+
+and the \PMisbn sequence would expand to the underlined anchor, and a link to
+http://www.amazon.com/exec/obidos/ASIN/0252725484/planetmath or some such.
+
+By the way, http://cm.bell-labs.com/cm/ms/what/shannonday/paper.html really works.
+
+Everybody would choose whether they want to use the \PMisbn control sequence in their lists of references.
+
+As to people using their own referral ID and keep the money, rather than making it a link that potentially benefits !PlanetMath, well... i don't like forbidding things, but i would certainly frown on it. Come to think of it, don't we already have a policy against commercial hawking? That would cover it.
+
+Judging from response times and overload notices, this site desperately needs more/faster servers. And it's all for an utterly worthwhile goal. The best a personalised referral link on a few dozen articles could bring the author is maybe five or ten dollars a quarter, if that, but !PM links on a substantial part of 6000 or so articles could bring in hundreds, maybe thousands.
+
+For that reason i would also not think splitting the proceeds with the author is necessary. An author already gets the warm glow of having contributed to a worldwide authoritative resource, and a chance to show off their expertise and writing skill. What the author doesn't really need is a handful of small change. The site already returns to the author the favor of engaging in the nitty gritty of broadcasting the author's words to the world. And it does need the cash it can scrape together to make it cope with the amount of traffic it deserves to get. --[[file:marijke.org][marijke]], 2005-Apr-09
+
+* Followups
+
+**  Centralized bibliography
+
+Two comments: 
+ 1. This system would encourage people to add references to their entries, which would (in my
+ opinion) improve PM even more. 
+ 1. The idea of a centralized reference database on PM is relevant to this discussion. 
+I wrote earlier:
+
+: ..another feature I think would be useful would be a
+ centralized reference database on PM. With it, each
+ reference would only be entered once into PM. After 
+ that it can be cited from any entry. First, this
+ would make it easier to cite references in the
+ encyclopaedia. Second, a forum for each reference
+ could be useful for discussions.  For example, the
+ board could be used to discuss the article/book and point 
+ out relevant work. We could also have a user editable review. 
+ A bit like a dynamic MathScinet. !
+
+[For full thread, see  http://planetmath.org/?op=getmsg;id=6079 ] With such a centralized
+database it would be easy to create links to all the popular bookstores, online versions
+of the book,
+etc. Furthermore, for papers, there could be links to preprints of the paper. All this
+would of course not be displayed in the encylopaedia entry. Instead, each reference on PM
+would have its own page with all this information. It would also
+promote more standard look'n'feel for references on PM. We would only need one command. Something
+like \PMcite{shannon1948}, where shannon1948 is a unique tag identifying the reference. 
+--[[file:matte.org][matte]] 2005-Apr-09
+
+* scarily brilliant
+
+These are some brilliant ideas.  They are almost scarily brilliant.  For
+personal reasons, first of all.  I recently had to sell off my
+several-thousand-dollar collection of books for pennies on the dollar.  Right
+now, I have about 6 books, and I intend to keep things that way.  There is a
+beautiful library three blocks from my apartment -- which I almost never use.
+If I thought that my experience would generalize, then I would encourage people
+to never buy books.  But I know that my experience does not generalize
+perfectly. Some people love to buy books and legitimately have the stability to
+support the habit.  For them, it would probably be a decent service.
+
+The other issues have to do with PM's non-profit status (i.e. can we legally do
+something like this?) and with our nominal support of free resources (assuming
+it is OK to support the use of books until all mathematics has been made free,
+is it OK to support the use of non-free software systems like Amazon.com?).  I
+have serious doubts about non-free web services that I don't think are commonly
+shared.  My view is that non-free webservices are not substantially different
+from non-free local software.  This view is, to my understanding, more extreme
+than the view currently held by RMS and the free software foundation.  Does this
+make me a luddite?  Maybe - and yet, I am also, without a doubt, a technologist.
+(These kinds of "contradictions" seem to appear frequently in my personality...)
+
+Thus, while I recognize the idea's strength as a means of securing financial
+support, I have serious reservations.  (I also have doubts about the Google ads,
+but I guess that's [[file:sources of funding for PM|another story.org][sources of funding for PM|another story]].)  The
+conclusion, however, is pretty much the same -- namely, why don't we spend some
+time thinking more about other ways to get money that don't involve advertising
+for a huge corporation and their non-free software systems.  Now, of course,
+some people will want to buy books.  If they want to use Amazon.com, I don't
+think we can stop them.  But personally I don't think we should abet them,
+either.
+
+As for the idea of the centralized reference database, I have no objections at
+all, and indeed, I think it should be done.  If this isn't already a feature
+request, maybe you could add it there as a separate page?
+
+To conclude, /not/ adopting the Amazon partnership idea might cost us
+thousands of dollars -- so (if we decide not to adopt the idea) I would like you
+to continue to help us think and talk about 
+[[file:thoughts on the viability of free-software style business|other ways of generating funding.org][thoughts on the viability of free-software style business|other ways of generating funding]].
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 15:32:35 2005 UTC  /PS./ As the de-facto maintainer
+of this wiki, I think I should encourage you to create user pages, etc. - see the
+[[file:Policy.org][Policy]].  Thank you very much for participating in AM!
+
+I'm restoring comments I made on version 3, which somehow were lost.  There are some
+things I feel are important in there.  They are now just below.
+
+Joe, as a (soon-to-be) public charity, your worries about PlanetMath having "too much"
+commercial support are somewhat manifested in the law.  There is some limit to the
+amount of this kind of support we can have (thanks for reminding me).   So we need to
+keep this in mind.  I think we should pursue any funding we can get, but we'll have to
+mind the proportion between commercial and noncommercial.
+
+I'd also like to draw attention to my restored comments about
+the "WAG" program, which puts in hooks to allow library holdings to get as much 
+visibilty with users as commercial holdings. 
+
+Finally, I want to give my personal feelings on library book vs. commercial purchase.
+I prefer purchase by far.   Though I severely dislike the scarcity of the physical 
+library holdings model, my main problem is that a book owned by me is not "interactive".  
+It is almost impossible for me to make full, or even significant, use of a book without
+heavily marking it up.  Thus, my best option is to make a purchase.  I also feel this 
+is often actually /cheaper/, when my time spent in acquiring a borrowed copy of a 
+library book is factored in (recently I spent a few hours trying to get a copy of 
+Siva Vaidhyanathan's "Anarchist in the Library..." book from my library, which turned
+out to be lost.  So I just bought it.  I think buying it turned out to be the lesser
+expense).
+
+So basically, I would like to see both kinds of use supported.
+--[[file:akrowne.org][akrowne]] Sat Apr 9 18:10:58 UTC 2005
+
+I think that at the very least, users should be able to /turn off/ the Amazon
+referals with a personal config.
+
+Also, I hope that we will take some time to think over the free/non-free
+software implications.  But this may not be the best place to debate the merits
+and demerits of non-free webservices in general (though I do think we should
+work on this topic some more).
+
+The GNU project 
+[[file:http://www.gnu.org/encyclopedia/free-encyclopedia.html encourages.org][http://www.gnu.org/encyclopedia/free-encyclopedia.html encourages]]
+free digital libraries /not/ to link to pages from non-free
+encyclopedias.  (The article is worth reading.)  But in the same article, RMS
+says that it is OK to link to non-free pages that are outside of the scope of
+the encyclopedia -- books for instance.
+
+Let me note that books are not completely outside of the scope of PlanetMath.  I
+think that free books (including ones featured on PM) should be given special
+preference in any bibliographic referal system.
+
+For me, the requirements are: be able to turn off Amazon referral system on a
+person-by-person basis; add a library referral system is available; /and/ give
+free books from the (pending) revised PM book collection special treatment.
+
+And, like you said, we'd need to balance it with various legal requirements.
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 19:41:46 2005 UTC
+
+One thing to take into account is that currently it is possible to read some
+books completely free online at amazon. Thus there could be some use (for the reader)
+in providing links to the Amazon page for a book, even without any cash for PM.
+--[[file:matte.org][matte]] Apr 10 2005
+
+This discussion seems to have split into the desirability or otherwise, and the implementation. So i hope it's okay to add to the discussion at two places... In an ideal society there would be no money and property so all this wouldn't be a problem. And all paper books would have a Search button :)
+
+I'm no fan of capitalism, but realistically speaking (a) this site could do with some money to keep it functioning adequately, and if people are going to buy books off Amazon etc. anyway as a result of them reading an interesting article here, why should we not take a slice of that? The user clicking through doesn't pay a penny more, and we're not pushing or advertising. It's simply a matter of, if you're going to buy the book anyway, tell 'em we sent you so we get a cut. And (b) there are many sectors of the economy i'm pretty much forced to buy from (directly or indirectly): water companies, food growers, the oil company that supplies the fuel for the bus i take, and their treatment of the environment and third world is questionable to say the least. Compared with these an online book reseller is definitely a much lesser evil.
+
+PS sorry to hear of your (jcorneli's) parting ways with your books <shudder>.
+
+--[[file:marijke.org][marijke]] 2005-May-08
+
+**  ideas for implementation
+I can take care of getting a referrer ID from Amazon, for !PlanetMath.
+
+I also tend to agree that we shouldn't need to allow for getting individual contributors paid.  You're right,
+the small bit of change means less to them than for us in the aggregate, anyway.  
+
+I like your idea of doing a pseudo-!LaTeX command that builds the referrer URL.  However, I wonder if there's
+a nice way we can make a concerted effort to get better coverage of our bibliographies.  This Amazon referrer
+effort should complement two other proposed initiatives we have been discussing:
+
+ 1. We should do something to enforce/encourage/make easier the provision of bibliographies.
+ 1. We should perhaps start turning bibliographies into metadata elements, so they can be analyzed,
+  and manipulated globally (for the whole site).  Imagine having to edit only in one place to set up
+  an Amazon referrer link that shows up in 100 entries!
+
+I wonder what the best way to do this is.  Maybe having a global PM !bibTeX file, which we edit
+as a collaboration object, and which gets linked in to each entry at rendering time.   Is there a
+way to add arbitrary elements to bibTeX, like a referral URL to buy the book?
+
+It would be cool also to include !OpenURLs/DOIs so that things like this could be used on to
+PlanetMath entries:
+
+: http://www.furl.net/item.jsp?id=2241761
+
+Then no one can argue we are giving libraries the short shrift.
+
+If bibliography items were managed centrally, eventually lots of this metadata could be filled in
+collaboratively.
+
+The downside to using bibTeX, though, would be that changes would require rendering to propagate.
+The upside would be not neededing to build the editing or manipulation into the Noosphere interface.
+--[[file:akrowne.org][akrowne]] Sat Apr 9 14:25:12 UTC 2005
+
+Shared bibliographies should be handled in somewhat the same way as [[file:shared style files.org][shared style files]]. 
+(I don't think we should have just one shared bibliography, but rather, as many as are useful.)
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 19:25:06 2005 UTC
+
+
+Would it be possible to change the "Papers" interface to include references? These could
+be exported into a huge bibTeX file. --[[file:matte.org][matte]] Apr 10 2005
+
+Sorry, been otherwise engaged for a few weeks. Central database of references is of course *the* way to go... To take the Shannon book as canonical example again, one article author might know it's finally in print again, and knows its Amazon URL, another one might know the URL where you can buy it direct from the publisher, yet another might know you can read essentially the same text (orig. published in Bell Labs Journal) for free at Bell Labs, but if they all link to the same bibliography entry then *all* that information is available to the readers of any one article referencing it. And as was said above, new information only needs to be added at one place.
+
+As for the tech implementation, i'm sorry but i don't know how pseudoLaTeX commands like \PMlinkescape are implemented here (in no&#246;sphere?) and may not have the time to familiarise myself with the inner workings of PM in the near future. I will make two suggestions though.
+
+ * If at all possible, it would be a good idea to standardise on a pseudo
+  command that authors can start using in their entries, commit ourselves
+  to maintaining that command, even if its implementation changes. For 
+  instance, at first \PMisbn might simply expand to the Amazon link with
+  our ID in it, or it might expand to an internal link to a little page
+  maintained by hand repeating the author, title, publisher, and perhaps
+  an Amazon link there. Later, the same \PMisbn might expand to an internal
+  link to a little page generated on the fly, with the book's details. Yet
+  later such a page might have links to other books in the database on a
+  similar subject. Oh and yes, links to libraries by all means... But if
+  the best kind of reference we can generate at the time will always be
+  invoked by \PMisbn, encyclop&aelig;dia entries never need to be re-written
+  merely to update the reference style.
+
+ * ISBNumbers are the most concise and exact identifiers for books, but they
+  are sometimes missing in books or unknown, and not all refs are books (some
+  are journal articles, web pages etc.). So i would suggest two commands,
+  \PMisbn and \PMref, used as
+
+  \PMisbn{underline this text}{0252725484}
+  \PMref{underline this text}[C.E.]{Shannon}{1948}
+
+Having two ways in to the same thing is in the same spirit as \PMlinkid{9876} and \PMlinkname{InfiniteImprobabilityDrive} pointing to the same article.
+
+Making the initials an optional argument would distinguish between books by A.Smith, B.Smith, C.Smith etc. in the same year, but still map Shannon to C.E.Shannon if there's no confusion. Don't know how to distinguish between the same author writing more than one thing in the same year <g>.
+
+I don't know what is best, to let the \PMisbn or \PMref also generate the text in situ (author, title, publ, year) or to let the entry author format that. In other words, should they write
+
+  \begin{thebibliography}
+  \bibitem[Sha48]{Sha48}\PMisbn{0252725484}
+  \end{thebibliography}
+
+to generate the whole bib item text, or should they do their own formatting
+
+  \begin{thebibliography}
+  \bibitem[Sha48]{Sha48} Claude~E.~Shannon, Warren~Weaver,
+                         {\sl The Mathematical Theory of Communication\/},
+                         Univ.~of Illinois Pr.~1948,
+                         {\small\tt ISBN \PMisbn{0-252-72548-4}{0252725484}}
+  \end{thebibliography}
+
+The first somehow seems easier for the author (and makes for a unified house style of bibliographies all typeset the same). However, going further and even absorbing "\bibitem" itself into \PMisbn might not be a good idea (for then how are authors going to refer to the bib entries in the text).
+
+The downside (which may be in fact an upside) is that if an author uses a \PMisbn or \PMref to a book we haven't got yet, they would not see the system expand the ISBN etc. to a name, title etc. in their entry. Ideally, something would pop up asking them to supply the details there and then...
+
+Note that all the above is relevant for central bibliographies, whether or not we decide to take a slice from Amazon referrals.
+
+PS i read some request (can't find it now) to move this discussion to another part of the wiki. I'm stupid, i don't know how. Or where. Whoever does know, feel free to do so, and tell me where it went.
+
+Oh, and do we have an Amazon userid now???
+
+--[[file:marijke.org][marijke]], 2005-May-08
+
+Would it not be easiest to leave the 'thebibliography' environment completely to the rendering machine. 
+In the entry text, the author would just add commands like \PMcite{shannon1948c} \PMcite{Rudin1975} ,
+\PMcite{Shannon1948-Shannon1948b}. 
+These would expand into [1],[2],[3-4], and the corresponding references would be added to 
+the entry's bibliography. 
+Here shannon1948c, shannon1948, .. are keys that point to entries in the centralized database. ISBN might 
+not be so good keys for articles. We would have to come up with some general naming convention, but at this
+stage this is not so important. An advantage with this system is that only references that are cited are 
+added to the bibliography. By clicking on references in the bibliography, the user would be taken to 
+a page with all the info on the reference. -- [[file:matte.org][matte]] 2005-May-10
+
+Based on this discussion and my thoughts, here is my proposal for how a centralized bibliographic system might be implemented.  Presumably, the database would be stored in SQL just like the other databases on Planet Math.  It could have the following fields:
+
+ * Author, Last Name
+ * Author, First and Middle Names
+ * Co-Authors (similarly organized by first and last names)
+ * Title
+ * Subject(s)
+ * Keywords
+ * Publisher
+ * Place of Publication
+ * Publication Date
+ * Edition(s)
+ * How to Obtain
+ * Description
+ * Dewey Decimal Number
+ * LC Call Number
+ * MSC Subject Number
+ * ISBN Number
+ * Copyright and Licensing
+ * Comments
+ * Reviews
+ * Canonical Name
+
+The field "reviews" would include reviews of the book by Planet Math members, much like what whe already have in the "Bibilography of Differential Geometry" and the like on Planet Math already.  The canonical name would be something like "ASmith78b".  It would be automatically generated by the machine form the author name and publication date in contradistinction to the other fielsds, which would be entered by the user.  
+
+Also, take this list as a first suggestion --- one might want to add some other fields I have not thought of and one might also want to think how to handle such references as electronic books, journal articles, and webpages which might require different sorts of data to describe. 
+
+To create new entries or update existing entries, one would have a form interface in which one simply has to fill in the blanks with the relevant data.  Even if one does not know all of the information about a given book, one could fill in whatever one does know (at the very least, the author's last name and the title) to start the entry 
+off and the remaining infomation could be added afterwards.
+
+Making !BibTeX entries from this data should be relatively simple: all one would have to do is fill in the blanks in the following template with information from the database:
+
+ \bibitem[_CanonicalName_]{_CanonicalName_} 
+         LastName_, _FirstName_, _Coauthors_,
+         {\sl _Title_\/}, _Publisher_,
+         _PlaceOfPublication_ \~_Date_,
+         {\small\tt _ISBN_}
+
+To reference the book, one could use the commands \PMref and \PMisbn described earlier. 
+
+The "subject" fields could be used to automatically generate bibliographies like the "Bibliography of Differential Geometry" mentiones above.  Towards this ens, one could consider expanding the subject data to incllude subsubjects such as "Differential Geometry -- Intermediate Textbook" or "Differential Geometry -- Local Riemannian Geometry".  The subsubjects would automatically give rise to headings within the annotated bibliography.  In coming up with this suggestion, I was thinking of how wiki category pages are  generated.
+
+To start the database off, we could enter data from the Library of Congress.  From my work identifying books in the public domain, I am familiar with how their online catalog works and should not be an impossibly hard task to obtain the data on all math books and enter it into such a datatbase.  --[[file:rspuzio.org][rspuzio]] 10 May 2005
+
+P.S.  This way of storing the data makes me think of a frame system and the relation of frames to templates.  In particular, the pussibility of storing defaults (such as "unknown" or "??") for items not yet entered sound a bit like what one does with frames.
+--[[file:rspuzio.org][rspuzio]]
+
+The above fields look good for books. The review would -- of course -- be rendered in Latex.
+However, some modifications are needed for papers.  
+--[[file:matte.org][matte]] May 16 2005

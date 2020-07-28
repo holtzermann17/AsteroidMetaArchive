@@ -1,0 +1,220 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Starting points
+
+
+There are some who feel that the current state of Noosphere documentation
+is insufficient for a strong Noosphere hacking initiative to exist.  This
+page is a broad feature request whose role is to document and organize
+the process of documenting and organizing the Noosphere documentation.
+In other words, if you want to understand Noosphere better, you've
+come to the right place, and you'll find other useful links and
+discussions branching off from here.
+
+** Why this is important
+
+Many of the feature requests for PlanetMath involve making changes to the Noosphere code.  In order for these requests to get carried out, someone needs to first be able to understand the program in order to figure out how to modify it or add functionality to it.  To make this first step as easy and painless as possible, ample, well-organized documentation is important.
+
+The importance of documentation is enhanced by the choice of economic arrangement.  Were we to hire a programmer on a long-term basis, it would be feasible to first have that person spend several months simply getting up to speed on the operation of the existing program and studying how the code works, and only then begin implementing new features.
+
+Unfortunaterly, give our finances, hiring a programmer on a regular basis is not a viable option in the near future, so instead we expect that programming will be done by a combination of volunteer effort and contracting out specific tasks.   Given such a model, it is crucial that a participant spend the least amount of time possible locating and studying background material before beginning work on a project.  For instance, if a project might involve five hours of work writing a new subroutine and making a few changes to an existing module, it will not do to have the programmer first spend 12 hours poring through the source code and the documentation to figure out exactly where the changes need to be made and what different variables mean.  Rather, the programmer should be able to spend no more than an hour reading an introductory ovderview, then locate specific information about variables, subroutines, dependencies with relative ease in a well-organized documentation.
+
+* Supporting Documents
+
+ * [[file:Installing Noosphere.org][Installing Noosphere]]
+ * [http://scholar.lib.vt.edu/theses/available/etd-09022003-150851/ Aaron's PM thesis]
+
+Note: It might simply help to have Aaron's PM thesis (or at least some
+portions thereof) turned into wiki pages, or otherwise made
+world-editable. --[[file:jcorneli.org][jcorneli]]
+
+* Discussion
+
+Note that better Noosphere documentation could both reduce the
+cost (and so, the fee associated with) [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] and also increase the likelihood
+that the bounties will be taken up.  Insofar as the various [[file:Feature Requests.org][Feature Requests]]
+related to Noosphere/!PlanetMath will also require (or at least really benefit from) more knowledge about the system
+being available, the current feature request is in some sense the
+basic, primative, or prerequisite one (for these projects).
+
+See the [[file:scholium system.org][scholium system]] for one potential tool that would help
+with this documentation task -- and for which there could also
+be some valuable exchange of system knowledge (but that's, basically,
+another story). --[[file:jcorneli.org][jcorneli]]
+
+* Data Tables
+
+As a start, maybe we could document the various SQL tables in which
+Noosphere stores its information.  Looking at the database administration
+pop-down menu, I see the following tables listed.  For each of these tables,
+it would be good to know the following:  
+
+ *  What the tale is for --- with some tables like "watches" or "books", 
+the name is self-explanatory, but what the hey is a "ns" or a "tdesc"? 
+
+ * What columns this table has.  
+
+ * What sort of data goes within each column. 
+
+ * What sorts of consistency conditions are to be maintained between
+data appearing in different items in the same or different tables. 
+For instance:  Two distings objects had better not have the same 
+unique identifier.  Presumably, the data in the three tables 
+pertaining to groups (groups, group)members, group_groupid_seq) had
+better jive with each other as well as perhaps with other tables such 
+as the table of users --- the groups to which a users belongs should
+be listed as groups in the appropriate place, for instance.
+
+To be sure, some of this information is mentioned in Aaron's thesis
+so that would be a good starting point for this project.  As for what
+might constitute a reasonable level of coverage, I propose the
+following criterion:  Given the description of the tables and their
+contents, someone should be able to perform all the basic actions
+of noosphere. such as adding an entry, posting a correction, or
+replying to a forum post by means of appropriate SQL manipulations.
+Likewise, it should allow on one to port over the data contained
+therein to other formats, such as Arxana triplets or quintuplets.
+
+ * acl_default_uid_seq
+
+ * acl_default
+
+ * acl_uid_seq
+
+ * acl
+
+ * actions_uid_seq
+
+ * actions
+
+ * authors
+
+ * blacklist_uid_seq
+
+ * blacklist
+
+ * books_uid_seq
+
+ * books
+
+ * cache
+
+ * catlinks
+
+ * classification
+
+ * collab_uid_seq
+
+ * collab
+
+ * concepts_id_seq
+
+ * concepts
+
+ * corrections_uid_seq
+
+ * corrections
+
+ * corstat
+
+ * forums_uid_seq
+
+ * forums
+
+ * group_members
+
+ * groups_groupid_seq
+
+ * groups
+
+ * hits
+
+ * inv_dfs
+
+ * inv_idx
+
+ * inv_phrases
+
+ * inv_words
+
+ * lastmsg
+
+ * lec_uid_seq
+
+ * lec
+
+ * links
+
+ * mail_uid_seq
+
+ * mail
+
+ * messages_uid_seq
+
+ * messages
+
+ * msc
+
+ * nag
+
+ * news_uid_seq
+
+ * news
+
+ * notices_uid_seq
+
+ * notices
+
+ * ns
+
+ * object_rating_all
+
+ * object_rating
+
+ * objects_uid_seq
+
+ * object
+
+ * objindex
+
+ * objlinks
+
+ * ownerlog
+
+ * papers_uid_seq
+
+ * papers
+
+ * polls_uid_seq
+
+ * polls
+
+ * relsuggest
+
+ * rendered_images
+
+ * requests_uid_seq
+
+ * requests
+
+ * score
+
+ * searchresults
+
+ * source
+
+ * storage
+
+ * tdesc
+
+ * users_rating
+
+ * users_uid_seq
+
+ * users
+
+ * watches
+
+----
+[[file:Feature Requests.org][Feature Requests]]

@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Hitting the "preview" button results in the message
+
+   Alert!: Can't open file for uploading
+
+There is apparently no way to save your work on the site using the Lynx browser.

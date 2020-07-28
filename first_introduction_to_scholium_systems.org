@@ -1,0 +1,72 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A "scholium" is a piece of writing attached to some other
+piece of writing.  A comment, or a corollary, or what have
+you.  A "scholium system", as discussed on these pages
+and in the paper that the pages have grown up around, is a
+contemporary, computerized, way of writing that treats
+many different kinds of text as if they were scholia.
+
+For example, when co-authoring a paper, you might highlight
+sections of the text and give comments to your co-author --
+these comments are scholia.  Or, after buying something online,
+say, at Amazon, you might leave some feedback about how
+you liked the product -- again, these comments are scholia.
+
+However, the scholium system, or "scholia-based document model"
+as it is more formally known, doesn't stop with one layer of
+superimposed information.
+
+For example, after submitting comments on an article to
+your co-author, you may see a revised version that derives
+both from your comments and from the original.  The scholium
+system keeps track of this relationship, and, indeed, can
+be used to track the flow of authorship or citation through
+a large corpus.  Where did this idea come from?  A full-blown
+scholium system might be able to tell you.
+
+The reason for the name "scholia-based document model" is
+that it describes situations in which authors provide comments
+on one another's work (or on their own work), and this collection
+of comments becomes the "final document".  That is, in general
+the comments aren't supposed to disappear when the work is finally
+published (although certainly some comments could be removed or
+changed, evolving along with the other pieces of the work), but
+rather, the audience is presented directly with the collection of
+scholia.  This provides the opportunity for dissenting voices
+to speak up, for knowledgeable persons to provide extra information,
+and for non-knowledgeable persons to ask questions.
+
+There are already many similar systems in operation -- newsgroups
+and slashdot are two popular examples of things that work roughly
+like this.  The Web, with its collection of pages that
+link to one another, is an example, if you interpret the links
+to be "scholia" with a particular sort of semantics.  
+
+The system that I'm proposing in the paper is one that is meant to be able to
+encode essentially arbitrary semantics for the relationships between different
+pieces of text, and also support quite general notions of what text is.  Still,
+the idea is roughly the same the "classical" one or the one familiar to us from
+the web, that of documents made up of many interconnected pieces.  The difference
+is that in this system, semantics are made explicit.
+
+The system could be used to create a dynamically evolving web page, or to build
+an AI, or to add annotations to your collection of ebooks.  The different
+applications will require some extra work - indeed, one of the goals
+of the system is to enable people to make modifications in real-time.  However,
+the model is ready, and it is explained in detail (along with some of its
+implications) in the paper.  On these wiki pages, you'll find some further
+discussion.  Enjoy.
+
+
+----
+[[file:scholium system.org][scholium system]]
+
+
+Hey, I don't know who changed "internet" to "Web", but it would be nice to
+explain your reasons for making the change, since I for one don't precisely
+understand it.  Also, if you're going to edit a signed comment (which
+typically isn't the way things are done AFAIK), you might as well
+remove the signature, so the original author isn't obligated to take credit
+for your changes. --[[file:jcorneli.org][jcorneli]]

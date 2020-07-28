@@ -1,0 +1,44 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In the course of our discussions on how to deal with copyright issues,
+we have come across points where we were unsure how to proceed.  These
+were not simply a matter of looking in the right reference or law-book
+for an answer; rather, these were instances where one situation is in
+flux and require judgement.  As Aaron pointed out, only an expert
+observer with years of experience monitoring trends is likely to be
+able to make reliable predictions on how courts are likely to decide
+in grey cases of the law or how measures are likely to work in
+practise.  To this end, I have started this page as a place to list
+some of these question so that, when an occasion to speak to such an
+expert presents itself, we will know what to ask.
+
+ * To what extent can an organization hosting a CBPP project assign
+responsibility by means of user agreements such as the one we have
+proposed?  If the answer to this question is positive, then are there
+changes that could be made to our agreement to make it more effective?
+
+ * What constitutes due diligence nowadays?  This being a rather wide
+question, we limit ourselves to cases which have arisen, or are likely
+to come up, in what we are doing.
+
+ * To what extent would a contributor's representation that a work was
+original except where indicated otherwise and that proper permissions
+had been obtained where required shield those who use the work from
+liability for infringement should it turn out that the these
+representations were incorrect and that the work did, in fact,
+infringe on copyright.  If someone releases under free license a work
+which they had no right to so release, to what extent might someone
+else who used this work in good faith under the terms of the license
+be liable?  (Of course, this ties in with the last question --- when
+using a work released under a free license, to what extent (if any) is
+one obliged or expected to check that the work was fit to be released
+under these terms in the first place?)
+
+ * In the case of texts written by more than one author, to what
+extent might one authour be held liable for infringement due solely to
+the other author's contribution if it could be clearly shown (by
+means of version histories) who contributed what?
+
+ * Minor concrete point: do we need to list all the authors of PM on
+the copyright notice?  Are usernames OK, or are real names required?  (Etc.)

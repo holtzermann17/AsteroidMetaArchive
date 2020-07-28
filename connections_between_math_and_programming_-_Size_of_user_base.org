@@ -1,0 +1,74 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+My worry is not that math done as literate programming cannot be beneficial or 
+even enjoyable, but that it probably won't find popular adoption outside a small
+community of very code-minded people who are interested in building the HDM.  I think
+we would need a sea change in education and society before anything programming-like
+is picked up by a significant fraction of learners (and, in fact, the problem 
+might be worse --- [http://www.adambosworth.net/archives/000031.html there might be something inherently repugnant to most human beings about formal interfaces]).  I would imagine that this is 
+the way NSF's program officers see things, too.  
+
+I think the HDM has a stronger and earlier prospect for helping the lay learner (i.e., most of 
+them) through dedicated /teaching/ interfaces, based on something resembling AI.  
+Inasmuch as the HDM can "know" math, it should be able to explain it.  Inasmuch as it
+can store knowledge, it can know what the learner knows, and adjust its explanations
+accordingly.  This would be like flesh-and-blood teachers, except more precise, faster,
+and paired individually with each learner! --[[file:akrowne.org][akrowne]] Mon Mar 28 01:28:54 UTC 2005
+
+----
+
+I too wouldn't expect many people to use literate programming features on PM.
+As you said, literate programming would be for a smaller population of
+code-minded people.  However, I disagree with the statement that it would only
+be used by people interested in building the HDM.
+
+Literate programming is just as useful for other kinds of programming.  Thus, as
+I said below (somehow missing your comment here), I would expect it to be very
+popular with people working on [[file:PlanetComputing.org][PlanetComputing]].  Furthermore, even just on
+[[file:PlanetMath.org][PlanetMath]], I'm really not thinking of primarily uses having to do with the
+HDM, rather, I'm thinking about rather standard CAS.  I think that !MathWorld
+already has some features that let you graph certain surfaces, and maybe some
+other (Web)Mathematica-driven features.  What the particular code I'm thinking
+about would do isn't especially "revolutionary" in and of itself. The novel
+feature of the system /from an educational point of view/ would be the
+integration of its products with the text of the encyclopedia.  Presumably, we
+wouldn't necessarily need to write any new CAS modules to give people access to
+a Maxima command line within articles.
+
+While the code I'm thinking of isn't revolutionary, the literate programming
+system itself /would/ be somewhat "radical" (in my opinion).  The /ability/
+to write highly-multiply-authored, highly modular, literate programs seems like
+a really nice thing, and I think it would be a big contribution to software
+development.
+
+Adding support for literate programming would be a (minor) "reinvention" of the
+Noosphere engine -- and it asks us to think about a new user base, namely people
+involved in CS and software development.  
+
+I think it is worth mentioning that a lot of the features that we'd need to
+build a great literate programming system don't have much to do with literate
+programming or Noosphere at all.  For example, we've previously discussed (and
+I've mentioned elsewhere on the wiki) the idea that it would be useful to put PM
+into CVS.
+
+Finally, I think that your comment about stronger/earlier prospects for helping
+the lay learner is a tad unrealistic.  How would the software you're talking
+about be built?  Presumably as normal software.  But I think that in order to
+actually build the HDM, we may need some new tools for collaborative software
+development and generation of machine-readable content.  Working with
+collaborators through [[file:AM.org][AM]] isn't likely to be highly ideal, though it is
+probably better than email.
+
+Literate programming features for Noosphere could be useful to anyone working on
+code-collaborations with a significant relationship to mathematics -- so, lots
+and lot of things from CS, statistics, physics, etc.!
+
+And it is a /tool/ to build new content useful for the "average student".
+--[[file:jcorneli.org][jcorneli]] Tue Mar 29 15:48:14 2005 UTC
+
+:: Well, I guess I meant that we're likely to see the lay learner helped sooner by 
+soft-AI teaching interfaces in the HDM than by literate programming.   But you make good 
+points; it would definitely be very useful for PlanetComputing, for instance. --[[file:akrowne.org][akrowne]] Thu Mar 31 16:51:33 UTC 2005
+
+[[file:connections between math and programming | Back.org][connections between math and programming | Back]]

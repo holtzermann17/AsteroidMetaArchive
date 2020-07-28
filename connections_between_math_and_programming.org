@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Literate programming and PlanetMath
+
+: But I am not convinced that the connections between math and programming
+(which [seem to underlie the ideas you've suggested be part of this grant application])
+will play out the way you think they will.
+There is something very different about the two.  The way I see it, programming
+is still the absolutely last thing you want to force a learner to do, not
+necessarily because it wouldn't be good for them, but because it will make them
+intensely hate the learning.  Programming is a tedious thing; even I find it to
+be this.  I don't think literate programming improves the situation much; I
+think it just makes programming and documentation tolerably efficient /for
+programmers/.  I don't see the typical learner embracing these practices.  It
+also seems to be thrusting an extra duty onto the content-producer to have to
+produce code-calibre output.  You can respond that math is already almost code,
+but this "almost" is large enough that even hardened mathematicians acted quite
+vigorously against having APM-Xi on PlanetMath.
+:: -- [[file:akrowne.org][akrowne]], on [[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]]
+
+----
+----
+
+ * [[file:connections between math and programming - General comments | General comments.org][connections between math and programming - General comments | General comments]]
+
+ * [[file:connections between math and programming - Size of user base | Size of user base.org][connections between math and programming - Size of user base | Size of user base]]
+
+ * [[file:connections between math and programming - Expectations for literate programming on PM | Expectations for literate programming on PM.org][connections between math and programming - Expectations for literate programming on PM | Expectations for literate programming on PM]]
+
+ * [[file:connections between math and programming - On Forced learning | On "Forced learning".org][connections between math and programming - On Forced learning | On "Forced learning"]]
+
+ * [[file:connections between math and programming - Math vs. Programming.org][connections between math and programming - Math vs. Programming]]
+
+ * [[file:connections between math and programming - Choice of language.org][connections between math and programming - Choice of language]]

@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page can be the place to talk about issues in hcode design that are
+specifically related to proofs.  It is a "top level" discussion rooted on the
+hcode page. --[[file:jcorneli.org][jcorneli]]
+
+See the page [[file:a dozen proofs.org][a dozen proofs]], where some examples of proofs in NL and
+subsequently in progressively more codelike, structured forms, should appear,
+and also [[file:structured proofs.org][structured proofs]] for a general discussion of structured proofs and
+examples that make the connection with hcode development.
+
+I'm sketching out a proof for the principle of identity in propositional calculus
+as expressed on Metamath: http://de.metamath.org/mpegif/id1.html I'm putting my
+work so far on a separate page. It includes the proof itself and the required axioms:
+[[file:proof sketching for propositional calculus.org][proof sketching for propositional calculus]]
+What currently puzzles me is how exact does the code need to be, i.e. how much
+work should be done by the author of the proof to make software understand exactly
+how different theorems and axioms are used, and what is left for the software to deduce?
+The current sketch isn't very exact. It's a jumble of different styles really. I define
+three propositions with a let that don't include any axioms or theorems to back them up,
+but this is what a real mathematician probably would write. Then there's the fourth
+proposition and the final statement that use an axiom to back them up, but then you
+can't really tell what's happening unless you look up the definitions of the axioms.
+I'm guessing some sort of compromise is in order?
+
+--[[file:pekuja.org][pekuja]]
+
+I'd suggest doing the proof in a variety of different styles, or maybe better,
+doing a variety of different proofs in whatever style seems best.  One of the
+styles we should try to emulate is the style used by mathematicians and math
+students when writing NL proofs, definitely!  We can be more formal too (i.e.,
+emulate the style used by formal math folks (see 
+[[file:Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM|this page.org][Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM|this page]]
+for some references).
+
+"Hcode version -1" was developed by working roughly in parallel on 100 example
+definitions; something similar is in order for [[file:Version Zero.org][Version Zero]], but with proofs.
+Of course, anything that you want to leave out of the proofs you feed into the
+system will have to be provided by the system itself.  For now, I'd suggest
+that you state fairly explicitly what steps that you think the prover will have
+to come up with on its own and also try to say why you think it is reasonable to
+imagine that the prover could come up with this sort of stuff.  But at the same time,
+I'd also say, don't get too bogged down in details, because there are gains to be
+had by going for quantity at this point.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 25 01:57:16 2005 UTC
+
+----
+[[file:h-code.org][h-code]]

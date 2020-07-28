@@ -1,0 +1,216 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Design info uploaded for new GMFF enhancement
+proposal. UPDATED w/info about the Model files
+for GMFF...plus tweaked versions of syl.html
+in the \html and \althtml directories.
+
+Let me know what you think!
+
+See the README.html file in
+
+http://us2.metamath.org:8888/ocat/mmj2/GMFFDoc.zip
+
+--ocat (25-Jul-2011).
+
+---
+
+New version of mmj2 uploaded: Release 20110701!
+
+http://us2.metamath.org:8888/ocat/mmj2/mmj2.zip
+
+*  3.6MB
+
+Refer to mmj2\CHGLOG.TXT in the mmj2.zip downwload
+for a description of the changes. 
+
+The mmj2\README.html file also contains valuable contact
+information for mmj2 support, including info about logging
+onto this wiki as an editor.
+
+A few interesting topics :-)
+
+- You can now support mmj2 development with monetary donations 
+via Paypal to siskiyousis at gmail.com! Continuing 
+maintenance and new enhancements (Jan 2012?) are
+time-consuming and way more than 1000 hours of work
+have already been invested in mmj2.
+
+- The new release contains mmj2\data\mm\RegressionTest1set.mm
+which is a snapshot of the 20-Aug-2008 set.mm. This file will
+be used for regression testing of new software releases going
+forward. The problem this solves is that over time a large
+number of symbols and statement labels in set.mm change and
+updating the mmj2 test data to match is too much work.
+
+- Since 2008 the number of symbols and statements in set.mm
+have increased by enough to justify increasing memory
+allocations in the mmj2.bat file. A Total Memory size of
+128MB and a Maximum Memory equal to 256MB are specified. 
+
+--[[file:ocat.org][ocat]] 6-Jul-2011
+
+---
+mmj2 is an open source software package for use with [[file:metamath.org][metamath]]
+(.mm) databases. It is written in Java and provides both batch
+(command line) and GUI capabilities. Its most notable feature
+is the mmj2 Proof Assistant GUI, which provides support for
+Metamath proof development and is perhaps easier to use than
+the metamath.exe proof assistant (note: power users benefit from
+using both proof assistants simultaneously, and employ the 
+Metamath eimm.exe utility to transfers proofs between the
+two proof assistants.)
+
+For documentation, tutorial, etc., plus the full source
+code and .jar (java executables), download:
+
+http://us2.metamath.org:8888/ocat/mmj2/mmj2.zip
+
+and
+
+http://us2.metamath.org:8888/ocat/mmj2/mmj2.md5
+
+
+See also (new!): [[file:mmj2ProofAssistantQuickTips.org][mmj2ProofAssistantQuickTips]]
+
+* Inspirational Quote
+
+     
+     "We have put ourselves to work for the sake
+     of an idea, seeking by magnificent exertions
+     to arrive at the incredible." ~ José Ortega y Gasset 
+     -- http://www.des.emory.edu/mfp/impossibleG.html
+    
+
+* Feedback
+
+MMJ2 Laboratories, Inc. is interested in hearing from
+you about your happy or unhappy experiences with mmj2.
+
+Please use the dedicated page for mmj2 Feedback/Questions: [[file:mmj2Feedback.org][mmj2Feedback]]
+
+Here is a dedicated page for feedback about the mmj2 Proof Assistant
+GUI:
+[[file:mmj2ProofAssistantFeedback.org][mmj2ProofAssistantFeedback]]
+
+NOTE: To update the wiki your "username" must be
+"whitelisted". Send an email to the wikilord if you
+are not already a user -- and, if you don't care
+to do that, I authorize you to post as "ocat" for
+the purposes of mmj2 feedback and problem reports,
+etc. (Just put some initials on your edits so I
+know who is doing what...)
+
+ALSO, you may get the "Cannot acquire main lock"
+error message when attempting to post to the wiki.
+In this case, hit the Back button on your browser,
+open a new window and go to RecentChanges then
+click on Administration, then Unlock Wiki. Wait,
+and then return to your original post and click
+on "submit" again. 
+
+--[[file:ocat.org][ocat]] 2007-10-15
+
+
+* Index of mmj2* pages
+(This is wiki /everything/ regardless of any "enduring merit". 
+The mmj2 "doc" directory in the mmj2.zip download 
+contains the most valuable information -- whereas these pages
+contain tenative drafts and discussions, among other
+things, such as errors and possibly even misinformation,
+depending...)
+
+[[file:antecedents.org][antecedents]]
+
+[[file:PrecomputationOfLogHypUnifiers.org][PrecomputationOfLogHypUnifiers]]
+
+[[file:MaximallyCompressedMetamathDatabases.org][MaximallyCompressedMetamathDatabases]]
+
+[[file:MergeSortedArrayLists.org][MergeSortedArrayLists]]
+
+[[file:MetamathForProgrammers.org][MetamathForProgrammers]]
+
+[[file:mmj2-01-Oct-2007ReleaseEnhancements.org][mmj2-01-Oct-2007ReleaseEnhancements]]
+
+[[file:mmj2ASCIITypesetting.org][mmj2ASCIITypesetting]]
+
+[[file:mmj2BetaRelease01Sep2007Feedback.org][mmj2BetaRelease01Sep2007Feedback]]
+
+[[file:mmj2Feedback.org][mmj2Feedback]]
+
+[[file:mmj2FeedbackV20061101.org][mmj2FeedbackV20061101]]
+
+[[file:mmj2FeedbackV20070716.org][mmj2FeedbackV20070716]]
+
+[[file:mmj2Feedback20080113.org][mmj2Feedback20080113]]
+
+[[file:http://planetx.cc.vt.edu/AsteroidMeta/mmj2FutureOf.org][http://planetx.cc.vt.edu/AsteroidMeta/mmj2FutureOf]]
+
+[[file:mmj2GrammaticalInductiveSets.org][mmj2GrammaticalInductiveSets]]
+
+[[file:mmj2InverseProvingProjectIdea.org][mmj2InverseProvingProjectIdea]]
+
+[[file:mmj2MoreDummyVarSpecs.org][mmj2MoreDummyVarSpecs]]
+
+[[file:mmj2PATCH20060725.org][mmj2PATCH20060725]]
+
+[[file:mmj2ProofAssistantConsiderations.org][mmj2ProofAssistantConsiderations]]
+
+[[file:mmj2ProofAssistantDeriveFeature.org][mmj2ProofAssistantDeriveFeature]]
+
+[[file:mmj2ProofAssistantFeedback.org][mmj2ProofAssistantFeedback]]
+
+[[file:mmj2ProofAssistantFeedbackV20060129.org][mmj2ProofAssistantFeedbackV20060129]]
+
+[[file:mmj2ProofAssistantFeedbackV20061101.org][mmj2ProofAssistantFeedbackV20061101]]
+
+[[file:mmj2ProofAssistantFeedbackV20070716.org][mmj2ProofAssistantFeedbackV20070716]]
+
+[[file:mmj2ProofAssistantFeedback20080113.org][mmj2ProofAssistantFeedback20080113]]
+
+[[file:mmj2ProofAssistantFeedback20080217.org][mmj2ProofAssistantFeedback20080217]]
+
+[[file:mmj2ProofAssistantQuickTips.org][mmj2ProofAssistantQuickTips]]
+
+[[file:mmj2ProofAssistantTutorial.org][mmj2ProofAssistantTutorial]]
+
+[[file:mmj2ProofAssistantUnification.org][mmj2ProofAssistantUnification]]
+
+[[file:mmj2ProofCompressionNotes.org][mmj2ProofCompressionNotes]]
+
+[[file:mmj2ProofDerivationMethods.org][mmj2ProofDerivationMethods]]
+
+[[file:mmj2Release20071101.org][mmj2Release20071101]]
+
+[[file:mmj2Release20071101InitialObjectives.org][mmj2Release20071101InitialObjectives]]
+
+[[file:mmj2Release20080201.org][mmj2Release20080201]]
+
+[[file:mmj2Release20080801.org][mmj2Release20080801]]
+
+[[file:mmj2SampleOutputTMFF.org][mmj2SampleOutputTMFF]]
+
+[[file:mmj2StepProver.org][mmj2StepProver]]
+
+[[file:mmj2UnificationHintsPreview.org][mmj2UnificationHintsPreview]]
+
+[[file:mmj2UnifyingOverloads.org][mmj2UnifyingOverloads]]
+
+[[file:mmj2UnifyingOverloadsFix.org][mmj2UnifyingOverloadsFix]]
+
+[[file:mmj2UsageNote20061019.org][mmj2UsageNote20061019]]
+
+[[file:mmj2WorksheetResponse20071021.org][mmj2WorksheetResponse20071021]]
+
+[[file:mmj2 bug.org][mmj2 bug]]
+
+[[file:mmj2bug.org][mmj2bug]]
+
+[[file:mmj2slawekk.org][mmj2slawekk]]
+
+[[file:mmj3ReengineeringOfmmj2.org][mmj3ReengineeringOfmmj2]]
+
+[[file:set.mm discussion replacement.org][set.mm discussion replacement]]
+
+[[file:mmjbert.org][mmjbert]]

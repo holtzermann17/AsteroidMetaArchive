@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+* Categorical Geometry
+
+The categorical approach to geometry pioneered by Bourbaki, in particular Grothendieck, may be seen as an abstraction of the notion of manifold.  In classical differential geometry, one defines manifolds by means of an atlas of coordinate charts and puts structures on manifolds by defining the structures on different coordinate patches in a consistent fashion.
+
+In the abstract approach, we forget about the details of coordinate patches being isomorphic to subsets of Euclidean space and of mappings being continuous but instead focus on how one could cover a geometrical space by an atlas of subspaces, how atlases interact with mappings of spaces, and how structures can be consistently built up out of their representations on coordinate patches.  Doing so, we abstact the notion of site from that of manifold and the notion of sheaf from that of bundle.  We will now state the formal definitions, comment on them, and note how they reduce to the classical notion in the appropriate circumstances.
+
+** Sites
+
+A /site/ is a category in which a certain class of sets of morphims known as coverings (atlases) has been selected in accordance with the following criteria:
+
+0. All the morphisms of a particular covering have the same terminal object.  (We will speak of our covering as a covering of this common terminal object.)
+
+1. Any set consisting of a single isomorphism is a covering.
+
+2. Given a covering {p_i : B_j -> A} of an object A, if we have a covering {q_ij : C_ij -> B_j} of every inital object of our coveing, then the set {q_ij p_i : C_ij -> A} is also a covering of A.
+
+3. Given a covering of A and a map from B to A, if we pull back every element of the covering along the map, we obtain a covering of B.
+
+(see also the [http://planetmath.org/encyclopedia/Site.html PlanetMath entry] for a detailed statement of this definition)
+
+In the classical case, the objects of our category would be open subsets of a manifold and the morphisms would be continuous maps.  Criterion 0 simply states a simple fact about atlases --- all the coordinate charts in an atlas should be charts of the same manifold!  (i.e. we don't do crazy things like put maps of Minneapolis into a New York atlas)  Statement 1 is also somewhat trivial --- a single map which covers the whole space counts as an atlas.  Statement 2 is about subdividing atlases --- is we replace each chart in an atlas by an atlas of that chart we obtain a (more detailed) atlas of the space.  (e.g. take a state-by-state atlas of the U.S. and replace each state map with a collection of city maps from an atlas of that state.)  Statement 3 says that, if we have a mapping of manifolds and take the preimages of all chart in a atlas of the range, we obtain an atlas of the domain. 
+
+** Sheaves
+
+Given a site S and a concrete category C, a sheaf is a contravariant functor F from S to C which satisfies the so-called sheaf axiom: given a covering {h_i : B_j -> A} of an element A of S, whenever there exists a collection of elements f_i &isin; F(B_i) such that F(p) f_i = F(q) f_j where p : B_i &times; B_j -> B_i and q : B_i &times; B_j -> B_i are the canonical projection mappings, then there exists g &isin; F(A) such that F(h_i) g = f_i.
+
+(see the [http://planetmath.org/encyclopedia/Sheaf2.html PlanetMath entry] for a detailed statement of this definition)
+
+
+
+* Discussion

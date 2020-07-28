@@ -1,0 +1,412 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This continues the discussion at [[file:What is Free Culture.org][What is Free Culture]].
+
+----
+
+If you were to critique Moglen's piece, you might have an even
+stronger reaction, since my summary glosses over some of the more
+"revolutionary" rhetoric and ideas!  Plenty of stuff there that you
+might disagree with; still interesting.
+
+But to continue our conversation: /What if [...] there would be no
+funding (or recompense) to cover the effort for its creation?/  Well,
+that is the universe I live in, right, so coming from my own
+experience, I'd have to say that the act of creation often has to 
+be its own reward.  I'm not working on this stuff because I think it
+will make me rich or famous or even that I'll ever necessarily be able
+to make a living doing it.  I do it because it is fun and something
+I think should be done.  If it happens to make me rich or famous
+someday, well, that'd be a whole boatload of gravy.
+
+/I can envision lots of software initiatives and situations which
+would require some restrictions to be put on access in able for them
+to be created./  If provably so, then you'd have a great refutation
+to the Moglen claims.  I haven't thought enough about the topic to
+know that every information resource can be created & published in a
+non-restrictive mode; I would say that some things (e.g. HDM) can be,
+and, I think, essentially need to be.  Maybe there is a continuum
+here, rather than just one or two points.  But you should exhibit some
+of your examples.
+
+/The argument is particularly strong when the "target market" does
+not have the expertise, ability, or desire to help with the
+development of the software instead of simply paying for it./  I
+think that the Moglen idea is that to some extent the market doesn't
+need to have expertise, ability, etc.; see the footnote on GNU/Linux.
+This was created by hackers, but also has a non-hacker user base.
+Relatedly, FAIF doesn't necessarily imply that payment for services
+won't change hands.
+
+/Even *regular* property is purely conceptual.  Law is purely
+conceptual./  Good point.  But I think what Stallman is saying isn't
+that "intellectual property" doesn't "exist", but rather, that he
+doesn't want to give credence to its existence, because he doesn't
+think that it /should/ exist.
+
+/How are you going to protect the integrity of an essay of mine
+unless I can distribute it with a verbatim-only license?/  Hey, I was
+just quoting Moglen :).  But I also suppose that integrity and
+motivating attribution could both be obtained if copyrighted
+electronic works were submitted to the LOC by email, and kept in a
+permanent archive, say.  Whether they were also copylefted doesn't
+matter here; I don't suppose Moglen was insisting on any sort of
+integrity that would interfere with copyleft.
+
+/Besides the fact that you'll never convince everyone to "play along"
+with the GNU-only model/ I think they idea is that with a
+sufficiently revolutionary force behind Moglen's GNU-style
+!DotCommunist model, people won't have to be convinced; the other
+option will just dry up and blow away.  But this is his idea, not
+mine, so I'll let him try to defend it.
+
+One philosophical point of my own: I think every action is additive,
+and hence every constraint can be modeled as being subtractive.  A law
+against murder is in this regard no different from a law for universal
+copyleft; both laws constrain the behavior of the members of society.
+--[[file:jcorneli.org][jcorneli]]
+
+To Joe:
+
+: /What if [...] there would be no funding (or recompense) to cover
+ the effort for its creation?/  Well, that is the universe I live in,
+ right, so coming from my own experience, I'd have to say that the act
+ of creation often has to be its own reward.
+
+Sometimes the act of creation is its own reward, sometimes people act
+expecting recompense.   I don't see why an absolutist position is called 
+for here.  
+
+As I get further and further in debt, I am looking more and more at
+situations where I could create businesses that I don't really deeply
+care about, but which others would be willing to pay to have me
+implement.  In a way, this is just extending the concept of earning
+money by work-for-hire in a more entrepreneurial way.  I don't see why
+creating new software for some market (which wouldn't otherwise exist)
+is not a valid route to accomplishing this.  More attractive to me are
+software services, but those might also require keeping the code base
+closed, which you repudiate.
+
+: /I can envision lots of software initiatives and situations which
+ would require some restrictions to be put on access in able for them
+ to be created./  If provably so, then you'd have a great refutation
+ to the Moglen claims.  I haven't thought enough about the topic to
+ know that every information resource can be created & published in a
+ non-restrictive mode; I would say that some things (e.g. HDM) can be,
+ and, I think, essentially need to be.  Maybe there is a continuum
+ here, rather than just one or two points.  But you should exhibit some
+ of your examples.
+
+First, note that Moglen hasn't /proven/ anything either.  And I believe
+when a particular solution hasn't been proven, it is illegitimate to 
+force people to accept it.  The solution in this case is to allow all
+possibilities and let people choose between them.
+
+As for examples, think of any situation where there is some "specialist"
+market that is simply failing to create some useful, productivity-enhancing
+(or capability-creating) software, for a variety of reasons (lack of 
+programming talent or inclination, lack of interest from "hackers" as you
+mention, etc.).  
+
+A good example is high-end digital picture processing, for which
+people tend to use Adobe Photoshop, an expensive commercial software
+program.  Underscoring this example is the fact that the free GNU
+Image Manipulation Program (the GIMP) co-exists with Photoshop.  Why?
+The reason is that the extra effort of the Photoshop development team
+serves the very market that is paying for it by paying money for the
+software, and demands these features.  These features fail to be
+provided by the "hacker" contingent which is serving the lay market,
+because the lay market doesn't really care about these features, and
+the hackers don't care about them either.  And by the way, the
+features basically center around the user-friendliness of the
+interface, which you and I don't think are really necessary, but
+that's because we're a part of the hacker market!  No amount of
+talking will convince a Photoshop user that they should really like
+The GIMP better (believe me, I've tried).
+
+Examples like this abound, especially in all kinds of "vertical"
+markets, where you don't really see the specialized systems that
+handle the supporting information.  Think logistics systems in
+shipping, procurement, and transportation.  Think customer
+relationship management systems in telecommunications.  Think of
+integrated inventory and point of sale systems for all the different
+kinds of retail there are.
+
+The market has created commercial solutions for these niches, in a way
+that I think is far more efficient than trying to drum up communal
+support to get the free software community to implement them.  In
+fact, I think the free software movement kind of assumes that the
+commons is "all there is", yet, these niche markets potentially add up
+to a software space that is as big or bigger than the "commons" of
+general-purpose software scenarios.  Thus, I feel arguments that
+everyone should operate like we do in the commons are based on an
+extremely non-comprehensive world view.
+
+In fact, I think this obviates how a lot of the discussion we're
+having here (which is a general debate in society right now) is
+missing the point.  The discussion should be about how to fix
+copyright /in the commons/ (/for/ the commons, or even /so we can
+have/ a commons), not how to change it for /everything./  Not
+everything is the commons.  I think Lessig gets this point right, but
+Stallman does not.
+
+: /Even *regular* property is purely conceptual.  Law is purely
+ conceptual./  Good point.  But I think what Stallman is saying isn't
+ that "intellectual property" doesn't "exist", but rather, that he
+ doesn't want to give credence to its existence, because he doesn't
+ think that it /should/ exist.
+
+I wrote based on what I've seen Stallman say directly.  I think in
+"apologizing" for him, you are assuming he is being more fair and
+intellectually honest than he actually is.  But I won't debate what
+Stallman "really thinks" (as opposed to what he writes) any further,
+because that is pointless.
+
+: /How are you going to protect the integrity of an essay of mine
+ unless I can distribute it with a verbatim-only license?/  Hey, I was
+ just quoting Moglen :).  But I also suppose that integrity and
+ motivating attribution could both be obtained if copyrighted
+ electronic works were submitted to the LOC by email, and kept in a
+ permanent archive, say.
+
+I don't see how that would enforce any usage rules.  Here I am
+expressly postulating an author might care about more than
+attribution: they don't want versions of their writing distributed
+with modifications.  This is a matter for licensing, as it concerns
+use.
+
+Registering a copyright isn't even enough to ensure attribution.
+Conceivably one could register the copyright on the creation of a new
+work without requiring that others attribute you if they reproduce it.
+This could still serve the purpose of a list of "official first
+publications".
+
+: /Besides the fact that you'll never convince everyone to "play along"
+ with the GNU-only model/ I think they idea is that with a
+ sufficiently revolutionary force behind Moglen's GNU-style
+ !DotCommunist model, people won't have to be convinced; the other
+ option will just dry up and blow away.  But this is his idea, not
+ mine, so I'll let him try to defend it.
+
+Well, I don't think its working.  I think, as I said, we are seeing
+that the commons is a different space than the spaces of specialized
+interest and purpose, which are legion.
+
+: One philosophical point of my own: I think every action is additive,
+ and hence every constraint can be modeled as being subtractive.  A law
+ against murder is in this regard no different from a law for universal
+ copyleft; both laws constrain the behavior of the members of society.
+
+I'm not sure how you are allowing that murder is additive.  Any action
+that takes away life or destroys property is trivially subtractive.
+Now, it could /also/ be additive, but society treats such things as
+special cases that need to be carefully examined (like the decision
+whether to go to war, which will cost some lives, but hopefully either
+save more lives or prevent more suffering in the long run).
+
+We need to distinguish the constraint to action from effect of the
+action itself.  All constraints are, as you point out, trivially
+subtractive.  But actions can be either (net) additive or subtractive.
+And what I was initially pointing out is that creating some software
+that has restricted distribution is still a net addition to the world.
+
+Note that the situation is in a key manner very different in the
+domain of intellectual property as opposed to the domain of laws in
+"meatspace".  When you create something purely intellectual like
+software, you are also creating it with a /license/ that says how
+other people can use it, since it is a nonrival entity that can
+potentially reproduce infinitely.  Thus, not only are you creating an
+artifact, you are also are creating rules (i.e., constraints to
+action).
+
+In this sense, you have a point, that by creating a restricted-access
+artifact, you are creating more negative rules (even though the
+artifact is new).  But because the artifact is new, I don't really see
+what right others have to complain about the rule.  If they want, they
+can ignore the artifact, and the rule won't apply to them.
+
+To some extent, I grant what RMS is saying.  I forget who described
+him as the "first intellectual property environmentalist", but I think
+this is very apt.  RMS noted that creative efforts become inhibited in
+an intellectual property environment where there are too many
+constraints to action (due to the licenses applied to the prevailing
+intellectual property).  But I think he (and you, by way of argument)
+want take things too far by eliminating /all/ restrictions.  As I
+said above, which I now think is an increasingly fundamental
+distinction, you can agree with this /for the commons/, while
+acknowledging that there is plenty of stuff /outside the commons/,
+an area where more restrictions are actually useful.
+
+--[[file:akrowne.org][akrowne]] Tue Nov 15 19:34:00 UTC 2005
+
+/Sometimes the act of creation is its own reward, sometimes people
+act expecting recompense.  I don't see why an absolutist position is
+called for here./  Sure.  The reason, I think, is that Moglen is
+proposing the absolutist position for revolutionaries, not necessarily
+for everyone.  Through his proposed revolution, the idea is that we'll
+see a shift in culture, and at the end of this shift, people will
+routinely be getting recompense (of some tangible sort) for work on
+free culture artifacts.  For the revolutionaries, participation in
+this process may be sufficiently exciting to be found rewarding "in
+and of itself."
+
+/As I get further and further in debt, I am looking more and more at
+situations where I could create businesses that I don't really deeply
+care about, but which others would be willing to pay to have me
+implement./  Hrm.  Well, the particular financial matters are sort of
+off topic (and details are unknown to me), but the issue is still
+somewhat concerning, so I'll say something about them.  In general,
+one has to make one's pay somehow.  As long as one gets to have fun
+and spend sufficient quality time on things that one cares about, and
+the particular way of making money agrees with one's moral structure,
+then it hardly matters how.  On the other hand, deficit spending can
+be trouble (sometimes a necessary evil), which I know from my own
+experience.  I think I am managing to work my way out of debt, but
+very slowly.  I hope that I can avoid incurring any future debts.  I
+think the question for you as you look at ways of making money is
+which ones will agree with your moral structure.  As a moral
+relativist, I'd say that you shouldn't worry about Moglen's moral
+structure, or mine, when you think about these issues.
+
+/The solution in this case is to allow all possibilities and let
+people choose between them./  As I indicated above, Moglen is
+emphasizing the possibility that he thinks leads to revolutionary
+change.  He wrote his manifesto for an audience who is already pretty
+much in agreement with him, namely, the people who are creating free
+content and free alternatives to existing non-free technologies.
+These people may at times lack a political voice, and he is trying to
+supply that, or rally it (cf. Richard III, "And gentlemen in England
+now a-bed / Shall think themselves accursed they were not here, / And
+hold their manhoods cheap whiles any speaks / That fought with us upon
+Saint Crispin's day.").
+
+/ the free GNU Image Manipulation Program (the GIMP) co-exists with
+Photoshop.  Why?  The reason is that the extra effort of the Photoshop
+development team serves the very market that is paying for it by
+paying money for the software, and demands these features.  These
+features fail to be provided by the "hacker" contingent which is
+serving the lay market, because the lay market doesn't really care
+about these features, and the hackers don't care about them either./
+But unless I'm mistaken, for all that you or I know, the non-freeness
+of Photoshop and freeness of GIMP is irrelevant to this quality
+difference.  Or, more precisely, this is why Moglen's rallying cry
+might be important.  He's calling upon the hackers to care, and to
+bust their butts to create something that surpasses Photoshop in every
+dimension.  But he isn't suggesting that they should do this without
+charging for their work.  The follow-up question to Moglen's piece
+isn't whether a free or non-free business model works better, but how
+to make a free business model work, period.  Once the free software
+version is built, /then/ it becomes part of "free culture" and the
+authors/creators can't (necessarily) make more money off of it.  But that doesn't
+imply that it can or should be built purely by volunteer effort.  The
+revolutionary motivation can be counted on for something, but (as
+above) people do need to make their money somehow.  It may be that
+work on a really hot version of GIMP would require a lot of time (as
+you put it before, would require the persons involved to quit their
+jobs and work on the program).  For Moglen, I'm pretty sure these
+would be "details" of free software business that are outside of the
+scope of his political manifesto.  We might have to look to other
+experts to find some thoughts about how one could make turning GIMP
+into something that is simply better than Photoshop into a good
+business proposition.  But as far as I know, free vs non-free isn't
+implicated.  All else equal, it might not be as lucrative to work on
+the free version; but assuming the money to be sufficient, that's were
+the non-monetary rewards take over and motivate the people working on
+the program.  Obviously many people are motivated by other things.
+But Moglen is trying to stir up the motivation of those who, at
+bottom, are motivated by free software & free culture.
+
+/No amount of talking will convince a Photoshop user that they should
+really like The GIMP better (believe me, I've tried)./  No, I
+wouldn't expect that it would.  This is similar to the "why would I
+pay for something I can get for free?" issue, but approximately in
+reverse.  Why would I use something that is palpably worse than the
+alternative?  Answer: I wouldn't.
+
+/ Think logistics systems in shipping, procurement, and
+transportation.  Think customer relationship management systems in
+telecommunications.  Think of integrated inventory and point of sale
+systems for all the different kinds of retail there are.  The market
+has created commercial solutions for these niches, in a way that I
+think is far more efficient than trying to drum up communal support to
+get the free software community to implement them./  AFAIK, all of
+these could be done with free software, no problem.  I think that the
+basic difference in our understanding of this issue is that I'm
+convinced that "communal support" isn't what's required.  I think its
+free software business that is required (and a better understanding
+thereof).  The products of FSB are given over to the community, but
+that doesn't mean that they are inherently less valuable to the people
+who commission them.
+
+/In fact, I think the free software movement kind of assumes that the
+commons is "all there is", yet, these niche markets potentially add up
+to a software space that is as big or bigger than the "commons" of
+general-purpose software scenarios./  I would say that the commons
+could be expanded to include these niche markets - not all at once,
+but piece by piece, as above.  Whether true or not from an economic
+perspective, this does seem to be what Moglen is driving at from a
+political perspective.
+
+/The discussion should be about how to fix copyright *in the
+commons* (*for* the commons, or even *so we can have* a
+commons), not how to change it for *everything.*  Not everything
+is the commons.  I think Lessig gets this point right, but Stallman
+does not./  I'm not sure how Stallman's point of view got involved in
+the discussion, or why you think he is wrong, or what particular
+pieces of Stallmanism you're critiquing.  As for Lessig, I think what
+you are talking about here is mainly his idea of conferring strong
+copyright protection to things that need that protection to flourish
+and /not/ conferring it to things that don't (and in particular, /not/ to
+things that are harmed by the existence of strong copyright).  Which
+of course has a specific "implementation" of sorts in the multiple
+levels of permission one finds in the Creative Commons licenses.
+Personally, I don't have a problem with this mandate of Lessig's, in
+the abstract.  But what I'd like would be to have the particulars made
+somewhat concrete - which areas need strong permission-based
+protection and which don't?  Perhaps there is an area that can be
+shown not to need strong permission-based protection to optimize
+growth /and/ that also includes the areas that Stallman and Moglen
+are talking about; mainly software, but also other things (like Math).
+If Moglen really thinks that "nothing needs to be non-free", then
+maybe someone should try prove the claim one way or the other.  Also,
+you should note that Moglen does seem to ask for some forms of
+protection ("integrity" in particular); maybe these weak protections
+are all that "really matter" from a legal point of view.  But I won't
+be making any strong assertions about this myself until the numbers
+are in!
+
+/Here I am expressly postulating an author might care about more than
+attribution: they don't want versions of their writing distributed
+with modifications./  What reasons would they cite?  Interestingly
+enough, the FDL itself contains a provision for exactly this sort of
+distribution; this clause is of course subject to much contention.  I
+wonder what Moglen thinks about the clause.  Anyway, I'm losing my
+powers of reasoning about this issue of "integrity", so I think we
+should simply ask him for more details.
+
+/I think, as I said, we are seeing that the commons is a different
+space than the spaces of specialized interest and purpose, which are
+legion./  That is one point of view.  The other point of view
+might be wrong, or it might be true-on-delay (not true yet),
+or it might be true with a certain definition of "commons".  
+Recall that all property is conceptual, as
+are all commons.
+
+/I'm not sure how you are allowing that murder is additive.  Any
+action that takes away life or destroys property is trivially
+subtractive./  I meant additive from the point of view of
+information, not social value.  This is coming from "scholium
+metaphysics" - adding a death scholium to a life without permission of
+the living entity or humanity at large is murder (but additive!).
+
+/All constraints are, as you point out, trivially subtractive./
+Actually, I only said they could be modeled as being subtractive.
+Really, they frequently just add some new conditions that will take
+place if the constrained-away act is carried out.  /True
+constraints/ make certain actions impossible (and thus decrease
+liberty), but within the law, there are plenty of constraints that
+aren't true constraints in this sense.  Laws against murder don't
+prevent murder.
+
+--[[file:jcorneli.org][jcorneli]]

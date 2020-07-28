@@ -1,0 +1,32 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We need some hcode encodings of facts about geometry.  Remember that
+in addition to definitions, theorems, and proofs, we are going to
+want axioms. (Axioms are just privileged definitions, really, I suppose.)
+In addition, in the AI component we should have heuristics like "if you
+know two angles in a triangle, it might be a good idea to compute
+the third one" or whatever.
+
+----
+* Discussion
+
+I'm not sure axioms are really privileged definitions. It's more like they are
+implicit definitions. They list (¿define?) what properties an object can have,
+without having to define the object itself. for instance, in the classical
+geometry exposition, point and line aren't defined "a point is..., a line is..."
+but rather they're implicitly defined by their properties: a line is something
+that always contains two points, which cannot intersect another line in two
+points... etc and so axioms define a group of objects altogether in an implicit
+way -- [[file:drini.org][drini]] Sat Feb 12 13:10 2005
+
+Good points.  (Bad pun.)  But I'm not clear on how the definitions are supposed
+to go.  Perhaps I should sit down with a copy of Euclid and see if I can get
+anywhere; at least I'd have an idea about the things we'd want to write up, even
+if I didn't have much of a clue about how to write them. --[[file:jcorneli.org][jcorneli]] Sat Feb 12 20:45:06 2005
+
+A good place to look for ideas and clarification might be D. Hilbert's "Foundations of Geometry".  In fact, I could think of no better a starting point for formalizing geometry.  As for how axioms can be thought of as implicit definitions, I think Makarov's article will shed some light on that, but I need to study it some more. --[[file:rspuzio.org][rspuzio]]
+
+Some motivation on the topic of formal geometry can be found here:
+http://www.cs.ru.nl/~freek/jordan/index.html (recommended
+reading). --[[file:jcorneli.org][jcorneli]] Sun Feb 13 13:02:47 2005

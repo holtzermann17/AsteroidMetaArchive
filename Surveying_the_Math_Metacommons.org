@@ -1,0 +1,563 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/A metacommons is a place to collaborate on developing collaborations.*
+
+* Introduction
+
+In this initial Survey and Stakeholder Analysis, I'm examining the
+possibilities for creating a [[file:metacommons.org][metacommons]] for mathematics.
+
+This [http://terrytao.wordpress.com/2009/08/27/mathematical-research-and-the-internet/ blog post by Terrence Tao]
+mentions several organizations and projects working in "online math" and facilitating collaboration and
+exchange
+between mathematics researchers.  The following list is based on the material in his talk, with some
+additions and reorganization by me.
+
+ * [http://en.wikipedia.org/wiki/File:Internet_map_1024.jpg Internet map] by
+[http://en.wikipedia.org/wiki/User:Matt_Britt Matt Britt] ([http://mattb.alwayssleeping.com/ blog])
+ * [http://en.wikipedia.org/wiki/History_of_the_Internet Internet] ([http://en.wikipedia.org/wiki/World_Wide_Web WWW], ...)
+  * Online lecture notes (e.g. by [http://www.jmilne.org/math/ J. S. Milne])
+  * Online video presentations (e.g. [http://www.youtube.com/user/TheCatsters The Catsters])
+ * Online databases/filesystems
+  * http://getdropbox.com
+ * Revision control systems
+  * [http://subversion.tigris.org/ subversion]
+  * [http://gitorious.org/ Gitorious]
+ * ...
+ * Email
+ * Various types of online groups
+  * News Groups ([http://groups.google.com/group/sci.math/topics?pli=1 sci.math],
+[http://groups.google.com/group/sci.math.research/topics?pli=1 sci.math.research], ...)
+  * mailing lists
+  * [http://groups.google.com/ Google groups]
+  * [http://groups.yahoo.com/ Yahoo! groups]
+  * [http://wave.google.com/ Google Wave]
+  * Chatrooms
+ * Blogs ([http://www.blogger.com Blogger], [http://www.moveabletype.org Movable Type], [http://wordpress.org Word Press], ...)
+ * Feed aggregators
+ * [http://www.latex-project.org/ LaTeX]
+ * Computer Algebra
+  * [http://www.maplesoft.com/ Maple]
+  * [http://www.mathworks.com/ Matlab]
+  * [http://www.wolfram.com/mathematica/ Mathematica]
+  * [http://magma.maths.usyd.edu.au/ Magma]
+  * [http://www.sagemath.org/ Sage]
+ * Preprint archives ([http://arxiv.org arxiv.org], ...)
+ * Overlayed journals (http://arxivjournal.org/rioja/, ...)
+ * Post-Print archives and journal databases
+  * [http://www.jstor.org Jstor]
+  * [http://citeseer.ist.psu.edu/ CiteSeer.IST]
+  * [http://projecteuclid.org/ Project euclid]
+  * [http://isiwebofknowledge.com/about/whatitis/ ISI Web of Knowledge], etc. (one can get pretty much
+any journal article on the computer for "free" -- if one is affiliated with a major research institution).
+ * Citation indexes
+  * [http://www.ams.org/mathscinet/search MathSciNet] (see also [http://www.ams.org/mrlookup MR Lookup])
+  * [http://www.zentralblatt-math.org/zmath/en/ Zentralblatt Math]
+  * [http://scholar.google.com Google Scholar]
+ * "Traditional" Encyclopedias, now online, may not be so traditional anymore
+  * [http://mathworld.wolfram.com/ Mathworld]
+  * [http://www.research.att.com/~njas/sequences/Seis.html Encyclopedia of Integer Sequences] ("which would now fill 750 volumes the size of the 1995 book"...)
+ * Collaborative editing
+  * Wikis ([http://www.wikipedia.org/ Wikipedia], [http://www.scholarpedia.org Scholarpedia], specialized wikis like
+[http://tosio.math.toronto.edu/wiki/index.php/Main_Page DispersiveWiki]...)
+  * [http://planetmath.org PlanetMath]
+  * ...
+ * [http://www.openarchives.org The Open Archives Initiative]
+ * Software for running your own repository (http://software.eprints.org,...)
+ * General-Purpose Search Engines ([http://www.google.com Google], ...)
+  * [http://books.google.com Google Book Search]
+ * OCR ([http://www.inftyproject.org/ Infty],...)
+ * Retrodigitization
+  * [http://www.archive.org/ archive.org]
+  * [http://www.google.com/press/pressrel/print_library.html Google (press release)]
+  * [http://historical.library.cornell.edu/math/ Cornell Math Monographs]
+  * ...
+ * Translation tools
+  * [http://babelfish.yahoo.com/ Yahoo! Babelfish]
+  * [http://translate.google.com/translate_t# Google translate]
+ * Specific projects using a range of different technologies
+  * [http://www.tricki.org/ Tricki]
+  * [http://michaelnielsen.org/blog/the-polymath-project-scope-of-participation/ Polymath]
+ * Social science about science and/or the internet:
+  * (e.g. Helmut Abt, The future of single-authored papers, [http://www.springer.com/computer/database+management+&+information+retrieval/journal/11192 Scientometrics] 73 (2007), 353-358
+  * http://michaelnielsen.org/blog/doing-science-online/
+  * [http://dlc.dlib.indiana.edu/ Digital Library of the Commons]
+  * [http://www.iascp.org/resources/articles.html International Association for the Study of the Commons] 
+  * [http://cyber.law.harvard.edu/ Berkman Center for Internet and Society] (At Harvard, headed up by [http://www.benkler.org/ Yochai Benkler] et al.), 
+ * More specific online-science policy+advocacy
+  * http://sciencecommons.org/
+ * More specific online-science tools/development
+  * [http://www.dessci.com/ Design Science]
+ * People using computers (not necessarily online) to do research
+  * http://www.carma.newcastle.edu.au/
+ * Less specific "new media" advocates/fans/funders
+  * [http://www.nmc.org/ the new media consortium]
+  * [http://www.macfound.org/site/c.lkLXJ8MQKrH/b.946881/k.380D/Domestic_Grantmaking__Education.htm MacArthur]
+  * [http://www.nsf.gov NSF]
+ * Totally specific! -- Anthropology of mathematics and mathematics learning
+  * http://www.didaktik-der-mathematik.jku.at/didaktik-mathe/abstracts.html
+ * Brick-and-mortar "legacy" institutions
+ * Mathematical associations, societies, and unions
+ * Advocates of things that are "Free as in Freedom"
+  * http://fsf.org
+  * http://creativecommons.org
+  * ...
+ * Other NGOs in Math, Science, & Engineering
+  * http://www.esustainableworld.org/
+  * http://www.ewb-usa.org/
+ * Math Ed stuff
+  * [http://remath.cti.gr/index.asp?action=62 ReMath]
+  * http://mathforum.org/
+  * [http://edutex-wiki.tug.org/wiki/index.php?title=Main_Page EduTeX]
+ * Math-related education stuff
+  * [http://www.vendian.org/envelope/ A View From the Back of the Envelope] 
+  * [http://www.wescheme.org/ WeScheme]
+  * [http://teachingopensource.org/index.php/Main_Page TeachingOpenSource.org]
+ * General online/free education stuff
+  * [http://learn.creativecommons.org/ ccLearn]
+  * [http://openlearn.open.ac.uk/ OpenLearn] 
+ * Mathematical Knowledge Management (surveyed at http://monet.nag.co.uk/mkm/)
+
+* How complete is this list?
+
+Formal math tools have not been treated
+here (cf. [http://www.vdash.org/formal/ vdash]'s succinct overview,
+or Freek Weidijk's [http://www.cs.ru.nl/~freek/digimath/bycategory.html comprehensive survey]);
+other important mathematical sciences are not represented at all.
+
+Furthermore, I think a variety of smaller non-web-oriented open source
+mathematical software tools would be included in a more definitive list.  Semantic Web
+tools, also. One comment on Tao's blog mentions "principles of distributed
+processing and more recently cloud computing, e.g. http://www.mersenne.org/".
+
+And, besides that, there are other tools coming from
+other non-mathematical areas of research that are, or could become, relevant to
+math (see http://metameso.org/cgi-bin/wiki.pl/Reengineering_Mathematics).
+
+But, at any rate, we have a nice beginning!
+
+* Is the list useful?
+By dint of the fact that many of these items are very "big", there is often
+no one point of contact or administrator to whom one could say "hey, let's team up".
+
+Indeed, we're pretty clearly at the level of "social movement" here (i.e.,
+everything is massively distributed).  Since no one is coordinating this
+"from the top", the obvious question is: is there anyone going up in an airplane
+to get a bird's eye view?  Michael Nielsen's post is the best item in that category
+I've found so far (well, other than Tao's talk of course).  Surely, however, these
+are not the only two "surveyors of the metacommons".  For the moment, Nielson
+seems like a key figure (not just because of his talk, but also because of his
+bookmarks -- http://delicious.com/nielsen/science2.0 -- and book 
+http://michaelnielsen.org/blog/the-future-of-science-2/).  His main web
+page is here: http://michaelnielsen.org/blog/michael-a-nielsen/ -- and, while
+we're at it, few more items referred to by Michael Nielsen!:
+
+ * http://3quarksdaily.blogs.com/3quarksdaily/2006/10/the_future_of_s_1.html
+ * http://www.sciam.com/article.cfm?id=science-2-point-0-great-new-tool-or-great-risk
+ * http://friendfeed.com/rooms/science-2-0
+
+** The true nature of the list, revealed
+
+In fact, these projects and resources are, for the most part, the /nouns/ of the math metacommons.
+
+The /verbs/ have to do with things like this:
+
+ * issues fading with time as later generations of tools
+become easier to use, more integrated, and more mainstream. (Tao) 
+ * us working together to bring this about (me)
+
+* So, what are the issues?
+
+** "Who cares?"
+
+Let me begin by brainstorming and/or inferring some hypothetical "use cases".
+
+ * A researcher in field A trying to read a paper in field B.  (Tao talks about this one.)
+ * A researcher working more or less "in their own field", but trying to produce some new results,
+perhaps in collaboration with others.
+ * A researcher charged with reviewing the work of some other researcher(s) to decide its merits or
+demerits (in particular, if it comprises a "significant new result").
+ * A student trying read a paper from field B without knowing anything about field A.
+ * A student trying to learn the basic concepts and techniques of the field of mathematics, for the first time.
+ * A beginning student, not particularly interested in mathematics, who nevertheless is required to
+learn the utmost basics of the field as part of a compulsory general education.
+ * A teacher trying to develop a curriculum to teach advanced or beginning students.
+ * A professional or scientist, who uses some mathematical tools (e.g. statistics, or "computational methods") in
+their work, who may not be a "mathematics researcher" but who wants to be able to apply a new/different mathematical
+technique to a new/different problem.
+ * A developer who is interested in building tools to support any of this type of activity (perhaps
+for personal or in-house use, or as a corporate/proprietary solution (for pay), or as
+an open source tool to share, or some combination of the above) -- in particular, this developer
+will often be interested in "mashing up" or extending other packages/tools/datasets.
+ * A policy-maker or administrator who is interested in building policies that support any/all of this type of activity.
+ * A social scientist trying  to understand the behavior of researchers, students, teachers, professionals, developers, and policy makers.
+ * A policy-maker or social scientist who is interested in understanding how activity/behavior in the math-sciences sector
+relates to activity/behavior in other sectors (e.g. education, economics).
+ * A funder or advocate who is trying to "improve" the life conditions of persons in some sector.
+ * An entrepreneur or technologist speculating on how to make money by finding and filling arbitrage opportunities related to any of
+the developments above (including entrepreneurs/technologists whose motivation is essentially "conservative" -- i.e. those parties
+who are getting rents in some domain and would rather not "retool the dies" -- and who, moreover, really do not want to be undercut by
+yahoo upstarts!)
+
+** "So, what's the problem?"
+
+What can "go wrong"?  What are the challenges/problems these people/groups have to deal with?
+(Again, brainstorming... since I've been in a number of these roles, many of these statements
+are drawn from personal experience...)
+
+ * I don't know the jargon, and so can't really understand the writing (even
+if I get the basic "flow").
+ * I don't understand the flow or conventions used in the writing.
+ * I understand the jargon and the flow, but proofs of important lemmas
+are buried in the references, and I don't have great intuition about where
+the ideas are coming from in this paper.
+ * The proofs are complicated / the writing is opaque.
+ * I have no idea what any of these words mean, much less any
+idea about how to do the exercises!
+ * The quantity of facts to keep track of and master is enormous; how am I supposed to organize all of this material in my mind?
+ * The search engine produces way too many results, leaving me 
+to do the brunt of the searching.  At best it serves as a 
+preliminary filter.  Why is this stuff so disorganized?!
+
+ * I can't find what I want via a search engine because the
+terms are used in other contexts --- what I need is something
+that works at a level higher than just the base vocabulary
+and can recognize patterns more subtle than strings of words
+and that can take context into account.
+
+ * I understand the facts and I'm able to put it all together in my mind, somehow -- but I'd sure like to find someone else who I could talk with about the material.
+ * I can do the problems, but I don't understand how this stuff is supposed to be useful.
+ * I'm trying hard and I'm sure I can do better -- I just don't know how!
+ * I keep failing exams and my teacher isn't helping.
+ * My students keep failing exams and I don't know what I can do to help them.
+ * I'm required to teach XYZ material by my department/school/supervising teacher/the government, but I can tell it's not working well.
+ * I see that there is a bunch of material online that my students could conceivably use, but it would take a long time to pull it all together and organize it.
+ * Everyone is designing their own curriculum, so there is (a) a lot of duplicated effort (b) no standard way to evaluate "what works".
+ * Or, as above, everyone is required to evaluate according some particular standard, and this evaluation process over-determines the teaching/learning process.
+ * In any case, the students were not taught "the basics" properly.
+ * I'm rusty with this stuff and it would take too long to relearn.
+ * I have some great ideas, but it's hard working on them without support.
+ * They said to "read the manual", but the manual is 2000 pages long.
+ * They said to "check in the newsgroup" but the newsgroup has been active since 1994.
+ * I can't find anything related to this on Google, but I know something must be out there; I just don't know the word for it.
+ * There is no documentation.
+ * I have to concentrate on my day job.
+ * I don't have a day job and I'm running out of money!
+ * Everyone is using such-and-such a platform already (e.g. QWERTY keyboards) and I know there is a "better solution", but hardly anyone's gonna be motivated to switch; they're happy enough to just "make it work for them".
+ * (Alternatively...) I know that "they" are going to come out with something better sometime soon, so why should I put in any effort improving things?
+ * There are so many projects in this area, it's hard to keep track of who's doing what, or what's actually been achieved already.
+ * I can't get funded to work on this stuff.
+ * The stuff I'm trying to work on is highly interdisciplinary and would ideally be pursued by an interdisciplinary team -- but it's a bit tricky to find/attract other folks (the "literature review" process is a tried and true, if somewhat slow, methodology... what can we do to make it work better?).
+ * I'm having a huge crisis of faith because I'm seeing that all my efforts at "benevolent development" are just making me the tool of mega-rich capitalists.
+ * I'm having a huge crisis of faith because my efforts at grass-roots organizing don't seem to be going anywhere.
+ * I've been working on this for a long time and it's hard for me to tell what my impact has been -- maybe I need to change my strategy.
+ * The world is starting to become overrun by pesky yahoos!
+ * The world is under the thumb of tiresome fuddy-duddies!
+
+ * Matt Britt: *I have ceased editing Wikipedia indefinitely. My decision to discontinue activity here stems from broken and counterproductive prevailing interpretations and applications of well-intended policies, a lack of leadership and initiative to make tough decisions needed to keep things on track, the sheer impossibility of finding consensus in highly polarized debates, and especially the politics. If you would like to contact me, you may do so via email.* ([http://en.wikipedia.org/wiki/User:Matt_Britt source])
+
+ * Ted Nelson: ... *today's nightmarish new world is controlled by "webmasters", tekkies unlikely to understand the niceties of text issues and preoccupied with the Web's exploding alphabet soup of embedded formats.  XML is not an improvement but a hierarchy hamburger.  Everything, everything must be forced into hierarchical templates!  And the "semantic web" means that tekkie committees will decide the world's true concepts for once and for all.  Enforcement is going to be another problem :)* ([http://ted.hyperland.com/buyin.txt source])
+
+ * Etc.
+
+** "Alright, what do you propose we do about it?"
+
+ * Papers shoudl be feedable into a system that will expand
+  jargon with mouseover, popups, side-bar, what-have-you.
+  (This should be totally doable now, and I would put it
+  together myself if I didn't think it had already been
+  90% done...).
+
+ * Papers and books should have forums attached for asking
+  questions.  Similar with source code for open source
+  projects, which can sometimes be hard to understand.
+
+ * Content from referenced papers (and not just definitions
+  therein, but theorems, proofs, the whole thing, and
+  comments/questions thereon) should ideally be expandable
+  and available within the current context.  Presumably
+  requires having the relevant papers and books in
+  electronic forms.
+
+ * Proofs should be parsable into simple network shapes as
+  a useful alternative to their text-based linearizations.
+
+ * Scholarly publications in general could be maintained
+  "Scholarpedia-style" with contributed revisions added in
+  if the maintainer approves.
+
+ * Examples and other intuitive/basic materials should be
+  linked to and popable within each context.
+
+ * We need organizing tools for mnemonics, visual storage,
+  storytelling... whatever works! -- We should hook up
+  with memory and heuristics/workflow researchers and ask
+  them.
+
+ * Probably Semantic Web-style markup organization would be
+  a useful addition -- making it possible for things to be
+  eternally reorganized.
+
+ * Turn "topics", "papers" and so forth into a social
+  network -- or perhaps more like a chatroom -- anyway,
+  the idea is that you should know who else is
+  reading/studying the thing, and who else has already
+  read it.
+
+ * Science is still rife with "competition" instead of
+  "collaboration" mindsets.  (And people who talk about
+  "plagiarism" may just be trying to find a convenient
+  excuse not to share... still, the need/desire to
+  establish "priority" should be handled nicely, and
+  already is, to a large extent, with arxiv...; there is a
+  giant field of "intellectual property" to study, but we
+  already have tools that work pretty well -- people
+  don't always use them... hm.)
+
+ * Connect math terms to applications/usages (like a dictionary!).
+
+ * Conversations and ideas about strategies (a la Polya)
+  should be popularized and linked to.  Perhaps Tricki
+  will help with this.  Some really basic strategies like
+  "if you are stuck, try looking at a different book"
+  should be documented.
+
+ * Tracking your own behavior in a parallel "supplementary"
+  learning model (which could explicitly include "problems
+  like Chapter X of Text Y) might be helpful to students.
+
+ * Access to student self-tracking data could be granted to
+  a "teacher" who can then intervene or comment.
+
+ * If the "standard material" isn't even working for its
+  own stated purposes, it clearly needs to be rethought
+  (and appropriate steps, including teacher re-training,
+  should be taken).  If it isn't working for some
+  /other/ purposes, then it is easy enough to
+  supplement! -- as much as student motivation allows.
+  This actual opens up a much bigger can of words, namely,
+  what's enjoyable, what's interesting -- but also, what's
+  useful, and how is it used (i.e. "in the real world").
+  The model "follow the student's motivation" is
+  interesting...
+
+ * Material that's online should be organized by whoever is
+  using it -- and any such "organizing/improving use"
+  should be accessible to others.  This is often the case,
+  e.g. with Connexions, !ArXiv, etc.  However, access
+  isn't enough, we also need explications, including
+  attached forums with /typed/ feedback (e.g. "comment"
+  versus "question"), and the ability to use all of this
+  data to pull together nice little boxes containing just
+  the kind of data feed that you happen to be interested
+  in... and these should, of course, be mapable to higher
+  levels for management, so we can e.g. look at particular
+  lists of requests that have gotten too long!
+
+ * Is it really true that "effort is duplicated", or is the
+  issue more that we have many similar "units of
+  production" -- close in a lot of ways, maybe, but not
+  the same.  It is important to be quite clear about what
+  the production objectives are!  To get a handle on what
+  is actually being produced seems like a prerequisite for
+  "evaluation".  It /is/ true that this is asking for
+  one unified dataset (unified to the extent that analysis
+  is done on the data set as a whole).  Note that right
+  now, most analysis is done e.g. at the end of the school
+  year (when it is already too late) and, moreover, is
+  used as a way to evaluate /students/ (e.g. rather than
+  teachers or methodology).
+
+ * The so-called "teaching to the test"
+  phenomenon... wouldn't be such a bad thing if the test
+  was in any way an accurate assessment of or intermediary
+  to the desired "real world" uses and behavior.  Again,
+  something other than /students/ needs to be evaluated.
+
+ * To what extent can older students learn "the basics" --
+  especially when they have been "taught wrong" before?
+  Some good education questions for sure.  Note that if
+  there was a /standard online curriculum/ that actually
+  worked, students could just be tossed into that at the
+  level that's appropriate...
+
+ * Review papers and such are suppsed to teach people what
+  they want to know at the level at which they want to
+  know it.  Having a reasonable diagnostic that would say
+  just how long it would take for a given person to learn
+  some given skills would be a neat thing.  Besides, maybe
+  people can keep their skills from getting rusty without
+  too much trouble, who knows!
+
+ * There are many relevant "flows" and many other forms of
+  support besides money.  It's worthwhile to go to where
+  work & innovation happens.  (We can also look for and do
+  or be part of research on "how that works".)
+
+ * All the same business about "navigating the material you
+  want to learn" ought to apply to /software/ as well as
+  math.
+
+ * Managing the data in conversations (not the same as
+  managing the conversations!) is related to Arxana.
+
+ * Semantic Web-style thinking is nice... what does it have
+  for math, and what does math have for it?
+
+ * It probably isn't strictly true that there is "no"
+  documentation -- even when the central object of
+  interest is not well-documented.  However, good software
+  development practices can /still/ be applied, and
+  documentation of "the basics" can be brought in and
+  combined with a functional description of the
+  whole... to redevelop or document as needed.
+
+ * When someone is working on their day job, one really has
+  to let them.  Blaming people who are working on other
+  things isn't going to go anywhere.  It seems much better
+  to work on our issues, document them better, find more
+  ways to engage, and ways to make engagement possible for
+  others who end up being interested.  At least this way
+  something gets done!
+
+ * As I was saying above, moving in some direction that
+  supports the work (even if it is outside of formal
+  employment) ought to be helpful.  In the mean time, for
+  money, there's always plasma donation, food not bombs,
+  welfare, etc.
+
+ * Build things you want to use!  Don't expect others to
+  necessarily want switch.  (They might if you do
+  sufficiently cool things, but then again, they might
+  not.)  Build an interface that lets you share your work
+  with them and learn from their work.  (There are some
+  interesting psychological issues here -- are we really
+  trying to "change society" -- or just change our own
+  lifestyles?)
+
+ * Whether what "they" came out with before or are coming
+  out with soon is useful or attractive or interesting --
+  or not -- there is still the matter of how one is living
+  one's own life, and if one is happy with that.  If one
+  is happy with the way one lives/works/grows that's
+  probably "good enough".  Don't begrudge other people
+  /their/ happiness!
+
+ * Making a map is typically useful in cases of
+  disorientation.  If this sort of work proves useful
+  enough, maybe there's even money in it.
+
+ * Some people have the luck, interest and
+  institutional-wrangling skills required to get money,
+  and others don't.  This presumably has some relationship
+  with issues of "how the product is going to be used".
+  Notice that if you can work without funding, people are
+  probably not so likely to give it to you.
+
+ * Just do the literature reviews.  Collaborate by bringing
+  your skills (and starting with topics you're good at).
+
+ * You pick your lifestyle and you try to stay honest with
+  yourself.  Can you really be happy with XYZ going on in
+  the world?  Know how what you're doing effects other
+  things/people.
+
+ * Keep plugging away, on your own if needs be, but look
+ for more ways to /participate/!  You won't /get/ what
+ you want, you have to /make it/.  Who/what will help
+ you, and how can /you/ help?
+
+ * Always good to reassess the strategy -- that should be
+  part of the strategy!
+
+ * Throw a pesky-yahoo/fuddy-duddy mixer and pool party.
+
+ * Document brokenness and bugs, and learn from these!
+  Take leadership, and don't expect full consensus (this
+  is part of /initiative/).
+
+ * Figure out your own "best practices" and work that way.
+
+
+*** Comments so far
+
+Ray: I merged your comments about search engines in with what
+I had about search engines.  Thanks!  I'm afraid this page already
+is the equivalent of "too many results" -- therefore, I'm going to
+try to distill it all into a relatively succinct conclusion!, to wit:
+
+* To sum up and conclude: Some Recommendations
+
+We have taken a look at /users of mathematics/, some of
+the /difficulties they face/, and listed some /ideas/ about
+that might help make things less difficult.  Some themes and
+outstanding issues arise -- here's what comes to mind.
+
+ 1. Math users are, statistically speaking, not programmers!  They
+are not all that likely to be able to develop their own new tools.
+There are a few (notable) exceptions to this rule, and we should
+get in touch with these people directly.
+
+ 1. Math users who are not programmers who nevertheless want new
+tools have a few options: (a) Hire someone; (b) Wait; (c) Learn
+how to program.  Each of these options has its situation-dependent
+merits and demerits.
+
+ 1. We observe that /some of the same problems that effect math effect software too/.
+This is no coincidence and has to do with the fact that /[[file:original_hdm_essay|math is a lot like software.org][original_hdm_essay|math is a lot like software]]/.
+Nevertheless, this should make us worry a little.  If programmers have a hard time
+overcoming these difficulties... aren't we all hosed?  Well, I don't think things
+are that bleak.  I think computers are, on a whole, getting easier to do useful
+things with.  It takes time for the ideas to gel, it takes time to
+write the code, and it takes time for the word to get out -- but all of this is
+happening.  Programmers can be rather smart :).  This doesn't mean that everyone
+else should just sit around waiting for what they want to fall into their lap:
+there are roles we can play as beta testers, subscribers/clients, and bloggers/pundits.
+The key point is to speak up!
+
+ 1. If possible, we should try to figure out what the view on math is
+from "outside" (as well as from "inside"...).  Places like the Free
+Software Foundation, First Monday, Free Software Magazine, and
+Slashdot will have things to say about math and maybe even math-as-a-commons.
+Some other folks might too.
+
+ 1. One thing we can do as "maintainers of a metacommons" is /connect our feature requests to implementations/ (and
+partial implementations).  It's helpful to everyone to have some sense of what's out there.
+
+ 1. Those of us who /do/ have programming skills should /keep building mashups/ -- not just because
+they are useful, but because /mashups give people in different communities a reason to start talking to each other/.
+Which they are probably /not/ going to do unless they have a reason.  First and foremost, developing
+a math metacommons is about building some discourse space -- we should always be looking for ways to get
+different groups communicating in productive ways.
+
+ 1. Do the groups listed in my survey above have contact information or mailing lists of
+their own?  If so, someone should be subscribing to all of these lists and at least lurking.
+Whenever we're ready, we should speak up!
+
+ 1. As I said in the comments above, even our survey-to-date is /complicated/ (and maybe
+boring to read).  We should revise this page into a Fine Piece of Writing and get it
+out there (e.g. in First Monday or AMS Notices or perhaps a version to both).  We may be
+able to get feedback from the groups we mention in the article...
+
+ 1. We should keep in mind that the adage "good enough is the enemy of the best" is
+a double-edged sword.  (At least!)   In other words, it can be frustrating when people "settled"
+for something that everyone else can see is only a local optimum.  At the same time, we
+need to be building tools that are flexible, tools that anyone can use, tools that are
+inherently anti-perfectionist -- tools that admit perturbation -- precisely so we can
+help people get out of local optima.  
+
+ 1. We might imagine (or believe) that the Semantic Web is going to Solve Everything.
+In fact, what seems more likely, is that it will just allow us to be more open and
+transparent about /what's hard/.  There are some serious limits to what is possible --
+as long as we know what they are (and can see we're not being "had") we tend to feel
+comfortable.  So we should look for Semantic Web-style tools (and any tools) that
+provide us with metrics, and with a sense of the lay of the land (as it were).
+
+ 1. Considering that /the people involved are often the key resource/ we should be asking
+/who is left out?/.  For example, in my list above -- comic book writers, science fiction
+enthusiasts... all those "weird" formal math guys.  Maybe some of these "outsiders" would have
+a surprising ability to make an impact in the math metacommons domain -- if we just go to
+the length of inviting them!
+
+--[[file:jcorneli.org][jcorneli]]

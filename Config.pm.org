@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+pp line 478:
+"sendmailcmd" => "/usr/sbin/sendmail -t",
+
+pm line 478:
+"sendmailcmd" => "/usr/sbin/sendmail",
+
+- I had a problem with mail being sent, not sure if this is part of the problem or if it is fixed and te -t can be removed, need to test

@@ -1,0 +1,125 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Initial brainstorming
+
+Wow.  (Cf. [[file:scholium basis for Neosphere.org][scholium basis for Neosphere]].)
+
+This ties together a lot of themes.  Hackability, totalization,
+scholium/Arxana, Noosphere, community spirit, !McLuhan, metasystems,
+code, user experience, life, thought, artificial intelligence.
+
+(Forgive my scatter-shot approach, some of these topics are connected,
+and I might have missed some.  Incidentally, this approach maybe
+says something about "the holographic nature of thought", which should
+probably get mixed into the mix, too.)
+
+Some interesting facts.  AM is approximately "(meta PM)", but notice that
+it isn't capable of dealing with everything; we can use it to help
+coordinate work on, say, Noosphere, but it wouldn't be reasonable
+to use it for doing coding work on Noosphere.
+
+Also, AM's explicit meta-level is the wiki engine; this is "hackable",
+but none of us have sought to hack it (even though we all recognize
+short-comings of the wiki); in my case, that is largely because I'm
+interested in something that is more *implicitly* "meta", in the sense
+of simulation of features as opposed to actual code.
+
+(It is interesting to notice that the ways the analogy between AM
+and (meta PM) work, and the ways they break down.  First of all,
+anyone is free to write things on AM -- it is a community space, and
+so it does away with ownership borders/boundaries between pieces
+of PM, as well as boundaries between content, code, and community.  
+However, AM is also in some ways "meta" to the HDM project...
+although *that* relationship is a little funny, because the HDM
+project's *content* is spread out all over the place, including plenty
+of it here; so, AM isn't exactly (meta HDM), it is more "part of
+the cluster of media where HDM such as it exists is stored".)
+
+I've become quite concerned with "lack of community involvement" or
+"lack of community spirit" or just flat out "lack of community"
+at PM; of course, I see the existing community through a fairly
+small window (AM's wide scope notwithstanding), so I wouldn't be
+the best one to talk about the "actual community".  However,
+one thing I can assert is that AM reflects only a few voices,
+some highly active, some not so active.  If this is the PM meta-community,
+then one thing we can say is that it is small (but yes, active!).
+
+While the wiki does allow freedom, it has its limits too.  In a way,
+it is more limited than Noosphere -- for, it only has two basic
+datatypes, the Page, and the Link.  One could cram PM into those two
+categories too!  Noosphere and Arxana maybe don't go much beyond this,
+except to add types to the links (in some suitable sense).
+
+But nevertheless, it seems to have a greater feeling of freedom.
+However! Noosphere is free too.  Changing Noosphere is no problem
+(assuming you can figure out how to do it) -- changing PM is
+where the problems really lie.  The "rigidity" of PM probably
+comes more from it being a live community than from its codebase
+being an obdurate shell.  As ocat has remarked, you don't want to
+change things on your users all the time!
+
+Finally (cause I think I better wrap this up soon...), we think
+of "thought" and "human expression" as being approximately the highest
+meta-levels.  These are the things we bring to bear in all media outlets.
+Or so it seems to us.  Actually (and this is part of !McLuhan's big
+insight) "media studies" -- thinking
+about all the different venues we use -- is a "higher" meta-level
+than that.  Not really, because again, we're just bringing thinking
+to bear.  But yes really, because we conceptualize the various media
+systems and the mind together as a whole... and we see that it isn't
+just the mind being brought to bear on systems, but also systems
+being brought to bear on the mind.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Some more musings
+
+I was thinking on my walk home today about the nature of mind & the
+universe.  (Le meme quotidien?)  We know that the mind is part of the
+universe, and also a reflection of the universe.  Accordingly, I've
+previously called it a "simulasm", or "agentless simulation".
+
+The curious fact is that everything we know about the universe we know
+through the mind.  This is how Bodhidarma can get away with saying
+"when you look around, all you see is mind" or "motion is just the
+mind", and so forth.  He also encourages us to become aware of the
+nature of mind.  But since everything we know is known through the
+mind, it would seem, we have a bit of a snafu!  Specifically, he
+says, "don't use the mind to study the mind!"  Well, indeed, using the
+mind to study the mind might seem a bit like trying to use your eyes
+to look at the back of your head.
+
+(Which works fine in an S^3 sans deritus, but nevermind that!)
+
+But every snafu is a call for the introduction of some metasyntactic
+variable.
+
+Suppose S is an simulation in U.  There is no reason we can't make a
+chain of simulations (going /down/ the chain, rather than /up/),
+and form some simulation T in S.
+
+In this case, T might be a sort of "supraego"; mediator between the
+concious mind and evidence of itself manifested in U.
+
+I'm not saying that such a simulation exists in the human mind...
+although if it did, it would kind of throw a wrench into Zen.
+
+With a computer, however, everything is right there on the table for
+us to see.  We can /define/ things like mind, understanding,
+self-awareness, etc., in very pragmatic and practical ways.  In order
+to make a computer "alive at the meta level", it needs some processes
+and processing space for meta-style computations.  This is easily
+enough accomplished.
+
+As for how much and what exactly can be accomplished this way, I
+suppose that remains to be seen.  My guess is that as in the previous
+section, we won't always see one clear "meta level", but rather a
+network of interconnected services that serve to mutually define a
+system.
+
+The system will contain various pieces of code, and the pieces of code will have their expressions,
+the expressions will interact with each other and produce more code.  And the cycle will continue.
+If this isn't "life" then I don't exactly know what is ;).  
+
+--[[file:jcorneli.org][jcorneli]]

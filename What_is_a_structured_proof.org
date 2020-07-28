@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In logic, a proof of a statement may be defined as a sequence of statements such that each statement in the sequence is already known or assumed to be true or follows from previous statements by a logical rule of inference.
+
+However, except in the case of rather short proofs, presenting a proof as a list of statements can be very confusing.  A moderately complex proof, such as a typical proof in a mathatical journal or book, can involve a hundreds of statements.  A simple listing of these statements would be rather difficult to read.  While it would be easy to verify the correctness of such a proof, it would be hard for a reader to gain an idea of "how the proof works" or separate main ideas from technical details.
+
+To overcome this difficulty, one can introduce the notion of a structured proof.  The idea behind a structured proof is that some of the statements in this list are more important and others serve to "fill in the gaps in the reasoning".  Therefore, we can  present an overview of the proof by presenting only the main steps in the proof.  Then under each item in the outline, we present statements that serve to prove that statement.  To see how this goes, please see the example.
+
+Back to [[file:structured proofs.org][structured proofs]]

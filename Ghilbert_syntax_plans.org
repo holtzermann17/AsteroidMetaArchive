@@ -1,0 +1,550 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: *Update 2 Sep 2006:* I'm prototyping a conversion from Ghilbert s-expressions to reasonable
+math typesetting, and have uploaded a draft [http://ghilbert.org/files/zfc.pdf PDF] for the
+amusement of !AsteroidMetans. The line-breaking is inspired by the
+[[file:mmj2SampleOutputTMFF|mmj2 prettyprinter.org][mmj2SampleOutputTMFF|mmj2 prettyprinter]], and the choice of symbols and fonts is of course
+very heavily influenced by Metamath's, both the GIF and !LaTeX outputs. I'm short on time to
+write up exactly what I've done, but am happy to answer questions. --[[file:raph.org][raph]]
+
+------
+
+Very nice: [http://ghilbert.org/files/zfc.pdf PDF]
+
+That looks close to standard, "MV" output.
+
+Will ghilbert & shullivan be able to read back in those
+typset formulas, or is that output-mode only? 
+
+Have you considered a !MathML output mode?
+
+--[[file:ocat.org][ocat]] 5-Sep-2006
+
+-----
+
+Thanks for the encouraging comments! Let me try to answer your two questions.
+
+: /Will ghilbert & shullivan be able to read back in those
+typset formulas, or is that output-mode only?/
+
+I can only speak to my own implementations. What Shullivan does is up to Dan :)
+
+For now, the syntax only works in output mode, i.e. as a translation from s-expressions
+to 2-d layouts. My original plan (see below) was to have grammar rules that could work
+in both directions, but I've revised my thinking since then and have decided to decouple
+the two directions somewhat.
+
+In both the old and new plans, precedence plays a central role. By assigning a precedence
+to each grammatical production, it is (usually) possible to derive a best-precedence parse
+even when the raw grammar is ambiguous. This mechanism has two strong advantages:
+
+ * It very closely aligned with standard (informal) mathematical usage.
+
+ * It gives great freedom in constructing grammars, unlike (say) LR parsing, in which
+introducing a new production is apt to break the grammar in unexpected ways.
+
+The latter property is especially important given the goal of modularity. Each module
+should be able to have its own grammar fragment, then, when multiple modules are imported,
+the total grammar is simply the union of these fragments. It is important that this last
+step not simply fail.
+
+I think that it is feasible to apply precedence to an arbitrary (possibly ambiguous) grammar,
+for example by suitable extension of an Earley parser. I was originally planning on using
+precedence similarly for the unparsing problem, to automatically invoke disambiguating rules
+when the output productions give a string that doesn't match the original when parsed. For
+example, given the input (* a (+ b c)), standard infix rules would produce "a * b + c", which,
+when parsed back into an s-expression, wouldn't match.
+
+However, after thinking about this a while, I decided I didn't like the approach, for several
+reasons. For one, there may be multiple disambiguating rules that would restore the correct
+parse. How to choose the best one? (see "unparsing" below) For two, I can see cases where the
+grammar becomes more complex in unintuitive ways (see "typesetting" below). For three,
+computing these output derivations /quickly/ (i.e. fast enough for interactive use) is tricky.
+A straightforward implementation would require exponential time to brute-force search the
+space of possible disambiguations on top of the cubic time performance of the underlying
+Earley parser.
+
+So, ultimately, I decided on a more procedural than declarative approach for output, doing a
+recursive traversal of the s-expression and invoking a small fragment of code at each node.
+Precedence is still there, and drives explicit generation of parentheses. It is entirely
+possible to write output code that produces incorrect, ambiguous, or unparsable[*] output,
+but with luck the people who create output grammars won't do that.
+
+More precisely, each such code fragment accepts an s-expression and produces a 2-d layout with
+additional attributes, most notably a precedence number. Most (but all) such procedures will
+immediately recurse on their children, then compose the returned layouts. In composing,
+parentheses are added based on simple numeric comparison of precedence values. The pseudocode
+goes something like "if my_precedence >= left_child_precedence then left_child = '(' + left_child + ')' ".
+Associativity is handled within the same framework, essentially changing the ">=" to a ">"
+for the left or right child of an infix operator, depending on the direction of associativity.
+
+For example,
+if + has precedence 200, and * has precedence 300, (with variables having precedence 999),
+then after * recurses on its children, obtaining "a" (precedence 999) and "b + c" (precedence 200),
+it uses the logic above to parenthesize its right child, resulting in "a * (b + c)", which is
+the desired result.
+
+I said "most" nodes will immediately recurse to their children, but the code has the option
+of delving more deeply into the child s-expressions itself. For example, the current code for
+` (function value) examines the left child to see if it's a known constant with an explicit rule,
+and then applies the default layout (F ` A) only if the rule is not present. That's how the
+Ghilbert s-expr (` (abs) (opr A (+) B)) typesets to "|A + B|". It's worth noting that the
+syntactic sugar for HOL works very similarly - "!x.ph" is really sugar for forall @ (\x. ph),
+where forall is a constant higher-order function, and @ is explicit function application.
+
+Right now, I'm concentrating on visual display only, with 2-d layout and fancy symbols. I
+haven't implemented 2-d summation notation (for example) yet, but it fits within the scheme
+outlined above. I'm still pondering what's the best way to do user-friendly input, but am leaning
+towards an intermediate ASCII notation, very similar to what Metamath does now, but with
+fewer parentheses and much more relaxed use of space.
+
+: /Have you considered a !MathML output mode?/
+
+Yes, I very seriously considered it. I decided not to use it in my own implementation for a few
+reasons. Mostly, I'm not yet convinced that existing MathML implementations can deliver anywhere
+nearly the quality I'm hoping for. It seems to me that it's lost a bit of its momentum, and I don't
+know of anybody doing book or journal article production in it.
+
+Also, I've settled on building a traditional app rather than a web app for now. There are
+most definitely advantages to the web-based approach, such as the ability to run anywhere, for
+example public libraries, but there is also lots you can do in a traditional app that's painful
+in a web app.
+
+But I'm just talking about what I'm implementing myself. If Ghilbert takes off like I'm hoping it
+will, then I expect people will do implementations based on whatever technology suits their fancy.
+I think that kind of competition is great, and very healthy. If somebody really believes in, say,
+!MathML, then they can write a Ghilbert->!MathML translator, and then everybody can see how well
+that works.
+
+: [*] I note with amusement that the spelling for "unpars(e?)able" is nearly evenly split,
+with 65 kGh (kilo Google hits) for the two-e version, and 73 kGh for the one-e.
+
+--[[file:raph.org][raph]] 4-Sep-2006 (amazingly, i am able to answer the question you posted tomorrow, today)
+
+-----
+
+Raph wrote:
+
+: /I'm still pondering what's the best way to do user-friendly input, but am leaning towards an intermediate ASCII notation, very similar to what Metamath does now, but with fewer parentheses and much more relaxed use of space./
+
+The following comments, based on my experience, may be relevant when
+considering whitespace in an intermediate ASCII language.
+
+Whitespace was optional in the original Metamath language/program, and
+the algorithm was as follows:  when reading the input stream, the next
+token is the longest string of characters that could constitute a legal
+token at that point (same as the C language spec).  It seemed like a
+beautifully simple and elegant algorithm in theory, and I was proud of
+how fast my implementation was.
+
+This worked great when there were a dozen or so different symbols, but
+it became confusing to read (if optimally packed) when there were
+hundreds of different symbols.  Not to mention that editing was hell,
+e.g. when you wanted to globally replace a symbol.  And because it's hard
+to remember all the symbols in the database, what looks right based on
+your local knowledge can introduce errors when you input without
+whitespace because, say, "((" might be some distant earlier symbol you
+forgot about.
+
+The code for this is still in the metamath program.  It is was bypassed
+for database parsing when the language spec was simplified, but as a
+hidden feature I still allow input without whitespace in the "let
+[step|variable]" commands, which can be convenient.  Since the redisplay
+of the proof steps expands the missing whitespace, that provides a
+confirmation for the user.
+
+My overall conclusions were as follows.
+
+ * Optional whitespace can be great for making input more efficient,
+provided the user can see an explicit indication of the program's
+whitespace assumptions for feedback, say by refreshing the display
+with a small colored wedge separating tokens if not actual whitespace.
+([[file:ocat.org][ocat]] may wish to reflect on this, since inputting formulas is an
+important part of the mmj2 interface.)
+
+ * Displays without whitespace might have a marginal advantage if limited
+to certain special cases like parentheses, but an optimally packed
+display can be very confusing when you have hundreds of symbols.
+We're not talking textbook math with half a dozen symbols where the
++ sign is overloaded with 5 different meanings based on
+context, or toy languages where each token is one ASCII character
+because there are so few of them.  A
+problem is that once you start adding special cases, where do you stop?
+Special cases add complexity and are yet another "feature" for the user
+to learn about or be aware of - for example, "((" couldn't be a token
+if we want whitespace-free parentheses.  Just something to consider.
+
+ * Finally, I don't see any advantage of optional whitespace in the
+database file itself, and only disadvantages.
+It makes it harder for others to parse and risks
+ambiguity/clashes when a new earlier symbol is introduced.  I'm sure the
+various authors of Metamath verifiers are unknowingly grateful that I
+trashed this part of the spec.
+
+[[file:norm.org][norm]] 4-Sep-2006
+
+"User-friendly" ultimately means serving a big universe
+of people who probably do not have a lot of patience for
+learning a new ASCII shorthand and grammar system. Which
+is not to say that having one of these input methods 
+available is not a good thing, but in the long run I believe
+"user friendly" means accepting digital pen input, as well
+as voice commands, and the output of other systems that
+are already on hand and which output to LaTex, MathML or
+whatever. So that might mean that the user selects a
+fragment of an equation and says "divide by 2", and then
+the system updates the formula and displays the result.
+
+Of course, with Ghilbert storing everything in "canonical"
+mode, the input/output syntaxes can be varied according
+to the user's desires. (I note that grammatical
+productions which have no terminal symbols but merely
+reflect operator precedence could create difficulties
+for parse tree processors -- things could get complicated
+for the mmj2 Proof Unification algorithm and I do not 
+believe I have fully explored those universes of .mm files.)
+
+
+--[[file:ocat.org][ocat]] 5-Sep-2006, Universe 2 which is one day ahead.
+
+-----
+
+Thanks for the great comments. Let me try to address them all.
+
+Regarding whitespace, Ghilbert has evolved in somewhat the reverse direction
+as Metamath. Originally, I had the requirement that all tokens, including
+parentheses, need be separated by whitespace. Of course, since Ghilbert is
+based on s-expressions, there are even more parentheses than in Metamath,
+so I put a lot of wear on my space bar. I made parens a special case not
+requiring whitespace, and I'm quite a bit happier.
+
+Your ([[file:norm.org][norm]]'s) experience with the problems of optional whitespace is very
+illuminating, but there are several reasons why I don't think they'll be as
+bad in Ghilbert.
+
+ * First and foremost, Ghilbert is modular, while set.mm is monolithic. Any
+given file of mathematics will only import what it needs, both in terms of
+syntax and the underlying axioms and theorems. Thus, introducing new symbols
+should be quite harmless, except in the case of adding a new import to a
+file; this particular case can easily be automated. Further, because of
+parsimony of imports, in many files there will only be a dozen or two symbols
+active, so the problems of keeping track of myriads simply go away.
+
+ * I've already decided that parentheses are a special case, and have modified
+parenthesis-containing symbols in Metamath. For example, in Ghilbert's set_mm.gh,
+the symbol for proper subset is "C:", while in set.mm it is "(.". Imho,
+parentheses are by far the most troublesome special case, and everything else
+is small potatoes.
+
+ * There is at least one case of mathematical notation for which I think lack
+of whitespace is imperative, which is positional digit notation (see numerous
+examples below). I'm much more inclined towards a general whitespace-optional
+grammar mechanism powerful enough to handle such notation than to make numbers
+a special case.
+
+There are a few other cases I can think of where lack of whitespace can really
+help. Aside from ordinary algebra (think "x^2 + 2xy + y^2", which should be quite
+straightforward in my proposal), I can imagine that a whitespace-optional
+grammar can also work for strings. For example, "a b" might parse to the
+s-expression (|s ('a') (|s (space) (|s ('b') ("")))), where |s represents consing
+a char onto a string, and the nullary constants have the obvious meanings.
+
+Which representation should be stored in database files? That's a complex question.
+A case can be made for the simplicity of pure s-expressions, especially if the
+database files are to be processed using a variety of tools not primarily concerned
+with human readability. However, if the parser is simple enough, it could well be
+worth the tradeoff to have standard text tools (think emacs, svn, vi, grep, diff, etc.)
+be able to work with the considerably more user-friendly version. In any case, the
+ghilbert.org web server will be happy to provide s-sexp versions of files upon
+request, even if the database stores ASCII syntax form. Note that the other direction
+is trivial; by construction, all s-expressions will also be valid in the ASCII syntax.
+
+: In my opinion, the master database should store s-expressions,
+which, as I understand things, will be the canonical form of the information; the syntaxized formulas could vary from user to user
+based on preferences. The ASCII-syntaxized versions formulas could be mirrored for
+searching purposes, but on the grounds of maintaining data integrity
+alone, I think going the "pure" route is best. One thing I noticed
+in mmj2, which proceeded along a trail for which I did not have a
+map, is that the most interesting -- and perhaps important -- code
+activities require the parse trees, AKA s-expressions; without those
+in hand, the system will need to be reparsed for every use. In
+Proof Assistant the parse trees are essential for unification
+searching, and as we have seen, the parse trees are vital for
+"pretty printing". --[[file:ocat.org][ocat]]
+
+To [[file:ocat.org][ocat]]:
+
+I think the difficulty of learning a ASCII input system is minor compared with that of
+learning a proof system. That said, there are things we can do to make it even easier
+to learn, such as letting users toggle between 2d and ASCII views of the same term. That's
+an appealingly simple approach to editing terms as well - the ASCII view would be editable
+but not the 2d view. In any case, I think most people probably learn syntax by example.
+
+: I hear you about that. But if you want global acceptance then
+users need to be able to learn without reading the manual. The
+way these things might work is that the user writes a formula
+with a digital pen on a virtual blackboard, augmenting his input
+with voice commands. If the user inputs a formula that justifies
+with an existing theorem, then fine, but if it does not justify
+then the system could ask for proof. The user could just write
+freely on the blackboard and connect the formulas to indicate
+hypotheses and conclusions. The key point is that 
+the language of math, the "MV", is pretty well standardized globally
+and if possible, the real language that already exists should be
+recognized; plus, typing formulas seems to inhibit the though
+processes. So, if the system could recognize pen input then the learning
+and acceptance curve would get very flat. That's the long range
+objective, IMO. It *has* to happen.
+--[[file:ocat.org][ocat]]
+
+But as you mention, /having/ an ASCII input system is very different than forcing people
+to use it. A central philosophical principle of Ghilbert is clean separation between the
+interchange formats and the tools. The interchange formats are nailed down very precisely,
+have a great deal of attention paid to simplicity, and change very conservatively. The
+tools, though, can and should exist in great profusion and diversity, can be ad hoc or
+general, carefully designed or dashed off quickly, and, of course, cater to the diversity
+of users, areas of mathematics, learning styles, and philosophical approaches.
+
+Thus, if you're interested in building, say, a pen-based input system for Ghilbert, your
+task is very crisply defined. You must simply produce s-expressions for the terms the user
+inputs with the pen. The same goes for output. Do you think that translating to !MathML or
+!LaTeX will serve some user needs better than the typesetter I'm prototyping? Fine, just
+write a tool that translates s-expressions to your preferred output format. My prototype
+is currently 649 lines of Python, it's not that hard. I'm very happy with my choice not
+to reuse one of the "systems that are already on hand" for output - as I've mentioned
+above, the main use of my 2d layout tool is for display in an interactive app, so using
+!TeX isn't feasible, and !MathML would bind me more tightly to a Web browser infrastructure
+than I'm comfortable with, not to mention the visual quality of the !MathML implementations
+I've seen.
+
+--[[file:raph.org][raph]], still 4 Sep 2006 here
+
+-----
+
+There seems to be quite a bit of discussion here on syntax and grammars
+for proofs. I'd like to add to this by briefly sketching my plans for more
+natural grammars in Ghilbert. Some relevant pages of the discussion so far:
+
+ * [[file:metamathGrammarFacilities.org][metamathGrammarFacilities]]
+ * [[file:metamath.org][metamath]] - especially the notes on making the set.mm grammar LALR
+ * [[file:mmj2GrammaticalInductiveSets.org][mmj2GrammaticalInductiveSets]]
+ * [[file:metamath-SyntaxAxioms.org][metamath-SyntaxAxioms]]
+ * [[file:using a powerful standard parser.org][using a powerful standard parser]]
+ * [[file:hdm's parsing system.org][hdm's parsing system]] - which discusses a parser written by [[file:jcorneli.org][jcorneli]] to implement this [[file:grammar for hcode.org][grammar for hcode]]
+
+**  Ghilbert levels
+
+The grand plan for Ghilbert is for there to be more than one language, at
+different levels. What I've released so far is the lowest-level language only,
+corresponding roughly to assembly code. Let's call it Ghilbert level 0.
+The overriding goal for this level is that it be as simple as possible. Dealing
+with s-expressions is much, much simpler than requiring a nontrivial
+parser, especially for user-defined grammar productions.
+
+However, it is clear that s-expressions are not that friendly for
+doing real math. I've been able to put up with them, but I expect that as
+I move more into real content rather than just setting up axiomatic
+frameworks, I'll want a more natural syntax. Thus, I have plans for a
+"next level up" language that does have grammar facilities, as well as
+some other facilities for reducing the tedium of writing proofs. I'll focus
+on the grammar plans here.
+
+**  Ambiguity and precedence
+
+I've decided to take a similar approach to ambiguity as
+[http://www.speagram.org/ speagram]. Essentially, I allow grammars
+to be ambiguous, as I believe that allows for the most natural expression
+of mathematics, but each production will also have a precedence number
+that will decide in the case of ties. A similar mechanism will also resolve
+associativity.
+
+Here is the classical example expressing the tighter binding of multiplication
+over addition. Assume that we already have a production for variables
+to generate "class", then the grammar is:
+
+  class := class class -> (* $0 $1) 200
+  class := class + class -> (+ $0 $1) 300
+  class := ( class ) -> $0 900
+
+The precedence-breaking rule is that when a substring has two matching
+productions, the one with the higher precedence number wins. Thus, the
+expression "A + B C" will parse to (+ A (* B C)), because that production
+has precedence number 300, while the alternate valid parse (* (+ A B) C) has
+a precedence number of only 200.
+
+Note that this grammar is still ambiguous for associativity, so that "A + B + C"
+has two productions with the same precedence. I haven't figured out exactly
+how I want to solve this problem yet.
+
+**  Lexical and syntactic productions
+
+Most compilers have a separate lexical analysis phase prior to syntax
+parsing, at which point things like number formats are defined. In
+Ghilbert, I plan to use grammar production for both. Here's a small
+grammar example, to add to that above:
+
+  digit := 0 -> (0)
+  digit := 1 -> (1)
+  ...
+  digit := 9 -> (9)
+  number := digit -> $0
+  number := number digit -> (|d $0 $1)
+  wspace := \epsilon
+  wspace := wspace ' '
+  class := wspace number wspace -> $1 900
+
+Numbers can't have internal whitespaces. "123" parses to (|d (|d (1) (2)) (3)),
+while "1 23" parses to (* (1) (|d (2) (3))).
+
+**  Variables have their own implicit production
+
+I plan to retain the requirement that all variables be explicitly declared
+with their "kind". These declarations will automatically generate the
+corresponding grammar productions, which will be treated the same
+by the parser as any other production. The precedence of these productions
+is higher than any explicit production, so if the variable "ab" is declared,
+the string "ab" will parse to "ab" rather than (* a b).
+
+**  S-expressions have their own implicit production
+
+Also, all syntactically valid Ghilbert level 0 terms will be valid in Ghilbert
+level 1, and will, like variables, have a higher precedence than explicit
+productions. Perhaps some care needs to be taken to avoid conflicts, for
+example maybe requiring different parens for s-exps and regular math
+parens, but I haven't found any serious problems so far.
+
+Note that the arity has to match for the production to fire. Digits are
+nullary, so (0 1) won't try to parse as (0 1), so the (* (0) (1)) rule will win.
+
+**  Unparsing
+
+In an unambiguous grammar, unparsing is trivial. Just traverse the parse
+tree, rewriting each term using the LHS of the relevant grammar production.
+However, with the parsing scheme outlined above, the result may actually
+parse to something different.
+
+For example, the s-exp (* (1) (0)) can unparse to the string "10", which
+has the precedence-winning parse (|d (1) (0)). Not good.
+
+To solve this problem, I plan on parsing the generated substrings as I
+construct them. At each point in the parse-tree traversal, if the substring
+has a different parse, the unparser invokes a disambiguation rule.
+
+It would be possible to derive the disambiguation rules automatically from
+the grammar, but there may be more than one that applies, so I think it's
+better to allow these to be given explicitly. For example, valid unparses
+of (* (1) (0)) include "1 0", "(1)0", "1(0)", "(1)(0)", and "(1) (0)" among others. Which
+is best? (Actually, the answer to this is almost certainly "1 \cdot 0", but that
+would take a new grammar production I haven't written yet)
+
+**  Typesetting
+
+A reasonable extension of the unparsing mechanism would be to generate
+an s-expression directing a mathematical typesetting engine, instead of a
+string that can be parsed again. Actually, it would internally generate the
+string, because you want the disambiguation rules to trigger, with the same
+logic as unparsing to a string. That way, (* x (+ y z)) gets typeset as "x(y + z)"
+rather than "xy + z".
+
+I haven't worked out the details of the intermediate s-expression language
+yet, but obviously it will include symbols (not necessarily restricted to
+Unicode), hbox, vbox, and array layout, superscripts and subscripts, fine
+control over spacing, and no doubt other goodies. I expect variable-size
+symbols such as radicals, big braces, and big operators like summation to
+be especially fun.
+
+I expect grammar rules for typesetting will be a bit more detailed than just
+for string parsing. For example, to typeset "e^(x+y)", you don't need the
+parens because the placement of "x + y" in the superscript removes the
+ambiguity. The grammar could look something like:
+
+  class := class ^ class -> (^ $0 $1) (hbox $0 (super $1)) 100
+  class := class ^ ( class ) -> (^ $0 $1) (hbox $0 (super $1)) 101
+
+Parsing and unparsing with strings is unaffected by the addition of this second
+production, but the extra parens would get removed in the typeset version.
+
+-----
+
+
+
+
+
+**  Open issues
+
+I haven't worked out all the details yet. Here are some open issues.
+
+***  Associativity
+
+How to resolve the ambiguity between (+ (+ a b) c) and (+ a (+ b c)) for the parse
+of "a + b + c"? To choose the latter, one way is to mark the first subclass of the
+"+" production so that a substring with a different precedence number as the "+"
+production itself is preferred over one with the same precedence number. I have
+to work out whether this is effective enough in all important cases.
+
+***  ASCII vs Unicode
+
+Tools such as editors and web browsers are increasingly capable of dealing with
+Unicode. Even though it's traditional for languages to restrict themselves to ASCII,
+some newer efforts allow full Unicode. APL was, of course, a very early language
+rich in symbols (predating Unicode), and
+[http://en.wikipedia.org/wiki/Limbo_programming_language Limbo] is another
+more recent mainstream-ish example allowing Unicode.
+
+That said, dealing with ASCII is still simpler. It's much easier to type ASCII than
+Unicode. To type math Unicode well, you need some kind of
+[http://en.wikipedia.org/wiki/Input_method input method], which won't be
+very consistent from platform to platform. For intensive math typing, you'd
+probably want a custom input method, which would then need to be specially
+installed, which is its own hassle.
+
+But it would still be neat to type (the forall symbol) directly, and never have to deal with
+ASCII-izations such as "A." at all.
+
+: !LaTeX code is pretty readable :).  [[file:hcode.org][hcode]] is supposed to follow that model. --[[file:jcorneli.org][jcorneli]]
+
+:: Your "minor edit" adding this comment inadvertently made a fairly strong case
+for the ASCII approach, as it replaced my carefully typed bits of Unicode with crude
+ASCII replacements. Check out the diff between rev 1 and rev 2 to see what
+happened. --[[file:raph.org][raph]]
+
+***  Types and overloading
+
+Ghilbert level 1 will probably have a real type system (not just "kinds"), and will
+probably also have some mechanisms for automatically inferring the types of
+subterms.
+
+Natural mathematics uses overloaded operators a /lot./ One particularly tricky
+example is concatenation, which can mean multiplication, function application,
+and probably lots of other things too. To disambiguate these, you need the type:
+the difference between parsing "sin th" and "2th" is that "sin" has type CC -> CC,
+while "2" has type CC (and I'm glossing over all the fun with subtyping, because
+of course it /really/ has type NN and you expect the promotion to happen
+automatically).
+
+Should parsing be dependent on types, or should the parser just pass a generic
+"concatenation" operator to the type-inferencing engine, which then has the
+responsibility of resolving it to something more specific, based on the types of
+the arguments?
+
+: One solution (that I like) to the problem of ambiguity caused by overloading is to not allow to overload any operators on the language level, but give an easy way of defining an unlimited number of symbols and a way to define how such symbols should be printed by the presentation level. So, for example one can define a symbol called "\<gr_op>" so that "x \<gr_op> y" means the application of some binary operation on a pair of (say, group) elements <x,y> and then tell the presentation level to print this symbol as +, \cdot or nothing. With such solution questions like the one above don't need to be asked.
+--[[file:slawekk.org][slawekk]]
+
+:: Interesting idea. I can see how it would work in applications such as
+group theory, but it doesn't directly solve the problem I posed above, which
+is overloading of "A B". Are you proposing that the user inputs "sin \<fun-app> th"
+and "2 * th", and the /display/ of both these infix operators is the empty
+string? --[[file:raph.org][raph]]
+
+: Yes, pretty much. Except that for some very basic operators like function application I would reserve keyboard characters, so one could write "sin ` \<theta>", with a possibility of writing "sin`(\<theta>)" and  requesting to print "`" as the empty string so it looks like Latex \sin (\theta ) in the browser (or printed version). This is what mathematicians are used to seeing. The idea is not mine, this is how it works in Isabelle/Isar and I found it very simple and convenient. The disadvantage of this approach is that a plain text editor stops being a good tool for authoring the source. For example the source may look as ugly as "\<forall>n\<in>\<int>. M\<zmu>n \<zlq> f`(N\<zmu>n)" (which actually is nicely printed as $\forall n \in \mathbb{Z} . M\cdot n \leq f(N\cdot n)$). However, I think the effort needed to write an authoring tool that would support defining and displaying new symbols is better spent that writing code needed for type inference. --[[file:slawekk.org][slawekk]]
+
+***  Implementation
+
+Parsers are not trivial, and there's a lot less literature on parsers that can handle
+ambiguous grammars than unambiguous. For one, it's very likely that the time
+complexity will exceed O(n), which is what you get from doing LALR or recursive
+descent properly.
+
+I need to take a good look at what speagram (referenced above) does, to see
+whether it's adaptable. Otherwise, it's back to the textbooks!

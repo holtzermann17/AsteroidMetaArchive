@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+PlanetMath and Wikipedia are both FDL-licensed (or more importantly, free and open and collaborative) knowledge resources which have mathematical content.  Obviously PlanetMath specializes in math, but Wikipedia has a lot of nice math articles.  Indeed, due to the general nature of the Wikipedia resource, many of their articles stand apart as gentler, more pedagogical introductions to various mathematical topics.   However, PlanetMath has different converage, tends to go more in depth in particular areas, and may have more proofs and examples.  In sum, PlanetMath and Wikipedia should share content, though complete merging of the two collections is probably not useful.
+
+One can break the task of one-time "porting" into two halves:
+
+ * PlanetMath -> Wikipedia
+ * Wikipedia -> PlanetMath
+
+And finally, we should ask the more general question:
+
+ * How do we keep these two collections maximally synched over time?
+
+A section is devoted to each of these bullet points.
+
+*  PlanetMath -> Wikipedia
+
+This project has been initiated!  CryptoDerk (on Wikipedia, who is also on PlanetMath) has organized the effort.  Please see the following relevant pages within the Wikipedia meta pages:
+
+ * [http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/PlanetMath_Exchange main page]
+ * [http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/PlanetMath_Exchange/Statistics exchange statistics]
+
+*  Wikipedia -> PlanetMath
+
+This project has not begun.  However, we will get some data "for free" based on the analysis done by Wikipedia folks, and recorded at the above links.  Most importantly:
+
+ * we don't have to do anything when a PM article was copied mostly verbatim
+ * when a PM article was "merged" with a Wikipedia article, we should analyze the differences for possible back-porting
+ * when a PM article was "rejected" completely, we should either copy over the WP article, merge it with the PM article, or consider rewriting from scratch
+
+Many of these things can be filed as corrections, with direct reference to the Wikipedia articles to assist in the process.  
+
+We should also consider some automation here: we can get the database of Wikipedia entries.  Maybe if we screen-scrape the porting meta-page, we can get a list of objects to copy over in full, and at least have these automatically inserted in the collection (it should be easy to expand Wiki math markup to LaTeX).
+
+*  Continual / Bidi Synching
+
+This is a nontrivial, huge, yet important digital libraries research problem.  It has implications for the existence of multiple "planet" sites, as well as sustainability in productive digital libraries in general.  As such, it has its own page on this site: please see [[file:bi-directional_content_exchange_and_updating.org][bi-directional_content_exchange_and_updating]].
+
+*  Referrals
+
+A consequence of sharing content between sites is increased traffic due to referrals from hyperlinked citations.   So far, increased traffic on PM due to referrals from Wikipedia is measurable, using HTTP logs.   Currently it looks like about .12% of PlanetMath's traffic originates from Wikipedia (as of Tue Mar 8 16:10:53 UTC 2005).  I expect this to eventually reach maybe half a percent, as Wikipedia works its way through porting more of PlanetMath's collection.  This answers questions about Wikipedia's effect on PlanetMath's recent increases in hits volume (i.e., not much).  But, it may have an important effect on increasing the visibility of PlanetMath over time.
+
+*  Discussion
+
+An important factor to consider here is the issue of ownership.  Whilst Wikipedia articles are world-editable, Planet Math articles have owners and can recieve corrections.
+
+At the moment, I do not have an opinion on what I would consider the best strategy for dealing with this issue.  Since this is only the beginning of this discussion, perhaps it is more appropriate to enumerate options and identify issues which are relevant to this question before taking a stance for or against diferent options.  In that spirit, let me introduce a possible option.
+
+Perhaps there could be a fictitous user "Wikipedia" who would own the Wikipedia articles copied over to Planet Math.  When a correction is filed to such an article, it would be automatically rejected and the rejection message would be a form letter stating the that the correct procedure is to make the correction oneself and describe the procedure for editing an article on Wikipedia.
+-- [[file:rspuzio.org][rspuzio]] 8 March 2005
+
+Perhaps it's somewhat tangential to this discussion, but I woulsd like to point out a curious fact.  While, as you say, mathematical entries in English in Wikipedia tend to be gentle and pedagigical, quite the opposite is true for mathematical entries in Wikipedia in Polish!  Math entries in Polish on Wikipedia are identical is style and outlook to Planet Math entries -- they're typically rather short, highly technical as opposed to pedagogical, filled with equations and also come with proofs and examples.  --[[file:rspuzio.org][rspuzio]] 9 March 2005

@@ -1,0 +1,39 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+I envision the PM of the future not simply as one community, but as
+many (interrelated) communities; by interest, locality, etc.; as a
+"social space" with many subspaces.  In my view, we haven't even
+gotten the meta-meta-architecture fully worked out yet (design
+principles for building tools that can be effectively used to build
+the sort of social space I'm talking about).  However, we certainly
+have put some thinking into this stuff (from the Noosphere thesis to
+the scholium system to Ray's brand-spanking-new proto-theory of
+"consistency conditions for relational systems".)  There remains much
+to do here. --[[file:jcorneli.org][jcorneli]]
+
+I think the scholium system is on the right track (I'll take your word
+on Ray's theory), as is the idea of having a meta-community of Noosphere
+implementers for various knowledge domains.
+
+So on to justification: why does Noosphere have this special role?  I think
+we want to argue that by being virtual but also supporting communities,
+it can allow people and content to be a part of more overlapping productive
+groups, because the additional work to do so diminishes.
+
+If we go the direction of using Arxana or a just bidirectional OAI-like updating
+system to implement the right productive services, then Noosphere really becomes
+something that even Wikipedia is not.  In fact, while Wikipedia is internally
+distributed, it is monolithic with respect to the outside world.  It can of
+course accomodate ingests of content, but only with much manual effort, and only
+in one direction.  There is no facilitation of inter-group operations like this,
+and facilitation by systems is the CBPP magic that lowers barriers to production
+and makes new information projects tractable.
+
+Noosphere, then, has the potential to evolve into something that fosters 
+free meta-culture, and allows CBPP to succeed more often (for a more concrete
+example, imagine how much better off PlanetComputing will do with an initial
+content boost from PlanetMath, and subsequent bi-di updating).
+
+--[[file:akrowne.org][akrowne]] Sat Feb 11 05:39:03 UTC 2006

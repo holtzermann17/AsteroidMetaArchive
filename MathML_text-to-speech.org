@@ -1,0 +1,100 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Today I was bored, so I made came up with the idea
+to have my computer speak maths. 
+It was a fun 15-minute hack.
+
+Steps:
+
+0. Get the Festival speech synthesis software: 
+   http://www.cstr.ed.ac.uk/projects/festival/
+
+1. Write some TeX markup.  Take for example the quadratic formula
+   $ \frac {-b \pm \sqrt{b^2 - 4ac}} {2a} $
+
+2. Convert it to MathML.  Spidermonkey JavaScript that does this:
+   http://gold-saucer.afraid.org/mathml/greasemonkey/dist/latex-to-mathml.js
+
+3. Run XSLT stylesheet http://gold-saucer.afraid.org/mathml/mathml-tts.xsl
+to convert MathML to format that Festival understands (SABLE format)
+
+4. Run from command-line: text2wave quadratic-formula.sable -o quadratic-formula.wav
+
+5. Here's the ogg audio file: http://gold-saucer.afraid.org/mathml/quadratic-formula.ogg
+
+I've also integrated this hack into my [[file:Display LaTeX.org][Display LaTeX]] user script, so that whenever I click on a formula in my Web browser
+my computer will read it to me ☺.
+
+If you want to try this, here is how it works:
+
+1. set-up a local Web server with CGI support
+
+2. put up this script (or something similar like it) on the Web server: http://gold-saucer.afraid.org/mathml/mathml-speak.sh
+
+3. set this browser configuration variable to where the CGI lives (use the about:config interface in Firefox)
+
+  greasemonkey.scriptvals.
+  http://gold-saucer.afraid.org/mathml/greasemonkey/
+  /Display LaTeX.click-post-url
+
+3. select "Enable native display of math images" in Tools > User Script commands menu of Firefox
+
+4. go to an encyclopedia entry on PM
+
+5. click on the formula to have your computer to read it
+
+This is how I do my development by the way. 
+I browse PM, clicking on random formulas to be read.
+Whenever I encounter a formula that is read wrong,
+I just open the XSL file in my text editor, fix the problem, and click the formula again to check.
+Voilà, instant feedback!
+
+**  News
+
+<b>2006-05-05</b>: Started doing some improvements to the text-to-speech thing again.  Still a long way to go
+before it is usable for most formula, but hey,
+but somebody’s got to start, right?
+
+**  Future goal
+
+Get it to read an entire LaTeX document!
+
+**  The need for semantic TeX
+
+There’s an annoying problem with the output 
+given the input
+
+ $| x | = 2$
+
+which is read as “vertical bar; x; vertical bar equals two”.
+However, if the preceding TeX code is rewritten in the “proper way”:
+
+ $\lvert x \rvert = 2$
+
+it works (“absolute value of x equals two”).
+
+Why do I say it is proper?  First,
+it makes my life easier as the developer of a TeX parser ☺ — if the parser sees \lvert, it knows that a subgroup expression is beginning.
+Secondly, the \lvert and \rvert commands are actually
+recommended in the TeXbook, because |x| will occasionally
+give incorrect spacing (e.g. try $|+x|$ in TeX).
+
+Unfortunately a lot of PM pages use the “wrong” method.
+And it seems petty to file “corrections”
+just to make my text-to-speech program work.
+
+I could always try to fix the Display LaTeX translator;
+however, I’m wary of changes that require lots of processing (browser JavaScript is slow) or might risk breaking perfectly good formulae
+that just happens to fail whatever heuristics I put in.
+
+I think we should be encouraging more semantic TeX
+code on PlanetMath, with a page listing
+recommended style / LaTeX commands.  Comments?
+
+
+**  See also
+
+ * [[file:http://www.w3.org/2001/tag/doc/leastPower.html The Rule of Least Power.org][http://www.w3.org/2001/tag/doc/leastPower.html The Rule of Least Power]]: why it is not a good idea to write low-level !TeX or !LaTeX documents 
+ * [[file:PM for the blind and users with low-vision.org][PM for the blind and users with low-vision]]
+ * [http://emacspeak.sourceforge.net/ Emacspeak] (reading latex formulas is not completely straight-forward; IIRC, the developer of this program wrote a thesis on the problem.  This stuff may help with parsing in general...).

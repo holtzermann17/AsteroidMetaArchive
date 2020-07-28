@@ -1,0 +1,434 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Links to related nodes:
+
+ * [[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]]
+ * [[file:Collaborative Version Of NSF ALT 2005 Proposal Introduction.org][Collaborative Version Of NSF ALT 2005 Proposal Introduction]]
+ * [[file:Collaborative Version Of NSF ALT 2005 Plan of Work.org][Collaborative Version Of NSF ALT 2005 Plan of Work]]
+
+*  Improving Pedagogy In Math and Science Virtual Learning Communities
+
+Executive summary: 
+
+: We propose to further advance the world of online learning
+communities and education in general by researching and
+implementing pedagogical improvements to the Noosphere
+collaborative digital library system.  This system, which is
+already a proven success in the pilot PlanetMath web site
+(an NSDL member collection), has the potential to spread to
+other educational sites for other mathematical sciences
+disciplines and greatly support learning in general as the
+internet becomes a stronger component of education.
+
+**  Discussion of Need
+
+Free culture is the cultural milieux available for anyone in
+society to both consume and build upon.  In specific, free
+knowledge culture is the component of free culture which is
+factual and objective (or at least, strives to be).  Free
+knowledge culture is am important foundation for education
+in society; when people say that a "free press is the
+foundation of a healthy democracy", they are referring to
+precisely this element of the social information
+environment.
+
+Digital libraries are emerging as engines of an important new type of free knowledge culture.  As
+the internet becomes cheaper, more accessible, and therefore used increasingly by all segments of society,
+more of society is able to learn via educational digital libraries.   There are numerous examples of 
+such digital libraries, from the 100+ members of the National Science Digital Libraries to the 
+Library of Congress American Memory site to Wikipedia.   Clearly, there has been widespread grassroots 
+as well as official notice of the importance of digital libraries in education.  
+
+Educational digital libraries tend to be fragmented into two broad families: relatively amorphous, collaboratively-built knowledge
+resources (like Wikipedia), and rigid, top-down constructed "information silos" (like the Library of Congress).   The former type is
+newest on the stage --- the stunning growth, uptake, and recognition of Wikipedia within the past year has 
+been breathtaking.   The same commons-based peer production (CBPP) benefits that allow the open source
+world to exist and thrive turn out to apply to knowledge resources as well, and Wikipedia is perhaps the
+best known example of this.  In essence, the world has discovered that CBPP is an excellent foundation for
+collaborative digital libraries.
+
+Just as important as the economic advantages of CBPP for producing educational content are the
+ramifications for free knowledge culture.  "Free culture" does not just mean "zero cost"; it also means 
+freely modifiable, extensible, improvable, and re-distributable.  As Lawrence Lessig has pointed out in
+/Free Culture/ (and numerous other places), this dynamic is the source of a tremendous amount of social 
+benefit.  Key is the new ability of the lay learner to /take part in shaping the shared knowledge of
+society/, or at least, view themselves as agents with the ability and right to do so.  This has the
+potential to make free knowledge culture a more significant and meaningful component of free culture
+in general (and again, Wikipedia is demonstrating this already).
+
+However, while free knowledge cultural content is being rapidly created by collaborative knowledge 
+systems like Wikipedia, much potential in this area is not being met.  These resources have the same
+problems as the web in general; they are disorganized, their quality is uneven, the identities and
+credibility of those involved is often hard to discover, and they have weak notions of "placeness" which
+are necessary to sustain communities.  The underlying problem is that these collaborative 
+systems need to be more completely married with digital library concepts to produce true /collaborative 
+educational digital libraries/.   It is this we intended to do with this project.
+
+Noosphere has the special status of having been designed to be a collaborative digital library.  From the
+outset, it was built to support an an academic style of community interaction, rather than a free-for-all, and
+advanced organization, rather than only being an "organic" web of facts.  The notion of /ownership/ of knowledge 
+artifacts in Noosphere encourages individual stewardship of content, responsibility, correctness, and a pedagogical 
+spirit.   We think this makes it an excellent platform for building communities of education centered around 
+knowledge resources, and perhaps the closest candidate to being a true collaborative educational digital library.   
+We think Noosphere is well-positioned to play an even greater educational role in the near future, through technical
+improvements and extensions meant to extend its pedagogical effect, much of which come from making it 
+more fully an educational digital library system.
+
+With this project, we aim to achieve these goals through the addition of *direct pedagogy features, quality control
+features, and content-sharing features*.  In addition, we would like to undertake *studies of the user
+community* to find out precisely which sub-communities are best-served and under-served, and which 
+features are needed to better serve them.
+
+We explain these four categories of work in more detail below.
+
+***  User Studies
+
+It easy to simply make assumptions about the needs of user communities and produce systems
+to meet these assumed needs.  It is much more difficult to actually "go out" and find out 
+what user communities need, and determine what kind of shape a community support system needs
+to take.  This is a process that involves asking the right questions, and then determining how
+to proceed based on the inevitable trade-offs created by conflicting needs, interests, and values.
+The difference in the impact of the final system can be dramatic.
+
+Much of PlanetMath's success thus far can be ascribed to its origins as a grassroots effort.  That is,
+members of the user community took a part in most formative discussions about how
+to build PlanetMath (and Noosphere), as well as took a strong role in testing it through real-world 
+use.  However, this participatory design and development was naturally limited to a  "colloquial"
+style, and could not extend much further than the circle of users the lead developers directly knew. 
+Today, PlanetMath has over 10,000 registered users, and countless tens of thousands of anonymous readers.
+To get a good reading of the needs of this vast user community, and even more importantly, who it is, 
+real resources are needed and an explicit, formal study must be conducted.
+
+***  Direct Pedagogy Features
+
+While we intend all of the work on this grant to ultimately improve the pedagogy of PlanetMath, part of
+this process consists of /direct/ pedagogy features.  Roughly speaking, these are features which
+make PlanetMath's content more /educational/ and better resemble learning objects.  In other words,
+they are constructed with facilitation of learning in mind.  In addition, pedagogy can be fostered by
+making PlanetMath/Noosphere as a whole better support curricula,
+programs of learning, and methodical, long-term, topic-driven learning in general.  These things need
+not be formal, but they do require more organization be provided than a simple "bag of encyclopedia entries"
+architecture.
+
+***  Quality Control Features === 
+
+Quality control features are improvements which raise the quality of the collection content 
+in general.  This indirectly fosters pedagogy, because higher-quality intellectual resources
+are more comprehensible and more useful.  It also plays a role in building community, as people
+will come back to high-quality resources.  Content of high quality builds name recognition and 
+makes a digital library a "first stop" and even "one-stop" location for meeting information,
+and educational, needs.
+
+***  Content Sharing Features
+
+The ability to share content created on a Noosphere system makes that content more widely available,
+extending the educational impact farther than if users had to visit the originating site to view it.  
+In addition, backlinks to the originating site draws interested parties into that community. 
+
+In essence, content should be "syndicated" as far as is appropriate and economical.  Due to the 
+digital and networked nature of the internet, this is generally a very cheap continuing operation.   
+Technologies like Open Archives and RSS have demonstrated this.  
+
+The prospect of multiple Noosphere-based "Planets" that have at least /some/ content overlap also
+raises some questions.  Can these planets more meaningfully share content than generic systems can
+(as with RSS and OAI)?  What can be done to address the changing nature of the collection at either
+end of every content-sharing dyad?  In general, the question of addressing content sharing and syndication
+between /productive/ digital libraries has been completely unaddressed.  However, it is a challenge
+we cannot ignore.
+
+**  Background
+
+PlanetMath is a virtual community which has as its                                                         
+core activity the collaborative production of a mathematics knowledge                                                         
+base (generically called the "encyclopedia").  In a little over three and
+a half years, over four thousand entries have been developed in this knowledge
+base, by hundreds of volunteers.   The project is currently a completely 
+un-funded grassroots effort (though some facilities support has been donated).
+
+Free culture (or perhaps more appropriately, "un-free culture") issues                                                                                                                               
+go back to the very genesis of PlanetMath.                                                       
+The idea for having an online mathematics reference resource was not the original
+concept of the founders of PlanetMath (Aaron Krowne and Nathan Egge); the idea came from a                                                          
+then (ca. 1999) extant resource called "MathWorld", a web-based reference
+site create by UVA professor Eric Weisstein.  MathWorld later moved later moved to Wolfram                                                         
+Research, Inc. (and Weisstein along with it).                                                                                              
+                                                                                                                              
+Weisstein had struck a deal with CRC press to have MathWorld published in                                                          
+book form, as the "CRC Concise Encyclopedia of Mathematics".  It sold                                                         
+well.  But amazingly, in 2000, CRC sued Weisstein because it had decided that                                                      
+the web version of the information was a threat to sales of the book.                                                         
+All Eric had was a "verbal agreement" that the web version would be                                                           
+allowed to stand.  So the web site went down, and learners lost a valuable,
+free educational resource.                                                                              
+                                                                                                                              
+This is when we decided to create a replacement for it.  To                                                        
+rapidly and inexpensively build up content, we needed to make the                                                             
+replacement site collaborative.  We also wanted to ensure no one could co-opt                                                      
+the work as CRC did to MathWorld, so we required that all contributed content be
+licensed under the GNU Free Documentation License.  We named the site "PlanetMath", 
+as an homage to MathWorld and Weisstein.                                                                                      
+                             
+PlanetMath is essentially the /free culture/ version of MathWorld.  While MathWorld
+has long since returned to the web, PlanetMath's different nature has resulted 
+in a vibrant community of learning growing up around the web site.  Not only only have
+people benefited from PlanetMath as passive consumers of the knowledge to be found
+there, but hundreds if not thousands have grown by helping to actually shape the 
+knowledge base of PlanetMath.   This is the value that free culture resources
+uniquely add.
+
+Soon after the creation of PlanetMath, the software supporting the system was 
+given its own identity as "Noosphere", made into a separate project, and released
+as free software.  Not only did this create the possibility of the underlying software system
+of PlanetMath improving through the same CBPP dynamics that were generating the mathematical
+content, but it opened the door to the re-deployment of Noosphere over and over again
+for other mathematical sciences subject domains, allowing others to create their own
+collaborative knowledge communities.
+
+**  Connections to Past and Current NSF Projects
+
+PlanetMath has been a part of the NSF NSDL programme since 2002 as a contributing member 
+collection.  To this day the NSDL carries PlanetMath content, and regularly refreshes its
+PlanetMath "holdings" (http://www.nsdl.org/).
+
+Also since 2002, PlanetMath has been sharing its Computer Science-related entries with 
+CITIDEL, the Computing and Information Technology Interactive Digital Educational Library (http://www.citidel.org/).  
+This effort, supported by the CITIDEL NSDL grant, was done by utilizing the Open Archives
+Protocol for Metadata Harvesting (OAI-PMH) and extending extant Open Archives software to support
+selection of collection portions by subject classification.
+
+Emory University (including Halbert and Krowne) has been working on an NSF and Digital Library Federation
+(DFL)-funded project called OCKHAM for the past year (http://www.ockham.org/).  The project, led by Oregon State University, has as its mission to create
+a peer-to-peer network of digital library services using generic web services interfaces and re-using
+application-specific protocols layered on top of these (for example, OAI-PMH).  In essence, the goal is to
+do for all present and future digital library services what OAI-PMH has done for harvesting, with a
+capstone service integration layer to facilitate coordination and actual end use.  The activities of this project are 
+closely related to portions of the present proposal, in particular, those that have to do with wider dissemination
+of records and coordination of productive activities between separate sites and communities.
+
+(anything else?)
+
+**  Other Supporting Ongoing Efforts
+
+Emory is currently in the final quarter of a two-year, Mellon Foundation-funded project called MetaCombine (http://www.metacombine.org/).
+The broad goal of this project is to develop methods and systems to more meaningfully integrate digital
+library resources and services.  Similar to OCKHAM, a third of this project is to develop  semantic
+clustering services for a federated digital library services framework.  In accordance with this,
+MetaCombine semantic clustering services (such as classification and text record clustering) are being 
+created for the OCKHAM framework.  
+
+Emory, in partnership with Virginia Tech is also beginning an IMLS-funded effort called "Study of User Quality
+Metrics for Metasearch Retrieval Ranking".  This effort is investigating how users need, and intuitively
+expect, digital library retrieval results to be organized.  An emphasis will be on how various latent and
+explicit attributes of metadata bear on notions of quality, which in turn effect the presentation of 
+information.  Also as part of the project, we will be developing a theoretical model for retrieval results
+presentation (including ranking), and developing a prototype retrieval system that implements the model.
+This study will be very valuable in determining what attributes of digital library resources communicate
+notions of quality to end users, as well as determining how to organize the resources based on these notions.
+
+**  Plan of Work
+
+In this section we discuss specific work items for this grant, which address the four categories
+of improvements mentioned previously.   We give some ideas for starting points of technical 
+directions, which will have to be further investigated once the project activities begin.  
+
+***  Integrating Feedback for Quality Control
+
+It would be nice to have some way to integrate feedback (for example, through ratings) to help
+assist in controlling the quality of entries.  Aggregated, derived, or inferred metadata about 
+quality can be used not only for filtering, but to put pressure on content creators and other 
+contributors to improve where quality is lacking and direct their attention where it is most 
+needed.
+
+Candidates for solutions here:
+
+ * explicit ratings and collaborative filtering
+ * "card-based" system
+ * reject rejections etc. and track of level of controversy
+
+(cite some things on CF)
+
+***  Strengthening of Reputations
+
+Binding of creative activities to reputations creates an incentive to meet higher quality standards and 
+act with a greater sense of social responsibility.  
+While PlanetMath currently has scores and user identities (full anonymity is not allowed), the reputation
+architecture could be improved.
+
+A few things could be done for this:
+
+ * start allowing, facilitating, and encouraging, the use of real-world identities.   
+ * replace the scoring system with something that integrates feedback about artifact quality.
+
+(cite some things on reputation systems, incl. kelly/sung/farnham paper)
+
+***  Improved Editorial Features
+
+I.e. editorial discussion areas, the ability for owners to move messages to more appropriate areas,
+change them from one type to another (i.e. message to correction, message to request).  More fully
+distribute the requests management system.
+
+(point out how other collaborative systems, such as mediawiki or scoop do some of this)
+
+***  Improved Deployability of Noosphere
+
+the crux is that Noosphere can spread much further than just one site and one subject domain
+(mathematics) if it is made easy for others to deploy.  
+
+talk about packaging it for easy installation, making it easy to configure and customize,
+cleaning up the code and organization to foster this.
+
+We should test the improved deployability on PlanetPhysics and PlanetComputing as part of the grant.
+
+***  Improvements to Educational Metadata and Organization
+
+support of standard learning object metadata fields, such as educational level, difficulty, time
+to learn, and intended audience (teacher, student, practitioner) would help a lot.  if these fields
+were connected up to the browsing system and searching system with filtering, a lot of time could be saved 
+for learners.  profiles could be saved for each user which automate the filtering.
+
+in addition, while the MSC-based subject organization is comprehensive and great for researchers, it is 
+too advanced and daunting for students and not quite what is needed for teachers.  other subject based
+organizations should be produced and mapped in, if possible (cite akrowne work on multischeming).
+
+content-based filtering should be attached to notification, to create "filtering and routing" services
+that forward new content and activity in particular subject areas to interested parties.
+
+***  Improvements to Content-Sharing Framework
+
+describe current system: OAI, one-way
+
+maybe talk about WP/PM exchange effort, which is being manually coordinated, and is one-way
+
+talk about problem of synchronizing overlapping portions of "planet" sites
+
+talk about potential bi-di framework
+
+***  General Community Support Improvements
+
+Much could be done to strengthen the community supported by Noosphere.  Some examples 
+are:
+
+ * better development of forums to reflect interests and subcommunities.   could track curricula/subject
+hierarchies, education levels, audiences, etc.
+ * improvement of communication facilities through integration of web site interaction with email.
+ * ... ?
+
+***  User Studies
+
+Below are examples of some questions we expect to try to answer with the user study efforts, phrased
+as direct questions to users:
+
+ * What subcommunity are you a part of? (student at various levels, researcher, industry worker, casual, etc.)
+ * How long have you been using PlanetMath?
+ * Is most of your use direct, or indirect (i.e., through web search results)?
+ * Do you have a PlanetMath account?
+ * Why did you create an account?
+ * Do you post in the forums (and how frequently)?
+ * Do you create entries? (and how frequently)?
+ * Do you file corrections? (and how frequently)?
+ * Do you feel the web site is organized well? What improvements would you make?
+ * How high would you rate the quality of the mathematical content?
+ * How high would you rate the coverage of the collection?
+ * How high would you rate the expertise of the contributing users?
+ * What types of content would you like to see more of: (figures, movies/interactive applets, examples, problems and solutions, proofs, biographies, introductions/broad overviews) ?
+ * Would you say you've learned something from PlanetMath?  If so, how much?
+ * What do you feel is the top thing that should be done to make the site more educational?
+ * What is the top feature you would add?
+ * What is the top feature you would remove?
+
+This is by no means a comprehensive list. 
+
+The user study may have many components, for example, a survey-style study, an in-person
+(or other synchronous, such as telephone-based) one-on-one interview study, and perhaps
+a focus-group style study.
+
+Certainly, a survey should be a component of any user study programme, as it has the potential
+to reach the greatest fraction of the user community.  However, serious planning will have to be done to
+determine how to execute the study.  The PlanetMath web site is of course a natural point of entry to
+interact with the user community, so it  is likely that doing an online, web-based, asynchronous version 
+of the survey will make the most sense.  However, it will have to be determined how to get users to do the
+work of going through the study, without essentially having to pay them all for their time.  Some incentive
+will need to be given.  There is also the issue of notifying the user of the survey and describing it to 
+them without being too overbearing and damaging use of the web site.
+
+**  Participants
+
+Here we should list institutions and the individuals at them who will be involved in managing the 
+project (leaving out ad hoc hires for actual implementation).
+
+ * Martin Halbert (PI, Emory)
+ * Aaron Krowne (co-PI, technical lead, Emory/PlanetMath.org, Ltd.)
+ * /Who else can we get?? I we really should have a domestic, PhD'd lead PI! Help!/
+
+**  Budget
+
+We'll need money for 
+
+ * core development on plan-of-work items
+ * research
+ * project management
+ * travel and costs related to dissemination of results
+ * conducting user studies
+ * some maintenance funding and funding for improvements of system reliability
+
+Need estimates for the cost of each of these!
+
+**  Bibliography
+
+Research papers and articles describing methods we may draw on in the course of
+this grant:
+
+/(huge list under development... but please post candidates here)/
+
+**  Appendices
+
+***  Papers
+
+Papers which support the proposal, especially those that refer directly to the 
+project:
+
+ * rmilson's paper on Noosphere as an educational tool (awaiting content)
+ * my d-lib.org paper on CBPP DLs (http://www.dlib.org/dlib/october03/krowne/10krowne.html)
+ * my paper on the authority models Noosphere study (http://br.endernet.org/~akrowne/my_papers/authority_models/authority_models.pdf)
+ * joe's scholium paper? (may go in bib. instead) (awaiting content)
+ * ?
+
+***  Letters of Support
+
+Letters of support from qualified/prominent/influential/famous people who advocate
+the proposed activities but aren't participants:
+
+ * ed fox?
+ * robert milson?
+ * lawrence lessig?
+ * Ross Moore (esp. due to ways this work supports the FEM)
+ * after there is a more complete draft, we should put a call-for-letters out on PM, and
+perhaps other places.
+
+*  Discussion of This Draft
+
+Mainly, see [[file:Discussion of Improving Pedagogy In Math and Science Virtual Learning Communities|this page.org][Discussion of Improving Pedagogy In Math and Science Virtual Learning Communities|this page]].
+
+See also [[file:Comments on free culture version of NSF ALT proposal.org][Comments on free culture version of NSF ALT proposal]].
+
+Question: Is this page still current in any way?  What is the structure of the
+final document?  If this page is still current, then I think it will be
+essential to make changes in the Discussion of Need section as I already
+mentioned.  (This effort seems to be a case where [[file:the way of the asteroid.org][the way of the asteroid]] or
+something like it could be used to advantage - I don't know who is doing what
+anymore, and this makes it harder for me to usefully contribute.)
+--[[file:jcorneli.org][jcorneli]] Mon May 23 01:58:45 2005 UTC
+
+Its mostly me and DTatar, with eaf weighing in as he has a chance to (he's mostly 
+working on getting letters of support).  This page of course still captures the spirit
+of the grant, and many portions of it have gone into the next stage of drafting. 
+However, the most current draft is still in a Word doc and not yet on the Wiki.  We'll let
+you know when and if we can handle (minor) commentary, as there probably won't be time for 
+major revisions. --[[file:akrowne.org][akrowne]] Mon May 23 03:33:17 UTC 2005
+
+I don't think I'm the best person to ask for minor comments,
+I'm more of a gouache person myself.  I can try.
+I guess I'll leave deconstructing and reconstructing
+to anyone who wished to do it at a later date for
+for fun or edification. --[[file:jcorneli.org][jcorneli]] Mon May 23 04:33:15 2005 UTC

@@ -1,0 +1,65 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+ 1. Why would this research be funded when wikopedia and other efforts are already up and running, supported, and don't require federal funds?
+ 1. Why should there be a number of planet# systems when a single broad service like wikopedia can cover everything? Encyclopedia are generally broad rather than narrow.  Especially for K-12, teachers like fewer rather than more places to look.  Same works for google - people like one service rather than a number.  This is a motivation for metasearch - would there be a planet-wide front end?
+ 1. The research listed above is technical, while NSDL funds generally go to help apply proven technology to diverse communities.  If the proposal focuses on applying proven technology, we'd have to have a list of the communities that would be served, letters of support from key people in each such field, and argumentation that it would become adopted and widely used.
+ 1. NSDL reviews often focus on quality. We'd have to argue and prove that the content would be of high quality.  We might have to have a review scheme added in to ensure this.
+ 1. Who would do what? How much of the budget would go to development, how much to PR, how much to deployment? What is the detailed plan for sustainability? -- [[file:eaf.org][eaf]] Sat Apr 2 23:03:45 EST 2005
+
+
+: You might be interested in my "Comparison to an existing Oddwiki feature"
+section of the [[file:PlanetMath engine interbred with wikibooks idea.org][PlanetMath engine interbred with wikibooks idea]] page.  In
+that section, I describe an idea for separating small noosphere sub-instances.
+No reason that - if this idea worked - it couldn't be used to incorporate all
+the planets within one site.  (More like Yahoo! than Google, I think, but
+sorta like what you were getting at with your second point above.) --[[file:jcorneli.org][jcorneli]] Sun Apr 03 07:12:35 2005 UTC
+
+
+----
+
+Dear eaf, please remember not only to sign you edits, but fill in the Username
+field (see [[file:Policy.org][Policy]]).  You should only have to do this once, if you have
+cookies enabled!  It will help everyone keep track of what's going on... 
+Thanks, --[[file:jcorneli.org][jcorneli]] Sun Apr 03 07:06:42 2005 UTC
+
+----
+
+Ed, thanks for the great "Devil's advocate" points.  Here are some reponses in addition to Joe's:
+
+ 1. Wikipedia benefits from being a general-purpose resource.  This gives it a "fundraising economy of scale" 
+that more specialized, academically-tuned resources like PlanetMath do not have (though perhaps may
+eventually attain!)  While it is great that Wikipedia is self-funding, I think few people would 
+advocate Wikipedia as the only type of educational digital library that there should be.  In fact,
+there is evidence that Wikipedia cannot and would not subsume PlanetMath, within the current effort 
+to "port" PlanetMath to Wikipedia.  As of my last check of the statistics of this effort, only about 25%
+of PlanetMath entries were being "ingested" into Wikipedia in some form.  So while there is overlap, there 
+is plenty of non-overlap and mutual exclusivity.
+ 1. The previous answer partly replies to this point.  However I would also like to say that "encyclopedia" is
+really a best-fit term for something that is completely new and perhaps calls for some other neologism.  I 
+do not think PlanetMath is really an encyclopedia.  I would consider it a knowledge resource that subsumes 
+much of the functionality of encyclopedias, but goes beyond.   And I think this going-beyond has the potential
+to greatly increase educational impact, as well as already demonstrates this to some extent.  
+To address the "scattering" point about many planet* sites, I believe this decentralization is an important
+sustainability feature.  This lets individual communities take care of stewardship of their own knowledge
+resources.  Of course the down side is integration, but I think there are technical fixes to this, including
+sharing content with the NSDL itself.  To go beyond, inter-Noosphere content sharing, including handling 
+updates, would be great to investigate as part of NSDL's interest in sustainability.  
+ 1. I think the technical work outlined above has immediate, and strong social ramifications.  I think it
+would be worthwhile to secure letters as you suggest, though I probably lack the skills and connections to
+do a good job of this, at least by myself.
+ 1. I think providing high-quality resources in a sustainable fashion is exactly the goal we are after, and
+something the development ideas above foster.  I think ratings and reputation systems, tied together with
+filtering and personalization, would better help steer users to high-quality resources, without incurring 
+administrative effort that would undermine sustainability.  There are a number of variations we can try for 
+quality control systems, which do not abandon the nature of PlanetMath-like projects as something anyone
+can contribute to.
+ 1. I don't have the answer to most of these questions.  I would likely do some R&D and much of the management
+of these efforts (at least, I'm willing to, and I think well-situated).  As for sustainability, I think the 
+technical efforts all have sustainability built-in, as we would just be producing software systems on a 
+one-time basis, but releasing them as open source so they can be modified and adapted by the community later.
+No part of the project would be to pour resources into creating content; we want to actually build
+and enhance software systems which do this /for us/.
+
+--[[file:akrowne.org][akrowne]] Thu Apr 7 19:43:35 UTC 2005

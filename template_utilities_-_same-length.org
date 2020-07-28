@@ -1,0 +1,31 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /same-length (x y)/
+
+ *Input:* Two s-expressions /x/ and /y/
+
+ *Output:* /t/ or *nil/
+
+ *Description:* If /x/ and /y/ are two lists of the same length, then /same-length/ returns /t/.  Otherwise (if one of them is not a list or they have different lengths, /same-length/ returns /nil/.
+
+ *Listing:*
+
+ (defun same-length (x y)
+   (cond ((atom x) nil)
+         ((atom y) nil)
+         ((null x) (null y))
+         ((null y) (null x))
+         (t (same-length (cdr x) (cdr y)))))
+
+ *Discussion:*  First, we check that neither /x/ nor /y/ are atoms.  Next we check if one of them is empty.  If so, we return /t/ if the other is empty, otherwise /nil/.  Finally, if they are both lists, we remove the first item from both lists and call ourselves recursively with the remainders of /x/ and /y/ since two non-empty lists have the same length if and only if the lists obtained by taking away an element from each list also have the same length.
+
+ *Examples:*
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

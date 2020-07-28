@@ -1,0 +1,598 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to run lisp programs stored as scholium-based documents, we will
+want to make temporary function bindings.  To do this in a double namespace
+lisp (specifically emacs lisp), we will make use of "flet", which is analogous 
+to "let" except that it works on function values of symbols rather than on their 
+variable values.  Since this is not a standard form which comes with the 
+distribution, we will have to roll our own.  This page documents the development
+of this utility.
+
+** Version 0.0
+
+This is my first crack at writing this utility.  It is limited to binding
+a single name and it has the serious shortcoming that it croaks if the
+symbol does not already have a binding.  However, since the code is 
+rather concise, it is a good starting point for explaining the essential
+idea underlying the program.  Once the workings of this program are
+understood, it is easy to figure out the fullblown version because
+further progress consists in tweaking the code so as to fix the bug
+and allow multiple assignments.
+
+The usage of this form is as follows:
+
+ (flet name val expr)
+
+Here, name is the symbol whose function value is to be bound and val
+is the value which it is to temporarily assume.  It evaluates the
+expression expr with name assuming val, returns the result of this
+evaluation, and then resets name to whatever function value it had
+before the call to flet.
+
+Let us illustrate this with an example.  As a preliminary step,
+we assign function values to "foo" and "goo"
+
+ (defun foo (x) (+ x 15))
+ => foo
+
+ (defun goo (x) (* x 2))
+ => goo
+
+Then we obtain the following:
+
+ (foo 2)
+ => 17
+
+ (goo 2)
+ => 4
+
+Now let us revaluate the former statement within a flet environment
+which temporarily sets "foo" to point at goo:
+
+ (flet foo (symbol-function 'goo) (foo 2))
+ => 4
+
+This gave us the same result as directly evaluating "(goo 2)" above.
+Suppose we again revaluate "(foo 2)":
+
+ (foo 2)
+ => 17
+
+We get the same value as previously, showing that flet has
+restored the original function value of the symbol "foo".
+
+We can also use flet with anonymous functions, as the
+next example shows.
+ 
+ (flet foo '(lambda (x) (- x 1)) (foo 2))
+ => 1
+
+Looking under the hood, we see that flet is a macro defined as follows:
+
+ (defmacro flet (name val expr)
+   `((lambda (a b c)
+       (fset ',name a)
+       c)
+     (symbol-function ',name)
+     (fset ',name ,val)
+     ,expr))
+ => flet
+
+To understand how this accomplishes its job, let us see how the macro
+would expand in the first example above.
+
+ (macroexpand '(flet foo (symbol-function 'goo) (foo 2)))
+ => 
+ ((lambda (a b c) 
+    (fset (quote foo) a) 
+    c) 
+  (symbol-function (quote foo)) 
+  (fset (quote foo) (symbol-function (quote goo))) 
+  (foo 2))
+ => 4
+ (foo 2)
+ => 17
+
+The reason that this works is based on the way that eval goes
+about digesting lambda expressions.  Given an expression
+"((lambda (a b c) (W a) c) X Y Z)", the subexpressions will
+be evaluated in the order X Y Z W.  This is important to
+note when figuring out side effects, such as setting and resetting
+the function value of "foo" --- the evaluation of each
+subexpression will occur in a context determined by the side 
+effects of the previously evaluated subexpressions.  Also.
+only W knows about the variables "a", "b", "c" bound by the
+lambda.  Taking these considerations into account, we see
+that evaluating the expansion of the macro above will
+implement the following procedure:
+
+ 1. Store the current value of "foo" in the local variable "a"
+for safe keeping
+ 1. Set "foo" to its temporary value (in this case, goo).
+ 1. Evaluate the expression (in this case "(foo 2)) and
+store the result in the temporary variable "c".
+ 1. Reset "foo" to its old value.
+ 1. Return the value gotten by evaluating the expression (in 
+this case, 17).
+
+This is, of course, exactly the right algorithm for making
+a temporary binding of a function symbol.
+
+*** Discussion
+
+Here is a copy of some correspondence on this topic:
+
+Sounds good. In the meanwhile, I was occupied with
+(among other things) a programming project. It is
+coming to a wiki near you when the stupid file lock
+finally lets me through; until then, I have attached
+some sort of preview. I am somewhat proud of the way
+I hacked the order of evaluation in lambda expressions
+to set and reset the function value of a symbol.
+
+--[[file:rspuzio.org][rspuzio]] e-mail dated Wed, 5 Dec 2007
+
+Your `flet' is an interesting example of a classic macro: in order to
+set up the lambda form you want to evaluate, you need to modify part
+of its code based on some data. You also need to modify the data to
+get it to feed into the lambda properly. Finally, you just evaluate a
+given expression subject to these modifications.
+
+On the down-side, it is a little confusing that you never use the
+argument `b' in your lambda form. It is kind of clever to be able to
+use lambda arguments to produce what we might call a preprocessor
+condition, but to my view it produces obfuscated code. Presumably
+there is a clearer way to accomplish that.
+
+In any event, the macro is complicated enough to illustrate a number
+of the properties of scholiumific programs.
+
+--[[file:jcorneli.org][jcorneli]] e-mail dated Wed, 5 Dec 2007
+
+> On the down-side, it is a little confusing that you never use the
+> argument `b' in your lambda form. It is kind of clever to be able
+> to use lambda arguments to produce what we might call a
+> preprocessor condition, but to my view it produces obfuscated code.
+
+From my point of view, this was actually illuminating rather than
+obscure --- it was the heart of the insight which led me to
+write this code. Namely, I was thinking of how to evaluate an
+expression, then set a variable, but return the value of the
+expression without having to make use of a global variable.
+This sounded like a job for a K-combinator:
+
+ (K (foo 2)
+ (fset 'foo old-foo-value))
+
+In lambda calculus K = (lambda (a b) a), so that's where the
+unused "b" comes from. Now, what I wrote above is a classic
+case of the Czech proverb about the devil that was kicked out
+the door coming back through the window --- instead of needing
+a global variable to store the value of the evaluating the
+expression, a global variable is needed to store the old
+value of "foo". This is a step backwards because it called
+for a K combinator in addition to a global variable.
+
+In accordance with a famous Russian quote, however, this
+step backwards was followed by two steps forwards. Thinking
+of combinators and lambda expressions suggested the way out:
+store the old value of "foo" inside a lambda variable. This
+would mean having to set "foo" from within the lambda expression,
+but that was no problem because expressions inside of lambda
+expressions only get evaluated after evaluating the arguments to
+the lambda expression and "foo" was to be reset after computing
+"(foo 2)". Once I realized this, the program pretty much
+wrote itself. Now, we needed to set "foo" to its temporary
+value before evaluating the expression "(foo 2)" which meant
+that this operation needed to be one outside the lambda expression.
+With K combinators already on my mind, the nearest solution
+at hand was to introduce an argument "b" whose value is not needed.
+
+Give how touchy the situation on PM is, I almost feel like I
+need to add a disclaimer, even though it is quite obvious that
+I don't need one when talking to you ;) The above is only
+meant as an account of how I wrote the program, not as some
+sort of argument why things have to be done as I did them.
+In particular, I think your point is well taken --- since most
+people are not thinking in terms of combinatory logic, the use
+of unused variables in lambda forms can be confusing. If you can
+think of a concise way of implementing the same preprocessor
+condition, I will gladly change this in future versions.
+
+--[[file:rspuzio.org][rspuzio]] e-mail dated Wed, 5 Dec 2007
+
+** Version 0.1
+
+In this version, we fix a serious shortcoming, namely what
+to do with undefined symbols.  Looking at the code above,
+trouble could arise if we would try to evaluate
+"(symbol-function (quote foo))" were "foo" not already
+defined.  Since there is no good reason why "foo" should
+already be defined since we are only going to use it as a
+temporary variable, we had better first check whether
+it is defined using "fboundp" and proceed accordingly.
+
+Hence, instead of "(symbol-function (quote foo))", we 
+could say
+
+ (if (fboundp (quote foo))
+     (symbol-function (quote foo))
+     nil)
+
+This way, if foo should not be bound, nothing bad happens ---
+we simply get "nil" as an indication that the symbol is
+unbound.  However, it is possible that the function value 
+of "foo"could be nil.  In that case, we would have an 
+ambiguity --- if the subroutine returns "nil" we don't 
+know whether that means "foo" was unbound or happened to
+be bound to "nil".  To patch this loophole, we will
+make sure that our subroutine returns a non-nil list
+by adding an extra "list" command:
+
+ (if (fboundp (quote foo))
+     (list (symbol-function (quote foo)))
+     nil)
+
+This way, we either get nil if "foo" is unbound or a 
+list whose one element is the old value of "foo" if
+"foo" is bound.  In particular, if "foo" is bound
+to "nil", we would get "(nil)" as a return value.
+
+We also need to change the code inside the lambda
+expression to reflect the improvement we made above.
+It needs to know that "nil" means that "foo" was
+unbound and therefore, that restoring the orginial 
+situation means unbinding "foo" and that, if "foo"
+was originally bound, the original value has been 
+packaged in a pair of parentheses for safekeeping,
+so it needs to be unwrapped before being placed back
+in the function value of "foo".  A code snippet
+which does this runs as follows:
+
+ (if a
+     (fset (quote foo) (car a))
+     (fmakunbound foo))
+
+Making these two changes in our code gives us the 
+following:
+
+ ((lambda (a b c) 
+    (if a (fset 'foo (car a))
+      (fmakunbound 'foo))
+    c)
+  (if (fboundp 'foo)
+      (list (symbol-function 'foo))
+    nil)
+  (fset 'foo (symbol-function 'goo))
+  (foo 2))
+
+This can be generated using the following macro:
+
+ (defmacro flet (name val expr)
+   `((lambda (a b c)
+       (if a (fset ',name (car a))
+ 	(fmakunbound ',name))
+       c)
+     (if (fboundp ',name)
+ 	(list (symbol-function ',name))
+       nil)
+     (fset ',name ,val)
+     ,expr))
+
+** Version 0.2
+
+In this version, we make a small tweak which only
+how things are done, but not what is done.  Instead  
+of checking whether the symbol is bound or unbound
+after expansion when we run the generated code, we 
+will check while generating the code and generate
+code which is specific to the case of bound or
+unbound variable.  Since evaluation of a macro 
+takes place immediately after generation, this makes
+no difference --- since nothing in the definition of
+the macro sets or unsets symbols, a symbol will be
+bound at evaluation time if and only if it was bound
+at expansion time.
+
+To do this we will basically move the "fboundp" out 
+of the quasi-quotation marks by unquoting.  While we
+are at it, we no longer will need to worry about 
+carrying information about whether the symbol is 
+bound or unbound in "a" since we will handle these 
+cases explicitly ahead of time.  With this proviso,
+we see that we can replace the text
+
+     (if (fboundp ',name)
+ 	(list (symbol-function ',name))
+       nil)
+
+within the quasiquote by
+
+  ,(if (fboundp name)
+       `(symbol-function ',name)
+       'unbound)
+
+This will either put "(symbol-function 'foo)" or
+"unbound" in the code to be evaluated as the first
+argument of the lambda expression.  It really doesn't
+matter what it outputs when the symbol is unbound
+because the variable "a" will not be used in that
+case.  This observation leads naturally to the next
+order of business, rewriting the code in the 
+lambda expression.  Instead of
+
+       (if a (fset ',name (car a))
+ 	(fmakunbound ',name))
+
+within the quasiquote, we will have
+
+  ,(if (fboundp name)
+       `(fset ',name a)
+       `(fmakunbound ',name))
+       
+
+Making these two changes gives us the following
+definition for flet:
+
+ (defmacro flet (name val expr)
+   `((lambda (a b c)
+       ,(if (fboundp name)
+ 	   `(fset ',name a)
+ 	 `(fmakunbound ',name))
+       c)
+     ,(if (fboundp name)
+ 	`(symbol-function ',name)
+       'unbound)
+     (fset ',name ,val)
+     ,expr))
+
+We may illustrate how this works with the following two
+examples.  Suppose that "foo" and "goo" have been defined
+as above but that "hoo" is undefined as a function.  We
+will evaluate "(goo 2)" two different ways using flet".
+First, we use "foo" as an alias name for "goo":
+
+ (macroexpand '(flet foo (symbol-function 'goo) (foo 2)))
+ =>
+ ((lambda (a b c) 
+    (fset (quote foo) a) 
+    c) 
+  (symbol-function (quote foo)) 
+  (fset (quote foo) (symbol-function (quote goo))) 
+  (foo 2))
+ =>
+ 4
+
+In this case, expanding the macro gives us code which says
+to store the old value of "foo" in the variable "a" and
+to restore it after evaluating "(foo 2)" with "foo"
+impersonating "goo".  Second, we use "hoo" as an alias name 
+for "goo":
+
+ (macroexpand '(flet hoo (symbol-function 'goo) (hoo 2)))
+ =>
+ ((lambda (a b c) 
+    (fmakunbound (quote hoo)) 
+    c) 
+  unbound 
+  (fset (quote hoo) (symbol-function (quote goo))) 
+  (hoo 2))
+ =>
+ 4
+
+In this case, expanding the macro gives us code which says
+to unbind "hoo" after using it in the temporary role. 
+
+** Version 1.0
+
+As it stands, flet is only able to deal with one
+symbol.  While it is possible to deal with making
+temporary function bindings for /n/ symbols by
+invoking flet /n/ times, it would be nice to
+bind them all at once, much as one can do with let.
+We shall add such functionality in this version.
+
+To do this, we will make use of mapping functions 
+to go through the list and repeat operations for all 
+the function symbols which need to be dealt with.
+Also, instead of the two arguments name and val
+there will be a single argument bindings of the form
+
+ ( (name1 val1) (name2 val2) ... )
+
+Looking at the code, there are three places where
+such changes need to be made.
+
+First, there is the place where we store away 
+whatever function bindings our symbols may have.
+Instead of storing away the value of a single
+function (or nil if it is unbound) we will want 
+to make a list of such values.  This, in turn,
+means that a piece of the macro will 
+generate code to produces such a list.  We 
+can do this using mapcar:
+
+ (cons 'list
+       (mapcar 
+        '(lambda (x)
+	   (if (fboundp (car x))
+	       `(list ',(car x) (list (symbol-function ',(car x))))
+	     `(list ',(car x) nil)))
+        bindings))
+
+For later convenience, the name of the function
+is bundled along with its value when it is defined.
+For instance, if "bindings" has the value
+
+ ((foo (symbol-function 'car))
+  (goo (symbol-function 'cdr))) ,
+
+and "foo" is already bound, but "goo" is not,
+then the above expression evaluates to
+
+ (list (list 
+        (quote foo) 
+        (list 
+	 (symbol-function (quote foo)))) 
+       (list 
+        (quote yoo) 
+        nil)) .
+
+Suppose, further, that "foo" happens to be the
+increment-by-15 function as above,  Then the
+snatch of code above evaluates to the following:
+
+ ((foo ((lambda (x) (+ x 15)))) 
+  (yoo nil))
+
+Second, there is the place where we make the 
+temporary bindings.  We can make a list of
+commands to do this as follows:
+
+ (mapcar 
+  '(lambda (x)
+    (list 'fset (list 'quote (car x)) (cadr x)))
+  bindings)
+
+In order to run these in sequence, we will add
+a "prog" to the front of the list:
+
+ (cons 'prog1
+  (mapcar 
+   '(lambda (x)
+     (list 'fset (list 'quote (car x)) (cadr x)))
+   bindings))
+
+While we are at it, we can stick the code from 
+the previous paragraph inbetween the prog and the
+list of commands.  Since the prog is a prog1,
+it will return the list generated by the first
+command when it is done evaluating all the commands.
+In other words, the prog block will fset all the
+symbols to point at their temporary values and
+return a list of their old values.  Doing this
+will also allow us to remove the contentious 
+variable in the lambda expression whose value
+was never used.
+
+ (cons 'prog1
+       (cons
+        (cons 'list
+	      (mapcar 
+	       '(lambda (x)
+		  (if (fboundp (car x))
+		      `(list ',(car x) (list (symbol-function ',(car x))))
+		    `(list ',(car x) nil)))
+	       bindings))
+        (mapcar
+	 (lambda (x)
+	   (list 'fset (list 'quote (car x)) (cadr x)))
+	 bindings)))
+
+Since this is a pretty substantial hunk of code
+by itself, it might be good to illustrate how
+it works with an example.  Suppose that, as before,
+"foo" is defined but "goo" is not and that
+"bindings" has the following value:
+
+ ((foo (symbol-function 'car))
+  (goo (symbol-function 'cdr))) 
+
+Then the result of running thee above code block
+is the following:
+
+ (prog1 
+     (list (list 
+	    (quote foo) 
+	    (list 
+	     (symbol-function (quote foo)))) 
+	   (list (quote yoo) nil)) 
+   (fset foo (symbol-function (quote car))) 
+   (fset yoo (symbol-function (quote cdr))))
+
+This is a prog block with three commands.  The
+first command was considered earlier and produced
+a list of the current values of the symbols "foo"
+and "goo".  The second and third commands point
+these symbols at their temporary values.
+
+Third, there is the place where we restore the 
+original values of the symbols.  Here, we will
+have to unpack the list of original values of
+symbols which we made earlier and restore their
+original values.  This is an easy job for mapcar:
+
+ (mapcar
+  (lambda (x)
+    (if (cdr x) 
+        (flet (car x) (caadr x))
+      (makunbound (car x))))
+  a)
+
+This is just like our previous invocations of
+mapcar, only now the mapping will happen when 
+the code generated by the macro is run, so the
+whole snippet above will be enclosed in quote 
+marks in the body of the macro.
+
+Now it only remains to collect the pieces into
+the new definition of flet:
+
+ (defmacro flet (bindings expression)
+   `((lambda (a b)
+       (mapcar
+        (lambda (x)
+	  (if (cdr x) 
+	      (fset (car x) (caadr x))
+	    (makunbound (car x))))
+        a)
+       b)
+     ,(cons 'prog1
+	   (cons
+	    (cons 'list
+		  (mapcar 
+		   '(lambda (x)
+		      (if (fboundp (car x))
+			  `(list ',(car x) (list (symbol-function ',(car x))))
+		        `(list ',(car x) nil)))
+		   bindings))
+	    (mapcar
+	     (lambda (x)
+	       (list 'fset (list 'quote (car x)) (cadr x)))
+	     bindings)))
+     ,expression))
+
+Note that the lambda expression now only has two
+arguments because the temporary values have been
+assigned in the same prog block which saves the
+old values in a list.
+
+To see this new macro at work, we will apply it
+to an example which we considered earlier:
+
+ (macroexpand '(flet ((foo (symbol-function 'goo))) (foo 2)))
+ =>
+ ((lambda (a b) 
+    (mapcar (lambda (x) 
+	      (if (cdr x) 
+		  (fset (car x) (caadr x)) 
+	        (makunbound (car x)))) 
+	     a) 
+    b) 
+  (prog1 
+      (list 
+       (list 
+        (quote foo) 
+        (list 
+	 (symbol-function (quote foo))))) 
+    (fset (quote foo) (symbol-function (quote goo)))) 
+  (foo 2))
+ =>
+ 4
+
+Back to [[file:A scholium-based programming model.org][A scholium-based programming model]]
+
+----
+
+I noticed this is in cl-... something in emacs, and also in the common lisp standard, FYI! --[[file:jcorneli.org][jcorneli]]

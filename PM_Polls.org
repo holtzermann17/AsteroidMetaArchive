@@ -1,0 +1,71 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Below are suggestions for poll questions on PM:
+
+*  I am a..
+ * Highschool student
+ * Undergraduate student
+ * Graduate student
+ * Work in the industry
+ * Researcher/Post-doc
+ * Professor
+ * Other
+
+How would I fit into this matrix?  I hold highschool and college diplomas,
+have been out of college for 4 years, spent some time in grad school,
+don't have a job doing math, do some research among other things?
+I guess "researcher" but that doesn't exactly sum up my interests or mathematical activities
+(e.g. I am also in some ways a student, and in some ways my own instructor).
+
+I think that rather than starting with the /poll questions/, which, as I've
+illustrated, might not have clear answers in every case, if we're
+going to design polls, we should start with the /scientific questions/
+that underly the poll.
+
+So, what are you interested in learning here, and why?
+
+--[[file:jcorneli.org][jcorneli]]
+
+I suggest adding "other" then (which could be further expanded on comments on the poll page). Any multiple option poll by its very nature leaves out some cases. That's what comments are for. I think the purpose is clear, to have an idea what the academic credentials are for people contributing to planetmath. --[[file:drini.org][drini]]
+
+I added "Other". However, everyone, feel free to add categories or rewrite. 
+As for motivation: Originally, I though this kind of information 
+would be useful if we want to prove that PM is a respectable resource. One way
+to do that is to put hard data on the table: N% of our visitors are math
+researchers. This will be be valuable data when applying for grants etc. In
+particular if we can show that N is growing. However, polls might not be the
+best way to do this. For this, a questionaire might be better. This will allow
+us to correlate answers. Polls are maybe more suitable as a method for opening up  
+discussions about more earthly issues. --[[file:matte.org][matte]]
+
+I agree.  If we're going to do some kind of study to prove something
+important, let's make sure the research methodology has been squared
+away before we start asking questions.  Any time "other" shows up
+(either explicitly or implicitly), that might be a bit of a red
+flag.  
+
+And just on principle, as a grad school dropout, I have to question
+the validity of the credentialization-implies-respectability paradigm!
+Also partly because I have no idea how to interpret it.  If we weight
+these categories 1, 2, ..., 7 and then find that we have an average
+score of 1.4, that doesn't mean PM is not respectable.--[[file:jcorneli.org][jcorneli]]
+: Sure, you may question the validity of the credentials-implies-respectability paradigm (which is a very good question by the way) but I believe the mathematical community as a whole does not question this validity, and mathematical sources are expected to be produced and reviewed by experts, and the only way the community has to check that somebody is an expert is by checking that the person has a PhD in math.--[[file:alozano.org][alozano]]
+
+Well in that case, we can shift the grant application and emphasize that PM is a 
+valuable resource for math students! I think a poll is a good way to check the
+waters before invoking a full questionaire. In any case I think
+it would be valuable to know who is using PM. This is also good to know
+when writing something. Who is going to read this? More generally, 
+if we view PM as a business, then we need to know who our customers are.
+And, if all our users are students. What can we do to attract more researchers? 
+How can we enlarge the user base? --[[file:matte.org][matte]]
+
+
+I don't say that the information gained in such a poll would be useless,
+however, if we're going to use it (which means offering some interpretation),
+we need to be ready to talk about the methodology and the interpretation
+in some scientifically/statistically intelligent way.
+
+Mainly what I'm suggesting is let's not post such a poll until we have
+this theory spelled out. --[[file:jcorneli.org][jcorneli]]

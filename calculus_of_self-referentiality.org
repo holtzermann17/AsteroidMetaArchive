@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Sometimes it is hard to know what /the point/ in some particular
+discourse (or experience) is.  Sometimes many arrows seem to be
+pointing at something -- but you don't know what it is, do you,
+Mr. Jones?
+
+Well, the calculus of self-referentiality can help you make sense of
+these complex and confusing situations, and, indeed can help you use
+them to your advantage.  You'll learn how to either come to the point
+quickly or avoid it gracefully (and still get somewhere).
+
+Briefly, here is how this calculus works in a simple case.  You think,
+you write, you read what you have written, and you react in writing.
+Then you think again, making some new or formalized connection between
+your previous reaction and previous thoughts.  You then write down
+what you thought, and continue.  In this continuing process, you are
+allowed to use earlier thoughts and reactions as well as the current
+ones.  But think /knitting with syllogisms/ and you won't be far of the
+mark.
+
+I've described here a "2-dimensional" version of the calculus, which
+is a form of 2-column bookkeeping for ideas.  The artifacts produced
+by this algorithm are  basic examples of
+"[[file:scholium system|scholium-based documents.org][scholium system|scholium-based documents]]".
+
+But there are higher-dimensional versions of this sort of thing.  For
+example, the processes that one goes through when updating a long
+paper resemble this model locally (original plus side-comments, call
+and response), but these local instances are strung together
+temporally, sometimes with loops, producing a complicated
+action-reaction set.  I don't have a full grasp of the details, but I
+would argue that following this sort of calculus is /how people get
+things done, in general/.  Big claim, I know.  While I'm not going to
+go into details right now, I might mention that I'm haven't come up
+with any counterexamples.
+
+Well, OK, I lied.  Here is a weak sort of counterexample: outside
+references.  In other words, sometimes self-reference isn't enough and
+you need to ask questions of someone else or do some other experiment
+to figure something out.  True, the results do get incorporated into
+your model somehow, first as gaps, and then maybe just as pointers
+(but also sometimes as de-referenced pointers).  This is strictly
+"second semester" stuff.
+
+When thinking about how to build a "mental map", the basic calculus is
+all you need.  You're less concerned with leaving things out (via
+outside references to points in /terra oublietta/ [cf. "forgetful
+functors"]) and more concerned with building up some kind of coherent
+presentation.
+
+--[[file:jcorneli.org][jcorneli]]

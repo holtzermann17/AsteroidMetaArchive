@@ -1,0 +1,73 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As per our conversation last night, I find the notion of tracks useful in thinking about our efforts. Since all these projects will be going on at the same time, looking at them sort of like different horses going to the finish line helps me to not lose sight of where all this is going and make sure that no project is lagging to far behind the pack --[[file:rspuzio.org][rspuzio]]
+
+ 1. Preparation for future work
+ 1. General theory of mathematical expressions
+ 1. Relational systems and inference operators
+ 1. Manifolds of theories
+ 1. Scholium system
+ 1. Proof checking
+ 1. Parsing
+
+I moved my original track-based view here because I find it useful for my thinking.
+While these cover the same ground as your goal tree, they present a different view ---
+think of it like two coordinatizations of the same manifold; you use the "subject"
+coordinate, but I use the "task" coordinate.  For me, a "track" is a relatively
+self-contained interdisciplinary subproject which may involve both research and 
+development components.  For instance, I would place simple net and musn alongside
+the theory of the scholium system because there is a lot of dependency between these
+items; developing theory and writing code will go on side-by-side and depend upon
+each other.  The parsing track (currently dormant) deals mainly with linguistic
+issues but also makes use of the mathematical theory developed in track one. 
+I also put in a zeroth order track for things like reading background material 
+for things like studying background material.
+
+The difference with these two views has a lot to do with our
+time-management systems.  Your goal tree fits well with your way of
+dividing the day into quarters devoted to the diffrent components.  My
+tracks fit with the way I first consider each track in isloation,
+break it up into a set of subtasks partially ordered by dependancy,
+then map these into the time axis in a way that respects dependency
+(the "propter hoc, ergo post hoc" order-preserving map) and then pace
+the different subprojects in a way that allows them to develop
+somewaht evenly and is consistent with the total amount of time
+allotted for HDM work.  --[[file:rspuzio.org][rspuzio]]
+
+Sounds good to me!  Plenty of room to view these things 1000s of
+different ways if we can come up with them and we find the useful.
+
+I do sort of wonder what goes into defining a "track", however.
+
+--[[file:jcorneli.org][jcorneli]]
+
+It's very simple.  For me, the fundamenal principle is that a if two
+tasks are in two different tracks, then I can pick either one to
+work on without worrying that I throw the other project off because 
+tasks in one track don't depend on tasks in the other track being done
+within the specific timeframe of the plan (say a year).
+--[[file:rspuzio.org][rspuzio]]
+
+Well, that's a good definition.  The way it relates to time-management
+and other aspects of project management and work flow is interesting.  I'm certainly able to
+approach the project from the point of view of one of these tracks, but
+it may actually be advantageous for one of us to work that way and the other
+to be the one who works on everything every day and somehow integrates
+the various different projects -- since their independence is only an
+approximation (e.g. by considering the one-year-out nature of the definition).
+
+This integrating role would make more sense (a) if there were more team members
+working on different tracks; (b) if the role of the integrator was clearer.
+As it is (i) I'd certainly be well-advised to put on the "track-worker"
+hat sometimes; (ii) I freqently have to wing it when integrating or connecting
+the different tracks or paths or what have you.
+
+One thing to bear in mind is the set of connections to "outside work",
+something I've been trying to maintain (but could do a significantly
+better job with, I'm sure, e.g. with a better database or network system
+than the one in my notebooks).  This is a way of identifying people
+who, even if they don't identify with the project at all, are in fact
+contributing to one or more of the development paths.
+
+Just some musings.  --[[file:jcorneli.org][jcorneli]]

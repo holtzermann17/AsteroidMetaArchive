@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Unfortunate as it might be that a sizable portion of the literature is "off limits" due to restrictive copyright restrictions, it is even more unfortunate that copyright property law is also being used to restrict access to material which has already passed into the public domain.  Not only does this undermine the Constitutional provision that copyright is only avilable for a limited time, it also restricts the progress of science directly by making it difficult scholars to base new works on these existing works or to add value to digital distributions of public domain works.
+
+Several institutions of higher learning have scanned copies of old books in their collections and made the digital images and/or transcriptions of these images into various file formats avaiable online.  Even though the copyrights on these books have clearly expired, the libraries nevertheless issue them under restrictive license agreements which typically only allow use as personal reading matrial, explicitly prohibiting redistribution of these files. [[file:[Free Math and Potential Bottlenecks -- Exmples of Restrictive Licenses of Digital Libraries.org][[Free Math and Potential Bottlenecks -- Exmples of Restrictive Licenses of Digital Libraries]]]
+
+When queried about this practise, a librarian replied that digitized versions of  books in the public domain may nevertheless be covered by a "thin copyright" on account of the human decisions and quality control present involved its the production of a digitized version.  This claim sounds rather questionable.  At least as much human effort and expertise is involved in the typesetting and proofreading of a text in traditional printing, yet no publisher claims a copyright interest in modern editions of ancient texts for these reasons.  In the case of Corel vs. Bridgeman [[file:[Free Math and Potential Bottlenecks -- Corel vs. Bridgeman.org][[Free Math and Potential Bottlenecks -- Corel vs. Bridgeman]]], the court rejected such a claim saying "the point of the exercise was to reproduce the underlying works with absolute fidelity. Copyright is not available in these circumstances.".
+
+Nevertheless, as long as digital libraries stick by their licensing agreeements, they will remain a menace.  Even if these contracts ultimately prove unenforceable, the libraries can still sue those they consider infringers.  Given that most of the entities involved in making older texts available online freely are not-for-profit organizations which have neither the time nor the money to mount a challenge in court [[file:[Free Math and Potential Bottlenecks -- Low-budget Operations.org][[Free Math and Potential Bottlenecks -- Low-budget Operations]]] (and may not even be aware of the fact that such license agreements stand on shaky legal ground), a cease and desist letters from a digital libraries likely to go unchallenged  with the result that public domain texts will be treated as if they were still copyrighted.
+
+* Discussion
+
+I worry that this section isn't being motivated well enough.  The real reason we care 
+about this problem 
+is not just the "redistribution" issue, but the fact that such works cannot be used to create 
+/derived works/.  Porting content to a !PlanetMath entry or entries is not just mere
+distribution; the intent is to modify the work by making it into something new and greater
+(at minimum, by performing reference linking).  This is the real menace to free culture---
+not that we cannot copy works for free (like a bunch of little "pirates"), but that we 
+are forbidden from using them to produce more and newer culture.  The result is stagnation
+and a cultural monopoly by those who hold power.  --[[file:akrowne.org][akrowne]] Wed Jul 6 06:05:52 UTC 2005
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

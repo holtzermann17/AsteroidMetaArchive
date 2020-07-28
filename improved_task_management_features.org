@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As discussed on the page "[[file:the relative merits of wiki and other workflow management media.org][the relative merits of wiki and other workflow management media]]",
+it would be cool if Noösphere had some advanced task management features - but what features
+would be best to add is a subject for discussion.  We can use the idea that we might
+eventually want to have [[file:AM.org][AM]] run under Noösphere as a guide to the sorts of things we
+would like, both in a minimal sense (wiki-like features) and in a more open-ended sense 
+(clearly useful features that a wiki doesn't have).

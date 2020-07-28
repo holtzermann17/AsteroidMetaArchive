@@ -1,0 +1,31 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think we should create many examples of problem-solutions which deal
+with various "real" problems -- the sorts of problems we want the [[file:HDM.org][HDM]]
+to target.  Earlier [[file:hcode examples|examples.org][hcode examples|examples]] of [[file:hcode.org][hcode]] were
+more limited -- the effort here should grow to be comprehensive
+(relative to the project's feature-set).
+
+These problems could come from anywhere -- but the hope is to move in
+the direction of fully automated solutions, which means that eventually
+everything should come from the HDM.  We have to allow ourselves a
+little bit of artistic liscense at this point, since many components
+of the system are not available.  However, it doesn't seem unreasonable
+to imagine the system growing as people author new examples, or go back
+to refine old ones.
+
+That "refining" could be done any number of different ways, e.g. adding
+definitions to the knowledge base that were required by a given proof,
+adding heuristics that achieve some of the reasoning steps in the proof's
+construction, adding translation modules that move from a natural language
+statement of the problem or parts of the proof to an hcode statement thereof,
+changes to hcode itself that make these things work better, etc.
+
+Ideally this will become a useful "laboratory" for the project.  
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Sketches
+
+ * /first example coming soon/

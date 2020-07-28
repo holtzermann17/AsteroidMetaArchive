@@ -1,0 +1,55 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+First day back at the keyboard (coding) in a month, I think.
+Various discussions with Ray and talks about related
+matters have helped to clarify the issues in my mind
+(and in my marginal notes on my latest printout),
+but confronting the code is painful.  Like exercising for
+the first time in a while.  (Which, incidentally I haven't
+been doing much of either.)  Ouch!
+
+Ray had this good suggestion: write up a spec for the basic
+objects.  I think I will do that next, in hopes that it
+will help me ground my work a bit.  Anyone can benefit
+from a quick-ref guide, right?  I don't really know if it
+will make my current work less painful, but I hope it does.
+At least it should help with future work.
+
+The system has gotten large enough that I definitely could
+benefit from some kind of guide to the major points (there
+is more written on paper than I can hold in my mind at one time).
+
+Abstractly similar: my plan is to try to do one or two things
+a day on this, until it gets back to humming along.  If I think
+about the full todo list, I feel too swamped.
+
+Currently I'm doing a bit of re-formatting (of basic objects); later
+there will come a time when even more of the code will benefit from
+re-writing.  But I'm hoping I can keep the thing together, and, indeed,
+moving in a positive direction, until I release it.
+
+I left Ray's place still somewhat unsure about the best strategy or
+strategies for transclusion et. al -- but the idea that these things
+fit into the general category of "consistency conditions" seems 
+helpful.  At every turn, it seems beneficial to have some
+central point to hang on to.
+
+I'm currently feeling that I can be happy about any progress,
+even slow progress.  Wanting to be "finished" doesn't seem like
+a helpful frame of mind to me anymore.  Doing reasonable work
+on the tasks before me may make the difference between having
+the program be my friend and having it be a savage out of control
+beast.
+
+I hope for the best.
+
+--[[file:jcorneli.org][jcorneli]] Jan 18 06
+
+So, I've fixed up links so that they take the new form I had in mind
+and so that everything pretty much works.  Here and there
+I see some losses in generality in the code associated with
+stopgap measures for moving from the old format to the new format.
+Either I'll move to fix those next or move on to porting backlinks
+to /their/ new format.  I like this new step-by-step methodology!
+--[[file:jcorneli.org][jcorneli]] Jan 19 06

@@ -1,0 +1,115 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I've meant to say a few words about this for a while - namely, I think that the
+scholium system may be very useful as part of the HDM's AI subsystem.  Even
+though scholia are "by default" just pieces of text, there is no particular
+reason not to push the system in a more code-like direction.  The model seems to
+be entirely flexible enough for that.  
+
+Indeed, my design for the scholium system was heavily influenced by my thoughts
+and views about knowledge representation.
+
+The first hypertext system I wrote corresponded to
+[http://www.ma.utexas.edu/~jcorneli/d/prototype%201/ HDM-p1] -- which used a
+hypertext model similar to the one used by PlanetMath, i.e., every "important"
+defined term was a link to the definition (see, for example,
+[http://www.ma.utexas.edu/~jcorneli/d/prototype%201/hdm.sobolev_space.html Sobolev space]
+ for a fairly typical HDM-p1 definition).  In HDM-p2, I gave up on
+hypertext in favor of adding many more definitions and improving their quality.
+And in HDM-p3, I switched directions entirely, and began working on a
+representation language that was the beginnings of [[file:hcode.org][hcode]].
+
+You can see that, along the way, my ideas about what "knowledge representation"
+means developed.  In fact, HDM-p4 will put together the strengths of each of
+these prototypes (and of course, strengths derived from other work, too).  It will be
+browsable like p1; it will contain the content from p2; and it will be
+written in a language based on the language from p3.
+
+But it should also begin to exhibit some more "large-scale AI-like" qualities,
+through the use of metadata and metadata processing.  E.g., all of the theorems
+in the corpus will be indexed as theorems; relationships like "similar to" can
+be made explicit by using scholia.  Note that more "small-scale" relationships
+will be implicit in the hcode representations: a proof will explicitly reference
+a lemma that it uses (an implicit "relies on" relationship), and a definition
+will of course explicitly state what other objects it is defined in terms of (an
+implicit "can be defined in terms of" relationship).  There is no particular
+reason to expose such things at the scholium level, in general.  But abstract
+relationships should be written about at this level.  For example, one might
+attach a scholium to the definition of "fundamental solutions" that explains how
+they can be used to find solutions to certain linear differential equations.
+Who knew, right?
+
+As these sorts of relationships are made more clear throughout the corpus, and
+as our understanding of how to use "small scale" and "large scale" features
+together improves, the system will become increasingly powerful.
+
+The difference between metadata for human consumption and metadata for computer
+consumption seems pretty much negligible, here.  At the "small scale" level,
+things may differ pretty significantly (code and text, for example, will be
+quite different).  But anyone should be able to benefit from the "large scale"
+layer.
+
+Note: I've introduced these terms "small scale" and "large scale" without
+any sense of how they might be used elsewhere in the AI literature (or
+if concepts like this are used) - but they may point to
+useful distinction.  On the one hand, we have code that one can use
+in a proof checker, for example.  On the other, we have code that can
+be used to come up with proof strategies.  
+
+It is interesting that, just like the "small scale structure" can be used
+independently (e.g. to check a given proof), the "large scale structure" may
+also be used independently (e.g. to assemble a small, relevant, reading on a
+given topic).  And of course, one can imagine that they may be best used
+together, if one is looking for previously unknown relationships between certain
+mathematical structures, for example.
+
+And I would just like to close this note by emphasizing that there is no
+particular reason to be "afraid" of text in this system.  Adding "large scale"
+code features to a body of text could really enhance them -- this sort of
+strategy could be used to turn a story into a computer game, for example.  (A
+fun side-project I'm hoping to get to work on when the scholium system is
+ready!)
+
+*  Discussion
+
+It sounds like you are just describing a general semantic network, of which 
+the digital-library-esque scholium system is a special case (with a 
+restricted set of node types and link types).  My working assumption has been
+that HDM will be implemented over something that is essentially, or effectively,
+a semantic network.  So far I'm not sure if anyone has come up with another way
+that is more general to represent knowledge (in a computer-actionable format).
+
+The HDM might be more comprehensible if thought of as being over a semantic
+network, not a scholium system.  And the scholium system might be more comprensible
+if thought of as a specialization of a semantic network (though I'm not sure the
+utility of thinking of it this way).  --[[file:akrowne.org][akrowne]] Mon May 9 04:27:18 UTC 2005
+
+Yes, I agree: while any particular implementation would be a special case, the
+system (or the "technical" part of the model) is a "semantic network".
+Unfortunately, I've never worked with a self-proclaimed semantic network before,
+so I don't really know how they differ (if at all) from things like Cyc and KM.
+My sense is that all of these languages have the same expressive power & similar
+ease-of-use profiles, although the code may look different.  I think CycL and KM
+code tends to be "small scale" in the terminology of the note above, because NL
+isn't emphasized in these systems.  
+
+The programmes here include:
+
+ 1. adding "large scale" (semantic-net-like metadata) structure to text and code;
+
+ 1. adding "small scale" (code-like) translations of NL texts and ideas.
+
+ 1. adding/maintaining plain text and 3rd party code (including PD computer
+  generated text, PD/free human generated text, and presumably also non-free,
+  offline, private collections to be used for development purposes)
+
+Describing this in terms of the scholium system could be confusing, but saying
+"semantic net" could also be confusing -- even though I would agree that the
+[scholium] system is semantic-net-based.  Any one way of describing the HDM is likely to
+give the wrong impression sometimes, because the system looks different from
+each of several different angles.
+--[[file:jcorneli.org][jcorneli]] Mon May 09 08:46:16 2005 UTC
+
+----
+[[file:scholium system.org][scholium system]]

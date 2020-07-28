@@ -1,0 +1,251 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is an offshoot of the [[file:tragical comedy intermission|comical tragedy.org][tragical comedy intermission|comical tragedy]] cycle.
+
+----
+
+The [[file:Comical_tragedies_of_the_info_commons|Comical Tragedy.org][Comical_tragedies_of_the_info_commons|Comical Tragedy]] page contains what I think is an important
+contribution to the discussion of how to make free content production
+into a 
+[[file:thoughts on the viability of free-software style business|viable business.org][thoughts on the viability of free-software style business|viable business]], 
+and more generally, into a viable and robust endeavor, period.
+
+That page takes the form of a critique and what might become a mandate
+(under appropriate circumstances).  I fear the writing may be too
+heavily drenched in philosospeak to be intelligible, so I'll attempt
+to lay it on the line here.
+
+I think that the users of systems like PlanetMath are not
+sophisticated enough with regard to system maintenance.  I count
+myself among the unsophisticated in terms of coding issues, even
+though I have made the attempt to contribute to other organizational
+matters.  I think that we should make the effort to increase the
+overall sophistication about these various matters, and, in
+particular, work to increase the variance of the distribution of
+sophistication.
+
+Move now to Mathematics (as opposed to !PlanetMath).  Since Mathematics
+is a commons-based peer-production process and product, the question
+"do we see a similar problem here?" makes sense.
+
+In Mathematics there are organizations like the AMS and MAA who help
+to organize discipline-wide initiatives.  They also help to organize
+various publications.  There are smaller organizations like research
+institutes, departments, and research groups, who organize smaller
+(sometimes self-similar) efforts.  There are outside specialist groups
+(e.g. Springer) who help to organize publication efforts.
+
+Clearly the outside publishers are a "problem" coming from the point
+of view of the free culture school (at least in their current mode).
+We say "don't alienate the products of our work from us!"  But this
+is the easy part of the answer.
+
+The harder part has to do with how much of an ability the day-to-day
+math practitioner or math user has to do non-trivial work with other
+parts of the system.  (We've agreed, at least temporarily, that they
+are mostly hosed when it comes to publication, with one possible
+exception being Mike Spivak, and maybe Knuth coming in as an honorable
+mention.)  Certainly the scholarly organizations, departmental chair
+positions, editorial boards, tenure revue boards, and graduate
+commitees are populated by mathematicians.  But my _guess_ is that the
+day to day practitioner feels like this organization (albeit
+hetrarchical) is a machine over which the individual has little to no
+control.  Also note that the costs of attempting to participate in
+decisions even at the departmental level is frequently high.
+
+: In the past, when the average academic mathematician could
+reasonably expect to rise to the positions of influence you mention in
+a few years, the situation may have not been so bad, but now that
+people are spending a much larger part of their carrers drifting
+around between temporary positions, I assume that more people feel
+shut out of meaningful influence. From what I've seen, the high cost
+to one's career of speaking out and attempting to participate in
+decisions is quite related to the new means of raising funds
+(something as seemingly trivial as suggesting a different textbook or
+place to buy books might upset a cozy relation with a publisher or
+bookstore chain, for instance) and the combination of scarcity and
+turnover rate (if you get out of line, there are 99 other applicants
+waiting for your position and good luck getting a good recommendation
+for your application for next year's job (and hence, being employed in
+a year) if you don't toe the party line and do as told).
+--[[file:rspuzio.org][rspuzio]]
+
+So, I think we are safe in concluding that Mathematics does manifest a
+similar sort of problem to the one I am adducing in !PlanetMath,
+namely the lack of sophistication and power _on the meta level_ among
+the majority of users.  (And, recalling the discussion on the Comical
+Tragedy pages, this effectively means _all users_, due to the
+overburdening of the "superusers".)  The organization in mathematics
+helps the discipline as a whole, but on a user-by-user basis, there
+will be many who still face major challenges whenever the go "meta".
+
+The question then becomes, what can be done about it?
+
+Well, it would perhaps be best to attempt to address the issues on PM
+first (it is one of the best _nontrivial examples_ of this sort of
+issue), but we can look at parallels with the general case any time.
+Of course, the [[file:scholium system.org][scholium system]] is another thing to look at in this
+regard, and it may be easier to work with, since to some extent it
+has been designed with these sorts of issues in mind.  But because
+of this it verges on being a trivial example in the matter
+at hand!
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+As I see it, the problem of not enough coders is part of the more
+general problem of Planet Math being woefully understaffed for the
+grandiose task which it is aims at. While we could definitely use more
+people on the coding end, it's not like there are all all that many
+people on the content end either. While Planet Math may sport 10000
+users, one also needs to keep in mind the fact that the vast majority
+of these users do not contribute or maintain entries. In fact,
+something like 30 people are responsible for writing and maintaining
+the vast bulk of the entries.
+
+By various means I estimate that we will need something like 100000
+entries in order to live up to the promise of becoming a reasonably
+comprehensive account of all known mathematics. While the current
+coverage may cover most of mathematics, it is far from thorough ---
+there are huge gaps all throughout the work, whole subbranches (such
+as special functions) are woefully underrepresented (for instance,
+there is no entry on Bessel functions or confluent hypergeometric
+functions, despite the fundamental importance of these functions in
+pure and applied analysis!) and much more work will be needed to fill
+in these numerous gaps, polish the presentation, and organize the
+material. From personal experience, I know that maintaining more than
+100 entries is a lot of work and is close to the limit of what the
+typical human being can do. Given the current rate of contributions
+(1000 per year) it will take about a century to get up to
+completeness. (By which time everything will have changed so time to
+start over again!)
+
+By no means do I say this to disparage the project --- if I thought it
+unrealistic, why the heck would I be I putting so much valuable time
+and effort into a hopeless undertaking? Rather, I would like to put
+things in perspective and point out that we need more participants
+across the board. While the nearly 5000 entries we already have is
+impressive in its own right and is certainly a powerful proof of
+concept, we still have quite a way to go. Hopefully, it will attract
+more people to the effort and things like the Focus article and the
+upcoming conference will help attract more people to contribute to all
+aspects of the project. While one might juggle around the distribution
+of sophistication, the fact remains that there are not that many
+people to begin with so gains in one department will come at the
+expense of losses in some other department. In fact, I would estimate
+that the distribution of sophistication may be about right, just that
+the whole thing needs to be scaled up by at least a factor of 2,
+ideally by a factor of 10.
+
+--[[file:rspuzio.org][rspuzio]]
+
+Well, this "bootstrapping problem" needs to be addressed.  Actually,
+PM is already "bootstrapped", but it needs to bulk up!  A couple of
+ideas come to mind right away, and these are:
+
+ 1. If we could organize some classes on collaborative digital libraries
+/ Perl / etc., we would have every right to make the class projects
+things that will enhance PM directly.  This is sort of like Summer of
+Code, but presumably done during the normal school year.  At New
+College, we used to have month-long "J term" classes led by visiting
+mathematicians, and this would be a fine venue to expect to get useful
+things done.  The trade is: we teach you some useful stuff, you do
+some useful work for us.  If the class is anticipated some time in
+advance, the host institution can drum up student interest and train
+them (e.g. in basic Perl).
+
+ 1. We could list specific items on the fundraising page together with
+the amount of money they need to get finished.  Basically, a "reverse
+bounty" situation.  (As for finding the labor to complete the
+bounties, that's another issue... but if my job situation continues as
+it is, I may be much more likely to switch into privateer mode than
+I had thought previously, so that's one person.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+I think that an important part of whatever solution one comes up with
+will involve convincing users that they have the ability, the right,
+and even the duty to participate in administrative, organizational,
+and coding issues of the site. Unfortunately, most people nowadays are
+so used to situations in which they would be considered strictly out
+of order were they to deal with such issues and have it beaten into
+their minds that these things are to be left to the powers that be and
+that their only hope is either to curry influence by intrigue or to
+climb the ladder to a position of power (and would be prone to
+interpret any suggestion that they need to participate in these
+affairs as an unfair imposition by the higher-ups). As long as people
+feel that they are powerless and lack the special skills needed to
+work on higher levels, I don't see much of a chance of changing this
+situation.
+
+Therefore, I think that this issue is primarily anthropological. I
+would say that quite a different set of social skills is required to
+function effectively in an egalitarian, anarchic, democratic society
+than in an elitist, hierarchical, oligarchic society and that these
+skills need to be learned and practised. Unfortunately, since the
+general situation around us seems to be getting further from the
+former situation and tending more towards the latter nowadays, so
+there are fewer opportunities for practise. In fact, one of the things
+I though about a few years ago when I was heavily involved with the
+movement (and talked over with fellow activists) one of the things I
+thought about may be summarrized by the phrase "democracy begins at
+home". I considered the various social settings in which people are
+involved (household, work, clubs, churches, schools, local government,
+...) and asked how many of these settings were such that all the
+people involved were treated equally and made decisions collectively
+as a group. The answer seemed to be depressing --- most of the time,
+someone in charge made the decisions and the best an ordinary peon
+could do is tell his concerns to the pardone and hope that they would
+be heard or else make bargains with the powers and intrigue one's way
+into a more exalted station (at the expense of one's fellow peons).
+
+In particular, this explained to me why our activist organizations
+were so lame and their structures tended to mirror the institutions
+they were opposed to --- that was the only way these people knew to
+organize a society. Sure, they might have known about other ways in
+theory, but in practise, they seemed to be lacking in the social
+skills needed to make these alternative models viable. In particular,
+I am thinking about things like: listening to other people, respecting
+differing viewpoints, seeing the situation form others' viewpoints,
+understanding what others find important and what they consider
+unessential or negotiable, persuading people of what one considers
+right, assuming one's share of responsibility in proportion to one's
+share in decisions, seeing how one's self-interest relates to the
+interest of the group (i.e. enlightened self-interest), respecting
+people's contributions, not idolizing those who make particularly
+significant contributions or found new projects, developing a sense of
+where the tacit consensus of the group lies vs. where one might need
+to ask permission or discuss the issue with people who think
+otherwise, making reasonable compromises which are fair to those
+involved in the case of serious disagreement (while at the same time
+continuing the dialogue in the hope of a real consensus) and looking
+for creative new solutions which avoid the dificulties and impasses
+people run across (generally speaking, when two parties seem to have
+come to a genuine impasse, I assume that they are both right and that
+the real problem lies at a deeper level, in the form of a shared
+assumption which should be called into question). I suppose that this
+is something like what my Marxist friends call dialectical thinking
+(although I am not too sure because I keep getting lost in a fog of
+philosospeak when looking for a defintion of "dialectic"). At any
+rate, these Marxists seemed to do rather well when it came to these
+sorts of social skills because they were of the few who put any
+serious effort into thinking what a new society might look like and
+how it might function rather than simply focussing their attention on
+what was glarinlgy wrong with the current state of affairs and naively
+assuming that, once they toppled the oppressors, everything would
+magically straighten itself out and not revert right back to an
+isomorphic copy of the ancien regime as it so often had done in the
+course of history.
+
+--[[file:rspuzio.org][rspuzio]]
+
+We could go so far as to edit-lock PM for a week, and run some kind of
+remote training session for users during that time.  This could
+consider cultural issues as well as things like programming
+certification.
+
+--[[file:jcorneli.org][jcorneli]]

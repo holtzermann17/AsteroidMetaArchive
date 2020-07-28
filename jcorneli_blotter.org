@@ -1,0 +1,98 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This blotter idea is as ridiculous as it is portentous.
+That's right, I said portentous, not pretentious!
+
+The reason it is ridiculous is that to be useful a "blotter" should be
+physically accessible (and ideally somewhat absorptive).  The reason
+it is portentous is that I think it would be quite useful to have an
+"electronic blotter" that is printed out every day, marked up, and
+re-incarnated as a new electronic version for the next day.
+
+I guess the pretentious part is where I say that this idea is simply
+brilliant and I wouldn't have expected it to come from anyone else
+but me!
+
+The below will remain as a solemn memorial to todo-lists past, present,
+and future.
+
+Please look forward with expectant anticipation to more blotalicious
+activities along the lines of the above proposal at some indefinite
+time and place in time and space.
+
+--[[file:jcorneli.org][jcorneli]], Dec 17 05
+
+Postscript.
+
+Xref: [[file:scholium system.org][scholium system]] (yes!), and, yes, this too: 
+
+: "There were some people in the intelligence community who knew at that
+time that some of these sources were not good, and shouldn't be relied
+upon, and they didn't speak up. That devastated me."
+:: General Colin Powell to Barbara Walters, http://abcnews.go.com/2020/Politics/story?id=1105979&page=1
+
+----
+
+PLAY, ON THE VERGE  Sat Dec 11, 2PM
+
+PROGRAMMING ISSUES OF THE DAY
+
+namespaces
+ reproduce the structure of the article table within
+ the article table.  use the "plan of the hdm" document
+ as a motivating example
+
+typed backlinks
+ consider either doing typed backlinks or backlinks bearing
+ segment, link, and version number (numbered backlinks)
+
+collaborative system stuff
+ sketch out the plans for using the system for multi-user
+ collaborative system (dates and users provide crosscutting
+ structures).
+
+fem
+ get the stuff there moving forward, far enough to put a build
+ together.  I had also thought about trying to put together
+ a latex-compliance checker, to make sure that the input files
+ are compatible -- before the whole program starts trying to run.
+
+emacs text properties bug
+ download the old version of the scholium system that manifested
+ that bug, and then download a new Emacs and see if the bug was
+ fixed up.
+
+experiment: AI example 
+ see if we can make the scholium system do something that
+ KM or some other known AI system can do.
+ 
+experiment: understand scholium system through lisp and vice versa
+ experiment: try to understand the connections of semantic
+ networks and programming (look at programs as trees or as
+ webs)
+
+question about reloading
+ how to maintain things in memory when there is a lot of stuff
+ out there?  Mill-works?
+
+OTHER ONGOING ITEMS
+
+papers for san antonio
+ these need to be written, probably in collaboration with apk
+ and other meta-heads
+
+miscellaneous formal projects for HDM
+ parsing, proving, metasystems, hcode -- all should be looked at
+
+library time
+ would be good to spend some time in the library, reading about
+ anthropology (find references from Gerlach on social movements,
+ commonses), economics, math, and linguistics
+
+workflow
+ further investigations of the "calculus of self-reference" would
+ be worth carrying out.  This reminds me of one problem with the
+ scholium system, namely, can it actually be effectively used to
+ edit itself?  surely it will improve in this area with time and
+ work.  but it is also a broader theoretical issue

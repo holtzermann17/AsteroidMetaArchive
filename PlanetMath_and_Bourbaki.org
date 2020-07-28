@@ -1,0 +1,209 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think two points needs to be emphasized here:
+ 1. PM differs from almost all other mathematical communities in that 
+its interactions --- from discussions to mathematical collaborations to board 
+meetings --- all take place electronically.
+ 1. The PM encyclopedia is produced by a collaboration on an unusually 
+large scale and broad scope for the mathematical community --- the 
+closest historical parallel would be Bourbaki.
+--[[file:rspuzio.org][rspuzio]]
+
+I think the Bourbaki comparison is important for understanding what we
+are doing and helping to convey it to others.  By drawing a connection
+to Bourbaki, we show a number of things:
+
+ 1. that developing scholars can generate mathematical content collaboratively.
+ 1. that the (mathematical) community in general will use this content, hence making
+it a part of the knowledge culture.
+ 1. that such efforts can sustain over a long period of time with the right social
+dynamics.
+ 1. we are already more massively-distributed than Bourbaki, having generated the
+equivalent of a multi-thousand-page book and involved hundreds of contributors.  
+ 1. we can, therefore, argue that we are well-positioned to deeply contribute to
+the mathematical knowledge culture, in essence, "21st-centurifying" Bourbaki.
+
+We might consider actually beginning the whitepaper with the story of Bourbaki, then 
+segue into these other items.  
+
+--[[file:akrowne.org][akrowne]] Sat Feb 11 06:11:38 UTC 2006
+
+The Bourbaki analogy is off the mark.  The spirit of Bourbaki was
+overwhelmingly elitist.  Participation was strictly by invitation.
+Young /initiates/, invited as observers to the meetings, were
+referred to as "cobayes" - guinea pigs.  The Bourbaki style was
+uncompromisingly unexpository.  Nothing was explained or motivated; it
+was "the math and nothing but the math".  In many instances the
+Bourbaki work was not consumed directly, but publicized to a wider
+mathematical audiences by other less unforgiving authors.
+Hartschorne's treatment of scheme theory is, I believe, an example of
+this phenomenon.  Be careful invoking Bourbaki, at least not without
+some further study.
+
+Finally, many mathematicians are less than enamoured of the Bourbaki
+legacy.  To some, Bourbaki is the veritable Devil, all that is wrong
+with modern, inaccessible mathematics.  FWIW, I don't I agree with
+this.  Bourbaki was and is a very important author.  He just requires
+on an exceedingly demanding commitment and background on the part of
+his readers.
+
+--[[file:rmilson.org][rmilson]] Mon Feb 13
+
+I think that the Bourbaki comparison must be honed if it is to be useful.
+What aspects of the "spirit of Bourbaki" do we share (if any) and what
+do we reject?  
+
+I gather that Ray intended to compare PM primarily with the /young/ Bourbaki,
+which was presumably pre-elitist in at least /some/ important sense.
+(Specifically, pre-credentialization.)
+
+Personally, I have sympathy both for the anti-expository formal style
+of Bourbaki and the super-expository style of, say, Guillemin -- or beyond.
+These various styles are all human mathematical practices, and as you
+mention, different styles can work together in a complementary fashion.
+
+I have asserted recently that PM's big issue is /community spirit/,
+and that elitism or anti-elitism is not a terribly critical issue at
+this time.  This may be due to the attitudes of the people running the
+PM show, and I don't want to trivialize the issue of elitism, just
+that I feel that, for now, it is not a huge problem.  Community spirit
+is more of a problem, in my mind.  Nevertheless, I think that we have seen
+some great examples.  I think Ray may be thinking of highlighting
+this set of examples & trying to expand it with his remarks.
+
+Also, he has a much fuller essay on the Bourbaki topic, that I'd
+encourage him to post here for further critique when it is ready!
+
+--[[file:jcorneli.org][jcorneli]] 2/13
+
+As with any analogy, there is always danger --- the analogy only holds
+for some aspects, but it is easy enough to misinterpret it to apply to
+other aspects.  In this case, as you point out, Bourbaki and Planet
+Math are opposites when it comes to community attitude --- the former
+was elitist, the latter is egalitarian.  Rather, the aspect I had in
+mind was that Bourbaki and PlanetMath are both large-scale long-term
+collaborations whose purpose is to produce a large work covering all
+of mathematics; beyond that the analogy unravels.  My primary reason
+for making an analogy to Bourbaki was that the idea of a large-scale
+mathematical collaboration can sound rather odd and hard to imagine
+for someone who is not familiar with a project like ours and one might
+be skeptical of the feasibility of such a means of writing.  Whether
+or not one agrees with the philosophy or the attitudes of Bourbaki, it
+is hard to deny that they did succeed in producing a large-scale
+collective work which had an impact on the mathematical community at
+large.  The reference to the early days of Bourbaki was primarily
+meant to remind that their beginning was not all that fancy --- a
+bunch of students meeting at a coffehouse.  Comparing Bourbaki five
+years after their founding with us in our fifth year, we look good.
+
+Exactly because of the objection you raise, using this analogy
+correctly will involve some careful rhetoric.  In particular, I don't
+any longer think that putting thi analogy as an introduction is too
+good an idea, because that could unintentionally invite people to read
+too much into the analogy and come away with the impression that we
+are trying to imitate Bourbaki in all ways, which we are not (although
+I think that there are definitely some more useful lessons we could
+learn from Bourbaki even if there are other things we reject.).  Also,
+it could have the effect of alienating readers who dislike Bourbaki
+but might have nothing against us, so I think it would be more prudent
+to put this analogy in an inner section where the context is less
+likely to lead to be misconstrued.  --[[file:rspuzio.org][rspuzio]]
+
+It is really very incomplete and sketchy since I have not had much
+chance to work on it, but here is the thing I wrote which Joe referred
+to.  It might still be of some use as a source of ideas:
+
+: In the Winter of 1934, several young French mathematicians met for the
+first time in the Cafe Capoulade to work on their project of a modern
+replacement for the classic, but outdated Traite d'Analyse.  Soon
+after, they realized that it would not suffice to simply write a new
+analysis book, but that all of math would have to be rewriiten in
+light of the revolution in mathmatical thought with respect to
+abstract mathematics which was taking place.  The original project
+grew into a massive collaboration which would, in the course of the
+next twenty years would count many prominenet mathematicians amongst
+its ranks, publish 40 volumes, shape the course of mathematics in the
+latter half of the twentieth century, and become a household word
+amongst mathematicians: Bourbaki
+
+: At PlanetMath, we share the goals of Bourbaki.  Like the early
+Bourbakistas, most members of PlanetMath are young mathematicians,
+students and recent graduates.  Like Bourbaki, our scope is all
+mathematics and, in order to realize so grand a goal, we make a
+collaboration on a scale which is unusual in the mathematical
+community.  Like Bourbaki, we believe in the principle of /the
+control of the specialists by the non-specialists/ --- anyone is
+allowed to write or critique an entry about any topic whatsoever, but
+should also be prepared to respond to objections by those more
+knowledgable than oneself.  Likewise, we believe in encouraging
+beginners to participate fully in discussions to the extent of their
+abilities and believe that this is an effective educational technique.
+(But we don't believe in treating newcomers like guinea pigs and
+shouting at each other.)
+
+: PlanetMath differs from Bourbaki significantly in the fact that
+we have electronic means of communication and publication which were
+only available in rudimentary form at best during the heyday of
+Bourbaki.  Electronics has lived up to its promise as a technology
+which serves to annihilate distance --- while active membership in
+Bourbaki was limited geographically to those who could make it to the
+seminar meetings, we labor under no such restriction.  Rather, as our
+name suggests, our members hail from all parts of the globe and it
+is not untypical to observe members who are located thousands of miles
+away from each other discussing some point or collaborating.
+Likewise, our activities are not limited to a few weeks of the year
+when seminaire Bourbaki meets but continue on an ongoing basis all the
+time (even around the clock since we have members in diferent time
+zones!).
+
+: One salubrious consequence of this fact is that we have a rather large
+pool of contributors --- to date, the community consists of over 12000
+members, of whom some 250 have contributed to the encyclopaedia and
+some 1400 have participated in discussion and critique --- so there is
+no need to restrict the scope of our coverage or apply Bourbakian
+scissors.  Likewise, there is little need to restrict ourselves to a
+single viewpoint, but can afford to have redundancy when different
+members explain the same topic from differing viewpoints.
+
+: A way in which PlanetMath differs from most contemporary online
+mathematics initiatives is the degree to which it utilizes electronic
+media.  While most online journals and preprint archives replicate
+familiar genres of scholarly communication in an electronic form, we
+go further and devise new genres which are adapted to the new medium.
+For instance, whilst most (all?) online journals replicate the usual
+form of peer review and editing, we have adopted a system in which
+contributions are continually reviwed by the whole community.
+Clearly, such a system would not be practicable with printed media
+where one cannot readily change a text once it has been typeset and
+printed, but there is no such constraint with electronic media.  We
+also exploit this flexibility of electronic publishing to ensure that
+our work is updated rapidly to keep up with developments.  As another
+example, one may cite the use of hyperlinks rather than the cumbersome
+internal references of Bourbaki.  Even more, we have automated this
+process of linking so that authors can focus their attention on
+writing and not be bothered with clerical details of
+cross-referencing.  As time goes on, we expct to progress further in
+this direction and implement such features as iteractive, multi-media
+documents, advanced hypertext systems, and automatic theorem
+verification.
+
+--[[file:rspuzio.org][rspuzio]]
+
+It would seem to me that we should hone in on the aspects of Bourbaki
+that we believe are salient and inspiring.   I mean, come on, Disney 
+does this all the time! =) 
+
+I guess the thing that attracted me to the Bourbaki analogy is it 
+"story-fies" the whitepaper.  Stories are intuitive, easy to read, and
+(for one like our take on Bourbaki) are motivating and inspiring.
+
+This approach has the potential to make the whitepaper less like a manifesto
+and more like ... an invitation to an adventure. --[[file:akrowne.org][akrowne]] Wed Feb 15 04:43:56 UTC 2006
+
+Which (an invitation to an adventure) is exactly what I think it
+should be!  Note that we could also make a comparison to the /young/
+Springer GTMs.  The idea of math as a "living science" they talk about
+on the back of those volumes is very inspiring.  Getting rid of that
+blurb was a questionable step, IMO, and may have coincided with
+Springer becoming the Yellow Undead that it is today.  --[[file:jcorneli.org][jcorneli]]

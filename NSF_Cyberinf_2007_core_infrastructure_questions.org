@@ -1,0 +1,193 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page about [[file:NSF_Cyberinf_2007_Grant_Draft_1.org][NSF_Cyberinf_2007_Grant_Draft_1]].
+
+----
+
+** What about "Core Infrastructure"?
+
+I don't see anything serious in this section or the one above about
+that clearly ties these problems back to the issue of a "core
+infrastructure" (cf. my comments on the [[file:grant planning--NSF Software Development for Cyberinfrastructure 2007|preliminary discussion page.org][grant planning--NSF Software Development for Cyberinfrastructure 2007|preliminary discussion page]] for this grant
+proposal).
+
+This is a preeminently technical matter, but it relates closely to the
+high-level "social" or "societal" concerns sketched in the
+Introduction above.  Specifically, it connects right into this key
+topic of "sharing".
+
+When we talked about meta-level sharing in the [[file:metacommons manifesto.org][metacommons manifesto]],
+the issue of sharing infrastructure (and infrastructural improvements)
+stood out.  The "core infrastructure" is, in some sense, the root of
+the tree of shared infrastructures.  What is it that everyone shares?
+That's the core infrastructure.
+
+(If it seemed useful to get into a discussion about ontology "as done
+by philosophers", we could go right ahead and do that now.  The shared
+(infra)structure that is "reality" is presumably the real root of this
+tree -- and models of computation can serve as roots for the purposes
+of discussing matters related to computation.)
+
+Simple things like Arxana come in "just above" simple models of
+computation like Turing's machines.  We could say that Arxana is about
+networking these machines together (into one bigger machine).
+
+Coming at it from a less theoretical point of view, Arxana comes in
+response to the question, "But what is the core infrastructure used on
+the (participatory) web today?", or more precisely to the answer,
+"Well, typically a lot of unstructure, out-of-control, silo-like
+stuff."
+
+By the way, just as a reminder, Arxana isn't some pie-in-the-sky
+fiction-ware: it is a simple, well-documented, and old technology --
+the semantic network.  The "problem" (if we must use such negativistic
+terminology), is that semantic networks have not been built with the
+idea of sharing them widely.
+
+There are a few examples out there (e.g. MBase, The Semantic Web) and
+if we're going to talk about Arxana, we should probably talk about
+them too.
+
+My main reason for writing this, I'll say again, is that if we are
+indeed talking about developing core infrastructure, we should make
+the content of the proposal mirror that -- by tying everything into
+the core.
+
+(I'll work some more on fleshing out what I think that core is.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+I have to disagree with a major part of the above: that there is (or 
+that we can appeal to) some sort of all-encompassing ontology, and 
+hence situate a "core infrastructure" that is at the "root" of the
+tree of all collaboration technologies (or arrangements, to be more
+general). 
+
+I suspect it may be enough to invoke "core infrastructure" in a relative
+sense: that is, relative to the things we discuss in our proposal.  By
+way of analogy, such core infrastructure should be extensible to similar
+situations inexpensively.
+
+I do agree with most of what you have said above, but I would be very
+reticent of being too ambitious or grandiose (or perhaps "total")
+about the infrastructure we plan to build.  We're going to try to
+build out more attractive and useful infrastructure than exists
+presently in our area, with wider import, but I don't see us
+addressing the problem in a manner and from the exact same perspective
+as the Metacommons Manifesto.  This is a step, certainly, but not
+quite at the same high/abstract level, in my opinion.  A decent litmus
+test would be whether you think funding this grant is an identical
+action as fully "signing on" to the Metacommons Manifesto (in the
+meaningful sense of putting resources to work on it).  My guess would
+be no: maybe we just get funded because someone likes Wikis and wants
+to see them applied more to math.
+
+But anyway, I can't even say with 100% certainty that arxana is "the"
+core infrastructure of the items of interest on this project.  It
+certainly seems to be a good fit for the basis of bidi content sharing
+in general, but is somewhat orthogonal from an infrastructural
+application like the automatic linking system.  I think it would be
+enough to sketch out some ways we plan to apply it, and also discuss
+that we will explore the use of any or all of these tools as
+infrastructure in a more "core" sense.
+
+By the way, I think this prose is excellent for describing and motivating
+arxana:
+
+: Arxana isn't some pie-in-the-sky fiction-ware: it is a simple, well-documented,
+and old technology -- the semantic network.  The "problem" (if we must use such 
+negativistic terminology), is that semantic networks have not been built with the 
+idea of sharing them widely.
+
+--[[file:akrowne.org][akrowne]] 
+
+
+The bit about ontology was just a parenthetical remark, it wasn't
+supposed to be a major thing.  Perhaps better to just ignore it.  And
+if you want to do that you shouldn't bother with reading 
+[[file:What do you mean by Ontology|this page.org][What do you mean by Ontology|this page]] right now.  It certainly 
+isn't directly important to deciding what to put in the grant proposal.
+
+On to more substantial issues.  First, thanks for your comment about
+the prose -- I think we are managing to clarify what it is exactly
+we're talking about, and that is a very good thing.  
+
+I hope that the following remarks will continue that process.
+
+When talking about a "core infrastructure" -- a distributed semantic
+network and simple programs that maintain this -- yeah, it could
+become very "total" in the long run.  That doesn't mean we should
+think grandiosely about it now!  Right now it is just this simple
+model.
+
+As you point out, services like autolinkers are not directly
+represented in this model, but they can be applied in concert with an
+implementation of it -- in this case, as "agents" creating scholia
+which contain overlayed links.
+
+I think you're right that these things are "roughly orthogonal", and
+it is fine to pitch them that way.  
+
+I was talking initially about connecting the various parts of the
+proposal to some core infrastructure and to a central rhetorical idea
+about sharing, and probably these two items should be kept at arms
+length from each other.
+
+As a brief aside: probably I would respond to your litmus test by
+saying that I have conceived of Arxana as the
+first-order-approximation to the "answer" to the technological parts
+of the metacommons manifesto.  As above, this isn't meant to be
+grandiose!  Many higher order elements would have to be present for a
+really rich metacommons system to function, and these elements range
+from other technological features, like channeled forums, to social
+features that Arxana says essentially nothing about.
+
+And to conclude: Rhetorically speaking, I do think it is a good idea
+to emphasize that this idea of bidirectional content sharing is an
+important part of our proposal, and that it operates at various
+"levels" in the proposal (e.g. from "simple" reversable links to
+substantial exchanges of content between entire online communities).
+And if we want to be reader-friendly, we'll sketch to some extent how the
+various applications of /that idea/ can indeed fit nicely with the
+simple semantic network model.
+
+(Oh, and by the way, I think you're probably right about wikis, but we
+may want to point out the "earth-shattering" fact that the current way
+wikis work is less optimal for scholarly applications than the sort of
+plug-able p2p-based model we have in mind.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+I think we're on the same page here.
+
+But here's a little bit of a curve ball: after reading the vision document,
+it is obvious to me that the OCI has it's own ideas on "core infrastructure", and I'm
+a little bit unsure as to how we, or any other individual project, would fit in.
+
+They go into considerable detail describing the characteristics of a Grand Overarching
+infrastructure that they'd like, but don't talk as much about how individual players can
+work towards that.  There may be some tension here between having an ecosystem of
+valid solutions and the natural impulse to design something that Everyone Should Use,
+but which few people actually do.   
+
+What it comes down to is I am worried about what kinds of infrastructure NSF OCI will
+fund that aren't already approved or decided-upon by Big Official Committees.  
+
+In one sense, we may have an opening, as they clearly didn't think about the discursive
+side of research and knowledge-building as much as sharing data, but that just means
+our "infrastructure" proposals may be even harder for them to understand.
+
+So I guess we'll just have to explain our relevance well.  But it would be nice to get
+a general reading of the "mood" (i.e. through talking to Dan Atkins).
+
+--[[file:akrowne.org][akrowne]]
+
+The fact that the semantic network model is compatible with other models (can model them!)
+should help our case for at least not being a dead-end.
+
+We might hit up other players in addition to Dan Atkins for comments/discussion
+(e.g. the other authors of these documents we've just read).  Also I hope you and
+I will be able to connect on the phone ere long!
+
+--[[file:jcorneli.org][jcorneli]] 

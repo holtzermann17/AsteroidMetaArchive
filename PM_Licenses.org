@@ -1,0 +1,775 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* PM/Noosphere Licenses
+
+The purpose of this page is to draft a set licenses for use on 
+PlanetMath (and fit for use on any Noosphere instance).
+
+* Generic goals of these licenses
+
+ * reduce "fog" through simplicity
+ * accomodate a family of "legitimate" licensing requirements (no restriction, attribution, "copyleft")
+ * encourage creative production of content
+ * foster compatiblity and cross-pollination of content
+ * make life easier for PM (and other Noosphere projects) down the road
+ * provide a better fit for how the scholarly world works
+
+Licenses have been created which cover all of the same legal requirements we cover here, but
+they have done a poor job of reducing fog, ensuring compatibility, making life easy for
+CBPP projects, and may be squelching the creation of free culture.
+
+/(Is it really true that an attribution license like the one here has been
+written before? --[[file:jcorneli.org][jcorneli]])/
+
+* Comparison with other licenses
+
+Note that these licenses are in many cases different from familiar
+[[file:Public Domain.org][Public Domain]] dedications, [[file:BSD.org][BSD]]-style licenses, [[file:CC.org][CC]] licenses, and
+[[file:FDL2.org][FDL2]].  In some cases these differences concern mainly a matter of wording
+(e.g. any public domain dedication accomplishes the same legal end);
+other times, they impose quite different requirements on users (e.g.
+the attribution-only license is not "viral"). 
+
+/(For comparison [[file:no license.org][no license]] --[[file:matte.org][matte]]/
+
+/(Maybe this section can be fleshed out a bit.  --[[file:jcorneli.org][jcorneli]])/
+
+----
+
+We envision three novel license choices as follows:
+
+** Public Domain
+
+This is in fact not a license, but merely a "deed" or "dedication".  The author forgos
+or relinquishes copyright by utilizing it.
+
+Text of the dedication:
+ 
+ Noosphere Public Domain Dedication v. 1.0
+ ===============================
+ . 
+ The author or authors of this content provide it free of copyright.  
+ .
+ Others may transmit or modify it without limitation.
+ .
+ While attribution and reference are encouraged, no specific requirements for
+ these practices are asserted.
+ .
+ (This dedication is available under the terms of itself).
+
+** Attribution-Only
+
+This license has as its goal to ensure attribution for creative
+contributions, and nothing more.  It attempts to be less rigid about
+how this is done than extant attribution licenses, which typically use
+the shorthand of requiring copyright bylines to be propagated
+verbatim.
+
+Text of the license:
+
+ Noosphere Attribution License v. 1.0
+ ==========================
+ .
+ The author or authors of this work require that clear attribution be given 
+ with transmitted or modified versions of the work.
+ .
+ This attribution may be done in any reasonable manner, either globally, or 
+ locally (placing crediting statements near the contributed portions).  The
+ attribution must be easy to find for the typical, competent reader.
+ .
+ Attribution must use the most-unique identifiers for authors as are openly
+ available.
+ . 
+ Network location (such as URL) may be used in place of exhaustive crediting,
+ provided the lead or current author at the time of drafting is included 
+ literally.
+ .
+ (This license is available under the terms of the Noosphere Public Domain 
+ Dedication v. 1.0).
+
+** Copyleft
+
+This license is the first to implement a notion of copyleft which is free of /license-lock/;
+that is, the license does not require the use of this same specific license for derived works.
+
+Text of the license:
+ 
+ Noosphere "Enlightened Copyleft" License v. 1.0
+ =====================================
+ .
+ The authors of this work provide it under the following conditions:
+ .
+ (1) Attribution must be preserved, as in the Noosphere Attribution License (version 1.0).
+ .
+ (2) Permission is granted to make derived works.
+ .
+ (3) If the work itself is not in a transparent (fully-editable/source) form, such a 
+ version must be made available either at a network location or upon request (provided
+ at-cost).
+ .
+ (4) Derived works may be licensed in any way which preserves the effect of these four
+ clauses.
+ .
+ (This license is available under the terms of the Noosphere Public Domain 
+ Dedication v. 1.0).
+
+----
+
+* Discussion
+
+Ok, so I've taken a stab at some ueber-simple licenses.  Clearly the
+licenses appeal to the best judgement of both users and potential
+jurists.  I realize this is somewhat risky, but so is life.  So, my
+main questions are:
+
+ * did I forget any critical conditions in the licenses?
+ * should more be said about how to bind the licenses to works?
+ * should something be done about handling updated versions of the
+ licenses? It might be good to require a specific version number be
+ given for the licenses to be validly used (otherwise, say, they
+ revert to attribution).  But I don't see any need to explicitly allow
+ future versions of the licenses, since they are already so liberal
+ future versions would be automatically compatible.
+
+Note: All of these licenses seem compatible with projection /into/ the FDL.
+
+--[[file:akrowne.org][akrowne]] Sun Jan 29 23:26:35 UTC 2006
+
+Let me also say a little bit about the license aesthetic here.  This
+is, basically, that you should say as much as necessary so that
+/most/ users will understand and follow your requirements and
+/most/ judges will enforce them, /and no more/.  This means:
+
+ 1. Using clear and concise language, as quotidian as possible (i.e. you
+would not use the word "quotidian" in the license itself).  
+ 1. Not attempting to enumerate in detail every single thing a user can
+do with the work.  This gives the false impression that items
+un-listed are forbidden, thus creating fog.
+ 1. Not attempting to rehash restrictions that are already covered by
+other law.  This is pointless.
+
+These seem obvious, but nearly every license, and even the non-license
+of the CC Public Domain deed, fails in one or more aspect.  For
+instance, that statement seems to admonish licensors not to commit
+fraud.  Well, duh, fraud is illegal.  Why does it need to be
+re-legislated in the deed?
+
+As another example: the BSD/MIT/X11 frenetic assertion of "NO
+WARRANTY", which the licenses spend a paragraph detailing, is also
+fully superfluous.  Why would code or a creative work automatically
+have a warranty?
+
+The more I look at the established "orthodoxy" of free culture
+licenses, the more bizarre and completely wrong-headed they appear to
+be.  It now seems pathological to me to actually think that one can
+account for every single possibility, contingency, and usage scenario
+in a license---and to do it bug-free!  It was /inevitable/ that
+these licenses would create diminishing returns for themselves out of
+this modus operandi.
+
+All in all this seems to be a sad consequence of letting the lawyers
+in to play in the creative fields.  Inasmuch as they are collecting on
+doing things that are, at best, provably useless, and at worst,
+damaging, I think it is high time we take matters into our own hands
+(as above).  --[[file:akrowne.org][akrowne]] Sun Jan 29 23:47:18 UTC 2006
+
+Based on our earlier discussions, there are some things that maybe
+should be included in these licenses.
+
+ *  Sunset clause --- after a certain reasonable time the work
+   reverts into the public domain.
+ *  Anti-orphaning --- if it becomes impossible to reach the copyright
+   owner to obtain permission by some standard, then the work reverts
+   to the public domain
+ *  Resetting the copyright clock --- Is copyleft forever under Aaron's
+   license?  I am phrasing this as a question because I don't know the
+   answer.  I would need to analyze it further and I think it depends
+   on some other questions to which I do not know the answer (see
+   below).
+
+In the copyleft license, you need to add a definition of "tertiary
+derivative work".  This notion is not defined in law or standard
+usage.
+
+Now that I think of it, I am not sure that it isn't the case that a
+derivative work of a derivative work is not considered a derivative
+work of the original work, at least in some cases.  I realize that I
+never stopped to check this point carefully and went by what seemed
+the obvious inference.  If so, this business of tertiary derivative
+works may be unnecessarry.  If not, then this third clause may not do
+all that much.
+
+As for updating, I don't see how this issue of numbering licenses
+would be of any real importance unless we were to put a stipulation
+about future versions of the license, which both of us reject on
+grounds of principle.  Otherwise, numbering is simply a matter of
+convenience of reference --- as I understand it, things like titles
+and section names in contracts typically carry no legal weight.
+
+As I understand it, the proper way to evaluate the merit of this or
+any any other license is as follows: Insofar as the ultimate meaning
+of a license is determined by the courts, one needs to contextualize
+the discussion.  One should start by determining what are the
+plausible scenarios for a lawsuit that would involve the matters which
+the license adresses.  For each of those potential cases, one needs to
+ask how the license would play out.  If it would happen that the
+license helps to bring out the desired outcome, then all is well.  If
+it would happen that the license (or some provision thereof) would be
+irrelevant, then maybe there is no point in having it.  If the license
+would not help bring about the desired outcome, it needs to be
+rewritten.  (Aside: this is quite similar in spirit, if not an
+instance of, query/database duality.)
+
+In addition to the anti-fog measures you mention, we could add the
+following, which we may term "legal minimalism"
+
+4.  Unless one can demonstrate a plausible courtroom scenario in which
+    a particular provision of a license would be relevant, that
+    provision will only contribute to the fog and, therefore, should
+    be removed.
+
+I don't have an overall opinion on these licenses because I haven't
+thought the matter thoroughly enough and don't think I am in a
+position to evaluate how they would likely play out in court.
+However, I think that you raise some excellent questions and issues
+here and that these proposed licenses could serve as the starting 
+point for a fruitful dialogue with the free culture community about 
+licensing.  I would be very interested to hear what Lessig, Moglen, 
+and their colleagues would think about the legal efficacy of these 
+proposals.  Such an approach could help clarify the true significance 
+of the sometimes arcane clauses we find in free licenses. --[[file:rspuzio.org][rspuzio]]
+
+Some very good points.  I like your courtroom criterion.
+
+Let me propose that your three provisions (sunset
+clause, anti-orphaning, resetting copyright clock) could all be taken care
+of with some clause which causes a contributor's copyright to expire some
+fixed amount of time after their most-recent contribution.  Perhaps we 
+could say that if a date stamp is not made available, the date is assumed 
+to be the original date of authorship.  
+
+The biggest concern I have with this is actually managing the time interval.
+First, there is agreeing upon one.  Secondly, if it is instead allowed to be variable,
+then the metadata needed to uniquely specify a license has become more complex,
+as has the "interface" to managing the licenses, and perhaps most importantly,
+the logistics of handling content one desires to work with.   So it would seem
+this would create a fair amount of fog.
+
+Alternatively, there is the problem of calibrating a fixed sunset interval.  If it is as
+short as it would probably have to be to help us out, say, 1 year, then it does
+seem a bit harsh to have copyrights expire after a mere year.   It might be better
+to set the interval very long (say, 20 years) and handle most of the norms of 
+license-permissions within the contributor pact.  
+
+It /would/ be good to put in a voluntary sunset clause if only to set a good example, 
+but these licenses are so liberal that this almost seems superfluous. 
+
+And here's an interesting question: is an attribution demand legitimate for contributors
+whose copyright has expired?  I.e. can our copyleft and attribution licenses legitimately
+state that you must attribute prior authors, even past their copyright sunset date?
+--[[file:akrowne.org][akrowne]] Mon Jan 30 05:00:15 UTC 2006
+
+Perhaps we could consider a sunset period of 28 years, if only to harmonize with John Ewing's "Modest Proposal", which the AMS is allowing authours as an option.  Or, maybe we could go with Michael Hart's 10 years.  (This would be my personal preference, but I am more than willing to concede the point if there is a strong sentiment for 28 years in the community)  Either way, adopting such a provision would show solidarity with Hart and Ewing.
+
+While on the topic, the other day Joe suggested that we might want to [[file:letter to Ewing|get in touch with Ewing.org][letter to Ewing|get in touch with Ewing]] and sees what might have to offer in the way of advice and suggestions.  Given that he has thought long and hard about these matters and dealt with these issues w.r.t. scholarly publishing as president of the AMS I would be very interested to see what he might have to say.  Also, given his critical attitude towards open access, I would be quite interested to hear his opinion of Planet Math --- would he view us as open to the same critique or as something fundamentally different?
+ 
+In reference to your question about copyright and attribution, I think one needs to be clear about terms lest one fall into verbal traps.  Copyright is generally described as a bundle of rights which may include
+
+ * authorizing copying
+ * authorizing derivative works
+ * performance
+ * display
+ * attribution
+ ......
+
+So, in a trivial tautologous sense, one can say that, if a work is not copyrighted, then there is no legal requirement of attribution.  But this answer really doesn't adress the issue.  In U.S. law, the right of attribution is granted only for works of visual art and differs from the other rights in that one cannot transfer it and that it can stay in force when the other rights pass away.  In that sense, it is correct to say that one can have an attribution requirement for works in the public domain.
+
+By the way, the law also says that authors can demand to have attribution removed --- this bit of fog was legislated by Congress.  In fact, I would say that Lessig's attribution requirement is likely the best possible solution under his circumstances.  In the context of the mashes Lessig is dealing with, it is easy to see how one could have borrowing between works of visual art and works which would not fit the technical legal definition of visual art.  To have different attribution requirements for visual art and other works could create a nightmarish situation in one needs to apply differing standards of attribution to different works being credited based on type of work (this could be especially bad since, in these mashes, one can have borderline cases between visual art and non-visual art).  By at least uniformizing the standards, Lessig at least managed to cut back this fog to managable proportions.
+
+However, for the case we are discussing, this provision of the law is irrelevant, so the only way to gauarantee atribution is by means of a license.  For a provision in a license (or a law) to be meaningful, there must be consequences attached to it.  In this case, the consequences of not attributing are that one loses the right to distribute the work or prepare derivative works.  Therefore, if the work passes into the public domain, this right would become unenforceable.  However, there is a subtlety in the case you raise.  While the contributors may no longer have copyright interest in the entry, the entry is still copyrighted (the newer authors owning the copyright) and is still subject to the license agreement, which stipulates that it can only be distributed or used if the earlier authors be credited.  So, if this analysis is correct, the answer would be that authors could be credited under this arrangement even after their copyright has lapsed.
+--[[file:rspuzio.org][rspuzio]]
+
+One odd thing about the attribution-only license is as follows.
+Suppose that Article A is released under attribution-only.  I come and
+derive Article B from Article A, giving full credit.  Next I come and
+derive Article C from Article B and release Article C to the public
+domain.  Is there any way I can get in trouble for doing this?  I
+think this question concerns the nature of /modified work/.  If
+every work that is an Nth-derivative of a given article (no matter how
+many generations N we are removed from the original article) /is
+also/ considered to be a derivative, then I fear we have the
+attribution-string-of-unbounded-length problem.  On the other hand,
+if we don't, then what is the status of 2nd-derivatives, as with my
+above query? --[[file:jcorneli.org][jcorneli]]
+
+In response to the above:
+
+Ray: If the attribution-removal clause is legislated by congress in copyright 
+law, then why has Lessig repeated it in the license?  Is this just another
+manifestation of lawyers liking to be wordy?  Would his license change
+at all in function if the clause were removed?  
+
+Joe:  I assume you posted the above after our phone conversation.  For the
+benefit of others, I will answer here too:
+
+(1) If you release Article C in the public domain, by which you neglect to
+preserve mention of the license, you would indeed be running afoul of the law. 
+You could also additionally neglect attribution, which was the whole point
+of going with this license.
+
+(2) However, the attribution requirements I encoded above are /very/ lax.  
+More lax than the FDL.  Unbounded-attribution-strings are avoided by two 
+key moves:
+
+1. You don't have to produce one big string; you can localize attributions.
+2. You can substitute citation/reference for a full attribution, giving only
+the first author literally (just like scholarly citation!)
+
+--[[file:akrowne.org][akrowne]] Fri Feb 3 15:40:50 UTC 2006
+
+Aaron: There is an important subtlety here: the attribution
+requirement in the law /only/ applies to /visual art/, where the
+term "visual art" is defined in a specific way in the law.  What
+Lessig is doing here is not redundant verbiage --- he is extending this
+requirement to works which wold not qualify as visual art in the
+strict sense of the law (although people might consider them as visual
+art in the colloquial sense of the term).  Also, he is simplifying
+matters in cases where a work of visual art is used in a work of
+non-visual art and vice-versa by not setting up two criteria whose
+applicability hinges on a not-always-obvious technical definition.  
+
+The definition in question reads as follows:
+
+A work of visual art is
+
+(1) a painting, drawing, print or sculpture, existing in a single
+    copy, in a limited edition of 200 copies or fewer that are signed
+    and consecutively numbered by the author, or, in the case of a
+    sculpture, in multiple cast, carved, or fabricated sculptures of
+    200 or fewer that are consecutively numbered by the author and
+    bear the signature or other identifying mark of the author; or
+
+(2) a still photographic image produced for exhibition purposes only,
+    existing in a single copy that is signed by the author, or in a
+    limited edition of 200 copies or fewer that are signed and
+    consecutively numbered by the author.
+
+A work of visual art does not include
+
+(A)(i) any poster, map, globe, chart, technical drawing, diagram,
+model, applied art, motion picture or other audiovisual work, book,
+magazine, newspaper, periodical, data base, electronic information
+service, electronic publication, or similar publication;
+
+(ii) any merchandising item or advertising, promotional, descriptive,
+covering, or packaging material or container;
+
+(iii) any portion or part of any item described in clause (i) or (ii);
+
+(B) any work made for hire; or
+
+(C) any work not subject to copyright protection under this title.23
+
+No matter what Lessig did, people would still have the attribution
+requirement of the law to deal with.  By proceeding as he did, he
+insulated users of CC licenses from having to wade through the lengthy
+definition above and have to worry about subtleties like how many
+copies of a print were made or whether a photographer signed a print, etc. 
+--[[file:rspuzio.org][rspuzio]]
+
+** Use-cases
+
+I think that in order to make an argument for the usefulness of these
+various licenses, we should try to provide some use-cases to go along
+with them.  Under what conditions would someone want to use
+
+ 1. a Public Domain dedication?
+ 1. an Attribution-only license?
+ 1. a Copyleft license?
+
+Presumably we should be able to come up with at least one solid use-case
+for each; if we can't, then that definitely calls that scheme
+here into question!
+
+It is important to bear in mind that a license alone may not fully "solve"
+a given problem.  We'll talk more about this below.
+
+** Meta use cases
+
+Note that /all/ of the licenses have the property of conveying to
+the user certain freedoms that are not available under copyright
+alone.  We assume this as a prior motivation in the following subsections.
+
+Licenses /may/ be used as part of a programme of user education and/or propaganda.
+For example, if a specific license happened to be selected as a site-wide standard,
+it would probably be because the user community and/or the site maintainers
+think that the license is "right" -- and they may want to convince other
+people that it is right as well.
+
+In addition, licenses carry some /legal weight/; this is important
+if anyone is thinking they might go to court over the issues here.
+
+*** Public Domain use case(s)
+
+I think that for short entries that are likely to be reused in a
+completely new context.  For example, the bare definition of a Mobius
+strip might go into the public domain, because this definition might
+be reused in many different contexts.  Furthermore, the bare
+definition seems unlikely to have any significant quantity of written
+or artistic expression in it.  Copyright is supposed to help the arts
+& sciences, and for the reason just stated, it can't help much with
+short, bare-bones, articles!
+
+Now, a longer exposition on Mobius strips might contain considerably
+more expression (maybe with carefully-drawn pictures), and only
+someone who /didn't care/ about always getting attributed /by every
+possible user/ of this mini-monograph would want to put it into the
+public domain.
+
+Notice that in a situation in which the content is available through a
+suitably robust digital library, the author can be certain that the
+original work will have an enduring "handle" through which attribution
+/can be given/ (even though it won't always be required).  If this
+is all the recognition the author needs, and there are no other
+ulterior motives besides wanting to share the work with others, then
+PD could be a fine choice for any written work.
+
+I agree that hyperlinking has basically taken the place of usage
+with explicit citation and crediting.  Thus attribution/crediting 
+generally happens anyway in the digital world today because of its ease.
+And digital libraries are becoming more stable and prevalent, adding 
+stability to these links.  This makes public domain a better contender 
+than it has been in the past. --[[file:akrowne.org][akrowne]] Fri Feb 3 15:43:42 UTC 2006
+
+*** Attribution-only use case(s)
+
+I don't really understand the use cases for this license.
+Also see my questions about the license itself above.  (--[[file:jcorneli.org][jcorneli]])
+
+Here are my two main usage scenarios, again, gleaned from our phone conversation:
+
+1) You are "publishing" in an environment where there are lots of students (or
+whippersnappers in general),  who don't really know the attribution norms of 
+the community well, and may require "disciplinary" force to understand their gravity
+and follow them.  In this case, the force of the law substitutes for a parental
+kind of force.
+
+2) You are "publishing" in an environment which isn't cloistered and limited
+to the core of your creative community.  Anyone can see what is going on,
+anyone can access the works (far more than contribute), and anyone can "take" from
+the pool of content.  These people probably outnumer the pool of content
+creators who hold the common norm that allows the community to function by orders
+of magnitude.  Thus, there is risk that the content will be used by "outsiders" who
+do not understand and perhaps who flout the norms---in this case, that being of
+credit through citation.  Of course, the internet is exactly like this environment, and
+again, the threat of the potential force of law may change behaviors in the desired
+manner.  Further, law suit may provide reparation against abusive commercial entities.
+
+The common theme of these two scenarios is that they call into question the 
+assumption that the community will regulate itself, by virtue of the fact that 
+the borders of the community are porous.  No community sustains itself without drawing
+in new members from "outside", plus typically there needs to be some level of openness to 
+"sell" itself to the world, and then on the internet, basically anyone can get any 
+open content at near-zero cost, widening the set of interactions to a high degree of interlopers.
+
+Now, another two scenarios, but ones which I think are weaker:
+
+3) The author wants to protect from abuse within the community.  Malicious members might
+try to "steal" creative works and take credit for them, unless they see a license with
+legal force (weak because the community and fraud procedures will generally deal with these
+people anyway.  Also, "first post" at some established repository can serve as establishment
+of authorship kudos).
+
+4) The author is worried that second parties might not know how to do attribution, so 
+the license serves as an informational tool (weak because this could be done with the 
+public domain deed).
+
+For me, I like attribution because of a combination of #2 and #4, with #1 a close third.   --[[file:akrowne.org][akrowne]] Fri Feb 3 15:55:08 UTC 2006
+
+/#2/ does seem to be the main point.  I think it breaks into two
+subcases.  /2i/ would be, the outside user takes away from the
+original user in some way.  A fairly extreme example of that would be:
+if the derivative work is combined with a Google bomb that made it so
+that the original work does not show up in web searches.  /2ii/
+would be the case in which the outside user doesn't really take
+anything away from the original; that is, while the community's norms are
+violated, this happens in relative seclusion, say, offline in the middle
+of some 3rd world country -- or within a computer system that isn't
+designed for popular use.
+
+This might be a false distinction, I'm not sure.  My point was that
+there may be some "2ii" cases where we don't care about norms being
+violated.  The point is, I'm trying to feel out the position of
+[[file:fair use of mathematical content.org][fair use of mathematical content]] WRT the motivations you described above.
+
+Final note: it is very interesting that "local attribution" is a lot 
+like transclusion!  To say that local attribution is required is
+like saying that the only allowed way to make derivatives is to do a
+transclusion.  Something to ponder...
+
+--[[file:jcorneli.org][jcorneli]]
+
+*** Copyleft use case(s)
+
+This license may be useful if the author wants to prevent "closed"
+(non-transparent) distributions of the work from being published.
+There could be a number of different reasons an author might desire
+this.  In particular:
+
+ 1. Curiousity to know what has been made of one's work.
+ 1. Antagonism towards distributors of non-transparent works.
+ 1. Desire to ensure that no one is denied access to transparent versions of the work or any derivatives of the work.
+
+These are, of course, related concerns.
+
+Notice that this license is only meaningful for works that /have/ a
+transparent form.  Sculptures and paintings, for example, typically do
+not.  Written works, including (by not limited to) computer programs,
+often do.  (However, notice that written works that are not
+born-digital may not; e.g. if I write something out by hand, it has no
+tranparent form, even though it may be obvious how to put it into a
+transparent form.)
+
+In the case of purely written works, a non-transparent version is
+typically a rendering /in print/ (although it need not be: for
+example, to take a written text, print it, and then scan the result
+back in probably does not result in a "transparent version" of the
+text; although these pictures are "editable" as pictures, they are not
+editable as text -- do I detect some fog?).  Antagonism towards
+distributors of non-transparent works, in this case, means that there
+should be no particular value added in a given print edition that the
+user can't reclaim by printing the work for him or herself /except/
+the value inherent to printing itself.  In other words, end users will
+never end up paying for specific enhancements to the semantic content
+and/or written expression /that have manifested themselves through
+linguistic features alone/.
+
+For the case of computer code, /compiling/ leads to a
+non-transparent work.  Like a bound book, a compiled program is
+useful.  As above, by using this license, one ensures that no one will
+pay for features that have not manifested through /transparent/
+code.  (It is interesting that in the case of programs,
+non-transparent code is nevertheless linguistic in nature, but being
+obfuscated from the end user, it might as well not be.)
+
+Note that the copyleft license very much applies to /downstream
+users/.  One can provide a transparent work in the public domain, but
+of course then one cannot make any logical assertions as to the
+transparency or lack thereof among derivatives.  If it is vital (for
+some reason) to be able to make such an assertion, then copyleft could
+be a good choice.
+
+Nothing more specific than the somewhat vague sentiments enumerated
+above is coming to mind as a reason why one would feel the need for
+downstream transparency so vitally.  Perhaps there will be other
+suggestions. --[[file:jcorneli.org][jcorneli]]
+
+I can think of some reasons why one would consider the need for downstream
+transparancy which I believe are more than mere sentiment.  Already, we have
+a good number of digital libraries which make free works (typically
+old books in the public domain) available only in opaque formats and
+use impose restrictive license conditions on its use.
+
+The problem which I see with this state of affairs is not that they
+are distributing from material in opaque formats but that it can be
+impracticably difficult to obtain the same material in a transparent
+format (it might require tracking down a copy in a library and
+obtaining permission to digitize it) and anti-circumvention laws
+prevent one from extracting a transparent rendering of the work.  The
+latter point is what makes this fundamentally different from
+value-added transparent distribution --- in the latter case, one has
+the right to delete whatever was added and recover the original text.
+
+In addition to offering only opaque copies of retrodigitized books and
+journals, I think it quite plausible that entities offering these
+works in opaque versions would also offer opaque versions of other
+free works.  Hence, I think it is realistic for a reasonable person to
+be concerned about the possibility of a free work one has authored
+being offered in an opaque foramt.
+
+I am not objecting to someone offering a proprietary version of a free
+text; let the market decide whether people are willing to pay for the
+added value of the opaque format.  Rather, my objection is that this
+needs to be a free market, which entails two requirements: 1.  The
+consumer needs to be informed that what they would be paying for (in
+cash or in rights given up under a license) is the added value of the
+format and not the original content --- the license agreement does not
+and cannot cover the original content.  One cannot re-copyright a work
+simply by adding to it or charge royalties on a work to which one does
+not own the copyright.  2. The consumer needs to have a meaningful
+choice.  If the consumer has no idea how to obtain a free, transparent
+copy or this is impracticably difficult, then the invisible hand of
+the market is tied.  Unless these preconditions are satisfied, we have
+a monopoly.
+
+In other fields of economic endeavor, these two conditions are
+enforced by legislation.  Here, however, the industry is not properly
+regulated so producers of free content may need to take matters into
+their own hand and impose this regulation via licensing.  The
+potential for abuse is that a distributor could exploit content
+producers by effectively charging for copies of a work to which they
+do not own copyright.  Hence, I think it is completely just for
+content producers to use licensing to protect themselves from this
+form of exploitation by using license clauses to keep the market fair.
+
+By the way, this seems to be another instance in which sunk costs lie
+at the root of the problem.  As it stands, the cost of digitizing a
+work is a sunk cost --- to recover it, people hope to make money by
+selling opaque copies and printed versions.  This presents a
+temptation to rationalize unfair competition in the interests of
+guaranteeing that one recovers these costs.  In addition to the legal
+fog, I think there is also an economic fog here --- since the actual
+cost of digitalization never is stated here, one can rationalize greed
+by upping this price and saying that one needs to keep the work closed
+to recover this cost.  Here too, a better approach would be to
+implement an economic model in which the cost of obtaining content is
+bid for before digitization commences and paid for in full before the
+work is distributed.
+
+While I think it is legitimate to employ copyleft in this case, at the
+same time I think it is necessarry that one recognize that here
+copyleft is a temporary stopgap and not a substitute for appropriate
+political (in this case regulation and reform of anticircumvention
+laws) and economic (implementing a better market) solution.  At the
+same time that we use our copyleft to but breathing room, we need to
+work on these aspects as well. --[[file:rspuzio.org][rspuzio]]
+
+A couple things.  First, if it is simply a matter of making sure that
+the downstream user has access to a /copy/ of the retrodigitized
+work, I can imagine two scenarios that don't use copyleft that could
+tend to secure the user such access (although only probabilistically
+so in one or both cases of the cases).  The #1 of these is an
+attribution license (e.g. /You can find a copy of the original
+version of this document, without non-approved changes, on
+!PlanetMath.org/).  This may or may not have a strong impact on
+subsequent derived works, depending on the nature of the attribution
+license in question (is it "viral" or is it written in
+by-derivation-disappearing ink, like Aaron's current attribution
+license, which is supposed to only require the user at each stage to
+cite the parent at that stage (personal communication... which I cite
+because I don't think this is clear in the text of the license makes
+the 1-level pyriamid nature of the license sufficiently clear)?).  If
+there is a chain to follow back to the transparent source, then a
+motivated-enough user can follow that chain.  The #2 of these is
+old-fashioned advertising.  E.g. If PM "comes to be known" (even just
+by most people) as "the home on the web" for free math then some
+bastardized version of PM that only provides things in
+newly-non-transparent form will come to be known as just that, ever so
+much trash, unless the non-transparent form really is a value-add for
+the consumer (and in this case knowing about the transparent source
+would not be very exciting for that user).
+
+I think the problem of people digitizing PD works and releasing them
+only in non-transparent, license-laden, formats is a real shame and I
+agree with your economic sketch regarding means of putting this bad
+practice to an end.  But I don't see copyleft as a solution to the
+problem, simply because that is a "source" problem, and not a "sink"
+problem.  For example, Gutenberg is known to everyone who values FAIF
+literature.  If Bantam or Dover or whomever decided to make a paper
+version of Gutenberg, they would not have to cite Gutenberg at all.
+(Indeed, the Gutenberg terms of use state certain use conditions under
+which sometimes one is explicitly requested not to cite Gutenberg.)  I
+don't think this takes away from Gutenberg because the Bantam group
+really won't have a monopoly in the PD content, nor in the information
+that this content exists.  Absolutely, there may be some
+/informational asymmetry/, which a copyleft license would do away
+with... but I feel that a copyleft license may be too big of a gun for
+that job.  Again, an appropriately constructed attribution clause
+would take care of the informational asymmetry -- but is it really our
+business, and a vital need, to impose conditions on use only to
+preserve information symmetry?  My feeling is that we can trust to the
+market here, noting that this market contains meta-level
+"redirections" (advertisements, propaganda, etc.).  Consider
+Wikipedia's growing popularity -- probably not happening because of
+the downstream copycats, although I'm sure they don't harm Wikipedia
+-- mainly, I'd bet, just because of word of mouth & some big-media
+play.
+
+So, unless there is some even more vital purpose, I don't think
+protecting the transparent sources with a copyleft or even just
+attribution license is really /necessary/.  I was thinking something
+along the lines of a scientific purpose, or perhaps something
+associated with some kind of code-a-thon or other competition...
+where a certain kind of full disclosure is necessary for the very
+function of the experiment.  It may be that some people will view
+certain coding projects this way (this is sort of how I have thought
+about HDM-core in the past) but I'm not completely sure I know of one
+example where copyleft is necessary, in the sense that I might be just
+as comfortable with one of the other options I outlined above.  Then
+again, just because I haven't thought of such a scenario yet doesn't
+mean it doesn't exist; maybe HDM-core itself is the example - but in
+that case I haven't fully thought things through.
+
+--[[file:jcorneli.org][jcorneli]]
+
+1. Please do suggest changes in wording in the licenses!  What you see is only
+a first cut.
+
+2.  I am not sure the above discussion hits on the core of motivation for
+copyleft.  With scanned works and the "thin" copyright situation it is 
+kind of a stretch to call the source (a book or other paper work) a "transparent"
+copy.  Really the only thing that makes it transparent is that there are no DMCA
+restrictions to accessing it in physical space =)
+
+A deeper meaning of transparent is something that is digitally editable with 
+the full expressiveness that the original digital creator had at their 
+disposal.  The point is we are trying to defend /CBPP-editability/, which means
+something that has a low barrier of injection into CBPP production.  Cornell's
+thin copyright, by contrast, only slows me down in the process of getting the
+underlying works into digitally editable form in the first place (i.e. by scanning 
+and OCRing them); they are not blocking me outright from accessing something 
+already in this form.
+
+This is why I think a "bigger gun" is needed, at least for some scenarios.
+
+Anyway, I don't think it is too much of a burden to make the transparent form 
+available, especially with the requirement weakened to reference (hyperlink).
+
+--[[file:akrowne.org][akrowne]] Fri Feb 3 16:10:58 UTC 2006
+
+
+** Licenses are never enough
+
+No license can fully serve the needs of (a) infrastructure for
+(re-)use and authorship; (b) user education; (c) user community.
+
+Indeed, the software platform, site documentation, and other "social"
+aspects of user group (online and offline availability, etc.) all play
+important roles in the life of a collaborative project.
+
+It may sometimes be the case that all of the needs of the community
+can be met through non-license means, for example, by particular
+contracts and/or mutual assurances between community members.
+
+In the "Copyleft use case(s)" described above, the license is
+(apparently) needed, /because there is no way to ensure the various
+desiderata to be met by people outside of the user community if no
+license is used/.
+
+In the "Public Domain use case(s)", /no particular desiderata are
+imposed on persons outside of the user community/.
+
+Nevertheless, /interests/ of these non-community members (or the
+"extended community") can be met, and a certain very limited form of
+constraint can be imposed upon the extended community /by the
+concrete facts of life in the community itself/.  In particular, if
+the community keeps track of authorship credits and dates, then the
+extended community will have this documentation as a reference point,
+and any /spurious claims of primacy/ by persons operating outside of
+the community can be contested (for example).
+
+(Notice the difference between spurious claims of primacy and
+potentially-rightful claims of authorship: I can put my name on "The
+Brother's Karamozov" and claim to have written it, if I like.  I can
+also be laughed at, and if I make the wrong step, I can be sued for
+fraud.  But if I pick and choose content from the book and or do
+even a very subtle rewrite and don't make any ridiculous claims,
+everything is legal.)
+
+** Making this all concrete
+
+Eventually, after we've given sufficient consideration to the abstract
+use cases described above, we should attempt to bring things home to
+roost for the case of !PlanetMath.  What sorts of use cases do we
+envision there?

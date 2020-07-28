@@ -1,0 +1,202 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+First board meeting (ever!), first quarter 2006.
+
+ * [[file:PlanetMath Board Meeting--Q1 2006--After party and discussion.org][PlanetMath Board Meeting--Q1 2006--After party and discussion]]
+
+* Time and Place
+
+Held: *January 22nd, 2006, 9pm EST*.
+
+The meeting took place by IRC (Internet Relay Chat.  Channel
+#planetmath, server irc.endernet.org). 
+
+(Don't know how to get on IRC? Check out [[file:PM Real Time Chat.org][PM Real Time Chat]])
+
+* Record
+
+A log of the meeting is available at: http://aux.planetmath.org/logs/pm_board_meeting_2006-01-22.txt
+
+Minutes are available here: http://aux.planetmath.org/logs/pm_board_meeting_minutes_2006-01-22.txt
+
+* Agenda
+
+Major topics for discussion are:
+
+; composition of board and non-profit : 
+Who should be on the board? what about the executive?
+and members?
+; composition of nonprofit administration : 
+I'd like to nominate myself for some kind position
+with a salary.  The actual amount isn't that important, but I'd like to
+get something set up so that if PM starts to get more money, I start to get a living
+wage. --[[file:jcorneli.org][jcorneli]]
+; structure of budget :
+what percentage to overhead, what percentage to projects, what percentage to reserves, etc.
+; [[file:PlanetMath Fundraising.org][PlanetMath Fundraising]] :
+We've seen a few wiki pages related to the ideas here, but I think
+the whole idea needs re-coordinating. /The wikipage
+[[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]] is recommended
+reading for everyone participating in the meeting!/ --[[file:jcorneli.org][jcorneli]]
+; strategies for getting more dev-level help (either for hire, volunteer, or paid by third-parties) :
+This parallels the issue of fundraising; also see the "market" item described below.
+; re-writing bylaws :
+Maybe have draft to discuss.  (What is the outline?)
+; relationship between executive, board, and member community :
+In particular, there is some concern over lack of direct communication between board and other volunteers
+(does this have something to do with individual preferences for communication media, or is there
+something else, possibly deeper, going on here?). Cf. [[file:communication vs media.org][communication vs media]]
+; continuing previous item, how should membership work, and when members vote, etc. :
+; how priorities are decided and projects selected :
+See the [[file:marketize feature requests.org][marketize feature requests]] page for some work/thinking on this.
+Note that the previous two items take a basically "governmental" approach, but this
+"marketizing" idea takes a basically "economic" approach -- potentially to similar
+questions.
+; what are current development priorities? :
+; what are long-term plans of the organization :
+One of the things people should at least be /aware of/ is the fact
+that PM's use of the FDL (or any copyleft license) is in question, in the sense that a number
+of us are beginning to doubt whether this is actually a good choice for PM.
+Ray and Aaron are working on this issue in a [[file:First Monday Paper--The Fog of Copyleft|paper.org][First Monday Paper--The Fog of Copyleft|paper]],
+although I don't know whether they have come to any specific conclusions 
+that pertain to the future of PM vis a vis licensing.  My own sense is that
+we need to think more about when licensing is a good idea (if ever)
+and whether there are any good alternatives at all.  There are plenty
+of pragmatic points to consider here.  This is just one of many "long-term"
+questions that face the organization right now! --[[file:jcorneli.org][jcorneli]]
+; indemnification and legal protection : 
+The main points of discussion here are "lawsuit insurance" and a contributor contract 
+(copyright pact).  See comments below, but to sum up, it may be too early to come to final decisions about this item.
+; ... :
+
+* Supporting documents
+
+ * [[file:PlanetMath ByLaws 2.0.org][PlanetMath ByLaws 2.0]] (need to start)
+ * [[file:Second Draft of Pact.org][Second Draft of Pact]] (contributor pact)
+
+* People
+
+Who plans to attend?
+
+ * [[file:akrowne.org][akrowne]]
+ * [[file:jcorneli.org][jcorneli]] (and see discussion below)
+ * [[file:rspuzio.org][rspuzio]]
+ * [[file:bloftin.org][bloftin]]
+ * [[file:alozano.org][alozano]] (possibly, see below)
+
+* Discussion
+
+We can begin discussing specific issues from the agenda here in
+subsections.  The more we have threshed out before the meeting the
+more we can accomplish. --[[file:akrowne.org][akrowne]] Fri Jan 6 19:26:34 UTC 2006
+
+Or, perhaps we can make an ongoing, informal meeting on the
+wiki -- if it turns out that we can make decisions that way,
+then IRC may just be a fun sidelight, and not a necessary
+part of the decision-making process. :) --[[file:jcorneli.org][jcorneli]] Jan 6
+
+Can anybody attend or board members only? --[[file:bloftin.org][bloftin]]
+
+My understanding is that ordinary members would at least be welcome as
+spectators, if not being allowed to contribute to the discussion.
+However, Aaron will have to give a definitive answer on exactly to
+what extent ordinary members can participate in the
+meeting. --[[file:rspuzio.org][rspuzio]]
+
+(moved) I think that this topic (the contributor pact) really needs to
+be redone from first principles so we might want to hold off from
+putting this item on the agenda just now or discuss it at a more
+fundamental level --- I am pretty sure it woulds not be a good idea to
+discuss adopting anything like the current draft because it seems
+irrelevant now.  When we drafted the document, we were not fully aware
+of the implications of the Digital Millenium Act, so we thought that
+the way to get some semblanbce of common-carrier status was by means
+of a user agreement.  But now that we looked at the Digital Millenium
+Act more closely and have a designated agent, this may no longer be
+relevant --- the "take-down safe harbor" grants us much of the common
+carrier status we hoped for.  To be sure, the idea of a contributor
+agreement which clarifies the right, obligations, and liabilities of
+the users and the staff may still be a good idea, but it would be a
+much different sort of document from our present draft, so we might
+need to move the discussion back to the level of deciding what is
+needed and drafting a suitable document.  --[[file:rspuzio.org][rspuzio]]
+
+On the contributor pact, I think we still need one.  It may be a lot
+simpler now based on leveraging the DMCA.  But I would still like to
+see the ownership system formally enshrined in a contract.  I think
+this better models the situation.  Surely we can discuss this at the
+meeting, even if we don't have a draft yet.
+
+On who can attend, the answer is: anyone. --[[file:akrowne.org][akrowne]] Sat Jan 7 23:28:13 UTC 2006
+
+I might attend the meeting, although I would prefer it the meeting was
+ongoing in the wiki as suggested by jcorneli. --[[file:alozano.org][alozano]] Jan 11.
+
+I am not really sure a meeting on the wiki can reasonably be held.
+[But certainly, anyone] is free to start commenting on agenda items or
+other things here[!]  The IRC meeting provides a real-time component
+which will be necessarily missing from the Wiki.  I'm not even sure an
+asynchronous meeting would qualify as a "meeting" by the muster of the
+corporation commission.  Also, we are having problems getting everyone
+involved in this format.  Some are more inclined to IRC.  In sum, if
+you want to participate the Wiki way, you can, and if you want to
+participate via IRC, you can do that too! --[[file:akrowne.org][akrowne]] Wed Jan 11
+20:20:55 UTC 2006  
+
+(Editorial: I made it clear that the fact that anyone can contribute
+to the discussion from the wiki is a good thing, and not a reason for
+not holding the meeting on the wiki. --[[file:jcorneli.org][jcorneli]])
+
+I think that if we can make the important decisions -- or at least
+sketch out their cases -- on the wiki, that should satisfy most of the
+organization's needs (possibly just modulo a final decision made using
+some other medium).  Personally, I think the wiki is a very practical
+medium for enlightened debate and discussion.  I don't have anything
+against "real time" (or better put, synchronous) discussion media or
+realistic simulations thereof, however, apparently there are some who
+dislike the wiki.  Like Aaron said, we can use both, and like he said
+way above, the better spelled out the "agenda" is by the time the IRC
+meeting takes place, the more can be accomplished at that time.  My
+guess is that this will work something like the distinction between
+"executive" and "legislative" in typical government structures.  The
+legislative branch (wiki) comes up with the suggestions, and the
+executive branch (IRC or whatever) either certifies the plans or asks
+them to be rewritten.  I can see that problems might occur if plans
+are being drawn up by the executive branch without any input from
+outsiders (pseudo-legislators or other contributors).  I also worry
+that this problematic situation may have been going on for some months
+-- since while Aaron has talked with people in both the wiki and IRC
+groups, the two groups have had very little /direct/ interaction.
+By the way, don't misunderstand what I said about separate branches of
+government to mean that I think that the separate branches should be
+/distinct/ branches; on the contrary, I think we would all like to
+see more co-participation and sharing between the different parties
+interested and involved with !PlanetMath.  I don't think anything as
+simple as a choice of preferred communication medium is any excuse for
+a break-down (or stillbirth) of communication between different
+groups.  If IRC fans really hate wiki, I'm happy to meet them more
+than half way, on their own IRC channel.  But I would very much like
+to get some feedback from them on /why/ wiki is so hated (if that is
+indeed what is going on).  I'll add something about this question to
+the agenda. --[[file:jcorneli.org][jcorneli]]
+
+Well said, Joe. But I'm not sure the fact is that our board members
+/hate/ the wiki as much as they just don't have practices that lead
+them to use it.  And practices are hard to change.
+I'm probably the only one with an RSS feed to the
+wiki, for instance, a fact which is instrumental in my interaction with
+it.  But, as a heavy user of both IRC and the wiki, I consider both
+indispensible.  To explain this in detail and provide justification
+would be an extensive exercise, so I think it suffices for now that
+we should have both formats because it is easy to do so. --[[file:akrowne.org][akrowne]]
+
+
+Well, I just joined IRC for the first time, interesting medium of communication...  I'm curretly tyring to recruit for PP by answering questions on physics channels and then creating entries on PP.  My only concern would be how to keep records, wiki is good at that, is there a secretary on the board and a way to record the discussions and decisions? --[[file:bloftin.org][bloftin]]
+
+Almost all IRC clients can log the sessions (in fact, I know of none that can't).  
+I always log, so I can guarantee there will be a log.  At the end of the meeting, 
+I will post the log on here. --[[file:akrowne.org][akrowne]] Sun Jan 15 03:05:47 UTC 2006
+
+Please make sure the agenda is fleshed out asap!  The meeting is in only
+a few days, and the agenda needs a brushing up at least. --[[file:jcorneli.org][jcorneli]]

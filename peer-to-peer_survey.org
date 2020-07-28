@@ -1,0 +1,113 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There are at least three standard models for distributed data-sharing,
+and as we think about the right model for /us/ to use, these should be
+on the table:
+
+ 1. "central CBPP-style" as used by !WorldCat 
+([http://en.wikipedia.org/wiki/Worldcat WP page]) or the international 
+banking system. (tightly-integrated "push" model)
+
+ 1. "OAI-style" as used by OAI 
+([http://en.wikipedia.org/wiki/Open_Archives_Initiative WP page], 
+[http://www.openarchives.org/ homepage]) (weakly-integrated "pull" model).
+
+ 1. "p2p-style" as used by Chord etc. (see below)
+
+* Some summary quotes
+
+"The great achievement of Napster was the empowerment of the peers (i.e., the 
+fringes of the network) in association with a central index, which made it 
+fast and efficient to locate available content." 
+-[http://en.wikipedia.org/wiki/Peer-to-peer Wikipedia] 
+"An unstructured P2P network is formed when the overlay links are established 
+arbitrarily. Such networks can be easily constructed as a new peer that wants 
+to join the network can copy existing links of another node and then form its 
+own links over time." -- Like Gopher or early WWW. (ibid.) 
+"Most networks and applications described as peer-to-peer actually contain or 
+rely on some non-peer elements, such as DNS." (ibid.) 
+"Peer-to-peer networks have also begun to attract attention from scientists 
+in other disciplines, especially those that deal with large datasets such as 
+bioinformatics." (ibid.) 
+"P2P network defense is in fact closely related to the "Byzantine Generals 
+Problem". " 
+* Some references
+
+ * http://en.wikipedia.org/wiki/Chord_project -- Systems we have prototyped 
+that use Chord and DHash include CFS (Cooperative File System), !UsenetDHT, 
+and !OverCite. CFS allows anyone to publish and update their own file system, 
+and provides read-only access to others; !UsenetDHT allows Usenet servers to 
+share storage instead of fully replicating articles locally; !OverCite is a 
+distributed version of the !CiteSeer digital library. 
+
+ *  http://en.wikipedia.org/wiki/PAST_storage_utility -- 
+http://freepastry.org/PAST/default.htm 
+
+ * http://en.wikipedia.org/wiki/P-Grid 
+-- From the project homepage I learned that " P-Grid is implemented in Java 
+and at the moment is available upon request for research purposes only."  I 
+don't know if that's what we want. 
+
+ *  http://en.wikipedia.org/wiki/CoopNet_content_distribution_system This looks 
+interesting ("uses locality") but I didn't find a source download on the MS 
+Research development page!
+
+ * http://en.wikipedia.org/wiki/LionShare -- GPL, "designed with academic 
+users in mind" http://lionshare.its.psu.edu/ 
+
+ * http://www.firstauthor.org/Downloads/P2P.pdf (a whitepaper that claims to 
+discuss use of P2P in science) 
+And this looks interesting:
+
+The Internet was designed to provide a communications channel that is as 
+resistant to denial of service attacks as human ingenuity can make it. In 
+this note, we propose the construction of a storage medium with similar 
+properties. The basic idea is to use redundancy and scattering techniques to 
+replicate data across a large set of machines (such as the Internet), and add 
+anonymity mechanisms to drive up the cost of selective service denial 
+attacks. The detailed design of this service is an interesting scientific 
+problem, and is not merely academic: the service may be vital in safeguarding 
+individual rights against new threats posed by the spread of electronic 
+publishing. -http://www.cl.cam.ac.uk/~rja14/eternity/eternity.html
+
+* Distributed Hash Tables
+
+Key based routing:
+
+All DHT topologies share some variant of the most essential property:
+for any key k, the node either owns k or has a link to a node that is
+closer to k in terms of the keyspace distance. It is then easy to
+route a message to the owner of any key k using the following greedy
+algorithm: at each step, forward the message to the neighbor whose ID
+is closest to k. When there is no such neighbor, then we must have
+arrived at the closest node, which is the owner of k as defined above.
+                                                              
+-- http://en.wikipedia.org/wiki/Distributed_hash_table    
+
+This kind of hopping seems similar to issues with Clusions (see below).
+
+----
+
+* Other notes, questions, musings
+
+How does p2p work relative to the functioning of a given ISP?
+Presumably every "peer" on the network has its "online image" at the
+ISP level, and so the servers provided by the ISPs are somehow
+the "effective peers" in the network.  (Everything else being
+simple "local rendering".)
+
+
+http://www.ietf.org/rfc/rfc1.txt -- details a method to avoid message 
+flooding by limiting the use of individual "links" between peers. (Note: this 
+suggests the possibility of using Arxana to model or "simulate"  the behavior 
+of a peer-to-peer system, not just embedding it within one.) The system 
+described here provides 32 links for potential peers to connect to, but 
+typically can only support a couple of connections at once.
+
+Notice that there are two different problems when we consider "sychronous" or 
+"asynchronous" behavior (both are just abstractions anyway).  The HCI for 
+math text doesn't need to be GUI or in any way fancy -- but some people will 
+no doubt want full-immersion math environments. I think that we can assume 
+that we are transmitting things like text files (or streams)
+and in either event they don't sound too threatening.

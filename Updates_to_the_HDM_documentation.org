@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+For a quick overview of the project, see the [[file:Guide to the HDM.org][Guide to the HDM]]. 
+
+
+Extensive documentation of the HDM project now appears in [[file:HDM CVS.org][HDM CVS]]; I've put
+copies online in my [http://www.ma.utexas.edu/~jcorneli/d/p4/ p4 directory].
+There are about 100 pages there at present, mostly stuff about the [[file:scholium system.org][scholium system]] and
+the [[file:parsing system.org][parsing system]].
+
+Lots of things about this documentation can be improved: the narrative
+introduction to the project and the report, the coverage of other systems, the
+way the document is compiled out of smaller documents, and the individual
+articles - so, nearly everything.  I needed to put something like this together
+in order to make the documentation truly GNU FDL compliant, a necessary step for
+getting the project hosted on [http://savannah.nongnu.org Savannah].  (We needed
+to have the FDL included in the document, so I figured, might as well make one
+big document out of the smaller pieces.)  We should have Savannah hosting soon.
+
+As time goes by, I expect this report to expand into something "book size", and
+I expect the quality of the articles to converge to "publishable".  We'll want
+to produce additional compilations and stand-alone reports, but for now, you can
+certainly feel free to stick things you write into this document.
+
+Help is appreciated.  (I'm going to be revising the scholium sections
+extensively asap!) --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:HDM.org][HDM]]

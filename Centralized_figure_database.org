@@ -1,0 +1,90 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Currently figures are attached to a fixed entry. It would be
+good if all figures on PM would be in a centralized figure database. 
+This database could also contain the code creating the figure. 
+This will make it easy to reuse figures across entries and
+also make small changes to figures. 
+
+It will also encourage users to take figures from PM and use
+them in their own texts.
+
+* Discussion
+
+I think this is a good idea for the general advantages to re-use
+and education on creating figures that it offers, but I'm not so
+sure about the benefits of re-using figures in PM articles.  Which
+figures and which articles might be candidates for such re-use?
+I guess I can imagine a series of related articles that all
+refer to the same pictures, but in that case wouldn't you want
+to make one main article that contained the pictures and had
+all the sub-articles as attachments?
+
+One nice thing about this proposal is that it would encourage
+people to include pictures in one unified way (eg. \PMfigure{}
+or whatever).
+
+Maybe it could be called a "gallery" instead of a "database".
+--[[file:jcorneli.org][jcorneli]]
+
+Direct copying of figures from one entry to another 
+might be minimal within PM. Maybe the first figure in 
+
+: http://planetmath.org/encyclopedia/PolarCoordinates.html
+
+could be useful in many articles. Also, a figure of the
+signum function could be used in the definition, and in entries
+related to continuity. However, if the sourcecode (not just the .eps)
+for the figure was available, that would increase its use 
+a lot. With small changes the figure could have a lot of use. 
+This would also encourage a "unified" look'n'feel on PM.
+It would also provide a (unique) place for people to learn 
+from others how to create good mathematical figures. This feature would
+naturally create all kinds of discussions/guides about the topic.
+
+For more involved figures the need becomes more and more 
+important. I have spend days creating figures. Most of that time goes to learning
+the software. 
+
+Math is not just text and formulas. There are also a lot of standard 
+pictures that could be useful over and over in mathematical writing. Say,
+transition function on a manifold, graphs of famous functions, tangent space of a surface,
+stereographic projection, right hand rule, etc.
+If I were to write lecture notes/homework solutions, it would be 
+great to have a source where all these can be found.
+--[[file:matte.org][matte]] 
+
+Absolutely, I agree with the points you're making here.  (I too spent a lot of
+time on some figures at one point.)  I still think I'd discourage reusing
+figures "verbatim" within the encyclopedia (e.g. instead of reusing the signum function,
+link to a page about it instead), but that's a minor detail: I'm definitely
+for the proposal. --[[jcorneli] Tue May 24 19:08:54 2005 UTC
+
+This is something that I have commented before.
+Sometimes I create eps graphics using commands, perhaps using pstricks, using eukleides or even mathematica.
+Respectively, I add the .tex file, th .euk file or add as a comment the command used to generate the plot.
+Some other times I just open a graphic editor and when I'm done, save to EPS. now what abotu source code?
+
+The thing is, EPS is a very special format. Unlike PNG, JPG, etc, it's not a binary file, it's a text file.
+It's a postscript file, programming code. You can open the text file see the source code. Modify it, 
+change the graphic. It includes its own source code as documentation, which is nto the case with the other
+binary image formats. So I don't think that when I upload EPS files created directly (not using a translator
+from other language) I'm not including the source code.
+
+The situation is similar to comparing a compiled C program, where you don't get access to the code, to a 
+interpreted python or perl script, where the program itself is the code, you cannot get the program without the sourcecode.
+Think of GIF, JPG as "compiled" and EPS as "interpreted".
+
+So, although uploading the pstricks code, the mathematica CODE, the eukleides code, the metapost code, etc is indeed a nice thing to do and Iconcurr, I don't think standalone eps files are to be shuned as lacking source code. 
+
+One could argue that "hey, but I don't know postscript, how am I supposed to change the graphic" but that argument is like claiming that distributing a perl script is not distributing its source code since somebody doesn't know perl and thus is unable to modify ithe script. -- [[file:drini.org][drini]]
+
+I think having a figure gallery or database or whatever would be a good idea. One reason is that this would facilitate quality control. At one point there were quite a few figures on PM that were just bitmaps wrapped in EPS files, very ugly. I think the situation is better now. Another reason is that it would be easer to suggest improvements, especially if each figure is available in its original editable format. --igor
+
+Have there been a lot of instances of need for figure reuse?  
+
+I wonder about the quality control aspect.  Who will own things in the central database?
+How will this be managed?  Seems like the current system would have to be applied to this
+new sort of object in addition to plain entries---which it is not ready to do at all. 
+Thoughts? --[[file:akrowne.org][akrowne]] Mon Feb 27 03:56:39 UTC 2006

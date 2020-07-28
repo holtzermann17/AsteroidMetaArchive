@@ -1,0 +1,94 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* About
+
+Below is a draft of what I think could be a good preface to the FEM.  Note that
+this isn't to replace what we currently have as an "Introduction" (which we should
+also put up here), as there is very little overlap between them.  Instead, this is
+more a reflection on the nature of PM and the FEM, that is spurred by contemplating
+the world's reaction to collaborative media and resources.   
+
+It could probably best go before the introduction, but others can weigh in on that.
+
+--[[file:akrowne.org][akrowne]] Sat Jan 21 18:58:04 UTC 2006
+
+* Preface Draft
+
+What you are looking at right now is a familiar rendering of very
+non-traditional resource.  This book contains, with relatively slight
+transformation, the full contents of the !PlanetMath online encyclopedia of
+mathematics.   
+
+The !PlanetMath.org site is unique in that it is a fully-collaborative,
+voluntary resource, dedicated exclusively to mathematics.   There are other
+(free) online resources dedicated to mathematics, and others which are
+entirely collaborative, but none which combines these two properties.
+
+!PlanetMath is a working proof-of-concept that knowledge resources of routine
+use and of critical cultural and educational importance need not be produced in
+a centralized, closed, and top-down manner.   It is proof that anyone can teach
+and become a scholar, without being part of any sort of "elite" or
+"priesthood".  It is proof that society's commonly-held knowledge is also
+commonly-constructed, and does not come from some mysterious external place
+which is off-limits to most.
+
+This book is similar proof-of-concept; that such a massively-distributed
+effort, made possible by computer hardware, software, and networks, is uniquely
+flexible and can take a variety of useful forms---including this "classical"
+one.   It is proof that we can do a pretty good job of stitching together
+volumnous, seemingly-disparate informational contributions, to make a
+surprisingly coherent whole.
+
+But the familiar form should not be allowed to fool the reader.  The underlying
+creative process is like nothing which has generated a book or encyclopedia in
+the past.  The knowledge represented here is continually evolving and
+improving.  This can be seen in real-time on !PlanetMath.  
+
+In the form of a printed book, however, this knowledge necessarily becomes
+"frozen", and a natural side-effect of this is that errors and other
+shortcomings will also be frozen.   In traditional publication, such errors
+have been dealt with surreptitiously, to be silently corrected in the next
+edition---if they are even discovered, and if a next edition is even produced.
+This attitude flowed naturally from the assumption that a work could be
+"finished", and that after this moment, the buyer could reasonably expect to be
+paying for perfection.
+
+Our model is different.  In our model, there is no "finished", and there is not
+even necessarily any "buying" (and when there is, it is for covering overhead and 
+delivery, as opposed to content production).  Resultingly, errors are expected rather than
+feared, and the finders of errata are embraced by the creative process.  After
+all, there is no distinction between them and the pool of people whose efforts
+have gone into producing the content! Thus, we encourage you to look at "bugs"
+and potential enhancements of this text as an opportunity to participate, and
+to go online and report them on !PlanetMath.    
+
+So in a deeper sense than any reference work has ever "belonged" to a
+community, this is /your/ encyclopedia.  We hope you will enjoy it.
+
+---The editors of the Free Encyclopedia of Mathematics
+
+* Discussion
+
+Might suggest "secular priesthood".  Also the part about "buying" is a
+little confusing, could be fleshed out to say what someone purchasing
+FEM is actually purchasing.  Thanks for writing this!  --[[file:jcorneli.org][jcorneli]]
+
+I think "secular" is understood with the "priesthood" comment (if not, 
+another word could be substituted).  I would like to avoid cluttering
+the preface with unnecessarily wordy explications.  I would be in favor 
+of clarifying the purchasing issue, if this could also be done without
+overly distracting the flow.  The fundamental point is, of course, that
+the user isn't paying for the production of the content, but only for 
+overhead and delivery.  --[[file:akrowne.org][akrowne]] Sat Jan 21 22:29:27 UTC 2006
+
+"Secular" is one word, and couldn't amount to much clutter!!!!  Obviously
+it is /understood/; it would be used here for emphasis, not explication.
+--[[file:jcorneli.org][jcorneli]]
+
+(But I'd just as soon delete the /or "priesthood"/ all together.
+"elite" by itself works fine.  I don't want to offend anyone who might
+actually /be/ a mathematician & a priest, see.  Which is not to say
+that I  personally dislike the metaphorical usage of the term.) --[[file:jcorneli.org][jcorneli]]
+
+I must say I like it and something of this sort must go with the FEM, if the FEM is going to stay as it is (see [[file:FEM_Criticism.org][FEM_Criticism]]). However, may the above be just a glorified view of the mathematical errors and shortcomings of the Encyclopedia? Unfortunately, I think so. Even if the FEM is taken from the ever evolving PlanetMath, the FEM could be virtually error free if we restrict ourselves to subsets of PlanetMath which have been reviewed (like matte's real number project). Of course every book will have some errors, but we cannot just compile a bunch of entries which for all we know nobody has ever looked at.--[[file:alozano.org][alozano]]

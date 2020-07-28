@@ -1,0 +1,95 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+Searching through the Library of Congress for mathematical works published in the Uninted States yielded the following:
+
+ * [[file:Mathematical works published in the U.S. in 1923.org][Mathematical works published in the U.S. in 1923]]
+
+Since this is letting a lot slip through the cracks, I decided to systematically search through call numbers.  Some of the material I found so far listing books which may be in the public domain will be posted here:
+
+[[file:Raw data from Library of Congress searches.org][Raw data from Library of Congress searches]]
+ * [[file:Raw data from Library of Congress searches QA1 - QA99.org][Raw data from Library of Congress searches QA1 - QA99]]
+ * [[file:Raw data from Library of Congress searches QA100 - QA200.org][Raw data from Library of Congress searches QA100 - QA200]]
+ * [[file:Raw data from Library of Congress searches QA200 - QA299.org][Raw data from Library of Congress searches QA200 - QA299]]
+ * [[file:Raw data from Library of Congress searches QA249 - QA299.org][Raw data from Library of Congress searches QA249 - QA299]]
+ * [[file:Raw data from Library of Congress searches QA300 - QA325.org][Raw data from Library of Congress searches QA300 - QA325]]
+ * [[file:Raw data from Library of Congress searches QA326 - QA349.org][Raw data from Library of Congress searches QA326 - QA349]]
+ * [[file:Raw data from Library of Congress searches QA350 - QA399.org][Raw data from Library of Congress searches QA350 - QA399]]
+ * [[file:Raw data from Library of Congress searches QA400 - QA450.org][Raw data from Library of Congress searches QA400 - QA450]]
+ * [[file:Raw data from Library of Congress searches QA450 - QA459.org][Raw data from Library of Congress searches QA450 - QA459]]
+ * [[file:Raw data from Library of Congress searches QA460 - QA469.org][Raw data from Library of Congress searches QA460 - QA469]]
+ * [[file:Raw data from Library of Congress searches QA470 - QA499.org][Raw data from Library of Congress searches QA470 - QA499]]
+ * [[file:Raw data from Library of Congress searches QA500 - QA549.org][Raw data from Library of Congress searches QA500 - QA549]]
+ * [[file:Raw data from Library of Congress searches QA550 - QA559.org][Raw data from Library of Congress searches QA550 - QA559]]
+ * [[file:Raw data from Library of Congress searches QA560 - QA569.org][Raw data from Library of Congress searches QA560 - QA569]]
+ * [[file:Raw data from Library of Congress searches QA570 - QA599.org][Raw data from Library of Congress searches QA570 - QA599]]
+ * [[file:Raw data from Library of Congress searches QA600 - QA609.org][Raw data from Library of Congress searches QA600 - QA609]]
+ * [[file:Raw data from Library of Congress searches QA610 - QA649.org][Raw data from Library of Congress searches QA610 - QA649]]
+ * [[file:Raw data from Library of Congress searches QA650 - QA699.org][Raw data from Library of Congress searches QA650 - QA699]]
+ * [[file:Raw data from Library of Congress searches QA700 - QA809.org][Raw data from Library of Congress searches QA700 - QA809]]
+
+This is not meant to be complete.  Later, I will explain more about exactly what this is, but for now take this to be a list of some (not all) math books published before 1963 or with no publication date indicated.
+
+* Question
+
+Can you add links describing the relevant portions of law?  (Or detailed
+summaries thereof.)  This is a bit confusing, since it has to do with /old/
+copyright law and its interface with /new/ copyright law.
+--[[file:jcorneli.org][jcorneli]] Wed Apr 13 06:51:54 2005 UTC
+
+Exacly what is in the public domain is explained on Project Gutenberg.
+
+(Links would still be helpful...) --[[file:jcorneli.org][jcorneli]]
+
+
+* Comment
+Ray, I just wanted to mention that I think that this project you're undertaking
+has quite a lot of promise.  Its exciting to think about what might be
+available here.  One thing that this just made me think is that maybe the
+LOC should maintain Copyright metadata, that would say if a work was in
+the public domain.  Certainly, a field like this could be added to PM's
+shared bibliography, when it is created.  Anyway, good job & looking
+forward to seeing the final results of the search -- and the eventual
+integration of the results into PM -- which could be the topic for a 
+whole 'nother grant, and partnerships with people like the folks at
+Cornell or elsewhere.  --[[file:jcorneli.org][jcorneli]]
+
+* Improvement
+
+Since the Library of Congress has redone its online catalog, it is now
+much easier to obtain the lists of math books published in a given year.
+To obtain the list of all books published in the year Y, one may proceed as follows:
+
+1. Browse the url http://catalog.loc.gov/
+
+2. Click on "Basic Search"
+
+3. Click "Set Search Limits"
+
+4. Type Y in "Date" box
+
+5. Click "Set Search Limits"
+
+6. Choose "Command Keyword*" from menu
+
+7. Type "KCLA qa?" in "Search Text" box
+
+8. Choose "100 records per page" from drop-down menu
+
+9. Click "Begin Search"
+
+10. Scroll down to bottom of page
+
+11. Click "All (this page only)" button
+
+12. Choose "MARC (non-Unicode/MARC-8)" from drop-down menu
+
+13. Click "Press to SAVE or PRINT"
+
+14. Save the file
+
+15. Go back a page on browser
+
+16. If there are more pages click on "Next" and repeat steps 10-15 

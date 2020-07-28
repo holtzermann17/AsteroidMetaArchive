@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+On the way to to building the Hyperreal Dictionary of Mathematics, there are
+some subsets of the final program which can stand as packages on their own
+right.  These are worth noting for several reasons.  They can be used as
+milestones in the development.  They may prove useful to mathematicians.  They
+could also be good places for someone new to the HDM to start work.
+
+: (I don't know if I'd call these "small" but they are somewhat focused and
+bounded.)  --[[file:jcorneli.org][jcorneli]] Tue Jun 14 20:13:50 2005 UTC
+
+Note: some of these projects are the sort of thing that can be done "piecemeal"
+in a problem-of-the-day style.  In particular, the literature review item and
+the proof translation item.  There may be other tasks around [[file:AM.org][AM]] that can be
+usefully approached this way.  Perhaps we should institute a sort of "club" for
+such efforts, wherein club members agree to contribute at least one item each
+day.  (If 5 people participated in this effort, we would have 100 items done in
+20 days.)  I'll mark these items with a /*/.  --[[file:jcorneli.org][jcorneli]] Tue Jun 28 01:40:56 2005 UTC
+
+* The projects
+ * [[file:Small Projects - Port APM-Xi to h-code | Port APM-Xi to h-code.org][Small Projects - Port APM-Xi to h-code | Port APM-Xi to h-code]]
+
+ * [[file:Small Projects - Version Zero | Version Zero.org][Small Projects - Version Zero | Version Zero]]
+
+ * [[file:Small Projects - Notation Translator | Notation Translator.org][Small Projects - Notation Translator | Notation Translator]]
+
+ * [[file:Small Projects - Logic Editor | Logic Editor.org][Small Projects - Logic Editor | Logic Editor]]
+
+ * [[file:Small Projects - Use FEM core to build HDM documentation  | HDM Docs.org][Small Projects - Use FEM core to build HDM documentation  | HDM Docs]]
+
+ * [[file:Small Projects - Literature review | Literature review.org][Small Projects - Literature review | Literature review]] /*/
+
+ * [[file:Small Projects - Proof translation | Proof translation.org][Small Projects - Proof translation | Proof translation]] /*/
+
+ * [[file:Small Projects - Sort and standardize HDM-p3 | Sort and standardize HDM-p3.org][Small Projects - Sort and standardize HDM-p3 | Sort and standardize HDM-p3]] 
+
+ * [[file:Small Projects - Condense MMAF literature | Condense the Metamath and Friends literature.org][Small Projects - Condense MMAF literature | Condense the Metamath and Friends literature]]

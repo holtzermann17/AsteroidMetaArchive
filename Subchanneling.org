@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(This discussion will be in the context of PlanetMath, but can easily be ported
+to other contexts.)
+
+PlanetMath's homepage currently shows a list of all messages posted
+to the site.  Most reasonable people think this is bogus.  What we
+need instead is a way to pump certain messages only to the people
+who are interested.  This sort of "filter" is a way to break the channel
+into several subchannels.
+
+People should be able to introduce sub- and super-channels at will.
+
+E.g. if I am interested in set theory but not ZF theory, I can create
+a subchannel that is set theory modulo ZF theory.
+
+If I am interested in some naturally-arising subcommunity, I should be
+able to create a subchannel of all messages, namely, those messages
+having to do with the given subcommunity.
+
+--[[file:jcorneli.org][jcorneli]]

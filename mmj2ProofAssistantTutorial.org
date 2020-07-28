@@ -1,0 +1,389 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[[file:HomePage.org][HomePage]] -> [[file:metamath.org][metamath]] -> [[file:mmj2.org][mmj2]] -> [[file:mmj2ProofAssistantFeedback.org][mmj2ProofAssistantFeedback]] -> [[file:mmj2ProofAssistantTutorial.org][mmj2ProofAssistantTutorial]]
+
+-----
+
+Here is how I use Proof Assistant...
+
+-----
+
+First, I open a Windows "Command Prompt" window (to create a
+desktop shortcut to "Command Prompt" use
+Start/Programs/Accessories then right-mouse click Command
+Prompt and select Create Short-Cut.)
+
+-----
+
+Next, I enter these commands
+
+        
+    cd c:\aMyName\myproofs
+    runpagui
+            
+
+Those commands trigger the Proof Assistant GUI (unless the
+input .mm file has load, validation or grammar errors).
+
+The first command does "change directory" in Windows, making
+the directory "c:\aMyName\myproofs" the home directory for
+subsequent commands.
+
+The second command runs a Windows "batch" command file named
+
+    
+    "c:\aMyName\myproofs\RunPAGUI.bat".
+    
+
+Notice that the "runpagui" command doesn't care about
+capitalization or the ".bat" file extension, and since it is
+stored inside of "c:\aMyName\myproofs" I do not need to specify
+the directory.
+
+[It is theoretically possible to just double-click on the
+"c:\aMyName\myproofs\RunPAGUI.bat" file name inside a
+Windows Explorer window, but the problem with that is that
+when the program finishes the window closes automatically,
+and if there were any error messages, they disappear!]
+
+Here are the contents of "c:\aMyName\myproofs\RunPAGUI.bat"
+which could be obtained by copying from
+C:\mmj2\test\windows\RunPAGUI.bat and changing the input
+RunParm file name at the end:
+
+         
+    CALL c:\mmj2\test\windows\RunBatchFramework.bat "c:\mmj2" BatchMMJ2 "c:\aMyName\myproofs\RunParmFileRunPAGUI.txt"
+        
+
+Here are the contents of "c:\aMyName\myproofs\RunParmFileRunPAGUI.txt"
+
+        
+    *========================================
+    * CommentLine: Example Running ProofAsstGUI
+    *========================================
+    MaxStatementPrintCount,9999
+    MaxErrorMessages,15000
+    MaxInfoMessages,1000
+    LoadEndpointStmtNbr,999999999
+    LoadEndpointStmtLabel,pm2.521
+    LoadFile,c:\metamath\expset.mm
+    VerifyProof,*
+    Parse,* 
+    RecheckProofAsstUsingProofVerifier,yes
+    ProofAsstFontSize,14 
+    ProofAsstFormulaLeftCol,20
+    ProofAsstFormulaRightCol,79 
+    ProofAsstRPNProofLeftCol,5
+    ProofAsstRPNProofRightCol,79
+    ProofAsstUnifySearchExclude,biigb,xxxid
+    ProofAsstProofFolder,c:\aMyName\myproofs
+    RunProofAsstGUI
+    
+
+OK! Notice the LoadFile command is set to read
+
+            
+    c:\metamath\expset.mm
+            
+
+which contains the contents of set.mm with all of the proofs in
+"un-compressed" format.
+
+Also notice that the ProofAsstProofFolder is set to:
+
+        
+    c:\aMyName\myproofs
+        
+
+That is the directory holding my ".txt" (text file) "Proof
+Worksheets".
+
+A "Proof Worksheet" is what I call the contents of
+the Proof Assistant screen. This screen is just a
+big text area, and is free-form, subject to the
+validation rules of Proof Assistant. At any time
+you can use 
+
+        
+    File/Save
+        
+
+or 
+
+        
+    File/SaveAs
+        
+
+to save the contexts of the Proof Assistant GUI
+screen -- your Proof Worksheet, in other words.
+
+[Now, since I am busy re-proving the first 100 theorems 
+of set.mm as a training exercise, I don't need to update 
+set.mm but I am keeping a copy of my Proof Worksheets.]
+    
+    
+-----
+
+OK, the runpagui command displayed the following scren (I
+show just the Proof Text area here, not the menu options):
+
+       
+    $( <MM> <PROOF_ASST> THEOREM=syl      LOC_AFTER
+       
+    h1::           |- ( ph -> ps ) 
+    h2::           |- ( ps -> ch ) 
+    3:2:           |- ( ph -> ( ps -> ch ) ) 
+    4:3:           |- ( ( ph -> ps ) -> ( ph -> ch ) ) 
+    qed:1,4:       |- ( ph -> ch ) 
+        
+    $)
+        
+
+-----
+That is the initial screen displayed by Proof Assistant
+GUI. It shows a proof of theorem "syl" from set.mm just
+prior to the user selecting Unify/StartUnification (or
+Ctrl-U).
+
+Since I am resuming work, I use the File/Open command
+to load saved Proof Worksheet "stoppedhere.txt". This
+is what appears after File/Open:
+-----
+
+        
+    $( <MM> <PROOF_ASST> THEOREM=mpcom  LOC_AFTER=?
+        
+    h1::mpcom.1        |- ( ps -> ph ) 
+    h2::mpcom.2        |- ( ph -> ( ps -> ch ) ) 
+    3:2:com12          |- ( ps -> ( ph -> ch ) ) 
+    qed:1,3:mpd        |- ( ps -> ch ) 
+        
+    $=  wps wph wch mpcom.1 wph wps wch mpcom.2 com12 mpd $. 
+    $)
+                
+
+-----
+
+Apparently I finished "mpcom" yesterday. I can tell that
+by the "$=" Generated Proof Step line which shows the
+Metamath RPN format of the proof.
+
+So, I open up my Mozilla browser and display 
+
+            
+    file:///C:/metamath/althtml/mmtheorems.html
+            
+
+That is a local copy of the webpage from metamath.org
+which I have stored on my hard drive for convenience.
+It shows the first 100 theorems in set.mm.
+
+The next theorem after mpcom is syldd, "Nested syllogism
+deduction". So I use File/New to start the syldd proof.
+Here is the the Proof Worksheet that is displayed:
+-----
+
+                
+    $( <MM> <PROOF_ASST> THEOREM=syldd  LOC_AFTER=?
+        
+    h1::syldd.1        |- ( ph -> ( ps -> ( ch -> th ) ) ) 
+    h2::syldd.2        |- ( ph -> ( ps -> ( th -> ta ) ) ) 
+    3::                |- ?
+    qed::              |- ( ph -> ( ps -> ( ch -> ta ) ) ) 
+        
+    $)
+                
+
+-----
+OK, notice that steps 1 and 2 are the logical hypotheses
+for syldd (as designated by the "h" at the start of the
+line.)
+
+And notice that step 3 is a skeleton step, which contains
+just a step number and an initialized formula area set
+to "?". 
+
+The "qed" step is the syldd formula. "qed" is always the
+step number of the last step of a proof (using a special
+code like "qed" helps the program know what is intended
+in the proof.)
+
+[OK, now I am looking at the GUI screen and drawing a
+blank. I cannot remember what I was doing yesterday, so
+I look at the the mmtheorems.html page for a little while.
+
+still thinking
+
+
+still thinking
+
+
+aha!
+
+]
+
+OK, I remember an identity, which I type into step 3, and then,
+I see a modus ponens result so I create step 4 using cut and
+paste, linking steps 1 and 3, and indicate that the qed step
+has hyps 2 and 4. Here is what the page looks like after
+typing:
+-----
+
+        
+    $( <MM> <PROOF_ASST> THEOREM=syldd  LOC_AFTER=?
+        
+    h1::syldd.1        |- ( ph -> ( ps -> ( ch -> th ) ) ) 
+    h2::syldd.2        |- ( ph -> ( ps -> ( th -> ta ) ) ) 
+        
+    3::                |- ( ( ch -> th ) -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) )
+        
+    4:1,3              |- ( ph -> ( ps -> 
+                          ( ( th -> ta ) -> ( ch -> ta ) ) )
+        
+    qed:2,4            |- ( ph -> ( ps -> ( ch -> ta ) ) ) 
+        
+    $)
+        
+
+-----
+
+OK, now I press Ctrl-U (shortcut for Menu Option
+Unify/StartUnification). Here is the updated Proof
+Text area:
+
+
+OOOPS! The UnificationErrors GUI page appears, with this
+message:
+-----
+
+                
+    E-PA-0346 Theorem syldd Step 3: Formula contains one of
+    more grammatical parse errors (somewhere in there). The
+    error is probably a typo, like a missing space or 
+    unbalanced parentheses. Note that Metamath is 
+    case-sensitive, and in Proof Assistant, '$.' is not used
+    to terminate statements.  Proof Text input reader last 
+    position at  Line: 8 Column: 5
+                
+
+-----
+
+OK, so I add an extra ")" on step 3, like this:
+
+                
+    $( <MM> <PROOF_ASST> THEOREM=syldd  LOC_AFTER=?
+        
+    h1::syldd.1        |- ( ph -> ( ps -> ( ch -> th ) ) ) 
+    h2::syldd.2        |- ( ph -> ( ps -> ( th -> ta ) ) ) 
+        
+    3::                |- ( ( ch -> th ) -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) ) )
+        
+    4:1,3              |- ( ph -> ( ps -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) ) )
+        
+    qed:2,4            |- ( ph -> ( ps -> ( ch -> ta ) ) ) 
+        
+    $)
+        
+
+-----
+
+and do Ctrl-U again!!!
+
+DANGIT. Another UnificationErrors GUI page!
+
+                    
+    E-PA-0346 Theorem syldd Step 4: Formula contains one of
+    more grammatical parse errors (somewhere in there). The
+    error is probably a typo, like a missing space or
+    unbalanced parentheses. Note that Metamath is case-
+    sensitive, and in Proof Assistant, '$.' is not used to
+    terminate statements.  Proof Text input reader last
+    position at Line: 12 Column: 7
+                
+
+-----
+
+OK, so I add an extra ")" on step 4, like this:
+
+                
+    $( <MM> <PROOF_ASST> THEOREM=syldd  LOC_AFTER=?
+        
+    h1::syldd.1        |- ( ph -> ( ps -> ( ch -> th ) ) ) 
+    h2::syldd.2        |- ( ph -> ( ps -> ( th -> ta ) ) ) 
+        
+    3::                |- ( ( ch -> th ) -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) ) )
+        
+    4:1,3              |- ( ph -> ( ps -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) ) ) )
+        
+    qed:2,4            |- ( ph -> ( ps -> ( ch -> ta ) ) ) 
+       
+    $)
+                
+
+-----
+
+and do Ctrl-U again!!!
+
+BINGO!
+
+            
+    $( <MM> <PROOF_ASST> THEOREM=syldd  LOC_AFTER=?
+        
+    h1::syldd.1        |- ( ph -> ( ps -> ( ch -> th ) ) ) 
+    h2::syldd.2        |- ( ph -> ( ps -> ( th -> ta ) ) ) 
+        
+    3::imim1           |- ( ( ch -> th ) -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) ) )
+        
+    4:1,3:syl6         |- ( ph -> ( ps -> 
+                            ( ( th -> ta ) -> ( ch -> ta ) ) ) )
+        
+    qed:2,4:mpdd       |- ( ph -> ( ps -> ( ch -> ta ) ) ) 
+        
+    $=  wph wps wth wta wi wch wta wi syldd.2 wph wps wch wth wi wth wta wi wch 
+        wta wi wi syldd.1 wch wth wta imim1 syl6 mpdd $. 
+    $)
+                
+
+-----
+
+Now, I do File/Save to save syldd.txt in my proofs folder.
+
+And that's that! 
+
+But...before exiting I also do a File/SaveAs to store the
+contents of the GUI, my Proof Worksheet in file
+"stoppedhere.txt" so I can remember where I left off when I
+come back later!
+
+-----
+
+P.S. Here is a new, shorter proof for sylcom. 
+I think the new GUI has proven its worth!!!
+
+     
+     $( <MM> <PROOF_ASST> THEOREM=sylcom  LOC_AFTER=?
+          
+     h1::sylcom.1       |- ( ph -> ( ps -> ch ) ) 
+     h2::sylcom.2       |- ( ps -> ( ch -> th ) ) 
+          
+     3:2:a1i            |- ( ph -> ( ps -> ( ch -> th ) ) )
+          
+     qed:1,3:mpdd       |- ( ph -> ( ps -> th ) ) 
+          
+     *my
+     $=  wph wps wch wth sylcom.1 wps wch wth wi wi wph sylcom.2 a1i
+         mpdd $. 
+     
+     *expset.mm
+     $=  wps wph wth wps wph wch wth wph wps wch sylcom.1 com12 sylcom.2
+         syld com12 $.
+     
+     $)     
+     

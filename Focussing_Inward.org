@@ -1,0 +1,237 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+While thinking back on PM related activities of last year,
+a unifying theme appears in the form of "reaching outwards".
+Most of the activities then, starting from the ill-fated 
+whitepaper through the Gateway conference to the NSF grant
+application were designed to better connect PM with other
+organizations.  By and large, we have been successful ---
+we have gotten the attention of such organizations as
+Metamath, Lisp NYC, MSA, MAA and First Monday and are forming 
+various sorts of partnerships with them which are already helping
+us in our efforts.
+
+At the same time that I think this was a good choice, I think
+it would be good to consider changing our strategic theme
+to "focussing inwards" for this year.  I see two main reasons
+for this.
+
+First, as I realized when working on our strategic plan for
+this year, exactly because we have been so successful, it is
+a pretty full workload just to keep up with the organizations
+whom we already have contacted.  Given that quality or 
+relationship counts as much as quantity of partnerships, it
+might be wise to pull back from actively soliciting new 
+partners to cultivating the relationships we have already
+begun.
+
+Second, I have been getting the feeling that, in reaching
+outwards, things are getting out of balance to an extent
+which I worry cannot be ignored lest the community start 
+going away.  During the planning for the grant, Aaron
+proposed that my role be some sort of community consultant
+and, as such, here are areas which I believe to be
+crying out for attention.
+
+ 1.  There is a growing rift between those of us working on
+the administrative end and those working on the content end.
+To be sure, as the project grows, it is only natural that
+people would take on specialized roles and not be personally
+involved in all aspects of the site.  However, what I see 
+goes beyond that.  I am not sure that each side has an
+accurate overall picture of what the other side considers
+to be pressing concerns or even what it is up to.
+
+ 1.  There is plenty of room for improvement in treatment of
+new members.  There is not much done in the way of welcoming
+newcomers and integrating them into the community.  This lack
+shows up rather dramatically on all too regular basis as 
+someone new comes along who is eager to help contribute, but
+unfortuately does it in a way which unintentionally messes up
+the workflow for existing contributors, leading to a flame
+war.  A few years back, Joe experienced this, more recently,
+there was Mathprof with copy editing and just now Prime Fan
+with filling requests.  I worry that, unless this issue is
+first adressed, it could be disastrous to try to interest a
+lot of people in joining PM.
+
+ 1.  There is likely also room for improvment of treatment of
+old members.  It is well known that there a fair number of
+people who, after being highly involved with the project for
+a long time, leave.  This could be due to various causes, and
+would depend on the person.  On the one hand, if people leave 
+because they only intended to contribute a fixed amount and 
+finish their project or because outside circumstances no longer 
+allow them to participate in the project that is fine.  On the
+other hand, if people leave because they get burnt out or feel
+unwelcome or unappreciated, then there is a problem.
+
+ 1.  I have always felt that there has been a lack of communication
+about how to write PM entries and coordination between authors.
+
+ 1.  Circumstances have changed tremendously since 2001 and I
+believe that attitudes and priorities need to undergo a phase
+transition to stay in touch with reality.  Originally, there
+was little in the way of online references, so the priority
+was simply to get material up, but now there is a growing
+realization that quality is important as well as quantity.
+While PM has recognized this early on and was far ahead of
+others in the beginning, I worry that everybody else has
+caught up and we might even begin to lag --- when I look at
+the quality of Wikipedia mathematical entries nowadays I see 
+that their push to improve the quality of coverage has had
+dramatic consequences.  Also, the standard of comparison is 
+rising as traditional publishers such as Springer are making
+their mathematical references openly accessible (but still
+quite unfree) online.
+
+ 1.  Another way in which circumstances have changed is
+that the internet has gone from primarily being a hangout of 
+hackers to being dominated by weblogs and My Space.  Surely,
+this demographic trend needs to be considered as it determines
+what context and defaults readers of our site, some of 
+whom will become participants, bring with them.
+
+ 1.  While it may not directly add or improve content, out of
+channel communication, including even jokes and puzzles, helps
+to build community.  I am not alone in this
+opinion --- [http://planetmath.org/?op=getmsg&id=9223 a year ago], 
+Drini wrote "Also there's the issue that the "community" feeling 
+isn't there. I know a few people, mostly from outside, but there 
+isn't much interaction among the vast majority of users. And 
+while this is not a social club, having a good atmosphere indeed 
+helps to create better encyclopedia.".
+
+ 1. There are a whole bunch of grass-roots ideas such as
+poster projects and topic-of-the month clubs which
+haven't really gotten off the ground.
+
+Overall, I consider it understandable, if regrettable, that things
+have proceeded as they have.  Two years ago, things looked quite
+differrent than they do now --- the 
+[http://planetmath.org/?op=getmsg&id=6276 budget was miniscule],
+we were quite disconnected from the rest of the mathematical
+world, the computer was 
+[http://planetmath.org/?op=getmsg&id=5929 agonizingly]
+[http://planetmath.org/?op=getmsg&id=4968 slow] 
+and even was 
+[http://planetmath.org/?op=getobj&from=news&id=319 crashed offline for a month],
+and there was no progess fixing bugs.  Given the gravity of these issues,
+it is pretty clear that they needed to be dealt with immediately,
+before even thinking zbout anything like the points raised above. Now, 
+this has changed, largely due to two years of intense effort by Aaron, 
+Joe, and Ray.  While there is still quite a ways to go before
+PM becomes sustainable, things have improved to the point that 
+we can start getting back to the points mentioned above.
+
+As I mentioned above, most of the effort on the organizational 
+level has been exerted by three members of the community.  The
+reason for this is simply that the three of us happen to be the
+[http://planetmath.org/?op=getmsg;id=9405 only ones] who were 
+committed to putting in long hours of work towards the organizational
+end of things, not that anyone was excluded.  However, while we 
+may have been the only ones who were interested and able to
+do things like write grants and track down potential partners
+and donors, it is certainly not the case that we are so alone when
+it comes to things more directly related to the core business of
+PM.  I believe that it is important to integrate the community
+in organizational activities better at this juncture for two reasons:
+1. We don't want to become some self-appointed central committee
+wresting power from the community or even look that way.  2.  This 
+is hard work, all three of us are working around full capacity on a 
+continued basis, and need to be really careful not to burn out.
+
+Here are some possible remedies to the problems cited above:
+
+ 1.  There need to be more communications about what is going
+on in the organizational end.  In particular, the system news
+could be much beter used.
+
+ 1.  Matte had [http://planetmath.org/?op=getmsg&id=12602 two nice suggestions],
+a "Welcome to PlanetMath"-page and list of projects.  The workflow 
+and the way the community operates needs to be documented and made 
+clear, rather than assuming it is obvious to everybody or expecting
+people to spend a long time lurking to figure it out on their own.
+
+ 1.  Before doing anything, we need to figure out if there is
+a problem in the first place and, if so, exactly what.
+
+ 1.  Likely we need better communications channels.  Fora and
+corrections leave a lot to be desired.  While we are working
+on a new program that should adress these issues, in the 
+meanwhile we might be able to make excellent use of 
+existing programs.
+
+ 1.  I think that the first step is consciousness raising.
+While a number of have been aware of this issue of quality
+for quite some time now, this hasn't become universal or
+been translated much into social arrangements for improving
+existing content --- this is closely intertwined with the 
+previous point.  Also, the current scoring system is likely
+to be a problem because it rewards people who flood the
+system with lots of short, hastily written entries.
+
+ 1.  First Monday could help us here by telling us about
+what internet culture looks like nowadays.
+
+ 1.  While our fora are excellent for asking questions, they
+seem not to be so good for other sorts of discourse because 
+of the way things are split into posts which quickly scroll
+off the screen.  Again, while we hope to adress this in a
+few years with new programs, in the meanwhile I think that 
+we could use existing technology which is much better 
+suited to the types of messages which build community.  
+Also, opportunities to meet PM members along travels and 
+inviting them to meet at a summit should help.  Given
+how opportunities to meet in person have reflected in 
+the quality of collaborration between the three of us,
+I would expect that meeting in person would also help 
+other members of the community as well.
+
+ 1.  These ideas should be dusted off and dialogue
+with their proposers resumed to see what is needed 
+in the way of organizational support and see 
+whether it could be provided in some form.
+
+Overall, I would say that, while we should definitely
+continue the work on raising funds and working on 
+building relations with partners, it would also be 
+nice to have community involvement and better
+integrate community members into organizational
+matters.  While it seems to be the case that there
+are only three members who are seriously interested
+in and able to do such things as writing grants and 
+talking with potential partners, there certainly are
+a lot more members who are interested in matters more
+directly connected to the site such as systems for
+verifying correctness of entries and official
+memberships; moreiover, they already have posted
+quite a lot of thoughts and suggetions on these topics
+over the last few years.  Now that we have gained some
+resources with which to implement some of these 
+suggestions, it might be good to reconnect with them
+and decide how to use some of the money we have 
+raised.  Since the discussion fora and this wiki seem no 
+longer to be so good for this purpose, maybe we need to 
+implement new channels of communication like a weblog or 
+some sort of meeting --- for instance, the two board 
+meetings we already had turned into general discussions,
+so it might be good to make some sort of town hall
+meetings in whatever form is most congenial to the
+members of the community who have been most active
+in considering these issues.
+
+--[[file:rspuzio.org][rspuzio]]
+
+References:
+
+[http://planetmath.org/?op=getmsg&id=9212 Future visions thread]
+
+[[file:How Free Culture Will Save Digital Libraries | Library as social space.org][How Free Culture Will Save Digital Libraries | Library as social space]]
+
+----
+
+Companion Document:
+
+[[file:Against Concepts.org][Against Concepts]]

@@ -1,0 +1,224 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+I just wanted to say briefly that I think the idea of doing something at least
+very much like this in spirit is very important for digital libraries and CBPP
+knowledge systems.  There has been some discussion in digital library circles
+for a few years about "superimposed information"; the idea being that this is
+value-added information, generally by third parties (not persons who authored
+the original resource), which somehow assists in the comprehension, application,
+or utilization of the original digital library resource.  An example from the
+CITIDEL project I was formerly working on was that users could sequence and
+annotate lists of digital library records from CITIDEL.  A cool superimposed
+information kind of thing to do would have been to link the value-added
+annotations to the original resources somehow (showing them as comments when
+the record is viewed, using them to supplement the indexing of the original
+record, etc.)  Such superimposed information has a natural scholium-based
+representation.
+
+I also like how the scholium model supports the notion that knowledge is always
+provisional and always changing, and that anyone can contribute to the
+commonly-held body of knowledge through the value-adding process of developing
+scholia on the corpus.
+
+In addition, it is worth noting that the scholium model does not work by
+altering or destroying the original resource (or subsequent linked scholia).
+This allows more relaxed notions of control, like the ones that I think
+PlanetMath begins to demonstrate (there is a partial scholium model there in
+that entries can be attached to each other in a way that distributes the work of
+covering a topic and adds value to primary entries with secondary ones, such as
+proofs, results, examples, and more.  And of course, PlanetMath encourages
+informal discussions to develop around most first-class object types.)  On top
+of scholium-based resources could be layered reputation-based and other forms of
+filtering that "render" a segment of the collection in a manner more useful and
+salient to individuals.
+
+There is therefore likely a lot of value in formalizing the scholium concept and
+building digital libraries -- especially collaborative, productive digital
+libraries -- upon it.  In terms of writing on this topic, I don't think we have
+to restrict ourselves to completely prospective, theoretical notions of
+scholium.  We should examine how existing systems, like PlanetMath, are already
+implementing scholium notions right now, and show what this buys them.  I think
+it actually embodies much of what is exciting about how CBPP changes knowledge
+production and is resultingly transforming society.  --[[file:akrowne.org][akrowne]] Thu Apr 7
+18:45:19 UTC 2005 
+
+** Comments
+
+Like the title says, it is a "model" - in which I include the sense of modeling
+behavior that we already see in the wild.  And yet, I think that the treatment
+is maybe somewhat novel - I have tried to make the system fairly abstract, so
+that it can be plugged into many applications, from document annotations like in
+MS Word or Adobe Acrobat, to Usenet, to Slashdot, to !PlanetMath, to the web, to
+fairly general sorts of markup, and beyond.
+
+The "philosphy" of the scholium system is a model (in another sense of the word)
+for people working with CBPP to keep in mind -- a sort of "guiding principle".
+Like you said, the philosophy of the system has very much to do with the
+"provisional" nature of knowledge - or, like I put it in a recent draft of the
+paper, with subjectivity.  In some contexts, like mathematics, "knowledge" may
+not be all that provisional - however, different people may still see the same
+thing that they all "agree" on in very different ways! - and our knowledge of
+mathematics will probably always be in some ways "incomplete".  Alternative
+perspectives - especially those which strike new connections between distinct
+topics - are of considerable interest to me.
+
+To be honest, the system as I've conceptualized it is partly a reaction against
+one of the things I don't like about !PlanetMath - the idea of there being only
+one article about each topic.  Even the name "Noosphere" brings to mind ESR's
+article about "Homesteading in the Noosphere", which seems to me to be exactly
+what people are doing in the current PM system.  The scholium system was an
+attempt at resolving the conflict between "ownership" on the one hand and
+subjectivity and inclusivity on the other.  Not to laden the topic with too many
+jewishisms ;), but the model here is perhaps more like kibbutzim than like
+homesteading.  While I think it is good for people to own their speech
+(something that Wikipedia lacks), I don't think that monopolies in a given topic
+are good.
+
+And while it is true that PM can potentially resolve the monopoly issue by
+permitting people to build such-and-such I, II, III, etc., the connections
+between these articles may be harder to see than they would be if the authors
+were working together to write one definitive article on the given topic.  Now,
+I suppose one could argue that some individual could come along and
+write/maintain a definitive guide to such and such in the current PM system; and
+while that is true, it really doesn't do much to convince me that
+"article-level" or "concept-level" ownership is all that great of a way to go.
+By making the concept of an article somewhat more "fuzzy", I think the proposed
+scholium system will actually make it easier to write "definitive" articles
+about any given topic.
+
+I think  PM support for discussion and attachments is good - but (a) the
+distinction between first and second class objects has some costs associated
+with it (some benefits too); and (b) on a sidenote, I don't think that the
+"attachment" metadata is being made transparent to the [[file:FEM.org][FEM]] project, which is
+too bad, because I'm sure it would be useful.
+
+In fact, I like the fact that a distinction between first and second class
+objects exists on PM.  In order for a scholium-based system to be really useful
+in any given deployment, more work on authority and filtering subsystems will
+need to be done.  I'm thinking of authority and filtering as being similar - for
+example, an authority model might permit an author to move certain scholia from
+the main page to a separate page - the power to change a given scholium from a
+footnote to an endnote, basically.  Filtering might give users the power to
+override the default behavior as determined by the author (and hopefully to do
+lots of other interesting things).  Unless appropriate social and technical
+procedures are added that suit a given deployment, a scholium-based system could
+easily devolve into a totally cacophonous babel.  Which might not be so bad
+(usenet...) or which could be awful (usenet...).
+
+Getting back to your closing comment above, it might be interesting to see if we
+could define a "parameter space" and locate different points in this space that
+simulate the behavior of usenet, slashdot, !PlanetMath, and so on - and also
+show how to move around in the space (including to "new" points) by changing
+various settings.
+--[[file:jcorneli.org][jcorneli]] Fri Apr 08 05:39:51 2005 UTC
+
+** Some replies
+
+First, on
+
+: To be honest, the system as I've conceptualized it is partly a reaction
+against one of the things I don't like about PlanetMath - the idea of there
+being only one article about each topic.
+
+I was a little bit surprised to see this, because an important design decision 
+I (and those participating in PlanetMath's development) made early on was that 
+we would encourage agreement on a single entry, but never force such a thing.
+So, there doesn't have to be only one entry on a topic.  Because of this guiding
+principle, I built the system and conventions around it to allow for alternative
+versions of entries.  In fact, people have indeed created alternative versions of
+entries and chaos has not erupted.  One example is:
+
+ * http://planetmath.org/encyclopedia/Inverse.html
+
+Which has an "alternate definition of group" attached.  There are many more examples 
+which I will lazily not take the time to dredge up.
+
+So, it sounds to me like this rule about only-one-article was only in your head =)
+If its not written somewhere, certainly we should make more clear that the "official"
+!PlanetMath philosophy is to create alternative entries when significant value can
+be added by them.
+
+Other than that, I think we are in agreement.  I like your "parameter space" idea;
+this drives home the point that existing systems (including PM) already do some 
+scholium-like things (to beneficial effect), but not all of them.
+
+--[[file:akrowne.org][akrowne]] Fri Apr 8 18:29:54 UTC 2005
+
+----
+
+You shouldn't be surprised that I think that a "no duplicates" rule is part of
+PM - even if it is an unofficial rule - just think back to the APM-Xi days and
+the furor that went up over "duplicate entries" (even independently from the
+furor about everything else).
+
+From the PM FAQ:
+
+: /How do I know what content has already been added?/  You don't really need
+to, other than to avoid directly duplicating a concept someone else has already
+written an entry for.  However, this can be avoided by simply using the search
+engine.  In addition, the system will provide a warning at entry-adding time if
+the title of your entry is suspiciously similar to the title of an existing
+entry.
+
+I'm pretty sure that there are other statements along the lines of "duplicates
+are to be avoided" in the site documentation.  And while "duplicate" is not one
+of the official correction types, if you search through the corrections that
+have actually been given, I'm sure you'll see that "duplicate" comes up a lot.
+
+(The ability to search through corrections, messages, and other sub-collections
+should really be a [[file:Feature Requests|Feature Request.org][Feature Requests|Feature Request]].)
+
+Now, I completely agree with the principle which says that people should not
+/duplicate/ (as a verb) work done by others.  And I'm not at all opposed to
+the idea that one article should become the standard.
+
+Indeed, I think that a well-developed scholium-based system will be quite a bit
+more likely to produce "definitive" articles than a system that does not use the
+scholium model's ideas - whether alternative versions of articles are encouraged
+or discouraged.
+
+It seems to me that both !PlanetMath and Wikipedia best accommodate dissenting
+voices through the attached discussions (in the first case) and the Talk page
+(in the second).  I agree that this is scholium-like.  However, while it can
+sometimes be good to separate "talk" from content, the "insight" of the scholium
+system is that, other times, the talk is actually a part the content and should
+not be separated out.  Usenet treats talk as content, whereas PM, Wikipedia and
+even Slashdot tend to separate the talk from the "actual" content (though in the
+case of Slashdot, talk is "officially" an important, but different, form of
+content; in PM and wikipedia, this is also the case, though talk seems to be
+less emphasized in the PM culture than in the Slashdot culture).
+
+As for attachments in general, here I should just plead ignorance, because I've
+never used them, nor have I seen the metadata that defines them (an FEM feature
+request).  Attachments, certainly, are a very scholium-system-like thing.
+Indeed (the simplest) scholia /are/ just attachments.  They get more
+complicated as we add more metadata - a TYPE, which might say that this is a
+"proof of this result" attachment, for example; or a BEG and END, which say that
+this scholium is only attached to a specific section of its parent document; or
+a scholium could be multiply-attached.  I recall being inspired by the idea of
+attachments, but I don't remember whether I was reinventing the wheel on my own
+or using the idea of attachments as they're done in PM.
+
+Note that typed attachments could be very nicely used to handle parallel
+collections (something I talked about
+[[file:Broad_layers_and_local_relationships|elsewhere.org][Broad_layers_and_local_relationships|elsewhere]] without really realizing
+explicitly that it connects so well with the scholium system).
+
+So, to sum up, I should really broaden my critique: forbidding duplicate entries
+would be bad, but allowing them does not really solve the problem I'm thinking
+of.  Discouraging them or encouraging them is not exactly relevant either.  It
+is tying them directly to the entries they relate to that is important.
+
+The APM-Xi entries, for example, were generally seen to be "bad" as untyped
+elements of the PM encyclopedia.  But as /typed/ elements they might have been
+OK (because then they could be filtered out, or in).  Furthermore, any
+"duplicate" APM-Xi entries could have been attached to the articles they related
+to, thereby adding value "directly" to these articles.  I.e., a user could set
+"default collection: PM encyclopedia" and "view attachments from: APM-Xi", to
+see APM-Xi entries below whatever articles they were attached to -- if they
+wanted to -- or not, if they didn't.
+
+I hope this makes my critique & its rationale more clear.  --[[file:jcorneli.org][jcorneli]] Fri
+Apr 08 20:52:59 2005 UTC

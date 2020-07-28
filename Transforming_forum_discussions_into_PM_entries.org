@@ -1,0 +1,200 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There is a large portion of math in the PM forums
+that could be turned into PM articles. As
+PM gets more users and the forums start supporting latex
+this will become even more relevant. 
+It would seem that we need some kind of procedure 
+after a question is answered. 
+
+Suppose we have some discussion in the
+Problem forum. For example 
+
+  http://planetmath.org/?op=getmsg&id=8122
+
+I think the best way would be to create a request and 
+somehow attach the discussion to that request. This would require some 
+modification to the PM software. 
+
+Another way (with no changes to PM software) would be just
+to create an request with a link to the discussion. 
+A problem, however, is that further discussions can take 
+place at two places: 1) on the request page and
+2) on the original  problem forum.
+
+In any case, it should be easy to see which
+threads (in the Problem forums) that are on their way into 
+PM entries. License-wise there is probably not any issues if
+we add some attribution line "This entry is based on the discussion ...".
+I think it would also be polite to offer the PM entry to the 
+person who originally answered the question on the forum.
+
+More generally, is there a need to rethink the request page? 
+I think the idea of a "seed entry" would be great. 
+There was also an idea (I think a good one)
+that a new entry is for some time world editable. --- [[file:matte.org][matte]] 07.19.2005
+
+----
+
+I wonder if just making messages searchable and having "good" threads get
+weighted highly would have the desired effect.  Combined with a reputation 
+system, the reputations of the participants could be used for weighting.
+Of course we could do weighting right now based on number of replies.
+ --[[file:akrowne.org][akrowne]] Tue Jul 19 11:59:00 UTC 2005
+
+An "Advanced search" would be great. However, this only helps
+if the user knows what he is searching for. 
+I think it would be best to have all the mathematical content in the 
+encyclopaedia. Or, I do not think we should have mathematical 
+content spread out over the whole of PM. (Part in the forums, part in the
+encyclopaedia.) After all, part of the fun thing with PM is its
+browsability. 
+
+If a discussion merits
+an entry, why not have a method (or culture, protocol) for 
+turning it into a PM entry?
+This will make it easy to use in other entries. By entering it into 
+the encycloaedia, the new entry will also be classified, attached to 
+an entry (if suitable), and interlinked with the rest of the entries. 
+Turning a thread into a good entry probably also involves
+some copyediting, restructuring, etc.
+
+I could imagine that entries based on forum discussions could be
+quite useful since some of these come from "real life" problems. 
+ -- [[file:matte.org][matte]] Jul 19 2005
+
+One cool trick would be to do Noosphere auto-linking in the messages.  Not quite
+what Matte was asking for, but it would be a step, since it would get messages
+"in" the encyclopedia automatically as long as they match some existing item.
+People might find answers automatically this way :).  Also, in cases where the
+question needed a new answer, the author could put the body of the response in
+the encyclopedia and just a pointer to it in the follow up message.
+--[[file:jcorneli.org][jcorneli]] PS.  I forgot to mention that if articles had /backlinking/
+(perhaps with several different "types"), then we could see which forum postings
+linked to the article.  This is a very "scholiumific" approach (as Ray and I
+agree, via private correspondence!) and best of all (IMO) it should be simple to
+code up. :)
+
+By auto-linking a thread, I assume you mean that the 
+thread is attached to an existing entry in the encyclopaedia. 
+If we employ this solution, then after a real entry is written from the
+thread, the same data is in the encylopaedia twice.
+
+I think this approach can be developed further. Here is what I would propose:
+
+Let's add more structure to the Problem forums. 
+Instead of just posting a message, one would "Open a question". 
+Questions would have
+the same kind of meta data as PM-entries such as related entries,
+related questions, 
+and classification. However, these can be filled in during the discussion.
+After the question
+is answered and thoroughly discussed, it is "closed" 
+(although users can still post to the thread).  
+By dividing questions into Open and Closed, it is easier to present and sort
+the question forums. Also, since problems would have a "Related entries" 
+field, it would link the problems to the encylopaedia more closely (with
+bidirectional linking).
+This would also have the advantage that the Problem forums would be
+easier to use and browse due to classification. 
+
+If the topic of a closed question is of general mathematical 
+interest, one could flag the
+thread as "Entry material" (or something alike). 
+These threads would automatically 
+appear in the "Request list". After an entry is created, it would 
+have a link back to the original thread, and vice-versa, a link from the
+thread to the entry. 
+This is a good way to credit all 
+contributers. Also, if there is any problems interpreting the 
+entry, the original thread would be useful. 
+
+This is maybe what you meant? 
+-- [[file:matte.org][matte]] June 20.2005 
+
+NO! (at least, not quite :)).  What I meant is "autolinking in the already existing Noosphere sense
+of the word", wherein key phrases (like "automorphism group" or "holonomic" or "Oswald's lemma") become hyperlinks, automatically.
+So if someone says "Why is xyz the case?" an author could reply "See Oswald's lemma in the encyclopedia" and not bother with copying and pasting the link.
+YES, what's true, is that if an author responds in full to the question /in the forum/, then we'd tend to see
+duplication of answers.  But tricky & smart authors would be expected to respond to the question /in the encyclopedia/
+and then only include a reference to their solution in a followup message (i.e. assuming the answer wasn't entirely trivial).  Does 
+this make more sense?  You wouldn't see duplication of answers in the encyclopedia and in the forums /as long as authors followed the rule I'm proposing here./
+Furthermore, some people asking questions might find that the autolinking gave them answers that they were too lazy to look up (or couldn't /think/ of the right search terms to find).  Such linking wouldn't always
+take place, of course, because sometimes the question-asker would choose the "wrong" words, but then the answerer can
+use the right ones.  --[[file:jcorneli.org][jcorneli]]
+
+OK I should have been able to quess that one :-) 
+Linking from the forums into the encyclopaedia could be good. For example
+with \PMlinkname commands. www-links are already automatically made 
+clickable. However, I am not so sure about auto-linking
+the whole text. That will generate a lot of bad links. In particular since
+messages are not classified nor editable. 
+Latex support would be great though. 
+
+I'm not here discussing a "quick fix", but more idelogically thinking
+what would be the optimal way to make full use of the mathematical
+disucssions on the problem forums. I think the solution I offered in the 
+previous post is a quite good one. For example, if someone has outlined
+a rough sketch of a proof in the forum, that is a good start when 
+someone -- at some point N years later -- is writing an entry on
+the topic. The solution is also completely automatic.
+Once a problem is posed, it is a start of a chain leading to a
+PM entry on the topic. Another good thing is that it is distributed. 
+The tasks of 1) posing the problem, 
+ 2) solving the problem,
+ 3) setting meta data (classification, related entries)
+ 4) copywriting/editing
+can all be done by different people. That is a good thing in an environment
+like PM. 
+[[file:matte.org][matte]]
+
+Yes, this is a good idea.  (I had to explain my idea before I could really
+get into yours, because I think mine is a good idea too and I wanted to
+make sure it was clearly laid out :).)  In the approach you're proposing, questions are more
+like "bug reports" from the software development world.  This makes 
+sense (given what PM is), and the design of the system could follow
+the design of standard bug reporting software.
+
+On the topic of "bad links" you brought up above - I don't think this
+is a problem with my suggestion, but with (a) the autolinker and (b)
+the fact that, as you mentioned, forum postings aren't editable ;).
+In fact, the more bad links we see, the more we should be able
+to fix.  I'll stand by my suggestion, but note that it may require
+more of a redesign of the forum system than I had initially thought.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Maybe not a bug report. More like a feature request :)
+
+I do not think our proposals are mutually exlusive. I, however, would see
+links from the encylopaedia into Problems as temporary. Over time, 
+someone should transform these into entries (and the PM software would/should 
+encourage this). Would you agree with this?
+Some threads can be pretty messy to read. 
+
+Here is how I would envision the link between Problems and the encyclopaedia:
+
+Each Problem (Open or Closed) can be classified and it has a 'Related entries'
+and 'Related problems' lists.
+After this, the Problem would be 
+linked (bidirectionally) from all the entries/problems in its Related lists. 
+When the Problem is made into an PM-entry, the Problem's 
+Related-lists would just be transformed
+into the entry's Related-lists. 
+
+In any case, (as you said) the forum system first needs to be rethought in order to 
+implement any of these approaches. But, when doing that, one should keep these
+issues in mind. 
+--- [[file:matte.org][matte]]
+
+I don't think there's any reason to make any of the links temporary,
+though the way they are handled might change over time (e.g. perhaps
+they would no longer show on the article's main page, but on a sub-page
+"Problems (or questions) that link to this article").  The fact that
+the questions are now encyclopedia entries doesn't change the fact
+that they are still, in their basic nature, questions.  So, someone
+might want to use this list of questions as an exercise set in order
+to learn more about the theorem.  Anyway, various details like
+this can be worked out later, no problem.  The main thing is to get
+some development effort going on the Noosphere code! --[[file:jcorneli.org][jcorneli]]

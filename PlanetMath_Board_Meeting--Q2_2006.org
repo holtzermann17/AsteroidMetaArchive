@@ -1,0 +1,131 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Second board meeting, Q2 2006.
+
+* Time and Place
+
+Tentative date: *Sunday April 30rd 2006, 9pm EST*. 
+
+The meeting will take place by IRC (Internet Relay Chat. Channel
+#planetmath, server irc.endernet.org), and simultaneously by
+long-distance telephone conference at 218-862-6100, access code
+2718281828# if enough people are interested in this extra option.
+
+(Don't know how to get on IRC? Check out [[file:PM Real Time Chat.org][PM Real Time Chat]])
+
+ * [[file:Discussion of date and time of PMB2.org][Discussion of date and time of PMB2]]
+
+* Record
+
+Log and minutes will be posted here.
+
+* Agenda
+
+Major topics for discussion are:
+
+ * proposing a structure for organizational decision making (will deal with how the board, officers, and voting members interact on decisions).
+ * goals/vision (see the "Visions" document below)
+ * proposing the creation of paid positions
+ * multiple licenses and the viability of proposed PM licenses (should know more by this point)
+ * putting in a contributor pact
+ * creating a membership (goal for getting this done by?  we should at least have all active "working members" formalized soon).
+ * ...
+
+[[file:Discussion of agenda of PMB2.org][Discussion of agenda of PMB2]]
+
+* Supporting documents
+
+ * [[file:PM Goals And Philosophy (Draft).org][PM Goals And Philosophy (Draft)]]
+ * [[file:Sketch of a Possible Organizational Structure.org][Sketch of a Possible Organizational Structure]]
+ * [[file:PlanetMath ByLaws 2.0.org][PlanetMath ByLaws 2.0]] (should embody decision-making procedures) 
+ * [http://www.ma.utexas.edu/~jcorneli/a/plan.pdf draft of a strategic plan]
+ * [[file:PlanetMath Roles.org][PlanetMath Roles]]
+ * [[file:Second Draft of Pact.org][Second Draft of Pact]] (contributor pact)
+ * [[file:PM Licenses.org][PM Licenses]]
+
+* People
+
+Who plans to attend?
+
+ * [[file:akrowne.org][akrowne]]
+ * [[file:alozano.org][alozano]]
+ * [[file:jcorneli.org][jcorneli]]
+ * ...
+
+* Discussion
+
+I think we should have draft proposals for consideration on the following items:
+
+ 1. vision (whitepaper etc.)
+ 1. new bylaws (decision-making dynamics)
+ 1. positions/offices (e.g. CEO/aaron, COO/ray, CKO/joe, CFO/bonnie)
+ 1. PM licenses (already have; need to get legal expert on)
+ 1. copyright pact (ditto, though probably could use some more work)
+
+--[[file:akrowne.org][akrowne]] Mon Mar 13 19:43:55 UTC 2006
+
+On the topic of "proposing a structure for organizational decision
+making ([to] deal with how the board, officers, and voting members
+interact on decisions)", I haven't drafted such a thing yet, although
+I do mention the utility of figuring this stuff out in my working
+draft of the overall strategic plan.  How should we go about working
+this out?  It seems to me that the board might want to be involved
+with this; while we could work on this question /before/ the board
+meeting, I don't know if we'll be able to sketch out a useful proposal
+without making a significant investment of effort, and I don't know if
+this effort is available right now.  Such a proposal should be made
+after some serious study; by the board meeting, it may be that the
+best thing we'll be able to come up with is a proposal to write a
+proposal. --[[file:jcorneli.org][jcorneli]]
+
+I have two comments on the !ByLaws:
+
+: 1. to create free educational content in mathematics in 
+order to liberate knowledge and improve understanding
+
+This seems to imply that PM will concentrate on producing 
+original content. If we want to promote free culture, I think a 
+central part of that is demonstrating the benefits of recycling existing 
+mathematical content. There's already a lot of such material on 
+the web. However, to use it, PM needs to define the 
+level of "copyright hygiene" we expect from users. As an example, 
+do we welcome Wikipedia entries that are licensed under the FDL? 
+Do we accept content that is PD is US, but possibly copyrighted
+elsewhere?
+
+If we allow wiki-entries, it would be questionable to hold PM
+users personally responsible for the content (as in the latest pact). 
+On the other hand, if we do not allow this, this is something 
+that should be stated explicitly. I think it is fair to assume
+that over time, the amount of off-site free content will grow.
+If so, this question will become more and more important.  
+It is also a strategic question that could change the nature 
+of PM a lot. Therefore it could be good if the board could
+address the question. IMO the issues of multiple licenses 
+and the contributor pact depend largely on the board's stand on 
+this issue. 
+
+: Unless otherwise stated, board meetings shall be open to members.
+
+In what kind of cases should board meetings be closed?
+
+--[[file:matte.org][matte]]
+
+The standard response to the first point, I think, is that PM
+should think about what it can add to a broader commons.  I think
+this question gets right to the heart of additional important questions:
+what is the value of being 'free', and what kind of 'free' do we value
+most?  Deciding on our role with respect to a broader commons (and sometimes several
+commonses) does indeed seem important when we talk about organizational goals.
+--[[file:jcorneli.org][jcorneli]]
+
+
+
+** See also
+
+ * [[file:Discussion of copyright pact for PMB2.org][Discussion of copyright pact for PMB2]]
+ * [[file:Discussion of creating paid positions for PMB2.org][Discussion of creating paid positions for PMB2]]
+
+----
+[[file:PM_Board_Meetings.org][PM_Board_Meetings]]

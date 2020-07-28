@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/outstandingcor
+
+pp line 15:
+Noosphere::initStats();
+
+pm line 15:
+Noosphere::initNoosphere()

@@ -1,0 +1,77 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is for the discussion of, planning for, and execution of PlanetMath fundraising efforts.
+
+Links to related AM pages:
+
+ * [[file:PlanetMath_Budget_and_Resources.org][PlanetMath_Budget_and_Resources]].
+ * [[file:Budget.org][Budget]]
+ * [[file:PlanetMath Fundraising strategy.org][PlanetMath Fundraising strategy]]
+ * [[file:sources_of_funding_for_PM.org][sources_of_funding_for_PM]].
+ * [[file:make_AM_projects_financially_independent.org][make_AM_projects_financially_independent]].
+ * [[file:Who_should_fundraising_target.org][Who_should_fundraising_target]].
+ * [[file:Potential_PM_supporters.org][Potential_PM_supporters]].
+ * [[file:Outsourced Fundraising and Nonprofit Services.org][Outsourced Fundraising and Nonprofit Services]].
+ * [[file:Improving the Donations Page.org][Improving the Donations Page]]
+ * [[file:Sponsoring PlanetMath.org][Sponsoring PlanetMath]]
+
+*  In-Situ Discussion
+
+Things that haven't yet graduated to their own pages =)
+
+**  Pledge-based Economic Coordination System
+
+It seems like a pledge-based coordination system would enable us to coordinate, and probably help 
+fund, lots of efforts, as well as build up general funding.    Here's how it would work:
+
+ 1. We define a funding item, which has a title, a description (describing what is to
+be purchased), a boolean for requirement of physical delivery address, a minimum price,
+a time-to-live, a cost/minimum total pledge goal, a 
+ 1. We advertise the item.
+ 1. People sign up pledges, giving billing info and possibly delivery addresses (note:
+people can come back and cancel their pledges at any time). 
+ 1. If the cost/pledge goal is met, the venture is "enacted".  This means (1) the
+money is billed, and potentially (2) something is purchased, and (3) potentially delivered.
+If the pledge goal is not met within the ttl, the venture dies, and no one is ever
+billed. 
+
+Such a system could be used for "bounties" for specific development efforts, pooling
+together to buy anything that has a nontrivial up-front investment, and even just
+generic funding drives (where nothing is delivered).
+
+***  Initial Questions
+
+Does a system like this already exist?  How complex would it be to build,
+especially considering interfaces with banking systems?  Are there any legal
+pitfalls (i.e. how solid are the "contracts" of making a pledge)?  Can we design
+it to avoid problems collecting pledges?
+
+***  Similar Things
+
+Sites that do something like this:
+
+ * http://www.pledgebank.com/ - Has the right spirit, but looks a little bit rigid.  Only has 
+  number of co-pledges goals, not total dollar value.
+ * https://www.fundable.org/ This could be used to raise
+  money for bounties and other greater investments for PM. 
+
+***  Discussion
+
+Cool!  I think we should undertake a 1-month pledge drive on fundable to raise
+get $1000 to repay [[file:PlanetMath_Budget_and_Resources|what's left of Aaron's loan.org][PlanetMath_Budget_and_Resources|what's left of Aaron's loan]]
+(100 users, $10 each, PM.org pays the remaining directly).  
+I don't know if it would work or not, but I think it is a somewhat reasonable
+goal, given that there are more than 100 users with a PM score of over 500.
+
+Admittedly, 500 isn't a huge score, but I suspect that many of these people
+would be willing to contribute something, besides, there are probably a number
+of people who like PM "$10 worth" or more.
+
+Even if it didn't work, we could use this as a test case to see if this sort of
+fund drive actually works.
+
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 21:20:58 2005 UTC
+
+* Online reference for fundraising
+http://www.networkforgood.org/Npo/OffsiteFrame/?SiteURL=http%3a%2f%2fwww.nonprofitmatrix.com

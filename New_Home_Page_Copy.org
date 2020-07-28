@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It's time to update the PM home page.  In the past two years I, and I think many PM 
+collaborators on here, have come a long way in terms of our understanding of PM's role
+and mission.  In particular, I now understand PM's function as a core advocacy of free
+mathematics content.  We should rewrite the home page to express some of this new 
+understanding.
+
+Some of the main points I'd like to hit:
+
+ * that we're the place to go for "free math" in general
+ * what "free math" is and why its important
+ * the collaborative nature of the site
+ * the community nature of the site
+ * that the current services and features are just a start
+ * that !PlanetMath is a charitable organization that relies on donations
+ * the educational nature of the site
+
+Yet, the copy cannot be too long! 
+
+*  New Copy
+
+Welcome to PlanetMath -- the home of free math on the web.  This site hosts 
+a vibrant virtual community dedicated to collaboratively developing free mathematics
+content, and helping people to teach and learn mathematics.  The core feature of 
+this site is the Mathematics Encyclopedia -- but this is only the beginning!
+
+"Free" does mean "no cost" (/gratis/), but more importantly, it means "lacking
+restrictions" (/libre/).   PlanetMath uses the GNU Free Documentation License
+so that anyone can re-distribute or extend the content they find here, provided 
+this is done in a way that honors the original authors and contributors.
+
+PlanetMath is run by PlanetMath.org, Ltd., a US-based 501(c)3 tax-exempt charitable organization.  We rely on public support to cover our tiny amount of overhead and 
+developmental costs.
+
+ You can help support PlanetMath: assist with coding, visit the PlanetMath store, 
+ donate directly. More info.
+
+PlanetMath encyclopedia entries are written in !LaTeX, the lingua franca of the 
+worldwide mathematics community. All of the entries are automatically cross-referenced 
+with each other, and the entire corpus is kept updated in real-time.
+
+In addition to the mathematics encyclopedia, there are books, expositions, papers, and 
+forums. You also might want to check out encyclopedia requests if you'd like to see 
+something we don't have. We also have the encyclopedia available in offline-browsable 
+snapshot form, and in book form. 
+
+*  Discussion
+
+What do you all think? Please feel free to edit the copy above.

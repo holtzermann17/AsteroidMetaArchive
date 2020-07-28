@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In the process of thinking about this business of reparameterization, I came across the following curious proposition.  I thought I'd list it here in case it proves to be of interest to somebody.  Since I thought it up myself, I'm not sure it does not belong on Planet Math so I'll put it here for the time being.  Also, I am writing it intuitively, as the ideas come to me, and it will need a bit of rewriting to make sense to others.
+
+The inspiration for this proof comes from Urysohn's technique for proving his metrization lemma.
+
+Let /U/ be an open subset of the interval [0,1] such that no point in the complement of /U/ is simultaneously the left endpoint of one open interval contained in /U/ and the right endpoint of another open interval contained in /U/.  Then there exists a continuous monotonic function /f/:[0,1] -> [0,1] such that /U/ is exactly the set of constancy of /f/.
+
+Every open set is the union of countably many open intervals.  Let's get a trivial cases out of the way.  If /U/ consists of 0 intervals (i.e. /U/ is empty) then we can choose /f/ to be the identity function.  
+
+If one of the component intervals has 0 as an endpoint, we must set /f/ equal to 0 on this interval.  Likewise, if one of these component intervals has 1 as an endpoint, we must set /f/ equal to 1 on this interval.  Throw out these intervals (if they exist) and number the remaining intervals.  Pick the first interval and decree that /f/ equals 1/2 on this interval.  Look at the second interval --- if it lies to the left of the first interval, set /f/ equal to 1/4 on this interval, otherwise it lies to the right and we set /f/ equal to 3/4.  We continue the process according to the following rule: Given an interval, look at the preceeding intervals and find the interval which lies closest to the given interval on the left and the interval which lies closest on the right.  Assign /f/ a constant value on the interval which is the average of the values assigned to these two neighboring intervals.
+
+We can extend this to a continuous function on the closure of /U/ by taking limits.  Since the function so constructed is increasing, left and right limits clearly exist.  We only need to be sure that they are equal at any point which is simultaneously a right and a left limit point of /U/.  By our hypothesis, such a point cannot be the endpoint of two intervals.  It will either be the endpoint of one interval or not be the endpoint of any interval.
+
+If it is the endpoint of an interval, say the right endpoint of an interval, then the right limit is simply the value on the interval.  We only have to check that the left limit equals this value.  Using our numbering of subintervals, pick the interval which is next after the interval of which the point is an endpoint and which lies to the right of this point.  Call this interval /I1/.  Pick the interval which is next after /I1/ in the order and lies between /I1/ and the point.  Call it /I2/.  We can continue this process forever because our point is a limit point but not an left enpoint of any interval.  Now, the value of /f/ on /I2/ is the average of the value on /I1/ and the value at the point, the value of /f/ on /I3/ is the average of the value on /I2/ and the value at the point, etc.  Hence, the limit from the right decreases to the value at the point, so /f/ is continuous there.
+
+If the point is not the endpoint of any interval, we proceed similarly, but now have to work from both sides.  Since it is late, a more detailed description will have to wait for another day.
+
+Consider the interior of the complement of /U/.  Since this too is an open set, it is also either empty or the union of open intervals.  If it is empty, there is nothing more to do.  If not, we need to assign values to /f/ on this set.  The endpoints of each such interval are elements of the closure of /U/, hence they already have values assigned to them.  On the interior, we will define /f/ to be a linear function which interpolates between these values at the endpoints.
+
+Back to [[file:Connections as Functors.org][Connections as Functors]]

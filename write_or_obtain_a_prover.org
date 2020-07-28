@@ -1,0 +1,21 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We will need a system that will convert hcode proofs into formal proofs.
+(The [[file:metamath.org][metamath]] proof verifier will not do this on its own!)
+
+There are a variety of systems out there, but for [[file:Version Zero.org][Version Zero]] it
+may prove most effective to write something simply by entirely from scratch.
+
+----
+
+Since this was written a while back and much has changed in our outlook on the project since then, it might be worth pointing out how our (or at least my) outlook on this particular issue has changed.
+
+Originally, our idea was that we would examine proofs in several steps.  First, we would translate the proofs into h-code and then translate the h-code into some machine-readable representation of formal logic, and then feed this into some existing program to check the validity of the reasoning.
+
+Soon afterwards, it began to appear that such an approach was unnecessarily complicated --- it would be at least as easy to verify proofs written as s-expressions as it would be to first translate them into some other format for the purpose of  verification.  A simple experiment soon convinced me of this fact.  I took some a few basic proofs in propositional logic (in fact the first few proofs from the metamath collection) wrote them as s-expressions and saw how easy it was to verify them.  
+
+Henceforth, I took a different attitude towards proof checking.  For the most part, I thought this out in August and September, put the finishing touches to the basic plan when I met with Joe and Aaron recently, and am now in the process of writing it up --- right now, the vast majority of the material is in my head, on my computer, and in my personal notes.  The theoretical end is in the process of being explained in the [[file:Monadology of systems.org][Monadology of systems]] essay.  The practical end is in the form of transcriptions of proofs from abstract algebra.  None of that has shown up here on the site yet.  There are several reasons for this.  The simplest is time --- there are only 24 hours in a day and most of them have already been claimed for other activities.  More insiduous are the (all too sordidly familiar by now) legal issues.  The book I used, while pre-emintly suited for my purposes, has all rights reserved by the publisher.  While there is nothing wrong in using the proofs contained in the book for my own research, one has to be careful when making one's private notes public.  While it might be fair use to post transcriptions of the proofs and even post a copy of one of the proofs for the purpose of explaining how the transcription was made, in today's brave new world of copyright, things don't always go by the book anymore.  While I could stick to my guns or write for permission, I am already knee-deep in copyright issues, and the last thing I would care to do at this point is to open a new front in the battle.  So what I'll do instead is to stick to using the book for my private research, but instead post similar examples based on proofs to be found on Planet Math or proofs I made up to illustrate the method once I gained some proficincy in the art of transcribing proofs as s-expressions.
+--[[file:rspuzio.org][rspuzio]]
+
+: I think translations into hcode are sufficiently different in terms of expression that it should be fine to post them.  This is one of the main parts of the Hypothesis.  Of course, the original isn't legal to post, and translations into French are probably not legal to post.  But hcode translations of some dozen or so proofs from the Schuam's book should be fine. --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,313 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: put a church key in your pocket //
+we'll hop that freight train in the hall //
+and we'll slide down the drain all the way //
+to new orleans in the fall
+
+:: Tom Waits, from Kentucky Avenue (Blue Valentine, 1978)
+
+Make a law that would require people to release results of gov't-funded research under FAIB terms.
+Aarons idea.  I think it is interesting.  Now, discuss. --[[file:jcorneli.org][jcorneli]]
+
+I thought along similar lines independently the last few days while working on the last section of my paper, so I obviously agree with it :)  As I see it, this is a natural extension of 17 U.S.C 105:
+: /Copyright protection under this title is not available for any work of the United States Government, but the United States Government is not precluded from receiving and holding copyrights transferred to it by assignment, bequest, or otherwise./
+
+In light of this, I would even consider ammending this proposal by striking out
+"FAIB" and replacing it with "Public Domain", i.e. by adding a phrase like "or
+any scientific work whose preparation is funded by the United States Government"
+to section 105.  Some thought will be required to make this watertight --- for
+example, it might be a good idea to be more elaborate and stipulate that if more
+than, say, 50% of the funds come from the U.S. Government, then the work is not
+eligible for copyright protection and goes in the public domain; otherwise there
+might be an obvious loophole.  Or maybe one could put the treshhold lower, I
+suppose it will depend on what legislators are willing to accept.  In addition,
+it might be necessary to include a definition of "scientific work" in the list
+of definitions in section 101.
+
+Aack!! I'm beginning to sound like a politician :( --[[file:rspuzio.org][rspuzio]]
+
+**  H.R. 2613
+
+In 2003 Minnesota congressman Sabo introduced
+[http://thomas.loc.gov/cgi-bin/query/z?c108:H.R.2613: a bill, H.R. 2613], to
+provide public access to works substantially funded with public moneys.  This
+bill was extremely controversial, and faced sharp criticism from publishing
+interests.  Understandably, the open access contingent thought the bill was a
+great thing.
+
+While I agree with the spirit of the bill, and would like to be able to freely
+access reports which my tax dollars have funded, I believe there are problems
+with it.
+
+The main problem is that the bill tries to achieve its end by making copyright
+/entirely unavailable/ to works funded substantially by public monies.  The
+problem with this is that it is contrary to scholarly tradition, where copyright
+is used to "guarantee" crediting of ideas published.  This system helps to
+establish reputations, and discourage fraud and misrepresentation.
+
+I believe that /banning/ copyright is hasty and possibly "throwing the baby out with the 
+bathwater".  Instead, the bill should simply create statutory requirements that leave the door
+open to, at least /gratis/ free licensing.  In other words, "All Rights Reserved" should be
+neither the default, or permitted, license for public works.
+
+The bill seems to have, rightly, stalled in subcommittee.  However, I think it is very 
+significant that it was created at all, as it is indicative of an important social change.
+This change, whereby citizens expect direct access to all levels and specializations of 
+knowledge, is likely brought on by the internet, and it is doubtful the oligarchic status 
+quo will be allowed to remain for long.
+
+--[[file:akrowne.org][akrowne]] Mon Jul 11 18:01:52 UTC 2005
+
+----
+
+Wait a minute --- you *can't* use copyright /to "guarantee" crediting of ideas
+published./ since ideas can't be copyrighted.  In fact, as the copyright office
+states, whether or not a work is cited is *not* a factor in determining whether
+or not use of a work is fair or infringing.  All one can use copyright for in
+this context is to prevent straightforward plagairism, not to make authors cite
+their sources.  Rather, I would say that it is a common misconception amongst
+most scholars caught up in the "fog of copyright" that copyrighting scholarly
+works serves such a purpose. (In fact, to me this line of misguided reasoning
+seems to play right into the hands of scholarly publishers and digital libraries
+who want to justify restrictive license terms.) --[[file:rspuzio.org][rspuzio]]
+
+I was sure someone would point that out pretty quickly =) No, you can't /guarantee/ crediting of 
+ideas.  But things like taking someone's research paper, replacing the author's name with your own,
+then plastering it all over the internet would be forbidden.  Note that they wouldn't be with public
+domain.  Note that this potentiality didn't previously exist on the scale the internet and computers
+enable, so its difficult to determine based on past experience in the scholarly community what 
+would happen in this digital age.  --[[file:akrowne.org][akrowne]] Mon Jul 11 20:45:59 UTC 2005
+
+I would say that trying to use copyright law to prevent this sort of thing is barking up the wrong tree.  The reason that such an action is wrong is because it is fraudulent --- when one takes someone else's paper and puts one's name on it, one is misrepresenting oneself as having carried out the research and having discovered the result. 
+
+This has nothing to do with whether or not one has the right to disseminate the work or prepare derivative works whatsoever.  Suppose that I copied some little-known results about differential equations form Forsyth's book and published the paper in the journal.  Suppose, further, that later on someone pointed out that these results already appear in Forsyth and, furthermore, showed that this was not a case of rediscovery, but that I had knowingly lifted them from Forsyth.  Under such circumstances, copyright law would not apply since Forsyth's book hs already passed to the public domain.  However, the publisher could still sue me for fraud --- in submitting the paper for publication, I had represented the paper as being an account of my original work.
+
+The principle involved is no different than what would apply in cases which have nothing to do with copyright whatsoever.  Suppose that I sold you what I claimed was a marble vase which I had carved by hand when, in reality, it was a plaster cast.  You could still hold me accountable for fraud not because I had no right to make and sell a plaster vase but becasue I had tried to pass it off as what it wasn't.
+
+I completely reject the argument that since the internet might makes this easy to do, we need to toughen up copyright to prevent it.  In my non-expert opinion, that is *exactly* the sort of misguided reasoning which has led to much of the Draconian copyright law we have seen in the last few years.  I reject it because it is a special case of the philosophy of "throwing the book" so dear to police and prosecutors --- since law A is too weak, we'll also charge the suspect under law B becasue, although law B is only marginally relevant in this case, it will allow us to impose a tougher penalty.  No, I would say that the correct procedure in this case would be to lobby for a stronger version of law A.  Trying to use law B to do what law A was supposed to do on a regular basis has some dangerous consequences --- it puts the letter of the law at odds with the spririt of the law, leading to confusion (e.g. for of copyright) and encourages selective enforcement.
+--[[file:rspuzio.org][rspuzio]] 11 July 2005
+
+I think we should be asking why "copyright protection is not available for any
+work of the United States Government".  Let's call this the "Question of
+Precedent".
+
+I also think that we need to make a clear distinction between the proposal for
+/requiring people to release results of gov't-funded research under FAIB
+terms/, which is what I initially thought the proposal was, and /denying
+publishers the right to deny authors the right to release results of
+gov't-funded research under FAIB terms/, which is something else.
+
+The 2003 debate on this issue seems to have been dominated by one Stevan Harnad,
+at least according to Google's search results today in 2005.  He appears to be
+in support of the latter of these two proposals, though sometimes he appears to
+be supporting the former.  He argues against HR 2613 using similar points to the
+ones Aaron is bringing up here.
+
+ * /misrepresentation/, e.g., "replacing the author's name with your own, then
+plastering it all over the internet".
+
+ * /understandable criticism from publishing companies/ - why subscribe to
+  journal X if you can subscribe to aggregator Y at a lower cost?
+
+I'm sure we could come up with a longer list of concerns that public domain
+works raise.  Some of these concerns would be largely irrelevant to the Question
+of Precedent (e.g. the concerns of publishing compainies), but perhaps not
+others.
+
+My sense is that copyright in scholarly publication is primarily to the
+advantage of publishers.  Works in the public domain are supposed to be there
+/for the good of all/.  Whether or not issues of misrepresentation, etc.,
+would tend to ruin things for the author, I can't say.  But I am reasonably
+confident that people could figure out a way to both get credit for their work
+and put the work directly into the public domain.  For example, GPG signatures.
+
+Authors benefit from recognition.  They also benefit from the spread, growth,
+and transformation of their ideas.  There are significantly more possibilities
+for all of these things under PD terms than under copyright terms.  
+
+Copyright was in my view designed with the interests of both authors and
+publishers in mind, and of course, with the interest of the public at the heart
+of the matter.  I think the interests of authors trump the interests of
+publishers, so long as the works in question do in fact reach the public.  The
+sad fact for publishers is that they may be becoming increasingly irrelevant, on
+technological grounds.  Laws that give them a special advantage are like the
+laws that "grandfather" dirty-burning power plants: these laws are there to
+provide stability.  Harnad makes some reasonable points about the shock that an
+instant switch to PD requirements would have on publishers (and it would
+presumably boil over to affect authors and readers).  I think a reasonable law
+on this topic would do a bit of "grandfathering".
+
+Harnad also makes the claim that government regulation of "open access" (a term
+I am increasingly coming to dislike) is a bad idea, and that the
+research/publishing symbiont should be allowed to come to its own conclusions
+about this without government interference.  I disagree, if only on grounds that
+the government has already interfered by providing and enforcing the notion of
+copyright to begin with.
+
+As for whether or not Sabo's bill was a good idea, or whether or not FAIB
+publication should be mandated, well, I'm not completely sure.  I don't
+know where Sabo's bill would draw the line: if I was getting NSF support
+for work on HDM (a lark!) and I started writing about some more-or-less unrelated
+topic (e.g. copyright law) in my spare time, would I have copyright in those
+other works?  There is ambiguity there, and I think it would have to be cleared
+up for either proposal to work.
+
+I am not at this point in time particularly in favor of a proposal that attempts
+to get at this issue by changing the laws that apply to publishers, who are
+essentially innocent bystanders to the government/contractor interaction.  I
+think authors are lazy, and most wouldn't publish under FAIB terms even if they
+had the guaranteed right to do so.
+
+But I think the real question is the Question of Precedent, and the
+complementary Question of Extension: why, if PD gov't works is a good idea,
+would it /not/ be a good idea to require that gov't contracted works also be
+PD?  And how far does this go: if someone is building an interstate highway, are
+their notes PD - and does it matter?  If a grant-winner was required to publish
+in the PD, would her or his grad student assistant (supported largely through
+the grant) also be required to publish in PD?  Even classnotes?  
+
+Further ambiguity.  PD and FAIB are essentially interchangable for many of these
+questions.  But the questions "why PD?", and similarly "why copyright?", are
+what need to be answered for any suitable response to this Sabo bill to be
+assembled.
+
+--[[file:jcorneli.org][jcorneli]] Mon Jul 11 21:59:01 2005 UTC
+
+First, I should mention that, when I first saw this discussion, I wasn't aware of the fact that this proposal had already been introduced as a bill.  That fact changes my attitude towards it from mostly theoretical to a more pragmatic point of view. (i.e. What chances does this bill have and what can we do?)
+
+One has to keep in mind that section 105 only refers to works of the Government, not necessarrily to works of federal employees (such as scientists at research labs).  I believe this is an important technicality.  When someone is paid for intellectual work, there is a possibility that the work will be considered as a work for hire to which the institution paying for the work will retain copyright.  However, this is not always the case --- it depends on the terms of employment.  For instance, most universities do not consider faculty publications as works for hire even though writing papers is one of the things a professor is paid to do.  If government laboratories follow a similar policy, then researchers initally own the copyrights to articles they write even if the subject matter of these articles is government sponsored research.  In this case, they can assign the copyright to a journal under any terms, and section 105 has nothing to do with it.  I suspect something like this is the case, so that journal
+articles written by scientists at national labs are copyrighted pretty much the same way as publications by scientists not working for the government and only technical reports put out by the lab are in the public domain.  
+
+--[[file:rspuzio.org][rspuzio]] 11 July 2005
+
+Let me pose this question to you fellas, then.  If you are for mandating PD
+in these cases, which is effectively the same as forbidding copyright, then 
+are you also for making all software copyright-less public domain? 
+
+In my mind, it seems that some notion of copyright is required to establish
+/a license,/ whether it be closed, libre, gratis, or both of the latter.  
+It seems like it would be enough for the bill to mandate that public research
+be available gratis to any citizen with access to standard facilities (i.e. a
+web browser) within some maximum time period (e.g., a year).   
+--[[file:akrowne.org][akrowne]] Mon Jul 11 23:13:47 UTC 2005
+
+
+I would point out that there is a big economic difference between software and research --- while authors of (non-free) software typically make money off of royalties (which can then fund the development of more software), scientists do not make any money in the form of royalties for their articles.  Because of this difference, I think one has to be careful about lumping the two issues together.  --[[file:rspuzio.org][rspuzio]] 11 July 2005
+
+When I put a BSD/MIT license on the code I do for Emory, it is not because I think 
+I'm going to get royalties.  It serves as a "branding" and crediting of the work, to 
+myself and the institution.  Note that this motivation is almost getting into trademark
+territory--- and trademarks serve a legitimate function of disambiguating entities in 
+a market.  
+
+For a public domain work, the user would be perfectly
+free to remove this crediting from my code, and post it as their own (with no other changes)
+on their web site.  Similarly, this would be an ugly scenario with formal research.  
+There is no requirement, as you say, that the malicious party try to submit the 
+work to a publishing venue as their own.  Remember, the internet allows anyone to be
+their own publisher.  Further, this interacts with the issue of copyright "leaks" 
+in CBPP projects.   I probably wouldn't want it to be legal for someone to take an
+independent article of mine, strip my authorship metadata, and post it to Wikipedia.
+--[[file:akrowne.org][akrowne]] Tue Jul 12 01:19:47 UTC 2005
+
+You have a point there --- the code you put up for Emory is more like a research paper than like a word processor.  So I didn't state my dichotomy too well.  The distinction isn't really between software and journal articles, it's between scholarly publishing and for-profit publishing . (Maybe this choice of two terms isn't so good either but fopefully it is an improvement.)  In the former, the primary benefit to the author is to establish credit and priority whilst in the latter, it is to collect royalties.  In actual practise, most research falls into the former category and most software falls in the latter, but this is not a hard-and-fast rule, as your example shows.  With this clarification, I think that this distinction needs to be maintained if we are to discuss the subject intelligently --- the economis situations with respect to authors are different enough that I would be reluctant to lump them together.  While the aim of copyright law is to promote the progress of science in both cses, it achieves
+this goal by rather different means in the two types of publishing.
+
+I think that a lot of what you worry about with respect to the "ugly scenarios" is not really a matter of copyright per se.  Leaving aside legal technicalities and simply looking at it from the point of view of moral philosophy, I would say that someone taking your program and posting it as their own is the moral equivalent of a sutiation in which you escorted an old lady across the street but somebody else got the merit badge by lying that they had done it.  This is clearly wrong --- the person lied, taking credit for what someone else had done and thereby obtained for themselves what should properly have been awarded to someone else.  Likewise, in the case you mentioned, the fellow who posted the code as their own lied and any benifits obtained by this action (such as, say, a job obtained by listing this accomplishment on a resume) were obtained fraudulently.  I don't see that copyright plays a role here.  The relevant issue here is not permission to copy the program but credit for the act of writing the
+program.   I would say that a legal system which is harmonious with this principle would allow you to sue the fellow for fraud and have the court restore to you whatever have been fraudulently obtained by this claim and make restitution for the effects of this action. 
+
+To see that it is independent of copyright, we can also consider the following case --- suppose that instead of reposting a copy of your code, I simply chose to state on my webpage that I wrote the code. (and maybe even go so far as to imply that you stole it from me and put your name on it!)  I don't see that this would be much different in effect from the scenario you describe but, in this version, there would be no way to apply copyright law.
+
+As for the case of posting the code to Wikipedia without credit, I would say that it is a bit more subtle.  As an analogy we might take a case where a newspaper wrote up a story about the old lady being helped across the street but deliberately did not mention who helped her.  Here too, the problem with this action would be not giving credit where credit is due.  However, the reason that it is more subtle is that it did not result in someone else getting what properly was due to you or result in damage to you or your reputation in a positive sense, rather it was a negative sort of damge, denying you the acclaim that you otherwise should have recieved.  I would say that this is a more subtle case where a moral judgement would be more sensetive to factors such as the manner in which this was done.
+
+So, as I see it, while these acts may be wrong, the right way of understanding them is in terms of taking credit for an action one did not do and hence they should be dealt with as fraud rather than as infringement.  Also, I think it is of paramount importance to maintain this distinction for theoretical reasons --- On the one hand, the right to take credit for one's actions and, concommitantly to right to accept the (good or bad) consequences can be taken as a basic principle.  On the other hand, copyright is a "constructed" right which is only permissible insofar as it promotes the progress of science.  If we confuse these two rights or use copyright law as an expedient to enforce an ethical principle of a rather different nature, we run the risk of increasing confusion and promulgating the mistaken notion that the basis of copyright is based on some unalienable right of an author to a work, which is not how the Constitution works.
+
+Also, it might be interesting that to note that copyright law in section 107 explicitly affirm that the author of a work of visual art hase some such right to attribution.  So maybe we need to not just focus on section 105 but also think of section 107 as well.
+--[[file:rspuzio.org][rspuzio]] 
+
+You say:
+
+: On the other hand, copyright is a "constructed" right which is only permissible insofar as it promotes the progress of science.  If we confuse these two rights or use copyright law as an expedient to enforce an ethical principle of a rather different nature, we run the risk of increasing confusion and promulgating the mistaken notion that the basis of copyright is based on some unalienable right of an author to a work, which is not how the Constitution works.
+
+I would argue that certainly, crediting (and the shoring-up of reputations) /definitely/
+promotes the progress of science.
+
+Remember the "gentleman's copyright"--- basically the scholarly convention of not 
+mis-representing others' ideas as your own.  Mostly, this is followed willingly.   But having
+a copyright available which could be used to support this notion is still useful--- not to 
+force the hands and actions of the 99% of the participants who agree with the convention, but
+to dissuade and set grounds for punishment of the 1% who do not, and do not want to "play 
+nice".  
+
+I know of no grounds in fraud law for punishment of the mere fact of mis-representing
+authorship of a public domain work, /per se/.   It seems such mis-representation would have
+to be tied to some distinct economic transaction.  Often times, certainly it would (such as
+getting a job at a University), but this is not necessary, and it seems the tool for 
+punishment (using fraud law) would be a poor fit for the crime.  If the economic transaction
+could not be distinctly identified (such as, say, if the work were only posted in Wikipedia),
+there would be no real grounds to apply fraud penalties.
+
+And again, I think it is not irrelevant that the world has changed.  The internet has made
+it such that the 1% of neer-do-wells are no longer an edge case which can be safely 
+disregarded.  These "edge cases" have nearly destroyed the utility of email.  And CBPP has
+given them an opportunity to wreak further havoc.  
+
+In sum, I fail to see what /bad/ copyright can do here, if free license is statutorily 
+required.  What happens currently is that copyright gets applied, with an "all rights
+reserved" license.  Thus I see only an upside. --[[file:akrowne.org][akrowne]] Tue Jul 12 13:17:10 UTC 2005
+
+While we weren't originally considering "free licenses" in the sense of
+"gentleman's copyright" and BSD and so on, maybe it would be good to add the
+possibility of legislating /that/ into the discussion.  I'm not sure it would
+work so well, but since it would serve to address the major concern you're
+raising, it could be useful in the current discourse!  I don't know how British
+copyright works, but in lots of British books, the rights page includes a
+statement like "The right of so-and-so to be recognized as the author of this
+work has been asserted."  If something like that was all that was required, but
+downstream modifiability and relicensing was allowed too, then it seems like
+we'd have the best of both worlds.  Furthermore, something like the FDL's
+endorsement clause could be used, by which it can be asserted that /only/ the
+original version is endorsed by the author; any subsequent version has to have
+that endorsement removed.  Clearly, maintaining such an endorsement when told
+not to is a case of fraud (or something similar).
+
+However, I still don't really understand how it damages a scientist to have
+verbatim, uncredited, results uploaded to Wikipedia.  
+
+Research results (if true) should be intersubjectively verifiable and are in no
+way owned by the scientist who discovered them.  On the other hand, since the
+act of discovery is part of the historical record, one would assume that
+Wikipedians (as neo-scholiasts) would want to add that information as well, but
+assuming they really wanted that info omitted, let's just note that copyright
+only added one level of indirection: the same semantic content could typically
+be uploaded with impunity, as long as it had been rehashed and re-expressed.  I
+fail to see how this indirection serves authors, though right now it is a
+"necessary evil" for downstream users.
+
+The "1% of neer-do-wells" had been handily dealt with in your own anti-FUD piece
+by the legions of do-wells who moderate the discussion, so I'm surprised to see
+them playing such a major role in the discourse here.  You say above that they
+can't be safely disregarded.  But they wouldn't be; their ability to do harm
+should be taken in its social context.  What sort of harm could they really do?
+I don't agree that email has been "destroyed" by such folks (or even close), for
+example; on the contrary, filtering has risen up along with spamming, and while
+a decent mail filter is now de rigueur, they are also easy enough to come by.  
+
+I guess the question you're asking (to parallel the discussion of copyright) is:
+what would the world of spam look like if spamming wasn't illegal?  I don't know
+the answer to that question, but I think the free market might take care of the
+issue just about as well in either event.  The majority of anti-spam enforcement
+seems (to my unexpert self) to be extra-legal.
+
+--[[file:jcorneli.org][jcorneli]] Tue Jul 12 14:33:07 2005 UTC
+
+The law also recognizes damage to one's reputation.  Even though I don't know exactly how the law goes here, I would guess, if somone were to claim one of my papers as their own work and put their own name on it, I believe that a court could order that person to put the right name on the paper on the grounds that this person is damaging my reputation as a scientist by deliberately misattributing my work to himself.  So as I see it, we don't need anything more; if economic damage is done, it's fraud, if damage to reputation, it's slander; if no harm is done, then it's no business of the law.
+
+As Joe points out, in the majority of cases, there is no need to go to court since there already are mechanisms for dealing with these problems outside the law; however, since this discussion is about law, I am considering what the law can and should do even about this problem even if cases where anyone actually uses the law to deal with this problem are exceedingly rare.
+
+As for the relevance of copyright, I will reiterate my counterexample --- whether I post a copy of your paper with my name in place of yours or post a statement to the effect that I, not you, am the true author of the paper, the effect is the same.  Rewriting your discoveries in my own words and presenting them as if I had discovered them would have a similar effect.
+
+To clear up one point, yes one could write the right of being recognized as author into Copyright law.  In fact, section 106 does this, but only for visual arts.  However, I would point out two things: 1. This is partially redundant since, as Joe pointed out, authorship is already part of the historical record. 2. This right would be hanldled differently than the rights of distribution and derivation which usually constitute copyright.  According to section 106 it is not transferrable and lasts for the lifetime of the author.  It is basically orthogonal to the other rights --- one could very well put a work in the public domain but still claim to be recognized as author.  (But remember that section 106 only applies to visual arts, so to apply this to scientific papers would require ammending this section as well.)
+--[[file:rspuzio.org][rspuzio]] 12 June 2005

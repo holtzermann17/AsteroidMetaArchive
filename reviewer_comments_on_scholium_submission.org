@@ -1,0 +1,115 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Comments on the paper
+
+ 1. proposal needs focus
+ 1. especially: focus on "digital library aspects"
+ 1. be concrete
+ 1. include bibliography / literature review to clarify books and articles that inform the work (contextualize the topic)
+ 1. avoid duplicating other papers (coordinate w/ other authors)
+ 1. don't overdo sections giving background information about CBPP
+ 1. address difference between "scholium system" and "scholarly peer review system"
+ 1. discuss relevance of the model to scholarship
+
+* Personal remarks
+
+ 1. get more anthropology "credentials" (or equivalent experience?)
+ 1. experience with CBPP systems is a good credential
+
+* My reflections
+
+OK, sounds good.  (Its always so stressful to read these things.)
+
+I can focus; I'm not if I can focus on "digital library" stuff or not - I want
+to get the model working, first of all, of course.  I'll think more about this,
+though.
+
+I can be concrete (working through the examples I said I would work on) but need
+to get the model up and running in order to do that.  That's my main development
+priority right now - there isn't a whole lot of time left, so it would be good
+to get the software finished this week or thereabouts.
+
+I can include some bibliographic items... but the idea that these things "inform
+my work" is maybe a stretch?  I'll make a wiki page talking about my 
+[[file:inspirations for the scholium system.org][inspirations for the scholium system]] and some general literature review 
+(aka stuff I know is connected but that I haven't read yet).
+  I'm sure this will be informative and helpful,
+though it should be known that I hate reading... no, OK, OK, I don't hate reading.  Sigh.
+
+Would be good to coordinate with [[file:rspuzio.org][rspuzio]] and [[file:akrowne.org][akrowne]] at least.  Maybe we
+can make [[file:coordinating free culture and digital library papers|a wiki page about that.org][coordinating free culture and digital library papers|a wiki page about that]].
+
+I don't know enough about the other submissions - maybe there is a way find out
+more info from the conference folks.
+
+The thing about "scholium systems" vs "scholarly peer review" systems is
+interesting... and funny because it is sort of mutually-self-referential in this
+context.  I think I can come up with some comments on this stuff.
+
+The relevance to scholarship question is interesting too - there's both a
+descriptive relevance and ... um, a more transformative one.  I think I can come
+up with some things to say about this stuff, too.
+
+Oh on the anthropology thing: it would be good to get back in touch with my old
+mentor, first of all; second of all, I wonder if there are any other
+"anthropologists of mathematics" or anything like that out there -- you might
+think that despite not completing my formal anthro training, if I'm the only
+person interested in this stuff, I might be better qualified than one might
+think upon first inpection.  However, I /know/ that there are other
+anthropolists who are working on things like "organizational culture" and of
+course there's the neo-institutional economics stuff I was interested in, etc.,
+etc., so - yeah - there's plenty of work for me to do to "credentialize" myself
+in this area - and probably it would pay off.
+
+It is good that my CBPP experience counts as a credential... I think more
+discussion of PM (which is the CBPP system I'm most familiar with) could come in
+to various parts of the paper.  E.g. the recent critique of the semantics of
+corrections, discussions about PM culture as related to OWIO, etc. - but I won't
+over do it!
+
+So - interesting comments; I'm basically back where I was, but with some
+additional things to think about in the back of my head til the prototype system
+is fully functional.
+
+--[[file:jcorneli.org][jcorneli]] Thu May 19 00:07:22 2005 UTC
+
+On the bibliography stuff: work that doesn't have a sizeable bundle of citations
+is generally considered suspect.  While it certainly is possible to come up 
+with novel, worthwhile ideas /de novo/, it is very difficult to come up with
+something /completely/ new in all respects.  Given this, it is polite to cite 
+overlap with existing work.  Otherwise, one opens onesself to one or both
+of the claims of (1) stealing other's work, or (2) not bothering to see what
+has been done.  So, when publishing, one should always do a sweep of the literature 
+to find this overlap, or at least, closely related things.  Then the present work
+can be connected to the common body of knowledge, and one's own work can be expressed
+in a way that is positioned relative to it.  It shows what you're aware of, what your
+work is similar to, and gives others a springboard to comprehending your work. 
+Unfortunately the process is laborious; but I guess, no pain no gain in scholarly
+publishing.  --[[file:akrowne.org][akrowne]] Thu May 19 02:32:01 UTC 2005
+
+P.S. I suggest looking up things about "superimposed information" in digital libraries,
+for starters. --[[file:akrowne.org][akrowne]] Thu May 19 02:34:55 UTC 2005
+
+Actually, in a well-constructed "semantic web" system, it might
+be comparatively easy to find the related info.  Another potential
+benefit of scholium system? :)
+
+Like I said, I think I'll start by scouring my mind for things
+that actually did impact my thinking.  /Then/ I'll start
+looking at other related things.  Of course, I'm /not/ a
+digital libraries expert, and I can't just magically come up
+with citations that everyone else knows immediately -- more reasons
+why author as authority is a somewhat suspicious idea... I'm
+an authority on what I have to say, but not necessarily on
+what I'm talking about :).  If you have any specific papers or
+suggestions about where to look, that would certainly be helpful.
+
+(BTW, vis a vis the "not bothering to see what's been done" thing,
+with HDM I had the convenient excuse that if it was done, I'd know
+about it.  Which isn't to say I refused to do any background research --
+quite the opposite -- but it did give me a comfortable feeling about
+spending some time on the philosophy parts of the project... even
+if /that/ was all stuff that had been thought up before, its worth
+thinking things through for yourself.... or whatever.  OK, enough
+excuses...) --[[file:jcorneli.org][jcorneli]]

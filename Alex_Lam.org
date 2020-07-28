@@ -1,0 +1,275 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Name: Alex Lam S.L.
+Email: alexlamsl@gmail.com, sll51@cam.ac.uk
+School: University of Cambridge, UK
+
+I would like to take the idea of "code market" especially in the field of mathematical tools. With the help of unit tests for validation and perhaps Maven for dependency solution we should be able to get things up and running.
+
+----
+
+Hi Alex, a couple of pages you might want to look at are: [[file:marketize_feature_requests.org][marketize_feature_requests]], [[file:public_markets.org][public_markets]], and [[file:Code Market.org][Code Market]]. (If you like, please revise the third page and
+make it into a design sketch for your proposal!).  You should also take a look at the article by Jordi Carrasco from First Monday on
+ [http://www.firstmonday.org/issues/issue8_11/munoz/ the open code market], which is where we got the initial idea.
+As you can see from the pages here, we're interested in something that does (or can be extended to do) more than just code.  Note that the idea of a codemarket has [http://www.communitywiki.org/odd/SoftwareBazaar/HomePage been tried] in at least one place.  So, we should talk about what worked and what didn't work about that effort.  
+The thinking aspects of this project would IMO mostly concentrate on coding up something that
+will "work" -- mostly straight hacking -- but there may be some interesting
+economics theory involved in making this work /well/
+(so you might want to be prepared to either front-load or back-load that!).  The
+"code market" could perhaps be integrated into PlanetComputing, so think some about that.
+Cheers,  --[[file:jcorneli.org][jcorneli]]
+
+----
+
+Thanks - I'll read through them (& finish off my reviews on QEC) before preparing for a proposal, so will be back asap ;-)
+
+I have been trying to integrate mathematical knowledge more tightly into our society through the use of information technologies; not sure if my thoughts / experience would contribute a lot to the existing base, but I'm surely willing to put as much efforts into enabling this for us and future generations to come.
+
+----
+
+Looked through the materials you have sent me ;-)
+
+If I understand correctly, we are going to build a "code market" from the ground up, right?
+
+If so, I do have a first draft of such a model, which I have been thinking about for some time - I was primarily restricting it to the scope of producing & implementing mathematical algorithms in code form. Or, to be more precise since the term Mathematics is a bit too broad to grasp, the model concentrates on code which features & specifications are identified and justified by means of unit tests. So the trust in that a piece of code contains functionality X, Y, Z etc. is verified through the passing / failing of the unit tests that correspond to those specifications under question.
+
+The merits of this approach is two-fold. Firstly, complex algorithms often result in nearly unreadable code with respect to people who do not have the required, specialised knowledge in that field. One should agree that in many cases it is those people who do not have expertise in a field that looks for utilising others' code to help achieving their goals.
+
+However, a unit test always composes of clearly purpose stated methods with often clean and simple method bodies that can be checked for validity (of whether it matches the specifications) by most non-experts. Thus when a presented algorithm passes the unit test one is reassured that the presented code satisfied the users' specific needs. In fact, the algorithm implementation need not be exposed for an user to verify whether the implementation works fully.
+
+This leads to the second point; it is possible to provide a mechanism for developers to receive donations, in particular a "requested donation". To illustrate with an example, say I have written a routine to solve for all real roots given a cubic equation. I post it onto the Code Market, with the respective test case so that the Code Market can run and verify the validity of my code, and make a Requested Donation of $10 - what I am saying effectively is that "if I receive 10 dollars then I will release my code under the GPL license". Say then 100 people would like to use this algorithm, and the first 10 (or, for that matter, the most urgent 10) of them donates $1 each which accumulates to the requested sum. So I received my donations, and my code will become freely available under GPL.
+
+Notice that the next 90 people down the (download?) queue will not need to pay a single penny to use the code, and all 100 people will enjoy the benefits of the released code being "free".
+
+There are a few points to clarify in the point just given above. People who do not want to make donations in terms of money but efforts instead are accounted for in this system - they are simply developers. Due to the nature of unit tests, we can assume that "partial" contributions to code are still quantifiable, hence would not need extra complexity to build upon the proposed donation system to deal with these cases.
+
+Inevitably the donation system itself gives any developers the rights to ask for a favour, which in users point of view would be a barrier to the actual services, i.e. implementations. But I'd argue that the pull factor that it generates on developers will be justified against the slight push factor on users. In particular, what leechers (users who insist not to donate anything) face is just a longer delay on access to algorithm implementations, since they need to wait for donors.
+
+A few practical points are noted about the system. On managing donation transactions, we have the choice of going real-time or in periods. In addition, we need to deal with the case when donation exceed the requested amount. Lastly, whether an indicator for the current cumulated sum of donations is to be shown.
+
+With the choice of a real-time transaction system one would not need to worry about the second issue except for the last donor. In that case it doesn't really make much of a difference since the donor or the developer will gain or lose much. If an indicator is shown, chances are this will be taken care of anyway.
+
+However, I would suggest going for a period-based system; the excess donation resolution scheme would be of a total reduction by proportion to the donors. For example, if Alice & Bob donate $10 and $6 respectively for the cubic solver, they will be notified that the source has gone opened, and that they will be given back $3.75 and $2.25 respectively - so I will only get the $10 I have requested for.
+
+The reason for such a design is based on the assumption that the user community is heterogeneous, i.e. it is comprised of people who are willing to donate (donors) and people who do not (leechers). Regardless of whether this holds or not, every person will have a limited quota of donations they can afford to pay in a given period of time. So by using a period-based transaction system we allow more donors to participate in the action of donations, which would be paid back with happiness and more confidence on the system once the process is completed. On the other hand, returning them with the excessive donations means they can then go and reuse it on other projects. In short, the period-based system will allow higher participations than a real-time system, and participation is a crucial factor - it means people are more involved in the community.
+
+The issue with showing the donation sum indicator is that incentive might diminish when the sum gets near to the finish line.
+
+----
+
+Hi Alex! I like your requirement of objectively measurable 
+deliverables. But another way of looking at the problem, this
+time from the user perspective is that it would be nice to have
+two or more programs written, preferably in different languages
+by different authors, which could be used to test each other.
+Since the open source coders are looking for just $10, I would
+like tons of them to solve my vitally important problems :)
+Separately, as a practical matter, a market for code would 
+logically have a market for designs, which would require a
+market for requirements and high-level analysis. And I can envision
+a trusted intermediary in the process, providing services to
+customers and workers -- said services would presumably include
+project coordination (requirements -> design -> code -> testing) 
+as well as handling the $$$ and maintaining records about the
+work performed, customer satisfaction, etc. Also, Alex, I think
+you may be thinking too small. $10? A top notch expert should
+be billing out to customers at anywhere from $50 to $300 an
+hour. If you can get just one good customer you can forget about
+this code market stuff :) Or start your own corporation and
+skim $15 per hour off the top of every worker's pay!!! --[[file:ocat.org][ocat]] 29-Apr-2006 (p.s. feel free to delete this comment or move it.) 
+
+----
+
+Obviously not all coders are looking for $10 (that was a hypothetical example anyway) - in fact, I'd envision the code market consisting of contributions ranging from $0 to infinity, so to speak. It is a market, so the price is ultimately determined by demand and supply.
+
+The point is that I have only discussed about one mode of contribution, i.e. the coder produces something and put it on the market, but with a code market the converse is also easily possible: users requesting for features. When I say easily possible I'm comparing to the general goods market, and in fact your interesting idea of Design Pattern Market would exhibit the same characteristics as well - because the goods are created purely out of Constrained Imagination!
+
+Just go into a bit of details - the "bidding" system will thus have 2 layers:
+
+   1 coders putting their code into the system, requesting a certain amount of donations and sets how many periods of transaction will th code remains open for collecting donations.
+
+   2 donors putting their donation against unit tests - they are also allowed to state the time length before withdrawing their donations.
+
+So the main functionality of the system is then to match unit tests with code (coders and users are likely to be part of this as well), hence to match donations with requests and determine which ones are met and which ones aren't.
+
+So with users stating their requirements and willing contributions, and by the aggregation of these (recent + outdated) donations the market prices for various features could be formed as a comprehensible picture in front of potential coders - which could well be other users, or in fact the very user who has requested the feature himself / herself.
+
+As you pointed out, the model that I'm presenting might favour smaller features over larger ones. Thus if this is true we will be relying on mathematical problems being able to break down into smaller bits, which can then be tackled by many coders. However, notice that the model does not require any matching between the scale of any requests and that of contributions - i.e. nothing prevents a coder from writing a grand API and meets hundreds of requests, so he / she can get a lion's share of donations from the willing donors.
+
+Although the system does operate irrespective of programming languages, I'd suspect that dividing the user community / setup efforts at this early stage of setup might not be a good idea. Just to add my point, the reason for restricting to mathematical algorithms is just due to their nature of purely platform-independent, so unit test verification stage would be a simpler one. Generalisation on any of these initial restrictions are thought of and plausible, but I reckon we should start low and get the infrastructure up and running first.
+
+Last but not least, to answer your challenge as to why this would be more attractive then setting up a corporation - be reminded that users will find most of the popular / basic features on the code market for free; this is simply because the act of a donor does not only resulted in benefits in oneself, as will be in the case of an employer-employee situation, but to the general community which also consist of many other donors doing the same favour to you. So the sum is certainly greater than the parts, especially when comparing to the point you have mentioned here.
+
+-----
+
+Have you ever seen this: [http://www.dice.com/ dice]? That is a
+market for *workers* with search axes by skill, employment type,
+location, pay, keyword, etc. I remember back before the internet
+was popular using their bulletin board via long distance phone
+call from out in the hinterlands and downloading a file of search
+results. Good times :-0)
+
+That may give you some ideas. 
+
+The thing is, getting a problem to the point where unit tests
+are defined and coded is 75% of the work. It is like the caddy
+who carries the bag, selects the golf club and tees up the ball
+for the rich guy, who merely has to swing the club. All the hard
+work is over. Figuring out the low-cost, quick result, reliable
+approach is the hard part. 99% of the time the user does not
+know the best solution, that is a matter of expertise. Factoring
+the problem is the hard part, and stroking the customer is the
+2nd hardest part. Actually writing the code is easy once someone
+with expertise has described the problem technically. But the
+client may have other needs that must be fulfilled by delivered
+program code: OS platform, language, software product, size,
+speed, coding standards, interfaces, etc. The existence of obscure
+and often boring details is what creates the need for programmers
+in many cases -- maybe there is an old system written in 1972 which
+needs to be ported to C and the deliverable will not be "open
+source", stuff like that. --[[file:ocat.org][ocat]] 29-Apr-2006 (as usual, feel
+free to delete my comments at any time, I don't mind at all :)
+
+----
+
+I'd agree - the time and memory complexities would need to be reported as part of the unit test results. Although this might not as basic as the pass / fail unit tests on whether a feature works or not, it can still be achieved. In fact with the particular choice of program code that I have focused on, the measures should be reliable enough to be measured on any hardware platforms instead of all of them, compare to say if we later generalise to graphics rendering routines.
+
+In addition with the choice of a platform-independent language, we can simplify / eliminate the issues you have mentioned further on - hardware & OS specs, locale etc.
+
+With a language like Java, the burden on coding standard can be relieved with the use of Jalopy code beautifier and perhaps even further with the [http://jackpot.netbeans.org/ Jackpot API].
+
+----
+
+Alex: I've looked over what you've added above, and some things I like,
+some of it I'm not so sure about.  While I think that support for "mathematical algorithms"
+and "unit tests" seems like a great thing to include, I think the market as you've described
+can be regarded only as an origin for a market that is more general in at least two dimensions:
+
+ * generalize kinds of code this way---->
+ |
+ | generalize kinds of transactions this way!
+ V
+
+I think that the one condition for entry of code into the market is that it should be
+FAIF.  I'd just as soon restrict to Public Domain for a proof of concept (I don't know
+if you saw the discussions wherein we thrashed copyleft licenses half to death!), but
+no doubt this would cause some hue and cry to be raised.  Anyway, this deals with the
+case Ocat mentioned above about non-free system portage: that case is explicitly excluded.
+
+I would like the market to essentially be a mash-up of Ebay and Sourceforge ideas, with
+a solid dose of barter-exchange thrown in.
+
+To sum up, I think the market must be designed from the beginning to be fully general.
+(E.g. Ocat had some good comments above about the other things besides code that could
+be traded in the code market.)
+Testable mathematical algorithms may make a good /test case/ but I want the proposal
+to be fully general!
+
+(PS. For one reason or another, I am not keen on the idea of giving back money that has
+been donated just because the minimum selling price has been reached -- indeed, in my
+view it would be ideal if we could find a way to avoid refunds in general.  This is
+tricky, and of course the mathematical algorithm case doesn't really have this problem.
+But I think we should think about how it would work in the general case.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+Proposing a plan with too many constrains does rise the danger of
+being too specific - I'll take your point and try to mash up a more
+general proposal then. However, since I suspect we need a plan for
+what is going to be done in the forthcoming time period, we might
+ended up doing something less general, which is why I am proposing the
+constrains in the first place. Anyway, let's see how it goes then :-)
+
+When is the deadline for the formal proposal by the way?
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+-----
+
+To be funded by Google you're going to need something feasible
+that can be accomplished in a couple of months, right? And it
+must be interesting, preferably with a hook -- like a self-referential
+scheme that pulls in users like a Kool-Aid cult, correct? 
+
+Here is an idea that has tremendous possibilities, including
+tangential uses related to google, the internet, and even your
+fondness for mathematical algorithms: a "demon" program running
+on a server or a single PC, with internet access and local
+storage that cycles through a queue of "Question Answerers" that
+are triggered according to a time schedule or satisfaction of
+predetermined criteria. 
+
+Question Answerers are invoked with
+zero or more variable parameters and may invoke other Question
+Answerers (which may invoke other Question Answerers, and so on.)
+
+For efficiency, answers may be cached for reuse, especially for
+expensive questions; therefore, a "freshness" parameter may
+be needed to instruct the system when to recompute a "stale"
+answer. 
+
+Furthermore, a mini-language for creating answers using
+combinations of other answers by using using boolean, relational
+and predicate logic operators could be provided. 
+
+A sub-category
+of "Answer" would be to trigger a computational event or process
+based upon the answer to a question. 
+
+A possible extension to the
+system would be to build a network of Question Answering servers
+along with a directory of "answerable questions". 
+
+Now we may view this proposal as a beautiful precursor to a
+code market with pizzazz -- it creates the market for little
+Question Answering modules! This is because timely knowledge
+may have sizable economic value in the right hands. Someone (rich)
+might pay to have an algorithm to go figure something out, and to
+keep repeating the question until a certain set of circumstances
+is identified (at which point the wager is made, or some other
+real world activity is initiated.)
+
+--[[file:ocat.org][ocat]] 29-Apr-2006 
+
+----
+
+I think that is a very interesting idea for a project.  However, my
+inclination for the time being is to make it into a stand-alone
+project, not use it as a temporary fill-in for the code market
+project.
+
+I do see the code market connection -- however, I think we should keep
+hammering away on the fully general code market proposal until we can
+come up with a good general plan, and also find a summer-sized bite
+that can be taken out of that plan and made into a summer project.
+
+Alex: I think the student application deadline is May 15, but come on
+man!  Google is your friend.
+
+--[[file:jcorneli.org][jcorneli]]
+
+: The [http://code.google.com/soc/studentfaq.html#42 submission deadline] is May 8.  --[[file:alih.org][alih]]
+
+----
+
+> Google is your friend.
+
+How true - Google has become a verb on its own (c.f. googling) and has been accompanying me against many problem-solving tasks in my life. It is just a source of spiritual wealth! (read: information)
+
+> "Question Answerers"
+
+I'd agree with [[file:jcorneli.org][jcorneli]] that this could be a standalone project, or a later stage of this development since the generalisation brings quite a few big issues to be defined / refined, and I have a nagging feeling at the back of my mind that it could become incomprehensible if tackled altogether in one go.
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+P.S. I will cook up the proposal in the next few days then - got a project viva on QEC on Wednesday ;-)
+
+
+----
+
+Sorry for the wait - I am now typing up the proposal on [[file:Code_Market_Proposal.org][Code_Market_Proposal]]
+
+--[[file:Alex_Lam.org][Alex_Lam]]

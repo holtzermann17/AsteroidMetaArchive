@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There's been a lot of talk on this wiki (and around the world)
+about different kinds of content licenses.  This page is going
+to attempt to at least index the disussions that have taken place
+locally (probably with some additional but minimal narration). 
+
+Of course, content licenses are meaningless without copyright.  For
+more information on copyright, see [[file:copyright concerns.org][copyright concerns]]
+(for a start anyway).
+
+--[[file:jcorneli.org][jcorneli]]
+
+ * [[file:license diversity.org][license diversity]] -- general comments
+ * [[file:no license.org][no license]] -- the default case, all rights reserved
+ * [[file:BSD.org][BSD]] -- pros and cons of BSD
+ * [[file:FDL2.org][FDL2]] -- pros and cons of FDL2
+ * [[file:CC.org][CC]] -- pros and cons of the Creative Commons family of licenses
+ * [[file:Public Domain.org][Public Domain]], [[file:the public domain.org][the public domain]] -- pros and cons of transfer-to-public-domain (not a license per se, but it gets two pages!)
+ * [[file:PM Licenses.org][PM Licenses]] -- draft of a small family of simple licenses that avoid "license lock"
+ * [[file:Termination of Copyright Transfer.org][Termination of Copyright Transfer]] -- technicality that allows licenses to be nullified sometimes
+ * [[file:First Monday Paper--The Fog of Copyleft|The Fog of Copyleft.org][First Monday Paper--The Fog of Copyleft|The Fog of Copyleft]] -- talks about problems with copyleft

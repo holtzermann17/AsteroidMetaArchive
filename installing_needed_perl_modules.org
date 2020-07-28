@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+If you have Perl installed, you can install directly through the CPAN
+module, which is like Perl's "own package system".  Run
+
+ perl -MCPAN -e shell
+
+And set up the system.  Then you can search for strings by running a command like "<nowiki>d /xslt/</nowiki>" or "m <nowiki>/Denter/</nowiki>", and then install with the "install".
+
+(You need to have the xml-libxml perl module installed in order for the xslt package to work.)

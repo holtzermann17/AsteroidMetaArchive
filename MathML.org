@@ -1,0 +1,229 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Why does !MathML suck so hard?
+
+[http://www.dataweb.nl/~cool/Papers/MathML/OnMathML.html The Disappointment and Embarrassment of MathML]
+
+Discuss.
+
+-- [[file:raph.org][raph]]
+
+Very *reactionary* paper! Must be so able to afford a copy
+of Mathematica that he cannot conceive of anyone else not
+wanting to cough up the $$$ for a single copy. What is it,
+$2000 if you're not a student? 
+
+[http://www.shopping.com/xPO-Wolfram_Research_Mathematica_5_2_Commercial_Single_User_Mac~CLT-HSNLF  Amazon]
+
+Does anyone believe that Wolfram will allow the entire world
+to copy its language and syntax and reverse engineer its code? 
+I'm not even sure it is possible to write open source
+software for something like Metamath/Ghilbert without getting into
+patent land...all one can hope for is that the software is
+so horribly unpopular that the infringement damages are 
+negligible...
+
+Mozilla renders MathML formulas of significant complexity.
+No plug-in necessary. Therefore, if Ghilbert or mmj2 can
+manage to spit out a MathML object for Mozilla, it can be
+rendered in 2D and will look very nice. Just need an
+Ontology to convert between notations. Since Ghilbert
+can aspire to being *the* canonical Ontology one day,
+all you will need is conversions to/from Ghilbert :)
+
+--[[file:ocat.org][ocat]] 4-Sep-2006
+
+-----
+
+Ok, that paper is flawed in lots of ways. But I still can't get very
+excited about !MathML. Because I have to see things for myself, I
+prototyped a !MathML output based on the same basic principles as my
+PDF one. The result is [http://ghilbert.org/files/zfc.xhtml
+zfc.xhtml]. I did implement a bit of the more advanced 2d layout
+stuff, like summation, exponents, square root, and combination (the
+C. operator in set.mm).
+
+In my Mozilla (Firefox 1.5.0.5 running on Ubuntu 6.06), with the
+recommended fonts installed, the rendering is readable but mediocre.
+I also tried the
+[http://www.mathmlcentral.com/Tools/FromMathML.jsp Wolfram Web MathML renderer],
+and found that to be also readable but mediocre, with different issues and quirks.
+Not promising for consistent rendering across platforms.
+
+Here are screenshots of aceq5, a fairly typical set-theoretic and predicate
+calculus example, for the interested:
+
+My PDF version, imaged at 125 dpi in Ghostscript:
+
+[[file:image:aceq5_pdf.org][image:aceq5_pdf]]
+
+A screenshot from Firefox 1.5.0.5 rendering the !MathML:
+
+[[file:image:aceq5_moz.org][image:aceq5_moz]]
+
+:  One thing Unicode doesn't have is !LaTeX's "math italic," so !MathML
+has to compromise with regular italic. --[[file:norm.org][norm]] 
+
+Wolfram's !MathML renderer.
+
+[[file:image:aceq5_wolf.org][image:aceq5_wolf]]
+
+:  The"forall" symbol is not symmetrical.  And why is the "cap"
+(intersection) symbol so thick (and also not symmetrical)?
+Strange, for a company whose business is the presentation of math.
+You figure they could afford to pay someone to
+spend a day or two tweaking
+their font's bitmaps, at least to correct the obvious defects.
+--[[file:norm.org][norm]]
+
+
+--[[file:raph.org][raph]] 5 Sep 2006
+
+-----
+
+zfc.xhtml was too massive for my system's memory. Hung
+Mozilla! Ha.
+
+[http://www.mozilla.org/projects/mathml/demo/texvsmml.xhtml Have you seen this page? MathML Torture Test]
+
+--[[file:ocat.org][ocat]] 5-Sep-2006 Universe 2
+
+-----
+
+ *My Unicode rant*
+
+What follows is a rant about Unicode excerpted from an email I wrote a
+few months ago.  The gist of it is that Knuth for the most part had it right,
+and everyone else seems to be
+reinventing the wheel, and not getting it right, instead of just
+accepting his public-domain gift to mankind.
+
+
+(Begin email excerpt)
+
+I am unhappy with the current state of Unicode.  I put examples of
+set.mm characters in several fonts side by side here:
+
+[http://us2.metamath.org:8888/fontcompare.gif  fontcompare.gif]
+
+To me, the Unicode font just doesn't look as good as the !LaTeX font or
+even the Metamath bitmaps.  The character sizes and shapes seem awkward
+and oddly inconsistent (e.g. vee/wedge seem too dark, the angle brackets
+too light, the subset-equals squished, the aleph too small, the script
+characters too dark and not very elegant, no special italic for math
+letters, intersection and union not symmetrical, the dot in
+less-than-dot not centered, etc.).  The unsmoothed version looks rough
+and unpleasant, almost amateurish; look at the broken big union and the
+asymmetrical angle brackets.
+
+And of course, Internet Explorer is hopeless with its missing symbols,
+thus preventing 95% of all Internet users from using Unicode math
+symbols.  The ones it does render are even more bizarrely inconsistent
+and even wrong.
+
+I don't think it's just my eccentric taste.  Based on my web logs, even
+Mozilla/Firefox users use the GIF version of the pages almost
+exclusively.  Of course I default to the GIF version, but I also make it
+easy to try the Unicode version, with a link on every proof page.
+Almost without exception, anyone who tries the Unicode version will look
+at a page or two, then go back to the GIF version in spite of its slower
+speed.
+
+What the world needs is a Unicode font that mimics !LaTeX, which is the
+closest to standard, professional-looking math symbols that I know of.
+I don't know why the Unicode designers didn't avail themselves of
+something beautiful that already exists, in the public domain to boot,
+and instead went down their own awkward, inconsistent path.
+
+I wonder if the existing !LaTeX font can somehow be mapped to Unicode.
+But even !LaTeX doesn't really seem great on the screen; it seems too
+blurry to me.  So even !LaTeX would probably have to be tweaked a bit for
+the screen to be ideal.
+
+Somewhere I read - on his advogato weblog I think - that Raph has a way
+of smoothing fonts that is "intelligent" in that it picks the best
+alignment to pixels on the screen.  The standard way just smoothes the
+character whereever it might be, so the same character can look
+different (lighter or darker) depending on its alignment with the screen
+pixels.  Maybe his technique combined with tweaked !LaTeX fonts might
+provide an optimal experience.
+
+(End email excerpt)
+
+[[file:norm.org][norm]] 6 Sep 2006
+
+There isn't a "Unicode font" per se. The Unicode Consortium does
+not *do* fonts, and most fonts are copyrighted works. For 
+example there are Mathematica fonts. I haven't used IE for
+several years but Mozilla provides a font preferences for
+different "families", but "Math" is not a font family, so
+it may be that a user's view of a webpage includes glyphs
+chosen from multiple fonts -- and math symbols are spread
+across lots of Unicode "code points", so you generally don't
+have a single font with all of the symbols you need. It would
+be possible to create a Metamath Font and specify that in
+your webpages, but the rendering would still not be as good
+as math typesetting found in books because there are subtle
+typesetting conventions used in Math. 
+
+http://en.wikipedia.org/wiki/Unicode
+
+Excerpt: 
+
+"Unicode, in intent, encodes the underlying characters — graphemes and grapheme-like units — rather than the variant glyphs (renderings) for such characters. In the case of Chinese characters, this sometimes leads to controversies over distinguishing the underlying character from its variant glyphs (see Han unification).
+
+In text processing, Unicode takes the role of providing a unique code point — a number, not a glyph — for each character. In other words, Unicode represents a character in an abstract way, and leaves the visual rendering (size, shape, font or style) to other software, such as a web browser or word processor. This simple aim becomes complicated, however, by concessions made by Unicode's designers, in the hope of encouraging a more rapid adoption of Unicode."
+
+--[[file:ocat.org][ocat]] 6-Sep-2006
+
+-----
+
+
+Yes, "Unicode font" is a misnomer.  What I meant is the math symbols that
+show up on standard installations of standard browsers, in response to
+the Unicode codes placed in the HTML source.  Regardless of their
+origin, for practical purposes the defects I mentioned are what people
+are going to see, since few people are going to download a special font
+(even if it existed, which it doesn't) just to look at math web pages.  The web logs show that most people
+apparently don't
+like the Unicode version of the Metamath pages.  
+
+--[[file:norm.org][norm]]
+
+A goodly while back after the 10*100th "Critical" patch
+from Redmond I set my browser to not download images --
+except for certain essential and trusted sites (also
+no Javascript unless mandatory for an essential activity).
+Turns out that Redmond image processing code has been
+ *very* difficult to secure, partly due to the design of
+.wmf format. But, since I use dial-up, my happiness is
+greater than ever! Much faster browsing without the
+B.S. images (especially the ads!) Curiously, at metamath.org
+I view the gif versions of the pages but I see your ASCII
+codes -- and I like them. 
+
+:  That is interesting.  The ASCII ALT tags
+where originally put in for the w3m text browser, but this shows what they look like with a proportional font.  The ALT tags also show
+an unintended example of optional white space:  the ASCII token has a
+space before or after it iff the GIF image does, based on my subjective
+decision as to whether a space made the GIF version look better.  For
+example, parentheses don't have white space whereas many relation
+symbols do.  It does seem that they are unambiguous for the most part,
+and it would be interesting to pass it through the metamath program's
+optional-white-space parser to confirm that.  --[[file:norm.org][norm]]
+
+
+Metamath is a beautiful, elegant system that proves (to me)
+the equivalence between theorem proofs and computer programs.
+I don't think that Metamath ASCII formulas are any harder to
+read than your C code :) A little bit of "pretty printing"
+and Metamath will rock! (I am making super progress with the
+new mmj2 release using pretty-printing AKA "TMFF". Will 
+use the extra time to do more testing and documentation,
+and to bell the cat (may attempt right mouse button menu
+for Proof Worksheet...)
+
+--[[file:ocat.org][ocat]] 6-Sep-2006
+ 
+-----

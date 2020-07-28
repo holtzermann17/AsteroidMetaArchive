@@ -1,0 +1,186 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There are substantial advantages to making HDM
+file-compatible with Ghilbert:
+
+1. Norm and Raph have already signed up as "users"
+at Asteroid-Meta, and that means having two 
+Einsteins providing some amount of input and
+constructive criticism.
+
+2. Eventually Ghilbert will have a GUI interface,
+as well as a full-fledged specification for 
+something that is aimed in the same general 
+direction as HDM. That means synergy, at least!
+
+3. Substantial body of mathematical knowledge
+already encoded in Metamath including Propositional
+Logic, Predicate Logic, ZFC Set Theory, Number
+Theory, Hilbert Space and Quantum Logic. That's
+ten solid years of work, global state of the
+art stuff! Wow. Free of charge too. 
+
+In my mind the task is not proving that Ghilbert
+can be adapted for HDM but attempting to prove
+that it is unsuitable -- and explaining why.
+
+* Discussion
+
+If by "file-compatible" you mean "can import from and export to",
+I think it would probably be a good thing - but I don't know
+enough about the technical issues to feel totally committed about this.
+As I was saying elsewhere, it would be nice if we could leverage
+existing collections of (meta)mathematical content, and
+Metamath's library is an essentially perfect candidate for this use.
+
+Pretty obviously I'm not going to be terribly moved by GUI interfaces at this point.
+Understanding the technical (theoretical) issues is well worth doing
+(see the hcode page in this continuity). --[[file:jcorneli.org][jcorneli]]
+
+-----
+
+My guess is that there needs to be another "logical data store"
+(database) besides what the Scholium System uses. I think a
+"math database" containing the HCode/Ghilbert formatted statements
+will be useful and perhaps necessary. My idea/vision of it would
+be that the Scholium System is used to enter and update 
+ *external* format math text, with various external notations,
+along with notes, links to other things, comments, etc. The
+Scholium System would be able to compile/parse the text and
+optionally store it in the "Math Database" -- and the Scholium
+System should be able to retrieve math from the Math Database
+and format it for display (reverse parsing). One reason why
+a separate "math database" would be helpful is that it would
+de-couple major sub-systems from the Scholium System, thus
+allowing them to function independently and be developed
+independently (otherwise you're talking about many man-years of
+code invested in Emacs/LISP and no exit strategy). There may also be
+significant performance issues involved in separating out
+the H-Code/Ghilbert statements from the Scholium Database
+(it would be most unfortunate to get to the end of the project
+and find out that it doesn't work because it is too slow...)
+--[[file:ocat.org][ocat]]
+
+I think you're partly right, and partly wrong.  The points to
+understand are that: according to my current plan, 
+the scholium system is "the world" within
+this system is going to be developed.  I.e., there won't be anything
+entirely outside of its reach.  But it is also independent of Emacs;
+for example, instead of storing everything as Emacs data structures,
+we could store pages as SQL entries or as plain text files.  We could
+also have an Eclipse or web-based interface.  Emacs plays no theoretical
+role in the scholium system; it is essentially a catalyst in building
+a demo.
+
+To clarify a little about the "world" comment above: currently there is
+ *nothing* "in" the scholium system.  And for a long time to come (actually probably forever), there
+will be lots of semantically important external resources (books, papers, ... and people come to mind).  But
+as development progresses, these things or representations of them will go "into" the system either
+verbatim (but with metadata showing how to use them) or in new forms
+(e.g. translated to hcode or whatever), which is why I said the system is
+the world in which development will take place.
+
+Does this make sense and/or seem agreeable to you?
+
+--[[file:jcorneli.org][jcorneli]]
+
+I counsel practicality. I have personally been involved with,
+(and at fault on, haha :) unsuccessful projects several orders of 
+magnitude less complex that what you are implying. And the world is getting bigger and more complex every day. Just look at the number
+and complexity of automated theorem provers:
+http://en.wikipedia.org/wiki/Automated_theorem_prover
+
+They even have competitions: 
+http://www.cs.miami.edu/~tptp/
+
+So just in this one microscopic area of "the world", change
+is happening faster than AsteroidMeta's download rate.
+
+Is there a need to store everything centrally?
+
+And ultimately, individuals and organizations would want to 
+download their own copy of the software and create their
+own Scholium repositories. Then they would want to exchange
+information with other users -- Scholium System users and
+users of other systems... In the end, the Scholium
+System would turn out to be just another environment -- but
+a nice one, of course. What that means is Distributed Scholia,
+each of which will probably be connected to the internet...
+
+Now, if that is true then the software has to be changeable
+by users, and people will need to be able to hook their own 
+software in and process Scholium System widgets. Unless all 
+software development is going to be handled at AsteriodMeta, 
+there is a need for external data formats and interfaces. 
+Otherwise, there isn't enough time left in the universe to do 
+the job -- or there won't be many users, maybe.
+
+My philosophy is like this: my neighbor has a beautiful tree
+that stands far above her house, and I get to see it every
+day. I am richer than she is because I get the benefit of
+her tree without having to take care of it -- and because she
+is too close to see all of it at once. It's a bit like that
+with math. I don't benefit from owning all of the math books
+in the world. The only benefit to me is from the math that
+is inside my head. To the extent that the Scholium System
+helps people learn Math and Logic I could care less how it
+actually operates internally -- just that it gets the job
+done and that everyone has a good time. As I practical matter
+though, I counsel working out the format of the (meta)math 
+file/commo syntax right up front and then making the Scholium
+System satisfy/service *that* -- as opposed to the opposite 
+perspective which is saying "the Scholium System will have 
+everything", like a magical black box.
+
+--[[file:ocat.org][ocat]]
+
+I believe I see what you're saying, so perhaps I should rephrase my
+comments so that we can better interface on this issue.  I should say:
+the scholium system is the framework in which /I/ plan to develop
+HDM; and of course I hope that "the HDM team" will find it useful as
+well.  To the extent that other people will be working on disjoint
+projects that tie into HDM (which is a de facto infinite extent), they
+are free to use their own systems.  To the extent that HDM will depend
+on these resources, it will have to interface well with them.
+
+There is no need to store things centrally; there is only a need to
+store things locally, where people will be working on them.  You're
+right that the plan is for the scholium system to be distributed.
+For a while there will probably be a "main repository" but this
+shouldn't be a permanent effect; eventually the idea is that the
+system will be fully distributed, like the internet.
+
+This may sound like a lot of high-falutin talk, and it is.  To reign
+things in and be practical for a moment -- I'm not saying "the
+scholium system will be a /magical/ black box".  Its more like
+working on a file system, text editor, or OS -- its a pretty
+down-to-earth black box.  Perhaps it will take off as I envision, but
+there's still not any "magic".  Its just a semantic network designed
+with text-processing in mind.
+
+The reason I'm working on it is that I feel I need to have this sort
+of a black box available if I'm going to make progress.  Furthermore,
+it is something my skillset makes relatively straightforward (even
+if somewhat long in time duration) for me to contribute to the project.  
+
+Other people have been involved (at various levels) on different
+aspects of the project.  I would have liked to have some people
+working on these things full time, but that hasn't happened yet.
+
+As for scholium system design, you can either trust me or read about
+why it is /very/ generic.  I've made almost no effort to specialize
+it for use by the HDM project thus far: it is meant to be a generally
+useful hypertext system.  This is goes against the strategy you
+suggest, but I hope you see why it should be compatible with whatever
+file/command/language stuff we eventually come up with.  It can be
+tuned and specialized later -- once it is actually working!
+
+If you or others want to work on the things you're saying are
+priorities, I am certainly not going to say "no".  In fact, I'll say
+"yes"!  In particular, this page started out as a discussion about
+Ghilbert.  I think that is a good thing to discuss.
+
+--[[file:jcorneli.org][jcorneli]]
+
+forward [[file:MMHDM1_deliverables.org][MMHDM1_deliverables]]

@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some terms that come up in discussion of [[file:hcode.org][hcode]] are listed here; the
+definitions of these terms are given on the linked-to pages
+
+ * [[file:atom.org][atom]]
+ * [[file:list.org][list]]
+ * [[file:binder.org][binder]]
+ * [[file:operation.org][operation]]
+ * [[file:s-expression.org][s-expression]]
+
+----
+[[file:hcode.org][hcode]]

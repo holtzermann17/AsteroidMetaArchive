@@ -1,0 +1,572 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* New
+
+Today after considerable delay I released a copy of the "metacommons
+manifesto" on !PlanetMath, on the !PlanetMath mailing list, and to
+several people who seem interested in supporting !PlanetMath.  The version I released is
+http://planetmath.org/~jcorneli/everything/PM/manifesto-Nov15.pdf (or .tex). I am
+putting a copy here too: feel free to add in-line comments or make changes.
+(We are revising this for future publication and to make it a more effective
+networking tool.)  Please see also [[file:PlanetMath Development Agenda.org][PlanetMath Development Agenda]] (a companion document).
+
+--[[file:jcorneli.org][jcorneli]] Nov 15, 2006
+
+For general-purpose (not inline) discussion, please use [[file:Metacommons Manifesto - Discussion.org][Metacommons Manifesto - Discussion]].
+
+--[[file:jcorneli.org][jcorneli]] Dec 13, 2006
+
+See [[file:metacommons.org][metacommons]] for general discussion of the metacommons idea.
+
+--[[file:jcorneli.org][jcorneli]] April 22, 2008
+
+
+New stuff more focused on developing a specifically "math-focused" metacommons is at [[file:Surveying the Math Metacommons.org][Surveying the Math Metacommons]].
+Focusing on math could make some parts of the project more feasible; other parts may continue
+to bleed out and be general.  Both approaches can be pursued in parallel.
+
+--[[file:jcorneli.org][jcorneli]] August 28, 2009
+
+----
+
+* Metacommons Manifesto
+
+by: Joseph Corneli, Aaron Krowne, Raymond Puzio
+
+: The Metacommons Manifesto advocates for the cooperative
+development of systems for doing commons-based peer production
+(CBPP).  The discussion is informed by the experiences of the
+authors working with a network of CBPP projects clustered around the
+popular online mathematics community, !PlanetMath.org.  We discuss
+challenges associated with formulating and enacting good policy in
+the CBPP setting.  A metacommons would improve the situation, by
+providing the means for various parties interested in CBPP policy
+and infrastructure to share knowledge and coordinate work.
+
+* Preamble
+
+This is a document about producing tools and practices for doing
+commons-based peer production.  We will talk about how this process
+can be improved through the development of a metacommons.  In order to
+make clear what we mean by this, we begin by defining the key terms.
+
+Commons-based peer production (or CBPP) is a phrase first
+used by Yale law professor Yochai Benkler to describe decentralized,
+Internet-based collaborative projects .  In order to keep the
+discussion simple, we will understand the term in somewhat greater
+generality, and include within its scope all decentralized efforts
+from which individuals derive some benefits from their participation,
+and for which there is some organizing principle that facilitates
+cooperation.
+
+
+
+A key feature of CBPP is that it accumulates value associated with
+positive externalities coming from the mediated interactions of
+individuals.
+
+We describe as meta-activities those activities associated with
+managing a commons.  Meta-activities complement and support the
+activities that take place within the commons itself.  Meta-activities
+may themselves have peer-production components (e.g. peer review can
+be considered to be a meta-activity), or they may be based on other
+sorts of organizational arrangements (e.g. firms).  In particular,
+meta-activities may or may not be carried out by the same group of
+people who use the commons.  The precise
+nature of meta-activities will, in general, depend on the nature of
+the associated commons.
+
+
+
+
+Commons-based peer production has shown itself to be important in many
+areas, from business, to science, to entertainment, and beyond.  In
+this document we will talk about how the idea of a metacommons
+-- a commons for fostering the development of CBPP -- can be used to
+make CBPP a even more effective means of producing value.
+
+Our goals in writing this document are to open a channel of
+communication with possible supporters; to talk about why improved tools for 
+doing CBPP constitute an important social good; and ultimately to assemble a
+productive team to work on CBPP issues.  We hope to help motivate and facilitate
+the involvement of our readers in contributing to existing commons-based projects,
+in starting new ones, and in changing norms, laws and society at
+large in ways which facilitate the development of CBPP.  This
+manifesto indicates and advocates an ongoing movement towards better
+understanding of how to manage vital common resources of all kinds.
+
+Our views are grounded, particularly, in the experiences we've had
+with the wide array of meta-activities associated with running
+!PlanetMath.org, a popular collaboratively-produced mathematics
+website.  In order to develop a well-rounded exposition of a somewhat
+broad topic, our opinions will be contextualized herein by our
+experiences behind the scenes at !PlanetMath; our experiences with a
+loose confederation of related projects; some discussion of the
+relationships between these projects and other organizations; and
+finally, our best attempt at conveying a broad social perspective on
+the matter at hand.
+
+Throughout history, human knowledge has grown to fill vast libraries,
+and technology has become greatly refined.  And yet, past progress
+merely sets the stage for future advancement.  Improvements to CBPP
+are, fundamentally, improvements to the process of social progress
+itself.
+
+* What we would like to have happen
+We want to make knowledge more available, expand knowledge, give more
+people access to both content and to the process of knowledge
+creation.  We want to effect social transformation towards the
+participatory and empowered, fun, free, responsible, and sustainable.
+In order to do this, we must understand knowledge production and
+commons-based peer production from both social and technological
+points of view.  We should build and support improved infrastructure
+for knowledge production and communication.  We should work together
+with others who share these goals, since it is by working together
+that we will achieve the most.
+
+
+* PlanetMath's goals are an interpreted version of our overall goals
+!PlanetMath specifies our goals to the domain of mathematics.  With
+this project, we aim to get a comprehensive and accessible source of
+mathematical information online.  We are developing increasingly
+powerful domain-specific tools which enable anyone to be involved in
+mathematics as both a consumer and producer, and in important hybrid
+roles, where, for example, a student's questions can become part of
+future curricula.
+
+!PlanetMath, and the software platform called Noosphere which supports it,
+are not just valuable for their successes in the mathematics
+domain -- they also constitute an ongoing experiment in CBPP.
+Indeed, improving our CBPP framework is one of the core goals of the
+!PlanetMath organization, since this will help us serve the needs of
+all of our users better.
+
+At the same time, it is clear to us that !PlanetMath cannot reach its
+goals using a "pure CBPP" mode of operation.  In particular, we will
+need a sustainable centralized organization to manage some parts of
+the overall effort; a contemporary example would be development of the
+Noosphere codebase (although we hope that in the future this
+development effort can be made more decentralized).
+
+As a rough comparison, while markets operate in a fundamentally
+decentralized fashion, they nevertheless rely on the existence of a
+central trading floor, which had to be put together at some cost.  The
+!PlanetMath.org nonprofit plays this central coordinating role, and
+also works to address the various needs of !PlanetMath users which are
+not currently met through CBPP.  Accordingly, we have made developing
+the !PlanetMath nonprofit an important high-level goal.
+
+
+* The various projects we're working on embody different interpretations of these goals
+!PlanetMath has become a beacon for people interested in "free math"
+and CBPP for the mathematical sciences, and it is often the first
+place that like-minded persons turn for help.  As a result, a number
+of philosophically related projects are currently clustered around
+!PlanetMath's organizational shell.
+
+The Hyperreal Dictionary of Mathematics project is concerned with
+building artificial intelligence for mathematics.  The project's main
+goal is to use this software to get all known mathematics online,
+without violating copyright law.
+
+Metamath is a long-running project in formalized mathematics whose
+developers have released a large quantity of formal mathematical
+proofs to the public domain.  This project promises to have a
+synergistic relationship with HDM.
+
+Various other "planets" (e.g. PlanetPhysics) have been starting up,
+to support knowledge communities working in various areas of inquiry.
+We intend for Noosphere to facilitate content-sharing and other
+collaborations between these several projects.
+
+A theme common to a several next-generation collaboration tools we
+have designed and started work on for !PlanetMath and HDM is that they
+should facilitate naturally-overlapping communication between the
+members of related knowledge communities.
+
+As one example application, we're interested in using CBPP ideas as
+the basis of a tool to help support the development of free/open
+source software.  We call this project the "Code Market", after
+Jordi Carrasco-Munoz .  In fact, the same ideas
+that apply to this project could be used as a framework for producing
+other public goods.
+
+
+* Our commons-based projects depend on exchange with outside entities
+Collaboration is important on an inter-project scale as well as on the
+intra-project scale.  We might well hope to be significantly better at
+collaboration than traditional (centralized, non-CBPP, top-down)
+efforts, which still fail to be collaborative in any deep sense of the
+word, resulting in considerable duplication of effort, and in many
+potentially fruitful synergies getting ruled out out-of-hand.  A healthy
+metacommons should facilitate fruitful exchanges and ongoing
+collaborative relationships between various commons-based projects and
+stakeholders.
+
+
+* Improvements to CBPP can help us solve important problems
+Any time society is confronted with a problem that requires an
+organized effort (as all important problems do), there is utility in
+having the following tools available: infrastructure that can support
+large-scale, multi-domain collaborations; and infrastructure for
+maintaining massively multi-dimensional information artifacts.
+
+In other words, we should be able to build and work with information
+artifacts that coherently incorporate many different facts, methods of
+interpreting these facts, opinions, artistic displays, and computer
+programs -- and so on -- and which lend themselves to the simultaneous
+and fluid involvement of many participants.
+
+Improved tools and theoretical models for CBPP are going to be of
+widespread appeal.  However, research and development in this area is
+associated with high initial cost, particularly since participation
+from many different kinds of experts is called for.  
+
+On the other hand, many different kinds of organizations are already
+interested in CBPP (although some will know it by another name or
+description).  Intuitively, CBPP development would be more efficient
+if these groups could manage to work well together than if they do
+not.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* How we plan to bring about our desired outcomes
+We plan to organize each of our projects (!PlanetMath, HDM, Code
+Market, etc.), and the collection of these projects as a whole, into a
+coherent and fruitful commons.
+
+The overall structure is of course going to be highly decentralized.
+We plan to be working at suitable meta-levels, guiding the system as a
+whole towards our stated goals.
+
+
+* PlanetMath plans to become a more effective organization
+We plan to provide improved support across the board for different
+interest groups operating within !PlanetMath's commons.
+
+In particular, we plan to add places to collaborate on and discuss
+current research; and, similarly, to improve our support for basic
+education by providing collaboration and learning tools for teachers
+and students.
+
+In order to achieve these development goals, our core organization is
+going to need an income stream, as well as an influx of other
+resources, which we will have to obtain as a combination of
+arrangements with other organizations and contributions from
+individuals.
+
+So far, !PlanetMath users have not provided a sufficient source of
+funds or other resources that would support our meta-level efforts.
+This is because most users have (at best) exactly one kind of resource
+to offer: volunteer effort directly related to their work in
+mathematics.  We have therefore broadened our search for financial
+support and peer producers interested in working at the meta-level.
+
+Where it proves to be possible, we will expand our range of services
+to include value-added items that financially-empowered groups of
+users will be interested in paying for -- which, notably, does not
+imply that the outputs have to be exclusively limited to this group,
+as free/open source software nicely illustrates.  More abstractly, we
+are looking for ways to better understand and communicate to various
+groups of users the practical benefits they will obtain from
+contributing to our efforts.
+
+We are currently in the phase of seeking out and negotiating the
+relevant relationships, and from this basis, formulating a suitable
+development plan.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* We want to help create a commons for developing CBPP projects
+
+It is typically useful for any group to have one central place to
+turn for information that is relevant to everyone in the group. 
+For example, Google famously plays this role for Internet search.
+
+We believe we can help create a set of central services which will be effective at
+serving the specific needs of the groups whose work is aligned with our goals.
+In particular, we hope to be able to develop a system for administering discussion fora
+with integrated subchanneling, and other novel CBPP communication tools, to
+share with everyone involved in our (thereby) coordinated effort.
+
+In addition to generally facilitating better communication within and between
+projects, we plan to give special emphasis to the development of tools for
+sharing content.  The idea is for projects with different foci
+to create diverse forms of content, which can then be reused creatively
+throughout a broader information commons.  
+
+Of course, this already happens to some degree.  But we want to
+push for the development of a social and technological environment in
+which it happens better.
+
+
+* We plan to establish contact and suitable relationships with all of the organizations working on related things
+Although the efforts we have mentioned are ambitious, they are widely
+relevant, and we feel we can reasonably hope to garner support to
+continue and expand them.  The NSF, the Department of Education, the
+Library of Congress, the United Nations, Wikimedia, First Monday, GNU,
+Google, various professional associations, foreign governments,
+for-profit companies, and philosophical and philanthropic groups are
+all likely to show some degree of support for the notions outlined in
+this document, and to have some synergies with us moving forward.  It
+might therefore make sense for some of these organizations to become
+financial supporters of our projects, or directly aid in our work by
+providing other vital resources, or otherwise collaborate with us in
+the development of the metacommons.
+
+
+
+
+
+
+
+* Improved communication channels can help people work together more effectively
+Participants in practically any social organization, from city
+government to large-scale social movement, will find their experience
+enhanced by improved communication, access to relevant facts, and
+means for considering and weighing alternative courses of action.
+Understanding how to do these things well is what CBPP is all about.
+Put another way, the key to CBPP is to create an integrative platform
+that makes it easy for people to usefully share their work with others
+without going too far out of their usual practice. 
+
+
+
+
+* What we have done so far
+The relationship between !PlanetMath and the wiki !AsteroidMeta, which
+it shares with our other projects, illustrates how a successful
+project can begin to take on the role of "project incubator."
+!AsteroidMeta also shows how related projects can collaborate,
+exchanging ideas and arranging to share resources as appropriate.  The
+several projects collaborating through !AsteroidMeta have laid the
+foundations for a successful "free math" movement, and are the
+beginning of a promising CBPP development programme.
+
+Over the course of its 5-year existence online, !PlanetMath has shown
+that internet-based CBPP can be a success.  On the other hand, we've
+seen that there are some things required for further growth that
+!PlanetMath's commons does not provide.  We've started a 501(c)3
+nonprofit to support !PlanetMath's development, and the strengths of
+this organization should help balance the shortcomings of "pure
+CBPP."
+
+
+* We have been working to make PlanetMath into a sustainable organization
+!PlanetMath has all the characteristics you would expect of a fledgling
+non-profit.  Through our CBPP approach, we have all but solved the
+sustainability problem for content (i.e., the content is fully
+maintained by the community).  However, we're left with sustainability
+problems related to project development and societal impact.
+
+Specifically, we would like to ensuring that the !PlanetMath project
+will continue through time and maximize its impact, without running
+against shortages of resources that the project will need to in order
+to bring this about.  The critical need is to balance volunteer effort
+and the CBPP mode of production with reliable support coming from a
+centralized organization devoted primarily to development and
+outreach.
+
+We believe that solving these problems for !PlanetMath would provide
+many instructive lessons and, likely, tools, which could be applied in
+other digital libraries and online community settings.  More
+generally, we think it is likely that such solutions would be
+applicable to cooperative organizations and constructive social action
+in general.
+
+We have been engaged with strategic planning meant to address these
+points.  We have also been networking with other organizations that
+are likely to be able to help us in these areas.
+
+
+* We have a basic framework for inter-project collaboration
+As a collaboration tool, our shared wiki !AsteroidMeta has a number of
+shortcomings, for instance, a site-wide recent-changes page that
+diminishes its value to readers who are not interested in reading
+updates on all of the projects using the wiki.  However, it has
+the strength of being usable for any however-tangentially-related
+philosophical discussion connected to any of the projects or ideas
+involved, and, indeed, it is out of these sorts of discussions that a
+number of the projects have had their genesis (e.g. our Code Market).
+In light of this, the wiki can certainly be considered to be a
+preliminary success.  Improving !AsteroidMeta will be part of our
+ongoing work to develop improved collaboration tools.
+
+
+* Our networking successes so far have engendered a few promising partnerships, and a community of interest
+!PlanetMath has become part of other broader efforts, including the
+NSDL, CITIDEL, Wikipedia, the joint NSDL/MAA Math Gateway project, and Google's 2006 Summer of Code program.
+We have also established a broad community of interest in our work,
+both among "math people" and "free culture people."
+
+We have furthermore identified items of potentially broad
+interest within our other projects (and in cases, we have found
+people who want to collaborate with us in developing these items).
+
+
+* Various institutions for addressing large-scale problems already exist, in centralized and decentralized forms
+Universities and the Internet are two of the institutions that have
+helped to established a broad cultural commons.  Why do we want a
+metacommons when these great institutions already exist?  Indeed,
+existing markets and laws could presumably be relied upon to
+coordinate CBPP development.  However, the ansatz driving this
+manifesto is that we can be still more efficient if we apply the
+strategy of CBPP development to the development of CBPP itself.
+
+Historical precedent for improvements in CBPP bringing about improved
+efficiency in cultural production is found in, e.g., Mersenne.
+Research on CBPP can show the way to further breakthroughs in
+efficiency.
+
+
+
+
+* What is needed to implement our plans
+Sustainability entails building sustainable relationships between
+various entities.  One needs to know who to turn to for what.  In any
+given organization the conditions for sustainability will have both
+external and internal components.
+
+Building sustainable relationships is currently our main focus.  We
+have seen many great ideas, but unless an effort can last long enough
+to achieve results, all the good ideas in the world don't amount to
+much.
+
+In order to be successful, we will need ongoing investments of work effort,
+money, attention, knowledge, etc.; and of course a work product which is
+worthy of these investments.
+
+
+* PlanetMath continues to need organizational development
+We have sufficient funds in our budget to begin to offer a small amount of money
+to consultants (whether professional or amateur) to help with our organization's
+internal structuring and strategic positioning.  We hope as well to attain
+gratis or quid-pro-quo help with organizational development from persons
+and organizations in positions of influence or ability.
+Indeed, this sort of thing that we hope that a metacommons could help provide.
+
+Among other organizational issues that !PlanetMath will have to address
+are the role of members, exactly what sort of staff we will be able to
+support, and how much and what kinds of
+help we will be able to offer to other projects.
+
+
+
+
+
+
+
+
+
+
+
+* As our commons grows, we will need improved strategies for communication
+There are many people who are working on things
+that are related to the things we are working on who nevertheless we
+are not collaborating with.  This is something we would like to
+change; even relatively weak collaborations (e.g. sharing research
+reports) would be a big improvement.  We expect that other 
+researchers share our sentiments.
+
+
+* We need to know more about the resource landscape
+The metacommons begins with simple networking.
+As we work to improve our network, we will need to think strategically
+about our relationships with other groups.  Sometimes we may not know
+immediately who we will be able to count on for a given resource, and
+other times we may not be taken seriously on our own.  In either of
+these cases, a third party may help us succeed.  Sometimes we may need
+to involve fourth or fifth parties in order to secure a good position!
+
+
+* Those concerned with solving societal problems will have to first solve the investment problem
+It might appear that the largest problems facing society will require
+immense new investment if they are to be solved.  Whether or not this
+is the case, one should not imagine that the world's largest problems
+will be solved de novo.  No matter what the level of new
+investment is, people will have to figure out how to capitalize on
+existing and preceding efforts.  Another basic fact is that costs can
+be reduced by find new ways to exploit widespread enduring effects,
+for example, by creating forms of entertainment which have the
+property that small increments of value are returned from the
+consumer's participation.
+
+
+
+
+* What you can do to help
+If you value the goals we mentioned above, then you should find a way to
+coordinate with other system agents (e.g. developers) some exchange or
+division of labor that will secure us all a better position.
+
+
+* You can help by connecting PlanetMath with the resources it needs to foster free math and CBPP development
+!PlanetMath can become a key site on the Internet not only for free
+math, but also for CBPP.    You may be able to help us
+get there.  At this point what we need most is to be able to engage
+a few developers.
+
+
+* Support project development and inter-project communication
+Many of our projects are in very early stages of development; in fact,
+even those project we can safely say to be well-begun are in a
+relatively early stage, compared to what we expect from them
+eventually.  All of our projects will need further investments if they
+are going to do new and exciting things.  You can help us by funneling
+appropriate investments to these projects.
+
+
+* Be specific about what you have to offer
+By the same token, if we have not been clear on what we're bringing to
+the table, please ask us questions!  As the network of groups and
+individuals supporting our projects grows, managing the associated
+information about who is doing what will become a large-scale
+collaborative project in its own right.  Indeed, that is the purpose
+of the metacommons.
+
+
+* You can help by using and developing CBPP
+Figuring out what role or roles are best for you to take relative to
+the commons is likely to be highly non-trivial.  Luckily, we can all
+make use of the strategy of progressive improvements.
+
+
+
+----
+* Old
+
+Here is a link to the latest release candidate.  http://planetmath.org/~jcorneli/manifesto-rcb.pdf (substitute ".tex" to get the source code).
+
+Please feel free to comment here.  The plan is for this to be published
+(to its main audience) soon.
+
+--[[file:jcorneli.org][jcorneli]] Sun Jul 9, 2006

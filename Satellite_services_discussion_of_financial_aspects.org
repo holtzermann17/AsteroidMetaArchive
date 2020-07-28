@@ -1,0 +1,75 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+These is preliminary discussion of the "Satallite Services"
+section of [[file:Vision for the future of PlanetMath.org][Vision for the future of PlanetMath]].
+
+----
+
+Describing these things (as a group) as a source of revenue is a
+stretch -- in order to be that, we'd need a marketing plan.  I don't
+know that we have one of those (except that we plan to make the FEM
+available for sale at some point).  What I think is easier to
+establish is that these things are unique in all the world, and our
+knowledge of them makes us somewhat special.  Which is not to say we
+have a perputual monopoly on these things (the opposite is true), just
+that we have a competitive edge.  The list above is of course far from
+being comprehensive.  I'm not really sure to what degree the FEM fits
+into this category anyway; it isn't mentioned in the research-job
+descriptions given below.  Perhaps it could be, but then these descriptions
+would need to be expanded.  Which might not be a bad idea anyway, i.e.,
+to spell out more of the sorts of Org things we plan to do -- and of
+course, to spell out timelines & deliverables in greater detail.
+What's there right now is fine as a summary/sketch; and I'm sure
+we'll get to the detailed stuff soon enough.
+--[[file:jcorneli.org][jcorneli]]
+
+The category I had in mind was "spin-offs of the main service".  FEM
+fits very well into this category --- the primary difference between
+FEM and a user-friendly noosphere release is that one is based on the
+content of the website and the other on the underlying software
+platform.
+
+As I see it, the research wing and the rest of the organization will
+have as their purpose the development of the main resource.
+Eventually, we will have a twin organization, say PM Enterprises,
+whose purpose is to develop, support, and promote these products.  The
+latter organization will be organized as a for-profit corporation so
+that the taxman won't bellyache about unrelated expenses and the
+for-profit organization will routinely donate a portion of its incoe
+to the non-profit organization.  Whilst the former organization will
+have innovation and service to the user community as goals, the latter
+organization will instead focus its eforts on user-friendliness and
+customer support.
+
+ *Everything* outlined here is a stretch --- it's not like we're
+going to pay anybody's salary on a $2000 budget!  We definitely need
+to supplement the statement of our goals with a statement of how we
+plan to achieve them and supporting documentation to show that the
+proposal is realistic.  Along these lines, I would propose a
+scholium-based approach to strategic planning --- as a base document,
+we take a description of our goal along the lines of this document and
+then atttach scholia explaining how these goals might be achieved and
+supporting documents to argue the plausibility of our case.  For
+instance, as you suggest, this section would have two scholia attached
+to it --- a survey of current products showing that what we have to
+offer is unique and a market study to show that there is demand for
+the new product.
+--[[file:rspuzio.org][rspuzio]]
+
+I don't have intuition telling me that these tools have any inherent
+marketability outside of PM.  And I am leery of doing a marketing
+study before we actually have the things we would be trying to market
+available.  OTOH, the things have easy-to-see usefulness within PM.  I
+think that should be enough to attract funding and interest from other
+groups.  Surre, we can be open to all kinds of arrangements, but for
+now I am happy to develop tools & ideas.  If you or someone else wants
+to market them and that ends up helping to pay me, I could support
+that.  But to me this seems like something to do way later; I think we
+have other much more likely-sounding ways of pursuing funding open to
+us for this start-up period.  This is not to say that these
+/projects/ are unimportant in any way (including to securing startup
+funding), but that I don't feel that viewing them as /products/ (or
+services) in the usual sense of $-exchange will work well at this
+point in time. --[[file:jcorneli.org][jcorneli]]

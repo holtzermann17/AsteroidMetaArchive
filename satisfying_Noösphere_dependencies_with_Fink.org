@@ -1,0 +1,113 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I'm trying to figure out which Fink packages correspond to the Debian packages
+named in the [[file:Noösphere installation guide.org][Noösphere installation guide]].  
+
+The format of this page is as follows -- the suggested Debian packages are
+indented in parentheses.  If an option is available, two sets of parenthesized
+packages are listed.  Below that, the corresponding Fink packages are listed.
+In places where I'm not sure, I've added a "?" in hard brackets.  I'm especially
+not sure about the package corresponding to /libxml-libxslt-perl/, so I marked
+that with a "??".  In places where the Noösphere instructions were themselves
+confusing, I've added a "*".  Hopefully someone familiar with Noösphere can fix
+the documentation.
+
+Summary of results: I didn't find /postgresql-client/ or /mysql-server/ and I'm not sure what
+package corresponds to /libxml-libxslt-perl/.  I can ask about these on the
+Fink mailing lists if no one here knows.  There are a couple of documentation
+bugs marked with *'s that need to be fixed in the installation guide in order
+for me to finish this page
+
+* Equivalent Fink Packages
+
+ (postgresql, postgresql-client) (mysql-client, mysql-common, mysql-server)
+
+fink install postgresql &&
+[?]
+
+fink install mysql &&
+fink install mysql-client &&
+fink install mysql-dev [?]
+
+ (apache, apache-common)
+
+should be built-in on OS X
+
+ (libapache-mod-perl)
+
+Presumably also built in.
+
+ (libdbi-perl)
+
+fink install dbi-pm585 [?]
+
+ (libdbd-pg-perl) (libdbd-mysql-perl)
+
+fink install dbd-pg-pm585-ssl [?]
+
+fink install dbd-mysql-pm584 [?]
+
+ (libxml-libxml-perl)
+
+fink install xml-libxml-pm581
+
+ (libxml-libxslt-perl)
+
+fink install libxslt [??]
+
+ (libxml-dom-perl)
+
+fink install xml-dom-pm581 [?]
+
+ (libunicode-string-perl)
+
+fink install unicode-string-pm584
+
+ (libdigest-sha1-perl)
+
+fink install digest-sha1-pm584
+
+Data::Denter [*]
+
+ (vim)
+
+fink install vim
+
+ (ispell)
+
+fink install ispell
+
+ (iamerican)
+
+maybe comes built in with ispell?
+
+ (wget)
+
+fink install wget
+
+ (tidy)
+
+fink install tidy
+
+ (gs or gs-aladdin)
+
+fink install ghostscript
+
+ (netpbm)
+
+fink install netpbm
+
+ (tetex-base, tetex-bin)
+
+fink install tetex
+
+ (latex2html)
+
+fink install latex2html [then copy source somewhere to patch it]
+
+ ImageMagick 5 (libs and dev) or later (libmagick5, libmagick5-dev) [*]
+
+fink install imagemagick && fink install imagemagick-dev [?]
+     
+/[*: Aaron or Logan or whomever, can you fix these in the documentation?]/

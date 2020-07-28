@@ -1,0 +1,81 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+## If /(x y) elt A times (B union C)/ then 
+/x elt A/ and /y elt (B union C)/
+
+## If /y elt (B union C)/ then /y elt B/ or /y elt C/
+
+### If /x elt A/ and /(y elt B or y elt C)/ then
+either /x elt A and y elt B/ or /x elt A and y elt C/
+
+### If /x elt A and y elt B/ then /(x y) elt (A times B)/
+
+### If /x elt A and y elt B/ or /x elt A and y elt C/ then 
+/(x y) elt (A times B)/ or /x elt A and y elt C/
+
+### If /x elt A and y elt C/ then /(x y) elt (A times C)/
+
+### If /(x y) elt (A times B)/ or /x elt A and y elt C/
+then /(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+### If /x elt A and y elt B/ or /x elt A and y elt C/ then
+/(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+## If /x elt A/ and /(y elt B or y elt C)/ then 
+/(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+### /(x y) elt (A times B) union (A times C)/ if and only if 
+/(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+## If /(x y) elt A times (B union C)/ then 
+/(x y) elt (A times B) union (A times C)/
+
+ 1. /A times (B union C) subset (A times B) union (A times C)/
+
+ 1. If /(x y) elt (A times B) union (A times C)/ then 
+either /(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+## If /(x y) elt (A times B)/ then
+/x elt A/ and /y elt B/
+
+### If /y elt B/ then either /y elt C/ or /y elt C/
+
+## If /y elt B/ then /y elt B union C/
+
+## If /x elt A/ and /y elt B union C/ then
+/(x y) elt A times (B union C)/
+
+### If /x elt A/ and /y elt B/ then
+/x elt A/ and /y elt B union C/
+
+ 1. If /(x y) elt (A times B)/ then
+/(x y) elt A times (B union C)/
+
+## If /(x y) elt (A times C)/ then
+/x elt A/ and /y elt C/
+
+### If /y elt C/ then either /y elt C/ or /y elt C/
+
+## If /y elt C/ then /y elt B union C/
+
+## If /x elt A/ and /y elt B union C/ then
+/(x y) elt A times (B union C)/
+
+### If /x elt A/ and /y elt C/ then
+/x elt A/ and /y elt B union C/
+
+ 1. If /(x y) elt (A times C)/ then
+/(x y) elt A times (B union C)/
+
+## If /(x y) elt (A times B) union (A times C)/ then
+either /(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+## If /(x y) elt (A times B) union (A times C)/ then
+/(x y) elt A times (B union C)/
+
+ 1. /(A times B) union (A times C) subset A times (B union C)/
+
+ 1. /A times (B union C) = (A times B) union (A times C)/
+
+Back to [[file:Example of structured proof.org][Example of structured proof]]

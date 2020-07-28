@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+An assignment is a list with exactly two elements, the first of which is a non-nil atom.  In practise, the first element is the name of a placeholder and the second element is the expression of which this placeholder takes the place.
+
+ *Navigation:*
+
+Back to [[file:Definition of template | template.org][Definition of template | template]]
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to [[file:Definition of assignment list | assignment list.org][Definition of assignment list | assignment list]]

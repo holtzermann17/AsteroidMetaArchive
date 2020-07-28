@@ -1,0 +1,149 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Intro
+
+These are some raw notes I took on the video from Ray's !LispNYC talk.
+Even though this talk was a while back, it seems like reflecting on it
+will help me frame my next talk (which, coming in half a year later,
+will presumably be a nice update on some of this stuff and also will
+go into more detail on things that weren't really ready to talk about
+in July).  I hear from various sources that Ray's talk generated a lot
+of interest and it will be a treat to be speaking to an audience
+already warmed to this subject. --[[file:jcorneli.org][jcorneli]] Dec 10, 05
+
+* The notes
+
+Form internal representation of things that the computer
+reads; translate from standard notation to the internal
+representation.
+
+future: artificial intelligence for proving theorems
+and answering questions
+
+writing notes for documents with the scholium
+system
+
+we'll get a database of mathematical facts
+
+listing of knowledge (get it in there & then use it)
+
+hcode: language inspired by lisp for representing
+mathematics
+
+exists: theoretical work to say how things should
+be done
+
+base what we're doing closely on what mathematicans actually do.
+
+use higher-level concepts than "just logic";
+we'd like to incorporate these.
+
+if we just use formal logic, its like programming
+with machine code.  [Is this bourn out by
+Metamath experience?]
+
+Basic lisp can be written with a few functions.
+But in actual practice we define other things
+to make the language easier to read.
+
+[Freeness as an epiphenomenon of increasing
+knowledge and power.]
+
+What do you need to have at hand in order
+to express mathematics on (to) the computer?
+
+You're going to need: notation for variables,
+notation for evaluating functions, notation for
+binding variables.
+
+With hcode, we might as well begin with a 
+uniform/simplified basic language.
+
+Lambda turns expression into function.
+
+Sum is another example of "binder", which turns an
+expression into a number.
+
+[How does this relate to other math/computer
+projects? - we need to review them.]
+
+We're talking on the level of SYNTAX.
+Later, things like predicates and indices
+and so forth will be interpreted in the
+same sort of syntax, but with different
+semantics.
+
+How is this stuff useful?
+
+E.g. checking proofs (automated refereeing).
+[Reminds me of the "duality" between prover
+and parser; or similar play between human
+expression and computer expression, which
+is really the process of debugging the parser.]
+
+Different mathematical concepts can be
+represented in different ways according
+to different formalisms.  It is good to be
+able to translate between them.  [And
+I might also add, to be able to translate
+between the intuitions behind different
+formalisms, if that makes sense.]
+
+Representation of mathematical objects
+is something like a frame (idea from AI).
+E.g. associated with a group we have
+various items associated with the group.
+Or a triangle has to have vertices and sides
+(all in the proper configuration).
+
+[How would you get the computer to
+represent something like "the xy plane"?]
+
+A lot of the time in math, things are defined
+implicitly.  E.g. point and line are defined
+implicitly by the axioms.  Makarov D-logic
+helps here.
+
+Theorems with inputs and outputs.
+Check that we have right inputs,
+then we can apply the theorem.
+
+This is similar when going through a
+proof, i.e., when applying an inference rule.
+
+Modus ponens is an example inference rule,
+so is the law of cosines.
+
+Templates are pattern checking functions.
+Check that the patterns apply and that
+they are applied coherently.
+
+Translating metamath database into
+hcode and checking it!
+Other examples like that!
+
+We're close to having a working prototype for
+plain logic & are close to extending to other
+kinds of math.
+
+Symmetries are like putting the proof into
+another program and actually doing
+the switching.  (At least, that is one way
+to do it.)
+
+What does the standard proof checker stuff
+have to do with actual mathematical literature?
+(Relativity, cosets, real math...)  This is the
+AI gap!  Cf. Automath vs. Landau.
+
+Distinguish between Otter on the one hand
+and Google on the other.  Work on things
+from a POV that works for logic but also works
+for other things.
+
+There are plenty of Human encyclopedia/dictionary
+projects.  But we expect to automate cross-referencing... and...
+
+Bio-lingua does something similar in biology.
+Which proofs rely on the axiom of choice?

@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There are lots of free software packages that have to do with mathematical
+science, cryptography, or other math-intensive subjects.  [[file:AsteroidMeta.org][AsteroidMeta]] probably
+shouldn't try to list all of these packages.  But this makes me wonder, what is
+the difference between these pieces of "mathematical software" and Free Math as
+it is treated on these pages.  I don't really know the answer.  Presumably there
+are some times when we would want to talk more about some piece of software.
+Perhaps the main thing about Free Math is that we're geared towards mathematical
+content.  Sometimes this would include content related to computation.  Anyway,
+its a curious thing, thinking about what to include and what to leave
+out. --[[file:jcorneli.org][jcorneli]] Thu Feb 3 15:45:42 2005
+
+
+We certainly should talk about [[file:software we use.org][software we use]], including use strategies,
+for example we can talk about [[file:using GNU Arch.org][using GNU Arch]] (which is, at least at first, a
+somewhat confusing topic) --[[file:jcorneli.org][jcorneli]] Mon Feb  7 03:29:48 2005
+
+/There's another alternative to "a single huge list of every kind of
+mathematical software" vs. "no list at all". Perhaps the [[file:AsteroidMeta.org][AsteroidMeta]] pages
+that discuss specialized fields of mathematics could briefly mention software at
+the end? Something like "by the way, I found the ____ software package useful
+for studying this field; I've heard ____ is a usable alternative.". --
+DavidCary/
+
+Sure, of course it is fine to work software into our conversations (as long as
+it is free software).  I do think the /software we use/ page linked above is
+worth hitting pretty heavily, since out of the universe of all mathematical
+software, there are only a few programs and languages that people here actually
+do use.  It may also be good to have a [[file:software we think is cool.org][software we think is cool]] page (as
+long as people use it responsibly).  As an example of how this sort of thing can
+useful: I hadn't heard of [[file:metamath.org][metamath]] until someone brought it up on the PM
+forums.  It is good to spread the word, even about things you might not use
+yourself. --[[file:jcorneli.org][jcorneli]] Tue Feb  8 22:55:33 2005
+
+----
+[[file:Discussions.org][Discussions]]

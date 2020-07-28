@@ -1,0 +1,43 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Final disposition: Behavior by design, not a bug.*
+
+There is perhaps a problem when you type sh p hbex. [[file:frl.org][frl]] 16-Apr-2006
+
+You'll have to provide more detail.  Here is what I get:
+
+ MM> read set.mm
+ ...
+ MM> sh p hbex
+ 22         hb.1=hb.1      $e |- ( ph -> A. x ph )
+ 23       hb.1=hbne      $p |- ( -. ph -> A. x -. ph )
+ 24     hb.1=hbal      $p |- ( A. y -. ph -> A. x A. y -. ph )
+ 25   3imtr4.1=hbne  $p |- ( -. A. y -. ph -> A. x -. A. y -. ph )
+ 28 28:3imtr4.2=df-ex $a |- ( E. y ph <-> -. A. y -. ph )
+ 32     albii.1=28     $a |- ( E. y ph <-> -. A. y -. ph )
+ 33   3imtr4.3=albii $p |- ( A. x E. y ph <-> A. x -. A. y -. ph )
+ 34 hbex=3imtr4    $p |- ( E. y ph -> A. x E. y ph )
+
+If you mean the "28:", this is not a bug, but is the way that "show proof"
+displays compressed proofs, by design.  It means that the subproof leading
+to step 28 is reused somewhere else in the proof.  If you convert the proof to
+noncompressed, it displays differently:
+
+ MM> save proof hbex / normal
+ The proof of "hbex" has been reformatted and saved internally.
+ Remember to use WRITE SOURCE to save changes permanently.
+ MM> sh p hbex
+ 32         hb.1=hb.1      $e |- ( ph -> A. x ph )
+ 33       hb.1=hbne      $p |- ( -. ph -> A. x -. ph )
+ 34     hb.1=hbal      $p |- ( A. y -. ph -> A. x A. y -. ph )
+ 35   3imtr4.1=hbne  $p |- ( -. A. y -. ph -> A. x -. A. y -. ph )
+ 38   3imtr4.2=df-ex $a |- ( E. y ph <-> -. A. y -. ph )
+ 50     albii.1=df-ex  $a |- ( E. y ph <-> -. A. y -. ph )
+ 51   3imtr4.3=albii $p |- ( A. x E. y ph <-> A. x -. A. y -. ph )
+ 52 hbex=3imtr4    $p |- ( E. y ph -> A. x E. y ph )
+ MM>
+
+Does this answer your question? --[[file:norm.org][norm]] 15-Apr-06
+
+yes, thank you Norm -- [[file:frl.org][frl]] 15-Apr-06

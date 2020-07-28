@@ -1,0 +1,94 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Go is a simple game.  If you know the rules, skip the next section.
+
+* Rules
+
+The game is played by two players, Black and White, who put black
+and white stones on a 19X19 board in turns (Black plays first).
+To be precise, a "move" consists of either placing a stone or
+passing.  The game ends when both players pass in succession -
+though if this rule was followed literally, games could end
+"hung"; in reality, games will only end when there are no more
+points to be made or when one of the players resigns (a sort of meta move).
+
+"Points" consist of territory surrounded by connected groups of "live" stones minus "prisoners".
+
+I'll now say what it means for a group of stones to be "alive".  Quite simply,
+it means that there is no possible play by which the group can be removed from the board ("taken prisoner").
+A group of stones is "captured" (removed from the board) whenever all of its
+"liberties" are filled by stones of the other color.  Stones live or die as a group,
+and initiative goes to the attacker in the case of a deathblow.  Thus, this shape:
+
+ ***
+ * *
+ ***
+
+can be "killed" (captured, whatever), but this shape:
+
+ *****
+ * * *
+ *****
+
+can not be.  This is because in the first case the other player can play
+all the way around the outer edge and then into hole in the middle, whereas
+in the second case, there are two holes, which can't be filled simultaneously.
+If it appears in a game, the second group will be alive thoughout the
+rest of the game -- as will groups with two "eyes" (holes) -- at least, typically.  Stones on the edges and furthest corners of the board have fewer liberties (three on the edges, two in the corners).  Interestingly (as should be obvious with a bit of thought) one can make live groups in the corners and around the edges with fewer stones than are required in the "free space" in the middle of the board.
+
+The only other rules are that it is illegal to repeat the immediately preceding
+board position and that it is illegal (except in New Zealand) to kill your own stones.
+
+(These rules could have been stated more succinctly, but I've tried to
+make them a little bit pedagogically useful.)
+
+* Why we might care
+
+A given Go game is a simple example of a commons-based, peer-produced
+scholium-based document.  Why do I say this?  
+
+Two players are co-authors of the game.  Each move is an "article" or "scholium";
+typically these moves have a text-like aspect (placing the stone on the board),
+but sometimes they have an actionable aspect (placing one stone and removing others).
+
+The players, are, moreover, egalitarian in their relationship to one another.
+Once the game has begun, anyone is free to play anywhere on the board, subject
+to the rules stated above.  (There are, in addition, certain conventions of
+etiquette, but these aren't especially important for the current discussion.)
+
+"Simple" may be the only part of this proposition that is misleading.
+Although the rules of the game are "simple", the knowledge that goes
+into playing the game well is quite complicated.  A person who is
+a Go master probably knows as much about Go as any other expert 
+knows about his or her field of expertise (whatever that might
+happen to be) - i.e., a lot!  Even though the game seems (at least superficially) "nonlinguistic" in nature,
+in fact, there are established patterns which do have a language-like
+aspect.  (Indeed, the game is sometimes referred to as "handtalk".)
+
+So, granting "simple", we then say - fair enough, but really, so what?
+
+Well, Go has many, many theorems ("life and death problems" etc.) and any
+computer that can prove these theorems might have a chance of being
+a decent theorem prover in general (conjecturally speaking).  In addition
+there are many "heuristic" aspects of the game (theory of openings, etc.).
+
+Thus, we should also say (if it isn't already apparent) that the 
+"theory of Go" is also a CB/SB document.
+
+The general claim is that Go is a sort of microcosm of mathematics -
+indeed, some have said it is a microcosm of everything.  But I hope
+you see what I mean with the mathematics claim.
+
+One point to end on: the relationship to monadology.  Every stone
+on the board relates to every other stone, that much is certain.
+Close-by stones typically relate more closely than far-off stones; and sometimes
+the game breaks into more-or-less unrelated subproblems.  But action at
+a distance is alive and well, in all of its combinatorial glory.
+If one could understand all of the relationships of each stone and each
+space on the board to all other stones and spaces perfectly, one could
+play Go perfectly.  (For an example of what it means to play "perfectly",
+look around for writings on the 5X5 version of the game, which has been
+"solved".)
+
+--[[file:jcorneli.org][jcorneli]] (~14 kyu)

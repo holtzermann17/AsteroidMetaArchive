@@ -1,0 +1,139 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I don't usually tackle topics that are this overtly philosophical.
+(Do I?)  But I figured, I would like to give this one a shot.
+
+I'll employ my favorite trick of referring to existing dictionary
+definitions (and especially etymologies).  (My other favorite
+trick is to refer to made-up etymologies.)  I'll look at a few
+words that I think are relevant.
+
+
+; Free : akin to Skr. prija beloved, dear.
+
+; Liberty : 
+from L. libertas; cf. liberalis, from liber; akin to libet, lubet,
+"it pleases".
+
+: excemption from subjection to the will of another claiming
+ownership of the person or services.
+
+: Note: freedom and liberty, though often interchanged, are
+distinct in some of their applications.  Liberty has reference to
+previous restraint; freedom, to the simple, unrepressed exercise
+of our powers.  A slave is set at liberty; his master had always
+been in a state of freedom.
+
+; License : fr. licere to be permitted, prob. orig., to be left
+"free to one", akin to linquere "to leave."
+
+; Leisure : F. loisir, orig., permission, fr. L. licere, "to be
+permitted." 
+
+: Freedom from occupation or business; vacant time; time free
+from employment; hence ease or convenience.
+
+; Scholar :
+fr. L. scholaris "belonging to a school", fr. schola; 
+Gr. schole meaning "leisure" (see also (dub.?) Gr. Schemea).
+
+: one who is under instruction, or one engaged in the pursuits
+of learning
+
+
+Thus, I'd say that "free" means: to be able to do as one likes,
+that which is within one's power.  ("Life, liberty, and the
+pursuit of happiness" may have some built-in redundancy.)  The run
+continues along "license", to "leisure", and thereby to "scholar",
+with the notion of "being permitted to do something" taking the
+fore.
+
+Following the note, this understanding of "freedom" is rather more
+of an understanding of "liberty".  This understanding of freedom
+seems relevant to Free Software, which puts one at liberty
+to do certain things.
+
+The notion of "civil liberty", 
+
+: exemption from arbitrary interference with person, opinion, or
+property, on the part of the government under which one lives, and
+freedom to take part in modifying that government or its laws.
+
+seems like an important usage for understanding "free as in free
+software", the difference being that with "software liberty", one
+is permitted to modify code, not government.  The notion of "free
+modifiability" has been seized as a key notion for FAIF advocates,
+but one should remember that it is not the only relevant freedom.
+(The right to redistribute is probably equally important.)
+
+I would like to point out the thought that scholarship may
+actually be a sort of "meta-freedom".  What do you do when you
+don't have anything you're obliged to do?  Learn about or figure
+out new things to do, of course!
+
+Here, I'm thinking that the notion that "liberties" (as in Go) and
+"degrees of freedom" (as in Mechanics) are important.  One can
+only freely do things that one can do at all.  In particular, one
+can not do things that one does not know about, or things that
+have somehow been "used up", precluded, or otherwise ruled out.
+Thus, "obligations" are locally (either in time or space or what
+have you) contradictory to freedom - though globally, the
+fulfillment of a particular obligation or series of obligations
+may be the only way to make some activity or other possible.
+
+----
+
+I have thought about this question for years, and I keep coming back to a
+definition of freedom as the *absence of coercion*.  The nice thing about
+this definition is that coercion is a human, social construct, so we are
+immediately dropping problems with conflating natural and social freedom.
+Inasmuch as we are limited by unintentional situations, random chance, and
+natural events, our freedom from coercion has not been reduced.  Freedom from
+coercion is also important in that it is the kind of freedom we have in our
+power to change, by changing how society is structured.
+
+I'm not sure how much finding the right definition of freedom really matters
+for the work on this site, however.  I think just separating out the above "libre" 
+freedom from "gratis" freedom takes care of much disambiguation when it comes to
+CBPP. --[[file:akrowne.org][akrowne]] Sat Apr 16 16:28:19 UTC 2005
+
+
+The absence of coercion seems like a good definition of "freedom", and I think
+it is probably more along the lines of an actual definition than what I wrote
+above, which, like I said, is more like a definition of "liberty".
+
+The relevance to this site, as I see it: to help us define complicated and
+potentially confusing terms like "free culture".  Furthermore, basic (legal)
+definitions of freedom do suffice for making "free content" in general.
+However, I think it is good for us to think about the different kinds of freedom
+that are relevant to different kinds of content.
+
+The liberty-based definition above is pretty strongly oriented towards the
+notion of the hyperreal - like Neo says at the end of "The Matrix", 
+
+: A world without rules or controls, borders or boundaries.  A world where
+anything is possible.
+
+This quote ties in nicely with the a non-coercion-based definition too, of
+course.  Indeed, "The Matrix" seems to tie these two notions of freedom together
+in an interesting way.  One can apparently be non-free, and possibly free,
+without necessarily being aware of the fact, which is kind of interesting.
+These fun questions would bear further inventigation - but maybe we need a
+!PlanetPhilosophy on which to talk about them :).
+
+My definition above is related to the idea that there are many different kinds
+of "freedom".  This is something that I hadn't really thought about before
+writing the HDM non-manifesto.
+
+As a short followup to your comment (that I just thought of), maybe it is good
+to have a definition that encompasses both natural and social freedom, then
+further distinctions can be made by applying modifiers.  I purposefully tried to
+make my definition fairly metaphysical (i.e. something that would apply to
+various sorts of agents in various sorts of scenarios, not necessarily human or
+societal ones).  This sort of generality could be a strength (flexible!) or a
+weakness (non-intuitive and sketchy!) or both.
+
+(I don't want to split hairs about it here, but perhaps on !PlanetPhilosophy
+later. :))
+--[[file:jcorneli.org][jcorneli]] Sat Apr 16 18:14:55 2005 UTC

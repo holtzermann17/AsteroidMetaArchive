@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As evidenced by the example brought up in the Legal section, it can be very
+helpful to read the comment-attachments that appear together with articles on
+PM.  It may not be the number one priority, however, someone who wants to do a
+good job of editing a particular article would do well to get familiar with the
+discussions about the article that have already taken place.
+
+One question that has occured to me several times is -- what should we do if we
+have a correction or suggestion but we are unable to convince the author that
+she or he ought to adopt our suggestion?  Here's what I think we need to do.
+ 1. Create a patch that rewrites things as we would like them.
+ 1. Keep track of the version against which this patch works; if the version number changes, we may need to change the patch.
+ 1. Write a program that will check the version numbers and apply such "last resort" patches.
+
+I really think that this approach is a last resort - it would be much better for
+everyone involved for the two works not to diverge.  Accordingly, we need to
+make a very serious effort to have our corrections accepted. (I would like to
+understand the way orphaning works better.)
+
+: An entry that has a pending correction for some fixed amount of time (I think it's a month, [[file:akrowne.org][akrowne]] can tell for sure), goes to the orphaned list and then someone else can "adopt" it and get the owner rights to make whatever change is needed. --[[file:drini.org][drini]]
+
+:: As I understand it, the reason for this has to do with people who reject stylistic editorial corrections.  There already have been people who have rejected corrections about -XX classifications and quotation marks.  The idea of the patches is to ensure that the TeX source for the printed book is correct.  --[[file:rspuzio.org][rspuzio]]
+
+(More to come in this section.)

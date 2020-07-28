@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+When using 'sub eimmexp.cmd' I get a bug message. It corresponds to nothing since the result is good. Perhaps you should remove it Norm. -- [[file:fl.org][fl]] 22-Dec-2006
+
+I don't know what you mean.  I tried it and don't get a bug message.
+You'll have to give more details. -- [[file:norm.org][norm]]
+
+I get a BUG #1521 but I've just realized that I'm using the 0.07.24 version (25-Sept-2006) and that there is a new version. It's perhaps the reason. I'll install the new release. -- [[file:fl.org][fl]]

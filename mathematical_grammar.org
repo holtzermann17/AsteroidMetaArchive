@@ -1,0 +1,229 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A while ago I wrote a rather sketchy parser for mathematical expressions.
+I'm currently about to get ready to investigate what I think is likely
+to be a much better developed tool, namely LaTeXML.  However, as a back
+up plan I am also thinking I ought to be able to specify a BNF grammar for
+math expressions (or something close) -- and since I didn't see such a thing
+in the LaTeXML documentation, maybe no one has thought to put such a thing
+on the web.
+
+So far I'm just getting started -- I found the PM entry on BNF helpful,
+also these references:
+
+ * http://cs.uic.edu/~spopuri/cparser.html#lr-parser
+ * [[file:mmj2slawekk.org][mmj2slawekk]]
+
+* Note on ambiguity
+
+I don't expect to be able to write one universally applicable BNF, since
+context is obviously important.  But nevertheless, there should be one
+that works in many contexts -- and others that work in the other contexts.
+
+* Discussion
+
+** Suggestions from O'cat
+
+Hi Joe. I have a suggestion. In a project such as this it
+is helpful to break it down into sub-projects or tasks, with
+the output from one task used as input to the next. One
+benefit is to achieve a "deliverable" that can be perfected
+(and delivered :) independently. In the case of a "mathematical
+grammar" one possible breakdown is to begin with the abstract
+syntax, disregarding the input/output display/renderings and
+concrete syntax. For example, disregard parentheses and
+brackets and develop a table documenting the elements of
+math you wish to model. For example:
+
+     
+     implies( a , b )
+     and( a , b )
+     not( a )
+     or( a , b) 
+    
+
+Note that "a" and "b" are typically 2-valued -- true or false --
+but you will want to /type/ the operands so that different
+operations can be distinguished ("implies" is different if
+the there are /n/ truth values instead of 2.)
+
+Document the logical, relational functional, and operator
+conversion operations,
+and give each an /internal/ name that is unique -- and has
+no connection to what is rendered in actual formulas and
+statements. The name is just a key used by programs and tables.
+Thus multiple /add/ functional operators may be present, 
+and each will have a unique /internal/ name even though 
+in normal usage they are all rendered as "+". Different
+"add" operations will be distinguished by the number of
+input operands and the domain of the operands -- output
+operands will not make an operation unique since conversion
+operatore will also be present. 
+
+This approach will let you deliver a set of mathematical
+operations for which you can then deliver /multiple/ grammars,
+or indeed, allow users to use their preferred grammar.
+
+You will also run into the problem of different levels
+of abstraction. For example, in Norm's set.mm just about
+everything is a "class" -- integers, reals, complex, and
+functions themselves. A different, higher level of abstraction
+using a subset of Norm's theorems as axioms might use
+Types such as Int, Real and Complex (etc.) 
+
+I suggest using a database such as MySql with table editing
+so that you can add attributes and perform queries. (There
+would be a need for multiple related tables to fully
+express the problem domain in 3NF relational terms.)
+
+Good luck! --[[file:ocat.org][ocat]]
+
+/Reply:/ This all sounds good for the "real" project, but right now I am more interested in doing a "warm-up exercise" in the form of one relatively simple BNF that handles some nice subset of formulas, without worrying at this point about different semantics for different kinds of "+" symbols, since mostly the particular choice of semantics will be indicated by surrounding NL text, and I'm not ready to tackle that yet. Eventually we'll need a sophisticated tool that can handle multiple grammars; however, I think it is OK to work on one grammar as a warm-up, and just make note of the places where it looks like one runs into trouble.
+
+That said, abstract syntax is one of the things Ray has been working on, maybe his efforts will feed right into future parser development.
+
+--jcorneli
+
+** Suggestions from slawekk
+
+I also have a couple of suggestions. 
+To make the project realistic I suggest to not start with writing a 
+BNF grammar for romantic math. Start with writing a grammar for 
+Metamath's ZF formulas. I mean strings like 
+
+"( A e. RR /\ B e. RR ) -> ( A < B <-> ( A <_ B /\ -. A = B ) )".
+
+I think the resulting grammar is quite universal in mathematics. 
+It is universal enough that one can translate this into a 
+different theorem proving environment (Isabelle/ZF) without 
+proper parsing, just with  text substitution 
+(Metamath's "e." becames Isabelle's "\<in>" etc.). This is because
+the authors of both programs followed the unspecified, 
+but commonly known grammar used in romantic math, making it well-defined 
+and thus doing work that you would have to do anyway.
+
+: Set.mm has an /effective/ grammar provided by the Syntax Builder
+Axioms. mmj2 dynamically constructs a grammar from an input .mm
+database file and uses it to parse the statements -- the output
+of which is a syntax tree for every statement (assuming the
+grammar is valid and there are no syntax errors in the input
+statements.) It would be /very/ easy to output a generic,
+parseable .mm file into another format using the parse trees
+and Syntax Axioms; I have had no need to write the code, yet.
+You might find metamath.exe's utilities capable for your needs,
+also... Look in set.mm for "Definitions for LaTeX output" to
+see what has already been defined for each symbol (mmj2 does
+not presently process those statements in a .mm file, but
+could.) 
+
+: .
+
+: The key to translations is having a table of abstract syntax
+which is /generic/, as I outlined: the syntax would be stored
+without regard to the various symbols input or output as they
+differ from one system to the next (latex is different from
+metamath ascii shorthand, which may differ from ghilbert, etc.)
+That table, for .mm files can also be generated, if needed.
+However, at last report the set.mm grammar has the property of
+LARL(7) -- I doubt it matches any other even taking into 
+account the ASCII shorthand symbols.
+
+: .
+
+: If there is a *real* need for .mm translation tools let
+me know. I aim to serve mankind :-)
+
+: .
+
+: It would be quite feasible to add a new input "template" file
+with one record for each Syntax Axiom and Variable Hypothesis. 
+The data for each Syntax Axiom would/could include the Metamath
+statement Label (as a key) plus the output text with "#1", "#2", etc. signifying the 1st, 2nd, etc. parameters (variables). Variations
+could include multi-line output (formatted, like TMFF), plus
+optional "codeset" RunParm parameters that would specify the
+character encodings for the template file and the output file
+(could be Unicode or French, whatever.) The scheme would also
+enable conversion from the parse trees to Polish or Reverse Polish
+as well as the standard infix+prefix used in set.mm. Note that
+this is for /generic/ .mm files that are parseable -- the mmj2
+parser has no hardcoding for set.mm so it is very forward looking :)
+
+: .
+
+: --[[file:ocat.org][ocat]] 5-Dec-2006
+
+
+:: Let me explain why I need the grammar for Metamath ZF formulas.
+You can treat this as a use case scenario so that you can assess 
+how real the need is and if it is worth your effort. 
+
+:: I am translating Metamath theorems to Isabelle/ZF's Isar. The tool 
+that I am currently using does not parse Metamath ZF formulas, but
+does simple text substitutions and some corrections to account
+for different operator precedence. This works reasonably well, but
+obviously it is not the way it should be done. The proper way is to
+parse the string (like the one above) to some internal representation
+and then generate the new format from that. To write code for this process
+it is useful to have some description of what one can expect on the 
+input, for example in the form of BNF. This information is not easily
+accessible (of course this also depends on what is "easy" for whom,
+and I may be missing something). "Definitions for LaTeX output" in set.mm
+is very useful (thanks for the suggestion), as it provides the list
+of things I have to look at. However, this does not have other needed 
+information (for example is "p /\ q /\ r" the same as "( p /\ q ) /\ r"
+or rather "p /\ ( q  /\ r )", operator precedence etc). 
+From what you write I understand that given the description of the target 
+language in some format (the "input template") you may be able to extend
+mmj2 so that it can otuput ZF formulas from set.mm to some 
+different proof language. It is an interesting approach, but I can't 
+see how one would set up the workflow for the whole translation process 
+based on this mmj2's capability (translating ZF formulas is only
+a part of the problem). Perhaps you can elaborate on this. --[[file:slawekk.org][slawekk]] 6-Dec-2006
+
+#+BEGIN_VERSE re: "The proper way is to
+parse the string (like the one above) to some internal representation
+and then generate the new format from that. To write code for this process it is useful to have some description of what one can expect on the input, for example in the form of BNF." -- I have that in hand
+/already/. I can even provide you a BNF-like listing for a recent
+set.mm (one of the mmj2 RunParms is "PrintSyntaxDetails".) I don't mean
+to suggest that you need to /justify/ your need for this but to explain
+what you want specifically; I could likewise generate ghilbert formatted
+output, but there are ghilbert specific requirements ($d's, order
+of hypotheses, file header statements, etc.) and since the ghilbert
+spec is still in /draft/ status I haven't bothered. I will create
+a new page for you to say what you want and, god willing, we shall
+happily code it up. --[[file:ocat.org][ocat]]
+
+
+Now, if I could convince you to write the grammar as a Haskell
+algebraic datatype, it would save me a lot of work...
+
+"higher level of abstraction (...) Types such as Int, Real and Complex"
+
+I don't think that in standard, set theory based mathematics 
+integers, reals and complex numbers can be thought of as types.
+The notions of integers, reals or complex numbers are closer
+to type classes if we really have to talk in these terms.
+They are defined by their properties, just like type classes
+are defined by what you can do with them.
+For example every complete ordered field (a quadruple of sets with some 
+properties) can be called "reals", no matter if these are really
+Dedekind sections, or classes of rational Cauchy sequences, 
+or classes of integer almost homomorphisms. Trying to impose
+some type system on set theory is not a good idea, I think.
+
+--[[file:slawekk.org][slawekk]] 
+
+/Reply:/ This is a reasonable suggestion -- but I don't see it as
+an "either/or".  Both a BNF for basic "romantic math" and one for Metamath
+seem like reasonable exercises in writing BNFs.  If you're right, the
+structures of the two should be quite simialar.
+
+As for how I'll write it, my goal is to just write out the grammar,
+but in order to make it useful, I'm aiming to put it in some Bison-like
+parser with transformation rules that will spit-out Lisp-like (sexp) parses.
+I think CL-yacc looks like a reasonable program to experiment with.  I
+expect it shouldn't be hard to transform the results (at some suitable
+level) for use with Haskell.
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,76 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:Grant_planning.org][Grant_planning]].
+
+* About The Program
+
+Web link: http://www.nsf.gov/pubs/2005/nsf05545/nsf05545.htm
+
+Letter of intent: March 9, 2005 (optional)
+
+Deadline: April 11, 2005 -- /passed!/
+
+** Synopsis
+
+(Emphasis added.)
+
+: The National Science, Technology, Engineering, and Mathematics Education
+Digital Library (NSDL) program is accepting proposals in three tracks: (1)
+Pathways projects are expected to *provide stewardship for the content and
+services needed by major communities of learners*. (2) Services projects are
+expected to develop *services that support users*, resource collection
+providers, and the *Core Integration effort and that enhance the impact,
+efficiency, and value of the library*. (3) *Targeted Research projects are
+expected to explore specific topics that have immediate applicability to
+collections, services, and other aspects of the development* of the digital
+library.
+
+**  Brainstorming of ideas for work we could do under this program
+
+PlanetMath/Noosphere -
+
+ 1. make Noosphere more deployable so others in the NSDL can use it!
+ 1. improve educational metadata and organization in Noosphere. E.g., add metadata fields like "educational level", perhaps "difficulty", or others.
+ 1. add the ability to write entries in a math-Wiki-like syntax (make it easier to contribute based on content knowledge, not LaTeX ? knowledge). This could be converted to LaTeX ? on the back-end.
+ 1. add editorial discussion areas, where things like pedagogy can be discussed more extensively without unnecessarily increasing noise in the communnity.
+ 1. bi-directional content sharing, to propagate Noosphere content between instances of Noosphere and other collaborative DLs (with multiple "Planets" coalescing, this could be framed as an effort of wider import to the NSDL).
+ 1. general improvements to Noosphere (code cleanups), easier deployability
+ 1. other studies of the educational potential of PM and related projects
+
+PlanetMath/Noosphere/FEM -
+
+ 1. improve ratings/reputation system to enhance quality of output. perhaps implement something like card-based system?
+ 1. put in provisions to use, encourage, and benefit from real-world identities.
+ 1. put in collaborative filtering to aid in selection of highest-quality entries.
+ 1. bi-di content sharing (also useful for development of FEM).
+
+**  Discussion
+
+I put pretty much the same collection of items here as NSF ADL.  However, the
+emphasis for NSDL is a bit more on sustainable digital libraries, so I think
+work on Noosphere and infrastructure items (like bi-di updating) are especially
+strong candidates.  The NSDL used to fund collection development, but stopped
+doing this, because it is such a slippery slope into the money pit.  I almost
+think we could bundle up a set of Noosphere tasks under the rubric
+"infrastructure for sustainable collaborative digital libraries" and have a
+strong proposal (keep in mind PlanetMath is already an NSDL member collection).
+I think we would also have a fair amount of freedom to adapt the tasks we
+undertake, as long as they foster and enhance sustainable collaborative digital
+libraries. --[[file:akrowne.org][akrowne]] Fri Mar 25 21:43:37 UTC 2005
+
+**  Devil's Advocate
+
+Some interesting criticism and discussion of the proposal. 
+
+Note: I've refactored the page to make it easier to follow.
+
+ * [[file:NSDL 2005 Devil's advocate - original version.org][NSDL 2005 Devil's advocate - original version]]
+ * [[file:NSDL 2005 Devil's advocate - refactored version.org][NSDL 2005 Devil's advocate - refactored version]]
+
+
+* Post Mortem
+
+Good discussion in the "Devil's advocate" section.  We really should have gotten
+started earlier if we wanted this grant to work.  We should learn from both.
+--[[file:jcorneli.org][jcorneli]] Sat Apr 16 04:58:08 2005 UTC

@@ -1,0 +1,119 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Introduction
+
+This page is about some thoughts I have had about a general mathematical framework.  The motivation for this comes from the proof checking in [[file:h-code.org][h-code]], but it is more general than that, as the examples wil show.
+
+The title has to do with the fact that the theory expounded here bears quite a resemblance to [[file:Personage - Gottfried Leibniz | Leibniz.org][Personage - Gottfried Leibniz | Leibniz]]'s monads which mirror each other.  It is meant to describe the way in which different mathematical theories interact, how one passes from one thoeory to another, and what it means for one theory to be a meta-theory of another theory.
+
+So far, the primary aim of this endeavor has been of a descriptive nature --- to formulate a general framework within which one can see several different phenomena such as algebraic systems and axiomatic theories as instances of the same structure, and our examples will illustrate how this works.  Another goal was to answer the question "What is a meta-theory?", which is to say, what does it mean that one theory is able to describe another theory.
+
+Of course, just proposing an abstract definition is not enough --- one needs to put it to a worthwhile use.  The application we have in mind has to do with proof-checking in HDM.  In particualar, we thought it would best represent the common practise of mathematicians to interpret the notion of "rule of inference" in a broad sense and that, rather than fix a set of known rules of inference, we should allow for the possibility of introducing new rules of inference "on the fly".  To justify the introduction of new rules, one needs to take recourse to a meta-theory and we hope to use the theory developed here as guidance in navigating this maze of levels and meta-levels.
+
+In addition, although it may not be our main focus at the time being, we hope to prove some interesting results.  If a theory succeeds in describing disparate phenomena as specific cases, it is natural to ask whether one can also regard theorems in different fields as special cases of more general results.  In particular, it might be possible to exhibit a general incompleteness or fixed-point theorem along the lines of what [http://xxx.lanl.gov/abs/math.LO/9903005 Sereny] has done. (It would also be interesting to consider the relation between the notion introduced here and Sereny's and Smullyan's "abstract formal system" and "logical system".)
+
+** Basic definitions
+
+To describe our theory, we shal make use of some preliminary definitions ad fix some notations.  The first two definitions will be familiar to anyone who has spent any time working with LISP:
+
+ * If *S* is a set, let *L(S)* denote the set of all n-tuplets of elements of S for all n. (i.e. simple lists of elements of *S*)
+
+ * If *S* is a set, let *LL(S)* denote the set of all linked lists of elements of *S* (i.e. n-tuplets whose elements can be linked lists).
+              
+In particular, we will make extensive use of these notions to speak of functions or relations of an arbitrary number of variables in an efficient fashion.  For instance, one [[file:Monadology of systems --- can regard | can regard.org][Monadology of systems --- can regard | can regard]] a function of two arguments as a function of an ordered pair (i.e. of a list with two elements) or a function of three arguments as a function on ordered triples.  Taking this a step further, one can choose to regard a function of an arbitrary number of arguments as a function on lists and thus (committing a slight abuse of notation) write something like /f/ : *L*(S) -> S to denote a function taking an arbitrary number of arguments in the set S.
+
+In what is to follow, we shall want to consider, not just functions, but generalize to the case of relations.  The reason for this wanting to do this here has to do with the nature of rules of inference --- while some inference rules like modus ponens or the Ockham-!DeMorgan laws allow one to form only one valid conclusion from a given set of premises and so the conclusion is a function of the premises, others, like the arbitrary premise rule or universal specification allow one to deduce more than one possible conclusion, so we only have a relation, not a function, between premise and conclusion.
+
+It is convenient to make an extension of a familiar notational convention and write something like r : S &harr; T to indicate that r is a relation beteween the sets S and T.  Set theoretically, this is completely equivalent to writing r &sub; S &times; T, but it is convenient to have a notation which does not require one to "look under the hood" and think what a relation actually is.  The double-pointed arrow here serves as a hint that one is dealing with a relation which may not necessarily be a function.
+
+One of the things we will want to do is to apply the notion of composition in this broader context.  Now, there is more than one way to generalize a notion like composition of functions to the case of relations, and the approach we shall choose is informed by our intended application.  For simplicity, let us start with the simple case of two place relations (generalizing functions of one argument) and think through what the appropriate generalization might be.
+
+In the context of making inferences, composition occurs when we combine two steps.  That is to say, suppose that we can use rule A to infer Y from X and can subsequently infer Z from Y.  Then the combination of rules A and B allows us to infer Z from X.  In the case where A and B only allow one possible conclusion to be infered, this "combination of rules" is simply the composition of functions on statements.  In the case where A allows for more than one possible conclusion to be drawn, all that is needed for us to derive Z from X is _some_ intermediate step Y that will do the job.  Hence, we can frame the following definition of composition:
+
+ * Suppose that we are given relations A : S &harr; S and B : S &harr; S.  Then their composition A &#8728; B : S &harr; S is defined by the condition that (A &#8728; B) (X,Z) if and only if there exists Y &isin; S such that A (X,Y) and B(Y,Z)
+
+One can generalize this to relations of more than two places.  This is easy enough conceptually, but can be awkward to state formally:
+
+ * Suppose that A is a relation on *L*(S) &times; S and that B is an n-tuplet of relations on *L*(S) &times; S.  Then the composition of A with B, denoted A &#8728; B is a relation on *L*(S) &times; S which is given as follows: (A &#8728; B) (x,y) if and only if there exists an n-tuplet z &isin; *L(S)* such that A (x,z) and bm (zm,y) for all m between 1 and n, where bm denotes the relation in the m-th slot of B and zm denotes the element in the m-th slot of z.
+
+** Systems
+
+We now come to the main definitions which, as mentioned earlier, are meant to capure much of what is common to such situations as algebraic systems and axiomatic systems.  We will first motivate and propound some definitions, then illustrate them with examples.
+
+The essential feature of algebraic or axiomatic systems is that we have some set of entities (group elements, matrices, numbers, ststements, ...) and a set of operations (algebraic operations such as addition and muliplication, laws of inference such as modus ponens and the Ockham-!DeMorgan laws, ...) which can be used to obtain new members of the set from already known members of this set.  We shall use the term /system/ to denote such an entity:
+
+ * A /system/ consists of two items: a set, which will be termed the /objects/ of the system, and a set of relations which will be termed the /rules/ of the system.  
+
+By itself, such a notion is too threadbare to be of much interest, so we shall spruce it up with some additional notions, starting with closure.  As hinted in the manner in which the definition was motivated, the rules are to be used to find new objects and one can obtain new rules by composing known relations.  Carrying this procedure as far as posible leads to the notions of closure and closed systems.
+
+ * A system (s,r) is /closed with respect to objects/ if it is the case that for a tuplet x &isin *L* (s) and every rule y &isin; r, there exists an object z such that y(x,z), then z &isin; s.
+
+ * A system (s,r) is /closed with respect to rules/ if the composition of elements of r always produces an element or r.
+
+** Relations Between Systems
+
+There are several ways in which one system can be related to another system.
+
+Suppose we have two systems, *(s,r)* and *(S,R)*.  We will define relations beteween these systems based upon the existance of various maps between the sets of objects and rules which are subject to conditions.
+
+**** Pushforward
+
+A /pushforward/ mapping from *(s,r)* to *(S,R)* is given by two mappings, *A : s -> S* and *B : r -> R* satisfying the following conditions:  If /f/ is any element of *r* and *(x,y)* is any element of *L(s) x s*, then /f/ *(x,y)* implies *B*(/f/) (*A*(*x*), *A*(*y*)).
+
+**** Pullback
+
+A /pullback/ mapping from *(s,r)* to *(S,R)* is given by two mappings, *A : s -> S* and *B : R -> r* satisfying the following conditions:  If /f/ is any element of *R* and *(x,y)* is any element of *L(s) x s*, then *B*(/f/) *(x,y)* implies /f/ (*A*(*x*), *A*(*y*)).
+
+**** Subsystem
+
+A closed system *(s,r)* is said to be a /closed subsystem/ of a closed system *(S,R)* if the following conditions are met:
+
+ 1. s &sub; S
+
+ 1. r &sub; R
+
+ 1. For all x &isin; *L*(s), all y &isin; S, and all f &isin; *r*, if f(x,y), then y &isin; s.
+
+ 1. r is closed under composition.
+
+
+**** Meta-systems
+
+Given two systems *(S,R)* and *(s,r)*, the former is said to be a meta-system of the latter if there exist three maps, *q : s -> S* and *Q : r -> S* and *m : r -> R* satisfying the following condition:  
+
+r(x,y) &harr; m(r) (Q(R), q(x), q(y))
+
+/My time is running out here at the library, so I will finish this when I get home tomorrow./
+
+* Discussion
+
+For a link to original version of monad theory, see page [[file:Personage - Gottfried Leibniz.org][Personage - Gottfried Leibniz]].  --[[file:jcorneli.org][jcorneli]]
+
+Here is an overview of how I am working this:  Right now, I am simply concentrating on writing down the basic facts and making sure that I have them correct.  when I finish this, I will add xamples; in particular, I will add the example of tensor analysis as a metatheory about which I spoke in Atlanta and which did so much to clarify my thinking on the subject and also the main example of s-expressions and LISP functions for which this theory was designed.  Then I will add some results (in particular, explore how these systems form a category) and work on tidying up notation and presentation.
+
+Your input and comments would be highly welcome at all stages in the process of writing this article.  In particular, I am sure that a lot of my notation and wording is rather cryptic.  I would appreciate it if you ask questions and complain about poor exposition since that will help me to make the article more readable --- left to my own devices, I am apt to produce something which, while it makes perfect sence to me, looks like incomprehensible gibberish to everybody else. ---[[file:rspuzio | Ray.org][rspuzio | Ray]]
+
+I promise to look at this after sleeping (but so far have just glanced).  Might I suggest again that
+HDM CVS would be a good place to get this stuff, so as time permits (when you aren't writing but do have time to spend at the computer working on this stuff) please do investigate
+the possibilities there.  It might seem that format doesn't matter, but I can almost guarantee we'll have a better time talking this over if it is in !LateX with scholia than if I'm trying to add footnotes or inline wiki-comments.  It would also good cross training
+to continue to develop the "medium" for better expression of the "messages" that we need to communicate here.  --[[file:jcorneli.org][jcorneli]]
+
+Well, I looked at it.  Those illuminating examples would be good to add, right
+now it is very abstract.  Examples would often help justify the choices you're
+making, but an additional narrative thread might be helpful too, unless the examples
+are always exactly the right degree of nontrivial to fully express the complexity
+of the things you're talking about.
+
+As for the motivation, it is good to be abstract; hcode should implement
+something that is abstract enough to capture everything, so 
+while you say that this theory is "more general than proof checking in hcode",
+it should also be true that hcode should probably implement a nice, general,
+theory like this one seems to be shaping up to be.  Of course, 
+I'll have more comments later (hopefully in the scholium system where
+I think they will be the most use to everyone).  This also
+makes me think that I should put in the small effort required for 
+loading APMXi without parsing (since I had mostly forgotten what a "relation" is
+and had to wing it on my informal remembered definition).
+
+--[[file:jcorneli.org][jcorneli]]

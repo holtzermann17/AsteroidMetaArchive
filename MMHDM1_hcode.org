@@ -1,0 +1,135 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To get HDM up and running, the key task is
+linguistic. It's all about "H-Code", or whatever
+common object language will provide a solid base.
+The ambitious requirements call for reading
+arbitrary math texts, AI, proof verification and
+logic agnosticism. The common requirement is that
+there be a common language interface to an internal
+representation of mathematical data.
+
+Given the goal of "logic agnosticism" and the need
+to handle *arbitrary math texts*, the H-Code
+language should not have built-in logic or assume
+that axiomatic set theory is the basis of all
+maths. 
+
+Thus, however H-Code's final specs turn out, it
+must be possible to use H-Code to write logic
+theorems -- to treat logic as part of math. It
+ought to be capable of expressing the axioms,
+theorems and rules of inference of the known logic
+systems without dependence upon ZF set theory,
+including:
+
+ * First Order Logic
+ * Higher Order Logics
+ * Quantum Logic
+ * Category Theory
+ * Multi-valued Logics
+ * Possible Worlds/Kripke Structures
+ * Knowledge-Based Logic
+ * Computational Logic
+ * Intuitionist Logic
+ * Metaphilosophical Actualization :)
+    
+The key Phase One Problem Definition task is the
+linguistic specification of H-Code, including
+representations of axioms, definitions, theorems,
+proofs and interfaces. The efficient direction
+would be to specify H-Code as a Ghilbert variant
+and then prove that H-Codebert can represent all
+desired logical and mathematical reasoning systems.
+The required linguistic analysis task is at an
+"Expert Level", requiring mastery of formal
+languages, automated reasoning, proof theory, logic
+and mathematics. (A contentious area involves
+Disjoint Variable Restrictions and Bound Variables
+-- these comprise the primary incompatibility
+between Metamath/Ghilbert and H-Code, IMO.)
+
+Second, it should be realized that the sexps
+of H-Code and Ghilbert are unacceptable as
+external representations for use by mathematicians
+and logicians. Therefore, existing notation
+schemes including prefix, infix and postfix -- plus
+combinations -- must be accepted for input *and*
+output. That means parser(s) and reverse parsers,
+with optional "pretty-printing" of standard
+mathematical notations into Tex, MathML, ASCII,
+braille, and Dolphin. We say "parser(s)" because
+in all probability, given the requirement for
+ *arbitrary* math text input, there will need to
+be specialized parsers, perhaps one for each unique
+input source category/language/notation scheme --
+and there may need to be layers of parsers, from
+natural language => "structured English" => H-Code.
+
+It should also be mentioned here that HDM should
+be totally agnostic about everything, including
+agnosticism :0) Not only should HDM be uncommitted
+about Logic, but the formal specification of
+HDM should be LISP-free -- i.e. implementation
+software language independence. And, HDM should be
+internationalized, from Day One; it may be true
+that English is commonplace, but in order for
+HDM and related sub-systems to be maximally useful
+to people of Planet Earth, HDM should be designed
+with hooks in place for multiple languages (you
+want youths to be able to use HDM right out of
+kindergarden, right? :)
+
+----
+* Discussion
+
+Being LISP-free is not a priority in my mind, perhaps because
+it is essentially automatic.  Turing-complete programming languages are all
+equivalent (if that is the right adjective, I forget).
+
+(reply: I meant that the *specification* of the language,
+sexps, etc. should not refer to LISP. The spec shouldn't
+say, for example, "an sexp must be a valid LISP blah-blah",
+but should spell out what the specific conventions are
+(whitespace, tokens, terminators, empty lists, whatever.)
+I think LISP is great, but other people like writing Python,
+and others prefer C -- and Smalltalk is undergoing a religious
+revival over at Squeak (which your H-Code proof examples
+remind me of...)) --[[file:ocat.org][ocat]]
+
+: OK, I see what you mean, and I agree; primarily because the LISP
+spec is somewhat too hairy to use as a foundation.  However perhaps
+some of the formal core of LISP will be part of the spec for
+hcode.  It is too early to say. --[[file:jcorneli.org][jcorneli]]
+
+As for "internationalized from day one", I think that is probably overkill.
+I'd rather have a prototype that the developers can easily understand
+than one that everyone on earth can understand and then rewrite it.
+If it turns out that some developer needs to write in some language other
+than English, then maybe it would be time to think about internationalizing.
+But I don't think that time is now.
+
+(reply: I sort of agree, and could readily go along with an English
+only policy. Thing is though, if provisions aren't made to support
+other languages and character systems, then they never will be -- it
+is just too hard to go back later. *If* you want to gain momentum
+and fulfill the long term goals then internationalization should
+be planned for and hooks inserted...) --[[file:ocat.org][ocat]]
+
+: I guess I still think internationalizing the code should only be
+done when there is a known demand for it.  Until then, I think it is
+just one more thing to worry about.  If it can be done
+/transparently/ (i.e. so that only one programmer has to think about
+it!) then I'd have no problem with doing it.  I think that the
+scholium system should probably make such transparency feasible.  We
+seem to both agree that the system should be user and programmer
+friendly.  My only major contention is that internationalizing in
+mid-flow is not going to be as hard as one might initially think.
+--[[file:jcorneli.org][jcorneli]]
+
+I agree that hcode is key, and I also agree that thinking deeply about the relationship
+between hcode and ghilbert would be worthwhile.  --[[file:jcorneli.org][jcorneli]]
+
+
+forward [[file:MMHDM1_ghilbert_compatibility.org][MMHDM1_ghilbert_compatibility]]

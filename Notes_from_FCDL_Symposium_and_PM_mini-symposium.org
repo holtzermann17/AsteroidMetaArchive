@@ -1,0 +1,56 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A significant subset of the AM crew met in Atlanta in October of 2005
+for a conference on Free Culture and the Digital library, and to chat
+about work on PM and related projects.  Notes and followup is posted
+here. --[[file:jcorneli.org][jcorneli]]
+
+* Plans
+
+** PlanetMath
+ * deployment
+ * version histories
+ * generalized classification scheme
+ * autolinker improvements
+
+* PlanetMath (continued)
+ * bibliographic database
+ * namespaces and DL structure, for, e.g.:
+  * importing old PD texts and old coursenotes
+  * an improved paper section
+ * improved support for various kinds of source code
+ * CVS (or whatever) for PM content
+ * eventual PlanetTechnae and other useful Planets
+
+** akrowne tasks
+ * talk to logan about neosphere development
+ * investigate possible OCR connections
+ * make CD for Noosphere install
+
+** PM.org
+ * code bounties
+ * get more people involved with operation of the nonprofit
+ * further work with funding streams
+ * jcorneli: ask fsb list about where to post code bounties
+
+** jcorneli tasks
+ * contact NC people about WP internship
+ * add importing PM to the scholium system experiments section
+ * PM FDL interpretation document
+
+** FEM
+ * frontmatter
+ * corrections metadata
+ * improvements to CVS structure and other minor technical issues
+ * applying patches
+ * links-to-footnotes for print document
+ * legal stuff (opt-in submission)
+
+**  rspuzio tasks
+
+ * Check out "Infty" OCR program
+
+**  HDM
+
+Please see [[file:next steps for HDM project.org][next steps for HDM project]].

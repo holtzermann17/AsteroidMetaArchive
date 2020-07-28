@@ -1,0 +1,324 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Op Ed: Happy May Day!
+
+Writers of the world unite... you have nothing to lose but your fences... and
+much to gain.
+
+We claim that free-as-in-freedom writing is the moral equivalent
+of the 8-hour day, for us.  Students have lived too long under
+the rule of the Examination Paper and the Grade Book, and the
+world has been too long dominated by information oligarchs.
+
+Spread the good word.  If you have access to a departmental mail
+room and photocopier, put copies of the [http://freeculture.org FreeCulture.org]
+manifesto in everyone's mailboxes.  If you are a student, ask
+your professors if you can post notes you took in their class
+online under the terms of the GNU FDL or a Creative Commons
+license, and get written permission to do so -- if they refuse,
+make this publicly known.  If you write papers, submit them with
+an assignment of copyright to the Public Domain instead of an
+assignment of copyright to the journal.  Focus some of your
+involvement in PlanetMath on helping create Free alternatives for
+all existing math classes.
+
+Don't do anything stupid, but do many brave things.
+
+Take part of this day to remember those for have died in the
+fight for freedom.
+
+-- Joe Corneli and Aaron Krowne
+
+* Feature: PlanetMath and Quadrock Grantseeking
+
+PlanetMath is working with Quadrock, an "edutainment" company, to 
+obtain grants to foster the collaborative creation of rich,
+educational mathematics resources.  We hope to use these grants
+to strengthen the pedagogy of PlanetMath and CBPP projects
+in general, and provide general funding for PlanetMath.  Your ideas
+and commentary are very much needed, so please saunter on over to
+the discussion page to weigh in!
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/PlanetMath_and_Quadrock_Grants
+
+* Feature: Emory Free Culture Conference Abstracts
+
+A number of AM users have successfully put together and submitted abstracts for papers for
+the Emory University conference on Free Culture and the Digital Library, to 
+take place this October.  Many interesting free culture topics will be 
+explored, along with their connections to AM projects.  For a sneak preview, see
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Emory_Free_Culture_and_the_DL_Symposium
+
+* Feature: Renaming the PM Encyclopedia
+
+Do you think the PlanetMath/Noosphere "encyclopedia" should be renamed?  If so, to what?  
+This topic is being spiritedly-discussed at
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Renaming_the_Noosphere_Encyclopedia_Section
+
+* Feature: "Promotional" Infopacks
+
+As part of our efforts to raise funding and participation for PlanetMath and related projects,
+we are putting together "infopacks" for use in introducing people to the projects, as well
+as conveying our plans and needs.   Your help in creating and propagating these infopacks could
+make the difference in getting support.
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/AM_Infopacks
+
+* Feature: Checking Proofs
+
+As a step towards automatic verification of correctness of proofs, the template
+utilities have been used to verify the correctness of some proofs of statements
+in propositional logic:
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/using_template_utilities_to_check_proofs
+
+Right now, this is being done "by hand" on a step-by-step basis to study how the
+process works; however, it should not be hard to automate this procedure, and
+this will be done in the near future.  Then it will be possible to take proofs
+of these theorems written in h-code and check them for correctness.  In
+particular, by combining this project with the parser for mathematical
+expressions, we will be able to exhibit a first "proof of concept" for part of
+the HDM project --- we will be able to read in the proofs from the !TeX file for
+the metamath proof explorer, automatically translate them into h-code and verify
+their correctness.
+
+* Ideas
+
+Things that it seems people may be interested in 
+(doing more on and...) getting into the next bulletin.
+
+Also don't forget to try to get any relevant data into the
+[[file:Schedule.org][Schedule]].
+
+**  Old items
+ * discussion of UBI on [[file:PlanetMath Budget and Resources.org][PlanetMath Budget and Resources]]
+
+**  New items
+
+ * increased influx of Library of Congress data
+ * discussed DIY nature of Bulletins
+ * idea about hosting homework solutions (discussion of services PM can offer)
+ * further discussion of the Way of the Asteroid & creation of the "Delta" page
+ * discussion of FDL compliance (Wikipedia)
+
+**  PULLED Feature: The Way of the Asteroid
+
+The Way of the Asteroid is a code that has been
+set forth to govern the behavior of AsteroidMeta
+authors.  Although it has yet to be universally
+adopted on AM, like the Tao te Ching or the
+Hagakure, the WOA describes a way of being in
+the world with application to many situations.
+The WOA is based on the principle of critical
+self-evaluation, but is best practiced in public
+discussion -- it combines elements of reflective
+philosophy with discourse.  To get a sense of
+what the WOA is about, see
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/the_way_of_the_asteroid
+
+* Discussion of this week's bulletin
+
+Also don't forget to add any articles you really
+want to see appear :) --[[file:jcorneli.org][jcorneli]] Tue Apr 26 00:41:29 2005 UTC
+
+Added some more stubs - remember, this is supposed to go out
+tomorrow.  I volunteer to write the May Day opinion piece, and
+note about the WOA.  It would be great to see a summary of the
+discussion about abstracts and a discussion about encyclopedia
+naming, and I'll contribute to articles about those things (and
+/maybe/ draft them).  Anything else, I think you're on your
+own.  --[[file:jcorneli.org][jcorneli]] Sat Apr 30 23:30:10 2005 UTC
+
+On "the way of the Asteroid" - I don't want a "[[file:code of behavior.org][code of behavior]]
+to govern" me, especially not one authored by someone else on a
+Wiki (the key onerous word being "govern").  Joe, I believe we
+need to be more clear about drawing the line between this wiki
+as your personal organizer and diary, and it as a public, shared
+space.  For one, if no one contributes to policy discussions you
+start, then I don't think its right for you to just propagate
+them as the final word of "the community" here.  --[[file:akrowne.org][akrowne]]
+
+: It is interesting to compare the above remark from a year ago (especially the last sentence) with the current bru-ha-ha about        
+  the the relation of AM and PM. --[[file:rspuzio.org][rspuzio]] 22 March 2006     
+
+:: /NOTE: Please follow the link labeled "code of behavior" to see my comments on Ray's remark just above./ --[[file:jcorneli.org][jcorneli]]
+
+Everyone has behavior-governing codes, I don't think there is
+any way you can escape them, particularly when you participate
+in social interactions.
+
+The WOA is meant to be completely "philosophy-agnostic" and
+"POV-agnostic" way of discussing, re-evaluating, and, if the
+motivation arises, modifying, these codes of behavior.  It is
+really more of a meta-code for than a code.  The only demands it
+places on people is that they should participate in some
+self-reflection, writing, and discussion.
+
+If someone doesn't want to do some or all of these things, then
+they simply opt out, and if they wish, they can be completely
+relieved of the WOA.  Personally, I think this would be a loss,
+but I recognize that some people may see things differently.
+That's why I said "set forth".
+
+I also think that the WOA may not be understood by everyone on
+the Asteroid, and accordingly, I wanted to write more about it.
+Its primary purpose is to help people to better-realize and
+better-actualize their /own goals/.  One way it does this is
+by promoting explicit thinking (made concrete by writing) and
+another way it does is is by promoting dialog.  In addition to
+helping each individual work more effectively, it is my feeling
+that WOA participation would help Asteroid authors work more
+effectively together.
+
+Furthermore, even though I have drafted the WOA, there is no
+reason why it can't be completely rewritten or massively revised
+by anyone else at any time.  It is not the final word of the
+community, nor even my own final word.  Indeed, the basic idea
+of WOA wasn't mine at all, it was Angus Errington's,
+communicated to me by private email; I just gave it a new name
+and deployed it here.
+
+I certainly don't wish to use the wiki as /my/ personal
+organizer in a way that excludes or bothers other people.  The
+WOA is not irrelevant to this: it is primarily a code to govern
+behavior of site authors /as/ site authors.  If any given
+author (me for example) is doing something annoying, then the
+WOA can be updated to explain why that particular behavior is
+disruptive and how it can be avoided.  We can't somehow
+communicate about these things telepathically.
+
+Also, I'm not really sure about the idea of the wiki as a
+/personal/ organizer for anyone.  What exactly is "personal"?
+One of the things I hoped for when I introduced the WOA was that
+it would help me to better understand the lifestyles of my
+myself & my peers, not with prurient, scatalogical, or otherwise
+"personal" (or perverse!) interest, but with a fundamentally /professional/
+interest.
+
+Specifically, I would like to see what sort of involvement
+people wish to put forth.  I want to know how people spend their
+time so that I don't impose on them or expect something other
+than what they wish to deliver, and so I know exactly what sorts
+of things I can count on them for.  I feel like my co-authors
+should have the right to know corresponding things about me.
+
+In a volunteer and/or collectively run organization like
+!AsteroidMeta, "personal" and "professional" certainly do seem
+to blur.  No-ones motivation but my own governs /my/
+participation in the site or in the activities I have described
+here.  But that doesn't mean I find the opinions, ideas, and
+activities of other people irrelevant.  I think about these
+things a lot.  The WOA was supposed to be a way to think clearly
+about the whole ensemble, and to help participating individuals
+better understand their relationship to the group and to the
+"collective" activities that we are pursuing.
+
+To the extent that this means the wiki is a "personal
+organizer", I think it should be everyone's.  But that was not
+the sole intent of the WOA.  I meant it to be a space for
+constructive criticism, both originating with oneself and
+originating with others.  
+
+I am entirely welcoming to the idea of you using it to critique
+aspects of my participation that you think are annoying or
+counterproductive, or as a place to give your insights on the
+sorts of behaviors that you think are most useful and
+productive.  If you don't want to put this into a "WOA" portion
+of the site, that's fine, but I thought it useful to put these
+sorts of things together, because they seem to share common,
+focused, themes of critical self-, other-, and group-evaluation,
+as well as a general "culture-building" theme. --[[file:jcorneli.org][jcorneli]]
+Sun May 01 17:40:33 2005 UTC
+
+Given that there seems to be a lot of discussion we would need to have about the
+WOA for it to really be useful, I'm pulling the feature for this week.  Maybe we
+can expand on the discussion above for an article for next week.  But the
+key thing is to expand on the discussion.   --[[file:jcorneli.org][jcorneli]] Sun May 01 19:07:52 2005 UTC
+
+It may be that the WOA is sufficiently meta-level that it applies to anyone.  But I have 
+not had the chance to think on it enough to determine that.  I don't want to keep you from posting
+anything to the Wiki.  Rather, I think the "live" Wiki is to the Bulletin as PlanetMath
+is to the FEM.  There is an implicit sense of "finality" to the Bulletin that isn't assumed
+for the Wiki.  Your wording of the WOA feature, combined with this finality, seemed like it
+was saying to me that that the ideas had become some sort of commonly-agreed-upon policy, and I'm
+sure others could get the wrong impression from this.   So, I think either with the presentation
+changed or some history of common deliberation, the feature would be suitable for the Bulletin.
+
+As for the personal organizer stuff, the distinction for me between your somewhat detailed 
+daily schedule and the WOA ideals is fuzzy.  I can tell you right now I will never sketch out my
+schedule on a public Wiki, because I consider it private.  I won't even put up the complete TODO
+list that I keep locally, because I consider it private.  I also have an inherent dislike of
+schedule rigidity (even imposed by me).  Instead, I strive to do what I feel like when I feel like
+it, as much as possible.  I find I work more efficiently and happily this way.  Where I'm going with
+this is... its perfectly fine if you want to put this stuff in the Wiki for yourself, but I won't be
+following suit, and I'd just like you to be aware that others who may be excellent helpers to AM
+projects may not feel comfortable using the Wiki as much like a personal organizer as you do. 
+
+Finally, as to the utility of putting up personal schedule information for project coordination
+purposes: I don't see myself ever getting around to studying your 
+schedule to see if you can take on a new task.  Rather, I will just ask you, or list the task
+publicly, so you can take it on if you want it.  Similarly, you have been working with me so far
+using this very same model.  I tell you when I can't take on a task and when I can.  There is 
+no need to see my schedule or the humongous list of tasks I always have in the queue.  If you
+saw this, you might never propose new ones, but this wouldn't be the correct handling either.  
+It is up to me to determine which ones I want to do, and when.  This is kind of pull-based 
+model for coordination, rather than a "push" based (you see my schedule, and "give" me a task,
+because you "know" I can handle it).  Frankly I dont think the "push" method will work, but 
+people who want to list their schedules to facilitate it certainly can do so.
+--[[file:akrowne.org][akrowne]] Sun May 1 23:35:08 UTC 2005
+
+As I have said before, I am a simulationist, also an anthropologist (of sorts),
+[...], and only then a mathematician.  Unless I can keep track of my schedule
+and my activities, I have to assume that stuff just happens by magic.  My goals
+wrt the HDM include the goal of being able to simulate the behavior of
+mathematicians and mathematical communities.  I can't accept magic as the
+driving principle.
+
+The WOA is not about schedules or task lists.  It is about understanding 
+your goals and strategies.  I don't care a bit about the stuff that you consider
+"private", that's 100% your own business.  I care a lot about the stuff that you
+consider "public", because that's where I feel I can conceivably make a positive
+impact.  If you prefer to have an unscheduled day, maybe you can write about why
+that works for you.  My own schedule includes very broad chunks of unscheduled,
+semi-focused time.
+
+The important thing about the WOA is to describe how /you/ operate in terms
+that will help others work well with you, and help you clarify /to yourself/
+your own strategies for success.  I would assert that everyone can benefit from
+some critical self-reflection like this.  Too much, and it becomes overkill.
+Not enough, and people are just "wandering stars, for whom it is reserved, the
+blackness, of darkness, forever."  Let's have a little light on this dark rock
+we call AsteroidMeta...
+--[[file:jcorneli.org][jcorneli]] Mon May 02 00:50:20 2005 UTC
+
+---- 
+
+I've edited the op-ed, changing some wording to be more general
+(and less GNU specific), and added my name to it.  I think it is
+much improved, especially since the FDL is about as scary a
+thing as the typical EULA to show someone as an introduction to
+free culture.  If you don't like that I mucked with it, you can
+change it back, but then I want to put in my own essay before
+this bulletin gets sent out.  --[[file:akrowne.org][akrowne]] Sun May 1 16:13:52
+UTC 2005
+
+: The edits are fine, though in one place I changed it to FDL
+/or/ CC, since some CC licenses are FDL incompatible.  (I
+don't know the full compatibility matrix, but we might make an
+effort to figure that out at some point.)
+--[[file:jcorneli.org][jcorneli]] Sun May 01 16:44:31 2005 UTC
+
+: I would be interested to see the essay that you would have
+written, but I'm assuming my minor edits to this version
+are OK with you.  Going to publish this stuff very soon
+unless I hear an outcry.
+--[[file:jcorneli.org][jcorneli]] Sun May 01 19:09:54 2005 UTC
+
+:: I don't know what I would have written, but I consider generality
+wrt/free culture important enough to write a new one from scratch if
+required.  I think your change is fine, and I'm cool with the essay now!
+--[[file:akrowne.org][akrowne]] Sun May 1 23:44:57 UTC 2005

@@ -1,0 +1,56 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here we've got the goals of PlanetMath organized as a "goal tree".  
+All the sub-goals flow naturally from the core (but vague) goal of PlanetMath (stated at the top).
+It is a pretty intuitive format; feel free to expand it, and link off goals to pages on the wiki.
+
+ *!PlanetMath Goal Tree:*
+
+ * increase accessibility of mathematical knowledge using CBPP
+  * improve content creation, enhancement
+   * improve CBPP process support (improve workflow support in Noosphere)
+   * properly incentivize CBPP activities
+  * improve dissemination
+   * improve access to the web site
+    * improve availability of web site
+    ** fix bugs in Noosphere
+    ** fix scalability problems in Noosphere
+   * get PlanetMath content "carried" in more outlets
+    * get Noosphere instances to share content more easily
+   * get PlanetMath delivered in more formats
+    * book
+    * CD
+    * misc (e.g., edutainment TV?)
+  * improve outreach
+   * get PlanetMath or its derivatives used in classrooms
+   * get PlanetMath or its derivatives used in practice
+  * improve pedagogy
+   * make core content easier to understand
+   * get learners more actively involved in forum aspects of the web site
+   * add and integrate level/difficulty metadata
+  * improve impact
+   * improve quality
+    * improve reputation systems
+    * add ratings
+    * give incentives to use real-world identities
+    * put in collaborative filtering
+   * improve information-seeking
+    * improve searching system
+    * improve browsing system
+    * add collection visualization systems
+  * champion free content
+   * move to support creation of free books, papers, expositions
+
+: I think it is a good design, I added a little to the tree.  I think that
+indeed every node in the tree could be or contain a link, if an explanation of
+that idea would be helpful.  For example, "properly incentivize CBPP activities"
+seems somewhat vague; maybe it could be expanded into a small essay on a
+separate page.  --[[file:jcorneli.org][jcorneli]] Sat Mar 12 14:57:52 2005 UTC
+
+Come to think of it (not to be pedantic or anything), but
+most of these "goals" actually look like what's called
+"objectives" in the literature.  --[[file:jcorneli.org][jcorneli]] Jan 11 06
+
+Interesting to note that objectives can be used as part of a 
+process of marketizing goals; cf. [[file:marketize feature requests.org][marketize feature requests]]. --[[file:jcorneli.org][jcorneli]]

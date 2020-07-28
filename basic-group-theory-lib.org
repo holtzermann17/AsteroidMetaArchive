@@ -1,0 +1,39 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ (require 'set-theory-lib)
+
+ (defn operation (* X)
+  (set X)
+  (forall a b :in X :st (elt (* a b) X)))
+
+ (defn associative (* X)
+  (operation * X)
+  (forall a b c :in X :st (eq (* a b c)
+                              (* (* a b)
+                                 c)
+                              (* a
+                                 (* b c)))))
+
+ (defn group (G *)
+  (set G)
+  (operation * G)
+  (associative * G)
+  (exists e :in G :st (forall a :in G :st (eq (* e a)
+                                              (* a e)
+                                              a)))
+  (forall a :in G :st (exists a' :in G :st (eq (* a a')
+                                               (* a' a)
+                                               e))))
+
+ (defn subgroup (H G)
+  (group H)
+  (subset H G))
+
+ (defn coset (a H G S)
+  (group G)
+  (subgroup H G)
+  (elt a G)
+  (eq S (setof (* a h) :st h :in H)))
+
+ (provide 'basic-group-theory-lib)

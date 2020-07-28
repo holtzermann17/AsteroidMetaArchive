@@ -1,0 +1,125 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The question of how to a proof should be structured in order to be
+easily followed by a human has been raised
+[[file:What_is_a_structured_proof|here.org][What_is_a_structured_proof|here]]. To reiterate what is said on
+that page, the idea behind a structured proof is that some of the
+statements are more important than others. What I have not seen
+discussed is how we determine how important a given statement
+is. (From now on I will use "theorem" as a logician would, i.e. as
+anything not being an axiom.)
+
+**  The importance of a theorem
+
+In all likelihood there is no general mechanical method for
+evaluating how important a particular theorem will seem to a human
+reader, as there seems to be no a priori reason that what we consider
+important should coincide with some formal property. We may have all
+kinds of reasons for considering something important, many of which
+have little to do with the theorem itself. Nonetheless, I believe
+there really are universal guidelines that will work very well in a
+large number of cases.
+
+A theorem, part of a larger proof or not, is considered important if
+it brings something new to the table. One may say that at least parts
+of its importance is proportional to the amount of new information,
+or surprise, that the theorem contains. This alone immediately
+suggests ways of determining its importance. First, if a theorem can
+be derived from earlier theorems it is not as important as if it can
+not. This not only seems very sensible, but has actually been
+verified by Wolfram in
+[http://www.amazon.com/exec/obidos/tg/sim-explorer/explore-items/-/1579550088/0/101/1/none/purchase/ref%3Dpd%5Fsxp%5Fr0/104-6315210-2083947 ANKS]. He derived all the theorems that have names in basic logic,
+and was able to conclude that they are precisely the theorems that
+cannot be derived from previous theorems (the only exception was the
+second distributive law). Some thoughts on this:
+
+ * Eventually the theorems that can be generated from the important
+theorems might equal the theorems that can be generated from the
+axioms. Does that mean we have no more imporant theorems? In a
+sense, yes, but we can always proceed to the "second level", where
+we consider the set of important theorems so far the axioms. Now we
+can simply repeat the procedure. Analogously for the third level,
+etc.
+
+ * Perhaps one would like to say that a theorem is more important if
+it requires a long proof, but simply to say that "long is more
+imporant" does not correspond very well with our intuition. It
+would grant the status "important" to far to many
+theorems. However, there is something about the length of the proof
+that contributes to its importance. One idea is that it is related
+to how many branches of the derivation tree the theorems used in
+the proof lie on, and their length.
+
+ * The converse could also be considered, i.e. a theorem's importance
+could be ranked in relation to the theorems it produces, rather
+than information about the theorems (and axioms) used to derive it.
+
+More to come here. My ideas on this topic are somewhat unstructured
+(no pun intended) so far. I get a disconcerting feeling I'm either
+heading towards something either profound or obvious, so any input
+would be appreciated.
+
+**  Existing systems which score interestingness
+
+During the last two days I've been looking into the research on ATP trying to figure out what has been done along these lines. It appears as if there is an subarea of ATP that goes by the name "Automated Theorem Discovery" which attempts to discover new theorems given some set of axioms without first having conjectures, but little research seems to have been devoted to it. However, there has been significant research about automating conjecture making, and it's equally (or, actually, more) important to have a scoring rule for interestingness for these programs. I have looked at some papers, and there seem to be some factors relevant to structuring proofs. Some examples:
+
+ * The more ways a theorem can be derived in, the more interesting it is. (Criteria used by Lenat's [http://laurel.actlab.utexas.edu/~cynbe/muq/muf3_21.html AM] program.)
+ * The longer the proof is, the more difficult it was to prove, and thus the more interesting it is. (Criteria used by Colton's [http://www.dai.ed.ac.uk/homes/simonco/research/hr/ HR] program.)
+
+The other techniques are mainly heuristics applicable to certain subbranches of mathematics, but not in general. Also, the differences by what counts as an interesting conjecture and an interesting theorem in the context of a proof are larger than I would have expected. These programs often use databases of facts, and models semantic relationships between then, in order to produce specialized conjectures. An example is Fajtlowicz's [http://www.math.uh.edu/~clarson/graffiti.html Graffiti] program which only produces invariant conjectures in graph theory, basically by looking things up in a database (although that's a bit simplified). I don't think such an approach is very useful for HDM and this particular task. However, I will delve deeper into this.
+
+* Discussion
+
+This seems like a sensible theory.  Of course, the more surprising a
+theorem is, the more explanation (or, barring that, independent
+thinking and research on the part of the reader) it would require for
+the reader to "get it".  Since you're talking about theorems that
+appear /in the context/ of a given proof, the surprise factor is
+particularly relevant to this context.  The ultimate way of saying
+that a given part of the proof isn't important is to simply indicate
+that /"the rest of the proof follows similarly."/
+
+I'd agree that the length of a proof probably doesn't correspond to
+the proof's importance.  The /minimal/ length of all proofs of a
+given theorem might correlate to the degree to which the result is
+"surprising".  (Ray shared a reference with me that talked about this
+statistic, but for code.)  However, something like the 4 color
+theorem has a simple, intuitive statement, and a very long proof (has
+it been shortened yet?).  So I'm not sure how this fits into the
+picture.
+
+Of course, when you're talking about theorems in a broader social
+context, it seems clear that the number of "in links" (citations, or
+perhaps explicit uses without citation) to a theorem is another
+obvious candidate measure of importance.  
+
+Note that having a name is the only way to be cited, so maybe the
+citation importance can be reconciled with the "can't be proved from
+previous theorems" importance; apparently the "new" theorems form
+some kind of spanning set?
+
+In general, there are probably a number of different kinds of
+importance (e.g. a long, difficult special-purpose lemma may be
+"important" on the way to some other special-purpose theorem, but it
+won't be in widespread use).
+
+One key thing about hcode design, which is part of what this
+theorizing relates to: we frequently try to use NL as the guide to
+what to put in hcode.  Not that we end up putting everything from NL
+in (and we might put some non-NL things in), but if you look at some
+textbook or journal proofs, you'll see the sorts of things that are
+included and the sorts of things that are left out.  There are a
+variety of reasons to leave things out - space, elegance, pedagogy,
+pedantagogy (sort of like elegance: catering to people who already
+know the material).  One thing to do to help bring this theory along
+would be to look at various examples and just seeing what people are
+treating as "important" in their proofs - and think about how we (and
+the HDM) are going to get by with that stuff (from a
+parsing/understanding perspective).  It may be that the
+information-theory based measure of importance is the best
+"mathematical" theory one, but it may or may not line up with what
+people are actually doing (which is not to defend the people or to
+cast aspersions on the theory; I'm just saying...)
+
+--[[file:jcorneli.org][jcorneli]] Mon Jun 20 00:03:08 2005 UTC

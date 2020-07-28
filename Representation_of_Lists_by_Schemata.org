@@ -1,0 +1,85 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We now give a formal inductive definition of the operation of substitution.
+
+* Trivial case
+
+To begin with, note that if the expression part of the schema
+contains none of the wildcards, then there is nothing to do to effect
+the subsitution; the result of substitution is simply the original
+expression.  
+
+* Two all-but-trivial cases
+
+This means that if the expression is a non-wildcard atom then the
+result of substitution is this same atom.
+
+However, if the expression a wildcard, then the result of
+substitution is simply the list for which the wildcard stands.
+
+* The not-so-trivial case
+
+If the expression is not an atom, then it must be a list.  In
+this case, substituting for the wildcards appearing in the list
+can be carried out by substituting for any wildcards that appear
+in each list element (recursively calling the substitution
+routine as needed).  Moreover, since any list element necessarily
+takes up less storage space than the whole list, this procedure
+must terminate when we reach an atom.
+
+* The algorithm for substitution
+
+Hence, we arrive at the following rule for substituting certain
+value-assignments for wildcards into a schema's expression:
+
+ (defun substitute-in-schema (values schema)
+   (cond ((null (cadr schema)) nil)
+         ((atom (cadr schema))
+          (if (member (cadr schema) (car schema))
+              (cadr (assoc (cadr schema) values))
+            (cadr schema)))
+         (t (mapcar '(lambda (schema-item) 
+                       (substitute-in-schema 
+                        values 
+                        (list (car schema) schema-item)))
+                    (cadr schema)))))
+
+* Example
+
+
+We can now revisit the example of the arbitrary premise rule presented
+earlier.
+
+ (substitute-in-schema '((x (if a b)) (y c)) arbitrary-premise-rule)
+
+ (if (if a b) (if c (if a b)))
+
+----
+
+: I don't understand what the italicized words in the
+"not so trivial" case are supposed to
+mean. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 03:54:25 2005 UTC
+
+
+:: By /item/ I simply mean an item in a list in the usual sense --- for instance the list 
+
+ (a (b c) c)
+
+:: has 3 items, /a/, /(b c)/ /c/.  By /length/ I mean nothing more
+profound that the number of symbols that appear in the list.  The idea is simply
+to show that the program terminates and does not get hung up in an infinite
+loop.  Each time it calls itself recursively, the argument is shorter, so sooner
+or later it will stop calling itself.  Maybe a better way of presenting this
+would be to put it in a proof that the program works.  At the time I wrote this,
+I didn't think of this and I haven't gotten around to it yet; maybe I will do it
+when I next revise this entry. --[[file:rspuzio.org][rspuzio]]
+
+#+BEGIN_VERSE I think /item/ is too vague, then, so I've changed it to /list element/.
+/Shorter/ is definitely misleading, because we could have
+
+  (a (b b b b b b) c)
+
+in which case the top-level list has length 3 and the list in the second level
+has length 6.  But it is true that the inner list will take up less storage
+space than the whole list, and I've adjusted the wording accordingly.

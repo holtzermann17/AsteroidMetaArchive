@@ -1,0 +1,77 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Links related to this page:
+
+ * [[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]]
+ * [[file:NSF_ALT_2005_Grant_Proposal_Draft|original proposal draft.org][NSF_ALT_2005_Grant_Proposal_Draft|original proposal draft]]
+ * [[file:Collaborative_Version_Of_NSF_ALT_2005_Plan_of_Work|plan of work for this version of intro.org][Collaborative_Version_Of_NSF_ALT_2005_Plan_of_Work|plan of work for this version of intro]]
+
+
+*  Automating Online Communities for Informating STEM Learning =                                                                  
+                                                                                                                              
+**  Project Summary
+                                                                                                               
+Working from the dual perspectives of digital library and online                                                              
+pedagogy research, we will create nearly self-sustaining,                                                               
+pedagogically relevant online communities for STEM learning.
+Our research will lead to radical improvements in the success of these                                                               
+communities: the automation of knowledge maintenance and the                                                                  
+efficient bootstrapping of new disciplinary communities.
+We will leverage our prior work on a particular architecture,                                                             
+Noosphere, with two extant learning systems/communities, PlanetMath                                                           
+and PlanetPhysics, and roughly 20,000 users.  Knowledge maintenance                                                           
+and connectivity are already supported through automatic linking and the corrections system.                                                             
+This will be augmented with pedagogical metadata elements, reputation systems, and services to support the community.  Our work on enhanced                                                           
+automation will lead to a system that /informates/, that is, informs                                                          
+users about the underlying productive processes through which it                                                              
+accomplishes its work.  A deep level of system                                                                 
+transparency will be supported by community response features,                                                           
+including those self-correcting and self-regulating mechanisms that have been so                                                                  
+successful in Wikipedia and in commercial                                                             
+endeavors such as Amazon.com and eBay.  The self-sustainability and                                                           
+utility of the approach will be tested by systematically involving                                                            
+different learning groups, including at-risk African-American high                                                            
+school learners. Additionally, the "bootstrapping" or snowballing                                                             
+creation of a new community, PlanetComputing (for Computer Science), will be                                                             
+documented and requirements for success detailed.                                                                             
+                                                                                                          
+**  Intellectual Merit ==                                                                                                          
+
+The investigation will build on new advances in automatic data                      
+extraction and integration stemming from digital library research, new understanding                                                         
+of online communities coming from such other NSF-supported projects                                                           
+as Tapped In, BRIDGE, Math Forum, and NSDL, and new developments in                                                             
+self-sustaining communities on the internet such as Wikipedia.                                                            
+Ultimately, the research supported in this grant                                                         
+will lead to improvements in other communities for learning either by                                                         
+direct incorporation of our communities or indirectly through adoption of the                                                         
+approach pioneered here.
+                                                                                                                              
+The investigators bring to the table considerable experience in                                                               
+development and research about online communities for learning                                                                
+(Tatar, Dunlap), K-12 STEM education (Tatar, Dunlap),                                                             
+university level STEM education (Fox), and in the creation and spread                                                         
+of digital libraries across multiple institutions and platforms                                                               
+(Krowne, Fox).                                                                                                                
+                                                                                                                              
+**  Broader Impact
+
+At a minimum, tens of thousands of learners and teachers will benefit from
+the enhanced pedagogy brought about by this work, either from the community 
+instances mentioned previously, from future and unanticipated self-sustaining 
+communities, or even from the syndication of educational content produced and 
+enhanced by these systems to the wider internet.
+
+Four graduate students at Virginia Tech and Emory University will be                                                          
+involved in the implementation and research aspects of the project.                                                           
+Three high school teachers and their classes will be involved in math,                                                               
+physics, and computer science content development and testing in                                                               
+Montgomery County. Montgomery County is located in the Appalachian region of Southwest Virginia, the second poorest region of the United States.  Virginia Tech faculty and students in math, physics, and computer science will also be involved.  Results will be disseminated through conference presentations and journal articles.  
+Learners and teachers in STEM fields will benefit from the enhancements from the extant communities, from new self-sustaining communities, or from the integration of these approaches with other systems.
+
+
+*  Discussion
+
+This is probably about one short paragraph over a page, now.   I'm not sure how to 
+trim it down... --[[file:akrowne.org][akrowne]] Sun May 22 18:25:19 UTC 2005

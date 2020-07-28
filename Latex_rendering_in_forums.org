@@ -1,0 +1,72 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Writing math in ascii is a mess. 
+
+As we can use latex in the entries it seems strange that one
+can not write latex in the forums. This would be useful as they
+are mainly used to discuss math. 
+
+Another advantage of this is that hopefully this ability would
+attract more users to PM, e.g. part of the usenet crowd. We should 
+make it as easy as possible to discuss math. These discussions would
+be great source material for PM entries.
+
+Another issue I think is current is how the forums should be organized. 
+Currently, there are only 14 forums. The biggest math related being:
+:  General Questions - University/Tertiary   1528 msgs.
+:  General Questions - Graduate/Advanced   377 msgs.
+:  General Questions - High School/Secondary 260 msgs.
+
+I think it would be easier to read these if they (interally) were organized in some way.
+
+:   Algebra
+:   Analysis
+:   Complex analysis
+:   Geometry
+:   ..
+:   Topology
+:   Functional analysis
+
+I think it would be desirable to have a pedagogical value in reading the forums. Also 
+for new users, Currently, IMHO, the subject range in each forum is too big for 
+this to be the case.  -- [[file:matte.org][matte]] 17 April 2005
+
+----
+
+The system actually has some infrastructure for forum hierarchy.  The real issue is settling on
+a top-level subject system that has complete coverage and that people mostly agree on.  
+I can make the forums at the snap of a finger once I have the subject breakdown.  You could
+accelerate this process the most by proposing one! --[[file:akrowne.org][akrowne]] Sun Apr 17 20:34:22 UTC 2005
+
+If people could add new sub-fora at will (like with [[file:nested noosphere instances.org][nested noosphere instances]])
+and maybe sort/label existing threads at will ([[file:scholium system.org][scholium system]] style), then
+this idea seems even more likely to be useful. (I think gmail-style labeling
+may be better for this than directory-style sorting, since some topics
+legitimately belong in several categories.)
+--[[file:jcorneli.org][jcorneli]] Sun Apr 17 21:57:39 2005 UTC
+
+I agree that users should be able to create new fora and subfora (under the 
+everwatchful eye of an admin). PM should be a comunity. I would start with:
+
+:   Puzzles
+:   Algebra
+:   Analysis
+:   Complex analysis
+:   Geometry
+:   Differential geometry
+:   Topology
+:   Functional analysis
+:   Statistics, Probability, stoachastics
+
+in a "Get Help", "Ask a mathematician" or "Problem corner"-folder. 
+In this fora, messages could be rated with a "type" from:
+
+:    high-scool
+:    university
+:    more?
+
+The type would be similar to type in corrections. This would require some 
+UI for browsing posts with a certain type. Would it be useful if a user could
+upload a jpg file? This could make discussing geometric problems much easier.
+--[[file:matte.org][matte]] 18 April 2005

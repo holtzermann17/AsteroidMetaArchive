@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We could have various different "high scores" -- one for users who file
+the most corrections would be a simple measure.  Another one for users
+who reject the most corrections could be funny -- it isn't clear that 
+rejecting corrections is a good way to improve your reputation.
+
+Other categories could be worth including.  (Most articles, most postings,
+etc., etc.)
+
+
+* Discussion
+
+I also just had the thought that rejected corrections that have
+/themselves/ been rejected (i.e. the rejection is rejected)
+could assume a special status.  Maybe a poll is automatically
+created to decide who is right.  As for what effect the
+results of the poll would have... I dunno.  Something to think about.
+(These ideas may be the basis of a useful alternative to the "card system".)
+
+This also reminds me of some discussions a few months back in which we spoke of how a more meaningful user/entry rating/score might be a multidimensional object.  Corrections accepted and rejected might form two components of that entity. --[[file:rspuzio.org][rspuzio]] 1 May 2005

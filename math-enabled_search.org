@@ -1,0 +1,215 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The goal of this project is to create open-source tools which allow for easier and more powerful searches of mathematical information.  While a conventional search engine makes it easy to search for information about mathematical terms like 'homeomorphism,' 'abelian,' or 'Cauchy-Riemann equation,' anyone who wants to search for mathematical notation like '\Zeta(s),' 'B(0;1),' or 'd^2 \Phi / dx^2' is likely out of luck, for several reasons:
+
+ 1. First, most search engines don't index a number of characters that are used in mathematical notation.  There are plenty of sites on the internet that use the notation 'B(0;1)' for the open ball of radius 1 in the complex plane with center z = 0; however, putting 'B(0;1)' into Google (try it!) doesn't give any meaningful results.  Of course, retrofitting such capability onto a general search engine like Google would be disastrous; certainly indexing words at the ends of sentences seperately due to punctuation isn't the right thing to do.  However, trying the same search on the internet's main specialized math resources -- PlanetMath, !MathWorld, and Wikipedia -- also yields no results, and this isn't such a good thing.
+
+ 1. Even if we could search for arbitrary strings, it wouldn't help in a lot of cases.  For instance, in !LaTeX the strings 'x^2_t' and 'x_t^2' produce the same output on the screed:  an 'x' with a superscript 2 and a subscript t.  While a user could conceivably search for both in such a simple case, things rapidly get much worse as the size of an expression grows.  A canonicalization is needed which recognizes equivalent !LaTeX code, at least in the simpler cases.
+
+ 1. Being able to search for verbatim symbolic information on a page would already be a boon to anyone who's using a database of mathematical (or physical or chemical or...) information, but it's not quite perfect.  For example, the expressions 1/(x^2 + a^2) and 1/(a^2 + x^2) are mathematically equivalent, even though they don't look the same on the page.  A search for one should return the other as well.  The solution at first appears to be canonicalizing ('simplifying') each expression and then comparing the results; however there are circumstances where this does not appear to be the right idea; for instance, a search for 'e^(i pi) + 1 = 0' should not first simplify the expression to 'true;' doing so would return every identity in the book, sorted randomly.  A better solution appears to be an adaptation of the 'edit distance' technique that spell checkers use, where the number of changes required to get from one expression to another is factored into the relevance.
+
+* Road Map
+
+This is only my ([[file:dan131m.org][dan131m]]'s) vision of how things could be done; feel free to respond in the discussion section below.
+
+** Preliminaries
+
+ 1. (Moderate) Add a tokenizer plugin system for Lucene which allows us to search the same database in different ways
+ 1. (Easy) Write some base rudimentary regexp support for searches; for instance, "\$x exp \$x" would match "x exp x" and "y exp y."
+
+** Symbolic Track
+
+ 1. (Trivial) Implement a search backend which searches inside of !LaTeX math environments and parses to some extent like !LaTeX
+ 1. (Trivial) Implement a matching frontend for Noosphere which takes !LaTeX input
+ 1. (Manual Labor) Create a dictionary of things which look similar enough on the page as to be equivalent, sort of like how Google indexes ö and o as the same character.
+ * Letters like a, b, d, etc. should match their greek equivalents, perhaps at lower relevance, and ascii or unicode greek characters should match the respective !LaTeX commands
+ * The characters '->' should match a !LaTeX arrow, '...' should match the ellipsis commands, etc.
+ * \mathbold, etc. should be ignored
+ * \tilde, \widetilde, and whatever the thing that draws arrows over vectors should be ignored
+ * Should \mathbb be ignored?  On the one hand, it's annoying to type in a search box if we are looking for articles about "f:R->Z"; on the other, do we really want a search for "Z" to return any page containing something like, "Assume $n \epsilon \mathbb{Z}"?
+
+(Remainder under construction)
+
+** Semantic Track
+
+ 1. (Trivial) Implement a search backend which searches (verbatim) hcode trees.
+ 1. (Hard) Come up with a stepwise canonicalization process that does "the right thing" for most expressions
+ 1. (Moderate) Using the canonicalization process, devise an edit-distance for search
+ 1. (Moderate) Come up with clever indexing schemes to make the edit-distance based search algorithm feasible.
+ 1. (Easy) Write the actual search system
+ 1. (Trivial) Add a Noosphere frontend for the system above which takes hcode input
+
+(Remainder under construction)
+
+* Discussion
+
+Some of this is moved from my user page.
+
+** Semantic approaches
+
+Hi Dan.  Take a look at the [[file:hcode.org][hcode]] page (also linked to from the !SoC coordination page).
+The idea with this project is to reduce math statements to some common semantic expression.
+Hcode goes somewhat further IMO than !MathML, because hcode is supposed to be a language that can represent *all* math objects, from expressions like those you indicated, to proofs, etc. (!MathML is certainly another thing to look at, altough my guess is it won't fully solve the problems we're looking at).
+I can imagine an !SoC project that would involve writing a parser (which would be hooked into a web-indexer) and an expression-resolver (that would take the user's query and transform it into the standard form found in the index).
+Let me know what you think.  --[[file:jcorneli.org][jcorneli]]
+
+It sounds like it could work out; however, the expression-resolver is
+going to take some cleverness.  For instance, suppose a kid comes home
+after hearing at school that e^(i pi) + 1 = 0; wanting more
+information, he types in "e(^i pi) + 1" in the search box, which the
+resolver cleverly resolves to "0," and then he receives a long list of
+pages which happen to have a zero in them -- likely about 95% of the
+site.  At the other extreme, someone might be searching for
+information about some integral or other, in which case there are
+often all sorts of terms that can be moved from numerators to
+denominators, or commuted with one another.  The question of where to
+stop simplifying differs in different contexts.  I guess the solution
+here could be something along the lines of the "edit distance" that
+some spell-checkers use, although such a method may or may not
+generate excessive numbers of extraneous searches. However, even a
+minor improvement in math text search would be a huge boon to lots of
+users.  For instance, the other day I saw the unfamiliar notation
+"B(0;1)" used in passing in a paper.  Now anyone who wants to look up
+something like "homotopy" or "Sylow's theorem" can do it with Google
+in five seconds, but I've been unable to find any search engine
+anywhere which indexes enough punctuation characters that I could
+search for something like that.  So just a rudimentary search which
+indexes characters used in math would be a huge start; heuristics
+could then be lumped on top to take care of the cases that needed some
+more help.  By the way, is this the appropriate place to respond to
+this message?  You guys don't seem to have any responses on your
+pages, so I'm assuming this goes here. -- [[file:dan131m.org][dan131m]]
+
+Hi Dan, if it is *easy* (i.e. not a full summer's worth of work),
+it may still be worthwhile to add a straight-up equation searcher
+into lucene (per Aaron's comment below).  This is a sort of "corner
+solution" -- the one in which there is no simplification or rewriting
+at all, and, in fact, text is not treated "semantically" at all.
+
+At the other extreme is your e^{i\pi} + 1 = 0 example.  The moral of
+that story is that "simplification" may often-times not be the way to
+go.  The canonical representation for /an expression/ is not that
+expression's simplest algebraic form.  In hcode, the equation above might
+be written
+
+ (equals (+ (exp (* i pi)) 1) 0)
+
+so, searching for the expression on the left-hand side means parsing
+the input expression, and also presumably adding such semantic 'index
+terms' to the pages in the corpus, and finally trying to match bits of
+the search query with bits of the semantic index.
+
+This all sounds both very challenging and very worthwhile.  It might
+be more than a summer project.  I think that if you can break the
+project up into easy/medium/hard subprojects, probably also break it
+up along a straightforward-coding/research-intensive axis, and add
+suitable milestones, you can come up with a great proposal.  Of
+course, we're happy to help with that as we can.
+
+As for where to discuss this, please, feel free to move the discussion
+to some other page, or keep it here, or whatever you like.  This is
+your user page... so make it what you want it to be.  The rest of us
+are reading the RecentChanges page and will respond to just about
+anything that shows up there...
+
+--[[file:jcorneli.org][jcorneli]]
+
+I think we still want some sort of simplification; for instance, using
+the example above, we would want "e^(pi i) + 1" to find pages about
+"e^(i pi) + 1" as well.  I think the "edit distance" solution could
+work out, by which I mean the expression would be canonicalized step
+by step and searches would be done at each step
+
+ 1. "e^(pi i) + 1"   (no results found)
+ 1. "e^(i pi) + 1"   (28 results found)
+ 1. "-1 + 1"         (300 additional results found)
+ 1. "0"              (8 million results found)
+
+If our threshold for relevance was set at, say, five results, then the
+search would stop after the second step and return.  Also, as I see it
+there should be seperate semantic and graphical searches; a lot of the
+searching I do for mathematical information on the internet is spent
+simply looking for definions of symbols, and any system based on the
+underlying meaning of a symbol is going to be no help when searching
+for the actual symbol.  Fortunately, both cases can be built
+ground-up, from very rudimentary systems that will nevertheless be
+useful for the end user, so there's no real call to worry about
+difficulty; I'll just go as far as I can.  I suppose the first step
+will be giving lucene a tokenizer plugin system (if it hasn't already
+got one somewhere) and a couple of basic plugins for it.  I'm
+installing lucene on my system right now to get an idea of my plan of
+attack.  -- [[file:dan131m.org][dan131m]]
+
+I wouldn't call this simplification, just equation rewriting.
+(Simplification is a special case.)  --[[file:jcorneli.org][jcorneli]]
+
+The idea is that "e^(i pi) + 1" is "simpler" than "e^(pi i) + 1" because one of the canonicalization conditions would presumably be that all the terms in a product appear in alphabetical order.  Of course, the search would have to be one that looks for things which simplify to the partially-simplified expression and not just a verbatim search.  (Or maybe you have an even more specific definition of simplification?  I'm not an expert on the internals of computer math systems.)  Perhaps a way to keep the search time down would be to manually flag everything worth searching for when writing an article. -- [[file:dan131m.org][dan131m]]
+
+** Using templates
+
+Dan, you might check out [[file:Shaneal.org][Shaneal]]'s statement here (and in context
+on his user page) if you haven't already:
+
+: Another tangential benefit would be provided by one of the key
+algorithms I would need to develop, a 'template matcher,' which would
+greatly improve PlanetMath's search capabilities. The template matcher
+would help match specific math statements to formulas, theories, or
+rules of inference that are applicable. For example, If I had a rule
+that said a(b+c) = ab + bc, it would be able to see that 2x(7a + 15)
+is simply a specific case of that rule. To use a more realistic
+example, if a user searched e^i*pi =-1 they would obviously be
+interested in Euler's Formula, and the 'template matcher' would
+recognize it as a specific case of e^ix = cos(x) + i*sin(x) and could
+automatically redirect to the relevant page (perhaps the theorem
+checker would know the formal names of various theorems in it's
+database, and could redirect queries about a specific case of a
+theorem to that theorem's name?).
+
+Templates seem important for search, proving, parsing, and even
+[[file:Display LaTeX|display.org][Display LaTeX|display]] -- so I think everyone should give them some
+thought.
+
+--[[file:jcorneli.org][jcorneli]]
+
+** Semantic middle ground
+
+I think you can go into the middle ground between fully semantic
+parsing (hcode), and searching raw !LaTeX formulae.  Somewhat like
+!MathML (perhaps turned into S-Expressions first); but you match using
+some sort of fuzzy regular expressions. If you're interested, you can
+look at [[file:Display LaTeX.org][Display LaTeX]], which does the parsing part from !LaTeX. --
+SteveCheng
+
+What is "fuzzy regular expression"? --[[file:rspuzio.org][rspuzio]]
+
+I leave it to your imagination :-).
+However, what I have in mind is that certain subgroups
+in a regular expression can have a score attached,
+so if a regular expression matches a formula,
+it can do so with some total score, which will
+be used to rank the matches.
+For example, concerning the $e^{i\pi}$ example,
+a search could also return $e^{i\pi/2}$ amongst its results
+with a lower score.  Because math formulae have structure, it might be possible to add scoring transparently even if the user types in a "plain" regular expression to search for.  And also, just "plain" regular expression matching
+for math formulae may be useful even without the fuzziness. -- SteveCheng
+
+The Wikipedia page on [http://en.wikipedia.org/wiki/Edit_distance edit distance]
+describes the Levenshtein distance between strings and has cross-references
+to several other algorithms and programs, such as agrep
+(approximate grep) for fuzzy string searching. --[[file:norm.org][norm]] 11-May-2006
+
+Thanks, norm.  I'm looking into that right now.  I have a feeling that the edit distance will be "generous," in the sense d’Alembert meant when he said “Algebra is generous; she often gives more than is asked of her.”  Of course, the transitions in !LaTeX code will be a little more complicated than those in spelling or DNA analysis, but I think it'll reduce to a very similar case. == [[file:dan131m.org][dan131m]] 5/12/06
+
+** Equation searching (or beyond)
+
+Dan, I think this is a worthwhile project.  There may be a fair amount
+of prior art, but a lot of it is commercial.  To make this a project
+that could be applied to PM within the course of a summer, I would say
+specifically that it would be to hack equation searching (or beyond)
+into Lucene, which is the search engine PM uses (there would be no
+"web indexer" because we directly index from out of the database).
+--[[file:akrowne.org][akrowne]]
+
+Dan's point on [[file:2006 PM Summer of Code Coordination.org][2006 PM Summer of Code Coordination]] was that
+equation searching isn't necessarily very useful. --[[file:jcorneli.org][jcorneli]]

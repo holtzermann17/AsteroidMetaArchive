@@ -1,0 +1,151 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It almost goes without saying (or anyway, it should) that
+the entries should be clear and well written.  Not only
+should the articles be comprehensible to experts, but
+they should also be understandable (in their context) to
+relatively sophisticated non-experts.  For example, I
+know very little about cardinal arithmetic or elliptic
+curves, but I should be able to understand the cardinal
+stuff or elliptic curves stuff after looking at the appropriate section -- I
+should at least have the basics down.  Of course, FEM
+isn't fully comprehensive -- but it should be totally
+comprehendable!
+
+But even with that caveat, this is going to be a /huge/
+task.  Maybe especially because I ([[file:jcorneli.org][jcorneli]]) am one
+of the lead editors -- I'm known to my mathematical
+colleagues as a real stickler for details and clarity of
+exposition.  Also, I use myself as the number-one guinea
+pig.  If I can't understand something, I assume that most
+people won't be able to understand it either.  I'm not
+sure if this is modest or egotistical of me.  There are
+other champion sticklers out there -- and I commend them!
+
+My personal goal in working as an editor for this project
+is to have a good working understanding of everything
+that is covered in the FEM.  Accordingly, there will be
+more than copyediting going on.  There will be requests
+for additional details, examples, pictures, articles, and
+organization.  Things that fail to meet the high
+standards for clarity will not be included in the FEM
+(assuming that my co-editors agree -- I am not going to
+be evil, but I am going to be proactive about my own
+understanding).
+
+I recognize that FEM is not meant to be [[file:HDM.org][HDM]] (or even
+an HDM prototype -- though working on it certainly does
+seem to complement work on the HDM).  I do not expect it
+to contain all extant mathematics.  I do not expect every
+proof to be available in arbitrarily fine detail, with
+every conceivable line of exposition available to the
+reader.  However, I expect FEM to conform to the highest
+standards of proof and exposition that are suitable for
+"real" (as opposed to "hyperreal") mathematics.  I don't
+necessarily mean the standards that are used in normal
+books and journals -- I mean my personal standards and
+those of my co-editors.  I intend to do some further
+research into what exactly these standards actually are!
+I invite comments and suggestions from other editors or
+readers.
+
+The take-home point here is that if it can not be said
+well, we will not be saying it.  
+
+Aaron has mentioned the idea of "reviving" the One Big
+Book (OBB) as a subproject of FEM.  This book would
+contain everything from PM without any editorial "holds".
+I am in favor of doing this, because I think this book
+would be useful for people who are working on editing.
+OBB will be available as "build time option" for FEM.
+
+For the reasons mentioned above, I think it is somewhat
+unrealistic to expect a Version 1 release of the FEM any
+time soon.  I don't intend to approach 1 asymptotically
+(compare !TeX...) -- but I think it is going to take some
+time.
+
+This does not mean (in any way) that there is to be a
+"hold" on publication of the book until Version 1 is
+complete -- far from it.  The prereleases will all be
+"camera ready", and I hope that we will be able to make
+arrangements to have them available for purchase through
+the PM site.  I expect these versions to be cheaply made
+(but within the dignity of the publisher).
+
+I propose that we should work to set some clear
+guidelines (timelines are probably out of the question at
+present) for version numbering and releases.  Version
+0.0.1. marked our first experimental release.  Version
+0.1.0. is going to mark our first sensible release.  I
+think versions 0.1.* will mark various improvements in
+the FEM code and in the content.  I don't know yet what
+will make the difference between things in this series
+and a possible future 0.2.0 release, nor do I know how
+long the series 0.*.* is going to have to be before we
+relent.  Comments about this are welcome too - but it may
+be too early to say anything very useful about the
+matter. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 18:08:04 2005 UTC
+
+: Aren't you being a bit unrealistic in your demands?  I just looked at the
+entries on elliptic curves and cardinal numbers I would say that they are
+ *already* written at the most basic level possible.  They are much simpler
+and more accessible than the definitions of these objects that I have seen in
+math books.  Both cardinal arithmetic and the arithmetic of elliptic curves are
+rather advanced topics and reqiuire a good amount of background material just in
+order to state the basic definitions correctly, let alone prove results or state
+further definitions.
+
+: To make these entries any more accessible, one would have to water down the
+definitions, glossing over important technicalities and simplifing assumptions.
+This would make the entries worthless as references.  To me it seems that the
+best solution would be to leave the current entries alone and add popularized
+entries which would make no pretense at rigor, but simply serve to give the
+casual reader an intuitive idea what a certain area of mathematics is about and
+end with a description of the prerequisites one needs in order to properly
+understand this area of mathematics and a reference to the next more advanced
+entry for further reading.  --[[file:rspuzio.org][rspuzio]]
+
+:: I just used those sections as examples of things I don't know much about -- I
+am not complaining about the writing there -- I haven't even /read/ these
+sections yet (just skimmed them a little).  Before concluding that my demands
+are unrealistic, let's see what my demands actually boil down to in some
+specific cases.
+
+:: I definitely like your idea of including purely expository contextualizing
+articles (or perhaps a purely expository subsection within each contextualizing
+meta-entry).  However, saying "the best solution would be to leave the current
+entries alone" seems reactionary.  I intend to be confident that every word in
+the book is placed correctly -- nay, every apostrophe -- and that none are
+missing, before I will call the book "version 1".  I might call it version
+0.99.99 otherwise, but not 1.  Extreme?  Maybe.  Unrealistic?  I certainly hope
+not. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 20:23:46 2005 UTC
+
+#+BEGIN_VERSE Perhaps the phrase /leave the current entries alone/ was a poor choice of words.  I by no means meant to convey anything as extreme as suggesting that every single letter in those entries is placed correctly and should not be touched.  All I meant to convey was the more modest notion that the basic outlines of those two articles are sound and that, while there might still be grammatical errors, typos, and other minor improvements that could be made, there is likely no need for major changes, additions, or rewrites.  In particular, as I saw it, the level at which those two entries was written was consistent and appropriate to the subject so I suggested that it would make more sense to add further entries which explain the material at a more basic level rather than try to make major changes to the existing entries in order to accommodate readers who do not have the background needed to understand them. 
+
+#+BEGIN_VERSE In general, I would say that all we can ask of an entry aside as far as content goes is that the information presented there be correct and that the entry (or different sections of the entry in the case of longer entries) be written with a consistent audience in mind.  As I see it, readers come with different backgrounds and levels of sophistication and have different reasons for reading the encyclopaedia.  Therefore, I would say that a one-size-fits-all entry is likely going to disappoint a lot of people, and a better approach might be to allow several entries on the same topic written with different audiences in mind.  In the case of shorter entries, these could appear as sections of a larger entry whilst, in the case of longer entries, they could appear as separate entries.
+
+#+BEGIN_VERSE Whereas you say "details and clarity of exposition", I would say that "details vs. clarity of exposition" more accurately summarizes the situation in many cases and that the proper balance between the two depends on the intended audience.  For beginners, the emphasis is on simplicity and clarity and most details would be suppressed either by adding them as footnotes or by introducing unnecessary simplifying assumptions or only considering special cases and mentioning that the what was seen in the example holds more generally.  For a more advanced reader, such a style of writing can be downright frustrtating to read since, in order to pin down a precise general definition with no detail left out, one has to sort through the entry and combine statements which are found in many different places and separate examples from general statements.  Therefore, for an advanced reader, clarity of exposition means stating theorems and definitions in full generality up front, even if this means having a page long list of technical details and special cases.  I think both classes of readers have equally valid concerns and both deserve to be accomodated.  A really nice expression of what I am getting at here can be found in the section "for whom this is written" in the emacs lisp introduction.  To put it another way, a well-written mathematics encyclopaedia should be able to serve as both an introduction and a reference manual. 
+
+#+BEGIN_VERSE It is with this idea in mind that I have, on several occassions, written more than one entry on a single topic.  For instance, there is both an introductory and an advanced entry on the Euler-Lagrange equations and I have added an elementary entry on tangent vector to go along with the more advanced entry. --[[file:rspuzio.org][rspuzio]] 4 March 2005
+ 
+As a fanciful dream, it is cool to imagine "Version 1"
+being generated on-demand directly from the PM sources
+as they exist on the site whenever someone wants a new
+copy.  Seems pretty far-fetched, but who knows.
+
+Instead of using "unapproved" recent versions of
+articles, for example, the last approved version would
+be used.  There is a problem in that /collections/ of
+articles would need to be approved, too, not just
+individual articles.  Perhaps this could be solved with
+the meta-entries: owners of meta-entries would serve as
+associate editors, who would be responsible for
+maintaining that little part of the FEM.  These
+meta-entries would themselves be "moderated" by another
+editor.  Thus, at any point in time, there would be a
+hierarchy of "approved" articles that could be sent off
+to the printer and uploaded.  I think this is a good
+goal, but it might be more viable to make this our goal
+for version 2.0.0. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 18:20:35 2005 UTC

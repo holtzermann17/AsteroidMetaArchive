@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Modern computing and storage technology makes it possible to manipulate mathematical information in novel, unprecedented ways. For instance, one could store a library of several thousand volumes on a disk and have a computer search through it to find all references to a particular result or formula. As the state of the programming art advances, it will become possible to have the computer do such things as check statements in different mathematical works against each other for consistency and arrive at new conclusions based upon known results in the literature.
+
+For this to be possible, one needs to enter mathematical information into a computer. In attempting this, one runs into a somewhat paradoxical situation — although mathematical knowledge is free, it cannot be conveyed apart from some form of expression, but this expression is subject to the strictest legal protection under copyright law.
+
+The Free Math movement seeks to address this disparity by making available mathematical works which are as free as the content they embody. Unfortunately, in the process of doing this, we run into all sorts of bottlenecks having to do with copyright issues. Fundamentally, the reason for these difficulties is that copyright laws were framed with the aim of regulating the printing trade and protecting authors. Unfortunately, due to the drastic changes in technology alluded to above, regulations which were originally designed to promote the diffusion of knowledge and the advance of science seem to be having the opposite effect. Unless this issue is dealt with, it threatens to slow down mathematical progress to a crawl by placing impediments which restrict the free flow of information which is vital for a thriving mathematical community.
+
+* Discussion
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

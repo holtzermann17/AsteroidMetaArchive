@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+Of course, all the different components of the [[file:HDM.org][HDM]] relate to each other, but
+it is conveninent, when possible, to look at the various pieces as sub, and
+sub-sub etc., projects, since this will help us spell out the milestones we need
+to complete the system.
+
+Each of the items below is a link to a page that explains that subsystem and its
+relation to things below it (and perhaps also across from it or above it) in the
+hierarchy.  Some of these pages don't exist yet.
+
+This list can be edited as needed.
+
+The links here can be to pages that are "meta" to the actual projects they
+describe (like the [[file:Guide to the HDM.org][Guide to the HDM]] is meta to the HDM project page).
+
+ * [[file:Theorem Proving Subsystem.org][Theorem Proving Subsystem]]
+  * [[file:Proof Checking Subsystem.org][Proof Checking Subsystem]]
+   * [[file:template utilities.org][template utilities]]
+ * [[file:AI Subsystem.org][AI Subsystem]]
+  * [[file:interface to NL parser.org][interface to NL parser]]
+  * [[file:interface to Theorem Proving Subsystem.org][interface to Theorem Proving Subsystem]]
+  * [[file:text generation.org][text generation]]
+  * [[file:question-answerer.org][question-answerer]]
+ * [[file:Content creation and management.org][Content creation and management]]
+  * [[file:language development.org][language development]]
+  * [[file:Managing unassimilated content.org][Managing unassimilated content]]
+  * [[file:Managing assimilated content.org][Managing assimilated content]]
+  * [[file:OCR Subsystem.org][OCR Subsystem]]
+  * [[file:content creation and user interface.org][content creation and user interface]]
+  * [[file:Parsing Subsystem.org][Parsing Subsystem]]
+   * [[file:Expression parser.org][Expression parser]]
+   * [[file:NL parser.org][NL parser]]

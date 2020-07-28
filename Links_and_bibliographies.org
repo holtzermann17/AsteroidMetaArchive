@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * [[file:HDM-related_things_to_check_out.org][HDM-related_things_to_check_out]] : a list of lists, describing previous or ongoing work in various areas related to the HDM project.
+ * [[file:Free culture and the digital library preprints.org][Free culture and the digital library preprints]]
+ 
+ * Bibliographies :
+  * [[file:Free Math and Potential Bottlenecks -- Bibliography.org][Free Math and Potential Bottlenecks -- Bibliography]] 
+  * [[file:Formal maths bibliography.org][Formal maths bibliography]] 
+  * [[file:Open access bibliography from AMS Notices.org][Open access bibliography from AMS Notices]]
+  * [[file:CBPP bibliography.org][CBPP bibliography]]
+  * [[file:Bibliography on Online Communities.org][Bibliography on Online Communities]]
+  * [[file:Meta-bibliography.org][Meta-bibliography]]
+
+ * [[file:Blogs and personal pages.org][Blogs and personal pages]]
+
+* Comments
+
+It says on the front page that this is "An index of various link and bibliography pages on this site."
+So I think these "blog and personal pages" things should be moved to their own page that is linked to from this one. (done --[[file:rmilson.org][rmilson]])
+Also, I don't think I want to maintain the list of HDM-related subtopics, so I deleted that and just have the link to the main page. I think
+the HDM-related page qualifies as a "bibliography", as do its sub-bibliographies; but I don't think they all need to be listed here.  (At some point, when that page has stabilized some, I may change my mind, and put the sub-topics back.) --[[file:jcorneli.org][jcorneli]]

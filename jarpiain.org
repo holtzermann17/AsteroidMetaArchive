@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Juha Arpiainen
+
+I am a student of Theoretical Physics and Mathematics at the University of Helsinki. Among other things I'm interested in formal mathematics and Lisp. I'm the author of [[file:Bourbaki proof checker.org][Bourbaki proof checker]].
+
+I can be contacted by email: juha dot arpiainen at helsinki dot fi
+
+**  Projects
+
+ * [[file:HDM.org][HDM]]
+
+**  HDM Primary Tasks
+
+ * [[file:hdm's formal system.org][hdm's formal system]]
+
+----
+Hi Juha, thanks for posting.  It would be great for us to be able to
+ride on your coattails for a while.  Some additional documentation of
+the Bourbaki prover would be great to see; maybe we can help, at least
+by asking you questions.  See [[file:Updates to the HDM documentation.org][Updates to the HDM documentation]] for
+a link to some of our documentation; maybe you can write a short report
+on Bourbaki to add to this collection? --[[file:jcorneli.org][jcorneli]]

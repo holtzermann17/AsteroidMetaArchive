@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Our master header file is months out of date.  A new one should be
+built.
+
+* Note
+Keep careful track of the steps used to build the new header; perhaps
+they can be made programmatic, or at least partially so, to speed
+things along in the future.
+
+* For the long-term...
+We should get a system of shared header files in place on PM.
+This way the local headers will not contain any surprises, and 
+it will be much easier to work on the FEM.  Shared headers will
+also make authoring PM easier.  I've already made some draft
+headers, but again, those are months old.
+
+----
+* Status
+I've written some code that produces the header automatically.  However,
+the output can still be improved in several ways.  --[[file:jcorneli.org][jcorneli]] Sat Feb 19 18:38
+
+Given the fact that I don't have a fully general !TeX parser, I think now the
+file is about as good as it is going to get -- it certainly qualifies as being
+an automatically generated header, and it is quite good enough to use as the
+basis of a shared header system, which should probably be the next task.--[[file:jcorneli.org][jcorneli]] Wed Feb 23 15:31:50 2005 UTC
+
+----
+[[file:Case Closed.org][Case Closed]]

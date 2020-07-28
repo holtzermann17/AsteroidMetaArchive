@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+The GCIDE is the GNU edition of the Collaborative
+International Dictionary of English.  I don't know
+a whole lot about the project, but I'm planning
+to port it to unicode/latex (perhaps with help...).
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 20:14:13 2005 UTC

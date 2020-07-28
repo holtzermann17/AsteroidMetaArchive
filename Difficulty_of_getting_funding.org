@@ -1,0 +1,134 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is part of a series of [[file:Discussions.org][Discussions]] of 
+"Difficulties for Commons-Based Development". 
+                                                                          
+We've already covered                                                     
+                                                                          
+ * The difficulty of getting people involved in general,                   
+ * the difficulty of getting programmers involved in particular,           
+ * and the mind-numbing difficulty of getting anything done.               
+                                                                          
+Any fascile solutions are probably half-solutions at best -- anyway,      
+the suggestions that we've come up with so far include:                   
+                                                                          
+1. doing local interpersonal networking by random or targeted outreach    
+  (which I've had some luck with along the 'philosophical discussion'     
+  dimension)                                                              
+                                                                          
+2. "creating" new programmers from the collection of site users by a      
+  targeted educational programme featuring documented code and praxis     
+  (which I would say is underway on the noosphere mailing list)           
+                                                                          
+3. generating involvement/support from Google's Summer of Code            
+  philanthropy (which has already supported several of our projects in    
+  the past)                                                               
+                                                                          
+4. setting a goal that can be broken down into small segments that ONE    
+  can actually do, and doing a little bit at a time (e.g. my              
+  mega-pagecount creative writing project that I've broken up into        
+  3-page daily or other manageable segments)                              
+                                                                          
+5. using good collaboration tools (which is a problem that we've worked   
+  on many times, and which is one of the central problems of CBPP)        
+                                                                          
+None of these heuristics seems particularly relevant to the problem of    
+raising funds, although item 4 seems like it could be applied -- once     
+we had a list of potential funders/benefactors in hand, which in fact     
+we do, and someone with the time and interest to go down that list.       
+(And I think we could do this, and could presumably justify paying        
+someone to do it, much like we're paying someone to get the membership    
+system up and running.)                                                   
+                                                                          
+As we've had pointed out to us, Marnita's suggested approach is rather    
+different from the grant-seeking approach.  In grant-seeking (which I     
+think is very similar to the fellowship-seeking I've tried), the          
+fundamental difficulty or bind is that (a) /you are asking for money      
+to fund work that you haven't done/, and unless (b) you have a            
+substantial track-record to show that you /can/ do that work, and         
+unless (c) the hithertofore unheard-of result is actually /in demand/,    
+funding will not appear.                                                  
+                                                                          
+Succinctly, working on (c) is called "creating a pitch", and working      
+on (b) is called "creating a resume".                                     
+                                                                          
+In the parenthetical remarks attached to items 1-5 above, I've made a     
+tiny "resume" of my own successes, and I'm sure that collectively we      
+could note down many other successes we've had collaboratively.           
+                                                                          
+A good pitch will of course take features of its audience and the         
+broader landscape into account.  For example, after several years of      
+bad results, we could well ask whether CBPP is /really/ in demand at      
+the NSF -- or maybe it's approach that's wrong -- but either way,         
+other audiences may be more enthusiastic about CBPP, and finding them     
+seems like the best way to make a good pitch.                             
+                                                                          
+But (a) is the crux of the matter, and the more I think about it, the     
+more I come to believe that the way people do work traditionally is       
+just wrong for the kind of work that needs to be done for CBPP to         
+thrive.                                                                   
+                                                                          
+For one thing, people tend to be paid for well-understood tasks -- but    
+when I say that we'd like to fund work we haven't done, I mean that       
+sometimes we only have the barest outlines of what the work will look     
+like in advance -- the perimeter of an unknown territory, so to speak.    
+Someone funding this work would have to be comfortable funding people     
+to solve a /boundary value problem/, and presumably for that to           
+happen, they'd need to be fairly well acquainted with the specific        
+boundary or research frontier in question.                                
+                                                                          
+And for another thing, I mean that in a fairly global sense.  While it    
+is OK to pick away at one part of the frontier -- which is how            
+traditional research presumably works -- CBPP is such a heterogeneous     
+topic, ideas and contributions will presumably be coming from all over    
+the /traditional/ map.  (My own approach, as reflected in the above       
+parentheticals, includes philosophical anthropology, free software        
+development, creative writing, and nuts-and-bolts administrivia -- and    
+of course that's very far from being all.)                                
+                                                                          
+In this sense, funding CBPP is a bit like a koan -- how can you get       
+funded to take on the global aspects of a global problem? (which is to    
+say, a problem that in many aspects is best addressed in small pieces     
+by disparate individuals).                                                
+                                                                          
+Please make sure you're looking at all the right /meta-levels/ in the     
+above sentence!                                                           
+                                                                          
+One answer that occurs to me is to solve the problem /backwards/ in       
+this fashion: examine the economy of successful CBPP or meta-commons      
+project -- figure out where money is going to come from -- and then       
+just borrow money (perhaps from a suitable micro-lender) to be paid       
+back when the money flows in *later*.  (Presumably this is called         
+"creating a business model".)                                             
+                                                                          
+But another answer is to just do the work without borrowing money, and    
+without being sure where or whether funding will come from later, and     
+trust that it will.  (This is frequently described as borrowing the       
+money from yourself, via the marketplace that determines the              
+/opportunity cost of your time/.)                                         
+                                                                          
+A final answer could kick off a whole new essay -- so I'll put it in      
+the form of a question.  To what extent does the search for funding       
+and thinking about funding actually detract from one's or one's           
+community's ability to do work?                                           
+
+ * Keep trying! I am sure you will solve things satisfactorily. 
+I would like to point out that there is, from what I have seen,
+very little pure philanthropy; always there is another agenda.
+So what people will pay for, as opposed to just giving away,
+are tasks which they want done. As Dave Wolverton wrote in
+"On My Way To Paradise", "Money is society's way of saying 
+thank you." This means, I think, using your skills first, on 
+behalf of someone else's agenda -- for example, creating 
+a software product that meets their needs and which they will
+actually use. Then, if you have a satisfied "client", who may
+or may not have paid you any money, at least you have a reference
+which can be used as a form of currency elsewhere. Or you could
+just try to find a job working on a project that is related
+to your interests, so that, in effect, you are doing things the
+Microsoft Way: "Learn while we earn!" Or, perhaps you can create
+an online service and get paid for advertisements on your 
+website. Somehow you will juggle and alter the variables to succeed,
+but that might mean thinking outside of your own comfort zone,
+outside your own "box", so to speak. --[[file:ocat.org][ocat]]

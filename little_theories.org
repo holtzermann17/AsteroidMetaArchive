@@ -1,0 +1,13 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(should be merged with [[file:Little Theories.org][Little Theories]])
+----
+"Little Theories" is the title of a 
+[http://citeseer.ist.psu.edu/farmer92little.html 1992 paper] by Farmer et al, and expresses the principle that instead of trying to find a single privileged axiomatic basis, there should be different axiomatic systems for different areas of mathematics. These different axiomatic systems are then knit together using the technique of "theory interpretation", which is a simple mechanical translation so that theorems proved in one axiomatic system can be imported to another.
+
+[[file:Ghilbert Pax.org][Ghilbert Pax]] is very much inspired by the philosophy of little theories. In most cases, the theory interpretation is implemented entirely using Ghilbert's (rather powerful) definition mechanism. Further support is provided by Ghilbert's module system; proof files import the interfaces axiom systems they need (and only those axiom systems), as well as, without restriction, interfaces that contain proofs and definitions based on the primitives provdided by the axiom interfaces.
+
+----
+
+FYI [[file:rspuzio.org][rspuzio]] briefly described this paper to me... --[[file:jcorneli.org][jcorneli]]

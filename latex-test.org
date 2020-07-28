@@ -1,0 +1,85 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Is this working yet or what:
+
+$$ \int 2x \; dx = x^2 + C $$
+
+It is! It is working!!!
+
+$$ \mathcal{P}, \mathbb{R} $$
+
+Hmm... what about non-centered $ \sqrt{2} $  ... cool.
+
+How about with a label:
+
+\[(EPiI) e^{\pi i} = -1 \]
+
+So we see in EQ(EPiI) that ...
+
+The answer to the <nowiki>$64000</nowiki> question is "Euler's identity".
+
+----
+
+References:
+
+ * [http://www.oddmuse.org/cgi-bin/wiki/LaTeX_Extension main page for LaTeX module]
+ * [http://thelackthereof.org/wiki.pl/mathematical_markup another page with some more stuff demo'd]
+
+----
+
+ *Discussion*
+
+Because the <nowiki>$LatexSingleDollars</nowiki> flag has been
+set to 1, most of the Metamath pages are broken because
+of its <nowiki>$d, $a, etc.</nowiki> tokens.  Would it make sense
+to set this flag back to the default (double dollar)?
+(Also, any discussion of PM budgets etc. may be problematic
+for newcomers who haven't learned the nowiki workaround.)
+--[[file:norm.org][norm]] 27 Oct 2006
+
+We could do that.  I'm kind of partial to $-syntax, so what I've 
+done is make the $ parsing stricter: now the entire math expression
+has to be on one line, so you can get away with one unprotected dollar
+sign per line.  
+
+If we continue to have problems, I could disable it.
+
+(That's one line of /source/, by the way: you can introduce 
+extra newlines in your source to sparate a bunch of variables
+on line, as in $a,
+$b, 
+$c,
+$d, ..., in order to print them all without causing dollar
+signs to pair.)
+
+--[[file:akrowne.org][akrowne]] 
+
+Well, it is nice to be able to indent nested parts of a formula to help
+build it correctly and for source readability for anyone who later edits
+it.  My co-author and I tend to do that in our !LaTeX papers, even for
+in-line expressions unless they are simple.  Maybe other people could
+relate how they feel about it.
+
+<nowiki>Alternately, is some simple escape possible for
+regular $'s, like \$ (backslash
+$), in place of the verbose [nowiki]$[/nowiki]? </nowiki>
+That would be consistent with the "!LaTeX philosophy" of
+the single <nowiki>$</nowiki>.
+
+--[[file:norm.org][norm]]
+
+I spent some time looking for exactly some such escape in whtever Oddmuse
+documentation I could find, but I had no success.  Aside from the nowiki
+thing, which is clumsy, the only thing I could come up with was usng an ampersand 
+along with the ascii code which is not much more elegant.  Perhaps the thing
+to do here would be to contact whomever wrote the package to suggest adding
+such a thing to future versions --[[file:rspuzio.org][rspuzio]]
+
+By the way, insisting that both dollar signs be on the same line is not so
+good either because it is easy to run into lengthy !TeX code even for relatively
+short pieces of math such as
+"$\rho \colon G \times \operatorname{\mathbf{Obj}} (F) \to \operatorname{\mathbf{Hom}(F)}$"
+which I typeset recently and already takes a full line .  I really will have to 
+contact the author of the package about this and plan to do so in the next few
+days. --[[file:rspuzio.org][rspuzio]]

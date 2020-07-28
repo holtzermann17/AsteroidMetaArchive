@@ -1,0 +1,77 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* NNexus
+
+NNexus is the name of the stand-alone, generalized version of what was originally Noosphere's automatic linking system (the acronym roughly stands for "Noosphere Networked Entry eXtension and Unification System".  The double-capped 'N' is a rough substitute for \mathbb{N}).
+
+* What does it do?
+
+It best handles "definitional" linking between entry objects and separately-declared concepts for standardized bodies of knowledge being maintained collaboratively.  What does that mean?
+
+ * "Definitional" linking means that as you invoke a concept by name in the body of an elaboration, that reference should in turn become a hyperlink to that concept's elaboration.  This usage of hyperlinking is actually rather recent; most of the original hyperlinking on the web was /referential/ (e.g., "here's a related site" or "here's another area of this site") as opposed to /semantic/ in the present context.
+ * "Standardized" basically means that everyone is using the same set of /concept labels/ (natural language strings) to refer to the same underlying concepts.  While you may have synonyms, you generally will not have people just "making things up" as they go.  This is in contrast to the more classical wiki mode of ad hoc naming, which fits better to "brainstorming" type work.
+ * "Being maintained collaboratively" means that there are many individual contributors to the knowledge base.  They are acting largely-independently, asynchronously.  Some ramifications of this are discussed later.
+
+* History
+
+NNexus started as just part of the Noosphere system; as the linking subsystem.  It was roughly but not completely modular within the Noosphere codebase.  Its first incarnation dates to something like 2001, and in 2004 it underwent a major revision by [[file:akrowne.org][akrowne]] (addition of invalidation index and some rendering and caching changes) that hugely improved its scalability.
+
+In the summer of 2006, funded by the Google Summer of Code program, [http://mathcs.emory.edu/~jgardn3 James Gardner] (a computer science grad student at Emory University) under the direction of [[file:akrowne.org][akrowne]] separated the system out and completed its "modularization", with some enhancements made.   It was then christened "NNexus" ([[file:SoC_2006_Project_-_Improvements_to_the_autolinker|AsteroidMeta page for that project.org][SoC_2006_Project_-_Improvements_to_the_autolinker|AsteroidMeta page for that project]]).
+
+After the summer of 2006, work continues on NNexus, for "client" Jim Pitman (Berkeley stat prof and open access advocate extraordinaire), funded by the IMS (which Pitman is prez of for 2006-2007).  Gardner and [[file:akrowne.org][akrowne]] are still doing the work.  In this contract, NNexus is being applied to Jim's lecture notes to help make them more useful to students, with the enhancements being largely along the lines of systemitizing the configuration and deployment, and making better use of multiple linking domains (destination knowledge bases).
+
+* Getting the Code
+
+There's information regarding the SVN repository and releases available [http://aux.planetmath.org/nnexus/ here].
+
+* The problem
+
+At first blush what NNexus does seems like it might be trivial, but it definitely is not (as we learned the hard way with more "naive" versions of the system on PlanetMath).   A collaborative knowledge-base environment with standardized knowlege represents a couple of key problems, besides just matching strings:
+
+ * the knowledge base is being updated continuously
+ * it is difficult if not impossible for a contributor to know what is already in the database for linking (this gets worse if multiple, "separate" knowledge bases are to be linked)
+ * maintaining links from all entries to all other appropriate entries represents an $\mathcal{O}(n)^2$ problem, or $\mathcal{O}(mn)$ *repeated every time there's a change to the collection* (where $m$ is the typical number of concept labels per entry).  This is obviously a scalability problem.
+ * synonyms quickly become a major problem in some subject domains (e.g. mathematics).
+
+Wikipedia (and to some extent wikis in general) deals with these problems in the following ways:
+
+ * links are manual and explicit
+ * links to concept labels not defined in the knowledge base become special "dangling" links that hint other members should do something about them
+ * at least two orders of magnitude more contributing participants to address the $\mathcal{O}(n)^2$ aspect (compared to more specialized sites like PlanetMath).
+ * "recall", the fraction of links that /should/ be created which actually are, is sacrificed  in favor of precision (it is unlikely that manual links to the wrong target will exist/persist).
+
+This approach might not be desireable for a number of reasons; manually delimiting each link is extra work for the author; dangling links are distracting/unprofessional; not every project will have thousands of active contributors; and recall might be more highly-valued.
+
+PlanetMath went the other way on all these points.  Thus, NNexus takes a different approach by automating the linking process up front, taking advantage of the meta-information in the knowledge-base (most of which would be there anyway, some of which is captured at a low additional cost from contibutors).  Then it adds some facilities to address link precision, which only needs to be used relatively rarely.  
+
+Some computational sophistication is requirede to pull this off, discussed in the next section.
+
+* How it works
+
+Here's a high-level outline of how it works:
+
+ *Linking an entry.*
+
+ 1. whenever an entry is created or submitted with changes (or forced to be re-scanned), it is tokenized and the text terms are scanned for linking.  the scanning is morphologically-invariant (pluralization, possessiveness, internationalization, etc.).
+ 1. the text is checked against a chained-hash index of concept labels in the system; this is the concept dictionary.  This is used to validate a match in a particular location.
+ 1. the first instance of a match is stored for later linking.  There may be multiple potential target entries, at this point.
+ 1. for each match with multiple targets, entry subject classification as well as domain and other priority meta-information is used to select the best target.
+ 1. when a target is settled upon, the matches are created as hyperlinks.
+
+ *Updating entries.*
+
+ 1. whenever an entry is added, concept labels are added to a database (labels, including additional defined terms or synonyms, may also be added to entry later).
+ 1. but we aren't done yet: we must check to see if any of the old entries needs to link to it (correspondingly, if a label is removed, we must check to see if any old entries must have their links removed).
+ 1. we use a special variant of an inverted index called the /invalidation index/ to look up entries that likely link to the concept label.  this gives us a relatively small set of candidate entries, which are invalidated (marked as "invalid" in a cache table), and generally reprocessed for linking before being viewed again.
+ 1. so whenever an entry is added, its text body must be added to this index.  this process works much like building a traditional inverted index (as in search engines like Lucene), except that frequent phrases are indexed adaptively, in addition to individual words.  This allows us to minimize entry invalidation (e.g., adding the concept "euler polynomial" should invalidate fewer entries than all those that contain the word "euler", given that "euler polynomial" is likely to be a frequent phrase in the collection).
+
+This produces a knowledge base that can be guaranteed to have "complete" and up-to-date linkage by the time they are viewed (as long as "invalid" entries are re-scanned before being viewed).
+
+There are many other details implicit in the above description, like how linking is overridden or "steered" manually, how classification and other metadata are taken advantage of, and what guarantees can be made about entry "freshness" given various schemes for the timing of analysis and and rendering, but you can refer to the papers below for more.
+
+* Publications
+
+ * [http://br.endernet.org/~akrowne/planetmath/papers/nnexus_mobcops06/nnexus-mobcops06.pdf Short paper] for !CollabCon !MobCops workshop, 2006, introducing NNexus and the summer work as planned (pre-!SoC 2006).
+ * JCDL07/WWW07-dev  [http://br.endernet.org/~akrowne/planetmath/papers/nnexus_jcdl07/li-jcdl-submit.pdf long paper] introducing the system, with more architectural details (post-!SoC 2006).
+ * [[file:akrowne.org][akrowne]]'s [http://scholar.lib.vt.edu/theses/available/etd-09022003-150851/ thesis].

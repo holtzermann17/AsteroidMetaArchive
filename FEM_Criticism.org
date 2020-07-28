@@ -1,0 +1,41 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is dedicated to, hopefully, constructive criticism of the [[file:FEM.org][FEM]] project.
+
+** The Actual Criticism
+
+Written by [[file:alozano.org][alozano]]: My starting point is what is the actual end-user we have in mind for this? This ties with some other points like "can we sell this thing" or more specifically "can we produce PM income selling this thing" or even more particular "would libraries be interested in this"?
+
+My take on the previous questions is that no matter what the end-user is, the FEM will not be worthy until some requirements are satisfied: 
+
+: * First and foremost: any published reference work must be reviewed and must have references to previous work, at least in the mathematics world and science in general. As such, I don't think the FEM is ready to be published or sold for what it is. The work must be accurate, the published work should be 100% accurate to the best of the editor's knowledge. PlanetMath entries, eventhough there is a correction system in place, are by no means accurate nor reviewed by the standards I am talking about in here. 
+
+: * A published reference work must have a minimum amount of quality, i.e. every entry should have a bare minimum of expository work, clarity. PlanetMath entries, in many cases, lack both expository work and clarity (and accuracy, which is covered by the previous point).
+
+: * The last resort is to explicitly write a disclaimer which states the points above: that the FEM lacks accuracy, overview and peer review. But this is just a shame and embarrasment. However, an interesting view of this is given in a suggested [[file:FEM_Preface.org][FEM_Preface]].
+
+So how can one improve the FEM to the point that these items are satisfied. First, I would require that every entry which is going into the FEM has references or bibliography attached to it (see for example MathWorld as an example of documented entries). And I would create a verification system in PlanetMath, so entries can be checked by authors and the authors can report that the entry has been read and verified. This, at least, will give us an idea that the entries have indeed been revised by at least one member. In some sense, matte's real number project already aims towards this goal of checking the work of others. I am just suggesting an easier way to deal with this, without having to come to the Wiki to list every entry which has been read and approved. 
+
+As the FEM stands, I don't think institutions would be willing to put a copy on the shelves of their libraries. Actually, I would not recommend any institution or library to put a copy in the reach of the fragile minds of students who may learn the wrong concepts. In particular, Mathematics departments, from my experience, would agree with the above points and would not settle for less. In fact, why settle for less when we already have reference works which are properly documented and reviewed by others. --[[file:alozano.org][alozano]]
+
+I agree. In my work/research I have used PM maybe less than five times as a real math 
+reference. When I have used it, it has mainly been to check properties for the inverse 
+image and other trivialities. On the other hand, I do use Wikipedia. They have better 
+coverage, and more exposition. Even if entries on WP are not as detailed 
+as PM, they spell out the general idea. This is what one should expect of an encylopaedia. 
+
+This does not mean that I do not find PM useful. Browsing random entries is fun
+and educating. I have learned a lot. The same thing goes for proofreading and 
+writing entries. I also support the FEM project as is, i.e., the "FEM-technology".
+Currently it is very difficult to get a bird's eye view of PM. If we would have 
+nightly pdf builds of the corpus, that would be very useful. 
+
+Ideally I think the FEM should be build around projects (like the real number project).
+In other words, IMO the basic unit in the FEM should be a topical entry, not a a 
+PM-entry. For example, once the pdf for the real number project is ready, we could create 
+a "short version" for the FEM that goes through the basics. For example, in the 
+short version, proofs could be given by just listing the proof's entry ID on PM. 
+--[[file:matte.org][matte]]
+
+: I agree with matte, PlanetMath is not an ideal math reference as it stands. Of course, I still think PlanetMath is *great* as a community and its goals and stuff. But, as a reference, one has to be very careful how PM is used. I don't even trust my own entries sometimes! But it is very useful to me because I record in PM results that I believe are important and that I will check sometime in the future. And I do use PM in that sense a lot, just to refresh my memory on some important theorems or definitions. Then, if I want to make sure of the details then I go to the reference I list. That's why I think it is essential to have references in every entry, so one can always doublecheck the definition. --[[file:alozano.org][alozano]]

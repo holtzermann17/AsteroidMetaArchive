@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The theme on PM (color scheme, some basic layout things) should really be updated, improved, and modernized.  Much of this is doable changing defaults in the CSS, though the CSS might need to be more fully worked into the templates to really do everything elegantly.
+
+I started to feel like this was really needed after seeing the more recent drafts of the FEM.  The reference links in there look much better, because they arent underlined and aren't a radically different color than the rest of the text (maybe this was just a side effect of my pdf viewer?)  So, they are visible, but not so garish.  In general I think the site could look better with just a small amount of work by someone who has an eye for graphics.  I am shocked it has gone so long with my non-designed design.

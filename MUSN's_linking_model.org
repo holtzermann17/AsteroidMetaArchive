@@ -1,0 +1,42 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a more formal, and yet also more down-to-earth follow up to
+[[file:Arxana's linking model.org][Arxana's linking model]].
+
+* Basic version
+
+I have a set of strings, S.
+
+I have a set of ordered triples of elements from S.
+
+I'm calling each ordered triple a "labeled directed edge"
+or a "relationship" or a "link".
+
+* Slightly more complicated version
+The thing is, I really do want to be able to very literally annotate
+a given link, and for this, more in line with my
+initial description, I'd want
+
+I have a set of strings, S.
+
+I have a set of ordered triples T of elements from S or
+elements of T.
+
+Now it is possible to annotate whole relations ("this link
+is bunk") and the labels on relations ("this predicate is an example
+of this other predicate").
+
+
+* Regarding simplicial complexes
+Ordered triples certainly
+do sound like good old triangles. At least, that was working
+out in the first description. 
+
+* Regarding implementation
+
+Either of the models can be implemented with a very simple database.
+
+* Where do we go from here?
+
+Lisp.

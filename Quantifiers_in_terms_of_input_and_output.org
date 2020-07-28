@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Logical statements which appear in mathematical usage may be understood in terms of predicate logic.  As we shall see, the quantifiers of predicate logic have a simple interpretation in terms of input and output.  This interpretation is nothing particularly new; it is merely a way of thinking of the laws of specification.
+
+Given a statement in [[file:prenex form.org][prenex form]], one may use the laws of specification to strip off the quantifiers one-by-one and replace them with variables.
+
+If the quantifier is a universal quantifier (i.e. "&forall;"), then the law of universal specification applies.  This law states that we may replace all occurrences of a variable which the quantifier binds by any other variable or expression.  Depending on the details of how bound variables are dealt with, we may or may not need to add a stipulation that one cannot allow this variable to be a variable which is bound by another quantifier (or an expression involving such a variable).
+
+If the quantifier is an existential quantifier (i.e. "&exist;"), then the law of existential specification applies.  This law states that we may replace all occurrences of the variable which the quantifier binds by a symbol which has not yet been assigned a meaning.  When this is done, the scope of the new variable is limited by the statement into which it has been substituted.
+
+This may be seen as an input-output relation of sorts.  The expressions which are to be substituted for the universally quantified variables can be regarded as input and the variables instantiated by the process of existential specification as output.
+
+It is important to not that there may be dependencies amongst the variables.  Any variable introduced via an existential specification will depend upon all the variables which have been specified prior to it.  For instance, if we apply universal and existential specification to the three quantifiers in the statement
+
+: (&forall; x) (&exist; y) (&forall; z) &thinsp; (x > z) &rarr; (y > z),
+
+then the variable instantiated by applying universal specification to "(&exist; y)" will depend on the choice of replacement for /x/, but not on the choice of replacement for /z/.
+
+
+[[file:Discussion of quantifiers in terms of input and output.org][Discussion of quantifiers in terms of input and output]]
+
+Back to [[file:theorems as transformational rules.org][theorems as transformational rules]]

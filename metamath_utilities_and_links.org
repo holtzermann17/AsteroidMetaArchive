@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Metamath utilities and links
+
+_About this page_
+
+This page is intended to host utilities, links and other 'supporting' materials which help the Metamath and friends users.
+
+_RSS feed for recent proofs_
+
+In order to support my Metamath reading habits, I've created an RSS feed for new Metamath theorems as they appear in Norm's recent proofs page. The link is http://www.gimal.com/rss/mmrecent.xml and it renders ok in Firefox 2.0 and Liferea which I use.
+
+Notes:
+ * It would be better to generate the feed automatically from Norm's programs (which I already implemented sometime in the past but it got a little bit of dust on it, and if there is a need i may dig it up).
+ * The current version scrapes the recent proofs site (pretty simple perl code).
+ * It is currently updated 3 times a day and home-hosted.
+
+- dan 22-Nov-2006
+
+-----
+
+Thanks, [[file:dan.org][dan]].  I tried with !InfoRSS and it looks
+nice; the Unicode renders well.
+I added a link to your RSS feed on the
+[http://us2.metamath.org:8888/mpegif/mmrecent.html mmrecent] page.
+It would be interesting to know if Unicode renders on other RSS readers,
+since it 
+[http://us.metamath.org/fontcompare.gif doesn't render] in Internet Explorer.
+-- [[file:norm.org][norm]] 26 Nov 2006
+
+----
+
+Hi [[file:dan.org][dan]].  Thanks from me as well!  'tworks in !InfoRSS, indeed.  But not as a Firefox 'Live Bookmark', unfortunately: I get the error "Live Bookmark feed failed to load".  The following quote (from http://reinventedsoftware.com/support/feederfaq.html#livebookmarks) might explain why.
+
+:  Live Bookmarks for my feed fail to load in Firefox.
+
+:  If your feed works in some RSS readers like !NetNewsWire or Safari, but you see a "Live Bookmark feed failed to load" message in Firefox, this is because the items in your feed do not have links. Firefox needs a link to give the user somewhere to go when they select the Live Bookmark.
+
+:  To add a link to your items, enter an http:// web address in the Article Link field for each item.
+:  
+:  If you do not have a specific link for each item, use your site's URL.
+
+But I'm not really sure that this is the cause, since you do have links in there.  Perhaps some RSS format not understood by (my version of) Firefox?  Anyway, just thought you might like to know.  (Oh, this is Firefox 1.5.0.8 on Gentoo Linux, by the way.  Haven't been able to test on Windows Firefox 2.0 yet.)
+-- [[file:marnix.org][marnix]] 29 Nov 2006
+
+-----
+
+Hi [[file:marnix.org][marnix]]. I fixed up the RSS feed a bit (now its conforms to RSS2.0 standard). I tested it with Live Bookmark and it works. Hope this helps.
+
+-- [[file:dan.org][dan]] 29 Nov 2006
+
+Yup, it works great now.  Thanks for the fast fix! -- [[file:marnix.org][marnix]] 29 Nov 2006

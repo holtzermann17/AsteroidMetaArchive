@@ -1,0 +1,70 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The theory delineated here is meant to be a framework within which one can describe
+what it means for something to be well-defined in a relative, rather than an
+absolute sense.  The inspiration, of course, comes from physics, where one realizes
+that it is not possible to discuss such entities as velocity maningfully in an absolute 
+sense, but instead needs to speak of them in reference to a particular observer.  While
+the laws of physics are the same for all observers, to apply them one needs to specify
+a frame of reference.  As with its prototype, this abstract theory comes both in a 
+special and a general version.
+
+This theory of reference frames presented here comes from Weyl's "Classical Groups", 
+where he presents it as a formalization of both Klein's Erlanger Program and of the
+relativity principle in physics.  Hoping to apply this even further afield, I have 
+added a few generalizations.  While Weyl considered groups of automorphisms I extend
+to semigroups because that seems necessarry in the more general context.  Indeed,
+Weyl himself points out that the theory needs to be extended but does not do so
+because it suffices for his purposes --- after all, the title of his book is not
+"Classical Semigroups".
+
+Another extension of the theory is the analogue of general relativity.  There,
+what one has is local Lorentz frames attached to events rather than the global
+frames of reference of special relativity.  In the broader context, this means that
+one has a category rather than a semigroup.  To each object in the category, one has
+its subcategory of automorphisms.  These can be handled as above.  Then one needs to
+specify how the reference frames corresponding to different objects are to be
+related to one another.
+
+ *Definition:*
+Let $G$ be a semigroup with identity element $\mathbf{1}$.  (The requirement of identity is 
+not too crucial because we can always append an identity element to a semigroup which does not 
+already have one.)  A /system of reference frames/ with /relativity semigroup/ $G$ consists of 
+a category $F$ (whose objects shall be termed "frames of reference" and whose morphisms shall be
+termed "transitions") and functions 
+$\tau \colon G \times \operatorname{\mathbf{Obj}} (F) \to \operatorname{\mathbf{Obj}}(F)$ 
+and
+$\rho \colon G \times \operatorname{\mathbf{Obj}} (F) \to \operatorname{\mathbf{Hom}}(F)$ 
+such that the following conditions hold:
+
+ 1. $\rho (x, a) \in \operatorname{\mathbf{Hom}} (a, \tau (x,a))$
+
+ 1. $\rho (x \cdot y, a) = \rho (x, \tau (y, a)) \circ \rho (y, a)$ 
+
+ 1. $(\forall a \in \operatorname{\mathbf{Obj}} (F)) \, \rho (\mathbf{1}, a) = \mathrm{id}_a$
+
+ 1. $(\forall a,b \in \operatorname{\mathbf{Obj}} (F)) \, \# {\mathbf{Hom}}(a,b) \le 1$
+
+Next, we shall note that, for every semigroup $G$, there exists a system of frames $F$ with $G$ 
+as relativity semigroup.  A trivial way to do this is to choose $F$ as the category with exactly
+one object and one morphism.  A non-trivial way is what we shall term the "canonical system of 
+frames":  
+
+ *Definition:*
+Let $G$ be a semigroup with identity.  Define $F_\mathrm{can} (G)$, $\rho_\mathrm{can} (G)$,
+and $\tau_\mathrm{can} (G)$ as follows: Let
+$\operatorname{\mathbf{Obj}}(F_\mathrm{can} )$ be the underlying set of $G$ and let 
+$\operatorname{\mathbf{Hom}}(a,b)$ be the empty set if there is no $g \in G$ such that
+$g \cdot a = b$, else let it be $\{ \{g \in G \mid g \cdot a = b\} \}$.  Define a composition 
+operation by $a \circ b = \{x \cdot y \mid x \in a \land y \in b\}$ and define
+$\mathrm{id}_a = \{ g \in G \mid g \cdot a = a\}$. Furthermore, define 
+$\rho (x, a) = \{ y \in G \mid y \cdot a = x \cdot a \}$ and
+$\tau (x, a) = x \cdot a$.  
+
+It is straightforward to verify that $F_\mathrm{can} (G)$ is a sytem of frames for $G$.
+
+ *Theorem:*  If $G$ is a semigroup with identity, then $F_\mathrm{can} (G)$ is a system
+of frames for $G$.
+
+ *Proof:* To begin, we verify that $F_\mathrm{can} (G)$ is indeed a category.

@@ -1,0 +1,195 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I had a few thoughts that you may or may not find useful:
+
+Your reference to the past is interesting and fertile.  In
+particular, I believe that our current notion of a book as a fixed
+entity is largely a product of the circumstances surronding use of
+the printing press.  As an opposite example to the mediaeval
+tendency to expand and comment on scripture which you mention, one
+might cite the Biblical literalists who trace their roots to the
+Reformation (scriptura sola) which made heavy use of the newly
+developed technology of printing.
+
+A concommittant product of the era of printing is the modern notion
+of author.  Etymologically, "author" and "authority" are twins.  In
+ancient times, the author of a work was the person on whose
+authority it was based, not necesssarily the person who wrote it
+down.  For instance, it is often pointed out that, say, the Gospel
+according to Mark may or may not have actually been written by John.
+Rather, what it meant that Mark was the author is that he was the
+authority on whose account the work is based.  (Try telling that to
+a fundamentalist!)
+
+To me, it seems that perhaps the important aspect, as far a
+conference for a largely non-technical audience goes might not so
+much the particular computer program but the
+philosophico-sociological "scholium concept" which it embodies.  As
+you point out already such a notion is already to be found in such
+contexts as point-to-point filesharing and colloaboratively built
+libraries, although perhaps not in so focussed a form as in your
+sholium system.
+
+Because it contradicts the paradigm of a book as a fixed work
+written by a fixed set of authors which is the unquestioned norm
+from the age of printing, this new mode of production raises several
+novel questions.  I mention two of them below:
+
+A librarian in the age of the press was understood as a curator who
+collected and catalogued books.  If, in the digital age, many works
+will be continually evolving and have all sorts of authors, what
+will the role of a digital librarian be?  For instance, will the
+librarian also be concerned with cataloguing the different versions
+of works?
+
+Copyright law is based on the way things work in the world of print,
+so it is essentially designed to deal with fixed works by a fixed
+set of authors.  In particular, the notion of derivative works is
+designed to apply to whole works based on other whole works.  In a
+document written extensively using a scholium system, the boundary
+between co-authors of the original work and authors of derivative
+works can get strained or blurry.  Is there a better system of
+protecting the interesest of the parties involved which we can
+expect to see in the digital age? --[[file:rspuzio.org][rspuzio]] 30 march 2005
+
+One more thought (likely not directly relevant, but perhaps worth
+considering): Like "scholia", the notion of "knowledge community"
+has a medieaval ring to it.  Just think of the monasteries of
+Christianity and Buddhism or, looking back a bit further, the
+philosophical schools (which formed a continuum with the religious
+traditions just mentioned at one extreme).
+
+During the middle ages, it was not common for an artist to sign his
+work.  That practise seems to be rooted in the individualism of the
+Rennaisance and the idolization of the Romantic period.  Thus, the
+modrn concept of "work" and "author" are definitely localized in
+time and, hence, I would think that they should not be taken for
+granted and definitely could change.  In particualar, such penomena
+as scholia-base production suggest that the time might be ripe to
+re-evaluate these notions. --[[file:rspuzio.org][rspuzio]] 30 march 2005
+
+Regarding your comment about "librarians" in this age of distributed
+authorship and potentially fuzzier or fringier texts -- my draft
+currently contains this statement:
+
+: For our purposes, the document and the library are essentially
+synonymous.  When we wish to refer to elements of the library in a
+generic way, we will call them /articles/.
+
+But as I mention in a footnote to one of the supporting files:
+
+: Later we might consider allowing entire libraries as articles, but
+for now we support only simple documents. More complicated articles
+would need a more complicated access mechanism.  Sub-library support
+would probably lead to fairly significant changes to the code.
+
+My initial response about libraries & librarians is: first, there
+will be some DIY librarian-style demands placed on users and
+maintainers of any given scholia-based document.  Presumably the
+codebase will include some standardly-useful functions, for
+accessing articles by various critera: title, author, type,
+contained regexps, graph-theoretic properties of the article
+relative to other articles, and boolean functions of these things.
+
+Sub-library support might not be so different: one could supply a
+"prefix" that would get such article-level cataloging functions to
+run at the right level(s).  To be sure, it gets increasingly
+difficult to hold in one's head, but that's what computers are for.
+
+Other complications (and benefits) are created by the fact that some
+scholia may have "actionable" characteristics, which could even be
+set up to interface with librarian-style operations.  E.g. a
+scholium might be able to tell a sufficiently sophisticated search
+processes: "Hey, search process, if you like me, you'll also like
+these children and cousins of mine, and here's how I think you
+should should display us all to the user."
+
+And regarding "authorship" - I didn't know that about /author/ and
+/authority/, but it makes good sense.  (Many classical authors are
+"only known to us through the writings of their students.")
+
+The problems of /crediting/ an author and /ownership/ of text
+are issues of contemporary concern that the scholia-based system has
+to confront.
+
+Whether or not one agrees with the usefulness (or chooses to
+acknowledge the existence) of the notion of "intellectual property",
+copyright law continues to be relevant to just about everyone.  And
+there are other reasons, apart from copyright, to keep records of
+changes and who made the changes (esp. quality control).  
+
+Wikipedia and PM both maintain edit histories.  Despite the fact
+that one can edit Wikipedia "anonymously", I would assume that they
+keep track of IP addresses, so that no edits are truly anonymous
+(unless one does anonymization at the IP level, perhaps by hoping
+from cafe to cafe ;)... or using proxies or other things I don't
+understand... and one is usually tracked down by the feds anyway, if
+such tracking is required).
+
+Both the scholia-based system and GNU Arch (and other similar
+version managing systems) have the challenging job of keeping track
+of all of the authorship/edits metadata that is created when one
+makes derivative works.  In theory, this information could (or maybe
+even "should") be tracked all the way down to the level of single
+characters, believe it or not, assuming someone is willing to
+acknowledge copying that character from some other source.  As you
+can imagine, trying to hold all of this metadata in ones head is
+also "increasingly difficult" (i.e. quickly becomes mindblowing).
+
+There are (historically) two ways to make derivative works: one is
+to copy and modify the writing of one or more other persons, and the
+other is to simply combine several writings (including "your own new
+writing", which is what a scholium is).  These two approaches may
+seem different... but within the scholia-based system as I envision
+it, they /may/ not end up being all that different.  (But I'm not
+sure about that yet.)
+
+You say: 
+
+: the boundary between co-authors of the original work and authors
+of derivative works can get strained or blurry
+
+and I would just emend this to say that things /shouldn't/ get too
+blurry if we're keeping track of ownership down to minute levels.
+The semantics may be tricky, or not, depending on our definitions.
+
+If A includes writing from B, then I would say that B is a
+"co-author" of the resulting work, though perhaps an unwitting one.
+Maybe B would not be considered to have co-author status in today's
+world (but then again, in most of today's world, A would be
+considered to be a criminal in this scenario).  To me, if B has
+written part of the text, B is a co-author.  However, in the event
+that A only comments on writings of B, then A is a co-author of "B's
+work plus commentary".
+
+The involvement of a witting (as opposed to unwitting) co-author may
+be "more valuable" in some ways... or at least, /more expensive/,
+because it does take some time and energy to use ones wits (and ones
+initial writings can be valuable even if one stops pursuing them
+personally).
+
+The job of tracking "value" as it flows through intellectual works
+is a challenging one.  (My dad was working on this problem for a
+time as part of his graduate work in economics, and I remember
+reading & being interested by some of his notes.)  Presumably the
+scholia-based system can provide some "hooks" that would help people
+track value... and they could then use this derived information to
+decide things like who gets a raise, who gets hired, who is cool,
+etc.  Rating systems, scores, bla bla bla, could all potentially
+come into play in various ways to help locate value in the first
+place.
+
+Now here's an interesting thought: one could set up an article to be
+"slippery" (so that no scholia could attach to it) but still let
+other people copy.  Then one could charge folks for the right to add
+scholia.  This would be sort of like paying to have a low Erdos
+number.  Or things could go the other way, and one might end up
+paying people to take their scholia down!
+
+All of the different freedoms, anti-freedoms, arbitrage
+opportunties, etc., should be assessed and considered.  There may
+not be any one "right" economy of prose (ha ha); different economies
+could work well for different authorship groups or "knowledge
+communities".
+--[[file:jcorneli.org][jcorneli]] Sat Apr 30 18:27:43 2005 UTC

@@ -1,0 +1,133 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Welcome!
+
+Welcome to the first edition of the Asteroid Bulletin.
+
+This will be a weekly chronicle sent to you by the people
+working on !AsteroidMeta
+
+(http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/HomePage).
+
+You could be - or easily become - one of these people.
+
+!AsteroidMeta (or AM for short) is - as you may already know -
+used in the administration of PlanetMath, Noosphere, and several
+other projects.  This bulletin reports on our activities of the
+past week, and is designed to help us keep you informed - and to
+help you get involved.
+
+If something from this bulletin grabs your attention, feel free
+to follow the relevant hyperlink and add your comments directly
+to the wiki.  This is an easy way to become famous, since you
+will then very likely be mentioned the next week's edition of
+the Bulletin!  Alternatively, you can post followups in the
+forum in which you find this copy of the Bulletin.
+
+We hope you will find our endeavors interesting.  We look
+forward to hearing from you.
+
+-- Joe Corneli, editor
+
+*  Summary of the past week's activities
+
+ * beginning work on NSF ALT and NDSL grants (more below)
+ * discussion: should we add literate programming features to Noosphere?
+ * continued work on template utilities (more below)
+ * discussion: merits of various languages and software systems (LISP, HOL)
+ * discussion: how to get more community involvement
+  * created bulletins, schedule, commons
+ * added a couple new project overviews (!FreeCyc, GCIDE)
+
+
+*  Upcoming visit to Wolfram
+
+Aaron Krowne (PlanetMath founder and head admin, and PlanetMath.org, Ltd.
+ director) will be in Urbana-Champaign Illinois from April 3-5, 2005, 
+visiting Wolfram Research.  For those not so acquainted with the background
+of PlanetMath, Wolfram (producer of /Mathematica/) has been hosting the 
+!MathWorld mathematics reference site /gratis/ since 2000 (!MathWorld was a
+ major inspiration for PlanetMath).
+
+Wolfram (more specifically, the !MathWorld staff) invited Aaron to come and
+speak about PlanetMath.  The talk he will give will be technical in nature, but
+he will also likely spend a lot of time [http://www.webhostingart.com web hosting] discussing policy, mathematics
+education, business matters, and potential for collaboration with the Wolfram
+folks.
+
+Slides of the talk will be linked to on AsteroidMeta as soon as they become
+available, and there will surely also be lots of reports from the trip and 
+discussion about it when Aaron gets back.
+
+*  Feature: Template processing
+
+Ray Puzio (aka rspuzio) has been creating and documenting some code for doing
+substitution.  If you're interested in metamathematics or computer math, you
+might want to take a look here:
+
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/template_utilities
+
+The system is still undergoing some change and development, so this is
+sort of a sneak preview.
+
+The utilities should be done sometime in the next week if all goes well, but
+there will, as usual, be extended polishing work going on afterwards.  They will
+be used as part of the HDM project's first protype proof checking subsystem.
+
+The style in which the utilities are written is worth describing briefly.  The
+code is written as a sort of "literate program", specifically, it is made up of
+LISP code written and documented in hypertext.  The result will hopefully be
+something that someone with only a little programming experience and a little
+familiarity with LISP can read and understand completely.  The author has found
+that writing in a literate style pays off by allowing one to write correct (or
+nearly correct) programs the first time around.
+
+
+*  NSF ALT and NSDL grants
+
+We need funding for PlanetMath and connected efforts (if you don't believe us,
+check out the lists of TODO items on AsteroidMeta)!  One way to do this is to
+get grant funding of the type the National Science Foundation (NSF) provides.
+Deadlines are fast approaching for the NSF's Advanced Learning Technologies
+(ALT) and National STEM Digital Library (NSDL) grant programs, and PlanetMath
+(and other related efforts) are good candidates to receive funding under these
+programs.
+
+If you want to see PlanetMath survive, grow, improve, and spawn other great
+projects, head over to the Grant Planning page on AsteroidMeta and lend a hand.
+
+We would especially like to hear from people who can help write the proposals,
+or who have a history with grant projects and want to sign on as PIs.
+
+Which brings us to...
+
+*  Volunteers sought
+
+ * We could use some people with good writing skills - and especially
+people with grant writing experience - to help with grant writing.
+A good place to get started would be here:
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Grant_planning
+
+ * We could also use the help of programmers or power-users
+who are interested in improving the Noosphere system, especially
+helping make the system easier to install improving its
+documentation. See
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Noosphere
+
+If you're interested in volunteering, you can leave us a note here:
+http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Commons
+
+*  Discussion of this week's bulletin
+
+Hi guys, go ahead and edit away, add summaries, details, links,
+articles or whatever.  This discussion section will disappear in
+the "published version", so if you find something here you want
+to discuss, add your comments here.  --[[file:jcorneli.org][jcorneli]] Thu Mar 31
+02:17:36 2005 UTC
+
+Adjusted name of page to reflect release date.  Other slight
+updates.  Would be good to see more details.
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 20:55:59 2005 UTC
+
+I added details (not too many --- I actually retrained myself from overwriting :) ) about template utilities. --[[file:rspuzio.org][rspuzio]]

@@ -1,0 +1,5 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Check the [[file:Bugs.org][Bugs]] page and Bugzilla.  Move tasks from [[file:PlanetMath bugs.org][PlanetMath bugs]] section to Noosphere section
+as appropriate.  Fix the bugs and get code into Noosphere.

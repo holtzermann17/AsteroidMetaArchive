@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What
+
+The official real-time-chat forum for PlanetMath (both the site and the nonprofit org)
+is on Internet Relay Chat (IRC).  
+
+* Where
+
+The address info is:
+
+ * server: *irc.endernet.org* or *br.endernet.org*
+ * channel: *#planetmath*
+
+* How
+
+There are a smorgasbord of clients that support IRC for all platforms:
+
+ * [http://www.mozilla.org/projects/rt-messaging/chatzilla/ ChatZilla] (all)
+ * [http://www.ceruleanstudios.com/ Trillian] (all)
+ * [http://www.xchat.org X-Chat] (linux, mainly)
+ * [http://www.mirc.com mirc] (windows)
+ * [http://gaim.sourceforge.net gaim] (linux, mainly, but also windows)
+ * [http://www.irssi.org irssi] (linux console)
+ * [http://www.emacswiki.org/cgi-bin/wiki/EmacsIRCClient erc] (emacs)
+
+Here are [http://www.emacswiki.org/cgi-bin/wiki/ErcCommands some basic commands], for those untrained in
+such things.
+
+* Why?
+
+We plan to hold board meetings by this medium (time will tell how well that goes).
+
+Other than this, its handy to have a real-time-chat forum for general, informal
+communications.  Real time chat has a unique ability to foster very rapid 
+collaboration.  And in general, those who enjoy this format can stay better-connected 
+with the community.

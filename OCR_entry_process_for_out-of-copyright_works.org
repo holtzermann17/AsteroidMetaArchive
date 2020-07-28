@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We should get a system in production for scanning, OCRing, proof-checking,
+uploading, and subdividing previous works on mathematics into the !PlanetMath
+database.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Now that I got back to the "Lost Ark Books", the is at least the beginning
+of preliminaries to this project.  However, while browsing the net, I
+noted that there is a major change since the last time --- nowadays
+Jstor and Google have made lots of books available online.  The former is
+a closed service, only available to people at subscribing institutions, so
+they are not of much use and we would need to obtain our own copies ot
+books which they offer.  Google has made a lot of old books available to
+the general public and has made a good number of them which are in the public
+domain because they were published before 1923 available as graphics files 
+in PDF format.  Thus, for old books, we can start at the OCR step.  As for
+more recent books, we first need to figutre out which ones are in the public
+domain either because their copyrights had not been renewed or for other reasons,
+which is the goal of the Lost Ark project.
+
+--[[file:rspuzio.org][rspuzio]]

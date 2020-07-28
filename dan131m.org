@@ -1,0 +1,17 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Daniel McLaury is a junior at Caltech majoring in math and English literature.  In his free time he is interested in jazz music, football, and the art of the classic cocktail.
+
+* Math-Enabled Search
+
+I am in the progress of moving discussion to [[file:math-enabled search.org][math-enabled search]].
+
+
+* Noosphere Sources?
+
+Update:  I submitted my summer of code proposal to Google today.  I've set up lucene and I've got all the prerequisites for Noosphere running, but the actual link to the page that tells me where do download the sources seems to be broken.  Can someone point me to a mirror or something?
+
+Thanks, [[file:dan131m.org][dan131m]]
+
+: Ok, the link at http://aux.planetmath.org/noosphere/ was broken due to a security change, but now it is back.  Let me know if you can get the sources.  I should note also right now that the code base is in a bit of flux, as I'm migrating things to apache2/mod_perl2 support.  I don't think I've checked in these changes yet, though.  --[[file:akrowne.org][akrowne]] 

@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+IsarMathLib is a library of proofs that have been checked with Isabelle proof assistant. This is similar to [[file:The Archive of Formal Proofs.org][The Archive of Formal Proofs]], except that IsarMathLib is organized more as an open-source project than a scientific journal. IsarMathLib is based on the Isabelle's ZF logic that implements Zermelo-Fraenkel (untyped) set theory. The emphasis is put on readibility. The proofs are written using Isar syntax and can be read and followed by any person familliar with standard mathematical notation. 
+The project is licensed under the modified BSD License.
+Project homepage: http://savannah.nongnu.org/projects/isarmathlib

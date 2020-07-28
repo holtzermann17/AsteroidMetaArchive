@@ -1,0 +1,46 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: /Each problem that I solved became a rule which served afterwards to solve other problems./ -- Rene Descartes, Discours de la Méthode
+
+The operation of substitution plays an important role in mathematics and logic.   We may illustrte this with a simple example.  For instance, given the identity
+
+: x&sup2; + 2 x + 1 = (x + 1)&sup2;,
+
+one could substitute "(y - 1)" for "x" to obtain
+
+: (y - 1)&sup2; + 2 (y - 1) + 1 = ((y - 1) + 1)&sup2;.
+
+Upon simplifying, we obtain the new identity
+
+: (y - 1)&sup2; = y&sup2; - 2 y + 1.
+
+The process of proving new results from known facts can be seen as an exercise in substitution.  For instance, to complete the derivation sketched above, we need to simplify an expression.  How is this to be done?  To begin, we could use the distributive law to replace "2 (y - 1)" by "2 y - 2 &times; 1".  
+
+: (y - 1)&sup2; + 2 y - 2 &times; 1 + 1 = ((y - 1) + 1)&sup2;
+
+This distributive law basically states that we can replace any expression (or subexpression) of the form &lceil;a (b + c)&rceil; [[file:[Quine quasi-quotation.org][[Quine quasi-quotation]]] by the expression &lceil;a b + a c&rceil;.  Next, we could replace "- 2 &times; 1" by "-2",
+
+: (y - 1)&sup2; + 2 y - 2 + 1 = ((y - 1) + 1)&sup2;
+
+and then replace "-2 + 1" by "-1",
+
+: (y - 1)&sup2; + 2 y - 1 = ((y - 1) + 1)&sup2;
+
+Having worked on the left hand side, we now turn our attention to the right hand side.  The associative law allows us to replace any expression of the form &lceil;(a + b) + c&rceil; by &lceil;a + (b + c)&rceil;
+
+: (y - 1)&sup2; + 2 y - 1 = (y + (- 1 + 1))&sup2;
+
+Next, we replace "(-1 + 1)" by "0" and replace "y + 0" by "y" to obtain
+
+: (y - 1)&sup2; + 2 y - 1 = y&sup2;
+
+To complete the derivation, we need to move two terms from one side of the equation to the other.  We can do this by using the fact that, if &lceil;a + b = c&rceil; then &lceil;a = c - b&rceil; twice.
+
+: (y - 1)&sup2; - 1 = y&sup2; - 2 y
+
+: (y - 1)&sup2; = y&sup2; - 2 y + 1
+
+The reason for going through this example in such detail was to show that every step in the proof is based on some substitution or another.  Substitution is the mechanism by which specific expressions become general rules which can then serve to derive other expressions.  Given the central role which this operation of substitution plays, one can expect that a suite of routines to deal with substitution operations will be of use in writing programs to verify and construct mathematical proofs.
+
+Back to [[file:template utilities.org][template utilities]]

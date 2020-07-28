@@ -1,0 +1,25 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+; "On Proof and Progress in Mathematics" by William P. Thurston : This is
+mentioned in the QED archives; it is a good read, and recommended for anyone
+working on the HDM project.  The article is in Bulletin of the American
+Mathematical Society, 30(2), 161-177 (1994).  It can also be [http://arxiv.org/abs/math.HO/9404236 found]
+on the ArXiv.   For some reason or other,
+the first [http://www.google.com/search?hl=en&ie=ISO-8859-1&q=%22on+proof+and+progress+in+mathematics%22&btnG=Google+Search google] link is here: http://fcis.oise.utoronto.ca/~ghanna/synthr5.html 
+The text referenced there there should provide some context, and may be interesting reading,
+but my sense is that the other authors take a rather different view form Thurston.
+Thurston's view looks at /mathematical communication/ in some generality, and
+advocates a somewhat "soft" approach.  (I first saw the reference in the QED
+archives, which is sort of interesting.)
+
+At the [[file:2007_MKM_Meeting_At_Dalhousie_University|MKM meeting at Dalhousie.org][2007_MKM_Meeting_At_Dalhousie_University|MKM meeting at Dalhousie]],
+I learned that even strong supporters of projects like PlanetMath and "open
+source" content for /mathematics education/ are still by in large very
+reticent about anything resembling "open source" content in /mathematics
+research/.  This is an interesting issue I will want to come back to and
+write more about later.  In the mean time, I'll just note that one way
+this motivation is reflected is in optionally concealing !TeX code on 
+sites like [[file:ArXiv.org][ArXiv]].  Obviously that is /not/ the most "accessibility
+friendly" thing to do - but there are other (interesting and also just
+frustrating) problems to consider here as well. --[[file:jcorneli.org][jcorneli]]

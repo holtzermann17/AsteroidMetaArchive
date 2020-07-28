@@ -1,0 +1,431 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is about an issue that we'll need to understand and
+express ourselves convincingly on in order to garner support
+for PM within the wider mathematical community.
+(See [[file:2006 JMM Followthrough.org][2006 JMM Followthrough]].)
+
+* Supporting Documents
+
+ * [[file:Why Free Math.org][Why Free Math]]
+ * [[file:Why not non-Free Math.org][Why not non-Free Math]]
+ * (And other threads in the "free culture" section of the [[file:Discussions.org][Discussions]] page.)
+ * [[file:First Monday Paper--The Fog of Copyleft|fog of copyleft paper.org][First Monday Paper--The Fog of Copyleft|fog of copyleft paper]] (on free content licenses).
+ * [[file:scholium system.org][scholium system]] (on online freedom)
+
+* Free mathematics
+
+** Initial discussion
+
+Contributors to PM currently share their work with others through the combination
+of the PM site and the GNU Free Documentation License.  The PM site constitutes
+one big document that anyone is free to re-use and re-distribute modified
+versions of (under the same GNU license).
+
+Aside from the benefits of this scheme (I have, for example, been able
+to [[file:FEM|put together.org][FEM|put together]], with the help of two editorial partners, a
+print version of one snapshot of the site -- and hope to do much
+better, by getting a new print version of the site to auto-generate
+nightly), I also feel increasingly ambiguous about the GNU FDL.
+Coming down on any side of the issue may be a contentious thing to do
+-- because the GNU FDL is set up to define a particular "commons"
+(which is bigger than just !PlanetMath) and not an open access
+resource.  There are some people who feel that the content of this
+commons should not be shared with outsiders; only with people who will
+continue to feed their labors back into the commons itself.  My own
+feeling on this issue is that the commons could be managed in other
+ways, which would tend to give the content an "open access" face as
+well as a managed "commons" face, and that this might not take away
+from the commons itself.
+
+/Note on terminology/: I understand "commons" and "open access" in
+the anthropology sense, not in any other sense; furthermore, to me,
+open access means "completely unrestricted", not just "anyone has
+access to some potentially restricted resource."  /Public domain/ is
+the legal status of this type of open access work in the US.
+
+However, the FDL is not designed simply to inhibit re-use, but also to
+promote the notion of "freedom" with users and non-users alike.  It
+might be that relicensing PM for the public domain could have the
+undesirable effect of making it appear that we think freedom is
+unimportant (when in fact we feel the opposite way).  Hopefully we
+could take measures against this effect.
+
+Certainly relicensing PM for the public domain would be a bold step,
+in part because it would allow all of our competitors to use the
+content, not just those friendly competitors who share our current
+commons.  Relicensing for the public domain would also tend to
+encourage wider use among people who aren't competing with us (e.g.
+reuse by students in their papers or homework assignments).  The
+statement would effectively be: PM /is/ the commons -- since it is
+precisely on the site where this public domain material would be
+managed; off of the site, it would not be.  Furthermore, I think the
+public domain idea captures the "freest" notion of freedom -- and I
+think that positioning ourselves right there could be a very good
+idea, because it could actually send the clearest message to potential
+contributors and users.
+
+That message is that re-use is a good idea -- and also that building
+the commons is a good idea, because it is through the commons that you
+get access to material to reuse.  And at least to my sensibilities,
+this does send an overall message that freedom is very important.
+
+It is my sense that PD sends a similar message (on freedom) to the one
+sent by GNU FDL, but somewhat stronger in some ways.  It does not send
+the same message about a commons -- however, as I noted above, I think
+that it can be used as part of a message about a commons.
+
+A PD-content-managing-commons has some advantages over a "public
+access" (PA) commons such as the Math Gateway, which points (following
+all the way to leaves) to other PA and semi-PA resources (other
+proprietary websites, who often point to books in
+libraries)... especially when it is the only such resource around.  It
+may even have some advantages to recommend it over
+license-managed-commonses (such as the one that Wikipedia and PM are
+currently a part of).
+
+An inquisitive mind would wish to understand the economics of the
+situation.  How can works be written only to be given away?  Well, the
+direct answer to that question is "if we are operating in a gift
+economy", but other answers, such as "they typically won't be" work in
+this case, too.  For one thing, many writings that would be
+contributed to such a site would have initially been written for some
+other purpose, and having served that purpose, could find a new lease
+on life as a PD resource.  Other times, as we've considered in
+[[file:marketize feature requests|our  discussion.org][marketize feature requests|our  discussion]] of code markets, the work
+can be  born free and still come with a builder's fee associated with it.
+
+Notice that the above points are similar for both PD and FDL.
+
+Now that we have a clear sense of what free math is (I hope), let's
+talk some about how we can promote the idea of making more math free
+-- and how we can leverage this idea to get more contributors.  This
+thought experiment may help us debug the particular notion of free
+math that we have advanced.
+
+For one thing, there are papers being contributed right now to the
+!ArXive under PA terms.  I'm not completely sure that all of the
+papers appear there legally, and in fact, I doubt that they do.  This
+same question would apply if they were being contributed to a PD
+resource.  A PD "version" of !ArXive would tend to serve the same
+purpose as !ArXive and more.  What it wouldn't do is protect against
+re-use of content -- I don't know if people contributing to !ArXive
+desire this protection or not; presumably some do and some don't.
+
+Certainly if even a fraction of the papers currently being contributed
+to !ArXive started appearing on PM instead, PM start growing at a
+considerably faster rate.
+
+How can we "sell" the notion of freedom to !ArXive contributors, or to
+others (e.g. REU students, whose papers might not be appearing
+anywhere)?
+
+Well, it is great to get your work out there for other people to see
+and use and contribute to.  That is a big part of it.  A site like PM
+needn't include only "published" or "publication-ready" work; partial
+results and questions are just as valuable.  So PM could play a role
+that is very different from that played by !ArXive (in its archiving
+aspect), -- and it could also do the archiving thing too.
+
+There will be some people out there who will say "So, you want PM to
+become home to a bunch of half-baked ideas? That sounds like a bad
+idea to me."  I would say that with an appropriate back-end, it
+needn't be such a bad idea at all.  Infrastructure to sort out the
+interesting from the uninteresting stuff is universally valuable.
+(And you never know what you might find in the "crank file" --
+there could be interesting things there as well).
+
+This is getting into notions of "online freedom" (as I've been
+considering in my work on the [[file:scholium system.org][scholium system]]), and this is an
+interesting topic in its own right.  A large part of the point there
+is to make clear the social contract for a site, and also make clear
+how this contract is re-written.  Freedom, within the terms of the
+social contract and its metacontract, exists online too; not just for
+subsequent separate re-use.
+
+I hope it is clear that working on systems for doing and communicating
+mathematics more effectively will tend to have an overall positive
+effect on the mathematics community.  It isn't just about sharing
+content, but also about helping people find the content they are
+looking for; and it isn't just about the freedom of individuals, but
+about choosing where we want to go as a society.
+
+Thanks.  No really you're too kind.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I know you are talking about math, but there are many parallels with
+physics.  When discussing PP with people who do not know me
+personally, they all have a very similar response:
+
+Great, another breeding ground for crackpots!
+
+Even though it is good practice to debunk things, I get the feeling
+the physics community is sick of it.  Although, I'm sure there are
+some crazy math people out there, it seems that the language of math
+can help fend off a significant amount making the bar for entry high
+enough.
+
+However, when it comes to the Astronomy/Astrophysics sub-community,
+there is a greater sense of 'sharing' and it seems to be a side effect
+of 'musical telescopes', there are more people then telescopes.  I'm
+not sure how we can learn from this but people need to quickly see the
+benefit of sharing.
+
+--[[file:bloftin.org][bloftin]]
+
+Hm, interesting points.
+
+My personal view is that rather than making the bar for /entry/
+high, the content management systems should be set up so that junk can
+be labeled as such quickly, and demoted to the netherregions of the
+site.  This has to do with "trust metrics" (although the particular
+metric chosen needn't be complex).  I think that with the right
+technology we can say "crackpots will always be around, but we have
+things set up so that they aren't much of a nuisance."  In particular,
+for every crackpot, there is bound to be a vigilante who gets off on
+busting up crackpots.  Persons who fall into neither category should
+be able to go about their day-to-day business without worrying about
+all the fighting in the streets...
+
+As for /sharing/ -- maybe we should look in the literature.  There
+has probably been some reasonable research done on this topic, since
+FLOSS has been popular for some years.
+
+The way I'd take the "musical telescopes" analogy (and apply it in
+math or in theoretical physics) is to say that there are more people
+than ideas, and both personal and systemic knowledge advances more
+when people can move around freely from idea cluster to idea cluster (and participate at each turn).  (Does this
+work?)  Another big point for me is knowledge re-use.  If something
+has been learned by 100,000 people before me, presumably they have
+devised (or could have devised) some techniques that make learning it
+easier than simply "learning from scratch".
+
+--[[file:jcorneli.org][jcorneli]]
+
+Good ideas, how about a quick and easy rating system similar to Netflix.  If a movie (or an article) is showing on the screen there are 'stars', by simply moving your cursor over them and then clicking, you have automatically rated the article.  Or maybe something like Slashdot, where you can give mod points or some variation on this theme.
+
+FLOSS ?
+
+One of my professors once said (probably 'copied' from somewhere else), ~"that all a scientist could do is add one more brick to the wall of knowledge, what would your brick be?"
+
+I think a core problem with information was presented eloquently in the book "Freakonomics" by Levitt.  He 'exposed' various institutions on how control of information results in significant power.  I believe his best example was the realestate industry, so why would someone give up their information/power?
+
+Off topic, if you have never used Netlibray,www.netlibrary.com, it is great if you have access, what potential for a 'digital library'!
+
+--[[file:bloftin.org][bloftin]]
+
+FLOSS=Free Libre Open Source Software.  Terminology that provides something for everyone!
+
+On the topic of information control: I think the difference between
+math/science and real estate is that one can't create more real estate
+simply by sharing information on real estate, whereas with "pure"
+information goods, sharing can lead very quickly to new material!
+
+Now, it is almost certainly the case that if real estate was "hacked"
+and we found a way to share the relevant information in a free
+fashion, trade in real estate would be more efficient, and there would
+be an increase in social welfare, and the people who currently "do"
+real estate business would hate it.
+
+In math/science, it seems likely that some people benefit
+"disproportionately" from information control, i.e., there is a
+"market failure".  But wresting the control away from these people may
+be as simple as creating a viable free option.  Some people will be
+unhappy about this; but the vast majority of people will be better off
+with access to free resources.
+
+And bear in mind that control of information about math/science may
+often be illusory -- if you publish something, that information is
+"out there" and is no longer under your control.  I'm not saying that
+the people in power don't have power (that would be silly); but that
+we may not depend on anyone giving up their power at all.  I think it
+is entirely conceivable that groups like the AMS and MAA would get
+behind free math precisely because it would give them more power --
+not power of the bad, exclusive, kind -- but of the good, creative
+kind.
+
+This is a very "if you build it, they will come" way of thinking.
+
+--[[file:jcorneli.org][jcorneli]]
+
+** After an intermission
+
+I think that our discussion of the "different kinds" of free math
+above (and elsewhere) has been useful -- however, I think that there
+is still not anything close to a complete agreement among PM members
+as to /which/ kind of free math best suits our organization.  Note
+that some pluralistic approaches are among those that have been
+advanced, and these appear to have some special advantages and some
+special disadvantages.
+
+It may be that if we are unable to agree about what specific kind of
+free math would be best, that we will have to go with some pluralistic
+approach.  And indeed, it may turn out that a pluralistic approach
+/is/ best.
+
+At any rate, I feel the discussion may in some rather concrete sense
+only be beginning.  Specifically, we need to write the "understanding
+free math" part of the whitepaper -- and currently even the
+"understanding free math" part of the whitepaper's /[[file:Detailed PM whitepaper outline|outline.org][Detailed PM whitepaper outline|outline]]/
+is very sparse.
+
+I am somewhat concerned about "[http://www.chillingeffects.org/ chilling effects]"
+of statements to the effect that "the conversation is over, and unless
+I get things my way, I won't participate."  (I linked to chillingeffects.org
+because, while no one is using /law/ to stop the discussion, the
+discussion is related to IP law; and besides, I think that statements such as
+the one I have paraphrased above are a clear example, following
+the more general [http://en.wikipedia.org/wiki/Chilling_effect definition from wikipedia].)
+
+Indeed, given the nature of the subject matter under discussion
+(freedom), it is ironic, and interesting, to see such effects arise.
+I do not specifically wish to condemn the content of the statement,
+only its /use/ in the context of our discussion (i.e. to quell
+further discussion).  I am comfortable with the fact that people have
+the freedom to take their ball and go home.
+
+I do not wish to be accused of attempting to destroy the PM community
+or hinder the discussion process because I want to get /beyond/ the
+"taking my ball and going home" attitude and critera in our discussion.
+Such an accusation would be ridiculous.
+
+Nevertheless, I accept that people may be tired of talking about these
+issues.  That is OK.  The only challenge that has ever existed on this
+topic in the current context was to put a satisfactory treatment of
+"free math" into the whitepaper.  That challenge has yet to be met.
+Once we have done that, we can all go home.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* A Tempest in a Teacup
+
+Every Tempest has a Prospero, a Caliban, a Miranda, and a prince.
+
+Prospero and Miranda are exiles.  Caliban is a minor monster.  The prince is
+a dupe.  Prospero is also a magician and an ex-ruler.
+
+Being over-obsessed with magic, Prospero let his state fall into disorder,
+and various disagreeable parties took over.  He and his daughter wound
+up on an island.  Caliban is a native to this island.  He lusts for
+Miranda, and is enslaved by Prospero.  Eventually the prince shows up.
+Prospero uses some magic and pretty soon the prince falls in love with Miranda.  So, she is
+destined to become a princess after all.  Then everyone leaves, except
+(maybe) Caliban.
+
+Since Caliban is left behind like a tea-leaf, let's take a look at him
+and see what we find out.  First of all, by definition, he's where
+we got the flavor from.  But we can do better than that.
+
+Caliban represents freedom enslaved (and so, of course, transformed into non-freedom) by power.
+There is a bit of him in all of the other characters.
+
+His wonder and joy are transformed into drudgery and repression.
+(Prospero, his enslaver, actually fared somewhat worse in Milan;
+although he did luck out a bit with the island kingdom.)
+
+In the end, however, as is well known:
+
+: In one voyage
+Did Claribel her husband find at Tunis,
+And Ferdinand, her brother, found a wife
+Where he himself was lost, Prospero his dukedom
+In a poor isle and all of us ourselves
+When no man was his own.
+
+This, one assumes, is true even (and perhaps especially) for Caliban.
+
+His story is about learning independence and even wisdom:
+
+: I'll be wise hereafter                                                                                             
+And seek for grace.
+
+Now, this thing has a not at all subtle colonial theme that
+I'm not advocating; I'm just saying what I see in the characters.
+There certainly appears to be some recognition within the play of flaws
+and psychical horrors of the power/slavery system.
+
+Still, over all, the play is surprisingly up-beat.
+
+Again, everyone remembers the epilogue:
+
+: As you from crimes would pardon'd be,                                                                                                   
+Let your indulgence set me free.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Note: it isn't clear whether the state of wonder experienced by Caliban
+is essentially an epiphenomenon of Prospero's magic.  Are there spirits
+active and experiencable on the island before Prospero shows up?  Or
+was Caliban essentially completely alone there?  I don't remember, and I don't
+know if this is ever made totally clear in the play.  --[[file:jcorneli.org][jcorneli]]
+
+* Special conditions for free math
+
+We note that math is historically esoteric, not popular.
+It shares this quality with /early/ software, and with programming
+to this very day.  However, software has become a consumer good
+whereas math is not typically recognized as such.  Instead,
+at the broad cultural level, basic math is a requirement; part
+of the state system, and, as such, a public good.  Advanced math
+is also a public good, but of a rather different sort.  Its natural
+consumer base is found in Science and Industry (and of course in
+the mathematics production system itself).
+
+Free software hopes to transform both the lives of the specialized
+consumers & producers of software ("programmers" and "hackers"),
+as well as the experience of the pure-consumer.
+
+Free math at this point in history is concerned also with 
+a specialized group with a similar dual nature ("mathematicians").
+However, there are, this time, two pure-(to an approximation)-consumer groups to consider:
+!SciTech and Students.
+
+Software and mathematics are similar, but not exactly parallel.
+
+Again, the biggest difference is that mathematics is ubiquitously
+seen as a public good, whereas software has come to be seen
+largely as a private good.  (Although, of course, the free
+software movement would like to see that trend reversed.)
+
+Evidence for math-as-a-public-good is provided in part by the
+fact that it is for the most part produced in the University
+setting, but also in the laws governing mathematical content.
+(It is just as FAIF if it is produced by Bell Labs as it is
+if it is produced by UCLA.)
+
+When thinking about how to build a free math /movement/,
+we should keep these special production and consumption
+patterns in mind.  
+
+Some of the Publishers, who have found a way to profit (symbiotically;
+we can not necessarily say parasitically) on the production and consumption of
+mathematics may conceivably turn out to be allies for free math.
+(Although that sounds like a long shot.)  I am thinking particularly
+of the AMS, here (and not so much Springer).  The important criterion
+for them is that Free Math should enhance research.  
+
+And similarly, for the MAA, that it should enhance math education.
+
+Our understanding of [[file:a paroxysm of parallax|parallax.org][a paroxysm of parallax|parallax]] strongly
+suggests that some kinds of freedom are of significant help to
+education.  (And I think there is every reason to hope that
+the same effect is useful in research, as well.)
+
+At this time in history, I think we do not understand Free Math
+well enough to say, definitively, what it is or what it is about,
+much less to provide authoritative studies showing its advantages.
+I think that instead, it is time to get the idea out there,
+for debate, discussion, and exploration.  We need to apply
+the parallax principle to this idea, much in the same way
+we hope (in the future) to apply it to math content, using
+the idea.  
+
+Free math, in short, is not a very new idea.  But it has yet to gather
+the momentum it will need to become a popular idea, a rallying point, or a movement.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Also: it would be interesting to know how much math Universities consume (through libraries, departmental reading rooms, etc.),
+as opposed to the amount consumed by Individual Professors. --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+There have got to be some simple free parsers out there that we could
+base this on.  See also [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]] for design principles.
+
+----
+* Discussion
+Also, it is wothwhile to consider the inverse problem --- converting sexps into
+!TeX.  As the h-code project progresses, it might be a good idea to consider to
+work on routines that will rewrite sexp notation for math in the usual notation.
+These two projects should go hand-in-hand --- on the one hand, it is impossible
+translate from a language which is still not completely defined, so obviously we
+need to work on developing h-code.  On the other hand, it might not be so good
+an idea to wait until h-code is completely developed and stable to begin writing
+the routine for translating it to conventional mathematical notation, because
+then one has to do all the work at once.  A better way might be to start by
+writing the routines to translate the simpler part of h-code which is already
+developed and not likely to change drastically in the future, and then add to
+these as the h-code project progresses.
+----
+
+* Status
+
+Well, we now have a file that does simple conversions in both directions,
+[http://www.ma.utexas.edu/~jcorneli/a/elisp/sttts.el here]. This is very cheery
+news.  However, the current version has very limited functionality: there are
+many other kinds of math expressions out there that the file can't handle.
+So the task has begin, but needs more work.
+
+--[[file:jcorneli.org][jcorneli]] Mon Feb 21 03:21:16 2005 UTC
+
+I am a little confused by this file -- it doesn't seem to exist in the CVS.
+
+--[[file:shargestam.org][shargestam]] Sat Jun 18 2005
+
+ah - this is an old file.  
+The old sttts.el has been broken apart into stt.el and tts.el (and tts.el
+has subsequently been broken into several smaller pieces itself.  As of
+this writing, the relevant files are
+
+ stt.el
+ tts-assist.el
+ tts-continuation.el
+ tts-greedy.el
+ tts-symbols.el
+ tts-testing.el
+ tts-utils.el
+ tts.el
+
+All in the parsing subdirectory.  --[[file:jcorneli.org][jcorneli]] Sun Jun 19 00:58:01 2005 UTC

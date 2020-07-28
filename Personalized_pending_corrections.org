@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Right now, when one clicks on the link "corrections" under "your stuff", all one obtains is a list of all corrections one has recieved ordered by date.  If one has been around for a while and has a lot of entries, one is likely to have recieved hundreds of corrections (For instance, to date, I have recieved 323).  Therefore, trying to find outstanding corrections can be like looking for needles in a haystack.  Since only 10 corrections appear on a page, this means having to a lot of clicking to move to from page to page.  This is tedious enough on a good day and is completely impractical on a slow day.  More than once, an entry has landed in the orphanage because I overlooked some correction while searching through this list.  (In fact, the way things are now, it seems that the most efficient way for me to take care of pending corrections is to wait for the entries to make it to the orphanage since then they are really easy to find.)
+
+To be sure, the automated nags help, but there might be a better solution.  Maybe there could be a page which lists only the outstanding corrections for each user, kind of like the system-wide list of corrections.  When one clicks on "corrections" under "your stuff", one could be taken to that page instead.  The current page could be there too, but maybe under a link "list all corrections".
+
+Also, it would be nice if, in this list it would also provide, next to each correction, the date that the entry will go to the orphanage or how many more days one has before the entry makes it to the orphanage and the type of correction.  Having all this data at one's fingertips in one place would make it easier to set priorities and deal with outstanding corrections in a timely fashion.
+
+--[[file:rspuzio.org][rspuzio]] 2 October 2005
+
+I agree. However, one way to make it easier to find pending corrections
+is to set "Entries per page" to 100. You can do that in the Prefernece
+page. -- 2 Oct. 2005 [[file:matte.org][matte]]

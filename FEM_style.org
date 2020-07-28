@@ -1,0 +1,94 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  About
+
+This page contains various stylistic points, somewhat at
+random - it should be reorganized to become more readable
+at some point
+
+----
+
+IMO, inline equations/expressions should (in general) not use
+displaystyle, because it makes the lines look funky.  Short entries
+should be inline (in \[\] for flexibility of placement if the
+author desires).  Wording around such entries should not be
+"display-specific" - the prose should be natural.  This is
+generally a good idea with displays.
+
+As a (primarily) English-language work, we should use the English
+spelling of "Gauss".  Spelling of all names needs to be consistent.
+We should probably have an index of names.
+
+Very short entries MUST occur in sections that provide sufficient
+context.
+
+Standard enivironments should be used (these will be provided in
+style files).
+
+We have to come to some agreement about how bibliographies are going
+to be done.
+
+We're going to have to do something about overfull hboxes - that
+sounds hard, maybe there are some !TeX tricks that will help tho.
+Nothing should go in the margins except things Ross wants to put
+there.
+
+Tables and figures all need to be done in some standard way.
+
+Emphasis needs to be done in a ~standard~ way.
+
+: The standard way is using \emph (which can be redefined if needed to look differently). Therefore, all \textsl should be changed to \emph for this (and NEVER use \textit )
+
+Displayed equations should look uniform - right now, some are
+left-justified, some are centered.  I personally prefer centered
+equations for most purposes.  There needs to be enough space around
+the displayed equations in the final copy.
+
+: I personally like left aligned displayed equations since they
+disrupt the flow of the text less, but that isn't a big issue, the
+only (simple) way to achieve that is to add the fleqn option to
+amsmath package, and thus it could be quickly and easily filtered
+(besides I think FEM wil have a single preamble after all, isn't
+it? --[[file:drini.org][drini]]
+
+
+Spelling needs to be accurate.  An draft/version of an article with
+spelling errors may require special attention...
+
+$\mathit{foo}$ should be used for italicized operators, not just
+$foo$ -- and operators need to be used consistently throughout the
+book.
+
+Individual authors should use !LaTeX commands for spacing and
+basically everything else.  Leave the !TeX commands for the FEM
+editors...
+
+: Yes, and this is somehow related to the $$ $$ versus \[ \]
+issue. --[[file:drini.org][drini]]
+
+[[file:Numbered or unnumbered lists, and list styles.org][Numbered or unnumbered lists, and list styles]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

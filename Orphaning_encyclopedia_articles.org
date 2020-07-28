@@ -1,0 +1,105 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Can someone who understands it please explain how orphaning usually works?  I
+didn't find a description in the site docs (might have missed it).  In
+particular, what happens if a correction is submitted and the article is never
+corrected?  Does this cause an orphaning event? --[[file:jcorneli.org][jcorneli]] Mon Feb 28
+07:53:32 2005 UTC
+
+Yes it does.  After a certain amount of time, if a correction (no matter how
+trifling) is ignored, the entry automatically winds up in the orphanage and
+becomes world-editable and the author loses the right of ownership (for a while,
+the author's name stays as owner; however anyone eles can adopt the entry and
+take ownership away as long as the entry is in the orphanage).  Alternatively,
+an author can deliberately place an article in the orphanage.
+
+By the way, this is a reason we may want to be careful in how we send mass
+corrections on behalf of the printed encyclopaedia project.  If too many
+corrections arrive too fast, authors will not be able to keep up with all these
+corrections and the orphanage will be flooded, making a mess out of Planet Math.
+In particular, authors like me with more than 100 entries (whose hard work and
+sacrifice accounts for 60% the content of the website) would be hardest hit by
+such a flood.  If, for instance, I were to recieve two corrections to each of my
+entries at once, that would amount to 400 corrections.  I would be completely
+swamped.  It would be impossible for me to search out the more serious
+corrections which need immediate attention regarding content (such as mistakes
+in proofs) from minor stylistic correction which are urgent and can wait a few
+days.
+
+An unfortunate side effect is that there are people out there who will adopt
+articles in the orphanage, fix the typo and keep them simply to gain the 100
+points, not because they are necessarily knowledgable in the topic or are
+committed to improving the entry.  In the normal course of events, this is
+justifiable because somone who does not bother to fix a typo for a long time
+clearly does not care about the entry and so no great harm is done if one
+disinterested party is replaced by another.  However, if this happens because
+the author was so flooded with mass corrections that it was impossible to keep
+up, then it would be a different story and I don't see that it would be either
+fair to the author or in the best interests of Planet Math.
+
+To avoid this problem, I am suggesting putting in some sort of "flow restrictor"
+into the mass mailing pipeline.  This would guarantee that a single author would
+recieve no more than say, 15 automatically generated corrections a day and leave
+the rest in the pipeline and deliver 15 more a day until the pipieline empties.
+From a practical point of view, this would not make much of a difference since
+there is a limit to how many corrections per day one can carry out.  Also, it
+would be nice if such a program would be able to consolidate more than one
+correction to the same author which is waiting in the pipeline into a single
+correction to make life easier for everyone involved.  --[[file:rspuzio.org][rspuzio]] 28 February
+2005
+
+: The idea of consolidating multiple different corrections seems a little weird,
+not impossibly so, but I am definitely in favor of consolidating multiple
+similar entries!  I don't think it would be hard to add *that* logic to the
+pipeline.  However, take the issue of quotes -- it would take as much time or
+more to find all the doublequote-marks in the encyclopedia and fix them as it
+would to go through a list of corrections and fix them...or almost.  Now, if we
+had a mechanism for applying /diffs/ what a different story /that/ would be!
+I could generate a diff that corrected doublequote-mark problems in 30 of a
+users entries, attach the byline "this diff fixes quotemark problems in 30 of
+your entries, please apply!" and after inspecting the patche, at the click of a
+button each of the entries would be fixed.  Wow!  Huge time savings.  And diffs
+with summaries are easier to write than prosaic corrections.
+
+: As in my apmxi days I think the "solution" to the flooding problem is to fight
+fire with fire (or, maybe, since it is a flooding problem, to fight water with
+water).  An /artificial/ flow-restrictor could put the FEM project back by
+years.  An fairly intelligent, /human/ flow-restrictor might give some time
+savings, but I think it would be marginal.
+
+: There are only 3 FEM editors, and there are hundred of PM authors (even the
+addition of 10-20 associate editors wouldn't change the ratio that much).  The
+"ability" to do things en masse is so far granted only to FEM editors.  That
+isn't really fair -- or useful.  It would be much better if authors could do
+things en masse to their own works.  If we had a diff functionality, one fairly
+"cheap" thing to do would be to download the sources to all of one's articles,
+fix them off line, submit a big correction to oneself, and, again, get the
+changes incorporated at the click of a button.
+
+: So, I think this is really the way to go, maybe in combination with your idea
+about consolidating all changes into one email, and a flow-restrict (whether
+artificial or just social) that says that only a small handful of such
+consolodated changes can be given to one author at a time.
+
+: This would lead to a slight change in the way corrections work - instead of
+posting a correction to an article, and FEM editor could be posting a correction
+to an author.  A little odd, maybe.  Maybe the FEM edits should not go through
+the "correction" pipeline at all, but some other sort of pipeline (like
+planetmath mail) that doesn't have any trace of automatic orphaning at the end
+of it.  Maybe a "multi-correction" pipeline.  But in any event, I think diffs
+are the way to go.  --[[file:jcorneli.org][jcorneli]] Mon Feb 28 14:23:23 2005 UTC
+
+:: While I think Ray's concerns are valid, I have a few problems with his claims
+and solution. (1) is that I think there will be a deluge of corrections at
+first, but that they will trail off.  Thus, constructing any bottlenecking
+system would have to be justified mostly as a one-time investment.  (2) Most of
+the corrections in the high-volume batches are quick and easy fixes. If these
+cause objects to get orphaned, the owner is obviously gone for good anyway.  (3)
+We cannot construct an elaborate system for everything.  I just simply don't
+have the time.  If someone else wants to do this, they can establish it as a
+module upstream of my email-importer system.  But I simply don't have time for
+it.  I have more critical priorities on my plate: like re-deriving version
+histories (which are almost universally broken) from database snapshots.
+--[[file:akrowne.org][akrowne]] Mon Feb 28 14:48:38 UTC 2005

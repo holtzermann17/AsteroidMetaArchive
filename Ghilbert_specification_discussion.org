@@ -1,0 +1,283 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(See [[file:Ghilbert specification.org][Ghilbert specification]].)
+
+**  Declarative vs. procedural
+
+Metamath is specified declaratively (mostly).  Ghilbert is thus far specified procedurally.  Declarative is better; I'm trying to rewrite this accordingly.  Hence the word "commands" is going away in favor of "statement".  ...Only, maybe not.  --[[file:jorend.org][jorend]]
+
+: Are you sure that "declarative is better than procedural" is not just your prejudice? I don't have
+terribly strong feelings about this, but find it entirely plausible that the most natural, concise,
+and easy-to-understand description of Ghilbert is as a series of commands that transform the Ghilbert
+state in particularly simple ways -- mostly adding new mappings to the namespaces. There is a distinct
+temporal element to Ghilbert files; references are only allowed to things previously defined, to avoid
+problems with circular definitions and so on. That constraint may be easier to describe imperatively
+than declaratively. -- [[file:raph.org][raph]]
+:: .
+:: Well, the Metamath spec is mostly declarative and reads very nicely.  Some parts are procedural, particularly where RPN is involved, and that's fine.  I'm not /that/ prejudiced.
+:: .
+:: I didn't mean to bring this page to your attention until I had a clue what I was doing (embarrassed look) -- [[file:jorend.org][jorend]]  18 Oct 2006
+:: .
+
+: Lastly, as a matter of nitpicky terminology, I'm using
+the word "statement" (and the keyword "stmt") to refer to the class of both axioms and theorems, in
+particular the primitive used in interfaces. That's the main reason I chose "command" to refer to
+things at the Ghilbert level -- [[file:raph.org][raph]]
+:: .
+:: OK.  Changed "statement" back to "command" the few places where I had changed it.  -- [[file:jorend.org][jorend]] 18 Oct 2006
+
+([[file:norm.org][norm]] here...)  The main thing I focused on in the Metamath
+spec, more than declarative vs. procedural (although the former
+dominates), was to try to avoid mentioning a term until it was
+defined.  To that end it almost reads like a mathematical theory
+or model, where definitions are built on definitions.  My
+relatively strict adherence to that philosophy is probably the
+main reason it seems mostly declarative.  It is possible that
+the BNF in the Ghilbert spec may take care of most of
+the declarative part, so that what's left would be procedural.
+
+My goal was to make the spec accessible to any technically
+mature reader, and the reader was not assumed to have a
+particular expertise such as computer science.  The spec was
+intended to be completely self-contained so that no knowledge of
+Metamath, proofs, logic, or programming was prerequisite.  Anyway,
+that was the goal.  Although it's hard for anything to be
+perfect, I think this goal was achieved  to a large extent, in
+the sense that non-mathematicians have been able to write proof
+verifiers with no assistance from me, and at least one
+mathematician (Bob Solovay) was able to express a nontrivial
+mathematical theory (Peano arithmetic) that was syntactically
+correct, without ever checking it with the metamath program.  (I
+checked it after he declared it done, and amazingly the only
+syntax errors were a couple of typos.)
+
+As an illustration, a simple example in the spec is the file
+inclusion command, $[...$].  Rather than say it "imports the
+file", which might have an uncomfortably vague meaning to a
+nonprogrammer, I say "the contents of the file replace the
+inclusion command," which describes simply and exactly what the
+command does.  If I wanted to talk about it more later, I might
+have introduced "import" as a defined term describing that
+precise action.
+
+The first sentence of the Ghilbert spec opens, "An /interface
+file/ is simply a list of axioms and theorems, stated without
+proofs."  This appears on the surface to be a definition of an
+interface file, since the term is italicized, but the non-expert
+reader does not know precisely what an axiom or theorem is at
+that point.  Then we say, "A Ghilbert /proof file/ imports zero
+or more interfaces," which has the suggestion of technical
+precision with "zero or more" but of course it is still only a
+general description, since "import" and "interface" are only
+vague ideas in the reader's mind at this point.  The reader
+may get a mixed message not knowing whether this definition
+is part of the formal spec or just part of the expository
+material that will be made precise later on.
+
+This "top-down" approach, where the reader is fed new terms
+that will really be defined precisely later, is certainly a
+possible style, and I can understand its purpose in attempting to
+help the reader grasp a high-level overview.  I didn't do that in
+the Metamath spec and instead relegated that approach to the
+expository material outside of the spec.  I am not trying to
+drive or direct the Ghilbert spec, but I thought it might be of
+some interest to know the philosophy I used.  -- [[file:norm.org][norm]] 20 Oct
+2006
+
+: Just so.  Thanks. --[[file:jorend.org][jorend]] 20 Oct 2006
+
+: Btw, I expect the "Basic Concepts" part of the spec will remain rather informal, for a while anyway.  The false precision implied by wording like "zero or more" is a defect though.  --[[file:jorend.org][jorend]] 20 Oct 2006
+
+
+**  Proposals
+
+ *Proposal:* Drop the hash feature.  It's not implemented anyway, and I assert it will prove too strict for its purpose (coping with change).  Something better can be added later, once there's some real-world experience with the system.  -- [[file:jorend.org][jorend]] 18 Oct 2006  (edited 20 Oct to be a bit less presumptuous with the word "we")
+
+ *Proposal:* Require that the reference be a URI (absolute and relative URIs should be allowed).  As a side effect, this bans \ as a path-separator on Windows.  This is good; it means files that work on Windows can be copied over to Linux and still work, or posted on the Web.  It also gives me a way to specify a filename with a space in it, fwiw.  Raph, I mailed you a gh_verify.py that implements this. -- [[file:jorend.org][jorend]] 20 Oct 2006
+
+
+**  discussion section on distinct variable conditions for def dummies
+
+Cut-n-paste of a query from Dan Krejsa (apologies for quoting private email):
+
+: /P.S. By design, variables in the remnant which
+are matched against dummy variables of a def expansion
+aren't allowed to occur in the hypotheses or conclusion
+of a theorem, yet it seems they might still need to be
+mentioned in the distinct variables conditions of the
+theorem, even though they would not and could not
+be used when the theorem is exported as a statement
+or applied in a later proof.  This seems odd./
+
+I think I might be able to sketch the argument for the
+correctness of the Ghilbert definition mechanism (at least in
+principle). I believe this argument justifies the somewhat peculiar
+details of the dummy variable checking.
+
+Think of the following mechanism for expanding definitions. Let there
+be a separate run of definition dummies delta_i, 0 <= i, which are
+distinct from all explicitly named variables and also ordinary proof
+dummies (i.e. variables appearing nowhere in the hypotheses or
+"remnant", as you call it). Then, from the inside out (or
+leaves-to-trunk order in the tree metaphor), for each def dummy in a
+definition, replace the dummy with the lowest-numbered delta_i that
+does not appear in the arguments of a definition instance.
+
+The basic correctness goal is that all proofs with definitions can be
+fully expanded, and the resulting proofs will be correct both in
+unification and distinct variable conditions.
+
+: /Example from Dan's email:/
+
+ thm (bigosh () () (-> (gosh) (gosh))
+        ((gosh) id))
+
+An important consequence of the expansion mechanism is that two
+syntactically identical terms will have identical expansions. Thus,
+bigosh is valid, as (gosh) expands to delta_0, and (-> delta_0
+delta_0) is a perfectly good theorem.
+
+I seriously considered choosing fresh dummies, but that is
+problematic. In this alternative, bigosh would be trying to prove (->
+delta_0 delta_1), which is not a theorem. I don't care about bigosh,
+but consider trying to prove something like (-> (E! x ph) (E! x ph)).
+If I chose fresh def dummies, then this would be a theorem, but the
+/expanded/ proof would require alpha-conversion, which is not baked in
+to the Ghilbert metalogic.
+
+As far as the "this seems odd" condition, it's required to make sure
+that the newly introduced def dummies really are distinct from def
+dummies that happen to be present in mandatory or hypothesis
+variables. We can justify that they're distinct from ordinary
+variables, because they're simply drawn from different spaces. We can
+also justify that they're distinct from any subterm appearing as an
+argument, because the expansion rules assign a distinct delta_i in
+such cases (the dvmap in match_expand is for exactly such cases).
+
+I have no idea whether a better definition mechanism is possible, but
+the one I came up with seems "good enough" to me. I wanted to avoid
+adding alpha-conversion to the metalogic, because I think that would
+be giving up a lot of the flexibility that Metamath has to offer.
+Things like df-subst become /much/ harder if you have to explicitly
+distinguish free and bound variables.
+
+ def ((wub) x)
+ 
+ thm (allwub () ((allwub.1 ph)) (A. (wub) ph)
+        (allwub.1 y ax-gen))
+
+I also seriously considered a variation that would simultaneously
+disallow allwub and remove the need for (cv x) terms to essentially
+"cast" a variable kind to a value kind. In this variation, any given
+term has both a kind and a boolean flag indicating whether it's a
+variable. "var" declarations would similarly specify both the kind and
+the variable-bit. When matching, if the variable in the template has
+the bit set, then the term unified to that variable must also have its
+bit set. The converse case could be either allowed or disallowed. If
+disallowed, then (cv x) terms would be needed just as now. If allowed,
+I think the checking would still be safe, as it would correspond to
+inserting (cv).
+
+In any case, this variation would disallow allwub, as (wub) would have
+its bit clear and thus fail to check against the template for x in
+ax-gen. I ultimately decided against this variation based on the
+slightly more complex metalogic needed for it, and for reasons of
+harmony with Metamath, but I think it could go the other way as well.
+
+-- [[file:raph.org][raph]]
+
+: How much of this still applies since the change regarding dummy variables?  -- [[file:jorend.org][jorend]] 20 Oct 2006
+
+
+**  Closed issues
+
+BUG - by this definition, a Ghilbert file must end with a LF.  gh_verify.py doesn't enforce this.
+
+: I'm more inclined to resolve this in favor of the implementation. Also, this grammar is ambiguous,
+as atoms cannot contain "(" ")" or "#". -- raph
+
+:: .
+:: Resolved in favor of implementation.  Bug regarding atoms is fixed. --jorend
+
+**  Better definition mechanism
+
+I'd like to get the discussion going again and I'll start with a proposal regarding a better definition mechanism. Right now, definitions declared with the <code>def</code> keyword are only ever expanded in one place: when they appear in the consequent of a proof. I'd like to have definitions which can be regarded as real abbreviations, transparently unfolding as needed, even in intermediate proof steps. If a theory defines its own definition mechanism, the number proof steps needed to apply a definition will probably be proportional to the nesting depth of the term in question.
+
+Naturally, this will require some changes in the way definitions are handled. For example, GHilbert will happily accept the following proof module:
+<pre>
+import (PROP pax/prop () "")
+import (ZFC zfc/set_mm_ax (PROP) "")
+
+var (wff ph)
+var (set x)
+
+def ((foo) (-> ph (A. x ph)))
+
+thm (bar ((x ph)) () (foo) (
+        ph x ax-17
+))
+
+thm (baz () () (foo) (
+        bar
+))
+</pre>
+This looks like we have proven a false theorem, <code>baz</code>. Actually, <code>foo</code> will not be expanded outside a consequent, so nothing evil will come of it. Not so if we allow definitions to expand everywhere in a <code>thm</code> statement. (I'm not quite sure but this may be the gosh/wub problem mentioned above.) The thing is, explicit variable names are quite unimportant. All we need to know is how to do simultaneous substitution in an expression correctly. So let's get rid of named variables as early as possible: by replacing the dummy variables in the definiens of <code>foo</code> immediately with unnamed counterparts, so that we would effectively get:
+<pre>def ((foo) (-> "dummy0" (A. "dummy1" "dummy0")))
+</pre>
+The variables dummy0 and dummy1 would only ever occur in this definition, globally. Subsequent definitions would get dummy2, dummy3, etc. With the named variables out of the way, disjoint variable restrictions for variables not occurring in the hypotheses or consequent of a theorem are then superfluous: they can be removed before the proof is checked. In this situation, the <code>bar</code> theorem would effectively become:
+<pre>
+thm (bar () () (foo) (
+        ph x ax-17
+))
+</pre>
+because neither <code>x</code> nor <code>ph</code> appear in the consequent. This theorem would then fail to verify because there a no disjoint variable constraints left for <code>ax-17</code>.
+
+Currently, <code>def</code> statements may only appear in proof modules. To be of any use, they should be allowed in interface files as well. This leads to a further elimination of variables appearing in the definiendum: they can also be replaced by unnamed variables (from a different class than the dummy variables). (The same could be done with statements and theorems as well.) This could also make implementations somewhat safer, as the danger of inadvertent unsound substitutions is reduced.
+
+**  param checking
+
+In its current implementation, GHilbert ignores the name and the locator of <code>param</code> commands. It should be checked if the locator coincides with the locator of the actual parameter, and if it does not, a phony export of the interface specified in the <code>param</code> command should be performed (with a copy of the current GHilbert state), to check that the interface is satisfied as intended by the author of the interface in which the <code>param</code> occurs.
+
+**  standalone interfaces
+
+Right now, GHilbert reads interfaces only when executing <code>import</code>/<code>export</code> commands in a proof module. It is to be expected that certain interfaces will be used quite often (such as <code>pax/prop</code>). I've written a Java implementation of GHilbert (with some of the aforementioned new features already built in) and the biggest time sink in it is the conversion of UTF-8 to unicode codepoints. (Interestingly, it's still about twice as fast as gh_verify.py despite absolutely not being written for speed. But that's probably python's fault.) It would be worthwhile to be able to convert <code>.ghi</code> files to some kind of intermediate byte code, equivalent to a "dynamic library". It can always be determined to which namespace an unknown atom belongs. So when a proof module loads such a library, all it would have to do is to dynamically bind the library's unknown symbols, and then lazily load the stuff it needs.
+
+**  Portable implementation testing
+
+It's very important that a GHilbert implementation satisfies the GHilbert specification. Well, that's true for all software, but in this case, the credibility of the proof verifier hinges on it. There are several ways to ensure implementation correctness. One is unit testing. That's quite important, but also quite specific to the implementation details.
+
+What I'd like to have is a suite for integration testing. This suite would consist of a bunch of GHilbert files, constituting a number of test cases. There would be a number of tests expected to verify correctly, and other tests expected to trigger scanner errors, parser errors, verification errors, etc., including subtle cases involving disjoint variable restrictions and whatnot. Such a test suite could be portably used by all implementations.
+
+**  Prefixes
+
+Something of a cosmetic issue, but I find the quotes in the interface prefixes slightly ugly. Why not omit them an use <code>()</code> for the empty string? Or use a list with at most one atom.
+
+**  Deployment
+
+So, when are we going to start a wiki site where people can happily write proofs in GHilbert? Yes, I know, there is talk of higher level versions of GHilbert. But it might be a good idea to gather some community to get the whole thing off the ground. I imagine the thing to look like this: first, there is a perfectly normal wiki. Then there are special <code><ghilbert></code> tags to enclose GHilbert stuff. So the GHilbert stuff would be interspersed with human readable proof text, like "Now we are going to do this and that <code><ghilbert>x y z proof_step</ghilbert></code> yielding foo..." The contents of these tags would be concatenated and treated as input to GHilbert. Such an extension could, for example, be easily written for the MediaWiki software. Why MediaWiki? Because it's honking big! That's a good thing: there is a lot of stuff that can be done with it. Furthermore, many people have already used it. (Granted, MediaWiki is the wiki I know best; there may be wikis better suited for GHhilbert specific stuff, such as mathematical typesetting).
+
+--[[file:GrafZahl.org][GrafZahl]]
+
+Hi. Nice energy! If I might suggest also, for your consideration:
+
+ * Use a different name, like "philbert" or something, just so that
+if/when Raph returns to work his name is still available.
+
+ * For testing you will probably want to prove that you can
+successfully process set.mm and ql.mm from Metamath. Not only
+do these files cover a lot of test cases and provide volume
+for performance testing, you will notice the extensive use
+of definitions (example: there are something like 160 of
+what I call "Named Type Constants", like "c0 $a class 0 $.")
+
+I don't know how many people still have an interest in Ghilbert,
+at least based on this wiki's usage. Perhaps [[file:norm.org][norm]] will 
+be able to critique the fine points of your specification
+modifications. 
+
+--[[file:ocat.org][ocat]]
+
+Hi ocat, thanks for the heads-up. The translated set.mm works quite well. I've decided to publish my version as [[file:JHilbert.org][JHilbert]] (philbert sounds a bit like filbert ;), so raph's name is still available, yet everyone will know where JHilbert originally came from.
+
+--GrafZahl

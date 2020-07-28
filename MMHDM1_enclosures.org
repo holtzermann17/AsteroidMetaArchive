@@ -1,0 +1,259 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Enclosures: stuff I stole from Wikipedia
+of immense interest, I think.
+
+
+http://en.wikipedia.org/wiki/Category_theory
+
+The study of categories is an attempt to capture
+what is commonly found in various classes of related
+mathematical structures.
+
+[...]
+
+Instead of focusing merely on the individual objects
+possessing a given structure, as mathematical
+theories have traditionally done, category theory
+emphasizes the morphisms -- the structure-preserving
+processes -- between these objects. It turns out that
+by studying these morphisms, we are able to learn
+far more about the structure of the objects than by
+simply focusing on the structures alone.
+
+[...] 
+
+[...]A category is an axiomatic formulation of this
+idea of relating mathematical structures to the
+structure-preserving processes between them. A
+systematic study of categories then allows us to
+prove general results about any class of
+mathematical structures and their processes which
+satisfy the axioms of a category.
+
+A category is itself a type of mathematical
+structure, so we can look for processes which
+preserve this structure in some sense. Such a
+process is called a functor, and it associates to
+every object of one category an object of another
+category, and to every morphism in the first
+category a morphism in the second. By studying
+categories and functors, we are not just studying a
+class of mathematical structures and the morphisms
+between them, we are studying the relationships
+between various classes of mathematical structure.
+
+Many mathematical theories attempt to study a
+particular type of structure by relating the
+structure to another simpler, better understood
+structure. For example, this is the central
+underlying theme of algebraic topology -- very
+difficult topological questions can be translated
+into algebraic questions which are much easier to
+solve. Certain "natural constructions", such as the
+fundamental group of a topological space, can be
+expressed as functors in this way. Different such
+constructions are often "naturally related", and
+this leads to the concept of natural transformation,
+a way to "map" one functor to another. Throughout
+mathematics, one encounters "natural isomorphisms",
+things that are (essentially) the same in a
+"canonical way". Many important constructions in
+mathematics can be studied in this context.
+
+[...]
+
+Special categories called topoi can even serve as an
+alternative to axiomatic set theory as the
+foundation of mathematics. These broadly-based
+foundational applications of category theory are
+contentious; but they have been worked out in quite
+some detail, as a commentary on or basis for
+constructive mathematics.
+
+-----
+
+http://en.wikipedia.org/wiki/Topos
+
+In the mathematical field of category theory, a
+topos is a type of category that behaves like the
+category of sheaves of sets on a topological space.
+
+[...]
+
+----- 
+
+http://en.wikipedia.org/wiki/Higher-order_logic
+
+In mathematics, higher-order logic is distinguished
+from first-order logic in a number of ways.
+
+One of these is the type of variables appearing in
+quantifications; in first-order logic, roughly
+speaking, it is forbidden to quantify over
+predicates. See second-order logic for systems in
+which this is permitted.
+
+Another way in which higher-order logic differs from
+first-order logic is in the constructions allowed in
+the underlying type theory. A higher-order predicate
+is a predicate that takes one or more other
+predicates as arguments. In general, a higher-order
+predicate of order n takes one or more (n - 1)th-
+order predicates as arguments, where n > 1. A
+similar remark holds for higher-order functions.
+
+Higher-order logics are more expressive, but their
+properties, in particular with respect to model
+theory, make them less well-behaved for many
+applications. By a result of Gödel, classical
+higher-order logic does not admit a (recursively
+axiomatized) sound and complete proof calculus; this
+defect can be repaired by using Henkin models.
+
+See also
+
+    * Higher-order grammar
+    * Typed lambda calculus
+    * Intuitionistic Type Theory
+
+----- 
+
+http://en.wikipedia.org/wiki/Table_of_mathematical_symbols
+
+http://en.wikipedia.org/wiki/Internet_shorthand_notation
+
+(Mathematical Alphanumeric Symbols)
+http://www.unicode.org/charts/PDF/U1D400.pdf
+
+http://en.wikipedia.org/wiki/Mathematical_notation
+
+[...]
+
+Computerized notation
+
+The rise of expression evaluators such as
+calculators and slide rules were only part of what
+was required to mathematicize civilization. Today,
+keyboard-based notations are used for the e-mail of
+mathematical expressions, the Internet shorthand
+notation. The wide use of programming languages,
+which teach their users the need for rigor in the
+statement of a mathematical expression (or else the
+compiler will not accept the formula) are all
+contributing toward a more mathematical viewpoint
+across all walks of life.
+
+There is a part of mathematics which is not
+algebraic, but which seems to use a different
+faculty of the mind. For those people with such
+minds and imaginations, like Isaac Newton's, if they
+are to benefit from the wide availability of
+mathematical devices, then they will need to be
+served by more graphical, visual, aural, tactile,
+and temporal modalities in notation, as a first
+step.
+
+[...]
+
+-----
+
+http://en.wikipedia.org/wiki/Model_theory
+
+In mathematics, model theory is the study of the
+representation of mathematical concepts in terms of
+set theory, or the study of the models which
+underlie mathematical systems. It assumes that there
+are some pre-existing mathematical objects out
+there, and asks questions regarding how or what can
+be proven given the objects, some operations or
+relations amongst the objects, and a set of axioms.
+
+[...]
+
+Definition
+
+A model is formally defined in the context of some
+language L. The model consists of two things:
+
+   1. A universe set U which contains all the
+   objects of interest (the "domain of discourse"),
+   and
+
+   2. a mapping from L to U (called the evaluation
+   mapping or interpretation function) which has as
+   its domain all constant, predicate and function
+   symbols in the language.
+
+A theory is defined as a set of sentences which is
+consistent; often it is also defined to be closed
+under logical consequence. For example, the set of
+all sentences true in some particular model (e.g.
+the reals) is a theory.
+
+[...]
+
+-----
+
+http://en.wikipedia.org/wiki/Hyperreals
+
+In mathematics, particularly in non-standard
+analysis and mathematical logic, hyperreal numbers
+or nonstandard reals (usually denoted as *R) denote
+an ordered field which is a proper extension of the
+ordered field of real numbers R and which satisfies
+the transfer principle. This principle allows true
+first order statements about R to be reinterpreted
+as true first order statements about *R.
+
+An important property of *R is that it has
+infinitely large as well as infinitesimal numbers,
+where an infinitely large number is one that is
+larger than all numbers representable in the form
+
+    1 + 1 + \cdots + 1. 
+
+However, in the 1960s Abraham Robinson showed how
+infinitely large and infinitesimal numbers can be
+rigorously defined and used to develop the field of
+nonstandard analysis. Robinson developed his theory
+nonconstructively, using model theory; however it is
+possible to proceed using only algebra and topology,
+and proving the transfer principle as a consequence
+of the definitions. In other words hyperreal numbers
+per se, aside from the use of them in nonstandard
+analysis, have no necessary relationship to model
+theory or first order logic.
+
+[...]
+
+The hyperreals can be developed either axiomatically
+or by more constructively oriented methods. The
+essence of the axiomatic approach is to assert (1)
+the existence of at least one infinitesimal number,
+and (2) the validity of the transfer principle. In
+the following subsection we give a detailed outline
+of a more constructive approach. This method allows
+one to construct the hyperreals if given a set-
+theoretic object called an ultrafilter, but the
+ultrafilter itself cannot be explicitly
+constructed.[...]
+
+[...]
+
+-----
+
+http://www.cis.upenn.edu/~giorgi/cl.html
+
+Computability Logic Homepage*
+
+
+----- 
+
+http://www.csc.villanova.edu/~japaridz/CL/gsoll.html
+
+Game semantics
+f(or)
+linear logic? 

@@ -1,0 +1,67 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(for artificial intelligence)
+
+As much as I might worry about writing an HDM manifesto, I feel
+fairly confident in asserting that mathematics is the one true
+prototype the simulationist movement must follow.
+
+Mathematics is already prototypical simulation.  
+At the market, you use mathematics to count what you buy and sell.
+You tally up credits and debits in a ledger.
+You do basic geometry to figure out crop yeilds.
+You use basic statistics (and/or game theory) to find the price-point at which you trade.
+And so on and so forth.  Indeed, the sky's the limit (and not even).
+
+Consider how much this assertion jumps out at you in 3D
+if you examine computers!  Computers run on mathematics.
+They function by representing facts about the world and algorithmatically
+working over those facts until they come up with an answer.
+
+Writers write.
+
+Computers compute.
+
+Thus, while /we/ might have storytelling and art and imagination and the mind
+as even more basic "simulational" phenomena, the computer
+already has its foot well in the door with mathematics (because it is
+built on mathematical principles), where as its progress in 
+these other areas has been slow.  Imagine if you knew
+a person who could beat the world chess champion, but couldn't
+write a half-way decent poem to save her life!  You would say that person
+was "[http://en.wikipedia.org/wiki/Autism autistic]" (but amazing nonetheless).  Well, this is the status
+of computers today.
+
+If they had been built on some other principle -- perhaps as an
+"Imagination Engine", or "Alchemical Conciousness" or "Robot Baby" --
+then we'd be in a different place right now.  But we don't know
+how to build those sorts of things.  And I think there is no particular
+reason to expect these things to take off /without mathematics/.
+
+Without mathematics, a collection of facts is as /dead/ on the computer
+as it is in a book.  With even the simplest mathematics, a collection
+of facts can begin to come alive.
+
+But we can do better than that.  Mathematics is the /language/
+of computation, which is to say, the language of simulation.  If
+we want our AI to have more intelligence than a slime mold, it needs
+to know a hell of a lot of mathematics.  To suggest otherwise would
+be like proposing to send someone with a 3rd-grade reading level
+to law school.
+
+If and only if the computer can understand mathematics, can it be
+truely /self-aware/.  To understand, say, science, might be nice --
+but science (apart from the scientific method, which is essentially
+mathematics) is only useful for understanding the outside world.
+Until we are self-aware, we can not understand the outside world;
+we don't even know it exists.
+
+And mathematics /is/ a prototype, in the sense that it should not
+be hard for the computer to /read/ mathematics books and understand
+the math that they contain.  Not so for philosophy or literature.
+Even science seems doubtful at this point. 
+
+We give homage to simulationists Charles Dodgeson and Alan Turing.
+The one, who showed what simulation is, and the other who
+showed how it could be done.

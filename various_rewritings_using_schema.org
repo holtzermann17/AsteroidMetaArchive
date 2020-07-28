@@ -1,0 +1,67 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+By combining substitute-in-schema with match-schema, one can do
+various (useful and interesting!) sorts of rewriting.
+
+* Implementing the associative law
+
+ (setq in-schema '((x y z) 
+                   (plus x (plus y z))))
+
+ (setq out-schema '((x y z) 
+                    (plus (plus x y) z)))
+
+ (substitute-in-schema (match-schema in-schema 
+                                     '(plus 1 (plus 2 3))) 
+                       out-schema)
+ ;=> (plus (plus 1 2) 3)
+
+* Drawing logical conclusions
+
+ (setq in-schema '((x y z) 
+                   (and (if x y) (if y z))))
+
+ (setq out-schema '((x z) 
+                    (if x z)))
+
+ (substitute-in-schema (match-schema in-schema 
+                                     '(and (if p (not q)) 
+                                           (if (not q) 
+                                               (if (not p) q)))) 
+                       out-schema)
+ ;=> (if p (if (not p) q))
+
+: I don't entirely "get" this example. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:22:40 2005 UTC
+
+* Translating notation
+
+ (setq in-schema '((x y) (times x y)))
+
+ (setq out-schema '((x y) (x times y)))
+
+ (substitute-in-schema 
+   (match-schema in-schema 
+      '(times 56 w)) out-schema)
+ ;=> (56 times w)
+
+* Preprocessing h-code
+
+ (setq in-schema '((x y z w) (sum (x) from y to z w)))
+
+ (setq out-schema '((x y z w) (bind sum (x) (leq y x z) w)))
+
+ (substitute-in-schema 
+   (match-schema in-schema 
+     '(sum (m) from 5 to (plus n 3) (plus (times m m) m)))
+         out-schema)
+ ;=> (bind sum (m) (leq 5 m (plus n 3)) (plus (times m m) m))
+
+(Note that /(leq 5 m (plus n 3))/ provides one unified test to
+ensures that the index variable /m/ lies in the correct set of
+values.)
+
+----
+
+This stuff certainly seems to be useful -- but some more description of exactly
+why it is useful would be good to see too --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:43:28 2005 UTC

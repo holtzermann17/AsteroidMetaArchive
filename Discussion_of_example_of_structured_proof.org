@@ -1,0 +1,151 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page contains discussion about the page [[file:Example of structured proof.org][Example of structured proof]].
+
+----
+
+Hmmm, I wouldn't say that "this is the proof as it would appear in mathematical
+literature". Even the "fine outline", it is just an outline, not a proof as we
+would like to read it in the literature, it is too schematic. -- [[file:alozano.org][alozano]]
+
+: I see, this is a proof in *logic*. I had not read the "structured" proof
+section. Still, it would be worth to mention that this is a proof as it would
+appear in logic, but not in other areas of math. --[[file:alozano.org][alozano]]
+
+
+:: If you think about it, the differences between the proof as written here and
+as it would appear in a math book are superficial.  Instead of presenting it in
+the form of an outline, each item in the outline would be the main sentence of a
+paragraph and the points mentioned in the subheadings would be the other
+sentences of the paragraph.  In the case of a longer proof with more levels of
+outline, the main headings would be chapters and sections and the lower level
+headings would appear as pragraphs.
+
+:: The point here is to study how proofs are structured.  There are many ways to
+present this information on a printed page and I have chosen to use the outline
+form because it makes the structure of the proof most apparrent.  --[[file:rspuzio.org][rspuzio]]
+
+#+BEGIN_VERSE I'm not sure if Lamport would agree that structured proofs are proofs as
+they would appear in a textbook -- I think Lamport's idea is that structured
+proofs are actually better in many ways than most proofs that appear in
+textbooks (but, if I recall correctly, that prose proofs /based on/ structured
+proofs /should/ appear in textbooks, using the algorithm you described).
+Maybe it would be good to try writing a prose proof based on the final
+structured proof. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 23:40:35 2005 UTC
+
+The latest revisions to the structured proof make it look very thorough.  I'm
+impressed!  It makes me think about writing an emacs mode that would help with
+some of the bookkeeping details.  (And which might become something that would
+keep a proving process on track.) --[[file:jcorneli.org][jcorneli]] Thu Mar 03 21:44:12 2005 UTC
+
+I kind of prefer the "elt", "union" notation. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 16:09:42 2005 UTC
+
+Sorry about that.  The reason that I changed it was simply that I was having
+trouble reading the proof and verifying that it was correct, but it would not be
+a big deal to change it back.  Also, I am thinking of introducing a different
+example to illustrate the concept of structured proof.  As I realized when
+examining this proof carefully, the author was sloppy in writing "if" rather
+than "if and only if" in definitions and that, therefore, 2/3 of the proof is
+unnecessarry.  However, if I cut out the unnecessarry portion of the proof, then
+what remains is so short that there is really not much point in trying to
+structure it, so I am thinking is is bettter to find another example to
+ikllustrate the concept of structured proof.  --[[file:rspuzio.org][rspuzio]] 4 March 2005 
+
+: Interesting learning experience -- it seems to illustrate the power of the structured proof idea quite nicely!  On notation, if you wanted to use !LaTeX, that would probably be easier for you and for the reader. --[[file:jcorneli.org][jcorneli]] Sat Mar 05 00:52:57 2005 UTC
+
+Have you developed any theory of how to structure an unknown proof
+automatically? I.e. from what information in the theorems and axioms would the
+hierarchical structure of the proof be derived? --[[file:shargestam.org][shargestam]] Sun Jun 19 2005
+
+: By "unknown proof" do you mean "the proof of a theorem as it is developing"?
+If so, I think you may find some (partial) answers in the Lamport article, although
+only rather partial ones.  Another fun example is Ray's 
+[[file:Mathematical Stream of Consciousness.org][Mathematical Stream of Consciousness]] 
+(or similar examples that you come up with on your own), which, at first glance, seem
+highly unstructured, but which probably have got some nice structures to them.  As it says in 
+the [[file:Discussion of Mathematical Stream of Consciousness|discussion.org][Discussion of Mathematical Stream of Consciousness|discussion]] about that page,
+one could presumably "abstract" the argument given in the stream-of-conciousness
+writing using scholia (i.e., marginal notes, see [[file:first introduction to scholium systems.org][first introduction to scholium systems]] if
+this term is unfamiliar!) and turn this into a structured proof in the sense we're
+talking about here.  This is about as much of a "theory" as I can come up with on
+the spot.  Translating this theory to a mechanized proof setting would be pretty
+straightforward - but implementing the actual prover and abstracter would be rather
+hard I bet!  Your question either begs (or maybe is, in which case, um, ignore the above?)
+the question: [[file:how to go about proving things.org][how to go about proving things]]?  I don't know the answer to that question,
+but I hope to learn something about it before... um... August, let's say.  --[[file:jcorneli.org][jcorneli]] Sun Jun 19 01:46:12 2005 UTC
+
+:: The "unknown proof" phrasing was perhaps misleading. What I meant was simply
+that given a complete proof (in h-code, if you wish), do you have a theory of
+how to structure that proof automatically so that it becomes as readable as
+possible for a human? I said "unknown proof" just to point out that the designer
+of the proof structuring routine would not know what the proof would look like
+(except that it would be correct and that it would be in h-code, say). If we
+look at the example proof of the distributivity of Cartesian product over union
+in set theory from the previous pages, it is clear that the latter versions are
+easier to read than the former, but not much is said about what rules are being
+followed when improving the readability. I'm asking because I have ideas of my
+own for such rules, but I don't want to devote significant time to fleshing them
+out if somebody else has already given this a great deal of thought (and I'm
+sure someone has, if nothing else the person who did the Cartesian product
+example). Reinventing the wheel, etc. --[[file:shargestam.org][shargestam]] Sun Jun 19 2005
+
+#+BEGIN_VERSE I don't think I have any particular theories of my own about this, no.
+There are some general "laws" of rhetoric that can be applied to mathematical
+writing that make it better, but the question of "[[file:what makes a good proof.org][what makes a good proof]]"
+isn't one I have an answer to.  Indeed, different proofs for different purposes,
+is what I'd say - if you look at Ray's [[file:Levels of Proof Checking.org][Levels of Proof Checking]], it should
+be easy to imagine each of the different corresponding levels of proof would
+have different "natural" audiences.  Even at the lowest level, in which all the
+details are given, the proof could presumably be structured in different ways.
+I have no doubt that some people have put thought into this question, but I
+don't know their conclusions, and it would be great to hear your thoughts on
+this.  Maybe supplemented with references.  Part of our project this summer is
+to work on defining good language structures for talking about proofs in hcode.
+A general expository page talking about the goals for such proofs would be good
+to work on (see the above link; also take a look at the more code-oriented
+[[file:designing proof structures for hcode.org][designing proof structures for hcode]], which would presumably mirror the
+"theory" page). --[[file:jcorneli.org][jcorneli]] Sun Jun 19 18:15:39 2005 UTC
+
+Hey, that's nice!  I just coincidentally used the same example on the
+[[file:metamathCalculationalProofs.org][metamathCalculationalProofs]] page.  And looking at the different
+versions of this proof, I think I like the calculational version better...
+--[[file:marnix.org][marnix]]
+
+-----
+
+In the 
+[[file:Proof_of_distributivity_of_product_over_union_with_justifications.org][Proof_of_distributivity_of_product_over_union_with_justifications]]
+the claim is that from
+
+    If (x y) elt A times (B union C) then (x y) elt (A times B)
+        union (A times C)
+
+it follows that
+
+    A times (B union C) subset (A times B) union (A times C)
+
+by the definition of subset.  A subtlety is that the implicit "for
+all" in the first statement ranges only over ordered pairs, whereas the
+definition of subset requires the "for all" to range over all sets.
+What has to be shown is that any set that is not an ordered pair does
+not belong to a product, so that the implication holds for non-ordered
+pairs as well as ordered pairs.  While this is "obvious," it
+can be slightly messy formally (with existential quantification and what
+not).  I'm sure this is what you implicitly meant, but I just wanted to
+explicitly point it out in case it is overlooked.
+
+By the way the set.mm proof of this, as Marnix mentions, is
+[http://us.metamath.org/mpegif/xpundi.html xpundi], which uses a
+somewhat different method involving class builders.  Your method could
+also have been used, making use of
+[http://us.metamath.org/mpegif/relssi.html relssi] and the fact that a
+cross product is a relation, [http://us.metamath.org/mpegif/relxp.html
+relxp] (and so is a union of relations,
+[http://us.metamath.org/mpegif/relun.html
+relun], for the converse).  In other words, relssi supplies
+the specialized "subset"
+definition you need.  If you look at the proof of
+[http://us.metamath.org/mpegif/relss.html relss] from which relssi is
+derived, you can see the kinds of things involved in its proof.
+--[[file:norm.org][norm]] 26-Oct-05

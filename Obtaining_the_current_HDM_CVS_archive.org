@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ export CVS_RSH="ssh" 
+ cvs -z3 -d:pserver:anonymous@cvs.sv.gnu.org:/sources/hdm co hdm
+
+Note: Savannah has recently changed the way their server works [these
+changes are reflected here --- for more details, please see
+http://savannah.gnu.org/forum/forum.php?forum_id=4168]. --[[file:rspuzio.org][rspuzio]]
+
+Let me know if you need commit access to this archive. --[[file:jcorneli.org][jcorneli]] 
+
+* Stand-alone stuff
+
+The [[file:scholium system.org][scholium system]] is the thing I've been mainly working on for
+the last year and a half; it is in the "scholium-system" subdirectory,
+in the file sbdm4cbpp.tex.  Perhaps that's all you want, so here are
+links to a stand-alone [http://planetmath.org/~jcorneli/sbdm4cbpp.pdf PDF]
+and [http://planetmath.org/~jcorneli/sbdm4cbpp.tex TeX] files
+with the relevant content.
+
+(The file sbdm4cbpp.tex contains code that runs in [[file:Emacs.org][Emacs]], as well
+as documentation that formats nicely with !LaTeX, as you can see in
+the PDF file.)
+
+--[[file:jcorneli.org][jcorneli]] Jan 23 06 (revised Jan 20, 07)

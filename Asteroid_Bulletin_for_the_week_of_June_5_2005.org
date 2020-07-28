@@ -1,0 +1,64 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Feature: 501(c)3 happy ending
+
+Aaron may end up making this a separate news item, since
+its a pretty big deal: but you can read it here first -
+PlanetMath.org now has 501(c)3 charity status.  This means
+that donations to PM are tax deductible, among other
+things.  Stay tuned for the full update.
+
+* Google Summer of Code 2005
+
+Google is going to pour $1M into free software development this summer by
+funding student programmers.  PM didn't make the final selection of "mentoring
+organizations" but thinking about this Google did spark some discussion about
+other ways to get money.  And of course, if you're a coder and you haven't done
+this already, you may be interested in checking out the projects that did make
+the final cut - it could be a good way to earn money this summer.  Tell your
+friends, too!
+
+A link to the main program page and our followup discussion about the
+application be found here:
+
+http://planetx.cc.vt.edu/AsteroidMeta/Google_Summer_of_Code_2005_Programme
+
+* Coding project: electronic map tackboard
+
+Is anyone interested in coding up a little map that will
+show where PM contributors are located?  Probably this would
+be easy to base on existing code (e.g. Xearth).
+
+More info/discussion:
+
+http://planetx.cc.vt.edu/AsteroidMeta/electronic_map_tackboard
+
+* Involvement with PM nonprofit
+
+One way you can help with PM would be to help us find people 
+or organizations who can help us raise money.  This may
+seem rather indirect, but it could be quite effective.  In addition
+to checking out the grant planning pages on AsteroidMeta,
+you might want to take a look at
+
+http://planetx.cc.vt.edu/AsteroidMeta/Outsourced_Fundraising_and_Nonprofit_Services
+
+and see if that rings any bells for you.
+
+* Discussion
+
+Note: this is supposed to be the week in which the initial code
+for the [[file:scholium system.org][scholium system]] is released. (Indeed, in a couple of days.)
+Assuming my computer holds together (see [[file:Classifieds.org][Classifieds]]...).  I will
+probably announce something about that here and on an emacs mailing list...
+or I may wait for the emacs announce til the system is /even better/
+(e.g. at the end of next month when the paper is finished).  Anyway,
+that's mainly what I'm going to be working on for the next couple of days...
+--[[file:jcorneli.org][jcorneli]]
+
+: Some slight delays with that - soon though! --[[file:jcorneli.org][jcorneli]] Sun Jun 05 17:35:13 2005 UTC
+
+
+----
+[[file:Bulletins.org][Bulletins]]

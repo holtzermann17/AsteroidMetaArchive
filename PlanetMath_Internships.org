@@ -1,0 +1,135 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is for organizing "internships" for !PlanetMath (as described 
+[[file:PlanetMath Business Development Idea 932|here.org][PlanetMath Business Development Idea 932|here]] or otherwise).  We'll
+start with a list of internship ideas.  Presumably there are other lists
+on this wiki that could be 'cluded into this one...
+
+Items here are much like TODO-list style development items, but tend to add
+the characteristics of being (1) relatively large projects, and (2) invoke more 
+"research" issues.   
+
+* Internship ideas
+
+** Add 'problem' and 'solution' types to the PM corpus
+
+We have definitions, theorems, etc., but not "problems" and "solutions".
+These would, however, be useful for students at every level in math, and
+they should be added.
+
+** Work on Bi-Directional Content Synchronization
+
+Content should be sharable between Noosphere instances (e.g. PlanetPhysics and PlanetMath).  
+Characteristics of the situation are that content overlaps partially, but not completely.  Decisions
+must be made on each end what changes to accept and decline.  What is needed is something like OAI
+that allows changes to propagate both ways, and has selectivity.
+
+** Work on Noosphere 2.0 ("Neosphere")
+
+A clean rewrite.  Should have a well-thought-out document and object model.
+
+** Work on Reputation System
+
+PlanetMath/Noosphere can have alternate versions of entries on the same topic.  This is great
+in terms of lessening the need for editorial selectivity, but this introduces the curse of
+information overload.  It is suspected this "curse" can be eliminated with the introduction of
+reputation systems and their use for filtering/sorting. 
+
+** Build a "Digital Library" Section
+
+Build a "proper" digital library section for Noosphere/PM.  It should be able to harvest in 
+remote content as well as native/local Noosphere content and make it all searchable/browseable.
+In addition, it should do Noosphere-esque things like allow commenting on the items, conversion to
+local entries, and filtering through a rating/reputation/recommender facility.  Things to start
+with would be arXiv, MathWorld, and Mathforum.
+
+** Editorial Process Improvements
+
+Many improvements could be made that have been suggested over the last few years (including separate
+"editorial" comments section and convertability between comments and corrections), new-user selection
+of authority model (freeform or owner-centric), and various tweaks the correction and orphaning workflow
+(*link in a reference here*).
+
+** FEM Editorial System
+
+Build an editorial interface for the Free Encyclopedia of Mathematics, a book form based on the PM
+content.  This system has similar aspects to the bidi content updating system (and could potentially be
+built on it).  But also, selection of articles should somehow be represented on Noosphere/PM (we want
+the selection information propagated so users will be motivated to make their entries nicer).  Also,
+better handling of real-world vs. cyber identities in Noosphere would be part of this whole system.
+
+** (Legal) Craft Intern/Unpaid Employee Contract/Liability Waiver
+Write an agreement covering the legal aspects of the relationship
+between "interns" aka "unpaid employees" and PlanetMath, Inc. with
+a view to spelling out the rights, responsibilities and 
+payment terms (i.e. job references) as well as termination events
+and disclaimer of all liabilities of PlanetMath, Inc. (i.e.
+volunteer travels to community college to place handbills,
+as specifically required by his/her position, and is hit by
+a truck.)
+
+** (Business) Invent Self-managing, Self-organizing Business Structure Relying on Unpaid Employees
+
+Create a business plan for PlanetMath Inc., for possible presentation to
+the board that uses a multi-level hierarchy of volunteers (reporting
+to Aaron, et. al) in which the volunteers are largely self-managing
+and self-directing within specific parameters in fulfillment of
+clearly stated goals. Craft the plan as generically as possible,
+and ideally as an "open business" that can be replicated easily.
+The ultimate organization should have comprehensive corporate
+infrastructure, including IT, human resources, legal, accounting,
+sales and marketing, etc. The ultimate goal is a self-supporting,
+highly effective organization that attracts donors, volunteers
+and mathematicians/scientist/IT content specialists while providing
+valuable work experience, training benefits, and job references
+to un/underemployed people.
+
+** (Non Profit) Write a Grant Proposal for PlanetMath
+
+Work with the President and staff of PlanetMath to develop
+a successful $50,000 grant proposal for system and infrastructure
+development.
+
+
+
+----
+
+Some of these seem to be migrating into TODO-list item or bounty-project territory.
+While the last three are fine I don't think they are "internships".  --[[file:akrowne.org][akrowne]] 
+
+I wouldn't get bogged down in the name. This may be interesting:
+
+http://en.wikipedia.org/wiki/Internship
+
+"In North America, an intern is one who works in a temporary position with an emphasis on education rather than merely employment, making it similar in some respects to an apprenticeship."
+
+[...]
+
+"An internship may be either paid, unpaid or partially paid (in the form of a stipend). "
+
+[...]
+
+Internships offer benefits that may include instruction and mentorship; work experience; networking opportunities; and a verbal or written letter of reference. Ideally, the employer has thought carefully about these benefits and described them in the posting. It is also up to the applicant to research or ask about the details of the situation.
+
+To find a suitable match, the hiring process is just as important as with permanent work. The job description should clearly describe the position, background information, expectations, benefits and how to apply. It should either ask for a cover letter and resume or provide an application form. The interview and reference check are equally important. To avoid surprises for either party, it is important to maintain clear and honest communication of both the employer's needs and expectations — and the potential intern's.
+
+[...]
+
+--[[file:ocat.org][ocat]] (delete my post as tidy up later...)
+-----
+
+So we may have someone available at the advance math grad student level who can do lots of content-based work as inexpensive contract jobs.  
+What kind of projects could we craft for such a person?  I'd like to solicit ideas.  Here are some to start:
+
+ * do FEM editorial work
+ * add diagrams to entries sorely needing them
+ * add examples to entries sorely needing them
+ * add proofs 
+ * fill in content for other areas PM is deemed "weak" in
+ * create entries to satisfy request list requests
+ * ...
+
+How do people feel about these?  How about others?
+
+--[[file:akrowne.org][akrowne]] Oct 23 2006 12:06am

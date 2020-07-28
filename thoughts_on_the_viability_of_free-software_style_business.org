@@ -1,0 +1,65 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+: Ask not how you can "do" free software business;
+ask what your business can "do for" free software. 
+:: -- Stephen J. Turnbull's sigfile
+
+
+*  In general
+
+This [http://www.crynwr.com/fsb/ mailing list] has some interesting discussions on
+the topic of free software business.
+
+Some general advice is available on this [http://www.stromian.com/bizmod.html web page]
+([http://64.233.187.104/search?q=cache:Sxil6egH048J:www.stromian.com/bizmod.html+free+software+business&hl=en&start=4&ie=UTF-8 google cache]).
+Skimming this page might offer some inspiration for people thinking grants in
+addition to FSB.  (Indeed, we might think about grantors as if they were
+clients, and see if any further inspiration comes from that.)
+
+For example, on this page it is suggested that customers are unlikely to pay for
+internal code cleanups.  I would imagine this is true of granting agencies just
+as much as it is true of potential clients.  So perhaps volunteer support for
+the [[file:Noosphere rewrite.org][Noosphere rewrite]] is really the only way to go!
+
+Surely there are other references about FSB? - more info should be added here.
+
+*  Funding for PlanetMath and friends
+
+First, here is a note with some (preliminary) discussion of how we might 
+[[file:make AM projects financially independent.org][make AM projects financially independent]].  And see also this essay:
+[[file:Who should fundraising target.org][Who should fundraising target]].
+
+Grants could definitely be a part of the picture, but they are already
+being discussed [[file:Grant_planning|elsewhere.org][Grant_planning|elsewhere]] on the wiki.
+
+So this section is about other things: 
+[[file:PlanetMath Membership|membership.org][PlanetMath Membership|membership]], for example, but here we give
+special consideration to useful for-pay goods and services that
+PM and friends can, or could potentially, provide.
+
+Paying relationships with other organizations would
+similar to grants but also similar to membership.
+Perhaps there are some organizations (professional
+or industry) would be willing to support PM financially
+with a no-strings-attached monthly check - and perhaps
+the minimal requirement that their organization gets
+listed on a Sponsors page.  Finding sponsors like this
+should be part of our [[file:Letter writing campaign.org][Letter writing campaign]].
+
+One possibility that I've long considered for [[file:HDM.org][HDM]] is the sale of printed
+books and manuals.  [[file:PM.org][PM]] could consider the same thing, once it establishes a
+large enough library of free books to sell (one reason to
+[[file:PlanetMath engine interbred with wikibooks idea|enhance the support for creating new free books.org][PlanetMath engine interbred with wikibooks idea|enhance the support for creating new free books]].
+Of course, we are already preparing to sell copies of the [[file:FEM.org][FEM]] (though this is not quite ready yet).
+
+* Where does all the money go?
+
+For any business model (or combined model) to work well,
+we will need to have a clear budget.  So see the 
+[[file:Budget.org][Budget]] page for more discussion.
+
+----
+[[file:Discussions.org][Discussions]]

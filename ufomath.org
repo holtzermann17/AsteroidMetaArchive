@@ -1,0 +1,89 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page about ufomath (http://ufomath.wikispaces.com).
+
+Moving some discussion here from [[file:alih.org][alih]] page.
+
+
+At first glance it would seem that [[file:ufomath.org][ufomath]] and [[file:mmj2.org][mmj2]] have
+rather a lot in common. Ocat will hopefully report soon, when not busy?  --[[file:jcorneli.org][jcorneli]]
+
+I don't see yet why [[file:ufomath.org][ufomath]] is like [[file:mmj2.org][mmj2]]. It has nothing to do with [[file:metamath.org][metamath]] proofs -
+it just calls ATP repeatedly. In Isabelle terms, it's like blasting all the way through.
+--[[file:alih.org][alih]]
+
+Well, the choice of programming language is the same, and that may be somewhat significant, actually.  The (main) difference (based on what we've discussed) is that you call an external program to do the logic part, whereas ocat reimplemented the metamath core in java, and so can use that module instead of calling an outside program.  But what makes mmj2 special (in my extremely limited understanding) is its emphasis on being meticulous about parsing issues.  I'll let [[file:ocat.org][ocat]] say anything further, lest I put my foot (leg, etc.) in my mouth. --[[file:jcorneli.org][jcorneli]]
+
+Very impressive! I like the way ufomath makes use of available
+software packages, like generating the parsing code. Very interesting
+piece of work. Is there a GUI front end too? Planning to store the
+statements in a database? What's next? --[[file:ocat.org][ocat]] 
+
+P.S. jcorneli -- I think java is common in colleges these days,
+but I like it because it is very strict. My work habits benefit
+from strict compiling. I even like the array bounds checking.--[[file:ocat.org][ocat]]
+
+Thanks for your opinion. I've just made it working (or so it seems), so there's no GUI.
+And since ufomath, like Mizar, doesn't talk with the user, I don't plan a GUI in the near future. Speaking of database, I will try to avoid producing any output files (maybe except proof objects) as long as possible for the sake of minimalism. When Mizar outputs 24 files checking your single article, you know it's grown too fat. 
+
+Next I plan to formalize something. I really need to get a feeling of using my own program before making long-term plans. But meanwhile, see http://ufomath.wikispaces.com/plans for some minor stuff. --[[file:alih.org][alih]]
+
+Hi. The reason I mentioned a GUI is that most people these days
+simply will not use "batch" programs due to the steep learning curve.
+I believe that, for the good of mankind, it is extremely important
+that many more people (especially lazy Americans) learn logic (and math :) 
+
+Hence, GUIs! Another thing I have seen in practice is that the
+initial conditions of a system, such as no GUI, no Unicode, English-only,
+hardwired logic/notation, etc. are inherited characteristics that
+tend to resist future change. They're like the genome, or the state of the universe just after the "big bang". 
+
+Also...I have been attempting
+to hack in Java Swing for my Proof Assistant GUI and it isn't so
+bad as long as you don't try to create a monster -- simple things
+are simple in Swing, just keep whacking away and eventually it
+comes together. I was surprised to learn that a GUI screen can be
+popped up almost anywhere in a "batch" program, in fact the batch
+program window keeps chugging away in the background (assuming
+you are running an Application instead of an Applet.) --[[file:ocat.org][ocat]]
+
+Steep learning curve is a relative thing. Some people have their favorite text editor; for me it's gvim, for others it may be [[file:Emacs.org][Emacs]], KWrite or even Notepad. I am used to its folding, to parenthneses matching, to linewise text selection and so on. I can even run ufomath right from the editor, without switching to a console. So if some
+GUI asks me to abandon my favorite editor, I have a steeper learning curve with it. Anyway, if someone learns what is a console and how to use batch programs, it will do him good far beyond using a single program.
+
+In our Windows-spoiled days, I admit, there are few people thinking like me. But before making decisions such as writing GUI, it is a good idea to know who's using the program and what for. You mentioned educational goals - but it is not yet clear for me whether ufomath can serve them, with GUI or without it.
+
+I am not afraid of your observations about initial conditions. I think it's far worse to make an all-supporting thing from the very beginning. For example, in Russia there are three russifications of TeX, and this situation seems to be constantly troubling. A brilliant TeX-based system Omega supports Unicode, many encodings, right-to-left texts and other such things, but it is so damn complicated that I have seen no one able to use it with Russian texts. --[[file:alih.org][alih]]
+
+So ufomath can be called, like a subroutine? That makes it better
+than a pure "batch" program, for sure. Such a thing could be
+embedded elsewhere, a GUI or even on a web server. 
+
+I know what you mean about GUI's vs. console. I started back
+in the card reader days, and in the aftenoons a program compile 
+"job" could run for an hour! The real learning curve is not so
+much about learning to initiate a program in "batch mode". People
+are so overwhelmed with data and innovations these days that 
+it can be hard to deal with a bazillion different programs...
+unless they get help and prompts. GUI's provide instant feedback
+on errors plus help. That's a good thing. The trick is to get
+people *onto* the learning curve in the first place, and then
+provide positive feedback to keep them going. But "GUI" is not
+the end all, be all of computing. Maybe one day we'll talk to
+our computers, and that will be just as good or better than
+these dorky mouse double-clicks and stuff... I do know that 
+people like pictures and charts, and web pages. I understand
+that the popularity of Metamath increased dramatically once
+Norm created the Metamath Explorer web page series. 
+
+I can also relate to what you say about starting simple and
+not adding every possible feature. A tricky business!
+--[[file:ocat.org][ocat]]
+
+Well, any batch program can be called like a subroutine, and that's what makes them far more convenient then GUI-based programs :)  Ufomath's interface, however, is too simple and not suitable for serious GUIs like ProofGeneral.
+
+You're basically saying that users' priorities are something like this: 1) GUI 2) demos 3) documentation ... 10) language design ... 100) system architecture. I agree completely. But as a developer, I have another viewpoint: 1) documentation 2) language design 3) system architecture ... 10) GUI ... 100) demos. I'm not saying that GUIs are not needed at all, I'm just saying it's too early. Someone who has only put some bricks in a foundation usually doesn't discuss wallpapers. As far as I understand, the Metamath Explorer was created only when the metamath language and architecture became stable. Ufomath is yet far from there.
+
+A good example of what can occur with early GUI is the Ivy proof checker from Argonne. McCune had built
+a "proof viewer" in Java (http://www-unix.mcs.anl.gov/~mccune/prototype/java/proof/Main.html), but /before the Ivy format was frozen/. Guess what happened?
+--[[file:alih.org][alih]]

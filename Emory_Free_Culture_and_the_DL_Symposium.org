@@ -1,0 +1,170 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Essentials
+
+Title: Free Culture and the Digital Library
+
+Home page: http://www.metascholar.org/events/2005/freeculture/
+
+Location: Emory University, Atlanta, GA
+
+Notable participants: Lawrence Lessig, Siva Vaidhyanathan, Cliff Lynch
+
+Date: October 14, 2005
+
+Abstract Deadline: May 6 (extended)
+
+Paper Deadline: July 1, 2005
+
+Description (from the call for papers):
+
+: This interdisciplinary symposium will explore the relationship between digital access to public cultural information and intellectual property constraints. In recent years, new legal limitations in the United States have affected public access to the materials held in a variety of different open digital library infrastructures, ranging from those of the Library of Congress to Kazaa. As new technological possibilities and laws governing their many uses emerge, it becomes critical to examine the relationship between digital innovation and legal regulation. This symposium seeks to promote a better understanding of the associated impacts of these changes on the local, national and international levels, both now and in the future.
+: .
+: Participation is welcomed from all disciplines including humanities, information science, law, social sciences, computer science, librarianship, archival science, and the study of popular culture. Persons from all domains --- education, government, industry, and others --- are encouraged to participate as presenters or attendees.
+: .
+: Articles should approach the symposium themes from any of four perspectives: cultural/social, legal, digital library technology, library science. Examples include (but are not limited to): the influence of copyright and Internet law on digital media; the cultural/social impact of electronic content; case studies illustrating how digital library services transform research or educational practices; the potential of digital scholarly publishing vehicles; the design, development and practical applications of digital library services; the likely impacts of the digital library on education, e-learning and e-science.
+
+*  Comment on Coverage
+
+Unfortunately, the abstract as phrased above makes it sound like the conference is /just/ about legal
+issues.  This is not the case, as an important aspect of Free Culture and Digital Libraries is the motivation
+for /having/ free culture digital libraries; i.e., the value they add over closed knowledge resources.  Value
+is added and society is transformed for the better by having both open access-style freedom and open production
+process-style freedom as a part of digital libraries.  In fact, Lessig goes out of his way to point this out
+in his book "Free Culture," which was a major inspiration for this conference.  In particular, Lessig argues that
+open content production processes makes culture more genuinely participatory, and greatly empowers the individual.
+The work going on at this site and with the connected projects we're working on emphasizes this aspect of FC and DLs,
+and I hope we can provide lots of coverage of this aspect at the conference. --[[file:akrowne.org][akrowne]] Thu Apr 7 20:18:04 UTC 2005
+
+*  Roll Call
+
+People who can go or are planning to go:
+
+ * Aaron Krowne ([[file:akrowne.org][akrowne]]) --- attending, helping to run.
+ * Daniel Mayer (CFO of Wikimedia) --- attending.
+ * Raymond P. Puzio ([[file:rspuzio.org][rspuzio]]) --- barring unforseen events, I plan to be there and talk.
+ * Robert Milson --- attending to present (I think --[[file:akrowne.org][akrowne]])
+ * Joe Corneli --- attending to present (I think --[[file:akrowne.org][akrowne]])
+
+*  Ideas for Submissions
+
+Put ideas in the list here, along with names of people interested in working on the
+item.  At least one person of this list should be planning to attend the event, or could
+go in the case of acceptance.
+
+Generally, anyone who is interested in one of these items may add their name to the
+list of authors, as long as they are willing to do some work!
+
+As these items develop, they should spawn off working pages, linked in here.
+
+The list
+
+ 1. An overview article describing what PlanetMath is and how free culture makes it tick ([[file:akrowne.org][akrowne]])
+ 1. A general article introducing CBPP, tying it to Free Culture and many innovative,
+high-profile projects. ([[file:akrowne.org][akrowne]])
+ 1. A general article examining how CBPP projects are structured (basically, how
+control and authority are distributed) ([[file:akrowne.org][akrowne]])
+ 1. Something on Wikipedia/PlanetMath content exchange?  Maybe how this kind of thing is
+possible with Free Culture, and how it works? (Wikipedia's CryptoDerk? [[file:akrowne.org][akrowne]]?)
+ 1. A description of the culture and community which has arisen in connection with such projects as Planet Math and Wikipedia.  (Somebody please consider this!)
+
+*  Definite Submissions
+
+Items that have been begun (submitted in at least abstract form):
+
+ 1. [[file:Adapting CBPP platforms for instructional use.org][Adapting CBPP platforms for instructional use]] (Robert Milson and Aaron Krowne)
+ 1. [[file:Trusting the user, Wikipedia as an example.org][Trusting the user, Wikipedia as an example]] (Daniel Mayer)
+ 1. [[file:How Free Culture Will Save Digital Libraries.org][How Free Culture Will Save Digital Libraries]] (Aaron Krowne)
+ 1. [[file:A scholia-based document model for commons-based peer production.org][A scholia-based document model for commons-based peer production]] (Joseph Corneli & Aaron Krowne)
+ 1. [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]] (Raymond Puzio)
+
+*  Preprints
+
+Permalinks to preprints of the above papers follow:
+
+ * [http://br.endernet.org/~akrowne/my_papers/fc_save_dl/fcsavedl.pdf How Free Culture Will Save Digital Libraries]
+ * [http://www.ma.utexas.edu/~jcorneli/a/lit/misc/scholia.pdf A scholia-based document model for commons-based peer production]
+
+: Perhaps Emory should be providing this service (or something similar)? 
+They talk about the "full text" of the sbdm paper
+[http://www.metascholar.org/events/2005/freeculture/viewabstract.php?id=19 here] but there
+is no link, also they seem not to have updated this page.  Anyway, the link I'm posting
+above is good until January.  Presumably by that point I'll have a new web page somewhere,
+and I can just search-replace the base everywhere on AM.
+--[[file:jcorneli.org][jcorneli]] Wed Aug 10 23:23:23 2005 UTC
+
+*  LaTeX Paper Template
+
+It has been duly noted that the Word-based template for the symposium papers would make the 
+conference decidedly "closed" in way.  I have talked to the other folks at Emory setting up
+the conference, and they would be opened to documents built in open systems, as long as they
+conform to the same look-and-feel.
+
+Accordingly, I planned to create a !LaTeX stylesheet and template for the papers, but I'm not
+sure when I'll get to this.  So, this is a call for help for someone else to do this, perhaps
+sooner and better than me (I have no experience with it and would take a while to learn).
+
+So, if anyone knows LaTeX and knows how to make classes/styles in it (or wants to learn) /and/
+can view the Word-based template file (see the metascholar site for the conference), your 
+help would be appreciated!  If interested, please say something here. 
+
+--[[file:akrowne.org][akrowne]] Mon Jun 6 01:45:00 UTC 2005
+
+I'm rather proficient in good old Plain !TeX (I have struggle through many "dangerous bend" exercises ;) ) so I can have a go at it.  As for !LaTeX, I don't know very much about that but, since it is a !TeX package, I assume it would not be so hard to adapt something wtitten in the parent language. --[[file:rspuzio.org][rspuzio]] 5 June 2005
+
+[[file:TeX format for Emory converence.org][TeX format for Emory converence]]
+
+* General Comments
+
+I don't think I have any other proposals left, sorry!
+--[[file:jcorneli.org][jcorneli]] Wed May 04 14:03:31 2005 UTC
+
+I noticed in the guidelines for submission that articles are supposed to be
+submitted using a Microsoft Word style template.  While I will be glad to write
+my essay, I suppose that somebody else will have to convert it to this format
+because I do not have a copy of Microsoft Word and do not intend to purchase one
+just to submit an article to a confrerence on free culture.  If I did, the irony
+would be delicious.
+
+I really wonder about this choice of a non-free program, especially when there
+are so many free word processors such as Open Office to choose from.
+--[[file:rspuzio.org][rspuzio]]
+
+Of course, one can save with Word format from Open Office, but that doesn't
+really help me, because I need !LaTeX formatting macros to make my paper look
+good.  If they are telling me that I can't use formatting that makes
+e.g. included code look good, then I guess they mean that I can't include code.
+Which means, I further suppose, that (a) they can expect to get a plain text
+file; (b) I can expect to rewrite the paper without code samples.  I suppose
+everyone ought to be able to deal with that, but it is a little bit annoying.
+--[[file:jcorneli.org][jcorneli]] Fri May 06 16:58:52 2005 UTC
+
+I hadn't noticed this, but I would expect it, given this is not a publishing-house
+operation.  This is a one time symposium and we don't have a nice production system
+that works on PDF or something.  I write in !LaTeX too and I would like to see a 
+system that is compatible with !LaTeX-based formatting, but I'm not sure we have 
+the resources to make that happen (unless there is something it is feasible for 
+me to put together).  I will ask around. --[[file:akrowne.org][akrowne]] Fri May 6 17:51:15 UTC 2005
+
+: There was a time when the teacher I was working with had to submit a paper for some engineer  conference and they requested word, even submitted a template. Using the power of LaTeX I copied the rough layout (set margins, two columns, etc as they wanted) and then I compiled with pslatex + dvipdfm to produce a pdf (that was an alternate format they accepted), we sent that and nobody ever notice it was done with latex instead of word. I'm not sure how well a latex2rtf converter would work. --[[file:drini.org][drini]]
+
+I have brought the concerns about Word to the rest of the planning team.  Everyone is
+really embarassed and we are all working on fixing the problem.  What I'm going to do is
+make a !LaTeX template that produces output that looks like what we are standardizing 
+with the Word template.  We're not sure what the rest of the procedure will be.  Either
+we will just take in PDFs and make final adjustments to those, or take in !LaTeX source.
+The former will probably be easier for us.  I will keep everyone updated. --[[file:akrowne.org][akrowne]] Tue May 10 01:57:32 UTC 2005
+
+This may seem like a stupid question, but...  I cannot make it so will the presented articles be made available to the public (free culture and all)?  What type of license will they be under? --[[file:bloftin.org][bloftin]] Fri Aug 12 23:00 UTC 2005
+
+Ha ha!  Good question!  I don't know.  The one on the scholium system is released
+under the FDL as part of the HDM docs (see [[file:HDM CVS.org][HDM CVS]] for the official version).
+--[[file:jcorneli.org][jcorneli]] Sat Aug 13 01:22:10 2005 UTC
+
+*  Proposals
+
+Please comment on whatever is placed here below. (tic toc... tzing... uh oh, time's
+up! -- swap! [snooze button!] ZZZ... [dreaming of more submissions?])
+
+----

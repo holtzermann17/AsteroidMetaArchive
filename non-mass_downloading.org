@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+One should be able to download and upload individual PM pages.
+
+This is really essential for productive use of the site.
+
+/PM should be put into CVS./  
+
+Note that AsteroidMeta pages can be downloaded and edited using the
+`simple-wiki-mode' for Emacs.  It would be great to set up facilities for doing
+basically the same thing for PM.  
+
+But CVS would of course be super, independently of anything like that. For one
+thing, it would remove the need to download huge tarballs when only a few files
+have changed, for example.  Furthermore, I'm not sure that the same features
+that are procesed by `simple-wiki-mode' are "exposed" by PM.
+
+Note that I can't even upload content to the encyclopedia using the lynx
+browser!  More work should be done on making the PM interface transparent
+to computers.  CVS would be a good first step

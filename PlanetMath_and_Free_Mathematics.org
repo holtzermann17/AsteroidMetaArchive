@@ -1,0 +1,147 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+20 minutes to say what "free math" and PM.org are all about and why
+they are important.
+
+*  Goal of the Talk
+
+Considering that we were invited to this conference by the mathematics community, I am
+approaching the talk chiefly as one of "marketing/evangelizing" our effort to perhaps the
+core constituency it is designated for.
+
+Actually, this isn't quite true, and therein lies much of the
+opportunity and challenge: PM was more intended for the wider
+mathematics community, as opposed to just the "official" academic
+segment.  This is an opportunity: we want to get a hefty chunk of
+academia "behind" PlanetMath, helping to support it financially and in
+terms of content and management.  But this is also challenge: how do
+we explain to academia how PlanetMath--a completely new beast to most
+of them--is something that is good for them, good for the field of
+mathematics, good for the general public, and not a threat to the
+scholarly world?
+
+So, what I will attempt to do with this talk is to explain what PM is,
+motivate it, explain what is so good and unique about it, explain
+where we are thinking we want to go with it, and discuss how the JMM
+denizens can become a part of this.
+
+--[[file:akrowne.org][akrowne]]
+
+----
+
+Given these goals, I suggest not just saying what makes PM cool,
+special, or different, but putting the talk (or a big part of the
+talk) in the form of a sequence of call/response pairs, where the
+calls come from academia, and the responses come from PlanetMath.
+
+What I have in mind is at [[file:outline of PlanetMath and Free Mathematics.org][outline of PlanetMath and Free Mathematics]].
+
+With some warm-up definitions, and some closing comments, e.g. for
+improving pedagogical metadata and enhancing the collaboration
+section, you'll have plenty of material.
+
+Many of the points from your outline will come up in this talk, in
+your spoken side-remarks, but folks won't get overwhelmed with a bunch
+of complicated slides, which they have to decide whether to remember
+or not.  If you can show them only memorable things, they won't have
+to invest in that kind of decision.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I'm planning to use an outline like this for the talk, and just use
+PM for the visual aid.  Luckily I'll have a stock computer to work
+with; and in the mean time I'll be thinking about what to do/say/show
+for the
+[[file:Metamathematical Visions - metadata, learning, and knowledge communities|visions.org][Metamathematical Visions - metadata, learning, and knowledge communities|visions]]
+talk.  
+
+The last talk was fun practice just talking (due to forgetting the damn
+converter-cable)... I'll have to watch the video to see how that actually
+went.
+
+The one modification to the above outline is to try to explain up
+front what "free math" is, and since we are finally starting to have
+some things written up on that, I think it shouldn't be hard to say
+something convincing.
+
+--[[file:jcorneli.org][jcorneli]]
+
+(Actually, I think that the "free math" is really almost sufficiently
+outlined in the outline; I'll think about this some more, and be sure
+to talk about it in my banter.  If anyone has specific comments on
+this or other points, please add them to the outline page.) --[[file:jcorneli.org][jcorneli]]
+
+
+*  Outline
+
+[[file:draft outline of PlanetMath and Free Mathematics.org][draft outline of PlanetMath and Free Mathematics]]
+
+*  Comments
+
+So basically the above is split into four main parts.  I think the logical 
+order of them makes sense: define "free", present PM.org, motivate "free",
+talk about developmental directions based on this, give ideas for how
+people can further these.  What do you guys think of this?  Of course, there
+are specifics that are probably missing as well.  Let me know.
+--[[file:akrowne.org][akrowne]] Mon Dec 19 03:48:08 UTC 2005
+
+Looks long.  Why don't you kick off the revisions by first sketching the goals of the talk
+at [[file:2006 JMM.org][2006 JMM]].  --[[file:jcorneli.org][jcorneli]]
+
+Added goals.  I guess it would be good to see what y'all think of that, first. 
+Eagerly awaiting! --[[file:akrowne.org][akrowne]] Tue Dec 20 04:14:27 UTC 2005
+
+It sounds like too much for 20 minutes to me --- it looks more like
+the outline of an hour-long (or even hour-and-a-half-long) lecture to
+me.  While all the points you mention here are good, there seem to be
+many more of them here than the average audience member who is not
+already familiar with the project is likely able to assimilate in
+twenty minutes.  My advice would be to go over this list, pick out a
+few main points, paying special attention to selling points which are
+likely to impress an audience of professional mathematicians as well
+as replies to one or two of the most commonly voiced concerns about
+the feasibility of the project and focus your talk around geting this
+handful of points across.  If the listeners finds what you have to say
+interesting, they will look at the printed version and pick up on the
+subtleties there, whilst, pardoxically, if you mention all the details
+in the talk, they might not be so interested and forget even the major
+points.  I remember how, a few months ago, most of my preparation for
+my bottleneck lecture consisted in figuring out what to omit --- one
+heading was completely omitted on purpose and one or two others were
+summarrized in a sentence or two so that I could better focus on the
+main point.
+
+Another thought that might help impress people would be if you could
+have a demonstration.  Let the audience see for itself how convenent
+and useful PlanetMath really is by looking up a topic or two and
+clicking on auto-links to look up some related definitions needed to
+understand the main definition.  Such a five-minute demonstration
+ought to convince most people that PlanetMath is a lot more convenient
+than having to put down what one is reading and fumble through a
+half-dozen books to hunt down definitions and then have to remeber
+what one was doing in the first place before one made the detour ---
+it puts mathematical knowledge at one's fingertips and allows one to
+look up background material without missing a beat.  Likewise, you
+might show them an example of a correction and of a discussion about
+some topic to illustrate how the feedback and review processes work.
+Also, by giving this quick introduction to how to use the resource,
+chances are good that audience members will go home, try it for
+themselves, and hopefully get hooked.
+
+Also, I think that the most powerful argument for free math is that it
+corresponds to the practise of working mathematicians --- most
+mathematicians freely copy and reuse the mathematical literature as if
+it were in the public domain.  What we are proposing here is nothing
+strange, it is simply being honest about what mathematicians
+instinctively feel is the most productive way to make use of their
+literature.
+
+--[[file:rspuzio.org][rspuzio]]
+
+I took your comments on making a demonstration and ran with them,
+above.  I definitely like your "get audience hooked" approach.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Thanks guys, I will think about your very excellent suggestions. --[[file:akrowne.org][akrowne]] Tue Dec 20 16:25:47 UTC 2005

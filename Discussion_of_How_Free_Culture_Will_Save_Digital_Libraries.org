@@ -1,0 +1,260 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Very strong beginning; I like it, and the thesis is one I think you can show
+(and you've already gone quite a ways towards doing that in this portion).
+
+A couple notes: First, discourse is always subject to copyright AFAIK - i.e.,
+that is not unique to digital libraries.  Second, I'm not seeing how /gratis/
+stuff relates to free culture as we've been discussing it so far.  I don't know
+what "structural cost" means.  I continue to be confused about "free culture",
+actually.  Defining it as a "milieux of information artifacts" might make sense
+(although the word milieux is maybe not precise enough), but tying this to cost
+seems to need explanation.  (Are potlatches an institution of "free culture"?)
+Also note that in the synopsis you describe CBPP as operating in a "milieux of
+free culture" - aka a double milieux?  Kind of makes my head spin.
+
+It might be kind of fun to mention "physical digital libraries" somewhere in
+here - sure, Borders "works", my apartment "works", but actual physical spaces
+/that are oriented towards scholarship/ and where you can go to meet with
+actual people and interact virtually with them or with others at the same
+time... seems like a nice thing too. I don't know how germane it is to this
+topic, but it came to mind.  Relatedly, this note seems to have a few reassuring
+things to say in response to my recent bout of concern about getting more people
+involved with working on HDM.  In a way, the "digital library as a social space"
+is similar to what I'm after here.  ("Ideas" and "projects" can be social spaces
+too.)  The HDM may not be mature enough to be a full-fledged "digital library" -
+but it seems to have the potential to become one (both in the content sense and
+in your social sense).  Things to think about, maybe.
+
+One other comment, which is that it might be worth including some general
+discussion about "online communities" in the paper, and relating this to CBPP.
+I think that most people would probably think of CBPP as a sub-category of
+online communities.  I'd probably say they got it backwards... but the line of
+thinking is that some online communities are "just" be about chat, that isn't
+"CBPP".  (I'd say that it is, but a somewhat weird sort.)  Anyway, it could be
+good to discuss/construct the relationship(s) of "CBPP" to "online communities"
+for purposes of this paper.
+
+--[[file:jcorneli.org][jcorneli]] Mon May 30 08:15:53 2005 UTC
+
+Thanks for the comments!
+
+Some replies here:
+
+: A couple notes: First, discourse is always subject to copyright AFAIK - i.e.,
+ that is not unique to digital libraries.  
+
+Actually, it isn't subject to copyright in a classical library, which is the 
+parallel I was trying to draw.  When you discuss something /offline/, copyright
+is, as a matter of practicality, not an issue.  
+
+The nature of discussion as it concerns copyright instantly changes in a digitized
+setting.  No, this is not unique to digital libraries, but I am not claiming it is
+so.  I am only exploring the ramifications of this dynamic /for/ digital libraries.
+
+Secondly, and something I should probably focus on more, is that other age-old scholarly
+operations in the context of a traditional library also must become free culture in
+the context of a social digital library space.  When you write in the margin of
+your dead-tree text book, it is unlikely anyone else will ever see or attempt to 
+propagate your insights (similarly, you could be writing notes on a separate piece of
+paper, since you can't write directly in a library book).  But when you create some 
+scholia in a digital library, there's no reason to "lock them up", and indeed, to do so 
+would be to deprive the rest of the community of significant value.  And this value,
+which must be coupled with a free culture treatment, would be a major "selling point"
+of the digital library.
+
+: Second, I'm not seeing how /gratis/ stuff relates to free culture as we've been
+ discussing it so far.  
+
+Maybe it doesn't.  But I have a hard time believing that the CBPP/free culture 
+productive "feedback loop" will be enabled by materials that require no permission
+to use or derive from, but require a steep financial cost to do so.
+
+: I don't know what "structural cost" means.  
+
+By this I mean charges for the express purpose use, rather than incidental 
+charges related to delivery, handling, paying for bandwidth, etc.  To take
+an example you are familiar with, PlanetMath is "structurally" free, but it 
+actually does cost something to deliver the product.  Right now this non-structural
+cost is being paid for by donations from myself, you, Logan Hanks, Edward Fox, and
+the handful of people who have sent in money.  But optimally, every one who 
+used the site would pay a little bit of the non-structural cost.
+
+: I continue to be confused about "free culture", actually.  
+ Defining it as a "milieux of information artifacts" might make sense
+ (although the word milieux is maybe not precise enough), but tying this to cost
+ seems to need explanation.  (Are potlatches an institution of "free culture"?)
+ Also note that in the synopsis you describe CBPP as operating in a "milieux of
+ free culture" - aka a double milieux?  Kind of makes my head spin.
+
+I probably need to work on my definitions.  They were very one-off.  But, probably
+some "fuzziness" will have to be retained.  This is culture, after all.
+
+: In a way, the "digital library as a social space"
+ is similar to what I'm after here.  ("Ideas" and "projects" can be social spaces
+ too.)  The HDM may not be mature enough to be a full-fledged "digital library" -
+ but it seems to have the potential to become one (both in the content sense and
+ in your social sense).  Things to think about, maybe.
+
+Absolutely.  Sounds good.  All of this might give you some insight on my own
+thought processes relative to the HDM and other AM projects that have been 
+going on for quite some time.  I'm just now trying to formally give voice to
+them.
+
+: One other comment, which is that it might be worth including some general
+ discussion about "online communities" in the paper, and relating this to CBPP.
+
+As well as defining CBPP itself.  But for space reasons, this kind of thing was
+left out of the proposal. 
+
+: I think that most people would probably think of CBPP as a sub-category of
+ online communities.  I'd probably say they got it backwards... but the line of
+ thinking is that some online communities are "just" be about chat, that isn't
+ "CBPP".  (I'd say that it is, but a somewhat weird sort.)  Anyway, it could be
+ good to discuss/construct the relationship(s) of "CBPP" to "online communities"
+ for purposes of this paper.
+
+Yeah, I think part of what I'm trying to say is that once you have a /virtual/
+community in a digitized context, you are doing CBPP.  To various degrees, these
+environments have been formalized to become "digital library-like".  I think that
+by understanding this, community and DL developers can better take advantage of
+the power of CBPP dynamics to create value -- or rather, let the communities create
+value. 
+
+I think chat is definitely CBPP.  I can't tell you how many times I've had computer
+questions answered by mailing list discussions turned up by Google.  These things 
+could be more formalized, or perhaps equivalently, /informated/ (there's that word
+again) -- so that their lasting knowledge value is better exposed.  
+
+--[[file:akrowne.org][akrowne]] Mon May 30 22:38:29 UTC 2005
+
+Maybe copyright law only applies to things that have actually been fixed in some
+written form.  But I don't think so.  My guess is that offline conversations and
+online ones are only different in that the latter can be redistributed with very
+little extra effort.  I don't think the law is different.  (And in the future,
+it may be that every conversation is essentially "online", e.g. once we have
+strong, cheap, portable speech-to-text.)
+
+: But I have a hard time believing that the CBPP/free culture productive
+"feedback loop" will be enabled by materials that require no permission to use
+or derive from, but require a steep financial cost to do so
+
+This relates to the notion of "translucency" that comes up for HDM, which in
+turn relates to the "multiple freedoms" stuff we've been talking about on AM.
+Math is "free culture" on the idea level but not on the text level... HDM
+is supposed to improve this situation.
+
+One major challenge is "library (community) building".  It is relatively easy to
+write a webpage about something (e.g. the HDM homepage).  It seems harder to
+create an active community around the idea.  Such communities, when they do
+arise (e.g. PlanetMath) have to "compete" or "cooperate" with other
+already-extant communities (e.g. math departments, math journals).  Cooperation
+is always a nice way to go, but it is somewhat challenging.  In any event,
+"/entrance to/" the online community "market" seems somewhat difficult when
+compared with entrance to the WWW.  I think this is a very interesting problem!
+One can easily start a blog, for example, but probably only 1% of all blogs
+actually get comments, and probably only .1% of all blogs are actually
+"popular".  (Statistics made up to protect the innocent.)
+
+The fact that AM "works" (in its somewhat limited capacity) and the fact that
+the individual pages on AM "work" (in their own capacities) has to do with the
+fact that a community already existed beforehand.  Totally new communities are
+probably rare, just like totally new ideas.  Something else to keep in mind.
+
+--[[file:jcorneli.org][jcorneli]] Mon May 30 23:39:47 2005 UTC
+
+You say:
+
+: Maybe copyright law only applies to things that have actually been fixed in some
+written form.  But I don't think so.  My guess is that offline conversations and
+online ones are only different in that the latter can be redistributed with very
+little extra effort.  I don't think the law is different.  
+
+Perhaps, but I don't know of anyone who's actually /considered/ copyright law
+as they made utterances in a library.  The point is, the ramifications are vastly
+different when everything /is/ fixed.
+
+--[[file:akrowne.org][akrowne]] Tue May 31 16:40:36 UTC 2005
+
+Section 102a of the copyright law states:
+
+: "Copyright protection subsists, in accordance with this title, in original works of authorship fixed in any tangible medium of expression, now known or later developed, from which they can be perceived, reproduced, or otherwise communicated, either directly or with the aid of a machine or device."
+
+Of course, as with everything else in the law, there is the possibility of interpretation.  What exactly constitutes a "tangible medium of expression" and what does it mean "to fix" a work in such a medium?  
+
+In the good old days, it was pretty obvious what this phrase meant --- to fix something tangible meant to take a pen and write it down.  But nowadays, with all these newfangled contraptions like computers and networks, this is not always quite as obvious.  For instance, I remember people arguing over the legality of providing links to webpages raising the issue of pictures on webpages on the grounds, when you click on a webpage, a copy of the picture is stored on one's computer, and using this as an argument to why providing links to webpages might make one an accomplice in the infringement of the copyright on those pictures.
+
+As I see it, a big reason why anyone would care about hairsplitting issues like this at all is the fact that, technology has eveolved in a direction which again makes decentralized distribution as efficient as centralized distribution.  To see how distribution has changed throughtout history, take a simple example --- a poem.  A century or two ago, someone coming across a particularly nice poem in a book might copy the poem into their commonplace book and send a copy in a letter to a friend.  While, strictly speaking, this might have constituted infringement of the author's copyright, noone was likely to care since the number of copies that could be so distributed was negligible in comparison to the number of copies that could be distributed by selling printed copies of the work.  Now, however, things are different in that, if I e-mail a copy of a poem I like, I can put a thousand people on the cc list and some of them might forward it to their friends.  In a matter of minutes, as many copies of the poem
+might be
+disseminated as were disseminated by selling the first edition.  Or even if I were to only e-mail it to two people and each recipeient were to forward it to two more, there could be thousands of copies disseminated in a matter of days.
+
+Also, modern technology makes it possible to have a continuum bridging what were once discrete possibilities, escpecially as machines become capable of doing things which at one time only humans could accomplish.  Also, with electronics, the issue of what is tangible is not as clear as it used to be.
+
+I suppose that this is enough for now, and soon I will get around to writing my essay and I have lots of other stuff to do,but I thought that this might answer your question and raise some points.  --[[file:rspuzio.org][rspuzio]] 31 May 2005
+
+I'd argue that my memory is a tangible medium of expression.
+But then again I have a pretty good memory.  Or at least,
+that has traditionally been the case.
+
+Good luck with your doings. --[[file:jcorneli.org][jcorneli]] Wed Jun 01 00:16:55 2005 UTC
+
+If you think memory is a tangible medium perhaps you'd better [http://www.sciencedaily.com/releases/2005/02/050205130345.htm read] [http://www.sciencedaily.com/releases/2004/04/040401075501.htm some] of [http://www.sciencedaily.com/releases/2001/06/010612065657.htm these] and [http://www.sciencedaily.com/releases/1999/12/991207074655.htm reconsider].
+
+Also, dolphins aren't hackers =)
+
+--[[file:akrowne.org][akrowne]] Wed Jun 1 13:36:05 UTC 2005
+
+Well, remembering things that didn't happen doesn't imply not remembering things that did happen.
+(a good exercise with "¬").  The last link is the most relevant.  The thing is, I don't need
+to remember things verbatim: an "impressionistic" memory is just about as relevant to "expression"
+as a "photographic" one.  (Heck, even a "surrealistic" memory is relevant.)  Or maybe not -
+maybe this is the simultaneous mutually implicit definition of "expression" and "fixed", by
+contradistinction to things that people can remember without writing them down.  But I doubt it.
+I might not have "The Matrix" memorized, but if I retold it using my memories from 2.1 viewings
+of the film, I could probably manage to land myself in some copyright trouble.
+
+--[[file:jcorneli.org][jcorneli]] Wed Jun 01 18:01:08 2005 UTC
+
+I would point that, although memory can be rather unreliable (for instance, I often have to look up expressions because I forget where the minus signs go or even remember some of them incorrectly) with frequent repetition to reinforce synaptic connections and memory aids to increase associations, one can fix a work rather reliably in memory, even verbatim if need be.
+
+The reason that I consider this relevant and mention it here is that, before writing, this was the medium in which texts were retained passed on --- long before digital libraries and written libraries, the library was in the minds of the community, perhaps concentrated in such specialists as priests and bards who could devote a significant part of their time to memorizing texts and periodically repeating them so as not to forget them.  
+
+Although this discussion started a bit tangential to the main theme, I think it intersects the curve to which it is tangent in another interesting point --- to understand the digital library and its cultural implications, it might be worthwhile to look at the history of libraries going back all the way to the era of oral literature.  To be sure, calling a college of bards a "library" is stretching the word, but, then again, using the term "library" to describe PM or HDM is also stretching the term.  This raises the issue of whether it is advisable to use the term "digital library" much as in our earlier discussion of whether it it is advisable to use the term "encyclopaedia" in connection with PM last week.
+
+While it takes a lot of work, memorizing long texts verbatim accurately is certainly not out of the question.  However, when a text is regarded as sacred or otherwise important, this expenditure of effort is considered as justified and verbatim memorization of such texts is common.  For example, think of all the Muslims who memorize the Koran, all the Chrisians who memorize the Bible (A good number of which even memorize the chapter and verse numbers, never mind that these were added for reference after the invention of printing!), all the Hindus who memorize the Vedas, and the like.  Among others, Leibniz and Euler were both proud of the fact that they could recite Virgil's Aeneid verbatim from memory.  (In ancient Greece and Rome, epics played a role analogous to that of the sacred scriptures cited above, and to some extent this role had been preserved until recent times by these texts' place in a "classical" education.)
+-[[file:rspuzio.org][rspuzio]] 1 June 2005
+
+
+* Classical libraries as social spaces
+
+I was struck by this thought when reading "Understanding Media" by !McLuhan in
+the library today, and also enjoying reading the marginalia that some 
+previous readers had left.  One way that libraries can be "social spaces" is
+by containing books (something they do very well at), which are themselves
+social spaces - scholia spaces to be precise.  A photocopy of one of 
+the pages in the book I was looking at would show people engaging in
+a "dialog" with the author, and followups wherein they engage with each other.
+I've tended to think that writing in library books is "vandalism", and
+I don't do it myself, though I do like to take notes.  (The last few times
+I've been to the library, I took notes on note cards, which is [[file:fun things to do|fun.org][fun things to do|fun]].)
+Notes are a way of transporting the information back to other media and
+other (real or potential) social spaces.  Of course, a digital library
+that is hooked up with a scholia system can presumably forget about the
+"vandalism" aspect of marginal notes, because people can turn the marginal
+notes on or off.  This relates to our discussion of the Moore and anti-Moore
+methods for learning mathematics: assuming Moore allowed himself to read
+a book, he probably would have hated to find marginal notes in the book.
+But an anti-Moore scholar would probably dig up books of commentary, enjoy
+marginal notes, and try to find people to talk to about the book.
+
+Incidentally, although I'm not a "vandal", historically I've been interested
+in the similarity between graffiti and math.  This was my version of
+"homesteading in the noosphere", before I knew anything about Raymond.
+Mathematicians search through math-space and write their names on things
+they find.  Gauss is maybe the most famous "tagger" in mathematical history.
+Furthermore, I am under the impression that graffiti may be a most useful part of "total revolution".
+
+--[[file:jcorneli.org][jcorneli]]
+
+Along these lines, it might be worth pointing out Fermat wrote his celebrated contributions to number theory in the form of marginal notes to Diophantus' Arithmetica.  One advantage of this ancient practise rather than the practise of writing one's discoveries as journal articles is that it makes it serves as a visible reminder of the giants on whose shoulder one stands.  Given that Fermat was also a judge it's interesting to speculate what his take on copyright law in mathematics might have been. --[[file:rspuzio.org][rspuzio]]

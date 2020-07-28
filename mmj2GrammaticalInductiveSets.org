@@ -1,0 +1,133 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some thinking, preliminary to continuing the work on detecting
+Ambiguity in mmj2. --[[file:ocat.org][ocat]] 10-Oct-2005
+
+----------------------
+
+Enderton's "A Mathematical Introduction to Logic"
+(1972, Academic Press) details a method for
+constucting the subset ("C") of the set of all
+possible symbol sequences in his propositional
+logic language (see pages 22 and 23 in Chapter
+1.2, Induction and Recursion.)
+
+Applying this to an arbitrary grammar generated
+from a Metamath .mm database such as set.mm
+requires a change to Enderton's scheme. In set.mm
+wff and class are defined recursively in terms of
+each other, and his grammar rules accept untyped
+symbol sequences (expressions).
+
+To make the set-building scheme work one could
+specify that the arguments to the grammar rules
+be "typed", but that would require a parse
+function to determine the type of an arbitrary
+symbol sequence; we have that (in mmj2 -- with
+certain restrictions), but the mathematical
+definition would be cluttered.
+
+Instead, the method from Metamath's proof
+verification engine is used. Substitution of an
+expression for a variable in Metamath's proof
+engine is allowed only if the first symbol of
+each formula matches -- the first symbol is a
+grammatical type code that Metamath prepends to
+every expression.
+
+We stipulate that the grammar rule arguments
+contain a prepended grammatical Type Code that
+matches the grammar rule's argument type -- or
+else the rule outputs a null symbol sequence!
+Creating a null symbol sequence as part of the
+definition allows us to say that the set of
+formulas given by the grammar rules is closed
+under the set U, the set C and the initial
+starter set ("B") if we include the null symbol
+sequence everywhere.
+
+And we stipulate that the output from a grammar
+rule is not an expression such as "( wff -> wff
+)" but a complete *formula* with prepended Type
+Code, like this: "wff ( wff -> wff )". This
+establishes that the output of each grammar rule
+is also grammatically typed, and eliminates
+spurious output (such as would otherwise occur
+when a class expression is fed into a naive
+grammar rule expecting a wff.) Output wff's are
+thus fed into subsequent operations expecting
+wff's and any attempt to feed a class argument
+with a wff generates only an output of null!
+
+Endertons "Induction Principle" theorem is as
+follows: Assume that C is the set generated from
+B by the functions in F. If S is a subset of C
+which includes B and is closed under the
+functions of F, then S = C.
+
+In our situation we add the null symbol sequence
+to U, and B. And specify that instead of
+populating B with the sentence symbols of the
+language, that B contains -- in addition to null
+-- either the grammar rule formulas themselves,
+or the grammatical Type Codes, prepended with
+themselves (like "wff wff", thus treating "wff"
+as if it were the name of a variable.) This
+generates a correct C, except that C also
+contains the null formula, which may need to be
+accounted for in subsequent work.
+
+In Schmidt's "Denotational Semantics" book,
+[ http://www.cis.ksu.edu/~schmidt/text/densem.html ]
+section 1.2 "Mathematical and Structural
+Induction" associated information about grammar
+rules that are defined in mutually recursive
+form. Schmidt also provides a very helpful
+theorem using structural induction on trees. Step
+1, is of course, being able to actually construct
+the set/tree under consideration...And next, to
+show that the output of the grammar building
+operations generate unambiguous output (or else
+follow-on proofs involving thee inductive sets
+and trees/ expressions will not be valid!)
+
+That's how I see things anyway (but IANAM :)
+
+----
+
+Maybe its just my head spinning, but it seems
+like Ray and I were just talking about something
+very similar, except, we had it in terms of "theorems"
+(instead of C) and "induction rules" (instead of F).
+B & S were only figured more vaguely, at least for
+me (Ray was leading the dicussion and I was following
+along as best I could).  We then moved on to talk about
+"predicates" implementing the induction rules (and
+transposing into a meta-language).  This idea of using
+grammar rules, however, is new to me.  Maybe
+I'll get the picture eventually, with some help.
+--[[file:jcorneli.org][jcorneli]]
+
+The commonly used technical term for what I call "grammar
+rules" is "grammar productions", often in conjunction with 
+"BNF". In mmj2 additional information is stored with each
+rule/production, so my ex-post facto self-justications for
+making my own terminology seems sound, to me :) 
+
+Enderton goes to great lengths to establish a sound foundation
+for his specific little language, which itself is designed to be
+unambiguous, easy to parse...and easy to prove that it is
+those things :) With Metamath the situation is more challenging.
+As Norm would say, Metamath is not just logic agnostic, it
+is grammar agnostic! The user can define any language she wants
+that will fit into the Context Free Grammar model (or below
+on the Chomsky hierarchy). What is most appealing to me is
+that a Metamath database user-language is self defining.
+One could envision encoding a .mm file such as set.mm and
+beaming it to an alien race without accompanying documentation.
+--[[file:ocat.org][ocat]] 
+
+OTOH, with just a bit more documentation, something like [[file:Natural deduction based metamath system.org][Natural deduction based metamath system]]
+could probably become much more self-explanatory, and could be something like
+a tutorial in the system.  --[[file:jcorneli.org][jcorneli]]

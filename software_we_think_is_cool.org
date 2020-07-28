@@ -1,0 +1,44 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some of our faves, see the [directory.fsf.org Free Software Directory] for lots more
+cool stuff.
+
+* General interest
+
+ * [http://gnugle.sourceforge.net Gnugle] D.N.E. (yet) but is still an
+  interesting idea, namely a P2P search engine.  Could have
+  applications/extensions that would help us out a lot.
+
+ * [[file:Emacs.org][Emacs]] is [[file:software we use.org][software we use]] (or anyway, some of us do) - and most of us
+  who use it think it is pretty cool.  It has lots of packages (email, web
+  browsing, etc., etc.) that make it so you almost never have to leave.  You can
+  even use it to edit wiki pages, see 
+  [http://ratpoison.elektrubadur.se/Wiki_editing_with_Emacs RatpoisonWiki:Wiki_editing_with_Emacs],
+  and adapt the instructions you find there.
+
+* Math
+
+**  free alternatives to popular non-free symbolic math applications
+
+(As advertised on [[file:Why not non-Free Math.org][Why not non-Free Math]].)
+
+These are the main ones:
+
+ * http://maxima.sourceforge.net/ computer algebra
+
+ * http://www.gnuplot.info/ plotting
+
+ * http://www.octave.org/ numerical calculation (matrices, computer vision, etc.).
+
+Look on the [[file:LISP.org][LISP]] page for a link to JACAL. --[[file:rspuzio.org][rspuzio]]
+
+**  Domain specific
+
+ * [http://pari.math.u-bordeaux.fr/ PARI] is one of the best number theory
+  packages out there, and it is all free. It can also be used as a C/C++ library
+  to compile applications.
+
+ * http://www.r-project.org/ Statistics-oriented.
+
+ *  http://www.gnu.org/software/nana/ Assertion checking (haven't checked it out in detail).

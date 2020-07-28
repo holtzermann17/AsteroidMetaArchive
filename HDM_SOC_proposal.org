@@ -1,0 +1,64 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* describe your idea/project in 10 words
+
+building a lisp-based mathematical language that anyone can use
+
+* explian in detail what you need
+
+I am working on a math/computer project with several components; they are
+described here:
+   
+http://planetx.cc.vt.edu/AsteroidMeta/HDM
+   
+My own work is focused on the parsing component - turning LaTeX (natural
+language) math into LISP math.  Another colleague (who lives near NYC actually)
+is focusing on proof checking mathematical statements written in the language
+that we are parsing too.  We've been working together on developing the object
+language.
+   
+A summer of code participant would help with implementing proof checking and
+theorem proving software for this language, or help with parsing tools, or both.
+
+*  why is this important to the Lisp/Scheme community
+
+LISP is the language of mathematics - but many people don't realize that!  The
+HDM project seeks to fulfill LISP's mathematical promise, and greatly expand the
+usability and accessibility of mathematics.
+   
+For anyone who uses a lot of math in their code or a lot of code in their math,
+the usefulness of this project should be pretty clear.  However, the aim of the
+HDM project is to develop tools that are useful not just for hackers but for
+day-to-day mathematician and math students.
+   
+Insofar as math is important to LISP/Scheme, this project should be a big help
+to the LISP/Scheme community!
+
+* what do you feel the summer intern will gain from this experience
+
+ * Learn about language design by doing language design.
+ * Learn about mathematics and metamathematics.
+ * Learn about and practice parsing, including NLP (if desired).
+ * Work with one or two full-time volunteer hackers/mathematicians.
+ * Help improve the PlanetMath.org website by creating tools.
+ * Help make mathematics "free as in freedom".
+   
+----
+
+Hm - some of the illiterateness in version 1 of this page is due to the fact that
+sentences were cut off here and there (I've tried to repair it...); some is just due to rushing.
+Anyway, it kind of conveys the point - and I'm glad to have put the
+HDM a bit further into "public view".   Maybe we should do some thinking
+about how to actually write /good/ HDM grant applications (perhaps
+to be administered by PlanetMath).  On that note, I think it would be
+exceptionally excellent if PM had a sufficiently "high profile" board or whatever
+(WRT math, CS, and free software) that it could confidently make
+grant applications on its own, to places like NSF.  (I don't actually
+understand the reasons why NSF favors academia... I'd assume that non-profits
+that do research are "OK" even without academic partners?)  I'm "into"
+the idea of getting research grants through PM to support HDM development,
+but I don't know how realistic it is at this point.  Maybe HDM could 
+apply for some grants as a stand-alone project.  There are lots of options,
+its just hard to map the options to reality.  Of course, actual completed
+work would be a very significant help... things are coming along though, honest :) --[[file:jcorneli.org][jcorneli]]

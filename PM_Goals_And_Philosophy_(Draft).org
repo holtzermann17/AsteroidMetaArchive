@@ -1,0 +1,146 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+This is a draft document intended as a starting point for community
+discussion, to be followed by relatively rapid official approval by
+the PlanetMath board.  It should contextualize and set the stage for
+all activities of the official organization and the general community.
+
+
+* Goals
+
+** Part 1: PLANETMATH ORGANIZATIONAL GOALS
+
+The goals describe the impact we hope to have on society, and the ends
+we ultimately hope to attain.  As a charitable organization (and an
+"altruistic" community), the goals are influenced by problems in wider
+society, as well as our personal notions of what we want to do.  
+
+The goals here may not entirely match with the goals that individual
+project members have (and may not match completely with /any/
+individual), however, we expect that there will be a high degree of
+overlap with most participants and "friends of" PlanetMath that will
+allow the project to exist as a cohesive unit.
+
+Our goals as an organization and community are:
+
+ * to create free educational content in mathematics in order to liberate knowledge and improve understanding 
+ * to get more people into mathematics, and get mathematical knowldge into more lives
+ * to improve the uptake, accessibility, and propagation of mathematical knowledge
+ * to foster commons-based peer production (CBPP) of knowledge content
+ * to improve the interconnectivity of information and knowledge/learning communities
+ * to break down technological and cultural "silos" which prevent the spread of knowledge
+ * to help students become scholars and support scholars
+ * to bring computer and social computing advances to learning and practice
+ * to ameliorate knowledge and informational disadvantages; i.e. the "digital divide" or "knowledge divide"
+
+** Part 2: HOW THE ORGANIZATION WILL DO ITS WORK
+
+This section describes how we generally (not specifically) plan to bring the above goals about.
+
+To do our work we plan to:
+
+ * structure our efforts in a chiefly volunteer/collaborative/CBPP manner
+ * employ choice and diversity over control and uniformity
+ * undertake research and development on collaborative systems
+ * do outreach in the mathematical communities about the goals
+ * get people into using CBPP systems (Noosphere and beyond),
+variously: in new areas, as a way of taking over areas of "centrally" produced
+knowledge, and also in ways are directly compatible with traditional methods
+of knowledge production 
+ * provide a sustainable organizational shell to accodmodate the community and steward development activities
+ * forge partnerships with organizations with overlapping interests
+ * pursue all compatible forms of support at all levels, from grassroots to official organizations
+
+* CODIFYING THE ABOVE: THE ORGANIZATIONAL STRUCTURE
+
+See [[file:Sketch_of_a_Possible_Organizational_Structure.org][Sketch_of_a_Possible_Organizational_Structure]].
+
+* COMMUNITY AND ORGANIZATIONAL PHILOSOPHY
+
+The philosophy of our community, and hence our organization, is that
+the individual or group should be free to do whatever they want as
+long as it does not destructively interfere with the commons (our
+shared resources and spaces).  When there is a question as to whether
+the commons is likely to be significantly altered, the general
+community should be engaged in discussion.  The nonprofit, its
+officers, and the board shall be the arbiters and stewards of the
+general community's interest in the commons.
+
+Ultimately, community members are responsible for maintaining the
+nonprofit (e.g. with contributed work effort whether for pay or not,
+monetary donations, and voiced opinions, e.g., in board elections or
+polls).
+
+It is highly desirable that procedures be put in place whereby
+community pre-approval can be secured before a given action is taken.
+This will save work and possibly avert disaster.  However, if some
+action or activity has significantly perturbed or altered the nature
+of the commons, we should have a protocol in place whereby the
+community may, after due deliberation, "roll back" changes that are
+not confluent with the organization's goals.
+
+The philosophy of freedom to act in a non-distructive fashion is the
+essence of "commons-based peer production", wherein most resources are
+brought to the table by motivated individuals on a volunteer basis, so
+individuals are free to make use of the intangible products of the
+collaborative project in an unlimited, nonrival manner.  When aspects
+of the commons itself are called into question, some political process
+is needed.  In our case, we choose a mixture of direct and
+representative democracy.
+
+Our organizational structure should reflect this philosophy
+throughout.  In other words, as we spell out in functional detail the
+interface between an arbitrary community member, the wider community,
+and the official organization, we will continue to turn to this
+philosophy as a guiding principle.
+
+ * [[file:Discussion of Community and Organizational Philosophy.org][Discussion of Community and Organizational Philosophy]]
+
+* COMMUNITY TEST CASES FOR THE ABOVE
+
+It should be useful to think about how various "challenges" to the
+community would be handled based on the above philosophy, goals, and
+organizational structure.
+
+Here are some ideas for test cases.  Feel free to fill in details.
+
+ * how would we handle OWIO?
+ * how would we handle the smarandache situation?
+ * how do we handle spammers?
+ * how do we develop guidelines and give them "force"?
+
+: One forward-looking question: how will we support various kinds
+of work on the site!? --[[file:jcorneli.org][jcorneli]]
+
+* Discussion
+
+Let the barbs fly! =) --[[file:akrowne.org][akrowne]]
+
+This isn't a barb, but now seems as good a time as any to
+post my revised (and /unofficial/, for those keeping track) strategic
+plan for !PlanetMath.org, as a complement to this document.
+(Eventually the two may be merged.)
+
+ * http://www.ma.utexas.edu/~jcorneli/a/plan.pdf
+ * http://www.ma.utexas.edu/~jcorneli/a/plan.tex
+
+--[[file:jcorneli.org][jcorneli]]
+
+
+(moved comment) I guess it is worth repeating (as we talked about on the phone) that
+goals without feasibile strategies don't carry much weight.
+(Cf. [[file:towards a definition of freedom|freedom without ability to act.org][towards a definition of freedom|freedom without ability to act]].)
+On the other hand, I think it is great to have at least a few somewhat flexible guiding
+principles, e.g., 'liberating knowledge'; and I don't object to this
+list as a starting point for discussion of these sorts of principles.
+Nevertheless, I think such a discussion should quickly get into operational
+strategies. --[[file:jcorneli.org][jcorneli]]
+
+(moved comment) I think that if a statement of goals is going to be approved
+rapidly, we should at least have some statement of how these goals are
+to be revised, so that we don't get locked into (or out from) some
+behavior pattern that is objectionable (resp. desirable).
+--[[file:jcorneli.org][jcorneli]]

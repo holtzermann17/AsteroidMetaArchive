@@ -1,0 +1,41 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is Noösphere?
+
+Noösphere (diaeresis optional) is the software that underlies the
+[http://planetmath.org PlanetMath.org] website.
+
+* Installing Noösphere
+
+See the [[file:Installing Noosphere.org][Installing Noosphere]] page for various helpful documents.
+
+* Hacking Noösphere
+
+** Getting The Code
+
+See the SVN instructions at http://aux.planetmath.org/noosphere/.
+
+* Formal Development
+
+** ChangeLog
+
+; Mon Feb 28 15.02.46 UTC 2005 : Previous commit was broken.  In two places, there was still a call to the old (removed) invalidation indexing function.  This broke entry revisions, and perhaps also additions. --[[file:akrowne.org][akrowne]]
+; Sun Feb 27 16.31.04 UTC 2005 : Synched code with new entry invalidation system.  The goal of this system is to be more precise than the previous one, which invalidated any entry containing the first word of a new concept label.  The new system employs an adaptive phrase index I came up with, which keeps track of occurrences of common word tuples, but not /all/ word tuples (on the current data set, this allows the index to save space by a factor of over 1,100 -- just for word /doubles/).  When a common phrase appears in a new concept label (say, a title), far fewer entries will now be invalidated (in general).  Also in this change, the definition of the rendered_images table was improved, and a fix to the definition of the cache table was improved in the mysql schema.  In addition, the stopwords list has been removed from the code and placed in etc/stopwords.txt. --[[file:akrowne.org][akrowne]]
+
+** Eventual Rewrite
+
+
+ * See [[file:Noösphere Niggles.org][Noösphere Niggles]], a list of major design issues to address for the Noösphere rewrite.
+ * Logan has started a [http://trac.loganh.com/projects/neosphere/wiki trac-based site] to manage the early stages of this project
+  (you'll find the project called &quot;neosphere&quot; there).  The page [[file:Noosphere rewrite.org][Noosphere rewrite]] contains the corresponding AM discussion. 
+ * Another take on the rewrite project is at [[file:Nooxana.org][Nooxana]].
+
+* Discussion
+
+**  Transparency to new users
+Please add an overview of the top-priority items directly to this
+page. --[[file:jcorneli.org][jcorneli]] Thu Mar 31 21:03:07 2005 UTC
+
+----
+[[file:Projects.org][Projects]]

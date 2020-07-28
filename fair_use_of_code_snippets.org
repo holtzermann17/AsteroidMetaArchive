@@ -1,0 +1,73 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The code for "the metamath book" includes a few lines that define a
+latex package, but which weren't written by the book's author.
+Is this a "fair use"?
+
+: *Update:* I received an email from Anthony Williams, the
+author of that code snippet, with the following declaration.
+
+    I hereby donate the code for realref.sty posted on the
+    comp.text.tex newsgroup on 9th November 2001, accessible from
+    http://groups.google.com/group/comp.text.tex/msg/5a0e1cc13ea7fbb2
+    to the public domain.
+
+: Of course this doesn't answer the general question, but it is no longer an
+issue for that particular code snippet. --[[file:norm.org][norm]] 24-Jul-2006 
+
+Similarly, the standard HDM !LaTeX header currently envokes a package called
+"simplemargins.sty" that isn't part of the standard !teTeX installation.
+Does this violate Savannah's requirement that your code work on a completely
+free software system?  I think so, but in order to get the margins
+set up properly, the easiest would be to make a "fair use" of some of
+the contents of simplemargins.sty.  I'm just curious about whether this
+would be legal.  I'm assuming it probably is, but thought I'd see if
+anyone else wanted to weigh in. --[[file:jcorneli.org][jcorneli]]
+
+For what it's worth, I'd say that this kind of snippet usage
+is totally ok. It's almost impossible to imagine that the intent of the original
+author of these style files was to limit the distribution of documents that
+include them. In addition, it seems that the snippets in question here are
+totally utilitarian. If one were being hyper-careful, one could track down
+the original authors and ask for clarification, but I'm not convinced it's
+a worthwhile use of time.--[[file:raph.org][raph]]
+
+Unfortunately, in today's legal climate w.r.t. copyright law, the almost impossible does happen with alarming frequency.  For instance, one would naively assume that having a blurry image of a television screen appearing in the background of a photograph is not infringement, but that is decidedly *not* the case --- the television companies routinely collect royalties in such cases nowadays.  Also, the intent of the original author is irrelevant if the author has signed away the copyright --- one needs to track down the current copyright owner, which may not necessarily be the author anymore, for clarification.
+
+As is often said, the doctrine of fair use is one of the grayer areas of the law and there are no hard and fast rules.  (For more information, see the references to my essay.)  The basis for determining fair use is the [http://www.copyright.gov/fls/fl102.html four guidelines in section 107].  However, these can be rather vague, there is much leeway for interpretation, so the real criterion is "the four guidelines as understood by the courts".  Sadly, this interpretation has been shrinking the domain of applicability of fair use in recent years.  In particular, there is now a tendency to presume that fair use does not apply if the owner of copyright has made an arrangement for potential users to obtain permission.  For instance, part of the argument why copying scientific papers is no (longer) considered fair use is that the publishers have an arrangement whereby one is permitted to make copies provided that one pays a certain fee to the copyright clearance centre.  Hence, your assumption that copying some
+code needed to set up margins constitutes fair use may not necessarily be warranted.  (Also remember that there is no simple test in terms of quantity copied which determines fair use --- just think about the examples of blurry TV screens which were mentioned at Emory!)
+
+In this particular case, I would first ask "who owns the copyright to this particular package?".  Since, to the best of my non-expert understanding, determination of fair use is a case-by-case business, it would seem that you need to look at the particulars of this case.
+
+Also, as long as you raised the issue, there is the question of !TeX itself.  Looking at my copy of the !TeXbook, what I see in the rights statement is far from a  GNU FDL --- it says "copyright  1984, 1986 by the American Mathematical Society ... all rights reserved ... by any means, electronic ...".  To be sure, Knuth himself is on the side of free software, he has spoken out against software patents, but he no longer owns the copyright to !TeX ever since he gave it to the AMS.  So we had better not simply assume that !TeX is a free program in our usual sense of the term (at any rate, the documentation is definitely *not* free) until we look into the matter more carefully.
+--[[file:rspuzio.org][rspuzio]]
+
+I think the GNU project is only sort of OK with !TeX (on http://www.gnu.org/licenses/license-list.html they say "it may take some careful checking to produce a version of !LaTeX that is free software).  Debian
+considers the license to be acceptable (http://www.freesoftwaremagazine.com/free_issues/issue_07/tex_license/) and since they are usually sticklers about these things, I'll take their word for it.  However,
+that doesn't mean that all of what we think of as "!TeX" is available under this free license.  <Dense fog drifts in>. --[[file:jcorneli.org][jcorneli]]
+
+The fog definitely is dense!  It might be worth mentioning that !LaTeX is distributed under (what else!) the [http://www.latex-project.org/lppl/lppl-1-3a.txt LaTeX Project Public License].  If it is thge case that this license applies to the particular !LaTeX package in question, then one can look at the license to see if it permits your use.  (If not, then we are back to the question of what is permissible as fair use nowadays.)
+
+However, this license only covers the !LaTeX package itself, not !TeX
+itself.  As far as I remember, the AMS owns the rights to !TeX and, as
+mentioned above, they are copyright tightwads when it comes to the
+documentation. (maybe a free commons-based replacement for the
+!TeXbook is in order?)  I'm don't know under what conditions they
+distribute !TeX, but it is definitely worth looking into
+further. --[[file:rspuzio.org][rspuzio]]
+
+The book "!TeX for the Impatient" is pretty good (ships with teTeX and
+is GFDL'ed).  I agree that further investigation of !TeX itself would
+be a good thing.  It is definitely not true that LPPL applies to the
+packages I was discussing at the top of the page.  These are simply
+user-written files.  As Raph said, /"It's almost impossible to
+imagine that the intent of the original author of these style files
+was to limit the distribution of documents that include them."/
+However, it isn't clear whether this has any bearing on a case for
+re-use based on fair-use!  --[[file:jcorneli.org][jcorneli]]
+
+: Maybe the "doesn't impact future sales" point could be used, except...
+even if the author didn't care when the code snippet was published,
+in theory they might care later; future sales could be impacted even
+if it doesn't appear that the author ever intends to sell the product! --[[file:jcorneli.org][jcorneli]]

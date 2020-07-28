@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page listing the source code for the diagrams of some of the figures in PlanetMath encyclopedia entries.
+We encourage studying and/or re-adapting the source code of these diagrams for your own PlanetMath contributions.
+
+*** MetaPost-based diagrams
+
+ * [http://aux.planetmath.org/files/objects/7628/model.mp drawing of vectors being projected] from [http://planetmath.org/encyclopedia/PerspectiveDrawing.html perspective drawing]
+ * [http://aux.planetmath.org/files/objects/7628/basis.mp perspective drawing of orthonormal basis] for
+[http://planetmath.org/encyclopedia/PerspectiveDrawing.html perspective drawing]
+ * [http://aux.planetmath.org/files/objects/7628/cube.mp perspective drawing of cube] for
+[http://planetmath.org/encyclopedia/PerspectiveDrawing.html perspective drawing]
+
+ * [http://aux.planetmath.org/files/objects/7221/rodrigues.mp perspective drawing of vectors being rotated] for
+[http://planetmath.org/encyclopedia/ProofOfRodriguesRotationFormula.html proof of Rodrigues' rotation formula]
+ * [http://aux.planetmath.org/files/objects/7261/rotation-matrix.mp polar diagram] from [http://planetmath.org/encyclopedia/DerivationOfRotationMatrixUsingPolarCoordinates.html derivation of rotation matrix using polar coordinates]
+ * [http://aux.planetmath.org/files/objects/7262/reflection.mp vectors being reflected in plane] from
+[http://planetmath.org/encyclopedia/DerivationOf2DReflectionMatrix.html derivation of 2D reflection matrix]
+ * [http://aux.planetmath.org/files/objects/7634/convex-newton.mp Newton iteration diagrams] from
+[http://planetmath.org/encyclopedia/NewtonsMethodWorksForConvexRealFunctions.html Newton's method works for real convex functions]
+
+ * [http://aux.planetmath.org/files/objects/7233/parabola.mp graphs of parabolae] from [http://planetmath.org/encyclopedia/QuadraticInequality.html quadratic inequality]
+ * [http://aux.planetmath.org/files/objects/6523/leibniz-sequence.mp picture of converging iteration] from
+[http://planetmath.org/encyclopedia/LeibnizEstimateForAlternatingSeries.html Leibniz' estimate for alternating series]
+
+*** pstricks-based diagrams
+
+ * [http://planetmath.org/?method=src&from=objects&id=1082&op=getobj parallelogram law]
+ * [http://en.wikipedia.org/wiki/Talk:PSTricks the 3d wireframe graphs]
+from [http://planetmath.org/encyclopedia/QuadraticSurfaces.html Quadratic surfaces]
+
+*** XEuklides-based diagrams
+ * [http://planetmath.org/encyclopedia/DesarguesTheorem.html Desargues' theorem] ([http://aux.planetmath.org/files/objects/424/desargues.eps .eps],
+[http://aux.planetmath.org/files/objects/424/desargues.euk .euk])
+
+*** Graphs from gnuplot
+ * [http://aux.planetmath.org/files/objects/7641/fourier.gp graphs of functions with super-imposed Fourier series approximations] from [http://planetmath.org/encyclopedia/CommonFourierSeries.html Common Fourier Series]

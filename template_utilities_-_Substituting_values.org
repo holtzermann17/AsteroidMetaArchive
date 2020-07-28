@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One main use of templates is substituting values into the tempaltes.  In this section, we shall present several techniques for accomplishing this.
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

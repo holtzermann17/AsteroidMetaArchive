@@ -1,0 +1,70 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Major projects related to commons-based peer production of free 
+content that come to mind; please add others as you see fit.  
+Relatively small "subprojects" of these projects are listed on the 
+[[file:Tasks.org][Tasks]] page.  If some task is big enough to be considered a major 
+project, add it here. 
+
+* Primary projects for this wiki
+
+ * [[file:Planetary.org][Planetary]]
+ * [[file:Noösphere.org][Noösphere]]
+ * [[file:PlanetMath.org][PlanetMath]]
+ * [[file:PlanetPhysics.org][PlanetPhysics]]
+ * [[file:AsteroidMeta.org][AsteroidMeta]]
+ * [[file:The Free Encyclopedia of Mathematics.org][The Free Encyclopedia of Mathematics]]
+ * [[file:The Hyperreal Dictionary of Mathematics.org][The Hyperreal Dictionary of Mathematics]]
+ * [[file:MathWeb.org][MathWeb]]
+ * [[file:metamath.org][metamath]] (and friends)
+  * [[file:mmj2.org][mmj2]]
+  * [[file:bourbaki.org][bourbaki]]
+  * [[file:Ghilbert.org][Ghilbert]]
+  * [[file:JHilbert.org][JHilbert]]
+  * [[file:Hmm.org][Hmm]]
+  * [[file:ufomath.org][ufomath]]
+  * [[file:IsarMathLib.org][IsarMathLib]]
+  * [[file:Natural_deduction_based_metamath_system.org][Natural_deduction_based_metamath_system]]
+  * [[file:Lambda_calculus_based_metamath_system.org][Lambda_calculus_based_metamath_system]]
+  * [[file:mmide.org][mmide]]
+ * [[file:Arxana.org][Arxana]]
+
+* Secondary projects for this wiki
+
+ * [[file:bi-directional content exchange and updating.org][bi-directional content exchange and updating]]
+ * [[file:NCT.org][NCT]]
+ * [[file:PCCC.org][PCCC]]
+ * [[file:PlanetComputing.org][PlanetComputing]]
+ * [[file:PlanetEconomics.org][PlanetEconomics]]
+ * [[file:PlanetLinguistics.org][PlanetLinguistics]]
+ * [[file:PlanetEngineering.org][PlanetEngineering]]
+ * [[file:FreeCyc.org][FreeCyc]]
+
+* Other projects discussed on this wiki
+
+ * [[file:GNU.org][GNU]]
+ * [[file:Emacs.org][Emacs]]
+ * [[file:GCIDE.org][GCIDE]]
+ * [[file:Wikipedia.org][Wikipedia]]
+ * [[file:The Archive of Formal Proofs.org][The Archive of Formal Proofs]]
+ * [[file:Project Gutenberg.org][Project Gutenberg]]
+ * [[file:CVS.org][CVS]]
+ * [[file:Open Directory Project.org][Open Directory Project]]
+ * [[file:Display LaTeX.org][Display LaTeX]]
+ * [[file:LaTeX2HTML.org][LaTeX2HTML]]
+ * [[file:freesound.org][freesound]]
+ * [[file:Sage.org][Sage]]
+ * [[file:Maxima.org][Maxima]]
+
+* Things that aren't products in the sense of the others, that are nevertheless discussed on this wiki
+
+ * [[file:Google.org][Google]]
+
+Proposal for Google SOC/Planetmath Project in Fractional Calculus
+Fractional Calculus is a field that is as old as Calculus itself, having been pioneered by no other than Leibniz himself. Despite his pronouncements that important results of great consequence will follow from it, however, it is only recently that applications of fractional calculus in other areas of physics and engineering have been pursued. Unfortunately, despite its importance and simplicity, Fractional Calculus is yet to be introduced as a separate course of study or feature in any of the Freshmen/Sophomore level Calculus or Engineering Math courses. Participation in research on its application and development in the Universities and Research Institutes is so far restricted only to people already in the field.  Hence the need to have a Google summer of code project on it to introduce the subject to a wider array of people.
+
+The aims of the summer project are: 
+1.	Write an accessible easy primer to fractional calculus.
+2.	Develop a JAVA/WXpython based GUI as instructional tool.
+3.	Explore the application of fractional calculus in Fractional Order Dynamical system (Chua’s circuit) via computer simulation (JAVA/Wxpython based package) as an example.

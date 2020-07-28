@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This was a productive meeting.  We began working on a manifesto
+(soon to be finished), did some library research for HDM, and
+generally had a good time.  More details to follow.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Some library books and other references
+
+Formalized Math, J. Harrison (e.g. at http://www.rbjones.com/rbjpub/logic/jrh0100.htm)
+
+http://crest.abo.fi/  (but what specifically?)
+
+A computational logic handbook QA 76.9 .A 96 B684 1988
+
+Contemporary Mathematics (series), Automated Theorem Proving after 25 years
+QA 76.9 .A96 S64 1983
+
+Boyer/Moore on Metatheorems: QA 79.6 C663
+
+Floyd-style theorem proving?
+
+Paul W. Abrams
+Machine Verification of Mathematical Proof
+Mathematical Algorithms
+v.1 #2 (1966) pp. 11-32
+
+Mathematics, Machinesm and Goedel's Proof
+N. Shankar 1997
+
+Tenth Internationial Conference in Automated Deduction
+Kaiserlautern Frg. July 24-27 1990
+M. E. Stickel
+#449 Lecture Notes in AI (Lecture Notes in CS)
+
+C. Zinn Proc, Amstelogue
+A Computational Logic
+JNL IGPL 2003; 11: 457-484 http://www.dfki.de/~zinn/Colosseum/MetaDL.html (Note also his thesis and other publications.)
+
+COLOSSEUM theorem prover 
+
+Wolska Kruiff-Koryabova
+Depenency-based Grammar
+
+Carlos Simpson
+Letters in Mathematical Physics 69 (2004) 287-315 http://math.unice.fr/~carlos/

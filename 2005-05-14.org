@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Added fr3q.el to [[file:HDM CVS.org][HDM CVS]] - this does key (and digraph, trigraph) counting.
+It is based in part on my musical-letters.el code.  I'm planning to use
+it to help track my coding productivity. --[[file:jcorneli.org][jcorneli]]

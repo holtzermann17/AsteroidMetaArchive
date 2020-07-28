@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Today, when lookinag at Planet Math, I was not able to find a certain page on the shapes most like ellipsoids.  The page landed in the orphanage, where it seemed that somebody adopted it and promptly deleted it.  I suppose the reason was that this page violated the unwritten rule about not writing about material of current research interest, but whatever the reason, the page is gone for good.
+
+To be sure, not all that much is lost since I can always recover the page from the history snapshots.  However, this experience led me to a thought that maybe there might be a better way to do things.  Namely, instead of deleted pages simply going away forever, they instead go to the retirement home.
+
+Note: Since we seem to be neck-deep in copyright issues, I hasten to point out that this discussion is not meant to apply to pages which have been deleted because their content infringed on copyright or was otherwhise unfit to be included.  Of course, in those cases, the material would still disappear as it does now. (And maybe need to be retroactively expunged from the page histories.)
+
+The name "retirement home" comes from the fact that the primary reason pages are deleted is that they no longer are needed in the collection because their content is out of date or because they have been merged with other entries or because they have been superseded by more comprehensive entries.  Even if they are not currently needed in the collection, they still might well be of interest in their own right and someone may well be interested in looking them up as I did in the example cited above.
+
+In addition to this new feature, ther would be a concommittant requirement that one explain why one is choosing to remove an entry.  To be sure, the warning box we now pretty much makes sure that one does not delete something by accident (although the "type in "yes" or "no"" trick might be a good way of getting extra protection here).  However, it provides no accountability for deleting entries.  On the other hand, if the entries go to the retirement home instead, then people could check up on the reason why the entries were dropped and adopt them back into the collection if they think that these grounds did not warrant this action.
+
+You might ask what would make this different than the orphanage we already have.  The answer if twofold.  First, the implicaton is that entries in the orphanage are entries which are needed in the collection, but which noone is maintaining as opposed to entries which are no longer needed.  Second, entries in the retirement home would have a much lower priority in linking since they are presumably of primarily historical interest.
+
+I think that the point about requiring people to mention why they delete (or retire) entries is important for accountability in the case of entries to which several authors have contributed.  For instance, there is an entry on quadratic surfaces which Drini, Pahio, and I co-authored.  I think either of the three of us would be rather upset were the entry deleted without first consulting us since each of us had put a fair amount of work into creating that entry.  By having the entry go to the retirement home instead, we could read the reason for this and readopt the then entry into the main collection if we the reason given were unconvincing.
+
+--[[file:rspuzio.org][rspuzio]] 19 November 2004
+
+A related feature would be "global" editing tools on PM that would respect the FDL. For example, there are a number of things that should be done when copying text from one entry to another (say when splitting/merging entries.) This could be done by having a field in the editing window and let Noosphere take care of the rest. In the same way it should be possible to copy text from the fora into entries. This would be especially useful if/when we ever start making entries out of problems discussed in the fora. It would also make it possible to copy text from the entry's forum into the entry. It would probably also be good to credit requests. 
+-- [[file:matte.org][matte]] 1/2006
+
+Actually, PM is considered to be one big document for purposes of the FDL,
+so anything that has been posted to the site can be copied to any other
+part of the site and the FDL will be automatically respected in that
+operation.  The complexity comes when copying between documents.  However,
+please do be careful from an editorial point of view; we don't want
+excessive duplication of content in the encyclopedia.  This concern
+should at some point be addressed by metadata handlers and other
+programs that support copying & keeping track -- however I think
+it is fine to go ahead, e.g. for things like making entries from
+forum postings!
+--[[file:jcorneli.org][jcorneli]] Jan 15 06
+
+OK. OK. But I still think that from a moral point of view it is polite to credit original authors. Nevertheless, this is something that could be discussed in the new user guide. It is not at all uncommon that one needs to combine two entries that are almost duplicates. Or, it is easy to imaging an old world-editable entry that needs to be split up to cover different settings. 
+-- [[file:matte.org][matte]] Jan 15 06
+
+Also see this [http://planetmath.org/?op=getmsg&id=3227 PM forum post].

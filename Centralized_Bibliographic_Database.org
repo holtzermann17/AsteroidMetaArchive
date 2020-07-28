@@ -1,0 +1,158 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to make it easier to add references to PM entries and
+recommend further reading, a centralized bibliographic database 
+would be useful.  It would supersede the bibliography entries
+we now have as well as the book section.  Such a database would 
+consist of records, each of which would consist of three parts.
+
+First, there would be a place for standardized information about 
+the work. T his could take the form of a frame which one fills in, 
+much as is now done with the book section.  There would be slots 
+for the following information:
+
+Author(s)
+
+Title
+
+Date
+
+Editions
+
+Publisher
+
+Keywords
+
+Classification
+
+Call number
+
+ISBN number
+
+Copyright Status
+
+Second, there would be a place for annotating the bibliography.  
+This way, people could append things like abstracts and 
+reviews of the work as well as any other comments they 
+saw fit.
+
+Third, there would be a place for availability of the work.
+If the work is in the public domain or available under free
+terms, a local copy could be made available; in this way,
+this would supplant the current book section (and, for that
+matter, the paper and exposition sections).  If the work
+is available online, a link to an online version could be 
+provided.  If a book is in print, links to the publisher 
+and bookstores could be provided.  Perhaps something could be
+concocted whereby one could determine whether the book is
+available in printed form at a local library.
+
+Each work in the database would have one or more unique
+identifiers whereby it could be accessed.  The program
+which supports this database would be able to produce
+a bibliographic reference to the item in one of several
+popular formats.  In particular, for use in PM, there
+would be a \PMcite command which would produce a reference
+to the work which would be linked back to its description
+in the centralized database.
+--[[file:rspuzio.org][rspuzio]]
+
+There has been an indirect step forward towards implementing
+such a database.  As a by-product of the search for books in the
+public domain, we have developed programs to download from
+the Library of Congress card catalogue and manipulate the
+data in MARC format.  This could all be used ion setting up 
+a centralized bibliographic database.  Moreover, it now seems
+clear to me that we should use the MARC format for storing this
+database so as to make it compatible with other databases.
+--[[file:rspuzio.org][rspuzio]]
+
+Having described what this centralized database would do, I
+will not turn to the question of how it might be done.  Here is
+a sketch of a possible architecture for such a program.
+
+** Database
+
+The centre of this package is a database of bibliographic 
+information which could be stored as a series of SQL tables.
+There would be a table for each major type of publication:
+
+ * Book (including monographs, etc.)
+
+ * Article (journal article, conference proceedings, preprints, reports, etc.)
+
+ * Thesis (Bachelor, Master, and Doctor theses, REU reports, etc.)
+
+ * Webpage
+
+ * Other
+
+The reason for the separate tables is that there will be rather
+different information about different types of works.  For instance,
+theses would include slots or advisor and institution, which would
+not be relevant for books and it would be wasteful to have a whole
+bunch of such empty slots in the records for non-thesis works.
+As for what sorts of columns to store about an item, the list
+given above is a first suggestion, but it would be good to come up 
+with a comprehensive list by examining the fields used by MARC, 
+BibTeX, OAI, etc. and combining the ones we find relevant and
+adding fields for other metadata we would like (such as the
+information pertaining to copyright which was mentioned above).
+Also, there should be flexibility in the system so that new fields
+can be added as needed.  A good way to proceed might be to give
+commonly used fields for a particular type of work their own columns
+and store the rest in a catch-all column labelled by identifiers.
+
+A fact to take into consideration is that a work can exist in multiple
+versions.  A book can go through many editions and an article can
+appear as a preprint and later be printed in a journal.  Whether
+each of these versions has a separate entry or the information about
+all the versions is combined in a single entry, the system should be 
+able to keep track of the different versions of a work.
+
+The works will be indexed by identifiers.  Just as with PM entries,
+there will be multiple unique identifiers possible for a single item.
+There will be a numerical identifier for each work local to the 
+collection.  In addition, there will be other identifiers which 
+will identify uniquely but will typically not apply to all the
+items.  Examples would include ISBN numbers and LOC catalogue numbers.
+One should be able to locate an item using any of these identifiers.
+
+To store comments, reviews, and the like, there could be another
+table.  Eventually, this could change when we re-implement 
+everything with the scholium system but, for the time being,
+this could be a quick way to get started.  Likewise, availability 
+information might be stored in this table along with the comments
+and reviews.
+
+As with most everything else on PM, the items of data stored in these
+tables will have owners who will be responsible for maintaining them.
+Permission to edit entries will be encoded in an access control
+table and non-owners can point out mistakes and provide additional
+data through posting corrections.  In general, the way this new
+feature operates would be similar to existing parts of PM where
+reasonable so as to make it easier for users to adapt to it.
+
+** Input
+
+Methods of adding new records would fall into two broad 
+classes --- individual entry and mass entry.  The individual
+entry would be quite similar to how one goes about making a 
+new encyclopaedia entry or book entry nowadays.  Namely,
+there would be a form which one fills with suitable data 
+and submits.  If adequate data is provided, the new entry is 
+then made with the submitter as initial owner and the user is 
+informed that the operation has been successful, otherwise there
+is an error message describing what necessary data were 
+omitted.  If the entry duplicates something already in the 
+database, a warning is generated.
+
+
+** Output
+
+** Search
+
+
+
+ 

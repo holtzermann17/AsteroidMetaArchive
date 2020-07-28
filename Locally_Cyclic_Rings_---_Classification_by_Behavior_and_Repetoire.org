@@ -1,0 +1,180 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Theorem*: Let $R$ a locally cyclic ring of characteristic zero.  Then, exactly one 
+of the following must be the case:
+
+ 1. $B(\phi) = 0$ if and only if $\phi = 0$.
+
+ 1. $B(\phi) = 0$ for all $\phi \in R$.  
+Furthermore, $\alpha \beta = 0$ for all $\alpha, \beta \in R$.
+
+ *Proof*:  Assume that $\phi \neq 0$ but $B(\phi) = 0$.  Let $\psi$ be any other
+non-zero element of $R$ and set $\phi \div \psi = m/n$.  Then $m,n \neq 0$ and
+$n \phi = m \psi$, so $m B(\psi) = n B(\phi) = 0$, hence $B(\psi) = 0$.  Thus,
+we either have $B(\psi) = 0$ for all non-zero elements $\phi$ or 
+$B(\psi) \neq 0$ for all non-zero elements $\phi$.
+
+Suppose $B(\phi) = 0$ for all $\phi \in R$.  Since, by definition, 
+$B(\phi) = \phi^2 \div \phi$, if $\phi \neq 0$, then $\phi^2 = 0$;
+in fact $\phi^2 = 0$ for all $\phi \in R$.  In particular, given
+two elemnents $\alpha, \beta$ of $R$, we have $(\alpha + \beta)^2 = 0$.
+using the binomial theorem, we conclude
+$$2 \alpha \beta = 2 \alpha \beta + 0 + 0
+2 \alpha \beta + \alpha^2 + \alpha^2 + \beta^2 = (\alpha + \beta)^2 = 0.$$
+Since $R$ has zero characteristic, this implies that $\alpha \beta = 0$.
+ *Q.E.D.*
+
+ *Theorem*: Let $R$ be a locally cyclic ring of characteristic zero.  Then the set
+$\{\phi \in R \mid B(\phi) \in \mathbb{Z}\}$ is a subring of $R$.
+
+ *Proof*:  By the theorems of the previous page and the fact that $\mathbb{Z}$ is a
+ring, we have the following:
+
+ * Since $B(\alpha + \beta) = B(\alpha) + B(\beta)$, if $B(\alpha) \in \mathbb{Z}$ and
+$B(\beta) \in \mathbb{Z}$, then $B(\alpha + \beta) \in \mathbb{Z}$.
+
+ * Since $B(-\alpha) = - B(\alpha)$, if $B(\alpha) \in \mathbb{Z}$, then
+$B(-\alpha) \in \mathbb{Z}$.
+
+ * Since $B(\alpha \beta) = B(\alpha) B(\beta)$, if $B(\alpha) \in \mathbb{Z}$ and
+$B(\beta) \in \mathbb{Z}$, then $B(\alpha + \beta) \in \mathbb{Z}$.
+
+ *Q.E.D.*
+
+ *Definition*:  Given a locally cyclic ring of characteristic zero $R$, the
+subgroup $\{\phi \in R \mid B(\phi) \in \mathbb{Z}\}$ will be called the
+/integral subring/ of $R$.
+
+ *Theorem*:  Suppose that $\phi$ is an element of a locally cyclic ring of 
+characteristic zero $R$.  Then there exists an integer $n$ such that
+$B(n\phi)$ is an integer.  In particular, this means that the integral
+subring is not the zero ring.
+
+ *Proof*:  If $\phi = 0$, any $n$ will do.  If not, set $B(\phi) = m/n$.
+ *Q.E.D.*
+
+ *Theorem*:  The integral subring of a locally cyclic ring of characteristic 
+zero which is not a zero ring is cyclic and has infinite order.
+
+/Proof/: Suppose that $\phi$ is an element of the integral subring.  Then, by
+definition, $B(\phi)$ is an integer.  Let $m$ be an integer.  Then 
+$B(m \phi) = m B(\phi)$, so $B(m \phi)$ is also an integer, hence, $m \phi$ also 
+belongs to the integral subring.  Because the ring has zero
+characteristic, $a \phi = b \phi$ only when $a = b$.  Hence, we know that there
+are an infinity of elements of the integral subring, namely $m \phi$ for every
+integer $m$, so the order of the integral subring cannot be finite.
+
+Suppose that the integral subgroup were not cyclic.  Then, for every non-zero 
+element $\phi$, there would exist an element $\psi$ such that $\psi \neq k\phi$ for 
+any integer $k$.  By local cyclicity, this wold mean that there existed $\omega$ such 
+that $\phi = m \omega$ and $\psi = n \omega$.  Because $\phi \neq 0$, we would have 
+$\omega \neq 0$ and $m \neq 0$.  Because $\psi \neq k\phi$, w could not have $m = \pm 1$.
+Because the ring is assumed not to be trivial, $B(\phi) \neq 0$ and $B(\omega) \neq 0$.
+Because $B(\phi) = B(m \omega) = m B(\omega)$ and $m \neq -1,0,+1$, we have 
+$|B(\omega) \le B(\phi)$.  To recapitualate, we have shown that, if the integral
+subgroup were not cyclic, for every non-zero element, there would exist another
+element with strictly smaller behaviour.  Since, by definition, the behavior of
+an element of the integral subgoup is in integer, this is imp[ossible by the principle
+of infinite descent.  Therefore, the integral subgroup must be cyclic.
+ *Q.E.D.*
+
+ *Definition*: Given a locally cyclic ring of characteristic zero $R$, the
+/behavior of the ring/ $R$ is defined to be the behaviour of the integral 
+subring of $R$.
+
+ *Theorem*:  Suppose that $\phi$ is an element of a locally cyclic ring of 
+characteristic zero $R$ and that $B(\phi) = m/n$.  Then $m$ is a multiple of 
+the behavior of $R$.
+
+ *Proof*:  Since $B(n \phi) = n B(\phi) = m$, we see that $n \phi$ is an
+element of the integral subgroup.  According to Warren, the behavior of any 
+element of a cyclic ring is a multiple of the behavior of that ring, so
+$m$ must be a ultiple of the behavor of the ring.
+ *Q.E.D.*
+
+ *Theorem*:  Suppose that $\phi$ is an element of a locally cyclic ring $R$
+of characteristic zero with behavior $b \neq 0$ and that $B(\phi) = m/n$, where the 
+fraction $m/n$ is in lowest terms.  Then, if $k$ divides $n$, there exists 
+$\psi \in R$ such that $B(\psi) = b/k$.
+
+ *Proof*:  Lowest terms means that $m$ and $n$ are coprime.  By Euclid 7.2,
+there exist $p,q$ such that $mp + nq = 1$.  Set $h = n/k$.  Let $\omega$ be a
+generator of the integral subgroup; by Buck 5.1, $B(\omega) = \pm b$;
+without loss of generality, we may insist that $B(\omega) = b$.  Set
+$\psi = hbp \phi + hq \omega$.  Then we have
+$$B(\psi) = hbp B(\phi) + hq B(\omega) = hbpm/n + hbq = hb(mp + nq)/(hk) = b/k.$$
+ *Q.E.D.*
+
+ *Definition*:  The /repertoire/ of a locally cyclic ring $R$
+of characteristic zero with behavior $b$ is the set of all prime
+numbers $p$ which do not divide $P$ for which there exists $\phi \in R$ 
+such that $B(\phi) = b/p$.
+
+ *Theorem*:  Suppose that $R$ is a locally cyclic ring of characteristic zero
+and behavior $b \neq 0$.  Then, if all the prime factors of $n$ belong to the
+repertoire of $R$ and $m$ is a multiple of $b$, there exists $\phi \in R$ such
+that $B(\phi) = m/n$.
+
+ *Proof*:  Without loss of generality, we may assume that $m$ and
+$n$ are relatively prime.   Let $k = m/b$ and let 
+$n = p_1^{q_1} \cdots p_r^{q_r}$ br the prime
+factorization of $n$.  By definition of repertoire, there exist 
+$\psi_1, \ldots, \psi_r \in R$ such that $B(\psi_j) = b/p_j$.
+Since $b$ and $p_i$ are relatively prime, so are $b^{q_i-1}$ and
+$p_j^{q_i-1}$, hence there exist $s_i$ and $t_i$ such that
+$s_i b^{q_i-1} + t_i p_i^{q_i-1} = 1$.  Set 
+$\omega_i = s_i \psi_i^{q_i} + t_i \psi_i$.  Then we have
+$$B(\omega_i) = s_i B(\psi_i)^{q_i} + t_i B(\psi_i) = 
+{s_i b^{q_i} \over p_i^{q_i}} + {t_i b \over p_i}
+{b (s_i b^{q_i-1} + t_i p_i^{q_i-1}) \over p_i^{q_i}} = 
+{b \over p_i^{q_i}}.$$
+By the Chinese remainder theorem, there exist integers
+such that
+$$h_1 p_2^{q_2} \cdots p_r^{q_r} +
+p_1^{q_1} h_2 \cdots p_r^{q_r} + \cdots +
+p_1^{q_1} p_2^{q_2} \cdots h_r = 1$$
+or
+$${h_1 \over p_1^{q_1}} + {h_2 \over p_2^{q_2}} + \cdots +
+{h_r \over p_1^{q_r}} = {1 \over p_1^{q_1} p_2^{q_2} \cdots p_r^{q_r}}.$$
+Set $\phi = k h_1 \omega_1 + k h_2 \omega_2 + \cdots + k h_r \omega_r$.
+Then we have
+$$B(\phi) = k h_1 B(\omega_1) + k h_2 B(\omega_2) + \cdots + k h_r B(\omega_r)
+{k h_1 b \over p_1^{q_1}} + {k h_2 b \over p_2^{q_2}} + \cdots +
+{k h_r b \over p_1^{q_r}} = {kb  \over p_1^{q_1} p_2^{q_2} \cdots p_r^{q_r}} = {m \over n}.$$
+ *Q.E.D.*
+
+ *Theorem*:  Two non-zero locally cyclic rings of characteristic zero with the
+same behavior and repertoire are isomorphic.
+
+ *Proof*:  We first note that the sets of behaviors of elements are the same for
+both rings.  We do this by showing that the set of behavors of elements of a ring
+is determined by the behavior and repetroire of that ring.  On the one hand, suppose 
+that an element has behavior $m/n$ (fraction in lowest terms).  Then we know that $m$ 
+must be a multiple of the behavior.  Furthermore, for every prime factor $p$ of
+$n$, we must have an element of the ring with behavior $b/p$, so $p$ must belong
+to the repetoire.  On the other hand, suppose that $m$ is a multiple of the behavior
+of the ring and every prime factor of $n$ belongs to the repertoire.  Then there
+exists an element with behavior $m/n$.
+
+Since every element of each ring is uniquely specified by its behavior, it follows
+that the relation of elements of the two rings with the same behavior is a 
+one-to-one correspondence.  Furthermore, by the theorems on behaviors of sums,
+additive inverses, and products, it follows that this correspondence is an isomorphism.
+ *Q.E.D.*
+
+ *Theorem*:  Suppose that $b \neq 0$ and $S$ is a set of prime numbers none of
+which divides $b$.  Then there exists a locally cyclic ring of characteristic zero
+with behavior $b$ and repertoire $S$.
+
+ *Proof*:  Let $R$ be the set of rational numbers whose numerators are multiples
+of $b$ and the whose denominators have only elements of $S$ as prime factors.  By
+elementary arithmetic, $R$ is closed under addition, subtraction, and multiplication,
+so $R$ is a subring of $\mathbb{Q}$.
+
+As a subring of a locally cyclic ring, $R$ is cyclic.  Furthermore, as a subring of 
+$\mathbb{Q}$, we have $B(\phi) = \phi$ for all $\phi \in R$.  Hence, the behavior of
+$R$ is $b$ and the repretoire is $S$.
+ *Q.E.D.*
+
+Back to [[file:Locally Cyclic Rings.org][Locally Cyclic Rings]]

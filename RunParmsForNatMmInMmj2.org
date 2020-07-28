@@ -1,0 +1,34 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+     *========================================
+     * sample for frl, 11-Feb-2006.
+     * note: RunParms have much
+     * documentation in c:\mmj2\src\mmj\util\UtilContants.java
+     * note: commands begin in column 1 of line! 
+     *       '*' or blank in column 1 means comment line.
+     *       therefore, shift this example left by 4 column positions!
+     *========================================
+     * CommentLine: Example Running ProofAsstGUI for nat.mm
+     *========================================
+    MaxStatementPrintCount,9999
+    MaxErrorMessages,15000
+    MaxInfoMessages,1000
+    ProvableLogicStmtType,#
+    LogicStmtType,LSTYP
+    LoadEndpointStmtNbr,999999999
+    LoadEndpointStmtLabel,zzzzzzzzz999zzzzz
+    LoadFile,c:\metamath\frl\expFRL20060130.mm
+    VerifyProof,*
+    Parse,* 
+    PrintSyntaxDetails
+    PrintStatementDetails,*
+    RecheckProofAsstUsingProofVerifier,yes
+    ProofAsstFontSize,14 
+    ProofAsstFormulaLeftCol,20
+    ProofAsstFormulaRightCol,79 
+    ProofAsstRPNProofLeftCol,5
+    ProofAsstRPNProofRightCol,79
+    ProofAsstUnifySearchExclude,aaaaaaaaaaaa,bbbbbbbbbb
+    ProofAsstProofFolder,c:\metamath\frl\myproofs
+    RunProofAsstGUI

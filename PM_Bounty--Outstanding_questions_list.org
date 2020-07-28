@@ -1,0 +1,85 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: 26 January 2007
+
+Status: *available*
+
+Time: 20 hrs (est.)
+
+Bounty Price: $200 (US est.) 
+
+Objective:
+
+30% of questions posted to fora scroll off the bottom of the screen before 
+being answered.  Create an alternative view into the fora which makes 
+unanswered postings prominent so that they recive due attention.
+
+Skills needed:
+
+ * Perl
+ * SQL
+
+* Background
+
+When someone asks a question to a help forum, it appears on the front page. Within a day or two, the question scrolls off the bottom of the screen into oblivion. Unless someone answers it within that two day window, it is highly unlikely it will ever be answered. Examining the last year of the University level help forum, 30% of the questions scrolled off the screen without reply.
+
+This is inefficient workflow management. Given that our answer fora are not only a main service we offer but also serve as first impression which attracts new members, this is utterly inacceptable. To remedy this defect, we propose to add a new type of view of the fora. In additional to the existing view of all posts in chronological order, there would also a view which shows only posts from question 
+fora (the "general questions" fora, the "competition questions" forum, and the "!TeX help" forum) which have not recieved replies in reverse chronological order. This way, questions which have not been answred for a long time will stick out like a sore thumbs and attract the attention they need. One could put a link "unanswered" in the main menu with a number after it in parentheses indicating how many posts to help fora have not recieved replies yet, much as we now do with corrections, requests, orphanage, unclassified entries, unproven theorems. Even better, the entry for unclassified entries ought to be removed since the system does not allow one to add an entry unless the classification box is filled and put the link to a combined list of unanswered questions there.
+
+* Plan
+
+ * Reuse code which generates list of pending corrections as far as is practical.
+ * Upon posting to an appropriate forum, an item will be added to a queue.
+ * Upon replying to a post in the queue, it is removed from the queue.
+ * This queue could be either be an actual data structure or determined implicitly 
+form the tables associated to the fora in question --- all that matters is that
+it be possible to interact with it as indicated above and map it into a 
+chronological list of unanswered questions.
+
+                             ._______________.
+                             |               |
+                             |   list of     |
+                             |   unanswered  |
+                             |   questions   |
+                             |               |
+                             '---------------'
+                                     ^
+                                     |
+                                     | render
+                                     |
+                             ._______|_______.
+                             |               |
+                             |     queue     |
+                             |               |
+                             '---------------'
+                                     ^
+                                     |
+                                     | generate
+                                     |
+                             ._______|_______.
+                             |               |
+                             |   question    |
+                             |   forum       |
+                             |   posts       |
+                             |               |
+                             '---------------'
+                                 ^       ^
+                                 |       |
+                            post |       | reply
+                                 |       |
+                             .___|_______|___.
+                             |               |
+                             |    users      |
+                             |               |
+                             '---------------'
+
+* Testing
+
+Check that all unanswered posts to the appropriate fora appear in the
+list and that nothing else shows up.  Have a look to see that nothing
+else was accidentally broken or corrupted.
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for more on how bounties work.

@@ -1,0 +1,41 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is based on http://us.metamath.org/mpegif/id.html
+
+ (setq id '((p) (if p p)))
+ => ((p) (if p p))
+
+ (setq step-3.1 '(if p (if p p)))
+ => (if p (if p p))
+
+ (setq step-3.2 '(if p (if (if p p) p)))
+ => (if p (if (if p p) p))
+
+ (setq  step-3.3 '(if (if p (if p p)) (if p p)))
+ => (if (if p (if p p)) (if p p))
+
+ (setq step-3.4 '(if p p))
+ => (if p p)
+
+ (match-template ax-1 step-3.1)
+ => ((q p) (p p))
+
+ (match-template ax-1 step-3.2)
+ => ((q (if p p)) (p p))
+
+ (merge-assignments
+  (match-template a2i-pr1 step-3.2)
+  (match-template a2i-ccl step-3.3))
+ => ((q (if p p)) (r p) (p p))
+
+ (merge-assignments
+  (match-template mp-pr1 step-3.1)
+  (match-template mp-pr2 step-3.3)
+  (match-template mp-ccl step-3.4))
+ => ((p (if p (if p p))) (q (if p p)))
+
+ (match-template id step-3.4)
+ => ((p p))
+
+Back to [[file:using template utilities to check proofs.org][using template utilities to check proofs]]

@@ -1,0 +1,67 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Create a ratings and reputation system for Noosphere; apply to PlanetMath
+By: Mithilesh Kumar (mithil@vt.edu)
+
+** Abstract
+
+With the evolution on websites whose content is built by a community of users, it is becoming a necessary to identify trustworthy and useful information. Current techniques mostly rely on peer based reviews for determining the quality of content. With rapidly rising size of these sources of information, it is becoming increasingly difficult to depend on humans to check quality. PlanetMath is one such source of user generated collective knowledge, that requires a measure of quality of its articles. 
+
+** Proposal
+
+My goal for this project would be to develop means to calculate quality values for PlanetMath articles based exclusively on meaningful information extracted from the application domain.
+
+An interesting point to note here is that traditional rating systems and recommendation systems (for example amazon.com) may not work for PlanetMath. These human based tools assign points to the content or the product being used. The points are averaged to determine the quality of the content or product. Additionally, these tools require time to work properly and with content that is static. Such tools are hard to apply to PlanetMath, where we would expect the content to be changing rapidly in order to improve the quality of the article.
+
+The first step of the project would be to understand the application and build an application model. The model would comprise of 2 main objects - articles and users. Articles may be further classified into article text, comments and discussions and review log, etc. Users would be classified as authors and reviewers. We can then identify the relationship between these entities and create a model to work on.
+
+The next task would be to identify the various quality measures that we will weigh appropriately and calculate final quality value. We will call this the quality model. Examples of quality measures can be:
+
+ * number of references
+ * number of edits to the article
+ * how often the article is being discussed
+ * number of corrections attended
+ * change of ownership
+ * number of visits to the article
+ * structure of the article - layout, length
+ * number of internal and external links
+
+The final quality value will be calculated as:
+
+Q = w1.q1 + w2.q2 + ... + wn.qn, 
+where 'wn' is weight applied to quality measure 'qn'.
+
+The individual weights can be determined by iterative experimentation. The information about the quality of articles can be learned by implementing user feedback mechanism, that could be used to build a training collection.
+
+** Expected Results
+
+The final result would be a number Q in a range like 0-10, that will can be mapped to a rating for the article. Since one of the aims of this rating system is to help improve the quality of the article, the ratings can be grouped into domains like Editing(w1.q1 + w2.q2), References(w3.q3), Stability(w4.q4) etc and then this can be translated into natural language and displayed to the user. Example: "This article has very less content and requires more references to establish its correctness. Moreover, the article has not been edited for a long time, though there are several correction requests."
+
+** Deliverables
+
+ * 1 week - Understand application model and identify quality measures
+ * 1 week - Get familiar with Noosphere, the code base
+ * 1 week - Think about implementation, prepare a plan that match with requirements
+ * 2 week - Implementation of application model
+ * 2 weeks - Implementation of quality model
+ * 2 weeks - Experimentation and verification of results
+ * 2 weeks - Testing, Fine tuning and implementation of miscellaneous features.
+
+** About me
+
+I am a Masters of Science student in the Department of Computer Science at Virginia Tech(expected graduation May 2008)
+
+AREAS OF INTEREST - Information Storage and Retrieval, Human Computer Interaction, Personal Information Management
+
+SKILLS:
+Programming Languages: C, C++, Ruby on Rails, Perl, Java, HTML, XML, WML, VoiceXML, 80x86 Assembly, Visual Basic
+Operating Systems: Mac OS X, Linux, Windows XP/2000
+Misc: OpenGL, MySQL, HTK, Oracle 8i/9i, Xilinx, NS2, Microsoft Visual Studio, Eclipse, Microsoft VSTO, Rational Rose
+
+CURRENT RESEARCH - Determining the quality of community built content(Group of 3 researchers), Multi-Platform User Interfaces(group of 3 researchers)
+
+
+** Ideas/Discussion
+
+Feedback, comments, suggestions are welcome!

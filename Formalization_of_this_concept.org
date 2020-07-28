@@ -1,0 +1,47 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Having introduced this notion, we will now introduce a formalism which allows us to speak of it precisely.  First of all, we need to be able to speak of an expression with placeholders in it such as, for example, 
+
+The length of the second side of *T* equals *b*.
+
+To accomplish this, we shall introduce the notion of a template.  A template consists of two items, a list of placeholders and a statement or expression which involves those placeholders.  Thus a template for the above premise would be
+
+ ( (T b) The length of the second side of T equals b )
+
+This stage is only a half-way house to a complete notation since the second item of our ordered pair is still and informal statement.  However, this problem is easily taken care of --- we merely need to re-express the statement in terms of mathematical sybolism to obtain 
+
+ ( (T b) length (side (2 T)) = b )
+
+or, if we adopt LISP syntax for our mathematical expressions,
+
+ ( (T b) (equal (length (side 2 T)) b) ).
+
+Having seen how to express a single premise, it is not much harder to express the whole theorem formally.  To express the theorem, we simply write down an ordered pair of lists of templates, the first list being a list of hypotheses and the second being a list of conclusions.  Thus, the law of cosines would be represented by the list
+
+ ((((T) (triangle T))
+   ((T a) (equal (length (side 1 T)) a))
+   ((T b) (equal (length (side 2 T)) b))
+   ((T c) (equal (length (side 3 T)) c))
+   ((T A) (equal (size (angle 2 3 T)) A)))
+  (((a b c A) (equal (power 2 a) (minus (plus (power 2 b)
+                                              (power 2 c)
+                                        (times 2 b c
+                                              (cos A))))))
+
+Since this can be hard to read, a variation on this notation in which we place all the variables together in the beginning and introduce the keyword "theorem" is preferable:
+
+ (theorem (T a b c A)
+   ((triangle T)
+    (equal (length (side 1 T)) a)
+    (equal (length (side 2 T)) b)
+    (equal (length (side 3 T)) c)
+    (equal (size (angle 2 3 T)) A))
+   ((equal (power 2 a) (minus (plus (power 2 b)
+                                    (power 2 c)
+                              (times 2 b c
+                                    (cos A))))))
+
+[[file:Discussion of formalization of this concept | Discussion.org][Discussion of formalization of this concept | Discussion]]
+
+Back to [[file:theorems as transformational rules.org][theorems as transformational rules]]

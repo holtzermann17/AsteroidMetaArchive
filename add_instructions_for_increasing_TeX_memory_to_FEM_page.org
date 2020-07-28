@@ -1,0 +1,5 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to build the FEM, you need to modify TeX.  I've done this but I forgot what I did.  We should
+put a mini-HOWTO on the [[file:FEM.org][FEM]] page

@@ -1,0 +1,299 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Totalizing projects (Jan 11, 2006)
+
+* What is a "totalizing project"?
+
+In one sense, by "totalizing" I simply mean a intellectual programme
+that aims for global scope in some specific area of
+inquiry.  For example, PlanetMath has the unofficial goal of becoming
+a comprehensive math reference work (I say "unofficial" because this
+goal hasn't been recorded on the [[file:PlanetMath Goals.org][PlanetMath Goals]] page, but I'm
+not sure what it would mean for !PlanetMath to have an "official"
+goal).  [[file:Wikipedia.org][Wikipedia]] advertises itself as being a free encyclopedia
+that /anyone/ can edit (thus, it aims to be global in person-space;
+and it is generally considered to have good, and certainly improving,
+coverage of "encyclopedia content space").  Cyc (and
+[[file:FreeCyc|projects like it.org][FreeCyc|projects like it]]) have to do with another kind of
+"encyclopedia" all together, namely, a "thinking" one; the idea is to
+get global, actionable, coverage in the computer of something called
+"common sense"; as I understand it, 
+
+: Cyc : Wittgenstein :: QED : Hilbert
+
+(approximately speaking).
+
+This last example seems to have a chance of sharing the next
+sense I understand for "totalizing".  A computer with very robust
+"common sense" abilities might (in theory, or say, by definition) be able to /read/ the other resources
+mentioned here, and, in a sense, subsume them.  This sense is both
+technically and legally tricky; a sketch of the legal issues
+is given on [[file:concerning the legal feasibility of a hyperreal dictionary of code|this page.org][concerning the legal feasibility of a hyperreal dictionary of code|this page]],
+but our understanding of these issues is far from complete.  The technical
+matters (philosophico-mathematical and also socio-hack-a-nomical) are
+probably even harder to deal with (but luckily we have had a number 
+of top minds, from [[file:Personage_-_Gottfried_Leibniz|Leibniz.org][Personage_-_Gottfried_Leibniz|Leibniz]] to 
+[[file:Personage - Richard Stallman|Stallman.org][Personage - Richard Stallman|Stallman]], and various places in between,
+thinking about these things).
+
+[[file:free_culture_as_a_labor_issue|I think.org][free_culture_as_a_labor_issue|I think]] of the situationist's "total
+revolution" as belonging to (and mutually extending) this second
+category of "totalizing projects", and, in particular, I think of
+"free culture" as being one of the key current-day instantiations of
+the "totalist" vision.  (Note, these views are probably somewhat
+atypical, but they are at least roughly compatible with the standard
+views.)  The key step to a third and final understanding of
+"totalization" is the step that takes us from purely intellectual
+projects to projects that take the same perspective on the physical
+world.  Given the interconnections between "information" and
+"reality", this step is probably not unintuitive.  I certainly
+acknowledge that to make this interpretation jive with the standard
+simulationist-hyperrealist thinking, we'll need to do some work, but
+the point is, roughly speaking, that by simulating reality in an
+increasingly "total" way, we come to have increasing "control" over
+reality.  Of course, since reality is practically speaking infinite,
+and simulation necessarily finite, increasing control ought not give
+us the illusion of complete control.  A totalizing project is total in
+scope and extent, but seems unlikely to obtain truely total control.
+(I won't say that this couldn't happen, however, I am unable to
+conceive of what it would actually mean if it did happen; hence, I say
+it is unlikely, so that I can focus on things I might have a better
+chance of understanding.)
+
+* What can be said to justify totalizing projects?
+
+Depending on which of the three "levels" of totalization we're talking
+about, the justifications may change.  Individual users might like the
+feeling of helping to build something big, important, interesting, and
+beautiful (the wikipedia ~ pyramids analogy, although note that the
+latter was, as I understand it, more of a slave-labor sort of operation
+than a happy/smiley volunteer/freetime activity).  They may get
+significant "content-level" benefits from participating in wide-scope
+intellectual projects, and they may also have a chance to learn some
+interesting "meta-level" skills (social networking, coordination of
+large effort, working with other people, etc.).  In the case of
+totalizing AI projects, the benefits are similar, but are of course
+related mainly to the content areas of AI ("how do we think", "what
+does it mean to think in general", etc., and in the case of /free/
+AI, "how do knowledge communities and cultures work").  Of course, the AI
+crowd is all the closer to the third level of totalization (should
+they choose to go that route), and there may be certain psychical (and
+later, tangible) benefits of participating in the build-up of a "total
+revolution".  The actual concrete benefits to be obtained from total
+revolution itself are (as above) increasingly difficult to
+conceptualize the more "total" things become.  But certain likely
+effects can be sketched, or at least imagined: e.g., reducing
+transaction and other logistical costs, controlling pollution, various
+improvements on the technological and medical fronts, greater
+empowerment on the social front, as well as all that fun we'd have
+with all the knowledge that would be available.  Well, no doubt there
+will be those who can more easily imagine a total revolution going
+awry, and us ending up in some dystopian end-state.  I can't argue
+this matter point by point, but I think a fair stock response is that
+we could end up in a dystopian end-state without total revolution of
+the kind I'm speaking of, too, so what do we really have to lose?  Of
+course, this discussion is probably too vague for many people to
+appreciate; I guess that's OK, because we can come back and fill in
+more details later.  This is, incidentally, is one of the usual tricks
+of totalization.
+
+* Can we work through one or two specific examples?
+
+Sure.  Let's take the [[file:Hyperreal Dictionary of Mathematics.org][Hyperreal Dictionary of Mathematics]] project
+as an example.  By itself, it is sitting roughly in between the first
+two levels of totalization, that is, between global content coverage
+in some specific domain, and strong, general, "common sense" AI.  Of
+course, the HDM wouldn't be expected to have "common sense" about
+shoelaces, or oranges, or birds, or human emotion; rather, as
+indicated by its name, it would tend to have common sense -- or just
+broad, increasingly "total", knowledge about mathematics (and, yes,
+the "real world" /as it applies to mathematics/, and, presumably,
+mutatis mutandis, applications of mathematics to various things in the
+real world).  If you're familiar with the ideas of the HDM project,
+you'll notice that it may have an edge on, or, from a slightly different
+point of view, something very valuable to contribute to, a project
+like !PlanetMath, in terms of the "global scope" goal we mentioned
+above.  This is because managing the huge amounts of information
+relevant to building a comprensive resource in mathematics becomes an
+increasingly computational problem.  The completion of the !PlanetMath
+project may require, and so, imply, the HDM (in some form).  This is
+one of the features of totalizing projects: that they do, in fact,
+tend to become more and more total.  Similarly, the HDM, with its
+[[file:scholium system.org][scholium system]] and its (putative or hoped-for) broad and deep
+knowledge of mathematics, seems poised to make the move to other
+knowledge domains, graduating, as it were, from something at level 1.5
+to something around level 2 or level 2.5.  And from there on, we
+presumably get swept up in the totalizing drift, and move along to
+level 3 (and whatever rarefied things follow).
+
+* Summary so far
+
+We don't have a great deal of hard facts to go on yet, but from the
+theorizing above, it seems to me that we should come away with a
+slightly heightened appreciation of what we have to do with the HDM
+project.  We, or whomever pulls off the totalizing project in
+mathematics (for, perhaps there are others working on HDM-like things;
+certainly, if we admit the distributed operation of the various MKM
+projects, there are plenty of people working on HDM-/related/
+things even if they aren't aware of the HDM and aren't thinking about
+HDM-like goals), will have subsumed the rest
+of mathematics and mathematical AI.  We were already essentially aware
+of this at the inception of the project.  What was less clear then was
+the fact that at that point, we will be poised to fulfil a broader
+totalizing destiny.
+
+* Aside (Turing)
+
+This essay is written after some reflections on Turing's Universal
+Machine, one of the prototypes of the totalizing programme.  If this
+essay ever becomes worth dedicating (i.e., instead of confounding),
+I'd like to post it to his memory.  I think that more work and a
+better treatment of the history and future of totalizing projects
+would be in order before we get to that point.
+
+* Totalizing projects, considered in their economic, political, psychological, sexual, and particularly intellectual aspects
+
+To the faithful reader who has accompanied me on this chaotic journey
+through [[file:concerning the legal feasibility of a hyperreal dictionary of code|time.org][concerning the legal feasibility of a hyperreal dictionary of code|time]],
+[[file:Adrift in a sea of assertions|space.org][Adrift in a sea of assertions|space]], and [[file:on bladders|identity.org][on bladders|identity]]:
+prepare yourself to embark along any and all of several new dimensions that 
+lie before us.
+
+For the totalizing project must be inclusive; holistic.  The needs and
+wishes of the multitude must be considered, and perhaps (as part of
+the project), re-engineered.
+
+Consider by way of example, the market.  Typically, anyone can buy and
+sell in the market -- reserving the right to refuse business to anyone
+would be a stupid financial mistake -- but, just as typically,
+everyone must conduct their business /with a registered agent of the
+market/, and that is the key point.  I can not go and buy stock on
+Wall Street and then turn around and sell it to my neighbor.  No.  I
+must sell it back to an agent of the market.  (Now, agents may of
+course wish to make sure you are solvent before they will sell to
+you.)
+
+Stocks are, in this sense, very different from, say, hammers.
+
+In particular, if we have Market A and Market B, by default there is
+no "totalizing condition" that says that persons trading in Market A
+can automatically trade in Market B at trivial cost.  It is not simply
+a matter of making a /representation/ of Market B within Market A;
+at any rate, the market prices in B aren't the meaningful prices in A,
+for even registered agents of A must pay a fee to trade with agents of
+B.
+
+Only if anyone is free to act as an agent in a given market (or, which
+is the same thing, agency is associated with no specific cost) do we
+have a totalizing condition.  
+
+In the "real world", this condition obtains: I am free to sell a
+hammer to my neighbor for $5 if he and I agree to the deal.
+
+Costs may apply of trading between any two commonses that don't match
+an appropriate totalizing condition.  For example, two
+[[file:First Monday Paper--The Fog of Copyleft|license colleges.org][First Monday Paper--The Fog of Copyleft|license colleges]] need not
+be compatible at all; and individuals "on the ground" attempting to
+move content between the two colleges will have to try their
+best to jump through series's of hoops (any of which may or may not be
+aflame and/or perched above the abyss).
+
+Notice that the "free market" scenario is nevertheless rather
+different from the "free content" scenario; the mechanism whereby the
+control valve is constructed and maintained differs.  In the market
+case, the list of agents is controlled; these agents, however, can
+both buy and sell stocks with anyone.  In the license college, anyone
+is free to enter (contribute content), but no one can leave (take
+licensed material and transfer it to another license college).
+/Easily in, not easily out, says the Lobster in the lobster pot./
+
+Confronted with challenging situations like these, totalizing projects
+have two options.  Either to destroy the more difficult traps
+(markets, license colleges), or render them irrelevant.  We have,
+historically, considered the latter method.
+
+How does Captain Kirk get out of trouble?  Almost invariably (skipping
+by a few details), by being teleported back aboard the Enterprise.  I
+can't remember whether the consensus is that he is formed anew out of
+basic particles upon arrival or not, but it doesn't really matter for
+my argument.
+
+Approximately the same method is used by !PlanetMath and the HDM
+project.  When we find some content we're interested in, we "beam it"
+from its original source to its new, freer home, by rewriting it.  The
+relevant semantics are, of course, unchanged.
+
+This precise approach is not always possible.  Stocks traded on the
+free market correspond, in a suitably general sense, to things out in
+the "real world".  There is no way to semantically replace these --
+but one can build near-equivalents.  For example, if we wanted to
+depreciate Coca Cola in favor of, say, Crystal Pepsi, we would have to
+manufacture a situation in which the demand for Coca Cola was rerouted
+entirely in the general direction of Crystal Pepsi.  The specifics of
+implementing the switch could of course be somewhat challenging; the
+point is, they involve a switch at the level of semantics.  Which is
+to say, the level of belief, desire, and in some cases, even more
+material facts.
+
+As I mentioned in the first section, total control is likely to remain
+impossible (indeed, it is only likely to be meaningful as an
+abstraction).  And, of course, the totalizing project will have to
+balance the spheres of control of individuals operating within the
+aegis of the project.  One model is to give everyone equal access to
+control over everything within the project (thus each individual's
+scope is total); but in reality, we would assume that the economics of
+the situation drive some degree of specialization among the project's
+agents, just as we're expecting to see differentiation between the
+elements of the project, although not necessarily to exactly the same
+degree.
+
+However, it seems reasonable to expect that the individual agents who
+are working on the project will come to depend on it to an
+increasingly high degree, indeed, to exactly the degree at which the
+project succeeds in being "total".
+
+What precisely this means about the livelihood, psychology, and
+indeed, the lives, of the agents who make up the project is not
+completely clear.  Since the scope of the project becomes increasingly
+"total", perhaps it will develop mechanisms to substitute for
+individual will ([[towards a definition of freedom|if indeed such a
+thing ever existed]]; I actually suspect this is a meaningless
+question).  What is clear is that insofar as the project is "total",
+agents will be tied inextricably to it; and its aegis will expand in
+every dimension.  It may very well "take over the lives" of the
+participating agents; which is perhaps to say no more than that it
+will become a way of life.  (It may be that "agency" as we know it
+will disappear in a field of [[file:ubiquitous subjectivity.org][ubiquitous subjectivity]] and
+[[file:a paroxysm of parallax|fully exchangable viewpoints.org][a paroxysm of parallax|fully exchangable viewpoints]]; these
+seem like very totalizing things to do.)
+
+For example, insofar as its agents have reproductive needs, these
+needs will be met within the project; but even more importantly (I
+hope that this development has been obvious), the agents will be
+serving the reproductive needs of the project.  The project will in
+any justifiable sense of the word, become alive.  And insofar as it
+really is "total", it will subsume all life that it comes in contact
+with (along with everything else).
+
+The project will be the ultimate foreign invader; perhaps working its
+magic invisibly, but (as is of course its nature) fully and
+completely.  Insofar as it is total there will be no escaping its
+grasp.
+
+/Parents, its 10 'o' clock.  Do you know where your culture is?/
+
+Well, as I mentioned, there are limits; light cones, for example, that
+we presumably won't be able to see beyond (by definition).
+
+* Are totalizing projects a good idea?  Do we have any rights with respect to them?  Should we try to stop them, or speed their progress?
+
+I think that insofar as we do have "will", it will guide us.  If the
+will is to build totalizing projects, that is what we should do; after
+all, we would only build them (if we are rational) if we think they
+are to our benefit.
+
+Of course, we might not be rational.  We might be quite wrong in our
+thinking.  But at this point in history, one can't build a totalizing
+project in an afternoon; there still remains plenty of time for checks
+and balances and evolution along the way.

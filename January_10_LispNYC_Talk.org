@@ -1,0 +1,77 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Will take some jumping-off points from [[file:jcorneli notes on rspuzio July 12 LispNYC talk.org][jcorneli notes on rspuzio July 12 LispNYC talk]]
+and from other developments since July 12.
+(Cf. [[file:First Monday Paper--The HDM Manifesto.org][First Monday Paper--The HDM Manifesto]] for some of this; there
+will also be some coordination with the [[file:2006 JMM.org][2006 JMM]] talks.)  This
+talk will benefit from a lengthy visit between Joe and Ray in NYC.
+Looking forward to all this.  --[[file:jcorneli.org][jcorneli]]
+
+There will also be some tie-ins with at least one of the [[file:2006 JMM.org][2006 JMM]]
+talks.  I put together an announcement, which has probably been
+circulated (see below).  There are a couple of work items I'd like to
+_do_ on the [[file:scholium system.org][scholium system]] before I give the talk, so I can
+demonstrate them.  --[[file:jcorneli.org][jcorneli]]
+
+* Announcement
+
+Title: Hyperreal Dictionary of Mathematics II
+
+Byline: An update on what's been happening with the Hyperreal
+Dictionary of Mathematics project since Ray Puzio's talk at LispNYC in
+July '05.
+
+Abstract:
+
+The Hyperreal Dictionary of Mathematics project is trying to do to
+math what the GNU project did to UNIX.  This talk will commence with a
+birds-eye overview of the project and a tentative roadmap.
+
+The main feature of the presentation will be a demonstration the HDM
+project's new hypertext and AI authoring tool, ARXANA, aka, "the
+scholium system."  Arxana is no ordinary hypertext tool: it draws
+heavily on the ideas from Ted Nelson's "Project Xanadu", combining
+them with the "semantic network" strategy from artificial
+intelligence.  It is implemented as a package for GNU Emacs (and it is
+useful for much more than just math hacking).
+
+To close out the talk there will be several updates on hcode (the
+microscopic universal language for mathematics) and proof checking
+"humanly written proofs."
+
+I'll try to leave sufficient time to have a good discussion after the
+talk.
+
+Bio:
+
+Joe Corneli dreampt up the HDM project as a mathematics graduate
+student at the University of Texas.  That was 3 years ago; since then,
+he's been working full time to try to make it happen.
+
+----
+
+* Working Draft
+
+**  Questions
+
+/Many of these questions were raised by audience members during the last
+<nowiki> HDM@LispNYC</nowiki> talk./
+
+ * How does HDM relate to/differ from other math/computer projects?
+  * What's previously been done about the "programming in machine code ~ doing math in formal logic" analogy, and
+what does HDM have to offer on this point?
+  * Example: Translation of Landau's Foundations of Analysis (Grundlagen der Analysis) by van Benthem-Jutting in 1977; see [http://www.cs.ru.nl/~freek/aut/ Freek's automath page] for sources.
+ * [[file:HDM vs Google|How does HDM relate to/differ from to Google.org][HDM vs Google|How does HDM relate to/differ from to Google]]?
+ * How does HDM relate to/differ from "human" encyclopedia/dictionary projects?
+  * How does the HDM relate to/differ from the PlanetMath project in particular?
+ * How does the HDM relate to/differ from existing work in artificial intelligence?
+ * How does the HDM relate to/differ from existing work in hypertext, e.g. things like Ted Nelson's "Project Xanadu" and Tim Berners-Lee's "Semantic Web"?
+ * What does the system /do/ at present?
+ * What can /you/ do to help with system development?
+ * (/Bonus/)  Can we agree that "freeness" increases as knowledege and power increase?  Are there
+any other relevant variables or connections?   (Consider, for example, the case of a knowledgeable slave.)
+
+* Actual talking points used, or at least considered, during the actual talk!
+
+ * [[file:LispNYC Jan 10 talking points.org][LispNYC Jan 10 talking points]]

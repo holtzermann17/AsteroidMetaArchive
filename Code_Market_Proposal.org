@@ -1,0 +1,463 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*** Note
+
+This proposal has been changed to a more general one. ([[file:Code_Market_Merged_Proposal.org][Code_Market_Merged_Proposal]])
+
+** On the Feasibility of Code Market
+
+Here we look into a model of the code market. Show how its evolution
+matches incentives on both sides of the demand and supply chain. Point
+out that the market promotes "Programmers are Humans"
+intrinsically. Investigate the conditions required to put this model
+into action together with recommendations.
+
+[[file:Alex_Lam.org][Alex_Lam]]
+
+** Goals
+
+ * Provide a place for contributors to submit potentially useful code snipplets
+ * Provide a place for coders to look for snipplets that matches their requirements
+ * Encourage production of programmer-friendly codes as far as the specifications permit
+ * Allow and encourage donations towards contributors within the market for their contributions
+
+** Assumptions
+
+ * Test case is a straight-forward method that will signal either Pass or Fail on a code snipplet
+ * Source code for test cases is always open and available
+ * Test cases can be run by the market to verify against a given code snipplet
+ * Specifications for code snipplets can be fully specified by a finite set of test cases
+ * Large specifications can always be broken down into smaller, more achievable ones
+ * More donations attract contributors better
+ * Larger specifications deters contributors
+ * Clean code increases consumer's confidence
+ * Consumers will prefer better performing codes
+
+** The Model
+
+We concentrate on code snipplets which features & specifications are
+identified and justified by means of test cases. So the trust in that
+a piece of code contains functionality X, Y, Z etc. is verified
+through the passing / failing of the tests that correspond to those
+specifications under question.
+
+The merits of this approach is two-fold. Firstly, it is often not
+possible to write clear code. This is more true as the complexity of
+the requirements goes up. Documentations might help explaining what
+the developer is intended to achieve, but it does not necessarily have
+any correlations with what the code actually does. In other words,
+complex algorithms often result in nearly unreadable code with respect
+to others who do not have the specialised knowledge in the particular
+field. One would agree that they are often those who need to utilise
+contributor's code.
+
+In comparison, test cases are laid out in accord to the list of
+specifications, and always composed of methods which are clean &
+simple. Thus they can be used readily to check for a submitted code
+snipplet's validity by most non-experts. When a presented snipplet
+passes the test one is reassured that the presented code satisfied the
+users' specific needs.
+
+In fact, the code snipplet itself needs not be exposed to the user for
+verification of whether the implementation works.
+
+This leads to the second point - it is possible to provide a mechanism
+for developers to receive donations, in particular "requested"
+donations. To illustrate with an example, say I have written a routine
+to solve for all real roots given a cubic equation. I post it onto the
+Code Market, with the respective test case so that the Code Market can
+run and verify the validity of my code, and make a Requested Donation
+of $10 - what I am saying effectively is that "if I receive 10 dollars
+then I will release my code under a free & open license". Say then 100
+people would like to use this algorithm, and the first 10 (or for that
+matter, the most urgent 10) of them donates $1 each which accumulates
+to the requested sum. So I received my donations, and my code will
+become freely available to everyone on this planet.
+
+Notice that the next 90 people down the queue will not need to pay a
+single penny to use / modify / redistribute the code, and all 100
+people will enjoy the benefits of the released code being open & free.
+
+There are a few points to clarify in the point just given
+above. People who do not want to make donations in terms of money but
+efforts instead are accounted for in this system - they are simply the
+contributors. Due to the nature of tests, we can assume that code
+snipplets that only fulfill a subset of the requirements (partial
+contributions) are still quantifiable, hence would need no extra
+complexity to build upon the proposed donation system.
+
+Since the donation system gives contributors the freedom to ask for a
+favour, a barrier between consumers' demands and code snipplet
+supplies is inevitable. However, we would argue that the pull factor
+that it generates on developers will be justified against the slight
+push factor on consumers. In particular, what "leechers" (users who
+insist not to donate anything) face is just a longer delay until
+access to the code snipplets, since they will need to wait for
+"donors".
+
+So far we have only discussed one mode of operation of our Code
+Market, i.e. contributor produces something, puts it onto the market
+and waits for consumption. However, the converse is also possible -
+user provides specifications, then contributor comes along and meets
+it. This is somewhat analoguous to a bidding system.
+
+Thus the Code Market have 2 layers:
+
+ * Contrubutor puts code snipplets into the system, requests an amount
+of donations and sets how long he / she is willing to wait for
+collecting donations. If enough donations are collected within a given
+time frame, the contributor receives the donation, and the code will
+go public. Otherwise the contributor will take code snipplet back.
+
+ * Consumer puts up specifications in form of tests and specifies an
+amount of donation (which can be none) - they are also allowed to
+state the time period before withdrawing their donations.
+
+So the main functionality of the system is then to match tests with
+code snipplets (contributors and consumers are part of this cycle as
+well), and hence work out which snipplets go open and where donations
+go.
+
+With consumers in the Code Market stating their requirements and
+willing donations, contributors can be presented with a "market price"
+picture for various fields. This can be as simple as the aggregation
+of recent / outdated requests & donations.
+
+Since smaller contributions would imply potentially lower requested
+donations thus can be met easier / earlier, the model that we are
+presenting does favour smaller requests over larger ones. Hence for
+the model to work for arbitrarily complex specifications we are
+relying on the assumption that these requirements can always be
+separated into smaller pieces. Note that in other words we are
+increasing the opportunity for more contributors to work on a more
+complicated request, since it will get broken down into more pieces.
+
+Last but not least, the model presented here would be pointless if it
+is surpass other existing systems for code snipplet productions:
+
+ * Work for a corporation
+ * Hire a coder
+ * Set up a business
+ * Utilise existing open softwares
+
+In a Code Market, the act of donation does not only resulted in
+benefits in oneself, as will be in the case of an employer-employee
+situation, but also towards the general community. So the most popular
+snipplets are most likely to be found freely available by most
+consumers. The donations are put against the immediately useful
+snipplets that have already been proven to work as expected, so the
+risks & uncertainties are much lower than that of hiring a
+programmer. Entering & exiting the Code Market have zero cost for both
+contributors and consumers - everyone is free to try out its service
+and receive / give donations, and is also free to leave for any
+arbitrary reasons afterwards. Finally, since the market is adhere to
+strict verifications of functionalties, it provides a greater
+confidence to its consumers when employing the snipplets when compared
+to existing release models of open softwares.
+
+*** Summary
+
+ * View code snipplets from the angle of test cases builds up trust and confidence faster & easier by even non-expert consumers
+ * Test cases provide concrete relations between code snipplets and specifications, while documentations won't
+ * Trust can be established without revealing the code snipplet under question
+ * Contributor can put code snipplets into the market with a requested amount of donations
+ * Consumer can put a set of requirements in terms of tests into the market with a stated amount of donations
+  * When a snipplet matches consumer's requirements:
+   * If donations satisfy the requested amount, donations transferred and code is opened to everyone
+   * Otherwise wait for further donations until either the above condition is satisfied or one of the sides withdraw
+  * When a snipplet matches a subset of the requirements:
+   * Consumer can choose to break the request down into smaller ones, and assign different amount of donations to each new items
+  * Contributors can see the market of demands through unmatched donations
+  * Contributors & consumers can also see other similar code snipplet's "price", thus values is established
+ * Donations from individual result in benefits of the wider public
+ * Barriers between consumers and code snipplets by requested donations is justified by the strong pull on contributors
+ * Leechers would still benefit from Code Market - they just don't have the say and needs to rely on donors, that's all
+ * Code Market favours smaller request, but specifications can always be separated into smaller parts
+  * So it works for consumer with specifications of arbitrary complexity
+  * More complex specifications overall will also result in more contributors participating as well
+ * Could be more attractive than existing code production models:
+  * Employ a programmer
+   * Donations are put against immediately useful snipplets proven to work
+   * lower risks & uncertainties
+  * Be employed as a programmer
+   * As a contributor you can start requesting donations the moment you submit a snipplet, no resumes, no interviews
+   * Your performance is known to the community you serve
+   * recognitions beyond examination certificates
+  * Set up a business
+   * Zero entry cost
+   * Shortest time-to-market!
+   * Zero exit fee
+  * Use existing open softwares
+   * Code snipplets are strictly verified against consumers' needs
+   * Most code snipplets would be small components; maximise code reuse
+   * Reduce / eliminate dependency hell?
+
+** Incentives
+
+ * Consumers will seek to merge similar requests (hence donations) since that would increase the chance of contribution
+ * Consumers will break down their requests into smaller bits so as to attract contributors
+ * Contributors will seek to fulfill the easiest requests to gain donations
+ * Contributors will fulfill the request with the most donations within his / her abilities to maximise benefits
+ * Code snipplets will be accompanied with detailed descriptions on its functionalties in order to be easily found by consumers
+ * Code snipplets will match the best interface boundaries for its users since these are specified by the consumers
+ * Contributors will not want to write duplicate snipplets in terms of functionalities, unless when it is significantly better
+ * Contributors will write readable codes since this will attract consumers
+ * Contributors will write performing codes since this will attract consumers
+
+** Ideas on Setting Up a new Code Market
+
+[http://www.topcoder.com/ TopCoder] provides a place for programmers to meet a submitted specifications by means of competition between themselves. I haven't tried out the full system, nonetheless I have tried out the "practice rooms" they provide for the upcoming CodeJam Europe competition. So I'll evaluate this system.
+
+Programmers are given the specifications, which they work out some implementations in accord. They can then test their own code until they are satisfied before submitting it. Score is given in terms of time elapsed to write the code, and the number of compiling mistakes / recompiling etc. Once your code is submitted onto the system, others can then use tests to challenge your code. If they succeed, you will lose your score and needs to modify your code again. A smaller amount of score will be gained if you succeed in challenging others and some would be lost if you failed. In the end a set of global unit tests are run to verify everyone's submissions. The person with the highest score, unsurprisingly, wins the competition.
+
+The working environment and the online testing facilities is quite similar to what one would do for a Code Market, except that one should be allowed to work with their own IDE / environment of choice instead of a black textbox. In addition, a Code Market would allow for much more general test cases to be written and run, instead of just a simple variation in test parameters.
+
+Although the idea of a competition does raise interests and attract momentum, I'd argue that it is doing more harm than good under the Code Market model. Firstly, writing good code does not imply getting it right the first time by perfect typing and as quickly as possible - these constraints would hinder programmers from producing good code. Secondly, since a programmer would choose to challenge codes that are readily spotted to have holes, the system actually encourages programmers to obfuscate their code! Lastly, the competition environment does not allow finer negotiations between consumer and contributors, and also prevents cooperation between contributors in accomplishing consumer's requirements.
+
+A few practical points are noted when setting up a Code
+Market. Firsly, we need to decide upon whether an indicator for the
+current cumulated sum of donations is to be shown. Secondly, on
+managing donation transactions we have the choice of going real-time
+or in periods. Lastly, we need to deal with the case when donation
+exceed the requested amount.
+
+The issue with showing the donation sum indicator is that incentive
+might diminish when the sum gets nearer to the finish line. However,
+the lack of indications reduces transparency as well; yet it will not
+disturb the distribution of individual donations since the information
+is masked.
+
+With the choice of a real-time transaction system one would not need
+to worry about the second issue except for the last donor. In that
+case it doesn't really make much of a difference since the donor or
+the developer will gain or lose much. If an indicator is shown,
+chances are this will be taken care of anyway.
+
+However, I would suggest going for a period-based system; the excess
+in donation resolution scheme would be of a total reduction by
+proportion to the donors. For example, if Alice & Bob donate $10 and
+$6 respectively for the cubic solver, they will be notified that the
+source has gone opened, and that they will be given back $3.75 and
+$2.25 respectively - so I will only get the $10 I have requested for.
+
+The reason for such a design is based on the assumption that the user
+community is heterogeneous, i.e. it is comprised of people who are
+willing to donate (donors) and people who do not
+(leechers). Regardless of whether this holds or not, every person will
+have a limited quota of donations they can afford to pay in a given
+period of time. So by using a period-based transaction system we allow
+more donors to participate in the action of donations, which would be
+paid back with happiness and more confidence on the system once the
+process is completed. On the other hand, returning them with the
+excessive donations means they can then go and reuse it on other
+projects. In short, the period-based system will allow higher
+participations than a real-time system, and participation is a crucial
+factor - it means people are more involved in the community.
+
+Although the market works irrespective of programming languages, I'd
+suspect that dividing the user community / setup efforts at an early
+stage might not be a good idea. To take this point further - we might
+want to restrict to implementations of mathematical algorithms. This
+is due to their nature of purely platform-independent, so the
+verification stage through tests will be simpler. Generalisation on
+any of these initial restrictions can then be made through a gradual
+upgrading process.
+
+An inevitable and fundamental issue with the Code Market would be the
+funding it needs to keep it up & running. The nature of the Code
+Market implies hardwares for running tests continuously are needed to
+sustain operation, thus implies cost for maintenance beyond a simple
+web site. Proposed solution includes the usual external donations and
+applications for non-profit organisation funding, as well as opt-in
+scheme towards contributors as they receive their donations and
+partial absorption in the excessive donation resolution stage. It
+might also be possible to avoid hardware expenses by using services
+like the [http://www.network.com/ Sun Grid].
+
+** Schedule
+
+*** Required Parts
+
+ * Test System
+  * Handles requests for snipplet testing
+  * Distributed
+   * Onto Code Market users (consumers & contributors)?
+  * Security
+   * Against malicious tests and snipplets
+   * Code leakage (if distributed amongst users)
+ * Market System
+  * Receives requests for snipplet testing
+  * Sends notifications for test results & matches
+  * Database
+   * Test cases
+   * Donations
+   * Code snipplets
+   * Donation requests
+  * Searching
+   * Keywords in documentations of tests & snipplets
+   * Code-aware?
+
+*** Scope for Summer 2006
+
+ * Focus on the Java language
+  * Runs on many platforms
+  * No code modifications / recompiles
+ * Focus on mathematical algorithms
+  * Platform independent
+  * Simple pass-fail on functionality with automated test cases
+  * Time / Memory performance can be measured and reported
+
+** Feedbacks
+
+Any feedbacks / suggestions / discussions are most welcome - just add your sayings down the line ;-)
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+My main suggestion is to incorporate /extensibility/ into the
+design.  For example:
+
+ 1. maybe someone wants to "pay" with some kind of work-share instead of
+with money
+ 1. we should be sure to set things up so that both code-buyers and
+code-sellers can post proposals: "I'll write this program for X dollars" or
+"I'd like to buy this program, and I can offer Y dollars."  In either
+case, there should be useful ways to negotiate (e.g. if the coder needs Y+Z
+dollars to do the work, then some other donor may have to come up with the
+difference, Z).
+ 1. Continuing with (1) above, there should probably be a way to sub-contract,
+or get paid for partial, but usable results.  (Your point about decomposing
+into sub-projects speaks to this matter.)
+ 1. And so on and so forth!
+
+Other than that I recommend: give the thing a good proof-reading, be a
+little more succinct, and add a section with a time table stating this
+summer's development goals/milestones.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+ 1. This is covered for, I think - "People who do not want to make donations in terms of money but efforts instead are accounted for in this system - they are simply the contributors."
+ 1. "the Code Market have 2 layers"; the negotiation is probably as simple as the case in which the contributor has yet to receive enough donations to open up his code, so this case is also covered for.
+ 1. You are right - it's incorporated into one of the assumptions about project specifications ;-)
+
+I think I'll separate those points into a new section then, to increase clarity.
+
+I'll work out this summer's time table, then compact the proposal a bit then.
+
+I think I'll layout the time table into components, so any extra persons can be fitted into the schedule nicely.
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+The key point with item 2 is that both buyer and seller can post
+descriptions of coding projects with attached estimated cost.
+If the proposal says this clearly I will be happy.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+It does at the moment - I think I need to make a summary section to sharpen my points a bit ^^"
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+I reckon they would like to score for quality as well, but as I have stated above I couldn't quite figure out how the rules align with high quality code, at least it won't be so on a first order look of it.
+
+Although I do feel against it, but since you've claimed to have experience with the system and witnessed good results, I guess I'd just give in to your proposed reality...
+
+So the major issue remains - what I'd like to see is that competitors are actually helping each other out in refining the ultimate product in the process, rather than beating each others' efforts. If you can present a proof that TopCoder does exactly that I'd be happy to employ their model for the Code Market, so to speak ;-)
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+A lot of hard work by programmers indeed ;-)
+
+Although I am yet to see why this would be a better way (call me stubborn), it is a system up and running, and seems to gain quite a bit of popularity (from Google's point of view anyway).
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+When you talk about "abstractions" of the Donation System and Test System, I wonder in which directions and ways are you thinking of? Any examples use cases for a start?
+
+In addition, I'm really not sure why you'd assume my model only works for collective amount of small donations - whatever was written there is an example. But it should be trivial to see that what you have said (one person fulfilling the donation request) is always possible with the donation system.
+
+I'd agree there are problems which strain the testing methodologies and does not fit into the pattern, but that would only form some unfortunate holes on the whole problem space. Other "well-behaving" ones will get resolved readily by the system, so these persistant issues, if proven to be popular(ly painful), will get a lot more attention since now everyone has nothing else to do, so to speak.
+
+Lastly, again I'm not sure what you'd assume the existing model only allow developer to provide test cases, and that it is a strictly necessary requirement somewhat. For instance, requests are made through specifications laid down in terms of test cases, so at least under this route the developer would not need to provide any test cases.
+
+Another case which the Code Market covers which I have yet to mention is the ability to discover further capabilities of code snipplets even after they are released. Take the cubic equation solver as an example, someone might later discovered that I've actually written to solve for complex roots as well - all they have to do is to run their new test case against the code snipplet, which will pass thus prove a newly discovered capabilities of the snipplet.
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+Sounds good - would you mind presenting arguments as to why "code under contract" and "profit per sale" models would beat existing employment and corporate marketing / sales systems as well? As stated, we need to make sure that users' incentives are aligned towards our Code Market.
+
+I think your argument against the pure testing model seems like a good one - I'd reckon we should put that into the proposal as well, with perhaps a common and concrete example to make it sound more convincing.
+
+P.S. no, I haven't, not yet :-)
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+Your proposal has been thought of and used a few others. Your assumptions here seem to be justified in the long run, however this could end up meaning a rather high startup cost.
+
+What I am aiming to do achieve here is to establish a culture in the code market - one that its users would not feel intrusive and thus generate an incentive to break away from the system. There are many parallel cases to consider as to why someone would go for the Code Market rather than anything else.
+
+Take your proposed point as an example - an inevitable incentive would be for contributor, say if he / she is asking for $1000, would love to settle for $950 from donor(s) if they pay the amount directly to the contributor. A need for legal regulations arise, but laws are to be broken... To put it in simple words - I do not want the maintenance feedback of the Code Market to cause unnecessarily negative impact onto itself. Hence the proposed opt-in scheme upon each successful transaction would be a better way than a compulsory one I'd say.
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+We shall find out soon enough, won't we? :-)
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+Wowowow.... give me a few minutes, I've just got up! ;-)
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+Read through your proposal - interesting :-)
+
+We both have similar aims on whereabout to specialise once the system is up, for a start.
+
+As for your rant about the existing infrastructure - I can only respond with my summer of experience @ Cambridge Science Park. We were spending most of the time writing things that are remotely useful to any other research groups - control routines for taking template images on a modified SEM system, image "stitching" through feature recognitions on VLSI, distortion correction based on magnetic lens' aberrations and AD/DA imperfections etc. etc.
+
+To them (or us, rather) it would not be immediately obviously that much code reuse beyond the most basic levels would be possible, since requirements on software could vary a lot simply by taking a different approach against the same problem. Of course I'm by no means saying that the community would not benefit greatly from the Code Market - with some thoughts on component abstractions we can always achieve better code reuse. In fact, I'd argue that the scientific community would have the best hopes to progress in the direction of the Code Market, since we are all trained to think analytically & systematically. (I guess I just want to do them some justice :-D )
+
+I guess you have adapted the development phases that TopCoder does? I wouldn't say too much except that we might need a more careful analysis here as to what incentives people have to keep themselves within the flow of the system, rather than escaping from it and prefers another route at any of the phases. No doubt what you've proposed here is optimised for code quality, but it might not be so for the Code Market as a place which attracts contributors and consumers.
+
+Having said all these, I think we might be able to enhance each other's proposal by a merge - you surely have more ideas (and experience) on the area of code generation and quality control steps ;-)
+
+And of course your schedule looks good. Feel free to incorporate the two proposals onto say a new page.
+
+--[[file:Alex_Lam.org][Alex_Lam]]
+
+----
+
+The issue here is that the tighter the model the more participation efforts from others will be required, hence the barrier of entrance into the market. This applies to both contributors and consumers.
+
+We do have a consensus on the absolute quality of released code though.
+
+To summarise - I am worried about the possible deterrant effects and wasted contribution efforts in the exising TopCoder model, and that abstraction and generalisation on the Code Market model too much to try and imitate the current reality might end up with a suboptimal model compare to the reality. So I'd like to see analyses on incentives as to why your preferences would form a converging model for at least most users.
+
+Lastly - and I do apologise if it sounds a bit mean - but we really need to address comparative advantages. Simply put, why would programmers go for our Code Market model other than employment contracts, circumvent the payment systems, or even just go and use TopCoder instead?
+
+BTW, would you mind pointing me to the location of the new proposal? :-)
+
+--[[file:Alex_Lam.org][Alex_Lam]]

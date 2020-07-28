@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Although I'm not inclined to rely on a formal context-free grammar programmatically
+to parse math, I'm finding that I want to write one down to
+organize my thoughts on parsing,
+even if the grammar is vastly incomplete and ambiguous.
+
+Here is what I have (it's most easily viewed using the [[file:Display LaTeX.org][Display LaTeX]] plug-in):
+
+ Relation -> Expr | Expr RelationOp Relation
+
+Relation is the start symbol.
+
+ Expr -> Term AddOp Expr | Term
+ Term -> Subexpr (MultiplyOp Term | Term)?
+ Subexpr -> Identifier | Numeral | $($ Relation $)$ | BigOperation | FunctionApplication
+
+ FunctionApplication -> Identifier $($ (Identifier | Numeral | Relation | BigOperation) $)$
+ BigOperation -> BigOp BigOperandExpr
+ BigOperandExpr -> Term | BigOperation
+
+ AddOp -> $+$ | $-$ | $\oplus$ | $\cup$ | $\lor$ | ...
+ MultiplyOp -> $\cdot$ | $/$ | $\times$ | $\otimes$ | $\cap$ | $\land$ | ...
+ BigOp -> $\sum$ | $\int$ | $\bigcup$ | $\bigcap$ | ...
+ RelationOp -> $=$ | $\in$ | $\subset$ | $\subseteq$ | ...
+
+Note that there are essentially four precedence levels.
+Too many and I'm afraid we won't be able to keep track of them...
+
+ Identifier -> [a-zA-Z] | $\alpha$ | ... | $\Omega$ | $\sin$ | $\exp$ | ...
+ Numeral -> $-$? [0-9]* ($.$ [0-9]+)?
+
+What this doesn't parse (yet):
+
+ * superscripts and subscripts
+ * anything using commas
+ * interval notation [a,b]
+ * ...
+
+
+----
+
+At some point, presumably you'll want several such grammars, and the ability to
+switch between them depending on context, right?
+
+: Yes, multiple grammars are probably necessary. However, in my case ([[file:Display LaTeX.org][Display LaTeX]]) “context” is hard to determine programmatically, so I’ll settle for only basic grouping, i.e. at the level of presentational MathML. e.g. $(x+y+2z)^2$ maps to 
+(^ 2 (x + y + (2 z)).
+
+: Once we have basic grouping, a tree-based grammar might be used for further parsing. I definitely want to try my hand at implementing tree-based grammars: it would kill (or rather, injure) three birds with one stone: math searching, semantic analysis of presentational MathML
+(perhaps towards hcode or content-based MathML), and high-quality MathML text-to-speech.
+-- SteveCheng
+
+(BTW, the parser that's in HDM deals with each of the three cases
+you mentioned above, although in a hand-rolled and only somewhat BNF-like way.  You might be
+interested in another refresh on what's done there...)
+
+--[[file:jcorneli.org][jcorneli]]

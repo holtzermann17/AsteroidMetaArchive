@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think we should write a letter to John Ewing (jhe@ams.org) about PM
+and copyright (and Public Domain).  I'd need to review his writings
+before I could ask specific fruitful questions.  Main questions are
+what does he think of PM, how does he think it should be set up to
+make it more useful to AMS people.
+
+* PM context/related
+
+ * [[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]]
+ * [[file:PM Licenses.org][PM Licenses]]
+
+* Outside context/related
+
+ * [http://www.ams.org/ewing/Twenty_centuries.pdf Twenty centuries Math DL proposal]
+ * [http://www.firstmonday.org/issues/issue8_10/ewing/  Copyright and Authors (First Monday)]
+  *  "ill-advised members of U.S. Congress who want to do away with copyright for all federally funded research" (I guess he means Sabo?)
+  * Copyright as a means of making author's responsible for what they wrote! (Condorcet); I guess that rules out "anonymous copyright".
+  * "two cultures of copyright" (economic protection for owners, natural protection for authors)
+  * I disagree with the assertion that the Mickey Mouse act doesn't benefit authors: rather, it benefits corporate persons above human persons.
+ * [http://www.ams.org/ewing/Documents/Misdirection-Chronicle.pdf Misdirection]
+  * Idea of an ideology: "Barriers to scholarship must be eliminated, and no one should profit from scholarship." (Some PM people do seem to think this.)
+  * We absolutely must distinguish "open access" (which is properly an anthropology-ish term about property) from "author pays" (a description of how funding is put together for journal publications).
+  * "Open access concentrates on a single, short-term goal -- immediate reader access -- while ignoring all other issues."  Per usual, licensing is not a whole solution!  Notice that just because someone /is/ an open access advocate it does not imply that /they/ will  ignore all other issues. 
+  * "journal prices have continued to escalate" - Can PM do anything about this problem?
+  * "The solution is to create demand for lower prices" - Interesting thought (basically we're in a "Daddy pays" situation now, I bet, so average mathematicians don't care about cost of journals!)
+
+* Outline/Topics/Brainstorm
+
+ 1. Copyright/Licenses/Contracts for PM to make it attractive to research mathematicians?
+ 1. Other things to make PM more attractive to research mathematicians?
+ 1. Digitizing contemporary articles & books - what licensing terms?
+ 1. Problem of alleged "thin copyright" in properly public domain materials e.g. at Corneli
+ 1. HDM as a copyright busting tool
+ 1. Interest in "market" solutions proposed in 20C paper, is there someplace to keep up on things happening in this market?  Maybe PM can one day play a role here?
+ 1. Maybe mention Ray's "lost ark" list
+ 1. "Format" as the central problem of archiving - neat.
+ 1. Adding value without adding/resetting copyright (e.g. with scholia, which may or may not be copyrighted)
+ 1. What is current status of the project? (Probably we can deduce this to some degree.)
+ 1. Registration sans copyright as a way to get credit while also giving rights to users
+ 1. Social usefulness of monopoly rights for publishers (i.e. as opposed to private benefits /to publishers/; that part's obvious)?
+ 1. We are absolutely interested in how money can change hands; FAIF does not imply no one gets paid.  (Again, our "market".)
+
+
+----
+[[file:2006 JMM Followthrough.org][2006 JMM Followthrough]]

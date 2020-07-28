@@ -1,0 +1,56 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We have a simple parser for math expressions -- really, in development, but it certainly
+works on some sample input.
+
+For the code, see [[file:HDM CVS.org][HDM CVS]].
+
+What can the expression parser do?
+[[file:What can the expression parser do|A sketch of its current abilities is given here.org][What can the expression parser do|A sketch of its current abilities is given here]].
+
+* Theory
+
+With no specific theory behind this parser (that I
+know of), I'll borrow some other related theory:
+see [[file:ParseTreesSectionOfSyntax.org][ParseTreesSectionOfSyntax]].
+--[[file:jcorneli.org][jcorneli]] Sat Apr 23 00:06:21 2005 UTC
+
+We might also consider drafting off of [[file:metamathGrammarFacilities.org][metamathGrammarFacilities]] and then generalizing.  --[[file:jcorneli.org][jcorneli]] Oct 26 05
+
+* How you can help
+
+Any conversation at all would be nice, of course!  Beyond that non-specific
+request, a couple things you might try are:
+
+ * if you want to understand why a certain piece of code is present (or what
+it does) try commenting it out and running the regression suite.  If
+no errors appear, then that code wasn't needed!
+ * /Unneeded code??/ - Yes... the parser currently seems to have a little
+redundancy to it.  (Sorry, I guess.)  I don't think the readability of
+the code is impacted terribly -- but one large-scale project would be
+to give the code some working over for efficiency (both in terms of
+speed and in terms of code-size).  I'm not even sure when I'll get around
+to this... but hey, if you want to give it a try -- be my guest.
+ * Another simple thing to do is to take a look at the things the
+parser can do (use above link) and perturb the examples.  If you find
+things that fail -- tell me, or submit patches.
+ * Finally, I /hope/ that the basics are getting stable (the results
+of work along the lines of the previous item will say more) - which
+means that once you understand the way the basic code works, you should
+be able to add some new "orthogonal" code to parse your favorite math
+expression idioms.  (E.g. summations, sets, differentiation, etc., are
+all "in the works" - but if you pick something that you want to work on,
+I'll be happy to save it for you, at least til everything else is finished.)
+
+*  Discussion
+
+ * [[file:difficulties associated with NL text.org][difficulties associated with NL text]]
+ * [[file:using a powerful standard parser.org][using a powerful standard parser]]
+ * [[file:expression simplifier.org][expression simplifier]]
+ * [[file:minneapolis local linguistics.org][minneapolis local linguistics]]
+ * [[file:bootstrap problem for hdm parser.org][bootstrap problem for hdm parser]]
+
+* Related software
+
+See [[file:Linguistics research and programs particularly relevant to HDM.org][Linguistics research and programs particularly relevant to HDM]]. 

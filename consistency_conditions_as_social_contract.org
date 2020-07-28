@@ -1,0 +1,117 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In in-person discussion with [[file:rspuzio.org][rspuzio]] about the scholium system, we
+hit on the interesting ideas of, first, a broad category of
+consistency conditions (which would include link redirection through
+masks at edit time as well as transclusion adjustments or
+identification uploading, as well as various variations on these
+themes), and also on the idea of consistency conditions as a sort of
+"social contract".  In other words, the user is free to do whatever
+they want in the system, but the system will enforce certain
+consistency conditions that will, in effect, constrain what can
+"actually" be accomplished (at least, accomplished in a world-visible
+sense). --[[file:jcorneli.org][jcorneli]]
+
+
+
+Here is one example of a social contract, 
+http://dmoz.org/socialcontract.html
+from an organization (Open Directory Project)
+that specializes in a certain sort of ontology.
+--[[file:jcorneli.org][jcorneli]]
+
+Joe, your example mixes hierarchic levels, in my
+opinion. Let me give you an example of a "social
+contract", the U.S. Constitution.
+
+The Constitution is America's social contract between
+the People and the government.
+
+Legislators pass laws, supposedly consistent with the
+Constitution to carry out various schemes enriching
+their contributors and themselves.
+
+Then agencies of the government then create
+regulations that supposedly interpret the laws at a
+detailed level -- again, still supposedly consistent
+with the social contract, the Constitution and the
+re-election ambitions of the Legislators.
+
+Then, Departments, bureaucracies and others involved
+in their schemes build systems and hire employees to
+mete out the inflexible, hobnailed will of the
+government supposedly in accordance with the
+regulations, the laws and the Constitution.
+
+Finally, down at the bottom of the hierarchy there
+are functionaries who perform specific low-level
+duties required by the systems that implement the
+regulations that interpret the laws that are
+supposedly consistent with the Constitution. These
+functionaries may be digging ditches or guarding
+prisoners or whatever. A functionary might not even
+speak the language in which the social contract is
+written or have any knowledge or regard for the
+social contract. They follow orders...do what they
+are told.
+
+Now your transclusion and hyperlink resolution items
+are not themselves the "social contract" but are 
+functionaries that might still be
+digging ditches, guarding prisoners, or whatever if
+the social contract changed. They don't operate at
+the social contract level. They are cogs in the
+machine.
+
+Here is my opinion. For HDM a top-down approach is
+needed. And of course you will want to spell out your
+"social contract" in general terms of Life, Liberty
+and the Pursuit of Knowledge Unhindered By Obsolete
+Concepts of Property Rights. But I recommend going
+in-depth and studying modern Object/Relational
+Database Management Systems. You will probably want
+an industrial strength database management system if
+you are going to hold "all of math" on Planet Earth
+-- and if not, the decision to Roll Your Own will
+need justification. Either way, a "database design"
+will be needed. If you can create a database design
+that holds "all math" then you will be able to find a
+way to populate it and to create a system fulfilling
+your goals and your "social contract".
+
+Top Down analysis and design is the way to go, IMO.
+
+--[[file:ocat.org][ocat]] 10-Mar-2006
+
+I mean social contract in the broad sense of "what you can expect".
+The Constitution is, or was, supposedly a high-level reflection 
+of norms and mores that extend throughout society.  Rather a bottom-up
+concern.  The statement "consistency conditions as social contract"
+formalizes that notion.  Whatever you can expect /becomes/ the social
+contract.  In order to spell this social contract out at a human-readable
+and sufficiently abstract level (as a Constitution-type document) will
+require some work.  And there may well be interplay between these
+high-level documents and lower-level goings on.
+
+The way this relates to the design and implementation principles
+I've been using is fairly straightforward.  I have a pretty clear
+idea of the sorts of functionality I want from a given system,
+say Arxana for example.  This is the high-level statement.  So
+I then go about trying to code the thing up; and maybe I realize
+some new things that I then want to be part of the system, or
+I change some of the old ones.  Subsequent high-level statements
+then change.  This should also work if /I/ is a variable, but
+it is admittedly somewhat more tricky.
+
+As for the statement about "modern relational database management systems",
+you're probably right; however for now I seem to be largely concerned
+with front-end issues.  Storage & access are basically good enough to
+let me work on the front-end.  Eventually the focus may shift.  You
+seem to be more into design than I am.  I'd be happy to see more work on
+design, and may get more into it myself; but these days I seem to be
+more into the short-run-optimizing that is programming.  When I'm
+actually able to /do/ programming; the last month or so I've been
+somewhat distracted by other things!
+
+--[[file:jcorneli.org][jcorneli]]

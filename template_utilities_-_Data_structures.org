@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to deal with substitution of expressions, we will use several data types.  First and foremost, we have the /template/ which represents an expression into which values may be substituted.  To tell us what is to substituted into the expression, we have the /assignment/ and the /assignment list/.
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

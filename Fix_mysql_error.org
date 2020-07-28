@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Effort on tracking down this error can be found at http://www.phys-x.org/PlanetPhysics/PlanetPhysics.html .  I now believe it is not a mysql error but something happens on a query that turns into a cascading error.
+
+I believe the Mysql has gone away error is now fixed. I was able to add multiple entries and edit a few. I changed line 450 in Requests.pm to
+
+my ($rv,$sth)=dbSelect($dbh,{WHAT=>'uid,title',FROM=>$table,WHERE=>
+'fulfilled is null'}); #,'ORDER BY'=>'lower(title)'});
+
+By getting rid of the ORDER BY part everything seems ok. I figure people can live without a sorted list for now. I do not understand why this would be a problem since the actual mysql statement executes at a mysql prompt. Oh well. More testing is definately needed.  This is a short term fix until I learn more about why?
+
+The error returned and now I have replaced the connection call to the database.  I am a little confused about what this statement is trying to accomplish:
+ 
+unless ($dbh ||= dbConnect()) {
+die "Couldn't open database: ",$DBI::errstr;
+}
+
+I've replaced it with simply,
+
+$dbh = dbConnect();
+
+More details given at http://www.phys-x.org/PlanetPhysics/PlanetPhysics.html.

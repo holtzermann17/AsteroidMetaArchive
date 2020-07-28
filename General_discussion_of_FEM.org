@@ -1,0 +1,182 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Cash money!
+The FEM has good potential for being a revenue generator for the PM site.
+
+: Does it? Can we quantify this?  My experience with outsourced products (in specific, the Cafepress store) is that we only get a tiny slice of the proceeds.  If there aren't many sales, the net effect might be minimal (though at least, of no net cost to us).  Maybe we actually need to do some market research here. --[[file:akrowne.org][akrowne]] Thu Feb 17 17:20:27 UTC 2005
+
+: I agree, we should.  One thing to do would be to ask a traditional publisher
+how much we would make per copy /if/ we worked with them.  Another thing to do
+would be to ask people on PM whether they would be interested in buying the book
+(maybe a Poll would be in order).  But I'm not sure how to actually take the
+pulse of the market... or even find its wrist.  Understanding the supply side
+issues will probably be easier.  I can do some emailing.  Also, Ross has more
+experience working with publishers than either of us do, so maybe we should talk
+to him about this.  Not that that is market research.  But he might have
+contacts with some of the traditional publishers who he could call up and get
+straight answers from, which is more than I can say at this point. --[[file:jcorneli.org][jcorneli]] Fri Feb 18 03:31:53 UTC 2005
+
+:: One thought is: if we could get access to a high-volume printer,
+for the cost of toner and paper, we could put together reasonably good
+looking volumes ourselves without much work, until the number of
+orders becomes overwhelming.  Some glue, Gorilla Tape and cardstock
+would make reasonable binding material.  (But I also like Ray's idea
+of asking at Dover.) --[[file:jcorneli.org][jcorneli]] Oct 16 05
+
+:: Print On Demand: http://www.aeonix.com/pod.htm
+--[[file:ocat.org][ocat]] 16-Oct-2005
+
+#+BEGIN_VERSE I have been happy with lulu.com, which is a print-on-demand publisher, for my
+[http://www.lulu.com/content/124435 Metamath book].  There are no
+minimums and no
+fees unless you want an ISBN number (about $40) or premium services
+(publicity, amazon.com, etc. - $100 up I think - I'm not into
+that), and you set the amount of
+profit you want (from $0 on up) and the copyright license you want.
+The prices are reasonable and the paperback quality is top-notch.
+I produced the PDF with pdflatex, although it took some
+tricks to get it into the 6"x9" format I wanted
+- otherwise it
+defaults to 8.5"x11" format. --[[file:norm.org][norm]]
+
+#+BEGIN_VERSE: Actually, we found lulu before, and the probability that we'll
+use them or someone like them seems high (they're now noted below).
+With my comments about DIY publishing, I wanted to point out that we
+might be able to produce the book with a still-lower marginal cost,
+using volunteer labor and cheap materials.  Of course, the sunk cost
+needed to obtain a high-volume printer is significant, so more than
+likely we'd need printer time to be donated too if we went that route.
+POD gives the impression of being very good value for money, but if we
+could get a still-lower marginal cost by doing our own POD, that would
+be swell.   --[[file:jcorneli.org][jcorneli]]
+
+While chilling out at Aaron's place after the conference (i.e. the real symposium), Aaron and I came out with an interesting proposal for selling lots of copies of FEM in between puffs on the peace pipe.  Our idea was to have a campaign asking members of Planet Math to go over to university libraries and request that the libraries order FEM.
+
+To see how effective such a campaign might be, we had a look at some statistics.  Aaron looked at the database of users and noted that there were about a thousand whose e-mail address ended in ".edu". We looked at the number of institutions of higher learning and found that there are someting like 5000 institutions of higher education in the United States, for instance. (Incidentally, India is the country with the largest number.)  Given that not everyone has a gaduate math program, this means that there would be substantially less than 5000 math libraries.  Hence, there is a reasonable chance of getting a copy of our FEM into most math libraries in the U.S. and around the world with this strategy.
+
+As I see it, an important argument in favour of our suggestion is the fact that it targets the right market.  Remember that the most math books and journals are sold to libraries as opposed to individuals.  While we should naturally also market FEM to individuals, it very well might be the case that institutional sales will make up the bulk of sales, especially if use such a strategy to get copies of FEM into university math libraries.  --[[file:rspuzio.org][rspuzio]] 18 October 2005
+
+
+** Imperativeness of tasks
+
+Note that most of the [[file:FEM tasks.org][FEM tasks]] are not optional -- future development
+of the FEM depends on their completion!
+
+** Possible publisher(s)
+
+ * http://www.network-theory.co.uk/ --  Well, they only donate $1 from the sale of many of their manuals.  We'd probably want to get more than that per FEM sold!?  How much would we get with on-demand?
+ * A mathematical organization, like the AMS or MAA?
+ * on-demand -- don't print more than we'd sell.  Quality? unknown.  Is there really no minimum size of a run?
+ * publish or perish press (has done spivak's multivolume work and some other out-there stuff)
+ * The FSF (aka GNU Press)? https://agia.fsf.org/order/#manuals
+ * Springer-Verlag ;) or some other mainstream math publisher?
+ * Lulu or other POD
+ * TUG
+ * Dover
+
+** Long term goal: format independence
+
+It would be nice to be able to publish the FEM not just as a PS or PDF file, but
+as a Texinfo file for browsing in Emacs.  (Getting all the math symbols to work
+would probably require some changes or extensions to texinfo; but I know there
+are several emacs subsystems for displaying latex2html-style math.)  Does anyone
+else have a format they would like to see used at some point?
+
+** The Copyright Problem
+
+Recently, I was discussing print versions of FDLed resources with some Wikimedia
+folks.  They called my attention to the fact that, not only will many publishers
+shy away from printing works without a single person to hold accountable for
+copyright violations, but that in some countries, it may even be /illegal/ to
+do so (France was given as an example, though I'm not sure what portion of the
+law explicitly says this).  Is this something we need a "certification" process
+to handle?  Will this be tractable?  Will it kill the benefit of selling print
+versions?  Is there a way around it, legally?  Can we evangelize this problem,
+to get the law changed or interpreted more reasonably? --[[file:akrowne.org][akrowne]] Thu Feb 17
+17:27:22 UTC 2005
+
+: I'd like to know more details.  If we can't print the books in France, then we
+won't print them in France.  If US printers just "shy away", maybe we can find
+some who aren't as shy.  Heck if needs be, we could probably print them
+ourselves.  But we should first try to understand exactly what's going on
+legally.  --[[file:jcorneli.org][jcorneli]] Thu Feb 17 18:11:53 UTC 2005
+
+: We have an advantage over Wikipedia in that, in theory, we have people to hold
+accountable - we know who wrote which articles.  In cases where a question
+arises and the original author can't be contacted, we could simply not include
+that article. (And obviously if we learn for sure that someone has committed a
+copyright violation in an article, we wouldn't include /that/ article.)  But
+more to the point, I think that the FEM editors can be held responsible for
+copyright matters.  In this respect, I don't think that the FEM is particularly
+different from any other multi-author compilation (like the EDM or Encyclopedia
+Britannica).  The fact that the various copyrights for the articles have not
+been assigned to any one individual or corporation shouldn't have much bearing
+on our copyright for the compilation and our editorial responsibility.  OK, this
+might not hold up in court, but it seems pretty reasonable to me. --[[file:jcorneli.org][jcorneli]] Sun Feb 27 18:17:44 2005 UTC
+
+: I would suggest that we take something like the approach publishers use with
+journals, which are also works by many authors, most of whom the editors do not
+know.  That is to say, when the time comes, we simply have authors sign a simple
+release form which states that
+
+ * The author gives Planet Math Ltd. permission to publish articles in the free
+Encyclopaedia of Mathematics.
+
+ * The author certifies that the contribution to the article is original and does
+not infringe on anyone else's copyright (except with the permission of the
+author of the copyrighted work).  In the event of a claim of infringement, the
+author agrees to assume sole responsibilty for what he/she wrote and not hold
+Planet Math liable.
+
+: To be sure, the above is just a vague suggestion and will need fine tuning and
+discussion.  Like everything else in law, wheteher or not it works ultimately is
+in the hands of judges and juries.  However, by having signed documents in hand,
+we go a long way in protecting ourselves and making the case that we, as
+editors, have done all that a reasonable person editing a multi-author work
+could do to avoid infringement.  Also, let me point out that getting authors to
+sign this may not be as hard as it sounds; as Drini pointed out recently, most
+of the contributions come from a small handful of contributors; there are only
+57 members who own more than 10 entries, 126 owners of more than one entry, and
+and only 177 members own entries.  The number of authors is somewhat higher, but
+I would guess that there are not more than 250.  Because of the distribution,
+even if we only get the 50 most prolific authors to send back their signed
+waiver forms, that already covers something like 90% of the corpus.
+--[[file:rspuzio.org][rspuzio]]
+
+**  What people are saying about our competitors
+
+It is always nice to have a sense of what the market you're entering looks like.
+Here are the Amazon.com pages that talk about the Encyclopedic Dictionary of
+Mathematics (EDM) and the CRC Concise Encyclopedia of Mathematics (CRCC).
+
+ * [http://www.amazon.com/exec/obidos/tg/detail/-/0262590204/qid=1109732180/sr=8-1/ref=sr_8_xs_ap_i1_xgl14/103-0029017-3619013?v=glance&amp;s=books&amp;n=507846 EDM]
+ * [http://www.amazon.com/exec/obidos/tg/detail/-/1584883472/ref=pd_bxgy_text_1/103-0029017-3619013?v=glance&amp;s=books&amp;st=* CRCC]
+
+I think we'll have a ways to go before we can catch these guys -- but it will
+happen.  In the mean time, if anyone who has access to all three books wants to
+write a side-by-side comparison, that could be extremely helpful. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 03:22:09 2005 UTC
+
+: I just had a look at the sample pages of the CRCC encyclopedia. Every entry has its own set of references...as it should be (sigh). -- [[file:alozano.org][alozano]]
+
+**  Similar Projects to the FEM
+
+What about Free ANTS ? Please have a look at
+[http://planetmath.org/?op=getobj&from=objects&id=6878 Algebraic Number Theory]
+at Planetmath. Maybe we should also think about creating different themed books,
+e.g. Free Algebraic Number Theory, which could (or not) follow the skeleton
+outlined in the entry and include all the entries in the appropriate order (with
+some editorial work to make them into a coherent read). In the same spirit one
+could create books called Free (insert your favorite math area
+here). --[[file:alozano.org][alozano]]
+
+: Sure - free math books that interlace with the encyclopedia content would be
+great.  I think the PM Books section might be a good place to work on these
+things, though it seems like it might be helpful to have some additional tools
+to facilitate the creation of books -- latex2html "outline" views of a source document is
+one thing that comes immediately to mind. --[[file:jcorneli.org][jcorneli]] Thu Mar 17 23:02:51 2005 UTC
+
+** FEM documentation
+
+One of the frontmatter items should be some description of how the FEM is built.
+I propose to write this shortly.  --[[file:jcorneli.org][jcorneli]] Oct 16 05

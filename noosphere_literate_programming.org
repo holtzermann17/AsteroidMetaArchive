@@ -1,0 +1,107 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+I also think that [[file:nested noosphere instances.org][nested noosphere instances]] could be useful for programming.
+
+For instance, the [[file:template utilities.org][template utilities]] project could easily be implemented as
+a Noosphere instance.  To do so, it would be nice to have a flexible version of
+Noosphere so that, for instance, it would be easy to specify "input" and
+"output" as metadata and turn off features which are more suitable for a
+mathematical encyclopaedia than a programming project.
+
+(As I understand it, some of the features are "hard wired" into the code;
+although it would take some work to do, it would be nice if they could be stored
+in a "settings" file which one could edit when setting up an instance of
+Noosphere.)  Also, it would be nice in that particular case to be able to
+replace the default editor with emacs so that it could automatically indent LISP
+and even allow one to run the code from within the webage.
+
+This last feature would be very useful one for using the website for
+collaborative authoring and testing of programs.  From time to time, I run into
+discussion about "Extreme Programming" and other paradigms for organizing
+programmers while surfing the web.  However, these seem to be based on the
+assumption that programming is done by a team of programmers in an office
+building.  While this is true of commercial software, it doesn't necessarily
+apply to free software.  I suspect that, with a bit of thought, Noosphere could
+be turned into a tool that allows hackers around the world to collaborate on an
+ad hoc basis according to the "if everybody contributes a little bit of spare
+time, a lot can be done" concept which underlies the Planet Math encyclopaedia
+project.  For instance, one fellow might contribute an algorithm, a second
+fellow might code the algorithm, a third fellow might contribute a more
+efficient but less transparent coding of the same algorithm, a fourth fellow
+might document the code, a few more people might contribute examples to
+illustrate and test the code, ...
+
+In fact, now that I think of it, it would be really swell if this sort of thing
+caught on and, one day, most programs (say a complete operating system and a
+suite of applications) were coded this way.  In particular, I think that this
+sort of collaborative hypertext literate programming could really put the ipso
+facto advantages of free software to best use.  --[[file:rspuzio.org][rspuzio]] 8 April 2005
+
+----
+
+While I understand what you mean about "specifying input and output as
+metadata", other readers might not get it, so let me just state that this is a
+comment about /functions/, specifically about the types of their input
+(arguments) and their output.  On the template utilities pages, rspuzio
+discusses these things quite precisely, sometimes giving mathematical proofs
+that the functions work exactly the way that their specifications say they will.
+
+My comment: I definitely agree that this sort of metadata would be useful.
+
+Over in the [[file:Emacs.org][Emacs]] world, we've recently been discussing some related issues
+having to do with documentation of functions.  Specifically, functions that rely
+on user settings should have metadata fields that explain exactly what settings
+are involved.  Then, when the function runs, a user would be able to run M-x
+what-just-happened and get a message explaining what happened and what user
+settings were relevant.
+
+Having a function be an object type is a good idea - it seems to have come
+naturally to you because you're doing your literate programming in hypertext,
+whereas I'm doing mine in flat text.  I had been thinking of programs just as
+"things you would include in your !LaTeX code" inside of a (generalized)
+verbatim environment.  But your approach seems to make a bit more sense,
+actually.  If we looked at this idea using the ideas of scholium system, we
+could have it both ways: programs could be stand-alone objects with their own
+metadata, and they could also be included into other "document" objects.
+Perhaps this approach makes the most sense, but it also would appears to require
+some fairly significant revisions to the Noosphere code.
+
+As for the "settings" idea, if we were doing nested instances, probably
+each instance would have a "settings" page associated with it that people
+on the ACL list (or maybe a special "VIP" ACL list) could modify.
+
+However, as for changing the default editor, I'm not sure you can /do/ that
+(in general).  Well... I know you can adjust Mozilla settings to use the Emacs
+editor when you are working with text fields, but it calls Emacs externally.
+
+As for me, my browser (indeed, this one is /my/ browser :)) runs inside of
+Emacs; one could fairly easily set things up to make editing PM pages
+wholly within Emacs easy to do, with or without my browser (cf. simple-wiki-edit-mode).
+
+My hope for a noosphere/LP system would be to tightly integrate CVS, so that one
+would do away with the web more or less entirely, and instead do uploading via
+'cvs commit' and downloads via 'cvs update'.
+
+As for the Extreme Programming idea, somewhere on my personal
+[[file:http://www.ma.utexas.edu/~jcorneli/o/tasks list of things to do.org][http://www.ma.utexas.edu/~jcorneli/o/tasks list of things to do]] is the idea
+of looking into a "multiplayer editing mode" for Emacs, which would allow
+several different people to work on the same buffer (or buffers) at once, in
+real time. But something wacky like that might not be needed for something sorta
+like extreme programming to work (though it would be running mostly in "wiki
+time" not "real time").
+
+I'm not sure if your comment about "one day..." is tongue-in-cheek or not --
+since really, this is basically how the [[file:GNU.org][GNU]] system has been written -- just
+with somewhat different tools.  The way current Emacs development works is /a
+lot/ like the way I think PM development should work -- Emacs certainly seems
+to match the "collaborative hypertext literate programming" description to some
+extent.  (It is "the self-documenting real-time editor", after all.)  I think
+Noosphere literate programming wouldn't be a huge improvement over Emacs
+development - it would simply lend itself to a different constituancy and, to
+some extent, different content.  (But the content should all be
+accessible/editable from within Emacs eventually, so I don't really see the two
+projects as distinct.)  The idea of metadata for programs you suggested, though,
+is a useful one, regardless of what platform it is applied on.
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 03:52:01 2005 UTC

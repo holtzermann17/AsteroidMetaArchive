@@ -1,0 +1,40 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is this?
+
+The "Code Market" is a catch-all term for /ways to break "the public good market failure"/,
+and, simultaneously, a more specific idea about how to do this in the case of libre
+software.
+
+This idea has been discussed cursorily in the [[file:metacommons manifesto.org][metacommons manifesto]] and
+[[file:the fog of copyleft.org][the fog of copyleft]] paper (see section on "Socio-Political
+Solutions"), but hasn't been given a full write-up of its own (sad!)
+since Jordi Carrasco-Munoz talked about it in First Monday.
+
+Quoting from "The Fog of Copyleft":
+
+: Perhaps a better strategy would be to promote institutions and
+attitudes which offer social and economic incentives to share content
+and corresponding disincentives to those who chose to be selfish.
+
+To sum up, here are some of the things that need to exist for the
+specific code-oriented version of the proposal to work well:
+
+ * An online code bidding and repository system that requires uploaded
+code to be sufficiently "libre" in order to play.
+ * A means for buyers and bidders to negotiate before code is submitted.
+ * Perhaps some means to check a regression test suite before the buyer becomes
+obligated to pay (note: this doesn't always work, say in the case of UI's;
+it works better for mathematical algorithms, so some other less formal
+quality control system should be installed for this less formal case).
+ * Superimposed knowledge-management tools that will help make uploaded
+code (and documentation, etc.) as easy to find as possible.
+
+One might expect that these sorts of tools would be just about
+sufficient in the general.
+
+* See also
+
+ * [[file:social, political, and economic scholium systems.org][social, political, and economic scholium systems]] -- more musing about wider application of these ideas
+ * [[file:Code Market Merged Proposal.org][Code Market Merged Proposal]] -- a nice writeup by some Google Summer of Code potentials

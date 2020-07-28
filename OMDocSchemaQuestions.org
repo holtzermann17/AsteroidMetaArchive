@@ -1,0 +1,648 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+return to [[file:MetamathOMDocBridge.org][MetamathOMDocBridge]]
+
+
+
+** 2007-03-22: More possible questions and such about the OMDoc 1.2 spec
+
+                           
+    attribute "just-by" of element "type":
+     
+        described on P. 147, section 15.2.3 is not
+        included in Figure 15.3 or in Appendix C
+        as one of the attributes of element "type".     
+     
+
+     
+    element adt:
+          
+        P. 164, Chapter 16 states that (re adt's)
+        "It is a theory-constitutive statement and can only
+        occur as a child of a theory element (see Section 
+        15.1 for a discussion)."
+     
+        However, a review of the Relax NG schema in Appendix
+        D.8 does not specify adt as a member of 
+        omdocst.constitutive.class (whereas, for example,
+        the schema for Module CTH) shows 
+         
+            omdocst.constitutive.class |= inclusion
+          
+        Nor does a scan of the .rnc modules reveal a reference
+        to "adt" outside of the omdocadt.rnc module -- 
+     
+        FURTHERMORE...a review of the trunk DTD's *does*
+        contain:
+     
+            <!ENTITY % omdocadt.constitutive.class "|%omdocadt.adt.qname;">
+     
+        Thus, it appears that the English specification of
+        element adt as restricted usage to "theory" is not
+        implemented in the normative Relax NG schema --- OR...
+     
+
+     
+    element adt: Nomenclature
+     
+        element adt's primary child element is "sortdef", which
+        defines "constructor" elements used to inductively define
+        the set represented by the "adt". But "adt" is closer to
+        what Enderton describes in Chapter 1 of "A Mathematical
+        Introduction" to logic as an "Inductive Set":
+     
+            'We may want to construct a certain subset of a set U
+            by starting with some initial elements and applying
+            certain operations to them over and over again. The set
+            we seek will be the smallest set containing the initial
+            elements and closed under the operations. Its members
+            will be those elements of U which can be built up from
+            the initial elements by applying the operations a finite
+            number of times.'
+     
+        This is the basic recipe for defining, among other things,
+        a formal language composed of constants and variables, for
+        example
+     
+            implies(a,b) = '( a -> b )' 
+            not(a)       = '-. a'
+            etc.
+     
+        Robert Sedgwick defines an "abstract data type" in
+        "Algorithms In C++":
+     
+            'The defining characteristic of an abstract data type
+            is that nothing outside of the definitions of the
+            data structure and the algorithms operating on it should
+            refer to anything inside, except through function and
+            procedure calls for the fundamental operations.'
+     
+        Now, if "adt" is intended to be a mathematical description
+        of an Abstract Data Type, then it is incomplete -- it 
+        allows for definition of "constructor" objects, but not
+        the other fundamental operations we would expect to have,
+        (e.g. "insert", "remove", "put", "get", etc.)
+     
+        element "adt" then is a conceptual mismatch, with respect
+        to its nomenclature. It defines inductive sets and calls
+        them abstract data types. 
+     
+        What the Metamath -> OMDoc Bridge project needs to be
+        able to do is what Enderton specifies: define a language
+        formally using constant and variable symbols and 
+        inductive definitions of wff's -- well-formed formulas.
+        There is a considerable and intricate body of mathematical
+        knowledge about formal languages, and one would expect
+        OMDoc to facilitate expositions of this content. Furthermore,
+        the charm and elegance of Metamath lies partly in the
+        fact that a Metamath database such as set.mm defines 
+        itself -- set.mm defines its own grammar and logic and
+        bootstraps itself into advanced mathematics using only
+        one hard-wired rule of inference: substitution. 
+     
+
+
+** 2007-03-20: More possible errors in OMDoc 1.2 spec
+
+
+                    
+    attribute "role" - not in alphabetic order in
+        Appendix C, Table of Attributes:
+    
+        p. 360-360 follows "just-by" precedes "lbrack"
+        p. 362 -- more occurrences follow "requires"
+                  and precede "scheme".
+     
+
+As mentioned earlier, the OMDoc 1.2 spec does not define
+which elements *specifically* are valid as <<top-level>> --
+i.e. as the children of an "omdoc" element. My best guess
+follows, based on inspection of the .rnc schema information:
+
+    
+    <<top-level>> contains
+    
+        adt
+        alternative
+        assertion
+        axiom-inclusion
+        code
+        decomposition
+        example
+        exercise
+        hint
+        mc
+        omgroup 
+        omlet
+        omstyle
+        omtext
+        path-just
+        presentation
+        private
+        proof
+        proofobject
+        solution
+        theory 
+        theory-inclusion
+        type
+    
+
+
+
+
+
+
+** 2007-03-15: More discrepancies between Figures and Appendices
+
+                         
+    element derive - 
+        p. 170, Figure 17.3, content: CMP*, FMP*, method?
+        p. 350, Appendix B, content: CMP*, FMP?, method?
+          
+    element theory - 
+        p. 158, Figure 15.18, 
+            content: (<<top+thc>> | imports)*
+        p. 181, Figure 18.1, 
+            content: (<<top-level>> | imports | inclusion)*
+        p. 354, Appendix B, 
+            content: (statement | theory)*
+        1. (eh?) what's that in Appendix B? there is
+           no element "statement" defined in Appendix B.
+        2. top-level ill-defined -- is <<top+thc>> the
+           same as <<top-level>> now?
+     
+    element axiom-inclusion -  
+        p. 181, Figure 18.1, 
+            content: morphism?, obligation*
+        p. 349, Appendix B, 
+            content: morphism?, (path-just | obligation*)
+          
+    element theory-inclusion -  
+        p. 181, Figure 18.1, 
+            content: (CMP*, FMP*, morphism, obligation*)
+        p. 349, Appendix B,
+            content: (morphism, decomposition?)
+     
+    element omtext - 
+        p. 130, Figure 14.1, content: CMP+, FMP*
+        p. 353, Appendix B, content: CMP+, FMP?
+     
+    element type - occurs in two varieties with
+        different attributes and content, but V.C
+        provides only one instance:
+     
+        p. 144, Figure 15.3, symbol type (AKA 
+            "type declaration") --> 
+            occurs as content of symbol and has 
+            its own content = CMP*, <<mobj>>
+            with optional attributes = xmd:id,
+            system, style, class.
+        p. 147, p.150 (Figure 15.9), term declaration
+           -> content = CMP*, <<mobj>>, <<mobj>>
+            where 1st <<mobj>> is an expression
+            and 2nd <<mobj>> is a type (a type?!@ --
+            but not a *type* type, rather a <<mobj>>
+            type! how confusing...)
+        p. 354, Appendix B, content shown with just
+           one <<mobj>>
+     
+    element alternative - 
+        p. 150, Figure 15.9,     
+            content: CMP*, (FMP* | requation* | <<mobj>>)
+        p. 349, Appendix B, 
+            content: CMP*, (FMP* | requation* | <<mobj>>*)
+     
+    <<top+thc>>
+        p. 158, Figure 15.18. <<top+thc> defined as
+            "stands for top-level plus theory constitutive
+             elements". HOWEVER...
+        A) "top-level" is already ill-defined and
+        B) P. 142, "non-constitutive statements will be 
+           defined in Section 15.3. They are allowed to
+           occur outside a theory element in OMDoc 
+           documents (e.g. as top-level elements), however,
+           if they do they must reference a theory, which 
+           we will call their home theory in a special 
+           theory attribute."
+        C) theory constitutive elements given on page 
+           144, Figure 15.3 = symbol, type, axiom, 
+           definition, requation, measure, and ordering.
+           BUT...element type is listed in Figure 15.9
+           on page 150 in section 15.3!!!! Thus it is
+           also a non-constitutive element!!! Figure 15.9
+           shows non-constitutive elements = assertion,
+           type, example and alternative.
+         D)THEREFORE type is non-constitutive AND
+           constitutive, depending on context and
+           may be allowed in the <<top-level>> AND
+           <<top+thc>>. 
+     
+
+
+** 2007-03-15: I have the Whine, who has the Cheese? :-)
+
+The 
+[http://www.omdoc.org/pubs/omdoc1.2.pdf OMDoc-1.2.pdf]
+documentation has several apparent
+omissions and inconsistencies that, although
+individually tiny, in aggregate are frustrating.
+Some of the frustrations would be alleviated if the
+document were presented in html format with internal
+links instead of page and section references.
+
+: It looks like this was generated with !LaTeX.  If so, to get hyperlinks
+in the PDF file itself like in
+[http://us.metamath.org/downloads/metamath.pdf metamath.pdf], the
+following line
+
+     \usepackage[plainpages=false,pdfpagelabels=true]{hyperref}
+
+: can be added before "\begin{document}" and the PDF regenerated with
+pdflatex.  For more precise hyperlinks if \pageref's are
+used (as in "see p. xxx"), "\usepackage{realref}" can also
+be used, as is done in [http://us.metamath.org/latex/metamath.tex
+metamath.tex].  However, the
+[https://svn.mathweb.org/repos/mathweb.org/branches/omdoc-1.2/doc/spec/spec.tex
+OMDoc-1.2 LaTeX source file] is password-locked.  Perhaps the
+author could be encouraged to add the hyperref line and recompile. --
+[[file:norm.org][norm]] 15 Mar 2007
+
+
+
+
+
+Specific whines:
+
+1. The tables of elements and attributes presented
+in Part III as figures (for example Figure 11.1)
+contain different information in some cases than the
+element and attribute "Quick Reference" appendices
+for elements and attributes in V.B and V.C.
+
+ * "omdocref", such as the "generated-from" attribute
+value, is sometimes but not always listed as "URI
+reference" in V.C. The value left blank for "via" in
+V.C. but is shown as "OMDoc reference" for
+attributes "exhaustivity" and "existence".
+
+2. In general, specifications of attributes are
+buried in various sections of expository prose. For
+the purposes of explaining OMDoc to non-programmers
+this is fine, but for programmers, I believe it
+would be far better to have a detailed, exhaustive
+specification of every element and attribute, all in
+one place. For example:
+
+ * in III.16, "Abstract Data Types" the "parameters"
+attribute of element adt is documented in the middle
+of a paragraph on page 164, "An adt element contains
+one or more sortdef elements that define the sorts
+and specify their members and it can carry a
+parameters attribute that contains a whitespace-
+separated list of parameter variable names. If these
+are present, they declare type variables that can be
+used in the specification of the new sort and
+constructor symbols see Section 26.20 for an
+example." And note that attribute "parameters" is
+not listed in Appendix V.C.
+
+ * Figure 11.1, "OMDoc Elements for Specifying
+Document Structure", on page 97 lists as element
+content "( <top-level> )*" and "<<MDelt>>*" but
+these are documented as simply "where top-level
+stands for top-level OMDoc elements, and MDelt for
+those introduced in Chapter 12". Nowhere (that I can
+find) does OMDoc1.2.pdf actually list the top-level
+OMDoc elements -- the reader is required to /infer/
+this information from various sources such as the
+RelaxNG schemas, appendices V.B and V.C, and the
+expository prose in part III. The index informs us
+that "top-level" is found on page 96, and a hunt
+reveals no additional information except this: "We
+call an OMDoc element a top-level element, if it can
+appear as a direct child of the omdoc element."
+
+OK, fine, but WHICH OMDoc elements are Top Level?
+I have my own guesses, of course, but the OMDOC 1.2
+specification ought to be very clear about this
+point. In fact, I seriously doubt that anyone has
+written a "normative" OMDoc document validator to
+exhaustively validate any OMDoc document against the
+OMDoc 1.2 specification -- given /just/ the
+OMDoc1.2.pdf specification document, a programmer in
+a "clean room" would have a helluva time writing
+bug-free code to do the job!
+
+This last topic raises deeper issues than might be
+seen initially because one of the criteria for
+success -- assuming that the advertised benefit of
+OMDoc is that it provides a common format for Planet
+Earth's mathemetics content in the 21st Century --
+is that if I create OMDoc XML language content for a
+math/logic system my "customers" are going to expect
+that math/logic to be computer understandable by
+other math/logic systems, not to be just "human
+understandable"... So a system that can read from
+OMDoc content must be able to /map/ my theory
+constitutive elements to its own -- symbols, axioms,
+definitions and abstract data types, plus their
+"logic" attribute which is described in V.C as a
+"token" which is an attribute of element FMP that
+"specifies the logical system used to encode the
+property." Pages 131 and 132 do mention that "logic"
+may be encoded as either "fol" or "hol" and provide
+an example of an FMP, but are "fol" and "hol"
+adequate -- does the document give us enough
+information to write code or does it just fork-off a
+new research project? And how I am supposed to 
+/automatically/ map my systems theory constitutive
+elements to other unknown systems encoded in OMDoc?
+(If there are 'n' systems we ought to require just
+2 * n conversion programs if we use OMDoc instead
+of n * ( n - 1) -- and if that is not the case then
+my customers will rate my work a failure...if I have
+to hand code every conversion's /parameters/ to
+and from every other system then I am doomed!)
+
+
+** Difficulties/Problems,
+
+1. element "hypothesis" is (apparently) contained
+only in proof objects (module "omdocpf"). Does this
+reflect a bias towards natural deduction over 
+Hilbert-style deductions? Note that Metamath associates
+0->n hypotheses with axiom/theorem assertions, and
+the hypotheses must be fulfilled in proof steps. 
+
+: Answer: hypothesis is a local assumption in a proof
+object. FMP's (Formal Mathematical Property elements)
+contain "assumption" and "conclusion" elements that
+(appear to) parallel Metamath's essential hypotheses
+and assertions, respectively. 
+
+2. Apparent error in omdoc dtds (not sure which is "authoritative"):
+
+    
+https://svn.omdoc.org/repos/omdoc/trunk/dtd/omdocmtxt.mod
+    
+
+and 
+
+    
+https://svn.omdoc.org/repos/omdoc/branches/omdoc-1.2/dtd/omdocmtxt.ent
+    
+
+    
+    <!-- the text types for proofs and proof fragments -->
+    <!ENTITY % omtexttype.pf "proof|derive|hpyothesis">
+    
+
+
+** Difficulties/Problems,
+
+Schemas obtained here:
+
+    
+     https://svn.omdoc.org/repos/omdoc/
+     
+
+-----
+
+#1 below appears to be an actual defect, either
+in trang, or in the omdoc.dtd's. Regrettably,
+trang doesn't provide the error location for
+these types of errors! I have not diagnosed the
+problem(s) yet.
+
+The other "error" situations below -- 2, 3, and 4
+are not errors in trang or omdoc, but rather,
+represent various limitations/incompatibilities among
+.rnc, .dtd, .xsd and trang's conversion capabilities.
+They are, in effect, opportunities for achievement
+(and "gotchas").
+
+-----
+
+1)
+
+These errors occured with Trang using both the "trunk"
+and the 1.2 "branch" public subversion dtd subdirectory.
+
+The following trang step is converting from dtd to rnc:
+
+    C:\Trang>java -jar trang.jar C:\downloads1\omdoc\dtd\omdoc.dtd 
+    C:\omdoc\rnc\omdoc.rnc
+    error: inconsistent namespace URIs for default namespace
+    error: inconsistent namespace URIs for default namespace
+    error: inconsistent namespace URIs for default namespace
+    error: no namespace declaration for prefix "xlink"
+
+-----
+
+2)
+
+The following trang step is converting back from rnc to dtd,
+thus completing the round trip for the "branch" 1.2 dtd's:
+
+    C:\Trang>java -jar trang.jar C:\omdoc\rnc\omdoc.rnc C:\omdoc\d
+    td\omdoc.dtd
+    C:\omdoc\rnc\omdoc.rnc:50:16: error: sorry, wildcards are not supported
+
+    C:\omdoc\rnc\omdoc.rnc:49:12: error: sorry, wildcards are not supported
+
+
+
+-----
+
+3)
+
+Apparently trang cannot convert the omdoc.rnc format
+to .xsd, due to the following -- messages received
+operating on the "trunk" .rnc's in the public rnc
+subdirectory:
+
+    C:\Trang>java -jar trang.jar C:\omdoc\rncORIG\omdoc.rnc 
+    C:\omdoc\xsd\omdoc.xsd
+
+    C:\omdoc\rncORIG\xslt10.rnc:21:5: error: sorry, nested grammars are not
+     yet supported
+
+-----
+
+4)
+
+Trang cannot convert the full, hand-coded omdoc.rnc format to dtd
+format because of many limitations in trang -- and the
+trang manual's advertised "approximations" were not
+invoked for these particular errors.
+
+    C:\trang>call trang.bat C:\omdoc\rncORIG\omdoc.rnc 
+    C:\omdoc\dtd\omdoc.dtd
+
+    C:\trang>pushd c:\trang
+
+    C:\Trang>java -jar trang.jar C:\omdoc\rncORIG\omdoc.rnc C:\omd
+    oc\dtd\omdoc.dtd
+    C:\omdoc\rncORIG\omdocdc.rnc:14:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdoccc.rnc:9:1: error: sorry, combining definitions w
+    ith combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocmtxt.rnc:9:1: error: sorry, combining definitions
+     with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocrt.rnc:9:1: error: sorry, combining definitions w
+    ith combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocpres.rnc:14:1: error: sorry, combining definition
+    s with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocst.rnc:17:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdoccth.rnc:9:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdoccth.rnc:18:1: error: sorry, combining definitions
+     with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocdg.rnc:9:1: error: sorry, combining definitions w
+    ith combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocdg.rnc:10:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocdg.rnc:11:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocpf.rnc:10:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocadt.rnc:8:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocext.rnc:9:1: error: sorry, combining definitions
+    with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocext.rnc:11:1: error: sorry, combining definitions
+     with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocquiz.rnc:8:1: error: sorry, combining definitions
+     with combine="choice" is not supported
+    C:\omdoc\rncORIG\omdocattribs.rnc:12:30: error: sorry, wildcards are no
+    t supported
+    C:\omdoc\rncORIG\omdocdoc.rnc:17:48: error: sorry, cannot handle this k
+    ind of "zeroOrMore"
+    C:\omdoc\rncORIG\omdocdoc.rnc:21:26: error: sorry, wildcards are not su
+    pported
+    C:\omdoc\rncORIG\omdocdoc.rnc:20:22: error: sorry, wildcards are not su
+    pported
+    C:\omdoc\rncORIG\omdocmobj.rnc:12:26: error: sorry, cannot handle overr
+    ides inside "include"
+    C:\omdoc\rncORIG\openmath2.rnc:79:32: error: sorry, wildcards are not s
+    upported
+    C:\omdoc\rncORIG\openmath2.rnc:79:12: error: sorry, wildcards are not s
+    upported
+    C:\omdoc\rncORIG\openmath2.rnc:19:10: error: sorry, not handled: duplic
+    ate declaration of element "OMATTR" from namespace "http://www.openmath.org/Open
+    Math"
+    C:\omdoc\rncORIG\openmath2.rnc:67:10: error: other element declaration
+    is here
+    C:\omdoc\rncORIG\mathml2\mathml2.rnc:10:32: error: sorry, wildcards are
+     not supported
+    C:\omdoc\rncORIG\mathml2\mathml2-presentation.rnc:103:9: error: sorry,
+    not handled: duplicate declaration of element "mn" from namespace "http://www.w3
+    .org/1998/Math/MathML"
+    C:\omdoc\rncORIG\mathml2\mathml2-presentation.rnc:100:6: error: other e
+    lement declaration is here
+    C:\omdoc\rncORIG\mathml2\mathml2-content.rnc:47:11: error: sorry, not h
+    andled: duplicate declaration of element "floor" from namespace "http://www.w3.o
+    rg/1998/Math/MathML"
+    C:\omdoc\rncORIG\mathml2\mathml2-content.rnc:46:9: error: other element
+     declaration is here
+    C:\omdoc\rncORIG\mathml2\mathml2-content.rnc:247:37: error: sorry, wild
+    cards are not supported
+    C:\omdoc\rncORIG\mathml2\mathml2-content.rnc:247:50: error: sorry, cann
+    ot handle this kind of "choice"
+    C:\omdoc\rncORIG\mathml2\mathml2-content.rnc:247:23: error: sorry, wild
+    cards are not supported
+    C:\omdoc\rncORIG\xslt10.rnc:77:28: error: sorry, wildcards are not supp
+    orted
+    C:\omdoc\rncORIG\xslt10.rnc:42:14: error: sorry, wildcards are not supp
+    orted
+    C:\omdoc\rncORIG\xslt10.rnc:37:11: error: sorry, wildcards are not supp
+    orted
+    C:\omdoc\rncORIG\xslt10.rnc:254:6: error: sorry, cannot handle this kin
+    d of "choice"
+    C:\omdoc\rncORIG\xslt10.rnc:210:19: error: sorry, cannot handle this ki
+    nd of "group"
+    C:\omdoc\rncORIG\xslt10.rnc:273:6: error: sorry, cannot handle this kin
+    d of "choice"
+    C:\omdoc\rncORIG\xslt10.rnc:261:6: error: sorry, cannot handle this kin
+    d of "choice"
+    C:\omdoc\rncORIG\xslt10.rnc:114:20: error: sorry, cannot handle this ki
+    nd of "group"
+    C:\omdoc\rncORIG\xslt10.rnc:21:5: error: sorry, nested grammars are not
+     supported
+    C:\omdoc\rncORIG\xslt10.rnc:20:11: error: sorry, wildcards are not supp
+    orted
+    C:\omdoc\rncORIG\xslt10.rnc:31:11: error: sorry, wildcards are not supp
+    orted
+    C:\omdoc\rncORIG\omdocpres.rnc:90:64: error: sorry, cannot handle this
+    kind of "choice"
+    C:\omdoc\rncORIG\omdocpres.rnc:30:51: error: sorry, cannot handle this
+    kind of "choice"
+    C:\omdoc\rncORIG\omdocst.rnc:52:48: error: sorry, cannot handle this ki
+    nd of "choice"
+    C:\omdoc\rncORIG\omdocst.rnc:52:48: error: sorry, ambiguous attribute c
+    hoice not handled (attribute "type" from namespace "")
+    C:\omdoc\rncORIG\omdocst.rnc:52:48: error: sorry, ambiguous attribute c
+    hoice not handled (attribute "type" from namespace "")
+    C:\omdoc\rncORIG\omdocst.rnc:52:48: error: sorry, ambiguous attribute c
+    hoice not handled (attribute "existence" from namespace "")
+    C:\omdoc\rncORIG\omdocst.rnc:52:48: error: sorry, ambiguous attribute c
+    hoice not handled (attribute "type" from namespace "")
+    C:\omdoc\rncORIG\omdoccth.rnc:10:1: error: sorry, cannot handle this ki
+    nd of "interleave"
+    C:\omdoc\rncORIG\omdocst.rnc:116:1: error: "omdocsth.imports.model" doe
+    s not correspond to an ATTLIST declarations and so cannot be combined with "inte
+    rleave"
+    C:\omdoc\rncORIG\omdocext.rnc:40:52: error: sorry, cannot handle this k
+    ind of "choice"
+    C:\omdoc\rncORIG\omdoccth.rnc:16:1: error: "omdocst.constitutive.attrib
+    s" does not correspond to an ATTLIST declarations and so cannot be combined with
+     "interleave"
+    C:\omdoc\rncORIG\omdoccth.rnc:15:1: error: "omdoc.toplevel.attribs" doe
+    s not correspond to an ATTLIST declarations and so cannot be combined with "inte
+    rleave"
+
+
+***  How to get help: Also use the mailing list!
+
+Hi! I'd suggest to post a short note to the OMDoc mailing list (omdoc@mathweb.org, or omdoc-dev@mathweb.org for more technical questions) and invite the people to use the wiki; otherwise, they might not notice. Cheers, [[file:clange.org][clange]].
+
+: Christoph, I am in the early stages of feasibility review.
+By the time I finish this part of the project I will have
+developed 100 questions -- there is no way I will /persecute/
+the members of the OMDoc mailing list with that level of
+detail, esp. since most of them are Very Heavy people :0-) 
+Doing the mmj2 work I had, easily, 100 questions to Norm,
+some of them seemingly repetitive, I think. 
+
+: .
+
+: It would be nice if the OMDoc/KWARC krewe took an interest
+in the Metamath/OMDOC bridge effort. Why? Because it is
+probably orthogonal to what has been done with OMDoc so far:
+a) Hilbert-style rather than Natural Deduction/Sequent; 
+b) Metalogical
+c) Based on Alfred Tarski's novel idea for an alternative
+to proper substitution (see "A Simplified Formalization of
+Predicate Logic With Identity") -- and the Megill paper,
+"A Finitely Axiomatized Formalization of Predicate Calculus
+With Equality".
+d) Access to vast Metamath library of formalized quantum
+logic (see ql.mm).
+e) set.mm is derived from first principles -- the only 
+rule of inference built into Metamath is substitution
+(it is "logic agnostic".)
+
+* Communication
+
+I think just inviting the people from both lists to stay
+in touch with the effort here if they are interested would
+be a good move.  Then they can pick up questions to answer
+as they see fit.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Yes. That has been done with *one* email to the OMDoc
+group and a post to their wiki. This is really an interesting
+"project" :-) What I used to call a "test of character" :-)**2

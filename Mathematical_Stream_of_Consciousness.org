@@ -1,0 +1,266 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Association has much part to do with it. Upon seeing the sine and
+cosine functions, the first thought that occurred to me was that they
+are periodic. Since we are looking for values of a function, this
+means we can restrict our attention to a period.
+
+It is relatively easier to make statement about particular values of
+a function than about all values. Hence, let me assume for the time
+being that the fact that the sine and tangent return rational numbers
+for the stated values of their arguments and concentrate on figuring
+out what they don't return rational values for any other arguments.
+
+In the statement of the theorem, we are talking about all rational
+values. Hence, we need to use some tool that distinguishes rational
+numbers. Continuity properties, monotonicity, and similar analytical
+tools don't sound too promising because they don't distinguish
+between rational and irrational numbers.
+
+Rational numbers suggest algebra rather than analysis. "Algebra" and
+"trigonometry" suggest angle sum identities. Let me focus on problem
+five now, guessing that whatever technique I come up with will apply,
+mutando mutandis to problem six as well. The relevant formula is as
+follows:
+
+    sin (u + v) = sin (u) cos (v) + sin (v) cos (u)
+
+I also know that the sum of rational numbers is rational so that this
+formula tells me what to do with their sines. As for multiplying, I
+could try that as repeated addition. In fact that is how one arrives
+at that angle doubling formulas, angle tripling formulas, etc.
+
+This is all well and good, but I am trying to prove that certain
+sines are not rational. Using the facts mentioned above, I could
+easily show that, if a certain set of numbers have rational sines,
+then their sums have rational sines, but that is not what I am trying
+to do here. To show that something does not exist using a method that
+lends itself to showing existence, a proof by contradiction might be
+in order.
+
+To prove something by contradiction, one assumes the opposite
+conclusion and derives a statement that contradicts a known
+fact. What is the statement here and what might be the contradiction
+it leads to? Well, the contrary-to-fact statement here would be that
+sin (&pi;c/d) is rational. From that I have to derive a
+contradiction. Presumably, this will be done by means of the angle
+addition formula.
+
+Given the angle addition formula and the value of sin (&pi;c/d), one
+thing to do is to add the angle to itself. So I can conclude that, if
+sin (&pi;c/d) is rational, then so is sin (&pi;nc/d) for any integer n.
+
+What good is that? I should be able to use it to cut down the
+work. If I know that a certain rational number gives rise to a
+rational sine, then so do all of its multiples. OK, so it looks like
+I somehow want to look at a system of representatives for rational
+numbers under multiplying by integers or something like that.
+
+Let's see: if I keep adding a rational number to itself, it keeps
+getting bigger. Oh, but remember that the sine is periodic, so if the
+number gets too big, I might be able to cut it back down to size.
+
+In particular, this leads to a hopeful speculation: maybe somehow,
+one could reduce to the case c=1. This sounds reasonable because
+every fraction can be trivially written as a multiple of a unit
+fraction. Therefore, this would be the best one could do as far as
+the goal of the paragraph before the last paragraph.
+
+Let's examine this possibility in detail. The period of the sine
+function is 2 &pi;. This means that
+
+    sin (πnc/d) = sin (πn'c/d)
+
+if
+
+    πn'c/d = πnc/d + 2 π m
+
+for some integer m. Cancelling the irrational &pi;'s,
+
+    n'c/d = n c/d + 2 m
+
+Clearing the denominators,
+
+    n'c = nc + 2 m d
+
+Aha! This is a congruence modulo 2 d. So I want to solve a
+congruence. In particular, given an n, I would like to find as many
+n' 's as possible so as to cut the work of proving the theorem down
+to size.
+
+Congruence like this make me think of the Euclidean algorithm. In
+particular, this works the nicest when numbers are relatively
+prime. Well, c and d will be relatively prime if write the fraction
+in lowest terms. Then there will exist integers a and b such that
+
+    a c = b d + 1
+
+Can I use this fact? Basically, it lets me get rid of c 's by
+multiplying through by a. So multiply through by a:
+
+    an'c = anc + 2 mad
+
+I'm going mad with excitement ;) Rewriting ac,
+
+    n' (bd + 1) = n (bd + 1) + 2 mad
+
+In other words, modulo d, n' is congruent to n.
+
+Aack, sounds like I missed my exit because I got too caught up in the
+algebra. Let's back up a bit here. My hope was to set n'c = 1. So I
+would like to solve the equation
+
+    n'c/d = 1/d + 2 m
+
+or, simplifying,
+
+    n'c = c + 2md
+
+Can I do this using the fact that
+
+    a c = b d + 1
+
+Again, multiply by a:
+
+    an'c = ac + 2mad n' + n'bd = 1 + bd + 2 mad
+
+As before n' is congruent to 1 modulo d. What could n' be? Look at
+the formula with a 1 in it. It says that ac is congruent to 1 modulo
+d. Oh, so we could just choose n' = ac.
+
+Alright, now that I got that confusion straightened out, back to
+business. Not quite. I see another snag. The angle addition formula
+involves both sines and cosines, so the reasoning used to conclude
+that the sine of a multiple of an angle is rational if the sine of an
+angle is rational may not be valid. What to do? Well, we only need to
+add the same angle to itself. ... Now, in connection with Chebyshev
+polynomials, I happen too recall something about the cosine of a
+multiple of an angle. Looking that up, I find the formulae:
+
+    cos (nx) = T_n (cos x)
+ sin (n+1) x = U_n (cos x) sin x
+
+where T_n and U_n are polynomials with rational
+coefficients. Alright, the problem with the angle addition formula is
+apparent, not real and the conclusion still holds. However, looking
+at the above formula, I see it is more convenient to restate the
+original problem in terms of cosines than sines. This, of course is
+no problem because sin y = cos (&pi;/2 - y) by definition.
+
+So I already know that
+
+ 1. If cos x is rational, then so is cos (nx + 2 m &pi;) for all integers
+m and n.
+
+ 1.  If c and d are relatively prime, we can choose integers m and n
+ such that nc/d + 2m = 1/d
+
+ 1. Hence, if cos (&pi;c/d) is rational, so is cos (&pi;/d).
+
+ 1. In other words, cos (&pi;c/d) is rational if and only if cos (&pi;/d) is
+ rational.
+
+Hey! My hopes are fulfilled. At least I succeeded in showing that the
+full theorem holds if and only if a special case holds.
+
+Looking back on this partial success and how it was achieved, more
+thoughts arise. These both go on at once in my head like two
+imitative voices in a fugue as I think but, for the sake of writing,
+let me write them serially instead of attempting to write in
+parallel.
+
+First, maybe one can simplify even further. In particular, by the
+first property above, if d = d1 d2, then if cos (&pi;/d) is rational, we
+can pick n = d2 and conclude that cos (&pi;/d1) is rational. Taking this
+a step further, if cos (&pi;/d) is rational, then cos (&pi;/p) is rational,
+where p is a prime factor of d. Since we are doing a proof by
+contradiction here, this means that, contrapositively, if cos (&pi;/p)
+is irrational, then cos (&pi;/d) is also irrational. Hence we can in
+fact restrict the theorem to the case of cos (&pi;/p).
+
+Second, in doing this, polynomials showed up. We noted that the
+cosine of a multiple of an angle can be expressed in terms of the
+cosine of the angle in terms of a polynomial. Furthermore, there is
+the well-known fact that we can use our formula 1 above to write down
+a polynomial equation for cos (&pi;/d):
+
+    T_d (cos (π/d)) = cos (dπ/d) = cos (π) = -1
+
+So we have a polynomial transform which acts on a root of a
+polynomial. Hmmm. Sounds like Tschirinhausen transforms. I feel good
+that this is now connecting up with topics in algebra of polynomials
+and fields like Galois theory and Tschirinhausen transforms,
+especially since the question is whether a number is rational and
+irrational and that is exactly the sort of question which these tools
+are designed to handle. So it seems like my original idea of looking
+for algebra in this problem is working out and I feel encouraged to
+keep on going in this direction.
+
+Now, looking at the last formula in light of what I already did, I
+note a generalization based upon the the reasoning that went into the
+four points enunciated above:
+
+    T_d (cos (πc/d)) = cos (cdπ/d) = = cos (cπ) = +-1
+
+Alright, so all the quantities cos (πc/d) are solutions of either the
+polynomial equation
+
+    T_d (x) = +1
+
+or
+
+    T_d (x) = -1
+
+and we can transform these quantities into each other using
+Tschirinhausen transforms also based on Tchebyshev
+polynomials. Sounds good.
+
+At this point in my thought process, the two themes just mentioned
+meet to produce a pleasant chord. I noticed that the cosine I am
+looking for is the root of a polynomial and that we can restrict to
+the case of prime values of d. Primes, polynomials suggests thinking
+in terms of well, .... prime polynomials. Is this just a silly play
+on words or an insight. Let's see -- we want to show that a certain
+quantity is rational. Well, if a polynomial has a rational root, it
+has a linear factor, so it cannot be prime except if it is of degree
+one. OK, so this is the handle to use on the problem. If we show that
+our polynomial is prime when d is prime, then it has no rational
+roots and we are done.
+
+The associations with algebra suggest looking at the Galois group of
+the polynomial. Well, I know a transformation of this group.
+
+    x |-> T_n (x)
+
+maps
+
+    cos (πc/p) -> cos(πnc/p)
+
+but that c/p was to be considered modulo 2. Alright, so our transform
+implements the operation
+
+    c -> nc modulo 2p
+
+for any choice of n. But this too is a familiar scenario. We are
+talking about an old friend here, the group of multiplication modulo
+p. It is well known (essentially the group theory behind Fermat's
+theorem) that if we pick the right n, this transform is of order
+p. Aha! maybe this is the trick to showing that the polynomial is
+prime. If it factored, then maybe it couldn't have such a transform in
+it's Galois group ?!
+
+Alright, I'll stop typing for now because we made it to the
+endgame. Now it is just a matter of combining Lagrange's theorem and
+the the fact that the Galois group is the subgroup of the permutation
+group on the roots of the polynomial (in fact, this is exactly the
+application Lagrange had in mind for his theorem) collecting the
+facts and filling up the details to get a complete proof.
+
+----
+
+* Discussion
+
+See [[file:Discussion of Mathematical Stream of Consciousness.org][Discussion of Mathematical Stream of Consciousness]] 
+
+----

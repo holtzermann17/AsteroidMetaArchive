@@ -1,0 +1,27 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page to talk about the many facets of the PlanetMath Books project. --[[file:jcorneli.org][jcorneli]]
+
+* Status to date
+ 1. We have created a proof-of-concept printable edition of the PlanetMath encyclopedia (called the "Free Encyclopedia of Mathematics").
+ 1. We have a created a partial index of the post-1923 public domain math books, using the Library of Congress catalog and copyright renewal records.
+ 1. We have created a few sample books on PlanetMath, using the Collections feature in Planetary.
+
+* Plans
+ 1. We plan to write/edit one or more books ourselves, using both original material and recycled free material from PlanetMath, Wikipedia, and StackExchange.  Our demo books are likely to be *Category Theory* and *Game Theory*.  Other possibilities include more basic books in *Calculus* and *Algebra*.  In general, we may have both a /monograph series/ and an /outline series/.
+ 1. The online versions of these books will include attached discussion forums and can serve as always-on discussion groups / classes on the subject.  For ease of use, this will require a number of technical improvements to PlanetMath's software: in particular, the front-end display of books should be improved, along with better interaction with problem sets, better support for collaborative workspaces to develop new books, etc.
+ 1. We will also publish free PDFs, and for-fee hardcopies and e.g. Kindle editions.  Hardcopy publications are the primary "product", but a course and online tutoring service ecosystem can grow up around the free versions of the books.  In addition, PlanetMath will accept donations.
+ 1. Once we have made our proof-of-concept books along with an improved UI, we hope to recruit ~64 editors to work on books and outlines for each of the major subject areas of the Mathematics Subject Classification.
+ 1. We will also return to our index of public domain mathematics books, and make online, PDF, and print-on-demand editions of any of these books.
+
+* Updates on Activities
+
+ 1. (22 March, 2014) Initial conversation between Ray, Dorotea, and Joe.
+ 1. (23 March, 2014) Created this wiki page and improved the look-and-feel of AsteroidMeta in order to create a simple "meta" workspace.
+
+* Next steps
+ 1. We have to decide how proceeds from book sales will be distributed (March 2014)
+ 1. Ray and Dorotea are making surveys of some likely sources of materials (March 2014)
+ 1. Initial LaTeX/PDF versions of books (Q2 2014)
+ 1. Basic software improvements for PlanetMath (Q2 2014)

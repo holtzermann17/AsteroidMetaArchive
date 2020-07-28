@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/test/testsearch.pl
+
+pp line 9,10:
+use lib '/var/www/pp/lib';
+use lib '/var/www/pp/essex/essex_2004-01-05';
+
+pm line 9,10:
+use lib '/var/www/pp/lib';
+use lib '/var/www/pp/essex/essex_2004-01-05';
+
+
+ 1. Is it possible to have directory for library as a config variable

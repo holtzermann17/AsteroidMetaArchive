@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Planetary is the new software system for PlanetMath
+
+On February 13th 2013, !PlanetMath.org was updated to use the new software system Planetary.
+
+* New front page text for PlanetMath= 
+
+!PlanetMath is a social environment for learning and doing mathematics which consists of the following components:
+
+ * A digital library of freely available mathematical works which is curated by our community and automatically cross-referenced and indexed.
+ * Fora where members can discuss mathematical topics, ask and answer questions, teach and learn.
+ * A software platform which provides wiki-like editing capabilities, workflow management, mathematical typesetting, automatic link generation, and semantically enhanced output.
+ * A non-profit organization which procures resources to support the foregoing activities.
+
+!PlanetMath began in 2001 as the world's first collaboratively edited mathematics website. For the first decade of its existence, the main feature was the mathematics encyclopaedia with entries written and reviewed by members of the community which currently has over 9000 entries covering a broad range of mathematical topics. Since then, the software has been rewritten to support a wider range of activities such as posing and solving problems. Currently, we are in the process of developing and implementing the following features:
+
+ * Facilities for retrodigitizing and producing books
+ * Centralized bibligraphic database
+ * Online classes and seminars
+ * Project orientation
+ * Internationalization
+ * Support for experimental mathematics
+ * Integration of computer math tools
+ * Advanced hypertext and artificial intelligence 
+
+!PlanetMath is currently visited by over 3000 people a day; the most active participants are working on building new features and expanding the site's content. All of the site's content is available under the [http://creativecommons.org/licenses/by-sa/2.0/|Creative Commons Attribution-ShareAlike] license, so you can use it for your own purposes. However, to do anything but read here, you'll need an account.

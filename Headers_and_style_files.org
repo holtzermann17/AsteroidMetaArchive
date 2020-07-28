@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Most of the header stuff should go into global style files.  We're working on that.
+Some things can/should still be done locally -- more description to come.
+
+The "style" of the style files should be compatible with [[file:FEM style.org][FEM style]].
+
+
+
+*  What we have right now
+
+A bunch of different commands sorted by type:
+
+; [http://www.ma.utexas.edu/~jcorneli/e/style/makeatletter.sty makeatletter] :
+Currently just some conditionally defined stuff written by people who have more
+of a clue about it than me.
+; [http://www.ma.utexas.edu/~jcorneli/e/style/newtheorem.sty newtheorem] :
+Way too many different shorthands for "theorem", "definition", etc. --
+we should standardize on a certain set
+; [http://www.ma.utexas.edu/~jcorneli/e/style/newenvironment.sty newenvironment] :
+Some special environments, including special lists from APM-Xi and special code-formating
+commands for pseudo-code.  I don't think anyone actually uses the special lists
+(or anyway, no one should), and the code-formatting stuff should go in its own
+file.
+; [http://www.ma.utexas.edu/~jcorneli/e/style/newcommand-and-friends.sty newcommand and friends] :
+Lots and lots of short hand notation, created by lots of different people, and
+merged here into one hodge-podge.  It should be broken up into semantically
+related sections and rewritten in a standard way.
+; [http://www.ma.utexas.edu/~jcorneli/e/style/def.sty def] :
+Like above, but this command probably shouldn't be used
+in headers on PM.
+; [http://www.ma.utexas.edu/~jcorneli/e/style/let.sty let] :
+Similarly.
+; [http://www.ma.utexas.edu/~jcorneli/e/style/declaremathoperator.sty declaremathoperator] :
+This is probably a good command to use (are there other fancy commands like this to
+use?).  Some of the stuff from the previously mentioned hodge-podge should be
+moved here.
+; [http://www.ma.utexas.edu/~jcorneli/e/style/miscellaneous.sty miscellaneous] :
+Various things we probably don't need.
+
+*  Some thoughts and questions
+
+**  Is it OK to use the same style files throughout PM?
+
+I certainly think it has some advantages: notation will appear standard in print,
+and that's good.  Not only that, notation will appear standard in code, which
+will make editing easier.
+
+Some of the potential drawbacks are that different people may have different
+notation for the same symbols -- however, there is no reason that that kind of
+multiplicity can't be included.  The real problem is when people use the same
+notation to mean different things (n.b., duplicate names of this sort have
+already been removed in the files linked to above).  I figure it is best to
+standardize, and make some people learn a new notation.
+
+**  Might it be better to use a specific style file for each area (geometry, algebra?)
+
+That could probably be made to work - it would be more convenient to have
+standardization by area than it is to have no standardization.
+
+**  How would shared style files work on PM?
+
+I'm not sure how the implementation would work - but presumably it isn't that
+hard.  Just like on a normal system, make a file that is in the TEXINPUTS path,
+and put these files in it.  They should also be made world-writable (presumably)
+and given their own special index page on PM.  People would then use usepackage
+commands to include the headers they wanted in their preamble.  The standard
+preamble could be rewritten to include the main style files.
+
+**  How would restructure things and avoid breaking anyone's documents?
+
+We could write a commands /\depreciatedcommand/, /\depreciatedtheorem/,
+/\depreciatedenvironment/, that would work but would also give a latex warning
+whenever that command was used.  Bug reports could then be submitted to the
+person who used the depreciated command, asking them to bring their file up to
+date.
+
+* Technical questions about LaTeX and style files
+
+Should \makeatletter be matched by a \makeatother?  Does it matter?  It matters
+for the script that puts together the mstr_header.  However, if \makeatother was
+optional (after 1 command?), then the script could be adjusted.  The optionality
+of \makeatother seems suspect to me, but I guess it could be...

@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+We're working on finishing up the first version of
+[[file:hcode.org][hcode]], which is the formal language and/or meta-language
+that the HDM will use.

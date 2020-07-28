@@ -1,0 +1,740 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to: [[file:mmj2.org][mmj2]] 
+
+* note about the wiki
+
+NOTE: To update the wiki your "username" must be whitelisted. Send an email to the wikilord if you are not already a user – and, if you don't care to do that, I authorize you to post as "ocat" for the purposes of mmj2 feedback and problem reports, etc. (Just put some initials on your edits so I know who is doing what…)
+
+ALSO, you may get the "Cannot acquire main lock"
+error message when attempting to post to the wiki.
+In this case, hit the Back button on your browser,
+open a new window and go to RecentChanges then
+click on Administration, then Unlock Wiki. Wait,
+and then return to your original post and click
+on "submit" again. 
+
+
+* other links
+
+Previous Version of Feedback: [[file:mmj2ProofAssistantFeedback20080113.org][mmj2ProofAssistantFeedback20080113]]
+
+(Complaints about other aspects of mmj2 -- general grievances --
+should go here: [[file:mmj2Feedback.org][mmj2Feedback]] )
+
+* Feedback About the mmj2 Proof Assistant GUI
+
+Wow, mmj2 /works/ great. I was able to re-prove the
+first 100 theorems in just 45 minutes! 
+
+(Just kidding...but still, it's fast!)
+
+Here is a new shorter proof for a1dd:
+
+
+     
+    $( <MM> <PROOF_ASST> THEOREM=a1dd  LOC_AFTER=?
+     
+    * Deduction introducing a nested embedded antecedent.
+    * old
+    h1::a1dd.1         |- ( ph -> ( ps -> ch ) )
+    2:1:a1d            |- ( ph -> ( th -> ( ps -> ch ) ) )
+    qed:2:com23        |- ( ph -> ( ps -> ( th -> ch ) ) )
+     
+    $)
+     
+
+     
+    $( <MM> <PROOF_ASST> THEOREM=a1dd  LOC_AFTER=?
+    * new
+    * Deduction introducing a nested embedded antecedent.
+     
+    h1::a1dd.1         |- ( ph -> ( ps -> ch ) )
+    2::ax-1            |- ( ch -> ( th -> ch ) )
+    qed:1,2:syl6       |- ( ph -> ( ps -> ( th -> ch ) ) )
+    $)
+     
+
+Nice and easy. And...
+
+---
+
+
+     
+    ( <MM> <PROOF_ASST> THEOREM=mpdi  LOC_AFTER=?
+     
+    * A nested modus ponens deduction.
+    * old
+    h1::mpdi.1         |- ( ps -> ch )
+    h2::mpdi.2         |- ( ph -> ( ps -> ( ch -> th ) ) )
+    3:2:com12          |- ( ps -> ( ph -> ( ch -> th ) ) )
+    4:1,3:mpid         |- ( ps -> ( ph -> th ) )
+    qed:4:com12        |- ( ph -> ( ps -> th ) )
+     
+    $)
+     
+
+      
+    $( <MM> <PROOF_ASST> THEOREM=mpdi  LOC_AFTER=?
+     
+    * A nested modus ponens deduction.
+    * new
+    h1::mpdi.1         |- ( ps -> ch )
+    h2::mpdi.2         |- ( ph -> ( ps -> ( ch -> th ) ) )
+    3:1:a1i         |- ( ph -> ( ps -> ch ) )
+    qed:3,2:mpdd          |- ( ph -> ( ps -> th ) )
+     
+    $=  wph wps wch wth wps wch wi wph mpdi.1 a1i mpdi.2 mpdd $. 
+    $)
+     
+
+-----
+
+* Intuitive proof of loowoz
+
+pm2.86 is a /key/ theorem, the significance of which
+I failed to appreciate until recently...
+
+And in retrospect, the "shorter proof competitition" sometimes
+obscures the meaning of theorems -- when you see the simple
+proof the theorem itself seems obvious...like loowoz!
+
+alternate (new):
+
+
+    $( <MM> <PROOF_ASST> THEOREM=loowoz  LOC_AFTER=?
+    
+    * An alternate for the Linearity Axiom of the infinite-valued sentential
+      logic (L-infinity) of Lukasiewicz, due to Barbara Wozniakowska, _Reports
+      on Mathematical Logic_ 10, 129-137 (1978).  (Contributed by Mel L. O'Cat,
+      8-Aug-2004.)
+    
+    1::pm2.86          |- (  ( ( ph -> ps ) -> ( ph -> ch ) )
+                          -> ( ph -> ( ps -> ch ) ) )
+    2::pm2.04          |- ( ( ph -> ( ps -> ch ) ) -> ( ps -> ( ph -> ch ) ) )
+    3::ax-2            |- (  ( ps -> ( ph -> ch ) )
+                          -> ( ( ps -> ph ) -> ( ps -> ch ) ) )
+    qed:1,2,3:3syl     |- (  ( ( ph -> ps ) -> ( ph -> ch ) )
+                          -> ( ( ps -> ph ) -> ( ps -> ch ) ) )
+    $=  wph wps wi wph wch wi wi wph wps wch wi wi wps wph wch wi wi wps 
+        wph wi wps wch wi wi wph wps wch pm2.86 wph wps wch pm2.04 wps wph 
+        wch ax-2 3syl $. 
+    $)
+    
+
+old:
+
+    
+    $( <MM> <PROOF_ASST> THEOREM=loowoz  LOC_AFTER=?
+    
+    * An alternate for the Linearity Axiom of the infinite-valued sentential
+      logic (L-infinity) of Lukasiewicz, due to Barbara Wozniakowska, _Reports
+      on Mathematical Logic_ 10, 129-137 (1978).  (Contributed by Mel L. O'Cat,
+      8-Aug-2004.)
+    
+    1::ax-1            |- ( ps -> ( ph -> ps ) )
+    2:1:imim1i         |- (  ( ( ph -> ps ) -> ( ph -> ch ) )
+                          -> ( ps -> ( ph -> ch ) ) )
+    qed:2:a2d          |- (  ( ( ph -> ps ) -> ( ph -> ch ) )
+                          -> ( ( ps -> ph ) -> ( ps -> ch ) ) )
+    
+    $=  wph wps wi wph wch wi wi wps wph wch wps wph wps wi wph wch wi 
+        wps wph ax-1 imim1i a2d $. 
+    $)
+    
+
+---
+
+* Proposed Enhancements
+
+* 1.
+
+Problem(s) to be solved:
+
+ * Unification Search not performed for steps containing
+work variables in their formula or their hypotheses' formulas
+
+ * "Hint" feature does not take into account hypotheses, though
+it does process formulas containing work variables.
+
+ * No "top-down" (forward) Hint feature available (e.g. from
+hypotheses A and B which assertions are available to
+derive another formula?)
+
+ * The Unify+Get Hints feature just displays assertion labels,
+not their formulas. 
+
+Solution: Replace Unify+Get Hints feature completely with
+a new step-specific (right(alt)-mouse button menu OR Ctrl-8)
+Unify+Step Selector dialog which presents available 
+unifying assertions for the step on which the input cursor
+is located, then allows the user to choose one, and
+then inserts the selected assertion label in the proof
+and finishes unification processing of the Proof Worksheet.
+
+The Unify+Step Selector feature will work for any proof
+step containing a formula -- even if just a skeltal formula
+such as "|- &W1" -- but of course cannot contain syntax
+errors or bogosities (it must pass the basic edits for
+a Proof Worksheet). 
+
+The unification search performed by Unify+Step Selector
+will return the set of Assertions that successfully unify
+with the selected step's Hyp entries and Formula. If
+the Hyp subfields include a "?" or incompleteness, such
+as ",1" then an any unifying Assertion with >= the number
+of input Hypotheses will be considered (in this example, >= 1). 
+If there are no "?" or incomplete Hyp entries
+then /exactly/ then only Assertion with exactly the number
+of input Hypotheses will be considered.
+
+Here are the user-modifiable settings, which may be set
+via RunParm or the GUI as Unify menu sub-menu items:
+
+ * Max Results -- maximum number of unifying assertions returned.
+
+ * Search Sequence -- may be Ascending or Descending database 
+sequence.
+
+ * Display Sequence -- Database Sequence or Assertion conclusion 
+(not including hypotheses) formula length, Ascending or Descending;
+if formula length is chosen then the results will be assembled 
+using a Priority Queue, which means that every Assertion prior
+to the current theorem will be searched to return /just/ the
+/Maximum/ /Results/ number of Assertions.
+
+ * Show Substitutions -- On or Off. If "Off" then the Assertions
+will be displayed as they are in the input .mm file. If "Off" then
+the search results will show the formulas as they would be in
+the context of the current proof step /after/ substitution by
+the unification algorithm. Note that "On" may tend to result in
+really long delays -- and Max Results ought to be set to some
+reasonably useful number to avoid encountering insufferable delays
+in some cases! 
+
+One other requirement: the dialog window showing the unifiable
+Assertions for the current proof step *must* not be "modal", 
+meaning that the user absolutely /must/ be able to Alt-Tab
+back and forth between the dialog window and the Proof Assistant
+main window. This point is non-negotiable, even if it means
+turning the "dialog" into just an inquiry window and forcing
+the user to manually enter the chosen Assertion label in the
+Proof Worksheet (I don't expect to be "forced" to do this, but
+that would be a fallback position...in the event that this
+Java "Swing" product turns out to, once again, be impenetrable
+to my mind...) 
+
+
+
+Details below...
+
+In mmj.pa.ProofUnifier.java#buildProofsAndErrorUnUnifiedSteps()
+error message "E-PA-0411 ... Unification Failure..." is 
+generated for steps containing work variables in their formula
+or their hypotheses formulas and which have a blank Ref
+Ref field. 
+
+This gives the impression that a full Unification
+Search was performed, which is not true. The fact that
+E-PA-0411 specifically /says/ that Unification Search
+is not performed in this situation is not a big help,
+because, frankly, it is a long error message and people
+tend not to read these things... FURTHERMORE...
+
+It is occasionally the case that a user desires to
+perform Unification Search on a proof step containing
+work variables in spite of the fact that, due to the
+fact that work variables represent sub-expressions
+multiple matches are possible -- and the "wrong" matching
+assertion may be returned. For example, Step 3 below
+/ought/ to have enough detail to result in a good
+match...and probably Step 2, though it is less obvious
+at first glance. Then, once Step 2 and 3 were provided
+with "good" Ref labels, &W1 would be resolved, and the
+rest of the proof would be handled automatically by
+the regular Unification Search!
+
+     
+    $( <MM> <PROOF_ASST> THEOREM=pm2.18  LOC_AFTER=?
+     
+    * Proof by contradiction.  Theorem *2.18 of [WhiteheadRussell] p. 103.
+      Also called the Law of Clavius.
+     
+    1::pm2.21          |- ( -. ph -> ( ph -> -. ( -. ph -> ph ) ) )
+    2:1:               |- ( &W1 -> ( -. ph -> -. &W1 ) )
+    3:2:               |- ( &W1 -> ( &W1 -> ph ) )
+    qed:3:             |- ( ( -. ph -> ph ) -> ph )
+    $)
+     
+
+-----     
+
+Scenarios: 
+
+
+1A) Top-Down proving (aka "forward") where the user does
+not know the proof step formula or even the justifying 
+assertion. 
+
+Example 1A1 : user manually adds step 3 and
+presses Ctrl-8 (note that "&W1" signifies /any/
+expression and that the user can be more 
+specific if the information is known -- such
+as "( ph -> &W1 )".)
+
+    
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    3:2                |- &W1
+    qed::              |- ( ph -> ch )
+    $)
+    
+
+The program builds a selector dialog showing all
+assertions (with database sequence number < syl's)
+which have exactly one hypothesis that is unifiable
+with Step 2 (e.g. a1i and a2i). The user selects
+a1i and unification proceeds normally, replacing
+&W1 with the formula resulting from unification 
+using the selected assertion:
+
+     
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    3:2:a1i            |- ( &W2 -> ( ps -> ch ) )
+    qed::              |- ( ph -> ch )
+    $)
+     
+
+-----
+
+Example 1A2 : user manually adds step 3 and
+presses Ctrl-8:
+
+    
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    3:2,?              |- &W1
+    qed::              |- ( ph -> ch )
+    $)
+    
+
+The program builds a selector dialog showing all
+assertions (with database sequence number < syl's)
+which have >= one hypothesis and at least one 
+hypothesis that is unifiable with Step 1 (e.g.
+ax-1, ax-2, ax-3, ax-mp, a1i and a2i). The user selects
+a1i and unification proceeds normally, replacing
+&W1 with the formula resulting from unification 
+using the selected assertion:
+
+     
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    3:2:a1i            |- ( &W2 -> ( ps -> ch ) )
+    qed::              |- ( ph -> ch )
+    $)
+     
+
+NOTE: The program will not automatically unify
+with/against previous proof steps as hypotheses
+for the selected assertion. If, for example, the
+user chose ax-mp for step 3, the following would result
+("Derive" would generate one hypothesis and the user
+would have to tidy up):
+
+     
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    1003:?:            |- ( ( ps -> ch ) -> &W1 )
+    3:2,1003:ax-mp     |- &W1
+    qed::              |- ( ph -> ch )
+    $)
+     
+
+-----
+
+1B) Bottom-Up proving (aka "backward") where the user
+knows the proof step formula -- which may or may not
+contain work variables -- but does not know the 
+the justifying assertion. 
+
+Example 1B1 : user manually adds inputs "?" in the
+'qed' step's Hyp field, signifying an "Incomplete
+Hypotheses" situation where the Hyps are totally
+or partially unknown. Then Ctrl-8 is pressed.
+
+    
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    qed:?:             |- ( ph -> ch )
+    $)
+    
+
+The program builds a selector dialog showing all
+assertions (with database sequence number < syl's)
+which have >= zero hypotheses which can be unified
+with the step's formula (e.g. ax-mp, a1i) Note: 
+these are the "Hint" criteria, so this enhancement 
+provides a superior Hinting facility on top of 
+everything else! The user selects ax-mp and 
+unification proceeds normally -- which in this case
+means invoking "Derive", as follows:
+
+    
+    $( <MM> <PROOF_ASST> THEOREM=syl  LOC_AFTER=?
+    h1::syl.1          |- ( ph -> ps )
+    h2::syl.2          |- ( ps -> ch )
+    1002:?:            |- &W1
+    2002:?:            |- ( &W1 -> ( ph -> ch ) )
+    qed:1002,2002:ax-mp |- ( ph -> ch )
+    $)
+    
+
+Note that the user now has the choice of either
+completing the proof manually or invoking 
+UnifyStepSelector on steps 1002 and 2002. Or
+a combination of these actions could be tried --
+for example: specify 1002's Hyp as "2" and 
+press Ctrl-8 to invoke UnifyStepSelector (yielding
+choices a1i and a2i.)
+
+
+
+----- 
+
+The "Selector" dialog will
+be a scrollable list showing available matching
+assertions, something like this, using the "Unformatted"
+mode of TMFF (Text Mode Formula Formatting):
+
+     
+    a1i: ph => ( ph -> ps )
+    a2i: ( ph -> ( ps -> ch ) ) ==> ( ( ph -> ps ) -> ( ph -> ch ) )
+    syl: ( ph -> ps ) && ( ps -> ch ) ==> ( ph -> ch ) 
+     
+
+The user simply moves the "selection" cursor to the
+desired line and hits the "Select" button, or
+alternatively, just double-clicks the desires
+formula to make a selection. Nice!
+
+----- 
+
+P.S. I believe I have solved the "problem" of how to
+create a non-modal dialog (box) with this enhancement.
+The problem I faced was how to communicate the user's
+selection back to the process which is awaiting the
+answer so that it can proceed. Because the (Java) dialog
+is running in a separate thread, somehow the initiating
+thread must wait suspended in mid-air. Normally in a 
+situation like this a non-modal dialog has access to
+the main window frame and a selection triggers an 
+event, which can be applied elsewhere. But in my initial
+idea, the subroutine invoking the dialog is already 
+in a separate thread and itself has no access to the GUI.
+
+So here is the solution: the GUI will have two "transactions",
+one (Ctrl-8) which triggers the process that creates the Step Selector
+dialog's display (of assertions which unify with the 
+step where the cursor is located), and a subsequent process
+which is initiated by the user's selection of an assertion from
+the dialog. In the first transaction the data is built and
+displayed, and in the second, the selected Ref label is passed
+by the GUI to the unification process for substitution into
+the Proof Worksheet.
+
+The beauty of this solution, assuming that it works, is that
+the dialog window will remain available for a retry by the
+user! If the first selection is unsatisfactory, hit Ctrl-Z 
+twice to undo and select another. The only drawback to this
+is that because the user will be able to browse and modify
+the Proof Worksheet GUI screen, the contents of the dialog
+box may become "stale" and/or inappropriate if the user
+changes something manually -- but that proviso can be 
+communicated as a "don't". 
+
+One tricky aspect of this is that, suppose step 5 is the
+target of Step Selector and that Steps 1 -> 4 involve 
+either DeriveHyp, DeriveFormula or Work Variables. The
+Proof Assistant /must/ perform the unification process
+to flesh out those proof steps /before/ it generates the
+data for the Step Selector dialog. That is because 
+Step 5 might say, "5:2: |- blah-blah" and Step 2 might
+say just "2:1:a1i" (meaning DeriveFormula). Again, this
+is a matter of communicating the processing features to
+the user and is not actually a drawback, just a minor
+complication. 
+
+P.P.S. Here is another (supposed) enhancement. I had
+planned to provide the user options for search sequence
+and display sequence, but now I see that asking the
+user to specify /how/ the program does its job is 
+backwards. Instead, the user tells the program /what/ 
+s/he wants and the program figures out the best way to
+do the job. Specifically, there will be *one* RunParm/Menu
+Option for "SearchBy", and it will have two options: Max/Min,
+and Key -- DbSequence, (conclusion) Formula Length, or (I think),
+Total Formula Length (conclusion formula symbols plus logical
+hypotheses' symbols). The results will be displayed in the
+order the successful unification matches are found. So if
+Max is chosen then the results are in descending order of 
+the given key (with a 2nd key of DbSequence to provide a
+unique key); if Min is chosen, the list is inverted. 
+
+A second enhancement is that when the user chooses a SearchBy
+key other than DbSequence, the Assertion list is pre-sorted
+by the chosen key. This provides superior performance (I think)
+because the program does not need to attempt unification against
+every assertion, it just needs to scan the list -- backwards if
+Max chosen, forwards if Min chosen -- and stop scanning once it
+has found the requested maximum number of Selection Items! Not
+only is a pre-sort (probably) much faster than having to
+attempt unification with every assertion in the database, but
+the sorted list can be reused during the user's session. And
+this simplifies the coding quite a bit, which is a good thing.
+--[[file:ocat.org][ocat]] 28-Jan-2008
+
+ * The efficiency benefits of this are marginal, if not
+dubious: results are heavily dependent upon the user's Max Results setting, and assume that the user has set a low value which is actually reached during the scan. The main purpose of Max Results
+is to avoid a worst case scenario wherein a very "general"
+set of hypotheses/conclusion formulas force unification 
+against every assertion, resulting in a massive selection list of
+matches; the "normal" setting ought to be something like 50,
+which ought not be reached in normal use (depending on the user).
+But in "normal" use, if the Max Results number of matches is
+not reached, the search will continue through the entire set
+of assertions -- and if Max Results is set very low, say, 5,
+then it subverts its own purpose by obstructing the user's
+quest for information. In fact, the only truly beneficial
+ -- hypothetical -- optimization
+would be to somehow sort the search candidates so that the most
+likely matches are processed earlier, on average, and I do not believe
+that a simple key sort can accomplish this (the exception would
+be a sort based on the number of logical hypotheses -- which would
+allow unsuitable assertions to be bypassed altogether in many
+specific instances.)
+--[[file:ocat.org][ocat]]
+
+  * OK, the least bad solution is best here. This is the way that
+it will be coded to start and we can experiment to see if it
+is satisfactory: the user gets no choice about the order the
+assertions are searched or the order that the matches are displayed.
+The only user option is Max Results. Search/Display order is by
+ascending number of logical hypotheses, followed by ascending database
+sequence number. Processing is most efficient in order by number 
+of assertion hypotheses (for internal processing reasons); and
+the display results will be most easily assimilable when presented
+in order from simplest match -> most complex match, which is at
+least a predictable order, and in most cases the simplest unifiable
+assertion is best. There is really no reason to make this any more
+complicated because the program has no special intelligence about
+either the "best" matching assertion or the odds favoring
+the unifiability of a given assertion (except to "fast fail" or
+reject a candidate based on database sequence number or number
+of logical hypotheses.) --[[file:ocat.org][ocat]] 28-Jan-2008 
+
+   * Another point to make about the benefits of this solution...
+the worst-case scenario of unification results from the fact that
+mmj2 does not require a derivation step's hypotheses to be 
+specified in any order. With Work Variables the problem is 
+potentially severe because of "false" unifications, wherein a
+hypothesis step does unify with certain logical hypotheses, but
+these unifications are inconsistent with other hypotheses; in
+these cases all possible permutations must be tried, one by one,
+until exhaustion or success -- and exhaustion of the permutations
+is in the worst case N Factorial (n!), where N is the number of
+logical hypotheses (maximum N in set.mm is 19.) Sooooo...with
+the solution in hand where we attempt unification of assertions
+with fewest hypotheses first, in the case where Max Results is
+set to a reasonable number, the assertion which can be examined
+fastest are examined first -- and this will, in some cases,
+avert a worst-case scenario (worst case is that the program
+spends long minutes, or even hours(!) processing one request --
+and the user is forced to hit the Cancel button.) 
+--[[file:ocat.org][ocat]] 30-Jan-2008
+
+-----
+
+* 2.
+When a RunParm encounters or triggers an error
+condition the message can be hard to see. These errors
+may result from changes to the input RunParms.txt file
+or changes to the input .mm file, including Metamath
+syntax errors or proof verification errors. To assist
+the user in problem diagnosis and resolution it would
+be helpful if mmj2 produced a GUI error message screen
+instead of "taking a dump" on the screen.
+
+Proposal: Add a new "GUI,on" RunParm -- default = "on"
+and modify the "BatchMMJ2" process to display a
+GUI "prompt" window with an "OK" button for mmj2 
+application specific errors (not for NullPointerException
+type of errors though!) When the user presses "OK"
+the normal mmj2 process continues, including the
+dumping of error messages to the screen (for completeness
+sake :-) On the other hand, if "GUI,off" is in use,
+which would be the case during batch regression testing
+then the GUI prompt window would not be displayed.
+
+This is an easy change. Quick and good.
+
+Note that the GUI prompt window will not appear if the 
+BatchMMJ2 Java version check fails, meaning that the
+mmj2 program requires a more recent version of Java
+than what is present on the user's machine. Also, if
+the RunParms.txt file is not found or cannot be opened
+there will be no GUI prompt window. (The gist of this
+paragraph is that if mmj2 itself cannot get started
+properly then there is no GUI...)
+
+-----
+
+New "beta" version of mmj2 uploaded with the "Step Selector Search"
+enhancement! Not rigorously tested yet, and user-satisfaction
+ratings have not been tabulated, but in my opinion, this is
+a "must have" capability -- absolutely great stuff. Give a try:
+[http://us2.metamath.org:8888/ocat/mmj2/mmj2Beta20080401a.zip http://us2.metamath.org:8888/ocat/mmj2/mmj2Beta20080401a.zip]. Note:
+the zip contains a README.txt with what you need to know, plus
+a mmj2.jar file, and a directory containing all of the new and
+changed .java source code files. There are no RunParm or other
+changes needed, just plop the new mmj2.jar into your environment
+and fire it up! 
+--[[file:ocat.org][ocat]] 4-Feb-2008
+
+ * If anyone has negative feedback speak up. I may have some
+free time this month and I am thinking of this: 1) remove
+Unify/Get Hints (redundant); 2) add pop-up message for
+start-up failure; 3) roll out the release w/effective date
+of March 1 instead of April 1. There are undoubtedly other
+enhancements which could be imagined, but what we have now
+is great and I recommend moving forward with alacrity. 
+--[[file:ocat.org][ocat]] 5-Feb-2008
+
+**** Feedback:  unification lockups
+
+(This is a general mmj2 issue, not related specifically to the beta.)
+
+Suppose we are developing a proof and have gotten to this point:
+
+ $( <MM> <PROOF_ASST> THEOREM=xxx  LOC_AFTER=?
+ 1::ax-1            |- ( &W1 -> ( &W2 -> &W1 ) )
+ 2::ax-2            |- (  ( &W7 -> ( &W4 -> &W7 ) )
+                       -> ( ( &W7 -> &W4 ) -> ( &W7 -> &W7 ) ) )
+ 3::ax-1            |- ( &W7 -> ( &W4 -> &W7 ) )
+ 4:3,2:ax-mp        |- ( ( &W7 -> &W4 ) -> ( &W7 -> &W7 ) )
+ 5::ax-2            |- (  ( ( &W7 -> &W4 ) -> ( &W7 -> &W7 ) )
+                       -> (  ( ( &W7 -> &W4 ) -> &W7 )
+                          -> ( ( &W7 -> &W4 ) -> &W7 ) ) )
+ 6:4,5:ax-mp        |- (  ( ( &W7 -> &W4 ) -> &W7 )
+                       -> ( ( &W7 -> &W4 ) -> &W7 ) )
+ qed:?: |- ( ( ph -> ps ) -> ( ( ch -> ph ) -> ( ch -> ps ) ) )
+ $)
+
+Then we realize, oops, step 4 should be "4:2,3:ax-mp" and not
+"4:3,2:ax-mp".  But after we make this correction, the proof is "stuck"
+because the work variables now have the wrong patterns.
+
+If we ctrl-z all the way back, which could have been a long time ago, we
+will lose all the work we did in the meantime.
+
+On the other hand, if we completely erase the proof's formulas by hand:
+
+ $( <MM> <PROOF_ASST> THEOREM=xxx  LOC_AFTER=?
+ 1::ax-1
+ 2::ax-2
+ 3::ax-1
+ 4:2,3:ax-mp
+ 5::ax-2
+ 6:4,5:ax-mp
+ qed:?: |- ( ( ph -> ps ) -> ( ( ch -> ph ) -> ( ch -> ps ) ) )
+ $)
+
+then press ctrl-u, everything is magically corrected to exactly
+what I want to see:
+
+ $( <MM> <PROOF_ASST> THEOREM=xxx  LOC_AFTER=?
+ 1::ax-1            |- ( &W1 -> ( &W2 -> &W1 ) )
+ 2::ax-2            |- (  ( &W3 -> ( &W4 -> &W5 ) )
+                       -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) )
+ 3::ax-1            |- (  (  ( &W3 -> ( &W4 -> &W5 ) )
+                          -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) )
+                       -> (  &W6
+                          -> (  ( &W3 -> ( &W4 -> &W5 ) )
+                             -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) ) ) )
+ 4:2,3:ax-mp        |- (  &W6
+                       -> (  ( &W3 -> ( &W4 -> &W5 ) )
+                          -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) ) )
+ 5::ax-2            |- (  (  &W6
+                          -> (  ( &W3 -> ( &W4 -> &W5 ) )
+                             -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) ) )
+                       -> (  ( &W6 -> ( &W3 -> ( &W4 -> &W5 ) ) )
+                          -> ( &W6 -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) ) ) )
+ 6:4,5:ax-mp        |- (  ( &W6 -> ( &W3 -> ( &W4 -> &W5 ) ) )
+                       -> ( &W6 -> ( ( &W3 -> &W4 ) -> ( &W3 -> &W5 ) ) ) )
+ qed:?: |- ( ( ph -> ps ) -> ( ( ch -> ph ) -> ( ch -> ps ) ) )
+ $)
+
+This shows that mmj2 inherently has the ability to
+recover from such mistakes.  However, erasing all the proof's
+formulas to recover from such mistakes is tedious to do by hand.
+Annoying even. :)
+
+I would be happier if there were an option that simply erases the
+entire wff content.  Or at least resets work variables back to their
+"most general" state.  This will give me the freedom to experiment
+without fear that an accidental bad unification will lock up the
+proof.
+
+How do other people feel about this? -- [[file:norm.org][norm]] 6 Feb 2008
+
+ * After erasing formulas on non-'qed' derivation steps
+which have Ref's already, the user would hit Ctrl-U
+to rederive the formulas, so we can just combine the
+two functions with a Unify menu option, 
+"Rederive Formulas + Unify". This can be coded as a Proof
+Worksheet pre-processing editing function to keep the
+logic simple and orthogonal to all of the other features,
+such as your "#" LocalRef feature, etc. 
+
+  * I am also thinking
+about removing the Alternate Refs feature which produces
+an info message for a step which has a non-unifying Ref --
+it is redundant now that the Step Selector Search is
+available. But, the $d error search for alternates /should/ be
+retained (if you recall it does a unification search looking
+for a Ref which has no $d errors or which reduces the
+severity from "hard" to "soft".) I would like to eliminate
+that too just to simplify the code but the service it
+provides, though very rarely used, is really nice. --[[file:ocat.org][ocat]]
+
+-----
+
+I just added a new way to initiate the Unify/Step Selector Search
+feature: double-click on a derivation proof step! 
+
+I /had/ been saving the double-click action for something
+really special, but as I was reviewing the Proof Assistant
+Tutorial it came to me that this was /It/. (Often doing 
+documentation produces new ideas because the requirement
+to explain something motivates the lazy programmer to
+make the documentation shorter and easier to write.)
+
+So we'll still have the Unify Menu, and Ctrl-8, and the 
+Pop-up (step-specific) menu as ways to initiate the Step Selector
+Search, but we will also have the ever popular "double-click"!
+
+This is especially nice and symmetric because the Step Selector
+Dialog accepts a double-click as the signal to "Select" and
+apply the selection to the proof...and unify. So basically,
+it will be possible to prove a theorem with a double-clicking
+fiesta; like monkeys hyped on caffeine and sugar, just double-click
+away until, one day, accidentally(?), a proof appears! Ha. 
+--[[file:ocat.org][ocat]] 16-Feb-2008

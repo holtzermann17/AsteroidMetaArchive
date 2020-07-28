@@ -1,0 +1,73 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+Trying to translate a mathematical proof as it appears in a book into formal
+logic for verification is not so easy, even though most mathematicians would
+agree that it is always possible in theory.  We need to make the theory
+concrete.  We split the process into two parts.  First, we will rewrite
+mathematical statements, theorems, and proof structures in an intermediate
+language we call h-code.  h-code is a language suitable for all sorts of
+day-to-day mathematics that will come quite naturally to persons familiar with
+LISP.  Of course, h-code leaves out the narrative structures found in text
+proofs (but replaces them with more code-like structures).  The next step in the
+process is to translate h-code statements into symbolic logic.  The process as a
+whole is analogous to the way the way PASCAL programs get compiled: first,
+PASCAL is translated into an intermediate language called p-code, and then the
+p-code is compiled to give the assembly language which can run on the computer.
+
+[[file:Advantages of h-code.org][Advantages of h-code]]
+
+[[file:Goals and requirements of h-code.org][Goals and requirements of h-code]]
+
+** Progress in h-code Development
+
+In this section, we describe our progress in defining a useful, expressive,
+h-code.  The development process is closely related to our work on [[file:hdm's parsing system|parsing tools.org][hdm's parsing system|parsing tools]]
+(our parser's object language is h-code) and [[file:hdm's formal system|formal mathematics.org][hdm's formal system|formal mathematics]] (h-code needs to
+be translated to a lower-level language for proof-checking).  Eventually our
+[[file:hdm's ai system|AI system.org][hdm's ai system|AI system]] should implement heuristics that apply to h-code structures for
+conjecture-generation and other purposes.
+
+; [http://cvs.savannah.nongnu.org/viewcvs/hdm/p3/?root=hdm an early sketch] : showing the what the language should look like in very simple examples
+
+; [[file:Version Zero.org][Version Zero]] : the (evolving) spec for the basic language
+
+; [[file:Hcode libraries.org][Hcode libraries]] : (evolving) "standard" libraries to test out the evolving spec
+
+* general hcode discussion
+
+ * [[file:hcode terms and their definitions.org][hcode terms and their definitions]]
+ * [[file:hcode algorithms.org][hcode algorithms]]
+ * [[file:hcode examples.org][hcode examples]]
+ * [[file:issues in hcode development.org][issues in hcode development]]
+
+** hcode topics
+
+Somewhat in-depth discussion about hcode-related matters.
+
+ * [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]
+ * [[file:theorems as transformational rules.org][theorems as transformational rules]]
+ * [[file:What is a Mathematical Entity.org][What is a Mathematical Entity]]
+ * [[file:classification of atoms.org][classification of atoms]]
+ * [[file:structured proofs.org][structured proofs]]
+ * [[file:designing proof structures for hcode.org][designing proof structures for hcode]]
+ * [[file:How to Check Proofs.org][How to Check Proofs]]
+ * [[file:Terms, Definitions, and Systems of Axioms.org][Terms, Definitions, and Systems of Axioms]]
+
+** hcode coding
+
+Here we describe (or exhibit) LISP code relevant to this sub-project.  See also [[file:HDM CVS.org][HDM CVS]].
+
+ * [[file:sexp to tex and back again.org][sexp to tex and back again]]
+ * [[file:template utilities.org][template utilities]]
+ * [[file:using template utilities to check proofs.org][using template utilities to check proofs]]
+
+**  miscellaneous
+
+ * [[file:Comments on Version 12 of the h-code page.org][Comments on Version 12 of the h-code page]]
+ * [[file:experiment with automated proofs of various interesting facts.org][experiment with automated proofs of various interesting facts]]
+
+----
+Back to [[file:HDM.org][HDM]].

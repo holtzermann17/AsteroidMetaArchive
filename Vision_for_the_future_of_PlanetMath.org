@@ -1,0 +1,571 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+During a four-way phone conference, we ([[file:akrowne.org][akrowne]], [[file:bloftin.org][bloftin]],
+[[file:jcorneli.org][jcorneli]], [[file:rspuzio.org][rspuzio]]), discussed a vision of what we might like
+PM to look like in the future.  While a lot of details will need to be
+filled in and careful plans will need to be made to achieve this goal,
+let us begin by sketching this scenario in broad outlines.
+
+* Setting the tone
+
+Ray: In the following, you talk about achieving a certain goal.
+What is the goal?  Let's either state it here, or point to existing
+documents that contain a statement of it.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Huh?  The bulk of this document (everything after the next section)
+spells out that goal in some detail.  Perhaps, it would be better to
+move the expansion section to the end of the document after describing
+the goal.
+--[[file:rspuzio.org][rspuzio]]
+: Yes, I agree, please move the expansion below, after the "goal" is described. Also, from what I read about the "goal" a big question came to mind. Is this the "goal" of PlanetMath.org Ltd ?? Remember that the non-profit organization is dedicated to PlanetMath and the board of directors run PlanetMath.org Ltd. So if the board is going to supervise this much more general view of PlanetMath, maybe the board should also agree to this more general view and long-term goal. This is crucial because it seems to me that the expansion is justified as the way to achive the goal, but the goal seems quite more general than what some members of the board may have in mind that PlanetMath's goal really should be.--[[file:alozano.org][alozano]]
+
+
+* Expansion
+
+In order to acheive this goal, it will be necessarry for the
+organization to expand to the point where it is possible to hire
+several people full-time.  Financing such a development will require a
+serious commitment to fundraising and setting priorities (both for the
+organization and individuals involved in this process) accordingly.
+
+To keep this plan realistic and ensure progress, there will be
+definite goals with times attached to them.  The overall goal to get
+us from the current state of affairs to this new situation will be to
+pay salaries to several individuals (currently that means Aaron, Joe,
+and Ray) in two years.  From conversations between the three of us, we
+estimate that /something like/ $40000 as a bare minumum will suffice
+to pay us starting salaries for the first year, but also expect that
+there will be raises as the budget grows.  To monitor progress towards
+the main goal, we will have verifiable quarterly goals.
+
+----
+
+40000 is not really fully justified, so let's not quote it
+everywhere without at least some caveat attached to it. --[[file:jcorneli.org][jcorneli]] 
+
+From our conversations, the three of us stated that, given our
+particular circumstances, the following amounts would be the minimum
+we would need in order to scrape by and work full-time on PM:
+
+Ray: $8000
+Joe: $12000
+Aaron: $20000
+
+Especially given the sort of work we plan to do, there is no question
+that these wages are ridiculously low.  If more money is available, of
+course we would expect to be paid more, at least double these figures.
+I am using this figure to establish a lower bound on how much money is
+needed.  If the organiation grows to the point where it is taking in
+at least this much money, then we can go ahead with our plan; if not,
+PlanetMath reverts to being something people do in their spare time.
+I will rewrite this section to make this clear. --[[file:rspuzio.org][rspuzio]]
+
+I don't mean to get up in ya'lls business, but I'd like to have some
+kind of statement about why these figures are what they are.  I know
+that you, Ray, have supplementary (in-kind) income in the form of
+housing, and I know that rent is approximately a third of what I pay
+out, so the figure you quote above (although yes ridiculously low)
+does make some sense to me, if I use myself as a measuring stick.
+
+However, it does seem pretty low as a wage for full- (or even 85%-)
+time highly-skilled work.  You're free to pitch your needs however you
+want, and I know this is a lower bound, but let's at least make sure
+we do the research on e.g.  how much health care coverage costs
+(assuming we want these positions to come with these sorts of
+benefits), as well as travel.  Like I said before, the reason I'd
+requests 12K instead of 10K is so I can have a margin for health
+support and research expenses that will help to make it worthwhile for
+me to be earning anything.  I.e. presumably there is a "research
+threshold" somewhere above survival.  As for Aaron's estimated figure
+of 20K, here, I don't know if this is supposed to be for full-time or
+part-time work.  If full-time, I can understand that Aaron may have
+higher cost-of-living than me for one reason or another, but I can't
+exactly see why it would be more than a few thousand dollars more.
+E.g. supposing he had 350 dollars more per month in expenses than me
+(car, more expensive place to live), then yearly he still only
+requires (for survival) $4200 more than me.  In this case,
+Justification for the additional $3800 should be given.  Maybe this is
+part of the research threshold, or maybe Aaron just needs some special
+treatment dollar-wise.  Whatever it is, let's figure it out.
+
+Also, bear in mind that my quoted figure represents me w/o any
+additional income.  If I did consulting on the side, kept up my
+weekend job, or published my first novel, that would change the
+equation drastically.  However, one should remember, that I feel the
+point of my getting paid is not to make as much money as possible
+(otherwise I'd probably be sending an application in to Cycorp), but
+to have as much mental space as possible (which is precisely what I
+wouldn't have if I was working for Cycorp).  So unless they are
+mind-enhancing (either excellent good cross-training or somehow built
+into the work I'm already doing), I think I should avoid side-jobs.
+Aaron may have some very synergistic "side-jobs"; and if this is the
+case, then that would tend to reduce his need for income from PM.  I
+have no idea.  Like I said, these things are ya'lls business, not
+mine.  I would, however, like to see to it that the data be
+documented.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Alright, this $40000 business is getting to the point where I am
+beginning to to regret that I ever opened such a hornet's nest by
+raising this point in the first place, so let me try to clarify what
+led me to such a crazy idea in the first place.
+
+As for what a reasonable pay scale would be, I would say something
+like $30000 - $40000 for each of us.  If I were applying for such a
+job somewhere, that is what I would expect to be payed and if I were
+hiring someone to do such a job, that is the sort of salary I would
+offer.  It is comparable to what universities typically pay junior
+faculty members.
+
+However, in this case, there is no pre-existing budget --- we first
+have to raise a budget, then write the paychecks.  To pay the three of
+us would require something like $100000 of money coming in to the
+organization per year.  Naturally, that is the goal we should aim for.
+
+However, going from $2000 to $100000 in two years is a tall order,
+especially when, to our present knowledge, we can count on no more
+than 100 person-hours of work per week.  So the question came to my
+mind "If we don't make it all the way to this goal, what is the
+minimum amount we will need in order to move ahead with our plan?"
+
+As for how I arrived at my figure, the answer is: I asked.  I asked
+Aaron what was the least annual income he would require to meet his
+costs of living and he told me $20000.  For me that is documentation
+enough.  I trust Aaron to understand his own circumstances and
+consider it inappropriate to poke my nose in his personal affairs nor
+would I expect him to publically post an account of his personal
+assets and expenditures.  While you may believe in making your
+personal finances a matter of public record by posting them on your
+webpage for all the world to see, that is your choice, not everyone
+shares this point of view, and I respect people's right to privacy.
+While I would be happy to discuss the details of why I came up with
+the figure for myself with you in private, I would not consider that
+anybody else's business. 
+
+I think that much of the problem came from the way I presented this
+figure.  Thinking about it some more, I see that what I should have
+said is more like "In order to achieve this goal, we propose to raise
+$120000 so as to pay each of the three of us and initial annual salary
+of $35000.  However, should it should happen that fundraising efforts
+fall short of this mark, we will be willing to accept substantially
+lower salaries in the beginning with the understanding that the
+shortfall would be made up as back-pay when more funds arrived.  As a
+bare minimum, we estimate that we would need at least $40000 to pay
+salaries for the three of us.  Hence, for this plan to be viable we
+need to increase the organization's annual income to at least $40000
+in two years."
+
+Yes, with this sort of rock bottom pay, we would be hard-pressed to
+pay for things like health insurance and travel (except from previous
+savings).  However, I don't expect such a situation to last long ---
+if the income can go from $5000 to $50000 in two years, I would expect
+that in another year or two we would get to the point where we get the
+full salary and back-pay for the early years.
+--[[file:rspuzio.org][rspuzio]]
+
+This all sounds fine.  
+
+I wasn't party to the discussion between you and Aaron, so I didn't
+even have that much documentation.  I'd still like to understand
+whether the 20K would be associated with full-time or part-time.  I
+guess we're to assume full-time (or equivalent in work-product :));
+and if that is actually the case, I think it is a pretty reasonable
+figure (since I know for a fact that my cost of living is lower than
+most people's).  If it was part-time, I'd be concerned.  These are the
+sorts of things I'd like to see documented.  E.g. is 85% time a
+reasonable estimate for you?
+
+--[[file:jcorneli.org][jcorneli]]
+
+Now that I understand the question (I can be slow on the uptake) here
+is a first attempt at a solution.  Suppose 6 hours of work per business 
+day.  That makes for 30 hours a week, 1500 hours per year, at $20/hr
+that amounts to $30000 annually.  That actually is pretty much a good
+reflection of the kind of time I am now putting in.  Of course, the 6
+hours per day is meant as an average --- some days I might put in as
+many as 12 hours and on other days I might take off from PM-related
+stuff to do other things.
+
+--[[file:rspuzio.org][rspuzio]]
+
+* A Solar System of Knowledge
+
+The main service which the organization will offer is support for a
+number of interlinked knowledge communities which organize their
+activities using Noosphere.  Currently, we have two such communities,
+PlanetMath and PlanetPhysics, but we have plans for more planets
+covering a variety of technical fields such as computer science,
+linguistics, economics, and craftsmanship.
+
+What primarily distinguishes us from Wikipedia is that, whilst their
+coverage is intended for the general reader, we offer detailed
+technical knowledge required by a practioner in the relevant field.
+Thus, we see our relation not as one of competitors, but as partners
+in a common enterprise of advancing scholarship through commons-based
+peer production.  To facilitate this collaboration, we will have a
+bi-directional updating system for sharing content.
+
+While now our main focus is the encyclopaedia section, which contains
+well-known facts, we plan to expand our coverage to items of current
+research interst and begin a digital library section containing
+research articles and books this year.  Our goal is to support
+scholars at all stages of development from beginners first
+encountering a subject through students to seasoned experts carrying
+out original research by providing materials and fostering a scholarly
+community.  We would like to be a library in the fullest sense of the
+term, not merely a repository of information but a locus for a
+community of scholars who use, comment upon, and contribute to this
+body of knowledge, a modern-day Museum of Alexandria on the internet.
+
+----
+
+There's every reason to believe that as Noosphere The Next
+Generation develops, it will also be use{d,ful} for non-technical
+fields, e.g. literature.  One of the things that I think is
+interesting about the overall HDM/simulationist approach is that
+technical and non-technical fields can be treated in a balanced way.
+E.g. we could easily establish a context in which we talk about
+mathematical theories of literary analysis together with some
+non-mathematical theory of, say, art history.  Yes, we offer technical
+knowledge suitable for practitioners -- but that is because
+practitioners (or something close) put it there.  We also offer
+knowledge for beginners.  To sum up, I don't think that what
+distinguishes us from Wikipedia is as much the /kind of content/ as
+the /kind of software/.  It just so happens that the software
+currently in use on PM is useful for talking about specialist
+material.  But it is also useful for talking about high-school-level
+material.  And in the not-so-distant future, it should be useful for
+curriculum development.  I think establishing ourselves as /CBPP
+researchers/ is entirely compatible with the general motivation
+behind what you're saying about being "partners in a common enterprise
+of advancing scholarship through commons-based peer production".
+Talking about how the R&D work relates to the PM community & content
+is a good thing to do -- but I'd suggest using slightly different
+wording (e.g. I'd prefer /comprehensive and detailed treatment of
+mathematical knowledge vs overviews of mathematical knowledge/ to
+/technical knowledge for practitioners vs general knowledge/).  You
+get to this in the last paragraph above, but I think the flow would
+be improved by revising the middle paragraph along the lines I've
+put down here. --[[file:jcorneli.org][jcorneli]]
+
+While I will be glad to not call this the primary distinction, I still
+maintain that it is an important distinction.  Recall that, during
+last year's content exchange, the Wikipedia folks cared nothing for
+mathematical proofs and detailed technical lemmas on the grounds that
+such material was not suitable for the general reader.  As I see it,
+this distinction of subject matter and software platform go
+hand-in-hand.  On the one hand, a particular choice of software
+platform is more conducive to a certain sort of activity.  On the
+other hand, people write software so as to meet their needs.  Wiki is
+designed to be simple and easy to use, as befits the non-expert,
+whilst noosphere offers a variety of services catering to the expert.
+
+Also, reading your comments, I realize that there is a third aspect to
+this distinction --- the nature of the communities.  PM (and its
+sister planets) is a place where experts talk shop with each other as
+well as explain their subjects to beginners and casual visitors,
+whilst, as far as I can tell, the main thrust of WP is popularization.
+
+As for the term "technical", I now realize that there has been a
+confusion.  This word has two meanings:
+
+"Technical" can mean "referring to pure or applied exact sciences".
+In this sense, one can refer to mathematics as a technical subject, but
+literature as not being a technical subject.  I agree with you that there
+is no reason to limit our coverage to "technical subjects" in this
+sense of the term.
+
+"Technical" can also mean "pertaining to the details of some
+discipline".  In this sense, we could speak of an analysis of a
+literary work which carefully analyzes how the author uses various
+rhetorical figures and structures paragraphs so as to build up to a
+dramatic climax as technical.  It is this sense of the term which I
+had in mind --- I would envision a Planet Literature as being filled
+with technical entries in this sense of the word.
+
+I will disambiguate this in the next version.
+--[[file:rspuzio.org][rspuzio]]
+
+Basically I agree, but I hope we'll emphasize that PM is /not/ just
+a place for experts to talk shop & explain their subjects to beginners
+-- at least, normatively speaking.  Me personally, I think it should
+also be a place for beginners to talk shop, and, yes, for folks to
+work on popularizing the subject.  I think the main thrust -- of
+/this/ document -- is the idea of developing tools that make it
+easier to pursue these various ends with content & community
+development.  IMO, the difference between us and Wikipedia is that
+they cater to the middle, whereas we can try to independently cater to
+/everyone/, experts, non-experts, beginners, masters, and so on.
+Wikipedia is one-size-fits all.  We're heading towards a situation
+with much more personalization and fine-tuning at both individual and
+group levels.  The fact that we currently do somewhat better with
+experts than with beginners is sort of an historical fluke.  (Well, in
+some ways catering to experts is easier, because experts can easily
+cater to themselves, whereas beginners often need someone else to
+cater to them.) --[[file:jcorneli.org][jcorneli]]
+
+I like your observation about one-size-fits-all.  I think that is a 
+much better way of getting at the point I had in mind w.r.t. content.
+
+Also, after having a look at Wikipedia documentation, I see that the
+absence of detailed technical information in any field is pretty much
+a site policy.  While the site policies do not say this explicitly,
+the policies about notability and against obscure content imply this
+and particular policies about unacceptable content go in that direction.
+By contrast, any mathematical fact, no matter how obscure, can go on PM.
+--[[file:rspuzio.org][rspuzio]]
+
+* Satellite Services
+
+In addition to our main service discussed above, we also will offer a
+variety of services derived from these main services and their
+software infrastructure:
+
+ * The Free Encyclopaedia of Mathematics --- This will present the
+  content of the online encyclopaedia section of PlanetMath in a
+  traditional print format.
+
+ * Noosphere --- This is the software platform underlying the various
+  planets.  It is also useful as a personal organizer, general
+  collaboration tool, and teaching aid.
+
+ * Arxana --- A sophisticated hypertext system which allows growing
+  documents by attaching comments.
+
+ * Autolinker --- This utility takes technical documents and makes them
+  easier to read by linking technical terms to their definintions.
+
+ * Notation Translator --- This utility translates mathematical
+  expressions in one system of notation to another system of notation.
+
+ * ResearchCollab --- A web-based LaTeX document collaboration service  
+geared towards researchers working on papers (already at working
+prototype/beta testing stage).  Could share technology, community, and
+financing with PM.  
+
+These satellite services are desiged to aid scholars in their
+activities and particular care will be paid to user friendliness since
+we expect them to be used by the general public.
+
+In addition to providing a further service to the scholarly community,
+these services will serve as a source of revenue for the organization.
+While, in keeping with our philosophy, the actual content will be
+free, we expect to make money offering selling actual printed copies
+of the Free Encyclopaedia, manuals, and disks of our programs,
+offering support for our software, and customizing our applications to
+clients' particular needs.
+
+----
+
+ * [[file:Satellite services discussion of financial aspects.org][Satellite services discussion of financial aspects]]
+
+I wonder about the description of these things as "satellites".  For
+example, Noosphere is pretty fundamental; and Arxana could become that
+way too.  I think you wanted to characterize these things as
+potentially stand-alone items, and although I can accept that, say,
+from a marketing point of view, I'm not sure I like taking this point
+of view.  For one thing, I'm not sure how to divide the tasks
+associated with "Satellite services" from those associated with
+"Research and Development" or "Community Support".  If we found
+a way to make a clear distinction between platforms-as-satallites
+and platforms-as-platforms, that could make it easier.  But
+unless we can do that, I might suggest moving the platforms
+to a different section. --[[file:jcorneli.org][jcorneli]]
+
+* Roles within the Organization
+
+In order to carry out this mission, several roles need to be filled
+within the organization.  In the early years of this phase, we
+envision that the three of us (Aaron, Joe, and Ray) will function in
+all these capapcities in a cook-and-bottlewasher way as we do now in
+an unpaid volunteer capacity but we also expect that, as the
+organization develops further, it will become possible to pay others
+to do much of the work, allowing us to focus our activities on our
+research.
+
+** Administration
+
+A certain amount of administrative and organizational work is
+necessarry in order for the organization to function and develop.
+This includes such things as accounting and bookkeeping, fundraising,
+evangelism and outreach, attention to legal issues such as copyright,
+and secreterial work.
+
+ * PM.Org president (Aaron P. Krowne):  Manage the various goings-on at
+  the Org.  Be involved with pretty much everything, in some measure.
+
+ * Grantwriting, outreach (Joseph A. Corneli): Strategic planning,
+  various partnerships, research grants, hitting up foundations
+  (collaborating chiefly with Aaron on these issues).
+
+ * Legal issues, various (Raymond S. Puzio): Collaborate with Bonnie and
+  others on legal stuff; work on relationships with other related interest
+  groups.  Misc. other admin stuff.
+
+ * Fundraiser, non-profit/co-op manager (we may want one of these): Take over
+  some of the tasks of fundraising, running meetings, being a liaison
+  between the Org and the community, etc.
+
+** Community Support
+
+Supporting the activities of the knowledge communities entails such
+activities as maintaining web servers, fixing bugs, maintaining the
+codebase and the database, and helping users.
+
+ * Developer (Aaron P. Krowne):  Continue to maintain 
+ Noosphere and the PM site.   Manage bounties.
+
+ * System Administrator (we may want one of these): Step in to take
+  over many of the basic tasks of Noosphere/PM maintenance.
+
+----
+
+The relevant issues may change as we grow; cf. in particular
+the discussion at [[file:On_rebranding_PM.org.org][On_rebranding_PM.org]].   Ben Loftin would
+be someone to stay in touch with about these sorts of issues.  --[[file:jcorneli.org][jcorneli]]
+
+** Satellite Services
+
+It will be necessary to write and maintain the various programs and
+texts.  Effort will be put into making them user friendly such as
+ample help, clear layout, and consistent intuitive interfaces.
+Support and customization will be offered to users.
+
+ * Noosphere project manager (Aaron P. Krowne):  Lead development of Noosphere
+  engine; coordinate integration of services into PM; manage bounty program
+  and so forth.
+
+ * Technical writing and editing, hacking (Joseph A. Corneli): Manage the FEM project;
+  help with Noosphere maintenance and documentation; service-ize HDM components.
+
+ * Hacker and mathematician (Raymond S. Puzio): Collaborate with APK
+  and JAC on autolinker & variations on this theme; work on FEM; help
+  manage ingest of new material into PM; service-ize HDM components.
+
+----
+
+To collaborate sufficiently well on Noosphere stuff will probably require
+Ray & me to learn at least some Perl.  I don't have a problem with that,
+and I intend to learn as I go (e.g. as I work on Noosphere documentation).
+--[[file:jcorneli.org][jcorneli]]
+
+** Research and Development
+
+Noosphere represents the state of the art in collaborative authorship
+platforms.  Maintaining this dominant position will require agressive
+innovation coming from an intensive program of research and
+development.  Our efforts in this direction may be summarized under
+four headings:
+
+ * Digital Library Science (Aaron P. Krowne):  Helping improve free culture
+  production and organization of knowledge using internet-based collaborative systems. 
+  Noosphere is of course the centroid of this work for PlanetMath, but there are other systems
+  that do and may continue to come into play (such as OAI tools).
+
+ * Artificial Intelligence (Joseph A. Corneli):  Current focus
+  is hypertext & collaborative authorship as a way of building AI systems.
+  I'm working on: a frontend (AI-building tool), backend (pre-ontology, reasoning), and
+  content (ontology, automatic learning).  I'll be responsible for helping
+  integrate other components of the research described here into the AI system.
+
+ * Formal Systems (Raymond S. Puzio): Lead development of a universal system of
+  mathematical notation uniformly applicable to all fields of
+  mathematics.  Formalizing the notion of metatheory in the context of
+  relational systems and the relation between theories and their
+  metatheories.  Studying examples of proofs in order to construct a
+  proof-checking framework which is based on the way human
+  mathematicians prove theorems.
+
+ * Linguistics (we need a linguist):  Studying examples of mathematical
+  writing to determine a grammar of mathematical prose.  Devising
+  means of automatically translating natural language statements of
+  mathematical assertions into equivalent symbolic expressions.
+
+* Discussion
+
+Alright, here is some description of what we talked about tonight.  It
+took me until 4 a.m. to write, but I felt reluctant to stop since I
+was on a roll.  In particular, I believe it will be of great use in
+writing our strategic planning document.  As I see it, this is a
+decent summary of what we would like the organization to look like in
+a few years, it is a matter of filing in details and explaining how we
+expect to grow from the present to the future in two years and
+convince the PM community (starting with ourselves) that this dream is
+realistic and garnering their support (at least moral support, if not
+time, talent, and treasure).
+--[[file:rspuzio.org][rspuzio]]
+
+I added a paragraph summing up my research.  This leaves
+out various things oriented more towards humans -- a non-trivial
+part of my work.  I changed your paragraph to say "lead development"
+instead of "devise", since I expect the notation will be worked
+out collaboratively.  Otherwise looks good.  I hope that it is
+clear that there are many ways we'll be partnering together,
+e.g. combining data-mining with basic AI to get stub entries.
+I'm sure I'll have various critiques later, but I'm glad
+that you wrote up a draft so there will be something to critique.
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+Probably worth mentioning that part of the motivation for my position in
+the debate we're having about the section "Satellite Services" above
+is that I want to see more discussion of "selling" these services
+to PM people -- which seemed like an important part of what we talked about
+on the phone.  Our research, as described here, is supposed to be
+set up to help people use PM to get their work done.  This is
+the case whether that work is advanced math or math pedagogy (hence,
+my comments here relate to the points I brought up in connection with
+the section "A Solar System of Knowledge", too).  To quote from
+my notes,
+
+: What we get paid for depends on what there is demand for!
+Everyone on PM would presumably want to be paying for
+HDM, as long as we can come up with deliverables.
+Defined work & deliverables should be pitched to
+the community.
+
+So, dealing the preliminaries of this pitch is what I'd like to see
+the "Satellite Services" section (or some other section) turn into.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+I think in addition to an "expansion" we need an "enhancement" objective.  As alozono's comments on PM in the last day have reminded me, people care about the quality of content.  I know everyone here agrees with that, but we need to make sure to outline our mission in terms of this objective. --[[file:akrowne.org][akrowne]] Fri Mar 3 21:19:40 UTC 2006
+
+It looks like that would go well in the "Solar System of Knowledge" section. 
+The goal is not just to have more planets, but better planets.  --[[file:rspuzio.org][rspuzio]]
+
+Of course, FEM should do something for "enhancement" -- and, as I've
+been thinking about it, so should Arxana.  --[[file:jcorneli.org][jcorneli]]
+
+** Research vs other stuff
+
+As I understood it (and wrote it) this document was primarily about the
+organization --- it was supposed to be a sketch of one possible scenraio
+for how the organization could look in a few years (and would be supported
+by documentation on why this goal is desirable and how it might be attained).
+The reason research figures so prominently is because that is one aspect 
+of this scenario we have though most about, but I would say that we should
+also give similar attention to other aspects of the organization so as to 
+give a more balanced view of this scenario.  --[[file:rspuzio.org][rspuzio]]
+
+I've fleshed out the "Roles Within the Organization" section.  You
+guys should give that stuff another going over, for sure (please view
+the paragraphs I added for you as stubs).  Eventually, I'd like to see
+something like an approximate time-division (e.g. I might spend 25
+hours a week on research and 15 hours a week on other things), perhaps
+in a new section.  Also, per the comments of Alvaro, David, and Pedro,
+let's make sure to justify the utility of everything for PM, as well
+as we can.  (For some things more towards the research end, I seem to have
+a reasonable justification-sketch going at [[file:Relationship of PlanetMath and HDM.org][Relationship of PlanetMath and HDM]].)
+
+BTW, let's make sure this document works well with
+the [[file:Timetable for PlanetMath development.org][Timetable for PlanetMath development]], especially in terms
+of near-term goals.  (Probably most of the editing can be done /there/
+rather than here; but I'm mentioning this point here as a reminder...).  --[[file:jcorneli.org][jcorneli]] 

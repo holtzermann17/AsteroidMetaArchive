@@ -1,0 +1,18 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In differential geometry, one encounters situations in which an entity such as a vector or a tensor is defined at one point of a space, but one requires it at a different point.  In such situations, one uses a connection to transport the entity from one point to another.  
+
+An analagous situation happens in metamathematics --- one might start with a particular mathematical entity defined in terms of one axiomatic system, but require it in terms of a different axiomatic system.  As we shall see, the process of transforming the definition of an entity from one axiomatic system to another is rather analagous to the proces of parallel transport.  In fact this analogy can be made mathematically precise --- by choosing suitable definitions, one can exhibit both parallel transport of vectors and translation of definitions as two instances of the same general construction.
+
+To define a connection in geometry, we first require a bundle over our space.  Essentially, a bundle consists of an assignment of a space called a fibre to each point of our original space.  In differential geometry, we subject this assignment to smoothness conditions; however, since continuity and differentiability will not play a role in our metamathematical applications, we shall not concern ourselves these assumptions here.
+
+By a path on a space, we mean an equivalence class of mapping from an interval into our space.  Two maps are considered if
+ * they differ by a reparameterization
+ * two paths are equivalent if they differ by retracing
+
+One way to specify a connection is as follows:  To each oriented path in our space, we assign a transformation which maps the fibre at the initial point of the path to the fibre at the terminal point of the curve.  This mapping is subject to two conditions:
+
+ 1. The mapping associated to a trivial path (i.e. a path whose image consists of a single point) is the identity mapping.
+
+ 1. If a curve /C/ can be obtained by joining together two curves /A/ and /B/ such that the terminal point of /A/ is the initial point of /B/, then the mapping associated to /C/ is the composition of the maps associated to /A/ and /B/.

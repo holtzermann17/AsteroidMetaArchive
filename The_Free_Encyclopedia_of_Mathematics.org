@@ -1,0 +1,59 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is The Free Encyclopedia of Mathematics?
+
+The Free Encyclopedia of Mathematics (FEM) is the print version of
+the [[file:PlanetMath.org][PlanetMath]] encyclopedia.  A [http://aux.planetmath.org/book/ prerelease version] has been produced;
+the first real version is currently [http://www-texdev.ics.mq.edu.au/FEM/ in development].
+
+* Quick Links
+
+ * [[file:FEM Goals.org][FEM Goals]]
+ * [[file:FEM editorial policy.org][FEM editorial policy]]
+ * [[file:FEM Editors.org][FEM Editors]]
+ * [[file:FEM Preface.org][FEM Preface]]
+ * [[file:FEM Criticism.org][FEM Criticism]]
+
+* Current Objective
+
+** Main
+
+Get a full version of the FEM out this spring that can be built anew by anyone,
+anywhere, using our [http://www.ma.utexas.edu/~jcorneli/e/FEM.el code] and
+[http://www.ma.utexas.edu/~jcorneli/e/book.tar.gz LaTeX backbone].
+
+** Ancillary
+
+ * Make diffs between Ross's version and the contemporaneous "raw" version
+ * Figure out a system for maintaining patches (.header files?  How about edits to bodies?  Maybe use .body files too?)
+ * track progress of FEM-originating corrections & suggestions
+
+** Aesthetic
+
+ * Remove canonical names (or make this a build-time option)
+ * (See other items in email from Aaron)
+
+* Longer term
+
+ * Lock in shared style files for PM
+ * content editing
+ * section intros
+
+
+* Discussion
+See [[file:General discussion of FEM.org][General discussion of FEM]]
+
+* Updates
+
+; CVS access : FEM is now available through CVS, see
+[[file:FEM CVS.org][FEM CVS]] for instructions.  This changes the way the FEM-building
+code works -- and seems to be making FEM development easier.
+Hopefully there will be a release soon... --[[file:jcorneli.org][jcorneli]] Sat Apr 23 00:01:48 2005 UTC
+
+; Project rolling again : I've "touched" the project (ok, I wrestled it to the ground)
+and things should be moving forward again after a long break.  Please see the file
+making-of-the-fem.tex in [[file:FEM CVS.org][FEM CVS]] for details. --[[file:jcorneli.org][jcorneli]] Tue Oct 25 2005 
+
+----
+[[file:Projects.org][Projects]]

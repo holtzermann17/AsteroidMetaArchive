@@ -1,0 +1,7 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The [[file:FEM.org][FEM]] build process can be thrown off by a single latex-non-compliant
+encyclopedia entry.  These entries should be screened for, probably when a
+[[file:PM.org][PM]] snapshot is built or when the file is saved.  Metadata should be added to
+the files (or to a separate list) saying which files are not compliant --[[file:jcorneli.org][jcorneli]] Sun Jan 30 12:27:22 2005

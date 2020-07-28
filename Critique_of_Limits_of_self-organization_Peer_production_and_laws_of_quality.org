@@ -1,0 +1,404 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Introduction
+
+In his essay "Limits of self-organization: Peer production and "laws of quality"", 
+Paul Duguid points out of the shortcomings of CBPP projects, as illustrated with
+examples.  Here, I would like to offer some impressions of this essay from my
+standpoint as both a scientist and participant in PM and related projects 
+both on the adminstrative side and the content-providing side in a constructive,
+collegial manner, hoping that this critique will further the discussion on the topic
+on CBPP and lead to progress.
+
+Overall, I would say that Duguid's essay points out shortcomings of CBPP efforts
+which those, like myself, who are involved in those efforts ignore at our own peril.
+Also, I am quite sympathetic to his complaints about the simplistic dualities and
+partisanship which seem so common in disussions of this topic and agree that 
+such simplistic notions do not advance understanding and such attitudes make 
+meaningful discussion difficult.  
+
+However, as a scientist, I am not convinced that the data he cites warrant the 
+conclusion that the laws of quality might not apply to CBPP.  I have two reservations 
+on this point.  Firstly, there is the issue of methodology, in particular that of 
+the control population.  Secondly, I believe that, these laws being of a statistical 
+nature, the effects of sample size and concommitant fluctuations about the mean are 
+important.  As a member of PM, I offer my perspective on the suggestions offerred
+based upon my experience with the project.
+
+** Scientific Critique
+
+In his essay, Duguid considers two laws of quality which have been cited in favour of
+CBPP projects: Linus' law and Graham's law and suggests that they are not
+working based upon examples he cites.  To this we might add the theory of
+self-organization cited in the title of his essay.  I do not find his approach 
+convincing because it does not balance these data with data of a control population. 
+I would not accept as valid a medical
+study which concluded that a certain medicine was ineffective
+at preventing colds becasue some patients who took it came down 
+with colds nevertheless, but did not compare the rate of 
+infections against patients who did not take the medicine or
+took some other medicine.  Likewise, I think that these examples
+need to be compared with examples of gaffes in non-CBPP works,
+such as traditional print encyclopaedias.  When Duguid states
+"Yet it seems no more adequate to defend Wikipedia by pointing 
+to holes in the Britannica than it does to invoke implicitly the 
+laws of quality.", I believe that is somewhat besides the point 
+and underscores a serious methodological misunderstanding.  The
+point of comparing mistakes in one work with mistakes in another
+work is not to raise oneself by undercutting opponents, but 
+rather to establish some standard of reference.  At the same time,
+I hasten to add that I agree with Duguid that the partisans in the
+CBPP debate have all too often pointed to the splints on the
+other side's eyes; I too deplore that, consider it not only
+unscientific, but unbecoming of scholars, behaviour which only 
+serves hinders dialogue and understanding.  Yet I still maintain 
+that it is important to point to holes in Brittanica if one is 
+to point to holes in Wikipedia.
+
+Ther reason is that, in the absence of a control population,
+the only standard one has is  100% accuracy, so all one can show
+is that CBPP is not perfect, which comes as no surprise to anyone.  
+A more appropriate approach might be to compare these errors aginst 
+the errors in prined works, such as the errata slips in scholarly 
+journals.  Not only would this contextualize the discussion 
+relative to some reference, it may well lead to further insights
+not only on the quantiative end but on the qualitative end.  In
+particular, I have in mind the possibility that one might discover
+patterns in the types of errata found in CBPP works which may
+differ from patterns of errata in printed works; further
+analysis of these patterns could well lead to further insights
+into the sterngths and weaknesses of these modes of production
+and thence to strategies for the improvement of scholarly
+technique.  Understood this way, comparing holes is consonant
+with Duguid's sentiment "Wikipedia relies on a different process to 
+get the job done and it is important to examine that process, 
+particularly if we are interested in improving it." 
+and can serve as a means of examining the process and 
+studying how it differs from other processes.
+
+Also, another factor needs to be considered, which is exactly how
+much time has been invested into these projects.  I don't know 
+about Wikipiedia, but in terms of PM (and even more so in terms of 
+PP), I would estimate not 
+more than 30 person-hours per day at present, perhaps more like
+10 or 15 person-hours per day. (I will be glad to discuss how
+I arrived at that figure if anyone are interested.)   That is 
+equivalent to the full-time work of not more than four people.
+In the past, it was even less.  If we are going to make a fair 
+comparison of PM against Math World or Springer's online
+encyclopaedia, this needs to be taken into account.   When
+arguing that CBPP projects should put more effort towards this
+area or towards that area, one needs to keep in mind that the
+total amount of labour available might be rather small, so there
+may be no way to excel in all departments, so some compromise
+may well be necessarry; in the case of PM, this has definitely
+been the case.
+
+Linus' law is statistical and depends crucially upon the
+number of eyes which have been looking on the work.  As an 
+estimate of the probablity of a bug remaining we may take the 
+probability of a single user overlooking
+that bug raised to the power of the number of users.  (A more
+sophisticated estimate would account for the facts that some eyes
+are better at spotting bugs than others and that some tend to
+to more debugging than others.) If the number
+of users is small, then the probability of finding a bug is 
+going to still differ significantly from 100% and one can expect
+large fluctuations.  I suspect that the egregious examples, such as
+the PG edition of Tristram Shandy and the  such fluctuations, but this is
+what I would expect based on plausible numbers for people involved
+in the project.  To me, arguing against Linus' law based upon
+the data presented may be on a par with arguing against Boyle's law 
+based on experiments with a gas of only a few dozen atoms.
+
+I would say that a good way to adress these problems it to try to
+grow the size of the community, as we are doing.  The history of
+growth certainly suggests that this is possible.  As for the
+present state of PM, I would call it a mesoscopic system as
+opposed to a macroscopic system anywhere near the thermodynamic 
+limit, hence still view it more as a proof of concept than a
+production model.
+
+Since the notion of self-organization comes from statistical
+mechanics, let me consider the issue from that viewpoint.  In order 
+for a system to enter an ordered phase, there has to be enough
+interaction between the constituents to counterbalance thermal
+fluctuations.  In this case, the interaction takes the form of social 
+contact between members.  My experience as an active PM member suggests 
+that this is not all that high --- it reminds me of a
+Van der Walls gas.  If the analogy with statistical mechanics
+holds, I would guess that CBPP projects have not yet made the
+transition to the ordered phase, so it is pointless to use them
+as an example of the failures of self-organization as it would be
+to complain that the atoms of a gas have not organized themselves
+in a crystal lattice.  This is a fundamental reason I am so
+emphatic about building community and encouraging collaboration 
+on content.
+
+** Commentarry on the Conclusion
+
+I now offer a point-by-point commentarry on the suggesions for
+improving CBPP projects in the concusion of his essay, which
+is informed by my experience with PM and related projects.  This
+should not be construed as a direct response to the points raised
+in the original essay because I am not familiar with WP and PG so
+what I have to say may well not apply to the examples cited in the
+essay.  Rather, this exercise should be seen as an attempt to
+build on the discussion by adding new perspectives.
+
+: First, protagonists of the sorts of peer production projects discussed 
+here should reflect on the extent to which, explicitly or implicitly, 
+they rely on the laws of quality. 
+
+As I explained earlier, these laws are statistical in nature and only
+guarantee quality in the thermodynamic limit.  I believe that if one
+accounts for the fluctuations in small systems and includes the terms
+which depend on the size of the system rather than naively comparing
+with the limiting value, then the evidence shows that these laws are
+working.  However, further study and a more rigorous formulation will
+be necessarry to make definitive statements.  Furthermore, the system 
+is growing and there is an active effort to accelerate the rate of 
+growth, so I also believe that we will arrive at a point where these 
+laws ensure high standards in a reasonable time.  
+
+: If they don't, they should ask themselves what they do rely on. 
+
+Growing the project to a size where these laws will ensure quality.
+
+However, since it will take time for a project to grow to the size
+necessarry for these laws to guararantee quality, I also would 
+consider prudent to consider the use of ad-hoc methods in the
+interim, as long as this is done in a way which does not adversely
+impact the CBPP nature of an effort.  To cite exapmles which have
+been floated in discussions on PM, one might offer some sort of 
+incentive to aim eyes in a particular direction or might hire 
+someone to compare the online work with books and draw up a list 
+of holes in the coverage which could then be filled by the community.
+
+Even when the project has grown to the point where Linus' law
+makes errors shallow, the community might still want to augment
+its own efforts with such means.  While some would argue that 
+this is undesirable breaks the purity of the CBPP model or of
+volunteer effort, I reject such a stance --- for me the end
+is producing free open content in an open manner through the
+freely associated labor of an egalitarian community in which 
+membership is open to all whilst CBPP is but a means to this end.
+Should such a community decide that it is in their interest
+to augment CBPP effort with some other mode of production
+or to collaborate with projects which share compatible goals
+but different organizational philosophies or modes of
+production, I would have no objection.
+
+Of course, being able to make such decisions presumes a certain 
+degree of organization in the community.  While elsewhere I have
+noted areas of weakness in the PM community and argued that these
+have prevented it from entering an ordered phase as far as certain
+aspects of content production are concerned, I would also point out
+that, in other areas, interaction has been better and one can
+observe the phenomena of self-organization and emergence at work.
+In particular, as a sort of converse to Duguid's statement "Not only 
+is it controlled from below by the chip on which code must run, but 
+projects are also organized from above by developers and maintainers 
+whose control and authority is important to the quality of the outcome.",
+I would point out that what we have in the way of an official 
+organization at PM has emerged from within the community as certain
+individuals, like myself, have taken an interest in the administrative
+side of the project and chosen to contribute to it.
+
+: Second, projects should be mature enough now for participants to admit 
+their limitations. 
+
+Certainly, at PM, this is the case.  If anything, I would describe our
+problem as the opposite one, a general sense of self-disempowerment and 
+a concommittant difficulty believing that the project could mature into 
+something far greater than what it is now.
+
+: Project Gutenberg and Wikipedia are tremendous achievements. That does 
+not entitle them to a free pass. Both, because free, tend to get some of 
+the condescending praise given a bake sale, where it's deemed inappropriate
+to criticize the cakes that didn't rise. 
+
+I don't see the issue as one of condescension, but as one of 
+contextualization.  When comparing cakes in a bake sale with 
+cakes from a bakery, I see nothing inappropriate in criticizing 
+the cakes which did not rise as long as the criticism is done in 
+a constructive rather than an antagonistic fashion.  (Duguid's
+essay be taken as a model of how to phrase such critiques in
+a respectful, constructive manner.)  However, at the
+same time that one might point out that the cakes in the bake
+sale are not so good as those from the bakery, one should also
+take into account that the bakers for the bake sale neither had
+access to the fancy ovens nor the fine ingredients found in the
+bakery nor have had the years of experience of the master baker.
+
+By analogy, when comparing PM with the Springer encyclopaedia, I
+consider it important to making a balanced presentation to point out 
+that, whilst Springer is rolling in dough and can hire editors and 
+staff as needed, has earned a reputation which allows it to attract 
+the seasoned experts in all fields of math, and has had over a
+century of experience in which to perfect their recipe for an
+encyclopaedia,  we have none of these advantages ---
+our budget is barely enough to cover essential maintenance, we are
+just beginning to be known in the mathematical community, and, with
+only five years of experience, we are still evaluating, experimenting
+with, and improving our methods.  Therefore, I prefer to think of the
+situation in the following light --- if these projects have done so much 
+with such meagre resources, just imagine what they could do with more 
+financial and social capital.  Since I cannot help thinking as a 
+physicist, I would say that perhaps the right measure of merit here
+is not the raw quality of the finished product, but that it should be
+normalized to the resources available.
+
+On the second point, let me add a personal observation.  I have written 
+a fair number of entries on subjects on which I have only a limited knowledge 
+and, like most top contributors, have way more entries than I have the time 
+to maintain.  The reason for this is simply that there are not enough 
+participants so the only way to get coverage of key topics is for people to 
+write on topics on which they are not as knowledgeable as one might desire
+a contrubutor to be.  I expect that this problem will go away as the project 
+grows both becasue I will become more knowledgeable on these topics and, as 
+more people join the project, people will come along who are knowlegeable in 
+subjects which currently are not well represented in the population. 
+
+: Third, they should draw closer to their roots in Open Source software. 
+
+I disagree.  The only thing that is open about a lot of open source
+software projects is the source code.  The procedure whereby decisions 
+are made and the code is written differ little from that of proprietary
+firms.  While we have a goal of producing open content, we also have a 
+goal of making the process whereby the content is produced open and are
+not interested in sacrificing the latter goal to achieve the former.
+
+: Software projects do not generally let anyone contribute code at random. 
+Many have an open process for bug submission, but most are wisely more
+cautious about code. 
+
+While there is certainly room for improvement, the system of ownership 
+and corrections on PM shows that something like this can be done in a
+way which is compatible with CBPP.
+
+: Making a distinction between the two (diagnosis and cure) is important 
+because it would suggest that defensive energies might be misplaced. 
+Project Gutenberg has built defenses against violations of copyright. It
+needs to be sensitive to violations of good sense.
+
+Based on my experience as Copyright Agent of Designation for PM, I would 
+say that the defensive energies have not been misplaced.  I completely agree 
+that quality of content is an important issue.  However, the amount of energy 
+available is quite limited, so some hard choices had to be made and, in this
+case of choosing between improving copyright defenses and improving 
+content, one's hand is pretty much forced by the current legal system.
+Given the state of copyright law, unless one puts significant effort into
+erecting defenses against infringement, one can expect to be shut down and 
+have no content to improve.
+
+: Editing is a hard task and needs to attract people prepared to think 
+through the salient issues.  Wikipedia is very sensitive to malice. It 
+needs to be as sensitive to ineptitude. Compiling correct and coherent
+encyclopedia entries is hard work. 
+
+I don't know enough about Wikipedia to comment on their situation.  As for
+the comments on editing, I agree.  However, I also maintain that editorial
+capacity can emerge from the community and does not necessarily need to
+be imposed form above as in Sanger's Citizendium.  On PM, the problem
+of copy-editing has pretty much been solved by the emergence of several
+members who have devoted most of their efforts towards correcting
+typos and the like.  While there is still much to be done in the way of
+content editing and ensuring thoroughness of coverage, there is a growing
+awareness of these issues within the community and significant preliminary
+efforts.
+
+: Allowing anyone to make changes to the text without discussion is unlikely
+to attract people willing to work hard on an entry. Thus, pace Linus's Law,
+more eyeballs may ultimately lead to a downward, not upward, spiral.
+
+I agree with this.  As I said before, my experience as a contributor to
+PM is that there has not been nearly enough communication with respect to
+writing.  In a traditional co-authorship situation, there is much 
+discussion between the co-authors; they don't just sit down at the same 
+desk and write.  However, I see this missing on PM and suspect that it is a
+reason for much of the tension I see there as well as problems like the
+ones cited in the original article.
+
+I suspect that one root cause of this is a naive notion of text.  Derrida
+said there is no outside-text.  One way I understand that remark is that the 
+actual string of characters which one sees as, say the text of a PM entry, 
+are only the tip of the iceberg --- there are also the interpretations of both
+the authors and of readers and the design which the author had in mind
+when composing the visible portion of the text, as well as a network of 
+allusions and references to other texts.  In the case of a traditional 
+coauthorship, the 
+coauthors form a shared vision of the portion below the water in the 
+process of their discussions.  However, on PM, I have experienced that
+typically dialogue between co-authors is limited to making changes 
+to the visible text and corrections.  Both these means have severe
+shortcomings and I have seen adverse consequences when someone has rewritten
+portions of my contributions in a way which indicated to me that the author
+had not appreciated the reasons, pedagogical or logical, for writing 
+the entry as I had or the nature of the audience for which it was
+intended.  Even worse are the cases cited in the original essay where 
+correct statements have been replaced by popular misconceptions.  As
+Duguid points out, in such cases, Linus' law is of no use.
+
+I believe the solution to this difficulty entails both a technological and 
+a sociological component.  On  the technology end, we have already made progress,
+through autolinking and fora attached to entries, in making visible a portion 
+of the text which would ordinarily be hidden from direct view.  The scholium system, 
+which owes much of its inspiration to post-modern philosophy, in particular that
+of Baudrillard, goes even further in this direction.
+
+On the sociological end, a tool is worthless unless somebody uses it.  Those
+of us who have thought harder and read more on this issue need to educate
+others and raise the level of consciousness of these issues within the
+community.  It would be overkill to require that contributors to CBPP
+projects take a course in hermeneutics and semiology before being allowed
+to join, but they should have a basic awareness of the issues involved at a 
+practical level, so they can appreciate the importance of participating in 
+author's fora and discussing what they are writing instead of merely chugging 
+away producing content and getting upset when someboby else edits an entry in a 
+way which collides with what they were trying to do.  As an example of what I
+consider an example of dialogue between co-authors leading to a high-quality
+entry, I cite the entry "[http://planetmath.org/?op=getobj&from=objects&id=6700 
+quadratic surfaces]" on PM, including the attached discussion.  Since we have
+already made great strides in raising consciousness of copyright issues on
+PM through such means as rewriting the section on copyright in the new user guide 
+and through discussions in fora and found that this has led to a decrease in
+copyright problems with contributions, I believe a similar approach could work
+here as well.
+
+
+: Finally, both projects would benefit by more competition.  Were Wikipedia,
+for its part, to force Britannica out from behind its subscription wall, 
+the shock would probably be as profound for each. One would lose its 
+business model, the other would the complacency that comes more from the 
+ease of its links than the uniform quality of its entries. .... All users 
+would gain from the competition because different 
+ideas of what quality is, how it is produced, and how maintained would 
+confront one another in the open. There would be blushes all round, but we 
+could begin to get beyond easy platitudes and recrimination of both fans and 
+foes to organize for quality.
+
+I very much like the dialectical sound of this --- synthesizing the insights 
+of traditional publishing and CBPP to sublate both.  Also, I would cite the 
+Springer online encycolpaedia of math as a preliminary example of something 
+like the scenario outlined above.
+
+At the same time, I do not want to be too optimistic because of the vested
+interests of publishers.  As history has shown, when vested interests are 
+involved, the establishment will concede no more that what it needs to
+stay in power.  In this case, I would suspect that hoarders
+will not make their content free and open until they have no other
+practical option because somebody else has produced a free alternative
+of comparable scope and quality which is generally recognized as such.
+
+Here I think that CBPP projects would do well to imitate a certain 
+aspect of what open source software projects have done.  Namely, they
+could work on establishing partnerships with traditional publishers
+who have not commited themselves to a business model based on 
+hoarding content.  Moreover, they could use competition to their
+advantage here in making such partnerships look attractive as a way of 
+lowering costs much as IBM was sold on free software as a way of 
+competing with MS.  This is very much along the lines of what I and
+my co-authors propose in in our metacommons manifesto (and the surrounding 
+discussions, which I also consider as part of that text!).

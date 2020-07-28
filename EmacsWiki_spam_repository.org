@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The [http://www.emacswiki.org EmacsWiki] people have a spam repository
+that we've been using here on AM to filter out attack-spam.  Obviously
+it is only a partial solution, but I would like to make sure that we are
+using this resource as effectively as possible.  It would be good to
+have the spam-reporting mechanism down -- so instead of just deleting
+spam HTML links, people around here would actually prevent those particular URLs
+from becoming spam again (on this wiki and on others).  
+
+One other thought: I guess we should all be reading the RecentChanges
+page with minor changes included, because that seems to be the route
+by which spammers mess us up.  
+
+Ideally it would be possible to just one-click delete and report spam.
+After I understand the situation a little better, maybe I can make
+a handy spam-blaster tool in emacs.
+
+--[[file:jcorneli.org][jcorneli]]

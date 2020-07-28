@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Typically, I think of these as s-expressions (see [[file:h-code.org][h-code]] for more information).  However, the discussion here is at a higher level of generality and would work with any formalism so I leave the choice of formal language for representing mathematical statements unspecified in this discussion.
+
+*** Discussion
+
+
+Back to [[file:How to Check Proofs.org][How to Check Proofs]]

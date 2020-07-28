@@ -1,0 +1,60 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* (merge-assignments &rest exprs)
+
+ *Input:* any number of assignment lists /exprs/
+
+ *Output:* an [[file:Definition of assignment list | assignment list.org][Definition of assignment list | assignment list]]
+
+ *Description:* /merge-assignments/ takes any number of assignment lists and combines them to make a single assignment list.  If any assignment list is /nil/ (indicating inconsistency) it returns /nil/. 
+
+ *Dependencies:* [[file:template utilities - shift-assignments | shift-assignments.org][template utilities - shift-assignments | shift-assignments]]
+
+ *Listing:*
+
+ (defun merge-assignments (&rest exprs)
+   (cond ((null exprs) t)
+	 ((null (car exprs)) nil)
+	 ((equal (car exprs) t)
+	  (apply 'merge-assignments (cdr exprs)))
+	 (t (shift-assignments
+	     (car exprs)
+	     (apply 'merge-assignments (cdr exprs))))))
+
+ *Description:* This is a simple case of recursion.  If the function is called with no arguments, it returns /t/ because that means that there are no assignments (see [[file:Definition of assignment list.org][Definition of assignment list]] for details).  Otherwise, it uses /shift-assignment/ to combine the various expressions into a single assignment list.
+
+ *Examples:*
+
+ ; (merge-assignments)
+ ; => t
+
+ ; (merge-assignments t)
+ ; => t
+
+ ; (merge-assignments t t)
+ ; => t
+
+ ; (merge-assignments t t nil)
+ ; => nil
+
+ ; (merge-assignments '((x a) (y a)))
+ ; => ((y a) (x a))
+
+ ; (merge-assignments '((x a)) '((y b)))
+ ; => ((x a) (y b))
+
+ ; (merge-assignments '(x a))
+ ; => t
+
+ ; (merge-assignments '((x a) (y b)) '((y b) (z (a b))))
+ ; => ((x a) (z (a b)) (y b))
+
+ ; (merge-assignments '((x a) (y b)) '((y a) (z b)))
+ ; => nil
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

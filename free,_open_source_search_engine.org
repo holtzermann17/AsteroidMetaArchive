@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Create a free, open source implementation of the Google algorithm.  A source for this algorithm is the paper by the founders of Google:
+
+Sergey Brin and Lawrence Page. The Anatomy of a Large-Scale Hypertextual Web Search Engine http://www-db.stanford.edu/~backrub/google.html
+
+Also, it might be possible to combine some variant of the Google algorithm with the scholium system to search documents created using that system.
+--[[file:rspuzio.org][rspuzio]] 13 July 2005 

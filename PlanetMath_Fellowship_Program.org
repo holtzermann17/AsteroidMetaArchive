@@ -1,0 +1,150 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Let me offer something of a counterproposal to bonuses for top
+contributors. Instead of automatically paying the top contributors,
+institute some sort of fellowship program. The idea would be that the
+organization would set aside a certain sum of money for this program
+which would be administered by the board or a special committee. The
+purpose of this fund would be to make it possible for people to spend
+more time than they otherwise could contributing to PM by paying them
+for time they put into the project.
+
+A sketch of how it might work is as follows: To be eligible to apply,
+one would need to have a score of at least 50000, with at least 2000
+of those points earned in the the last two months.  One would submit a
+proposal of what one would like to do along with some estimate of how
+much time is needed and a timetable.  To be considered, one would need
+to be willing to put in at least 10 hours a week to the project.  The
+committee would review the applications and award fellowships based on
+the quality of the applicants' existing entries, the merit of the
+proposed project, and the amount of money available vs. the number of
+applicants.  Once one recieves such a fellowship, one is expected to
+keep up a rate of prgress consistent with what one promised as a
+condition for recieving the money.
+
+For instance, someone might want to spend a month working full-time
+working on the section on Bessel functions, proofreading existing
+entries, and adding a hundred new entries on the subject and
+organizing the coverage.  Recieving a PM fellowship for this project
+would let that person to accomplish this project in a month rather
+than a year by working full-time on this project and not having to
+worry how the bills get paid for that month but focussing full
+attention on that particular project.
+
+As I see it, the target audience for such a program would likely be
+two groups: 1. Students might find this useful as a means for
+supporting themselves which, unlike waiting tables at the dining hall,
+reinforces their studies.  I could even see a graduate student who is
+interested in working with an advisor who is unable to obtain student
+support (an all-too-common occurrence, as I know well from personal
+experience) helping pay his way through grad school by writing entries
+on material related to the subject of his thesis.
+2. Independent-minded people pursuing a non-traditional mathematical
+career might find such a program to be a way of being paidfor doing
+math.
+--[[file:rspuzio.org][rspuzio]]
+
+
+I like this.  But I'm not sure of the function of such a large lower
+limit, or even any score threshold, to get a scholarship.  If your problem
+is finding the time between washing dishes and classes, then I doubt you 
+will have written many entries prior to applying for the fellowship.
+
+This is what I worry about in taking too much of a bureacratic mindset---that
+arbitrary criterion will be set that keep benefits from flowing, perhaps in
+ways that didn't fit our preconceived notions.
+
+Instead, I doubt this operation will be so large-scale that we can't simply
+example some portfolio of the student's work.  If they don't have one, we could
+ask that they write say 5 entries.
+
+--[[file:akrowne.org][akrowne]] Tue Feb 28 15:19:09 UTC 2006
+
+The amount of the lower limit was more-or-less arbitrarily picked as
+an illustration.  If a time comes when we have sufficient funds to do
+something like this and are seriously considering it as an option, we
+can work out the exact details.
+
+The reason for a lower score treshhold is twofold: 1.  To ensure that
+the applicant is familiar with the way PM operates.  2.  To ensure that
+the applicant is committed to the PM community.
+
+Even student with a full courseload and a part-time job who is
+dedicated to some cause can spare, say 10 or 20 minutes per day of
+time.  I would expect that, if such a person were at all serious about
+PM, that person would regularly participate in forum discussions, file
+corrections, and contribute something like an entry a week.  Over a
+few months, this would add up to some significant points.  The number
+I proposed may be too high but, as I said, it was an uninformed guess
+so we could choose some more appropriate criterion, maybe a different
+score or the consistency metric or something else.  If someone is not
+even willing to put an hour or two a week into a project for an
+extended period of time, I seriously question that person's dedication
+and commitment.  Talk is cheap.
+
+As I see it, the primary purpose of such a program would be to allow
+members of the community to put a greater amount of time into
+contributing material, not to obtain hired help.  Accordingly, I think
+that it is at least as important to make sure that applicants are
+familiar with how PM works and committed to the project as it is to
+make sure that the applicant is competent to write about mathematics.
+I worry that, while submitting a portfolio or writing sample entries
+will demonstrate expository ability, it says nothing about dedication
+to the project.  Supposing that we pay a student to write a bunch of
+entries instead of wash dishes based on a portfolio, what reason do we
+have to suppose that that person will be inclined to interact with the
+community or accept corrections and maintain his contributions?  I
+think that without some reason to believe this (like a history of
+involvement in the community) two problems are likely to arise:
+
+1. As the experience with Ed Fox's classes shows, entries written by
+   people who are not familiar with the operation of the site and
+   motivated by ulterior motives (like obtaining credit for a class or
+   being paid for writing entries) are not likely to be well
+   integrated into the corpus or well-maintained.  From the point of
+   view of a person whose sole motivation is to make some extra
+   cash (there is nothing wrong in this motivation per se, only it
+   makes the person a poor fit for PM) there is no reason to actively
+   participate in the activities of the community other than
+   submitting the entries one is contracted to do and making the
+   minimum changes necessarry to implement corrections.
+
+2. There is the issue of avoiding having "an elite cadre of paid
+   contributors".  A situation in which the motivations of paid
+   fellows differ from those of volunteers will probably lead to
+   tension and conflict in the community.  Only paying people who
+   are already well integrated into the community and being clear that
+   the purpose of the fellowship is to let them devote more time
+   towards an activity which they would otherwise have done anyway
+   prevents this problem from arising.
+--[[file:rspuzio.org][rspuzio]]
+
+I think a lower bound is fine, but I'd say 5000 is a more realistic one.
+The higher the score, the more the person will have done, and presumably
+that would help with their application.
+
+As I noted on the main expenditures page, this proposal isn't really
+opposed to Bonuses, it is essentially orthogonal to them.  (Although,
+of course, money we spend on one thing can't be spent on the other.)
+
+Also, the relationship of applications to Bounties is clear: a proposal
+from an author is like a reverse bounty. --[[file:jcorneli.org][jcorneli]]
+
+This is a good idea. If we have money. 
+Instead of writing new entries there are also many other things a PM-fellow
+could do. For example, fill requests. I have lately created quite a lot
+of "no-brainer" requests, where everything needed is already on PM. Essentially
+they only have to be written up. Projects (like the real number project)
+are sure to generate a lot more of these. Another example is to entrify old
+discussions on the fora, draw figures, and proofread existing entries. 
+
+One thing that could prove problematic is ownership of "hired" new entries. Once the 
+fellowship is over, who is going to maintain these?
+
+I think it would be quite acceptable to have lower limits for fellows. 
+In order to contribute to PM one has to be somewhat familiar with both 
+the user interface and the present content. And, we would probably be
+getting more applications than we can hire. The fellowship would be like a lottery. 
+To enter you have to pay 50 entries. 
+--[[file:matte.org][matte]]

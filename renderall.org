@@ -1,0 +1,91 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Describe the new page here.
+
+pp lines 21-25:
+(empty)
+
+pm lines 21-25:
+ 1. connect to the database
+#
+$dbh = Noosphere::dbConnect;
+
+Noosphere::initNoosphere();
+
+pp line 30:
+my $runfile = "/var/www/pp/noosphere/bin/run/renderall.running";
+
+pm line 30:
+my $runfile = "/var/www/noosphere/bin/run/renderall.running";
+
+pp line 38-43:
+(empty)
+
+pm line 38-43:
+ 1. necessary so cached entries can be overwritten by the web application
+umapsk 0002;
+
+$ENV{'PATH'} = "/bin:/usr/bin:/usr/local/bin";
+
+push @INC, ".";
+
+pp line 51-53:
+ 1. connect to the database
+#
+$dbh = Noosphere::dbConnect;
+
+pm line 51-53:
+(deleted/moved)
+
+pp line 55:
+my ($rv,$sth) = Noosphere::dbLowLevelSelect($dbh,"select cache.objectid from cache left outer join objects on cache.objectid = objects.uid where objects.uid is null");
+
+pm line 55:
+my ($rv,$sth) = Noosphere::dbLowLevelSelect($dbh,"select cache.objectid from cache left outer join objects on cache.objectid = objects.uid where cache.tbl = 'objects' and objects.uid is null");
+
+pp line 57:
+print "dangling cacheref ($row->{objectid}), deleting\n";
+
+pm line 57:
+print " dangling cacheref ($row->{objectid}), deleting\n";
+
+pp line 62:
+print "checking for invalid objects and rendering";
+
+pm line 62:
+print "checking for invalid objects and rendering\n";
+
+pp line 69:
+print "timed out $row->{title} ($row->{objectid}), rerendering ";
+
+pm line 69:
+print "timed out '$row->{title}' ($row->{objectid}), rerendering ";
+
+pp line 72:
+print "rendering $row->{title} ($row->{objectid}) ";
+
+pm line 72:
+print "rendering '$row->{title}' ($row->{objectid}) ";
+
+pp line 111:
+my $int;
+
+pm line 111:
+my $int = "";
+
+pp line 115:
+my ($rv,$sth) = Noosphere::dbSelect($dbh,{
+		 WHAT => "cache.objectid,cache.build,cache.touched,$table.title",
+		 FROM => "cache,$table",
+		 WHERE => "cache.valid=0 and (cache.build=0 or cache.touched <= now() - $int) and $table.uid=cache.objectid and method='$method'",
+		 LIMIT => 1});
+
+pm line 115:
+....not actual text here
+
+pp line 118:
+return undef if ($sth->rows() < 1);
+
+pm line 118:
+return undef if ($sth->rows() < 1);

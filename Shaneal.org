@@ -1,0 +1,106 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* A Flexible LISP Proof Checker
+By: Shaneal Manek
+(smanek@gmail.com)
+
+
+** Introduction
+Mathematics is a unique field in that once something has been shown via a valid proof it may never be contended. Because of proofs' important role, an infallible method of proof verification or checking has long been a matter of interest. Several others programs have already tackled the problem with varying degrees of success, including the Mizar system, PhoX, and Coq to name a few. 
+
+However, these all seem to share a certain difficulty in use, and as a result have yet to gain wide spread acceptance from the mathematical community as a whole. The misstep that I believe existing proof checkers take is only checking proofs that are presented in formal logic, thus forcing mathematicians to write their proofs in a relatively minimal formal logic (this is unlikely, it’s analogous to trying to force a Lisp programmer to code in assembler) or having the proof checker incorporate a converter that will ‘compile’ a particular higher level math into its formal logical equivalent (extremely difficult and inflexible).  
+The solution that I propose to work on is different, and in my opinion superior, in several important ways. First, the problem has broken into three discrete modules as suggested by the Hyperreal Dictionary of Mathematics (HDM) project, each of which fairly manageable alone. The first module can be viewed as something of a parser that could import ‘natural language’ math into h-code, a Lisp-based representation language for mathematical expressions. The second module is a proof checker that can verify the h-code proofs’ validity, and the third module could best be termed as an artificial intelligence basically tying up all the remaining loose ends. The eventual value of such a system, once complete, would be immeasurable: it could augment, if not completely replace, math journals’ article referees, greatly speed up the rate at which proofs and theorems could be added to comprehensive math encyclopedias like PlanetMath and the HDM, and would help individual mathematicians verify their proofs. 
+
+I feel that the module that best matches my particular interests and skills is the proof checker and thus am submitting a proposal that includes a relatively novel approach to this problem. Although the proof checker’s utility would be maximized when used in conjunction with the parser and A.I. modules, it holds considerable stand-alone value. First, since h-code is so similar to ‘natural language’ math it will be trivial to hand convert proofs to h-code for verification in the interim until a parser is available. Secondly, a proof checker that is capable of verifying true math proofs, as opposed to only formal logic proofs, should garner considerable interest and support for PlanetMath and the HDM. Finally, the proof checker, with its high degree of functionality, flexibility, and ease of use will lift a great burden from many professional and amateur mathematicians interested in verifying a novel proof; although some time investment will be required to learn h-code, this outlay would be dwarfed by the effort required for an orthodox formal proof verification, which can span several months. 
+
+** Benefits to PlanetMath
+One of the most common complaints lobbied against collaborative online encyclopedias is that their open nature and lack of accountability makes them unreliable and non-authoritative. Obviously PlanetMath already has some checks in place to verify the verity of its articles, specifically peer contributed addendum and errata, however the fact remains that the ‘owner’ of an article has the final say.
+
+This lack of a central authority allows for something of an impasse to develop: what happens if an arrogant but daft user creates an article replete with technical errors? With some luck, the ‘many-eyes’ of the community will find these errors before too much harm is done, and they will submit errata to the article. However, the misguided owner of the article could still feel he is still in the right, and refuse to incorporate the fixes into his article.
+
+One possible solution would be to implement some sort of rating system, and filtering based on ratings. Although this would eliminate many difficult situations, it only treats the symptoms, but not the problem itself. It could allow a popular, but incorrect, view to be propagated over the correct answer. Furthermore, even if the community quickly recognized the correct answer, the incorrect view would be available for users in the interim period. If I get wrong information from PlanetMath, it is of little conciliation to me that the error was corrected one hour later.
+
+The only solution that would completely stifle all fears of unreliability is to ensure that erroneous information could not be added to PlanetMath in the first place. Having a panel of experts review every article before incorporation into PlanetMath actual is infeasible and incompatible with the PlanetMath philosophy of openness. The most viable solution is to build an automated proof checker that flag technical errors, and possibly disallow their incorporation unless certain criteria, such as an over ride by a verified expert, take place.
+
+However, a perfectly reliable, easy to use, general proof checker is not something that will be completed overnight: rather we must work towards that goal in incremental steps. This Summer of Code proposal is the first step towards that goal. It will build an easily extensible platform for proof checking, that will initially be able to check formal logic and algebraic proofs, and will eventually be able to  check all proofs nearly instantaneously. With the assistance and guidance of Dr. Puzio and Mr. Corneli, I believe that such a proof checker could be made ready within 2 years, and would greatly augment PlanetMath’s existing repertoire of tools to fight mistakes. Before its completion, the proof checker could still be integrated into PlanetMath, and used to check the specific types of proofs it understands. Although this is a long term commitment, I feel that its value is so great that it would be well worth the investment. 
+
+Another tangential benefit would be provided by one of the key algorithms I would need to develop, a 'template matcher,' which would greatly improve PlanetMath's search capabilities. The template matcher would help match specific math statements to formulas, theories, or rules of inference that are applicable. For example, If I had a rule that said a(b+c) = ab + bc, it would be able to see that 2x(7a + 15) is simply a specific case of that rule. To use a more realistic example, if a user searched e^i*pi =-1 they would obviously be interested in Euler's Formula, and the 'template matcher' would recognize it as a specific case of e^ix = cos(x) + i*sin(x) and could automatically redirect to the relevant page (perhaps the theorem checker would know the formal names of various theorems in it's database, and could redirect queries about a specific case of a theorem to that theorem's name?).
+
+Although I would be hard pressed to actually implement my template matching algorithm into Lucene this summer (in addition to my actual work on the proof checker) I believe that getting a working a template matching algorithm, backed by a fairly large database of valid theorems, axioms, and inferences, would be of considerable benefit to those working on improving Lucene.
+
+** Project Specifications
+The proof checker will be able to take a series of steps, written in h-code, where each step follows logically from the previous one. One of the key goals here is to ensure that a proof shouldn’t have to explicitly justify a step; rather the proof checker should be able to determine whether a step can logically follow from the preceding one in accordance with an axiom, or proven theorem/inference. If a step does not logically follow, the proof checker should halt and inform the user of the problem (e.g. “Step 47 does not logically follow from Step 46, using any known axiom, inference, or theorem. The proof is either invalid or insufficiently explicit for checking”). 
+
+Another key feature is extensibility: adding support for a new branch of mathematics (e.g. calculus, geometry, or group theory) should be as simple as adding new basic axioms for the branch while rules of inference can then be proved as needed. This approach to proof checking allows support for arbitrary systems to be added fairly painlessly. This is in contrast to the traditional approach of converting any proof down to the minimal formal language of pure logic, whose axioms and rules of inference are then hard coded into the program. 
+
+** Time Table
+
+Week -3 to 1: Familiarize myself with the problem and solutions by reading about proof theory, axiomatic set theory, formal logic, the h-code specifications, LISP, and the approaches attempted by other proof checkers. By Week 1 decide on a particular ‘plan of attack,’ complete with a rough outline of the project in pseudo-code (this early, I still expect to have several fairly large black box functions that will just conform to known specifications, implementation will be left till later). 
+
+Weeks 2-3: Write an h-code parser/library that lets the proof checker understand basic logical h-code statements. This could be viewed as analogous to the program’s ‘dictionary’ of the logic language.
+
+Week 4-5: Code in valid rules which will allow the transformation of one line of logic into the next (valid axioms and inference rules). This could be considered the program’s ‘grammar rules’ for logic. 
+
+Week 6-8: Get a basic logic proof checker operational. This version will still be a command line tool that will take an h-code file as input, and either ‘certify’ it is a valid proof or point out a line that is non sequitur. So far, the checker will only be able to certify simple formal logic proofs where each step follows from the system’s initial axioms or known rules of inference (i.e. no importing theorems or inferences yet). Tentatively, I’d like the proof checker to be able to verify DeMorgan’s law, or a similar proof from Quine’s Logic book. If CPU is a bottleneck, I’ll consider adding some sort of heuristic search to efficiently find an acceptable transform rule from one step to the next; otherwise a brute force approach may be adequate.
+
+Week 9: Allow for the importation of theorems and rules of inference. One possible method would be to have the program scan a particular directory for h-code proofs, and anything in that directory could then also be an allowable justification for a step. Possibly, a user could provide the proof checker with a list of ‘known good’ theorems, omitting the proof. This would allow the proof checker to make use of theorems with complex proofs in the checking of other proofs, without being familiar with the complex theorem’s proof itself.
+
+Weeks 10-12: Expand the proof checker’s ‘dictionary’ and ‘grammar rules’ to allow for algebraic statements and proofs. Tentatively, I’d like to be able to verify the proof of a relatively simple algebraic proof, like distributivity of multiplication over addition or similar a proof from an adequately verbose algebra text book. 
+
+The remaining week may be allocated to a milestone as difficulties crop up. Assuming there is time left, I’d like to get started with some notes about the proof checker, its mathematical foundations, and potential implications in anticipation of an eventual article for journal submission. 
+
+*** Milestones
+ * Pseudocode program overview by the end of Week 1
+ * Basic h-code logic reader by end of Week 3
+ * Build a logic ‘grammar’ (axioms and inferences) by the end of Week 5
+ * Basic logic proof checker up and running by the end of Week 8
+ * Allow importation of theorems and rules of inference by the end of Week 9
+ * Basic algebraic proof checker up and running by the end of Week 12
+
+** Future work
+Although the Summer of Code will help give this proof checker an extremely promising start, the coming of fall will not be the end of this project. There are a lot more interesting and exciting ways in which this proof checker could be further expanded. For starters, grammars and dictionaries for Calculus, Geometry, Group Theory, and many other branches of math will still require development. Another interesting direction the development could take is building in an automated theorem prover, to allow ‘coarser’ raw proofs to be taken as input. Mathematicians often write proofs where many steps are compressed into one and obvious or trivial steps may be omitted all together. A relatively simple automated theorem prover would allow us to automatically ‘fill-in’ missing steps in a proof, and would make the proof-checker more useful to real world mathematicians. Another interesting direction that might be considered is a Metamath to h-code converter that would allow PlanetMath and the HDM to augment their existing theorem libraries with Metamath’s. All of these are just ideas for where the future could take this proof checker, and how its value could be continually increased, even after the end of this Summer of Code.
+
+: Rather than [[file:metamath.org][metamath]] to h-code, a more natural fit for a LISP-based converter would probably be [[file:Ghilbert.org][Ghilbert]], whose syntax is based on S-expressions.
+A Metamath to Ghilbert translator already exists. --[[file:norm.org][norm]] 9-May-2006
+: Great Idea, I've looked over [[file:Ghilbert.org][Ghilbert]] a little and it seems easier, while still accomplishing the same end result. Thanks -Shaneal 9-May-2005
+   
+
+As something of an aside, my school requires me to present a senior thesis paper in mathematics prior to graduation: this project is by far one of the most exciting I’ve encountered. I would be extremely interested in continuing my work with PlanetMath on this proof checker, as my thesis project, into next year. This additional contribution may speed up the time it will take for this proof checker to ‘come to market’ and fulfill its full potential.
+
+
+** Biographical Information
+*** Summer of Code Particulars
+If this project is accepted, I will be able to afford to take a break from my part time teaching job with the Princeton Review and devote myself to the Summer of Code full time. I plan to take a short vacation to attend my cousin's wedding, but this should not significantly interefere with my work on the Proof Checker. I will be able to take my laptop with me and still work and communicate online while away making this a relatively minor inconvenience.
+
+I feel that I have a good working relationship with both Dr. Puzio and Mr. Corneli, and would greatly enjoy collaboratively working over the internet. As an added bonus, both will be visiting Chicago (where I live) at least once over the course of the summer, where we plan to meet and hash out some more of the details regarding this project. 
+
+
+*** Academic History
+I'm currently an undergrad at Elmhurst College majoring in Mathematics (with an emphasis on number theory) and minoring in Philosophy (with an interest in formal logic). I studied Computer Engineering for one year at the University of Illinois at Urbana-Champaign, until I realized that the formal systems of Discrete math were more attractive to me than engineering itself. I have junior standing as of May, and will have senior standing by June. 
+
+I've formally taken 4 Computer courses (CS I, CS II, Analog Signal Processing, Digital System Design).  Through a combination of classes and personal interest, I have gained familiarity with C++, Java, Perl, VHDL, and MPI and proficiency in Python, TCP/IP Networking, Linux. I was fortunate enough to do some work in a bioinformatics lab my freshmen year (at UIUC) which introduced me to high performance networking and spurred an interest in discrete math.
+
+In math, I've completed taken the normal Calculus courses (Calc I, Calc II, Multivariable Calc, and Differential Equations), Linear Algebra, Discrete Math, Abstract Algebra, and am taking an independent study Research Methods course where I have further pursued my interest in Discrete Math. I would consider myself moderately familiar (though by no means proficient) with Maple, Mathematica, and LaTeX (Lyx).
+
+I feel that my greatest strength isn't what I know, but how quickly I learn. I can read at approximately 700 words per minute, and have a very strong understanding of the foundations of Math and Computer Science. These traits allow me to acquire new knowledge relatively quickly, and I am more than capable of getting up to date with existing work by the end of the first week of the Summer of Code (as enumerated in the time table).
+
+*** Work
+I worked at local Radio Shack throughout my senior year of high school. Through a semi-fortunate coincidence, a large engineering firm had recently been forced to lay off several hundred workers (mostly engineers), so a co-worker of mine actually was an Electrical Engineer who had over 20 years of experience. After hearing him talk about his work desiging enterprise level routers, I decided that I wished to do the same, and proceeded to pursue a degree in Computer Engineering at UIUC.
+
+At UIUC, I was extremely fortunate as a freshmen (though I technically had sophomore standing upon entrance) to find work at a bioinformatics research lab. The National Center for Supercomputing Applications was kind enough to donate a rack of servers to our lab, and my job basically involved trying to make the computers a working cluster (first by deciding on an optimal network topology, then configuring the computer's software, and finally installing a job queuing (Sun Grid Engine) and a message and data passing methodology (MPI and rsync respectively, both over UDP/IP). The job, though interesting, was also extremely time consuming, and I was forced to quit when finals rolled around to concentrate on my grades.
+
+Then, after transferring out of UIUC, I started working as a tutor for The Princeton Review, and have been to date.
+
+*** Extra Curricular
+Much of my time outside of school and work has been dedicated to personal interests. I find philosophy extremely interesting, especially the works of Robert Nozick and Aristotle. I have a voracious appetite for books, and am always trying to save money to buy more for my already overflowing library. I'm also a fair chess and tennis player, and enjoy going camping or a good movie. I've competed in several contests, and generally fare quite well. I won first in state (Illinois) at Computer Repair (through the Vocational Industrial Clubs of America), Computer Networking, and Network Design (Business Professionals of America). I've also placed in the top 10 in the country in each of those categories. 
+
+
+** Discussion
+----
+
+Nozick will be missed! --[[file:akrowne.org][akrowne]]
+
+----
+
+Tell us something about your !SoC ideas! --[[file:jcorneli.org][jcorneli]] PS.  Ah. I got your email.

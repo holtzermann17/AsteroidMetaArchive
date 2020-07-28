@@ -1,0 +1,74 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Definition*:  Suppose $\phi$ is a non-zero element of a locally cyclic ring
+of zero characteristic.  Then we define the /behavior/ of $\phi$ as 
+$B (\phi) = \phi^2 \div \phi$.  We define $B(0) = 0$.
+
+ *Theorem*: $B(\alpha + \beta) = B(\alpha) + B(\beta)$
+
+ *Proof*:  If $\alpha = 0$, the result reduces to $B(\beta) = B(\beta)$.
+Likewise, if $\beta = o$, it reduces to $B(\alpha) = B(\alpha$.
+If $alpha$ and $\beta$ both differ from zero, we have
+$$B(\alpha + \beta) = (\alpha + \beta)^2 \div (\alpha + \beta) =$$
+$$((\alpha + \beta)^2 \div (\alpha + \beta)) \cdot ((\alpha \beta) \div (\alpha \beta)) =$$
+$$(\alpha \beta (\alpha + \beta)^2) \div (\alpha \beta (\alpha + \beta)) =$$
+$$((\alpha \beta (\alpha + \beta) \div (\alpha \beta)) \cdot
+((\alpha + \beta) \div (\alpha + \beta))) =$$
+$$(\alpha \beta (\alpha + \beta) \div (\alpha \beta) =$$
+$$(\alpha^2 \beta + \alpha \beta^2) \div \alpha \beta) =$$
+$$(\alpha^2 \beta) \div \alpha \beta) + (\alpha \beta^2) \div \alpha \beta) =$$
+$$(\alpha^2 \div \alpha) \cdot (\beta \div \beta) +
+(\beta^2 \div \beta) \cdot (\alpha \div \alpha) =$$
+$$(\alpha^2 \div \alpha) + (\beta^2 \div \beta) = B(\alpha) + B(\beta)$$
+ *Q.E.D.*
+
+ *Theorem*: $B(-\phi) = - B(\phi)$
+
+ *Proof*:  If $\phi = 0$, then both sides equal zero, hence each other.  Otherwise,
+$$(-\phi)^2 \div (- \phi) = \phi^2 \div (- \phi) = 
+{1 \over (- \phi) \div \phi^2} = {1 \over - (\phi \div \phi^2)} = - (\phi^2 \div \phi)$$
+ *Q.E.D.*
+
+ *Theorem*: $B(\alpha \beta) = B(\alpha) B(\beta)$
+
+ *Proof*:  If $\alpha = 0$ or $\beta = 0$, then both sides equal zero, hence each other.  
+Otherwise,
+$$(\alpha^2 \div \alpha) \cdot (\beta^2 \div \beta)
+(\alpha^2 \beta^2 \div \alpha \beta)
+(\alpha \beta)^2 \div (\alpha \beta).$$
+ *Q.E.D.*
+
+ *Theorem*:  If $B(\alpha) \neq 0$ and $\alpha \beta = 0$,
+then $\beta = 0$.
+
+ *Proof*:  By multiplicativity of behavior, $B(\alpha) B(\beta) = 0$.
+Since the former factor is not zero, the latter must be, so $B(\beta) = 0$.
+By local cyclicity, there exists $\gamma, m, n$ such that $\alpha = n \gamma$
+and $\beta = m \gamma$.  We then have $B(\alpha) = n B(\gamma)$ and
+$B(\beta ) = m B(\gamma)$.  Since the former quantity does not equal zero, we 
+must have $B(\gamma) \neq 0$;  Since the latter quantity does equal zero,
+we must have $n = 0$, so $\beta = 0$.
+ *Q.E.D.*
+
+ *Theorem* If $B(\alpha) = B(\beta) \neq 0$, then $\alpha = \beta$.
+
+ *Proof*:  Set $B(\alpha) = m/n$, where $m$ and $n$ are non-zero integers.  Then,
+by definition of behaviour and ratio, we have
+$$n \alpha^2 = m \alpha$$
+$$n \beta^2 = m \beta$$
+$$n \alpha^2 \beta = m \alpha \beta$$
+$$n \alpha \beta^2 = m \alpha \beta$$
+$$n (\alpha^2 \beta - \alpha \beta^2) = 0 .$$
+Since the ring has characteristic zero and $n \neq 0$, this implies that the second
+factor equals zero.  Factoring this factor, we have
+$$\alpha \beta (\alpha - \beta) = 0 .$$
+Since $B(\alpha) \neq 0$ and $B(\beta) \neq 0$, by the previous theorem we conclude 
+that $\alpha - \beta = 0$, or $\alpha = \beta$.
+ *Q.E.D.*
+
+These results show that the behavior is a morphism of locally cyclic rings into the
+ring of rational numbers.  These facts will be used to classify locally cyclic rings.
+
+
+Back to [[file:Locally Cyclic Rings.org][Locally Cyclic Rings]]

@@ -1,0 +1,187 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As it stands, the peer review system on PM has only a negative aspect --- 
+if one sees something amiss, one can file a correction.  However, there is
+no way of pointing out what already is correct.  The reason that this is 
+problematic is that one cannot tell whether the absence of a correction 
+should be taken to mean that an entry is correct or that it has not been
+examined.
+
+As a solution to this problem, I would propose the addition of verification
+boxes to entries.  The idea is that, if someone reads through an entry 
+carefully and finds that the information contanied there is factually
+correct, then one can click on the endorsement box for that entry.  
+Subsequently, at the bottom of the webpage for said entry there will appear
+somewhere near the list of corrections to the entry a list of endorsements
+along with their endorsers.
+
+This way, future readers will have some assurance that someone has taken out 
+the time to check an entry and perhaps reason to trust the information 
+contained therein without having to test it themselves.  Of course, the 
+measure of assurance will depend on the number of endorsements (the more
+eyes that have perused an entry, the less likely it is some gaffe went 
+unnoticed) and who endorsed it (If someone is careful and knowledgable, their
+endorsements will carry much more weight than an endorsement by someone whose
+knowledge of a field is shaky and who is careless.  In the case of someone
+who, in Serge Lang's turn of phrase, cannot distinguish a fact from an 
+opinion from a hole in the ground, that person's endorsement's would be
+pretty much worthless and go ignored.).
+
+As for who makes a good reviewer, I would say that is best left to the reader,
+as different users will have different notions.  For instance, a stuffy 
+traditionalist might insist on having an entry reviewed by at least two 
+people with the proper degrees and academic/professional credentials in 
+their field of specialization while someone else might rate reviewers based
+upon their past performance and the quality of their contributions.   As long 
+as there is a data field which contains the user names of the reviewers, it 
+should be possible (perhaps after making Noosphere more hackable) for different
+users to implement filters which select entries based upon the number of 
+reviewers and credibility of reviewers according to whatever criteria.
+
+This field could also be of use to such projects as Matte's editing of entries
+on real numbers and the FEM.  In such cases, as articles are checked, these
+endorsements could be added to the entries which have been examined and found
+correct.  Conversely, this could make the work of such projects easier.  If an
+entry already has several endorsements by trustworthy (by whatever criteria) 
+reviewers, then there might be no need to scrutinize it and one could go on to
+the next entry.
+
+I think it important to maintain a distinction between assuring factual 
+correctness and stating that something is a good entry.  There are many ways
+in which a piece of writing might be deficient --- it might be disorganized,
+it might be unnecessarily difficult to understand, the choice of notation
+might be unfortunate, the grammar might be faulty and the words
+misspelt, it might not be adressed to any particular audience, etc.  However, 
+considerations of factual correctness trump all these other
+issues --- whatever its literary excellences, a scientific reference is worse
+than worthless if it contains factual errors.  Nevertheless, as these literary
+qualities are of some importance, making it easier for readers to grasp the 
+information presented, perhaps one could present a palette of endorsement boxes.
+For instance, there might be a box one could click to indicate that one has 
+proofread and entry and found it gramatically and typographically correct.  This
+palette would fit nicely with the "everybody contributes a little and it adds up" 
+approach to division of labour which has worked so well for PM.
+
+Naturally, there are various details to consider in order to have a efficient, well
+thought out system.  There is the issue of versions.  The comments should be attached
+to the particular version of an entry which the reviewer read.  If the entry changes,
+it may need to be reviewed again unless the changes were purely grammatical or 
+organizational and did not affect the content.  It would be nice to have a system 
+whereby endorsements would propagate under such minor edits with the least hassle to
+those involved.  One possibility would be to have a "This change is a minor edit." 
+box on PM as here on AM and allow for the possibility that endorsements would 
+automatically propagate across minor edits.  To thwart abuse by unscrupulous authors 
+who might misrepresent additions or other alterations to content as minor changes,
+the endorser would have the option of stating whether the endorsement will 
+automatically propagate or whether it will require explicit approval by the reviewer.
+
+There is the issue of showing what one has reviewed.  Just as there is now a list of
+objects which one has authored, perhaps there should also be a list of entries which
+one has reviewed.  This could be useful for readers to evaluate reviewers.
+
+There is the issue of scoring.  Should someone get points for reviewing an entry and,
+if so, how many.
+
+There is the issue of retraction.  Should someone be able to retract an endorsement one
+has given, and under what circiumstances.  For instance, it might be good for a reviewer
+to withdraw an endorsement if the reviewer later discovers a mistake which went undetected
+but bad to have people withdrawing endorsements as revenge for not having their entries
+endorsed.  Should there be a penalty (such as lost points) for withdrawing an endorsement
+or would that discourage people from withdrawing endorsements when they were mistaken, 
+the loss of reputation as a reviewer being consequence enough for poor judgement.  One idea
+might not be to allow outright withdrawal of endorsements, but instead have the reviewer
+file a correction stating what was wrong and have the endorsement temporarily suspended until
+the correction has been filled.
+
+There is the issue of additional text.  Just as with acceptances and rejections of corrections,
+it would be a good idea to allow optional text.  In the case of endorsements, this might be
+used for notes on the quality of the entry or comments explaining how it was verified or why
+the reviewer is particuarly qualified to judge the entry.  For instance, one might write that
+one redid calculations and found the same result or that the subject matter is something the 
+author has taught for a number of years or that one has checked the entry against certain texts
+and references or that the entry contains material which the reviewer uses on a daily basis.
+--[[file:rspuzio.org][rspuzio]]
+
+Perhaps "Types" of either correction or endorsement should be 
+coded. That would facilitate systematic review of reviewers
+as well as enabling users to differentiate between disputes --
+say, the math is valid but the English explanation is unclear,
+or there are merely typos in the math and/or English, or perhaps
+just the LaTex needs tweaking. It would also be nice if you
+could program a way for the article author to code an endorsement of
+a correction or endorsement so that the system could have a way to
+rate reviewers. --[[file:ocat.org][ocat]]
+
+Building on your idea of types of endorsements, perhaps one could
+do this in such a way as to make for a nice duality between 
+corrections and endorsements and a consistent user interface
+for both.  Right now, to file a correction, one fills in a form
+which includes 1. a drop-down menu specifying the type of correction,
+2. a line to type in the title and 3. a text area for the body
+of the correction.  Presumably, one could use the same interface
+with a few minor adjustments.
+
+As for types of endorsements, here are my sugestions:
+
+ * *Content*  This means that one has reviewed the entire entry
+and found that the information contained therein is factually
+correct.  For this type of endorsement, the title and text are
+optional --- while one might want to add a few comments, the 
+meaning of this type of endorsement is quite clear without
+further comment.  The endorser would have the option of clicking
+a box to indicate that this endorsement would carry over minor
+revisions.
+
+ * *Partial*  This means that one has reviewed only a portion
+of an entry (say a specific calculation or proof) and found that
+portion to be factually correct.  For this type, the text is 
+mandatory because one needs to specify which portion has been vetted.
+The endorser would have the option of clicking a box to indicate that 
+this endorsement would carry over minor revisions.
+
+ * *Proofread* This means that one has proofread the entry and
+found the grammar, orthography, and punctuation correct.  This type
+does not carry over minor revisions.  For this type, the title and
+text are optional.
+
+ * *Typographical* This means that one has examined an entry and
+found that the text usage and layout are correct and correspond to
+the guidelines in the style guide.  This type does not carry over 
+minor revisions.  For this type, the title and text are optional.
+
+--[[file:rspuzio.org][rspuzio]]
+
+Right, an endorsement is the opposite of a correction, so there
+are three possibilities for a reviewer or a reviewer of a review:
+1) accept; 2) reject; 3) n/a
+
+With respect to the types, I would suggest specificity about the
+content, rather than the process employed. So (you are the expert,
+I am merely taking your ideas and reformulating), the Types of
+Review would be Grammar, Orthography, Punctuation, Text Usage,
+Text Layout, etc. (plus Mathematical Validity?) Ideally the
+Types (categories) should be so specific that a computer program
+could examine the encyclopedia and mark "Reject" on certain
+Types.
+
+The way this would likely work in practice is that few people
+would be inclined to mark something as "Accept", meaning that
+it is completely "ok". Most people would however, feel comfortable
+in adding "Reject" within certain specific categories. 
+
+On the other hand, an Expert in the Subject Matter, might feel
+qualified to mark "Accept", and an expert's unqualified approval
+of an entry would carry much weight. A non-expert's Accept would
+carry zero weight, and would be of little interest to the 
+readers of the encyclopedia. Yet, even a monkey's Reject would
+be significant, at the very least to the Author, who ought to
+be notified so that he/she could Accept or Reject the Rejection.
+In many cases the non-expert's Reject would be correct since
+errors do happen and spotting an error sometimes means just 
+seeing that the pattern is broken. Over time the system should
+gather information about Accepted Rejections by reviewers
+and a "non-expert" might have a very respectable score (assuming
+that the Authors are honest :)
+
+--[[file:ocat.org][ocat]]

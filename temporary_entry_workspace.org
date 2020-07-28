@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It has been suggested in the past that there should be a place for users to "draft"  entries, where they won't be listed anywhere publicly.  This makes a lot of sense, especially for larger entries.   However, it just re-occurred to me, since classification policy has been changed such that no new entries will be addable without classifications.  I can hence envision the situation where a novice would be unable to figure out what the best classification was, to an otherwise complete entry, and wanted to ask for help in the forums.  Since there is a delay at this point, a staging area would help a lot.
+
+This shouldnt be too big of a change... just a "draftobjects" table with the identical scheme as "objects", and some overloading of the current entry editing code to handle the situation where the desitnation to save changes is different (for example, all errors should become warnings for a "draftobject").  Also, some routine to "publish" a draft object is needed.

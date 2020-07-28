@@ -1,0 +1,266 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Wikipedia, the free encyclopedia
+
+[http://en.wikipedia.org/wiki/Main_Page Wikipedia] is a prominent free hypertext-based
+encyclopedia written by a lot of folks from
+all over, maybe even by you (in part).
+
+It is released under the terms of the GNU Free
+Documentation License (like [[file:PlanetMath.org][PlanetMath]]).
+
+/Or is it?/
+
+See the ultra-contentious expose:  [[file:Wikipedia, the unfree encyclopedia.org][Wikipedia, the unfree encyclopedia]]. 
+
+----
+
+(Rationale: Wikipedia does not hold GFDL. PLanetmath neither does at 100%, so Planetmath is unfree as well?) --[[file:drini.org][drini]]
+
+That's a big part of it, and to the extent that PM doesn't hold to
+GFDL and yet asserts GFDL, then yes, it is creating a non-free
+situation for users.  --[[file:jcorneli.org][jcorneli]]
+
+* Relationship of Wikipedia and PlanetMath
+
+The thought occured to me that we might want to position !PlanetMath
+or some derivative organization (see [[file:On rebranding PM.org.org][On rebranding PM.org]])
+to become the "micropedia" to Wikipedia's "macropedia" (i.e., we provide
+short, but in-depth, technical coverage, they provide big ideas and
+contextualizing information).
+
+We might start by talking to the human entities behind
+http://en.wikipedia.org/wiki/Wikipedia_talk:WikiProject_Mathematics/PlanetMath_Exchange
+(which page speaks to part of the current relationship of the 2 organizations)
+--[[file:jcorneli.org][jcorneli]]
+
+I agree. Tis is something I've had in mind.  This is a "strategic plan" sort of idea
+that is necessary when there are other providers "in the same market". --[[file:akrowne.org][akrowne]]
+
+Also, remember the conversations we've had elsewhere on this sitewhere it was pointed
+out that the primary difference between WP and PM is not so much technical vs. 
+non-technical as it is that PM allows different levels of sophistication simultaneously 
+as opposed to reducing everything to a common level.  --[[file:rspuzio.org][rspuzio]]
+
+Interesting discussion found via google on wikitech-l:
+
+ On Wed, 2002-11-27 at 08:00, Tomasz Wegrzanowski wrote:
+ > On Wed, Nov 27, 2002 at 01:13:11AM -0500, The Cunctator wrote:
+ > > On Tue, 2002-11-26 at 22:12, Jonathan Walther wrote:
+ > > > On Wed, Nov 27, 2002 at 02:50:24AM +0100, Tomasz Wegrzanowski wrote:
+ > > > >How to integrate it with Wikipedia script ?
+ > > > >
+ > > > >Wikipedia script when rendering should find all <math>.*</math> in markup,
+ > > > >call this program (which is very fast if images are already rendered)
+ > > > >and get info provided by it to render a page. I'm not even sure what should
+ > > > >that program return.
+ > > 
+ > > We would be best served by not duplicating the efforts of
+ > > http://planetmath.org, a GFDL math encyclopedia.
+ > > 
+ > > I recommend that Wikipedia either 1) not use Tex-graphics, and stick to
+ > > what can be done with plain-jane wiki/HTML, or 2) integrate efforts with
+ > > planetmath.org.
+ > 
+ > Neither of these two solutions would work well, nor would "upload pngs". 
+ 
+ I fail to see how the second method wouldn't work well-it's a philosophical
+ approach, not a particular method. All I'm saying is that we should
+ figure out ways to work with planetmath.org, not duplicate their effort.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* What comes next for wiki?
+
+Maybe this? http://meta.wikimedia.org/wiki/Semantic_!MediaWiki (simple semantic additions to wiki pages). --[[file:jcorneli.org][jcorneli]]
+
+That seems to be about as much a jump as the semantic web is from the web.  Namely, too big,
+at least, to just implement the improvements we want.  I haven't looked in detail at the semantic wiki, but 
+my concerns with the semantic web have been that it is highly divorced from the human element of production. 
+RDF is a great innovation and has lots of applications, but its not exactly inducing a societal sea-change
+in how we author content.  On the other hand, while the semantic web people were inventing RDF, wikis came
+out and did just that.
+Now what I want out of wiki is a simple extension to allow typed links, and some basic interface filtering
+and organization to do natural things based on them (such as navigation/searching based on site /structure/).
+I could be wrong about Semantic_!MediaWiki, though, I'll have to look into it in depth later.  The
+point is, being machine-processable is not the entirety of what we want. --[[file:akrowne.org][akrowne]] Fri Apr 7 19:34:32 UTC 2006
+
+* The software behind wikipedia
+
+I think we all like to think of Noosphere as having advantages over
+the wiki software that's being used on Wikipedia, but I don't know
+if we're tapped into the development of that software (even as lurxors).
+In a [http://planetphysics.org/?op=getmsg&id=94 thread] over at PlanetPhysics,
+someone mentioned that Wikipedia 'has !TeX support'.  Is this true?  And
+what sort of support do they have?  What is coming on the horizon for
+Wikipedia?  (If it isn't 'being semantic', then is it maybe automatic
+linking?  Ownership?  Threaded forums attached to everything?  Deep linking and character-level annotation ;)? ) --[[file:jcorneli.org][jcorneli]]
+
+: The homepage of the !MediaWiki software
+is at http://www.mediawiki.org/wiki/!MediaWiki, but I could find no 
+roadmap.
+WikiMedia has tex support. See
+[http://meta.wikimedia.org/wiki/WikiTeX] and [http://meta.wikimedia.org/wiki/Help:Formula].
+However, there seems to be no support for numbered equations, macroes, or 
+theorem environments as on PM. 
+However, for WikiMedia, Latex is just one extension among
+[http://meta.wikimedia.org/wiki/Category:!MediaWiki_extensions others].
+Other examples are [http://meta.wikimedia.org/wiki/Gnuplot gnuplot],
+[http://meta.wikimedia.org/wiki/Inline_SVG_extension inline SVG],
+[http://meta.wikimedia.org/wiki/Maps maps],
+[http://meta.wikimedia.org/wiki/Permissions permission/access control],
+[http://meta.wikimedia.org/wiki/ShowHide_Extension show/hide extension]
+(this could be useful for proofs),
+[http://martin.jambon.free.fr/biblio_php.html citation manager].
+I could imagine that one could quite easily implement a Metapost 
+extension.
+-- [[file:matte.org][matte]]
+
+So, when they say !TeX support, they mean you can embed a !LaTeX
+expression in a wiki page.  Not a bad idea (no doubt we could use such
+a thing on !AsteroidMeta), but it is not quite the same as actually
+supporting full-on !TeX authoring!  I know we had talked about
+possibly adding a wiki 'authoring mode' on PM; perhaps we could 
+use !MediaWiki, and then automatically translate the wikisource to
+!LaTeX source.  As for the permissions, that's interesting, but
+it doesn't seem that these are used in a terribly complex way on
+Wikipedia (at least not as far as I know!). --[[file:jcorneli.org][jcorneli]]
+
+The homepage for meta-issues about !MediaWiki is at [http://meta.wikimedia.org/wiki/Main_Page].
+It has a wealth of information. There is an old (1y) proposal
+for creating a wiki of mathematical proofs [http://meta.wikimedia.org/wiki/Proposed#Wikiproofs].
+A "first draft" for an i18n of !MediaWiki is [http://meta.wikimedia.org/wiki/Multilingual_MediaWiki here]. 
+
+But, yes. It would make sense to at least consider !MediaWiki before
+rewriting Noosphere. Surely it would require 
+changes to !MediaWiki. At least better !LaTeX support and an auto-linker 
+to start with. However, I don't think we should blindly stick to !LaTeX 
+(nor Noosphere!) without at least considering alternatives. For example, 
+!LaTeX's theorem environment is quite primitive for PM's purpose.  
+It would make sense to mark up proofs, theorems and definitions in a standard 
+way. Maybe we could keep such data in a 
+[http://meta.wikimedia.org/wiki/Wikidata Wikidata] database? That would
+benefit the HDM project?
+Due to the large number of plug-in extensions, !MediaWiki
+seems to be rather flexible. 
+
+One advantage of moving to !MediaWiki is that it would free up resources
+and energy to free math, and not software issues. Say, once !MediaWiki's 
+i18n project is completed, we could probably adapt it almost as is. 
+This would also move PM closer to WP. This could have many advantages. 
+For one, it would be easier to share content. 
+-- [[file:matte.org][matte]]
+
+: I think using !MediaWiki would be going in the opposite direction of a Noosphere rewrite.  
+If we've decided that we like automatic linking and the ownership model, and want to move in
+the direction of a more flexible scholium-based system, then we are basically departing from
+the particular philosophy of the !MediaWiki software.  These distinctions cut to the core of
+the collaborative system; the interactions, the data model, the social model, and so forth.
+I like the way Noosphere distinguishes itself and would like to continue to build upon that.  
+Those who don't may want to re-examine how they allocate their time amongst the two projects.  
+I also don't see spending development time on software as a bad thing.  I think the "Noosphere
+model" is worth developing, and besides, Computer science and math are very close --[[file:akrowne.org][akrowne]] April 20, 2006
+
+I wasn't suggesting using !MediaWiki /instead/ of Noosphere.  I
+don't think it would be a good idea.  I don't think there are any
+(reasonable, free) alternatives to !LaTeX.  !LaTeX markup is easy 
+to write, and it has the benefit of being directly typeset-able 
+using the !LaTeX program.  Of course, is primarily a typesetting language.
+
+When you talk about marking up theorems, proofs etc. in a 'standard way',
+I think this could be done in !LaTeX, no problem: it is just a matter
+developing some site-wide style standards.  AFAIK, there is no need
+to get rid of !LaTeX as a typesetting language just to install some
+additional "semantic" markup.  Whatever semantic markup we use could be
+stored in just about any kind of database, I don't see why a wikidata
+database would be any particular benefit.
+
+: Yes. Sorry. Should have been clearer. I completely agree that PM should use 
+  !LaTeX for formulas. This is the /lingua franca/ for math. By questioning 
+  !LaTeX I meant questioning !LaTeX's theorem/proof environments. Or,
+  !LaTeX's lack of any standard for these. In this sense !LaTeX is a 
+  loose language; many things can be done in numerous ways. 
+  This makes it difficult to do further processing on the text. 
+  Say, if the environments were properly marked up, one could do all kind of 
+  things. Maybe hide proofs as default, or create a list of all
+  definitions. But, 
+  as you say, the same thing can be accomplished with a strict style guide. 
+  --[[file:matte.org][matte]]
+
+As for the flexibility of the platform due to its extensions: that's
+an interesting point to consider, certainly.  However, we could no
+doubt add more extensions (e.g. Gnuplot, Maxima) to Noosphere, as well.
+
+: After a rewrite I'm sure Noosphere will be equally flexible. Nevertheless
+  the gnuplot extension is quite impressing. It is a 120 line script. 
+  --[[file:matte.org][matte]]
+
+As for "freeing up resources and energy for free math instead of
+software", I must reject that assertion.  Free math and free
+software are integrally linked; you can't really have one without
+the other.  There is an immense amount of software work that will
+be worth doing regardless of what platform we use.  I've been
+working on a platform that is neither Noosphere nor !MediaWiki --
+the choice of platform is certainly important to me, enough
+to motivate me to work on one that's rather different from these others.
+
+For many things the choice of platform is somewhat arbitrary.
+But it isn't /always/ arbitrary.
+
+: !MediaWiki is under the GPL, so that should not be a problem. I am
+  sure that there is lots of software work to be done. But, one of the benefits 
+  with free software is to be allowed to make use of other free software. Wiki's are
+  also rapidly becoming the platform of choice for CBPP. (I assume
+  this is right. Are there alternatives apart from Noosphere?) Thus, 
+  if PM uses a "non-standard" platform, it could be good to motivate somehow.
+
+: I am sure that there are cases where it makes sense to 
+  roll your own software. I am not suggesting to blindly shift
+  to a wiki-system as is. But, by cursory looking at the feature 
+  list of !MediaWiki it looks to have many properties of Noosphere (basic latex, 
+  access control, attached entries). That would be something to at least
+  consider. --[[file:matte.org][matte]]
+
+Being "closer" to WP doesn't seem like a good objective in and of itself.
+Having some interface that is more familiar to WP's may be a very
+good thing.  But whatever's behind this interface will almost surely
+have to be different.
+
+Sharing content seems to be a bigger technological problem than could be
+resolved simply by choice of platform.  (To say nothing of our license
+questions!)  See [[file:bidi system.org][bidi system]] for a sketch of the issues there.
+
+: What you say is correct. --[[file:matte.org][matte]]
+
+Now, I do think it would be great to coordinate our development with the
+WM people as much as is reasonable -- but in addition to these folks,
+there are dozens of other groups working on commons-based software efforts!
+Ideally we'd be coordinating with all of these people.  Coordinating
+these sorts of efforts was one of the mail goals for !AsteroidMeta --
+and I'm sure there is a lot we can do to improve our situation there.
+--[[file:jcorneli.org][jcorneli]]
+
+* The burden of being Wikipedia
+
+Wikipedia has the burden of "being an encyclopedia".  Some other
+resource with different goals (e.g. "being a knowledge-base") might
+not have the same dubious editorial tyranny issues.  By selecting
+items from the KB for inclusion/exclusion from the encyclopedia, it
+would be possible to have both types of resources at once.  The
+problem with Wikipedia is that they are trying to do everything (a)
+with wiki; (b) within the confines of the "encyclopedia" framework^1.
+
+Over at PM we are currently talking about significantly expanding the
+set of "OK" objects, by allowing them to bear different labels (like
+"new result") and deciding inclusion/exclusion in the encyclopedia
+proper based on at-least-clearly-defined classification criteria.
+(More interesting: letting users decide which "namespaces" to draw
+data from, so they can create a tailor-made reference work to suit
+their need, even OTF.)
+
+1: Actually, (b) is patently false if you take all of the Wikimedia
+Commons into consideration, but since the various projects there don't
+seem to interface with each other much, it is effectively true; and
+(a) basically kills the possibilities for interesting inter-component
+interfaces anyway.

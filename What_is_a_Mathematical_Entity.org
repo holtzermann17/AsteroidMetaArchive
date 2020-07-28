@@ -1,0 +1,105 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Although this essay may at first sight appear to be "pie in the sky" abstract speculation involving category theory and abstract differential geometry, please be patient --- after a little bit of general nonsense, this essay will settle down such old friends as template matching utilities will emerge in a perhaps unexpected context.
+
+ 1. [[file:Introduction to What is a Mathematical Entity | Introduction.org][Introduction to What is a Mathematical Entity | Introduction]]
+ 1. [[file:What is a Mathematical Entity - Categories and connections | Categories and connections.org][What is a Mathematical Entity - Categories and connections | Categories and connections]]
+ 1. [[file:What is a Mathematical Entity - Abstract Relativity Theory | Abstract Relativity Theory.org][What is a Mathematical Entity - Abstract Relativity Theory | Abstract Relativity Theory]]
+ 1. [[file:What is a Mathematical Entity - The Category of Theories | The Category of Theories.org][What is a Mathematical Entity - The Category of Theories | The Category of Theories]]
+
+
+----
+
+*  Discussion
+
+ * [[file:the big picture on connections and mathematical entities.org][the big picture on connections and mathematical entities]]
+
+----
+
+I'm wondering if you're making this more complicated than it needs to be. A lot of the ideas sound
+just like [[file:Little Theories.org][Little Theories]] to me. I struggled with similar philosophical questions when designing
+the Ghilbert module system, and now feel that Little Theories are pretty much the framework needed,
+although there are still plenty of engineering details to get right.
+
+The "connection" you talk about is basically the same thing as an "interpretation" in the Little
+Theories world. How much sophistication is needed to actually construct these interpretations? In
+particular, just how far can you go with plain 'ol syntactic substitution, and what kind of things
+need more firepower? Your 2+2=4 example is easily done in the Ghilbert module framework, with
+substitution and nothing much else. Just define a very generic "number" interface with the usual
+commutative, associative, and distributive rules for + and *, define your numbers in terms of
+multiplicative and additive identities, and then 2+2=4 is a straightforward theorem. Then, you can
+/export/ this generic number interface from Peano arithmetic, the HOL nat type, Church numerals,
+RR (or NN0 or CC) in set.mm, etc.
+
+Instantiating the theorem is basically syntactic substitution. If you instantiate the PA theorems
+exporting the generic number axioms, then the theorem is "SS0 + SS0 = SSSS0". If you instantiate
+using the export from set.mm, then it's an identity about sets. The fact that the resulting expanded
+theorems are always valid in the underlying axiomatization is an important feature of the Ghilbert
+metalogic, but need not be referred to explicitly. The "import" statement is implicitly a quantifier
+over all systems satisfying the axioms. If you want that quantifier to be explicit (a meta
+"gen" rule), then that's probably a mechanical translation as well.
+
+Would it help to actually define a generic number interface and produce a proof file for 2+2=4,
+as well as exports from two or three axiomatic systems? I have not done so, but it would be pretty
+straightforward.
+
+-- [[file:raph.org][raph]]
+
+Sure, what I do here is very much along the lines of Little Theories and I agree with you the what
+they call "interpretation" is essentially what I am terming "morphism of formal systems" and viewing
+as forming some sort of a connection on a space of mathematical theories.  However, as you say, there
+is still work to be done.
+
+The particular "engineering detail" which I am worried about  here is this one.  Suppose that instead 
+of "$2+2=4$", we were looking at stuff like "$\sqrt{2} + \sqrt{2} = \sqrt{8}$" instead.  What we might
+do (I'm not advocating this as the way to go, merely offerring an illustration.) is make a whole bunch
+of little theories corresponding to different algebraic number fields which would include a notation
+for numbers and for the operations of additions, subtraction, multiplication, and division of them.
+
+In such a framework a certain twin paradox might arise.  Suppose we have two twins, Fricke and Fracke,
+who set out to compute "$\sqrt{2} + \sqrt{2}$".  Fricke works within the little theory corresponding to
+$\mathbb{Q} [\sqrt{2}]$ and comes up with $\sqrt{8}$ as an answer.  Fracke, being something of a 
+smart-aleck, decides to first export to the theory for $\mathbb{Q} [\sqrt{2}, \sqrt{-1}]$, then export
+to $\mathbb{Q} [\sqrt{2}, \sqrt{3}]$ and then export back to obtain $-\sqrt{8}$.  What happened???  
+Since $\sqrt{2}$ and $-\sqrt{2}$ are indistinguishable in the sense of Leibnitz, we need to make an
+arbitrary choice of convention.  As long as we stay within the same little theory and impose our sign 
+convention consistently, all is well, but if we exporting between theories, there is the possibilty
+that we might return to our original theory with a different sign convention but naively might forget
+to account for that possibility.
+
+The reason that such a difficulty arose was exactly because our theory had automorphisms.  To answer
+your earlier question about "$2+2=4$", translating this between proof systems would not be relevant here
+because the ring of integers (or, for that matter, it's quotient field of rational numbers) does not have
+any automorphisms which could lead to trouble.  As for how to handle automorphisms in the case of number fields, there is Galois theory, which is about automorphisms can be used to figure out exactly what 
+conventions are needed in particular cases.  What I am trying to do here is to abstract away those aspects 
+of the theory which are of general relevance, but more about that later.
+
+I describe my example in the quaint form of a story about twins on purpose.  The purpose was to point
+out the similarity the situation here and that of the twin paradox of relativity theory.  There, the
+resolution of the paradox is to note that, even though the twins have arrived at the same place in the
+end, the twin who travelled is describing things from the perspective of a different Lorentz frame.  In
+humanistic terms, we might say that, even though they share the same language, they are using it in
+different ways and hence, to borrow your turn of phrase, are talking past each other than to each other.
+The resolution of the paradox is to recognize this fact.
+
+Hence, I propose that what might be needed here is a notion of "reference frame" for math.  As I said,
+Weyl has already described such a thing and all that I am doing is restating it and generalizing it some
+to make it applicable in a context of formal theories.
+
+I might also to help to point out something of my personal motivation and background.  While I believe 
+that what I am discussing here will prove of use for computer math and hope that this will be an 
+important application, that is not my only motivation, which may explain why I seem to be putting so 
+much energy to make something more complicated than what might actually be required in the application.
+
+In particular, Galois theory has a lot to do with it.  I have always felt that there was something
+fascinating in the type of reasoning used to prove insolubility, but couldn't quite put my finger 
+on it.  It seemed that there was a general principle at work here which had little to do with details
+of polynomials and number fields.  While one can describe Galois theory generally in terms of
+mapping the lattice (or category, depending on your tastes in abstract nonsense) of number fields
+to the lattice (or category) of groups, that didn't seem like the whole story.  What I had in mind 
+was more metamathematical than that.  With the right perspective, one can view the classic impossibility 
+theorems (irrationalty of square roots, impossibility of trisecting angles and duplicating cubes
+with compass and straightedge, impossibility of solving the quintic with radicals) as incompleteness
+theorems.  
+--[[file:rspuzio.org][rspuzio]]

@@ -1,0 +1,311 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(back to [[file:mmj2.org][mmj2]] )
+
+NOTE: this .mm file does not simplify things. It
+does not seem like a good idea...
+
+I can't seem to figure out a way to provide
+the simplicity of Fitch's "subordinated derivation"
+approach. Perhaps for now I will just have to point
+the "student" to the new File/New-Next Proof and
+suggest working through the first 100 theorems in
+set.mm. What we really need is a textbook designed
+for use with Metamath. --[[file:ocat.org][ocat]] 25-Sep-2006
+
+
+
+Revised *proposed* .mm file for use with the
+mmj2 Proof Assistant User Manual. 
+
+Feedback is welcome, especially prior to investment
+of time and energy creating this thing :)
+
+The idea is that the User Manual will have several
+components:
+ * expository section with diagrams, thus enabling
+  the "student" to rapidly form a mental model of
+  the system.
+ * "Why" links inside the expository prose pointing
+  to digressions that explain why something is the
+  way it is, or the idea behind it which serves as
+  a unifying principle in the design of the system.
+  (By putting the "Why" outside the main text the
+  student is not compelled to read a lot of blah-blah
+  stuff -- and subsequent perusals of the User Manual
+  for key facts can be expedited by not bogging down
+  in introductory material.)
+ * Example Proof Worksheet files demonstrate the 
+  actual workings of the system as described in the
+  exposition. These are executable Proof Worksheets
+  that contain their own comments and are basically
+  a self-contained resource -- they can be used
+  independently of the User Manual.
+ * Fulfilling the idea that instructional materials
+  *must* have Activities, a "Hilbertized Natural
+  Deduction" .mm file is provided (see below). The
+  plan is that the student is provided 10 or 20
+  theorems to prove as exercises using the given
+  "axioms", which are the "natural" way of doing
+  propositional logical :) After the student creates
+  Proof Worksheet proofs for the given exercises,
+  s/he can then re-prove the exercise theorems by
+  converting their Proof Worksheets to set.mm's
+  axioms and theorems -- which should be a very easy
+  task, and also educational. (One of the drawbacks
+  for students re-proving set.mm theorems in order
+  is that only previously proved theorems can be used
+  in reasoning -- this .mm file eliminates that
+  problem by giving the student a complete palette
+  of assertions for use in doing the exercises.)
+
+
+    $( <MM> <MODULE> <ID>MMJ2TUT1</ID> <PREREQ> </PREREQ> </MODULE> </MM> $)
+    
+    $(
+    #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+    mmj2tut1.mm - Version of 24-Nov-2006
+     
+                             PUBLIC DOMAIN
+     
+    This file -- specifically, the version of this file with the above
+    date -- is placed in the public domain per the Creative Commons
+    Public Domain Dedication:
+    http://creativecommons.org/licenses/publicdomain/
+    #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+    $)
+     
+                      $c (                                         $.
+                      $c )                                         $.
+                      $c wff                                       $.
+                      $c |-                                        $.
+       
+                      $c ->                                        $.
+                      $c /\                                        $.
+                      $c \/                                        $.
+                      $c -.                                        $.
+                      $c <->                                       $.
+      
+                      $v ph                                        $.
+                      $v ps                                        $.
+                      $v ch                                        $.
+                      $v th                                        $.
+                      $v ta                                        $.
+      
+        PH            $f wff ph                                    $.
+        PS            $f wff ps                                    $.
+        CH            $f wff ch                                    $.
+        TH            $f wff th                                    $.
+        TA            $f wff ta                                    $.
+      
+        IMP           $a wff ( ph -> ps )                          $.
+        AND           $a wff ( ph /\ ps )                          $.
+        OR            $a wff ( ph \/ ps )                          $.
+        NOT           $a wff -. ph                                 $.
+        EQV           $a wff ( ph <-> ps )                         $.
+      
+    ${
+        RE.1          $e |- ph                                     $.
+        RE            $a |- ph                                     $.
+    $}
+        REF           $a |- ( ph -> ph )                           $.
+     
+    ${ 
+        II.1          $e |- ph                                     $.
+        II            $a |- ( ps -> ph )                           $.
+    $}
+        IIF           $a |- ( ph -> ( ps -> ph ) )                 $.
+     
+    ${
+        IE.1          $e |- ph                                     $.
+        IE.2          $e |- ( ph -> ps )                           $.
+        IE            $a |- ps                                     $.
+    $}
+        IEF           $a |- ( ph -> ( ( ph -> ps ) -> ps ) )       $.
+     
+    ${
+        AI.1          $e |- ph                                     $.
+        AI.2          $e |- ps                                     $.
+        AI            $a |- ( ph /\ ps )                           $.
+    $}
+        AIF           $a |- ( ph -> ( ps -> ( ph /\ ps ) ) )       $.
+     
+    ${
+        AE.1          $e |- ( ph /\ ps )                           $.
+        AE            $a |- ph                                     $.
+    $}
+        AEF           $a |- ( ( ph /\ ps ) -> ps )                 $.
+     
+    ${
+        AE-R.1        $e |- ( ph /\ ps )                           $.
+        AE-R          $a |- ps                                     $.
+    $}
+        AEF-R         $a |- ( ( ph /\ ps ) -> ph )                 $.
+     
+    ${
+        OI.1          $e |- ph                                     $.
+        OI            $a |- ( ph \/ ps )                           $.
+    $}
+        OIF           $a |- ( ph -> ( ph \/ ps ) )                 $.
+     
+    ${
+        OI-R.1        $e |- ps                                     $.
+        OI-R          $a |- ( ph \/ ps )                           $.
+    $}
+        OIF-R         $a |- ( ps -> ( ph \/ ps ) )                 $.
+     
+    ${
+        OE.1          $e |- ( ph \/ ps )                           $.
+        OE.2          $e |- ( ph -> ch )                           $.
+        OE.3          $e |- ( ps -> ch )                           $.
+        OE            $a |- ch                                     $.
+    $}
+        OEF           $a |- ( ( ph \/ ps ) -> 
+                              ( ( ph -> ch ) ->
+                                ( ( ps -> ch ) -> 
+                                  ch 
+                                )
+                              ) 
+                            )                                      $.
+     
+    ${
+        NI.1          $e |- ( ph -> ps )                           $.
+        NI.2          $e |- -. ps                                  $.
+        NI            $a |- -. ph                                  $.
+    $}
+        NIF           $a |- ( ( ph -> ps ) -> ( -. ps -> -. ph ) ) $.
+     
+    ${
+        NE.1          $e |- -. -. ph                               $.
+        NE            $a |- ph                                     $.
+    $}
+        NEF           $a |- ( -. -. ph -> ph )                     $.
+     
+    ${
+        EI.1          $e |- ( ph -> ps )                           $.
+        EI.2          $e |- ( ps -> ph )                           $.
+        EI            $a |- ( ph <-> ps )                          $.
+    $}
+        EIF           $a |- ( ( ph -> ps ) -> 
+                              ( ( ps -> ph ) -> 
+                                ( ph <-> ps ) ) )                  $.
+     
+    ${
+        EE.1          $e |- ( ph <-> ps )                          $.
+        EE.2          $e |- ps                                     $.
+        EE            $a |- ph                                     $.
+    $}
+        EEF           $a |- ( ( ph <-> ps ) -> ( ps -> ph ) )      $.
+     
+    ${
+        EE-R.1        $e |- ( ph <-> ps )                          $.
+        EE-R.2        $e |- ph                                     $.
+        EE-R          $a |- ps                                     $.
+    $}
+        EEF-R         $a |- ( ( ph <-> ps ) -> ( ph -> ps ) )      $.
+     
+
+
+-----
+
+While I don't know what expository material you have in mind for the
+mechanics of how Metamath proofs work, there is a feature you may or may
+not be aware of in the metamath program:
+
+ MM> show proof equid /detail 32
+ Proof step 32:  pm2.61i.1=syl $p |- ( A. x -. A. x x = x -> x = x )
+ This step assigns source "syl" ($p) to target "pm2.61i.1" ($e).  The source
+ assertion requires the hypotheses "wph" ($f, step 10), "wps" ($f, step 15),
+ "wch" ($f, step 16), "syl.1" ($e, step 27), and "syl.2" ($e, step 31).  The
+ parent assertion of the target hypothesis is "pm2.61i" ($p, step 36).
+ The source assertion before substitution was:
+     syl $p |- ( ph -> ch )
+ The following substitutions were made to the source assertion:
+     Variable  Substituted with
+      ph        A. x -. A. x x = x
+      ch        x = x
+ The target hypothesis before substitution was:
+     pm2.61i.1 $e |- ( ph -> ps )
+ The following substitutions were made to the target hypothesis:
+     Variable  Substituted with
+      ph        A. x -. A. x x = x
+      ps        x = x
+
+My intent for this feature was to try to make things as explicit as possible
+for a beginner.  I don't know whether anyone has found it helpful; I've had
+little feedback about it.
+Perhaps people don't know it exists.  Nonetheless it might save some time
+when preparing a manual, so you don't have to figure out the substitutions
+for an example by hand but can copy them from the output of this command.
+--[[file:norm.org][norm]] 25 Sep 2006
+     
+I hadn't noticed this new feature but I will try it.
+
+: It can sometimes be helpful in figuring out the substitutions in
+e.g. [http://us2.metamath.org:8888/mpegif/biigb.html biigb]. :)
+
+By the way, once, I had tried 
+sh n / col and I had noticed it didn't work but I hadn't made very deep tests. 
+
+: Oof.  It seems I never tested it in 'show new' (I
+never use this feature).  Thanks for the report; it is now fixed in 
+[http://us2.metamath.org:8888/index.html#mmprog Version 0.07.24].  
+
+What is 
+this feature for ? -- [[file:frl.org][frl]] 25-Sep-2006
+
+: See the help and examples below.
+
+ Metamath - Version 0.07.24 25-Sep-2006
+ ...
+ MM> help show new_proof
+ ...
+ in progress.  It is identical to the SHOW PROOF command, except that the
+ ...
+ MM> help show proof
+ ...
+     / COLUMN <number> - Overrides the default column at which
+         the formula display starts in a Lemmon style display.  Affects
+         only displays using the / LEMMON qualifier.
+ ...
+ MM-PA> show new_proof /lemmon
+ 5 a1i.1          $e |- ph
+ 8 ax-1           $a |- ( ph -> ( ps -> ph ) )
+ 9 5,8 ax-mp      $a |- ( ps -> ph )
+ MM-PA> show new_proof /lemmon /column 10
+ 5 a1i.1    $e |- ph
+ 8 ax-1     $a |- ( ph -> ( ps -> ph ) )
+ 9 5,8 ax-mp  $a |- ( ps -> ph )
+ MM-PA> show new_proof /lemmon /column 20
+ 5 a1i.1              $e |- ph
+ 8 ax-1               $a |- ( ph -> ( ps -> ph ) )
+ 9 5,8 ax-mp          $a |- ( ps -> ph )
+
+
+: BTW true Lemmon style has the justifications (labels) on the
+right, but I found that often makes it 
+hard to visually line up the label to the step, because there
+is often a large gap from the end of a proof step to the label column.
+The longer proof steps will push the label column to the extreme
+right of the screen, but many proof steps can be much shorter,
+leaving the gap.
+
+: I guess we're getting way off-topic here - metamath bugs on the mmj2 page?
+Sorry, [[file:ocat.org][ocat]].  I'll just mention that none of these display modes
+are as sophisticated as mmj2's, to get back on topic. :) --[[file:norm.org][norm]] 25 Sep 2006
+
+:: This is useful info. If I have time I may (considering) 
+a "Metamath.exe Survival Cheat Sheet". But the task list I
+wrote yesterday leaves little time for writing a textbook :)
+The good news is that mmj2 stands on the shoulders of Metamath
+and I don't have to prove jack: I can just say, "If you have
+questions concerning the ... refer to the wonderful book written
+by Norm Megill, "Metamath.pdf", which explains the theory of
+... in detail." I will have time for some diagrams and 
+terse remarks. The key will be out-of-the-box activities
+that get the "student" doing some proof of something right away.
+If they want explanations about "logic" there are 1000 books
+available online, and even summaries ("Dr. Math"). --[[file:ocat.org][ocat]]
+ 
+(back to [[file:mmj2.org][mmj2]])

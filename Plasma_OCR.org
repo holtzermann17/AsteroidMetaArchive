@@ -1,0 +1,346 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I'm planning an OCR program. Would you like to mentor such a project?
+
+--[[file:alih.org][alih]]
+
+Maybe!  AFAIK, there isn't any 'open' math OCR program.  On the other hand, I've also heard that math OCR is a hard problem to solve.  Tell me more about your plans.
+--[[file:jcorneli.org][jcorneli]]
+
+Even non-math open OCRs are quite rare. Most notable of them are Clara, Gocr and Ocrad
+([http://software.newsforge.com/article.pl?sid=05/12/15/1848236&tid=152&tid=130 a review of open OCRs]).
+Clara is rather a letter clusterizer than an OCR; by design, it tries to work without pre-knowledge of letters. Gocr and Ocrad, on the contrary, work by "feature extraction": each letter is hard-coded into the program, and that makes adding new letters painful.
+
+In 2004-2005, I've contrived some algorithms for letter clusterization. They are used for bitonal !DjVu compression in [http://djvu.sourceforge.net DjVuLibre] >= 3.5.14. I've also made a separate project [http://minidjvu.sourceforge.net minidjvu]; it is now the only open-source program that can compress multiple pages into !DjVu format.
+
+Among that algorithms, the most relevant to OCR is quick extraction of medial axis.
+A medial axis is a geometric place of centers of circles inscribed into the letter.
+
+Good news: medial axis is perfectly legible.
+Here's how it looks:
+
+    Original letter          Medial axis
+  
+  .....@@@@@@@@........  .....................
+  ...@@@@@@@@@@@@......  ......@@@@@..........
+  ..@@@@@@@@@@@@@@.....  .....@@...@@@........
+  ..@@@@@...@@@@@@@....  ....@@......@@.......
+  ..@@@@.....@@@@@@....  ....@........@.......
+  .@@@@@.....@@@@@@....  ....@........@.......
+  .@@@@@.....@@@@@@....  ....@........@.......
+  ..@@@@.....@@@@@@....  ....@........@.......
+  ..........@@@@@@@....  .............@.......
+  .......@@@@@@@@@@....  .............@.......
+  .....@@@@@@@@@@@@....  ........@@@@@@.......
+  ...@@@@@@@@@@@@@@....  ......@@@....@.......
+  ..@@@@@@@..@@@@@@....  .....@@......@.......
+  .@@@@@@....@@@@@@....  ...@@@.......@.......
+  .@@@@@.....@@@@@@....  ...@.........@.......
+  @@@@@......@@@@@@....  ..@@.........@.......
+  @@@@@......@@@@@@....  ..@..........@.......
+  @@@@@.....@@@@@@@....  ..@..........@.......
+  @@@@@@....@@@@@@@.@@@  ..@@.........@.......
+  .@@@@@@@@@@@@@@@@@@@@  ...@@.....@@@@@......
+  .@@@@@@@@@@@@@@@@@@@@  ....@@..@@@...@@@@@..
+  ..@@@@@@@@@.@@@@@@@@.  .....@@@@............
+  ....@@@@@....@@@@@...  .....................
+
+The main hope and inspiration is: a medial axis is essentially a 1-dimensional object. The plan is to treat it as a graph of curves and compare letters that way. I hope that works.
+
+About OCRing math: it's hard to tell now for sure how complicated it will be when the core engine (recognizing one math character) is already done. And the engines of Gocr and Ocrad are not even remotely there; Clara is a clusterizer and doesn't count. I guess that making a prototype won't be hard, but some convoluted formulas would probably mess it up. At least, my proposal has an advantage: extending the character library should be easy.
+--[[file:alih.org][alih]]
+
+I like this description (I'm a sucker for ascii art ;))!  With math OCR, the problems
+are mostly with layout, as far as I know.  Richard Fateman has written some papers
+about this problem.  I don't know if there much else written on it!
+John Borwein recently described to me his strategy for doing math OCR "one equation at a time" --
+apparently this makes things easier, since separating the equations from the text
+is a bit of a problem in its own right!  I don't know what OCR backend Borwein uses,
+but we could ask him.  Anyway, I think clear description of the /research problems to solve/ (whether special for math OCR or for OCR in general or for single-character OCR or whatever)
+together with any special development problems (e.g. possibly integrating any new work with existing tools) would be good to write down, and I imagine such a thing could make
+a great proposal.  (Recall that Google is interested in OCR for its own reasons!)  I'd like to see a more detailed proposal of this
+sort before going full-steam-ahead, and I am especially interested in anything relevant to math OCR.
+I'd like be quite happy to do some mentoring for a project that will have a positive impact on math OCR -- and if we got a free and even marginally usable package together by the end of the summer, I'd be thrilled!
+--[[file:jcorneli.org][jcorneli]]
+
+I've taken a look at Fateman's pages. It seems that his goal is much
+broader: parsing the formula, including understanding of symbols and
+interpreting ellipses. That is too big for a summer. My maximal goal
+is to recreate !TeX representation that will more or less resemble the
+original for not-too-hairy formulas. But I'd like to put more efforts
+into making a good one-character recognizer than to tweaking math
+stuff.
+
+OK, I'll write a more detailed proposal, maybe later (making a diploma now). Also, before the middle of May, I'll try to put together a prototype that will use minidjvu facilities to recognize characters.
+
+There's a license issue about integrating existing work, because much of it is GPL'd. What do you think about choosing GPL for the project?
+--[[file:alih.org][alih]]
+
+I have no problem with GPL, and making use of existing material is the name of the game!
+
+As for 1-character recognition versus formula recognition: I like your
+idea of biting off a summer-sized chunk of the math OCR problem.
+However, showing (a) how the particular chunk you choose goes beyond
+existing (or available) OCR work; (b) how it fits into the overall
+math OCR problem; and, (c) that it really can be feasibly completed in
+a summer -- all seem important.  I'd like the proposal to include
+'making a roadmap for free math OCR' -- since you're right, math OCR
+is probably too huge to finish in one summer, but nevertheless, you
+can (without doing any terrible tweaking) lay some foundations.  
+
+On the single-character recognition stuff, I wonder if anything in
+[http://www.cogs.indiana.edu/people/homepages/hofstadter.html Douglas Hofstadter]'s
+"Letter Spirit" work might somehow fit in.  It seems rather different to me
+(generating letters as opposed to recognizing them); but you might find
+something interesting there.  (His other AI work seems pretty cool to me too!)
+
+--[[file:jcorneli.org][jcorneli]]
+
+Am I right to assume that by math OCR you mean a system that could not only read characters but also understand (probably in CAS sense) all the formulas?
+
+Thanks for the link! I especially liked the Sabretooth font :). In my opinion, the grid is potentially dangerous (too many information lost). Latin alphabet is fine, but distinguishing X from \chi might pose a problem. But I'll keep it in mind.
+--[[file:alih.org][alih]]
+
+Yes and no.  Certainly there is some level of understanding going on if one recognizes
+formulas like $x^{x^{x^\ldots}}$, however this understanding is not precisely mathematical,
+it is more -- spatial.  When I say "math OCR", I mean a program that turns typeset expressions
+into !LaTeX code that typesets the same expression.  I agree that if the program can't
+recognize single characters, then it can't get anywhere!  But in addition, spatial
+understanding of a certain kind of 2D patterns is essential for math OCR to work.
+As I mentioned, there is also the challenge of separating the 2D regions from the more
+fundamentally 1D lines of plain text. --[[file:jcorneli.org][jcorneli]]
+
+Great, I understand it the same way. It were Fateman's pages that created confusion.
+
+Originally I planned a plain-text OCR, but it was after speaking with you that I thought math OCR is also more or less feasible :) If you're not sure that something that big can be done in a summer, we can settle on a plain OCR :)
+
+Meanwhile, I've made a [http://alih.wikispaces.com/space/showimage/protoplasm-1.0.tar.gz prototype]. It recognizes formulas that consist of digits in Computer Modern Roman font, some symbols ( ()+-*/ ) and \frac (if not nested too deeply, otherwise the letters become too small).
+
+The 1-char recognizer is dumb, but it's very simple and only has one sample of each shape. The layout is handled by hbox/vbox decomposition: we try to split the formula horizontally or vertically. The prototype also features the "bitonize" (pgm->pbm) tool that works smarter than pgmtopbm (but drops characters that intersect with the border).
+
+There's no readme file. "./compile" compiles, "./protoplasm <PBM or PGM file>" runs (try ./protoplasm example.pgm).
+Note that the directory with all the stuff, if it's not ".", should be written into the protoplasm script.
+
+--[[file:alih.org][alih]]
+
+Sweet, I'll check it out! --[[file:jcorneli.org][jcorneli]]
+
+I realized that I'd better write the big proposal in parts. Here's one part:
+
+*  Goals
+
+Primary goal:
+ * A 1-character recognizer that won't require special programming for each character.
+      This is something I haven't seen anywhere (Clara OCR doesn't count since it
+      requires user intervention). But that doesn't mean it's impossible: a very simple
+      algorithm is demonstrated in the prototype.
+
+
+Secondary goal:
+ * A layout analyzer that would recognize 5 basic layout patterns:
+## horizontal
+## vertical
+## subscript
+## superscript
+## overlap (e.g. square root)
+This is sufficient for most formulas and text (however, spaces should be detected separately; Ocrad detects them fine).
+
+
+NOT goals:
+ * Speed (unless it becomes unreasonably slow).
+ * Preprocessing image. That's better handled by a separate tool
+      like [http://unpaper.berlios.de unpaper] or my simple `bitonize'.
+ * GUI.
+ * Any interpretation of formulas that goes beyond constructing LaTeX.
+ * Font style detection (except italic);
+      in particular, medial axis method drops boldness.
+ * Detecting space tunings like \; or \mathop.
+ * Coping with rare black-filled shapes like \bullet, \clubsuit, etc. 
+      (extracting medial axis will ruin them)
+
+----
+
+: One method I heard about many, many years ago was to take the radius of
+curvature of the medial axis vs. distance along the curve (not sure how
+the curve "start" was determined nor what you do at an
+intersection), then normalize the length of the
+curve, then take the FFT, then compare the mean-square error of
+FFT terms (possibly with some weighting, e.g. to suppress high-frequency
+noise) against a reference table.
+That's all I remember about it, if I even remember it correctly.
+--[[file:norm.org][norm]] 20-Apr-2006
+
+:: I've also heard something about FFT, but I recall it was about online handwriting recognition. If so, then it answers the questions about the curve start and intersections. But I haven't heard of any implementations.
+--[[file:alih.org][alih]]
+
+
+And the project can be divided in two: 1) character locating/recognition and 2) layout reconstruction. The prototype is organized just like that. So if anyone wants to do OCR too, we can split the task :)
+--[[file:alih.org][alih]]
+
+I've found [http://kognition.sourceforge.net Kognition]. It has a good 1-character recognizer along the lines of medial axis extraction; probably it can be used for math symbols.
+--[[file:alih.org][alih]].
+
+: Given this, focusing on making as useful a math OCR program as possible seem all the more feasible.  I think
+a proposal could say that "I'll do reseach to understand the state of the art
+in math OCR theory (cite some references); then I will use a pluggable 1-character recognizer to build as good a math OCR as I can over the course of the summer, with an eye towards extensibility."
+Hopefully we can all be scanning in math textbooks before long! --[[file:jcorneli.org][jcorneli]]
+
+:: Yeah, the math OCR has just got closer. But I won't hurry with the proposal; maybe I'll try to program something before May 8 and see how it works. --[[file:alih.org][alih]]
+
+Here's another cool link: [http://www.inftyproject.org/en/ InftyProject]. They distribute a free (but not open-source) math OCR program, and they have an (almost) freely available database of 688,570 scanned characters. 
+--[[file:alih.org][alih]]
+
+: I know about that project; they refuse to release their source code.  But at least it seems to prove that math OCR can be done.   OTOH, no doubt they made a huge investment to build this.  So the real question is, can we do the same thing for much cheaper?  --[[file:jcorneli.org][jcorneli]]
+
+:: It was rather their database that made me ecstatic. I had nothing remotely comparable when I was doing the !DjVu stuff. It's a big thing, seven students worked on it. And they're giving the database for free. So their investment wasn't totally wasted :)
+
+--------
+
+Sorry I havent replied earlier, my attention has been focussed elsewhere.  Hopefully, better late than never (at least 8 May is still 4 days away).
+
+As I see it, this Math OCR business is some sort of disassembler --- we would like to go backwards from the binary file (this time a graphical image rather than an executable image) to the source (TeX).  One thought is that you might want to break up the process a step further, set your sights a step lower (as an intermediate step) and first reconstruct DVI and then reconstruct TEX.
+
+On the topic of disassembly, in my memory there distinctly stands out a book from my Sinclair ZX=80 days.  It was a book on machine language which included writing a disassembler as a final project.  What especially has stuck with me from that book is their notion of levels of disassembly.  Based on that notion, here is one possible approach to MOCR:
+
+: *Step 0* (raw data): We have a graphical image of some mathematical text we would like to recognize.  In enginerring terms this is a bunch of bits on a grid, in math terms this is a mapping from a product of (discretized) intervals into the truth values.
+
+: *Step 1* (organization): We determine the cardinal directions (horizontal and vertical) and organize the pixels int clusters (which presumably are characters or, perhaps, connected components of characters).  Each of these goes in some bounding parallelogram, so the output is a bunch of boxes, each of which contins the graphical image of a character.  Whilst this may still be a far cry from TeX boxes, it represents the beginning of a process will eventually turn these boxes of raw data into TeX boxes.
+
+: *Step 2* (description):  The contents of each box are described.  This includes such things as the medial axis and the Fourier transforms discussed above.  The end result is a description of the geometrical image contained in the box.  An important feature of this is that this description is (at least approximately) invariant under changes of graphical representation --- were we to change the resolution (dilation) or translate the image or rotate it or distort it a bit (i.e. act on it with the Moebius group) the description would stay the same --- whatever it is that makes "a"'s look different from "b"'s ought not to depend on what angle we view the page from.  This suggests to me that good old invalriant theory and differential geometry might be a place to look for insights into this process.
+
+The chasm: /At this point, we pass the great divide from graphical processing to artificial intelligence, from geometry to formal linguistics./
+
+: *Step 3* (recognition):  We are still working boxwise.  We take the higher-level, invariant description generated in step 2 and try to figure out what character(s) it best describes.   At this point, our boxes begin to resemble something more like TeX boxes or, more accurately, DVI boxes.  Based on what character we think it might be, we can make reasonable assignments of bounding box, baseline, and centre point.
+
+: *Step 4* (preliminary contextualization):  In the last few steps, we have focussed our attention on individual boxes.  Now that we have a reasonable idea what these may be, it is time to step back a bit and look at the picture they comprise.  As a start, we will look at things like the spacing between the bokes, which boxes seem to be in a line and the like.  After this step, we will generate something like a DVI file and start putting back some of the TeX glue.
+
+: *Step 5* (intermediate contextualization):  Now we consider the specifics of our symbols to gain further insight into our text.  For instance, if we see a summation syblo, we know to look for limits and an argument to which it may be applied, if we see delimiters, we look for matcing delimiters.  At this stage, we can reconstruct something like TeX macros to describe the text.  I think that this could be done by means of an expert system with production rules about symbols and TeX macros and goals contravariant to the way TeX is compiled.
+
+: *Step 6* (deep contextualization):  We now graduate from print demon to typesetter to mathematician.  We make use of mathematical knowledge to try to understand the meaning of the mathematical formulae represented in our graphical image.  To do this, we shall use the context of the whole equation, of nearby equations, and the surrounding text.  Now we can produce output in something like h-code.
+
+So there you have my "TeXoholics anonymous" 6-step plan from recover from addiction to graphical images ;)  I think something like this could be done nicely in a scholium-based framework.  At step 1, we generate our base document as a set nodes corresponding to the different characters-to-be, then add links between them and attach scholia to them in the subsequent steps (say scholia saying that this blob has a certain median line) then refactor the whole as scolia over a different base document (in this case, a DVI or TeX source).  This reminds me of a construction in algebraic/differential geometry where one might construct a bundle/sheaf over some space, then re-express the total space as a bundle/sheaf over some other base space which appears in teh course of the construciton.
+
+To keep things managable for a summer, one might restrict one's focus to a particular mathematical document or closely-related class of documents.  For instance, we might take Whitehead and Russel's Principia and develop the program to recognize the notations contained therein.  This already could have some handsome payoffs.  It might well be possible to plow ahead to step 6 with this work and tie it in with some of what Joe and I did last year so as to be able to translate notations.  Given that probably the biggest obstacle to modern readers perusing Whitehead and Russell (and Quine and Lukasiewicz ....) is the notation, this would be a great service to the mathematical logic community.  I'm sure the metamath people would find it useful, especially since we ought to be able to output the fomulae in their notation.  As deliverables for this project, we could produce not only the OCR program, but also an edition of the PM.  Heck, if Google funds this, maybe we could have them provide us with a nice scanned image of the PM from their scholar project and, if this succeds, maybe there would be a way to continue some sort of contract work with Google developing the OCR programs for math which they then apply to the math books in their collection.
+--[[file:rspuzio.org][rspuzio]] 4 May 2006
+
+Step 0: Yeah, it's called a bitmap, you know.
+
+Step 1: Called splitting elsewhere. A standard trick is to jump back from step 3 to splitting if things have gone wrong. Gocr does it.
+
+Step 2: Invariant description is too strong a condition. We just need some mapping into a "description space" with a metric on it. It might be even resolution-dependent. And the metric might be asymmetric. The description needs not to stay the same when rotated (imagine < and > to be recognized as same).
+
+Step 3: It is not obvious that we can clearly divide this from step 2, no matter what philosophy says about chasms. I'd say step 2 is only a speed-up cache for step 3.
+
+Step 4: I'd call this line detection and formula detection.
+
+Step 5: That's layout analysis for formulas.
+
+Step 6: I'm not going to do that!
+
+Restricting to PM: nope. I already have a big ground-truthed character database made by seven students. That will be my testbed for the recognition engine (steps 1-3).
+
+The general idea of early recognition is something I've implemented it in the prototype and said I'll continue this way. But this approach is unorthodox. Compare your plan with the GNU Ocrad list:
+
+  1) read the image.
+  2) optionally, perform some transformations (crop, rotate, scale, etc)\.
+  3) optionally, perform layout detection.
+  4) remove frames and images.
+  5) detect characters and group them in lines.
+  6) recognize characters (very ad hoc; one algorithm per character).
+  7) correct some errors (transform l.OOO into 1.000, etc).
+  8) output result.
+
+FineReader also does zoning (= layout detection) first, then recognition. That's because early recognition makes both zoning and recognition harder. For instance, in your plan, baseline is determined by recognition; in other OCRs, baseline /helps/ to recognize. When I've chosen early recognition, I fully understood the consequences.
+
+--[[file:alih.org][alih]]
+
+I've just realized that Ocrad can be used as a column/line detection tool. Run it with -x <file> option and it will print a list of text blocks and lines. It dislikes \frac's, however. But now I think that using Ocrad will be easier than playing with early recognition. --[[file:alih.org][alih]]
+
+Kognition displays extremely poor performance. Like this:
+
+  OD2 DI ?h8 hi?hIi3ht5 OI thP 98Om8tci8 th8DrY
+
+Too bad I spent time on it.
+--[[file:alih.org][alih]]
+
+I felt it would be wiser to shift only one mountain per summer. Joe, what would you say if I'll cut the proposal to developing a omnifont engine?
+
+
+I suggest a pre-proposal: show the need/usefulness/estimated difficulty/originality/etc., of each possible proposed project, in a tabular format, one line per item or so.  Then we'll talk about it.  E.g. I don't know offhand why the world needs a(nother?) omnifont engine. --[[file:jcorneli.org][jcorneli]]
+
+Here goes.
+
+An omnifont engine is useful for the following purposes:
+ 
+ 1. It would be the essential component in a math OCR.
+  It's anyway necessary due to unmached ease of adding new characters.
+    (template matchers are also part of the fun, but they won't do the whole thing)
+    
+ 1. Augmenting capabilities of other OCR engines.
+    The developers of !CuneiForm OCR acknowledged that they use an omnifont
+    engine for the first pass (and finishing with a template matcher).
+    !FineReader boasts its "fountain" method
+    which seems to be a hybrid of omnifont and traditional approaches.
+
+ 1. (Bonus) Making an OCR for Cyrillic and Greek alphabet.
+
+Unfortunately, omnifonts are said to display weaker performance on their own than template matchers.
+(That surprises me. I think that's because OCR companies invest into large database.)
+But hybrid omnifont/matcher systems are reported to perform better. (I shall see whether I can plug in the pattern matcher from DjVu).
+
+There's only one implementation of omnifont engine that I know of, and that's Kognition. It has questionable
+thinning (meanwhile, I've put together [ftp://ftp.berlios.de/pub/plasmaocr/thin_demo-1.0.tar.gz my thinner]). 
+The Hausdorf metric is poorly implemented in Kognition, as one can see looking how it identifies e with 2.
+So, softly speaking, there's room for improvement.
+
+Difficulty is hard to determine, especially in terms of achieved results. To the end of the summer, I hope to be at least able to recognize characters, including math, on samples of 600dpi and perfect quality like those that come with !InftyReader ([http://www.inftyproject.org/demo/sample1.tif sample1.tif]).
+
+Other proposals? Well, I had a couple of thoughts, but there's nothing I'd like to do as much as an OCR engine, except for a next generation of ufomath :). Here goes:
+
+ * OCR into HTML with formulas as pictures.
+  * Difficulty: unknown, but for minimal results, we can use gocr for everything but formulas. So the main difficulty is detecting formulas without recognizing them. Formulas usually have fancy layout or specific gocr-recognizable characters like parenthneses, digits or +/-, so I think that woudn't be very hard. But again, I'm afraid of spending too much time on layout when there is engine to write.
+
+ * OCR with user intervention, like in Clara OCR. While that's more promising, that would be much harder to test.
+  * Difficulty: even harder. Seems a paradox, because a user intends to help the program. But I think the addiction to the user's help is a trap: it prevents automatic testing on something like !InftyCDB.
+
+ * Recognizing clearly handwritten (Graffiti) formulas.
+  * Usability: Hm, I can't think what to use it for. Just a crazy method of entering formulas into a computer or searching for a LaTeX command.
+  * Difficulty: Not too hard. Graffiti recognition is easier than it seems. Linux on handhelds has acceptable recognition (3x3 grid + regexp), and editing distance works wonders (not to mention FFT, which I don't trust). Again, the layout; but it's only one formula, so hbox/vbox decomposition like in protoplasm should do.
+
+--[[file:alih.org][alih]]
+
+I've just had a successful experiment with next [ftp://ftp.berlios.de/pub/plasmaocr/minidjvu-0.45.tar.gz DjVu compressor prototype]. Compressing a 97K PNG file into a 9K !DjVu file looks cool. More importantly, it opens new possibilities for OCR. I have to think about it. If only I could estimate its OCR performance right away...
+--[[file:alih.org][alih]]
+
+
+Alih, this looks good.  Write it up in a little more detail and submit it!
+Your "other proposals" can go in a "future work" section.  Make sure to make a good introduction
+stating the lack of any F/LOSS OCR engine for math, and why your approach is a step in the right direction.
+Such a proposal will have /my/ strong support (I hope the powers that be will feel similarly). --[[file:jcorneli.org][jcorneli]]
+
+Thank you! I've searched for FLOSS and found a !PhD student position in Germany about OCR. Wow, probably you've just influenced my future career. Well, if you know something as rocking as !InftyCDB and FLOSS, please don't hesitate to tell it now :)
+
+I've submitted it. After thinking about the classifier, I've changed the mission statement to an adaptive OCR engine. Alea jacta est. Cheers. --[[file:alih.org][alih]]
+
+I've created the [http://plasmaocr.berlios.de project at Berlios] with [http://plasmaocr.berlios.de/wiki wiki] (empty now), and made the [http://prdownload.berlios.de/plasmaocr/plasma-0.1.tar.gz first release]. It is basically protoplasm, but plugged into Ocrad and supplied with a better pattern library. No adaptivity yet. --[[file:alih.org][alih]]
+
+: By the way, do you have some stock input to test against?  
+I did't see any in your distribution. I tried your program
+with my own (PGM) input, but couldn't get it to work yet (got glibc malloc() corruption).  But given that there was a fatal bug in the PGM parser (I can mail you a patch to fix it), I'm guessing it works only on PBM images right now, right?  Anyway, this work looks interesting, keep it up :-)
+-- SteveCheng
+
+:: Yeah, thanks, I've already found the bugs. But PGMs are anyway recognized a bit /worse/. Don't know why... probably because the program was trained on bilevel !InftyCDB. Strange, anyway. So I suggest converting them to PBM.
+
+:: Smart PGM to PBM conversion is a big problem of its own. Thresholding (pgmtopbm -threshold) is crude, but more or less working. I use my "bitonize" (svn checkout svn://svn.berlios.de/plasmaocr/trunk/utils/ to download it), but its edge detection is dumb and nowhere near Canny. Commercial !DjVu compressors use some sort of adaptive thresholding. As with everything, scientific papers are way ahead of available implementations.
+
+:: I've put 6 sample pages into ftp://ftp.berlios.de/pub/plasmaocr/images/ . --[[file:alih.org][alih]]
+
+Wrote something like an article: [http://plasmaocr.berlios.de/fftsplit.html Adaptive Splitting]. --[[file:alih.org][alih]]
+
+----
+OCR was recently given a short discussion in the 'free software business' mailing list (always an interesting venue).
+
+http://www.crynwr.com/cgi-bin/ezmlm-cgi?sss:11243:200606:nhgcpcpnkjfddejknggp#b
+
+--[[file:jcorneli.org][jcorneli]]

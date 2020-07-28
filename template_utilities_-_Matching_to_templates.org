@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To do template substitution, we are given a template and assignment of values to variables, and produce the resulting expression. We now consider a sort of "inverse problem", namely, given a template and an expression, is there some assignment of subexpressions to the placeholders of the template such that the expression can be obtained by substitution? (In other words, does the template represent the expression?)
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

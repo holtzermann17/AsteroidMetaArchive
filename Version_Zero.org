@@ -1,0 +1,108 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page will discuss the specification and implementation of the zeroth version of h-code.  In  the interests of being able to complete this project in a reasonably short time, some severe restrictions and simplifications will be imposed.  In particular, we shall leave out such possible advanced features as object-oriented programning and quotation.  Therefore, this version may be thought of as some sort of toy model or demonstration version of h-code.  
+
+To keep the project focussed, we shall pick a small body of theorems in some area of mathematics like elementary group throry or finite sums, transcribe them into h-code, and compile them using the zeroth version of the program.
+
+This project will consist of three parts: a body of mathematical writing which will be rewritten in h-code, a description of the language, and programs that implement this description and can process the h-code translation of the first part.
+
+* Language definition
+
+This is a tentative description of the language based on discussions and examples.  While the final product will have the same look and feel to it as this protoype, we also expect that it may differ from it on various points.
+
+[[file:grammar for hcode.org][grammar for hcode]]
+
+** Inbuilt Functions
+
+*** Metamathematical
+
+defthm
+
+; defn :
+ * *Usage*: (defn <name> (<argument> ... <argument>) <definition>)
+ * *Description*: Explicit definition.  The term being defined should not appear in the definition. 
+; defm :
+ * *Usage*: (defm <def-name> (<name> ... <name>) (<property> ... <property>))
+ * *Description*: Implicit definition.  One or more terms are being defined implicitly via their defining properties.  Also, a definition-name is provided for so that one can refer to the  definition (more accurately, to the defining properties) in proofs.
+; let:
+ * *Usage*: (let ((<name> <expression>) ... (<name> <expression>)) <expression> ... <expression>)
+ * *Description*:  Assignment operator.  Indicates that the names stand for the expressions they are paired with.  If just one assignment is made, this is the same as creating (defn <name> nil <expression) who's scope lies within the `let' form, but more convenient and flexible.
+
+
+: I made this `let' like the LISP `let'.  Not sure if this description works,
+but I do think this is the sort of `let' we should use. --[[file:jcorneli.org][jcorneli]]
+
+*** Bookkeeping
+; require:
+ * *Usage*: (require <feature>)
+ * *Description*:  Similar to elisp require.
+; provide:
+ * *Usage*: (provide <feature>)
+ * *Description*:  Similar to elisp require.
+
+*** Logical
+
+; if :
+ * *Usage*: (if <expression> <expression>)
+ * *Description*: Logical connective "if" (conditional)
+; not :
+ * *Usage*: (not <expression>)
+ * *Description*: Logical connective "not" (negation)
+; and :
+ * *Usage*: (and <expression> ... <expression>)
+ * *Description*: Logical connective "and" (conjunction)  It should take at least two arguments, but more are allowed for convenience.
+; or :
+ * *Usage*: (or <expression> ... <expression>)
+ * *Description*: Logical connective "or" (disjunction)  It should take at least two arguments, but more are allowed for convenience.
+; iff :
+ * *Usage*: (iff <expression> ... <expression>)
+ * *Description*: Logical connective "iff" (biconditional)  It should take at least two arguments, but more are allowed for convenience.
+; exists :
+ * *Usage*: (exists (<variable> ... <variable>) <expression>)
+ * *Description*: Logical quantifier "exists" (existential quantifier)  For convenience, it is allowed to bind any number of varibles so that one can write, say, (exists (x y z) (P x y z)) instead of the more cumbersome (exists (x) (exists (y) (exists (z) (P x y z))))
+; forall :
+ * *Usage*: (forall (<variable> ... <variable>) <expression>)
+ * *Description*: Logical quantifier "forall" (universal quantifier)  For convenience, it is allowed to bind any number of varibles so that one can write, say, (forall (x y z) (P x y z)) instead of the more cumbersome (forall (x) (forall (y) (forall (z) (P x y z)))).
+; eq :
+ * *Usage*: (eq <expression> <expression>)
+ * *Description*: Predicate of equality
+; exists-unique :
+ * *Usage*: (exists-unique (<variable> ... <variable>) <expression>)
+ * *Description*: Logical quantifier "exists-unique"  It can be defined in terms of /exists/, /eq/, and connectives, but is used frequently enough to justify inclusion as an inbuilt function.  As with the other two quantifiers, it can be used with multiple variables to save space.
+
+*** Set-theoretical
+
+elt
+
+is-set
+
+atom
+
+empty-set
+
+subset
+
+union
+
+intersection
+
+setminus
+
+pair
+
+tuplet
+
+prod
+
+setof
+
+lambda
+
+
+------------
+
+Back to [[file:h-code.org][h-code]]
+
+----
+[[file:Comments on hcode version zero.org][Comments on hcode version zero]]

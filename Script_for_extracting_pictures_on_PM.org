@@ -1,0 +1,103 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[[file:Output from the 2006-2-20 snapshot.org][Output from the 2006-2-20 snapshot]]
+
+See also: 
+[[file:Centralized figure database for PM entries.org][Centralized figure database for PM entries]],
+[[file:Centralized figure database.org][Centralized figure database]]
+
+**  Discussion
+What is the easiest way to (automatically) access the .eps files on PM? 
+I know that I can manually download them from directories like this:
+[[file:http://aux.planetmath.org/files/objects/7634/.org][http://aux.planetmath.org/files/objects/7634/]]. However, it
+would be nice to be able to do this in some automatic way. For example, 
+it would be nice to have a script that generates a .pdf from all real number entries
+from the latest snapshot. To do this, .eps files are also needed.
+-- [[file:matte.org][matte]]
+
+Probably 'find -name "*.eps"' applied to the tarball is the best way
+to find eps files.  Pipe to 'xargs' to do stuff with the files you find.
+
+Probably the best way to build a PDF of all "real number entries"
+would be to modify the code for the [[file:FEM.org][FEM]].  I would be willing
+to help you with that, if you tell me more about what you want.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Arrr.. So the .eps files are in the snapshots. 
+I'm running this on windows and all the eps files seem to be missing. 
+I guess my version of tar cannot handle files with more than one period in
+the name. Have to look into it. 
+As for the real number project it would be nice to have a script
+that inputs a list of canonical names and combines these into one latex file.
+The canonical names would be 
+entries related to the project presented in a logical order.
+If you have some source for the FEM, could you put it on this wiki? 
+This kind of script would be useful for all kinds of projects, where participants want
+some global view of a topic and how it is evolving.
+It would also be nice to start working on a script that automatically generates  
+a .pdf of all PM content. 
+--[[file:matte.org][matte]]
+
+I don't remember about the EPS files and the snapshots, actually.
+Of course I have FEM source.  It may be a little while til
+I have time to dig up the latest version though.   You don't need to tell me it would be useful. --[[file:jcorneli.org][jcorneli]]
+
+: By FEM source I meant some script for generating the source. Maybe we should start
+documenting the directory structure of the snapshots. --[[file:matte.org][matte]]
+
+:: I know what you meant!  Just be a little patient here.  If you
+don't have time for that, go to the [[file:FEM.org][FEM]] page, and familiarize
+yourself with what you find there.  I think it is great that you are
+zealous about getting lots done, but we have gotten a lot done
+already.  If you want to be collaborative, please try to be aware of
+what has been done, and somewhat patient about other things getting
+done.  Statements like "maybe we should start documenting the
+directory structure of the snapshots" seem bizarre to me, because I
+already know what the structure is; and I think that this structure is
+essentially self-documenting.  You can go ahead and say more about it
+anywhere you want; but please don't go to the effort of re-doing the
+whole FEM project, since that would be a waste of time. --[[file:jcorneli.org][jcorneli]]
+
+OK. I had a look at the FEM code. Since I do not know lisp, I didn't
+understand very much though, but I really appreciate that the
+code is well documented. Learing lisp is definitely one
+long time project for myself, and this is good motivation. 
+Could you briefly indicate what the status of this code is? 
+How well does it do the job?  Once specific question. How does the
+code handle tex macros with same name but different meanings in different
+entries?
+
+My documentation statement was vague. However, a point is this. A lot 
+more could be done with the snapshots with minimal changes to Noosphere. 
+For example, suppose each entry would have its full meta-data included in 
+the .tex header (or in a designated meta file). Then I (or anyone) could 
+write a script to extract more elaborate statistics about the encyclopaedia. 
+For example, we could have a plot of entries over time. Does this correlate 
+with the academic year or holidays? Is the growth linear or exponential? 
+What is the growth rate? How many Definitions, theorems, proofs, topic 
+entries, etc. do we have? Currently the 
+[http://planetmath.org/?op=sysstats system stats] does
+not seem to work. 
+
+From current snapshots one can essentially only count the number of entries. 
+That is 4830 [http://planetmath.org/encyclopedia]. BTW. This means that 
+we are coming up to 5000. Maybe we could organize a project to raise the missing entries. See [http://planetx.cc.vt.edu/AsteroidMeta//User_activities PlanetMath
+weekend marathon]. 
+-- [[file:matte.org][matte]]
+
+The latest draft of the code needs a little work to make it work properly
+I suspect there is an earlier version of the code checked into CVS that
+works slightly better out of the box.  One of the key issues is the one you mentioned,
+overlapping macro definitions.  The way we're dealing with that is by
+standardizing a set of global macros for PM, but allowing these
+global definitions to be overridden locally.  We currently are only part-way
+there with this project on the PM side: however, what I just said accurately
+sums up how we make things work on the FEM side.  Once this situation is
+taken care of in both places, life will be better for everyone involved.
+
+Your point about header files and access to site statistics is a good one.
+I agree that it would be nice to have more data more readily available.
+
+--[[file:jcorneli.org][jcorneli]]

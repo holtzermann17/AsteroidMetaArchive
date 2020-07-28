@@ -1,0 +1,371 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here are some more detailed comments on the version of Thu May 19, around 14:25
+Central.
+
+*  Executive summary
+
+The wording has been improved. I might still simplify the first sentence...
+
+: We propose to research and develop pedagogical improvements
+to the Noosphere collaborative digital library system.
+
+The phrase "collaborative digital library system" is still sort of wordy, but I
+don't know if "online collaboration system" is a good substitute.
+
+: potential to spread
+
+Sounds like a disease, not good, "potential to be used as the basis of" is, I
+think, better.
+
+: greatly support learning in general
+
+If you want to say this, hope you can prove it.
+
+**  Discussion of Need
+
+: Free culture is the cultural milieux available for anyone in society to both
+consume and build upon.
+
+I continue to be highly confused.  Is "math" free culture?  According to this
+sentence, I think the answer is "yes".  And does this sentence serve to
+distinguish "free culture" from any other kind of culture?  And why is a
+discussion of Noosphere and !PlanetMath starting this way - what does free
+culture have to do with these projects.  I'd suggest starting this section with
+a "thesis" sentence instead of a "theme" sentence.
+
+: In specific
+
+Why this idiom?  It seems like "legalistic language" that isn't really needed in
+a document that is meant to be consumed by a scientifically-minded reader.  As
+Inigo says in "The Princess Bride": "you keep saying that word, I do not think
+it means what you think it means."
+
+: , free knowledge culture is the component of free culture which is factual and objective (or at least, strives to be).
+
+Here you seem to be using "factual" and "objective" as postive-value-laden
+terms.  I guess this might be OK - most people would agree they are good things
+- but to somehow connect them (as synonyms-of or specializations-of?) to the new
+and somewhat poorly documented term "free knowledge culture" is a bit of a
+stretch.  Especially since it seems that you mean this sentence to further
+/define/ the term "free culture" from the previous sentence.
+
+My sense is that "free knowledge culture" of this /equation/ is more commonly
+known as "science".  I also think that "free culture" of the first sentence does
+not need to be science.  For example, you might have "free music".
+
+So, you're specializing this general (and somewhat vague) term to the instance
+"free knowledge culture".  Is the motivation to show what "free culture" means,
+or was that just a "lead in"?  I'm confused (again) about the "in specific"
+construction.  I thought it might have been introducing a /definition/, but
+that doesn't seem to be the case.
+
+Apparently, when you insert the word "knowledge", you convert the general term
+"free culture" (which might apply to almost /any/ cultural milieux unless you
+can further /define/ it) to mean, essentially, "science".
+
+This is philosophical, non-standard, verbose, and probably not a great way to
+kick things off.
+
+
+: Free knowledge culture is am important foundation for education in society; when
+people say that a "free press is the foundation of a healthy democracy", they
+are referring to precisely this element of the social information environment.
+
+
+Here, you're conflating "education" and "the press" and (from before) "science".
+
+Maybe "the press" could be incorporated into the phrase "free knowledge
+culture", along with science, because both do /strive to be factual and
+objective/.  But, inarguably, they are different too.  And a discussion of the
+similarities and differences of "science" and "the press" could take volumes.
+
+Basically, you seem to be saying that education as well as society should have a
+strong "factual and objective" basis.  I don't know if we need to get so heavily
+into social theory, here.
+
+I'm gathering that you want to talk about the relevance of "free culture" or
+"free knowledge culture" to education, but so far I'm not really getting the
+point.  (If you used the "thesis sentence" model of writing, then I would have
+gotten the point already.)
+
+
+: Digital libraries are emerging as engines of an important new type of free
+knowledge culture.  [...]  Clearly, there has been widespread grassroots as well
+as official notice of the importance of digital libraries in education.
+
+I don't know if it is necessary to talk about "free knowledge culture" in order
+to make the point about the increasing importance (/relevance/) of digital
+libraries in (/to/) education.
+
+Like Stallman, I'm in favor of more talking about "freedom" - but I'm not
+getting anything particularly related to "freedom" from what you've said so far
+about "free culture" or "free knowledge culture".  Like I said above, I don't
+think you have adequately distinguished these phrases from the non-free variants
+for the purposes of this discourse.
+
+Although it is hard to work with terms that are not clearly defined, my sense is
+that the paragraph I'm commenting on here has failed to draw the connection
+between digital libraries and free knowledge culture.  (Yeah, I cut the middle
+of it, but from what I recall, in the middle part you talk about the widespread
+availability and the growing popularity of DL infrastructure.  Where is the
+connection to "free knowledge culture"?  How do we know that DL's strive to be
+"factual and objective"?  I don't think we do, at all... (e.g., see
+http://encyclopediadramatica.com).  Maybe we could say that DL's were a
+/medium/ in which "free (knowledge) culture" can flow, but I don't see them as
+a "type" of free knowledge culture.  Indeed, I don't know if artifacts (like
+DL's) are any "type" of culture at all.
+
+You might make a case for "culture that has grown up around DL's", that would
+be something to talk about.
+
+: Educational digital libraries tend to be fragmented into two broad families:
+relatively amorphous, collaboratively-built knowledge resources (like
+Wikipedia), and rigid, top-down constructed "information silos" (like the
+Library of Congress).  The former type is newest on the stage --- the stunning
+growth, uptake, and recognition of Wikipedia within the past year has been
+breathtaking.
+
+Stunning growth has been breathtaking?  Er?
+
+
+: The same commons-based peer production (CBPP) benefits that allow the open
+source world to exist and thrive turn out to apply to knowledge resources as
+well, and Wikipedia is perhaps the best known example of this.
+
+
+This doesn't seem very scientific ("turn out to apply").  And does the
+audience know what CBPP is?  I'm not sure they do!  And what does the "open source
+world" (whatever that might be!) have to do with any of this - this is the first time
+you've mentioned this particular construct.
+
+There are probably some /facts/ you could cite about CBPP and its relevance to
+software or (other) "knowledge resources"... but... well, I would want to know what
+you were trying to prove before I started looking at facts.
+
+(And how do we even know that the "open source world" /thrives/ -- I'm not sure!
+Do you mean Red Hat?  Do you mean Linux?  Do you mean GNU?  Do you mean !FreeBSD?  I don't know what
+the term "open source world" means, and I don't know what you mean when you say it is triving.  Is it really
+CBPP that allows it to (makes it) thrive?  I'm not even sure about that -- maybe it is venture capital,
+or maybe it is American Ingenuity, or maybe it is Moore's Law... or maybe it is the fact
+that the stuff is usully dirt cheap.
+
+: In essence, the world has discovered that CBPP is an excellent foundation for
+collaborative digital libraries.
+
+Maybe /this/ is the thesis you're hoping to prove.
+
+: Just as important as the economic advantages of CBPP for producing educational content are the
+ramifications for free knowledge culture.
+
+Which economic advantages?
+
+: "Free culture" does not just mean "zero cost"; it also means freely
+modifiable, extensible, improvable, and re-distributable.
+
+And, by the way, /does/ it mean "zero cost" at all?  I am already confused
+about the definition of this term, and your statements here are not supported.
+Are these parts of the definition of "free culture", or are they theorems that
+you might prove, somehow?  The word "mean" can /mean/ both "is" and "implies".
+
+
+: As Lawrence Lessig has pointed out in /Free Culture/ (and numerous other
+places), this dynamic is the source of a tremendous amount of social benefit.
+
+And, have we seen any of the benefits yet?  What are they?  Can you offer
+independent confirmation of Lessig's results?
+
+: Key is the new ability of the lay learner to /take part in shaping the shared
+knowledge of society/, or at least, view themselves as agents with the ability
+and right to do so.
+
+I'm not sure how "ability and right to do so" is relevant if the agents don't
+ever exercise their rights.
+
+I don't know about this claim of a "new ability" (how is that claim to be
+substantiated).  I don't know what the definition of "lay learner" is.
+
+: This has the potential to make free knowledge culture a more significant and
+meaningful component of free culture in general (and again, Wikipedia is
+demonstrating this already).
+
+Making relations between things I don't understand.
+
+: However, while free knowledge cultural content is being rapidly created by collaborative knowledge
+systems like Wikipedia, much potential in this area is not being met.  These resources have the same
+problems as the web in general; they are disorganized, their quality is uneven, the identities and
+credibility of those involved is often hard to discover, and they have weak notions of "placeness" which
+are necessary to sustain communities.  The underlying problem is that these collaborative
+systems need to be more completely married with digital library concepts to produce true /collaborative
+educational digital libraries/.   It is this we intended to do with this project.
+
+This paragraph is not bad -- except this "free knowledege culture content" from
+the first sentence, which is stuck in the same tarpit of ill-definition I've
+been poking quite a bit above, and the neologism /placeness/ which isn't
+really necessary.  ("Sense of place" is I think a perfectly acceptable
+alternative.)
+
+However, when you say /It is this [that] we [intend] to do with this project,/
+my sense is that you have established the existence of another thesis statement.
+This is good, but it will take some "restoration work" to get this thesis
+statement properly cleaned up and set in its proper place.
+
+What does it mean to produce "true collaborative educational digital libraries"?
+How many of the problems have been solved already in the Noosphere system?
+
+Are you sure that you want to say that Wikipedia is "disorganized"?  I don't
+find it to be terribly disorganized - if I want to look up something in
+Wikipedia, I type it into the search box, and remarkably, the answer usually
+appears.
+
+Rather than disparaging Wikipedia, it might be better to talk about the known
+weaknesses of PM -- why they exist, what we would like to do about them, etc.
+Perhaps Wikipedia can be brought in for comparison, but the "discussion of need"
+isn't about Wikipedia.  It is somewhere between being about /Noosphere/ and
+being about /the world/.  And I think the stress should be on the latter.
+
+In the following paragraph, you talk about how Noosphere is designed to help
+address some of the world's needs (or demands, whatever).
+
+
+: Noosphere has the special status of having been designed to be a collaborative digital library.  From the
+outset, it was built to support an an academic style of community interaction, rather than a free-for-all, and
+advanced organization, rather than only being an "organic" web of facts.
+
+Hey, let's not disparage "organic" webs of facts... can you rephrase this
+sentence in a way that seem so likely to hurt someone's feelings... maybe like
+saying that PM and Noosphere were built in a way that emphasizes the use of
+metadata?
+
+: The notion of /ownership/ of knowledge artifacts in Noosphere encourages
+individual stewardship of content, responsibility, correctness, and a
+pedagogical spirit.  We think this makes it an excellent platform for building
+communities of education centered around knowledge resources, and perhaps the
+closest candidate to being a true collaborative educational digital library.  We
+think Noosphere is well-positioned to play an even greater educational role in
+the near future, through technical improvements and extensions meant to extend
+its pedagogical effect, much of which come from making it more fully an
+educational digital library system.
+
+This is a fine paragraph, but it should be expanded somewhat.
+
+: With this project, we aim to achieve these goals through the addition of
+ *direct pedagogy features, quality control features, and content-sharing
+features*.  In addition, we would like to undertake *studies of the user
+community* to find out precisely which sub-communities are best-served and
+under-served, and which features are needed to better serve them.
+
+This is also fine, and also could benefit from some expansion (and I know that
+you do this somewhat in several detailed sections below).  A further "meta"
+expansion of the paragraph -- like, why is this going to be enough to meet the
+various needs that you've identified? -- or why these particular needs first?
+and so on -- could be included here, though.
+
+/I'm now going to skip ahead to the background section/.
+
+**  Background
+
+: PlanetMath is a virtual community which has as its
+core activity the collaborative production of a mathematics knowledge
+base (generically called the "encyclopedia").  In a little over three and
+a half years, over four thousand entries have been developed in this knowledge
+base, by hundreds of volunteers.   The project is currently a completely
+un-funded grassroots effort (though some facilities support has been donated).
+
+There have been other donations too, don't forget.
+
+I don't know if you're now following /their/ format... but it seems to me that
+some basic background stuff like this might go well in the "need" section above,
+since it shows what the specific needs of PM are.
+
+From there, you could go on to talk about how /these/ needs might be met, and
+how the ideas about making Noosphere more useful to /other/ groups of people
+relate to these specific needs.
+
+: Free culture (or perhaps more appropriately, "un-free culture") issues go back
+to the very genesis of PlanetMath.  [...] Not only only have people benefited
+from PlanetMath as passive consumers of the knowledge to be found there, but
+hundreds if not thousands have grown by helping to actually shape the knowledge
+base of PlanetMath.  This is the value that free culture resources uniquely add.
+
+I don't know if the "!MathWorld" stuff is helpful.  Its long.  Its boring.  You
+can probably sum it up in one sentence.  Then you can can say interesting things
+about !PlanetMath, which are quite a bit more relevant (IMO) to the current
+proposal.
+
+: Soon after the creation of PlanetMath, the software supporting the system was
+given its own identity as "Noosphere", made into a separate project, and released
+as free software.  Not only did this create the possibility of the underlying software system
+of PlanetMath improving through the same CBPP dynamics that were generating the mathematical
+content, but it opened the door to the re-deployment of Noosphere over and over again
+for other mathematical sciences subject domains, allowing others to create their own
+collaborative knowledge communities.
+
+This would be worth talking about more - with some specifics.  (Why hasn't it
+happened, then, for example -- with [[file:PP.org][PP]] and [[file:PC.org][PC]]?  That's a very important
+question.  Are we going to make it happen during the course of this grant?
+That's also an important question.)
+
+--[[file:jcorneli.org][jcorneli]] Thu May 19 20:48:36 2005 UTC
+
+Thanks for your comments.  Most things I agree with; the narrative is still a very rough
+draft, and I'm still trying to figure out how to say what I want to say about the relationship between free culture, education, and Noosphere/PlanetMath as learning technologies.
+A couple quick notes: (1) A grant proposal is not a
+research paper.  The objective is to convince, not to prove (for better or worse).  (2) 
+You seem to have written more in commentary than the original narrative, already.  
+Maybe it would be most efficient just to have you help write and revise it directly. 
+(3) There isn't much time.  Whatever we get out is going to be imperfect.  But if point #1
+is met, we win. --[[file:akrowne.org][akrowne]] Thu May 19 20:54:11 UTC 2005
+
+I /am/ helping write it directly.  The thing is, the best way to write directly
+is to write indirectly.  In other words, the next step is to write an outline.
+You are still the lead authority on this topic.  Use my notes to help write an
+outline.  I will then comment on the outline.  At that point, actually finishing
+the writeup should be a piece of cake.
+
+As for "the object is to convince" - I've read Aristotle's "Rhetoric" (and
+that's the only thing by him that I've read).  Yeah... and indeed, I think I
+could do with another read.  Between that book and "Elements of Style", you have
+summed up my formal training in writing.  The thing about outlines I learned
+from my dad at a young age.
+
+And I wouldn't worry too much about the time constraint, I think we're doing well.  If you're
+willing to do an outline, though, do it soon, cause I will need time to comment.  
+
+--[[file:jcorneli.org][jcorneli]] Thu May 19 21:28:39 2005 UTC
+
+Actually, there's a lot that must be done that has little to do with writing the narrative
+of the proposal (which is why I've made what I feel is so little progress on the narrative so far).
+I really only have until monday to get a budget not only worked out, but in the proper
+format, due to adminstrative procedures.  I have to work out the arrangements of 
+institutions and individuals involved with the project, somehow balancing the amount of work
+each additional entity entails with their contribution to the likelihood of getting us
+funded.  Of course, I actually have to interact with people, on a time-delayed basis, to 
+get them involved.  I have to go through the bureaucracy of getting registered in NSF's !FastLane 
+system in some capacity (its not like registering for a PlanetMath account, sadly--- other people are
+involved in the process and have to sign off on things and perform actions in my
+behalf).   In short, there really isn't much time, at least, time that I can spare.  --[[file:akrowne.org][akrowne]] Thu May 19 21:57:06 UTC 2005
+
+If you can spend 15 minutes on an outline, that is enough to get
+me started.  But I think it is important that you write this initial
+outline, because I think I'd be likely to say the wrong things.
+If you write me a 15 minute outline, I will be able to put in
+some time critiquing, structuring, and inflating it.
+  --[[file:jcorneli.org][jcorneli]] Thu May 19 22:21:07 2005 UTC
+
+I'll have an outline tomorrow.  I've been busy doing the overhead stuff and getting 
+people together.  Really, the thing we have the /most/ time on is the core 
+narrative of the proposal.  Thanks for your willingness to help (and help thus far)! --[[file:akrowne.org][akrowne]] Fri May 20 04:35:52 UTC 2005
+
+OK, whenever - my time is pretty flexible.  I think the important
+thing is it be good when it is submitted, but it would also be
+nice to have something to send around for comments (and I don't
+think the current version is really ready for that yet), and
+another round of editing to adjust to those comments...!
+
+Anyway, pumping info into the Wiki is a good thing.  I'll be offline most of the
+day today, but will check back for progress this evening and plan to work some
+on whatever is up then.  (And if you're interesting in talking by phone, after
+10PM here or tomorrow morning could work; otherwise look for postings from me
+this eve. and/or tomorrow afternoon.) --[[file:jcorneli.org][jcorneli]] Fri May 20 16:31:12 2005 UTC

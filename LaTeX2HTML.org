@@ -1,0 +1,122 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Used by PlanetMath for displaying the LaTeX in entries 
+as Web pages.
+
+But SteveCheng considers it broken and wants to scream at it
+after discovering that it has the following misfeature:
+it will mangle the ALT text of long formulae:
+
+e.g.
+
+ \displaystyle = \left\lvert\left( \frac{f'(\xi_x)}{g'(\xi_x)} - 
+ m\right) + \fra... ...x)}{g'(\xi_x)} \left(  
+ \frac{1-g(c)/g(x)}{1-f(c)/f(x) } - 1 \right) \right\rvert
+
+Why!?  It makes downstream processing impossible,
+and unreadable for text-based browsers.  Never mind that trying to cleverly abbreviate a long formula is actually more effort to implement.
+And the HTML specification *clearly says*
+that the ALT text is to be the *alternative* text
+when the image is not available.  "..." is not alternative text.
+
+I bet this would be super-easy to hack out. --[[file:akrowne.org][akrowne]] Mon Apr 3 03:29:37 UTC 2006
+
+Yeah, but you probably wouldn't care to install the corrected version
+onto PlanetMath, would you?  Who knows what things might break?
+That's why I wrote this rant.  <em>I can't do anything about it</em>.
+
+-----
+
+FYI:
+
+[http://www.tug.org/pipermail/latex2html/2004-March/002682.html RE ALT comments]
+
+If the *mangling* is a feature of Latex2Html then a new
+option could be added -- ask at http://latex2html.org/ ?
+
+Or if it is a bug, it might still be best fixed with an
+option in case the new, correct functionality would
+break existing uses. 
+
+The place to start is with the author/maintainers of
+the package -- I would think...
+
+--[[file:ocat.org][ocat]] 4-Apr-2006
+
+Well, thanks to you!  Perhaps I should not have been so hot-headed:
+it was after only reading the above-linked post 
+that I discovered that LaTeX2HTML also puts in 
+<!-- MATH ... --> comments.  
+I would hope these would
+not be truncated.  That would solve the problem at least;
+I'm happy :)  --SteveCheng
+
+**  Other software related to LaTeX conversion
+
+A real gem I found when researching this topic:
+
+ * [http://www.pytex.org/texd/ PyTeX - The TeX daemon]. Implementation of interactive TeX typesetting.
+
+Anyway, enough complaints about LaTeX2HTML.
+I’ve started writing a replacement, which I will soon make
+available.  What it will have:
+
+ * A small Python module to translate LaTeX to an intermediate XML format (!TeXML) 
+ * Almost all of the LaTeX to HTML translation will be driven
+by an XSL stylesheet
+ * Another separate Python module to extract the math markup
+and turn them into PNG (using TeX and dvipng)
+ * Or alternatively, direct LaTeX markup to MathML translation
+will be possible.
+
+The first step is almost done.
+
+Why do I write a new program instead of working on !LaTeX2HTML instead?  Because I think I can write a better program.  Also:
+
+ * !LaTeX2HTML is an eye-straining messy Perl script that is difficult to customize.
+ * !LaTeX2HTML is too slow.
+ * !LaTeX2HTML is just a pain in the ass.  (I <em>still</em> have not gotten non-gray anti-aliased without-ugly-black-borders math images working yet,
+despite fiddling with the many combinations of switches available!)
+
+— SteveCheng
+
+I think this is a fine (actually good!) thing to work on, but do note that there are other
+latex-to-html converters on the market.  It might be advisable to survey
+them all at some point.  I think it would be swell to get a mathml display
+mode hacked into PlanetMath.  --[[file:jcorneli.org][jcorneli]]
+
+: Besides !LaTeX2HTML, there is also tex4ht which uses TeX to parse its input.  (There’s also TtH, which is non-free, so I’m not even considering it for one more second.)
+I like neither, because I really want to get away from the TeX system;
+the tool should be suitable for migrating from
+TeX. TeX is good typesetting, but its implementation sucks.  Just even try to get good-quality PDF Chinese/Japanese/Korean output working from LaTeX and you’ll see what I mean.
+— SteveCheng
+
+**  Progress
+
+<b>2006-05-18</b>: The progress 
+is going to be slow, unfortunately —
+there are lots of other things to work on.
+So for now, I’ll make the release of the first Python module
+I talked about earlier: http://gold-saucer.afraid.org/mathml/latex2xml.py
+
+Notes:
+
+ * The code is totally undocumented.  
+
+ * Not only that, the parser is messy (a hand-rolled push-down automaton thing). It really needs to be tamed
+by the literate programming treatment.
+
+ * This program comes with its own GTK+ GUI debugger ;)
+  To use it, type 
+
+ $ python 
+ >>> import latex2xml
+ >>> latex2xml.debug("file.tex")
+
+: You can observe the state of the parser at each token,
+and manipulate it more with the interactive console.
+
+ * The program current does not parse (only pass through) !LaTeX math environments.  However, this will be bad when we need to implement equation numbering.  Still searching for a solution.
+
+ * Need to investigate what needs to be done for round-tripping

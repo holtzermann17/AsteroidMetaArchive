@@ -1,0 +1,149 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is an enumeration of the benefits of Commons-Based Peer Production.
+
+*  Efficiency
+
+[[file:akrowne.org][akrowne]] began a discussion on [[file:the efficiency of CBPP.org][the efficiency of CBPP]].  Much of this
+comes from the fact that CBPP projects are decentralized, and the dynamics of
+how decentralized projects work.
+
+*  Accessibility
+
+The fruits of CBPP are generally more accessible than those of other forms of
+production.  This is for several reasons.
+
+First, other forms of production often do not lend themselves well to maximal
+accessibility.  Centralized producers must recoup the costs of production, and
+often must limit access to their products to paying consumers.  CBPP, on the
+other hand, decentralizes the costs of production, making it quite possible to
+offer free access to everyone.
+
+Second, in order to be CBPP, participation in the project must be widely
+accessible.  It immediately follows that the product as well must be widely
+accessible.
+
+*  Openness
+
+While this point is related to accessibility, there is a subtle difference.  Due
+to the elimination of limitations to access and the decentralization of the
+production process, novel parts of this process become available to consumers
+and examiners of the project.  Thus, not only is the final product widely
+accessible, but secondary artifacts of the production process become available
+as well.
+
+For example, CBPP encyclopedia-like projects commonly have version histories of
+articles available for public consumption.  Using these histories, readers can
+get an idea of how mature the article is, what past mistakes the writers made,
+who contributed and how much, and how the item might have changed from when last
+viewed.
+
+Another example, which is common in CBPP publication projects, is the
+availability of editorial discussions.  These discussions give consumers insight
+into the production process and may also alert them to especially contentious
+portions of the output.  This helps to enforce the notion that knowledge is
+always provisional, a notion which closed, centralized producers tend to
+suppress.
+
+*  Empowerment
+
+CBPP allows the consumer to become a part of the production process, whether
+they can play a small or a large role in it.  This has ramifications for more
+efficient self-improvement of the consumer: interactive things are generally
+more engaging, for instance, and perhaps the best way to learn is through
+teaching.
+
+Also, due to the openness factor discussed above, the whole production process
+becomes much less "mysterious".  The consumer sees that fallible humans like
+themselves have generated the output, with a little dedication and hard work.
+This puts consumers on the same "level" as producers (an actuality which as
+always been the case), which opens the door to future participation, as well as
+end-user critique of the effort.
+
+In general, the ability to join the productive process, and even the mere
+presence of an overtly level playing field, teaches the consumer that /they/
+can actively shape the world around them and make a difference.  Combined with
+the accessibility of product, CBPP allows for knowledge production and
+dissemination to become more egalitarian than any system which has come before
+it.
+
+*  Collaborative Filtering
+
+Because there are many participants, CBPP-based projects are rich environments
+in which to apply collaborative filtering.  This is the use of data collected
+from many participants in order to derive a particular perspective for a user
+(or all users, or some subset of users).  These perspectives are useful for
+several purposes: determining quality in a subjective manner; recommending
+unvisited content; finding related content; and even searching.
+
+Some CBPP projects are little more than collaborative filtering.  Some examples
+are SETI @ Home, Ami/whatever/ornot.com, or ircquotes.com (the latter two do,
+however, at least take content contributions from users).  Google can even be
+seen as an example of collaborative filtering, except Google comes to /you/ to
+get your data contribution, rather than vice versa.
+
+However, it would not be correct or useful to call all CBPP projects solely
+"collaborative filtering" projects.  The hint at why this is so comes from the
+observation that "collaborative filtering" is something of a misnomer: the
+actual participants aren't ever directly working together.  Thus, CF is only
+about collaboration in a very watered-down sense.  This should not be taken to
+dimish the importance of collaborative filtering projects or CF components of
+CBPP projects, but it does show that there is a difference.  Filtering is merely
+one task that CBPP might undertake.
+
+*  Trustworthiness and Quality
+
+For CBPP naysayers, trustworthiness is often the primary flaw in CBPP-derived
+content.  Ironically, it is CBPP that is best equipped to ensure
+trustworthiness.  One can only trust content by its reputation or by exercising
+diligence in the determination of its quality, neither of which comes from the
+production process itself.  However, CBPP strongly enhances both.
+
+Through the use of collaborative filtering, we can employ many methods of
+deriving reputation.  For example, a record of an author's quality can be
+collected collaboratively (e.g., through user ratings).  We can then collect
+this data to derive a measure of that author's reputation.  This is generally
+not possible with other forms of production, as they rarely build in a means of
+rating content or authors.  Instead, the reputation must be derived from the
+centralized producer itself, which can lead to /elitism/.
+
+No process, whether CBPP or otherwise, can guarantee quality.  By having an open
+process, CBPP makes the options a consumer has in determining quality much more
+rich.  For example, a CBPP-based process can provide a means of recorded
+discussion of content.  A consumer can peruse this discussion to find issues
+that other consumers have found with this content.  It is in these discussions
+where misinformation or corrections can often be found.  In a closed process,
+all such problems are swept under the rug, until a new edition is released.
+
+*  Sharing the load
+
+Related to the notions of "efficiency" and "openness" is the fact that work can
+be shared between interested parties.  If some task becomes too big for one
+person, they can seek help from others.  Of course, there is no guarantee that
+anyone else will be interested in working on the given task; also, even people
+who might be interested can lack the know-how or other resources to make their
+involvement profitable.  Nevertheless, CBPP makes it possible to share a given
+workload with anyone who has the interest, time, and skills to work on the task.
+
+In a firm, a surfeit of work could be a call for overtime, or hiring new
+employees (or consultants), or maybe outsourcing some of the work to another
+company.  So it is not so much that firms can not rebalance their load - but
+they are constrained to do it within the aegis of the firm itself, whereas CBPP
+can share with here-to-fore unknown outsiders.
+
+As an example, in the case of free software projects, bug reports are a way for
+end users to contribute back to the project leaders.  This saves money on
+testing (in the long run, I mean!).  Some companies do use bug reporting
+systems; arguably this is a "CBPP-type" aspect of their production mode.
+
+
+----
+
+*  Discussion
+
+This is a very early draft, and is currently a brainstorming effort.  I have not
+done a good job of elucidating any of these points.  Consider it a beginning,
+for myself and others to expand upon.  I'd like to see some good, solid
+arguments for each of these points, and the introduction of further benefits.
+-- [[file:logan.org][logan]] Sun Feb 27 03:50:12 UTC 2005

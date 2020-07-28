@@ -1,0 +1,217 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: See this ain't somethin new that's just gonna come out of nowhere, no!!! This is somethin OLD, and DIRTY!!
+:: - Ol' Dirty Bastard, "Raw Hide"
+
+----
+
+
+Here are my suggestions for other historical antecedents:
+
+ * Newton's celebrated scholia to the Principia :)
+
+ * Renga --- a genre of Japanese poetry in which numerous authors accrete verses onto a seed tristich in order to create a longer work.
+: http://www.renga-platform.co.uk/
+: http://thewordshop.tripod.com/renga.html
+: http://www.ahapoetry.com/renga.htm
+:: The next reference is particularly interesting because it also includes commentaries on the verses --- a tour de force of the possibilities of scholiastic literature.
+: http://www.ahapoetry.com/sjreng.htm
+:: The next reference features a tree of bifurcations into alternate universes as the same text branches into different versions:
+: http://www.ahapoetry.com/wwwdiag.htm
+
+ * You cite the "Art of Fugue" [as an inspiration].  Perhaps even better musical
+examples would be choralvorspeilen, mediaeval motets, and similar cantus firmus
+compositions in which musicians add contrapunctal voices as a sort of musical
+commentary on an existing composition.  Since this composition is typically a
+hymn, this may be considered a musical analogue of the Talmud, where scholars
+record different comments on a verse of scripture.  
+
+On a similar note, it is worth noting that, in the past, musicians made very
+free use of each other's work and, far from being looked down upon as a sign of
+laziness or lack of originality, creating derivative works was considered a
+legitimate outlet of musical creativity.  For instance, a chorus in one of
+Handel's oratorios is a keyboard canzona of Kerll with a suitable text attached,
+earlier Ancina modified the texts of pagan madrigals to express Christian
+themes; keyboard artists and lutenists would embellish the lines of vocal
+compositions to create instrumental pieces; Renaissance composers would
+frequently adapt anthems to liturgical settings, convert songs for one chorus
+into songs for two choroi and the like.  
+
+To tie this in with the theme of my paper, modern copyright law in music which
+cracks down on even the copying of a single bar without permission would have
+been a major bottleneck in the production of music as it was practised before
+1800.  Musicians of the calibre of Ockegham, de Pres, Palestrina, Lassus,
+Gabrieli, Sweelinck, Bull, Pachelbel, Bach, and Handel would all likely be found
+in violation of copyright law were they to return today and would find many of
+their classics suppressed by cease-and-desist letters from the likes of ASCAP
+and RIAA.
+
+--[[file:rspuzio.org][rspuzio]] 23 June 2005
+
+
+Neat stuff.  The renga looks particularly fun.  
+
+ I was practicing
+ writing poems online last fall
+ more fun than stats class
+
+The stuff about music is interesting too!  I don't know if I'll cite it in the
+paper, but it makes a great scholium.  The fact that "free culture" relates more
+to "oral traditions" than "written traditions" is arguable; it is amusing &
+interesting that people talk about the Talmud reflecting the "oral traditions"
+of Judaism.  Perhaps the music you are talking about here was "oral" too, in a
+weird way.
+
+One of my favorite pieces (that I listen to each morning if I'm up, "evocation a
+la chapelle sixtine") contains a portion of a piece that was allegedly "stolen"
+by Mozart (using his typical trick of learning things by ear in one hearing) and
+another piece of a work original to Mozart.
+
+Of course, borrowing goes on all the time in music (dub and djing are modern forms).
+Presumably these things were inspirations to me too, in some distant way.
+I don't know exactly what the legal status of this stuff is, these days.  I'm
+not even sure what the legal status of playing music on the radio is.  Apparently
+you can play songs legally.  You can also [http://www.crapfromthepast.com/archives/ download them]?
+(Not sure about the legality of this, the fact that I like the radio show that this content comes 
+from notwithstanding.)
+
+--[[file:jcorneli.org][jcorneli]] Mon Jun 27 06:41:57 2005 UTC
+
+BTW, it is interesting to compare the structure of renga and go (i.e. the famous
+asian game).  Similar!  Down to 17 stones being a reasonable number to count
+as the "opening".  I like go, but I am unstudied (and somewhat unpracticed, and consequently quite unadvanced).  I think it would be fun
+to make a scholium system introduction to go, so you could look at possible
+follow-up moves and give some narration on their purpose and value, find themes, and so
+on and so forth.  (I'm worried about a "bottleneck" here, though, which is:
+are individual go diagrams copyrighted?  I'm guessing that the answer is "yes"
+similarly to the way in which individual formulas are copyrighted, i.e., as
+parts of bigger copyrighted works.  However, a go diagram /seems/ to be somewhat
+more "expressive", in that the author of a go book has more choice about the
+sorts of diagrams to include than the author of a (specific) math book has about the 
+sorts of formulas to include.  But this seems sort of like hogwash, too.  Anyway,
+some things are "standard", similarly to the standard openings in chess, and 
+I don't think one could really get in trouble for copying these things - there
+appears to be little to no expression involved in re-recording standard information.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+Even more interesting might be to base a a go program on such a system by making
+these narrations computer-readable so that they could be compiled or interpreted
+as a library of routines for evaluating moves and the like.  That would
+certainly be a different approach to development than, say, IBM's closed-source
+deep blue.  In promoting free sowtware, I think it is important not to forget to
+point out that there are some models of software which can only be realized in a
+meaningful way as open source programs.  --[[file:rspuzio.org][rspuzio]]
+
+Your comment is both very much on point, and very much what I was thinking
+above.  In effect, with this scholium system stuff, there is no significant
+difference between programs and papers; at least, that's the way I see it.  If
+you can write down a heuristic that works for human beings, you should,
+eventually, be able to "formalize it" so that will work for machines too.  (I
+was just looking at a great book for my learning style called
+"[http://www.gobooks.info/wilcox.html EZ-GO: Oriental Strategy in a Nutshell]",
+written by someone who has been working on computer go: it is full of metaphors
+and heuristics and is /very/ human friendly, more so than most go books I've
+looked at before.  Clearly there is some back-and-forth going on here.)
+
+The denouement of APM-Xi on PM should amount to something like this: parallel
+systems for reading about math and for programming computers to do math.  The
+interaction of the two media is valuable in and of itself (as I was indicating
+on [[file:Small Projects - Proof translation.org][Small Projects - Proof translation]]), and besides that, /yes/, like you
+said, some kinds of software (e.g. Deep Black / HDM) seem likely to be far more
+feasible if we use free software development.
+
+I may never have made this point sufficiently clear, but this has been the
+motivation from the beginning.  Free software is not really about altruism, but
+about getting the job done; copyleft is also selfish, it is about knowing what
+the "competition" does with your work, if anything.
+
+Some people might argue and say: why not use non-free OCR (or whatever); does
+the whole system really need to be free?  And the answer is "that might be OK in
+as much as non-free software can ever be OK (which isn't much), but the core of
+the system really needs to be free, and of course the content should be free
+too."
+
+The opposite pattern of thought obtains at Cycorp, which makes it very hard for
+me to imagine how they expect to actually reach their goal.  They have indicated
+that they wish to catch the "open source" wave, but what they have managed to
+come up with so far is one of the best examples I know to show why I prefer
+"free software" to "open source" - the mentality of free software is that the
+system should be comprehensively free, whereas "open source" thinking seems to
+say something is open source if just part of the system is published - in the
+case of !OpenCyc, the parts that are published are pretty small, and actually
+were somewhat laborious to extract from their binary; the whole thing was sort
+of a mess.  Maybe it has improved some now.  Last I heard, they wanted their
+language and core ontology to become some kind of "standard" but still they
+wanted the system itself to remain secret.  This combines two of my least
+favorite development techniques (proprietary code and standards-mongering).
+OTOH, Lenat himself indicated to me that the system would /eventually/ be
+published.  I personally am not going to hold my breath.  I think free software
+that is in a similar niche can get the job done faster.  
+
+A more complete analysis would now go on to critique the existing free AI
+development platforms; see FreeCyc - the single point to make is that these
+systems don't adequately conform to the patterns of human intelligence.  Indeed,
+people need to get clued into the fact that there is no significant difference
+between human intelligence and artificial intelligence.  They are (in this
+hyperreal era) basically inseparable.  The fact that mathematics is "a game
+played on paper" doesn't make it any less artificial, nor any less human.  If we
+start playing it with computers instead of paper, the game itself hasn't
+changed.
+
+--[[file:jcorneli.org][jcorneli]] Tue Jun 28 01:20:35 2005 UTC
+
+----
+
+Of course, marginalia of any sort are really "scholia" too, according to
+the broad definition we're using.  
+
+The following is an improvement on an ancient tradition of making marginal
+comments.  Print out a document of reasonable size, single sided, and secure it along
+its left margin at top and bottom (and maybe middle as well).  You now have
+a notebook (the unnumbered "even" pages on the left when this book is open)
+attached to your "book".  In other words, lots of space for making scholia!
+
+I used to print documents single-sided with the purpose of using them this
+way, but never with such a feeling of purpose and recognition as when
+I printed out the scholium system code and put it together with some
+of those metal spring document fasteners.  How cool!  This is about as good
+as the HPDA (see [[file:fun things to do.org][fun things to do]]) and a great low-tech complement to
+that other device; this is the "laptop" version, I guess.  :)
+
+It is interesting to watch the document evolve, from rough draft, through
+a process with scholia and some code testing, to another rough draft.  
+Eventually it will be "finished", or anyway, finished enough to release
+with some fanfare.
+
+Just thought people might enjoy this little update about old made
+new, new made old, and the scholium system making history itself, in a way.
+
+Also, it is worth pointing out that (per usual) the paper version has
+some interesting and nice features that could be worth emulating as
+closely as possible in the electronic version.
+
+--[[file:jcorneli.org][jcorneli]]
+
+This sounds a lot like what I do with copies of the papers I am in the process
+of writing.  One thing which this practise makes apprent is that, for each page
+of finished proof, there may be two or more pages of notes.  Certainly proofs as
+they appear in most books and articles are rather condensed, sometimes more like
+sketches.  This sounds encouraging for writing the proof checking program ---
+one could first aim at checking proofs in the rough form which mathematicians
+work them out with more details than in the finished version.  The original,
+more detailed form could then be appended as scholia to the polished proofs so
+that someone could run then through the computer to make sure that the proofs
+are correct. --[[file:rspuzio.org][rspuzio]] 23 July 2005
+
+----
+
+The most complete discussion of /recent history/ of scholium-like systems
+(including Xanadu-inspired systems) that I've found to date is at
+http://hyperworlds.org/ --[[file:jcorneli.org][jcorneli]] Thu Aug 18 04:14:21 2005 UTC
+
+----
+
+Oddmuse claims to have page-transclusion implemented, but I couldn't
+get it to work!  See http://www.oddmuse.org/cgi-bin/wiki/Transclusion. --[[file:jcorneli.org][jcorneli]] Mar 7 06

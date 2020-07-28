@@ -1,0 +1,83 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  PlanetMath.org board meeting for June 2008
+
+This is the first meeting of the new board consisting of:
+
+ * Chi Woo
+ * Raymond Puzio
+ * Joe Corneli
+ * Roger Lipsett
+ * Aaron Krowne
+
+This is also the first meeting where the organization has a formal membership established.
+The focus will be on bootsrapping the organization and getting basic operation in place.
+
+* Date/Time
+
+TBA
+
+*  Draft Agenda
+
+ * ratify some version of the bylaws (see [[file:PlanetMath_ByLaws_2.0.org][PlanetMath_ByLaws_2.0]] for latest candidate)
+ * settle on formal wording of Organizational Goals and objectives (see above link)
+ * develop a budget (see section below)
+ * formalize committees (see section below)
+
+*  Budget Discussion
+
+A budget with the following approximate spending areas has been
+suggested.  This concerns spending over the Next Quarter only.
+
+: Our current reserves hold: X dollars, we expect an income around Y
+dollars with no "interventions", we have a target income of Z dollars
+if we follow through on fundraising efforts.
+
+ * maintenance/small-scale development and bug fixing (50%)
+ * fundraising/capacity building (40%)
+ * mentorship/meta-development of content (10%)
+ * reserves/overhead/incidentals (10%)
+ * research and development (0% -- because we have SoC for now)
+
+**  "Proposed activities"
+
+This should include things that the budget should be spent on (along
+with some estimate of how much would need to be spent).  If a
+substantial portion of the work is expected to be contributed by
+volunteers, that should be noted.  Where possible, we should be
+specific about e.g. particular development goals!
+
+ * Implementing Marnita plan
+ * Hiring system administrator
+ * investment in "public domain content" pipeline 
+  (Archive.org, Infty OCR, ...)
+ * cross-index
+
+* Committees
+
+Please discuss or provide links to details on plans for:
+
+ * content
+ * disciplinary
+ * site administrators
+ * ...
+
+*  Documents
+
+Other documents besides this agenda, to be familiar with before the meeting:
+
+ * [[file:PlanetMath_ByLaws_2.0.org][PlanetMath_ByLaws_2.0]] 
+ * ...
+
+
+----
+
+* Discussion
+
+A contemporary overview of !PlanetMath is provided in the wiki page
+"TowardsDMLPaper".  This overview may help us figure out our list
+of "Proposed activities", and vice versa.  --[[file:jcorneli.org][jcorneli]]
+
+What should we do about longer-term planning (something in between
+organizational goals and current-quarter budget)?  --[[file:jcorneli.org][jcorneli]]

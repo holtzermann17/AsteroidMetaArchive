@@ -1,0 +1,32 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This relates to several existing requests,  and is sort of an overview of several of them.
+(See [[file:non-mass downloading.org][non-mass downloading]], [[file:Mass-uploading.org][Mass-uploading]], [[file:email posting to forums.org][email posting to forums]].)
+
+"CVS" here is a stand in for "some CVS-like version management system".  The
+idea would be to make it so that PM could more easily be used by people working
+on math or code projects -- [[file:mmj2.org][mmj2]] is an example of an existing project that
+has is now hosted by PlanetMath, but doing this required administrator
+intervention.  It would be swell if more of this process could be automated.
+
+This even relates to the [[file:User pages for PM.org][User pages for PM]] request; everyone could have a
+file area as part of their user page, for example.  See also
+[[file:PlanetMath engine interbred with wikibooks idea.org][PlanetMath engine interbred with wikibooks idea]].
+
+This feature would be very useful for people writing papers together.
+The usual way, I suppose, is to bounce revisions over email. Maybe we 
+could charge a nominal fee? Or at least, we could encourage
+people to pay something if "find it useful". 
+
+There are some similar projects on the web, but nothing for mathematicians
+or scientists (as I could find): http://www.writeboard.com/,
+http://www.andamooka.org/ (only for free content).
+--[[file:matte.org][matte]]
+
+----
+
+CVS would of course be useful to have for administrative documents as
+well as for math content.
+
+--[[file:jcorneli.org][jcorneli]]

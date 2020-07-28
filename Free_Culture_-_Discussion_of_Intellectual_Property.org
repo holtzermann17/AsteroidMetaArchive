@@ -1,0 +1,220 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This continues the discussion at [[file:What is Free Culture.org][What is Free Culture]].
+
+----
+
+In discussing Stallman's opinions on intellectual property, one should
+keep in mind that he is often referring to the term "intellectual
+property" in a narrow sense, in specific, he is countering the
+assterions of WIPO.  As I understand it, when
+[http://www.twnside.org.sg/title2/twr171g.htm he says] that
+"intellectual property is meaningless", what he means is that a
+catch-all notion which lumps together copyright, patents, and
+trademarks and blurs the distinctions between them and suggests false
+analogies with property in the usual sense of ownership of physical
+objects is meaningless and misleading.  As I see it, the situation
+here is very analagous to the discussion we had on the use of the term
+"encyclopaedia" with respect to Planet Math --- while one could use
+the terms "encyclopaedia" or "intellectual property" if one defines
+them suitably, there is the problem that, to most people, these terms
+have connotations which run counter to the definitions one is
+proposing and hence it might be better to choose a term which is not
+potentially confusing in this way.
+
+More generally, I think we need to be more careful about exactly what
+we mean by the term "property" if we are to have a meaningful
+discussion rather than a shell game of confusing different
+definitions.  As mentioned, the notion of property is conceptual,
+however, there are differing conceptions of exactly what bundle of
+rights constitutes "property".  In the case at hand, examples of
+rights which are relevant include
+
+ * attribution
+ * reproduction
+ * distribution and sale
+ * preparation of derivative works
+ * performance
+ * display
+
+So, if we choose to use the term "intellectual property", we should be
+careful to first propound our definition and state exactly which
+rights are part of our definition.  Also, I think it is important to
+distinguish which of these rights are considered to be inalienable,
+allodial rights which can only be abrogated when they conflict with
+some other such rights as opposed to constructed, feudal rights which
+are only granted by whomever is in charge for the purpose of
+furthering some aim (such as encouraging production of works or making
+sure that authors are paid).
+
+It might be worth pointing out that what Moglen was quoted as saying
+was "Abolition of all forms of private property in _ideas_", *not*
+"Abolition of all forms of private property in _expression_".  Thus,
+there is no contradiction between his points 1 and 6.  Nor does it
+contradict the statement "there is some sense in which conceptual
+_works_ can be productively treated as property."  As we have stated
+many times, this is an important distinction, although it can become
+problematic in areas (such as the expression of mathematical ideas)
+where there is very little leeway for expressing the same idea in a
+form which is recognizable to the average reader.
+
+As far as I am concerned, demanding the right to verbatim-only
+licenses is excessive.  While it definitely will protect integrity of
+works, it also stifles creative reuse and can limit other rights such
+as free speech.  I would consider a more reasonable measure to be one
+whereby it is permited to modify a work only under the condition that
+one clearly states that what one is releasing is a modified version of
+a certain work and claims credit for only those portions which one has
+contributed.  This should protect the integrity of the original work
+just fine --- noone would confuse the modified work for the original
+and could always look at the original.  Moreover, I think that it
+would make for an even greater incentive to create and distribute
+theses, essays, and other forms of written ideas --- if one does a
+good job, then the likely result is that there will appear many
+modified versions and portions of one's work will be reused.  Since
+each of these modifications or reuses will come with a link back to
+the orginal work, this will create more fame for the original author.
+This is not unlike what happens in the mathematical literature --- if
+one comes out with an interesting result, it is likely that many
+people will use this result and consequently cite the original article
+more people will have a look at the original article as a consequence.
+As for how this could be accomplished in practise, one current
+suggetion is the history list requirement in the GNU licence.
+
+--[[file:rspuzio.org][rspuzio]]
+
+A couple of brief comments to Ray:
+
+Good point about Moglen's expression vs. idea property distinction.  I agree that
+ideas are not property, beyond the point where you keep them to yourself and 
+hence have "trivial and absolute" ownership in them.   I don't really think this
+is a deontological point; it is just a socially damaging notion to admit property
+in pure ideas.
+
+On defining which restrictions we are including in "intellectual
+property", as a whole, I think the answer is simply "all of them".  At
+least, they are all valid potential restrictions (or, seen conversely,
+rights of creators), analytically speaking.  The debate needs to be on
+which particular restrictions are best for which specific scenarios.
+E.g., in "the commons," rights to propagate and derive are probably a
+salient thing to allow most of the time.
+
+I guess what I'm saying is we need to move the debate on from "intellectual property"
+to "how to license for various kinds of intellectual property".  We need to co-opt the term
+"intellectual property", even for commons-centric situations, and make it a "good thing".
+I think Stallman is making a specific choice of licensing arrangements, then trying to
+obliterate the whole notion of an intellectual property framework, so people don't even
+understand that there is a whole menu of perfectly valid licensing conditions. I view this 
+as an approach akin to nanny-statism, in contrast to Lessig's "informed choice" approach.
+
+Finally, you don't consider a verbatim-only distribution valid.  But I do.  It would
+appear we are at loggerheads here, therefore I appeal to the "freedom principle":
+if you can't reach consensus, allow both approaches.  You can distribute attribution
+only, and I can distribute verbatim-only.  Of course, I myself would generally allow 
+derived works, and I would try to convince other authors that this is in their best interest
+in most cases.  But sometimes people just don't feel comfortable with something, besides 
+the fact there may genuinely be extenuating circumstances.
+
+--[[file:akrowne.org][akrowne]] Tue Nov 15 19:47:44 UTC 2005
+
+I actually think that Ray is right and I was mistaken; it isn't that
+RMS thinks that "IP shouldn't exist" or "IP doesn't refer to anything"
+but rather, that the catch-all notion of "IP" actually isn't
+well-defined.  Well, folks like Lessig probably can come up with a
+reasonable definition, but folks like Corneli get confused.  If we're
+going to talk about "intellectual property", then I think we should
+attempt to find out the definition of the term.  But I don't just want
+to spend time arguing over semantics details without a concrete goal
+in mind.  I'm not sure what the concrete purpose is in this case.
+
+I will mention, however, that this notion that "there is some sense in
+which conceptual _works_ can be productively treated as property"
+seems relevant to the discussion of in-commons and out-of-commons
+property.  Indeed, I'd say that conceptual works are almost always treated as
+property; the only question is what sort of property. --[[file:jcorneli.org][jcorneli]]
+
+-----
+
+58 million bytes in the latest Java
+SDK download! And that is zipped. Does
+not include the documentation either.
+
+The download process has me humming
+the theme song from Gilligan's Island,
+"...a three hour tour!" The process
+isn't quite a perfect example of
+Zeno's Paradox, but the download rate
+steadily decreased and decreased leaving
+me with 3 hours to go, still, after
+3 hours, and only half way through.
+
+It's a miracle of technology though.
+POTS, Plain Old Telephone Service,
+and a free call lasting 6 hours to
+download free software -- 58 million
+zipped bytes of software that allows
+the 21st century user to write a
+stinking program. Why back in ye olden
+days, our corporation's mainframe had
+a mere 4 meg of RAM, and an afternoon
+program compilation lasted 45 minutes
+wall clock. We even used short variable
+names for the sake of compiler efficiency.
+
+And here I am today, completing a Hail
+Mary download in a mere 6 hours because
+I am too cheap to sign up for broadband.
+Also, I just don't trust those newfangled
+inventions :0) Why, even on my POTS line
+I see my firewall soaking up multiple
+attacks every minute (though I don't know
+the difference between an attack and a
+friendly invitation to swap bytes.)
+
+Old technology never seems to disappear
+either. I see virus attacks that are nearly
+old enough to vote, like the port 135 ep-map
+attack. And I take that to mean that *still*
+there are millions of machines that have
+been infested, having unsafe byte exchange
+since the last century -- oblivious to
+everything, just 0wn3d, totally.
+
+While I watch the download and listen to
+my hard drive vacuum up the packets of Java,
+I am having a leisurely second read of 
+Neal Stephenson's "Cryptonomicon". This is
+one of my few sci-fi hardbacks, paid for
+with cash, a first edition, that has been
+carefully sealed in airtight wrapping for
+5 years. Any of you mathematicians out there
+who haven't read this book might give it
+a shot. Plenty of math in there, including
+an amusing philosophical rehashing of 
+Russell and Whitehead's "Principia Mathematica"
+by a fictionalized young Alan Turing. Buy
+the book, you'll enjoy it. The first 25
+pages are great, even as a re-read and I look
+forward to the next 892 pages. You get your
+money's worth with this one.
+
+That reminds me of the ongoing debate here about
+copyrights. I could copy the bit about
+Turing and Russell, perhaps, but that would
+be like scanning the centerfold from a Playboy
+and expecting people to still buy the magazine
+"for the articles". How is Stephenson supposed
+to earn his next million dollars if everyone
+is copying bits to the internet? Eventually,
+anyway, sometime before the end of the universe,
+a physical copy is bound to end up in a rummage
+sale near each potential reader. So have
+patience and wait for it :) 
+
+Hope y'all have a nice set of holidays. I'm
+on vacation until next year, so don't expect
+anything intelligent from me until, say,
+February (if then :) 
+
+--[[file:ocat.org][ocat]]

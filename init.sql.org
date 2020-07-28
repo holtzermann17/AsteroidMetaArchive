@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: init.sql
+
+pp line 37:
+insert into forums (uid,userid, title, data) values (
+ 0,
+ 1,
+ 'LaTeX Help Forum',
+ 'General LaTeX questions, and Noosphere LaTeX questions in specific.'
+);
+
+pm line 37:
+insert into forums (userid, title, data) values (
+ 1,
+ 'LaTeX Help Forum',
+ 'General LaTeX questions, and Noosphere LaTeX questions in specific.'
+);
+
+
+pp:
+insert into forums (uid,userid, title, data) values (
+ 1,
+ 2,
+ 'Planet Physics Help',  /* change this to your project name */
+ 'Help using this system.'
+);
+
+pm:
+insert into forums (userid, title, data) values (
+ 2,
+ 'Noosphere Help',  /* change this to your project name */
+ 'Help using this system.'
+);

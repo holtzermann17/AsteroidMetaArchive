@@ -1,0 +1,25 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*** Definition
+
+The notion of /assignment list/ is a type of /association list/ sepecifically designed for describing data which is to be substituted into templates.  
+
+An /assignment list/ is either "t", "nil" or a non-empty list L such that 
+ * each element of L is a list with exactly two items.
+ * the first item is a non-nil atom
+ * no two items of L have the same car.
+
+*** Ratioanle
+
+The rationale for this definition is as follows.  In the case where an assignment list is a list (as opposed to "t" or "nil"), each item provides the name of a placeholder and a replacement text for which that placeholder stands.  The rule about no two items being allowed to have the same car is there to guarantee consistency --- there should not be more than one replacement text per placeholder.
+
+The usage of /t/ and /nil/ as assignment lists is a bit counterintuitive and only makes sence in the context of programs such as /match-template/ and /merge-assignments/.  /nil/ means that there is an inconsistency, so no variable assignment is possible.  /t/ means that there are no placeholders to be assigned.  Intuitively, it would seem more logical to use /nil/ to denote that there are no placeholders.  The reason for this perversity is that it allows one to use /match-template/ as a test whether a particular expression matches a given template.
+
+ *Navigation:/
+
+Back to [[file:Definition of assignment | assignment.org][Definition of assignment | assignment]]
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to [[file:template utilities - Operations on asignment lists | Operations on asignment lists.org][template utilities - Operations on asignment lists | Operations on asignment lists]]

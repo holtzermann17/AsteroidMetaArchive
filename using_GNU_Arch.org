@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+GNU Arch seems to be an attractive tool for file sharing and version management for the HDM project.  However, it is a little hard to figure out how to use.  This page will have a discussion of what I learn about how to use the system, as I begin to figure things out.  Any help or feedback from experienced Arch users or others who want to share in the learning process is appreciated. --[[file:jcorneli.org][jcorneli]] Mon Feb  7 03:33:59 2005
+
+We have several developers, in theory anyway (grin), and each of these has (at minimum) sftp access to a server from the machine they actually use.  The servers can read from eachother via http.  I think this situation accurately describes where we are at, so I am going to use it as the basis of the model. --[[file:jcorneli.org][jcorneli]] Mon Feb 7 22:41:29 2005
+
+So, if this is going to work, we really have to investigate:
+ * downloading via http
+ * making local changes
+ * checking in changes via sftp
+ * syncing over http

@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Assuming I can get the scholium system to a usable point before too long, is
+anyone willing to volunteer to use the system for some trial runs?
+
+What I would really like to do would be to finish the Emacs Lisp implementation
+of the system and then show the paper to Ross Moore to see what he can suggest
+about a sch2tex converter.  But the Elisp version needs to get finished before
+anyone can use it for much of anything!
+
+I was thinking that we (I, most likely) could attempt to import AM to the
+scholium system.  That might be a little tricky to do, but it could be fun - and
+it would certainly give us a substantial (non-toy) thing to use as our test
+case.
+
+The reason I'm thinking about "using the scholium system" is that I would very
+much like to be able to say in an abstract that "this paper describes the system
+and an experiment using the system."
+
+Since one of the simplest things the system should be capable of is
+re-implementing the Wiki idea (and extending it), AM seems to be a good
+candidate system to try.  
+
+We would want to bear in mind that it would be an experiment (of sorts), so if
+we hated the system, that would be OK, and we could come back to the Wiki
+version without delay.
+
+
+(Note that to /really/ be productive, we would want a bi-directional gateway
+between the scholium version and the wiki version.  That sounds somewhat hard to
+implement, but it could conceivably be done.)
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 05:05:13 2005 UTC
+
+
+I'll try it out. (no surprise :) ) I'm finishing plastering, I still have a
+bunch of stuff to do, so bear with me, but I would be glad. --[[file:rspuzio.org][rspuzio]]
+
+Well, it could take some 'til the system is ready to go, so you have some time.
+I'll make the ability to import AM one of my goals.  (Its frustrating not
+to have the financial support aspect of my life sorted out sufficiently yet,
+but maybe it will be soon - perhaps via a job that will give me the opportunity
+to program & write all night, on the clock.  That's what I'm hoping for now,
+jobwise.  If that comes about, then you might end up seeing some increase
+in my overall productivity... at a certain expense, perhaps.  But since I can't
+seem to sleep anyway, it really seems like not such a bad idea.) 
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 07:55:19 2005 UTC

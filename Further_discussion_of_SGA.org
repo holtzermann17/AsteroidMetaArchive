@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Update: I just learned that the copyrights for the SGA are back in the hands of
+the Bourbakistes who wrote them.  Since the authors seem to consent to a free
+electronic edition of their work in French, (see
+[http://www.math.leidenuniv.nl/~edix/public_html_rennes/sgahtml/index.html Towards a free electronic TeX version of SGA] for
+more information) and there is already a collaborative project for doing this
+(see
+http://www.math.leidenuniv.nl/~edix/public_html_rennes/sgahtml/part_info.html
+for more information) I would think that there would be no objection to a
+collaboratively prepared translation into English.  I cannot strongly enough
+urge that we look into this idea of preparing an infrastructure for
+collaborative translation and set up a webpage for the "translate SGA" project.
+Even if it doesn't get any grant money, I would think that this could definitely
+put Planet Math on the mathematical map. --[[file:rspuzio.org][rspuzio]] 28 March 2005
+
+
+I don't know about this.  Grothendieck is still alive and was the primary author
+of the work and hasn't given his permission for republication or translation to
+go ahead (and indeed, the last word from him on the subject, so far, was "no").
+So I am concerned that the project is not doing right by him.  I think that is
+perfectly ridiculous to say that it is impossible to reach the main author -- it
+might be improbable, but even if it /was/ impossible to reach him (e.g. if he
+had died or gone completely insane or really was so well hidden that no one
+could find him), then that is no excuse for seizing his copyright.  (At least,
+not under the current state of US copyright law; it may be different in France;
+and if his works fell to the public domain there, then they probably would here
+as well, irregardless of our copyright protection for US citizens.)
+
+See http://www.eldred.cc/p3/000135.html for a discussion of "orphan works" in
+the US.
+
+I think it would be fine to work on stuff that really was without a shadow of a
+doubt in the public domain.  But this SGA stuff just seems a little fishy to me.
+
+I suggest that you consider and, if necessary, check out, the copyright issues
+carefully before actually getting involved in this project.  It would be a shame
+if Grothendieck were to emerge from his retirement and put suing !PlanetMath
+first (or rather, second) on his agenda.
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 05:42:49 2005 UTC
+
+After what I've been saying the last few weeks, of course I completely agree with you.  Looking back at how I stated things a few minutes ago, I see that I maybe made it sound like we should set up the webpage immediately.  Rather, the adverb "immediately" should only refer to the verb "look into" but not apply to the verb "set up".  I definitely think that the possibility of gaining publicity by translating Bourbaki should be considered seriously.  And you are right that one important part of looking into such a project is getting the proper permissions and I am by no means suggesting any sort of about-face here.  Rather, I took what I saw under the webpage which I cited as an indication that the door is not shut and therefore is a possibility here which should be looked into.  As for Grothendieck, the trickiest part may be nature of his retirement!
+
+: /He is said to now live in the Pyrenees, a Buddhist, and to entertain no visitors./
+
+Perhaps one of our "French connections" could help in getting to the bottom of the situation.  Also, it might be worth finding out more from Bas Edixhoven (who is leading the project to put SGA on the web) about exactly why he is so confident that it is alright to publish these works.  At any rate, from what I can tell, he seems to have taken care to make sure that this was legal so I would not want to dismiss the possibility without first finding out more of what is going on here.  Also, there is the question of why the [http://smf.emath.fr/Publications/DocumentsMathematiques/ Societe Mathematique de France] (the French equivalent of the AMS) has assumed responsibility as publisher for the volume 1, which is available online.
+
+The situation seems rather puzzling.  Given Grothendieck's political views, I would not be surprised to find that he was opposed to commercial publication but might be open to free non-commercial distribution.  After all, at the same time that he refused to let Springer reprint the book, he also went to Hanoi to lecture on category theory in the middle of the war and refused a mathematical prize on the ground that the money would be better spent on young mathematicians!  Let me hasten to add that I am *not* saying that we should jump to any conclusions, just pointing out that thing are not as simple as they might appear at first sight.  Somehow, I am getting the feeling that some of the people involved with this share a lot of the ideals that motivate free math, so we might want to look into this further and hopefully enlarge our circle. --[[file:rspuzio.org][rspuzio]]

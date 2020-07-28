@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: "When I was in middle school, I told my dad that I wished that there
+was a machine that you could hook your head up to that would tell you
+all the answers to math problems." -- Joe Corneli
+
+Inspired by the successes Deep Blue, one problem for HDM is to beat
+the best human mathematician(s) at their own game.  Since there are no
+formal rules for competition in mathematics, the idea here is to solve
+some hard problem that humans hadn't been able to solve, which will
+show that the computer can compete at least at the same level.
+
+One can argue about whether or not the 4-color proof is already an
+example.  I would say not, because the point is to create a
+human-style proof of something humans haven't been able to figure out
+yet.  The millenium problems are a good set of example problems :).
+
+This isn't a subproject of HDM, just an ulterior motive.  The name
+"Deep Black" is a response to "Deep Blue".  It is meant to bring to
+mind monoliths, outer space (as opposed to underwater scenes), dark
+arts (see [[file:Arxana.org][Arxana]]), black skinned human beings (and the history of
+slavery and liberation in this country, with the suggestion that
+perhaps as computers become more sentient, their liberties will become
+relevant), and even good old free software (via the black coloration
+on penguins).
+
+* Additional points of interest
+
+ * Many mathematicians play Go, so maybe Deep Black would also learn to
+play Go, and maybe that it would become a strong player, at least as
+black (?) :).
+
+ * Also note that the official color of the HDM project itself is
+yellow, not black.
+
+----
+
+* Discussion
+
+If you're interested in this topic, I suggest reading the book "Behind
+Deep Blue" by Feng-Hsiung Hsu.  An exciting and inspiring story.
+I also recommend the book version of "Searching for Bobby Fischer" :).
+
+--[[file:jcorneli.org][jcorneli]]

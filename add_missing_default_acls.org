@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/convert/add_missing_default_acls
+
+pp line 6:  
+use lib '/var/www/pp/noosphere/lib';
+
+pm line 6:
+use lib '/var/www/noosphere/lib';
+
+ 1. Is it possible to have directory for library as a config variable
+
+Yes... I've started doing this for the search engine library.  Add a new variable in baseconf.pm and
+and example instance and value in baseconf-example.pl.  Then make sure baseconf is loadded before any of these
+"use lib" calls to a static location.  --[[file:akrowne.org][akrowne]] Thu Aug 18 19:13:17 UTC 2005

@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I’m a Computer Science student at Babes-Bolyai University of Cluj-Napoca, Romania. I would like to help the PlanetMath  with designing a new visual interface for it. Here is a more detailed description:
+
+ * redesign the whole template engine of Noosphere to use only XSL instead of the current HTML templates. 
+ * create a new look for PlanetMath based on the new template engine. All formatting should be done in CSS. Page layout should also be redesigned, emphasizing more on the math content rather than on the meta links (login box and so on).
+ * create stylesheets for printing and display on mobile devices. Printing stylesheets should only allow for the math content to be printed.
+ * face lift for AsteroidMeta, similar to Noosphere. 
+ * WYSIWYM (What You See Is What You Mean – similar to lyx) editing of articles inside the browser. (maybe a plugin for Firefox – IE is considered broken, anyway ;-) ) This would be hardest part of the project. 
+ * make Noosphere return MathML content to browsers that can display them besides the old  'HTML with images' format. This would reduce download time and make the output look better than with the current embedded GIFs.
+ * a new logo for PlanetMath, maybe ?
+ * this might be a bit off topic, but I think that it would be nice to be able to download a PDF version of the article, containing not only the current one, but also all the articles accessible from it. This way if you want to view it offline, you won’t have to save a bunch of html files together with their linked images.
+
+You can contact me at t-bronc@spunge.org, or visit my website (http://www.spunge.org/~t-bronc) for more information.I would like to hear feedback about my proposals. Thank you. 

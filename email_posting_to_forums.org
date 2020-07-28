@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is an idea that I brought up a while ago, but I'm not sure if it made it
+onto the wiki yet.
+
+The idea is to make forums and so on into mailing lists.
+
+As described on [[file:the relative merits of wiki and other workflow management media|this.org][the relative merits of wiki and other workflow management media|this]]
+discussion page, I think it would be great to have /all/ the features
+of the collaborative system available through an email or other very "lite"
+interface.  But starting with the forums for PM would be a good beginning!
+
+I think that an email interface would massively increase the amount of participation
+that we'd see in the forums from people who would rather do their math
+discussions in a "mailing list" than on an online bulletin board.  (They
+wouldn't have to think about the fact that the two things are the same...
+because they would be being /bidirectionally updated/ with each other -
+hey, a very simple case for bidi systems.)
+--[[file:jcorneli.org][jcorneli]] Fri Mar 25 04:54:17 2005 UTC
+
+Aaron has written some code for automatic-email-creation
+of corrections.  Presumably it could be modified to form the basis
+for this email/forum system. --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,89 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+This is a place to transparently describe the finances of PM.org.  Since the organization is wrapped around a CBPP project, there has been no spending in the central content production.  However, every sort of sunstaining project has overhead, and we have begun raising money for and spending it on this sort of overhead.  To date, this activity has not reached a significant magnitude, but we think it could/should, so this page will likely get more imporant.
+
+* Vital Stats
+
+The financial figures in this section are up-to-date as of *October 13, 2006.* Last update March 20, 2006.
+
+** Overview of Revenues
+
+Our historical revenues are:
+
+ * A total of *$3154.99* has been received through the Google
+  Adsense program (since around spring 2004).
+ * *$2547.70* has been donated to us through Paypal since 2003 (our largest donations
+  being $100 and $200(x2), before the Paypal tax).
+ * Large-scale donations totalling about *$4000* have been made and matched by a corporation (the employer of the donator).  Thus we have brought in approximately *$8000* in this category (unfortunately the activity is not broad-based).
+ * *$1170* has been received by check or direct handoff or miscellaneous.
+
+** Cash Holdings
+
+PlanetMath.org, Ltd.'s current account holdings are:
+
+ * Paypal - *$0.0* (or close to it)
+ * Wachovia - *$6,421.36*
+
+** Cash Flow
+
+These are definite items we expect to receive and spend in the near future.
+
+Accounts receivable:
+
+ * $1000 corporate donation match
+ * $2000 in Google SoC mentoring donations
+ * $2000 Chris Johnson donation
+
+Accounts payable:
+
+ * $2000 to Whirix for development of membership handling system
+ * $1000 bounty payment (Steve Cheng; installable Noosphere)
+ * $150 to Joe Corneli and $100 to Ray Puzio for 2nd half of Shaneal SoC mentoring
+
+Indefinite receivable and payable items:
+
+ * $1000 potentially to Chris Johnson for additional PlanetComputing work (if this is done)
+
+* Sketch of Spending
+
+Where have the vast sums (hah) detailed above been spent?  A valid question.  Here is an approximate idea:
+
+ * legal and clerical fees  (about $3000-$4000, mostly a legacy of startup costs)
+ * hardware (so far, RAM and hard disk upgrades, about $300-$400)
+ * maintenance (e.g., backups, ~$100)
+ * bounties (~$800 so far)
+ * outreach, especially travel to meetings (~$1500)
+ * incidentals (such as domain registration, which is itself about $30-60 every few years)
+
+The legal and clerical fees have been drastically reduced since the up-front cost, as 
+our full-fledged lawyer was replaced with a volunteer with paralegal skills (Bonnie).
+
+* Non-monetary Donations
+
+This category is for non-cash labor, expense coverage, machinery and other forms of support channeled to
+PlanetMath.  "Contract-like" spending which overlaps considerably with PlanetMath development objectives goes here.
+
+ * The IMS (directed by Jim Pitman) is now paying $1600/mo for James Gardner and $600/mo for Aaron Krowne 
+  to continue development of the modular linking system (Nnexus) and apply it to Jim's and the IMS's information environment.
+ * Google effectively donated $20000 worth of labor (though $2000 was cash directly to PlanetMath) for summer of code projects
+  (including the continuing James Gardner work on Nnexus).
+ * The MAA paid about $500 towards costs for Joe and Aaron to attend the 2006 Math Gateway meeting in DC.
+
+* Discussion
+
+Maybe these figures should be updated before the next board meeting. Also, notice that there are two bounties announced right now, and each one of them is worth $1000. These figures only consolidate my point. This is not the time to discuss paid positions, when we don't even have the money to pay for bounties. --[[file:alozano.org][alozano]]
+
+I will update the figures soon.  
+
+I don't consider a summation of the offer values on the outlined bounties to necessarily be any sort of meaningful number.  I in fact hope to eventually post far more bounties than we can pay for (at least, given their face value), which will supply us with many options and ensure we always have some irons in the fire.   
+
+I do agree that finances are limited, but it is always a folly to ignore planning for the future.   I believe we need a healthy dose of planning for the future right now, including discussion of paid positions.  No one has demanded promises of future pay at this time, nor would they get them if they did.
+
+Ironically, regularized updates of the financial information may have to be paid for in an ongoing capacity.  --[[file:akrowne.org][akrowne]] Mon Mar 20 22:07:26 UTC 2006
+: Sure, but let's plan for the future responsibly! First, one needs a detailed account of income for the next year, what earnings do we expect? and is it reasonable to expect such income? Once this is settled, and a responsible estimate is produced, we can then plan the future and think how funds may be used. What is not responsible is talking first about paying positions without having serious estimates on the funds we will receive. Maybe there are estimates somewhere which I can't find?--[[file:alozano.org][alozano]]
+
+:: I think you are setting up an impossible requirement here.  How can we give "detail" for funding from unknown future sources in such a volatile atmosphere?  The best we can do are rough if-then contingencies, which Ray has provided, but which were the initial source of your objections.  Also perhaps it has not been said clearly enough, but the two people I have most appreciated the help of would have to reduce or eliminate their level of assistance if they did not have some reasonable hope of getting support when their own efforts paid off.  I see this as the best hope for getting out of a chicken-and-egg situation with respect to the sustainability of PM.   So I will vouch for them and for monetary support for them when the time comes.  --[[file:akrowne.org][akrowne]] Tue Mar 21 13:47:05 UTC 2006
+#+BEGIN_VERSE When I say detailed I mean "in as much detail as possible". Are there no estimates at all? And, if you agree (and I agree too) that the scenario is too volatile at this point, how can we responsibly attribute monetary support to others at this point of time? As I understand, the plan is increase the budget over two years to the point that paid positions can be sustained. If the board approves this plan, and after a year the budget has increased considerably, then, next year, when there is proof that the plan is working, the board can actually approve paid positions if the board agrees on this. But , by no means, I would rush right now to create contracts or promise money which we may never have. --[[file:alozano.org][alozano]]

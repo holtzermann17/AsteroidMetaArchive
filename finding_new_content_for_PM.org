@@ -1,0 +1,509 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Gutenberg-US has some math books. These should all be public domain in 
+the US. However, they do not seem to have a good list of all math related books. 
+This makes them quite difficult to find.
+
+It could be good to have a "Donate material"-button on the front page of PM. 
+This would encourage lecturers, researchers, professors, etc. to "donate" old course
+material, theses, lecture notes, etc. to PM. We would of course 
+take care of all the integrating (if the material is fit for that).  
+-- [[file:matte.org][matte]] 23 April 2005
+
+See also: [[file:Copyright renewals for math books.org][Copyright renewals for math books]]
+
+*  Directories of online math books
+
+ *  The page
+   http://www.theassayer.org/cgi-bin/asbrowsesubject.cgi?class=Q#freeclassQAmg
+contains a list of science books on the net. Copylefted work
+is marked with a yellow symbol. 
+
+ * http://www.gutenberg.org/catalog/world/search Search interface to Gutenberg books
+
+ * Distributed Proofreaders at http://www.pgdp.net/c/default.php also proofread 
+  math books. 
+
+ * [http://www.andamooka.org/ Andamooka] seems to be a small site hosting open book
+projects. Most books seem to be computer manuals.
+
+ * [http://www.archive.org/ The Internet Archive] This place has some excellent content 
+of scanned public domain or CC math and physics material, see list below
+
+*  Examples
+
+Below are some books that possibly could legally be entered into PM. 
+See [[file:Public domain content and PM.org][Public domain content and PM]].
+
+** Gutenberg
+
+ *  Hyperbolic Functions by James McMahon, http://www.gutenberg.org/etext/13692
+It is written in short "Articles". Some of these are
+great as possible base material for PM. The Latex is also available. 
+Despide its age, it seems surpisingly current.
+
+ *  The Theory of Numbers, Robert D. Carmichael, 
+    http://www.gutenberg.org/etext/13693
+    copyrighted 1914. Elementary number theory.
+
+ *  Vector Analysis and Quaternions, Alexander Macfarlane,
+    http://www.gutenberg.org/etext/13609
+    published 1906
+
+ *  Miscellaneous Mathematical Constants, Plouffe, Simon,
+   http://www.gutenberg.org/etext/634
+   In addition to the numerical values, this book 
+   contains the names of quite a lot of constants and their definitions. 
+
+ *  Non-Euclidean Geometry, Henry Manning
+   http://www.gutenberg.org/etext/13702, (c) 1901,
+   Chapter 6 gives a good account on the history of hyperbolic geometry. 
+
+ *  History of Modern Mathematics Mathematical Monographs No. 1, David Eugene Smith
+   http://www.gutenberg.org/etext/8746,
+   history of determinant, geometry, etc. 
+
+ * The foundations of geometry, Hilbert, David (English)
+150 pages, 
+  http://www.gutenberg.org/etext/17384,
+  Geometry is not self contradictory. 
+
+ *  "Biographies of Distinguished Scientific Men", Arago, François (English), 473 pages, [http://www.gutenberg.org/etext/16775].
+Not directly suitable for the encylopaedia.
+
+ * "Amusements in Mathematics (1917)", Dudeney, Henry Ernest (1857-1930) (English)
+266 pages; [http://www.gutenberg.org/etext/16713]. Contains a lot of word puzzles. Not suitable for addition. 
+
+ * "Synthetic projective geometry,, 1st ed.", Sanger, R. G. (English)
+138 pages, [http://www.gutenberg.org/etext/17001]. 
+
+ * "Researches on curves of the second order,,", Hearn, George Whitehead (English)
+85 pages, [http://www.gutenberg.org/etext/17204]. Alanytic geometry. May contains results suitable for addition, but requires quite a lot of work.
+
+ * The Algebra of Logic by Louis Couturat, [http://www.gutenberg.org/etext/10836]
+
+ * Glenn, Oliver E, A Treatise on the Theory of Invariants
+[http://www.gutenberg.org/etext/9933]. Seems to specific for addition. However, it could contain isolated theorems and definitions that could be added. 
+
+ * Boole, George, An Investigation of the Laws of Thought
+[http://www.gutenberg.org/etext/15114] -- From Wikipedia, [http://en.wikipedia.org/wiki/George_Boole Speculations concerning a calculus of reasoning had at different times occupied Boole's thoughts, but it was not till the spring of 1847 that he put his ideas into the pamphlet called Mathematical Analysis of Logic. Boole afterwards regarded this as a hasty and imperfect exposition of his logical system, and he desired that his much larger work, 'An Investigation of the Laws of Thought, on which are founded the Mathematical Theories of Logic and Probabilities' (1854), should alone be considered as containing a mature statement of his views. Nevertheless, there is a charm of originality about his earlier logical work which is easy to appreciate.]
+
+** Distributed Proofreaders
+The following list are "In progress" math books (as 24 April 2005) on 
+http://www.pgdp.net/c/default.php .
+When books are finished (proofread and formated) they are moved to the Gutenberg site. 
+
+ *  "A Short Account of the History of Mathematics", Ball, W. W. Rouse (English)
+540 pages; Last Proofed: Friday, November 26th, 2004
+
+ * "Abriss Einer Theorie der Abelschen Functionen", Friedrich Schottky (German)
+168 pages; Last Proofed: Wednesday, January 12th, 2005
+
+ * "Elliptischen Funktionen", Karl Bobek (German)
+292 pages; Last Proofed: Friday, November 12th, 2004
+
+ *  "Mathematical Monographs - Harmonic Functions", William E. Byerly (English)
+68 pages; Last Proofed: Tuesday, April 12th, 2005
+ 
+ * "Mathematical Monographs - The Solution of Equations", Mansfield Merriman (English)
+55 pages; Last Proofed: Tuesday, December 28th, 2004
+
+ * "Mathematical recreations and essays", Ball, W. W. Rouse (English)
+420 pages; Last Proofed: Wednesday, February 9th, 2005
+
+ * "Plane and Spherical Trigonometry", Wentworth & Smith (English)
+265 pages; Last Proofed: Thursday, April 21st, 2005
+
+ * "Plane Geometry", Wentworth, G. A. (English)
+266 pages; Last Proofed: Wednesday, April 20th, 2005
+ 
+ * "The elements of non-Euclidean geometry,,", Coolidge, Julian Lowell (English)
+310 pages; Last Proofed: Friday, November 26th, 2004
+
+ * "Vorlesungen Ueber Die Theorie der Hyperelliptischen Integrale", Leo Koengsberger (German)
+174 pages; Last Proofed: Thursday, June 17th, 2004
+
+** Internet Archive
+
+ * "Lectures On Mathematics" by Felix Klein 1911
+
+ * "Mathematical and physical papers (Volume 1-2)" by Stokes, George Gabriel, Sir, 1880
+
+ * "Vorlesungen über geshichte der mathematik" by Cantor, Moritz 1907
+
+ * "Elements of Quaternions" By Hamilton
+
+ * "ernhard Riemann's Gesammelte mathematische Werke und Wissenschaftlicher Nachlass" by Riemann, Bernhard 1876
+
+ * "Exercices d'analyse et de physique mathematique" by Cauchy, Augustin Louis, Baron 1840
+
+ * "A Treatise On The Differential Calculus" by I. Todhunter, 1885
+
+ * "Werke (Volume 1-4)" by Gauss, Carl Friedrich 1870
+
+ * "A Treatise On Elementary Trignometry" by John Casey
+
+ * "An Elementary Treatise On Laplace Functions Lame'S Functions &Amp; Bessels Functions" by Todhunter 1875
+
+ * "A Treatise On Differential Equations" Andrew Russel Forsyth 1888
+
+ * "Introduction To Quaternions" by P. Kelland & Amp; P.G. Tait 1882
+
+
+There are many more some in different languages, so above is just a quick sample
+
+** non-Gutenberg
+
+***  Sean Mauch, Introduction to Methods of Applied Mathematics
+
+ * http://www.acm.caltech.edu/~seanm/
+
+ * This book has over 2000 pages and contains a lot of examples, exercises with
+solutions and figures. It's still "work in progress". Its copyright reads:
+
+: No rights reserved. Any part of this publication may be reproduced, stored in
+a retrieval system, transmitted or desecrated without permission.
+
+I suggest we use this page as a springboard for a new one on /integrating/
+new (extant elsewhere) content into PM.  As soon as it is determined that the
+license of the content is compatible with the FDL (or such a license is secured),
+there is no need for any deliberation in ingesting the content (so for example,
+the Mauch work is clearly compatible and ready to be copied now).  Whether to 
+ingest  is at the discretion of the transcriber, who becomes the object(s) 
+creator on PM. --[[file:akrowne.org][akrowne]] Sat Apr 23 15:26:09 UTC 2005
+
+On http://www.its.caltech.edu/~sean/book/unabridged.html, the author says
+
+: Please note that the unabridged version of the text may not be used by Caltech
+students in ACM 95/100.
+
+This could pose some problems, even though it contradicts the anticopyright.
+Also, the "anticopyright" may not be legally binding, we would want to check
+this out.  I assume that a Creative Commons transfer to Public Domain would be
+much better.  Perhaps we should contact the author about this work before going
+ahead (esp. given the restriction on use for Caltech students -- which of course
+I find somewhat infuriating).
+
+:  For PM, it could be good to have some standard written agreement for these situations. It could also be good to have all the 
+ parties involved in the agreement. For example, in this case, both Mauch and
+ Caltech (Mauch's employer?) are probably legally involved. -- [[file:matte.org][matte]] 23 April 2005
+
+For notes on integrating... see [[file:notes on integrating works into PM.org][notes on integrating works into PM]].
+--[[file:jcorneli.org][jcorneli]] Sat Apr 23 16:04:26 2005 UTC
+
+The restriction on students taking a particular class doesn't worry me much at
+all.  Although we should ask the author to make sure, my guess is that this is
+not part of the legal contract, but something else altogether.  Presumably, the
+complete book (as opposed to the abridged version) contains answers to homework
+problems, so for students to consult the full work would be to cheat.  If
+students should disobey this regulation, I assume that they might have to
+explain their actions before a dean, but I doubt that they would have to explain
+anything before a judge.  After all, it is standard practise in pedagogy not to
+allow students taking a class to look at the solution manual even though they
+have a legal right to do so.  --[[file:rspuzio.org][rspuzio]] 23 April 2005
+
+It probably isn't a legal issue... but it is still somewhat annoying,
+philosophically.  And, even assuming that it doesn't have to be carried forward
+in derivative works (which I'm not even sure can legally be made based on this
+"anticopyright"), Caltech students may be put into the uncomfortable position of
+not being able to look at PM (assuming that we add the "taboo" contents) without
+accidentally cheating.  Pandora's boxes and Bluebeard's castles aren't my
+favorite learning aids... but it would presumably be up to the Caltech student
+population to try get the rules changed (if they care).
+--[[file:jcorneli.org][jcorneli]] Sat Apr 23 19:51:22 2005 UTC
+
+***  Old journals
+If copyrights of old journals are not renewed, they might be in the
+public domain. See discussion at [http://planetmath.org/encyclopedia/NashIsometricEmbeddingTheorem.html this entry]. Nowadays there seem to be quite efficient ways of scanning 
+books. See for example [http://hardware.slashdot.org/article.pl?sid=06/02/18/2157223 this device].
+It seems to scan one page in 4 seconds, or 100 pages in 7 minutes minimum. 
+Compared with DP we have the advantage that we do not really need
+to proofread the texts completely. For example, if we would have 
+the pdfs and
+raw output from the OCR, that would probably be enough to make
+the articles searchable and useful for research. Most of the 
+material suitable for PM would probably be contained in the 
+introduction for the articles. 
+--[[file:matte.org][matte]]
+
+Sure, nowadays, scanners are easy to come by so scanning in papers is
+not that much of a problem.  For instance, my all-in-one desktop
+machine, which cost me U.S.$150 does high resolution scanning.  While
+scanning in volumes of journals is something of a chore, it is not all
+that much more time-consuming than what we already are doing to
+contribute content by wring entries.  Perhaps the trickiest part would
+be getting librarians to allow people to borow journal issues or bring
+scanners into the library.
+
+As for OCR, that is a real problem.  Whilst recognizing ordinary text
+is no problem nowadays, mathematics, as Joe informed me, is still a
+bear of a problem because of the two-dimensional nature of
+mathematical notation.  To the best of my knowledge, the problem of
+mathematical character recognition is still an open problem although
+there has been progress.  In particular, the Infty program seems
+rather capable of recognizing mathematical notation.  Unfortunately,
+it is only available for Windows and the authors were not receptive to
+the idea of releasing a free version to run under GNU.  However, if we
+had a pile of graphics files ready, maybe we could find someone with a
+Windows box to run the program on them or even get the authors of the
+program to convert them to TeX.  To make the story short, the
+prospects for OCR aren't all that promising right now but, even if we
+only offer graphics files, that would be valuable enough to justify
+the effort.  In the case of some papers which are still of particular
+interest to contemporary mathematicians, we could presumably
+retro-digitize them by some combination of OCR for the text and the
+simpler equations and having people typeset equations by hand and
+proofread the result.
+
+: The Infty project homepage is [http://www.inftyproject.org/en/index.html here].
+My idea was simply to run the scanned articles through a usual OCR. Sure. This
+will scramble the formulas. However, the main text will be mostly intact.
+(This is at least my experience from proofreading 
+Gutenberg math books). These "raw" scanned files would be online only for
+searching. For example, if we have these visible to Google, that should
+generate traffic. Once a user finds what he is searching for, we would have
+the original pdf ready for printing. Since people don't search for formulas 
+anyway, this should be acceptable. I suspect this is essentally how JSTOR operates (?).
+-- [[file:matte.org][matte]]
+
+Maybe this would be a good occasion to see how committed the American
+Math Society is to John Ewing's modest proposal.  Already on their
+submission form (http://www.ams.org/authors/ctp.html) they have a bok
+one can check to indicate that one's contribution will go into the
+public domain after 28 years.
+
+: AMS has already released Grinstead, Snell, Introduction to probability, 
+using the FDL, so they seem to be receptive. See the FDL/CC section below. --[[file:matte.org][matte]]
+
+Just to be even more modest, let's start by doubling the period to 56
+years.  I propose that we contact the AMS about making digital
+versions of the articles in their journals before 1950 available
+online freely at Planet Math.  When I looked at the renewal records, I
+don't remember seeing that AMS renewed their journals, so likely these
+are all in the public domain anyhow, but it won't hurt to contact them
+anyhow.  Most places I read suggested contacting publishers to check
+if they renewed copyrights. (A letter from a copyright holder stating
+that they did not renew their copyright could prove useful in
+establishing good faith should questions about copyright status arise
+later.  While asking publishers for permission can be troublesome,
+this is a somewhat different issue; we are not asking them for
+permission, simply clarifying our understanding of what they did or
+didn't do 30 years ago.)  Even if we don't need their permission,
+this could help us build a relationship with them and they might be
+willing to help us out by letting scan their copies at their main
+office or something like that which would save us a lot of hassle
+tracking down copies and haggling with librarians. --[[file:rspuzio.org][rspuzio]]
+
+: Yes. This sounds like a good idea. Maybe one reason why AMS is not 
+providing free access to their old articles, is simply that no-one else 
+is. If this is the case, we should start making enquires  to the AMS about going 
+forward in this direction. At best, they would provide the 
+material --- possibly under a thin copyright, so that we can not use it. 
+But, this would still be a step forward for the average mathematician. 
+Also, if AMS is providing access, other publishers would be motivated 
+to start making their works available. 
+Writing up a letter about this should not be too difficult. We have a 
+very specific question. Are, say old Monthlys, in the public domain? 
+If they are, there would be many natural follow-up questions. --[[file:matte.org][matte]] 
+
+****  Links
+ * http://www.ams.org/ewing/Twenty_centuries.pdf An essay by 
+John Ewing (executive direction of AMS) outlining a "digitizing and
+dissemination" of the past math literature. 
+
+
+***  US Government publications
+
+Note that all publications of the US Government are considered to be public
+domain.  This has relevance not just for PM, but for all the 
+[[file:Projects|other planets.org][Projects|other planets]].  We should put some work into identifying any
+and all /mathematical/ US Government publications.  (E.g. maybe stuff from the
+Naval Research Lab?)  There may be other sources of public
+domain stuff originating in other countries too.  (Though of course
+I don't know whether any of this other stuff is public domain according
+to US copyright law.)
+--[[file:jcorneli.org][jcorneli]] Sat Apr 30 02:27:07 2005 UTC
+
+: I could explore the possibilities with my dad, who works at NRL, or another person I 
+know who works in the IP office there.  In fact, this second guy (Dale Peebles) might
+be even better, as I think he's worked on the databases at the IP office. --[[file:akrowne.org][akrowne]] Sat Apr 30 19:52:01 UTC 2005
+
+:: I also got this idea talking with my dad: a lot of what he writes is filed to
+something called the FERC (Federal Energy Regulatory Commission), and he
+believes that this writing then becomes part of the public record w/o copyright
+terms.  This makes some sense, but of course it would be good to check.  If so,
+there may be many instances like this, where contemporary industrial
+researchers/advocates are putting rather "expensive" documents into the public
+domain.  My dad's stuff could be relevant to PlanetEconomics (assuming that the
+site was developed enough to go into a lot of detail)... but we could even
+consider things like PlanetLaw, etc., etc.  --[[file:jcorneli.org][jcorneli]] Sat Apr 30 21:54:06
+2005 UTC
+
+#+BEGIN_VERSE I know someone who used to work at FERC and could probably answer that 
+question, actually.  I will try to find out.  (P.S. this is the second time 
+I've posted this reply, somehow my edit here also mysteriously vanished. )
+--[[file:akrowne.org][akrowne]] Sun May 1 15:49:56 UTC 2005
+
+:: Even better, Aaron, what about somebody in the microwave lab of the Naval Research laboratory =)  (or is it the same person ?)
+
+: Can we maybe identify a list of US Gov't "publishing houses" and then
+use the LOC to create a list of all US Gov't publications?  (Then skim
+math topics, find preimage, map back down...)
+--[[file:jcorneli.org][jcorneli]] Mon May 02 05:05:00 2005 UTC
+
+***  Misc
+
+There is an interesting experiment by Brakke on mechanical [http://www.susqu.edu/facstaff/b/brakke/PlateauBook/PlateauBook.html translation of Plateau]; I don't see any licensing terms, but we could ask him (I'll do that).
+ 
+There is a  project atDartmouth on making Euler available online, and
+of course the scans are PD  (see  [http://www.math.dartmouth.edu/~euler/FAQ.html#copyright this page]).
+I don't know about any other materials, we could ask (maybe someone else could do that). 
+--[[file:jcorneli.org][jcorneli]]
+
+For the centralized reference database (See [[file:Bibliographies and Amazon referrals.org][Bibliographies and Amazon referrals]]), 
+we could ask users to upload their BibTex files. 
+This could easily provide us with basic data of thousands of works. Maybe we could
+even develop our own BibTex command that fetches bibliography data
+from PM. Complete with in-document links to the database. If people
+would use this in their works, this would generate a lot of links to PM! --[[file:matte.org][matte]]
+
+***  FDL/CC math books
+ * Steve Cheng (user stevecheng on PM) has released the following texts under the FDL[http://gold-saucer.afraid.org/math/]: Lebesgue Integral and Measure Theory (54 pp.),
+Taylor polynomials in Banach spaces (18 pp.),
+Conditional probabilities and expectations (13 pp.),
+An Application of the Rational Canonical Form (3 pp.). Of these, the most interesting is the introduction to measure theory, one area where PM is very weak.
+ * Stefan Bilaniuk, A Problem Course in Mathematical Logic, [http://euclid.trentu.ca/math/sb/pcml/welcome.html], FDL
+ * Grinstead, Snell, Introduction to probability, 
+[http://www.dartmouth.edu/~chance/teaching_aids/books_articles/probability_book/book.html],  FDL. The release letter from AMS is here [http://www.dartmouth.edu/~chance/chance_news/for_chance_news/ChanceNews12.04/gnu.pdf].
+ * Shlomo Sternberg, various, [http://www.math.harvard.edu/~shlomo/], CC Some rights reserved (is this for real or is there some misunderstanding?)
+ * TSLIB (various), Finite Mathematics, [http://math.dartmouth.edu/~doyle/docs/finite/finite.pdf], FDL
+ * Dan Sloughter, The Calculus of Functions of Several Variables, [http://math.furman.edu/~dcs/mvbook/], CC Some rights reserved
+ * Dan Sloughter, Difference Equations to Differential Equations, [http://math.furman.edu/~dcs/book/], CC Some rights reserved
+ * J.S. Milne, 1600 pages related to group theory, number theory, 
+and modular forms, etc. [http://www.jmilne.org/math/CourseNotes/] (CC)
+ * Richard Kaye, lecture notes on real numbers, sequences, and series. 
+[http://mat140.bham.ac.uk/~richard/MSM2P01b/] (xhtml, FDL)
+  * This text contains some material which would help the real number project.
+ * [http://linear.ups.edu/ A First Course in Linear Algebra] (650 pp., FDL) This is a huge book. A first impression is that it is a bit bloated.  But, among some quite 
+elementary examples, there are also very good introductions to subjects. The book also 
+contain proofs that border to the trivial, but, have a clear place on PM. 
+ * [http://www.und.edu/dept/math//transition/transcalc1.pdf Transition to Calculus] (31 pp., FDL)
+ * Steven E. Pav, [http://www.cam.ucsd.edu/~spav/pub/numas.pdf Numerical Methods Course Notes] (180 pp., FDL)
+ * Bart Snapp, [http://www.math.uiuc.edu/~snapp/119/ Ideas in Geometry] Elementary introduction to geometry, Continued fractions, Induction, elementary set theory. 
+This book contains a lot of very good pictures (!!). (161 pp., FDL)
+By just importing the pictures would give many entries on PM a nice facelift. 
+ *  Laurent Claessens, [http://student.ulb.ac.be/~lclaesse/ Field theory from a bundle point of view]. An elementary introduction to fiber bundles, manifolds, and
+differential forms (see the appendix). (155 pp., FDL). This could be 
+a good reference for a differential geometry project on PM.
+ * Benjamin Crowell, [http://www.lightandmatter.com/calc/ Calculus], (132 pp., FDL/CC) Basic calculus
+ * Sergei Winitzki
+, [http://www.theorie.physik.uni-muenchen.de/~serge/T7/ Topics in Advanced General Relativity
+] Contains some tensor analysis and Riemannian geometry. (88 pp., FDL)
+ * Daniel Clemente Laboreo,
+[http://www.danielclemente.com/logica/dn.en.pdf Introduction to natural deduction], 
+(45 pp., FDL)
+ * Simone Piccardi, [http://firenze.linux.it/~piccardi/relmecquant.pdf Introduzione alla
+Meccanica Quantistica Relativistica], (physics, 145 pp. FDL) This is in Italian. 
+ * JiÇr´1 Ad´amek, Horst Herrlich, George E. Strecker, [http://katmat.math.uni-bremen.de/acc/acc.pdf Abstract and Concrete Categories The Joy of Cats]. (524 pp. FDL)
+Category theory. 
+ * H. Jerome Keisler, [http://www.math.wisc.edu/~keisler/ Elementary Calculus: An Approach Using Infinitesimals] (900 pps., CC) The text is only available as a scanned PDF of
+a printed book. This would make it impossible to release it under the FDL (?). 
+ * Norman Walsh, [http://makingtexwork.sourceforge.net/mtw/ Making TeX Work].
+ * Benjamin Crowell, [http://www.lightandmatter.com/area1.html Light and Matter introductory physics textbooks]. (290 pp., CC/FDL) This is not really math, but closely related. 
+ * Paul Garrett [http://www.math.umn.edu/~garrett/calculus/ Notes on first-year calculus].
+In [http://books.slashdot.org/article.pl?sid=04/03/04/028253&mode=thread this review]
+it is suggested that the book is under the FDL, but I could find no notice about this 
+on the homepage. Maybe contact the author and ask what the status is. 
+ * [http://www.potto.org/ Fundamentals of Compressible Flow Mechanics] (230 pp., FDL) Physics.
+
+***  Free resources (non books)
+ * Old APX-Xi entries. These will require some work. But, as I recall there were
+quite many definitions and important theorems 
+that were deleted during the 'APM-Xi'-experiment. 
+For example, many related to distribution theory. With hindsight, the remaining
+Apm-Xi entries should maybe have been converted into requests instead of being deleted in 2003.  --[[file:matte.org][matte]]
+ * metamath.org - contains more than 8,500 theorems and
+axioms. Has output formatting capability for Latex and html,
+and custom extracts are feasible via mmj2 given some custom programming
+if PM provides the file layout specs. Metamath is a very
+remarkable achievement. Starting directly from the axioms of logic and
+ZFC, set theory is developed from the basics through ordinals and 
+transfinite cardinal arithmetic, while real and complex numbers are constructed with Dedekind cuts and developed to include infinite
+series, limits, and trigonometry. Famous theorems include Russell's paradox, the Schroeder-Berstein theorem, Zorn's lemma, the infinitude
+of primes, and the uncountability of reals. Separately, quantum
+logic is developed in database ql.mm, with more than 1,000 theorems.
+Contact Norm Megill to learn more about the past, present and
+future of Metamath! --[[file:ocat.org][ocat]] 5-Mar-2006
+
+
+****  Discussion
+
+This makes a good example for the article Aaron and I are now writing
+(The Fog of Copyleft).  As things stand now, it would be impossible to
+make use of the material released under CC licenses in PM because of
+deliberate incompatibilities between those licenses.  This shows that
+the problems of license lock of which we speak are not only
+theoretical; they have practical consequences for math right now.
+Whatever th situation in othe fields, such as programming may be, in
+math we already have the problem of incompatibilities between copyleft
+scemes rearing its ugly head --- had there not been these
+difficulties, we could have made a whole bunch of entries out of
+Sloughter's book, but now this is impossible.  Having the resulting
+entries be licensed under the CC scheme (and other entries licensed
+under the GNU scheme) does not seem like a realistic option to me
+because it would prevent combining the material in these entries with
+other material and would prove confusing to most PM members and only
+lead to a lot of headaches sorting out what is legal to do and
+checking the website for violations.  While Stallman and Lessig may
+feel that there differences are important enough to warrant keeping
+their licenses incompatible, I am not sure that most users (in
+specific, PM members) really care about these issues and are simply
+inrterested in being able to reuse mathematical exposition with at
+minimum of trouble.  (I would say that, for such people, if using
+copylefted material is as hard as obtaining permissions to use
+copyrighted material, then copyleft is not doing them any good and
+maybe impeding the progress of free math.)  --[[file:rspuzio.org][rspuzio]]
+
+True. However, if a math book is in the CC, it shows that the author
+presumably could be a supporter of the Free Math Movement. While it
+would be illegal to add material from CC-books directly, it would not
+seem unreasonable to send a mail to the author, explain our situation
+and politely ask him/her to consider releasing the material under a
+FDL/CC dual licence (this should be possible I understand?). For
+example, the first author encourages people to send "questions,
+comments, corrections, suggestions, or requests" to him. This would
+seem as an invitation to discuss the book. Even its license. As long
+as our approach is polite and well prepared, I think most authors
+would be more than happy to discuss their work. --[[file:matte.org][matte]]
+
+I agree with both Ray and Matte; it is annoying that we have to ask
+these CC people, but I think they are rather likely to give us
+permission.  I think this comes to a bigger issue, however, which is:
+is it the case that /any/ copyleft license can be a good choice for
+!PlanetMath?  I don't know whether Ray and Aaron have satisfactorily
+answered that question, but I appreciate the fact that they are
+grappling with it (at least in the abstract).  Perhaps we
+should also make this question a concrete part of the upcoming
+[[file:PlanetMath Board Meeting--Q1 2006|board meeting.org][PlanetMath Board Meeting--Q1 2006|board meeting]]. --[[file:jcorneli.org][jcorneli]]
+
+Several of the suggested additions (if not all of them) should
+be kept in separate collections, with translation mechanisms between
+them.  E.g. a metamath entry that corresponded to a given "standard" 
+PM entry could have a link saying "view this entry in plain
+English mathspeak" whereas the corresponding "standard" entry 
+would have a link saying "view the corresponding metamath entry".
+If there is only one or more "related" entry but not any directly
+corresponding entry, we could note that, too.
+
+Similarly for entries in other languages (whether computer or human).
+
+I might suggest that collections of entries coming from any source be
+kept in a separate holding tank until they are "translated" into the
+mainstream encyclopedia by someone (or something) -- however the
+issues of translation, mass ingest, standards, etc., are likely to
+be somewhat contentious!  I hope we can find something that works for
+everyone! --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:PlanetMath.org][PlanetMath]] / [[file:Donating material to PM.org][Donating material to PM]]

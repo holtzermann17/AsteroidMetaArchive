@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It seems from our discussions that improving the documentation
+of Noosphere is a high-priority item (see [[file:Noosphere_documentation.org][Noosphere_documentation]]).
+In terms of /actual/ feature requests, however, it seems to
+me that [[file:nested noosphere instances.org][nested noosphere instances]], specifically taking the form
+of /infrastructure for translation/, would be good. --[[file:jcorneli.org][jcorneli]]
+
+: /Infrastructure for translation/ (i.e. multi-language support) would be an /excellent/ addition to the system. --[[file:alozano.org][alozano]]

@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/convert/makethreads
+
+pp line 4:  
+use lib '/var/www/pp/noosphere/lib';
+
+pm line 4:
+use lib '/var/www/noosphere/lib';
+
+ 1. Is it possible to have directory for library as a config variable

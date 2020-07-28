@@ -1,0 +1,117 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+**  Feature request:  Metamath readline support
+
+If you've used the precompiled version of the [[file:metamath.org][metamath]]
+[http://us2.metamath.org:8888/index.html#mmprog program] on
+Windows, you've probably noticed
+that you can press the up-arrow to recall previous commands and edit them
+to produce new commands.  This is a feature built into the lcc compiler
+that I used for the Windows version.
+
+The gcc compiler does not have this feature built in, so the Linux/Mac/Unix
+version (assuming it is compiled with gcc) isn't as user-friendly.
+But there is a library called 
+[http://cnswww.cns.cwru.edu/~chet/readline/rltop.html readline] that in principle can be
+used to achieve this kind of behavior.
+
+Interfacing readline to Metamath that would be a very useful project.
+If anyone is interested, here are some details about the Metamath program
+that may prove helpful.
+
+Almost all user input in metamath is funnelled through one line in
+mminou.c:
+
+    if (!fgets(g, CMD_BUFFER, stream)) {
+
+Here 'stream' is either stdin when taking input from the keyboard,
+or a file pointer when taking input from a file (with the SUBMIT
+command).
+
+Ideally, we would want to add in the readline interfacing via some
+#ifdef constant or something so that the program reverts to fgets with non-gcc
+compilers, so that there will be only one version of the program that has to
+be maintained.  So far the metamath program is strictly ANSI compliant
+and works with many different C compilers with no code
+changes, and I hope we can keep it that
+way.
+
+The only other user input is also in mminou.c, where there are 3
+getchar() calls for the one-character answer to the scrolling questions.
+These probably don't have to go through readline.  (It would be nice if
+you didn't have to hit return after pressing the character, but I couldn't see
+how to do that under strict ANSI C.  But I don't think it's a big deal.)
+
+There is also an fgets in mmvstr.c but that's only used for files so
+you don't have to be concerned with it.
+-- [[file:norm.org][norm]] 25-Nov-2005
+
+**  Suggested solutions - readline wrappers; emacs
+
+[[file:marnix.org][marnix]]: Note that [http://utopia.knoware.nl/~hlub/uck/software/ rlwrap] can be used for
+arbitrary programs that don't have readline support.  With an appropriate shell
+alias, nobody probably need to notice.  I know there are other tools, but I
+can't find them right now.  -- [[file:marnix.org][marnix]]
+: [ other tools ] There is emacs at least. M-x comint-run metamath does a good job. -- [[file:frl.org][frl]] 26-Nov-2005
+
+-----
+
+[[file:norm.org][norm]]: Wow, this is excellent! Thanks, Marnix.  I installed
+[http://utopia.knoware.nl/~hlub/uck/software/ rlwrap] and it worked perfectly the
+first time.  It makes life so much more pleasant.
+I'll add this to the metamath program
+[http://us2.metamath.org:8888/index.html#mmprog instructions].
+So, this feature request is now a feature.
+
+
+(I was wondering why gcc doesn't do this by default, like other
+compilers.  The answer may be that the gcc libraries are under
+the LGPL, whereas the readline library is GPL - so any program that uses
+readline must also be GPL.
+From the page
+[http://www.fsf.org/licensing/licenses/why-not-lgpl.html
+Why you shouldn't use the Library GPL for your next library]:
+"Releasing [readline] under the GPL and limiting its use to free programs gives our community a real boost.
+ At least one application program is free software today specifically because that was necessary for using Readline."
+I thought that was interesting.) --[[file:norm.org][norm]] 25-Nov-2005
+
+-----
+
+[[file:raph.org][raph]] weighs in: there is the license issue, and also the question of the interface between the application and the underlying system. In the Unix world, for terminal programs anyway, this interface is defined (somewhat archaically) by the "tty" notion. This interface supports only "raw" and "cooked" modes, the latter of which supports backspace and very primitive editing, but nowhere near the full functionality as readline.
+
+Thus, if an application wants to provide richer editing, it is responsible for this itself. The readline library is simply one popular way to do this. There are other alternatives, including libedit (mostly readline compatible, but with a BSD-style license).
+
+Making the interface between the application and readline explicit, rather than just default behavior of an fgets() call, has some advantages. Most notably, you get completions (usually invoked by the tab key). The question is, of course, how far down this platform-specific road you want to go. In the meantime, rlwrap is probably a fine choice.
+
+--[[file:raph.org][raph]]
+
+-----
+
+[[file:norm.org][norm]] comments:  The philosophy in VAX/VMS was, I believe, that the
+"cooked" mode of cc just inherited the OS command line behavior as far
+as up-arrow command recall, etc.  I would also guess that Windows' lcc doesn't really
+have it's own "readline" code built-in but somehow inherits the Windows
+Command Prompt behavior, since it shares similar idiosyncracies.
+
+The same philosophy applied to Linux/Unix would mean that by default the
+"cooked" mode would inherit whatever readline-type features the user has
+enabled for the particular shell the program was running in.  That would
+give the user a consistent experience that would change according to the
+behavior of the shell, not frozen according to one programmer's choice of
+readline settings.  That would
+also solve the problem of having to futz with the stty settings to get
+even backspace to work in the program, when it already works fine in the
+shell itself (as happened with metamath on my Debian box) - which seems
+like duplicate effort and a silly waste of time, since the shell must
+already "know" what the correct tty settings should be.
+
+I wouldn't necessarily propose this be the default behavior of gcc for
+legacy reasons, but possibly the result of some compile option.
+This would be independent of readline, which would still be used exactly
+as it is now for programs needing customized behavior.
+
+Of course I am talking way over my head here, knowing nothing about the
+internals of how an application program interacts with the shell.  Not
+that I would have any say in such a fundamental OS decision anyway.  :)
+-- [[file:norm.org][norm]] 25-Oct-05

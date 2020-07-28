@@ -1,0 +1,200 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+On [[file:connections between math and programming - Math vs. Programming|this part of the math/programming thread.org][connections between math and programming - Math vs. Programming|this part of the math/programming thread]],
+Ray says interesting (and sometimes amusing) things about the different languages people use in math.
+
+I /do not/ want to start a flame war (or any kind of war) about what language is best.
+I really only know /one/ programming language, and /one/ mathematical language (and
+/one/ natural language for that matter).  I think that "what language is best" debats have a
+strong tendancy to be sort of silly.  Mathematically and/or computationally, all "reasonable"
+languages are equivalent.
+
+But (oh, you knew there was a "but" coming? - well good for you) different
+languages definitely have different features (and, sometimes, mis-features).
+For example, English is said to be notoriously hard to learn because of its dual
+latinate/germanic heritage.  Or, for another example, can you imagine trying
+to program a big application in [[file:http://www.muppetlabs.com/~breadbox/bf/ this programming language.org][http://www.muppetlabs.com/~breadbox/bf/ this programming language]]?
+(To be fair, here's
+[[file:http://esoteric.sange.fi/brainfuck/bf-source/prog/gameoflife.b an implementation of the game of life.org][http://esoteric.sange.fi/brainfuck/bf-source/prog/gameoflife.b an implementation of the game of life]] -
+but still, the thing is too low level to be useful for anything very high level, IMO.)
+
+While Turing complete languages don't differ in a "mathematico-logical" semantic
+sense, they frequently do differ (fundamentally) in several "computational" semantic
+senses.  E.g. languages can have "built in" support (i.e., typically, existence
+of compilers) for certain sorts of hardware but not for others; or they can have
+some libraries that another language doesn't have; or they can have different
+"usability" features.  For example (oh, you saw this coming too, did you? - you
+are really on form, I must say), /parentheses/ -- lots and lots of parentheses.
+
+That's right.  What this all leads to is the following.  While I don't think
+that there is a "best programming language", I do think that LISP is so
+darn /user-friendly/, especially when combined with the Emacs editor,
+that I would like to humbly suggest that you try the following Tom's of Maine-like
+challenge: program exclusively in LISP for a week.  Emacs Lisp is especially
+easy to install -- because it comes built in, in your Emacs editor.  
+I won't be able to refund your time if you aren't happy, but I can refund
+the cost of your Emacs editor (or, at my discretion, provide you with
+a voucher for a brand new Emacs editor of your choice).  No other guarantees
+are issued.
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 05:25:39 2005 UTC
+
+And no free cans of Tahiti treat :(
+
+To make LISP even more friendly, maybe we could resurrect m-expressions.  For those who are not familiar with this notion, m-expressions and s-expressions are meant as two different syntaxes for LISP.  Originally, the idea is that m-expressions were to be for user interface whilst s-expressions were to denote the internal representation as cons cells.  However, LISP programmers took to programming directly in terms of s-expressions and the m-expressions fell by the wayside.
+
+To give the reader an idea what these creatures looks like, consider the listing of a LISP program as an m-expression:
+
+ mem (a, l) := atom (l) -> a = l; 
+               mem (a, head(l)) -> T; 
+               T -> mem (a, tail(l))
+
+and as an s-expression:
+
+ (defun mem (a l)
+   (cond ((atom l) 
+          (eq a l))
+         ((mem a (car l))
+          t)
+         (t 
+          (mem a (cdr l)))))
+
+Especially if one uses a typesetting system like !TeX or one's favorite word
+processor to make the output look pretty, one could make the m-expressions look
+rather readable to mathematicians and other newcomers to LISP.
+
+Translating between m-expressions and s-expressions should be a lot like the
+parsing we have been considering.  Used alongside literate programming, this
+could make LISP source code read a lot like a math paper and perhaps interest a
+wider audience.  --[[file:rspuzio.org][rspuzio]] 31 March 2005
+
+
+Mmmm - tahitian treat, yummy. :-)  But it's mine!
+
+As for m-exps, what I have to say about them is: ick!  and also: yuck!
+
+The basic reasons for which I prefer s-exps are:
+
+ * `forward-sexp'
+ * `backward-sexp'
+ * `kill-sexp'
+ * `backward-kill-sexp'
+ * `up-list'
+
+Besides, I find m-exp syntax to be essentially unreadable.  s-exps give you
+maximum control over order of operations.  m-exps have built-in order of
+operations, which leaves me with confusion... unless I add "unnecessary"
+parens.
+
+Maybe if you write it this way...
+
+ mem (a, l) := atom (l)           -> (a = l); 
+               mem (a, head(l))   -> T; 
+               T                  -> mem (a, tail(l))
+
+OK, maybe I was overreacting a little.  But if you've tried to use ML or
+HOL... ouchy, that's all I can say.  To try to sum up: I'd much rather go the
+other way, translating m-exps to s-exps.
+
+Really, for me, code clarity comes mostly from documentation, not from syntax.
+"Real" LISP has very little syntax... which I would say is a good thing.
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 08:27:27 2005 UTC
+
+This suggestion was not meant for either you or me :)
+
+As far as I am concerned, the usual notation for mathematics is even more icky,
+yucky, ouchy, clumsy, confusing, inconsistent, and intractable than
+m-expressions.  It is filled with historical barnacles and idiotic special
+cases.  I much prefer the elegance of writing mathematics in h-code or some
+similar notation which is based on the consistent application of a few basic
+principles.
+
+However, there are a lot of people who do not share this point of view.
+Unfortunately, many mathematicians are reactionary fuddy-duddies who could care
+less about such elegance and prefer familiar-looking notations even though these
+notations have a fiendishly complicated syntax with all sorts of special cases
+and complicated order of operations rules and potential for ambiguity (think of
+the fact that some functions are represented as prefixes, others as infixes, yet
+others as superscripts, ...).  Rather, I was thinking that people who are
+attached to conventional mathematical notation and have a hard time thinking
+outside this box might prefer m-expressions since they look familiar and would
+consider s-expressions difficult to read simply because they look unfamiliar.
+
+My idea was simply that an interface which could convert betweem s-expressions
+and m-expressions might therefore make LISP attractive to a wider audience.
+This was meant along the lines of the earlier comment "Some people might prefer
+to have programming be more like doing math" -- those people might prefer typing
+in m-expressions.  Likewise, as noticed earlier, many people are very reluctant
+to leave their comfort zones and learn a new syntax so attempts to convince
+other people about the virtues of having little syntax are likely to fall on
+deaf ears.  I suspect that, just as many mathematicians would be unwilling to
+consider typing math in the form of s-expressions (and can be downright hostile
+to the suggestion) so too more mathematicians might consider using LISP if they
+could read it in a notation which was very close to what they already were
+familiar with.
+
+As I see it, as long as there is a parsing program to convert between the two,
+ther is no real problem because one could set one's browser to display LISP as
+m-expressions or as s-expressions.  --[[file:rspuzio.org][rspuzio]] 31 March 2005
+
+
+Sure, if you can convert between the two, it hardly matters one way or another.
+
+I guess the issue here - and the reason that you might find me to be abnormally
+cantankerous about it - is that in talking about the merits of m-exps you are
+doing the opposite of preaching to the choir here.  There /is/ a "choir".  But
+I bear a relationship to it that an inveterate and probably drunken atheist,
+socialist, hack might bear to a real choir.  He (or she, but this hardly seems
+like a lady we're talking about) might one day have a divine vision... but it
+isn't likely to be any time soon, and it might be a direct cause of drinking too
+much and not eating enough, and it would probably be rejected upon awakening.
+
+Now, it might be most preacherly to spend time talking to such a person about
+his higher callings... but you have to be prepared to get a bottle or two
+chucked at your head.
+
+To be more concrete.  The "choir" is the HOL/ML community, and their brethren.
+Mizar, I think, is not too different.  HOL/ML /is/ precisely the reinvention
+of LISP as m-exps you (and !McCarthy, previously) were talking about.
+
+I would describe them as a "mathematical salvation army".  These sorts of folks
+want to save mathematics from itself.  And like the real salvation army, they
+are, arguably, a quote-un-quote poverty industry.
+
+It is not a poverty of money that this industry thrives upon, nor even of
+ideas... but a poverty of language, and (I hope no one will be offended) of
+vision.  /Here/ is the vision, and, if I do say so, it is rather divine:
+
+Of perfectly strident (but in a good way, i.e., like Strauss) and elegant
+mathematical /prose/ - written perhaps with some of the same "inconsistent"
+notations people have invented and memorized for psychological convenience, or
+perhaps with somewhat "flatter" or perhaps just "better" notation, but the point
+being: /clear/ -- as the light of day, as thrice distilled vodka, as the
+agency of a higher power to the faithful... as LISP... as the beating of the
+tell-tale heart... as Poe's own prose.
+
+The point being... yes, let me continue...  That contrary to what I seem to be
+hearing folks say, I don't necessarily want that many people to be writing math
+"in code".  If it works for you, hallelujah!  But if hcode isn't acceptable to
+someone else, I'm perfectly ready to accept that.  If they're doing traditional
+math or HOL or what have you, good!  We'll get them too, in the end, of course,
+but they might not even notice.
+
+And if HOL grows to take over the whole universe, I'll probably still be here
+writing in LISP, and won't notice, either.
+
+They are just languages, after all.  I like LISP because I find it to be
+user-friendly.  To someone else, maybe something else is "user-friendly".  OK.
+It is really sort of like the Dvorak/QWERTY debate; HOL is like QWERTY, Lisp is
+like Dvorak.  But real math is written with pencils, fountain pens, bics, chalk,
+and !TeX code, and not "typed" at all.
+
+And... OK.  I'll take that as a clever pun coming from my subconscious, and end
+this diatribe on an up note -- which is that while I don't like the HOL syntax,
+the project as a whole has had some /really/ good ideas.  What I think we
+/should/ do, as time goes by, is mine their work for their best ideas, and use
+or adapt them, like we've been wont to do with other projects in the past (and
+in the future).
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 15:23:14 2005 UTC
+
+[[file:connections between math and programming | Back.org][connections between math and programming | Back]]

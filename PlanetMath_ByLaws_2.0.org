@@ -1,0 +1,210 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Overview of The Organization
+
+The organization generally works as follows:
+
+ * board approves vision
+ * board determines resource allocation (including disc. budget amount)
+in accordance with vision
+ * board approves the creation of ongoing positions
+ * executive conducts hiring for ongoing positions
+ * executive disburses pay in allocated categories
+ * executive has 100% discretion on spending discretionary portion
+ * treasurer vetts all spending
+ * treasurer can bring spending concerns to board
+ * board or executive can call referenda (votes by members with vote)
+ * board can create committees (of board members or community members)
+to "delegate" their decision-making
+ * members vote for board periodically 
+
+* The ByLaws
+
+This section (and this section only) consists of the offical bylaws of 
+PlanetMath.org, Ltd.  More specific rules of the organization should be 
+considered separate policy.
+
+** Board of Directors
+
+
+ 1. The purpose of the Board of Directors is to oversee the operations of
+  the organization, make sure that they are consonant with the mission
+  of the organization, and set goals for the organization.  
+ 1. The board represents the interests of the members and the nonmember
+  "stakeholders" of the organization's activities (such as primary or
+  secondary mathematics students).
+ 1. The oversight provided by the board is at a high level, dealing
+  with the overall operation.
+ 1. The board is responsible for setting the organizational budget.    
+ 1. The board serves as a court of appeals for disputes within the
+  organization which cannot be settled by ordinary means and
+  investigates complaints of impropriety raised by members or
+  employees of the organization.
+ 1. The board creates and destroys permanent positions within the
+  organization. 
+ 1. The board creates and destroys committees to perform specific tasks
+  (be they limited-term or ongoing).
+ 1. The board approves officers for the organization and reviews the
+  performance of officers on an annual basis (and can relieve officers
+  of their duties and replace them if it deems that they are not
+  carrying out these duties in a manner consonant with the mission of
+  the organization).
+ 1. A quorum of the board is a majority of the board.
+ 1. The board can create arbitrary operational policy by a majority vote.  
+  This policy should be recorded in an officially-posted document.
+ 1. Board elections take place every other year.  
+ 1. A board member is automatically a member of the organization.
+
+** Officers and Employees
+
+ 1. The officers and employees serve to conduct the day-to-day operations of
+  the organization.  While the board sets the agenda in broad terms,
+  it is the officers who implement this agenda, deciding how it is to
+  be carried out and setting up subagendas and subgoals for that purpose.
+ 1. The President is also Executive Director and supervises the activities of the 
+  other officers and ad hoc and non-officer ongoing hires.  The President
+  has full discretion over hiring of non-officers, unless the board sets
+  forth special policy dictating otherwise.
+ 1. For accountability, there will be at least annual reports to the board, which 
+  will be also available publicly to the members.  The reports will be
+  coordinated by the President, who can delegate portions to other officers.
+ 1. The officers are to be responsive to the needs to the community and
+  their requests.  Officers should engage in and encourage discussion 
+  within the community.
+
+** Membership
+
+ 1. There are three ways one can become eligible to be member of the organization:
+## Working Member --- Someone who has contributed at least 1000 points 
+   to the PlanetMath.org web site, or who has contributed code to the codebase.
+## Paying Member --- Someone who has donated at least $20 to the organization 
+   within the last year.
+## Board Member --- Someone who has been elected to the Board.
+ 1. Powers of Members:
+## Members may propose
+  board nominees but board members or officers may also nominate themselves or 
+  other parties.
+## Members ratify changes in the bylaws.
+## Members vote on formal referenda.
+
+** Board Meetings
+
+ 1. Official meetings shall take place quarterly at a time and date
+  and venue set by the board with at least two week's public notice.
+ 1. Unless otherwise stated, board meetings shall be open to members.
+
+(officially adopted, 11/5/08)
+
+* Organizational Goals
+
+Our goals as an organization and community are:
+
+ 1. to create free educational content in mathematics 
+ 1. to advocate for and support the study of mathematics
+ 1. to improve the uptake, accessibility, and propagation of mathematical knowledge
+ 1. to foster commons-based peer production (CBPP) of knowledge content
+
+(officially adopted, 11/5/08)
+
+*  Supporting Policy
+
+Other guidelines (not official) 
+
+** Operating Principles of the Organization
+
+This section describes how we generally (not specifically) plan to bring the above goals about.
+
+To do our work we plan to:
+
+ 1. structure our efforts in a chiefly volunteer/collaborative/CBPP manner
+ 1. employ choice and diversity over control and uniformity
+ 1. undertake research and development on collaborative systems
+ 1. do outreach in the mathematical communities about the goals
+ 1. get people into using CBPP systems (Noosphere and beyond),
+variously: in new areas, as a way of taking over areas of "centrally" produced
+knowledge, and also in ways are directly compatible with traditional methods
+of knowledge production 
+ 1. provide a sustainable organizational shell to accodmodate the community and steward development activities
+ 1. forge partnerships with organizations with overlapping interests
+ 1. pursue all compatible forms of support at all levels, from grassroots to official organizations
+
+** Community and Organizational Philosophy
+
+The philosophy of our community, and hence our organization, is that
+the individual or group should be free to do whatever they want as
+long as it does not destructively interfere with the commons (our
+shared resources and spaces).  When there is a question as to whether
+the commons is likely to be significantly altered, the general
+community should be engaged in discussion.  The nonprofit, its
+officers, and the board shall be the arbiters and stewards of the
+general community's interest in the commons.
+
+Ultimately, community members are responsible for maintaining the
+nonprofit (e.g. with contributed work effort whether for pay or not,
+monetary donations, and voiced opinions, e.g., in board elections or
+polls).
+
+It is highly desirable that procedures be put in place whereby
+community pre-approval can be secured before a given action is taken.
+This will save work and possibly avert disaster.  However, if some
+action or activity has significantly perturbed or altered the nature
+of the commons, we should have a protocol in place whereby the
+community may, after due deliberation, "roll back" changes that are
+not confluent with the organization's goals.
+
+The philosophy of freedom to act in a non-distructive fashion is the
+essence of "commons-based peer production", wherein most resources are
+brought to the table by motivated individuals on a volunteer basis, so
+individuals are free to make use of the intangible products of the
+collaborative project in an unlimited, nonrival manner.  When aspects
+of the commons itself are called into question, some political process
+is needed.  In our case, we choose a mixture of direct and
+representative democracy.
+
+Our organizational structure should reflect this philosophy
+throughout.  In other words, as we spell out in functional detail the
+interface between an arbitrary community member, the wider community,
+and the official organization, we will continue to turn to this
+philosophy as a guiding principle.
+
+** Petitioning Policy
+
+In addition to carrying out planned activities, the organization can react to
+ad hoc situations through /petitioning/.  As a general guideline, the organization
+should be petitioned in any case a community member or members thinks their actions
+(or those of another) will significantly alter the nature of the commons.  
+
+We define "commons" in this context to specifically mean the shared resources of the
+community and that which the organization directly supervises, including, but not
+limited to:
+
+ * the "meta" materials of the web site (documentation pages, etc.)
+ * the server or other facilities of the web site
+ * the overall kind or balance of content on the site
+ * the functionality of the web site (i.e. the Noosphere software itself)
+ * the planning wiki, especially sections marked "official"
+
+Petitioning should proceed logically up the "chain" of command: to the specific officer
+supervising the aspect of the commons in question, then to the executive (the president),
+then to the board itself.  
+
+The petitioned officer will then decide (possibly in congress with other officers or the
+board) if the issue merits a different course of action or wider input in order to reach a
+decision.  
+
+If more input is deemed necessary, generally one of three courses of action will be taken:
+
+ 1. informal commentary will be solicited on some public forum (such as the PM.org discussion board on
+the web site) and the official(s) at the petitioned level or above will make a decision based on the 
+feedback.
+ 1. a poll will be conducted of web site users and used to advise the decision-making as above.
+ 1. a referendum will be conducted amongst the organization's members and action will be binding
+based on the outcome.
+
+Which course of action is taken is at the discretion of the managment (and ultimately the
+board).
+
+Conversely, the officers of the organization may step in directly to initiate the 
+above process if they feel there is some need to re-evaluate an activity taking place
+or which has already taken place that has altered the commons.

@@ -1,0 +1,324 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Introduction
+
+/Sharability has been underemphasized in the digital library field./
+
+Much officially-funded digital library activity to date has focused on
+central teams building collections of digital content for wholesale
+release to the public, with some notable but relatively "secondary"
+efforts geared towards building widely re-applicable digital library
+systems and other related pursuits.  However, this implicit set of
+priorities has produced a situation where large-scale projects like
+the NSDL are grappling with sustaining themselves and bringing about
+societal impact on a scale fitting the large amounts of money invested
+in them.
+
+/The participatory internet has, in the mean time, become a major
+player in society./
+
+Meanwhile, a quiet revolution has taken place: scholarly efforts which
+are fundamentally /community-based/ have exploded almost directly
+from the grassroots, such as :
+
+ * arXiv.org
+ * Wikipedia (and other wikis)
+ * PlanetMath
+ * connexions
+ * educational/scientific blogs
+ * tech sites like theCodeProject
+ * ...
+
+While the extent to which these kinds of projects are supervening on
+past forms of communication (scholarly or otherwise) is the subject of
+extensive debate, virtually no one debates that their impact has
+become societally-significant in a very short time.
+
+What we find provocative about this situation is that these efforts
+have essentially already /proven/ their public impact: in essence,
+meeting the primary goal of large-scale, top-down funded efforts, but
+with far fewer resources.
+
+/Nevertheless, 'bottom-up' digital libraries come with many of the
+same problems as those built from the top down -- as well as 
+some new problems./
+
+If, then, these grassroots "scholarly community" efforts represent an
+advance, the question is how to build on them or otherwise move
+forward.  Indeed, many of the concerns voiced in the aforementioned
+debate they have stirred are based on at least a kernel of truth,
+including:
+
+ * the lack of quality and trust discrimination in community-generated content
+
+ * the lack of interconnection between related, similar, or identical
+  information resources at a variety of productive loci
+
+ * the lack of embedding of free and open community resources with
+  formal and traditional educational environments
+
+ * a lack of a methodical framework or toolkit for dealing with the
+  above problems, as well as providing for the basic productive
+  activities of the community
+
+/The strength of the participatory internet is that it provides a
+basic mechanism for sharing.  This mechanism could stand to be
+improved, especially for applications to scholarship and pedagogy./
+
+In essence, we believe there is great untapped benefit in the free and
+open content produced by volunteer communities online, as well as in
+the communities themselves and latent in the general public --
+provided that the above points can be addressed.  We believe the
+scholarly information environment of the near future will seamlessly
+take advantage of information and expertise embodied in these "public
+networks" of people and content, while doing it in a way that is
+"sound" relative to each particular agent who taps into this network.
+
+/Two key problems herein are to identify suitable content to deliver
+to the user, and to integrate the user's response into an appropriate
+context for subsequent use by others./
+
+For example, a high-school mathematics student should be able to take
+a digital lesson, written to their "grade level," and have it linked
+to complementary mathematical articles on the web, written by experts.
+These experts should either be highly-trusted as determined by a
+community-based filtering process, or by appraisal from some other
+trustworthy entity (such as the student's school, or a professional
+association).  The student should be able to ask additional questions
+about this content, which can be handled by peers in the virtual
+community, or potentially by those who are (at least
+relatively-speaking) experts or even the authors and other
+contributors to the content.
+
+/Related scholarly communities should be able to easily share content
+and conversations on topics of mutual concern -- without any of the
+'information-overload' associated with filtering out more specialized
+concerns./
+
+As another example, those working on building knowledge-bases in
+various fields should be able to share their efforts where they at
+least partially overlap.  While particular fields have their own
+terminologies and ontologies (whether implicit or explicit), typically
+they borrow from each other extensively.  They should not have to
+re-write all of their content from scratch to have a comprehensive,
+cohesive knowledge base.  For example: a "community encyclopedia" on
+computer science has a considerable amount of topical overlap with one
+one dedicated to pure mathematics.  These communities should be able
+to easily share entries and discussion.
+
+/Another key issue it to better facilitate use of scholarly material
+by 'outsiders' (both in basic and continuing education)./
+
+Finally, the traditional scholarly process should be better integrated
+with the general public, both in a consumptive and productive sense.
+For example, articles by experts typically produced for traditional
+journals could also be posted online in various forms of
+knowledge-bases (such as encyclopedias) and interlinked with
+complimentary general-community knowledge resources, and thus gain
+their benefit as well as be made available to general readership.
+
+*  Detail of Problems and Solutions
+
+The above narrative emerges from specific relevant technical/social
+problems and solutions we have identified.  The key of these are as
+follows:
+
+/Historically, the ways to attach pieces of information to one
+another are defined once and for all at the system level, constraining
+the ways in which users can attach new information to pre-existing
+information./
+
+Solution(s):
+
+ * The "scholium system" Arxana is based on a relational semantic
+  network, allows flexible typed links, and is readily extensible.
+
+/Text being consumed for pedagogical purposes (esp. in technical fields)
+often comes without definitions./
+
+Solution(s):
+
+ * The NNexus system
+  * automatic "conceptual" hyperlinking
+  * adding definitions for terms you use
+  * terms come from "anywhere" (any "domain" you choose)
+
+/Reusability and usefulness of high-quality survey articles is currently low./
+
+Solution(s):
+
+ * The Math Atlas
+
+  * journal/production management system that's produced serially and
+   collected in an encyclopedia
+
+  * two display "heads": linear/chronological /journal/,
+   subject-browseable web /encyclopedia/
+
+  * a modification of existing OJS system to create a reusable tool
+
+/Trustworthiness of free and open resources is currently low./
+
+Solution(s):
+
+ * recognizeable identity attached to text
+ * scoring of articles/people (reputation systems etc.)
+
+ * "seeding" with trustworthy, high-quality free (in all senses)
+  content (as in Math Atlas)
+
+/Building new useful resources is currently difficult./
+
+Solution(s):
+
+ * productive system tied to existing resources at first (e.g. linked via nnexus)
+
+ * systems that facilitate bootstrapping of core content (direct re-use
+  of existing content)
+
+/Not many great tools exist to connect collaborative resources in meaningful
+ways./
+
+Solution(s):
+
+ * OAI as "good start" for one way copying ("harvesting") of content
+  * extend to handle semi-overlapping updates in both directions
+
+/No good way to develop code as content in collaborative online
+system that integrates with the user community/
+
+Solution(s):
+
+ * make collaborative platform "hackable" (by regular system users)
+  * Specifically, use the collaborative system to develop itself online!
+  * synchable archives (so you can get the code and hack on it offline!)
+  * a well-documented codebase (so you can understand the code!)
+  * an easily deployable codebase (so you can fork and use/improve elsewhere 
+   [ideally any diverging groups will contine to exchange with each other
+   on items of shared interest -- see other points here]!)
+ * scholium system (e.g. for better integration of (frequently asked) questions
+  and (frequently given) answers and standard program documentation)
+
+/Not many great tools exist to connect collaborative resources in
+meaningful ways/
+
+Solution(s):
+
+ * OAI as "good start" for one-way copying ("harvesting") of content
+  * extend to handle semi-overlapping updates in both directions
+ * automatic "semantic linking" of resources (nnexus ...)
+ * metadata standards, sharing platforms
+
+/Integrating your online resources with the rest of the web is
+difficult./
+
+Solution(s):
+
+ * linking (nnexus), content harvestability/buildability (OAI, etc)
+ * use existing tools for connectivity
+
+*  Theory
+
+Talk about conceptual stuff regarding what we want to do, including:
+
+ * these activities as building core infrastructure
+ * the hierarchical OAI model of sharing vs. what we are invisioning: a full-on network,
+or a /heterarchical/ network (provide some diagrams)
+ * types of exchange/linking/interconnection:
+  * Nexus: between a paper (say) and a dictionary
+  * Atlas: between a survey journal and an encyclopedia
+  * Reputation: between pre-existing credentials and potential consumers
+  * Hackability: between users and developers
+  * Bidi-OAI: between any two online communities
+  * Arxana: between parties who want to share :)
+
+
+*  Proposal
+
+What we propose to do on this project is to work towards the four
+broad goals from the Introduction section (trustworthiness and quality
+control, interconnectivity, embedding, and systemitization/modularity
+of base productivity and all of these areas) and addressing the kind
+of scenarios sketched there specifically for the domain of mathematics
+(which is our practice and source of considerable previous
+experience).  We plan to use the solution sketches above as our guide
+for directions to proceed.
+
+We plan to take specific examples of community and other scholarly
+content and recast it based on what is more properly a comprehensive
+"cyberinfrastructure" for scholarly activities online (but extending
+in impact naturally into the traditional/formal learning environment),
+by using the infrastructure tools we develop.
+
+Importantly, we plan to produce re-usable and generally-deployable
+open source software on this project, so that our efforts may seed a
+wider array of efforts as generally "public" infrastructure, possibly
+becoming the basis for beneficial uses we did not even anticipate
+(within and beyond mathematics).
+
+The specific tasks we plan on this grant are:
+
+ * Development of the Math Atlas
+  * modify OJS with
+   * linking and rendering system
+   * subject-based (encyclopedic) browsing
+  * outreach to develop editorial hierarchy??
+
+ * Development of the NNexus encyclopedia autolinking system
+
+  * continue work on NNexus into a fully-fledged, robust system able to
+   produce hyperlinks between arbitrary online knowledge bases
+
+ * knowledge and knowledge production interconnection:
+  * getting nnexus doing linking in a variety of instances:
+   * lecture notes and other resources to web encyclopedias
+   * other IMS information to web encyclopedias
+   * ...
+ * "bi-directional" content sharing framework
+
+  * planetmath to planetphysics (in fact, generalized Noosphere
+   application would be good)
+
+  * planetcomputing, and this to planetmath *and* planetphysics
+  * wikipedia to all of the above
+   * subject-based content filtering from wikipedia to extract subsets
+
+  * could base this on arxana!?  alternative is maybe a modification of
+   OAI to "bi-directionify it"
+
+ * Development of quality control/trust systems
+  * applying a reputation system and other trust aspects to Noosphere
+
+  * FEM editorial system could be thought of as going under both this
+   and bi-di framework
+
+*  Work Schedule
+
+(develop later)
+
+*  References
+
+ * cite my thesis on sustainability stuff; in particular, participatory
+  sustainability and what it has to do with the kind of features we
+  talk about implementing
+
+ * papers related to bidi content sharing
+ * joe arxana papers, other technical writeups
+ * reputation system papers
+ * virtual community papers
+ * various papers looking at blogs, wikipedia (for impact)
+ * NSF-CIO reports
+ * Atkins 2002 report, http://www.nap.edu/catalog/10545.html  (See transcript of
+ chat http://chronicle.com/colloquylive/2002/11/research/ linked from the above page.)
+ *  As the walls of academia are tumbling down (Luc E. Weber, Werner Zvi Hirsch eds.)
+
+*  Comments
+
+See:
+
+ * [[file:NSF Cyberinf 2007 Grant Draft 1 Discussion.org][NSF Cyberinf 2007 Grant Draft 1 Discussion]]
+ * [[file:NSF Cyberinf 2007 core infrastructure questions.org][NSF Cyberinf 2007 core infrastructure questions]]
+ * [[file:NSF Cyberinf 2007 stick to the agenda.org][NSF Cyberinf 2007 stick to the agenda]]
+ * [[file:NSF Cyberinf 2007 team.org][NSF Cyberinf 2007 team]]
+ * [[file:NSF Cyberinf 2007 HACKING.org][NSF Cyberinf 2007 HACKING]]

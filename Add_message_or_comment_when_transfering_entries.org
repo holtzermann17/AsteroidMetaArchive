@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+When transfering an entry to another user, it would make
+sense to have some comment field describing why one is offering 
+the entry to him/her. 

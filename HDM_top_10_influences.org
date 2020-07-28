@@ -1,0 +1,73 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* HDM top 10 influences
+
+** Joe
+ 1. Baudrillard, author of "Simulacra and Simulation", "Impossible Exchange", etc.
+ 1. Stallman, author of the "The GNU Manifesto" and various programs, Emacs maintainer
+ 1. Hsu, author of "Behind Deep Blue"
+ 1. Bledsoe, presumed author of "The QED Manifesto"
+ 1. Thurston, author of "On Proof and Progress in Mathematics"
+ 1. Gerlach, author of "People, Power, and Change: Movements of Social Transformation" (with V. H. Hine)
+ 1. principles of New College of Florida: "in the final analysis..."
+ 1. experience with math research
+ 1. difficulty of math prelims (and math in general!)
+ 1. LISP
+
+
+----
+
+* Discussion
+
+I've left  more than a few things!  I've actually been interested
+in these sorts of issues since I was in 7th grade, but of course
+I didn't have much idea about how to proceed then.  You can 
+see a few words about how my experience then connects to my
+work in grad school on my [http://www.ma.utexas.edu/~jcorneli/j/ deep black] page.
+I suppose I ought to thank my 7th grade algebra teacher for throwing
+me out of class so frequently.  (Me and my friends were fairly
+critical; sometimes my friend Sam would get thrown out with me,
+at which point we would work on roleplaying game stuff in the hallway.)
+
+I also didn't mention the influence that the book Riddley Walker
+by Russell Hoban had on me.  I read this when I was 11 or so.
+The state of affairs in that book is somewhat different from
+the state of affairs in this world, but there are some thematic parallels.
+(Just for example, compare "Eusa's hat".)  Language and reading
+has always been interesting to me.  In college I would often spend
+part of Friday evening with the Oxford English Dictionary looking
+up the words I had learned.  My grandmother also gave me an etymology
+dictionary; these sorts of things contributed to the "dictionary"
+part of the title.  I like dictionaries.
+
+So, this is just a sketch; probably it isn't as "technical" as
+some people might like.  But for me the project is pretty personal,
+so, the more technologically-minded will just have to deal.  Again,
+there's still plenty more to this story that I'm leaving out, but
+it is probably increasingly personal.  For some more "connected to
+current research" content, see [[file:HDM-related things to check out.org][HDM-related things to check out]].
+--[[file:jcorneli.org][jcorneli]]
+
+I added two of my favorites to make it a list of 12 --[[file:rspuzio.org][rspuzio]]
+
+I moved yours to keep my list pure!  I wasn't influenced by Mizar, except
+insofar as it is one of the main examples of things coming out of QED, and
+insofar as I want something that is different from what they have.  If
+I made a list of all the things that HDM was /negatively/ inspired
+by, that would be a different list from the one I made.  Which is not to
+say that I think nothing can be learned from Mizar at this point in the
+game, just that I don't think they qualify to be on my top ten list.
+You're more than welcome to have them on yours. 
+--[[file:jcorneli.org][jcorneli]] Tue Jul 12 18:18:56 2005 UTC
+
+All I had in mind way a condensed bibliography for the talk, but since I seem to have hit on a raw nerve instead, I'll forget about it especially since I don't have time now.  In the intersts of purity, I have pulled my stuff off.  --[[file:rspuzio.org][rspuzio]]
+
+OK, but eventually perhaps you can add a list of your influences.  Makarov's D-logic
+could go on the [[file:HDM-related things to check out.org][HDM-related things to check out]] page.  As a condensed bibliography,
+the list you put together was probably fine, but the sense with which the different
+works should be cited wasn't conveyed.  The main reason I don't like Mizar is that
+they are proprietary: IMO, they are doing something "similar" to what I want HDM
+only in terms of "being another math-on-computers project".  The philosophy
+seems quite different, and even runs against the philosophy of their parent,
+QED.  This top ten list is predominantly basic philosophy.

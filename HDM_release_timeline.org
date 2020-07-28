@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/By the time we have the [[file:scholium system.org][scholium system]] working and the APM-Xi (HDM-p2)
+content is ported to [[file:hcode.org][hcode]], we can probably legitimately release a new HDM
+prototype./
+
+That's what it said on the main [[file:HDM.org][HDM]] page until just a moment ago -- I wonder
+if it is accurate, and in addition I'd love to come back and hazard a guess about
+an actual date at some point -- but give me a little while to think about it!
+
+Note that the [[file:HDM Directory.org][HDM Directory]] contains some information about /components/
+that will have to be prepared in order for the project to fly.  I don't know which
+ones are needed for a "release" or what releases even mean in a project like this.
+
+So, I'll get back to you.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Note, the quote above is good in that it talks about the qualities of the deliverable.
+Any timeline that didn't take such things into account would be ridiculous.
+
+Nevertheless, I don't know if that is those are just the right qualities, above.
+It would be good to think this through at various levels.  (As I said: I'm not
+even sure what "a release" really should mean here -- maybe we just release some
+"modules" one at a time?)
+
+At what seems to be a fairly extensive level, maybe we'd have formal encodings
+of everything in the current PlanetMath collection!  That would certainly be
+impressive.  But it seems sort of unrealistic.  A much more realistic sounding
+goal would be to have encodings and a suitable corresponding implementation
+of a "friend of [[file:Metamath.org][Metamath]]".
+
+These abstract ideas are all fine and good as abstractions, but they do not do
+much to help me feel more grounded.  Perhaps they could be augmented with
+detailed decompositions that would help (which is what I've been trying to
+do at [[file:HDM Directory.org][HDM Directory]]).
+
+All things considered, until we have a reasonable decomposition into small(er)
+pieces, describing a /time/line is probably impossible.  And the decomposition
+must be paired with a reasonable estimate of work- (and/or discovery-) effort going
+towards the various pieces.
+
+I'd love to have this all developed at a finer granularity, so as to make each
+day's report meaningful and exciting.  But again, I think this is going to have
+to wait a while longer.  You can see from this page what the high-level
+thrust is: decomposition into pieces!  (Otherwise known as "analysis".)
+
+--[[file:jcorneli.org][jcorneli]] 

@@ -1,0 +1,120 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: Mon Jan 23 15:38:54 UTC 2006
+
+Status: *available*
+
+Time: a week (40 hrs) (est.)
+
+Bounty Price: $1000 (US est.)
+
+Objective:
+
+Make Noosphere extremely easy to install for a new instance, by non-experts (not including deep customization of appearance).
+
+Skills needed:
+
+ * perl
+ * linux admin
+ * package building (deb/rpm)
+
+* Background
+
+Noosphere is open source, but it is a bit of a bear to install, especially for non-gurus.  This has limited its 
+uptake (in fact, we know of many people who have tried to install it without success, and many successes were only
+due to akrowne's intervention).
+
+We would like to change this.
+
+* Plan
+
+ 1. sanitize, simplify config
+ 1. separate default instance from PM instance in code repository (PM should become a branch)
+ 1. catalog dependencies
+ 1. reduce dependencies
+ 1. make installers/packages
+
+At the end, if someone has a supported distro, they should essentially be able to issue one command to install
+Noosphere and have a working, default installation.
+
+Considerations:
+
+ * right now config items are concentrated in Config.pm, with baseconf.pm having many of the basic system things.
+This is confusing.  The config should be in one place.  It should probably be rewritten to use a config XML, which
+gets loaded upon startup.  Config.pm should be reserved for config support routines, and infrastructural things
+the user is unlikely to change initially or even at all, for standard use.
+ * some support scripts might be necessary to make this all work: a dependency checker/fetcher, a configuration
+wizard script, etc.
+ * the system might come with some alternatve default configurations; i.e., a "multi-domain" config like PM is 
+using, and a "single CGI script" configuration smaller-scale instances might want to use.
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for
+more on how bounties work.
+
+* A Proposal
+
+There is a current [[file:Proposal to complete PM Bounty--Make Noosphere More Installable.org][Proposal to complete PM Bounty--Make Noosphere More Installable]], by SteveCheng.
+
+* Discussion
+
+For a shot at $1000 (or part of it), let me mention that under appropriate circumstances
+(soon to be divulged) I could tackle this problem and the [[file:Noosphere rewrite.org][Noosphere rewrite]] in one go.
+The thought is to swap a modded [[file:scholium system.org][scholium system]] in as a new backend (or major part of one) for !PlanetMath.
+Maybe this seems like an outlandish proposal; consider that we would start with [[file:Noosphere documentation.org][Noosphere documentation]],
+and also consider Ray's comments on the rewrite page, as well as our discussion on the [[file:Ruby on Rails.org][Ruby on Rails]] page.
+Unifying two major projects (Noosphere and scholium system) might be a big help.
+Anyway, I wanted to put this idea out there (thanks to Ray for the suggestion!)
+and see what kind of monetary offer might be waiting.  I'm definitely willing
+to provide more of my own thoughts on the issue later, but right now I'm
+feeling wiped out.  I sign off, Lando Corneli-san
+
+Daring, but I think this is too long-term to qualify for the bounty.  Your proposal needs to be very 
+sanely and meticulously architected, with a fuller understanding of the current Noosphere.  It is
+/not/ just a bunch of nodes and links, but in fact an extremely rich set of layered services.  That is
+really where most of the work is---a main distinction between Noosphere and mediawiki is that mediawiki 
+really has no services.   I think you (and we) should instead consider doing something like a 
+[[file:scholium basis for Neosphere.org][scholium basis for Neosphere]].  But a whole new field of how to map workflow/CBPP services to a scholium system will in fact have to be invented.  --[[file:akrowne.org][akrowne]] Wed Jan 25 20:38:00 UTC 2006
+
+OK & thanks!   And your suggested course of not so different from mine.  That's good.
+Let's strongly consider doing it.
+
+How does the current bounty relate to Neosphere?  Is it
+necessary/helpful to spend $1000 to make the current thing more
+installable when we're concurrently planning a redesign/rewrite
+(which may well go to fundamental levels along several axes)?
+Also, note that in terms of money, my involvement in the rewrite
+project would be most pleasant for me if it was underwritten,
+say to the tune of $1800 (which I know is a lot given
+the current budget; but one bears in mind that this would
+allow me to quit my job and work on programming for 6 months
+with significantly reduced, although not completely nonexistent,
+need for other outside funding).  --[[file:jcorneli.org][jcorneli]]
+
+Scholium issues aside, to me this project and rewriting Noosphere seem pretty
+linked to me.  Presumably, one of the design goals for the next version is to
+have it be more deployable.  While I suppose someone could take the current 
+version and tweak it to make it easier to deploy, that might not make much
+sense if a new version is around the corner.
+
+As for the scholium issues, I am starting a separate page for them.  Since I
+seem to be the main instigator here (primarily because I seem to be the one
+person who is equally in the PM camp and the HDM camp) I think that I had
+better explain what sort of mischief I have been proposing here :) --[[file:rspuzio.org][rspuzio]]
+
+We really can't afford to allocate $1800 to a long-term project right now.
+Besides that, I don't think I could put reasonable estimates on price or 
+duration until I more fully understand the scholium system. --[[file:akrowne.org][akrowne]] 
+
+Well, again, scholium issues completely aside, I think it is sort of
+curious to devote $1000 (approximately half the budget) to a short
+term project when a rewrite is pending.  This may all make perfect
+sense to you, but it doesn't make sense to me; I think we're lacking a
+clear timeline.  Notably, do the bounties connect to each other, or
+are they perfectly modular?  How does this all relate to the long-term
+(and mid-, short-term) goals of PM?  Unfortunately we never really got
+into discussing /these/ rather vital topics in the board meeting.
+But I think it would be good to see some more structure develop
+in these respects. --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,852 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Metamath's grammar is based entirely on pattern-matching and unification, and thus in practice the accepted notation depends on which database is in use.
+
+The following are grammars extracted by David A. Wheeler on 2014-03-11 from various databases. Non-terminals such as "wff" appear on the left of "::=" (and "|").  For this purpose, symbols such as "A" are left in place (e.g., in set.mm this is a class).
+
+Note that set.mm employs infix and prefix notation, as does ql.mm, while peano.mm employs polish notation.  In spite of the fact that Metamath files may use parentheses and function symbols (like "+" and "*"), things such as operator precedence, associativity, bracketing of expressions, and the like are not built-in. Syntactic analysis/grammatical parsing, and proof verification, are based strictly on pattern matching.
+
+Note that in set.mm, all infix operations that produce classes or sets are surrounded by parentheses.  Many predicates including -&gt;, &lt;-&gt;, /\, and \/ also require parentheses.  However, a few infix predicates (e.g., those involving equality, membership, subset, relationships, and function mapping) are *not* surrounded by parentheses.  The infix expressions without parentheses correspond to a simple rule (per Norman Megill): "their arguments are classes but they evaluate to wffs".  Cases where infix (not prefix notation) is used without parentheses in set.mm are:
+
+<pre>
+infix_no_parens ::
+  | A = B
+  | x = y
+  | A e. B
+  | x e. y
+  | A =/= B
+  | A e/ B
+  | A C_ B
+  | A C. B
+  | A R B
+  | R Po A
+  | R Or A
+  | R Fr A
+  | R We A
+  | A Fn B
+  | F : A --> B
+  | F : A -1-1-> B
+  | F : A -onto-> B
+  | F : A -1-1-onto-> B
+  | H Isom R , S ( A , B )
+</pre>
+
+Here are each of the .mm metamath databases, along with their "grammar" as determined from $a and $p statements:
+
+<pre>
+File set.mm:
+
+wff ::
+  | -. ph
+  | ( ph -> ps )
+  | ( ph <-> ps )
+  | ( ph \/ ps )
+  | ( ph /\ ps )
+  | ( ph \/ ps \/ ch )
+  | ( ph /\ ps /\ ch )
+  | ( ph -/\ ps )
+  | T.
+  | F.
+  | A. x ph
+  | E. x ph
+  | A = B
+  | x = y
+  | A e. B
+  | x e. y
+  | [ A / x ] ph
+  | [ y / x ] ph
+  | E! x ph
+  | E* x ph
+  | A =/= B
+  | A e/ B
+  | A. x e. A ph
+  | E. x e. A ph
+  | E! x e. A ph
+  | A C_ B
+  | A C. B
+  | A R B
+  | Tr A
+  | R Po A
+  | R Or A
+  | R Fr A
+  | R We A
+  | Ord A
+  | Lim A
+  | Rel A
+  | Fun A
+  | A Fn B
+  | F : A --> B
+  | F : A -1-1-> B
+  | F : A -onto-> B
+  | F : A -1-1-onto-> B
+  | H Isom R , S ( A , B )
+  | Smo A
+  | Er R
+  | ( ph -/\ ps -/\ ch )
+  | ( ph (+) ps )
+  | [.] ph
+  | <> ph
+  | () ph
+  | ( ph until ps )
+  | Prt A
+  | (. ph ->. ps ).
+  | (. ph , ps ->. ch ).
+  | (. ph , ps , ch ->. th ).
+  | ( ph /\ ps /\ ch /\ th )
+  | R _Se A
+  | R _FrSe A
+  | _TrFo ( B , A , R )
+
+
+
+class ::
+  | x
+  | { x | ph }
+  | { x e. A | ph }
+  | _V
+  | [_ A / x ]_ B
+  | ( A \ B )
+  | ( A u. B )
+  | ( A i^i B )
+  | (/)
+  | if ( ph , A , B )
+  | ~P A
+  | { A }
+  | { A , B }
+  | <. A , B >.
+  | { A , B , C }
+  | U. A
+  | |^| A
+  | U_ x e. A B
+  | |^|_ x e. A B
+  | { <. x , y >. | ph }
+  | _E
+  | _I
+  | On
+  | suc A
+  | om
+  | ( A X. B )
+  | `' A
+  | dom A
+  | ran A
+  | ( A |` B )
+  | ( A " B )
+  | ( A o. B )
+  | ( F ` A )
+  | ( A F B )
+  | { <. <. x , y >. , z >. | ph }
+  | ( x e. A |-> B )
+  | ( x e. A , y e. B |-> C )
+  | 1st
+  | 2nd
+  | ( iota x ph )
+  | rec ( F , I )
+  | 1o
+  | 2o
+  | 3o
+  | 4o
+  | +o
+  | .o
+  | ^o
+  | [ A ] R
+  | ( A /. R )
+  | ^m
+  | ^pm
+  | X_ x e. A B
+  | ~~
+  | ~<_
+  | ~<
+  | Fin
+  | Undef
+  | ( iota_ x e. A ph )
+  | sup ( A , B , R )
+  | TC
+  | R1
+  | rank
+  | card
+  | aleph
+  | cf
+  | +c
+  | InaccW
+  | Inacc
+  | Tarski
+  | Univ
+  | N.
+  | +N
+  | .N
+  | <N
+  | +pQ
+  | .pQ
+  | <pQ
+  | ~Q
+  | Q.
+  | 1Q
+  | /Q
+  | +Q
+  | .Q
+  | *Q
+  | <Q
+  | P.
+  | 1P
+  | +P.
+  | .P.
+  | <P
+  | +pR
+  | .pR
+  | ~R
+  | R.
+  | 0R
+  | 1R
+  | -1R
+  | +R
+  | .R
+  | <R
+  | CC
+  | RR
+  | 0
+  | 1
+  | _i
+  | +
+  | <RR
+  | x.
+  | <_
+  | +oo
+  | -oo
+  | RR*
+  | <
+  | -
+  | -u A
+  | /
+  | NN
+  | NN0
+  | ZZ
+  | QQ
+  | RR+
+  | 2
+  | 3
+  | 4
+  | 5
+  | 6
+  | 7
+  | 8
+  | 9
+  | 10
+  | ZZ>
+  | |_
+  | mod
+  | (,)
+  | (,]
+  | [,)
+  | [,]
+  | ...
+  | seq M ( P , F )
+  | seq1
+  | seq0
+  | seqz
+  | shift
+  | limsup
+  | ^
+  | Re
+  | Im
+  | *
+  | sqr
+  | abs
+  | !
+  | _C
+  | #
+  | ~~>
+  | sum_ k e. A B
+  | -cn->
+  | exp
+  | _e
+  | sin
+  | cos
+  | pi
+  | ||
+  | gcd
+  | Prime
+  | ndx
+  | Base
+  | le
+  | Poset
+  | lt
+  | lub
+  | glb
+  | join
+  | meet
+  | 0.
+  | 1.
+  | Lat
+  | CLat
+  | +g
+  | Grp
+  | 0g
+  | -g
+  | Abel
+  | .r
+  | Ring
+  | 1r
+  | DivRing
+  | invr
+  | vbase
+  | vadd
+  | vsca
+  | LMod
+  | LVec
+  | 0v
+  | LSubSp
+  | LSpan
+  | LSSum
+  | Top
+  | TopSpOLD
+  | TopOpen
+  | TopSp
+  | TopBases
+  | topGen
+  | tX
+  | Clsd
+  | int
+  | cls
+  | nei
+  | subSp
+  | limPt
+  | Cn
+  | CnP
+  | Haus
+  | Met
+  | MetSp
+  | ball
+  | dist
+  | MetOpen
+  | ~~>m
+  | Cau
+  | CMet
+  | GrpOp
+  | Id
+  | inv
+  | /g
+  | ^g
+  | AbelOp
+  | SubGrpOp
+  | GrpAct
+  | RingOps
+  | DivRingOps
+  | *-Fld
+  | CVec
+  | NrmCVec
+  | +v
+  | BaseSet
+  | .s
+  | 0vec
+  | -v
+  | norm
+  | IndMet
+  | .i
+  | SubSp
+  | SubSp
+  | LnOp
+  | normOp
+  | BLnOp
+  | 0op
+  | adj
+  | HmOp
+  | CPreHil
+  | CBan
+  | CHil
+  | PosetRel
+  | supw
+  | infw
+  | LatRel
+  | log
+  | GrpHom
+  | GrpIso
+  | SymGrp
+  | TosetRel
+  | fi
+  | Homeo
+  | ~
+  | fBas
+  | filGen
+  | Fil
+  | fLim
+  | FilMap
+  | fLimf
+  | Comp
+  | Fre
+  | Con
+  | Plig
+  | DirRel
+  | tail
+  | Ass
+  | ExId
+  | Magma
+  | SemiGrp
+  | Mnd
+  | Com2
+  | Fld
+  | ~H
+  | +h
+  | .h
+  | 0h
+  | -h
+  | .ih
+  | normh
+  | Cauchy
+  | ~~>v
+  | SH
+  | CH
+  | _|_
+  | +H
+  | span
+  | vH
+  | \/H
+  | 0H
+  | C_H
+  | proj
+  | +op
+  | .op
+  | -op
+  | +fn
+  | .fn
+  | 0hop
+  | Iop
+  | normop
+  | ConOp
+  | LinOp
+  | BndLinOp
+  | UniOp
+  | HrmOp
+  | normfn
+  | null
+  | ConFn
+  | LinFn
+  | adjh
+  | bra
+  | ketbra
+  | <_op
+  | eigvec
+  | eigval
+  | Lambda
+  | States
+  | CHStates
+  | HAtoms
+  | <oH
+  | MH
+  | MH*
+  | zeta
+  | Fmla
+  | Sat
+  | SatE
+  | =g
+  | e.g
+  | /\g
+  | -.g U
+  | A.g N U
+  | |
+  | ->g
+  | \/g
+  | <->g
+  | E.g N U
+  | AxExt
+  | AxRep
+  | AxPow
+  | AxUn
+  | AxReg
+  | AxInf
+  | ZF
+  | Pred ( R , A , X )
+  | TrPred ( R , A , X )
+  | No
+  | <s
+  | bday
+  | ( A (++) B )
+  | ( A (x) B )
+  | SSet
+  | Trans
+  | Bigcup
+  | Limits
+  | Fix A
+  | Funs
+  | Singletons
+  | << A , B >>
+  | ( A XX. B )
+  | EE
+  | Btwn
+  | Cgr
+  | OuterFiveSeg
+  | InnerFiveSeg
+  | Cgr3
+  | Colinear
+  | FiveSeg
+  | Seg<_
+  | gcdOLD ( A , B )
+  | t+
+  | t* 
+  | pr
+  | prj
+  | cset
+  | LatAlg
+  | cur1
+  | cur2
+  | Preset
+  | mxl
+  | mnl
+  | ub
+  | lb
+  | ge
+  | se
+  | AntiDir
+  | OrHom
+  | DecFun
+  | OrIso
+  | BndLat
+  | prod3_ k e. A G B
+  | prod_ k e. A G B
+  | Com1
+  | ^md
+  | SubSemiGrp
+  | subSemiGrpGen
+  | SemiGrpHom
+  | FreeSemiGrp
+  | Tofld
+  | zeroDiv
+  | Hom
+  | Action
+  | GrpWOp
+  | Vec
+  | SubVec
+  | RVec
+  | +m
+  | .m
+  | xm
+  | RAffSp
+  | topX
+  | fLimfrs
+  | IsolatedPt
+  | Unif
+  | UnifSp
+  | TopGrp
+  | opfn
+  | TopRing
+  | TopFld
+  | TopVec
+  | -e A
+  | +e
+  | sup_ x e. A B
+  | inf_ x e. A B
+  | Frf
+  | +cv
+  | 0cv
+  | -cv
+  | -ucv
+  | .cv
+  | /cv
+  | Intvl
+  | der
+  | Dgra
+  | Alg
+  | dom_
+  | cod_
+  | id_
+  | o_
+  | Ded
+  | Cat
+  | hom
+  | Epi
+  | Monic
+  | Iso
+  | cinv
+  | Func
+  | Isofunc
+  | SubCat
+  | InitObj
+  | TermObj
+  | Source
+  | Sink
+  | Natural
+  | LimCat
+  | ProdObj
+  | SumObj
+  | tarskiMap
+  | tar
+  | tr
+  | MorphismSetCat
+  | domSetCat
+  | graphSetCat
+  | codSetCat
+  | IdSetCat
+  | roSetCat
+  | SetCat
+  | line
+  | Plibg
+  | Plibg0
+  | Plibg1
+  | Plibg2
+  | Plibg3
+  | Plibg4a
+  | Plibg4b
+  | seg
+  | Kleene
+  | Words
+  | IndCls
+  | IndClsBu
+  | Grammar
+  | sym
+  | prdct
+  | conc
+  | -.c
+  | /\c
+  | \/c
+  | =>c
+  | <=>c
+  | _|_c
+  | phc
+  | psc
+  | Pc
+  | notc
+  | andc
+  | ors
+  | impc
+  | bic
+  | Prop
+  | derv
+  | 1stc
+  | 2ndc
+  | Fne
+  | Ref
+  | PtFin
+  | LocFin
+  | Kol2
+  | Reg
+  | Nrm
+  | UFil
+  | fClus
+  | fClusf
+  | II
+  | ~~>t
+  | TotBnd
+  | Bnd
+  | Ismty
+  | Rn
+  | PHtpy
+  | ~=ph
+  | pi1b
+  | *p
+  | pi1
+  | RngHom
+  | RngIso
+  | ~=r
+  | CRing
+  | Idl
+  | PrIdl
+  | MaxIdl
+  | PrRing
+  | Dmn
+  | IdlGen
+  | HypGrph
+  | PsGrph
+  | SmpGrph
+  | +r
+  | -r
+  | .v
+  | PtDf ( A , B )
+  | RR3
+  | plane3
+  | line3
+  | tan
+  | sec
+  | csc
+  | cot
+  | _fns A
+  | _pred ( X , A , R )
+  | _trCl ( X , A , R )
+  | oc
+  | OP
+  | cm
+  | OL
+  | OML
+  | <o
+  | Atoms
+  | AtLat
+  | AtsLat
+  | CvLat
+  | HL
+  | C_rng $)
+  | *r
+  | *Ring
+  | ip
+  | PreHil
+  | +ss
+  | ocv
+  | CSubSp
+  | Hil
+  | LLines
+  | LPlanes
+  | LVols
+  | Lines
+  | Points
+  | PSubSp
+  | pmap
+  | +P
+  | PCl
+  | _|_P
+  | PSubCl
+  | LHyp
+  | LAut
+  | WAtoms
+  | PAut
+  | LDil
+  | LTrn
+  | Dil
+  | Trn
+  | trL
+  | TGrp
+  | TEndo
+  | EDRing
+  | EDRingR
+  | DVecA
+  | DIsoA
+  | DVecH
+  | ocA
+  | vA
+  | DIsoB
+  | DIsoC
+  | DIsoH
+
+
+
+
+
+File ql.mm:
+
+wff ::
+  | a = b
+  | a =< b
+  | a C b
+
+
+term ::
+  | a '
+  | ( a == b )
+  | ( a v b )
+  | ( a ^ b )
+  | 1
+  | 0
+  | ( a =<2 b )
+  | ( a ->0 b )
+  | ( a ->1 b )
+  | ( a ->2 b )
+  | ( a ->3 b )
+  | ( a ->4 b )
+  | ( a ->5 b )
+  | ( a ==0 b )
+  | ( a ==1 b )
+  | ( a ==2 b )
+  | ( a ==3 b )
+  | ( a ==4 b )
+  | ( a ==5 b )
+  | ( a <->3 b )
+  | ( a <->1 b )
+  | ( a u3 b )
+  | ( a ^3 b )
+  | ( a == c ==OA b )
+  | ( a == c , d ==OA b )
+  | C ( a , b )
+
+
+File peano.mm:
+
+wff ::
+  | binpred s t
+  | not psi
+  | logbinop psi phi
+  | quant v phi
+
+
+
+
+
+term ::
+  | v
+  | 0
+  | S s
+  | binop s t
+
+
+
+BINOP ::
+  | +
+  | *
+
+
+
+LOGBINOP ::
+  | or
+  | and
+  | implies
+  | iff
+
+
+
+BINPRED ::
+  |
+  | <
+
+
+
+QUANT ::
+  | forall
+  | exists
+
+
+File miu.mm:
+
+wff ::
+  |
+  | x M
+  | x I
+  | x U
+  | x y
+
+
+File demo0.mm:
+
+wff ::
+  | t = r
+  | ( P -> Q )
+
+term ::
+  | 0
+  | ( t + r )
+</pre>
+
+
+
+An older grammar list, but with useful commentary and completely replaced syntactic grammar (e.g., "A" is "class"), is at [[file:metamath-Grammars.org][metamath-Grammars]].
+
+
+The Unix shell script that did this is:
+<pre>
+for file in set.mm ql.mm peano.mm  miu.mm demo0.mm
+do
+
+  echo "File $file:"
+
+  for type in wff class term BINOP LOGBINOP BINPRED QUANT
+  do
+
+  if grep -E -q '\$[ap] '"${type}" "$file" ; then
+    echo
+    echo "$type ::="
+    grep '\$[ap]  *'"${type} " "$file" | \
+      sed -e 's/^.*\$[ap]  *'"${type}"' /  | /' \
+          -e 's/ \$[=.]//' -e 's/\$( .*//'
+  fi
+  echo
+  echo
+
+done
+
+done
+</pre>

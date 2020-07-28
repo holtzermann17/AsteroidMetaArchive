@@ -1,0 +1,124 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The best application software is just a language
+that allows the users to explain to the computer
+what they want. How often will the programmers
+be in possession of that information...long enough
+for the users to change their minds? And if new
+features are desired, just expand the language!
+(The language symbols may be words, point-and-clicks
+or bird whistles -- or all of these.)
+
+So, one of the keys to a successful project is
+having a clean definition of the problem, being
+able to explain it to the users and to the
+programmers (if you can't explain it you can't
+program it.) With a clean, precise problem 
+definition, the code gets done right the first
+time! 
+
+The problem definition explains *what* needs to
+be done, not *how* to do it. The how part is
+a design topic. 
+
+The real key to a successful project, assuming
+a clean problem definition is in hand, is to break
+out the design into modules with clean interfaces,
+and to compartmentalize the work.
+
+ * Modularizing means reducing size-related
+complexity inside each sub-system and each 
+sub-sub-system, down to the "module" level. 
+
+ * Compartmentalizing means partitioning the 
+solution so that everything isn't dependent
+on everything else. 
+    
+There are practical and psychological reasons for
+insisting upon clean and thorough modularization
+and compartmentalization:
+
+ * Deliverables can be phased (if anyone plans
+more than 3 phases they are BS'ing everyone,
+so don't buy into this -- no 4 phase project
+has ever been completed in the history of
+bureaucracy!)
+
+ * Ideally, a module (a self-contained unit of
+work/deliverable) can be coded and tested in a day
+(or an hour if the programmer is expert, or two
+weeks for a trainee...). This provides a daily
+sense of accomplishment as well as a unit of work
+that is eminently *disposable* if botched, while
+being small enough that internal documentation is
+irrelevant.
+
+ * It is easier to split up the work among a 
+large team!
+
+ * Programmers don't like to be bothered when
+they're working (3 months out of every 12...),
+therefore, self-contained assignments are optimal
+(and don't put your hand in the cage at feeding
+time...)
+
+ * Ideal partitioning creates simple, medium, hard
+and brutally hard tasks -- you give the wizards
+the "impossible" tasks, the serious practitioners
+get the "hard" tasks, and the rest go to whoever
+wants them. Some problems have intrinsic
+difficulty such that it isn't a question of how
+long it would take a beginner to write the
+code, but rather, how long would it take for
+everyone to acknowledge the failure and redo
+the work properly.
+
+ * System testing should be a slam dunk, revealing
+at most, errors in the problem definition and
+analysis. Once the interface booboos are cleaned
+up all that should be left is performance tuning
+(which still might mean a total rewrite for 
+a certain sub-system :)
+
+----
+* Discussion
+
+Maybe you were an IT manager in another life.  This seems
+more rational than anything I'd come up with -- and I mean
+that in a good way.  
+
+Not wanting to sound at all like I'm making excuses or being
+wishy-washy or flakey, but /sometimes/ it is hard to work
+out a design in advance and a person (or a team) simply must code & depend
+on the interplay between the mind(s) and the machine.  Really
+this isn't so different from what you said above; and perhaps
+arguments or discussions about "development style" are going
+to mostly be "semantic arguments."  I'm not sure.  But I do think
+it is good to have a document like this around to point at from
+time to time.
+
+Furthermore, to the extent that it /is/ possible, it would be
+great to have a better-spelled-out development plan.  --[[file:jcorneli.org][jcorneli]]
+
+-----
+
+The starting point should be some sort of high-level system block
+diagram(s). Show the deliverables/sub-systems as blocks connected to
+each other and to the logical data stores with arrows that 
+show the communication/data flows. Also, it can be good to show
+users on the diagram interacting with sub-systems. A top-level
+"context" diagram can show the system in relationship to the
+world (i.e. external resources and users versus internal.) 
+
+A good diagramming exercise will clarify things in your mind
+and reduce the need for a lot of narrative! People will naturally
+prefer to start with the pictures and then "drill down" as needed.
+(I suspect there are two sorts of people: picture oriented and
+text oriented...there are some people who absolutely will not
+wade through pounds of verbiage, but you will want their participation,
+so definitely have diagrams and pictures! Sets of tables can supplement the diagrams too...)
+--[[file:ocat.org][ocat]]
+
+
+forward [[file:MMHDM1_hcode.org][MMHDM1_hcode]]

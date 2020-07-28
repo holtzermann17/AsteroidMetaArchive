@@ -1,0 +1,312 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page about improving the correction system to enhance accountability
+and help address disputes.
+
+* Original proposal
+
+In order to promote accountability both on the part of article authors and
+persons filing corrections, I propose the following system be implemented:
+
+ 1. the original /corrector/ should be able to reject a /rejection/, causing the
+ rejection /and/ the correction to come up for /arbitration/.
+
+ 1. the original /corrector/ should be able to reject an /acceptance/, causing the
+ acceptance /and/ the correction to come up for /arbitration/.
+
+The exact details of "arbitration" need to be worked out.  They could be
+anything from temporarily removing the article from the encyclopedia until a
+replacement that both the original author and the original corrector agree
+about, to calling a popular vote to orphan or delete the article - and several
+things in between.
+
+Presumably the arbitration algorithm could be somewhat complex, and ideas are welcomed.
+
+The important thing about this request is that if it was filled, for the first
+time some solid accountability for corrections would be present in the system.
+
+Also note that some useful data could be derived from outcomes of this process
+and applied to multi-dimensional scoring/profiling.
+
+** A response
+
+I am open to the possibility of improving the corrections system, but I think a lot 
+of what you are calling for here assumes things that are false and problems that 
+don't exist.  
+
+To start with, the foundational assumption that there is no accountability in the
+system is puzzling.  I think the most important kind of accountability is already
+present: the fact that the entire process is public.  I consider this our key 
+advantage over the traditional publishing model, which continuously "arbitrates"
+conflicts, but almost completely eliminates accountablity.  The best way I see to
+strengthen PM's system is to either encourage or require that PM identities be 
+real-world identities, so there's even more impact of the public nature of the 
+interaction.
+
+While being able to reject a rejection would be handy, this is essentially already 
+done by re-filing the correction.  I'm not sure if this is done frequently enough
+to justify the coding effort involved in making it "one-click" semiautomated.  Maybe 
+it is.  But I don't consider it of critical importance.  
+
+Even more worrisome is your call for an "arbitration" process.  Aside from the fact
+that this could be cumbersome and cause the workflow support in the system to 
+balloon inelegantly are questions of who the authorities would be to determine the
+"right" answer.  By design in Noosphere, the author was made the final authority 
+on their own little sphere of content to bypass this problem.  From my experience,
+attempts to "democratize" conflicts like this in virtual systems gradually degrade
+over time, either driving people from the communtiy or causing a regression to some
+fictional mean (see the debate about kuro5hin.org for example).
+
+I can't see any purpose at all in rejecting acceptance.  In the rare occasions that
+(1) the submitter was wrong, (2) the owner didn't notice this, (3) the owner integrates
+the wrong correction, and (4) the same filer also notices their initial correction was
+wrong (that is a chain of four increasingly unlikely "ifs"), why not just file another
+correction?
+
+If there are serious disagreements, why not just fork the entry?   Maybe we should focus 
+on making this easier, and putting in features to help users make a decision of which
+entry to "use" over others (and similarly, which entry to select for export and inclusion
+in derived works like the FEM).
+
+--[[file:akrowne.org][akrowne]] Fri May 13 21:35:52 UTC 2005
+
+***  A response to that response
+
+The concerns you raise are good - let me clarify a couple of points, to continue
+to help things along (not so much to argue, because I like the direction you're
+going with this).
+
+ 1. Assumption that there is no accountablity.  True or false: if I submit 
+  corrections to your entry, you can reject them, or accept
+  them without making the change - ad infinitum.  (I think the answer is "true".)
+
+ 1. Author as the final authority.  In light of 1, the author can persist in
+  error, and if this error is publicly presented as fact, it has the potential
+  to hurt others (not just the pig-headed author).
+
+ 1. Rejecting acceptances.  This is to deal with the situation in which an author
+  accepts a correction without actually making the changes (nothing as
+  complicated as the scenario you described).
+
+
+Certainly there are other ways to deal with these issues.  Forking and
+depreciating is one way.  This presents its own challenges, certainly.  I think
+this may be the biggest gun.
+
+Scholia are another way.  You're absolutely right that a public process is
+necessary for accountability - but I don't think it is always sufficient (people
+don't always look at all the relevant public information).  If an article came
+with a prominently displayed scholium that said "This article is bogus, please
+see my comments at XYZ location for a description of why." then that would
+certainly help people decide what to think of a given article.  Of course,
+things like scoring or trust or whatever may enhance the usefulness of these
+scholia.  E.g. maybe it is XYZ that's bogus - accountability needs to be across
+the board, and no one should make someone else look bad w/o good reason.
+
+Personally, I don't think the concern about workflow support ballooning
+inelegantly should be raised immediately.  The amm't of support should be
+dictated by the wants and needs of the community, and the most elegant system is
+the one that suits those needs best.  I think I'm making a reasonable case here
+(perhaps better in this follow-up) for there being something useful that's
+missing.
+
+However, I agree that the question about "who should be able to determine the
+right answer?" is important.  I don't have an answer to this question right now,
+but I think it is good to think about some more!
+--[[file:jcorneli.org][jcorneli]] Sat May 14 02:36:54 2005 UTC
+
+---- 
+
+*  A new/modified proposal
+
+The following feature request is a modification of jac's "reject rejections and
+acceptances" proposal.  Just like the original proposal, it is meant to address
+the issue of spurious rejections and acceptances.  The impetus behind these
+changes is to come up with a proposal that has a much smaller impact on the
+existing system.  There are two aims:
+
+ 1. The modified proposal describes a true extension of the current
+protocol.  The authors and contributors, if they so choose, could
+ignore the new features, and continue to operate according
+to the existing protocol.
+ 1. The implementation requirement for the proposal are quite minimal.
+
+The key to the proposal is the notion of a /disputed/ entry.  The
+present system already accommodates this notion, albeit implicitly.
+Entries with pending corrections are in some sense, /in dispute/.
+There are consequences if an author fails to address an existing
+dispute in a timely fashion; the entry in question is moved to the
+orphanage.
+
+I propose that we allow for four levels of dispute: 
+: strong
+: tentative
+: ongoing
+: resolved. 
+
+ *Presently*, a new correction against an entry throws that entry into a strong
+state of dispute.  The author has a limited amount of time to address
+the dispute, before the entry is moved to the orphanage.  At any time
+during this period, the critic (the originator of the correction) can
+withdraw the correction, in which case the dispute becomes /resolved/.
+
+ *It is  proposed that* acceptance or rejection of the correction is construed as the attempt
+of the author to /close the dispute/.  As such, an acceptance or a
+rejection changes the state of the correction to /tentative/.  The
+critic then has a limited amount of time to reject the closure, in
+which case the dispute is marked as being /ongoing/, or to accept the
+closure, in which case the dispute is /resolved/.  If the critic does
+nothing, the dispute becomes /resolved/ after a predefined period of
+time.
+
+An /ongoing/ dispute has no time limits associated with it, and cannot
+result in loss of ownership.  However, just like an outstanding
+correction (strong dispute), an /ongoing/ dispute is flagged in an
+appropriate fashion.  In particular a correction notice continues to
+appear at the bottom of the entry's display.
+The only way for an author to clear an /ongoing/ dispute is to once
+again, accept or reject the correction.  This once again switches the
+state of the dispute to /tentative/, and allows the critic a limited
+amount of time to either accept the resolution, or to reject it and
+maintain the dispute as /ongoing/.
+
+Implementation details.
+I assume that the current database already has the following fields
+for the correction object: $DATE_FILED (the date a correction is
+filed), and $DATE_RESOLVED, the date a correction is resolved.
+
+We define a new constant #DEFAULT_RESOLUTION_TIME
+
+We consider a correction/dispute as being in
+
+: the STRONG state if $DATE_RESOLVED=NULL 
+: the TENTATIVE state if $TODAY-$DATE_RESOLVED<#DEFAULT_RESOLUTION_TIME
+: the RESOLVED state if $TODAY-$DATE_RESOLVE>#DEFAULT_RESOLUTION_TIME
+: the ONGOING state if $DATE_RESOLVED=-1 (or some other impossible
+  date).  Alternatively, we could add a new field to flag an ONGOING
+  dispute 
+
+A correction in either the STRONG or the ONGOING state manifests in
+the usual fashion on the author and public displays.  As mentioned
+above, a correction in the ONGOING state has no associated time
+limits, or default actions.  It is similar to corrections in
+the RESOLVED state, and could, potentially, remain indefinitely.
+(remember that the author always has the option of attempting to close
+the dispute)  Corrections in the STRONG and the TENTATIVE states, have
+time limits and default actions.  In the first case, if nothing
+happens, the entry is moved to the orphanage.  In the second case, if
+nothing happens, the correction enters the RESOLVED state.
+
+Joe, if you would like to stick with your original proposal, please
+feel free to move my suggestions to a separate page (or let me know
+and I will do it myself).  I take the liberty of modifying your
+proposal, because I perceive that there might be the possibility that
+my modifications could advance the issue for all involved.
+
+My perspective is that the current correction system works quite well, and that
+we can, at best add just a bit of value, with incremental protocol tweaks. I am
+quite leery of messing too much with a time-tested protocol, or introducing
+major system changes (bugs bugs bugs)
+
+--[[file:rmilson.org][rmilson]] Monday, May 16, 2005 15:20 UTC
+
+**  A response
+
+This is a great place to post this modified proposal.  
+
+The "binary" nature of your suggestion -- author and critic would be the only
+people involved -- is both a potential strength and a potential weakness.  I
+like the fact that it is simple, and I think this is good.  I think it
+formalizes something that needs to be formalized (the answer back from a critic).
+
+But in your proposed system, there is still the possibility for "edit wars", in
+which the dispute state of an article switches back and forth between ONGOING
+and TENTATIVE forever.  I don't like this, since I personally don't think it is
+worth spending time toggling a variable repeatedly like this.  That's why I like
+the idea of a more involved social conflict-resolution process.
+
+On the other hand, such a process could be completely informal (and require no
+new program code or new codes of behavior).  It seems almost certain that a more
+explicit recognition of the dispute state of articles would /help/.
+([[file:Wikipedia.org][Wikipedia]] does something similar for articles that exhibit POV.)  Since
+your proposal seems relatively simple to code up and also seems to be an
+improvement over the current system, I think it would be worth adding, and then
+we can see what happens.
+
+However, I do think we should put some more time into thinking about and
+discussing social means of resolving disputes.  What might the arbitration
+process look like?  Can an informal system work well?
+
+Extending your system, we might make the level of dispute /grow/ each time the
+state toggles between TENTATIVE and ONGOING.  Somewhere on the site, users could
+be presented with a list of "most disputed articles", which might help them
+weigh in on arguments, or spot truly bad behavior on the part of either authors
+or critics.  Dispute (although often productive in the long run) could
+temporarily lower an article's search ranking.
+
+Thus, to conclude, I think think there are a number of easy ways to go beyond
+the core of your proposal to make something that is both simple and useful.  I
+support your proposal - as long as we can keep talking about these further
+extensions and keep thinking some about effective/relevant social processes.
+--[[file:jcorneli.org][jcorneli]] Mon May 16 16:31:48 2005 UTC
+
+* General discussion
+
+I think the crux of rmilson's proposal is not that the state toggling itself 
+somehow resolves the dispute, but by that by recognizing these states explicitly, 
+attention might be drawn to the dispute and the actors might be reminded of what 
+they are taking part in.
+
+Joe, in response to your first response, why isn't a message posted effectively a 
+"scholium" that can be used to comment on the persisting incorrectness of an entry?
+The complaintant can always post a message (potentially linking it to another entry),
+and the author is powerless to delete it.  Perhaps this should be a specially-typed
+scolium, but at least now, there is a way a misbehaving author can be "punished" in 
+situ.
+
+--[[file:akrowne.org][akrowne]] Tue May 17 03:58:53 UTC 2005
+
+** Followup
+
+: /I think the crux of rmilson's proposal is not that the state toggling itself
+somehow resolves the dispute, but by that by recognizing these states
+explicitly, attention might be drawn to the dispute and the actors might be
+reminded of what they are taking part in./
+
+I agree, and I also think this is a good idea.  That's why I suggested this:
+
+: /Extending your system, we might make the level of dispute /grow/ each time
+the state toggles between TENTATIVE and ONGOING.  Somewhere on the site, users
+could be presented with a list of "most disputed articles", which might help
+them weigh in on arguments, or spot truly bad behavior on the part of either
+authors or critics./
+
+In answer to your question
+
+: /why isn't a message posted effectively a "scholium" that can be used to
+comment on the persisting incorrectness of an entry?/
+
+Well, it is, but the way it is presented has a lot to do with how it is
+perceived.  In Wikipedia, a very prominent flag
+
+: /The [http://en.wikipedia.org/wiki/Wikipedia:NPOV_dispute neutrality] of this article is disputed./
+
+is shown when there is a dispute (follow the link for their description).
+
+When I encounter text like that, it makes me think differently about the article
+I'm reading.  By contrast, a critical message without any specific markup is
+harder to understand (and the fact that [[file:expand-all option when viewing messages|threads can't currently be expanded.org][expand-all option when viewing messages|threads can't currently be expanded]]
+doesn't exactly help).  The system's semantics should clearly reflect the situation that
+is being modeled.  A non-deletable plaintext message is OK, but the semantics
+aren't as clear as I'd like, that's all.
+
+(And given that the message will stay around even after the article changes, a
+once-accurate critique has the potential to become misleading.  Expanded threads
+might help, but specific and prominent flags would help people get the basic idea
+quickly.)
+--[[file:jcorneli.org][jcorneli]] Tue May 17 04:27:01 2005 UTC
+
+
+----
+[[file:Feature Requests.org][Feature Requests]]

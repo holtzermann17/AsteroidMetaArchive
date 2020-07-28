@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+; [http://www.yacy.net/yacy/index.html distributed indexing] :
+; [http://www.cs.rice.edu/Conferences/IPTPS02/ IPTPS 2002] :
+; [http://iptps03.cs.berkeley.edu/program.html IPTPS 2003] :
+; [http://www.cs.rice.edu/Conferences/IPTPS02/165.pdf scalability issues of the Gnutella network] :
+; [http://iptps03.cs.berkeley.edu/final-papers/search_feasibility.ps paper about the feasibility of P2P search engines] : shows the problems to be overcome

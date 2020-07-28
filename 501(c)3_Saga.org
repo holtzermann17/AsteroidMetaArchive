@@ -1,0 +1,186 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We (chiefly Aaron Krowne and Bonnie Rabichow) are working on attaining tax-exempt public charity 501(c)3 status for PlanetMath.org, Ltd., with the IRS.  Although PlanetMath is clearly and intuitively this kind of organization, this undertaking qualifies for "saga" status because of the IRS's poor understand of the type of enterprise PlanetMath is.  In specific,
+
+ * PlanetMath is largely internet-based
+ * PlanetMath is based on CBPP (volunteers create the content)
+ * The technical work of the nonprofit is chiefly to improve CBPP systems, not the content or pedagogy themselves (which should benefit indirectly)
+ * The nonprofit is not 1-1 identifiable with the project
+ * Many important PM sub-projects (some even potential revenue streams) are not "run" by the org.
+
+The original 501(c)3 application was submitted in fall 2004, September-ish, I think.
+
+* Updates
+
+; Sat Jun 4 19.55.00 UTC 2005 : *Victory!!!* I found out yesterday from Bonnie that PlanetMath.org, Ltd's 501(c)3 status has been granted!  This is way ahead of when I expected.  I will now begin taking care of newly-enabled business, such as getting PM signed up for an officially free checking account and working on getting matching donations. --[[file:akrowne.org][akrowne]]
+; Fri May 20 20.21.11 UTC 2005 : Semi-bad news: the process has been delayed a little while.   I called the IRS a few days ago and asked what was going on with our status; our agent had silently (thanks) put things on hold, claiming the copies of the articles of incorporation we sent in were not "conformed".  But, they were as conformed as Virginia makes them, which we eventually convinced her of.  So supposedly she is recommending approval and sending things on.  Unfortunately, this is a convoluted procedure that involves sending the whole application on to at least two other offices in different states, and at least a two month delay.  So, we will have to be patient.
+; Sat Apr 16 18.28.25 UTC 2005 : Good news! I spoke with our IRS case agent on the phone yesterday and she has relented: hyperlinks to commercial sponsors are OK as long as they are not in a commercial context.  That is, we cannot link to specific products, or suggest that users should buy something in the context of the link (duh).  So basically, as soon as the conformed copies of our Articles of Incorporation reach the IRS in the mail, our 501(c)3 status will be granted!
+; Sat Mar 19 01.23.18 UTC 2005 : We have submitted ammended articles of incorporation to the Virginia State Corporation Commission.  We have also requested conformed copies of both the new and old articles.  In addition, we faxed in a polished version of the respose draft given below, and requested a 30 day extension to our case (this was on Tuesday, March 15).  The original deadline was today (March 18 EST).
+; Thu Mar 10 18.26.08 UTC 2005 : I spoke with our case agent at the IRS via phone, today.  The Missouri issue has been resolved: this was a slip-up, we should of course get approval for ammended articles of incorp. from /Virginia/.  Bonnie is investigating the issue of whether we need conformed articles.  I also brought up the hyperlinking question, citing organizations from Ray's list of counter-examples.  Our agent stuck to her guns, suggesting that all of these organizations are in volation.  I requested a copy of the law or code restricting internet linking; she suggested that the code exists but may not be published (scary), and will research the matter.  I said we need to open a dialog on this issue, even while the other points are resolved.  Updated Jimbo Wales on the situation; he is going to try to get some lawyers to weigh in on the matter.
+; Thu Mar 3 16.17.55 UTC 2005 : A few days ago, we received a [http://br.endernet.org/~akrowne/planetmath/legal/irs_PM_inquiries_scanned.pdf response from the IRS] about our original application. 
+We are now working on our reply.  [http://br.endernet.org/~akrowne/planetmath/legal/irs_nonprofit_inquiry_response.txt Here] is a draft.
+Note that there are /serious/ problems with the IRS's claims about PM's ability to link to other organizations.  This may also bear on the PM/Wikipedia relationship, and Wikipedia's relationship with other organizations and internet entities.  If not cleared up, these issues could lead to bad things for the web in general.
+
+* Discussion
+
+ *On hyperlinking*: Looking over the [http://www.fourmilab.ch/ustax/www/t26-A-1-F-I-503.html
+ IRS requirements for exemption], 
+it looks like the only clause that could be construed to forbid hyperlinking to
+sponsors is 503(b)3: "making services available on a preferential basis."  I
+guess links to donors could be construed as "services".  However, it seems
+incorrect to call hyperlinks, which are widespread and ad hoc, "services" (they 
+are also not /the/ service of the organization -- which is fostering CBPP
+mathematics education).  Links 
+are really purely informational.  In addition, I am not sure how this is any
+more a "service" than simply revealing who the donors are, or in the case of
+some nonprofits, giving donors extra advertisement time.  --[[file:akrowne.org][akrowne]] Thu Mar
+3 19:42:24 UTC 2005
+
+Maybe I'm being very naive here, but I wonder if one could use the analogy of
+public television and radio since that is the closest thing I can think of here.
+In particular, I have in mind a particular organization, the volunteer radio
+station WEVL in Memphis, with which I am somewhat familiar.  There, the
+situation was that there was a non-profit organization which took care of making
+sure that the transmitter was in working order.  The radio shows were put on by
+volunteer disk jockeys and hosts and the whole thing was paid for by member
+donations.  In this way, this sounds a lot like Planet Math if you apply the
+transformation
+
+ radio -> computer
+ show host -> entry owner
+
+It sounds to me that this issue of hyperlinks is a bit like the issue of
+announcements so perhaps one could get some guidance to what might be
+permissible.  In the case of non-profit radio and television, commercials are
+absolutely definitely reihe verboten.  Therefore, I would surmise that the
+Google ads might have to come down.  From hanging around WEVL, I got the
+impression that, in practise, the requirement of non-preferentiality came down
+to two points:
+
+ 1. Not to use airtime to support a particular political candidate.  Except for
+  one post long ago where Joe taked about a mathematician who was running for
+  office in Texas, this is not likely an issue here.
+
+ 1. Being impartial in allowing access to public service announcements.  I would
+  guess that whether hyperlinks are considered services depends on context.  If
+  the links were presented in a "links" page, I could see an argument about them
+  being some sort of referral and publicity service analogous to public service
+  announcements.  However, there is no links page; the links on Planet Math
+  occur as bibliographic references inside articles, so I would assume that it
+  would be hard to construe those as anything other than the scholarly practise
+  of acknowledging sources and suggesting futher reading.
+
+: This is a good comparative example. But actually, all links do not occur as bibliographic
+references.  We have links to Mozilla, links to GNU, links to this Wiki site, and occasionally
+links in the news to other sites.  So far I think all are non-corporate or nonprofits, but 
+I don't see why we couldn't also link to a free software product by a for-profit company, or a
+free article by a for-profit publisher which happens to cover PM (imagine if Wired magazine 
+did an article on PM).  /Just because we may be sending traffic their way,
+doesn't mean we are providing preferential service/.  The exposure we generate for them is really
+only incidental, as our linking /primarily/ suits the goals of our project. Also note that
+the IRS never clarified what /kind/ of corporations or organizations their vague admonition applied 
+to.  I don't even know if we can link to Wikipedia (non-bibliographically), or vice versa!  
+There may be simple ways out of the "preferential treatment" trap.  For example, maybe all we have to do
+is let any donor supply an optional hyperlink, then present our donor list sorted by donation magnitude,
+hyperlinked if such link is available.  --[[file:akrowne.org][akrowne]] Sat Mar 5 16:30:37 UTC 2005
+
+: A note on "Google Ads would have to come down" -- Not necessarily. 501(c)3's are allowed to have 
+commercial sources of revenue, but they must pay taxes on them using a specific form (it was mentioned
+in the IRS's letter).  In addition, commercial revenue cannot exceed other forms of support (again, there
+was a vagueness here, as the ratio might be something different than half and half). I feel that I can
+deal with this.  However, if we get really substantial public/grant funding, the ads might really
+end up not being worth the tax hassle.  --[[file:akrowne.org][akrowne]] Sat Mar 5 17:23:29 UTC 2005
+
+As for donors, I would like to point out that while commercials are taboo, there
+ seems to be a good bit of leeway in what a non-profit station can do in the way
+ of acknowledging its sponsors.  Here I have in mind what happens on public
+ television (as opposed to volunteer radio).  When a large company finances a
+ show on PBS, at the end of the show one often sees not just a mention of the
+ sponsor, but also a brief video about the company.  From what I can see, what
+ makes this OK is that the video is supposed to be informational as opposed to
+ overtly promoting a product which the company makes.  Arguing from this
+ precedent, I would guess that if, say, Springer decided to make a contribution
+ to Planet Math, it would be alright to thank "Springer-verlag, publisher of
+ fine math books" for the donation and add a link to their home page on the wall
+ of donors.  As long as we don't go too far and advertise the yellow sale or
+ recommend Springer books, I would, in my naivete, imagine that this is
+ acceptable. --[[file:rspuzio.org][rspuzio]] 4 March 2005
+
+: Precisely. I feel that we need to be able to do the kind of thing you outlined in
+your Springer example -- otherwise we could be cutting off some of our most promising
+funding avenues.  I think the idea is /reasonable/, and not at all out of line with what
+PBS does. This may serve as a good specific example to give to the IRS if they 
+want to stick to their guns on this issue.  Why can't we do the equivalent of 
+what PBS does?  --[[file:akrowne.org][akrowne]] Sat Mar 5 16:21:06 UTC 2005
+
+:: Well, before that line of argument gets taken too far, let's check to see if
+PBS (or, anyway, the member stations) actually have the 501(c)3 classification. --[[file:jcorneli.org][jcorneli]] Sun Mar 06 00:50:56 2005 UTC
+
+:: The answer is in the affirmative.  As a rule, if an organization is recieving
+money from big businesses, you can be sure that they must have the proper IRS
+classification for the simple reason that businesses do not give away money
+unless they get something back in the way of tax deductions and tax deductions
+are *only* available if the organization recieving the donation is properly
+certified with the governmemt.  To <u>underscore</u> how big businesses will not
+even consider donating to an organization unless that organization has 501(c)3
+status, let me cite a case I knew where a Wild Oats store would not consider
+letting a local Food Not Bombs group have access to the old food they were about
+to throw away until that group managed to piggyback on the tax-exempt status of
+a local non-profit organization!  If a supposedly progressive and
+community-minded business would not even consider giving old food away without
+official tax-exempt status, you can be quite sure that any organization which
+routinely recieves money from companies like Microsoft and Exxon has all it's
+paperwork in order with the IRS.
+
+:: By the way, to find out if a particular organization has tax-exempt status,
+you can use the search engine at http://www.guidestar.org/
+
+:: With respect to the link business, here are two suggestions.  First, it might
+be a good idea to look at webpages by certified non-profit organizations to see
+what they have to offer in the way of links.  If I find anything particularly
+interesting in the process, I will mention it here.  Second, have a look at the
+section "Links to Third-Party Sites" in
+http://www.alanwood.net/unicode/legal.html I wonder if adding a similar
+disclaimer about links on Planet Math might not help the
+situation. --[[file:rspuzio.org][rspuzio]]
+
+#+BEGIN_VERSE I was thinking that PBS might have an even further taxfree-enhanced status.
+Speaking of links, a friend of mine also recommended these...
+ http://donorsforum.org,  http://philanthropy.com,  http://www.givespot.com
+I haven't checked them out at all, but who knows. --[[file:jcorneli.org][jcorneli]] Sun Mar 06 03:51:10 2005 UTC
+
+#+BEGIN_VERSE For examples of tax-exempt non-profit organizations with websites chock-full of links to commercial enterprises, check out the following:
+
+#+BEGIN_VERSE [[file:Thanks to our corporate sponsors.org][Thanks to our corporate sponsors]]
+
+#+BEGIN_VERSE After seeing these examples, I would say that anyone who claims we can't put up links to donors' websites is really got to be joking.  Also, it seems to suggest that, if we want to link to Wikipedia, the way to do it is to call them a partner organization. --[[file:rspuzio.org][rspuzio]] 6 March 2005
+
+#+BEGIN_VERSE: Great "evidence", Ray. I will definitely bring this up with the IRS.  Thanks! --[[file:akrowne.org][akrowne]] Sun Mar 6 16:39:31 UTC 2005
+
+#+BEGIN_VERSE: Every saga comes with a list chapter at some point.  Homer has his catalogue of ships and we have our [[file:Thanks to our corporate sponsors | catalogue of websites.org][Thanks to our corporate sponsors | catalogue of websites]].  I expanded my list of "Thanks to our corporate sponsors" websites into a dossier documenting how the practices of certain well-known, tax-exempt, non-profit organizations are at variance with the guidelines presented in the reply of the IRS to PM's application.  --[[file:rspuzio.org][rspuzio]] 7 March 2005
+
+Excellent comments, in my opinion.  I've been contemplating the idea of
+PlanetMath as a public-media-like outlet for a while.  I think it is a good
+analogy.  (Indeed, we might even consider getting in touch with organizations
+like the Corporation for Public Broadcasting to seek sponsorship.)
+
+There is a community radio station in my neighborhood. I don't know much about
+how it works, but I do know that they are quite adamantly /not/ an NPR
+station.  I haven't listened for a few months, so I don't remember how or
+whether they do on-air sponsorships.  However, I could walk over and ask them
+about this stuff. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 14:48:13 2005 UTC
+
+** Conflict with amazon referrals idea
+
+The no-commercial-linking clause seems to conflict with the Amazon referrals
+idea sketched here: [[file:Bibliographies and Amazon referrals.org][Bibliographies and Amazon referrals]].  Maybe when the
+tax-exempt status has been granted, you should call in and double check whether
+such linking would be OK.  It seems unlikely.
+--[[file:jcorneli.org][jcorneli]] Sun Apr 17 21:35:45 2005 UTC
+
+: That's a good point, though I mentioned it in the call and the IRS agent didn't
+object.  In principle, we could do referrals to a nonprofit bookseller-- is there
+such a thing? It seems like there should be, for educational books (on the other hand,
+I think a lot of times these things don't develop when the private sector does 
+a good enough job.)  --[[file:akrowne.org][akrowne]] Mon Apr 18 05:17:17 UTC 2005

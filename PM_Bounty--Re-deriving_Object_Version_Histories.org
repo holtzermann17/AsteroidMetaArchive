@@ -1,0 +1,72 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]].
+
+----
+
+* Bounty: Re-deriving Object Version Histories
+
+Date Posted: Mon Nov 21 21:59:34 UTC 2005
+
+Status: *ongoing* (herbling)
+
+Time: 10 hours (est.)
+
+Bounty Price: *$200* (US est.)
+
+Objective:  
+
+At the beginning of 2005, we lost a big chunk of our object version histories in
+a hard drive crash.  However, we had been keeping daily snapshots of the database, so in
+principle, we should be able to use these snapshots to derive object versions.  We want to
+do this to re-derive the missing intermediate versions of objects.
+
+* Detailed Outline
+
+A rough plan for how to re-generate the snapshots is:
+
+ 1. create a dummy Noosphere instance
+ 1. iterate over the database snapshots (compressed archives)
+## uncompress each snapshot
+## load snapshot into database
+## have Noosphere dump an XML object snapshot to disk for every object (this is an existing subroutine)
+ 1. Replace missing and broken snapshots in live versions/ directory with "synthetic" snapshots from previous step (a little bit of logic will be needed to determine if the recovered version
+of an object still has missing versions before or after it).
+
+There are a few caveats to this plan:
+
+ * revision comments are lost forever; restored snapshots do not have them, as they are only stored in the original XML.
+ * multiple changes in the same day will be lost.
+
+However, I think most of the desired effect will be attained with this method.
+
+Kinds of skills needed:
+
+ * Programming (probably in some scripting language).
+ * Ability to work in a linux shell environment and use basic *nix tools (like tar, gzip, scp, ...)
+ * Basic understanding of databases (mysql in specific) and preferably some knowledge of administering them.
+
+Other work considerations:
+
+ * We can probably have the user work on the live server, so they don't have to re-install
+the Noosphere libs, but using a separate database and section of the disk.
+ * The database snapshots are stored on another server and will have to either be copied 
+over, or pulled over individually via scp as they are processed.  
+ * Any code written is entirely one-off, so you can work in whatever language gets the job
+done easiest for you.
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for
+more on how bounties work.
+
+* Discussion
+
+- the hardest part seems to be the dummy Noosphere instance :), if it is on the live server will there be a conflict with the current instance?  To have PP and PC on the same machine I had to rename the the perl modules to Noosphere2 for the second instance, very tedious, but I now have a version that could be used if copied over.  --[[file:bloftin.org][bloftin]]
+
+: It should be ok.  If its on the same machine, a new install of the libraries doesn't actually
+have to be done; I think using a baseconf.pm with different database should suffice.  I could be
+wrong though.  Did you ever try this?  --[[file:akrowne.org][akrowne]] 
+
+- I just tried it and PlanetPhysics comes up because it won't load another module (baseconf.pm) with the same name so it uses the baseconf in the PP directory.  If I try to rename it to baseconfTest.pm, I get a problem with the database hook in since when it tries to connect using values from getConfig which uses Noosphere::baseconf:: etc.  if I try renaming Config, everything has to change and I am back to renaming everything with a 2 like I did with PC.  Mabye I am missing one extra step so it can differentiate between the baseconf modules, but I'm not sure how. --[[file:bloftin.org][bloftin]]

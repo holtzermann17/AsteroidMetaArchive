@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Very briefly put, [[file:Ghilbert.org][Ghilbert]] is not AI-complete, but it is AI-friendly.
+
+The success of the broader Ghilbert project is not dependent on developing a good AI for proving theorems. However, I think the Ghilbert language is a great choice for developers of theorem-proving technology, whether based on domain-specific algorithms, search, automated reasoning, or artificial intelligence. For one, this gives such tools access to a good proof library (currently based on set.mm, but with more developments planned). For two, this lets the fruits of such technology be available to a potentially broad audience.
+
+This philosophy is similar to that of the
+[http://www.rbjones.com/rbjpub/logic/qedres04.htm QED Manifesto]. I find it impressive that the
+Metamath set.mm database was developed with essentially no automation of any kind. To me, this strongly suggests that it is practical to develop a large repository of proofs using primarily human ingenuity. 
+
+The simplicity of the Ghilbert proof language makes it especially appealing as the basis for a variety of automated tools. I see a number of roles for such automation:
+
+ * Translation help for more complex [[file:little theories.org][little theories]] than can be interpreted with syntactic expansion alone.
+ * Simple domain-specific provers (e.g. propositional calculus).
+ * Bridges to and from other proof systems.
+ * Brute-force search, automating the production of short proof fragments.
+ * Automation of specific tasks such as applying Deduction Theorems, expanding definitions, etc.
+ * Proof optimizing, i.e. the production of shorter proofs from longer ones.
+ * Calculation (arithmetic, parsing, etc).
+ * Implementations of standard theorem proving technology such as resolution, model checking, etc.
+ * Entirely new theorem proving technology.
+
+Since HOL includes a very powerful programming language, it is particularly amenable to automation, and most of the tasks listed above have implementations in the HOL world. However, because the <em>text</em> of HOL proofs isn't readily accessible, some of these tasks are harder to do in HOL (translation to other proof systems and proof optimizing in particular).
+
+The diversity of such tasks leads me to believe that there should be a rich diversity of tools for automating them, and that there are great benefits to using a simple common language so that these tools may all interoperate. This belief has helped motivate the design of Ghilbert.
+
+: -> This discussion is continued in [[file:Ghilbert and HDM.org][Ghilbert and HDM]] and [[file:Ghilbert automation.org][Ghilbert automation]].
+
+--[[file:raph.org][raph]]

@@ -1,0 +1,159 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/Hipster The Gathering/ is a parlor game of philosophical conversation.
+
+/New:/ Hipster the Gathering has changed its name to Building a Better
+Conversation (or BBC).  Here and there it will still be referred to by
+its original name, or the short name "Hipster", but the official name is
+now BBC.
+
+It is inspired by the Hipster Parietal Disgorgement Aid (see
+the [http://en.wikipedia.org/wiki/Hipster_PDA HPDA] page on Wikipedia),
+the card game "Magic: The Gathering"
+([http://en.wikipedia.org/wiki/Magic:_The_Gathering MTG] on Wikipedia),
+Hesse's "Glass Bead Game"
+([http://en.wikipedia.org/wiki/Glass_Bead_Game GBG] on Wikipedia)
+and various other related topics and ideas.  Further discussion takes place below.
+
+First, a description of the (extremely simple) rules.  The choice of
+specific rules is inspired in part by the rules of the
+[http://www.dvorakgame.co.uk/rules.html Dvorak card game] (although
+none of the Dvorak variants are entirely compatible with this game).
+/New/ (as of March 26, 2007): There is now a Dvorak MUSH online, at http://dvorakgame.co.uk/index.php/DvorakMUSH.  The parallel developments
+for BBC are described on this wiki at [[file:MUSN.org][MUSN]].
+
+
+* Approximate rules of BBC
+
+ 1. Each player uses an independently constructed deck of 100 or fewer cards; each card can contain
+any information whatsoever (typically they will include a title).
+
+ 1. Players start with 5 cards in their hand, and play one card each
+turn, drawing one new card at the end of each turn (when the
+draw pile is depleted, play continues with the cards in hand).
+
+ 1. A card is either played face up and remains in play for the rest of
+the game, or discarded, face down, to the player's personal discard
+pile.
+
+ 1. When playing a card face up, the player must state the card's
+interpretation within the current game; essentially, why it is being
+played.
+
+ 1. Every play should relate to at least one previously played card,
+continuing and adding to the discourse.
+
+ 1. Blank cards drawn from the deck can be converted to non-blank cards
+on-the-fly, then played (but can not be played before being so
+converted).
+
+ 1. Play ends either when all of the players discard in succession, or
+one of the players can not play because of being out of cards.
+
+* Comments
+
+A natural question to ask is what the point of the game is.
+
+For one thing, there are no winners and losers in the game, at least,
+not intrinsically.  Typically it will be played in a cooperative
+rather than a competative spirit.
+
+The point, in short, is to have an interesting conversation.  Sharing
+and developing your own ideas, learning about what your table-mates
+are thinking about and helping them to develop their ideas, while
+building an interesting (if transient) co-authored "text" (the game
+record) is a joy in and of itself.
+
+* Example
+
+Here is a brief example to show what a typical game might look like.
+(The game portrayed here never actually took place; each of the
+imagined players starts with 5 cards in their hand.)
+
+; A-1 : /Global Judgements/:  "People figure easier things out first."
+; B-1 : /Narration/: "Narration is a guide to the easy elements of a story."
+; C-1 : /Science Fiction/ :  "A story takes place in the mind of the author,
+and is a machine for expressing some point."
+; A-2 : Blank->/Documentation/ : "Narration tells you how a literary machine is supposed to work."
+; B-2 : /Teleology/ : "The source of everything in the story is usually the author,
+but does every story have an author?  Note that there is a difference between an author and a narrator."
+; C-2 : /Tengen/ : "Tengen means 'the origin of heaven.'  It is not the 'final cause,'  nor does it
+give you the 'mandate of heaven.'"
+; A-3 : /Beams/ : "The issue with tengen seems to be finding ways to connect everything to it.
+Tengen is the hingepin, but if the connections are broken, everything falls apart."
+; B-3 : /Hipster The Gathering/ : "This is also a game of connections.  The central point may shift from game to game.
+What do you suppose the central point is in this game instance?"
+; C-3 : /Coherence/ : "The point is making things stick together well."
+; A-4 : Blank->/Understanding/ : "The idea of helping the audience to understand a given work is also important."
+; B-4 : Blank->/Mutual Understanding/ : "This relates to the idea of different parts of a system understanding each other and
+also understanding the system as a whole."
+; C-4 : Discard
+; A-5 : Discard
+; B-5 : Discard
+
+* Other uses
+
+I have been using my Hipster cards as a sort of personalized I Ching.
+The way I do this is to think of a good question, shuffle, and deal
+out 5 cards.  I then think about how these cards are related to the
+question, and try to see how they can connect into an answer.
+Sometimes I write down this answer on a new card.
+
+* Playing with a full deck
+
+For the first time in my life, I am [[file:playing with a full deck.org][playing with a full deck]]!
+I'll share the titles of these cards with you.  Before too long,
+I hope to have an Emacs version of this game (to be implemented,
+fittingly, with [[file:Arxana.org][Arxana]]) and at that time I expect I'll be ready
+to share the full cards.
+
+* Discussion
+
+Please feel free to adjust the above as you see fit, but I'm
+requesting that any major deviations should be developed separately.
+E.g. ideas about changing the rules, thoughts about certain
+strategies, or musings on the nature of the game itself, should go in
+this section or onto separate pages. --[[file:jcorneli.org][jcorneli]]
+
+I wonder if there should be some "bonus" if the current play relates
+in some way to the immediately-previous play (as opposed to just some
+other prior play).  Of course, without winners or losers, I'm not sure
+what form a "bonus" would take =) --[[file:akrowne.org][akrowne]] Sun Dec 18 02:39:45 UTC 2005
+
+My friends here who I introduced the game to had basically the same
+comment (even raised the idea of requiring a response to the
+previously played card).  I guess the general response should be "do
+whatever seems to make for the best conversation."  Any improvements
+in that regard can be appreciated by everyone!
+
+Another point is that if patterns like "trying to say something that
+relates to the immediately previous card improves the game" are
+noticed, these could go into an FAQ.  Statements of this sort could also be 
+played at some appropriate point during a game in progress.  Note
+that unlike the situation with [http://en.wikipedia.org/wiki/Nomic Nomics],
+there are no rules about introducing new rules.  If I was a Marxist
+theorist I might say that Nomics constitute a fetishization of the rule,
+but I am not a Marxist theorist.  I don't know enough about HTG to say
+what it is about exactly!     --[[file:jcorneli.org][jcorneli]]
+
+For an interesting physical point of comparison, see
+http://en.wikipedia.org/wiki/Three_sided_football  
+(note that this game was invented by the author of "Open Creation
+and its Enemies" -- which is probably not a coincidence at all). --[[file:jcorneli.org][jcorneli]]
+
+Dvorak, as I mentioned above, is a related game.
+This page: http://www.dvorakgame.co.uk/index.php/Infinite_Dvorak_deck
+gives a particularly interesting and perhaps especially closely related
+Dvorak implementation.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Scott McCloud invented a similar game he calls
+"five card nancy": http://www.scottmccloud.com/inventions/nancy/nancy.html
+
+The game "Apples to Apples" is vaguely similar as well (more similar
+to Scott's game than mine).
+
+----
+[[file:Discussions.org][Discussions]]

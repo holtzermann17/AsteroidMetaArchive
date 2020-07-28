@@ -1,0 +1,13 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(should be merged with [[file:little theories.org][little theories]])
+----
+The [[file:IMPS.org][IMPS]] system popularized the concept of "little theories," the principle that axiomatic systems
+should be small and modular, and that individual theorems should use only the axioms they truly need,
+rather than having a monolithic One True Axiomatization for all theorems in the universe. A very
+accessible presentation of the ideas is the 1992
+[http://imps.mcmaster.ca/doc/little-theories.pdf Little Theories] paper by William Farmer et al.
+
+These ideas are very similar to the motivations behind the [[file:Ghilbert.org][Ghilbert]] module system. Thanks are due
+to [[file:marnix.org][marnix]] for pointing out this connection.

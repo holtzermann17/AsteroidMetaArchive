@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+ 1. /A times (B union C) subset (A times B) union (A times C)/
+
+ 1. If /(x y) elt (A times B) union (A times C)/ then 
+either /(x y) elt (A times B)/ or /(x y) elt (A times C)/
+
+ 1. If /(x y) elt (A times B)/ then
+/(x y) elt A times (B union C)/
+
+ 1. If /(x y) elt (A times C)/ then
+/(x y) elt A times (B union C)/
+
+ 1. /(A times B) union (A times C) subset A times (B union C)/
+
+ 1. /A times (B union C) = (A times B) union (A times C)/
+
+Back to [[file:Example of structured proof.org][Example of structured proof]]

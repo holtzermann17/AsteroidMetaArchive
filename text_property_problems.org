@@ -1,0 +1,74 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This may seem overly technical if you haven't been following along closely
+with the system's development, but you need some introduction to the
+use of text properties -- so why not start here?
+
+The main thing to know is that I'm using /text properties/ to associate
+marked up regions with the scholia that are marking them up.  Text properties
+stick to text as it moves around, so articles can be edited, and the
+scholia that are attached to certain passages will persist throughout
+this editing.  Since the actual target, relative to the beginning of
+the marked up article, is going to change, saving the new position of
+the text property, after editing, is important.  This is what I've meant
+by "committing" -- it is the hard and novel part of the commit process;
+other details are of course to be added later.  This hard part is done.
+
+And so far so good.  Now, it gets interesting.  With /transclusion/
+or even more advanced /identification/ (one- or two-way gated copies
+of the bleeding edge of some other article, respectively), we need to use a more
+interesting sort of text property.  Rather than a uniform text property
+that says "this region is associated with such-and-such a scholium",
+we need a text property that gives a unique ID to each character within
+the marked up region.  Linearly-changing is fine.  But what's the point?  The marked-up
+region may be re-arranged on the recipient's end, and if it is, what
+was formerly one transclusion may become many (or one, but with a modified target).
+
+I've been assuming that the first kind of text property will be
+"sticky" -- if someone adds to a marked-up region, the added text
+will bear the new markup.  At some point, the option could be given
+to the scholiaist, but for now, this is fine.  However, the text
+properties associated with transclusions should not be sticky.
+Text into the middle of a quoted passage should become an "island"
+in the middle of the transclusion, and the transclusion should be
+split in two.
+
+This is interesting in and of itself (I'm sure).  The problem arises
+in the fact that Emacs seems to have a bug that makes it hard and/or
+ugly to use an individual text property for each scholium or transclusion.
+Which you might think would be fine, because I had been maintaining
+all of the data about who marks up what on /one/ text property (despite
+what anything that might have been taken as an insinuation of anything different in the preceding paragraphs).  
+Now, the "stickiness" of each text property is controlled individually,
+and I have no idea how to make it behave differently for different items
+on the list.  So, the long and the short of it is, I'm back to using
+one text property to keep track of "scholia", but I'm going to want
+to use separate individual text properties to mark up transclusions.
+(Again, with linearly-changing /values/.)  The associated explorations
+in which I found the relevant Emacs bug can be found in CVS versions
+41 through 43, version 44 being identical to version 41.
+
+This note is here as a record of these version numbers, in case I forget
+later -- and hopefully it will also interest its readership in the
+use of text properties in the scholium system.  Also, the readership
+should be aware that although the Emacs text property system is 
+most excellent, it could stand to have some improvements enacted upon it.
+
+Thank you for your time.  --[[file:jcorneli.org][jcorneli]] Thu Oct 6 21:08, Chicago
+
+Actually, /identification/ doesn't need the nonsticky properties.
+Since it is actually what I'm interested in right now, I can press
+ahead without any major overhauls.  --[[file:jcorneli.org][jcorneli]] Fri Oct 7 11:48, Chicago
+
+Looks interesting:
+
+http://www.dr-qubit.org/download.php?file=predictive/auto-overlays.tar.gz
+
+The Auto-Overlays Manual can be viewed online at:
+
+http://www.dr-qubit.org/predictive/auto-overlay-manual/html/index.php
+
+The package's web page can be found at:
+
+http://www.dr-qubit.org/emacs.php#overlay

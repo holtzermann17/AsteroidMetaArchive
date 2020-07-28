@@ -1,0 +1,679 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[MetamathOMDocBridge current page]
+
+I am interested in working out the specifications for converting
+between OMDoc and Metamath ".mm" files At this time that means
+set.mm and ql.mm, but I would prefer to develop a generic solution
+(without hardcoding) for any .mm file that can be unambiguously 
+parsed. And I would like the /product/ to be operational in
+both Windows and Linux environments.
+
+-----
+
+As a starter, the [[file:mmj2.org][mmj2]] software provides a way to obtain 
+a fully parsed Metamath database in RAM, which can easily be
+output -- either directly to XML, or if preferred, to one or
+more intermediate files that can be manipulated. Going the
+other way, we could generate either ".mm" formatted files, or
+use the mmj2 Proof Worksheet format for individual theorems
+(which offers some advantages such as unification and
+import/export via Metamath's eimm.exe utility.
+
+Ideally a collaborator would be expert in OMDoc, provers,
+formal logic, and software programming -- but in that case
+I would be totally redundant; so really, any participation level is
+welcome :)  
+
+AND if you want to write a thesis or research paper about Metalogic
+(or whatever) in OMDoc, this might be an excellent project.  
+I am just a simple programmer and all I want to do is advance 
+the state of the art of Metamath, mmj2 (my project), and 
+OMDoc, while benefiting mankind :-) Take a leadership role
+or whatever role is peaceable. 
+
+-----
+
+Here is an excerpt of a discussion about set.mm from earlier
+today. I think it illustrates one of the immediate theoretical
+questions about the mapping semantics between set.mm and OMDoc
+(Perhaps the could be two different conversions -- one to
+a Metalogical Content Dictionary target and another to 
+a standard first order logic Content Dictionary.):
+
+**  $d's and meta vs. object language
+
+Hi Norm, I apologize in advance if this question seems particularly
+dense, or lazy. I want to nail down in my mind the application of
+$d's. Take set.mm, for example. It is written in a meta-language,
+the /subject/ language and discusses an /object/ language. If 
+we stipulate that the object language contains the same symbols
+and convert a meta-theorem into an instance of the theorem in the
+object language, then by virtue of the metalogical proof of the
+metatheorem, the object language instance of that theorem is
+also valid -- and assuming that the object language version of
+the formula is expressed with properly distinct variables, then
+the object language formula can be validly manipulated using
+"proper substitution" and the usual mechanisms of formal logic.
+In essence, a specific instance of the metatheorem generated into
+the object language is valid and no further use of distinct
+variables would be required assuming proper substitutions are
+obeyed. Yes? Any caveats? 
+
+P.S. The context of this question is that I am investigating
+[http://www.mathweb.org/omdoc/ OMDoc] with a tenative goal of
+converting Metamath .mm files to OMDoc format -- and perhaps
+vice-versa. The idea is that as a common format, or "software
+bus", OMDoc would enable us to send a new set.mm theorem to
+the various provers, get a proof back, and then convert the
+proof back into the original .mm symbols; voilà! The common
+OMDoc format would also be a worthy target of other projects
+discussed on this wiki, such as a speech-enabled interface.
+
+--[[file:ocat.org][ocat]] 4-Jan-2007
+
+
+ *Answer*
+
+In the object language, two individual variables with different names
+are distinct by definition (simply because they have different names -
+that's what "distinct" means).
+
+In most formal logic textbooks, and in the Metamath note on
+[http://us.metamath.org/mpegif/mmset.html#schemes schemes], the names of
+individual variables and the metavariables that range over them are
+different to avoid confusion.  And this confusion is a
+problem, based on questions I see asked about Metamath; it seems hard to
+communicate that Metamath is a metamathematical language and not the
+object language, in spite of its very name.  :)  The reason may be
+that superficially its theorem schemes look the same as
+actual theorems of the object language.  I thought this was an
+advantage, but maybe I should have picked some cryptic glyphs for its
+metavariables so they would be obviously different.
+
+However, in principle there is no reason why variable and metavariable
+names can't be same as long as it is clear from context.  With this in
+mind, a (Metamath) theorem scheme having metavariables x, y,... ranging
+over individual variables can be converted (by switching context) to
+an object language theorem with individual variables x, y,...
+simply by dropping any $d's, since 
+$d's are
+meaningless in the context of actual theorems.
+
+Keep in mind two things.  First, this resulting object language theorem will
+be only one of several possible theorems that the scheme could range
+over, so in that sense it would be weaker than the original scheme, even
+though (aside from any $d's that were dropped) it looks identical to the
+original scheme.
+
+Second, the object language has only individual variables, and
+there is no such thing as a wff variable.  So it is impossible to
+"translate" a theorem (scheme) of even propositional calculus to the object
+language by switching contexts in this way.  All we can do is pick
+specific instances of wffs, constructed from individual variables and
+connectives, to substitute for the wff metavariables of a propositional
+calculus theorem scheme.  The result, of course, is necessarily a much
+weaker and less general statement than the original scheme.  For most
+predicate calculus provers, this is not a problem because they handle
+propositional calculus (and schemes of predicate calculus that involve
+wff metavariables) in the code itself, not with explicit external
+axioms like Metamath does.  Internally, program variables
+are in effect
+emulating wff metavariables when they manipulate object language wffs.
+
+To a certain extent, we can emulate wff metavariables in the object
+language by artificially introducing new predicates into the language.
+(Set theory itself has only two predicates, equality and membership.)
+For propositional calculus, we could introduce 0-ary, true/false
+predicate constants P, Q,...  (which could even be called ph, ps,... if
+you want to have the same names after switching the context).  For
+predicate calculus, we would introduce n-ary predicates such as
+P(x,y,...) where x,y,... are some variables that aren't in a distinct
+variable pair with the corresponding wff metavariable ph.  However, keep
+in mind that this emulation isn't perfect:  in the object language, a
+wff cannot be substituted for a predicate symbol - predicate symbols are
+not variables.  However, since the predicate symbols behave in many ways
+like wff metavariables, under certain circumstances we can carefully
+jump "outside of the system" with a metalogical rule that lets us
+pretend that they are, so that we can substitute for an n-ary predicate
+a wff containing at most the n individual variables in its argument
+list, or in a more sophisticated system, a wff containing at most those
+n variables free.
+
+I don't know what languages might support or not support such a feature
+that emulates wff metavariables in this way.  It can get a little clumsy:
+the 0-ary constants in a propositional calculus theorem actually should
+be assumed to be oo-ary predicates (infinite number of variables) for
+full generality, otherwise they would be useless for predicate calculus.
+Or, at least have all the variables used by the proof, which you don't
+know in advance what they will be.  Similarly, fully general n-ary
+predicates should have all variables except those that aren't allowed.
+So it would be more efficient to list what variables /aren't/ allowed
+- oops, we're getting back to $d's.  :)  -- [[file:norm.org][norm]] 4 Jan 2007
+
+-----
+
+Provocative quotes excerpted from
+[http://mathweb.org/omdoc/pubs/omdoc1.2.pdf OMDOC1-2.pdf]:
+
+[...]
+
+OMDoc is one of the first fruits of the Mathematical
+Knowledge Management (mkm) Network
+(http://www.mkm-ig.org/). This network combines researchers
+in mathematics, informatics and library science. It is
+attempting to realise the dream of creating a universal
+digital mathematics library of all mathematical knowledge
+accessible to all via the world-wide-web. Of course,
+
+[...]
+
+We posit that there are three levels of information in
+mathematical knowledge: formulae, mathematical statements,
+and the large-scale theory structure (constructing the
+context of mathematical knowledge).
+
+[...]
+
+OMDoc initially developed from the quest for a solution of
+the problem of representing knowledge on the one hand and
+integrating external mathematical reasoning systems in the
+Omega project at Saarland University on the other. Omega
+[SBB+02] is a large-scale proof development environment
+that integrates various reasoning engines
+(automated theorem provers, decision procedures, computer
+algebra systems) via knowledge-based proof planning with
+the aim of creating a mathematical assistant system.
+
+[...]
+
+This led to the idea of developing a global repository of
+formalized mathematics, which would eventually allow peer-
+reviewed publication of formalized mathematical knowledge,
+thus generating academic recognition for formalization work
+and eventually lead to the much enlarged corpus of
+formalized mathematics that is necessary for knowledge-
+based formal mathematical reasoning. Young researchers
+would contribute formalizations of mathematical knowledge
+in the form of mathematical documents that would be both
+formal and thus machine-readable, as well as human-
+readable, so that humans could find and understand them.
+
+-----
+
+31-Jan-2007: This undertaking is proving to be much larger
+than anticipated. In fact, its feasibility is unknown (by me).
+One issue is that OMDoc 1.2 stores formal proofs in Gentzen
+Sequent style using a form of Lambda notation; translation from
+Metamath's Hilbert-style proofs is a dubious undertaking, though
+perhaps such a tool is either "doable" or already done. OTOH,
+OMDoc 1.2 introduced changes to increase the expressivity of
+the system and perhaps an accomodation could be made for
+Herr Hilbert :-) 
+
+(A curious item: in the OMDoc 1.2 book the example of a formal
+proof apparently uses a wff metavariable in the example, though
+this is implicit and I don't fully understand the language yet...
+but they lambda'd " A /\ B " into x!)
+
+Another issue is that I have not, as yet, connected with anyone
+working on anything related to MathWeb, OMDoc, MBase, Mozart-Oz,
+etc. The wiki is null and the mail lists are not happening either.
+For CBPP the situation has some theoretical interest since the
+mailing list archives are inaccessible unless you are a member,
+and wiki updates are restricted to members, and membership is
+available only upon request. The situation is the inverse of the
+Asteroid Meta wiki, which is freely updateable even by Japanese
+bots peddling pharmaceuticals. It may be that the intellectual
+production environment is designed to keep work-in-progress closely
+held until publication, and that most of the production work is
+done by professors and their students -- or it may just be that
+their peer group is so tiny that there is no need to communicate
+with the planet until the work is complete. I will struggle along.
+
+One interesting thing: I am studying introductory Lambda Calculus
+now (finally) based on 
+
+    
+   "Introduction to Lambda Calculus"
+   by Henk Barendregt and Erik Barendsen
+   Revised Edition, 1994
+   http://citeseer.ist.psu.edu/barendregt94introduction.html 
+    
+
+Naturally, I was compelled to translate the grammar into
+Metamath format :0-) ... which is an interesting exercise.
+I believe that the fully parenthesized abstract syntax for
+untyped lambda calculus can be implemented in Metamath --
+using bound variable renamings and certain $d restrictions
+(ironically). However, this is not the elegant and concise
+syntax people normally associate with Lambda Calculus. The
+lessons?
+
+1) For Metamath to work properly, at least with mmj2, the
+abstract syntax must match the concrete syntax; Metamath has
+no concept of associativity or precedence and mmj2 specifically
+requires what it considers to be an "unambiguous grammar". 
+In theory, to get around this problem a "pre-processor" 
+could be written for a specific Metamath .mm database to
+"un-abbreviate" formulas.
+
+2) The lack in Metamath of substitution of only "free" occurrences
+of variables is somewhat of a drawback -- to do Lambda Calculus
+in Metamath, I think that
+multiply bound variables would need to be explicitly renamed so that
+double-binding does not occur, which would be tedious and
+non-standard to do by hand...perhaps a pre-processor could handle
+that also.
+
+3) Unnamed recursive functions can be defined in Lambda Calculus.
+I have wondered several times about modifying the Metamath 
+Proof Verification Algorithm -- allowing a proof to actually
+put proof steps on the proof stack, making it self-modifying
+and a full-blown Turing capable machine. I am interested in
+the Lambda Calculus in this regard because it is said to be 
+equivalent to a Turing Maching (but easier to program :-) I don't
+really know how this would work in practice...
+
+4) I am curious whether in theory the Lambda Calculus could be
+successfully encoded beneath the level of Propositional Logic
+in Metamath. Or, whether it would be most interesting to layer
+it on top of set.mm (at the end.) Of course, it would be unnatural
+and tedious to do the experiment using Metamath -- given the
+inevitable variable naming conflicts, it would be more doable
+in, say, Ghilbert (or OMDoc :-)
+
+Well, that's the noose. I'll be busily studying for at least a 
+year. Any mmj2 questions/problems, just post a note on the Asteroid.
+
+--[[file:ocat.org][ocat]]
+
+I had gathered some notes about how to implement lambda calculus in
+Metamath ([[file:Lambda_calculus_based_metamath_system.org][Lambda_calculus_based_metamath_system]]). In fact I think
+it's straightforward but there are some details I don't understand (how to
+define a definition for instance; is it useful to make a 
+difference between immediate beta-reduction and beta-reduction ? and so on). I think 
+there is no need to implement proposition calculus when you work with
+lamba calculus: lambda calculus is a complete system in itself. In the axioms
+I've gathered, substitution is missing. But in fact I have a set of axioms to make
+substitution somewhere (except that it means that I must work it out). I
+think that in lambda calculus $d is unnecessary but perhaps I'm wrong.
+More than that in the books I have read, they present the system but there's
+never anything like "principia mathematica" (I mean a book that explains at length 
+how to develop mathematics using the system).
+-- [[file:fl.org][fl]] 1-Feb-2007
+
+I'm not sure what you are referring to as "immediate" beta-reduction.
+
+About $d's, here is what I invented:
+
+
+     
+      $( All Lambda Vars to be distinct, by convention --
+         place this Begin Scope after *all* syntax defs.
+         Everything else must be within scope of
+         these $d's.                              $)
+    ${ 
+      $d u v  a b c d  x y z w                    $. 
+     
+      ${   
+        $( alpha conversion - rename bound variable.
+           See 2.8, Pg. 11.
+     
+         NOTE: Here we apply $d to the substitutee and the
+               substitutor to eliminate the possibility of
+               accidentally binding a renamed free x instance to
+               the new bound variable y -- this expresses the
+               idea of allowing the rename of x to y only if
+               x is free for y in M.
+                                                   $)
+        $d M y $.
+        df-alphac $a |- ( \ x . M ) == 
+                        ( \ y . ( M [ x := y ] ) ) $.
+      $}
+     
+
+I think we need the rename implemented so that we can get rid
+of doubly-bound instances of 'x' -- which if we did not get rid
+of, then subsequently when we make the beta-reduction substitutions
+via Metamath, we could incorrectly substitute an expression into
+a bound variable. And the motivation for making lambda variables
+distinct is to hammer them down to the object language instances
+(no funny business!) 
+
+If you're interested in my draft progress, which I don't expect
+to actually *use* -- just an exercise for learning -- I can
+shoot a copy offline. --[[file:ocat.org][ocat]]
+: Yes I'm interested. I can't swear I will play a lot with it.
+But I'm interested. By the way instead of `( M [ x := y ] )`
+I would use ` [ y / x ] M ` because we are more accustomed
+to that sort of notation and because this way I think you can
+remove the parentheses. 
+:: I *like* the ":=" symbol because the alternative is written
+both ways by different authors (i.e. ' y / x ' and ' x / y ')!
+
+#+BEGIN_VERSE  While I can understand your point, I believe [y/x]M is almost
+universal in "mathematical" lambda calculus texts (as opposed, perhaps,
+to "computer science" type texts that I am less familiar with); e.g.
+Curry; Hindley and Seldin.  In fact I don't recall ever seeing the ":="
+version.  Perhaps Raph, if he's tuned in, could share his expertise.  I
+don't know of any text that swaps the x and y in [y/x]M; if so, the
+author has made a grievous error showing his or her ignorance
+of the literature.  Perhaps you are thinking of logic
+books that sometimes use M(x|y) for "y is substituted for x".  In both
+cases, the y is "pushed" toward the M to overtake the x, as is also the
+case in M[x:=y].  But the way I remember "y is substituted for x in M"
+is to think of "/" as meaning "for" in [y/x]M.  That said, I suppose I
+could get used to ( M[x:=y] ) although the extra parens needed are
+unfortunate.  One final tidbit:  on p. 65 (PDF p. 81) of the
+[http://de2.metamath.org/downloads/metamath.pdf previous Metamath book
+edition] you will see the earlier notation used in set.mm, (M x|y),
+with a comment at the top of the page
+on the placement of the parentheses. -- [[file:norm.org][norm]] 2 Feb 2007
+
+
+:: Mostly I am following the great Henk Barendregt's syntax, and
+the fully parenthesized version is the abstract syntax -- without
+the shorthand abbreviations (which Metamath doesn't handle so
+well.) I did add back the '.' in the fully parenthesized abstract
+syntax for the sake of uniformity and clarity. 
+About swapping M and [ x := y ], the issue is associativity,
+with Application and Substitution both being the same: to the left...
+so M [ x := y ] [ y := z ] would be parsed to ( ( M [ x := y ] )[ y := z ] ). Deeper in Henk's system, the fully abbreviated syntax allows
+for statements like 'LMN', and so on -- but that depends upon agreement
+about which way the operands associate. I hope Mozart-Oz deals
+with these issues in a way that is fun to work with! --[[file:ocat.org][ocat]]
+#+BEGIN_VERSE My small experience with lambda calculus within Metamath tells
+me the less parentheses, the better. And the reason is that the formulas
+in lambda calculus are very long. I would use [ x / y ] even if 
+[ y := x ]  is clearer. The reason is that it only takes 5 characters
+and that the best would be that you think to your end user. 
+If the end user is accustomed to [ x / y ] because he uses set.mm
+a lot I think he will appreciate to find the same notation in
+your file. I don't understand the problem of associativity. 
+In my opinion there is only one way to read [ x / y ] [ w / z ] M 
+-- [[file:fl.org][fl]] 2-Feb-2006
+
+:Lambda calculus it's just like natural deduction, there are so many
+different systems which are described that you are always wondering
+if these systems describe the same thing.
+
+:Here is another link. http://www.jetcafe.org/~jim/lambda.html -- [[file:fl.org][fl]]
+
+To [[file:fl.org][fl]] and [[file:norm.org][norm]]: I am not dogmatic about this, and I 
+accept your critiques as given. Thank you for taking the time
+to review the matter. I won't actually /attempt/ Lambda
+in Metamath, writing pre- and post- processors to switch
+between the abstract and concrete (abbreviated) syntax forms
+is more work than I wanted to invest, and there are programming
+languages available (Lisp, Scheme, Haskell, etc. ... and less
+purely, Mozart-Oz.) --[[file:ocat.org][ocat]]
+
+: O my god, O'Cat, I hope we are not responsible for this abandon.
+In fact I think it's a very good idea to try to give a lambda calculus
+system. I think it's pretty simple in fact. No need to try to write
+pre and post-processors. You say that many programming languages are
+based on lambda calculus. That's true. But that's the problem: they are
+only /based/. Nowhere exists the opportunity to see the original lambda
+calculus logic at work. And to see that can help to understand how the
+languages work internally. There is another thing that is interesting. Programming
+languages concern computer scientists and engineers. But at the origin (as far
+as I know) lambda calculus was designed for mathematical purposes (to give a logic
+based on the idea of function and not on the idea of set). But nowhere we can 
+find a system where it is used this way. -- [[file:fl.org][fl]] 2-Feb-2207
+:: Nyet. The OMDoc-1.2 (pdf) specification has 16 /pages/ of
+citations and references, of which Lambda Calculus is just a
+few lines... --[[file:ocat.org][ocat]]
+#+BEGIN_VERSE But it does mean nothing. Lambda calculus is huge. And it's
+one of the rare systems that doesn't depend on the concept of set. 
+-- [[file:fl.org][fl]] 3-Feb-2007
+#+BEGIN_VERSE: I agree. Lambda calculus is an entire universe. Very elegant.
+It can be formalized in OMDoc, or so it is theorized... --[[file:ocat.org][ocat]]
+#+BEGIN_VERSE:: And consequently you have only one obsession in your life: to give
+us a pretty metamth file with all the needed axioms and the needed
+definitions  we will have the pleasure to work with under
+mmj2 haven't you ? :-) In fact I have many questions, many questions
+concerning lambda calculus that only a real metamath file can heal because
+the resources on the internet are very poor and unsatisfying. 
+
+#+BEGIN_VERSE::  For instance I'd like to see what a real lambda calculus proof can ressemble. 
+What is a the proof of if ` I = \ x x ` then ` ( I I ) = I ` for instance ? 
+I would like to see it with all its elegant alpha-conversion and beta-substitution..
+
+-- [[file:fl.org][fl]]
+
+#+BEGIN_VERSE#+BEGIN_VERSE I am sure you will enjoy Henk Berendregt's 1994 Introduction.
+As to a .mm file of Lambda Calculus, the problem I have with doing
+that is the requirement that the abstract syntax match the 
+concrete syntax -- meaning, in real life, that the formula have
+exactly 1 parse tree. That is doable in mmj2, but I did not do it,
+and Metamath's proof assistant definitely does not do it (there is
+hardcoding for set.mm in Metamath.exe, as is.) Without abbreviations,
+such as optional/eliminated parentheses at will, it is really hard
+to do Lambda calculus; it just doesn't look right and is unwieldy.
+That is where a pre-processor would come in handy. Or Ghilbert!
+P.S. I will be very busy in the real world for a while now also.
+
+----
+
+I wanted to chime in on a few points. My experience so far is that
+writing an axiomatization for a formal system in MM/Gh is deceptively
+subtle. I'm not even done yet with Peano arithmetic, although I do
+feel myself closing in on it. And lambda calculus is definitely a harder
+system to think about than just numbers. I wish you luck!
+
+You say "bridge," but I find myself confused which direction you mean,
+or perhaps both. I'm also not clear on whether you're trying to make
+a lambda calculus "island" with MM syntax, or whether you want to
+also be able to port theorems back and forth between the set.mm and
+lambda calculus worlds.
+
+The latter would certainly be the most useful, but there are some
+difficult problems in the way. ZFC is stronger than lambda calculus
+(in the sense that a model exists), so not all theorems of set.mm /can/
+be ported to lambda-calculus. Further, set.mm does not have
+mechanically enforced module boundaries to distinguish between the
+theorems that can readily port (all of real analysis, for example) and
+those that cannot. Creating such module structure is a long term goal
+of the Pax project, but that's a ways off.
+: /Not all the theorems can be ported to lambda calculus/ : that's exactly
+the sort of point a lambda.mm file could explain us (me). You can
+find in some documents that lambda calculus is equivalent to a Turing
+machine in that case since metamath stuff only needs a Turing machine then
+it can be ported to lambda calculus. In other documents lambda calculus
+is an alternative to set theory (but apparently you disagree). So one question
+is how to define things like a topology for instance in the hypothetic
+lambda.mm. -- [[file:fl.org][fl]] 4-Feb-2007
+
+The other direction also has difficulties. Models exist, but they are
+not exactly intuitive (a good summary is in
+[http://www.dsi.unive.it/~salibra/TrueHome/Papers/amilp2003.pdf Lambda Calculus: Models and Theories]).
+In particular, set.mm's function application operator ( F ` A ) cannot
+map directly to application in the lambda calculus world. The
+straightforward mapping breaks down because the identity function
+(\x.x in lambda calculus notation, I in set.mm) is a proper class (see
+[http://us.metamath.org/mpegif/inelv.html inelv] for the proof), and
+so cannot appear in the domain or range of a function. In the set.mm
+world, ( I ` I ) = (/), (see
+[http://us.metamath.org/mpegif/fvprc.html fvprc]) which is a pretty sad result in the world of lambda
+calculus.
+:: Oh my god. Lambda calculus is a world by itself ... :-) [[file:fl.org][fl]] 4-Feb-2007
+
+#+BEGIN_VERSE I have an idea that any system with more than a tiny number
+of rules, symbols and definitions /is/ a universe. Metamath is
+a universe too. The problem is that human time appears to be
+finite..."Time is the fire in which we burn." --[[file:ocat.org][ocat]] 
+
+: I managed to screw up pretty badly in the above. The logical system
+behind Omega is a variant of the simply typed lambda calculus, not
+the untyped. In face, I'm not sure there are any significant differences between
+Omega's logical system and Isabelle's. Of course, its automated theorem
+proving mechanisms are quite different, with a strong AI flavor. In
+any case, once I get a translation from Gh's Peano archive to HOL, I think
+it should be reasonably straightforward to adapt that to OMDoc / Omega.
+After having looked over the OMDoc / MathWeb documents more
+carefully, I agree with your assessment that the goals of that project
+overlap considerably with HDM's, as do many of the details. I highly
+recommend the PlanetMath people here to read the OMDoc 1.2 spec
+cited above -- [[file:raph.org][raph]]
+
+Replying to raph:
+
+"Considerable overlap" is something I'll agree to, based on my
+understanding and the opportunity to talk in person with Michael
+Kohlhase in my home town this past December.  To be able to groove on
+"essentially the same" (from your edit summary), one needs to really
+get to know the two projects.  One can begin by examining
+representative quotes.  Lucky for me someone provided some of these
+above!  So I'll begin by examining them.
+
+ * /creating a universal digital mathematics library of all
+mathematical knowledge accessible to all via the world-wide-web/ -
+Yes, this is essentially the same.  (The details that go into defining
+the concept of "all mathematical knowledge" are bound to be
+interesting, no matter who you get the definition from :).)
+
+ * /We posit that there are three levels of information in
+mathematical knowledge/ - Ray says this too, although his three
+levels are different from the three levels mentioned in the quote
+above.
+
+ * /OMDoc initially developed from the quest for a solution of the
+problem of representing knowledge on the one hand and integrating
+external mathematical reasoning systems [...] on the other./ -  These
+are completely reasonable goals pursuant to the overarching goal
+mentioned above.  Now, certainly one can develop different strategies
+for representating knowledge, and [[file:hcode.org][hcode]] might end up looking quite
+different from OMDoc for various strategic reasons.  It would certainly
+be advisable discuss OMDoc when we talk about our language-development
+strategy.
+
+ * /This led to the idea of developing a global repository of
+formalized mathematics, which would eventually allow peer- reviewed
+publication of formalized mathematical knowledge/ - Now, this idea
+has actually been chewed over for a long time.  I think HDM might be
+the first project to focus on the idea of a global repository of
+"informal" mathematics as a goal with weight (at least) equal to
+that of the goal of developing the hoped-for formal repository.
+
+So, it looks to me like the two projects do have some different goals,
+and certainly they have different approaches.  Maybe the goals are
+actually closer than I think.  To decide that, I'd want to talk to
+Michael Kohlhase some more - which, luckily, I'll have the chance to
+do in a couple months.  If you guys want to help me frame some
+questions for him, I'd be most obliged!
+
+One thing I know is that he has been working with linguists, but I
+don't know on what; so this is something I'd like to learn more about.
+
+I think it would be great to combine efforts with Kohlhase et al in a
+sensible way.  But I don't fully know yet what this sensible way is.
+One thing that I think Ray and I agree on is that we should finish off
+at least demo versions or descriptive writeups of the things we have
+been thinking about over the last couple of years.  If it turns out
+that Kohlhase (or someone else) has been working on something very
+similar, then presumably this will make it easier for us to
+communicate and get further together.  If not, then maybe they can
+help us see how to leverage our unique contribution (and, mutatis
+mutandi, us theirs).
+
+In the mean time, one of the things I'd very much like to see would be
+some clearer and more coherent statements by everyone involved in this
+math-on-computers business sketching out exactly which parts of the
+picture different folks are working on.  (As the name suggests) 
+[http://www.cs.ru.nl/~freek/digimath The Digital Math by Alphabet] list
+is not as ontologically revealing as one might like.  (And the various
+other taxonomic data Freek uses elsewhere don't necessarily help clarify
+the picture much.)
+
+I've sometimes joked that before writing the Hyperreal Dictionary of
+Math, we'll need a Hyperreal Dictionary of Computer Math.  This joke
+isn't necessarily very funny... partly because it is so serious.
+
+Anyway, I hope this reply shows that the HDM folks are aware of OMDoc
+and some of the connected efforts, and that I'm trying to see how
+these things can be related to (and further) the HDM project.  We
+aren't jumping in immediately (a) because we've got some fish of our
+own to fry; (b) we expect to opportunities for rich discussions with
+the relevant parties before too much more time goes by.
+
+--[[file:jcorneli.org][jcorneli]]
+
+
+
+
+As a short-term focus for Ghilbert, I have chosen to carefully formalize
+Peano arithmetic to be both as portable as possible, and as powerfully
+expressive as possible (in the sense that proof files are short, avoiding
+type assumptions and leveraging a rich definitional framework). If
+successful, my hope is that the archive of theorems will be useful enough
+that maintainers of HDM's will be motivated enough to import those
+results into their systems, rather than redo all the proofs themselves.
+
+I invite you to consider adopting the more focussed goal of porting
+this PA framework to OMDoc. By concentrating on this simple system,
+you avoid all the proof-theoretic and metalogical pitfalls of trying
+to reconcile two mind-bogglingly rich universes. I also feel that it will
+serve as a great proof of concept. If it succeeds, then it will no doubt
+show the way to building other similarly portable modules with more
+richer expressiveness and higher proof-theoretic strength. But if it
+fails, then taking on the more ambitious goal would almost certainly
+have failed also.
+
+[[file:raph.org][raph]] -- 2007-02-03
+
+Hi Raph, 
+
+The Peano Axiomatization is indeed a deep topic, just based
+on what I have seen of recent communications. The discussion
+of Lambda calculus here is a bit of a tangent for my goal
+of creating a Metamath/OMDoc bridge. OMDoc uses Lambda notation
+to express formulas formally, which is what motivated me to
+get my feet wet (I know enough now to be wrong :-) OMDoc also
+uses Gentzen-style Sequent calculus in the proofs, so that is
+another topic -- and a big question for me: how to translate
+Hilbert-style proofs (or, can OMDoc's specification be modified
+to allow for Hilbert-style proofs?) 
+
+Your point about converting the formalization of the Peano
+Axioms is well taken because of the modular approach in
+OMDoc to theory reuse. To fully convert, say, set.mm to OMDoc
+it would be necessary to build up a hierarchy of theories
+and content directories in OMDoc. But, there are multiple
+levels of conversion, starting with the most superficial and
+culminating in fully-formalized and proof-checked. As you pointed
+out set.mm has a (basically) monolithic structure. Writing
+code to break out the components would be quite a feat. However,
+the /intent/ of OMDoc is that it be a target language for the
+multitude (n) of provers and math systems in existence -- thus
+only 2*n translations would be needed, rather than (n - 1)**2.
+If that is the stated objective, then if it is not doable then
+I will find the reason(s) why, and report back to M. Kohlhase.
+At the very least, I ought to be able to code the mapping
+from .mm to OMDoc using mmj2's parse trees and Proof Worksheets --
+which, since mmj2 is not hardcoded for set.mm or any particular
+.mm database, would mean that if we did have lambda.mm, then
+a superficial conversion would be obtained from the basic bridge
+code...And, if you write Ghilbert ==> .mm bridging code then
+we will have Ghilbert ==> OMDoc, as well (though perhaps you will
+be able to leverage my work and do it better in Python, directly,
+thus not losing the modularity in Ghilbert.) 
+
+In any case, I think this looks like a year-long effort for me
+just to get to the point of being up to speed in the basics of
+what OMDoc|MBase|Mozart-Oz|MathWeb are doing. There is a ton of
+stuff to figure out before writing /any/ code.
+
+--[[file:ocat.org][ocat]] 3-Feb-2007
+
+**  A kind reminder from the MathWeb wiki admin
+
+Dear community, the [http://www.mathweb.org/wiki MathWeb wiki] has been re-opened, and there have already been the first contributions. The software features
+
+ * LaTeX formulae
+ * Semantic Web extensions
+ * User talk pages
+ * ... and more :-)
+
+--[[file:clange.org][clange]] 13-Feb-2007

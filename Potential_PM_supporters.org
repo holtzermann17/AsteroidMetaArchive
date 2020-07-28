@@ -1,0 +1,261 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+* Introduction
+
+This is a page about people and groups who might support PM.
+They might be interested in writing letters in support of
+specific grants, or they might be interested in being
+general supporters (either through writing or financially).
+
+In order to figure out how we are going to coordinate things
+with these people, we should begin a [[file:Letter writing campaign.org][Letter writing campaign]].
+
+We should also think generally about our 
+[[file:goals for sponsorship relationships.org][goals for sponsorship relationships]].  If we are going to say
+"support us" - what are we going to throw out initial?  What 
+are we going to hope for secretly?
+
+* Initial Content
+
+ * We've talked for a long time about possibly striking up a connection with the
+  AMS or the MAA.  We should probably try sniffing them out (er, sorry, talking
+  with them, I meant).  Like, important people who can then refer us to other
+  people if necessary.  I recall reading a
+  somewhat progressive article written by John Ewing ([http://www.ams.org/ewing/ homepage]),
+  in support of mathematics digitization. (Go to 
+  [http://www.ams.org/notices/200207/200207-body-pdf.html this page] to download the article;
+  you will need to make a user account first if you don't have one already.)
+  If he supports mathematics digitization, maybe he would also support 
+  mathematics that starts out being digital.  But other AMS/MAA people
+  may be worth talking to too.
+
+  * Really, if we're going to be making outings to Wolfram research, we should
+   also plan trips to talk to "normal" mathematicians about our projects.  I
+   gave one talk an an MAA conference about math AI, but that was pre-Asteroid,
+   and I wasn't really looking for funding/support.  It would be great if we
+   could just "drop in" on the AMS, but I don't think they work quite like that.
+   Still, it could be worth figuring out /how/ exactly one does work with
+   them.
+
+ * We might also try to talk with Donald Knuth, see what he thinks about the
+  project.  He might be more interested in [[file:PC.org][PC]] than in [[file:PM.org][PM]], but he would
+  probably like both.  (Now, just think how bad-ass it would be if he would
+  release TAOCP under appropriate GNU licenses as a way to kick of PC.  I wonder
+  if he would even entertain the notion.)  It might be best to hold this
+  conversation in person.  Do we have any tight connections with anyone at
+  Stanford?
+
+ * I assume RMS would support PM.
+
+ * We should find connections in computing, maybe also in Linguistics (if we ever
+  want to make a PlanetLinguistics).
+
+ * [[file:Wikipedia.org][Wikipedia]] -- of course.  But the question is, would they support PM 
+/financially/?  If they are using about a quarter of the PM content, that
+is a lot of content.  We could ask them.  Also, has any progress been made
+with their History page?
+
+----
+
+* Notes
+
+In addition to coming up with lists /this/ way (by brainstorming), we could
+make a Letters area of PM (much like the exposition section) and invite people
+to leave letters of support directly on the site.
+
+Also, I just wanted to mention that I think the idea of creating 
+[[file:nested noosphere instances.org][nested noosphere instances]] that we've been taking some about this 
+week is pretty important, and something we should think more about.
+
+See also [[file:Benefits to PM supporters.org][Benefits to PM supporters]].
+
+* Discussion
+
+I'm glad you wrote this up, because apparently there are updates coming out of my efforts
+and those of "friends" of PM that you might find exciting.   Updates and comments follow.
+
+: We've talked for a long time about possibly striking up a connection with the
+ AMS or the MAA.  We should probably try sniffing them out (er, sorry, talking
+ with them, I meant).
+
+It looks like we're going to have a short article in the MAA bulletin (may have the
+publication name wrong).  Alozano is leading this effort.   Look for activity on this 
+Wiki soon, started by him.
+
+Hopefully this will get the ball rolling in MAA-land.
+
+: Really, if we're going to be making outings to Wolfram research, we should
+ also plan trips to talk to "normal" mathematicians about our projects.
+
+Remember that Wolfram approached me about this, and footed the bill to get me out
+there.  I would love to visit scholarly mathematics organizations, but none of them
+have quite reached this point of interest (and maybe they dont even do this kind
+of thing -- remember how Clay Math turned us down).  For now, there's little I can 
+do to make our exposure coverage "even"; I have to take every opportunity I can get, 
+given our resources.
+
+: We might also try to talk with Donald Knuth, see what he thinks about the
+ project.  He might be more interested in PC than in PM, but he would probably
+ like both.  (Now, just think how bad-ass it would be if he would release TAOCP
+ under appropriate GNU licenses as a way to kick of PC.  I wonder if he would
+ even entertain the notion.)
+
+That is an awesome idea.  Its worth a shot.  And really, I can't see Knuth objecting
+to our TeX content source basis =) Help, anyone?
+
+: I assume RMS would support PM.
+
+We've had some contact with RMS.  David Jao consulted him way back when we were looking
+for advice about a license.  Obviously, we took RMS's advice.  We might be able to get
+David to make another pass at Richard; maybe the memorable factor will get him a hearing,
+or a more serious one.
+
+: We should find connections in computing, maybe also in Linguistics (if we ever
+ want to make a PlanetLinguistics).
+
+Yes.  Ed Fox is an example of this kind of connection.  And the more the merrier.
+
+: Wikipedia -- of course.  But the question is, would they support PM
+ /financially/?  If they are using about a quarter of the PM content, that is
+ a lot of content.  We could ask them.
+
+More appropriately, I think you mean /Wikimedia/.   I've been working on this.  I floated
+the idea of "coupling" PlanetMath funding with Wikimedia funding by getting us mentioned
+on the "thank you" page of their funding drive (in fact I proposed the concept of using this
+page to help out Wikipedia's dependencies/friends).  This would get us linked-in to precisely
+the kind of visibility we want: people who give money to open content projects.  
+
+They are seriously considering this idea, last I checked.  There are worries in
+the Wikimedia organization that there would be cries of "foul" for favoritism;
+but I think these can be addressed by defining some clear criteria for projects
+that get endorsed in this way:
+
+ 1. The project is nonprofit and charitable.
+ 1. The project deals with free+open software, free+open content, or the communities surrounding either.
+ 1. The project contributes significantly to the welfare of Wikimedia projects.  This must be of a 
+  greater scale than simply being a source of information for one or a few Wikipedia entries.
+
+If something comes of this, we could really benefit from Wikimedia's next funding drive.  Not hugely,
+but we might actually start having a budget we can work with.  My fingers are crossed.
+
+: Also, has any progress been made with [[file:Wikipedia.org][Wikipedia]]'s History page?
+
+Good question.  I will ask Dan Mayer (and try to get him to come here).
+
+
+* Followups
+
+**  Math associations
+
+You should probably just write a note to John Ewing about the project (read the
+stuff on his webpage first, and we can collaborate on a draft here on AM).
+Similarly for MAA leadership.  We need to approach this like hackers.  The first
+goal of the letter should be find out what they think.  The note could be signed
+by you and Alozano after he publishes his article, perhaps by others.
+
+**  RMS
+
+I also have talked with him a lot by email recently.  I very much doubt whether
+he remembers David, but David & I should both sign any letter we write him.
+
+RMS may have other connections in the free software world who would write
+letters on our behalf.
+
+**  PlanetLinguistics (domain specialists)
+
+Karl Berry suggested someone who has done a lot of work with !LaTeX and
+linguistics.  I should get his name and we should write him a letter.  But we
+should also be sure we have the infrastructure to actually support creating PL,
+so it isn't just a wild goosechase for him.  However, we could write soon and
+see how interested he is.
+
+**  Wikimedia
+
+Yes, that's what I meant, but I also meant Wikipedia.  There is no need for a
+discussion of "favoritism".  What we need is for them to follow the terms of the
+FDL.  And you should make really sure that the PM history page is what you want
+to have published to the world.  Then, we should insist that they publish it.
+
+However, we might also just ask Wikimedia to give us some money (if they have so
+much of it).  Tell your contacts there that we could really use $1000 and see
+what they say. --[[file:jcorneli.org][jcorneli]]
+
+Actually, things are not so simple.  They also want to acknowledge efforts
+outside the primary produced document stream (which aren't under the FDL) --
+such as the OpenProjects IRC network they use for real time communications.  And
+the FDL is useless as a vehicle for determining how much is big enough of a
+contribution to result in an endorsement (and there /will/ in a practical
+sense be limited space for these endorsements).  FDL is also author-level
+instead of project-level, and all hell would break loose if we were to admit
+that payments should maybe start being made to individuals.  On the second
+point, I think Wikimedia is in no position to give grants, so I feel it would be
+improper of me to ask. --[[file:akrowne.org][akrowne]] Sat Apr 9 02:15:31 UTC 2005
+
+They can acknowledge whoever /else/ they want in their History page, that's
+fine, and if they want to debate about it, I don't care.  But the FDL
+/requires/ them to acknowledge FDL'ed works that they use (by quoting their
+History sections), and if they aren't doing that, then I do care, and indeed, it
+makes me a bit upset.  Q.  Also, if they aren't in the position to give grants,
+then what do they do with their money?  A. They fund wikimedia projects.  So
+what if PM became a wikimedia project?  Or, alternatively, Wikimedia could
+become a "real" AM project (rather than something we just badmouth ;)).
+Honestly, the point of telling them we could use $1000 wouldn't really be to
+/ask them/ for money per se (even though that's what I said above), but
+rather, it would be to kick off (or re-initiate) an interesting conversation
+about how we could coordinate fundraising.  (I think you've been talking with
+them about this some already...)
+
+Maybe they would have no objection to bringing PM under their financial
+umbrella. Maybe they have some good suggestions about other places to look for
+money.  Maybe they could send a crack team of hardened FCB organizers over here
+to help us whip the business end of things into shape.
+
+And more generally, have no objection whatsoever to them being under our
+discursive umbrella (i.e., participating in AM).  If they aren't going to come
+over here to talk with us, maybe we should make more of an effort to drag some
+of their old content over and see what we can learn from it.  And any
+discussions you have with them about financial matters would be great to
+document here.  --[[file:jcorneli.org][jcorneli]] Sat Apr 09 02:54:47 2005 UTC
+
+(1) I've been talking /specifically/ about Wikimedia's donation "thank you" 
+page, not the comprehensive content history page as required by the FDL.  Huge
+difference, being as the former is what users see after making a donation during
+a funding drive.  (2) I've certainly mentioned we need money, and they didn't 
+offer any.  I don't think they've run out of things to spend their own money on.  
+(3) We're working with them, or at least, I am.  I don't think they
+are drastically "ahead" of us in running this kind of charitable operation --
+for example, we have been giving each other feedback on the 501(c)3 attainment
+process, which they are going through concurrently. --[[file:akrowne.org][akrowne]] Sat Apr 9 03:53:00 UTC 2005
+
+The FDL requires that the content of the History page from each FDL'ed work that
+is used to be quoted.  They could "hide" this history page somewhere, but why do
+that?  If they did that, I would object.  Right now, I don't see a History page
+(in the FDL sense) linked to from http://en.wikipedia.org/wiki/Main_Page at all,
+and so I /do/ object.  
+
+This may be a separate issue from the Thank You page, but at any rate, it is
+really beginning to irk me.  Now, if they /did/ have a History page and they
+failed to put the groups that they mentioned there on their Thank You page, I
+think they would have to have a pretty good reason for it.  (E.g. maybe some
+particular work was only one page long or something like that.)  If PM wasn't
+mentioned on the Thank You page, I would object to that too.
+
+However, I still think that better than being mentioned on a Thank You page
+would be to actually get a share of the donations.  It makes sense to me -
+really it is very similar to the case with the FEM.  If WP wants to continue to
+use good free math articles coming from PM, I think it would be very polite of
+them to make some donation.  FEM does this (or will do this); Network Theory
+does this; lots of GNU users do it.
+
+Maybe you should tell the people you're working with there that you would prefer
+to have the conversations take place in public here on AM, or in some other
+public venue.  If I could participate in these discussions, I'd be very happy to
+give them my criticisms and ideas directly (and I'd be very interested to hear
+theirs).  --[[file:jcorneli.org][jcorneli]] Sat Apr 09 04:40:47 2005 UTC
+
+Well, I hope they will consider direct donations.  But advertising and endorsement
+/are/ a form of support.   You can basically put a price on these things.  I would
+like to see what the result is of being listed on their "thank you" page for one
+donation drive, before pushing the "write us a check" idea. --[[file:akrowne.org][akrowne]] Sat Apr 9 14:33:17 UTC 2005

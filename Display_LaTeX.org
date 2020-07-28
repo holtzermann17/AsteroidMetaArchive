@@ -1,0 +1,548 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I (Steve Cheng) have written a Javascript program
+for the Mozilla Firefox 1.5 Web browser
+that allows for plain LaTeX typed into web pages
+within dollar signs --- like this $x^2 + 1$ ---
+to be displayed as real math formulae.
+
+The program uses the Greasemonkey extension for Firefox.
+
+For more details on the program and how to obtain it, 
+please see http://gold-saucer.afraid.org/mathml/greasemonkey/.
+
+Also: Python version available here:
+http://gold-saucer.afraid.org/mathml/greasemonkey/latex-to-mathml.py
+http://gold-saucer.afraid.org/mathml/greasemonkey/LaTeX2MathMLModule.py
+
+This should serve as a temporary solution until
+PlanetMath gets real mathematics support in forum/correction messages.
+
+The script is written as a literate program,
+which you can browse here:
+http://gold-saucer.afraid.org/mathml/greasemonkey/dist/display-latex.
+(--- Yes, I know there are some HTML/CSS formatting bugs.  That's because the stylesheets that do the displaying are still under development (by me).)
+: Congratulations, once your stylesheet will be finished, it promises to be very well.
+-- [[file:frl.org][frl]] 27-Mar-2006
+
+**  News
+
+<b>2006-05-11</b>: Support the [tex] … [/tex] syntax
+for embedded TeX math, which is used by phpBB.
+
+I’ve also started parsing precedence levels.
+The current version of the scripts now include the preliminary results.  They do run, although this part is still unfinished
+and has serious bugs:
+
+ * it does not yet distinguish between invisible multiplication and function application.
+ * absolute values (incorrectly) written as |x| will lead to incorrect MathML parse trees
+ * the selection of operators recognized for precedence parsing is very limited.  Because I haven't composed the big list of operators for each precedence levels yet, and even if I did, it would not handle direct Unicode characters correctly.  First implementing the typing of tokens will help with this…
+ * \over and \choose parsing were broken by the last change (oh, do I hate the design of these commands)
+
+I told'ya heuristic semantic parsing would be hard ;-)
+
+<b>2006-05-07</b>: Made the user script to be compatible with the Greasemonkey extension of the Mozilla-based Epiphany browser.
+
+<b>2006-05-05</b>: Finally written the Python implementation, which should open the door to server-side usage.
+It was boring grunt work, but the results are satisfying in that it proves that code generation based on the S-Expressions abstraction works ☺
+
+Also fixed the serious bug of the parser hanging on a \mbox
+
+<b>2006-05-04</b>: Can now parse tensor indices.  Wasn’t conceptually difficult, although it did require extending
+the sexpr language a bit before being able to implement it.
+Also implemented combining \not (although this displays wrongly with most fonts :(, correct placement of limits on \oint
+
+<b>2006-05-03</b>: Fixed some more bugs; added various explanations of source code
+
+<b>2006-05-02</b>: Fixed bug in handling matrix arrays
+
+<b>2006-04-29</b>: Rewritten the tokenization routine so that
+it handles \textrm and friends, possibly with embedded math inside
+$ signs.  Documentation of how tokenization is supposed to work will come soon.
+
+<b>2006-04-02</b>: Translator now does primitive grouping of math subexpressions (part of semantic parsing)
+
+<b>2006-03-30</b>: The implementation based on the S-Expressions mini-language was successful!  The newly-organized version
+can be found at the usual location: large portions of display-latex.user.js are now automatically generated
+from S-Expressions.
+
+Now, I really need to get the xhtml2to1 stylesheets in 
+a releasable
+state; otherwise I can't release a working build of the LaTeX-to-MathML
+translator either...
+
+<b>2006-03-23</b>: Added support for matrices of all sorts. (This took a while, because new code was needed to parse LaTeX-style environments.)
+
+
+
+
+**  To-do list
+
+ * parse degree mark on numbers
+
+ * parse displayed equations. To support numbered equations
+  there will need to be interaction with the wrapping HTML or XML
+
+ * put in hack for TeX-compatible parsing of number strings
+
+ * (hard) more semantic parsing: add invisible dot operators, group subexpressions based on precedence of operators
+
+ * support \stackrel
+
+ * had moved the "miscsyms" and "other alphabetic symbols" to be operators, but some of them should be identifiers.  Figure out which is which and split them up
+
+ * start working on the text-to-speech thing again.  The MathML that comes from automatically translating the PlanetMath pages are starting to be usable now... And this would get people to write more semantic TeX. Much like the situation with semantic HTML, just talking about how nice semantic parsing probably isn't going to convince people, but perhaps working text-to-speech functionality might
+
+**  Discussion
+
+ *Can you package up some module that just does the parsing part* (input string, output XML)?
+--[[file:jcorneli.org][jcorneli]]
+
+Done, *see below*.  I need it myself too, 
+both for the obvious debugging reason, and for server-side conversion to MathML -- I don't want to write MathML
+in my literate programming documents, nor do I want 
+to rely on client-side conversion.  
+
+ *Any chance that the program itself can be written in, say, Scheme?*
+--[[file:jcorneli.org][jcorneli]]
+
+An interesting idea!  I hadn't thought of it before.
+Indeed, the program had been written in a functional style
+right from the beginning, and I am already converting
+a lot of the data parts (the character tables) to XML
+(although I did it for a different reason: 
+I want nice HTML listings
+of the characters).  
+
+Unfortunately, I am not too familiar with Scheme, only having toying with it a long time ago.
+I'll continue writing it in JavaScript for now,
+and pay the price in possibly rewriting it in Scheme later: if I switch to Scheme now, my productivity would go down, and I don't want to be bothered with writing the necessary Scheme-to-JavaScript translator right now.  -- SteveCheng
+
+ *Second answer:* Despite my admonition above 
+to not rewrite things in Scheme yet, I have experimented with your idea.  
+I've concluded that the ideal should be
+to write the tree-mapping parts of the code
+in a restricted Scheme-like language (using parentheses and prefix notation, but not standard Scheme itself).
+Other code deals with interacting with the browser will, of course, be continued to be written in JavaScript.
+
+The ultimate goal is to have the core part be automatically
+and translatable to _efficient_ JavaScript and Python.
+Implementing the program in Scheme for the sake
+of elegance is not important to me, because I, and most other people, don't use Scheme.
+I just want to be able
+to express parse trees in this program in an easy-to-use form
+that can be translated to efficient programs in the more common programming languages (for client-side and server-side use), with the least work required from me.  
+
+In other words, think of it as a templating language.
+(Another alternative is to use XML instead of Scheme, but that would in fact be harder to implement --- XML syntax is more complex.)
+--SteveCheng
+
+**  Standalone LaTeX-to-MathML translator
+
+There is a script at
+http://gold-saucer.afraid.org/mathml/greasemonkey/dist/latex-to-mathml.js
+that is a LaTeX-to-MathML translator running standalone,
+using the standalone interpreter 
+from the Mozilla Spidermonkey JavaScript engine.
+
+Example run:
+<pre>steve@jenova:~/mathhack$ js latex-to-mathml.js "i+2" "3+4"
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mi>i</mi>
+  <mo>+</mo>
+  <mn>2</mn>
+ </mrow>
+</math>
+<math xmlns="http://www.w3.org/1998/Math/MathML">
+ <mrow>
+  <mn>3</mn>
+  <mo>+</mo>
+  <mn>4</mn>
+ </mrow>
+</math>
+</pre>
+
+Yes, I know relying on Spidermonkey is stupid.
+I would rather use Python myself, as that's what I use
+for my non-XSLT XML processing.  But for that
+we have to wait for the Scheme-based rewrite.
+
+Note: Spidermonkey has been conveniently packaged in Debian
+and Ubuntu Linux; package name spidermonkey-bin.
+
+**  More ideas
+
+Here are some things I would like to see in the MathML translator.
+
+ * Modify the tokenization, to automatically adorn commands
+  with \   e.g. 'sin' -> '\sin'.
+  Now I think about it, TeX math should have worked this way
+  from the beginning, but probably the need for \ is just
+  a technical limitation of the TeX parser.  ASCIIMathML
+  uses the same idea.  In fact, it would be a good idea
+  to support all the symbols from ASCIIMathML.
+  The new tokenization mode can be signaled with `...` 
+  as ASCIIMathML does, so as to not break existing strict 
+  LaTeX math.
+
+ * Tokens should be typed.  This is needed for the previous item,
+  and also make the parser more robust (e.g. it can show an error
+  message if a command is unrecognized).  It is also needed
+  for the following item.
+
+ * Unicode support. One should not be disallowed to use 
+  Chinese hanzi / Japanase kanji as identifiers ☺
+  It would seem that you can
+  use them judiciously to disambiguate meaning better than Roman/Greek letters;
+  some examples
+
+   「集」: a set S (「集合」)
+   「群」or 「組」: a group G
+   「彳」: differential d. 
+         (This character was in fact used in 1800s Chinese 
+          calculus text books.  It’s shorthand for 「微分數」, 
+          “infinitesimal”)
+   「空」: a space S (「空間」)
+   「和」: a sum S
+   「實」: a real number (「實數」)
+   「虛」: an imaginary number (「虛數」)
+   「複」: a complex number z (「複數」)
+   「束」: limit L (「收束」)
+   「率」: a rate r
+   「素」: a prime p 「素數」
+   「理」: a rational number r 「有理數」
+   「定」: a constant C 「定數」
+
+: The disadvantages are more writing is required (which is mitigated if you’re writing math on computer), and of course, you need to know Chinese or Japanese ☺
+
+ * It should be time to make a test suite, to catch regressions.
+
+ * Replace LaTeX math images created by LaTeX2HTML also
+  (this is easy) <b>Almost done</b>, except for aligned or 
+  numbered equations (because the translator does not support those
+  natively yet)
+
+ * Color highlight
+  subexpressions on mouse over (this needs semantic parsing).
+
+ * Pop-up window for quick preview of formulae for typing
+  into message forums.
+
+ * I really need to think about how to handle parsing errors ---
+  as gracefully as possible.  This is especially important
+  for semantic parsing, because we are guaranteed to make
+  a wrong heuristic guess on the structure of some TeX markup,
+  and we need to be able to recover.
+
+**  Fun stuff you can do with MathML
+
+ * [[file:MathML text-to-speech.org][MathML text-to-speech]]
+
+**  How should I go about the rewrite? (implementation issues)
+
+If we rewrite the program in Scheme, one of the 
+annoying things that would have to be dealt with
+is translating tail recursions into iterations
+for the imperative programming languages.
+(Yes, this is necessary --- looking into some of the Scheme-in-JavaScript
+implementations, apparently the Web browser interpreter
+can run out of stack space after 100-level deep function calls or so.)
+
+This also brings up to mind another issue:
+the program, as it is written now, has an execution time
+that is potentially _quadratic_ in the number of tokens.
+While this is no big deal with most LaTeX math out there,
+if I'm going to have to write the program again,
+I would rather make it more efficient at the same time too.
+
+<b>2006-03-30</b>: The problem described below has been fixed
+in the latest version.
+
+The reason for the quadratic performance is that,
+when we execute TeX commands,
+we first always scan left to right for matching braces
+before we hand the argument over to the function responsible
+for handling the TeX command.
+So, for example, if we are given:
+
+<pre>
+$ \cmd{\cmd{\cmd{\cmd{...}}}} $
+</pre>
+
+the program will perform 4 scans performed over the innermost tokens.
+
+There is, of course, a way to fix this, otherwise I would not bother
+criticizing it.  It is to  let the function that handles the TeX command
+consume the arguments that it needs itself.
+Thus the parsing might work like this:
+
+ 1. output starting tag for outermost cmd
+ 2. move pointer over the { token
+ 3. parse subexpression starting at pointer, and return pointer
+    to where it finished parsing (after the last } brace)
+ 4. output end tag for outermost cmd
+
+The disadvantage is that the functions for handling individual
+commands become more complicated, compared to the functional style
+used now, where each command handler just gets handed its arguments.
+
+However, the program actually already uses the previous 
+imperative-style procedure (in the source, look at 
+the function subexpr_to_mathml_piece).  So it may not be a huge
+step to convert all the logic to this imperative style,
+especially if we are able to properly abstract the simplest cases
+to a single convenience function.
+
+In other words, perhaps we should give up functional programming, and use
+an iterative style instead.  
+At the same time this would avoid all the effort in
+having to automatically translate recursion to iteration.
+This is very far from
+what we would think as a "Scheme" rewrite!
+
+Any comments? --SteveCheng
+
+I wouldn't think of Scheme as being a purely functional language.
+It is just a clean and easy to read/understand language.
+If I remember correctly, the latex parser I wrote a year or so
+ago (in lisp) used a scheme similar to your 1--4 above.  But
+although it is written in a clean language, it is not written
+in a terribly clear fashion.  It may be a useful reference
+point for planning a better parser, if you're interested,
+see the 'parsing' subdirectory after CVS checkout from http://hdm.nongnu.org.
+
+One difference with the parser I wrote is I was working
+on a "semantic" basis, so, e.g., eliminating plusses from
+1+2+3 to write (+ 1 2 3).  But such post-processing is mostly
+outside of the proper domain of a parser. --[[file:jcorneli.org][jcorneli]]
+
+To go from 1+2+3 to (+ 1 2 3) is probably too much work
+to do at once for the parser.
+However, even "presentational MathML markup" is actually quite abstract.
+For example, the LaTeX expression $(1+2x+3x)^2$
+should actually be translated 
+to (^ (1 + (2 x) + (3 x)) 2) in presentational MathML.
+My parser does not do this yet, but I will study the problem and implement it.
+From  the last expression it should be relatively easy to transform
+to (^ (+ 1 (2 x) (3 x)) 2)   --- in MathML terms, this is called "content-based markup". --SteveCheng
+
+I just noticed that I wrote up a short report on what my elisp-based
+parser can do.  I copied it to this location: [http://www.ma.utexas.edu/~jcorneli/a/parsing-overview.tex (TeX)]
+[http://www.ma.utexas.edu/~jcorneli/a/parsing-overview.dvi (DVI)].  This should be easier to
+make sense of than the code alone.  It also confirms that the algorithm matches your 1--4,
+so perhaps the code, once decyphered somewhat, will help.  --[[file:jcorneli.org][jcorneli]]
+
+Thanks for the report (frankly at the moment I have little patience to read others' uncommented code).  I'll give a status report as of 2006-03-28.
+I've prototyped S-expressions based mini-language, and am
+mostly satisfied that it can automatically be translated to JavaScript
+with not a lot of effort involved. As usual when making a new language, 
+most obstacles are about 
+deciding what features to put in, what features to omit.
+Now the grunt work begins to re-type all the previous JavaScript code
+in S-expression syntax, and make the Sexpr-to-Python parser.
+-- SteveCheng
+
+:: FYI I almost always add extensive comments to my code :). --[[file:jcorneli.org][jcorneli]]
+
+**  Semantic parsing
+
+Another potentially useful thing to do would be to write down the
+BNF grammar for math expressions.  Obviously this can be somewhat tricky,
+since semantics are involved; this is one way to work on [[file:hcode.org][hcode]] development,
+i.e., thinking about parsing math.  If you're interested in pursuing this
+let's talk more about it.  --[[file:jcorneli.org][jcorneli]]
+
+You just love formalism, don't ya :)  Sorry I'm not good with BNF's myself though, never having practical experience using them (i.e. something more than reading them in computing specs), but if you want to write something first, I'll see what I can contribute.  <b>Note</b>: 
+http://www.w3.org/TR/2003/REC-MathML2-20031021/chapter3.html#id.3.3.1.3.1
+describes a rule for semantic grouping.
+
+Anyway, my goal for my Greasemonkey script is nothing less
+to be able to parse all TeX math correctly,
+and since MathML means "at least some semantic parsing",
+that's what I am going to do, BNF's or no.  Also,
+if we manage to implement the sort of eye candy stuff using
+machine-readable/semantic math, I think that should
+attract some people to the idea of HDM.
+--SteveCheng
+
+The problems associated with display aren't so severe;
+after all, one's only trying to copy what !LaTeX already
+does.  But interpretation can be hard.  For example, if
+you see $a*b$, how do you know to treat "*" as an operator?
+/Do/ you know to treat "*" as an operator?  Perhaps
+the lexp (latex-math-expression) appears in a context
+in which $*=3$ is true (and these other symbols assume
+their usual meanings).  So, this business of parsing correctly
+seems at least somewhat confusing, if we allow for non-standard
+semantics.  Which in math /is/ the standard (if you think
+about it). --[jcorneli]]
+
+This isn't quite true, not any more.
+If you want portable MathML that works well with,
+say, [[file:MathML text-to-speech.org][MathML text-to-speech]], then some semantic analysis
+is necessary.  It might even be possible that the MathML
+visual rendering is improved (most likely better spacing)
+if the input MathML has the notational structure explicit.
+-- SteveCheng
+
+In answer to your question, I don't tend to think of myself
+as favoring formalism all that much.  But I do like to know
+what's what.  Honestly, I think the BNF's are a bit of a
+red herring, since (per the above) we'd want an incredibly
+flexible family of grammars that can be swapped in and out
+at will.  Nevertheless, starting with a BNF for "normal"
+math wouldn't be a bad idea.  I might work on such a thing
+at some point! --[[file:jcorneli.org][jcorneli]]
+
+**  Formal grammars
+
+: A reason for documenting your grammar formally, say in
+BNF, for example, is that that is the most concise way
+to document a grammar. The state of the art (science?) of Parsing is
+highly developed, and though there may be valid reasons for 
+hand-rolling a parser instead of just writing a BNF grammar
+and running a parser generator, the question of Ambiguity
+is worth considering. An unambiguous parse tree for an
+expression is extremely valuable -- especially in unification
+and proving, not to mention formatting. I recommend this
+book quite highly. 
+
+    
+    Dick Grune and Ceriel J.H. Jacobs,
+    "Parsing Techniques - A Practical Guide"
+    [ http://www.cs.vu.nl/~dick/PTAPG.html  ]
+    
+
+Anyway, the first small step towards semantic parsing
+seems to be this:
+given a typical equation of the form "x = y",
+where x and y are some more tokens, not involving relational operators,
+and "=" is any relational operator, annotate the equation as "(x) = (y)".
+-- SteveCheng
+
+I’ve started reading the book recommended by ocat.
+
+Here’s my latest idea on semantic grouping: it is that certain operations and operators
+stick together (this I will probably implement
+in my LaTeX parser).  So for example, to parse,
+$\sin x \cdot y$:
+
+First the token $\sin$ is read, and the 
+token $x$ is read.  Then seeing that the next operator
+$\cdot$, that implicitly applies to the “atom” $x$.
+Thus it would get parsed as, in prefix notation,
+as (sin (* x y)), not (* (sin x) y).
+
+One can find examples where this scheme could fail.
+For example: $\sin(x+y) \cdot z$ or 
+$\sin(x+y) \cdot (a+b)$.  Arguably a human reading
+these formulae might be confused too.  If a human
+has problems then I don’t think we can expect
+a computer to parse them flawlessly either.
+
+A seemingly more general solution is to define 
+precedence levels for parsing operators.  
+Besides me being too lazy to do such a thing,
+I’m inclined to maintain that no reasonable and universal
+precedence levels (for symbols such as $\oplus$)
+can be defined.
+
+: It turns out a coarse scheme for precedences is not hard
+to implement.  So I have to amend my opinion there; it works. 
+— SteveCheng
+
+Also, are there any math formulae
+written for humans that requires more than the basic
+precedence levels (+-, */, and relation symbols) ?
+I have enough trouble remembering what are the 
+precedence levels in the C programming language.
+
+Finally, about context-free grammars:
+it sounds nice, but I have doubts that we can pull
+it off, practically speaking.
+
+For a system intended for display (and speech),
+the formal grammar approach also seems 
+fragile to me,
+because all it takes is one valid LaTeX formula
+that doesn't conform to the (complicated) 
+grammar in some way, and parsing fails.
+
+: In theory you could use a primary and a fallback
+parser -- and fallback if the expression is not
+syntactically valid according to the primary
+parser (doing what Grune calls "syntactic
+analysis").
+
+: The end result of Dick Grune's book is
+that most people today use a "LALR" parser generator.
+This works well for fixed grammars. In mmj2 I chose
+the simpler Earley Parser algorithm because the
+task involves first producing a grammar from an
+arbitrary Metamath file (so unless I called yacc
+as a subroutine...and anyway Metamath's set.mm
+is said to be LALR(7), meaning lookahead of 7
+symbols is required...oy!) If you can get your task
+done using the approach you are taking now, great,
+but remember to test your system on some really,
+really long formulas, perhaps involving set 
+theory and predicate calculus :) 
+
+--[[file:ocat.org][ocat]] 10-May-2006 (P.S. Keep up the good
+work. Very inspirational!)
+
+(That does not mean that the token-based parsing
+used right now is ideal.  I know of a bug
+in the parser that will cause it to loop forever.
+While the bug can be very easily fixed, the fact
+that it got introduced so easily is discouraging.)
+
+Another thing just crossed my mind:
+all the time I’ve been assuming that the LaTeX should
+be “fully” parsed using JavaScript (or that S-Expressions thingy).  This assumption came about because I wanted to convert to MathML on-the-fly using a Web browser.
+But that may turn out to be too hard.
+
+(And you may have noticed that, although I claim I can extend the custom S-Expressions language if it turns out to be inadequate in a specific area, in practice I try to avoid it if possible.  Because it means I have to  implementation the new feature in both JavaScript and Python.  I’m lazy.)
+
+In my view there are three steps to parsing LaTeX:
+
+1. Tokenize (done in my implementation based on regular expressions)
+
+2. Turn the sequence of tokens into a MathML tree,
+with some semantic parsing (done using the parser written in S-Expressions).
+
+3. Make the markup even more semantic. (not yet done)
+
+Although the difference between “some semantics” and
+“even more semantics” is ill-defined, 
+I separate out the steps 2 and 3, because
+they need conceptually different tools.  Step 2 deals
+with lists of LaTeX tokens. Step 3 deals with trees.
+Hence something like tree regular expressions might be
+better for step 3.
+
+In fact, I am already experiencing difficulties
+with not having a good language for tree-based matching.  In the [[file:MathML text-to-speech.org][MathML text-to-speech]] XSL stylesheet
+I have written, the XPath language is used
+to match stereotyped math patterns: e.g. “x^2” should
+be read “x squared” but “x^n” should be read “x to the n”.
+However, the XPath language is not really designed for the type of matching we are doing with math, and so the XPath expressions are tedious to write. I suspect the present
+method is not scalable to writing a serious 
+math text-to-speech program.  
+
+(You know, even the proprietary MathPlayer program whose text-to-speech capability that its creators are so proud of, is not much better than what I have now.)
+
+See also [[file:Formal grammar for math expressions.org][Formal grammar for math expressions]].
+
+----
+
+Steve: if you're a student, why don't you make some of this stuff into
+a summer of code project! --[[file:jcorneli.org][jcorneli]]
+
+Unfortunately, I'm not a student (until Fall of this year, anyway).
+— SteveCheng
+
+
+A tiny suggestion: why don't you put your updates in /descending/ chronological order? --[[file:akrowne.org][akrowne]] 

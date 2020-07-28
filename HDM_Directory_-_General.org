@@ -1,0 +1,40 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/This page is part of the [[file:HDM Directory.org][HDM Directory]]./
+
+/See also: [[file:Educational issues particularly relevant to HDM.org][Educational issues particularly relevant to HDM]], 
+[[file:Communication issues particularly relevant to HDM.org][Communication issues particularly relevant to HDM]],
+[[file:Philosophical issues particularly relevant to HDM.org][Philosophical issues particularly relevant to HDM]]./
+
+Whereas there are target domains in which we have goals (especially
+mathematics, of course), this section blows like reeds in the wind,
+this way and that, depending on what's needed.  While it is not
+associated with any high-level goals, it may at times have sub-goals,
+as we try to figure out some practical issue or other associated with
+what's needed to make the project (as represented in the other four
+sections) a success. If this was chemistry, this section could be
+regarded as a collection of necessary catalysts. Otherwise, it
+constitutes a sort of "practical philosophy" of the project. Among any
+other concrete uses that may appear, this is a good place to describe
+the high-level guiding principles of the project, which include:
+
+; The Simulational Principle : Build systems that simulate other systems.
+This is part of the grand tradition of computer science (e.g. Turing, Church).
+When a full-on simulation isn't possible, build good approximate simulations.
+
+; The Scholiumific Principle : All information can be thought of as "superimposed information".
+Or, insofar as it may be both easier and better to avoid thinking about any initial base field (void or tabula rasa):
+all information is made up of mutually interreferential scholia (bits and pieces put
+together to produce a semblance of a whole).
+
+; The Parallax Principle : You can and should apply "The Scholiumific Principle"
+to build simulations and/or super-duper approximations.
+
+; The Holographic Principle, or Keeping Up With The Joneses : You can find useful information
+on just about any topic anywhere, if you're looking for it.  (Simple example: every university
+will have scholars that have studied language, maybe even linguists, so find them and ask
+them questions.)
+
+; The Empirical, or Pairing Principle : Progress comes from pairing your own thoughts with
+data from the outside world.  Dust off those brackets and smash things up!

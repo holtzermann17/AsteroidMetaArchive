@@ -1,0 +1,44 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Centralized Bibliographies
+
+There has been some discussion on the idea of shared bibliographies for
+!PlanetMath.  Originally, this discussion started with the suggestion that
+!PlanetMath could raise funds by referring readers to but books from Amazon.
+Although the Amazon referral idea may actually not be compatible with the
+non-profit nature of !PlanetMath, the idea of a centrally located bibliographic
+database on !PlanetMath seems almost certain to be useful.
+
+With a system like this, it would be easier to add references to entries, since
+one would only need to refer to the appropriate entries in the centralized
+bibliography -- rather than having to retype or copy-and-paste bibliographic
+information whenever it is referenced.  Various ideas on how to implement a
+centralized bibliographies for PM are under discussion here:
+
+http://planetx.cc.vt.edu/AsteroidMeta/Bibliographies_and_Amazon_referrals
+
+* New Feature Requests
+
+A suggestion about rejecting correction rejections and correction acceptances
+(also brought up by jac in the PM forum) was raised on the wiki, where it proved
+to be somewhat contentious.  The wiki discussion is here:
+
+http://planetx.cc.vt.edu/AsteroidMeta/reject_rejections_and_acceptances
+
+Another request -- about getting various new kinds of updates on events that
+take place in the PM forums -- was also brought up.  The idea here is to be able
+to have postings that match a certain keyword or other user-specified metadata
+sent directly to your email account, and the hope is that this would help make
+PM more useful to anyone who wants to avoid "information overload".
+
+http://planetx.cc.vt.edu/AsteroidMeta/email_notification_by_keyword%2c_metadata
+
+* Discussion
+
+Please remember to put some effort into these things if you want them
+not to be boring. --[[file:jcorneli.org][jcorneli]]
+
+BTW, I wont be able to post this til the evening tomorrow. --[[file:jcorneli.org][jcorneli]]
+----
+[[file:Bulletins.org][Bulletins]]

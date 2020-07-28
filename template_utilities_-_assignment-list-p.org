@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(assignment-list-p expr)/
+
+ *Input:* an s-expression /expr/
+
+ *Output:* /t/ or /nil/
+
+ *Description:* If /expr/ is a valid [[file:Definition of assignment list | assignment list.org][Definition of assignment list | assignment list]], then /assignment-list-p/ returns /t/, otherwise it returns /nil/
+
+ *Dependencies:*  [[file:template utilities - repetition-p | repetition-p.org][template utilities - repetition-p | repetition-p]], [[file:template utilities - assignment-p | assignment-p.org][template utilities - assignment-p | assignment-p]]
+
+ *Listing:*
+
+ (defun assignment-list-p (expr)
+   (cond ((equal expr t) t)
+	 ((null expr) t)
+	 ((atom expr) nil)
+	 ((member nil (mapcar 'assignment-p expr)) nil)
+	 ((repetition-p (mapcar 'car expr)) nil)
+	 (t t)))
+
+ *Discussion:*  This routine works by checking various conditions to determine whether or not /expr/ is a valid assignment list.  The first three conditions are rather trival --- if /expr/ equals /t/ or /nil/, then it is a valid assignment-list whilst if it is some other atom, it is not.  
+
+If we have made it through the first three conditions without a match, then we know that /expr/ must be a list.  The next order of business is to check if each item of /expr/ is of the right form.  We do this by weeding out lists whose elements fail to meet the criteria.  The way we do this is by first using /mapcar/ to apply a test to the items of expr and then applying member to the result to see if there were any elements which fail the test.  This way we weed out lists which contain atoms as elements, lists whose elements are of the wrong length, lists whose elements start with /nil/ or with something other than an atom.
+
+If we have gotten to this point, we know that /expr/ is a list whose items are lists whose first items are atoms.  All that remains is to check that no two items of /expr/ start with the same atom.  We accomplish this by using /mapcar/ to compile a list of these atoms and then /repetition-p/ to check for repetitions.
+
+ *Examples:*
+
+ (assignment-list-p 't)
+ => t
+
+ (assignment-list-p nil)
+ => t
+
+ (assignment-list-p '(a))
+ => nil
+
+ (assignment-list-p '((a x) (b y)))
+ => t
+
+ (assignment-list-p '((a x) (b y) (a x)))
+ => nil
+
+[[file:Discussion of template utilities - assignment-p | Discussion.org][Discussion of template utilities - assignment-p | Discussion]]
+
+Back to [[file:template utilities.org][template utilities]]

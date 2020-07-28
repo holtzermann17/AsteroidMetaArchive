@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(shift-assignments expr assignments)/
+
+ *Input:* an s-expression /expr/ and an assignment list /assignments/
+
+ *Output:* an assignment list
+
+ *Description:* If expr is a list, shift-assignments takes all the assignments to be found in /expr/ and tries to add the ones which do not already appear in /assignments/ to /assignments/ and returns the augmented assignment list.  If there is an inconsistency, /shift-assignments/ returns /nil/.
+
+ *Dependencies:* add-assignment
+
+ *Listing:*
+
+ (defun shift-assignments (expr assignments)
+   (cond ((null expr) assignments)
+         ((atom expr) assignments)
+         (t (shift-assignments (cdr expr)
+               (add-assignment (car expr) assignments)))))
+
+ *Discussion:*  If /expr/ is empty or is not a list, we return assignments and are done.  Otherwise, /expr/ is a non-empty list so we use /add-assignment/ to move the first item of /expr/ to /assignments/ and invoke ourselves recursively in order to move the rest of /expr/ to assignments.
+
+ *Examples:*
+
+ ; (shift-assignments '(b (b y) (c x y)) '((a x)))
+ ; => ((b y) (a x))
+
+ ; (shift-assignments '((a x) (b y)) nil)
+ ; => nil
+
+ ; (shift-assignments '((a x) (b y)) t)
+ ; => ((b y) (a x))
+
+ ; (shift-assignments '((a x) (b y)) '((a x) (c (x y))))
+ ; =>((b y) (a x) (c (x y)))
+
+ ; (shift-assignments '((a x) (b y)) '((a y) (c x)))
+ ; nil
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

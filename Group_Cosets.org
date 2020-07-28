@@ -1,0 +1,80 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a tentative transcription of the Planet Math entry
+"[http://planetmath.org/encyclopedia/Coset.html coset]" into [[file:h-code.org][h-code]].  
+
+/Note/:  Some of the features of this translation are fairly unrealistic.
+This is based on an [http://www.ma.utexas.edu/~jcorneli/d/prototype%203/etc/understanding%20mathematics/ earlier attempt]
+at translating the same proof. --[[file:jcorneli.org][jcorneli]] Fri Jul 08 17:12:21 2005 UTC
+
+ (require 'set-theory-lib)
+ (require 'basic-group-theory-lib)
+
+ (defproof two-left-cosets-identical-or-disjoint ()
+  (coset a H G aH)
+  (coset b H G bH)
+  (if (elt c (intersection aH bH))
+      ;; this is the body of the proof
+      (and
+       ;; rewriting what it means for `c' to be in the intersection of
+       ;; the two cosets
+       (exists h1 h2 :in H :st (eq c
+                                   (* a h1)
+                                   (* b h2)))
+       ;; use the last equality to show another equivalent equality
+       ;; first step
+       (eq (* (inv b) a h1)
+           h2)
+       ;; second step
+       (eq (* (inv b) a)
+           (* h2 (inv h1)))
+       ;; conclude from the last step (and closure of H) -- [0]
+       (elt (* (inv b) a) H)
+       ;; we now make a big statement about elements of H
+       (forall h :in H :st (and
+                            ;; [1]
+                            (eq (* a
+                                   h)
+                                ;; introduce `e'  in a nice way
+                                (* (* b
+                                      (inv b))
+                                   a
+                                   h)
+                                ;; regroup terms
+                                (* b
+                                   (* (inv b)
+                                      a)
+                                   h))
+                            ;; from [0] and the definition of bH
+                            ;; [2]
+                            (elt (* b
+                                    (* (inv b)
+                                       a)
+                                    h)
+                                 bH)
+                            ;; just rewrite [2] using [1]
+                            (elt (* a
+                                    h)
+                                 bH)))
+       ;; shorthand for a variation on the last chain of reasoning
+       (symmetrically b  a
+                      bH aH)
+       ;; summarize the last step
+       (subset aH bH)
+       ;; using the previous symmetrical argument
+       (symmetrically bH aH)
+       (eq aH bH))
+    ;; if there is no element `c' in  the intersection
+    ;; the intersection is empty
+    (eq (intersection S1 S2) nil)))
+
+* Discussion
+
+I'm moving the definition stuff to [[file:Hcode libraries|appropriate libraries.org][Hcode libraries|appropriate libraries]].
+The /symmetrically/ predicate still needs to be dealt with somehow.  I'm not sure
+this proof is really as readable as it should be.  Suggestions welcome.
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 17:13:26 2005 UTC
+
+----
+Back to [[file:a dozen proofs.org][a dozen proofs]].

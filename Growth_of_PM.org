@@ -1,0 +1,59 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * Date  --- Number of entries
+ *  10/2001 250
+ *  01/2002 700
+ *  01/2003 2000
+ *  07/2003 2500  
+ *  01/2005 4000
+ *  02-28 2006 4837 
+ *  03-24 2006 4940
+ *  04-25 2006 5025 
+ *  05-25 2006 5079
+
+This data is collected from the PM news, the PM thesis, and [http://planetmath.org/encyclopedia].
+
+There is too little data for any deep analysis or predictions. But, 
+would it be possible to add date info into the snapshots. 
+If this is done I can (no, will) write a perl script to extract more 
+information.
+Currently the entry header for entries look like this:
+
+ %%% This file is part of PlanetMath snapshot of 2006-02-20
+ %%% Primary Title: inductively ordered
+ %%% Primary Category Code: 06A99
+ %%% Filename: InductivelyOrdered.tex
+ %%% Version: 5
+ %%% Owner: pahio
+ %%% Author(s): pahio
+ %%% PlanetMath is released under the GNU Free Documentation License.
+ %%% You should have received a file called fdl.txt along with this file.        
+ %%% If not, please write to gnu@gnu.org.
+
+What about adding:
+
+ %%% Entry born: 2005-01-02
+ %%% Hits: 629
+
+If we start showing statistics on a month to month basis, this could
+lead to a positive feedback loop. This would also enable us to set
+goals in terms entries, and monitor the progress. 
+
+This statistics would also provide us with a constant flow of
+data that could be published as a monthly newletter on the fora. 
+In addition to the stats, we could have 
+ * links to last month's entries. Maybe with some editing and commenting(?).
+ * last month's most viewed entries
+ * overview of AM discussions 
+ * mention code bounties, major donations, etc, etc.
+ * list of new figures in the encylopaedia,
+ * progress report of active projects
+ --[[file:matte.org][matte]]
+
+Aaron, please fill Matte's small request -- and maybe tell us more about the sorts of data we could
+expose. --[[file:jcorneli.org][jcorneli]]
+
+----
+
+BTW, !AsteroidMeta has 1057 entries as of today (4/25/06). --[[file:jcorneli.org][jcorneli]]

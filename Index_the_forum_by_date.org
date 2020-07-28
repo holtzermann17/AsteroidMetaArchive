@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Make it possible to access past years and months quickly through a hierarchical
+menu (click on year to get list of months, click on month to bring up all messages)
+posted that month.

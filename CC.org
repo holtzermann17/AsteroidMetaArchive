@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Creative Commons, can it be a role model?
+
+I think it is, but it also happens to perpetuate some flaws and some (IMO) wrong-minded ideas.
+I'll break down what I think the good and bad are of Creative Commons, below:
+
+The Good:
+
+ * *many different licenses*, all "free culture"
+ * *vernacular versions* of licenses
+ * *marketing/evangelism* for licenses, coupling with notion of free culture
+ * *"branding"* for licenses---making them easy to identify, remember
+ * *"wizards"* for selecting appropriate licenses, also other tools, like
+license metadata and search/browse/etc services that recognize it.
+
+The bad:
+
+ * *license-lock*.  it isn't necessary to implement compelled-sharing with
+license-lock, but continuing mechanically in the spirit of the GNU licenses,
+this is how CC ShareAlike licenses work.  
+ * *some licenses remain overly-intricate*. having vernacular-speak then 
+glosses-over too much, and this makes users susceptible to agreeing to
+something they dont understand.
+ * *unnecessary, maintenance-increasing clauses*.  for example, the attribution
+licenses have buried in them a clause that lets earlier-version contributors 
+have their attribution stripped from derived works!  this is all largely
+enabled by the considerable complexity of licenses like this.
+ * *control held by those who are not the work's authors*.  this is chiefly
+a complaint with the founder's license, whereby you sign over your copyright
+to Creative Commons, and they license the work back to you.  this is done to 
+implement limited terms, but it is unknown why they are implemented this way
+instead of simply with a license.  alienating the copyright from the author
+was a manipulation that has enabled the worst abuses of the publishing industry;
+i think it should be avoided.
+
+Interestingly, it seems most of the progress of Creative Commons has not been
+legalistic, but it has been social.   All of the good points are basically social,
+the negative points are legalistic.  I think this just goes to show how sorely-needed
+some social effort was needed in free culture.
+
+--[[file:akrowne.org][akrowne]] Mon Jan 23 19:34:27 UTC 2006
+
+I think that "many different licenses" is actually an ambiguous point.
+We have all these different licenses, and they are incompatible with
+each other.  Also, some of them (to the best of my understanding)
+convey very limited freedom.  It may be that this caters to the wishes
+of some content providers, but it isn't clear at all that such use
+caters best to the needs of society.  (It isn't clear that it doesn't,
+either, to be fair!)  Its frustrating to me for the same reason "open
+access" publishing is frustrating in general.  People talk big talk
+about doing something good for society, but I think that they can get
+trapped in a sub-optimal situation because they haven't adequately
+considered other, freer, options.  (I'm not saying that everything
+needs to be ultimately free; I'm just questioning the choices of some
+content providers who choose to make things relatively non-free.)
+--[[file:jcorneli.org][jcorneli]]

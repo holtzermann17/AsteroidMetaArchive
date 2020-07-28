@@ -1,0 +1,29 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Finally, we define the function which checks the consistency of a
+list of matches. In the case where our list has but one item, the
+result of applying check-consistency to this list simply equals the
+one item.  When the list has more than one item, we can check
+consistency by checking consistency of two items at a time using
+merge-assignments.  Hence, our definition looks as follows:
+
+ (defun check-consistency (assignment)
+   (if (cdr assignment)
+       (merge-assignments (car assignment) 
+                          (check-consistency (cdr assignment)))
+     (car assignment)))
+
+* Examples
+
+ (check-consistency '(((x a) (y b)) ((z b) (w a)) t))
+ ;=> ((y b) (x a) (w a) (z b))
+
+ (check-consistency '(t ((x a) (y b)) ((y a) (z c))))
+ ;=> nil
+
+----
+
+This reminds me of the substitutions one does with CNF's. (I
+forget the details... but basically, the /((y b) (b z))/
+example would be interesting to look at.) --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:06:09 2005 UTC

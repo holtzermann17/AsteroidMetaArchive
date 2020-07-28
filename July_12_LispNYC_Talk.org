@@ -1,0 +1,123 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Announcement
+
+Please join us for our next meeting on Tuesday, July 12th from 7:00 to 9:00 at
+Trinity Lutheran Church.
+
+In last month's talk, we heard how Lisp is based upon certain ideas from the
+foundations of the Lambda Calculus branch of mathematics. In this month's talk,
+Raymond Puzio will consider how Lisp can repay this debt to mathematics:
+
+Lisp is the language of mathematics - but many people don't realize that!
+
+The Hyperreal Dictionary of Mathematics seeks to fulfill Lisp's mathematical
+promise, and greatly expand the usability and accessibility of mathematics for
+everyone.  The core of this project is a comprehensive dictionary of
+mathematical knowledge in a formal language inspired by Lisp which will
+represent mathematical concepts formally at a higher level than symbolic logic
+and is comprehensible to both humans and machines. To make sure that this
+language will indeed be capable of expressing any precise mathematical idea that
+can be expressed in mathematical notation, we have examined examples of
+mathematical proofs and definitions and studied the theoretical underpinnings of
+mathematical notation.
+
+Since few mathematicians are willing to adapt a new system of notation, no
+matter how well thought out, we are also writing programs to translate between
+our formalism and conventional mathematical notation.  In the future, we hope to
+include natural language processing software so that can transform standard
+mathematical literature into a computer-friendly form.
+
+Simply translating a body of mathematics into a new formalism is relatively
+uninteresting by itself; one also need to do something with it. To that end, we
+are working on programs which will perform such tasks as translate between
+different notations and verify mathematical proofs for correctness. In
+particular, we are working on an approach to proof checking which treats logical
+and non-logical operations on an equal footing and views proofs as analogous to
+programs. We believe that this approach is well suited to implementation in Lisp
+and captures the way mathematicians concieve of proofs better than an approach
+based upon reducing everything to formal logic.
+
+This talk will be of interest to mathematicians, metamathematicians, and
+lispers, and especially interesting to those who find themselves in the
+intersection of these sets.  Only a basic acquaintence with Lisp and the
+foundations of mathematics is necessary in order to understand this talk.
+
+Raymond Puzio first encountered Lisp one Saturday on 116th street as a
+high-school student in a weekend enrichment program offered at Columbia
+University; it was love at first byte and his enthusiasm for Lisp has not waned
+since, but the relation has deepened with his appreciation of the subtle
+beauties of logic and metamathematics. This program led him to enroll as an
+undergraduate in Columbia where he majored in physics with a concentration in
+mathematics. He then went on to Yale for graduate studies in physics, leading to
+a doctorate in the subject of general relativity and quantum gravity and was a
+post-doctoral scholar in the Centre for Gravitational Physics and Geometry at
+Pennsylvania State University.
+
+After some time in exotic places like Mississippi and Memphis, he is now back in
+the New York metro area. He has taken an interest in projects such as Planet
+Math, Asteroid Meta, and the Hyperreal Dictionary of Mathematics which aim to
+make mathematical knowledge generally accessible in digital form and build
+software tools which will help mathematicians. He has authored more than 200
+entries for the Planet Math encyclopaedia and is also involved in other aspects
+of the project.
+
+Raymond is collaborating with Joe Corneli on the ambitous Hyperreal
+Dictionary of Mathematics project and contributes regularly to Asteroid
+Meta, which serves as a focal point for coordinating work on these
+projects as well as exploring their theoretical foundations and
+cultural implications.
+
+Resources:
+http://planetmath.org/
+http://planetx.cc.vt.edu/AsteroidMeta/The_Hyperreal_Dictionary_of_Mathematics
+
+Directions to Trinity:
+
+Trinity Lutheran
+602 E. 9th St. & Ave B., on Thomkins Square Park
+http://trinitylowereastside.org/
+
+>From N,R,Q,W (8th Street NYU Stop) and the 4,5 (Astor Street Stop):
+Walk East 4 blocks on St. Marks, cross Thomkins Square Park.
+
+>From F&V (2nd Ave Stop):
+Walk E one or two blocks, turn north for 8 short blocks
+
+>From L (1st Ave Stop):
+Walk E one block, turn sounth for 5 short blocks
+
+The M9 bus line drops you off at the doorstep and the M15 is near get
+off on St. Marks & 1st)
+
+To get there by car, take the FDR (East River Drive) to Houston then
+go NW till you're at 9th & B. Week-night parking isn't bad at all,
+but if you're paranoid about your Caddy or in a hurry, there is a
+parking garage on 9th between 1st and 3rd Ave.
+
+* Discussion
+
+I realize that it might not be convenient to put all of the content of the talk
+onto AM at this point, but if there is an outline, or set of requests, or
+anything else you'd like me to look at to help prepare the talk, please
+let me know!
+
+--[[file:jcorneli.org][jcorneli]] Sat Jul 09 18:11:14 2005 UTC
+
+Even if I did, it may not help all that much because I tend to let my mouth do the talking and keep visual aids to a  minimum.  Basically, I plan to use the computer to show a few simple examples --- take a logic example, check that it is corect and parse the output into standard notation.  Other than that, I will only flash a few slides here and there so the audience has something suitable to focus it's eyes on.  One of my heroes is Dirac, who once gave a talk on quantum mechanics in which he had exactly one transparency with exactly one equation on it!
+
+What would help me the most would be a list of 
+[[file:HDM participants|people who have participated in the project.org][HDM participants|people who have participated in the project]] (I might miss out on some people who were involved before I joined)
+and a list of the [[file:HDM top 10 influences|top 10.org][HDM top 10 influences|top 10]] or so people and/or projects which influenced HDM.
+(Sure, there are many more, but there is only so much one can fit on a slide and
+hope that the folks in the back row will be able to read it or that anyone will
+have a chance to make it through even half the list before move on to the next
+topic.)
+
+The basic outline is something as follows:  I will start with a general introduction to what this project is about (including the lists I just requested) and where it stands.  Then I will focus on h-code, starting with the general theory (I might even say some things about the theory of mathematical entities depending on circumstances.), explaining the realtion to LISP, illustrating with an example or two, and ending up with proofs as programs.  The end will consist in the simple demonstration I mentioned.
+--[[file:rspuzio.org][rspuzio]] 9 July 2005
+
+Here are some notes I took on the video: [[file:jcorneli notes on rspuzio July 12 LispNYC talk.org][jcorneli notes on rspuzio July 12 LispNYC talk]].
+BTW, good job on the presentation!  A blast from the past, but will be very helpful for
+me as I plan the next talk (as will our visit I'm sure!).

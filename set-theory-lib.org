@@ -1,0 +1,19 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some of these defintions are nil, which means in particular that proofs that
+rely on them will fail.  I'm not sure how to proceed here, cf. [[file:issues in hcode development.org][issues in hcode development]].
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 17:17:30 2005 UTC
+
+ (defn set (X))
+
+ (defn elt (x X))
+
+ (defn subset (Y X)
+  (set Y)
+  (set X)
+  (forall y :in Y :st (elt y X)))
+
+ (provide 'set-theory-lib)
+----
+[[file:Hcode libraries.org][Hcode libraries]]

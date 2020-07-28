@@ -1,0 +1,151 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The title of this section is meant as a variant on the title of the 
+parent page and is meant as a place to discuss the use of scholium
+system for programming.  This is potentially a huge topic, so I 
+will start by picking something rather specific and working on it,
+
+The specific project I will consider is is a type of literate 
+programming using scholia.  The idea here is that, instead of
+a literate program being a text file which can either be read
+as an article describing the program or as a source from which 
+the program can be extracted, the literate program assumes
+the form of a scholium-based document.  Different modules of
+the program appear on different cards; certain types of links
+indicate dependencies between modules and discussion of the 
+program is attached with a type of link which can be distinguished
+from the types of links used to indicate dependencies.
+
+Given such a scholium-based document, there are several things one
+can do with it.  Of course, one can browse it just like any other
+scholium-based document to learn about the program it contains.
+One could, perhaps with some extra work, render it into a 
+monolithic work like the usual literate program.  Or, one could 
+instead just extract the program from it and run that on the
+computer.  One could also run the program directly without
+first disentangling it from the document by means of an interpreter
+which understands the structure of the document and obtains the
+necessary information about dependencies from the links.
+
+Below, you will find an account of my progress (likely with a
+good amount of regress and egress mixed in) in writing such
+an interpreter.  Once it is working reasonable well, I plan
+to start using it as a programming platform for further work
+on my prototype of a relativistic scholium system among other things.
+--[[file:rspuzio.org][rspuzio]]
+
+Before proceeding further, I am going to need a utility which works
+like let, except it binds function values instead of variable
+values.  Of course, in a single namespace lisp, these would be 
+two things, but the variant of lisp I am using, emacs lisp, has
+two namespaces so this needs a different utility.  Since such a
+utility is not a standard library function, I need to roll my own.
+
+[[file:flet.org][flet]]
+
+Having gotten this preliminary step out of the way, I can now move
+on to the core of the matter and write an interpreter for scholium-
+based Lisp programs.  As mentoned above, the idea is that the code
+may be spread across a whole bunch of nodes with dependencies 
+indicated by links but the interpreter should be able to sort that 
+all out and run the program.
+
+Since there are many different ways to store links and nodes, I
+will take an abstract approach to keep the program generally
+applicable and modular.  In particular, this means that we
+identify what access functions are needed and only interact 
+with the knowledge base via those functions.
+
+The basic setup here is that we have a number of function nodes
+connected by two types of links --- function links and variable
+links.  Each function node contains arguments and code.  A 
+function link contains a source, a source name, and a destination.
+
+** Deeper Ruminations
+
+In our correspondence, Joe and I considered some of the deeper ways
+in which scholia relate to programming, specifically how they 
+figure into the structure of lisp:
+
+While taking a stroll in the garden right after our conversation,
+your question about anonymous functions finally sank in and it became
+clear to me that all the functions should be anonymous because the
+scholium system would automatically take care of the naming and
+reference. For instance, instead of typing
+
+ (defun foo (x)
+   (append (- 5 (car x))
+	   (mapcar '(lambda (y)
+		      (* y (+ y 1)))
+		   x))))
+
+
+one would type
+
+ (lambda (x)
+   (append (- 5 (car x))
+	   (mapcar '(lambda (y)
+	 	     (* y (+ y 1)))
+		   x))))
+
+on a card of type "lisp-function" whose name is "foo". Even
+better, one only need type
+
+ ((x)
+  (append (- 5 (car x))
+	  (mapcar '(lambda (y)
+		     (* y (+ y 1)))
+		  x))))
+
+because the "lambda" could readily be supplied as needed and there
+is no point cluttering valuable memory with redundant "lambda"s.
+
+Suppose now that we have a "fie" card which reads
+
+ ((x)
+  (foo (fum (- x 3))))
+
+and a "fum" card which reads
+
+ ((x)
+  (if (< x 4)
+      nil
+    (cons x (fum (- x 2)))))
+
+To make it clear that the name "foo" refers to the function in the card
+"foo", we would attach a scholium of type "function-reference". Likewise,
+we would have two links for "fum", one referring to its use in "fie" and
+another referring to the self-reference in the recursive definition. (No
+reason not to not allow a card to link to itself!)
+
+Running such a program could proceed in two steps. Firstly, we would
+render the function by following the links and filling out the
+references. This could be arranged so as to produce a big, happy,
+self-contained lambda expression. Secondly, we would evaluate this
+expression and print the result.
+ --[[file:rspuzio.org][rspuzio]]
+
+I assume something like this is going on with CAR, CDR, RPLACA,
+RPLACD, etc., as well as the very definition of LAMBDA, etc. -- maybe
+before going too much further we should go backwards and try to
+understand the scholiumific principles of Lisp.
+
+Cons cells are of course pairs that contain pointers to a symbol on
+the one hand and another cons cell or nil on the other. A variable
+can be `set' to point at a cons cell or another symbol. There are
+namespaces (called "obarrays" in Emacs, presumably similar in CL) that
+classify symbols as functions or variables or some other type.
+Symbols can have multiple classifications, e.g. because you can `fset'
+them to have a "function definition" as well as "value". Furthermore,
+they have plists, which are basically pairs of "property name" and
+"value" -- although perhaps a convincing case could be made for
+viewing plists as "curried triples" -- ("symbol", "property name",
+"value"), where the symbol just happens to be specified already.
+
+As for how the Lisp interpreter works with all this structure, that's
+where my knowledge is sorta limited! But it wouldn't be too hard to
+do some research on it. And could would be interesting to think about
+whether extensions are useful, e.g. is it useful to know, given a cons
+cell, what variables are pointing at it, for example?
+--[[file:jcorneli.org][jcorneli]]

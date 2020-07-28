@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The symbols "&lceil;" and "&rceil;" introduced here are quasi-quotation marks ar
+introduced by the logician W. V. Quine.  Whilst ordinary quote marks serve to
+denote the particular expression which they enclose, quasi-quotation marks serve
+to denote any expression obtained by substituting suitable values for the
+variables in said expression.  Thus, while "x y + x" denotes precisely one
+expression, &lceil;x y + x&rceil; denotes a whole class of expressions such as
+"2 \times 3 + 2", "3 \times x + 2", "x (x + 1) + x", etc.  More will be said
+about this later.
+
+*  Discussion
+
+Note that LISP has a quasiquote too, but it means something somewhat different.
+In LISP, the quasiquote is denoted "`" and it applies to whatever sexp is
+behind it.  It is like the regular quote "'", which means "interpret literally",
+but "unquoted" elements in a quasiquoted form are evaluated first.  (The unquote
+operator is ",".)
+
+Thus, if we do
+
+ (setq x 1)
+
+Then
+
+ '(x)
+ ;=> (x)
+
+and
+
+ `(x)
+ ;=> (x)
+
+but
+
+ `(,x)
+ ;=> (1)
+
+(It would be nice to see/think more about the relationship between the
+LISP quasiquote and the Quine quasiquote.)  --[[file:jcorneli.org][jcorneli]] Sat Mar 26 22:04:12 2005 UTC
+
+I would say that the analogy
+
+: Lisp quote : logician's quote = Lisp quasiquote : logician's quasiquote
+
+is rather precise.  In particular, the Lisp quasiquote notation allows one to unquote whole expressions rather than just variables.  This is a bit more general than what is usally done in logic, but it might come in handy too somewhere.  Also, supplementing Quine's notation with an unquote mark might not be a bad idea since Quine's original notation offers no indication of exactly what can be replaced and what cannot.  Looking ahead, templates may be regarded as a form of quasiquotation which involves bound variables. --[[file:rspuzio.org][rspuzio]] 28 March 2005
+    
+[[file:Introduction to template utilities | Back.org][Introduction to template utilities | Back]]

@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+This is a page for discussing commons based peer-production of free content.
+
+Why the name?  Because a big portion of this site is about [[file:Noösphere.org][Noösphere]] and the
+"Planet..."-named sites that use it.  But it isn't a "Planet" itself; it is more of a proto-planet.
+Hence, "AsteroidMeta".
+
+* Sections
+
+ * [[file:Projects.org][Projects]] A list of projects that are fair game to discuss, with links to the discussions.
+ * [[file:Tasks.org][Tasks]] The projects require work, and we need volunteers.
+ * [[file:Bugs.org][Bugs]] If you find a problem with one of the projects, you can report it here.
+ * [[file:Feature Requests.org][Feature Requests]] If you'd like to see something new in one of our projects, please let us know.
+ * [[file:Discussions.org][Discussions]] Threads that aren't associated with any particular project, but that still tie in to our theme.
+ * [[file:Users.org][Users]] Our roster/guestbook.  We appreciate it if you sign your edits in accordance with our Policy (see below).
+ * [[file:Policy.org][Policy]] Specific policy items relevant to this Wiki.
+ * [[file:Classifieds.org][Classifieds]] Stuff wanted or offered by AM users.
+ * [[file:Schedule.org][Schedule]] Events on or around the asteroid you should know about.
+ * [[file:Bulletins.org][Bulletins]] Weekly summaries of AM activities.
+ * [[file:Commons.org][Commons]] a meta-commons: miscellaneous stuff can go here.
+
+* License
+Copyright (c) 2005, <nowiki>AsteroidMeta</nowiki> Users 
+
+The content of this wiki is available under your choice of the
+[[file:GNU Free Documentation License.org][GNU Free Documentation License]] (FDL) and the [[file:GNU General Public License.org][GNU General Public License]] (GPL).
+If the FDL is selected, be advised that this document has no Invariant Sections,
+no Front-Cover Texts, and and no Back-Cover Texts. /By contributing to this wiki, you agree to make your contributions available
+under these licensing terms./
+
+* About AsteroidMeta
+<nowiki>AsteroidMeta</nowiki> is hosted by [http://oddwiki.taoriver.net Oddwiki on Taoriver].
+The Oddwiki wikihive runs the [http://www.oddmuse.org Oddmuse] wiki engine.
+For help with markup, see [http://www.oddmuse.org/cgi-bin/wiki/Text_Formatting_Rules Oddmuse:Text_Formatting_Rules]
+and [http://www.oddmuse.org/cgi-bin/wiki/Usemod_Markup_Extension Oddmuse:Usemod_Markup_Extension].  <nowiki>AsteroidMeta</nowiki> was founded on January 30th, 2005.

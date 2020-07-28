@@ -1,0 +1,57 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Robert !McHenry is the former editor of the Encyclopedia Britannica.  He has been an [http://www.techcentralstation.com/111504A.html outspoken critic] of Wikipedia and similarly-organized efforts.  Despite the fact that he is supposed to be fundamentally /for/ bringing knowledge to the people, he has spread FUD about Wikipedia, which does this much better than the effort of his previous employ.  
+
+I have [http://www.freesoftwaremagazine.com/free_issues/issue_02/fud_based_encyclopedia/ written a response] to his criticisms which has been published in issue 2 of the Free Software Magazine.  It is also cited in the [http://en.wikipedia.org/wiki/Robert_McHenry Robert McHenry Wikipedia article]. --[[file:akrowne.org][akrowne]] Sat Feb 26 15:48:13 UTC 2005
+
+----
+
+The published version of the "FUD based encyclopedia" looks really good -- with
+the exception of a few missing periods.  (I wonder if the editors can change the
+document once it has "gone to press"?) I'll want to take a look in more detail
+at your brief discussion of the
+[http://www.kuro5hin.org/story/2004/12/30/142458/25 article] by [[file:Larry Sanger.org][Larry Sanger]]
+and his orginal remarks.  It seems like the profile-raising ideas he was talking
+about in that article would be interesting for people from [[file:PM.org][PM]], even if we
+end up disagreeing with them, since one of PM's recent goals is to raise the
+perception of its quality.  It would be interesting to think about the ways in
+which this can be done that are not "elitist" and that work well with the
+peer-production style.  Issues of quality (and maybe, perception of quality) are
+certainly relevant to your discussion of the [[file:the efficiency of CBPP.org][the efficiency of CBPP]], since
+a large quantity of low-quality stuff may be worth about as much as a low quantity
+of high-quality stuff (n.b., any resemblance of these ratios to anything in reality is
+purely coincidental).  --[[file:jcorneli.org][jcorneli]] Sat Feb 26 16:43:54 2005 UTC
+
+: Yeah, I really /really/ have a problem with the whole "elitist" thing.  I think "elitism" pretty much encapsulates everything that is bad about info-oligarchy, and I feel Sanger is somewhat misguided in calling for it.  I think his two sins were (1) overstating the "problems" with Wikipedia (just because people like !McHenry made a lot of noise), and (2) inasmuch as Wikipedia (and other CBPP projects) could use improvement, immediately falling back to coercive, oligarchic, elitist, and (as rmilson has said) "political" solutions.   I think the correct answer is highlighted in the PlanetMath experience: build in CBPP /protocols/ that better fit your community, including notions of deference to expertise. Ray has a great detailed discussion of all this below. --[[file:akrowne.org][akrowne]] Sun Feb 27 17:36:18 UTC 2005
+
+----
+
+Since I am the one who has been most vocal in talking up the idea of raising the perception of quality and marketing Planet Math to the "mathematical establishment", I feel it behooves me to respond to these points.  I have read Dr. Sanger's article and am of the opinion that the points raised there are either irrelevant to Planet Math, based on assumptions that apply to print rather than digital media, or else involve compromising essential principles for dubitable gains.  I will now deal with the points raised in the article.  (but be warned that I have changed the order of these points for my convenience.
+
+ * the root problem: anti-elitism, or lack of respect for expertise
+
+I don't see this as a problem on Planet Math.  As far as I have seen, most members of Planet Math are willing to acknowledge when someone else is an expert in a topic.  For instance, it is frequent for someone who has recieved a correction to an entry to reply with "since you are more of an expert than I am in this subject, maybe you would consider co-authoring this article" or something to that effect.  Most of the times that I have seen and real problems was when somebody thought that his expertise somehow made him superior than non-experts and therefore gave him the right to treat non-experts as second class citizens and push them around.  However, for me, this does not really qualify as a counterexample because, as far as I am concerned, being an expert is no excuse for lack of courtesy.
+
+ * dominance of difficult people, trolls, and their enablers
+
+I'm not sure that everyone will agree on this, I'm not all that sure, but I would say that most of these people on Planet Math post to the discussion fora rather than contribute entries.  While there are such people, I would definitely say that they are not dominant, although they can be annoying.
+
+ * a university, ... can ... release vetted versions
+
+As I see it, given the way the internet works, there is not reason that doing this means that this university or whoever will need to take control of Planet Math.  They could simply have their own website and point links to the entries in our website of which they approve.  Something like this is already happening with online journals --- several of them do not carry copies of their articles, but point the reader to preprint servers in which the articles are to be found.  I see no fundamental reason why this could not work here as well.  There is the issue that the author could change the article after having it approved.  One simple solution would be to have approval only pertain to a specific version --- if an author changes an entry, then it needs to be resubmitted for certification if the new entry is to come with the good mathkeeping seal of approval.  Also, it would be convenient to have some arrangement whereby it would be possible to have the certification roll over if the change was a minor matter line fixing typos or dealing with bad links.  I don't see that this would require us to make any substantial changes in how we conduct our business.  In particular, I would think that if somone posted a correction about a significant error in an entry that was so vetted, it would be an egg in the face of the institution which granted the approval and a strong point in the favor of our review system.
+
+ * If the project was lucky enough to have a writer or two well-informed about some specialized subject, and if their work was not degraded in quality by the majority of people,...
+
+In the case of Planet Math, the ownership model makes this a non-isssue.  Noone can touch an article unless the owner permits it.  Also, I would point out another benefit of our ownership model.  Since the owner of an article is ultimately responsible for the contents of an article and is able to exercise this responsibility in a meaningful way, one can use the name and reputation of the author as  guarantee of credibility.  To be sure, different people will have different ideas of what a credible and reputable author looks like.  For some people it will be a matter of tradidtional academic credentials.  For others, it might be based on score and reputation.  However, the point is that, whatever one thinks a credible author looks like, one can use one's notion to decide if an entry is trustworthy.
+
+ * lack of public perception of credibility, particularly in areas of detail
+
+Here, I would be careful in distinguishing between perception and reality.  By all means, we should work on making sure that our encyclopaedia is correct and credible.  However, when it comes to dealing with people who refuse to believe this despite the facts or are unwilling to examine the evidence, but cling to falsified steroetypes and persist in believing rumors, then I would propose say that these people are being unscientific and can be lumped in roughly the same group with circle-squarers, perpetual-motion inventors, and the like.
+
+However, this does not mean that we should completely ignore our public image or be comepletely unwilling to make concessions to the popular idea of what a credible reference looks like.  As I see it, the important point here is to be clear on what are the fundamental principles as opposed to unessentials and be willing to compromise on the latter whilst staying steadfast with respect to the former.
+
+For example, while I think that we should not restrict membership based on academic credentials or treat people like second class citizens because of their lack of formal academic standing, I think it would be OK to print the credentials of contributors and editors (this would be completely voluntary on the part of the individual) in the print version of our encyclopaedia since that is frequently used as a criterion for assessing credibility.
+
+Also, I think that is worthwhile thinking how to publicize our project to the mathematical community at large and at the same time make it clear that Planet Math is intended as a place where people at all levels of mathematical knowledge, from novice to expert are welcome and free to contribute.  I would think that the best way to convince most of the public about our reputability is to produce a quality product and publicize it so that people can judge for themselves what we have to offer.
+--[[file:rspuzio.org][rspuzio]] 27 February 2005

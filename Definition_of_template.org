@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Definition
+
+A *template* is a list of two items whose first item (car) is a list of (non-nil) atoms known as placeholders.  The 
+
+A typical example of a template is the rule of the
+arbitrary premise:
+
+: ((x y) (if x (if y x)))
+
+Here "x" and "y" are placeholders.  In later sections,
+we will give some simple routines that can be used
+to substitute arbitrary expressions for each of x and y.
+
+Bear in mind that one or more of the placeholders may
+not appear in the expression:
+
+: ((x y) (if x (if x x)))
+
+: ((x y) (if p q))
+
+Even a list of this form in which zero placeholders
+appears or the expression is empty count as examples:
+
+: (() (if p q))
+
+: ((x) ())
+
+: (() ())
+
+However, the following is *not* an example of a template
+
+: ((x (if y x)) (if x (if y x)))
+
+because "(if y x)" is not an atom.  Likewise, 
+
+: ((x ()) (if x (if x x)))
+
+is not an example of a template because we do not allow "nil" (or"()") as a placeholder.
+
+ *Navigation:*
+
+Back to [[file:template utilities - Data structures | Data structures.org][template utilities - Data structures | Data structures]]
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to [[file:Definition of assignment | assignment.org][Definition of assignment | assignment]]

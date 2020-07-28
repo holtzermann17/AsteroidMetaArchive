@@ -1,0 +1,159 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A proto-essay by [[file:akrowne.org][akrowne]] on Commons-Based Peer Production.  
+
+---- 
+
+One of the major incentives of CBPP (commons-based peer production) as a mode of
+organization is that it is (thought to be) much more efficient than classic
+production (i.e. through firms ).  I think this arises a variety of ways:
+
+; CBPP is massively distributed : the productive work is broken down into a large
+  number of mostly orthogonal sub-tasks, each of which can be done by a
+  different person, and usually done asynchronously.  These tasks are also of
+  drastically different sizes, so people can participate who are willing and
+  able to do many different levels of work.  Compare this with a traditional
+  firm, where you may participate if-and-only-if you do approximately 40 hours
+  of work per week.
+; CBPP is anti-bureaucratic : controls are replaced with protocols that are part
+  of the collaborative system (thank you Siva Vaidhyanathan for this
+  terminology).  These protocols fit the shape of, and encourage, the most
+  natural workflow to get the job done.  Simply put, coercion as an organizing
+  principle is eliminated.
+; CBPP is voluntary : individuals who participate self-select for willingness to
+  do so.  Also, due to the modular nature of the work, individuals can apply
+  themselves to just the portions of the project they are most suited to do.
+  The end result is they are much more personally invested than they would be on
+  a traditionally-organized project.
+
+Because these properties of CBPP are clear and distinct, I think there is little
+question CBPP is more efficient than traditional production.  However, as of
+yet, I don't think that CBPP efforts have been quantitatively compared with
+classically-organized efforts which have the same aims.
+
+A few days ago, I happened across the data necessary to make a rough comparision
+of this kind, and the results are striking.
+
+* Wikipedia vs. Nupedia
+
+One of the hallmark examples of CBPP is Wikipedia.  Barely out of the gates in
+2002, the community-generated encyclopedia now has over one million articles.
+There was a classically-generated counterpart: Nupedia.  The two projects were
+both meant to be internet-based encyclopedias, and both projects were intiated
+by Jimmy Wales.  Nupedia failed as a business venture, and Wales moved on to
+Wikipedia.
+
+When Nupedia folded, it had produced twelve articles.  The cost to generate
+these articles, which included facilities and business-meta things, but most
+importantly, human resources, was about $250,000.  Thems' some expensive
+articles!
+
+Compare this with Wikipedia.  To date, the effort has spent about the same
+amount of money, but mostly on delivery systems (computers, bandwidth, networks,
+and adminstration).  A little bit has been spent on nonprofit-org "meta" things.
+None has been spent on authoring or vetting of articles; all of this has been
+voluntarily provided for free by the community.  The output has been at least a
+million articles.
+
+So, we can make a rough comparison.  Nupedia's stats: $250,000 for 12 articles.
+Wikipedia's stats: $250,000 for 1 million articles.
+
+Based on these numbers, we have that the CBPP method is 83,333 times more
+efficient than the classical, firm-based, "oligarchic" method of organization.
+
+That's almost six orders of magnitude. 
+
+Now, I'll admit, this figure is very rough, and there are some huge caveats.
+Firstly, Nupedia got so little done, that the "12 articles" number is probably
+best considered random.  If the whole effort were attempted again, it might
+produce 5 or 100 articles, but probably not much more.  So this could shave an
+order of magnitude off the multiplier.
+
+Another big philosophical objection might be that Nupedia folded after a limited
+time, but Wikipedia has run successfully for a longer time.  Well, I don't know
+specifically the number of years behind each effort, though I think Nupedia's
+life was indeed relatively brief (a year or two).  But given that it is also
+possible for Wikipedia to "fold" were it to fail productively, I think that it
+is perfectly reasonable to directly compare the two efforts, and to do so based
+on how much money was spent to deliver the end-product.
+
+I would allow for a tweak of the CBPP multiplier into the 5 or 4 orders of
+magnitude range, probably with 5 more likely.  But I wouldn't give any more
+ground than this.  I think CBPP really is that much more productive in the right
+settings.  The challenge for organizers of knowledge production efforts to
+determine if their setting is one of the right ones.
+
+* Conclusion
+
+Given that the productive benefit is so unambiguously great, I find it that much
+more amazing that people like [[file:Robert McHenry.org][Robert McHenry]] or [[file:Michael Gorman.org][Michael Gorman]] are so
+vehemently opposed to CBPP.  They are supposed to be champions of knowledge
+egalitarianism, but they seem to be unable to get beyond the fact that the
+"anarchistic" CBPP was not their idea, they were not consulted about it, does
+not bolster their political or financial standings, and is not controlled by
+them.  I think with numbers like 83,333-times-more-efficient, they will simply
+be left eating our dust.
+
+* Discussion
+
+/Because these properties of CBPP are clear and unique, I think there is little
+question CBPP is more efficient than traditional production./  
+: Let's first define the terms -- "[[file:what is CBPP.org][what is CBPP]]?" would be a good discussion to have.  
+I think [[file:Yochai Benkler.org][Yochai Benkler]] would only argue that CBPP is more productive for certain
+sorts of production, not that it is more productive across the board (specifically,
+I think, for production of "knowledge-based resources" or "knowledge production"). 
+:: Agreed. --[[file:akrowne.org][akrowne]] Sun Feb 27 16:45:21 UTC 2005
+
+/Wikipedia vs. Nupedia/
+: To what extent did the initial investment in Nupedia carry over to cover set-up
+costs of the Wikipedia project?  I don't know the history here, however, the fact
+that they were initiated by the same person seems to suggest that Wikipedia benefited 
+somehow from the Nupedia experiment.
+:: I had thought about this, but somehow I doubt the material carry-over was significant.
+this is because most of the money for Nupedia was spent on human resources (i.e. article
+writers and other staff). Certainly Wales learned many valuable lessons, but I don't see
+why we should "discount" the biggest lesson of all: that it was pointless to do a 'net
+encyclopedia without CBPP.  --[[file:akrowne.org][akrowne]] Sun Feb 27 16:45:21 UTC 2005
+
+/The challenge for organizers of knowledge production efforts to determine if
+their setting is one of the right ones./
+: Well put - I think it would be good to start the essay off with a question like this.
+
+--[[file:jcorneli.org][jcorneli]] Sat Feb 26 16:26:13 2005 UTC
+
+----
+
+I think the Wikipedia vs. Nupedia argument is a bit disengenuous.  The $250,000 cost of Nupedia
+was entirely borne by the contributors.  However, the cited $250,000 cost of Wikipedia only applies
+to a small fraction of the contributors.  There's no measure of the decentralized effort put into Wikipedia
+in order to generate those million articles.
+
+I think the efficiency instead comes from the directness in which value is exchanged.  Under firm-based production,
+value is only ever directly exchanged between the producer and consumers.  The flow of value is in the structure of a tree,
+following the hierarchy of producers and consumers, so that in order for value to flow from one consumer or another, it must
+pass through at least one middle-man (the producer).
+
+Under CBPP, there is no distinction between producers and consumers.  The flow of value is directly between peers,
+and is in the structure of a strongly connected network.  There are no middle-men, and there are no restrictions on
+how value can flow.  This is why I think CBPP is more efficient, but it might take someone with some economics background
+to turn this into some sort of actual proof.
+
+--[[file:logan.org][logan]] Sun Feb 27 03:05:51 UTC 2005
+
+: Good comment.  Actually, I believe Nupedia was funded by a separate "investor" class, not the contributors (you did 
+mean content contributors, right?)  In Wikipedia, the "investor class" /is/ the contributors (who are also the consumers).   
+You are right to note that value flows in a radically different way, but I'm not sure this completely undermines the comparison.
+In both cases, money is required to deliver the "same" product.  It is just spent in very different ways.   If I had $250,000 and 
+I was looking to create a knowledge resource, and I additionally thought it was likely CBPP might work, I would expect my $250,000
+to go much farther with that method.  Anyway, I think you are on to something with your flow of value argument.
+ --[[file:akrowne.org][akrowne]] Sun Feb 27 16:45:21 UTC 2005
+
+:: Well, the reason I raised my claim of disengenuousness is that, with Wikipedia, there is so much investment into the project that
+is unaccounted for.  The $250,000 Nupedia figure probably covers quite a bit of the effort put into the project.  The $250,000 Wikipedia
+figure probably covers less than 1% of the effort put into the project.  I think your comparison neglects the individual efforts put into
+creating the millions of articles, which is spread across many people and completely unaccounted for.  I think it'd be interesting to see a study of the economics of a project like Wikipedia, but I think this will always be difficult with CBPP projects. --[[file:logan.org][logan]] Sun Feb 27 19:15:50 UTC 2005
+
+#+BEGIN_VERSE I think its a matter of perspective.  You're absolutely right, effort is put in by millions of contributors.   We could do a real "dollars per entry" comparison if we could get an estimate on aggregate time everyone has put into Wikipedia.  However, no such comparison is needed for the prospective project initiator who wants to see how much money it would cost to produce the final product.  For them, all of the collaborative contributions are "free".  This is why open source is embraced by big companies like IBM -- much of the cost doesn't have to be paid by them.  But yes, it is paid by someone(s).  For a full analysis, both perspectives should be examined. --[[file:akrowne.org][akrowne]] Mon Feb 28 04:28:24 UTC 2005
+
+----

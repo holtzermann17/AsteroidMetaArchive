@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As it stands, the only way to invoke the Planet Math autolinker is to add or edit an encyclopaedia entry.  However, there are times when one might want to run a document other than a contribution to the encyclopaedia through the autolinker.  One such instance was discussed in the request for autolinking in forum postings, and another is described below.
+
+While one could package a copy of the linker as an application which one could run on one's computer, I think most users would find it more convenient as a web-based application since, to be of much use, it requires access to the current version of the website.  As I envision it, ideally there would be several different interfaces available.
+
+ *1. Stand-alone version*  As was just mentioned, this would require the user to have a current copy of the relevant autolinking database on one's computer.  Because of the effort involved in installing a program and in keeping one's local copy of the database current, this version would primarily be of interest to people who find themselves using the stand-alone autolinker heavily on a daily basis.
+
+To make it easier to keep one's local database current, one could have companion program which contacts Planet Math once a day and automatically downloads the most recent version.  To make this quicker, one could make available a difference file which only lists the changes which were made to the database.  Since not much more than a few percent of the the entries are changed in a typical day, this difference file would be rather short and daily upgrading would be quick and should not tie up the Planet Math sever.
+
+ *2. Edit-window interface*  In this web-based version, one would have an editing window much like the one that pops up when one wants to add a new entry.  One would type in one's text in this window, then press a "autolink" button on the bottom to invoke the autolinker.  As a result, one would obtain an autolinked version of one's entry.
+
+ *3. Download interface*  In this version, one would obtain a dialogue window which would allow one to upload one's file to the Planet Math computer.  Once the autolinking was done, the autolinked version would be downloaded.
+
+ *4. Mail interface*  In this version, one would mail a copy of one's file to a special address at planetmath.org and recieve the autolinkled version as a reply.
+
+The situation in which I would find such an autolinker application useful is when reading mathematical literature.  Especially if the subject is not familiar to me, there are many times when I wished that I could have the definitions of unfamiliar or barely familiar terms at my fingertips so as not to interrupt my attention to go and look up definitions.  With such a stand-alone autolinker, this would be easy --- I would simply run the article or book through the autolinker before displaying it; then, when I need a definition, I simply click on the term to bring up the relevant enecyclopaedia entry.
+
+This could be useful for online journals, preprint archives, and other mathematically-oriented digital libraries. In addition to the various formats in which they offer the holdings (such as !TeX source file, postscript, PDF, and the like), they could also offer autolinked versions.  If they did, I believe that a lot of their customers would be pleased and make use of this amenity.  If so, then this could further serve to publicize Planet Math within the mathematical community and get us more members.
+
+--[[file:rspuzio.org][rspuzio]] 2 Oct 2005

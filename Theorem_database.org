@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+So, an idea I had lying around in my head for some time. It seems vaguely related to PlanetMath, though a bit more on the Artificial Intelligence side.
+
+So, the principle is this : have a website as a frontend to a database of mathematical theorems, with their proofs. These theorems, and their proofs, would be formalized in a computer-readable language.
+
+The system would be able to "check" the validity of proofs. (This is analog to automatic theorem proving, but easier since the program doesn't have to look for a solution - he just has to check that the one given to him is valid).
+
+Any user could submit new theorems and their proofs. The system would check the validity of the proof, and use that as a basis for accepting the adition to the database. So, the main activity of the site would probabl be "translating" proofs in mathematics from the litterature into the special computer-readable format.
+
+The key problem, I expect, would be making that special format. I expect expressing axioms, theorems and lemmas wouldn't be too much of a problem. However, actual steps of a proof ... I expect it would be possible to make a "good enough" language that woudn't cover all possible demonstrations, but would be good enough to keep people busy.
+
+So I admit, I don't know much about this. I don't know how demonstrations can be formalized. I don't even know what the vocabulary would be to talk about such a thing. But I suspect it would be pretty awesome :)
+
+any thoughts ?
+
+-- EmileKroeger
+
+Hi Emile, have you had a look at the [[file:HDM.org][HDM]] project (the hyperreal dictionary of mathematics) and [[file:h-code.org][h-code]]? I think both projects would be very interesting to you. -- [[file:alozano.org][alozano]]
+
+Also look at [[file:metamath.org][metamath]]. --[[file:jcorneli.org][jcorneli]]

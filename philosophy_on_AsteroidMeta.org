@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Joe, from the recent changes log I get the feeling you are getting interested in
+philosophy of science in general, and logical positivism in particular (with the
+references to Popper's work etc). As you know I have a degree in philosophy
+(with a focus on philosophy of science and epistemology), so if there's anything
+specific you're trying to figure out, maybe it can take a shot at it?  Or, more
+accurately, say something about what other people have had to say about
+it. (BTW, I have not yet figured out what does and what doesn't count as a
+"major edit".)
+
+--[[file:shargestam.org][shargestam]]
+
+I think one benefit of working on this wiki is the chance to talk philosophy
+with the denizens.  I think we all qualify as "freelance philosophers".  Its
+fun; my only concern is that it needs to be balanced with coding!  The scholium
+system is partly about balancing code with text in a nice way: maybe all of our
+philosophy can be implemented in code at some point :).
+
+My main concerns at present are (1) a logic and linguistics problem, mentioned
+on the page about [[file:hdm's formal system.org][hdm's formal system]] in the "Expressing formal math in
+hcode" section.  I'm still sort of worried about finding the appropriate lowest
+level language for hcode, even though I suppose we can start with examples and
+work our way down as needed; getting the philosophical/metamathematical basis of
+hcode worked out seems a little tricky; (2) I'm also very interested in the fact
+that a lot of the ground that has been covered by AI researchers was already
+covered by /phenomenologists/.  What a surprise!  This was described in a book
+called "The Artificial Intelligence Debate" 
+([http://www.amazon.com/exec/obidos/tg/detail/-/0262570742/002-7105478-0636039?v=glance amazon page]), 
+in an essay by Hubert and Stewart Dreyfus.  That article is definitely recommended
+reading for everyone on !AsteroidMeta.
+
+Those are a couple of areas in which I could use some freelance help.  Its also
+just fun to spin your philosophical yarns and get feedback; feel free to post
+new [[file:Discussions.org][Discussions]] at will.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 25 01:47:48 2005 UTC
+
+I haven't read Dreyfus' book, but it's certainly true that AI researchers have
+been rather naive with respect to philosophy. "Rather naive" is actually an
+euphemism -- most of them were completely ignorant about every major development
+in philosophy since Descartes. So it should not be so surprising that they did
+some philosophical blunders early on.
+
+As for the lowest level for hcode, I am very interested in coming to grips with
+that too. I feel I can't really start doing serious work on the parser until
+that matter is somewhat settled --[[file:shargestam.org][shargestam]]
+
+It may be best not to worry too much about the lowest level for hcode: it could
+be better to worry about how we can move from a given level (e.g. the contents
+of the current [[file:Version Zero.org][Version Zero]]) to a lower level.  Every time you encounter
+math, it will be in some /mathematical vernacular/.  I don't think we can
+write a language that covers all mathematical vernaculars off the top of our
+heads.  Rather, we should write a language that we know is
+"downwards-compatible" (as well as upwards compatible) with various vernaculars.  (We do want a flexible parser: a good parser is one "metalanguage", of a particularly abstract sort.)
+
+--[[file:jcorneli.org][jcorneli]] 

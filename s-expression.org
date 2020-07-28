@@ -1,0 +1,18 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+An s-expression is a syntactically correct expression in LISP.  This notion also has a semantic side to it since s-expressions are used to express programming statements in LISP.  However, for the purpose at hand, the semantics does not interest us; we only care about the syntax in order to make sure that h-code can be properly read as input to the LISP programs we shall write to process h-code.
+
+The basic syntax may be described by the following rules:
+
+ <s-expression> -> <atom>
+
+ <s-expression> -> ( <s-expression> )
+
+ <s-expression> -> ( <s-expression> . <s-expression> )
+
+ <s-expression> -> ' <s-expression>
+
+Note: In a more complicated implementation (such as Common LISP) there may be more synatax rules than this basic set. 
+
+Back to [[file:h-code.org][h-code]]

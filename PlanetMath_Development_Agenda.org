@@ -1,0 +1,147 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a draft (not official) document for discussion purposes.
+I have been circulating it to potential supporters.  Feel free to make changes or suggestions here; this derives from the version at http://planetmath.cc.vt.edu/~jcorneli/everything/PM/agenda-Nov9.pdf (.tex).  --[[file:jcorneli.org][jcorneli]] Nov 15, 2006
+
+!PlanetMath's development agenda
+
+Joseph Corneli, Aaron Krowne, Raymond Puzio
+
+* Introduction
+
+Our Metacommons Manifesto talks about building collaborations to
+improve the state of the art in commons-based peer production (CBPP).
+!PlanetMath.org is highlighted in the manifesto, where it serves as an
+example of the sort of project one might find as a "user" and
+"contributor" in the metacommons.
+
+When we wrote that document, we were thinking about strategies for
+pushing !PlanetMath's development.  Our idea was that it would be wise
+to focus on developing strategic partnerships with other organizations
+interested in using CBPP or in creating improved technologies and
+practices for doing CBPP.  In the mean time, !PlanetMath has its own
+development agenda, and it is the purpose of this document to present
+it in overview.
+
+!PlanetMath.org's development goals include items that are
+mathematics-specific (in particular, items that are specific to the
+needs of our user base), as well items of broader CBPP-related
+interest.  We are, in addition, working on basic matters of
+organizational sustainability.  Short descriptions of key agenda items
+in these three areas follow.
+
+* Increasing PlanetMath's impact
+
+These are our goals specifically to enhancing !PlanetMath's usefulness
+for people interested in mathematics, including our current user base.
+
+
+
+
+[outreach in the math community] We suspect that many people who
+  haven't heard of !PlanetMath will find it useful once they know what
+  it is.  Discussion with potential users will also likely give us new
+  ideas about how we can improve our service.
+
+
+[improve Noosphere as indicated by users] We have a long list of
+  user-generated feature requests for Noosphere (!PlanetMath's software
+  platform).
+
+
+[more, and better, content and coverage] The quality and quantity
+  of articles on !PlanetMath will both be improving in an ongoing
+  fashion, most likely through centralized as well as distributed
+  editorial efforts.  Another important approach to improving the
+  quality of !PlanetMath's content is to find ways to improve our
+  systems for peer review by tweaking article ownership, correction,
+  and rating systems.
+
+
+
+[improve !PlanetMath's support for math research] We plan to
+  create areas of the site for posting and discussing new and/or
+  previously unpublished material, including work in progress.  We're
+  also planning to develop support for third-parties who would like to
+  auto-link their material to !PlanetMath's collections.  These changes
+  will enhance !PlanetMath's usefulness both as a reference and a
+  collaboration tool for researchers.
+
+
+[propagate !PlanetMath content] We are content-providing partners
+  with the Mathematics Gateway and NSDL, and Wikipedia has used quite
+  a bit of our content.  We're interested in further promoting re-use of
+  !PlanetMath content in partnerships other 
+  groups.  Another attractive strategy for wider content propagation is
+  to add multiple language support to Noosphere.
+
+
+* Cultivating CBPP
+
+These are our development goals related to CBPP in general -- for
+example, improvements to Noosphere which would have application in
+various digital library settings.
+
+
+
+
+[general improvements to Noosphere] Improved documentation,
+  modularization, and extensibility of the Noosphere codebase should
+  enable it to be fruitfully deployed in many new settings.
+
+
+[create new "Planets" and inter-Planet exchanges] Noosphere
+  lends itself to use in any of the mathematical sciences and in other
+  technical fields.  (E.g., there has been a !PlanetPhysics site
+  running in parallel with !PlanetMath since 2005.)  We plan to set up
+  "sister sites" in several other subject areas.  In order to make
+  these sites work well together, we are developing a strategy for
+  content-sharing and/or interlinking between the various Planets.
+
+
+[develop next-generation CBPP platforms] We're interested in
+  developing systems of fora with integrated subchanneling for ad hoc
+  collaboration, and other sophisticated applications of metadata,
+  which will facilitate enhanced markup and discussion, user-centric
+  content organization, and more decentralized platform maintenance.
+
+
+* Sustainability development
+
+These are our high-level goals related to organizational sustainability.
+
+
+
+
+[raise more public donations] We are currently instituting a
+  system for managing paid memberships; in addition, we plan to
+  canvass corporations that do donation-matching.
+
+
+
+[improve our policies for user contribution and rights
+  management] In order to protect both the !PlanetMath organization and
+  its users from the consequences of potential copyright infringement
+  by malicious or negligent users, we need to better understand any
+  points of liability and secure them, whether with user contracts or
+  changes in the peer review system, or both.  In addition, the
+  complicated issues associated with the conflict between any exercise
+  of control by contributors over the use of their contributed
+  material and the freedom of downstream users to do as they like with
+  this material will need to be studied, and addressed in a manner
+  that we can feel confident about.
+
+
+[gather and follow up on user feedback] In the long run, it will
+  be important to have an improved methodology for gathering and
+  coordinating information about users.  Such mechanisms will be
+  essential if !PlanetMath is to become robustly self-governing.
+
+
+[create !PlanetMath spin-offs] Spin-off enterprises could provide
+  a means of leveraging !PlanetMath's content, software tools, and
+  contributor know-how to supply various markets and generate revenue.
+  For instance, we are well along in the process of creating a
+  "print-ready" rendering of the encyclopedia, which we plan to
+  market via a suitable business entity.

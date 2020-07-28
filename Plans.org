@@ -1,0 +1,146 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page complements the [[file:Schedule.org][Schedule]].  While the schedule is concrete, our
+plans are still somewhat abstract.  Nevertheless, formulating a global plan is
+important to the success and usefulness of AM.  See also this central
+[[file:the way of the asteroid|coordinating page.org][the way of the asteroid|coordinating page]].
+
+This is the first month during which this page has been active, but I think we
+should do it sort of like a monthly version of the [[file:Bulletins|Bulletin.org][Bulletins|Bulletin]],
+except that we can use old versions of this page as the source for new ones.
+
+* Timeline
+
+It is now the month of May in the year 2005.  
+
+ * [[file:PM.org][PM]] has been active since Fall of 2001.
+ * [[file:Noosphere.org][Noosphere]] has been active since Summer of 2002.
+ * [[file:HDM.org][HDM]] has been active since Fall of 2003.
+ * [[file:FEM.org][FEM]] has been active since Winter of 2003.
+
+**  For PM.org
+
+See also [[file:PlanetMath Budget and Resources.org][PlanetMath Budget and Resources]].
+
+The next objective is to secure funding to support software development.  We are
+working on [[file:Grant planning|grants.org][Grant planning|grants]], but don't expect to know until (when)
+whether this particular batch of grants has panned out.  We will continue to
+look for more grants, sponsorships, and other forms of financial support.
+
+**  For the PM website
+
+One objective is to move to support creation of free books articles, and so on.
+
+**  For Noosphere
+
+A top priority is to make installation easier.
+
+[[file:Discussion of PM Plans.org][Discussion of PM Plans]]
+
+**  For HDM
+
+See also [[file:Guide to the HDM.org][Guide to the HDM]].
+
+***  Short term - April 2005
+
+Our current programing objectives are to improve the parser and to write a
+simple proof checker.  We expect significant improvements in both these areas by
+the end of this month.  When we have gotten a test system based on these tools
+to a useful state, we will reassess.  We will probably release hcode version 0
+around this time.  (I.e. a standard for the language, together with some example
+hcode packages and LISP software for doing useful things with the hcode.)
+Hopefully no more than two months would be needed for this; one or less would be
+preferable.  But we will be focused on these goals until they are complete.
+
+***  Short term - May 2005
+
+The statements above continue to be true, but getting even just these aspects of
+the system working reasonably well is challenging.  One mid-term goal is to
+build a specialized parser and proof-checker that will work with the
+[[file:metamath.org][metamath]] content.  Another goal is to convert HDM-p3 into [[file:hcode.org][hcode]]. The
+[[file:scholium system.org][scholium system]] is now considered to be part of the HDM codebase, and
+getting it into a usable state is a priority.  A paper describing this system
+should be completed by July 1, and before that, hopefully, we will start using
+the system to manage the hcode contents of HDM-p4.
+
+***  Long term - April 2005 (updated May 2005)
+
+Probably the next direction to go in after publishing HDM-p4 will be to
+emphasize AI components of theorem proving, proof checking, and parsing
+(including support for naturally written mathematical text).  This will entail
+improvements to the system we are focusing on now, as well as extensions to the
+hcode codebase.  It would be good to make our next full release in about a year,
+and to do a reasonably interesting demo, like proving the Fundamental Theorem of
+Calculus or something along these lines.
+
+Text generation may receive increasing emphasis as this year-or-so goes by,
+especially if we have HDM hooked into the PM/Noosphere system. (In this setup,
+we would want to be able to easily port HDM content to "human readable" PM
+content).
+
+HDM will begin to depend increasingly on user-friendly systems for inputting
+data and managing data and code.
+
+During the subsequent 3 years, we hope to build extensive theorem proving and
+hcode codebases.  This brings us to 2009.
+
+After an additional year for focused research, it would be nice to give a high
+powered demonstration of the system's capabilities (i.e., use it to prove a new
+theorem or known conjecture of interest to mathematicians).
+
+After this demo, the HDM project should go into full swing, i.e., we should
+switch our focus to OCR software (if necessary) and set about the process of
+getting all extant mathematics into the HDM.  Depending on the volunteer effort
+and how good our code actually is, this may take, say, 1-5 more years.  (Note
+that the progess of this phase would be accelerated if OCR tools are developed
+by a separate group earlier.)
+
+***  Note on conflicting timelines
+
+The "fraternal twin" of the HDM project,
+/[http://www.ma.utexas.edu/~jcorneli/j/ Deep Black]/, gives
+an alternate time estimate that is not so favorable.  This
+estimate (obtained by extrapolating from the ad hoc numbering
+I've used to describe Deep Black's progress over time) says
+that we'll get 10% of "the way there" in 3 years total, thus,
+"all the way" in 30 years.  This seems just too long to wait,
+so I guess I'm assuming that we'll pick up the pace at some
+point.  (BTW, in case it isn't obvious, the goal with Deep
+Black is to build a computer that can do math on human terms
+at or beyond the level of world's best human mathematician(s)
+-- thus, similar to Deep Blue from the world of Chess.)
+
+Hey: look at the genome project, and "believe".
+
+**  For FEM
+
+*** Short term - April 2005
+
+We hope to do a release within the month.  It would be best to get things set up
+so that the FEM was regenerated nightly.  (We are approaching that point.)
+After our initial release, associate editors should be called in to work on
+improving the content.
+
+We should also talk about how proceeds (if any) are going to be used.
+
+*** Short term - May 2005
+
+The above continues to be basically accurate, but change "release" to
+"prerelease", since before we do a real release, we will want to give the
+content a good once-over for quality and copyright things.  Prior to this
+prerelease, we need a few content changes (to satisfy FDL requirements), a few
+layout changes (marginpars, etc.), and a slight change to the build strategy
+(use .body and .header files for editor-modified contents).
+
+This could all be ready soon.  The prerelease may be useful as something to show
+to potential grant-givers or other potential sponsors.
+
+*  Todo
+
+Where applicable, add expected dates of completion or other relevant details.
+Connect in other ideas and feature requests - when do we expect these things to
+be completed?  What stands in our way?
+
+----
+[[file:the way of the asteroid.org][the way of the asteroid]]

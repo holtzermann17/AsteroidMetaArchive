@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+My default mode of viewing the objects on PM is to use the !TeX source.
+I don't use a graphical browser, so the HTML-with-images view isn't
+particularly useful for me, especially since the alt text used for the
+images is still not completely perfect.  I think it would be nice to
+be able to use links in a !TeX source view, specifically, in addition to
+the un-marked-up original !TeX view, I would like there to be a version
+that includes things like
+
+  But this is fairly \pmxref{ad hoc}{AdHoc}.
+
+Here "!AdHoc" would be a link to the object.
+
+----
+
+This is reasonable; I'd call it a "linked source" or "linked TeX" view. --[[file:akrowne.org][akrowne]] Fri Mar  4 17:59:17 UTC 2005
+
+----
+
+[[file:Feature Requests.org][Feature Requests]]

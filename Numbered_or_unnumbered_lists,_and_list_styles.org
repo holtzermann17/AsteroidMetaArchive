@@ -1,0 +1,52 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Do not use numbered lists when unnumbered would suffice (compare
+"properties of functions" article).
+
+: I would say that the numbering in this article serves a useful purpose in allowing one to refer to particular properties in another entry.  For instance, they allow one to say something precise like "by property 4 of functions, we have ..." or "(see property 4 in the entry properties of function)" as opposed to the more vague "by a property of functions, we have ..."  or "(see the entry properties of functions)" which makes the reader have to figure out exactly what property an author has in mind.    Also, when it comes to attaching a proof of these properties to an entry like this, one really needs the different statements to be numbered in order to refer to them in an intelligent fashion in the proof.
+
+: I do not say this merely to make trouble or play "devil's advocate" --- I speak from experience.  There have been several occasions where I have linked to an entry like this one and then filed a correction to the author exactly because I referred to an equation in an unnumbered list and had no good way of stating which equation I had in mind.  Therefore, I asked the author to number the equations.  While it is an accepted principle to only number equations which will be referred to, one must remember that referrences can happen in other entries and therfore equation numbers may be appropriate even when they might not seem necessary. --[[file:rspuzio.org][rspuzio]] 26 February 2005
+
+:: Maybe the issue in that particular article is one of "list style", not whether
+there are numbers.  If you compare the numbered list in [http://planetmath.org/encyclopedia/PeriodOfMapping.html PeriodOfMapping] (also in
+section 03E20) you'll see the formatting works fine.  The parentheses in the
+[http://planetmath.org/encyclopedia/PropertiesOfFunctions.html PropertiesOfFunctions] article are visually quite confusing, given the quantity
+of parens in the text.  I personally am not a fan of one-sided parens in general
+(too much Lisp experience for that).  It could be that this entry if rewritten
+with numbers and periods would be fine.  But in fact if you look in the source,
+you'll see that the author isn't even using a list environment:
+
+    1) $f(\bigcup \limits_{i \in I}{A_i}) = \bigcup \limits_{i \in I}{f(A_i)}$
+    
+    2) $f(\bigcap \limits_{i \in I}{A_i}) \subseteq \bigcap \limits_{i \in I}{f(A_i)}$
+
+:: etc.  That isn't good for business.  But I will continue to stand by my
+remark that an unnumbered list might be better in this case.  People can easily
+count things that number less that 10.  If someone says "by the fourth item in
+the list of properties of functions" that should (in theory) be just as
+effective as saying "item number 4 in properties of functions".  However, what
+would probably be /much better/ in this case would be to use a /description
+list/ environment or otherwise augment the list with labels or names for the
+properties, e.g. the first might be "set additivity" and the second might be
+"sigma algebra property" (or whatever this property is actually called; that
+isn't a very good name for it).  The basic problem with using numbered lists in
+this case is that there is nothing "canonical" about the numbering.  If we're
+talking here on the Wiki about properties of functions and we say "item 8 on the
+list" that isn't of much use.  If we say the "surjective function acting on an
+inverse image property," then, presto, things are working pretty well.  In
+addition to not being canonically ordered, the numbers almost make it look like
+this list is supposed to be a definition or something, whereas in fact I think
+they are just a grab-bag of properties.  Numbered lists work well for situations
+where the ordering is, or can be taken to be, canonical.  Otherwise we get into
+a situation where people "hardcode" references to things that can move around,
+and it is a real mess.  Here the list is not only non-canonical, but highly
+heterogeneous (items 9 and up are really on a different list).  So while I
+accept and respect your statements about clarity of references, I hope you'll
+understand why I continue to think this article has a problem.  Perhaps with
+nicely formatted numbered list/s/ (two of them) it would be better.  But even
+so, there are further improvements that could be made, and if these are made, I
+think it doesn't really matter whether the list is numbered or unnumbered.  A
+well-written description would probably render the numbering more or less
+superfluous: at any rate, numbers plus descriptions plus formatting would
+definitely serve to soothe my ire. --[[file:jcorneli.org][jcorneli]] Sat Feb 26 15:12:29 2005 UTC

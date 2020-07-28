@@ -1,0 +1,78 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Not long ago, I had a talk about PlanetMath with Fernando Gouvea, who is the
+editor of Focus, one of the MAA publications. He asked me to write an article
+(600 words) about PM for him. The following is the first draft of an article to
+be submitted for publication in FOCUS. I, [[file:alozano.org][alozano]], wrote this first draft,
+but I would very much like your input on this. Do not modify the text (for now),
+but include all your thoughts under the "discussion" header. I took some
+paragraphs from different sources (from the PM documentation) and changed it
+around so it makes sense as a unit. Also, *we need two screenshots of PlanetMath
+which are representative of how it looks and how it works* to be included along
+the article. I suggested to Aaron to coauthor this article with me, because it
+is obvious to me that he should be involved in this.
+
+** The Draft
+
+PlanetMath is a virtual community which aims to help make mathematical knowledge
+more accessible. The main feature is the "encyclopedia", whose entries are
+written (using !LaTeX) and reviewed by the members. PlanetMath was created in
+2001 by Aaron Krowne and Nathan Egge when another popular math reference site was
+taken after a copyright lawsuit. The goal was to create a
+comprehensive mathematical resource which was not susceptible to the same legal
+pitfalls: PlanetMath entries are contributed under the GNU Free Documentation
+License in order to preserve the rights of both the authors and readers in a
+sensible way (i.e. all pages on the site are copyrighted by their respective
+authors, but permission is granted to copy, distribute and/or modify these
+documents under the terms of the GNU FDL). PlanetMath is similar to Wikipedia in
+that the content forms a conceptual network of interlinked entries which is
+updated in real time as the collection changes.
+
+Anyone can become a member of PlanetMath (for free) and anyone (with basic !LaTeX
+skills) can create entries in the encyclopedia. Once the entry is added, the
+rest of the community evaluates the content. An effective corrections system is
+in place; any member can file three different types of corrections: (i) minor,
+(ii) errata, or (iii) suggestions for improving/expanding the entry. The author
+of the entry has then 6 weeks to take appropriate actions: accept the
+correction, transfer the entry or decline (with justification); otherwise, the
+entry becomes adoptable by other members. The entire corrections process is
+public, greatly enhancing accountability. The author can also choose to make the
+objects editable by anyone. Through collaborative effort, many entries have
+grown to be great expositions enhanced by the many different points of view of
+the participating members (e.g. *insert example here of an entry...*).
+
+The entries in PlanetMath are classified by the MSC subject system, and also as
+definition, theorem, proof, example, etc., which, together with the built-in
+search engine, make the collection easy to browse. For good examples of the full
+potential of PM look for: elliptic curve, quadratic surface, algebraic number
+theory, *let's find other good examples...*
+
+PlanetMath has been in existence now for about 4 years during which it has
+accumulated more than 4200 entries and more than 9000 members.  The quality of
+the entries varies greatly.  However this is intrinsic to the beauty of an
+ever-improving and evolving collection of knowledge. Most remarkable of all,
+PlanetMath has grown solely on voluntarily contributions (both financial and
+intellectual). The website attracts not only mathematicians but also students in
+search of help, teachers looking for new topics and all kinds of math
+enthusiasts who want to share their knowledge and discoveries in the mathematics
+world. Besides the "encyclopedia", the website also counts with a variety of
+widely used forums where the members can pose questions and discuss interesting
+topics. Moreover, there are many other exciting projects undertaken by members,
+mathematical and pedagogical (e.g. a book form of the encyclopedia is under
+way). In this sense, we think PlanetMath is extremely valuable, both as a
+resource to the mathematician and a place to promote mathematics and math
+education, thinking and writing.
+
+Lastly, the authors of this note would like to encourage all MAA members to
+participate and become active members of the PlanetMath virtual community. **We
+need your help!** As the encyclopedia matures, we need all forms of your
+support, especially any kind of funding, your input, comments, and mathematical
+additions, which will make PlanetMath an increasingly better source for
+generations of mathematicians to come. --[[file:alozano.org][alozano]] and [[file:akrowne.org][akrowne]]
+
+* Discussion
+
+See [[file:Discussion of Article for FOCUS.org][Discussion of Article for FOCUS]].
+
+BTW, the article should probably mention http://planetphysics.org. --[[file:jcorneli.org][jcorneli]]

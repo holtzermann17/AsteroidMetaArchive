@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * Check out this [[file:Demo Anchor.org][Demo Anchor]].
+ * a 
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a 
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+ * a
+
+[::Demo Anchor]
+
+ 1. works OK, subject to the need to reload after pressing save, as described here: http://oddmuse.org/wiki/Permanent_Anchors

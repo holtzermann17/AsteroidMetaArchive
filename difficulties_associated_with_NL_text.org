@@ -1,0 +1,62 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I have a question about the goals of the parser. (An elementary one, I'm sure,
+but I'm new here...) It is clear that any mathematical text written by a human
+for a human will not be easily parsed, even if in the form of latex. The actual
+latex mathematics (that is, whatever is bracketed between $ signs) should be
+parseable, but as soon as any amount of NL enters the picture this is no longer
+true in any absolute sense. By then it will be necessary to rely on heuristics,
+such as "the definiendum is usually in italics" or "when we encounter the words
+'belongs to' we have a case of set membership". Naturally these heuristics will
+fail every now and then (it is difficult to estimate how often), and in these
+cases we will end up with incorrect mathematics. The only away around this, as I
+see it, is for actual people to supervise the parsing process. I.e., someone
+should check every parsed text and see whether it corresponds to the
+output. With this in mind, is it productive to view the parser as a full-blown
+parser, or should it be considered an aid to a human translator? I feel these
+are important considerations to have in mind prior to designing the guts of the
+parsing routine.
+
+--[[file:shargestam.org][shargestam]] Sat 18 Jun 2005
+
+Good questions.  Even within the $$'s there is sometimes ambiguity; just for
+example, how do you /know/ that /(f(g))(x)/ is function application and not
+multiplication?  Well, you don't, at least not for purely formal reasons, at least not without some very specific context.  So
+even here some heuristics will probably come in handy.  Furthermore, 
+the $$ parts are /almost always/ given meaning only by their NL context.  For
+example, if I say /G/, you don't /know/ that I'm talking about a group (even
+if that's your first guess): G could be equal to Bill Clinton or to the set of
+all sets that contain themselves as an element or to 6, or I could just be
+talking about the symbol "G".  So - to answer your question, the output of the
+parser will /absolutely/ need to be checked, at least at first.  Eventually
+the AI system should be smart enough to take over some of the checking; indeed,
+that's sort of what a "semantic parser" is - an AI hooked up to a syntactic
+parser.  Now, it may be calming to think about the large number of NL
+expressions that are /idiomatic/.  There are lots.  Surely not enough to get
+by in general, but many "well written" texts will actually turn out to be mostly
+"formal" (from a linguistic point of view).  At least, that's my hypothesis.  You
+should take a look at the UT CS thesis by Don Simon
+(http://www.ma.utexas.edu/~jcorneli/b/Simon/ and also linked to from the
+[[file:HDM-related things to check out|HDM-related.org][HDM-related things to check out|HDM-related]] page).  You might want to make a wiki
+page about this thesis.  Anyway the point of it is that he got reasonably far
+with /one/ book as his source of inputs.  There is also a paper by Suzuki 
+(the earlier of the two papers provided [http://www.inftyproject.org/articles_mkm.html here])
+that, while again only giving partial results, is somewhat encouraging.  (Again, a wiki
+page about it would probably be good.)  As for the idea of making the parser an aid
+to a human - that seems like an extreme measure, but in some cases it may be the best
+way to go.  Ideally we would make a stand-alone parser, but in some cases (like
+the flowery language of Guillemin and Pollack) most parsers are gonna croak for the
+foreseeable mid-range future.  Eventually we (of course) want something like full
+NLP, but that's considered to be "AI hard" so we hold off for a while.
+In the mean time, humans will be involved, but please try to think of them as the
+most expensive part of the toolchain.  Since this includes human programming time, you
+have to balance!  But certainly one of the best ways for the AI system to grow (mid-term)
+is by having users correct its behavior.  So: the answer to your question is 
+sort of a tentative yes. HTH! 
+
+--[[file:jcorneli.org][jcorneli]] Sun Jun 19 00:47:48 2005 UTC
+
+
+Note (also, in particular) that "someone" in the shargestam comment could
+be a program, not a human.  --[[file:jcorneli.org][jcorneli]]

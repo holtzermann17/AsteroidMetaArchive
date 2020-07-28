@@ -1,0 +1,41 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the main reasons for writing [[file:template utilities.org][template utilities]] was to provide
+routines for verifying proofs.  As an illustration that they accomplish this
+intended purpose, we shall present a verification of the first few theorems form
+the [http://us.metamath.org/mpegif/mmtheorems.html metamath list of theorems].
+The names of the results are taken fron the metamath page.
+
+[[file:using template utilities to check proofs - axioms | axioms.org][using template utilities to check proofs - axioms | axioms]]
+
+[[file:using template utilities to check proofs - ali | ali.org][using template utilities to check proofs - ali | ali]]
+
+[[file:using template utilities to check proofs - a2i | a2i.org][using template utilities to check proofs - a2i | a2i]]
+
+[[file:using template utilities to check proofs - id | id.org][using template utilities to check proofs - id | id]]
+
+[[file:using template utilities to check proofs - id1 | id1.org][using template utilities to check proofs - id1 | id1]]
+
+[[file:using template utilities to check proofs - idd | idd.org][using template utilities to check proofs - idd | idd]]
+
+* Discussion
+
+Let's talk about what you'd like to have done in terms of hooking this thing up
+to the (a) parser!  I'll need the input sentences and output sentences and
+potentially a little narration on "why" (i.e. why the input goes to that
+particular output).  I assume that after the parse is generated, you can take
+the leadership on code to run the checker (maybe you already have some code like
+this).  I'm happy to help with that too, as needed.
+
+(I say maybe "a parser" here because the metamath language might be sort of
+specialized, and might require some slightly different approaches than the one
+I've been working on, even though the one I've been working on is "supposed to
+be" general.)
+
+Maybe we can get this metamath-checking system running w/i about a week?  I
+think I owe the parser some attention after all the time I've been spending on
+the scholium system.  --[[file:jcorneli.org][jcorneli]] Sun May 01 19:00:29 2005 UTC
+
+First, I will automate this.  That will not take too long.  Then it will be easier to see what the output and input will look like.  Basically, it will be the same sort of theorem environment we have been envisioning for h-code all along.  Also, since it is permitted to do so, I will dig into the relevant !TeX file and post the relevant portion here.
+--[[file:rspuzio.org][rspuzio]] 1 May 2005

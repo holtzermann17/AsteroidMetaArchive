@@ -1,0 +1,123 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[[file:akrowne.org][akrowne]] has [[file:Asteroid Bulletin for the week of May 1 2005|previously.org][Asteroid Bulletin for the week of May 1 2005|previously]]
+made it clear that he doesn't like a GNU-only version of free-as-in-freedom,
+and, overall, [[file:jcorneli|I.org][jcorneli|I]] agree with this point of view.
+
+Not wanting to start a flamewar -- I would like to have some discussion
+about the pros and cons of various licenses.
+
+To get this started, my preference for my own work is to use the GPL or the FDL
+for things I want to get feedback on.  If someone improves my GPL
+or FDL work, I'm reasonably sure I'll get wind of it, and stand to learn something.
+I'm also attracted by the public domain for things that I am not interested
+in tracking.  In terms of "politically motivated" sentiments (capitalist overthrow, social justice, and whatnot), I think
+that the public domain has at least as much potential as the GPL domain,
+but the latter is more convenient for the short term.  (These remarks
+only really apply to codebases and codegenerators of significant quality and usefulness;
+for other things, the license may not be all that important.)
+
+BUT - there are plenty of other licenses (including BSD and Creative
+Commons) that I don't really understand at all.  Maybe others can say
+what they think the pros and cons of these licenses are, and give
+some other feedback on the GNU licenses.
+
+* Three Issues
+
+Here are three issues which might be worth considering with respect to free
+license agreements:
+
+** Compatibility
+
+While the aim of free licenses is to make a work freely available and keep it
+free, unfortunately different free licenses can conflict with each other and
+thereby unintentionally work against the goal they were designed for.  A good
+example is the creative commons license which states "you may distribute the
+resulting work only under a license identical to this one".  If a math book were
+released under such a license, we would not be able to use it for PM or HDM
+because those projects are released under the GNU license, not the Creative
+Commons license.
+
+I feel this is unfortunate considering that both the GNU license and the
+Creative Commons license were drafted with the same ends in mind.  Moreover,
+this problem could be avoided rather easily with some forethought.  Instead of
+"license identical to this one", one could say "license which grants the public
+the following rights:" and list the rights which the license allows.  This would
+convey the same intent as the original license (unless whoever wrote it was
+perverse enough to think that everyone should only use that particular license
+and no other) while allowing reuse under other licenses (such as GNU licenses)
+which have the same aim even if they are worded differently and include slightly
+different provisions.
+
+***  Comments
+
+I agree with your motivation here, and in these comments, I'm going to talk
+about how various distinct licenses that share similar ends could be made
+compatible.
+
+But I'll also talk about some of the challenges associated with trying to make
+two licenses compatible, and why it seems, at least at first, that maybe even
+wery similar licenses can't be made compatible.
+
+Some "rights" read as "if...then" statements -- including the copyleft clause,
+that basically says "if you want to redistribute a modified version, then you
+can, but you must do certain things, like provide source code and make this
+offer, subject to the same demand, to all subsequent down-stream users, and
+furthermore, you must also impose no additional demands on down-stream users."
+
+Clearly, one /can/ word this as a list of granted rights: "you have these
+rights..." where each right is an ordered pair of actions and conditions on
+those actions (so, really, just a fancifed action).  
+
+But if the allowed actions all demand the release of the code under the same
+license (in particular, release with all the same rights, and no other
+conditions), then it seems like we can't really avoid license lock-in, even from
+licenses that are very similar in spirit.  The only conceivable ways for two
+different licenses like this to be mutually compatible is for them to either be
+semantically equivalent, or for each to explicitly allow for relicensing under
+the other - which, really just means that they are one license (a hypertextual
+license, if you wish).
+
+Since it is somewhat unlikely that two distinct licenses would be semantically
+equivalent, even if very similar in motivation, I don't think that case will
+come up much.  The only remaining option (at least of the ones I've noticed so
+far) is for the similar licenses to "assimilate" one another by explicitly
+allowing relicensing.  One might can imagine that while, not impossible, there
+are some challenges, including egos but also some fairly substantial differences
+even in similarly-spirited licenses.
+
+I can't imagine the GPL or FDL ever saying "or you can just use the creative
+commons by-sa license instead" because that license doesn't include the stuff
+about source code!  Similarly, I have a somewhat hard time imagining a future
+version of the CC by-sa license saying "or you can just use one of the GNU
+licenses instead" -- although I think that is somewhat more believable, since
+the GNU licenses /include/ all the restrictions of the CC by-sa license (and
+more).  But still, I can imagine that some CC people might not like this change,
+or would not want to include that GNU-friendly clause, because they don't like
+the idea of downstream users adding more requirements.
+
+(But BSD is GPL-compatible and not too different from the CC by-sa license, so
+maybe CC by-sa is actually GPL-compatible already?)
+
+In general, it seems like moving from a "less restrictive" to a "more
+restrictive" license should work (assuming less and more are taken in the sense
+of inclusion).  But in some cases, it isn't 100% clear (at least to me) when a
+given pair of licenses actually bears this relationship to one another.
+--[[file:jcorneli.org][jcorneli]] Thu May 12 17:45:55 2005 UTC
+
+
+**  Avoiding Red Tape == 
+
+In crafting provisions to ensure freedom of use and reuse, there is the
+possibility that the conditions one imposes on users can become burdensome and
+even discourage people from using a certain work because doing so would mean
+having to jump through various bureaucratic hoops.
+
+**  Sunset Clauses
+
+(I will finish this tomorrow or so.)  --[[file:rspuzio.org][rspuzio]]
+
+
+----
+[[file:Discussions.org][Discussions]]

@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In addition to [[file:email posting to forums.org][email posting to forums]], this seems like an important
+step towards making PM useful to people who prefer email to web forums.
+
+The idea here is to enable people to specify certain keywords and
+phrases that they will get email notices about (e.g. "number theory"
+or "prime number" or "statistics").  Similarly, one might always wish
+to get email notices when certain people (aka "buddies") post, or when posts occur
+in certain parts of the site (e.g. attachments to anything in the 38-XX
+range).
+
+In addition to helping the email-disposed crowd, measures like these
+would help /anyone/ avoid "information overload", and encourage more
+people to use the site -- because they know that they will be getting
+information they want (and less information they aren't interested in).
+
+/Note:/ these suggestions come from a mathematician friend, and aren't
+original to me - though they have my strong endorsement.  I think that
+tools like this would be pretty important to uptake of PM among research
+mathematicians. --[[file:jcorneli.org][jcorneli]]

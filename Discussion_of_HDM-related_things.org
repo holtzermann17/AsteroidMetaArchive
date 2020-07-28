@@ -1,0 +1,98 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: A number of academic projects are pursuing HDM-like goals and questions.  It is
+not wise to ignore prior work, and to begin building anew something that has
+already been built, or even half-built by others.  At a minimum, one should
+begin by making a survey of the subject field and of related projects.  One
+needs to decide which elements of prior work to incorporate, which to reject and
+why!
+
+I don't think anyone here is "ignoring prior work", although perhaps you thought
+we were.  Please take a look at [[file:HDM-related things to check out.org][HDM-related things to check out]].  This "survey" is very far from complete, of
+course.  Eventually we're likely to need a Hyperreal Dictionary of Computer Math
+Projects (ha ha) in order to sort it all out and guide and orient ourselves
+towards the copious quantity of work in this area.  I.e., I recognize that we
+could (at least in theory) do a much better job in the area you are talking
+about.  For now Freek's guide (see link immediately below) is a good start.  One
+issue you have to bear in mind is that HDM is actually unlike many other
+computer/math projects: which is to say that while many projects will have
+"HDM-like" goals, HDM tends to have goals that either go beyond or diverge from
+these other projects.  This is only natural.  But I wish to be clear on the fact
+that HDM is rather unlike Mizar (or Isabelle) in one particularly key respect:
+we do not hope to "reconstruct" the mathematical vernacular.  If anything, I'd
+say that our mandate is to /deconstruct/ it.  You might say: OK, so why bother
+with [[file:hcode.org][hcode]]?  Well, hcode is first and foremost a language for hackers to use
+in pursuing this goal.  Hcode is, in some sense, a stopgap (or at least
+intermediate) measure, since HDM should eventually "work" just fine with natural
+language.  But in addition, we're trying to design hcode in such a way that
+day-to-day mathematicians /can/ easily and beneficially use it, without too
+much of a learning curve.  (I've heard that Mizar requires a month to learn how
+to use.)  A certain degree of /uptake/ among average mathematicians will be
+important for the HDM project.  Mizar /et al./s uptake is low, probably in
+part because it is not free software - but even similar languages and programmes
+aren't very popular in mainstream mathematics.  My sense is that this is because
+they take a formal machine-oriented approach and scorn the human and social
+approaches.  Presumably I'm unfairly biased; maybe you or someone else can
+provide more context describing the way in which other projects concern
+themselves with these matters.  Just to sum up: I would say that not everyone
+with "HDM-like" goals shares our sense of the proper or best means to achieve
+these goals.  And to give you a couple of take-home points: first, GNU did
+exactly the "unwise" thing you are referring above with regard to UNIX;
+sometimes there are good reasons to rebuild.  Second, it is somewhat unrealistic
+to suggest that a project "begin" with a review of the literature (I'm not sure
+if this is actually what you were suggesting or not); a more realistic approach
+is to make the literature review an ongoing part of the research work, and I
+certainly subscribe to this approach.  It is somewhat interesting that I just
+created this wiki version of the "related" page the day before you posted the above comment.
+
+Anyway, thanks for the discussion (which I've obviously found provocative even
+though I'm not sure that if was your intent or not); and also for your
+contributed summaries about Mizar and Isabelle - if you have other points to
+make about this matter I'd be happy to discuss them, and of course, further
+situation of HDM in its social context can be fruitfully added to this page.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 18 23:24:33 2005 UTC
+
+As far as MIZAR goes, I would say that, whilst our formal language is modelled
+on LISP, their formal language is built along the lines of FORTRAN, BASIC,
+PASCAL and C.  While both projects are pursuing the same goal of expressing
+mathematics in a computer-friendly format which is also comprehensible to humans
+and teaching compuers to understand math, they go about this same goal in
+fundamentally different ways.
+
+Once HDM gets a bit further along, it will certainly be interesting to compare
+and contrast the two projects and determine the relative strengths and
+weaknesses of the two approaches.  Also, at some time, it would be nice to write
+compilers to translate between MIZAR and h-code.  Already a project to translate
+metamath into h-code is in the works.  
+
+--[[file:rspuzio.org][rspuzio]] 18 June 2005
+
+The language isn't really all that important, other than the fact that LISP is
+easier to use (IMHO!)... and while we share the one goal you mentioned (with
+perhaps somewhat different ideas about what it means), HDM also has other goals
+that are of comparable importance.  Indeed, in the QED manifesto (which I think
+is safe to say was the direct inspiration for the Mizar project), I think there
+is very little emphasis on social transformation.  (It would be fun to write a
+full critique.)  I don't want to come off as an uninformed blowhard, so bear in
+mind that that's my impression of the manifesto, not of the Mizar project or
+their code.  But just the fact that they aren't doing free software means that
+the two projects are somewhat incompatible.  Simply translating their theorems
+etc., if these theorems are not in the public domain (or, potentially, otherwise
+available to us) is not going to be legal, so a Mizar-to-Hcode
+compiler/translator would only be of limited use (unless I've missed something
+about the copyright status of their works).  If they've done copyright
+assignments and so on, we could, at some point, canvas them for
+free-software-like rights in their work.  But I'm more worried about getting our
+program off the ground.  Of course, as per usual, we're free to use any of their
+ideas (as expressed in their documentation in particular) that we find useful.
+Metamath is much more "our style" from a licensing point of view.  I have no
+idea about the quality; but Metamath is mostly the work of one person, which
+could mean some advantages or disadvantages (?) or could be inconsequential.
+
+--[[file:jcorneli.org][jcorneli]] Sun Jun 19 18:01:17 2005 UTC
+
+
+----
+[[file:HDM-related things to check out.org][HDM-related things to check out]]

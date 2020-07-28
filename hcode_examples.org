@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This section contains examples of mathematical writing along with their
+transcription to h-code.
+
+ * [[file:Let G be a group.org][Let G be a group]] (translating simple /sentences/ into hcode)
+ * [[file:a dozen proofs.org][a dozen proofs]] (examples showing how to write /proofs/ in hcode)
+ * [[file:collection of sketches in hcode.org][collection of sketches in hcode]] (a later page, attempting to sketch solutions to "whole example problems")
+
+----
+[[file:hcode.org][hcode]]

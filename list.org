@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Let /S/ be a set.  Then we may define the concept of a *list constructed from S* as follows:
+
+ 1. The empty set is a list constructed from /S/.
+
+ 1. Every tuplet whose items are elements of /S/ or lists constructed from /S/ is a list constructed from /S/.
+
+ 1. The only lists constructed from /S/ are those which are required by the foregoing two conditions.
+
+More formally, we may restate condition 3 as follows.
+
+: 3. If /T/ is a superset of /S/ which is closed under forming tuplets, then every list constructed from /S/ is an element of /T/.
+
+
+** Remarks
+
+This definition may be seen as a generalization of the Peano axioms for number theory.  However now, instead of simply taking the empty set (zero) as our starting point, we also allow elements of the set /S/.  Also, we employ the more general operation of forming tuplets as opposed to the simpler successor operation.  For this reson, lists may be seen as a more general sort of counter than integers.  This remark explains why the LISP programming language, which is based on lists is more flexible than most other programming languages, which are based on integers.
+
+[[file:Discussion of lists.org][Discussion of lists]]
+
+Back to [[file:h-code.org][h-code]]

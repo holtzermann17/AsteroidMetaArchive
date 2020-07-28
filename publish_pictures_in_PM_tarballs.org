@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Apparently postscript and eps figures aren't being included
+in planetmath tarballs.  Fix this, maybe put them in their
+own tarballs, and generate a seperate tex-only tarball. --[[file:jcorneli.org][jcorneli]] Sun Jan 30 11:45:33 2005

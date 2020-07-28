@@ -1,0 +1,70 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+With RSS support done, PM might some day have an "entry of the day" as suggested by Aaron [http://aux.planetmath.org/doc/rss.html].
+Once this is implemented, we should have a steady supply of entries that
+are of suitable for this purpose. Suitable entries should probably:
+ * be non-technical and accessable
+ * have pictures (?)
+ * mathematically "make sense" or be suprising
+ * contain historical information about well known facts
+
+*  Suggestions
+Please add suggestions below with a link and a short description of the entry.
+
+ * Gelfond's theorem [http://planetmath.org/encyclopedia/3952.html], when
+is a^b transcendental?
+ * Hogatt's theorem [http://planetmath.org/encyclopedia/HogattTheorem.html],
+every positive integer can be expressed as a sum of distinct Fibonacci numbers.
+ * Cantor's function [http://planetmath.org/encyclopedia/CantorFunction.html],
+a famous pathological function
+ * n-th root of 2 is irrational (proof using Fermat's theorem)
+[http://planetmath.org/encyclopedia/NthRootOf2IsIrrationalForNge3ProofUsingFermatsLastTheorem.html]
+What do we mean by "proof"?
+ * Bourbaki, [http://planetmath.org/encyclopedia/NicolasBourbaki.html], biography
+ * Lemma, http://planetmath.org/encyclopedia/Lemma.html, What does lemma mean?
+
+
+
+* Discussion
+
+I think this is a great idea.  I've been an avid consumer of
+word-of-the-day feeds at various points in my life, this would be
+similarly interesting.  One meta-suggestion is to make the
+entry-of-the-day actually be a mathematical object or fact (which
+cause Bourbaki and Lemma to go off of the list).  The reason for this
+suggestion is that I think many people who want to learn mathematics
+won't be interested in the historical or "encyclopedic" entries.
+(Of course, I do think that as entries in the encyclopedia,
+these sorts of things are great!) 
+
+If we get this service up and running, I think we should advertize
+it with youngmath.net and maybe elsewhere.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I was actually just thinking of generating it randomly!  But you rightly
+observe that picking it with intent would increase the impact of the service.
+
+Of course, we'd have to figure out how this would work, and the labor would
+have to be supplied and organized to make it happen.  We wouldn't want it to
+suffer the same fate as our other "feature" initiatives.
+
+I'm realizing currently, however, that I'm not sure I even want an
+editorially-selected entry-of-the-day.  My own preference is more to have
+a random tour of the collection.  
+
+Perhaps we could do both?
+
+--[[file:akrowne.org][akrowne]] Wed Jan 18 01:01:16 UTC 2006
+
+If we could make the entry selected by vote, randomizing ties, and
+forbidding repeats for a number of years, we'd have the best of all
+worlds... but of course, this would take some coding work! --[[file:jcorneli.org][jcorneli]]
+
+On editorial vs. random selection, I think the question is: what is the purpose of the entry of the day? If the goal is to improve entries of PM, it would be good have one random entry per day under scrutiny by everyone. This would be very different from the random button since everyone would know that everyone else is reading the same entry. Thus there would be a motivation to have some comment on it. At best, it would open up a discussion that would benefit the entry. 
+
+On the other hand, if the goal is to promote mathematical understanding, then IMO it should be selected in some way. The risk of getting too esoteric entries is just too high. After a few of these, the casual reader is most likely to unsubscribe. If we would have entry ratings, then we could just randomly select entries that are good.
+
+In any case,  the entry should also be advertised on the front page.  
+-- [[file:matte.org][matte]]

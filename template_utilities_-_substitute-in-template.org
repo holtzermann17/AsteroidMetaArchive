@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(substitute-in-template assignments template)/
+
+ *Input:* an assignment list /assignments/ and a template /template/
+
+ *Output:* a template or /nil/
+
+ *Description:*  This function creates a new template with fewer placeholders than were to be found in the original template by replacing whatever occurrences of the placeholders to be found in /assignments/ by their replacements texts and removing them from the list of placeholders.
+
+ *Dependencies:* [[file:template utilities - substitute-assignment | substitute-assignment .org][template utilities - substitute-assignment | substitute-assignment ]]
+
+ *Listing:* 
+
+ (defun substitute-in-template (assignments template)
+   (cond ((null assignments) nil)
+         ((equal assignments t) template)
+         ((null (cdr assignments))
+            (substitute-assignment (car assignments)
+                                    template))
+         (t (substitute-in-template
+              (cdr assignments)
+              (substitute-assignment (car assignments)
+                                    template)))))
+
+ *Discussion:* We call /substitute-assignment/ recursively to substitute one assignment at a time until there are no assignments left.  Remember that, when it comes to assignment lists, we have the convention that /t/ means no assignments left and /nil/ means inconsistency so we have to adjust our definition accordingly.
+
+ *Examples:*
+
+ ; (substitute-in-template nil '((a b) (a b (a c))))
+ ; nil
+
+ ; (substitute-in-template t '((a b) (a b (a c))))
+ ; ((a b) (a b (a c)))
+
+ ; (substitute-in-template '((a x)) '((a b) (a b (a c))))
+ ; ((b) (x b (x c)))
+
+ ; (substitute-in-template '((a x) (b (x y)) (c y)) '((a b) (a b (a c))))
+ ; (nil (x (x y) (x c)))
+
+ *Navigation:*
+
+Back to 
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

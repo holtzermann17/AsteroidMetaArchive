@@ -1,0 +1,33 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+At present there are four main areas of the project; some can be found
+in [[file:HDM CVS.org][HDM CVS]], but please take the time to read the introductions here:
+
+; [[file:h-code.org][h-code]] : this is the LISP-inspired shorthand that we use to write basic
+  mathematical objects, like definitions, theorems, and proofs.
+
+; [[file:hdm's formal system.org][hdm's formal system]] : We want to have a flexible system for doing formal
+  proofs.  (The [[file:metamath.org][metamath]] project provides a free system that we may crib
+  some things from, but we'll most likely be rolling our own system --
+  for a variety of good and interesting reasons!)
+
+; [[file:hdm's ai system.org][hdm's ai system]] : We need something to hold everything together, i.e., we
+  want a frame-based knowledge representation system or something of the sort.
+  Formal representations of mathematical structures are just part of the
+  picture, we also need to know, more informally, how the different bits and
+  pieces of mathematics relate to one another.  We will want to incorporate
+  fancy reasoning techniques that take both formal and informal facts into
+  account.  This system has its beginnings in our [[file:scholium system.org][scholium system]] (otherwise
+  known as [[file:Arxana.org][Arxana]]).  This system goes beyond the call of duty insofar as
+  it is meant to provide a useful and generally applicable document
+  interface.
+
+; [[file:hdm's parsing system.org][hdm's parsing system]] : Eventually we want to be able to put a piece of
+  unedited !LaTeX code written by an average mathematician into the system and
+  get a computer-friendly representation of what was said.  We are a long way
+  from that; this kind of parsing requires some AI to work well.  At this point
+  we are working on much simpler parsing tools, for example a system that will
+  take in the math "between dollar signs" in !LaTeX and return an s-exp
+  representation of what was said.

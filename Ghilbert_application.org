@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A very rough prototype of the Ghilbert application is now checked into the Ghilbert darcs repository. A screenshot is posted below.
+
+[[file:image:Ghilbert app screenshot.org][image:Ghilbert app screenshot]]
+
+The top pane is essentially a generic text editor. The bottom pane interactively shows the contents of the proof stack, typeset using the algorithms discussed in [[file:Ghilbert syntax plans.org][Ghilbert syntax plans]].
+
+The app is written in Python with a [http://raph.levien.com/garden/x3/ GUI layer] in Pyrex. Right now, only the Gtk+ port works, but Carbon and Win32 ports are planned. I have not yet posted a recipe for building the app. I will certainly do so when I make a real release, and may do so before then if there is sufficient interest.
+
+For the math display, I created Unicode [http://ghilbert.org/repo/ghilbert/font/ fonts] from !TeX Type1 originals, using !FontForge. The generating scripts are also in the darcs repository.

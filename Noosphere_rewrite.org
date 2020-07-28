@@ -1,0 +1,257 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is about the pending [[file:Noosphere.org][Noosphere]] rewrite.  Some related
+discussion (mainly of "nitty gritty details") is already taking
+place at  [[file:Noösphere Niggles.org][Noösphere Niggles]].
+
+*  Ideas
+
+I would like it if all of the ideas we've been kicking around on the wiki are
+considered.  The rewrite could come at a great time -- the perfect chance for us
+to "Apollonize" our "Dionysian" ideas.  
+
+In particular... I hope serious consideration will be given to:
+
+ * [[file:nested noosphere instances.org][nested noosphere instances]]
+ * [[file:A scholium-based document model|the scholium system.org][A scholium-based document model|the scholium system]]
+ * [[file:the relative merits of wiki and other workflow management media|better workflow management tools.org][the relative merits of wiki and other workflow management media|better workflow management tools]]
+ * [[file:literate programming.org][literate programming]]
+ * (probably more...)
+
+as well as all of the relevant [[file:Feature Requests.org][Feature Requests]].  Even the idea
+about [[thoughts on the viability of free-software style
+business|for-pay question answering]] should be considered.  It may be
+that some or all of these features should be developed, but not as
+part of Noosphere proper, rather, as modules that will fit into
+Noosphere.  In this case, good support for outside modules should be
+built into the system. --[[file:jcorneli.org][jcorneli]] Sat Apr 09 15:57:57 2005 UTC
+
+Has anybody used [[file:Ruby on Rails.org][Ruby on Rails]], http://www.rubyonrails.org .  I'm
+going to look into it, no offense against python or perl, but I think
+they are not modular or extensible enough. Reuse Reuse ... Reuse ...
+
+--[[file:bloftin.org][bloftin]]
+
+* Solutions
+
+ * [[file:Ruby on Rails.org][Ruby on Rails]]
+
+
+* Timeline
+
+Personally, I have no idea, but I think that people in the know should
+update the [[file:Plans.org][Plans]] section of the wiki. --[[file:jcorneli.org][jcorneli]] Sat Apr 09 15:57:55 2005 UTC
+
+
+* People
+
+: "/The harvest is plenty but the laborers are few./"
+:: -- The Gospel according to Matthew, ch. 9, v. 37
+:: -- The Gospel according to Luke ch. 10, v. 2
+
+To me, a more serious problem than planning a timeline is finding
+people to work on this project.  As we all know all to well, there are
+only a handful of us who are involved in the activities discussed
+here, and only a subset of that handful has contributed to Noosphere.
+Moreover, all of us seem rather busy with a variety of activities, so
+we really need to interest more people in participating if a project
+of the sort outlined above is to be realistic in the foreseeable
+future.
+
+This topic of needing to get more people aboard has come up before.  I
+have been thinking about it, but still do not have a better answer
+than to keep thinking about it and, in the meanwhile, continue with
+what we have been doing to publicize our activities.  However, in this
+case, we maybe should think of Planet Math contributors as a potential
+contributors to the code as well. To make this feasible, I think it
+would also help to put some thought and effort into making it easier
+for people to contribute.  In particular, I have in mind trying to
+make things easier for people who are not that well-versed in
+programming, specifically PERL programming.
+
+One thing that would help and not require much effort is providing
+interested people with background information.  Surely, there are a
+lot of good textbooks, manuals, tutorials, faq's, and the like about
+PERL out there; it would be nice to have an short annotated
+bibliography to which we could refer the interested beginner.
+Likewise, I suppose that there is some other background material which
+might be necessary.  I furthermore suppose that much of that material
+is to be found in Aaron's thesis and the research articles referenced
+therein, so it might suffice to simply add these to the bibliography.
+
+Another thing that would help is to make hacking noosphere as user
+friendly as possible.  As I see it, if one can lower the learning
+curve, the probability of getting users (i.e. Planet Math
+contributors) to contribute to the code as well goes up.  If the laws
+of physics apply here, the probability of penetrating the barrier
+depends on the barrier height exponentially, so even small
+improvements can effect appreciable improvements.
+
+Also, I think that literate programming is a great way of making
+programming more user-friendly.  By explaining what is being done in
+humanese as well as in computerese, it becomes much easier for people
+to follow the listing of a program and hence more likely for them to
+become interested in contributing to be program or even pointing out
+improvements like: "Wait a moment here!  Why are you wasting valuable
+CPU time here initializing these variables when they are going to be
+initialized anyway by the routine which first uses them?"  As Knuth
+once put it, /!TeX the Program/ can be used as enjoyable bedtime
+reading.  Obviously, this is only true for technically minded readers,
+but these are exactly the sort of people who are interested in Planet
+Math.
+
+Ultimately, I would like to see noosphere become like emacs in that it
+can document its own code and that one can use noosphere to write
+noosphere.  Naturally, this is all a long term goal.  Adding the
+documentation necessarry to make the program literate is a lot of
+work, so to some extent, this is a chicken-and-egg dilemma.  I think
+that the way out is to do the easily done pieces first, to consider
+hacks and shortcuts that will allow one to have a reasonable
+approxiamtion to the intended functionality in the meanwhile, and to
+perhaps put "making programming noosphere more user friendly" high on
+the list of priorities in the hope that, when we get to the
+implementing the extra features, there will be more uf us to do the
+implementing.  --[[file:rspuzio.org][rspuzio]] 9 April 2005
+
+: FYI, it looks like the rewrite will be in Python, not Perl, at least
+as long as Logan is in charge.  My attitude is basically one of
+"anything but Perl".  --[[file:akrowne.org][akrowne]] Wed Apr 13 13:28:29 UTC 2005
+
+* Version management and discussion
+
+People (logan) actually working on the project can of course do whatever they
+want... but after taking a look at the trac page (see link at  [[file:Noosphere.org][Noosphere]])
+I would like to ask, unless there are pressing reasons to do otherwise,
+that the discussion components take place here on AM.  If it turns out that
+the discussion is too overwhelming, then maybe we should consider moving it
+elsewhere.  But for now, it seems like we could use more discussion here,
+and it also seems like the various ideas that we're kicking around on AM
+will help inspire work on Neosphere.
+--[[file:jcorneli.org][jcorneli]] Wed Apr 13 05:13:29 2005 UTC
+
+* Project status?
+
+At the PM summit, Aaron said he'd ping Logan to see what the status of
+this project is looking like from its (candidate) lead developer's
+point of view.  Any result on that, Aaron (or Logan?)?
+
+Not to go around passing the buck, but Ocat's motion for a 
+[[file:HDM Feasibility Study discussion|feasibility study.org][HDM Feasibility Study discussion|feasibility study]] for the HDM project
+makes me think that it would also be nice to have a full-fledged
+design document for the Noosphere rewrite.  I'd be happy to contribute
+to this, but we'd probably need a pretty active developer team to make
+that a well-timed contribution. --[[file:jcorneli.org][jcorneli]]
+
+Such a feasibility study might prove useful to show to potential
+contributors when we go door-to-door asking for
+donations. --[[file:rspuzio.org][rspuzio]]
+
+Guess what --- that time is arrived! --[[file:rspuzio.org][rspuzio]] 5 March 2006
+
+What do you mean? --[[file:jcorneli.org][jcorneli]]
+
+The current dicusions surrounding the whitepeper --- now we are getting
+around to the business of writing a document to show contributors when
+we go knocking from door to door as opposed to simply talking with Ocat
+about doing something like this.  ---[[file:rspuzio.org][rspuzio]]
+
+* Slashcode comparisons
+
+This is simply a page that talks about the implementation of the
+Slashcode in hope of learning something for the rewrite.
+
+[[file:Slashcode.org][Slashcode]]
+
+* Relation to Scholium System
+
+Now that, thanks to Joe's hard work over the past few months, the
+scholium system is a reality, I think we need to consider the relation
+of noosphere to arxana.  In a sense, one could even consider arxana as
+a noosphere rewrite since a main reason Joe wrote it was to have an
+improved collaboration platform which did not have some of the
+shortcomings of noosphere and he was heavily influenced by Noosphere
+and PlanetMath in the design of Arxana.
+
+At the very least, it would be nice to have compatibility --- for
+instance, the Noosphere database could be designed in a way which
+makes it easy to translate it into article quintuplets and
+vice-versa.  Also, scholium-based thinking could inform the rewrite.
+
+However, I could also see the connection happen in more intimate ways
+as well.  As I see it, the main strength of the scholium system is
+it's generality and flexibility --- for instance, it would be easy
+enough to set up a semantic equivalent of PM or AM in the scholium
+system and even do such things as turns forum posts into entries with
+ease.  However, arxana does not have the nice, user-friendly web
+interface which noosphere has.  This suggests to me that one
+possibility would be to consider using the scholium system as a
+framework which takes care of organizing the various entries, posts
+and what not.  This way, both projects might benefit --- noosphere
+would gain a highly flexible, sophisticated system for combining
+documents and arxana would gain a user-friendly interface.
+
+I suppose that more on this will be figured out when Joe and Aaron
+meet, but I thought it would be worth at least raising this as a
+suggestion. --[[file:rspuzio.org][rspuzio]]
+
+I hope we can do something like you suggest; at least make the
+scholium system an alternative interface to the PM database.  One
+problem with Noosphere (as I see it) is that the different layers of
+abstraction have tended to get blended together in one big block.
+(See [[file:levels of abstraction in PlanetMath.org][levels of abstraction in PlanetMath]].)  One of my goals
+for the [[file:Noosphere documentation.org][Noosphere documentation]] project is to unpack these, so
+I can figure out how I (and other wannabe hackers) can interface
+with the system.  --[[file:jcorneli.org][jcorneli]]
+
+* Autolinker and Linguistics
+
+One of the more advanced features of noosphere is the autolinker.  It
+is also a feature which needs more work, as evidenced by all the
+complaints about wrong links and this problem only promises to get
+worse as PM grows.
+
+I think that improving the autolinker is another area in which we can
+have a useul symbiosis between PM and HDM.  While there are some
+obvious things that could be done to improve the autolinker, I also
+believe that there is only so much that can be done before one needs
+to use techniques of natural language processing to make the
+autolinker behave more intelligently.
+
+As it turns out, we in HDM are very interested in the business of
+understanding mathematical liunguistics although we have not done much
+on this subject yet because we would like to have a linguist on
+board.  Since basic researcher into the linguistics of mathematical
+prose will prove valuable to improving the autolinker as well, maybe we
+should consider some sort of collaboration here in the future. --[[file:rspuzio.org][rspuzio]]
+
+* Discussion
+
+[[file:Logan.org][Logan]]'s writeup on http://planetx.cc.vt.edu/AsteroidMeta/No%c3%b6sphereProtocols is very good
+(mentioned at [[file:Noösphere Niggles.org][Noösphere Niggles]]). Sounds like he knows his
+stuff. Taking system design to that level gives it a very
+mathematical flavor, and given that PM and the Noosphere already
+exist, a rewrite using the most advanced techniques will be
+like cheese to mice -- irresistable for those who are fascinated
+by computers and programming. A rewrite of an existing system
+is harder than starting from scratch, in some ways -- the existing
+data must be converted and service interruptions are a major risk
+factor. But the nice thing about total rewrites is that the
+target is well understood and tangible, which helps keeps the
+effort well grounded. If PM can arrange this effort so that 
+it becomes irresistable to students of computer science, it will
+almost write itself, at small cost -- and those who successfully
+develop the rewrite along the lines described by Logan will find
+themselves with solid 6 figure employment prospects, or at the
+very least, solid resume line items and gold-plated references.
+P.S. IBM bills out people who can do what Logan is talking about
+and create a modern system at $300 per hour. And that isn't 
+just a few hours here and there, like a plumber; we're talking
+8 hours a day, 5 days a week for longggg time. The ROT is take
+the hourly rate and multiply by 2 to get the annual amount, net
+of holidays (which of course, IBM employees take.) So the incentive
+is there. $50 per hour = $100K. But money is not the issue for
+people who have a heart for the work, and it shouldn't be. The
+money comes in due course -- money is society's way of saying
+thanks.
+--[[file:ocat.org][ocat]] 6-Mar-2006

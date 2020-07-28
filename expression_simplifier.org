@@ -1,0 +1,13 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Note that the expression parser currently does a lot of "simplifications"
+(e.g. will transform 1+2+3+4+5 into (+ 1 2 3 4 5), instead of
+(+ 1 (+ 2 (+ 3 (+ 4 5)))), the latter being the parse you might
+expect to see from the simplest sort of parser.  It isn't immediately
+clear to me that these sorts of simplifications can't be avoided,
+but maybe they can, in which case, the parser could be simplified quite
+a bit if a post-processor did the simplification routines on the
+hcode parse.  Also, Kyle wrote the beginnings of such a simplifier, see [[file:JACKYL.org][JACKYL]].
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the minor nuissances of a mathaematicians life is having to put up with different, sometimes conflicting notations.  Chern once defined differential geometry as the study of invariants under changes of notation.
+
+Technology can offer assistance to the beleagured mathematician by automatically translating between notations.  One way of accomplishing this is by using our parser.  First, we read in a formula written in notation A and translate it into h-code.  Second, we have translate this h-code into notation B.  By using h-code as a common meeting-ground, it is easier to write translation programs for notations.  
+
+* Discussion
+
+This ability will also keep PM/HDM looking current in 50 years. Another important thing is that
+translations will be very easy. One only has to translate the rendering code.
+-- [[file:matte.org][matte]] 6/2005
+
+----
+[[file:Focused HDM subprojects.org][Focused HDM subprojects]]

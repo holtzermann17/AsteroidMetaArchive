@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+A fundemental concept in differential geometry is the connection.  Basically, a connection on a space is a structure which allows one to transport ceometric objects such as vectors and tensors defined at one point of a space to another point of the space.
+
+In this essay, I will consider a reformulation of the the definition of connection which has the potential to be generalized to situations in which one would not ordinarily think that connections could be found.  in particular, I hope it will be of use in metamathematics to describe how mathematical notions are "parallel transported" between axiomatic systems.  
+
+This definition is based on parallel transport along curves.  It may be stated as follows:  A connection is a functor from the category of paths to the category of vector spaces.  In the remainder of this essay, we will give a more detailed description of the definitions involved and compare them to more conventional definitions of connection.
+
+Back to [[file:Connections as Functors.org][Connections as Functors]]

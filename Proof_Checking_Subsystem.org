@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Mainly wanted to check in about plans for the deployment
+of the [[file:template utilities.org][template utilities]].  How will they be used here?
+What are the easy test problems, and, to the extent we can
+know it now, what's the long term plan for becoming general?
+
+Do we need any AI to make proofchecking work?  My sense is
+no, the proof checker
+will take some [[file:hcode.org][hcode]] and run with it.  It will be
+the job of the AI (eventually, humans at first) to assemble
+proofs.  But the AI should certainly be able to read and
+utilize the output of the proofchecker. (Probably that won't be
+hard.)

@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It is more explicit, but I don't know if it is clearer.  For example, as I've
+thought about it so far, frames probably wouldn't be part of hcode even in later
+versions of the system.  Rather, hcode would sit in frames.  Of course, if
+objects prove to be necessary at the hcode level, that's another story.
+Finally, we should be clear on the hcode page that we aren't just designing a
+language, we're also going to write a compiler for the language. --[[file:jcorneli.org][jcorneli]]
+
+Since the emphasis was on pointing out what would would definitely not be found
+in version zero as opposed to suggesting what might be a feature of later
+versions, I put in the phrase "such advanced features as ..." to keep the
+emphasis in the right place.  Also, I will point out the this project involves
+both coming out with a language specification and writing programs.  As for
+being clearer, I suspect that true clarity will only come when we actually have
+something concrete to present on this page in the way of language definitions
+and programs.  --[[file:rspuzio.org][rspuzio]]
+
+---- 
+
+Since sets are important, one thing I think we should definitely have in our
+hcode Version Zero would be an hcode definition of "set". --[[file:jcorneli.org][jcorneli]]
+
+You have a good point, and I agree completely.  (And, of course, related things
+like "elt", "union", and "intersection", but that hardly needs to be said.)
+--[[file:rspuzio.org][rspuzio]]
+
+/However, later we seemed to think that the actual definitions for "set"
+etc. would be likely to be implemented in "assembly".  At least, for now./
+--[[file:jcorneli.org][jcorneli]] Thu Feb 17 18:18:02 UTC 2005
+
+----
+
+One thing I was thinking of when I read the latest code you sent me was that it
+might be worthwhile to have a `:by' keyword, or some other way of connecting a
+statement with another statement.  For instance, if a certain statement is an
+application of the definition of "associativity" or whatever, we might say
+(assert foo :by associativity), where foo is the statement in a proof we're
+working on.  This doesn't necessarily take the system all the way to the end
+(which part of the definition of associativity is being applied?  How does
+everything fit together?) but it does decrease the search space. --[[file:jcorneli.org][jcorneli]]
+Thu Feb 17 18:22:01 UTC 2005
+
+
+----
+
+
+
+Back to [[file:Version Zero.org][Version Zero]].

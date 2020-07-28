@@ -1,0 +1,608 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+*  (Original) Brainstorming of ideas for work we could do under this program
+
+**  PlanetMath/Noosphere
+
+ 1. improve educational metadata and organization in Noosphere. E.g., add metadata
+fields like "educational level", perhaps "difficulty", or others. (School kids
+shouldn't have to sift through research-level materials.)
+
+ 1. add the ability to write entries in a math-Wiki-like syntax (make it easier to
+contribute based on content knowledge, not !LaTeX knowledge). This could be
+converted to !LaTeX on the back-end.
+
+ 1. add editorial discussion areas, where things like pedagogy can be discussed
+more extensively without unnecessarily increasing noise in the communnity.
+
+ 1. bi-directional content sharing, to propagate Noosphere content between
+instances of Noosphere and other collaborative DLs (with multiple "Planets"
+coalescing, this could be framed as an effort of wider import to the NSDL).
+
+ 1. general improvements to Noosphere (code cleanups), easier deployability
+
+ 1. other studies of the educational potential of PM and related projects
+
+ 1. Better support for creation of free books, papers, and expositions.  
+(Compare [[file:PlanetMath engine interbred with wikibooks idea.org][PlanetMath engine interbred with wikibooks idea]].)
+
+**  PlanetMath/Noosphere/FEM
+
+ 1. improve ratings/reputation system to enhance quality of output. perhaps
+implement something like card-based system?
+
+ 1. put in provisions to use, encourage, and benefit from real-world identities.
+
+ 1. put in collaborative filtering to aid in selection of highest-quality entries.
+
+ 1. bi-di content sharing (also useful for development of FEM).
+
+**  PM/Noosphere/HDM
+
+ 1. infrastructure for developing HDM (and other translated version of PM content)
+to PM
+
+ 1. do experiments on the learning potential of working on HDM (hire students to
+participate and then test them on their knowledge?)
+
+ 1. other studies of the educational potential of PM and related projects
+
+ 1. infrastructure for literate programming
+
+* Discussion
+
+Comments? (But feel free to modify above section directly).
+
+** General comments
+
+Personally, I think that the third and fourth items in the "PM/Noosphere"
+section are the most interesting.  The more purely technology stuff is just
+harder to get excited about.  (Bidi content sharing is very technological, but
+is also social too, since it relates to the way in which digital libraries fit
+into a larger social context.)  Thus, I get a more gung-ho feeling about these
+items than I do about the other items listed here.  And of these two items, bidi
+content sharing seems likely to be the most "radical".  (See synopsis.)  But the
+"editorial discussion areas" could perhaps be expanded expanded into a broader
+topic -- /how to get people more involved in discussions online, and how to make
+these discussions "count" for education/.  I imagine something less like
+editorial discussion and something more like "chalk talks" (but with !LaTeX).
+Maybe this would be something to talk to Oscar about.  Running a little bit with
+this idea, I added to the PM/Noosphere/HDM section the idea of just doing some
+more studies on Noosphere as an educational tool.  Translations, which I also
+added, are not in and of themselves revolutionary - but they are
+multiculturally-friendly, which is something the NSF likes.  However, we'd want
+to actually do translations, lest the work suffer from being "too technological"
+(as ranted about above). --[[file:jcorneli.org][jcorneli]] Fri Mar 25 04:39:31 2005 UTC
+
+: I moved the "educational potential" studies to PM/Noosphere, since HDM is pretty
+long-term. --[[file:akrowne.org][akrowne]] Fri Mar 25 20:47:04 UTC 2005
+
+:: It would probably have been better to /copy/, not delete, since
+PM/Noosphere/HDM is meant to be inclusive of all three, and these sorts of
+studies can be conducted from different points of view.  I restored the original
+item under PM/Noosphere/HDM too.  This is brainstorming, so there are no right
+or wrong answers. I don't think being long term should weigh against a project, if
+there are immediate steps that can be taken.  It may be that we aren't quite ready 
+to take those steps for HDM (which, if true, should weigh against it, for this
+proposal) but I think we can certainly conceptualize to some extent what the steps
+would be. --[[file:jcorneli.org][jcorneli]] Sat Mar 26 17:38:17 2005 UTC
+
+#+BEGIN_VERSE On /I don't think being long term should weigh against a project.../.  Neither do
+I.  But you have to admit that being long-term makes it harder for a funding organization
+to evaluate the success of the project.  Also, there is the gap between the worth of your
+project and how well the grant program officers recognize this.  It is better to focus on
+what you can convince them to give you money for, not what /should/ be funded, in a 
+perfect world. This kind of consideration is built into my deliberations on this and
+other grants.  --[[file:akrowne.org][akrowne]] Sun Mar 27 21:08:49 UTC 2005
+
+Now that you brought up translations, that suggests a few more ideas:
+ 1. While works published before 1923 have passed into the public domain, most
+  math written before 1923 is not in English.  Perhaps we could have a project
+  to make translations of such works and release the translations into the
+  public domain via the books section.  If we divide up the work (say a dozen
+  people agree to each translate a chapter of a book or an article in a journal)
+  this could go relatively fast and nobody would feel overwhelmed.
+ 1. People have made livings by translating math.  Perhaps this project would give
+  people a chance to support themselves or at least supplement their incomes if
+  the grant were to include funds for paying translators. --[[file:rspuzio.org][rspuzio]] 25 March
+  2005
+
+It would certainly be a worthwhile project to get started.  (Basically just
+seems to need a robust books-creation section and a new forum for translation
+issues.)  It would certainly be fine to release the translations to the public
+domain, but it seems a little bit more likely that they could be used to
+generate income if they were released under the FDL instead.  They could go into
+a series of books available through the (as yet non-existent) "PM Press", which
+would of course include the FEM.  Indeed maybe we could set thigs up so that all
+books on the site were available through http://www.lulu.com or some other
+on-demand publisher.  It can't be too hard to write code that would
+automatically upload a PDF file to Lulu whenever a version is saved. (I think
+uploading is free... I have no idea if this automated behavior would piss lulu
+off.)  Then, book display could provide a link that says "Buy this book from
+Lulu for $USDXX".  As for whether/how some of the proceeds would be transfered
+to the translators, I'm not sure.  Maybe PM.org can set up some contracts for
+book authors/translators/editors.
+
+As for the idea of getting grand funding to actually do the translations, that
+seems a little bit unlikely, unless it was a big project like translating the
+whole PM encyclopedia into Spanish and Russian or something like that.  And even
+then I'm not sure who would bite.  Maybe a few translators could get funded as
+part of a project that was mainly designed around the idea of /building a good
+system to do translations/ -- but I think grant funding is almost always going
+to be easier to come by if we take this "meta" point of view. --[[file:jcorneli.org][jcorneli]] Fri Mar 25 19:19:06 2005 UTC
+
+** Issues and discussions of relevance
+
+I have to say that I don't think most of the stuff under the HDM list qualifies. While
+I agree that the HDM will eventually have educational impact, in the near to medium
+term, I think it would mostly have impact for practitioners.  What the NSF wants to see
+with the ALT program, I think, is fairly immediate eductional impact.  This is why I
+think, even while I agree that adding metadata fields to the content is "boring", that this is more
+likely to get us funding, since it quite clearly and immediately improves the pedagogy
+of the entire PlanetMath site (why? because kids won't have to sift through research-level
+materials anymore...)  Basically, I think we have to avoid too many levels of indirection
+between the work and educational impact, with this program.  If we can keep the levels
+of indirection down, and avoid trying to fit every task into every grant program,
+then we will have cleaner proposals that are more likely to get funded. 
+--[[file:akrowne.org][akrowne]] Fri Mar 25 20:41:03 UTC 2005
+
+
+Having an educational impact most immediately for practitioners is exactly what
+I was thinking too (I explicitly highlighted it in the second item in that
+section).  I was thinking of it as a good thing.  Maybe it is something that
+might be better for a different grant.  But it is pretty inarguably a "good
+thing" in some regards - because practioners are a clearly identifiable set of
+people who can be studied directly.  This would be something that is part
+development project and part psychology experiment.
+
+Indeed, I don't think that HDM fails to qualify, and certainly not on grounds
+of studying its own practitioners:
+
+: /Integrative research approaches that build across disciplines and establish
+tight linkages among theory, experiment, and design are strongly encouraged./
+
+: /Technology goals/ may /include systems for tutoring/ or assessment, modeling
+and sensing of cognitive or emotional states, /context awareness/, 
+/natural language interfaces/, collaboration, knowledge management, 
+and /non-traditional goals that redefine the roles of technology in learning/.
+
+After all, we don't really know yet whether we can use the HDM to jump start
+people's educational potential - even though it seems intuitively obvious that
+we should be able to.  Perhaps it is hard to leap from the current state of the
+project to a clear conception of the research methodology to be used in studying
+its educational efficacy (which might make it hard for us to write a good grant
+proposal about this topic at this point in time, even though we have some
+interesting ideas about the sorts of questions we might like to explore).
+Furthermore, you may be quite right that NSF wants to see is immediate, and I
+think you also meant public or broad, educational impact.  But I don't think
+that being "long term" is the problem for HDM; the fact that it is just getting
+started might be.
+
+On that note, I would like to comment a bit further on what you said about "the
+medium term."  This is a digression away from a discussion of the NSF grant.
+
+For the medium term, it seems somewhat silly to me to distinguish between
+"practitioners" and "consumers" of the HDM.  HDM-p1 and HDM-p2 were about
+teaching /me/ math, not just something done for abstract fun or research
+interest.  This continues to be a major personal goal, and it guides my
+participation in the project.  At the research and higher educational levels,
+the practitioners are the consumers, and their psychology and learning is
+precisely the bread and meat of the mathematical endeavor.  From this point
+of view studying the experience of HDM practitioners would seem to be
+something that will help bring the HDM towards the point where anyone can
+participate and become an "HDM practitioner".  The future version of
+"mathematician" might be "HDM practitioner.  What we really need is a
+lab for HDM development where we can study these things and work on code, 
+etc.!  Maybe we should write a proposal about this.  (Sadly I think we'd
+all need multiple Ph. D.'s for them to bite.)
+
+I would also like to comment on the /quote-un-quote/ boring items.  
+
+Firstly, it would be just great to add features so that people could be working
+at their educational level.  This is not boring at all.  I just didn't
+understand that line-item.  I added your explanatory comment in parentheses.  Of
+course, just adding metadata fields is not enough - the fields need to get
+populated.  Once you explain this, and what the purpose of the changes would be,
+then that item takes on a social component (addressing, here, the issue I was
+mainly concerned with in my initial critique) and it becomes quote-un-quote
+interesting.
+
+Perhaps my comments should be taken less as a criticism of the items that were
+"boring" and more of the fact that their social and educational relevance was
+not spelled out, nor their "radicalness".  General improvements to the site, for
+example, would certainly help with education, but it does not seem that radical.
+Adding (and populating) metadata fields which make it so that users have a
+somewhat (maybe highly) customizable site experience does seem to fairly
+radical.  I think "relevance" would be a better word (or continuum) to refer to
+than boring/interesting.
+
+Another item with uncertain (to me) relevance is math-wiki-like syntax.  Would
+this make it easier to contribute to the site, or enhance anyone's educational
+experience?  Bear in mind that I don't really know what math-wiki-syntax is.  
+My fear is that it would just be another (non-standard) syntax to learn, and
+that it would have little relevance to education.  Furthermore, since (as far
+as I understand, please correct me if I'm wrong) wikipedia already does math-wiki
+markup, adding it to PM doesn't seem particular radical.
+
+Code cleanups and and easier deployability (although I think these things are
+highly desireable) do not in themselves seem particularly relevant to education,
+nor are they /that/ radical. (We hope :).)  However, they might be necessary
+for accomplishing certain other coding goals.  In any event, I'm not sure it 
+would be highly beneficial to emphasize this item in a grant proposal.
+--[[file:jcorneli.org][jcorneli]] Sat Mar 26 18:27:13 2005 UTC
+
+** Literate programming proposal
+
+Looking at Ray's very nice page "[[file:Introduction to template utilities.org][Introduction to template utilities]]", I
+began to think that it would be really, really nice to see this page in !LaTeX
+together with the accompanying LISP code.  Oh, it would be nice!  So I'm adding
+an item to the "PM/Noosphere/HDM" section on infrastructure for literate
+programming.
+
+This is different from "infrastructure for developing HDM", which was sort of
+broad/vague, but which I mainly was thinking of in terms of adding features for
+parallel work on [[file:hcode.org][hcode]] versions of PM articles.  But literate programming is
+much more general - it basically subsumes the HDM side of this "infrastructure"
+development item, and it would have great future applications for projects like
+[[file:PlanetComputing.org][PlanetComputing]].
+
+Let me point out, though, that literate programming can really be very simple.
+I do "literate programming" by using `mmm-mode' in [[file:Emacs.org][Emacs]] and writing my code
+inside verbatim environments in !TeX.  (There is a bit more functionality I
+should add, but basically it is a nice writing/programming environment - not
+quite feature complete, but getting there.)
+
+Doing literate programming on PM would be pretty similar, I imagine.  But a lot
+of additional back-end work would be required.  For example, if someone had
+defined a function as part of their article, there should be a way to send data
+to that function.  This could work out to be an exquisitely beautiful collection
+of web-services, which could also be seamlessly ported to an off-line usable
+code collection, and to nicely printed documentation.  (If we make a clear
+statement that the code that is inside of a
+/\begin{literate}...\end{literate}/ pair is licensed under both the GPL and
+FDL, there shouldn't be any licensing problems.  The FDL-only sections wouldn't
+appear in downloaded code, but could appear in auto-generated PDF or HTML, etc.,
+formatted accompanying documentation.)
+
+In order to turn the idea into a grant proposal (or part of such a proposal), we
+would want to write up some specific details on the actual features we would
+want to implement, and talk some about the educational/research merits.
+
+Here are some miscellaneous thoughts about the merits of this programme:
+
+ * As an Emacs user, I can easily imagine integrating web-services and their
+results into my writing.
+ * But I would probably just download the code and documentation, and use 
+the programs offline.
+ * Wolfram already has a "!WebMathematica".  It would be nice to have a free
+alternative.  This approach would facilitate work on a comparable free 
+product.  And, in the process, it would help build a new comparable free
+offline-usable math software system.  (I'm not saying that Maxima is bad,
+but its documentation certainly could be improved, and what better way
+to produce improved documentation than to do a literate-programming rewrite.)
+ * As mentioned above, literate programming would be good for working on [[file:PC.org][PC]],
+as a means of illustrating useful code, and it would also be useful for working on
+[[file:HDM.org][HDM]], as a means of developing a new system
+ * Don Knuth has said that without literate programming, he couldn't have written
+!TeX (which is kind of funny, seeing as how !TeX is the basis for the literate
+programming system).  I suspect that without literate programming it would be
+much harder to write the HDM.
+ * We could extend the [[file:FEM.org][FEM]] code into something that would /weave/ and
+/tangle/ PM code, outputing a program along with the printed encyclopedia
+(so, we already really have part of the system prototyped ;)).
+
+I think it would be swell to adopt Scheme or LISP as the official language
+for PM, but we would want to keep the system language-agnostic, for future
+use by [[file:PC.org][PC]] and other developers.
+
+This idea seems so beautiful, compelling, useful, and interesting, that
+I have a hard time imagining anyone saying "no" to a proposal that 
+contained it.
+--[[file:jcorneli.org][jcorneli]] Sat Mar 26 21:33:18 2005 UTC
+
+*** Literate programming and HDM
+
+I think we have been interpreting "radical" differently.  The way I see it,
+PlanetMath and CBPP in general are already a "radical" departure from
+traditional learning environments.  I agree the HDM is radical, but much much
+more so.  I would be surprised if the NSF was willing to fund something that was
+truly so radical, even though they use the word "radical".  In these situations,
+there is always an unstated trade-off between how radical a project is, and how
+much the grantors will (1) understand it, (2) be willing to take a risk on it,
+and (3) feel confident they will be able to make a measurable contribution to
+such a big project.  Add to this, of course, our lack of professional stature...
+
+I am sure that you will respond that the ideas you've proposed above are small
+pieces of the HDM.  But I am not convinced that the connections between math and
+programming (which seems to underlie them all) will play out the way you think
+they will.  There is something very different about the two.  The way I see it,
+programming is still the absolutely last thing you want to force a learner to
+do, not necessarily because it wouldn't be good for them, but because it will
+make them intensely hate the learning.  Programming is a tedious thing; even I
+find it to be this.  I don't think literate programming improves the situation
+much; I think it just makes programming and documentation tolerably efficient
+/for programmers/.  I don't see the typical learner embracing these practices.
+It also seems to be thrusting an extra duty onto the content-producer to have to
+produce code-calibre output.  You can respond that math is already almost code,
+but this "almost" is large enough that even hardened mathematicians acted quite
+vigorously against having APM-Xi on PlanetMath.
+
+So where am I going with this... well, I actually think some of this is worth
+trying to get funded.  But I think perhaps it should be separated from the more
+"boring" (to us) ideas for PlanetMath and Noosphere development, which would be
+justified as furthering CBPP for education, a process which has surely just
+started to take off.  The HDM proposal would be a lovely thing, I'm sure, but
+I'd be amazed if the NSF could "handle" it (and would actually give it to
+/us/) in this program.  I think HDM work "disguised" as PM/NS work has a
+better chance of getting done (for instance, a translation system, one
+"language" of which would be happen to be machine-readable), but I'm not sure
+how much HDM stuff can be positioned this way.
+
+** Tabling HDM proposal, but do consider spin-off applications!
+
+I certainly do not think I could capably write "an HDM proposal" at this point
+in time.  So, I agree, we should table it for this grant.
+
+However, some of the related proposals appear to be quite manageable.  Literate
+programming for example, and translation infrastructure for another.
+
+Furthermore, these items appear to be of broad application within the
+Noosphere-based universe.  They are in this regard similar to the
+[[file:PlanetMath engine interbred with wikibooks idea.org][PlanetMath engine interbred with wikibooks idea]], general improvements
+to workflow management within Noosphere, and so on.
+
+I would rather pitch literate programming as a way to build a free, extensible,
+answer to Mathematica and !WebMathematica, and as part of the groundwork for
+PlanetComputing, than as a foundation for HDM.
+
+We should be aware of "spin-off" applications to HDM, but also weigh them
+against other priorities, and, like you said above, weigh everything against
+the likelihood that it will be funded.  (If there are several components to
+the proposal, we should think about the likelihood of their being funded
+together.)
+
+As for the [[file:connections between math and programming.org][connections between math and programming]] in general,
+let's take that discussion up elsewhere.
+--[[file:jcorneli.org][jcorneli]] Sun Mar 27 21:52:08 2005 UTC
+
+** Translations (and books and papers)
+
+I would love to get started on the translations infrastructure.  However, I see problems in
+convincing NSF to front money for this kind of thing.  Why?  Because NSF's "bosses" (the 
+taxpayers) speak English.  To take the machine-readable perspective on this work 
+doesn't help us for this grant program either, because I think it will be difficult to
+convince the NSF that the applications are as much learning as practice.  On the other hand,
+machine-readable versions could be more salient for the NSDL program, since the emphasis is
+now supposed to be on sustaining and /utilizing/ (bringing into practice) the digital 
+libraries that are a part of the NSDL (PlanetMath being one). --[[file:akrowne.org][akrowne]] Mon Mar 28 01:12:40 UTC 2005
+
+But what about the translation from foreign languages into English?  Exactly
+because so many Americans are monolingual Anglophones, it would seem that
+ *that* project would sound especially enticing.  I would think that selling
+the translations infrastructure from the foreign language to English direction
+would be much easier and there is definetly a place for such translations.
+Dimitri's original proposal about the Russian lecture notes is an example.
+Also, as I said, much older literature (read: most mathematical literature which
+is now in the public domain) is not in English, so it might be nice to translate
+it.  Heck, even though it's still copyrighted so we may not be able to translate
+it, as far as I know, Bourbaki's EGA's and SGA's are still only available in
+French which effectively cuts off a lot of American mathematicians from
+firsthand access to this important source of information and ideas.  Right now,
+there is a project to make these texts available in a free electronic form
+(although one needs to keep in mind that the people doing this might not have as
+high standards as to what constitutes free math as we do) at
+[http://www.math.leidenuniv.nl/~edix/public_html_rennes/index.html].  I would
+think that if the rights conditions were acceptable to us, then maybe a proposal
+for building a multi-user translation infrastructure with a translation of the
+SGA's as one intended application would have a relatively good chance at being
+funded and so might be worth trying. --[[file:rspuzio.org][rspuzio]] 28 March 2005
+
+I think Bourbaki's work is probably still under copyright, non? ;)
+
+But anyway, infrastructure for translating books into english would be different
+from the infrastructure for creating parallel encyclopedias.
+
+I think we definitely should add "/better support for creation of books and
+papers/" to the list.  (Indeed, I had added it to a previous version of this
+page, but either I forgot to save my changes or it got lost in the ether.
+Anyway, /I'm adding it again now/.)
+
+A couple other quick thoughts:
+ * I agree with Ray that translations are of educational value to US Citizens,
+but I also agree with Aaron that NSF may not recognize this.
+ * Maybe the parallel encyclopedia idea can be subsumed (quietly) by the bidi
+system idea. (I think translating books is subsumed within the "better support
+for books and papers" idea.)
+
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 04:59:01 2005 UTC
+
+: These are good points.  Actually, I think we'd have a better chance of working 
+translations into the NSDL proposal, because translation of valuable knowledge is 
+better known as a digital libraries problem (and the responsibility of the digital
+libraries field to solve).  I have more of a sense that this programme (ALT) has more of an 
+"active teaching" emphasis, that is, an emphasis on getting the knowledge from its
+encoding into the learner's head, as opposed to getting it into an encoding in the first 
+place, or moving it from one encoding to another. --[[file:akrowne.org][akrowne]] Mon Mar 28 15:54:41 UTC 2005
+
+:: Nice encapsulating point, thanks. --[[file:jcorneli.org][jcorneli]] Mon Mar 28 16:59:36 2005 UTC
+
+[[file:Further discussion of SGA.org][Further discussion of SGA]]
+
+**  Sorting into "Digital Libraries" stuff and "Advanced Learning Technology" stuff
+
+
+I'm quite taken with what Aaron said above about ALT placing "an emphasis on
+getting the knowledge from its encoding into the learner's head, as opposed to
+getting it into an encoding in the first place, or moving it from one encoding
+to another."  
+
+This "encapsulating point" may help us differentiate between the two
+applications, and make some more honed proposals.
+
+Accordingly, I'm going to try sorting the lists above into two categories, DL
+and ALT, and then we'll see what comes out of that (if anything).  I'd hope that
+there would be some balance between the two things.
+
+Again, this isn't meant to be normative - and the two things are similar.  If
+you disagree with the way I'm sorting things, that's fine with me - maybe it
+will prompt more discussion of the points themselves, which would better
+position us to put them into a proposal (whatever proposal it happens to be).
+
+These two lists are a combination of the three lists above.  I'm taking out
+redundancy between the items there (but maybe it will be useful to add some
+new redundancy -- well, we'll see! here goes nothin').
+
+: I did make a section for overlapping items, for the things that I thought were
+"most" in both categories.  Probably all of the items are "somewhat" in
+both categories, but actually most of them seemed to naturally gravitate
+to one or the other (for me, anyway).  I added some extra exposition to each
+of the points, and then some "personal" comments too.  People can add to these
+comments, or take the whole text and go off in another direction with it,
+or who knows - anyway, I hope this will turn out to be somewhat helpful.
+It seems like a good next step to do after brainstorming and preliminary
+discussion.  (Of course, there can be more of both, but now new brainstormed
+ideas should maybe be added in two places, into the lists above, and
+into these sections here.)
+--[[file:jcorneli.org][jcorneli]] Tue Mar 29 07:12:11 2005 UTC
+
+***  "Digital Libraries"
+
+Emphasis on building, maintaining, and making more useful.
+
+; bi-directional content sharing :
+Propagate Noosphere content between instances of Noosphere and other
+collaborative DLs (with multiple "Planets" coalescing, this could be framed as
+an effort of wider import to the NSDL).
+
+: useful for development of FEM, HDM, NL translations, sharing with
+PlanetPhysics, PlanetComputing, etc. - great all-around feature, could be the
+centerpiece of a strong proposal, in my somewhat irrelevant opinion.  (Note,
+BTW, this is only part of the HDM-building infrastructure that we would
+eventually want, but it is a useful part)
+
+; general improvements to Noosphere :
+code cleanups, easier deployability
+
+: This would have an educational effect (and probably a big one) but since
+Noosphere is the digital library infrastructure (after all!) this seems to
+be more of a DL issue.
+
+; improve ratings/reputation system :
+This would to tend to enhance the quality of the product (add more details!).
+Perhaps we should implement something like card-based system?
+
+: as the person who proposed the card system, I would like to say that I think
+more research needs to be done.  I don't know if NSF grants are actually good
+for supporting research!, i.e., most of the ideas we've been talking about have
+to do more with /development/.  I personally think research is great - but I
+get a sort of ambivalent feeling about it both from the NSF and from our
+proposals.  To me, this seems a very open-ended item. (On the same magnitude of
+/studies of educational potential/ below.)  We should work to state the goals
+behind this item more clearly, and look some at what other people have done.
+(We don't necessarily want to do the same thing.)  Joe Konstan might be
+a good person to talk to more about this.
+
+; collaborative filtering :
+features to aid in selection of highest-quality entries.
+
+: see above.  A little research and/or thought experiments need to be done to be
+sure that it would work with our population.  If PM authors think a page is
+good, are we certain that the "average" users (who we hope to cater to) will
+also think it is good?  If all users were given the ability to rate pages, /and
+they actually did it/ then it would work pretty well.  Maybe this could be the
+power that non-contributing users are hoping to get when they sign up, I don't
+know.  Another potential problem: what if ratings make some authors really
+upset?  (There could be some tyranny by the masses unless we're careful.)
+
+;  real-world identities :
+Add the metadata fields, and encourage their use (when such use is benefitial,
+which, I think, we should talk about more and/or do more research on and/or
+get the opinions of more people on).
+
+: This is a DL thing, it seems to me, but it could tie in with the /editorial
+discussion areas/ thing below - for example, if some user leads a "class" or
+something like that, we might want to know who this person actually is.  (One
+tends to be more comfortable with teachers who one could actually go talk to in
+person - at least in theory!) -- note that this need not have much to do with
+real-world "reputation", degrees, and so on -- its more of a basic psychology
+thing.  If someone is teaching a "clinic" on group theory or on their thesis or
+on some particular mathematical game or puzzle, I don't care if they have a
+Ph. D. or not - but it would still be nice to know their email address, what
+they look like, etc.  (Note that some people will presumably always want some
+anonymity, and I think that we should respect that.  I seem to recall
+hearing/reading someone said, playing chess online is more fun, because people
+don't judge you based on your age or gender, but on your playing ability.)
+
+***  "Advanced Learning Technology"
+
+Emphasis on using technology to help people learn more easily, thoroughly, etc.
+
+; improve educational metadata and organization in Noosphere. :
+E.g., add metadata fields like "educational level", perhaps "difficulty", or
+others. (School kids shouldn't have to sift through research-level materials.)
+
+; add the ability to write entries in a math-Wiki-like syntax : 
+In principle, this would make it easier to contribute based on content
+knowledge, not !LaTeX knowledge.  Wiki syntax would be made exchangable with
+!LaTeX by the back-end.  
+
+: Note, whether or not it would actually work... this idea seems to be less
+about building the collection than it is about making it for people to be
+/involved in/ building the collection (and in other parts of the PM
+experience).  I don't think that people who are going to really add a lot of
+material will have a hard time learning enough !LaTeX. 
+
+; add editorial discussion areas :
+These could be used to talk about pedagogy, for example (as opposed to
+mathematical correctness).  They could be set up as a separate "channel"
+of discussion, or as stand-alone conversations that are not broadcast to
+other parts of the site.
+
+: I think this is a good idea, and should be explored further.  I think there are some
+related comments on the [[file:connections between math and programming.org][connections between math and programming]] page.
+
+; studies of educational potential :
+I imagine that we don't actually have the time or resources to put
+together a really great  proposal in this area right now, but I think
+it would be good to network with education, cog sci, and psychology
+people, who might be able to help us put together good experiments.
+
+: Aaron has already done one interesting experiment, on the ownership model.
+And I think that things like working with small "focus groups" to test out new
+features might be something that we /could/ build into a budget for the
+current proposal.  To me, this seems connected to the editorial discussion areas
+and the "alternative education" methodologies we were talking about.  These
+things aren't "studies", but they could help us design studies and fine tune
+certain features.  Note also that there are quite a few groups working
+on things like automatic tutoring and what not.  We want to do something
+different, and like Aaron said elsewhere, we want to do something that
+has immediate effect.  Another issue that has come up is the issue of
+catering to "average" students.  How do we know /who/ we're catering
+to, and how well we're doing?  Especially when a big part of the 
+population doesn't want to leave any info on the site!  Perhaps we should
+randomly select users and offer to pay them to be part of a focus group.
+(I'm not good at experimental design, but anyway, something like this could
+probably be done.)  Perhaps we should list some specific /questions/
+we'd be interested in answering.
+
+***  Really both
+
+; Better support for creation of free books, papers, and expositions. :
+Compare [[file:PlanetMath engine interbred with wikibooks idea.org][PlanetMath engine interbred with wikibooks idea]].
+
+: This seems to have both an education side (these things are educational, and
+especially for fairly advanced people, they are one of the main ways of
+learning) and a DL side.  In the education side, again, the "editorial
+discussion area" catch-all seems relevant.  One of the big issues here is
+improving the collaboration tools.  Which of course, for books, papers, etc.,
+don't even really exist right now, but I mean across the board improvements.
+On the DL side, things like integrating the BPE with the encyclopedia
+comes more to the fore.
+
+; infrastructure for literate programming :
+On the one hand, this is about promoting math education and research
+with technology; on the other hand, it is about building new CBPP
+collections (specifically, collections of code).  We can get into more
+detail later!

@@ -1,0 +1,117 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+  ; ax-1
+  ; ( a -> ( b -> a ) )
+  
+  (defaxiom ax-1
+            (forall (a b) (proposition a b)
+                          (implies a (implies b a))))
+
+  ; ax-2
+  ; ( ( a -> ( b -> c )) -> ((a -> b) -> (a -> c)) )
+  
+  (defaxiom ax-2
+            (forall (a b c) (proposition a b c)
+                            (implies (implies a
+                                              (implies b c)) 
+                                     (implies (implies a b)
+                                              (implies a c)))))
+
+  ; ax-3
+  ; ( ( neg(a) -> neg(b) ) -> ( b -> a ) )
+  
+  (defaxiom ax-3
+            (forall (a b) (proposition a b)
+                          (implies (implies (neg a) 
+                                            (neg b))
+                                   (implies b a))))
+
+  ; ax-mp
+  ; hyp: a, a -> b
+  ; b
+  
+  (defaxiom ax-mp
+            (forall (a b) 
+                    (implies (and (proposition a b)
+                                  a ; is true
+                                  (exists (c) (eq b (implies a c))))
+                             b)) ; is true
+
+  (deftheorem id ()
+              (forall (a)  
+              (and (proposition a)
+                   (implies a a))))
+  
+  (defproof id
+            (let
+               ; (ax-1 a a)
+              ((first (implies a (implies a a)))
+               ; (ax-1 a (implies a a))
+               (second (implies a (implies (implies a a) a))) ; (ax-1 a (implies a a))
+               ; (ax-2 a (implies a a) a)
+               (third (implies (implies a (implies (implies a a) a)) 
+                                  (implies (implies a (implies a a)) (implies a a))))
+               ; (ax-mp second third)
+               (fourth (implies (implies a (implies a a)) (implies a a)))
+              ; Proofs of the "subtheorems":
+              (implies ax-1 first)
+              (implies ax-1 second)
+              (implies ax-2 third)
+              (implies (and ax-mp second third) fourth)
+              (implies (and ax-mp first fourth) (implies a a)))))
+
+----
+* Comments
+
+I'm not sure what the /proposition/ predicate is supposed to
+mean.  Can we just get rid of it?
+
+/I'm sorry, I've learned mathematics in Finnish, so I probably guessed the term
+wrong. What I meant is that all the parameters are such that they have a truth
+value, so that you can't pass a polygon as a parameter to those axioms and
+theorems for example. That would make no sense./
+
+I see what you're saying, and it does make sense!  But it still seems a little
+clunky to have to assert that the arguments are propositions.  Probably
+functions like /implies/ should do type-checking automatically.  Alternatively
+(perhaps additionally) we could make the axioms themselves do type-checking on
+their arguments.
+
+----
+
+Typically in hcode, theorems and definitions take arguments, so maybe you can do
+the same thing here, e.g,
+
+  (defaxiom ax-1 (a b)
+    (forall (a b) 
+            (implies a (implies b a))))
+
+Then later you can use /(ax-1 a a)/ like you did in your comments.
+
+/Yes, I originally had this, but I wasn't quite sure about it./
+
+I think it is a good idea.  Check out the README from the [[file:Bourbaki proof checker.org][Bourbaki proof checker]].
+
+----
+
+Also, I think the translation of ax-mp is supposed to be
+
+  (defaxiom ax-mp
+            (forall (a b) 
+                    (implies (and a
+                                  (implies a b))
+                             b))
+
+/I wrote it like that on purpose, but I'm not sure if it was good or not. The
+idea was that the two prequisites for the axiom, which were that a is true and
+that a implies b, I used those as "parameters", so a is true, b is true, and b
+is of form "a implies c". So if the prequisites are ok, then c is true. But
+yeah, it's cleaner the original way./
+
+I find the "cleaner" version to be much less confusing!
+
+----
+
+And finally, after these changes are made (if they are needed),
+how about doing a two-column proof? (See [[file:Levels of Proof Checking.org][Levels of Proof Checking]].)

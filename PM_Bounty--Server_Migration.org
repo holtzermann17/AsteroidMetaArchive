@@ -1,0 +1,130 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: Mon Jan 23 14:41:27 UTC 2006
+
+Status: *completed!* (bloftin)
+
+Time: 5-10 hours (est.)
+Actual Time: ~12 hours (It might be longer if you just stared at the screen while large files are copied over)
+I believe most of the time was spent trying to work with multiple ip's/vinstall and binding network card.
+
+Bounty Price: $150 (US est.)
+
+Objective:
+
+Migrate the PlanetMath web site to a new (better) server.  Aside from being faster, the machine is not in use for multiple projects.
+
+(see old task definition for this bounty: [[file:migrate_to_planetx_server.org][migrate_to_planetx_server]])
+
+Skills needed:
+
+ * general linux server admin
+ * apache 2.0
+ * some perl
+ * mod_perl
+
+* Background
+
+We have a new server awaiting planet* usage: *planetx.cc.vt.edu* (currently we are using *planetmath.cc.vt.edu*).  The new machine 
+has been provided by Ed Fox, at Virginia Tech (thanks, Ed!)
+
+A comparison of stats of the machines:
+
+Planetx.cc stats:
+
+ * 3ghz Xeon processors (x4)
+ * 2gb RAM
+ * 70gb SCSI disc (x2, in RAID-1 configuration)
+
+Planetmath.cc stats:
+
+ * 650mhz PIII processors (x2)
+ * 1gb RAM
+ * 120gb IDE disc (x1)
+
+Thus, planetx is a considerable improvement in both raw power and redundancy.
+
+** Vinstall
+
+The /vinstall/ system is being used to provide isolation between different project instances on planetx (this is a pre-emptive move, anticipating
+that we will later have multiple projects on the machine).  This system lets you type "vinstall <systemname>" to enter one of the virtual environments.
+The environments are isolated in terms of disk space, and hence libraries and dependencies.   They are *not* isolated in terms of network
+space, or CPU and memory resources.
+
+More on vinstall: http://br.endernet.org/~akrowne/elaine/vinstall/index.html
+
+* Plan
+
+ 1. set up a virtual system on planetx (/done/)
+ 1. set up a mysql 4.1 DBMS in the virtual system (/done/)
+ 1. set up an apache 2.0 in the virtual system (/done/)
+ 1. get PM all checked into new SVN repository (/done/)
+ 1. check out PM; get it set up locally (/done/)
+ 1. get the vinstall PM web application properly with apache (maybe use conf from ben loftin, who has PM with apache 2.0)
+ 1. load the database from the main system
+ 1. get the maintenance tasks working properly (backups, snapshot gen, cleaning scripts, etc...)
+ 1. get thttpd for images ported over (can we use a virtual host? do we still need a separate port??)
+ 1. initiate the switchover (point domain names to new machine)
+
+As you can see, most steps have already been done.  However, these are the easy steps. 
+Most of the work is probably hidden in getting PM to run smoothly in apache 2.0 in the new environment.
+
+The domain names are:
+
+ * [www.]planetmath.org - the main web application (www. just redirects to planetmath.org)
+ * images.planetmath.org - for image serving
+ * aux.planetmath.org - for static files and OAI
+
+Considerations:
+
+ * [[file:akrowne.org][akrowne]] can give access to planetx and give a tour of what has already been done.
+ * the bounty hunter will work with [[file:akrowne.org][akrowne]] when it is time to switch over the domain names.
+ * if necessary we can probably get more IPs from the Computing Center (say, to make separate server instances more doable)
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for
+more on how bounties work.
+
+* Discussion
+
+Would it be possible to use the vinstall method to also tackle the 'Re-deriving Object Version Histories' bounty?  I'd volunteer for this bounty if there is no one else more qualified who wants it.  Also, whoever does it needs to document EVERYTHING, so it can help in the future when the install bounty is attempted. --[[file:bloftin.org][bloftin]]
+
+It should be possible, however, it should also be possible to install the Noosphere libraries in an arbitrary location, even
+if they are already installed in the same system environment.  If that is problematic, then some hacking should be done there too.
+I should point out that that bounty could even be performed on the running !PlanetMath instance, with a shell account.  It isn't
+imperative that the libraries be re-installed somewhere else. --[[file:akrowne.org][akrowne]] Mon Jan 23 19:22:21 UTC 2006
+
+I am interested in hunting down this bounty and Aaron has my offer. [[file:bloftin.org][bloftin]] - aka - Boba PM Fett
+
+
+** Bounty Documentation
+
+1/26
+
+I'm in and made it to the pm vinstall.  The first step is to update noosphere with svn.
+
+Darn, I'm stalled and do not know the svn password for root@planetmath.org, waiting for Aaron's reply.  Until then I will work on the apache config file.  I copied the current config file /etc/apache2/sites-available/001-planetmath to /var/www/noosphere/default.backup.
+
+
+Step 1: Update the apache conf file.   Note the lines with #BEN added might be optional, I need to double check and also need to replace ServerAdmin with correct email, attach the new config file to this page
+
+[[file:Apache2 conf file.org][Apache2 conf file]]
+
+Step 2: Update /var/www/noosphere/startup.pl
+
+Add line after use Apache;
+use Apache2::compat;
+
+Step 3: Edit server's host file to point to test planetmath website.  Hopefully,this will not affect anyone using this comptuer.  Fingers crossed.
+
+Added the line to /etc/hosts
+
+198.82.160.115  www.planetmath.org planetmath.org images.planetmath.org aux.planetmath.org oai.planetmath.org
+
+Step 4:  Add the same line to the client 'home' computer host file so I can test from home
+
+Step 5: Restart Apache
+
+There was an error, couldn't load Apace2:compat, checking inot

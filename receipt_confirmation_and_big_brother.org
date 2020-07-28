@@ -1,0 +1,106 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+OK, maybe the title is a little dark, but it should get the wheels turning.
+What I'm thinking about when I say "receipt confirmation" is the feature
+for PlanetMath mail that tells you when your message has been read.
+There is no corresponding feature for email that I know of.  (Perhaps some
+email systems do auto-reply confirmation, but it would be strictly an
+add-on.)
+
+My latest PM feature request [[file:hitcounter for messages and other objects.org][hitcounter for messages and other objects]]
+would do something similar for forum postings.  One could extend this
+request to a non-anonymous version, that would list the usernames of
+logged in persons who viewed the posting.  Then, if people don't follow
+up, you could go harrass them personally.  Or maybe there is some polite
+and concretely productive way of using this information.
+
+Certainly, viewing a message without posting a followup isn't always a bad
+thing.  There could be many reasons not to post.  Sometimes, someone's input
+is specifically requested, and I would tend to assume that unless the OP
+is being rude/imposing in making this request, it is considered to be rude not to
+follow up.  OTOH, sometimes such replies come very late, and that is considered
+to be significantly less rude.  (I'm not a netiquette guru, these are just
+my own opinions, and they are subject to change.)
+
+A /subscription/ model for message delivery changes things around a little,
+but not too significantly.  Anyone to whom your email messages are delivered,
+for example, should probably be assumed to be subscribed (by default, if 
+nothing else) to all of your email.  Maybe not the fairest assumption, since
+semantic mail filtering is sort of a "dream", but the assumption is made
+relative to today's technology.  In a subscription model, the OP might have
+the contact information for all subscribers (as is the case with email)
+or they might not (as is the case with RSS).  In either event, knowing
+who is subscribed to your message(s) is a little different from knowing
+who actually read the message.  (However, in the case of the current PM forums
+these categories collapse into one.)
+
+These questions bring to mind a more general questions about /privacy/.
+This topic is one that I'm interested in primarily because I don't 
+seem to understand it very well.  I'm reminded not only of "1984" but
+of [http://en.wikipedia.org/wiki/A_Scanner_Darkly A Scanner Darkly] (haven't
+read, but saw the preview!) and other such "Dickian" police dramas... and
+of course [[file:the way of the asteroid.org][the way of the asteroid]].
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Discussion
+Here is a tangentially related essay by PKD: http://www.geocities.com/pkdlw/howtobuild.html
+
+** The lion's paw
+One established reason for /privacy/ is found in vigilante crimefighting,
+including whitehat-oriented [{cr}{h}]acking.  Sometimes ones work goes counter
+to the interests of people who would try to make your life miserable (or even
+try to end it) if they knew who you were.  In cases like this, it could be
+extremely advantageous to do your work in an anonymous fashion.  (Something
+about this general topic made frontpage news today, actually.)
+
+The fact that privacy tools can be used by people to commit crimes is not
+particularly germane to this discussion, though of course it will inevitably be
+mentioned by someone, so why not me.
+
+Of course, most of the time people aren't engaged with crimefighting or criminal
+activity or other "risky" behavior.  Usually people are proud to have their name
+and person associated with their work.
+
+On the other hand, personal reputation and so on pretty much goes out the window
+in cases in which the author is anonymous.  The best that you can hope for is
+that their anonymous persona has some reputation, or that the facts are
+transparent enough to speak for themselves, once they've been brought up.
+
+When we consider relatively mundane things like receipt notification, the
+"right" to fly under the radar may be pretty trivial.  Maybe no one cares.
+Maybe one should still be able to opt out, just in case.  
+
+I guess I should think about it some more.  Maybe go read some stuff by
+the aforementioned SF author.
+
+In case anyone wants to join in the discussion... the theme is what should
+be private?  What should be recorded for the public to see?  Etc.
+This relates to the [[file:social, political, and economic scholium systems.org][social, political, and economic scholium systems]]
+essay where we imagine that lots and lots of facts are recorded publicly
+about lots and lots of things.  Presumably sometimes it is useful to
+remain anonymous when publicizing certain facts.  I'm not really
+sure how this relates to more mundane things like math or chemistry,
+but I'd be interested to get the thoughts of others...
+
+--[[file:jcorneli.org][jcorneli]] Wed Jun 01 22:00:34 2005 UTC
+
+*** The Antelope's Tuchus
+
+I was going to bring this point up earlier in the discussion about real world identites on PM, but now that this discussion has come along, it could go here as well.  A good number of people might feel reluctant about revealing their real life identity in public place on the internet for about the same reasons of personal safety that lead them to request unlisted numbers or ask not to have their first names listed in phone books.  Let me illustrate with a simple example.  While you have been studying SF (Science Fiction), I have been perusing SH (Sherlock Holmes) ;)
+
+Suppose Karen K. is a single female student who is living alone and has just escaped from an abusive relationship with a jealous man Jack R. and suppose  further that she joins Planet Math.  I can understand why she would prefer to remain anonymous.  If she revealed her real world identity on Planet Math, there is a good possibility that her real world ex-tormentor who is familiar with the internet would find out and seek to harm her.
+
+Let us suppose that real world identities are required and she provides the bare minimum of a real world identity --- her name.  Pining with demented, lustful longing for his former prey, Jack searches for Karen on the internet.  A Google search (Google shows up in this story as well :) ) on her name tuns up an entry on Gamma functions on Planet Math.  Knowing that Karen is interested in mathematics, Jack is rather certain that this must be the same person.  Looking through the fora for Karen's postings he finds two seemingly innocuous facts.  In a discussion on Dr. Moriarty's book on the binomial theorem, she recommends the book and states the she found his lectures on the subject taught last semester to be quite informative and well-presented.  In the undergraduate help forum, she states that she is now taking an introductory course in topology and is having difficulty understanding the concept of an open covering.  From the first fact, Jack deduces that Karen is currently enrolled as a student at Muskgrave University.  Examining their online catalogue, he finds that the introductory topology course meets from 2 to 3 in the afternoon at Baskerville Hall.  From the comfort of his armchair, he has already found out where Karen is to be found, has studied a map of the campus, and made his evil plans.
+
+The next morning, he boards a train to the university.  Disguising himself as a student doing homework under a tree opposite the lawn from the enterance to Baskerville hall, he sees her emerge amidst the throng of students.  He stalks her; he finds out her habits and whereabouts in short order and effects his gruesome revenge on the poor lass as she returns home from the digital library one evening. 
+
+While this example is perhaps a bit extreme in it's consequences, it is by no means unrealistic in my opinion.  Even in less extreme cases, I have known female students living alone who felt vulnerable and therefore exercised caution in revealing personal information.  While they might not have had jealous lovers ("haters" would be a more appropriate term) in their past,  there was still the possiblity of being harrassed by random creeps if they made peronal information public (hence the unlisted telephone numbers or missing first names in the phone book).  
+
+Also, using real world identities which are substantiated by real-world information opens the door for identity theft and the like.  Let me illustrate this with a  (supposedly, at least -- I haven't checked so it may well be an urban legend, but it will still serve well as an illustration) real world story which seems too strange to be fiction.  Shortly after buying appliances from a certain company, a number of housewives were confronted with harassing telephone calls by individuals who knew all sorts of details about their lifestyles, interests, hobbies, income, and the like.  It turned out that what had happened was that the appliance company had farmed out the intabulation of warranty information to jailhouse labor.  As you might recall, to obtain a warranty on an appliance, one is typically required to fill out a demographic survey which includes all sorts of trival and not-so-trivial personal information.  Ordinarily, filling this out would have no direr consequence than recieving junk mail and being bothered by pesky salesmen, in this case the consequences were worse because this seemingly innocuous infomation had fallen into the hands of experienced extortionists who knew how to make the most of it for their sinister purposes.
+
+As the fictional story illustrates, a little information can go a long way on the internet.  A computer can easily sort through haystacks of information to find a few sharp needles which the evil sorceror can jab into his unfortunate victim.  Therefore, it is prudent to limit what one posts about oneself in virtual public places.  For instance, while I have no problem posting what I consider public information about myself such as educational background and publications, I will not list things like home adress of telephone number (as opposed say to an office number or office telephone number) as online biographical data.  Even though I may not have a lust-struck fiend chasing after me, I already have enough of a daily nuisance with crank e-mails and do not particularly care for crank snail mails and crank phone calls as well.
+
+In summarry, I would say that there are any number of reasons why one might want to hide real world identity for reasons of safety.  It is understandable that people who feel that their safety is compromised, perhaps for reasons for which they could not really be held responsible, may have legitimate reasons to remain anonymous in public or semi-public fora like PM and we need to take this into acount when deciding how to implement real-world identities as a means of enhancing reputation.
+--[[file:rspuzio.org][rspuzio]] 2 June 2005

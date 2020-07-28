@@ -1,0 +1,633 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since I learned that Google would not sponsor any of the HDM
+projects, I have not been very active here at the HDM. It is likely
+that it will continue that way (I'll probably hang around at the
+wiki, but I most likely will not contribute to the code base), and I
+think it is only fair of me to explain why this is so.
+
+The primary reason is of course money. Money is not what attracted me
+about the HDM, of course, but the fact remains that I am startlingly
+broke, and I must somehow find a way to pay the rent. This means
+taking a full time job, which in turn leaves little time for the
+HDM. Or, at the very least, far less time than I would have had if I
+would have been funded by !SoC.  However, there are other reasons,
+more pertinent to the project. Since I became involved a couple of
+weeks ago, I have lost faith in it. Not completely, but
+significantly. I believe it will be good for everyone if I explain
+why. (The best thing would be if you could demonstrate to me that my
+reasons for no longer believing in the project are inadequate,
+because I really want to believe in it.)
+
+When I looked at the reviewers' comments to the papers Joe sent in to
+the MKM 2004 conference, I found myself agreeing with all criticism
+put forward. Indeed, the criticism mirrors my own to, to a large
+extent. That is particularly disturbing since the paper is a year
+old, and the same criticism applies today. Now, in some detail what I
+have problems with:
+
+**  1. Lack of structure
+
+Despite the enthusiasm some HDMers apparently feel about the wiki as
+a tool for organizing the project, to me it seems to have done more
+harm than good. It is good to have a wiki to discuss things on, no
+doubt, but as the only information repository of the project? When I
+first came to the HDM I was very confused as how "everything fit
+together". However, I was certain that it was a function of my
+ignorance that I didn't get it then, as it often is when one arrives
+at the scene of large work which is already in progress. However, as
+I delved into it, it became clearer to me that the documentation was
+in disarray.  There seems to be no focus on what's important. There
+are as many pages about the h-code, the very core of the HDM, as
+there are on random musings about things completely tangential to the
+project. Add to that the fact that not a single page appears
+completed, no matter how small the issue it deals with. It's always
+"more about this later". There is no sense of priority, nor any sense
+of finishing things just for the sake of finishing them. There are no
+timetables, no to-do lists, no structured ideas for how the project
+is actually going to move forward. Everything is just too vague, too
+up in the air. The wiki gives the impression of someone's stream of
+consciousness rather than a plan for a serious project.
+
+**  2. Messy code
+
+I have only looked at the parser, so I can't comment on the rest of
+the codebase, but it is my impression that at least the parser code
+isn't very good work. At some point in some file Joe even comments
+that it is "spaghetti code". I agree. The question then, obviously,
+becomes: why is it spaghetti code? Why hasn't it been refactored? Why
+was it written like that in the first place? The parser is currently
+less than 1000 lines of code, which is not a lot by any standards,
+nor is a basic parser really supposed to be very difficult to
+write. So why is it a mess? Things like this have caused much worry
+for me. This is a project that is supposed to read, represent and
+utilize all human mathematics, but it can't get the first step right?
+This doesn't instill confidence.
+
+**  3. Lack of progress
+
+I don't know when the HDM project was started, but it appears to me
+as if it has been around at least a couple of years. After reviewing
+what has actually happened in those years, I don't get the feeling
+things are even moving forward. Since this project is such a massive
+undertaking, if there ever is to come anything useful out of it it
+will have to have momentum. I don't feel there is any. There's a lot
+of talk, but no action.
+
+**  4. No theory
+
+For a project this intellectual in nature, there seems to be
+extraordinarily lack of research into what has already been
+done. There are several journals devoted to ATP, and every single
+issue of every single one of them deals with something relevant to
+the HDM. What influence does this have on the HDM? As far as I can
+see, almost none at all. In fact, there appears to be no interaction
+whatsoever with the research community. There are many lists of
+"things to check out", sure, but those are just lists. In the actual
+discussions nobody mentions relevant related work. It's like the HDM
+is completely isolated, which is /not good/.
+
+Furthermore, it doesn't seem like the HDM rests on a solid base of
+theory. It's a lot of ideas, and they might work, but there seems to
+very few facts to back this up. Some of the ideas are obviously too
+hard (parsing an arbitrary mathematical text written in NL), and
+there is no discussion on how a compromise should be reached, no
+discussion of what we should aim for. This brings me to the next
+point.
+
+**  5. Unreasonable goals
+
+I feel there is a disconnect between what we want to do and what
+anyone actually has reason to believe can be feasibly achieved. An
+open source project with a handful of contributors cannot have all
+its goals 20 years in the future. That is not a project, it's a
+dream. There needs to be short term goals as well, but none such seem
+to exist. All parts of all systems are worked on in parallel, and
+specific problems are always dealt with in general terms. What's
+worse is that some goals that for all practical purposes are
+unattainable, such as writing a perfect semantic NL parser, seem to
+be treated simply as problems that someone will solve some other day
+when there's not so much else to write about on the wiki. The fact
+that these problems are unsolvable, and yet crucial to the project's
+success, is never mentioned. It is just glossed over. This is highly
+disturbing.
+
+**  End rant
+
+OK, I believe I've given a decent summary now. However, this is still
+from the top of my head, so be aware that I might revise it a little
+bit at some later point in time. I know these are rather harsh words,
+so it might be a good idea of my to point out that I still think the
+HDM is a terrific project (in theory), and that none of this is
+personal in any way.
+ 
+I'm very interested in hearing comments on this criticism, both
+rebuttals and agreements.
+
+* Response
+
+Even though I'm not a main "HDM guy", I feel I can respond well to
+your points.  The most important rebuttal comes from the observation
+that active /work/ on the HDM (not just discussion) has mostly just
+been going on since the /beginning of this year/.  As most of what
+you see has basically been produced in just the last few months (and
+in everyone's spare time), I've actually been quite impressed with
+the progress.
+
+On the subject of HDM theory, I've actually witnessed lots of HDM
+prior art, theory and practice, in my discussions with Joe in email
+and on this wiki, in the past year.  Perhaps it isn't all gathered
+together well in this wiki, which would suggest improvement is
+needed.  So yes, I would recommend the theoretical structure of HDM
+be explicitly conveyed, however ambiguous the "hard parts" might be.
+
+On the subject of the disorganization of the wiki: the wiki surely
+has its limitations.  It is great as a framework for an informal "web
+of knowledge" , but it is very bad at lending structure to this
+knowledge.  As a simple example, this web site is logically
+structured as a /tree/, but the wiki system is completely oblivious
+to this tree structure.  As such, while we attempt to delineate
+"sections", the wiki cannot let us separately navigate or filter by
+these "sections".  Pages cannot be "under" other pages, they are only
+/attached/.  It can be extremely disorienting.  And it also falls
+short of optimal productivity-- why should I have to manually create
+backlinks?  I've been musing about wikis which would allowe the
+creation of structured (and perhaps other typed) links to solve this
+problem.
+
+(I also dont understand why I can't have automatic linking --- but I
+guess my own Noosphere system spoiled me!  We need to start a
+"super-wiki" project to solve all of this...)
+
+I don't think these problems are "show-stoppers", though, they are
+just things to fix.
+
+Basically, you are getting in on the ground floor here, if you choose
+to be involved with the HDM.  You can help address the substantial
+problems you point out.  It is as if you have joined us at the moment
+a year from when RMS founded the GNU project, and most of it still is
+not very substantial.  But there is potential, no one can say the
+lofty goals are impossible, and what is here is encouraging and
+perhaps even has a chance of being useful relatively soon.
+
+--[[file:akrowne.org][akrowne]] Fri Jul 1 02:13:20 UTC 2005
+
+----
+
+; Meta comment : It is possible to critique without being 
+so caustic.  
+
+; Overview : You criticise the project, but then say you don't want
+to work on it.  I recognise the same faults that you recognize and
+seek to fix them.  Progress only comes through work.
+
+; Lack of structure : I am actually focusing on developing the "super-wiki" system
+Aaron mentioned above.  See [[file:scholium system.org][scholium system]].  One take-home point of this
+work is that /structure is superimposed/.  If you don't like the way the information is
+structured here, you can create your own structures.  If you want completed pages,
+you are free to write them yourself.  Aaron & I are  "finishing" a paper describing
+this system right now, but it is really just a progress report: everything is under evolution.
+If you have specific questions, ask them!
+I'm not at all opposed to exposing the structures in my head, but I prefer to answer specific questions as they
+come up, and continue to work in a way that suits me the rest of the time.  If I don't have
+the structures you're after in my head, you may have to invent them yourself.
+
+; messy code : I wasn't writing the code to instill confidence, but to
+get a job done.  If you can get the same job done with better code,
+then you should write the code and contribute it back to the project.
+
+; lack of progress :  
+"All talk no action" is a strange critique for a philosopher to
+level against a project.  A suitable approach must be talked about
+and simple experiments must be done (compare the previous prototypes).
+Besides, we have a reasonable amount of code that is converging towards
+another prototype that I think we will be quite happy with: the release date should be
+right around the end of the summer.  
+
+; no theory : I took a seminar on Knowledge Representation in which I
+began to develop hcode.  I spent a summer working at Cycorp to learn
+about AI after that.  I've talked fairly extensively to several researchers in ATP and
+linguistics.  Right now I'm focusing on some interface and knowledge
+representation issues that seem to be of fundamental importance to the project.
+I've connected with previous work on this topic (again subject to the
+fact that everything is evolving).  We'll get to the other stuff in
+time.  I've read pretty much everything on the lists of things to check out,
+but I wasn't taking detailed notes: it was more of a first pass through.
+If you feel particularly motivated help with background research, then
+you can work to connect various portions of the project with the relevant
+existing theory & work.
+
+; unreasonable goals : I don't think any problems are unsolvable.
+But I recognize that the solutions may be imperfect.  You are
+reasoning about ends (the project's success) and criticising us for
+not having near-term goals.  Whereas in fact some simple elements of
+the project stand alone as being useful (e.g. the scholium system or
+a working math expression parser); the project is modular and we are
+working on certain specific modules.  Rome was not built in a day.
+Given that we seem to agree about this, maybe you will wish
+revise this particular piece of criticism?  Perhaps there are other
+questions you might ask before you conclude that we aren't making
+progress towards our admittedly lofty long-term goals, or that
+we don't have reasonable near-term goals?  You didn't cite theory
+to prove that the "impossible" stuff is impossible; I didn't cite
+theory to prove it is possible.  Day-to-day work seems more
+important, but by all means, if you know of some relevant theory,
+feel free to describe it!
+
+; conclusion : Either you'll work on the project or you won't.
+Perhaps you will work on some other related project with
+more focused goals.  Perhaps you will work on other things.
+In any event, don't expect other people to do the work for you.
+Work for yourself.  If you have objections to something, you
+can try to change it.
+
+--[[file:jcorneli.org][jcorneli]] Wed Jul 06 18:02:17 2005 UTC
+
+----
+
+If I was being caustic, it was because I wanted to get my points across*. It
+wasn't because I enjoy criticising, so please don't take my tone the wrong
+way. I appreciate your comments Joe (and yours too, Aaron).
+
+Perhaps I will reply in more detail later, or perhaps it is better left as it
+is. For now I will just say that I don't expect anyone to "do my work for me",
+but I still don't think that it's very fair to reply to any kind of criticism by
+just saying that the criticizer should fix what he has issues with and that's
+all there is to it. What's the point of criticism if you can only raise it when
+you're going to fix the problems yourself anyway? I was under the (possibly
+mistaken) impression that my perception of what goes on here was likely to be of
+interest, regardless of whether or not I'll stick around in the future. Sure,
+you can ask me to "do it myself", but when someone else -- perhaps a potential
+financial benefactor or a journal editor -- voices the same concerns, a similar
+reply won't cut it.
+
+At any event, I will not work on the project at this point in time. What will
+happen later remains to be seen. --[[file:shargestam.org][shargestam]]
+
+----
+
+Suggesting that you work to address issues that you find incomplete or not to
+your taste is certainly not the same as dismissing the concerns.  Typically, I
+said "We're working on this issue, but if you want something to happen faster,
+you may have to do it yourself."  This response seems perfectly fair given that
+our effort is already fully extended working on the things we think are
+priorities.
+
+Your criticisms, and perhaps those of the people who reviewed the MKM paper,
+include several over-generalizations (e.g. the "no theory", and "no progress"
+claims), and moreover, they seem to dismiss discussion as non-useful.  These
+points simply don't jive well with me.  
+
+If you wanted to meet me half way on some concrete item like parser code, I
+could probably do about half of the work.  But right now I'm focusing on the
+scholium system which as I noted is the response to what I think was your main
+item of concern.  For the project to move forward with any kind of speed or
+momentum, we will need other good people in leadership roles on the various
+subprojects.
+
+If you have specific criticisms, that is useful, and actually counts as
+contribution.  If you have broad or deep criticisms, you might show us the error
+in our ways kindly by leading us along a nobler path.  Instead, you leave us
+with a parting volley of scattershot, and I don't know what to make of it.  I
+hope you find something to do that you like better.  Perhaps this brief
+experience with HDM has given you some indication of how free software projects
+work /in vivo/.  If you want to contribute to HDM in the future please give
+these matters due consideration.  
+
+--[[file:jcorneli.org][jcorneli]] Thu Jul 07 05:01:56 2005 UTC
+
+----
+
+Joe, I think there are things worth addressing in shargestam's criticisms that
+maybe he isn't the best person to address (efficiency-wise).  One is the 
+meta-comment about the "super-wiki", but you seem to agree with this already. 
+The second is the theory item.  You state that it seems more important to complete
+the day-to-day work towards the stepping-stone goals of the HDM, but I can see how
+a newcomer might not understand how these stepping-stone goals fit together, due 
+to a lack of a broad theoretical sketch.  Such a sketch could be honest and admit 
+where there are stepping-stone solutions lacking, where we are less certain of prior 
+art in techniques or systems, etc.
+Even if this document doesn't help you or Ray at all, (though I imagine writing it
+would), it could serve as a critical piece of articulation to get others involved.
+--[[file:akrowne.org][akrowne]] Thu Jul 7 12:51:59 UTC 2005
+
+----
+
+My immediate goal is to finish the code for the scholium system.  Samuel can
+read about that theory in our paper: the system is a semantic net that fits into
+the hypertextual and AI traditions; reasoning capabilities will follow
+eventually.  But my immediate plan for after that coding is stabilized is to
+parse APM-Xi to hcode and stick it into the scholium system.  The plan for hcode
+is that (a) it will use a lisp-like style; (b) users will be able to write
+structured proofs; (c) hcode proofs will, according to our plan, be verifiable
+using a system based on the metamath proof checker.  The parser mentioned above
+is rather special purpose.  After these goals have been completed we will
+release a new prototype.  I think this plan has been made clear on the HDM wiki
+page(s), although I could be wrong.
+
+I could re-write these statements as questions and make an FAQ, but I'm not sure
+that would address the issue about "theory".  Presumably Samuel wants theory to
+say why we think a semantic net can be used to solve hard problems in
+mathematics.  I'm not too concerned: the mathematical part of the HDM is an
+expert system (albeit a big one) and there is plenty of historical precedent.
+He is even more concerned about the linguistics stuff: how can a computer be
+made to read math books?  Again, I'm not too concerned: I've read a lot of math
+books, and I've found many of them to be exceedingly dry.  Of course there will
+be challenges and some of them may be very hard, but when we work on this issue,
+we won't be at any particular /dis/advantage over other people working on NLP, and
+we will be able to use their theory then.
+
+So, we currently connect to AI theory, but not to all of it, increasingly to
+proof checking, not much to automatic theorem proving, not much to linguistics.
+The main idea behind the work we've been putting into the HDM project so far is
+that we'll work on making something as HDM-like as possible.  If we run into
+killer snags or snafus like "NLP for math just doesn't work", then people can
+still continue to work on the project by hand, and produce an artifact that does
+work in some capacity.
+
+If anyone wants to work on making this exposition less sketchy, that's fine with
+me.  For example, a linguist or linguistics student could take the parsing part
+and run with it (I've talked to one of Samuel's countrymen about this, and he is
+trying to finish up sufficient coursework to give him the skills he'd need to
+work on this, but I think he may want to take charge of this part the problem
+after that, i.e. in about a year).  For me, theoretical items like ATP,
+heuristic reasoning, and NLP come /later/.  I'm not an expert in any of these
+areas, and it will be a lot of work to understand the relevant theory items as
+they relate to HDM.  But I think it will be easier when we have the current
+prototype finished.
+
+I really don't know if these statements are any use to Samuel, since his
+criticism seems to kill further conversation with such non-helpful gems as "I
+don't get the feeling things are even moving forward", or "these problems are
+unsolvable", but there you have them.  I tried to indicate how Samuel (or
+anyone) can be helpful.  Maybe that has been clarified here.  If you seriously
+think that we can help more people get involved by making further clarifications
+to this sketch, or if you (or others) have things you'd like to add, then please
+jump in now.  I grow weary of responding to nay-sayers, especially when I see
+that there are concrete steps I can take to make progress.  Perhaps there are
+other groups who can be successfully evangelized, but right now I'm not in the
+mood for that.  I don't think there is any way to prove that HDM will be a
+success short of building it.  People shouldn't get involved with HDM because
+they are convinced that it will succeed, but because they want it to succeed and
+they find working on it interesting and enjoyable.  Perhaps HDM is a dream (or a
+vision or whatever), and perhaps it should stay that way so we have something to
+inspire us.  But in order for that to work we need to have some hope that the
+dream can be realized.  I'm plenty hopeful.  If anyone wants to go in some other
+direction with the discourse, fine, but this is basically good enough for me.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jul 07 14:41:31 2005 UTC
+
+I meant to say this earlier but was too busy --- while all the points raised are valid, the main issue is that we are only able to work on this project part time and are busy with other things which have little or nothing to do with this project.  To cite my schedule as an example, I rarely have been able to devote more than two days in a row to working primarily on HDM.  On average, I spend an hour a day or so working on HDM (in particular, on most days, I simply do not have *any* time to devote to HDM).  For instance, in the last month, the first week was devoted to paperwork realated to the Summer of Code, the next week and a half I was able to work on improving HDM documentation, but that was cut short when my aunt passed away; after that, I had spend to the last week of the month (and am still spending the first week of this month) wroking not just full-time but overtime (ca. 13 hrs a day) writing, editing, and typesetting contributions to the Emory conference.  In the meanwhile, I have also had to work
+on my regular mathematical research as well as life outside of math.  In conclusion, during the last month, I was only able to devote 30 hours or so to HDM.
+
+Responses to particular points:
+
+1.  I think this is due to a misunderstanding.  This wiki is devoted to several projects and topics, of which HDM is only one.  Therefore, it is no surprise that there would be many pages which are tangential or irrelevant to this particular topic.  When one looks at pages devoted to HDM (as opposed to talking *about* HDM or brainstorming which, by definition, is a stream of consciousness activity) such as the main  HDM page and the h-code page, I would say that they are highly organized and focussed with musings confined to comments.  I would say that a good part of the reason why many of the pages are not completed has to do exactly with priorirites --- the first priority was to make sure that all the main points were written in outline form and important ideas were at least jotted down; polishing the presentation and filling in details was a secondary concern, especially since the primary pupropse of the wiki was a reference for ourselves.
+
+When one works on a project in one's spare time and cannot be sure when one will next be able to devote significant time to a project, it is not really possible to have a precise timetable as opposed to a vague indication of when things will hopefully be done.  Also, to-do lists are limited when priorities get thrown off by events that go on in the meanwhile.  For instance, in late May we were working on putting together a first version of HDM dealing with propositional logic when the Summer of LISP business came along and we had to completely change ourr to-do list.
+
+2. You might want to contrast it with [[file:template utilities.org][template utilities]] which has been been polished, documented, and finished.  As for whether 1000 lines is a lot or a little, we need to judge by relevant standards.  A standard rule of thumb is that a good programmer can produce [[file:50 lines of code a day.org][50 lines of code a day]]; for a language like LISP, this is rather high.  By this standard, 1000 lines of code require at least 20 days of full-time work.  As it so happens, Joe wrote the parser during the months of March and April.  Given that this was a part-time project, I would say that this was rather excellent progress.  While writing an expression parser is straightforward, it does take time.  As for why the code hasn't been refactored yet, the reason is one of priorities.  For the time being, we thought that it was good enough to have a working parser, even if it was undocumented spaghetti code since we needed to focus our energy on other aspects of the project such as proof verification; once we had the several components of the
+system
+working together, we could go back and fix up the messy code.  At any rate, it doesn't make sense to spend time refactoring, polishing, and documenting code which still may undergo major revisions or be scrapped infavor of a different approach.  Perhaps someone with a lot of (his own or somebody else's) time on his hands could afford to do so, but time is the one thing we don't have, so we can't afford to be lavish in this way.
+
+3. While the project has been around for a couple of years, it also is very much a part time project.  If you were to combine all the person-hours which have been devoted to it, you would come up with the equivalent of a few months of full-time work by a  single person.
+
+4.  The reason that you don't see more in the way of citations to prior work on the HDM portion of Asteroid is that we haven't had a chance to put it there yet.  Asteroid only began early this year and was recently moved to a new server.  Our first priority was in using it to coordinate our current work on the project rather than to document the connection to previous work or to carefully lay out the theoretical background.  While these things are certainly important, it will be some time before we will be able to treat them properly.
+
+Also, there definitely has been work on the theoretical end of the project --- look on the h-code page.  However, most of it is now in the form of working notes, as I have not had the time to organize it or even type in these notes on Asteroid.  Preparing a carefully written account complete with citations is time-consuming --- a well-written research article takes on the order of  a a fortnight to a month of full-time work to perpare, as I know all too well from being in the midst of writing a submission to the Emory conference right now.  Writing an exposition which is accessible to a general audience takes even longer.  I am steadily working on turning [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]] and like entries into such polished accounts but, given the amount of time I can allot to to this undertaking, it is not likely to be done until at least next year.
+
+5.  Given the situation, I would say that goals 20 years in the future are reasonable.  Naturally, we hope to accomplish our goals sooner by intetresting other people in collaborating on the project and bringing about circumstances which would allow us to work on the project full-time for a month or more at a time.  However, we are not simply waiting for such favourable conditions to appear, but are working on the project as we can in the meanwhile and Joe and I plan to stick with the project even if it is just us two working on it part time for 20 years.  While progress may be goelogically slow, there definitely is progress and dripping water has been known to shape mountains.
+
+The reason we are working on different systems in parallel is these systems are interdedendant.  It is a simple fact of engineering and craftsmanship that, if you want several parts to work together well, you need to design and build them at the same time.  The only exceptions occur when the parts are relatively independant from one another or when one is simply reproducing something which has been done successfully many times already.  Neither of these conditions apply here.
+
+Passing from the general to the concrete, we have essentially three components, h-code, the parser/translator, and the proof checker which must work together closely.  Were we to build the three parts separately, chances are they would not work together correctly when assembled and would require considerable rebuilding.  If we built one part first, then built the next part to match, chances are that unfortunate design choices in the first component to be built resulting from not foreseeing what the second component would do would mean that the second component would have to be built in an inelegant, bulky and inefficient manner.  For instance, were we to design h-code first, we might have an elegant language but it might interface poorly with the way mathematicians usually express themselves so the parser/translator would be unnecessarily complicated.  Were we to build the parser/translator first, we might find that the reculting h-code language is bloated and ill-suited to proof checking.  To design any of
+the three components requires one to understand how the two other components work and to build any one component well requires adapting it to the other two components.  The only efficient way to produce an efficient product under these circumstancs is to work on all systems simultaneously.
+
+Sure, building a NL semantic parser is no joke.  The reason we didn't say anything about it is not that we think it is trivial; rather, we are focussing our effort on more accessible parts of the project so we haven't taken the time to discuss the feasibility of this future aspect of the project.  
+
+I realize that these misimpressions are largely due to the fact that we haven't written much in the way of explanation of the site which would be of use to a beginner.  In particular, up to June the primary purpose of the site was for ourselves because there was not anyone else working on the project.  As soon as the Summer of Code project came along and people like you who were unfamiliar with the project we dropped what we were doing in the way of developing HDM for the time being to try to explain the project for newcomers.  However, not only did we do this in a rush, but we were also busy with the paperwork realted to the Summer of Code and, soon after that was done, Aaron and I found ourselves very busy with preparing submissions for the Emory conference and Joe had to leave town for two weeks.  In particular, we didn't make clear in one place what the long-term and the short-term goals were and how they related to each other and why they were feasible.
+
+To summarize, priorities and scheduling are very different affair when a few busy people are working on a project in their spare-time than when one has an organization with dedicated full-time workers so please be patient with us and tolerant of loose ends and rough spots since it may be a while before we can properly adress these shortcomings.  However, as this belated response shows, we do get around to tying up loose ends, but it may take some time for us to find a chance.
+--[[file:rspuzio.org][rspuzio]] 7 july 2005
+
+One further note on the subject of time: not only do other obligations take up time that
+might be spent in other ways, they also take up more than their fair share of attention.
+I might have been able to spend many hours on HDM things when I was in school, but it was
+always coming at the cost of schoolwork, and, in retrospect, that time was not highly efficient
+from a coding perspective.  It may have been somewhat efficient from philosophizing and 
+learning perspectives, I don't know.  
+I think I'm being somewhat more efficient at coding now that I'm not in school.  
+One should bear in mind that there is more than a small amount of learning taking place
+here, and while it would be great if that was always highly efficient, it is much more
+important that it be sufficient - and that typically means thinking long term.  I still
+don't know whether these points of criticism are really worth responding to... but I'm
+glad we've had a chance to clarify some of the needs of the project: developer time,
+focus, and also, additional developers who can work on specific tasks.
+
+HDM seems to have a certain inevitability to it, in the sense that we will
+always be able to draw on the work of other free software authors and thinkers
+who are working on similar things.  But then again, there are no guarantees!
+The "global" nature is somewhat at odds with our own shortcomings and lack of
+time.  Are we being efficient given the other constraints we face?  Depending on
+my mood I'd say anything from a Resounding Yes, to Maybe, to Not Really.  But
+now I think I've almost completely drifted away from the criticisms that were
+raised...  which I'm somewhat happy about.  Just to tie this back in a little:
+it is much easier to conceptualize something than it is to pull it off.  That
+doesn't mean the conception part is bad!  The MKM people weren't open-minded
+enough to think deeply about the ideas of the HDM project, but that doesn't mean
+the ideas were wrong or non-useful.
+
+Anyway, I'll call it quits with this reply for now.
+
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 00:21:31 2005 UTC
+
+Ray, thank you for an excellent response. While I still disagree on some points, I think you have made your case very clearly.
+
+In reply I can only lament the fact that I hadn't understood what timescales we were talking about here before I joined the project. Unfortunately, I don't believe I have the patience to work on a project that will take 20 years, especially not if the main reason it takes so long is the mundane fact that few people are working on it and that those people are frequently busy doing other things. If I were to devote myself to such a project, I would have to feel very confident that it would succeed, and that I would still have an interest in it in 20 years (or, alternatively, feel confident that the circumstances of the project would change in such a way as to allow for more rapid advancements). As of now, neither is the case. That, however, is not to say that I don't admire the spirit of those who are fearless enough to plan 20 years -- an eon in terms of software development -- into the future. --[[file:shargestam.org][shargestam]]
+
+There is no particular reason for this "20 years" figure.  Depending on how
+things go, we could be getting great results in 5 years or less, or 30 years or
+more.  Since we do in fact have short-term goals, and since we enjoy working on
+the project, the benefits do not all appear at the end of this long
+(unspecified) period.  The super-philosophical payoff of work on the scholium
+system, for example, is moments (in terms of software development) away.
+Success is a gradual process, not an instantaneous event.  The ideas behind the
+HDM project seem far-reaching, so I think that there is some assurance that they
+will be of interest to anyone who dwells on them for quite some time.
+"Acceleration effects" like those seen in computer chips and the human genome
+project might sweep us up, or they might not.  In any event, one should try to
+enjoy the journey.  And by the way, I have been working "full time" on this
+stuff since sometime around February.  I feel that my focus and work quality has
+been improving throughout this time period, on average.  But to really be making
+the sort of progress you seem to want to see, we'd probably need 30 full time
+developers with a range of different skills.  In order to have a chance of
+bringing something like that that about, we need some prototypes that will be
+useful and interesting to a variety of people.  This is a medium-term project
+that I think we are reasonably capable of pulling off with the current amount
+of developer effort, although as you've seen, we'd be quite happy to have
+other volunteers helping out. 
+
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 17:42:22 2005 UTC
+
+Today I read a discussion here in which the word "Microsoft" was continually
+spelled with a dollar sign. I'm sorry, but I just cannot take such discourse
+seriously. Even though it's just a minor point, this was the last straw for
+me. I am now officially leaving the project (rather than just "not being around
+so much"), and doubt I will ever return.
+
+I wish you all best of luck. I'd still love to see something come out of this
+someday, of course. --[[file:shargestam.org][shargestam]]
+
+Its unfortunate this is the reason you are leaving.  I know its not the /whole/ reason,
+but I think it is indicative of something deeper.  This site, being a wiki, has a very
+"scholium" nature.  It is merely an interconnected, dynamic repository of subjectively-expressed 
+statements, which together make an intersubjective whole.  Every actor here must interpret
+the subjective remarks of others for themselves.  It is also bad etiquette to try to censor
+similar subjectivity in the statements of others; thus, if something politically incorrect is
+said, it is always let to stand.  The "solution" is to /additively/ express a counter-acting 
+subjective statement.  This can all be jarring to people who aren't using to working in 
+such an environment, but I believe this discomfort is basically immaturity which pales
+in comparison to the productive benefits of the entire arrangement.  The wider world 
+is perhaps not ready for it, but migration to such frameworks seems unstoppable.   --[[file:akrowne.org][akrowne]] Sat Jul 9 13:53:11 UTC 2005
+
+Some parts of this site are more serious than others.  For instance, if you look
+at the Emory conference section, the content you find there is as serious as
+anything in a scholarly journal. (I am referring here to the main content and
+not the discussions on it, which sometimes come in a lighter tone.)  Asteroid is
+not really all that different than from a research institute or a university in
+this respect.  Just as a tea-time discussion in the math department is bound to
+be much less formal and much less serious than the weekly coloquium, so too our
+casual discussions here are bound to be silly at times; not all discourse is
+intended to be taken equally seriously.  If a potential student visiting a
+physics department were to say "The lectures were alright, but then they started
+spouting nonsense about fashion and politics so obviously they are all just a
+bunch of impostors and wannabes.", we would laugh off this objection as
+reflecting on the social ineptitude of the speaker --- the conversations in the
+hallways were not meant to be taken as seriously discourse even if they occured
+in the physics department by the same people who had just been discussing mass
+renormalization a few minutes earlier.
+
+The reason that the situation is similar here because this website serves
+approximately the same function.  Aaaron is in Atlanta, Joe is in Minneapolis,
+and I am in New York.  It would be impractical for us meet in the same room on a
+regular basis, so we use this website for collaboration.  When scientists
+collaborate in person, they typically do more than just sit down to work at
+writing code, make calculations, or carry out experiments and deliver talks
+about their progress.  No, they also brainstorm, go off on tangents, have random
+conversations, discuss the papers they are working on, and even make jokes. So
+do not be surprised if you find these things here as well.  There is nothing
+strange in what we are doing, only the setting may be unfamiliar.
+
+Finally, let me point out that one can talk about serious topics in a tone which
+is not serious.  For classic examples, please see Chuang Tzu or many other
+Taoist classics.  (Or latter-day Taoist works such as "The Tao of Pooh".)  This
+is a point on which Confucianists would agree with Taoists --- a well-educated
+gentleman must know at what times a serious tone is appropriate and at what
+times a more playful tone is permissible.  To illustrate with the instance which
+was brought up, the reference to "M$" occurred in a discussion inspired by Joe's
+thoughts on economic scholium systems.  While this was a serious discussion of a
+serious topic, the tone was light and flippant because it was the equivalent of
+a tea-time conversation.  Were I to express the same opinions in a sholarly
+paper on the economic implications of scholium-based systems, they would have
+been expressed much differently in a serious tone.  --[[file:rspuzio.org][rspuzio]] 9 July 2005
+
+----
+
+Ray and Aaron, I agree with both of you. There's nothing wrong with the net
+equivalent of tea time conversations (though I still believe there's way too
+much of that on this wiki), and I don't discourage anyone from being flippant
+when a serious tone is not required. But to take Ray's example of a university,
+say that I overheard my professor of economics refer to MS as "M$" in his spare
+time. That would no doubt have an impact on how I viewed his more serious
+lectures, simply because I would know that he thinks writing "MS" with a dollar
+sign is either funny, insightful, or both, even if he doesn't choose to make
+that sentiment known in his lectures. If he were my physics professor, on the
+other hand, I probably wouldn't mind much, because how nuanced his opinions on
+Microsoft's business practices are have little relevance the intricacies of
+M-theory, or what have you. The problem here is that the HDM isn't only the
+equivalent of a physics (or math, rather) department, it is also to some extent
+the equivalent of a political science, philosophy, and economics
+department. It's much more a math department than any other kind of department,
+but I still don't think it's irrelevant what people think of philosophy,
+economics and politics in here. These things do matter.
+
+But now I am running the risk of making a hen out of a feather, as this is, as
+I've already said, only "the last straw" (and unfortunate choice of wording,
+since it indicates that I am somehow upset, which is not the case) rather than
+anything like the main reason I'm leaving. If I had more faith in the project,
+from a technical and organizational standpoint, these things would not
+matter. After all, the nature of the project is, at least as far as I'm
+concerned, first and foremost technical. People may wish to complete it for
+different reasons, and there's no need for their ideals to align perfectly as
+long as they all agree on what the system they want to produce should look
+like. --[[file:shargestam.org][shargestam]] 
+
+----
+
+Good comments from Ray & Aaron (above), about this style of writing both in
+abstract and in practice.  The idea that we can simultaneously be fans
+of, say, Hunter Thompson and Bourbaki shouldn't come as a surprise.
+M$ is a perfectly acceptable abbreviation for "Microsoft" in casual
+discourse.  Maybe it raises eyebrows or maybe it doesn't, but in
+either event, it seems inconsequential - especially compared to
+the use of the term "hyperreal" in the title of the HDM project!
+
+I think that the AM folks work well with a variante of the "Think Globally, Act
+Locally" way of doing things.  We're willing to consider lots of different
+things...  but we bring them to bear on specific projects.  Samuel maybe
+can't see the actual progress and results (for some unknown reason)
+and doesn't see that building a small community is itself something
+we should be somewhat happy with.
+
+In addition, I think the page about [[file:Logical positivism and social welfare.org][Logical positivism and social welfare]]
+caught Samuel's eye, and maybe he objected to something I said there.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jul 09 19:25:32 2005 UTC
+
+----
+
+I just can't seem to leave, can I? :) I guess I'll have to stick around this
+page until I feel there's nothing more I need to reply to, as to minimize the
+risk of being misunderstood. For Joe's points, in the order they were raised:
+
+ 1. I don't think there's any good reason for an intelligent adult to say "M$"
+  instead of "MS", but I guess we'll just have to agree to disagree there. As
+  for the "hyperreal" part, I never actually liked that, but didn't think it
+  mattered very much and still don't.
+
+ 1. Building a small community can be good, but I didn't know that I had implied
+  otherwise. As for results and progress, it would be disingenuous for me to say
+  that there has been no results and no progress at all. Clearly there
+  has. However, the momentum is not strong enough for me, personally, to be
+  interested in this project. That's what I have said and that I stand by.
+
+ 1. I hadn't seen the page you referred to, Joe, and I don't object to anything
+  there. Actually, I didn't even find much it would be possible to object to, as
+  it's basically just a bunch of questions. I think the question of how one
+  evaluates what should be given funding is both interesting and important. I
+  actually used to ponder that quite a bit a couple of years ago, but didn't
+  arrive at any very interesting conclusions. --[[file:shargestam.org][shargestam]]
+
+If you want to be understood, you will have to be a lot more clear.  In your
+initial critique you seem to have mistaken a biting tone for clarity, indeed you
+said the reason you chose to be so caustic was "because I wanted to get my
+points across".  
+
+But in fact, you said things like "it is my impression that at least the parser
+code isn't very good work" that add little to no information, and furthemore
+insinuate (blindly, because you never took the time to look) that none of our code is good.
+
+In short, if you want to be understood, lose the derisive tone, and focus on
+being helpful to the project.
+
+Otherwise, there is nothing to understand but that you don't like our style, you
+don't think we have enough momentum to satisfy your needs or tastes, and so on
+and so forth.  I've attempted to point out how you could help address these
+concerns, but you apparently aren't interested.  
+
+If all you want is to leave the project, then you really don't need so many
+words to make yourself clear.  If you want to stay, then stop posting to this
+page and start making yourself useful.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jul 09 21:06:50 2005 UTC

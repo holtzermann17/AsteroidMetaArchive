@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(substitute-assignment assignment template)/
+
+ *Input:* an [[file:Definition of assignment | assignment.org][Definition of assignment | assignment]] and a [[file:Definition of template | template.org][Definition of template | template]]
+
+ *Output:* a template
+
+ *Description:* If the first item of /assignment/ is a placeholder in /template/, this function returns a new template with one less placeholder in which all occurrences of this placeholder have been relaced by the second item of /assignment/.  Otherwise, the function simply returns /template/.
+
+ *Dependencies:* first, second, substitute-helper
+
+ *Listing:*
+
+ (defun substitute-assignment (assignment template) 
+   (if (member (first assignment) (first template))
+       (list
+        (remove (first assignment) (first template))
+        (substitute-helper (first assignment)
+                           (second assignment)
+                           (second template)))
+       template))
+       template))
+
+ *Discussion:* Look at /assignment/ to see if the placeholder actually occurs in the list of placeholders in /template/.  If so, call on /substitute-helper/ to replace all occurrences of this placeholder with the appropriate substitution text and remove the placeholder from the list of placeholders.  If not, there is nothing to do but return /template/ as given.
+
+ *Examples:*
+
+ ; (substitute-assignment '(a x) '((a b) nil))
+ ; => ((b) nil)
+
+ ; (substitute-assignment '(a x) '((a b) (b a b)))
+ ; => ((b) (b x b))
+
+ ; (substitute-assignment '(a x) '((b) (b a b)))
+ ; ((b) (b a b))
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

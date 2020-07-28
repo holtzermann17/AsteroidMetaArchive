@@ -1,0 +1,185 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+/A Scholium-based Document Model for Commons-based Peer Production/
+
+* Introduction
+
+The simplest model of a document is a list of characters;
+a "string", "file", or "buffer".  This model is not diachronic.
+A diachronic model would keep track of editing operations, or summarize them as
+a sequence of differences between document versions.
+
+Many texts have features which can not be modeled adequately without still more
+information ("metadata").  Compilations, hypertext, and collaboratively written
+documents are examples.  In this essay, we advance the idea that it can be
+useful to treat such documents as collections of scholia.
+
+* Scholia
+According to Webster, a scholium (pluralized "scholia") is, 
+ * A marginal annotation; an explanatory remark or comment; specifically, an
+explanatory comment on the text of a classic author by an early grammarian;
+ * A remark or observation subjoined to a demonstration or a train of
+reasoning.
+
+The Talmud an example of a document that is comprised of scholia.  This document
+is a collection of interconnected commentaries and reflections on Jewish law
+(Torah, and subsequently, Talmud), written by generations of Jewish religious
+scholars.  Scholia also appear in the writings of Galileo and Newton, where they
+play the role of what these days we usually call corollaries or remarks.
+
+Viewing scholia as operations on a file, we might describe their
+functionality as follows:
+
+  (scholium DOC BEG END NAME CONTENT) 
+  `scholium' specifies a comment on a portion of the document DOC. BEG and END
+  are character positions in DOC marking the beginning and the end of the
+  portion being commented on. NAME gives the canonical name of the new comment
+  as an element of the document collection. CONTENT is the commentary to be
+  added.
+
+As an example of how such a function might look, here is
+an example based on the document I'm writing now.
+
+  (scholium DraftDocumentModel 1883 2204
+            RemarkOnScholiumDefinition
+            "This is how Lisp functions are documented.")
+
+We could, if we wished, add further commentary on this commentary.
+
+  (scholium RemarkOnScholiumDefinition 1 4
+              ClarificationOfRemarkOnScholiumDefinition
+              "By which he means: the style in which the
+  excerpt of the current article between character 
+  positions 1883 and 2204 is written.")
+
+Emacs text properties would be a good example to keep in mind, if they are
+familiar to you.
+
+* Extensions
+
+Additional arguments to `scholium' might be handy, for example, a TYPE argument
+that would enable the user to specify the "type" of the scholium; i.e., to say
+that it is a comment, or a correction, or what have you.
+
+A user may wish to make comments that apply across several documents, so `scholium'
+could take a list of several documents and buffer positions in place of DOC,
+BEG, and END.  (This would also make it possible to create a scholium that
+applied to several disjoint sections of the same document.)  If someone wished
+to make a comment about a whole document or collection of documents, we could
+set things up so that BEG and END were optional.
+
+One might want to use an existing document or a substring thereof as the CONTENT
+field of a new scholium, in which case it might be appropriate to allow the name
+of that document and the position of the desired substring to fill the CONTENT
+field.
+
+Note that we are treating the `scholium' as a fairly low-level function.
+Interface issues and probably an assortment of metadata-related functions would be
+"extensions" that exist outside of the `scholium' function itself.
+
+* Implementation Strategy= 
+
+The basic idea in this model is to create a sea of documents, an unstructured
+database that contains all of the basic elements of our digital library.  This model
+is very similar to the `sea of assertions' model used in knowledge
+representation systems like Cyc and KM.
+
+Rendering a "page" drawn from a scholium-based document in, say, HTML, could pose
+considerable challenges.  Although the simplest scholia are no more complex than
+hyperlinks, display may become complicated if many levels of interlinked
+documents are to be shown onscreen at once.
+
+** Compilations and modified versions
+
+In the scholium-based document model, the simplest way to combine documents is by
+"linking". That is, the system should provide a way to follow the `edges' that
+from point from one element to another.  A nice display system would presumably
+put some of the nearby scholia onscreen.  To do this, we would need a way to
+`linearize' the collection, or, anyway, small portions thereof.
+
+But this does not shed much light on the problem of assembling /new/
+documents, which may include existing pieces drawn from all over the database.
+So far, we have only talked about how relevant scholia would be displayed in the
+appropriate places when an already-existing document was rendered.
+
+One solution to this problem is to have a LISP command that runs against the
+current collection of documents, and inserts the desired content into the buffer
+at point, and subsequently attaches an appropriate scholium to the current
+document which cites the source of the quoted content.
+
+  (include-document DOC &optional BEG END) 
+  `include-document' causes DOC, or, optionally, the
+  substring of DOC between BEG and END, to be inserted into
+  the current document.  The content that is inserted is
+  marked up with a `scholium' that cites its source.
+  History and bookkeeping information are adjusted
+  appropriately whenever this command is run.
+
+The scholium that is created by `include-document' is not intended to be
+modified by hand.  It would instead be updated automatically when the contents
+of the current document are changed, so as to keep track of the flow of derived
+content through this document.  If the portions of the included text are later
+changed or deleted entirely, this should be noted.
+
+DOC here could be one of the basic elements of the scholium-based CBPP system,
+or it might be one of the "rendered pages", or otherwise include content from
+several different sources within the system; see the section on extensions above
+for more ideas about basic variants of the `include-document' function.
+
+A more advanced alternate version of `include-document' would track the
+/included/ document for changes, and update the included text whenever the
+original changes.  This sort of /mirroring/ may be preferable in many cases,
+particularly because the maintainers of CBPP systems often prefer not to have
+redundant information in the database, even if it is duplicated in several
+places for presentation purposes.  Furthermore, it is frequently to a user's
+benefit to get any changes inserted in (or around) the original document,
+whenever possible, instead of placing them in a separate derivative version.
+
+Nevertheless, there are certainly times when it is beneficial or expedient to
+create a modified version.  To cater to users in this situation, we could also
+set up a derivative-tracking device, who's function would be to update the
+original author about the fate and progress of any derived versions.
+
+As an example of how this sort of infrastructure might be useful, suppose that a
+series of existing definitions was quoted in a textbook-style entry.  The author
+of the "textbook" might receive a question from a reader and then adjust one of
+these definitions to include more expository text.  Upon learning of this
+change, the author of the original definition might wish to add the expository
+text as a scholium attached to the standard definition.
+
+** Bidirectional updates
+
+These sorts of exchanges become somewhat more cumbersome but presumably not
+impossible to carry out if one of the agents is working outside of the
+scholium-based CBPP system.  In order to make bidirectional updating work when
+some of the editing is going on outside of the scholium-based system, we would
+need to be able to read a stream of diffs coming from the other system and
+decide how to incorporate the modifications.  We'll have to think more about how
+to do this!
+
+* Conclusions
+
+In a context with multiple authors talking about many intersubjectively
+important concepts, with `ownership' of the texts that they write but freedom
+with the content, treating the total document as a collection of scholia could
+provide important alternative perspectives on a given subject.  The presence of
+on-screen scholia could encourage responsible maintainership and aid users in
+making specific comments and suggestions part of their critical reviews of
+existing entries.
+
+Technological difficulties are posed by the fact that a document must be
+assembled out of several pieces for presentation purposes and the fact that
+standard web browsers and editors may not be very useful for browsing or
+creating these sorts of documents.
+
+* Coda
+
+In thinking about assembling a "document" from various disparate sources in the
+database, one is vaguely reminded of something that comes up in p2p filesharing,
+namely the way in which a document can be assembled from partial data drawn from
+various nodes.  How should one go about the process of assembling the document
+from the sources available?  We will need to think and learn more about the
+algorithms that would need to be employed in a system like the one described
+here, including its potential uses in distributed content systems.

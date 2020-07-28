@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/init.sh
+
+pp line 13:
+su -c "/var/www/pp/noosphere/bin/spelld &"
+
+pm line 13
+su pm -c "/var/www/noosphere/bin/spelld &"
+
+pp line 17
+rm /var/www/pp/noosphere/bin/run/renderall.running
+
+pm line 17
+rm /var/www/noosphere/bin/run/renderall.running
+
+pp line 21
+/var/www/pp/noosphere/bin/start_searchengine.sh
+
+pm line 21
+nohup /var/www/noosphere/bin/start_searchengine.sh &

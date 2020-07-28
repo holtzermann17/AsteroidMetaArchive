@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This program manages a knowledge base which can be regarded from many
+points of view.  The knowledge base itself consists of a number of
+cards, each of which has a name, belongs to a suit, and holds content
+appropriate to that suit.  For instance, we might have a suit "link"
+and have cards of that suit hold triples of the sort used to define
+links in the SimpleNet implementation of the scholium system.
+
+What distinguishes this program from Arxana and SimpleNet is that it
+provides for multiple points of view.  Whilst all the knowledge is
+stored in a single card deck, that deck can be viewed from many
+different vantages.  For instance, suppose we were describing an
+office building.  Then card no. 101 might describe the typewriter on the
+desk in room 6.  There might be different points of view corresponding
+to the people who use these offices.  Hence, from Joe's point of view,
+"typewriter" might refer to card no. 101 whilst, in my point of view,
+"Joe's typewriter" would refer to the same card and "typewriter" would
+refer to what Joe would call "Ray's typewriter".
+
+
+* Discussion

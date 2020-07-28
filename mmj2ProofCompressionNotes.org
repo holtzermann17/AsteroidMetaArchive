@@ -1,0 +1,164 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* A throwaway page of rough notes
+
+A now obsolete theorem in set.mm, "climadd2OLD"
+has a proof that expands to approximately 15,000
+steps (in Metamath RPN format). 
+
+As an experiment I used metamath.exe to
+repeatedly compress and decompress its
+proof. Surpisingly -- to me -- the compression
+of climadd2OLD takes about 1 second (subjective
+estimation), plus/minus .2 seconds.
+
+This is not totally surprising though because
+of the significant amount of work required
+to scan an array of 15,000 proof steps looking
+for duplicate subproofs. I estimate that
+if there were, approximately, 7,500 assertions
+requiring inspection (1/2), and an average
+traversal of 7,500 steps, then 56 million
+equality comparisons would be needed just to
+find duplicate subproof roots (plus/minus).
+
+There are other tasks involved in compressing
+a Metamath proof, and I won't go over all that
+right this moment, but the point is that
+the process is computationally intensive!
+We can refine the workload estimates for a
+given proof, but it is clear that a lot of
+work is involved in going back, after the
+fact of successful proof creation and turning
+an array of label strings into an array of
+numerically compressed symbols in the Metamath.pdf
+format. 
+
+For metamath.exe the *price* of compression
+is definitely "worth it" because metamath.exe
+processes compressed proofs directly in its
+Proof Verifier, and because there is no need
+to decompress a proof unless the user requests
+it. 
+
+For mmj2 the question is different because mmj2's
+Proof Verifier does not presently operate upon
+compressed proofs, though it could one day. And
+throughout mmj2 processing the standard format
+is decompressed. Fortunately, decompression
+promises to be fairly swift, so file loading
+will likely not be slowed greatly when reading
+a file with compressed proofs. However, the
+Proof Assistant may indeed be somewhat slower
+than seen now. The average unification time for
+a Metamath proof is 1/10th of a second, and
+long proofs require something like 3/10th of a
+second. So, if a user desires to see generated
+proofs in compressed format, response time for
+the gnarliest proof could increase to 1 second
+or more!
+
+That is interesting. The alternative is to accept
+uncompressed output from mmj2's Proof Assistant
+for the sake of somewhat speedier response times. 
+The decompressed proofs could be cut-and-pasted
+into Metamath.exe and compressed -- or, an option
+could be provided on the GUI to toggle back and
+forth between compressed and uncompressed formats
+(that is the likely approach...)
+
+ * * *
+
+One possible algorithm for compressing a Metamath
+proof involves a bottom-up, left-right traversal
+generating a hash code for each subtree containing
+an assertion in the subtree's root. If no match,
+add it and output the original symbol sequence; 
+otherwise, double-check for equality and
+if equal, plug in the reference number for the
+Metamath compressed proof. 
+
+There are details that would need to be worked out
+in this approach. But it is not clear just how much
+would be saved given the expense of creating 
+objects to store in the hashmap, etc. However, as
+a gedankenexperiment, the hashmap approach has
+merit -- it would be more widely useful if the
+method were used thoughout processing. To use a
+complicated algorithm just to compress one proof
+and then throw everything away may not be justified,
+but in the context of an *entire* system for 
+creating and manipulating proofs, the investment
+might generate a positive return. 
+
+ * * *
+
+One thing is very clear to me in hindsight: I should
+have created a first class "Proof" object in mmj2
+instead of coding "proof" as Stmt[] in Theorem (i.e. 
+as an array of Stmt object references.) If, in 
+metamath.exe Proof Verification is quicker when 
+operating on compressed proofs, might not proof trees 
+be faster and more efficient if there were a mechanism
+for stubbing out "virtual" tree nodes to replace
+repeated subproofs -- and if each node contained
+a hashcode, ready for use at a moment's notice
+(just an idea.)
+
+Actually, it is not too late to retrofit mmj2 with
+Proof objects. Proof references are not so numerous
+as to make the upgrade task unmanageable. At any
+rate, add this to "Lessons Learned" -- or partially
+learned, for there are many other interesting
+avenues to investigate...
+
+Ghilbert's proof format is intrinsically more
+concise than Metamath's because it does not store
+variable substitutions at a given tree level 
+unless the variable is referenced in that
+level's assertion. And Ghilbert externalizes
+proofs, which seems like a good idea on the simple
+grounds that there may be multiple meritorious
+proofs for a given theorem.
+
+Another area to look at is using subtree hashcodes in
+proof unification lookups -- and subtree matching.
+
+The problem of how to actually *do* proof unification
+in a speedy manner against a database containing
+1,000,000 assertions is unresolved in mmj2. It seems
+clear that 2D database techniques are needed, but
+the precise organization of such a database has not
+been designed. At present, with set.mm at 7,000 some
+theorems and the likelihood of next years PC's 
+coming standard with 1 or 2GB of RAM, the problem
+does not require an instant solution. (As long as
+Microsoft bloats Windows faster than Norm Megill
+adds theorems to set.mm, we're ok!)
+
+--[[file:ocat.org][ocat]] 20-Mar-2006
+
+* mmj2 loads compressed 1/28 set.mm 50% faster than uncompressed set.mm
+
+Fascinating. Takes about 3 seconds to load the "LogicalSystem"
+data structure from the 1/28 compressed version of set.mm, which
+weighs in at +12MB uncompressed -- and the uncompressed version
+takes +/- 6 seconds to load. I theorize that the reduction is
+due to a combination of factors including a) few disk i/o's,
+b) fewer tokens to parse; c) fewer ASCII characters to validate;
+d) fewer Metamath proof labels to validate. On the last item, 'd',
+the compression routine does not need to check the Stmt tbl hashmap
+for every input label, only the parenthesized labels in the
+compressed proofs -- the remaining labels are generated via direct
+index lookup (i.e. reusing the prior validations). 
+
+So that's good, especially because this cuts down the startup
+time for the Proof Assistant. BTW, the mmj2 "Verify Proofs *"
+takes about the same amount of time -- about 3 seconds -- that
+metamath.exe takes, in spite of the fact that mmj2 processes
+uncompressed proofs internally. That would seem to imply that
+additional runtime reductions can be achieved by modifying the
+mmj2 VerifyProof logic to handle compressed proofs directly.
+
+--[[file:ocat.org][ocat]] 20-Mar-2006

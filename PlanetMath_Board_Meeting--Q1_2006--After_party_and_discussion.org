@@ -1,0 +1,92 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Aaron put together an abstract.  Things can be added to this.
+Discussion can branch off from here.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Topics
+
+Note: these minutes are kind of sparse because I only started taking
+them about half way through.  See the log for a complete record.
+
+LOGGED AT: http://aux.planetmath.org/logs/pm_board_meeting_2006-01-22.txt
+
+PRESENT:
+
+Logan, akrowne, djao (Galois), rspuzio (rsp), jcorneli, nathan
+(unlord), mathcam, bloftin, drini, jwales, kim
+
+GENERAL DISCUSSION:
+
+ * discussion with Jimmy Wales (of Wikimedia)
+  *  WP does not have members at the corporate level
+  *  WP has bylaws available under GFDL:
+    http://wikimediafoundation.org/wiki/Wikimedia_Foundation_bylaws
+  *  WP has voting but not by official "members"
+  * community at large votes for some board members.
+ * lots of discussion on licensing issues (see log, and below)
+
+DECISIONS/ACTION ITEMS:
+
+ * jwales will try to connect us with WP's legal team
+ * we will stick with non-membership corp. structure for now
+
+ * bounty committee formed: Aaron, Logan, Ray.
+  *  Ray will draft details on wiki
+  *  first meeting, ~2 weeks from now
+  *  draft bounties on wiki until then
+  *  any akrowne work will have to be extra-bounty and require
+    board approval.
+  *  need to keep a little bit of money (~$500) from being spent on
+    bounties
+
+ * need to put "Reasons we need funding" on the PM donate page (or a
+  wiki page); need to make how much money we HAVE and how much we
+  NEED visible.
+
+ * Not all board members integrated with Wiki.  Like mailing lists--
+  better for discussion.
+
+ * Logan created a google group for mailing list discussion.
+  *  TODO: announce it more widely on PM, AM
+  *  http://groups.google.com/group/planetmath
+
+ * for dev discussion, could create a Noosphere/PM project on Savannah,
+  which comes with mailing list.
+
+ * we need to get legal experts to look into copyright pact!
+
+ * keep discussing lawsuit insurance with WP
+
+ * djao a prime example of someone who does not want to switch to PD
+  (but acknowledges problems in FDL)
+
+ * look at debian legal for discussion of FDL problems
+
+ * board meetings to stay quarterly for now
+
+ * think about licensing, specifically, making something BSD-like
+  (attribution-only) default for new contributions.
+  *  djao would be amenable to dual-licensing in this case
+  *  notion of giving PM "control" something we want to avoid
+
+* Discussion: Licensing
+
+ * [[file:Public Domain.org][Public Domain]]
+ * [[file:BSD.org][BSD]]
+ * [[file:FDL2.org][FDL2]]
+ * [[file:CC.org][CC]]
+ * ... 
+
+* Discussion: Goals
+
+We somehow let overt discussion of [[file:PlanetMath Goals.org][PlanetMath Goals]] slip during
+the meeting (i.e., we didn't do it).  Not to say that some goals can't
+be figured out from the discussion (including possibly the summary
+above).  But I think it would be very wise to work on the discussion
+of these issues now, particularly in light of the new
+[[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]] we've been
+working on, but also in light of the engagement of a [[file:bounty committee.org][bounty committee]]
+and the fact that bounties are starting to be offered. --[[file:jcorneli.org][jcorneli]]

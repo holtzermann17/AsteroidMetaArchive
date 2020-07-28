@@ -1,0 +1,96 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:Grant planning.org][Grant planning]].
+
+This item actually groups together a bunch of grant programs of private (mostly telecom) foundations which would be appropriate for a collaboration between PlanetMath and Quadrock, Inc. In sum, Quadrock seeks to foster the creation of materials usable within its commercial "edutainment" system, while PlanetMath has the compatible goal of creating high-quality educational materials (for mathematics) and fostering systems that allow this to be done collaboratively in a sustainable fashion.
+
+* More About Quadrock, Inc.
+
+People on this site of course know about PlanetMath, so here I'll describe Quadrock, their product, and their interest in working with us.  I probably can't say too much, but here is the general overview.
+
+Quadrock, Inc. is a startup developed by Daniel Howard, a seasoned geek and veteran of successful startups.   He lives in the Atlanta area and I met him through some mutual friends.   The company's core product is to be a personalized video-based "edutainment" system, which superimposes relevant educational materials from the Web over whatever program is being watched within the video component.  I don't know nor can I divulge the details of how this system works and works so well (which I trust is the case); this is the real selling point of their business.  Note that the business is really a /service/ (possible with the secondary sales of some hardware, which I'm not sure of) to connect information to other information in a way which is personalized for the viewer.  So, Quadrock wants to make sure "nice" information of the type desired (educational) is available, and that more of it will be available in the future, so their service does not become stagnant.
+
+Why not develop the educational materials in-house and proprietarily?  There are a few reasons for this.  One is that content development is expensive and doing so in-house would increase start-up costs vastly.  Another is that there is a strong potential that more materials could be developed if the entire web community is opened to the process.  Another is that by making the materials freely available and collaborative, they will be more "alive", getting frequently updated and improved.    Note that there is no real risk to Quadrock's business in allowing other parties (including potentially commercial companies) to have access to the same content, since Quadrock is really selling the information integration system, not the content.
+
+* More on PlanetMath's Interest
+
+As you might expect, due to the video-centric nature of the Quadrock product, the emphasis is more on visual, interactive and introductory-level content.  Thus, we will want to go beyond the typical PlanetMath entries of today, which are very advanced, formal and text-bookish (some entries are pretty graphical, but this is a minority).  So what excites me about this project is that it is a chance to do something about this imbalance in our content offerings.  Of course, since we're not hiring people to just make the kind of entries we want, we have to build (or enhance) /systems/ that encourage this kind of content to be developed.  This could also include outreach to expand the PlanetMath community to the kinds of people who would want to make this kind of content. 
+
+* Plan of Attack
+
+We plan to bring together the candidate grant programs, identify the differences and similarities in their focii, write a single grant "template" for the PlanetMath+Quadrock collab, then "merge" the template into instance proposals for each program, effectively carpet-bombing them with minimal work while increasing our chances n-fold.
+
+ *Note:* It looks like all of the grant programs can be applied to anytime.  So, no deadlines!  We get our proposals in when we are ready.  Ah, what a refreshing break from government granting organizations...
+
+* Grant Programs
+
+The following programs have strong overlap with our collaboration interest.  Below we summarize the programs and pick out their focii which are especially apropos for our effort.  Note that most of them are private foundations for telecoms.  The idea here is that we would be especially attractive to them, because any project which makes video more attractive has the potential to increase business for them (as common carriers) down the road.
+
+**  QWest Foundation
+
+Link: http://www.qwest.com/about/company/sponsorships/foundation/requestFunding.html
+
+ * K-12 ed. (HS-level e-learning resources in mathematics)                                                                     
+ * Community-based initiatives (dev. through online community)                                                                 
+ * eventual commercial interest for QWest.
+
+**  Sprint Foundation
+
+Link: http://www.sprint.com/community/sprint_foundation/
+
+ * Education (mostly K-12, same as above)                                                                                      
+ * Youth dev (can we get kids to /create/ the content?)                                                                              
+ * Community dev (dev. through online community again)                                                                         
+ * Eventual commercial interest for Sprint.
+                                                                                                                              
+**  SBC foundation
+
+Link: http://www.sbc.com/gen/corporate-citizenship?pid=2560
+
+ * Enhance education (pretty simple angle)                                                                                     
+ * Eventual commercial interest for SBC.
+                                                                                                                              
+**  BellSouth foundation
+
+Link: http://www.bellsouthfoundation.org/
+
+ * Development of learning communities (Development of content through the community)                                          
+ * Quality in the classroom initiative (Get teachers to create math and science e-resources as part of their professiona; development.  Better yet, get them to get their kids to create content! This will all also assist their technical development and open the door to classroom exposure.)
+ * Eventual commercial interest for BellSouth.
+
+**  Carnegie Corp
+
+Link: http://www.carnegie.org/
+
+ * Education (no-brainer)                                                                                                      
+ * Strengthening democracy (What happens when you can read a counter-point essay to a political commentary on the news? Quadrock system would be perfect for this! Thus, development of any applications for such a system should be supported.)                                                                                  
+                                                                                                                              
+**  Sloan Foundation
+
+Link: http://www.sloan.org/programs/edu_careers.shtml#informationaboutcareers
+
+ * Anytime, anyplace learning (this program is a great fit)                                                                    
+
+**  Arthur Vining Davis Foundation
+ 
+Link: http://www.jvm.com/davis/2003GRANTS.HTM#secondary
+
+ * Secondary Education (developing HS-level mathematics e-learning resources)                                                  
+
+* Development Items
+
+How do we execute the work on these grants, if funded?  Some ideas for tasks:
+
+ * get more educational metadata supported in PlanetMath, and hooked into browse/search filters.
+ * write guides for the development of multimedia and interactive content on PlanetMath (also research these methods).
+ * do some outreach efforts to get the broader mathematics education community involved in PlanetMath.
+ * some research and development on personalization (esp. implicit personalization, perhaps building on 
+  Seonho Kim's work at VT).
+ * hook up with Schoolforge (http://schoolforge.net/index.php)
+
+There must be more!  
+                                                                                                                              
+* Discussion
+
+What do ya'll think?  Ideas for more development items and how to proceed with them?

@@ -1,0 +1,313 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page describes a submission of Aaron's to the [[file:Emory Free Culture and the DL Symposium.org][Emory Free Culture and the DL Symposium]]
+and of course hosts discussion for it.
+
+----
+
+Title: How Free Culture Will Save Digital Libraries
+
+Author: Aaron Krowne ([[file:akrowne.org][akrowne]])
+
+Abstract:
+
+: For the past few years, libraries and digital libraries have seen themselves
+"at war" with internet search engines, exemplified by Google.  Aggressively
+innovating, Google has continued to develop new services and enhancements of old
+ones which further compete with library offerings.  For example, Google Scholar
+better-implements a major library function and moves it to Google, making Google
+even more of a salient starting point for research.
+
+: .
+
+: In the face of all of this, libraries are struggling to "catch up" by
+providing services that Google can not or does not (at least, yet).  Some
+approaches to this that have been actively pursued within digital libraries
+recently include the better use of metadata in information services (sorting,
+filtering, browsing, searching, integration), personalization, and
+domain-specificity.
+
+: .
+
+: In this paper I will argue for another approach to making digital libraries
+(and library systems) useful to the end user: integrating commons-based peer
+production (CBPP).  This free-culture approach is demonstrated by Wikipedia,
+which, far from competing with Google, is actually being "adopted" by it, as an
+important information service upon which Google relies to enhance the
+information-seeking experience of its "patrons".
+
+Update: this has been submitted, but I may tweak the abstract later. --[[file:akrowne.org][akrowne]] Fri Apr 29 17:04:08 UTC 2005
+
+ *Revised proposal*: [[file:How Free Culture Will Save Digital Libraries (revised proposal).org][How Free Culture Will Save Digital Libraries (revised proposal)]] 
+
+ *Draft* (for commentary): http://br.endernet.org/~akrowne/my_papers/fc_save_dl/fcsavedl.pdf
+
+The sub-sections below are chronologically ordered, most-recent first.
+
+ *Note, Fri Jul 15 19:33:04 UTC 2005* - I have incorporated many of the comments 
+here into updates to the paper.   You can download it again at the same link. --[[file:akrowne.org][akrowne]]
+
+**  Comments on the First Full Draft
+
+Good work Aaron --- very timely.  Please consider putting it on the preprint
+server; this will make the paper instantly citable and put it into the scholarly
+data stream.  What about publishing a shorter, summary version, written in a
+more journalistic style, in a techology/culture venue, or even something like
+dlib or firstmonday?
+
+One more note, regarding a proprietary, thriving, academic DL that google cannot
+as yet assimilate.  This is mathscinet, a review and indexing service run by the
+AMS (one can find the link from the AMS main page http://www.ams.org) They send
+out copies of all published works in math and related fields to volunteers who
+then return short reviews.  This gets incorporated into a proprietary, but
+not-for-profit database, which used to be published as quarterly volumes called
+Math Reviews, but has now for a number of years been available as a subscription
+service on the web.  Absolutely indispensible resource for math research; this
+is how literature searches are done.  Almost all math institutions have a
+subscription.  AMS gives heavy discounts and even free access to smaller
+institutions and to institutions in financially disadvantaged countries.  There
+is a competing and even older review service based in Europe called Zentralblatt
+Math http://www.emis.de/ZMATH/, which is run by the European math society.
+
+I mention these kinds of assets as a kind of analytical challenge.  Mathreviews
+is proprietary (non-free), scholarly oriented, peer produced, proprietary, but
+not-for-profit.  The restrictions are there to generate income which makes the
+service possible; the AMS does not make and could not make a profit.
+Furthermore, the peer production aspect is absolutely vital.  Reviewers don't
+get paid (but receive some small discounts on AMS publications).  Reviews are
+considered academic service and are useful for establishing reputation and for
+things like tenure and promotion.  Basically, the AMS is itself a kind of
+digital library: very focused and at this point largely resistant to the google
+phenomenon.  It employs peer production, but in the traditional academic sense;
+it is most definitely not CBPP.
+
+There is a fair bit of theorizing about such matters going on around here, so
+the Math Reviews example might prove interesting/useful.
+
+--[[file:rmilson.org][rmilson]] Thu Jul 14 08:28:57 ADT 2005
+
+: Thanks for pointing this out.  I have to wonder: why does Mathreviews need to be
+closed-access?  (1) The underlying articles are generated anyway.  (2) The reviewers 
+are unpaid and write for "intangible" benefits.  (3) No paper delivery is done.  So,
+what does AMS need the subscription money for, and is it worth making the reviews 
+difficult for outsiders to get?  It seems like this arrangement is just waiting for
+the right CBPP system to come along.  I would say the only thing preventing this 
+venture from being CBPP is that there is a corporate middle-man (whether for-profit
+or non). --[[file:akrowne.org][akrowne]] Thu Jul 14 16:00:27 UTC 2005
+
+Maybe, one day, Planet Math could offer similar services.  I think that such a proposal is already somewhere way down on our to do list :) --[[file:rspuzio.org][rspuzio]] 14 July 2005
+
+One has to remember that Math Reviews predates the internet.  20 years ago it was distributed exclusively as a print resource.  About 15 years ago, a CD rom subscription also became available.  mathscinet, the online version of Math Reviews, debuted about 10 years ago.  I don't believe anyone bothers with the print Math Reviews these days. 
+
+As for the subscription models, there are significant editorial and administrative costs.  The editors try to ensure timely reviews for all articles.  They maintain a large list of voluntary reviewers and their specialization and preference profiles, and assign all newly published items to these reviewers.  Reviewers can decline. If they accept, there is a 4 month deadline.  If a reviewers fails to submit past a certain deadline, the editors provide a summary description based on the abstract and intro.  This is decidedly un-CBPP, but works reasonably well to ensure the appearance of reviews in a timely fashion.  The timeliness is a real value, having to wait 1-2 years for a review would subtract value from the service.  As well, there is the qualifications issue.  Although there is no precise rules, generally the reviewers are PHDs and have some expertise related to the area of publication.  Typically, Math Reviews approaches people just after they get their PHD with a request to become a volunteer
+reviewers.  Since everyone uses and values the service, most people say yes.  
+
+Finally, the reviewers are copyedited.  The database integrity is maintained.  As well, there was a huge project to transfer the older print-only reviews online.  This was a very costly project, involving scanning, formula typesetting, and meticulous proof-reading.  I believe that it's largely done now.  The added value is huge, because of the ability to electronically access and search older citations.  This was paid for by institutional subscription fees.  
+
+[http://www.jstor.org Jstor] is another example where electronic re-archival of older scholarly material is supported by a non-profit organization and institutional subscriptions.
+
+Finally, one has to note that, at this point, the bulk of Math Review articles, come from non-open access publications.  All publishers send free reprints to Math Reviews (its to the publisher's and authors' advantage to get reviewed).  A CBPP review service would be limited to open access pubs only.
+
+--[[file:rmilson.org][rmilson]] Fri Jul 15 07:28:40 ADT 2005
+
+Although this is getting tangential to the original topis of Aaron's essay, I think that this question "Is a free Math Reviews feasible is nevertheless worth exploring.  (And if it doesn't belong on this page, we could simply make a new page and move it there.)
+
+In this post, I am interested in the following question:  Supposed we wanted to build a service which works as Math Reviews does (the reviews are written by volunteers, but the underlying organization assigns articles to reviewers and proofreads the reviews) but is completely online and takes advantage of computers where possible.  Could the costs be kept low enough that such a service could be offered for free because the funds necessary to pay the editors could feasibly be obtained elsewhere?  
+
+The job of the assignment editors could definitely be made easier.  One could have a computer program which keeps track of incoming submissions and potential reviewers so that all the assignment editor has to do is look at the list of incoming papers, type in the assignments and the computer would take care of the rest --- it would automatically e-mail the reviewer, check wheteher the reviewer accepted the assignment (and if not, put the article back on the assignment list) and update the database accordingly.  One could even make the assignment editor's job easier by having the computer make an educated guess as to which submission should go to which reviewer based on the suibject classifications of the article and of the potential reviewers and on spreading out the work evenly between reviewers.  I suspect that the computer would do a reasonably good job of this and that the assignment editor's job would amount to checking these assignments to make sure they look reasonable and correcting those cases where the computer made poor choices.  Thus, the function of assignment editor might be comined with that of an overseer who supervises the operation of the whole ooperation.
+
+The copy editing could be be done as follows.  There would be a pool of copy editors and, as soon as a review came in, it would go on a queue.  Whenever a copy editor was ready to edit another review, he would simply be assigned the paper at the top of the queue and, when he was done, he would e-mail the edited review back to the organization, which would then send the editor a check in the mail.
+
+Under such an arrangement, there would not be much in the way of infrastructure and supprt staff needed, so most of the money would go towards paying the editors and maintaining the computer program.  Since the copy editing would be farmed out to editors who work at home, one would not have to pay for office space for the copy editors.  In fact, an office with a staff of five or so --- one or two assignment editor/overseers, one or two hackers, and a secretary should suffice.  
+
+Thus, the cost of delivering the same service that Math Reviews now offers, but in electronic fashion would amount to salaries for not more than a dozen full-time people, renumeration for copy editors, and a small office.  This is on the same order of magnitude as what we hope to have for Planet Math someday, so I think it would be feasible to produce a free service comparable to Math Reviews.  I think that the real issues are more political than economic --- is the mathematical establishment willing to entertain such a proposal and what about all the people who would be downsized as a result?
+
+I don't see that a free operation would necessarily have to be limited to reviewing open access publications.  All that would happen is that reviews would be written only by those who have access to the work, but the resulting reviews could be free and perhps different people who have access to the same closed access work could collaborate on a review.  As a counterexample, consider the annotated bibliographies on Planet Math.  Most of the books reviewed in these are not freely distributable.
+
+As for Jstor, they impose a restrictive license conditon on the user, so I consider them more a part of the problem than part of the solution. --[[file:rspuzio.org][rspuzio]] 15 July 2005
+
+----
+
+ 1. I'm not sure about the /save civilization/ bit; save it from /what/?
+ Itself?  Mongol hordes?  Nuclear bombs?  Pop culture?  
+
+ 1. Your sabobill citation on page 6 is off.  
+
+ 1. I use CBPP in a different and more general sense (see your page 9 and the
+  abstract on the scholium system paper).  Your use is consonant the main
+  examples from the Benkler paper, but not all of them; mine, I think,
+  generalizes the Benkler concept.  It might be worth adding some qualifications
+  around page 9, for example saying that you focus on examples of CBPP that are
+  free.  Especially confusing to say that CBPP is free when the examples in
+  section 5 are ambiguous in the FAIF category.  They do, however, seem somewhat
+  compatible (as a class of basic examples) with the "hackable culture" notion I
+  talked about WRT MUDs.  I get the feeling that without more explanation of the
+  terms, this paper could be retitled "How CBPP Will Save Digital Libraries".
+  You do come around in section 6.2 to talk about the relevance of copyright,
+  and that's a good thing!  These issues seem central to the paper, but sort of
+  come out of left field in the paper.  (Especially since previously you seemed
+  to conflate CBPP and FAIF.)  If in addition to a few minor changes around page
+  9, you included a summary of everything in the introduction, that would also
+  help lessen the surprise factor.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jul 14 15:41:32 2005 UTC
+
+Replies to Joe:
+
+ 1. Yes, in a very real sense actually, I would say nuclear bombs.  More generally,
+bullets, bombs, and bigotry (if I may quote KMFDM).  I took a bit of artistic license, but
+the idea is that the sharing of knowledge and the proliferation of collaboration will
+foster equity and social harmony and yadda yadda... (can you yadda-yadda peace?!)
+ 1. Thanks, will fix.
+ 1. Perhaps this is worth a footnote pointing out that CBPP can be unfree (i.e., closed,
+corporate wikis and the like).  But I'm more interested in the kind that isn't, and 
+this is the kind everyone is "talking about".  I intentionally "conflate" CBPP and free
+culture, because they seem to me to be inexorably intertwined.   I tried to get across
+in the paper that I consider /both/ free culture and CBPP as FAI*. Also, I intentionally
+did not make copyright the focus of the paper, since that is all amply covered in the
+rest of the conference (I know, I've seen at least all the proposals).  Still, since it
+is important to enable free culture, I gave it some treatment.
+
+--[[file:akrowne.org][akrowne]] Thu Jul 14 16:07:19 UTC 2005
+
+(1) In order to say "save", you have to establish something that threatens to
+harm.  I'm just as idealistic as the next guy, but that's for me personally.  In
+writing, if I was going to talk about saving civilization (or whatever), I'd be
+careful to lay out the threat and try to sketch how the fix applies.  Think
+about it in terms of frames: "save" has a /threat/ slot and a /pathway/
+slot, and that's being pretty minimal.  (3) I wouldn't argue against "free
+culture" being related to CBPP (and vice versa), but I think either of us could
+write a multipage essay on the nature of the relationship.  And if it turned out
+to be the relationship of equality, that would be a surprise that requires
+explanation.  The term "FAI*" above is an example of how being ambiguous can be
+theoretical trouble.  Nelson's Xanadu system is FAIF but not FAIB, and is CBPP.
+The different terms are around for a reason; and while they themselves may be
+ambiguous, as a philosopher you have every right to redefine them, clearly, to
+suit your own needs (and the needs of your audience).  Of course, we've all done
+that to some extent, but its sort of weird to me that you've been behind several
+different points of view on the subject in the different papers you've authored
+or co-authored for this conference.  I think we all owe it to ourselves to try
+to understand the issues clearly.  Multiple viewpoints will help, as long as we
+can "get" them all adequately.  I think I got the idea about conflated "free
+culture" and "CBPP", and I think it is a good contribution to the discussion.
+But I don't think it is definitive.  I think that if you agree, you should
+acknowledge this in the paper.
+
+--[[file:jcorneli.org][jcorneli]] Fri Jul 15 14:59:37 2005 UTC
+
+
+**  Comments on Initial Proposal
+
+Yes.  The first paragraph seems to assume that I know what Google Scholar is.
+(Which, in fact, I don't.)  I suppose that in the full paper, you would explain
+what this is, but without the benefit of the paper, that term and the vague
+phrase "better-implements a major library function" are not informative enough.
+It would be better to say exactly what library function you are talking about.
+
+The first sentence of the abstract is (quite) good, but I can't say I care for
+the term "aggressively innovating" in the second sentence - especially in light 
+of the fact that the program you're talking about apparently re-implements and
+improves upon an existing feature of libraries.
+
+"All of this" in the first sentence of the 2nd paragraph is somewhat handwavy;
+"salient" in the end of the 1st paragraph may be incorrect usage (check the
+dictionary).  "To this" in the  2nd sentence of the 2nd paragraph can be omitted
+or made more specific (make the construction of this sentence less passive).
+
+Overall, I would say that you could give a somewhat larger percentage of airtime
+to the specific argument you're going to make.  How does CBPP relate to the
+competition you're talking about?  Why is there competition in the first place?
+
+Part of the set-up is that digital libraries can make use of unique
+data-processing algorithms that Google doesn't have access too, and can,
+accordingly, sometimes provide easier and better access to information.  The
+"Google phenomenon", i.e., that raw search can apparently do just as well, does
+seem somewhat hard to argue with.  If the digital libraries in question are
+being indexed by Google, as Wikipedia is, then it would seem that Google will be
+able to use any sort of Google-visible information to its advantage.  If the
+free-culture stuff you're talking about is invisible (or non-transparent) to
+Google, then yes, it could provide an "advantage" to the digital libraries.
+
+Perhaps in the end a two-tiered (cooperative) approach is best: Google helps you
+find resources that will help you find the information you're looking for.  Can
+CBPP do this, and end the war?
+--[[file:jcorneli.org][jcorneli]] Thu Apr 28 18:28:51 2005 UTC
+
+Thanks for the comments.  Google Scholar combines library databases of academic
+publications with (probably) autonomously discovered academic papers from the web, in a
+unified searching interface.  The results are enhanced with links to the source library 
+databases, when available.  
+
+In a sense, Google is a one-trick pony.  "All" it does is bring all of its information
+under a single search interface.  Much of its innovation going forward has simply been in
+integrating more and more information into this interface.  Yet, libraries resist this,
+because they are in love with their OPACs and scores of completely separate holdings 
+databases.  I've realized that the Google approach (called "metasearching" in the 
+library world, for searching /above/ databases instead of /within/ them) is inherently
+more efficient.  
+
+Why?  The problem with hopping between a bunch of OPAC (digital) library databases is that
+you dont know if you'll find what you're looking for, and if you find nothing, it doesn't
+prove its not in some /other/ database you missed.  With metasearching (like Google does),
+you find out immediately if there /are/ any answers to your query, then you just have the
+easier task of picking between the sources of the answers (the answers must be intelligently
+marked up so as to inform about their type/source, but Google realizes this).
+
+So, I think DLs and libs can easily do a better job by more widely deploying metasearch. A 
+lot of the projects I work on at Emory, and other colleagues I know are working on, strive
+toward this goal.
+
+But that is not the point of the presently-proposed paper.  The more important point, I think,
+is that DLs could be /cultural/ places, and engaging the user base through CBPP almost 
+/defines/ how this is done.   DLs may even /need/ to be cultural places, because the Googles of the world are always /ahead/ of libraries on the technology curve.   What these
+entities can't do is be the specialized, community-specific cultural spaces that CBPP digital libraries would be.
+
+In fact, in a way, digital libraries are more culture-poor than brick-and-mortar libraries,
+even though they (usually) exhibit superior retrieval and organization.  When you walk into
+a real-world library, it is a social environment.  People can talk to each other, help each
+other out, share information, and even go there just to use it as a social space.  Digital
+libraries almost universally lack this.  But CBPP projects online re-capture this social 
+aspect of libraries, by becoming a virtual /social/ space where knowledge is constructed
+and learning takes place.
+
+After writing the abstract, I realized most of it might be better as an introduction.  Maybe
+the abstract should motivate this CBPP and free culture stuff more.  On the other hand, 
+talking about Google is very provocative in the library world right now =) --[[file:akrowne.org][akrowne]]   Thu Apr 28 19:51:50 UTC 2005
+
+**  Summary of feedback from 1st round of review
+
+The reviewers decided to give me a '2', which means they detected the proposal had merit,
+but that it will have to be significantly revised or re-written for them to accept.
+
+Without getting into much detail on their numerous comments, I generally agree with them.  
+I wrote the above as more of an abstract than a proposal, and as I tend to often do in 
+abstracts, I left out a lot of key information (as if the abstract was a "teaser").  
+Unfortunately, this is a really bad plan for writing a /proposal/.
+
+But on top of that, the write-up was in general accused of being unclear and perhaps 
+contradictory, and I agree.  Even an abstract on this topic could have been done better.
+
+I still feel this paper needs to be written. I'm going to carefully re-think my argument,
+frame it clearly, and cook up a new proposal.  
+
+--[[file:akrowne.org][akrowne]]
+
+**  Notes
+
+Some ideas for CBPP examples to use in the paper:
+
+ * Wikipedia, PlanetMath (collaborative construction of knowledge resources)
+ * Amazon (reviews/ratings/recommenders in the context of library catalogs)
+ * Slashdot (self-moderating commentary)
+
+Should discuss how ideas from these examples could be applied to extant DLs
+which aren't integrating CBPP.
+
+A key point to motivate my argument is that CBPP turns an otherwise static
+collection of information into /culture/ (i.e. shared knowledge as a major
+element of free culture).  This actively integrates the content with users'
+lives, and makes the user community a valuable resource in its elf.
+
+Scalability and sustainability should also be discussed (/especially/ 
+sustainability).

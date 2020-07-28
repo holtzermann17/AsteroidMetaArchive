@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+1. Obtain free "mmj2" source code and documentation. mmj2 provides proof verification and grammatical parsing (syntactic analysis) of arbitrary Metamath ".mm" databases (with only minor restrictions related to ambiguity, meta-meta complications, etc.) --[[file:ocat.org][ocat]]
+
+OK, Version 0.00001 of mmj2 is available at PlanetMath!
+
+See:
+16K README + INSTALL:
+http://aux.planetmath.org/mmj2/mmj2.html
+
+417K Zipped download of mmj2 directory:
+http://aux.planetmath.org/mmj2/mmj2.zip
+
+Thanks!
+--[[file:ocat.org][ocat]]

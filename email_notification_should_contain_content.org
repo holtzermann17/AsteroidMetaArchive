@@ -1,0 +1,14 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Email notification of forum postings should contain the content
+of the new postings.  This would enable people to sort the
+messages they get however they see fit, keep track of which 
+postings have been read more easily, and so on.
+
+See also [[file:email posting to forums.org][email posting to forums]].
+--[[file:jcorneli.org][jcorneli]] Mon Apr 18 08:06:05 2005 UTC
+
+----
+[[file:Bugs.org][Bugs]]

@@ -1,0 +1,284 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:PM_Summers_of_Code|main PM SoC page.org][PM_Summers_of_Code|main PM SoC page]].
+
+Up to [[file:SoC metapage.org][SoC metapage]].
+
+*  Intro
+
+Are you a student?  Do you want to help out PlanetMath /and/ get paid for it??  Well, perhaps you can, through this year's Google "Summer of Code" program.  Through !SoC, you can get a paid internship to work on a !PlanetMath project for the summer.   The projects are listed below (the detailed ones have links to more information).  Please make add a link to a user page next to the project(s) that most interest
+you.  Then, if you want comments from us, describe
+your proposal on your user page.  Feel free to engage us in dialog on other pages
+on the wiki, or to propose brand new projects if you think they will fit in.
+
+You can use what you learn here when you prepare your official application for Google.  The wiki is a good place to discuss things and get multiple
+viewpoints on a proposal, and so you'll want to keep an eye on developments
+here.
+
+Tip: for best feedback, start with a short summary of your proposal and give
+us a chance to comment on that before launching into a fully detailed proposal.
+
+* Project Guidelines
+
+This year the priority is on improving Noosphere.  Other project proposals
+will be considered, but they better be especially good. :)
+
+Also, this year we will not have time for "planning phases" or "design phases"
+that take place within the summer of code proper.  Working code will have
+to be committed frequently.  This doesn't mean there will be no room for
+experimentation or trial and error... but there is no room for delay.  Your
+proposal should therefore look more like the shooting script for a movie,
+and less like an abstract theoretical proposal for things you may be able
+to develop with enough thought.  Trust me, your thought-power will be quite
+taken up by /coding/.
+
+* One easy way to make a proposal we'll like!
+
+Here is some advice that you can follow if you like.  While we are
+willing to sponsor traditional "development projects", something
+we'd really like would be a project that ranges over a long list
+of needed improvements.  If you check out the [[file:Feature Requests.org][Feature Requests]]
+list, you'll see that we have many places where we could use
+the coding work done.  Someone who could polish off a good portion
+of the list would earn our admiration and a great recommendation letter.
+
+Just for example, if you could develop a good plan for improving the
+user interface as a whole, that would be cool, and many people 
+would feel the impact.  We can help you find a good "project area",
+or pick your own.  Just remember that we'll need to see evidence
+that you have a good plan just as we would with one large project.
+The benefit of picking a "project area" is that it is relatively
+easy to make your development milestones out of stand-alone modules
+that people will actually use.
+
+*  Mentors
+
+ * [[file:akrowne.org][akrowne]]
+ * [[file:jcorneli.org][jcorneli]]
+
+ *(Defunct)* /Note/: those who want to be mentors should
+[http://code.google.com/soc/mentor_step1.html sign up here].
+
+*  Important Dates
+
+ * March 17: List of accepted mentoring organizations published on code.google.com; *student application period opens*
+ * March 24: Student applications begin.
+ * April 7: Student applications end 5:00 PM PDT/00:00 UTC April 1, 2008.
+ * April 21: List of accepted student applications published on code.google.com/soc/
+ * May 26: *Students begin coding for their projects*; Google begins issuing initial student payments
+
+The complete list of important dates can be found in [http://code.google.com/soc/2008/faqs.html#0.1_timeline here].
+
+*  Funded Projects
+
+This section consists of projects which we have recieved confirmation (so far) will actually be funded by Google.
+
+ * [http://code.google.com/soc/2008/plmath/app.html?csaid=KBkRAQhLSgECNRINH0VSXCxfaEMBFVIJUHdfbhFURVgEBXA%3D%0A Pawel - Ratings/Reputations system improvements]
+ * [http://code.google.com/soc/2008/plmath/app.html?csaid=KBYGEQdUQQECNRINH0VSXCxfaRICRlICAiNfbxVVFggGVnU%3D%0A James - NNexus back-porting to Noosphere, improvements, and rendering improvements]
+
+*  Project Ideas
+
+/Please feel free to add your own ideas!/  See the 
+[[file:Feature Requests.org][Feature Requests]] page if you're looking for some quick inspiration.  
+
+ *Important note: Due to persistent spamming, you must get permission from the wiki maintainer in order to edit pages.  Email akrowne at gmail dot com.*
+
+Note that a student project could focus on the details of *one* of the
+items mentioned below, or it could combine aspects of *several*.
+
+Preference will be given to students who can produce a well put
+together proposal, whatever it is about.
+
+** Proposals
+
+ *  See a link to all formally submitted proposals [http://code.google.com/soc/2008/plmath/open.html here].
+
+* Last Year's Ideas May Still Work This Year!
+
+** CBPP Hacking Track
+
+*** Noosphere
+
+ * make Noosphere system more deployable and configurable
+ * work on integration of ratings/reputation system to Noosphere, or add new algorithms, or otherwise improve the existing one
+ * Noosphere interface nicifiation (CSS, AJAX, better layout, better theme...)
+ * develop Noosphere translations/i18n infrastructure
+ * develop improved notifications/updating systems for Noosphere
+ * develop improved editorial and collaborative facilities for Noosphere (direct-edit corrections with revert; editorial message areas, owner control over request fulfillment, mutability of messages to corrections etc)
+ * develop non-web (e.g. CVS-, email-based) interfaces to Noosphere
+ * streamlining/optimizing the Noosphere rendering subsystem (speed up latex2html or apply alternatives;  apply jsMath; etc.) 
+ * credibility/community features in Noosphere: infrastructure for real names/real-world identities, people map (e.g. with Google Maps), etc.
+ * generate small visualization of local link structure of Noosphere documents 
+
+*** NNexus
+
+ * abstractify handling of classification schemes; disciplines other than math; multiple schemes; mapping between schemes 
+ * better morphology (possibly re-using an existing module; likely paired with other work)
+ * improved parsing for NNexus; e.g. with [http://cpan.uwinnipeg.ca/dist/LaTeX-TOM LaTeX::TOM] or LaTeXML
+ * combine jsMath with latex2html to integrate client-side, accessible rendering with NNexus and Noosphere (cross-listed with Noosphere, above).
+  (possibly pair this project with improved parsing for NNexus if the jsMath integration isn't enough)
+
+[[file:jgardner.org][jgardner]] is interested in the project. His proposal is here: [[file:NNexus 2008.org][NNexus 2008]].
+
+*** Arxana
+
+ * Work on the [[file:MUSN.org][MUSN]] project
+ * help complete/extend [[file:Arxana.org][Arxana]], the "scholium based" content management system, 
+e.g. get Arxana to a stage where it can re-implement a better version of !AsteroidMeta (this wiki), or more...
+ * help re-write Noosphere using a "scholiumific" framework
+ * write a stand-alone, easy-to-use, scholium-based editor that interfaces with Arxana
+
+*** Other/Miscellaneous
+
+ * Add MathML support 
+ * create a !PlanetMath "digital library" of papers, books, REU reports, etc.
+ * create a "code market" system for coordinating funded/semi-funded projects 
+ * Set up PlanetComputing (PlanetEconomics, etc...) and help streamline the installation system while you do it
+ * integrate maxima with !PlanetMath in some useful way (webMaxima?) 
+ * create distributed/grid computing systems that can do useful things for PM (e.g., rendering, linking)
+ * create a validator for [http://www.omdoc.org OMDoc] similar to
+[http://www.openmath.org/software/validate.html OpenMath Validation (XSLT)]. 
+
+
+** Math Hacking Track
+
+ * Any of the items above mentioning Arxana may involve math
+hacking, depending on what you want to do with it.
+ * Parsing "natural language" math, written in !LaTeX, into
+computer-friendly math written in LISP (see [[file:hcode.org][hcode]]). (last year -- interested [[file:Leno.org][Leno]], see [[file:Parsing_natural_math.org][Parsing_natural_math]])
+ * Developing proof-checking (and proof-authoring) tools that operate using the language mentioned above. ([[file:Kseniya.org][Kseniya]])
+ * Anything else related to [[file:HDM.org][HDM]] that strikes your fancy.
+ * ...
+
+** Content Hacking Track
+
+ * "ingest" Wikipedia content PlanetMath doesn't have.  build a system to automate this as much as possible. (interested [[file:amar.org][amar]])
+ * use focused crawling or other technologies to find math content on the web and get it on PM in some capacity
+
+** IR Hacking Track
+
+ * enhancement of Lucene (the search engine system PM is using).  Things that could be added: run-time field-weight boosting; storing citation links to the index and scoring based on them.  Figure out how to integrate reputation/rating ranking in boosting.
+ * Add additional tokenizers and front-ends to allow search for text including mathematical symbols.
+
+** Other
+
+ * Optical character recognition, especially OCR that works for math content. [http://planetmath.org/?op=getuser&id=20090 Chris] is interested in this project. 
+
+ * ...
+
+* Discussion
+
+This list is largely recycled from last year and needs some updating. Even this message is recycled from last year! --[[file:akrowne.org][akrowne]]
+
+The wiki is still "whitelisted" to fend off spambots, so [[file:akrowne.org][akrowne]] should be contacted (feedback AT planetmath DOT org ) to get an account. --[[file:akrowne.org][akrowne]]
+
+Hi...I am an undergraduate computer science student from india with good programming skills in c/c++/java/vb.I would like to know how i can contribute and participate in gsoc to code for planetmath.Is the development of digital library still a valid project to be taken up?----
+
+ * Hi. Welcome. Contact Aaron Krowne ( [[file:akrowne.org][akrowne]] ) directly (I don't
+know if anyone other than the Friends Of Metamath read this wiki...)
+--[[file:ocat.org][ocat]]
+
+Hi, I am interested in the project "create a validator for OMDoc similar to OpenMath Validation (XSLT)." where should i discuss about the project? --[[file:alok.mandavgane.org][alok.mandavgane]]
+
+Hi alok. That was my idea from last year. I don't know that anyone
+at the Asteroid is qualified to discuss the fine points of it
+with you. However, Christoph Lange has spent the last year creating
+"SWiM" - Semantic Wiki for Mathematical Knowledge Management --
+which uses OMDoc as a foundation. I recommend contacting. There
+is plenty of work going on related to OMDoc, SWiM, Omega, etc.,
+with very heavy EU funding and armies of doctoral students doing
+coding. Check http://ontoworld.org/wiki/SWiM  --[[file:ocat.org][ocat]]
+
+Hi, all. I've started writing up a tentative proposal for the project to parse natural language math into LISP, and I was hoping to get some comments on its feasibility and if it is what you are looking for. It is available at http://tmp.omer.bar-or.org/pm.php There is a form for leaving feedback there, or you can leave it here. Thanks! --[[file:omer.org][omer]]
+
+ * You might want to explore http://www.cs.chalmers.se/Cs/Research/Language-technology/GF/
+which is a Grammatical Framework. GPL, of course. Also look
+into integrating your product into http://www.sagemath.org/ 
+which is written in Lisp. I personally wouldn't expect to complete a
+standalone project of this magnitude and difficulty in just
+one summer of code. You may be able to find a partial solution
+to the objective that is doable in the time permitted
+which benefits mankind while getting you paid :-) --[[file:ocat.org][ocat]]
+
+
+  * Thanks for the information! I've updated my tentative proposal, mostly to mention building on top of existing tools. Grammatical Framework looks very useful, since it sounds like it is perfect for defining arguments and what sorts of entities can fill them. As an aside, it looks like http://www.sagemath.org/ is written in Python, not LISP. There are a few other interesting tools, though. I found a library of math functions in LISP: http://www.cs.cmu.edu/afs/cs/project/ai-repository/ai/lang/lisp/code/math/0.html and a system like Mathematica, Sage, &c., but smaller and in LISP: http://www.cs.berkeley.edu/~fateman/mma.mailer Thanks again! --[[file:omer.org][omer]]
+
+   * OK, right, Python. Still...SageMath integrates Maxima which 
+is written in Lisp, and I think SageMath is potentially a
+Reallly Big Next Thing (reason is it is Open Source and thus
+allows theoretical math/CS researchers to see inside the
+computational algorithms whereas Mathematica (and friends)
+are proprietary/secret.) ALSO...think how great it would be
+if someone could just /say/ in some natural language
+"Give me a graph of hyperbolic sine" (because you piped
+a Speech Recognition system front-end to stdin...) (Note: I'm
+not exactly pushing SageMath -- I don't use it myself -- but
+you will want a platform for your product so that you have
+real users, right? And SageMath gives you users who might
+want a natural language interface -- or there are potential
+users who would use a symbolic math package if they had
+a natural language interface... Anyway, whatever you do,
+good luck and great success! I hope you get the loot! --[[file:ocat.org][ocat]]
+
+Hello! I'm interested in the OCR idea. I put my name next to it last week but no-one has got in contact with me...I'd like to apply for this project so if anyone is interested, I'd love some contact! Chris
+
+ * Hello! It is curiously interesting that you are interested in
+this project :-) Recall how both Google and Microsoft have been
+busily digitizing libraries as fast as they can. So there ought
+to be plenty of test data even without running a single page
+through a scanner. I am guessing that the smart thing to do would
+be to research Open Source OCR systems and figure out what needs
+to be added to accomplish your goal, which as I understand it
+involves distinguishing between mathematical text (formulas) and the
+accompanying prose, and then converting the formulas into LaTex --
+and doing what? Re-outputting the page "properly", with OCR raw
+data converted into LaTex pages or books? You might have a look
+also at the work done with handwriting recognition of mathematical
+content -- there are commonalities, such as figuring out how to
+group things and reiterating through the groups to figure out
+which layout interpretation makes sense (a very difficult job,
+with either OCR or digital pen!) For example, see http://mathfor.mi.fu-berlin.de/pmwiki/pmwiki.php?n=Main.Downloads
+and [http://www.buyans.com/POL/UploadedFile/138_3192.pdf  MathFoR: The Mathematical Formula Recognition System]. P.S. If you included in
+your analysis/design/proposal write-up how your work is intended to
+run on multi-core Intel processors you can probably get a job interview
+out of the whole thing (the major IT vendors are *hot* on parallel
+processing these days -- you'll probably want a hybrid system with
+multiple dataflows across a cluster of multi-core processors and multi-threading across each processor, etc.) P.P.S. I have nothing
+to do with GSOC so suggest you contact [[file:jcorneli.org][jcorneli]] for more info
+about pragmatics. Good luck. Have great summer. --[[file:ocat.org][ocat]]
+
+Proposal for Google SOC/Planetmath Project in Fractional Calculus
+Fractional Calculus is a field that is as old as Calculus itself, having been pioneered by no other than Leibniz himself. Despite his pronouncements that important results of great consequence will follow from it, however, it is only recently that applications of fractional calculus in other areas of physics and engineering have been pursued. Unfortunately, despite its importance and simplicity, Fractional Calculus is yet to be introduced as a separate course of study or feature in any of the Freshmen/Sophomore level Calculus or Engineering Math courses. Participation in research on its application and development in the Universities and Research Institutes is so far restricted only to people already in the field.  Hence the need to have a Google summer of code project on it to introduce the subject to a wider array of people.
+The aims of the summer project are: 
+1.	Write an accessible easy primer to fractional calculus.
+2.	Develop a JAVA/WXpython based GUI as instructional tool.
+3.	Explore the application of fractional calculus in Fractional Order Dynamical system (Chua’s circuit) via computer simulation (JAVA/Wxpython based package) as an example.
+4.      Integrate the above package with SAGE, a free computer algebra system released under the terms of GNU General Public License.
+
+Suantak
+
+ * Hi Suantak. Here are ideas which might make your proposal
+more marketable to the GSOC approvers: write your package suitably,
+along with the patches to hook it into [http://www.sagemath.org/ Sage: Open Source Mathematics], which is a new Open Source project that
+is like Mathematica except that it allows researchers access to
+the underlying algorithms, and it pulls together existing 
+"silos" of code, such as Maxima. In addition, I see that there
+is a [http://en.wikipedia.org/wiki/Fractional_calculus Wikipedia Fractional calculus] entry of some significant extent, but that the [http://planetmath.org/encyclopedia/FractionalCalculus.html PlanetMath Fractional Calculus] entry is very sparse. So perhaps you could
+do your primer writing in the PlanetMath entry in addition to
+writing documentation for your software separately. Feel free to totally
+disregard these ideas :-) --[[file:ocat.org][ocat]]
+
+thnax for the tip ocat. how do i get through sage or is it different from planetmath? btw can u 
+
+: hi. i have downloaded and installed maxima but not sagemath.
+i do not correspond with the sagemath people, but it is open
+source so, according to my understanding, you can get the code
+and make/test your patches, then inform the people at sagemath
+of your excellent new package. (that is going to be quite a
+challenging task, but i have an idea that once you've done it
+the skills will be transferable, and that sagemath has a good
+future (i.e. you can write more packages in the future and
+just clone your first project.) --[[file:ocat.org][ocat]] 
+
+thanx ocat. indeed i'd expand my scope with a view to integrating it with SAGE. i have modified the proposal above accordingly.

@@ -1,0 +1,250 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I wanted to discuss this statement a little further.
+
+(Maybe all the "Notes" fields on the [[file:Let G be a group.org][Let G be a group]] page should
+be moved to separate pages like this one?  But it is nice to have
+a few words to go along with the initial statement.  So maybe these
+links will be "drilling down" to more documentation, like I tend
+to be keen on.  (And, if I can be allowed a further digression,
+if we were using the 
+[[file:A scholia-based document model|scholium system.org][A scholia-based document model|scholium system]], these 
+digressions would be scholia that would attach themselves to
+the appropriate document, rather than just sitting uglily here
+in this relative backwater - but I don't have time to interupt
+the flow to adjust things to suit the current document model
+right now!))
+
+The point I wanted to make is that a statement like
+
+: By Theorem 21, we conclude that G must be a group
+
+seems to me to be an /operator/ which is supposed to
+act on the "current state of knowledge".
+
+For example, a statement like this might be used if we had just proved that G is
+a ring and Theorem 21 says that every ring is an example of a group.  (Maybe
+a sort of crummy example; sorry.)  The point is that the relevant hcode really
+isn't
+
+ (implies (theorem 21) (group G))
+
+but rather
+
+ (implies (and (theorem 21)
+               (current-state-of-knowledge))
+    (group G))
+
+Of course, this `current-state-of-knowledge' function is somewhat preposterous
+in general, computationally speaking.  In an AI application, some heuristic
+function that does something similar could maybe be used to narrow the focus to
+the /relevant/ information.  In a more strict theorem-proving application, the
+`current-state-of-knowledge' might be something we would actually have a handle
+on. (Again, however, some heuristics might be needed to make search efficient.)
+
+Note that the NL template "result A implies result B" is still accurate
+(linguistically speaking) since people never say "result A, combined with the
+current state of knowledge, implies result B".  They may, however, say something
+like "/thus/" - the notion being that by chaining together enough thusses, the
+"derivation" of a certain fact can be shown.
+
+(scholium: The word "derivation" has a somewhat Daltonian sound to it, wouldn't
+you say?  I.e., as if with all these thusses we're trying to show the fact's
+"pedigree".)
+
+*  Relationship to modus ponens
+
+Your example seems like a good illustration of modus ponens in action.  Suppose
+that we already knew the statement
+
+ /G/ is a ring
+
+Then, by modus ponens, we could use this statement and theorem 21 to conclude
+that /G/ is a group.  Then we could replace the nebulous
+`current-state-of-knowledge' with a precise statement and turn our parse of the
+natural language statement into the following tautology
+
+ (implies (and (implies (ring G) (group G))
+               (ring G))
+     (group G)) 
+
+This fits the template of the modus ponens tautology
+
+ ((p q) (implies (and (implies p q) p) q))
+
+with the following assignment list
+
+ ((p (ring G)) (q (group G)))
+
+To do this, we would presumably have the computer search through the known
+facts, plugging them in for `current-state-of-knowledge' until something
+clicked.  In early versions of the program, we could do this with a brute force
+search but, as you say, in later versions designed to handle more sophisticated
+situations, we will presumably want to use more refined search algorithms with
+heuristics and what not and use such techniques such as structured proofs to
+limit the searches.
+
+Already this simple example shows how the parsing piece and the template piece
+will work together in practise.  I guess that things like
+`current-state-of-knowledge' will serve to tip off the search engine that it has
+work to do.  Also, what you say
+
+: seems to me to be an /operator/ which is supposed to act on the "current state of knowledge"
+
+sounds a lot like [[file:theorems as transformational rules.org][theorems as transformational rules]] -- [[file:rspuzio.org][rspuzio]]
+
+You're quite right about Modus Ponens.
+
+The hard part (for the parser and/or prover) is to find the right "p".  We
+already know (implies (ring G) (group G)) from Theorem 21, but we don't know
+(ring G) except "from context."  Once we're aware of (ring G), guessing "modus
+ponens!" shouldn't be too hard.
+
+I suspect that a good parser/prover would be able to generate a very short
+list of candidate "p's".  
+
+Note that this example illustrates why it can be useful to make the parser
+working together with the prover.  For instance, we can use the combination of
+the two to keep track of things like "previous-result" or
+"cumulative-result-so-far".
+
+Or better yet, maybe my flippant comment about Dalton has a hidden, useful
+message - namely that there is probably a "family tree" within any given proof
+development that will be useful to keep track of.  
+
+In this model, a "thus" denotes a mating event; we might look at "p" as the
+male, "(implies p q)" as the female, and "q" as the offspring.  (OK, OK - this
+is weird... my excuse? - that spring is in the air, of course!)
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 05:47:55 2005 UTC
+
+Oh, and one more thing -- if the program is smart, it might be able
+to use modus ponens "backwards" to figure out (ring G) just from Theorem 21
+(assumed to be understood already) and the statement considered here; that's
+neat.
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 05:52:22 2005 UTC
+
+**  Relationship to theorems as transformational rules
+
+Yes, that looks right too.  Thought of this way, I'd say that the "result A
+implies result B" type statement represents the "multiplication" of Result A
+with the State (which is equal to (ring G), in our example).  
+
+In normal algebra, we often leave out the multiplication operation, as
+understood: /S * A = SA = B/.  But here, one of the multipliands is left out,
+i.e., we see something like /* A = B/!
+
+Well, it really isn't that bad, because /S/ can probably be gotten "from
+context" pretty darn easily.  Most likely it was stated in the sentence
+immediately preceding /* A = B/.  I.e. the assumption that it is "understood"
+probably isn't too bogus.  (Note, however, "traditional" parsing that relies on
+going at things sentence-by-sentence will be easily flummoxed.)  --[[file:jcorneli.org][jcorneli]]
+Thu Mar 31 05:59:13 2005 UTC
+
+Let's look at the nuts and bolts of "working backwards from modus ponens".  We can express modus ponens as a rule of inference which transforms statements as follows: (I like your way of describing this as a binary operation --- food for thought)  Consider the following three templates:
+
+ (setq T1 ((p q) p))
+
+ (setq T2 ((p q) (implies p q)))
+
+ (setq T3 ((p q) q))
+
+The rule says: if you can match the first two templates to two propositions using the same values fo /p/ and /q/, then plug those values into the third template to obtain the conclusion.  So suppose that we are given two statements P1 and P2.  For concreteness, we can choose
+
+ (setq P1 (ring G))
+
+ (setq P2 (implies (ring G) (group G)))
+
+We can match them to the templates using the commands
+
+ (match-template T1 P1)
+ => ((p (ring G)))
+
+ (match-template T2 P2)
+ => ((p (ring G)) (q (group G)))
+
+To make sure that they are consistent, i.e. agree on how 'p' and 'q' are to be interpreted, we can use merge-assignments
+
+ (merge-assignments 
+   (match-template T1 P1)
+   (match-template T2 P2))
+ => ((p (ring G)) (q (group G)))
+
+So far, so good.  Now we can figure out the conclusion by substituting these values of 'p' and 'q' into the template 'T3' like so:
+
+ (setq C 
+   (substitute-in-template
+     (merge-assignments 
+       (match-template T1 P1)
+       (match-template T2 P2))
+     T3))
+  => (group G)
+
+Now consider going backwards.  Suppose that we are given the conclusion
+
+ (setq C (group G))
+
+and the premise
+
+ (setq P2 (implies (ring G) (group G)))
+
+but do not know the premise 'P1'.  We could figure out the missing premise as follows.  We know that 'P2' and 'C' have to fit into the templates 'T2' and 'T3' with the same values of 'p' and 'q' so we can type
+
+ (merge-assignments 
+   (match-template T2 P2)
+   (match-template T3 C))
+ => ((p (ring G)) (q (group G)))
+
+and learn that they indded fit these templates with consistent values of 'p' and 'q'.  Therefore, to recover the missing premise, we only need to fit these values of 'p' and 'q' back into the template 'T1' which describes the missing premise.  We can easily do that.
+
+ (setq P1 
+   (substitute-in-template
+     (merge-assignments 
+       (match-template T2 P2)
+       (match-template T3 P2))
+     T1))
+  => (ring G)
+
+This gives another illustration of the template utilities at work.
+
+By the way, Leibniz already noticed the analogy between modus ponens and
+multiplication and figured out a way of making it precise.  In fact, what
+Leibniz did is actually quite close to how Goedel designed out his famous
+numbering two centuries after Leibniz.
+
+As for your male-female conception and pedigrees, it makes proofs of theorems
+look a bit like genealogies of the sort one finds in the Bible --- A begot B who
+begat C who begat ...  These genealogies list only one parent and leave the
+other out.  Likewise, proofs typically leave one of the two premises out.  With
+your terminology, I suppose that that the inference rule Barbara which says that
+from
+
+ ((p q) (implies p q))
+
+and
+
+ ((q r) (implies q r))
+
+we can derive
+
+ ((p r) (implies p r)
+
+means that Barbara is a Lesbian!  Maybe this is no surprise, because lambda figures prominently as a symbol in LISP :)
+--[[file:rspuzio.org][rspuzio]] 31 March 2005
+
+ 
+Zing!  I think that some plants are capable of procreating this way?
+
+Of course, the reasons I chose
+
+ ((p q) (implies p q))
+
+as a "female" expression were sort of mixed (ouch)... partly I had gotten
+my XX (female) and XY (male) turned round the wrong way (relative to how I was
+trying to apply 'em).  Maybe this whole sexing of logical expressions was a bad idea...?
+
+But on the other hand, I very much like the "biblical genealogy" metaphor.
+
+Anyway, um... nice work with the templates by the way :).
+
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 07:32:07 2005 UTC

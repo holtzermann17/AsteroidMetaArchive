@@ -1,0 +1,225 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Planet Math figure database
+
+The below list (should) list all entries on PlanetMath 
+    containing either an .eps file or a pstricks file.
+ * [http://planetmath.org/encyclopedia/AristotelianLogic.html AristotelianLogic] (1, 0)
+ * [http://planetmath.org/encyclopedia/Aristotle.html Aristotle] (1, 0)
+ * [http://planetmath.org/encyclopedia/JulesHenriPoincare.html JulesHenriPoincare] (1, 0)
+ * [http://planetmath.org/encyclopedia/AxiomOfChoice.html AxiomOfChoice] (1, 0)
+ * [http://planetmath.org/encyclopedia/ConcentricCircles.html ConcentricCircles] (0, 1)
+ * [http://planetmath.org/encyclopedia/BipartiteMatching.html BipartiteMatching] (1, 0)
+ * [http://planetmath.org/encyclopedia/CompleteGraph.html CompleteGraph] (1, 0)
+ * [http://planetmath.org/encyclopedia/FourColorConjecture.html FourColorConjecture] (0, 1)
+ * [http://planetmath.org/encyclopedia/Graph.html Graph] (3, 0)
+ * [http://planetmath.org/encyclopedia/Polyomino.html Polyomino] (7, 0)
+ * [http://planetmath.org/encyclopedia/GoldenRatio.html GoldenRatio] (1, 0)
+ * [http://planetmath.org/encyclopedia/Ramify.html Ramify] (1, 0)
+ * [http://planetmath.org/encyclopedia/Interval.html Interval] (9, 0)
+ * [http://planetmath.org/encyclopedia/PolynomialLongDivision.html PolynomialLongDivision] (5, 0)
+ * [http://planetmath.org/encyclopedia/QuadraticInequality.html QuadraticInequality] (3, 0)
+ * [http://planetmath.org/encyclopedia/EllipticCurve.html EllipticCurve] (4, 0)
+ * [http://planetmath.org/encyclopedia/DerivationOf2DReflectionMatrix.html DerivationOf2DReflectionMatrix] (1, 0)
+ * [http://planetmath.org/encyclopedia/DerivationOfRotationMatrixUsingPolarCoordinates.html DerivationOfRotationMatrixUsingPolarCoordinates] (1, 0)
+ * [http://planetmath.org/encyclopedia/PerspectiveDrawing.html PerspectiveDrawing] (3, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfRodriguesRotationFormula.html ProofOfRodriguesRotationFormula] (1, 0)
+ * [http://planetmath.org/encyclopedia/ClassificationOfIndecomposableRootSystems.html ClassificationOfIndecomposableRootSystems] (0, 9)
+ * [http://planetmath.org/encyclopedia/PicturesOfDynkinDiagram.html PicturesOfDynkinDiagram] (0, 8)
+ * [http://planetmath.org/encyclopedia/Klein4Group.html Klein4Group] (0, 2)
+ * [http://planetmath.org/encyclopedia/NonCommutingGraphOfAGroup.html NonCommutingGraphOfAGroup] (2, 0)
+ * [http://planetmath.org/encyclopedia/CantorFunction.html CantorFunction] (1, 0)
+ * [http://planetmath.org/encyclopedia/DefinitionsInTrigonometry.html DefinitionsInTrigonometry] (1, 0)
+ * [http://planetmath.org/encyclopedia/ExtremalValueOfConvexconcaveFunctions.html ExtremalValueOfConvexconcaveFunctions] (1, 0)
+ * [http://planetmath.org/encyclopedia/NewtonsMethodWorksForConvexRealFunctions.html NewtonsMethodWorksForConvexRealFunctions] (5, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfArithmeticGeometricHarmonicMeansInequality2.html ProofOfArithmeticGeometricHarmonicMeansInequality2] (0, 2)
+ * [http://planetmath.org/encyclopedia/ProofOfJordansInequality.html ProofOfJordansInequality] (2, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfYoungsInequalityByPicture.html ProofOfYoungsInequalityByPicture] (1, 0)
+ * [http://planetmath.org/encyclopedia/SierpinskiGasket.html SierpinskiGasket] (4, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfGoursatsTheorem.html ProofOfGoursatsTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/HartogsTriangle.html HartogsTriangle] (1, 0)
+ * [http://planetmath.org/encyclopedia/GammaFunction.html GammaFunction] (1, 0)
+ * [http://planetmath.org/encyclopedia/GreensFunctionForDifferentialOperator.html GreensFunctionForDifferentialOperator] (1, 0)
+ * [http://planetmath.org/encyclopedia/LorenzEquation.html LorenzEquation] (4, 0)
+ * [http://planetmath.org/encyclopedia/OrthogonalCurves.html OrthogonalCurves] (0, 1)
+ * [http://planetmath.org/encyclopedia/SomeQualitativeAnalysisOfFitzHughNagumoEquationUsingNullclines.html SomeQualitativeAnalysisOfFitzHughNagumoEquationUsingNullclines] (2, 0)
+ * [http://planetmath.org/encyclopedia/FeigenbaumConstant.html FeigenbaumConstant] (1, 0)
+ * [http://planetmath.org/encyclopedia/FeigenbaumFractal.html FeigenbaumFractal] (1, 0)
+ * [http://planetmath.org/encyclopedia/LeibnizEstimateForAlternatingSeries.html LeibnizEstimateForAlternatingSeries] (1, 0)
+ * [http://planetmath.org/encyclopedia/SecantMethod.html SecantMethod] (1, 0)
+ * [http://planetmath.org/encyclopedia/AngleBisector.html AngleBisector] (1, 0)
+ * [http://planetmath.org/encyclopedia/AngleSumIdentity.html AngleSumIdentity] (2, 0)
+ * [http://planetmath.org/encyclopedia/BisectorsTheorem.html BisectorsTheorem] (2, 0)
+ * [http://planetmath.org/encyclopedia/ButterflyTheorem.html ButterflyTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/CenterOfATriangle.html CenterOfATriangle] (1, 0)
+ * [http://planetmath.org/encyclopedia/CevasTheorem.html CevasTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/Collinear.html Collinear] (1, 0)
+ * [http://planetmath.org/encyclopedia/Concurrent.html Concurrent] (1, 0)
+ * [http://planetmath.org/encyclopedia/ConstructionOfPolarCoordinates.html ConstructionOfPolarCoordinates] (4, 0)
+ * [http://planetmath.org/encyclopedia/DesarguesTheorem.html DesarguesTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/Diameter2.html Diameter2] (1, 0)
+ * [http://planetmath.org/encyclopedia/DirectedSegment.html DirectedSegment] (0, 1)
+ * [http://planetmath.org/encyclopedia/FundamentalTheoremOnIsogonalLines.html FundamentalTheoremOnIsogonalLines] (1, 0)
+ * [http://planetmath.org/encyclopedia/GergonnePoint.html GergonnePoint] (1, 0)
+ * [http://planetmath.org/encyclopedia/GergonneTriangle.html GergonneTriangle] (1, 0)
+ * [http://planetmath.org/encyclopedia/Incenter.html Incenter] (1, 0)
+ * [http://planetmath.org/encyclopedia/Incircle.html Incircle] (1, 0)
+ * [http://planetmath.org/encyclopedia/IsogonalConjugate.html IsogonalConjugate] (2, 0)
+ * [http://planetmath.org/encyclopedia/Legs.html Legs] (1, 0)
+ * [http://planetmath.org/encyclopedia/LemoinePoint.html LemoinePoint] (1, 0)
+ * [http://planetmath.org/encyclopedia/MedialTriangle.html MedialTriangle] (2, 0)
+ * [http://planetmath.org/encyclopedia/MenelausTheorem.html MenelausTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/Midpoint.html Midpoint] (0, 1)
+ * [http://planetmath.org/encyclopedia/MollweidesEquations.html MollweidesEquations] (1, 0)
+ * [http://planetmath.org/encyclopedia/NinePointCircle.html NinePointCircle] (1, 0)
+ * [http://planetmath.org/encyclopedia/ParallelogramLaw.html ParallelogramLaw] (0, 1)
+ * [http://planetmath.org/encyclopedia/PedalTriangle.html PedalTriangle] (1, 0)
+ * [http://planetmath.org/encyclopedia/PivotTheorem.html PivotTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/PolarCoordinates.html PolarCoordinates] (2, 0)
+ * [http://planetmath.org/encyclopedia/Polygon.html Polygon] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfApolloniusTheorem2.html ProofOfApolloniusTheorem2] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfBisectorsTheorem.html ProofOfBisectorsTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfBisectorsTheorem2.html ProofOfBisectorsTheorem2] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfBrahmaguptasFormula.html ProofOfBrahmaguptasFormula] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfButterflyTheorem.html ProofOfButterflyTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfCevasTheorem.html ProofOfCevasTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfMenelausTheorem.html ProofOfMenelausTheorem] (2, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfParallelogramLaw.html ProofOfParallelogramLaw] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfPicksTheorem.html ProofOfPicksTheorem] (2, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfPivotTheorem.html ProofOfPivotTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfPtolemysInequality.html ProofOfPtolemysInequality] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfPythagoreanTheorem.html ProofOfPythagoreanTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfSimsonsLine.html ProofOfSimsonsLine] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfStewartsTheorem.html ProofOfStewartsTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfThalesTheorem.html ProofOfThalesTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfTrigonometricVersionOfCevasTheorem.html ProofOfTrigonometricVersionOfCevasTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofOfVanAubelTheorem.html ProofOfVanAubelTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ProofThatTheSlopeOfALineIsWellDefined.html ProofThatTheSlopeOfALineIsWellDefined] (0, 1)
+ * [http://planetmath.org/encyclopedia/PythagorasTheorem.html PythagorasTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/Rectangle.html Rectangle] (2, 0)
+ * [http://planetmath.org/encyclopedia/SectorOfACircle.html SectorOfACircle] (1, 0)
+ * [http://planetmath.org/encyclopedia/SimsonsLine.html SimsonsLine] (1, 0)
+ * [http://planetmath.org/encyclopedia/SinesLawProof.html SinesLawProof] (1, 0)
+ * [http://planetmath.org/encyclopedia/SomeProofsForTriangleTheorems.html SomeProofsForTriangleTheorems] (2, 0)
+ * [http://planetmath.org/encyclopedia/StereographicProjection.html StereographicProjection] (2, 0)
+ * [http://planetmath.org/encyclopedia/StewartsTheorem.html StewartsTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/StraightLineIsShortestCurveBetweenTwoPoints.html StraightLineIsShortestCurveBetweenTwoPoints] (1, 0)
+ * [http://planetmath.org/encyclopedia/Symmedian.html Symmedian] (1, 0)
+ * [http://planetmath.org/encyclopedia/ThalesTheorem.html ThalesTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ThreeTheoremsOnParabolas.html ThreeTheoremsOnParabolas] (3, 0)
+ * [http://planetmath.org/encyclopedia/TrigonometricVersionOfCevasTheorem.html TrigonometricVersionOfCevasTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/VanAubelTheorem.html VanAubelTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ExampleOfCurvatureSpaceCurve.html ExampleOfCurvatureSpaceCurve] (1, 0)
+ * [http://planetmath.org/encyclopedia/PolarCurve.html PolarCurve] (9, 0)
+ * [http://planetmath.org/encyclopedia/ExampleOfASpaceThatIsNotSemilocallySimplyConnected.html ExampleOfASpaceThatIsNotSemilocallySimplyConnected] (0, 1)
+ * [http://planetmath.org/encyclopedia/KleinBottle.html KleinBottle] (1, 0)
+ * [http://planetmath.org/encyclopedia/ConnectedSum.html ConnectedSum] (1, 0)
+ * [http://planetmath.org/encyclopedia/BernoulliDistribution2.html BernoulliDistribution2] (2, 0)
+ * [http://planetmath.org/encyclopedia/GeometricDistribution2.html GeometricDistribution2] (1, 0)
+ * [http://planetmath.org/encyclopedia/ZipfsLaw.html ZipfsLaw] (1, 0)
+ * [http://planetmath.org/encyclopedia/ExampleOfGramSchmidtOrthogonalization.html ExampleOfGramSchmidtOrthogonalization] (3, 0)
+ * [http://planetmath.org/encyclopedia/HoughTransform.html HoughTransform] (4, 0)
+ * [http://planetmath.org/encyclopedia/HeapsLaw.html HeapsLaw] (1, 0)
+ * [http://planetmath.org/encyclopedia/SamplingTheorem.html SamplingTheorem] (1, 0)
+ * [http://planetmath.org/encyclopedia/ShannonsTheoremEntropy.html ShannonsTheoremEntropy] (1, 0)
+Found 204 pictures.
+
+
+
+**  perl script
+The above list was automatically created with the below perl script from the
+2006-02-20 snapshot. 
+
+#
+ 1. This perl script creates a list of all entries 
+ 1. in a PM snapshot that contain  either '.eps' 
+ 1. or '\begin{pspicture'. 
+#
+
+sub MAIN
+{  
+  $totalpics=0;
+  
+  use File::Find;  
+
+  print "= Planet Math figure database =\n\n";
+  print "The below list (should) list all entries on PlanetMath 
+    containing either an .eps file or a pstricks file.\n";
+
+  find(\&SEARCHENTRY, ".");
+
+  print "Found $totalfigs pictures.\n";
+
+}
+
+sub SEARCHENTRY
+{
+ 
+  if ($_ =~ /\.tex/) 
+    {
+      # get canonical name from .tex filename
+      @namearray = split(/\.tex/, $_);
+      $canname = @namearray[0];
+
+      # read in tex file 
+      open(EFILE, $_);
+      @lines = <EFILE>;
+      close(EFILE);
+      
+      $eps = 0;
+      $pstricks = 0;
+      $indocument = 0;
+
+      #
+      # find references to .eps files
+      #
+      foreach $line (@lines) 
+        {
+
+        #
+	# split \includegraphics*{file.eps} into 
+        # components = '\includegraphics*', '{', 'file.eps', '}'
+        #
+	@components = split(/(\{|\})/, $line);
+        foreach $comp (@components) 
+        {
+          if ($comp =~ /\.eps/) 
+            {
+              #print ".eps file: $comp in $canname \n";
+              $totalfigs++;
+              $eps++;
+            }
+        }
+
+        if ($line =~ /\\begin\{pspicture/) 
+        {
+          #print "pstricks figure in $canname \n";
+          $totalfigs++;
+          $pstricks++;
+        }
+
+	if ($line =~ /\\begin\{document\}/) 
+        {
+          $indocument = 1;
+        }
+
+        if ($line =~ /\\figura/) 
+        {
+          if ($indocument >0) {
+          $totalfigs++;
+          $eps++;
+          }
+        }
+
+
+        }
+      if ($eps + $pstricks >0)
+      {
+          print "* [http://planetmath.org/encyclopedia/$canname.html $canname] ($eps, $pstricks)\n";
+      }
+
+    }
+
+}
+&MAIN

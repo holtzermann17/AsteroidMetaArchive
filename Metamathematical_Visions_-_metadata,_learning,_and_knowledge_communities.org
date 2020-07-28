@@ -1,0 +1,67 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+20 minutes to say what metadata, learning, and knowledge communities are
+about.  HDM.  Scholium System.  News at 11.
+
+The draft: [[file:visions talk.org][visions talk]]
+----
+
+* thoughts/outline/idea/goals/brainstorm thing
+
+ 1. We show the audience what the "vision" is...
+
+ 1. tools for asking questions, answering questions, finding old answers, and associating different pieces of information with each other in different ways
+
+ 1. empowering the user to change the system (/easy/: make a side-remark on someone else's writing; /challenging/: adjust the fundamental structures of the system)
+
+ 1. artificial intelligence arises from multiple human intelligence working together to build a good tool (much in the same way objectivity arises from multiple subjectivity)
+
+ 1. traditional metamathematics: "linguistics of mathematics".  neo-metamathematics: "anthropology of mathematics"
+
+ 1. both of these fields need investments.  While they aren't part of
+the basic mathematics curriculum, you can bring them in as optional
+courses or through independent reading.  Even just learning how to
+program opens many doors.  Participating in projects like PlanetMath
+and AsteroidMeta give anyone with an internet connection a way to be
+involved.
+
+ 1. We are at a critical point in the history of mathematics, and
+indeed, in the history of knowledge.  The old ways of doing things
+aren't going to bring about a new epoch, only more of the same epoch.
+We have already seen some glipses of the future.  Let's not mistake
+these glipses for future itself.
+
+* Discussion
+
+Comments welcome.  --[[file:jcorneli.org][jcorneli]]
+
+I think a lot of other people will have heard of other metamathematical projects already (and I don't mean either of what you've put under "traditional metamathematics").
+Perhaps a section where you relate the HDM to these would be helpful, both to help
+people understand, as well as to show how the HDM is worthy in itself. --[[file:akrowne.org][akrowne]] Wed Dec 21 04:01:32 UTC 2005
+
+Last time I tried to give a talk about HDM to mathematicians,
+many of them failed to understand what I was talking about.
+This is a two-way street, I know.  See 
+http://www.ma.utexas.edu/~jcorneli/p/mathfest04.jpg
+for the abstract.  (Actually, Aaron, you heard a version
+of this talk live.)
+
+Part of the problem at that time was that some audience members
+got hung up on the stuff they already know.  What do we need
+AI for, if we already have theorem provering apparatus?  (What
+do we need teleportation for if we have steamships and dirigibles?)
+
+But I can probably make some better slides, to show HDM's relationship
+to the different existing technologies, and the differences as well.
+
+The driving variable in the comments I previously made above is that HDM is supposed
+to be a "social" project.  This is where the metadata comes in, too;
+and this is all new stuff since 2004.  Of course, I'll (personally) have a better sense
+of how the HDM relates to work in formal math once I've talked to Ray about the project
+for 10 days!!
+
+So --- take the above to be an angle on social stuff & its relationship to
+metadata.  Other stuff will come in time.  Feel free to add more yourself :) --jcorneli, nyc
+
+Note that the talk will probably be informed by my [[file:January 10 LispNYC Talk.org][January 10 LispNYC Talk]]. --[[file:jcorneli.org][jcorneli]]

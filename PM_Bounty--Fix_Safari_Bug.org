@@ -1,0 +1,44 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: July 31 2006.
+
+Status: *completed*
+
+Time: 5 hrs (est.)
+
+Bounty Price: $200 (US est.) (completed for free by [[file:bloftin.org][bloftin]])
+
+Objective:
+
+People cannot post or edit entries from Safari (which is on the Mac).   Fix this.
+
+Skills needed:
+
+ * CGI programming
+ * Perl
+ * Knowledge of apache, mod_perl
+
+* Background
+
+It was noticed in the past few months that posts of new entries and edits stopped working for people using the Safari browser (and them only).  This 
+may have been introduced because of updates to mod_perl and simplifications of the CGI handling routines of Noosphere (which were made to use the 
+standard Perl/mod_perl libraries, rather than ad hoc code).  We would like to support everyone again, so this should be investigated and fixed.
+
+What appears to happen is that, which CGI is submitted back to the server normally by Safari browsers, somehow it is not getting parsed into 
+by the Perl/mod_perl CGI libraries, so they think no data is being returned.  This leads to a cryptic "Noosphere" error, because there is absolutely
+no referential data for the request.
+
+* Plan
+
+ 1. debug the problem (preferably someone who can run Safari themselves to test)
+ 1. code a fix.
+
+* Testing
+
+Interesting enough, Safari had no problem on [[file:PlanetPhysics.org][PlanetPhysics]]
+
+: that was because the bug was only introduced in a "modernization" of the CGI code I implemented recently.  --[[file:akrowne.org][akrowne]]
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for more on how bounties work.

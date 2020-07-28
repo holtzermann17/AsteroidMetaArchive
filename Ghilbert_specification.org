@@ -1,0 +1,356 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Important:* This specification is not complete.  As of 20 Oct 2006 major work is underway.  The language is essentially settled in Raph's head.  What remains is to figure out what that language is ;) and get it onto the page.
+
+I moved a bunch of discussion to the talk page: [[file:Ghilbert specification discussion.org][Ghilbert specification discussion]].  I don't mean to trivialize any of it of course--at this stage, the discussion is probably more important than what's here!--just to separate the two things.  --[[file:jorend.org][jorend]]
+
+
+
+**  Introduction
+
+[[file:Ghilbert.org][Ghilbert]] is a simple language for writing mathematical proofs.  This document defines two classes of documents: Ghilbert /interface files/ and Ghilbert /proof files/.
+
+
+**  Basic concepts
+
+An /interface file/ is simply a list of axioms and theorems, stated without proofs.
+
+A Ghilbert /proof file/ imports zero or more interfaces; optionally adds further axioms of its own; puts forth step-by-step, machine-verifiable proofs of theorems from the imported and stated axioms; and lastly exports a new interface representing the theorems proved.  It is straightforward to check the consistency of a proof file, independent of whether the imported interfaces represent true statements.
+
+A Ghilbert file consists of a sequence of commands, each of which operates on a Ghilbert state, which is a collection of namespaces.  Verifying a file is equivalent to successively applying each command to the state.
+
+A Ghilbert /proof checker/ is a program that checks the consistency of a proof file.  The intent is that a proof checker can do this in time proportional to the length of the proof file.  There are three possible results of checking a proof file:  (1) the file violates one or more of the restrictions below, and therefore is invalid;  (2) one or more interface files could not be obtained, or the program failed for some other reason, such as running out of memory, so validation failed though no conclusion may be drawn about the validity of the proof; (3) all interfaces were found, all proofs were checked, and no restrictions were violated: the proof file is valid.  Each restriction applies to a particular physical line of a proof file, a particular command, or a particular step of a proof; a proof checker SHOULD report the location of each violation found when it rejects a proof file as invalid.
+
+
+**  Syntax
+
+The syntax of a Ghilbert file is shown here in extended BNF.
+
+Lexical structure:  A Ghilbert file is a sequence of ASCII characters that makes up a *token sequence* following the grammar below.
+
+  ghilbert-file = line (line-sep line)*
+  line          = opt-hws (token opt-hws)* comment?
+  opt-hws       = (SP | HT)*
+  token         = "(" | ")" | atom
+  atom          = atom-char+
+  atom-char     = any ASCII character in the range 33-126 inclusive except "(", ")", and "#"
+  comment       = "#" comment-char*
+  comment-char  = HT | any ASCII character in the range 32-126 inclusive
+  line-sep      = LF | CR LF
+
+The /atom/ construction always matches as many characters as possible; two adjacent /atoms/ must be separated by space.  SP represents ASCII 32, the space character.  HT is ASCII 9, horizontal tab.  LF is ASCII 10, line feed.  CR is ASCII 13, carriage return.
+
+/BUG - gh_verify.py currently treats ASCII 11 (vertical tab) and 12 (form feed) as whitespace within a line.  Probably they should be banned./
+
+/BUG - this definition forbids CR appearing anywhere except immediately before LF.  gh_verify.py doesn't enforce this./
+
+/BUG - gh_verify.py allows atoms to contain characters beyond ASCII 126./
+
+The token sequence of a Ghilbert file is the sequence of all instances of /token/ in the order they appear in the file, plus an /end-of-line/ token following the tokens of each /line/.
+
+The token sequence makes up a *command sequence* following this grammar:
+
+  ghilbert-file = (command | end-of-line)*
+  command       = atom sexp end-of-line
+  sexp          = atom | "(" end-of-line* (sexp end-of-line*)* ")"
+
+
+***  Namespaces
+
+A namespace is a mapping from names to abstract objects. A number of
+Ghilbert's namespaces are shared between multiple kinds of abstract
+objects. In other words, these namespaces map from names to a disjoint
+sum.
+
+Many commands introduce new name/value bindings into the namespace.
+In all such cases, the command is invalid when the name specified
+already exists in the namespace. In other words, once a name is bound,
+it is immutable.
+
+Ghilbert proof files and interface files have four namespaces:
+
+ * Interfaces.
+
+ * Kinds.
+
+ * Terms.
+
+ * A shared namespace containing Variables and Statements.
+
+: /The change to four namespaces rather than three reflects the "RPN vs terms in proofs"
+design change proposed in the main [[file:Ghilbert.org][Ghilbert]] page./ -- raph
+
+While proof and interface files have the same collection of
+namespaces, the valid commands differ.
+
+***  References to external interfaces
+
+Ghilbert proof and interface files refer to interfaces contained in
+other files. These references may be one or more of:
+
+ * A filename, which hopefully can be opened in the local filesystem.
+
+ * A URL, which hopefully can be loaded from the Internet.
+
+ * A SHA-1 hash of the contents of the file.
+
+When verifying a Ghilbert file, each such reference is resolved to the
+file contents. If it is not possible to resolve the reference, then it
+is not possible to check the validity of the file containing the
+reference.
+
+A reference containing the SHA-1 hash of the file contents
+unambiguously refers to a specific version of the file. Otherwise,
+it is possible to pick up different versions, which may lead to
+verification errors downstream.
+
+
+**  Interface files
+
+An interface file consists of:
+
+ * "param" commands referring to other interfaces.
+
+ * "kind" commands establishing new kinds.
+
+ * "var" commands assigning kinds to variables (analogous to $f in
+Metamath).
+
+ * "term" commands introducing new terms.
+
+ * "stmt" commands representing theorems or axioms.
+
+These commands introduce names into various namespaces, some of which
+are exported. All kind names introduced are exported. All terms and
+statements introduced into the joint namespace are exported.
+
+***  param
+
+The argument to a param command is a list of:
+
+ * A name for the parameter.
+
+ * A file reference to the corresponding interface file.
+
+ * A list of parameter names, which serve as arguments.
+
+ * A namespace prefix string.
+
+The namespace of parameters is global to the interface file and
+unique. Any interface file containing two param commands with the same
+parameter name is invalid. Further, each of the parameter arguments
+must be a valid parameter name that is defined earlier in the file
+(thus, no cycles).
+
+Verifiers are expected to resolve file references to actual interface
+files. I'm still working on the exact syntax, but I imagine file
+references to include one or more of:
+
+ * References to files on the local filesystem.
+
+ * URL's.
+
+ * Cryptographically strong hashes of the interface file content.
+
+The param command introduces all names exported by the interface,
+prepended with the namespace prefix string. If the first and last
+characters are double-quotes (ASCII 34), they are stripped, thereby
+enabling empty string as a valid prefix. Any conflict between a name
+so introduced and one already present in the module's namespace is an
+error (a major goal of namespace prefixes is to make it
+straightforward to resolve such conflicts).
+
+***  kind
+
+A "kind" statement takes a single atom as its argument, and introduces
+that name into the interface's kind namespace, which is global to the
+interface file and unique.
+
+***  var
+
+A "var" statement takes a list of atoms as an argument. The first atom
+is a valid kind name; the rest are variable names, each introduced
+into the joint namespace as a variable.
+
+***  term
+
+A "term" statement takes two arguments: a valid kind name, and a list
+consisting of the name of the term (an atom) and kind names for the
+arguments. The term name is introduced into the joint namespace as a
+term.
+
+As described above, each such term command expands the space of
+valid terms.
+
+***  stmt
+
+A "stmt" command takes four arguments:
+
+ * The name of the statement.
+
+ * The distinct variable constraints.
+
+ * The hypotheses.
+
+ * The consequent.
+
+The name is introduced into the joint namespace as a statement.
+The distinct variable constraints are a list, with each constraint a
+list of variables (thus, each constraint corresponds to a $d command
+in Metamath).
+
+The hypotheses are a list, with each hypothesis a valid term (thus,
+each hypothesis corresponds to a $e command in Metamath).
+
+The consequent is a valid term. It corresponds to a $a or $p statement
+(the latter without the corresponding $= clause) in Metamath.
+
+
+**  Proof files
+
+***  import
+
+An "import" statement has the same syntax as a param statement in an
+interface file, and much the same meaning.
+
+***  var
+
+A "var" statement has the same syntax and meaning as in an interface
+file.
+
+***  thm
+
+A "thm" is essentially a statement with a proof. It consists of:
+
+ * The name of the theorem.
+
+ * The distinct variable constraints.
+
+ * The hypotheses, with labels.
+
+ * The consequent.
+
+ * The proof.
+
+Each hypothesis is a two-element list, the first of which is a label,
+the second of which is the corresponding term. (Note that, in
+Ghilbert, "stmt" hypotheses do not require labels, but "thm"
+hypotheses do. Metamath always requires labels for hypotheses).
+
+The proof consists of a sequence of atoms, each of which is either a
+name in the joint namespace, or a label of a hypothesis in the present
+proof. In case of conflict, the latter has precedence (although I
+think a warning might be appropriate, as it's bad style).
+
+Proofs are very similar to Metamath's, with the following exceptions:
+
+ * In Metamath, $f statements assigning a "kind" to a variable have
+labels. In Ghilbert, the corresponding proof atom is simply the name
+of the variable.
+
+ * In Metamath, new terms are introduced with $a statements asserting
+the well-formedness of the term, and proof steps refer to the label of
+that statement. In Ghilbert, the corresponding proof atom is the name
+of the term.
+
+ * In Metamath, invoking a statement requires well-formedness
+assertions (mandatory hypotheses of the $f flavor) on the proof stack
+for all variables. Ghilbert omits these assertions for any variables
+which appear in a hypothesis.
+
+ * In Metamath, the well-formedness assertions ($f) precede the $e
+hypotheses. In Ghilbert, they follow. (thus, sequences of
+"structure-building" steps are closer to the the RPN order
+characteristic of most proofs)
+
+ * In Metamath, the order of the well-formedness assertions is
+determined by the order of the corresponding $f statements for the
+variables. In Ghilbert, the order is determined by the order of
+appearance in the consequent. (this choice facilitates cutting and
+pasting a theorem from one file to another that may not have the same
+$f ordering).
+
+Once proved, the theorem name is introduced into the joint namespace
+as a statement.
+
+Obviously, I need to write up a self-contained description of proofs,
+but for now the reference to Metamath should do.
+
+One open design question: should dummy variables require explicit
+distinct variable constraints in "thm" statements? An argument against
+is that the distinct variable constraints would be identical to the
+corresponding "stmt" exported; otherwise, the dummies need to be
+elided. What's a good argument for (other than avoiding gratuitous
+incompatibilities with Metamath)?
+
+: /This design decision has also been made, in favor of not requiring
+dummies to be listed in distinct variable constraints. See "Distinct variable conditions on dummies"
+on the [[file:Ghilbert.org][Ghilbert]] page./ -- raph
+
+***  def
+
+The "def" statement is the tool used to introduce definitions. The two
+arguments are the definiendum and the definiens. The definiendum is a
+list consisting of the name of the newly defined term, and zero or
+more valid variable names. The definiens is a valid term. The name is
+introduced into the joint namespace as a definition.
+
+Note that the kind of the definiens can be readily determined from
+term (or variable) constituting it. Similarly, the kinds of the
+parameters are determined directly from the named variables. Thus,
+it's quite straightforward to rewrite a "def" into the corresponding
+"term" for export in the interface. The name of the newly defined term
+can appear as a proof step; when it does, its meaning is the same as
+this corresponding "term" (in other words, it establishes
+well-formedness, but does not expand the definition in any way; see
+"Definitional framework" below for more details on that).
+
+***  export
+
+The "export" statement has the same syntax as "import" (except that
+the interface name is elided), but opposite meaning. Each name
+exported by the exported interface must find support in the proof
+file.
+
+In particular, each "stmt" must be supported by a matching "thm" with
+matching name (re-exporting imported "stmt"'s is also allowed), and
+each "term" must be supported by a matching "def" (again, re-export of
+imported "terms" is allowed).
+
+TODO: "kindbind" commands, so that we can export interfaces that
+introduce new kinds. These are, in fact, implemented now, but have never
+been properly documented.
+
+**  Definitional framework
+
+This is a brief sketch.
+
+In Metamath, at the end of a proof, the proof stack must contain
+exactly one term, which must be identical to the consequent. In
+Ghilbert, we allow the consequent to contain definitions as well.
+These two terms are matched by traversing the term tree. At each node,
+either the term names match, or the term name in the consequent is a
+definition. In the latter case, the definition is expanded, and the
+matching process continues.
+
+The expansion of a definition is its definiens, with each occurence of
+a variable replaced by the corresponding argument of the term. For
+"dummy" variables in the definiens (in other words, variables not
+appearing in the definiendum half of the "def" statement), a variable
+appearing in the result of the proof may be used.
+
+The mapping from dummy variables in the proof result term to dummy
+variables in definitions is subject to the following restrictions,
+which are necessary to ensure soundness:
+
+1. The variable must not appear in the hypotheses or consequent of the
+"thm" statement.
+
+2. If a given definition is expanded more than once, all dummy
+variables mapped must be mapped consistently.
+
+
+**  Future directions (non-normative)
+
+A future version of this specification may allow Unicode characters other than ASCII characters to appear in tokens.

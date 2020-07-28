@@ -1,0 +1,34 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I'm a 18 years old student, interested in developing some non-web interfaces to Planetmath.
+What I'm thinking about would be either a mail-based interface (for small queries), where the reply can be sent as a PDF file or as plain text, and/or a XMLRPC service in order to enable the development of client programs.
+
+More to be written later.
+
+Probably the e-mail interface could be developed as an application of the XMLRPC service that runs on serverside.
+
+Please leave any comment you think is relevant.
+
+Update : got some more precise idea, will develop it later and in my application.
+
+-- 
+
+Also, I have a lot of interest into support for i18n, because I tend to use French wikipedia instead of Planetmath because of the language. This could be another project.
+
+
+----
+
+Arthur: Email and CVS support would be great to add, and they are something
+I've wanted for a long time (cf. [[file:CVS_support_for_projects.org][CVS_support_for_projects]], 
+[[file:email posting to forums.org][email posting to forums]], [[file:email notification by keyword, metadata.org][email notification by keyword, metadata]]).  
+You may be able to come up with some strong proposal that incorporates
+some of these ideas.
+
+However, i18n is a big development priority for us right now, and my
+guess is that it could easily be made into a strong proposal.  This is
+just an opinion; and of course I would like to see both projects done.
+
+In either event (or both), I'll look forward to seeing a more detailed
+sketch of the project in time (probably developed collaboratively, and
+I'll be happy to help some with that when I can).  --[[file:jcorneli.org][jcorneli]]

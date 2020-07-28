@@ -1,0 +1,59 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Check out the `apply' function... I think it would enable you to simplify the code.
+
+  (apply function &rest arguments)
+  
+  Call function with our remaining args, using our last arg as list of args.
+  Then return the value function returns.
+  Thus, (apply '+ 1 2 '(3 4)) returns 10. 
+
+--[[file:jcorneli.org][jcorneli]] Fri Apr 01 02:08:29 2005 UTC
+
+The problem I ran into was that, since 'or' is a special form and not an ordinary function, emacs LISP won't let me feed it as an argument to 'apply'.  If I try something like
+
+ (apply 'or '(t nil))
+
+I get a "invalid function #<subr or>" error.  You are certainly right that 'apply' is the right tool for this job and makes the code easier to read, but what to do about the "invalid function or" business?
+
+One other thing I thought of was maybe use something like (member 't '(t nil)) which would also do what (apply 'or '(t nil)) was supposed to do.--[[file:rspuzio.org][rspuzio]] 1 April 2005
+
+Sorry about that... I have no idea why that would be, about `or'. 
+Maybe ask on the help-gnu-emacs - I'd be interested to know the answer.
+
+In the mean time, here is another attempt at being helpful...
+first step, was - I actually read (most of) the code instead of just
+having a knee-jerk reaction against `eval'.
+
+Here's what I came up with.
+
+
+ (defun test (expr)
+  (let (bad)
+    (while (and expr
+                (not bad))
+      (let ((elt (car expr)))
+        (when (or (null elt)
+                  (atom elt)
+                  (null (car elt))
+                  (not (atom (car elt))))
+          (setq bad 'bad)))
+      (setq expr (cdr expr)))
+      (or bad
+          'good)))
+
+ (test '((a . b)))
+ (test '((nil . b)))
+
+This takes care of four of the cond cases, and perhaps you
+can use the model to finish off the code with no evals
+and also in such a way that you stop whenever you encounter
+a bad element.  You'll want to change the return
+values around to match the system you're using here.
+--[[file:jcorneli.org][jcorneli]] Fri Apr 01 05:53:00 2005 UTC
+
+Since I already wrote it while you posted your entry, I put up my revised code using "member" -- it is a bit simpler and easier to understand than what I had before and the new discussion is correspondingly shorter.  Tomorrow or so, I will finish off your version and add it as another possibility.  I figure, why not offer more than one version? --[[file:rspuzio.org][rspuzio]] 1 Apr 2005
+
+Back to [[file:template utilities - assignment-p | assignment-p.org][template utilities - assignment-p | assignment-p]]

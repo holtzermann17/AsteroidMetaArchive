@@ -1,0 +1,44 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to: [[file:mmj2.org][mmj2]] 
+
+* note about the wiki
+
+NOTE: To update the wiki your "username" must be whitelisted. Send an email to the wikilord if you are not already a user – and, if you don't care to do that, I authorize you to post as "ocat" for the purposes of mmj2 feedback and problem reports, etc. (Just put some initials on your edits so I know who is doing what…)
+
+ALSO, you may get the "Cannot acquire main lock"
+error message when attempting to post to the wiki.
+In this case, hit the Back button on your browser,
+open a new window and go to RecentChanges then
+click on Administration, then Unlock Wiki. Wait,
+and then return to your original post and click
+on "submit" again. 
+
+
+* other links
+
+Dedicated page for feedback about the mmj2 Proof Assistant GUI: [[file:mmj2ProofAssistantFeedback.org][mmj2ProofAssistantFeedback]]
+
+Previous version of mmj2Feedback: 
+[[file:mmj2Feedback20080113.org][mmj2Feedback20080113]]
+
+---
+
+* Questions/Comments About mmj2?
+
+1. Note: The "Unify + Get Hints" feature works very well
+on proof steps containing Work Variables. A proof step
+with a blank Ref and a "?" in the Hyp field, plus at least
+one Work Variable will get sent through the new StepUnifier
+algorithm for performing unification on formulas (and
+hypotheses) containing Work Variables. This means that
+for one of these steps, the StepUnifier function will be
+invoked for /every/ assertion in the database (except those
+excluded intentionally via RunParm.) So this may be a
+very handy feature given that the Unification Search
+algorithm does not attempt Ref lookups for steps containing
+Work Variables. And, a "Hint" may be very useful indeed
+if your formula is highly specific and complicated (hints
+are not tremendously useful when you receive too many
+at once :-) --[[file:ocat.org][ocat]]

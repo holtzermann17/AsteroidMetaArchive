@@ -1,0 +1,198 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Response to "Elephant"
+
+by Joe Corneli and Aaron Krowne
+
+*  Introduction
+You can get this article "The Elephant and the Internet" by Daniel
+Biss (CMI Research Fellow) from the AMS's website, in the current
+Notices.  His name just happened to catch my eye when I was looking
+through my friend's paper copy.  Worth reading, and I think Biss
+could be a useful ally.  However, it wouldn't be an alliance won at
+no cost.  
+
+Biss is skeptical of the internet, and, it seems, for good reason.
+But PM appears to be in a position to work to address his concerns.
+
+By responding one by one to his critiques, I think we have in the
+end a very strong argument for the role of PlanetMath, particularly
+in the "expansive/inclusive" vision I outlined in my previous
+message and in the note about document models.
+
+For example: he says that internet postings are likely to be
+shoddily written.  Yes, sure, but as we've talked about with
+reference to our correspondence, this is partly because people need
+the chance to ask questions, clarify, revise, and repeat.  CBPP
+creates a good opportunity for "idea people" to collaborate with
+"writing people" in shaping a text to be both well-written and
+mathematically interesting.
+
+Also he talks about the weaknesses of the LCD and printout media
+when compared with traditional journals.  The FEM seems to be in a
+position to address this.
+
+He talks about the difficulty of navigating the large store of
+mathematical information on the internet.  The HDM addresses this
+concern.
+
+I'll leave off now, and let read the article for yourself.  I think
+we might consider writing a response to Biss, either to send to the
+Notices or to him personally or both.
+
+*  A riddle
+
+
+: Q.  /How can you tell if there's an elephant in the room?/
+: A.  /You smell the peanuts on his breath./
+
+
+Talking about the putative "hazards of the internet" reminds one of
+the famous saying, "Guns don't kill people, people kill people."  On
+the one hand, its silly.  On the other hand, it appears to be dead on.
+In the end, it seems to be a not-so-enlightening paradox (on the order
+of "Which came first, the chicken, or the egg?").
+
+The internet has certain properties that can lend focus to the more
+general questions.  But setting it up as the problem of the day
+is highly misleading.  Unless one tackles these questions at a more
+appropriate level of abstraction, one risks stumbling around for a
+long time in the world's most overhyped sociogeopolitical miasma.
+
+We would say that "the rise of the personal computer and the
+internet" points up, but does not cause, important -- but
+still at present largely potential -- "reorganization of the
+relationship between human beings and information."
+
+*  The Future
+
+In order that to steel ourselves for what is to come, it is
+important that we recognize that while, as mathematicians, our
+single goal is to further mathematics, as human beings, we have
+other goals.
+
+We relish the mathematical experience.  A professional earns
+monthly paychecks and the best earn lasting social recognition for
+their work.  Mathematics is a sort of marketplace, in which we
+mathematicians play the role of consumers as well as producers; in
+which the "sacred" is bought and sold, alongside the latest
+theories, expositions, and hours of thought.
+
+It is because of the market that none of us really needs to ask "Is this the
+best way for me to further mathematics?": for the most part, we simply bow
+reverantly before the market's invisible hand, and ask (perhaps with a sly wink)
+"How will this work further my career?" or "Is this going to be /fun/?".
+
+The constitution of the mathematical marketplace is changing.  What is
+bought and sold is changing.  The entities who buy and sell are
+changing.  Prices are fluctuating.  And this has always been happening.
+
+In the future, things will look very different.  It is not entirely
+improbable that in the future things we now consider to be hard will
+be easy, or that we'll be robots.  That's life.  The more things
+change, the more they stay the same.
+
+This is all the more reason for us to exercise care in deciding how
+we want the mathematical marketplace to be run.  This sort of
+practical sociocultural metamathematics is well within our grasp.
+
+----
+* Discussion
+
+This is rather "first draft" (as I'm sure you can see!) but perhaps AMers can use it as the basis
+of an article/recommendation that sums up all of our Emory papers and discussions,
+then submit the thing to the Notices. --[[file:jcorneli.org][jcorneli]]
+
+In general, I think that the best refutation is to put this back 500 years.
+Many of the arguments proferred for printing over networks also work well as
+arguments for hand-copying over printing.
+
+: /The fact is that our current relationship to the Internet has the undeniable
+ effect of degrading the sacrosanct status of the mathematical text.  [...]  --
+ in other words, without sacred texts--mathematics can only go in one direction:
+ toward the profane./
+
+ * But then again a printed book cannot compare with a carefully penned and
+  illuminated manuscript, yet I don't see anyone clamoring that we abandon
+  printing and go back to hand-copying manuscripts.  I'm sure that, back in the
+  day, a lot of scribes whined about how the printing press degraded the
+  sacrosanct status of the religious and philosophical classics by ending the
+  era of beautifully prepared manuscripts complete with carpet pages and golden
+  illumination.  --[[file:rspuzio.org][rspuzio]]_
+
+  * Another example comes from music (Mozart!). --[[file:jcorneli.org][jcorneli]] 
+
+  * And, come to think of it, the "Talmud and the Internet" book seems to show
+how (at least WRT one religious tradition) sacred and profane texts can actual
+evoke some similar experiences in the reader.  There is no particular reason
+that online math shouldn't be a "sacred text", but it would be a rather
+different sort of sacred text from the author-as-authority texts that Biss is so
+fond of. --[[file:jcorneli.org][jcorneli]]
+
+: /This effect is easy to see in the arena of fiction.  The weblog has given rise
+ to a whole generation of young, trendy writers who have attained prominence on
+ the strength of their popular websites and online journals./
+
+ * In the eighteenth and nineteenth centuries, printing gave rise to several
+  generations of young, trendy hack writers who made a living cranking out
+  popular novels.  So the printing press seems to suffer from the same problem.  --[[file:rspuzio.org][rspuzio]]_
+
+  * I like this point especially.  Some of these writers are considered quite
+   good these days.  Horace [http://www.tkline.freeserve.co.uk/HoraceEpistlesBkIIEpI.htm considers]
+   a similar problem: the elevated status of "classics".  (This theme is [http://www.gutenberg.org/dirs/etext96/batbk10.txt revisited]
+   by Swift.)  Combine that with !McLuhan, and you have: the elevated status of
+   classic media.  Biss makes a good choice of metaphor: he would apparently have
+   us revert to the days of tithing!   --[[file:jcorneli.org][jcorneli]]
+
+   * So this is a generational thing like parents complaining about the wild fahsions their kids wear or older musicians complaining how new music is dissonant noise.  Nothing like the good old days, especially if you happen to be an elephant with a nostalgic memory!  --[[file:rspuzio.org][rspuzio]] 
+
+: /This presents authors with a new challenge; rather than try to impress an
+ élite group of professionals (publishers, referees, and the like) in order to
+ attain a specific goal whose consequences are known quantities, one must now
+ post writings for all to see and somehow hope to snatch the wandering
+ attentions of a large enough slice of the audience./
+
+ * Exactly the same possibility of appealing to the masses instead of elites
+ happened five centuries --- read any history of the Protestant reformation for
+ details.  Yet, although they had to share some of what used to be their
+ exclusive domain with others, the intellectual élites of thosre days survived
+ the invention of printing (and are still around today) and, in fact, new élites
+ (such as the mathematical élite referred to in the quote) arose nonetheless.  
+
+: Since I am rather egalitarian in outlook, I personally think it is good thing
+ that authors now have a choice between trying to impress elites and appeal to
+ the public.  While elites can enforce high standards they can also promote
+ vested interests and stifle innovation which they see as detrimental to their
+ position of superiority.  In this respect, mathematics is not much different
+ than religion, politics, or any other field of human endeavor --- see the
+ article "Bad Mathematics" which appeared in the Intelligencer (I think so, but
+ need to check the reference) for a discussion of how mathematical elites have
+ sought to supress certain subjects.  I think that the possibility of an appeal
+ to the public is an important safety-valve.  --[[file:rspuzio.org][rspuzio]]
+
+
+: /For readers, this has the effect of creating a vast and bewildering array of
+ options, and our instinctive response is to reach out for whatever strikes us
+ first./
+
+ * Hello?  We /already/ have such a situation.  Walk into a large math library
+  (perhaps the best example would be the math section of the Library of
+  Congress) and you will find thousands of books and more than a hundred
+  journals.  The only reason that people can manouver their way through this
+  vastness is because they learn to control their instinct to grab the first
+  book they see and instead use card catalogs, abstract and citation indices and
+  similar resources to navigate their way thorough the sea of books.  Whilst
+  computers might make it easier to generate a lot of intellectual content, they
+  also make it much easier to catalogue and search that content. --[[file:rspuzio.org][rspuzio]]
+
+  * This point reminds me of the Wikipedia "FUD" piece Aaron responded to.  The
+same thought is voiced by the Semantic Web proponents, actually.  Namely, that
+the larger the resource becomes, the more disorganized it becomes.  I think
+these folks might want to give some thought to the meaning of the word 
+[http://en.wikipedia.org/wiki/Emergence emergence]. --[[file:jcorneli.org][jcorneli]]
+
+
+I have much more to add, but not enough time, so I will have to finish this later.
+
+--[[file:rspuzio.org][rspuzio]] 10 July 2005

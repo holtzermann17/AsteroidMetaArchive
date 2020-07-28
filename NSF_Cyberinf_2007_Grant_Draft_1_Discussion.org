@@ -1,0 +1,366 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a page discussing [[file:NSF Cyberinf 2007 Grant Draft 1.org][NSF Cyberinf 2007 Grant Draft 1]].
+
+----
+
+A first comment.  One of the major thematic things about the narrative
+Joe pointed out to me would be to basically eliminate the negative
+aspects of the justification, and focus on the positive aspects of how
+CBPP "scholarly cyberinfrastructure" could improve.  That is, cover
+the impact and successes so far, but then discuss about how what has
+been achieved is in some way only partial progress; an incomplete
+vision.  I think there may be much gained from this approach -- I may
+do a rewrite of the first part correspondingly. --[[file:akrowne.org][akrowne]]
+
+What follows is perhaps, as Bruce Sterling would say,
+/deeply orthogonal/ to your proposal... feel free to
+delete these remarks if they are unsuitable for this
+web page.
+
+I am thinking about /infrastructure/ and /middleware/
+in support of scientific research and computation,
+linkages between silos of knowledge at various
+institutions, and taxpayer funded objectives designed
+to foster knowledge acquisition by carbon-based
+humanoid lifeforms facilitating national strategic and
+economic objectives...
+
+A couple of decades ago a very sharp programmer with a
+scientific background told me that the best
+application, even in business, would be developed as a
+language for expessing the users' needs. That would
+apply even in a mundane scenario such as inter-bank
+billing. The programmers' task would be to implement
+the language and provide the infrastructure to process
+the user requests. Ideally this combines maximum user
+flexibility and power with an absolute minimum of
+boring maintenance work for programmers.
+
+So, when I hear about the need for /infrastructure/ I
+think of a language and user protocols for retrieving
+and manipulating information. Then, instead of allowing
+users to directly hack "code", the system provides a
+way for them to create, store and share queries and
+requests written in the language the system supports.
+(Whether the user language is Turing-complete is beyond
+the context of my remarks here...)
+
+Next, the use of a shared language implies the
+existence of shared referents -- e.g. names of things.
+Which in turn, as a practical matter implies the
+existence of a shared Ontology (in the sense of the
+word as used in the Semantic Web -- and Dublin Core,
+etc.) If everyone is sharing the same names for things,
+like "sine" and "cosine" then queries and requests
+written in the user language and stored as canned
+procedures -- perhaps to be embedded in higher level
+queries and procedures -- can be shared globally
+throughout the system.
+
+Finally, I see the need for synergy between the users,
+the system and system sponsors. The CBPP agenda ought
+to mesh with and reinforce the needs of users -- who in
+turn are motivated to contribute and participate in an
+an informational Darwinian evolutionary process that
+pushes the most useful beneficial information and
+processes to the top of the heap, while still
+furthering the agenda of the system sponsors (however
+murky and mysterious :)
+
+To be specific, though this is just one possible
+example, there need to be /activities/ for the users,
+beyond merely inputting of mathematical text and
+proofs. We have observed this requirement as it relates
+to Metamath. mmj2 was written partly, as a first
+step, to provide activities relating to the
+knowledgebase; without user activities to stimulate
+user interest and motivate people to actually /do/
+math, the popularity of the system may tend to be
+somewhat limited...
+
+One possible activity (many others are possible), which
+you mentioned above is taking courses. Perhaps an Open
+School using the CBPP approach that offers /accredited/
+courseware and course credits would simultaneously
+satisfy number of goals and needs. It is easy to
+imagine a community of perpetual students and scholars
+working together to provide essential services at
+minimal cost. The high cost of tuition and textbooks
+combined with America's wretched and devolving global
+educational and economic standings provide substantial
+motivation for developing this activity to the fullest
+(ASAP!).
+
+An Open School CBPP example might involve students
+being asked to create homework and test problems for
+the /next/ instance of a class, and then CBPP could be
+used to rank the quality and appropriateness of those
+problems.
+
+Also, you may have noticed that there are multiple,
+somewhat redundant sets of textbooks available online
+these days. Each professor is obliged to publish a
+textbook, it seems. Within the scope of a CBPP system,
+collaboration and/or competition could occur to evolve
+the finest, most effective textbook for each level of
+audience. Perhaps students could assist in
+this endeavor with their questions and feedback.
+
+Obviously, a nationally accessible "school" would have
+substantial infrastructure needs, largely orthogonal to
+the electronic library infrastructure needs.
+But there are commonalities, such as user identity
+maintenance and access. My suggestion would be a
+hardware identification system, like two factor
+authentication gizmos that generate a new password
+every 60 seconds. A centralized repository of user
+identity information parallels the need for a shared
+Ontology. Of course, sensitive personal information
+would be segregated, perhaps even offline, leaving just
+the minimum electronic identifying traces of data
+needed to function within the system. I also recommend
+allowing an authorized user to have multiple online
+identities; this would provide necessary degrees of
+personal freedom, unchained from the fears of damaging
+travel along the tenure track (essentially, people need
+to be free to interact and experiment -- to segregate
+their various activities and reputation ratings,
+according to personal preference.) --[[file:ocat.org][ocat]]
+
+What a lovely proposal, it is nicely put together - and it happens to
+touch on several topics I've been thinking about, which always helps.
+My first thought is to that parts of this are a lot like what's
+being done with [http://www.mathweb.org/mbase/ Mathweb.org's MBase], which
+I've just been reading about and which I think we'd all do well to
+become better acquainted with.  MBase is "a web-based, distributed
+mathematical knowledge base".  
+
+I'm not yet able to say what needs MBase serves or doesn't serve, how
+precisely it compares to, say, Arxana (except by being rather further
+along); and accordingly I can't recommend anything but learning more
+about it at this point.  Ideologistically, it seems to fit with (to
+some as-yet unknown extent) everything you said up until "synergies
+between users the system and system sponsors".
+
+Specifically, I think your idea of an Open School using CBPP rocks (my
+world and maybe many others)!  I had tried to express ideas on such a
+thing on the [[file:NCT.org][NCT]] page.  But I did not see with such clarity, until
+now, how much the idea of such a school has to do with the questions of
+commonality raised in e.g. the [[file:metacommons manifesto.org][metacommons manifesto]], and I hadn't
+connected these matters to an evolutionary paradigm.
+
+The concerns are instanced right in this paragraph.  Typically, for
+us, it comes down to "there is some Metamathematical System, A, and it
+is not immediately clear if this system is compatible with
+Metamathematical System B, so there are two disjoint user and
+developer communities which undergo, at least for the time being,
+largely separate evolution."  And the Metamathematical Systems might
+seem superficially "ametamathematical"; things like repositories of
+mathematical knowledge; systems that strive for extreme flexibility;
+systems that allow even completely informal mathematics: so, Arxana
+and Mbase, for example.
+
+But of course to be truly "metamathematical", such systems should be
+able to at least converse.  Which brings me back to the language issue
+you started off with.  
+
+This seems to be a tower of babel problem in reverse: rather than
+trying to build some unique edifice that reaches to heaven, we instead
+build one largely horizontal language that translates between the
+various ghettos of human experience.  
+
+Borges would find this interesting, I'm sure.
+
+The one potential problem I can envision is that this Work requires
+"deep collaboration" (to riff off of "deep orthogonality") -- and what
+about those knowledge communities who are building commonses which are
+silotic in their structure?  Which, sadly, describes most of us at
+this point in time, despite our better intentions and maybe even our
+best efforts.  I don't know if I want to say that it is necessary to
+overcome "ego" because that seems far too dramatic.  But still,
+dramatic times call for dramatic measures, hm?
+
+Compare the first few couple paragraphs of 
+[http://www.spunk.org/texts/art/sp000338.html this writeup on the theater of the oppressed].  And further related readings:
+
+ * http://en.wikipedia.org/wiki/Augusto_Boal
+ * http://en.wikipedia.org/wiki/Paulo_Freire
+
+--[[file:jcorneli.org][jcorneli]]
+
+Hi Joe, I like the NCT idea in general. Same as Open School, maybe.
+As a practical matter -- making things actually /happen/ -- I have
+these thoughts:
+
+ * Education: a student, a teacher, and a log. 
+ * "Open Source" is about people "scratching itches", doing what
+they really /want/ done, regardless of everything else. Learning
+is the same thing: it happens when a person wants it badly enough
+to /do/ it. 
+ * I would begin with 1 course using 1 Creative Commons textbook
+and email or a wiki. When the student is ready, the teacher will
+appear. 
+ * I /foresee/ each individual class becoming an institution,
+perhaps having its own wiki.
+ * Real "accreditation" means that at the end of the class the
+students can do the work correctly. That is the only criterion
+for success and it is measured one student at a time.
+ * I would begin without any sponsorship because of potential
+entanglements. 
+ * Success would breed success and create a series of new problems
+to solve -- opportunities for achievement. 
+ * Infrastructure later. 
+--[[file:ocat.org][ocat]]
+
+I happened to notice that most of the major pieces of infrastructure
+Aaron proposed are about making exchanges between different online
+resources or user communities.  Here's a quick sketch:
+
+; Nexus: between a paper (say) and a dictionary
+; Atlas: between a survey journal and an encyclopedia
+; Reputation: between pre-existing credentials and potential consumers
+; Hackability: between users and developers
+; Bidi-OAI (a distributivity system like MBase uses):
+between any two online communities
+; Arxana: between any parties who want to share :)
+
+I don't think it would be hard to add a /research area/ and an
+/education area/ to !PlanetMath -- these would be like Noosphere
+"subinstances", perhaps.  And within the "research area" you'd find
+exchanges among a group of researchers, and between these researchers
+and other PM users (via Nexus); similarly, within the "education area"
+you'd find exchanges between a group of teachers, between a group of
+students, between these groups, and between all participants and the
+rest of !PlanetMath.  This is true even in the simple case of one
+student and one textbook you described above.  And I don't think it is
+particularly heavy infrastructure -- rather these are just examples of
+the sorts of things Aaron's proposal basically covers.  But I think
+they should go into the proposal.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Ocat, I don't think your writeup is /actually/ orthogonal to the proposal --
+or at least it shouldn't be, based on the Office of CyberInfrastructure's "vision"
+document!
+
+In specific:
+
+ * I very much agree with your statements about language interfaces.  In fact,
+I've always been thinking of them interchangeably with "code" any time and place
+we talk about "hackable interfaces".
+ * I also agree that the "CBPP agenda" ought to motivate users to contribute and
+participate in an "informational Darwinian process".  It would seem OCI shares this
+vision too in calling for "broader participation". 
+ * Your point about /activities/ is important -- here we are going beyond 
+dialectic and "meta" stuff and actually "doing the primary work" (whatever that
+may be).  This is what metamath is all about, and it was a huge theme of the OCI
+document (except for them the "primary work" examples were grid computing and data
+mining and so forth).  The point is that the "primary work" must interface with 
+the "meta" level (where the work is organized, discussed, results disseminated, and 
+where pedagogy occurs), which requires collaborative infrastructure.
+ * I think the Open School example is great.  Maybe we should illustrate how the
+proposed work items go towards creating one.
+
+--[[file:akrowne.org][akrowne]]
+
+Addendum: I noticed this: 
+
+http://www.openarchives.org/OAI/openarchivesprotocol.html
+
+It seems to me that an excellent project would be to provide
+a connection to/from NNexus using the OAI-PMH requests. There
+is a logical place for a subject-matter specific Ontology.
+In theory you could improve NNexus's linking accuracy (at
+first glance) and provide metadata about the contents of
+PlanetMath, etc. to /Harvesters/. It would be a good sized
+little chunk of work (as said by one with real world EDI
+experience, the devil is in the protocol details :)
+
+One tricky thing would be defining the content types, such
+as Encyclopedia entry, etc. I don't what has been done
+standardizing beyond the Dublin Core elements. 
+
+Also, work would possibly need to be done to the PlanetMath
+code to keep datestamps, as well as to take advantage of
+the PlanetMath Ontology (a different word might be less
+mind numbing...)
+
+The Open School needs just ... free 
+textbooks, instructors, students and a wiki. Or perhaps the
+students could attempt self-instruction and just flounder
+around until the mysteries and confusions are resolved.
+Perhaps it could be a "donation suggested" operation, with
+PlanetMath divvying up any incoming loot (money changes
+everything, as always...)
+
+--[[file:ocat.org][ocat]]
+
+P.S. My interests at this time are leaning towards the (my)
+vision of an Electronic Whiteboard for doing math/logic
+proofs in Metamath and Ghilbert. There is a tremendous amount
+of open source software available now that could be harvested.
+
+I just discovered the Sphinx4 speech recognition system
+at Sourceforge and have been reviewing the system. Very
+heavy duty stuff with many commonalities with handwritten
+symbol and gesture recognition. Other possibilities involve
+open source artificial neural networks... (I have an idea
+that the alternate input device software(s) will need to
+be trained by each user -- it all seems too implausible to
+expect to have a system that can recognize any input.)
+
+And the symbols that must be recognized will require 
+a /database/ or ontology containing a variety of data
+elements. I have an urge to start designing the database
+already :) 
+
+The rendering side of the system also suffers from an
+excess of open source code to choose from. I can see
+borrowing Ghilbert's output grammar scheme, and maybe
+Latex or Mozilla's MathML renderer, and then generating
+abstract syntax trees for processing at the back end
+by an mmj2 or ghilbert server. 
+
+The amount of work to do is stupefying and yet nearly
+everything has already been invented. It all just needs
+to get put together. 
+
+This vision is really about deep infrastructure, and will
+require current generation dual core PC's with >= 2GB of RAM. 
+For sure. But it is definitely the Way (/personally/, I now
+require a Mission and this is definitely something worth 
+doing. Being able to wave your Wii or use a digital pen, or talk
+to your computer to /do/ math/logic is really where we
+need to be (WYSIWYG for math). The trick to succeeding
+is to start with something achievable, not the entire
+enchilada all at once, which is why I would focus first
+on being able to do Metamath proofs (we already have mmj2's
+Proof Assistant which just lacks graphical formula formatting.)
+
+: This is /way/ off topic for the NSF grant, except as inspiration.
+I downloaded Sphinx4 from sourceforge and using the new Ant 1.7
+and the Java JDK, built the Sphinx jar files and ran the demos.
+What they have done is unbelievable. The computations needed to
+just recognize digits is insane: 2 byte of sound data sampled 16000
+times per second, run through Fast Fourier Transforms and 
+tons of other algorithms. It's wild. Seems to work, but I would
+bet a truckload of money there are bugs in there somewhere :)
+And I bet the code could be stripped down and optimized for
+a particular application...the simplest kind they mention is
+/command-and-control/ and uses context free grammars we are
+very familiar with in mmj2 :) This looks doable -- as long as
+I don't have to touch their math coding. Need to buy a mike
+tomorrow...
+
+--[[file:ocat.org][ocat]]
+
+What you say about all of the things that have been done but
+that need to be put together seems quite reasonable as an
+INFRAstructure challenge topic.  Presumably this happens all
+the time: many pools but few interlinking canals.
+
+BTW for graphical display: have you taken a look at !TeXMACS?
+
+--[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,25 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Ross Moore's core !LaTeX files for the [[file:FEM.org][FEM]] (see [[file:FEM CVS.org][FEM CVS]])
+make it possible to combine many disparate files into one large
+file.  It is important to the HDM to be able to do something similar,
+(a) for readability of the documentation; and (b) to make [[file:FDL.org][FDL]]
+compliance easier (we need only include one FDL notice in the document).
+
+Ross's code currently has some FEM-specific elements to it.  Making
+the code work on any collection of files would be a boon.
+
+To do this task, get the FEM repository and the HDM repository;
+use the FEM core files (from the book/ subdirectory) to build an
+extensible document called "The HDM Project" out of all of the tex
+files in the HDM repository.  We should try to do this soon, because
+FDL compliance is a necessary ingredient for posting the HDM
+project to Savannah and thereby making further collaborations easier.
+
+--[[file:jcorneli.org][jcorneli]]
+
+
+
+----
+[[file:Focused HDM subprojects.org][Focused HDM subprojects]]

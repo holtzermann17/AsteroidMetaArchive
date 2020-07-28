@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * Get Oddmuse running (it's  [http://www.oddmuse.org/cgi-bin/wiki/Installation easy to do]).  Obtain and install a copy of the [http://www.oddmuse.org/cgi-bin/wiki/Usemod_Markup_Extension Oddmuse:Usemod_Markup_Extension].
+
+ * Make sure you have <nowiki>LWP::UserAgent.pm</nowiki> installed (it is in libwww-perl for Debian or Fink users).
+
+ * Obtain the [http://www.oddmuse.org/cgi-bin/oddmuse/wikicopy Oddmuse:wikicopy] script and make sure it is pointing at perl, is executable, and is in your path.
+
+Then run the appropriate variant of
+
+  wikicopy -i 'http://planetx.cc.vt.edu/AsteroidMeta?action=index;raw=1' \
+              'http://planetx.cc.vt.edu/AsteroidMeta' \
+              'http://examplehost.com/cgi-bin/wiki'
+
+You can do this at regular intervals to maintain a mirrored version of the site.  E.g. I have the following in my crontab:
+
+  59 11 * * *  /Users/arided/bin/wikicopy -i 'http://planetx.cc.vt.edu/AsteroidMeta?action=index;raw=1' 'http://planetx.cc.vt.edu/AsteroidMeta' 'http://localhost/cgi-bin/wiki'
+
+----
+
+AsteroidMeta currently has 188 pages of content.  It is getting pretty big.
+I would like to request that it be moved to a more permanent location with
+better backup solutions asap. Thanks, --[[file:jcorneli.org][jcorneli]]

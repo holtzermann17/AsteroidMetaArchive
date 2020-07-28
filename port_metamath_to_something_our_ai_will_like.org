@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think that ghilbert may be even better for us, but it is not
+explicitly free.  So one task is to
+
+ * [[file:see about licensing conditions for ghilbert.org][see about licensing conditions for ghilbert]]
+
+If it isn't free, we may want to do something similar, looking
+at the documentation, not at the code.  Hmm.  I expect the author
+will be reasonable.

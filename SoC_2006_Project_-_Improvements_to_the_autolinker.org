@@ -1,0 +1,67 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Enhancing the Auto-linker
+
+James Gardner
+
+james.gardner@emory.edu
+
+*  Proposal
+
+Planetmath.org can be viewed as a semantic network. For a user to learn about a particular topic in most cases requires reading other related articles. The planetmath.org auto-linking system tries to help users find related information. The auto-linking system performs the task of linking articles so that authors will not have to search the planetmath site to find related articles and manually link to them. The auto-linking system is a one of kind process for a dynamic corpus. There are two main issues with the auto-linker that I propose to fix. I propose to completely modularize the auto-linker and make it memory resident. Details, ideas, and other possible auto-linker enhancements are outlined below.
+
+Currently the auto-linker is a part of the Noosphere system that planetmath is built on. The auto-linker needs to be completely modularized so that planetmath could use it to link to documents in other domains (e.g., applying the autolinker to a new Math Atlas project written by leading scholars, by having links drawn both internally to that content, and externally to PM, Wikipedia, and MathWorld.) If the autolinker is converted to a stand alone process it would be possible for other websites, e.g. Wikipedia or MathWorld, to incorporate the autolinker into their own corpus.
+
+The autolinker is currently not memory-resident. Therefore every time a new document is added to the corpus the autolinker has to re-load the corpus when a new linking task is run. I propose to code the autolinker into a memory-resident process, complete with it's own data.
+
+Two other auto-linker enhancements that may be implemented are fixing the "false positives" problem and implementing a mini-definition box. There is a problem with determining which terms or phrases to link. Consider "Fermat's last theorem." Should the auto-linker link "Fermat," "Fermat's last," "Fermat's theorem," or "Fermat's last theorem." The autolinker currently links the longest match in the location of the entry text. One of the major (problems/annoyances) of the autolinker is generating false positive links. Currently /false positive links/ can be prevented by the authors using pseudo-latex commands that planetmath processes to prevent a particular term from being linked, but this solution is only adequate if the authors carefully review the text they have written to insure that no false positive linking has occurred. To eliminate this problem I will consider using link forbidding metadata
+that will be applied to the subset of culprit links. This link forbidding metadata will be provided by the authors of various articles by an automatic process. One possibility to generate the metadata is prompting the author whether he/she would or would not like to link to a given term to another document in the corpus. This functionality has been requested by many planetmath.org members. Another possibility to resolve false positive links is for authors to provide key terms. One other possible application of the autolinker is a mini-definition box that allows users to view a short definition of a topic rather than having to open the linked document. This can easily be implemented by requesting that authors apply short definitions or phrases for their documents.
+
+*  Timeline of Development
+
+ * 1 week - Get familiar with Noosphere and development situation.
+ * 1 week - Learn the auto-linking system. Plan the implementation and extra features.
+ * 4 weeks - Modularize the auto-linker and implement link domains.
+ * 1 week - Integrate the auto-linker with the running system. Test and package the system.
+ * 1 week - Implement the link restriction/forbidding system.
+ * 1 week - Implement the mini-definitions feature.
+ * 2 weeks - Implement miscellaneous features and perform thorough testing.
+
+*  Qualifications
+
+My research Interests include Graph Theory, Optimization, Information Retrieval, and the intersection of these topics. 
+
+*  Education
+
+ * Emory University, Atlanta, GA, USA
+ * Masters of Science, Computer Science (Pending, May 2007)
+ * Concentration in the intersection of Graph Theory, Optimization, Information Retrieval, and Data Mining.
+ * I am currently researching query refinement using negative reinforcement with an underlying graph model. I have written the beginnings of a prototype system using the Lucene API. My advisor is Dr. Li Xiong.
+ * I am Proficient in C, C++, and Java. I also have experience in C#, x86 Assembly, Visual Basic, Python, and Perl. I have experience with Linux, Solaris, Mac OS X, and all Microsoft OS.
+
+My full resume can be found at http://mathcs.emory.edu/~jgardn3/jamescv.pdf
+
+*  Code Produced
+
+The code produced during this project can be found [http://aux.planetmath.org/nnexus/ here].   Soon SVN instructions will be up, as the system is worked into the 
+Noosphere project (though it will stay logically separate).
+
+The system has been named "NNexus", as it has its own entityship now.
+
+The main achievements of the project were:
+
+ 1. to survey linking accuracy; it was still about 85% at the commencement of the project, confirming the 2003 survey and suggesting quality does not degrade as the system scales.
+ 1. to modularize the system.  it now has a socket-based API interface and many of the key structures (including the invalidation index) are completely encapsulated.
+ 1. to optimize it (dramatically).  the concept hash structure is now kept in memory, using a hash/heap table.
+ 1. to abstract the source of concept definitions, allowing for multiple domains to be used.
+ 1. to augment linking policies to allow for category-based linking blacklisting or whitelisting for specific concept labels.
+ 1. to plan for the re-interfacing of the new system with Noosphere and the running PlanetMath instance.
+
+
+----
+
+Hey - this page is currently in the top ten list of Google hits for search term "planetmath".
+
+
+--[[file:jcorneli.org][jcorneli]] March 4, 2007

@@ -1,0 +1,146 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Work Availability of AsteroidMeta People
+
+If it seems helpful, Joe can be available on an up-to-full-time basis
+for something around $1400/mo. plus any travel expenses.  This may
+or may not be a good deal.  Part-time may be preferable to full time,
+in which case, dollar amount can go down.
+--[[file:jcorneli.org][jcorneli]] Wed May 18 19:58:43 2005 UTC
+
+(But if $3000 would make it look more legit, I wouldn't say no :) )--[[file:jcorneli.org][jcorneli]] Wed May 18 20:08:54 2005 UTC
+
+* Comments on first version
+
+Pros that jump out to me: I think your selection of things to work on sounds good (a few additional comments follow).
+
+Cons that jump out to me: Some of the modifiers seem superlative and/or vague.  Examples: "/further/ contribute", "/greatly/ enhance learning /in general/", "internet becomes a /stronger/ component", "an /"academic"/ sense of community", "/excellent/ platform".   Budget is missing.
+
+Suggestions: 
+
+ * I think the new [[file:reject rejections and acceptances.org][reject rejections and acceptances]] proposal might be better to include than the card-based model, or perhaps both could be included under item 1.
+ * A brainstormed budget is better than no budget, so it would be great if you could add something to that section later today or asap.  My folks told me recently that doing things "on the cheap" isn't necessarily going to make the proposal more attractive.  A list of things that need to be funded w/o specific dollar amounts would be one place to start.  Also, state length-of-duration for funding.
+ * Rework the sections containing the phrases I quoted above. Tone down the language, emphasize precision and readability.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Please be aware that I was cut off in mid-authoring of this draft as I transitioned from home 
+to work this morning, compeletely unaware that campus would be without network access all day (yay Emory netcom!)  So, what is up there is unusually rough (by my standards).
+
+I probably won't single out any quality control improvements in the proposal.  I'd rather 
+describe what the intent is, plan to research it, and name as many possible solutions as
+we know of, at this time.
+
+As for toning down the language, I think positive, ambitious language is good, as long 
+as the proposal is couched in specifics.  From my experience on multiple grant proposals 
+(many of which were awarded), this is the way to go.  
+
+--[[file:akrowne.org][akrowne]] Tue May 17 22:33:13 UTC 2005
+
+
+Well, "further contribute" seems questionable from a grammar point of view.  I'm
+not opposed to being positive and upbeat -- just be careful that it doesn't come
+at the expense of readablity!  Actually, I thought that the /overall/ style
+was good -- honest, straightforward, etc. -- but there were these relatively
+minor wording things that seemed to be going the opposite direction.
+
+My suggestion would be to try writing a version w/o spicy modifiers, and see
+what the material has to say "for itself".  Then you can go back to add
+modifiers that will spice it up later, in such a way that you preserve the
+factual and clear foundation.
+--[[file:jcorneli.org][jcorneli]] Tue May 17 23:59:28 2005 UTC
+
+* Comments on first revised version
+
+I like the added emphasis on "user studies", which have as their objective:
+
+: find out precisely which sub-communities are best-served and under-served, and
+which features are needed to better serve them.
+
+This is a research, as opposed to an R&D or pure development, project.  I'm sure
+that the NSF will get a kick out of this, assuming the research project comes
+across the right way.
+
+As we've recently been discussing (both on & off the wiki), there seem to be a
+number of things that mathematicians would like and/or need.  But I do think we
+need more research.  I think we might want to /hierarchify/ the user studies
+section, with questions that are geared towards different groups.  (Teachers,
+youngsters, advanced students, etc.)
+
+We're probably working with several constituencies who may have overlapping but
+not necessarily equivalent needs (e.g. students and educators at various
+different levels; researchers).  This may mean that several different
+non-mutually-interfering featuresets will need to be implemented.  
+
+Notice also that it isn't just existing sub-communities -- but also potential
+future user communities -- that we should study.
+
+However, research findings are not enough - it would be great to have money to
+fund the development of things we find out.  
+
+If it is possible to emphasize the distinction between research & development
+portions of the grant, I think that might be good.  As I see it, there are three
+categories:
+
+ 1. Things that we simply should research, and that we would like to develop later.
+ 1. Things that we already know we would like to develop, but that may require some additional research along the way.
+ 1. Maintenence, management, etc., - not really research or development.
+
+For /some/ of the research items, we may say: we just want to do the research
+now.
+
+For the development items, we should be clear that we basically have done the
+research that says /what/ to do - now, we may need a bit more research to
+figure out /how/ to do it, but the main thing we need is development funding
+to carry out the plan.
+
+--[[file:jcorneli.org][jcorneli]] Wed May 18 19:46:26 2005 UTC
+
+* Thu May 19 version
+
+I'd be very careful with this "free culture" stuff.  
+[[file:What is Free Culture|As our conversations should illustrate.org][What is Free Culture|As our conversations should illustrate]],
+the term has the potential to be quite confusing.  And as we encountered with
+the CMI proposal, some people will find "free" stuff in general to be ideologically
+driven and repellent.  I'm not saying you shouldn't talk about it, but
+keep the tone scientific, not polemical.
+
+Indeed, the more you write, the further this thing seems to diverge from the
+simple, fact-based document that I was hoping to see (as discussed in the first
+set of comments above).  I'm afraid that even I am going to have a hard time
+reading the document closely, and I actually agree with most of the colorful
+ideological points I assume you're making from what I saw when I skimmed it.
+
+I will give it a shot (and comments will follow); maybe I'll have to write the
+version I want to see, then you can ignore to... but at least I'll be satisfied
+that I know what's going on.
+
+More will appear here after I've read everything in detail.
+
+--[[file:jcorneli.org][jcorneli]] Thu May 19 19:21:24 2005 UTC
+
+I present some fairly extensive comments on the new "free culture" parts of the
+document here: [[file:Comments on free culture version of NSF ALT proposal.org][Comments on free culture version of NSF ALT proposal]].
+Over all, I would say that these sections may be useful as brainstorming or free
+writing, but I hope that they are not really considered to be part of the
+"draft proposal".  I found several paragraphs and sentences that I thought were
+/good/ -- and worth developing further -- but I also found many paragraphs
+that were (a) vague; and (b) about things that may not be particularly relevant
+to the grant proposal.  
+
+I think that this stuff was /worth writing/ - but I would suggest that you
+start again, probably using my comments on these sections to create an
+/outline/ of the argument and its key points.  Keep the document clear and
+precise and impossible to argue with and things will go better in the long run.
+
+Unless you are very careful and very specific, "free culture" discussions will
+be a risky and probably unnecessary operation.  I would agree that "free
+culture" is relevant to PM and the future of knowledge resources, but I don't
+think that you really made a strong case for how or why - and (as you'll see
+when you look at the comments) I think that a big part of the problem is that
+the definitions were missing or vague.
+
+Again, I think everything would look better in outline form.
+
+--[[file:jcorneli.org][jcorneli]] Thu May 19 21:03:26 2005 UTC

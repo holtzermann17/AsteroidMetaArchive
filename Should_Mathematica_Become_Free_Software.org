@@ -1,0 +1,149 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This question occurred to me as I thought about my visit, especially since I am
+increasingly suspicious of closed software these days.  I strongly believe this
+is the correct model for some scenarios, but I am not sure if this scenario
+applies to Mathematica anymore.
+
+I think Mathematica is a very nice program, and I have always been impressed
+with its elegance and power, as well as how complete and integrated it is.  I
+haven't ever encountered anything that compares with it, though I haven't had to
+use it in a long time, since I've been able to do my work in the intervening
+years with free alternatives that perform a small subset of Mathematica's
+functionality.  But my point here is that Mathematica is really good and
+valuable.
+
+Mathematica has been going on as closed, unfree (and in fact, very expensive)
+software for a long time now (since about 1989, I believe).  It has made Stephen
+Wolfram very rich, and I'm sure he deserves to be.  However, I wonder if now it
+isn't time to open up Mathematica to the public.  I can't help but think that
+the impact of the system would be felt tenfold by making it free and open.
+Sure, it is good enough to be worth money, but that doesn't mean that everyone
+who can afford it will believe they should buy it, and it doesn't mean that
+transaction costs to integrating the closed application in other systems won't
+kill such enterprises off before they are born.  And of course, people who could
+really benefit a lot from the program will often truly not be able to afford it.
+
+Imagine the effect of having a free, open Mathematica, that bright young kids
+could tinker with, anyone could extend and improve, or that other projects could
+use as a kernel for higher-level integrated systems.  On the latter point, the
+leverage that a free and open general symbolic computing engine would lend to an
+unimaginable array of projects would be massive.  It could very well make some
+society-transforming undertakings possible that simply are not economical now.
+
+A free, and open Mathematica would surely provide even more opportunities for
+Wolfram Research to make money, if only due to the increased attention they
+would be receiving.  But I am sure there would be plenty of opportunities to
+build commercial services on the free kernel.  Or, add-on extensions that do
+specific, advanced tasks could have cost, but the basic kernel would be free.
+There are even viable models where the "trunk" of the Mathematica tree is
+/temporarily/ closed and unfree, but the old versions are free and open (there
+are precedents for this model, such as iD Software's "Doom").  In this case, I
+still think most of the positive benefit of releasing the program as free, open
+source software would be preserved.
+
+Were this done, perhaps we could even think about using Mathematica as a basis
+for AsteroidMeta projects, or at least parts of them.  And this is a segue into
+the next item... --[[file:akrowne.org][akrowne]] Fri Apr 8 21:05:21 UTC 2005
+
+* Mathematica and Literate Mathematics
+
+As I became a bit re-acquainted with Mathematica (I hadn't really used it since
+my undergrad days of around 1998 or 1999) and heard some of the things the
+Wolfram folks were saying about where they wanted to go with it, it occurred to
+me that there was a connection with some of Joe's ideas on literate
+programming/mathematics.
+
+Basically, Mathematica has been (intentionally) evolving to the point where
+Mathematica notebooks become literate programs, containing not only
+presentational output, but actionable mathematical "code".  Notebooks have been
+evolving to be more useful as the primary representational format for
+mathematics, for now within Mathematica, but in the future, maybe in any
+context.
+
+I wonder what people here think of this.  The underlying idea seems good.  Is
+Mathematica the right platform for this?  Is there anything about it that would
+prevent literate coded mathematics from becoming fully realized?  Should we
+think about moving to it someday for PlanetMath/Noosphere?  What of !LaTeX?
+--[[file:akrowne.org][akrowne]] Fri Apr 8 21:05:36 UTC 2005
+
+* Discussion
+
+While I think it would be great if MMA was made free, until I actually see the
+code, I can't make any statement about how useful it would actually be in my
+work (whether computing, writing, or math related).  I assume that some of it
+would be quite useful.
+
+As for whether or not it would make a good "backend" for a typesetting system, I
+have doubts.  First off, isn't !LaTeX good enough?  Secondly, MMA-driven
+typesetting currently depends on using a MMA editor, which to me is anathema
+cursed, since I so strongly prefer using Emacs.  To use MMA to do typesetting
+from within Emacs, you would want to detatch it from the editor, and write an
+MMA-derived renderer and viewer.  If it was free software, there wouldn't be any
+problem with this scheme - but would an Emacs/MMA system have any advantages
+over an Emacs/!LaTeX system?  Probably MMA is most useful as a typesetting
+application to people who don't like typing -- but there are already some free
+platforms for doing !LaTeX-based typesetting through a GUI, namely !LyX and
+!TeXmacs (and perhaps others).
+
+Building a literate programming environment inside Emacs is really pretty
+trivial (especially since one can make use of component code others have already
+written).  Building a CAS is far from trivial.  Thus I imagine that the most
+useful parts of a free mathematica would be its CAS parts.  For now, Maxima
+seems to be fine for the (little) CAS I need.
+
+While I'm pretty sure Wolfram Research could continue to make plenty of money by
+doing work on commission and doing consulting, I wouldn't hold my breath; to me
+they seem to be an almost archetypal non-free software business.
+--[[file:jcorneli.org][jcorneli]] Fri Apr 08 21:50:51 2005 UTC
+
+----
+
+Well, I don't see how !LaTeX is good enough.  After all, a whole chunk of the HDM 
+programme is figuring out how to turn !LaTeX into actionable code.  A MMA notebook
+is actionable per se.  It is unambiguous.
+
+In principle, a notebook format that can completely express mathematics could be used
+as a source to generate !LaTeX, which has superior presentation ability.
+
+I sympathize on the issue of having your own editor.  Personally I'm a vim man.  
+Presumably a free MMA would be coupled with opening the notebook format, in which
+case other editors could be built.
+
+One must take care to separate the free MMA issue from the literate 
+programming issue.  Wolfram could conceivably free the MMA kernel, but not the 
+interface, in which case, you dont have free MMA notebooks for literate programming,
+but you've got a free kernel you can integrate into other systems, or hack, or do
+whatever the heck you want with.
+
+--[[file:akrowne.org][akrowne]] Sat Apr 9 00:11:05 UTC 2005
+
+----
+
+I agree that !LaTeX is insufficient for programming needs.  I meant "good enough"
+as a typesetting engine, not as a language for expressing math (and everything else)
+in.
+
+But actually, I think it is OK in this grand regard too, because you can always drop
+into a \begin{verbatim}...\end{verbatim} environment and start writing LISP or MMA
+or Perl or whatever other language you want - then from there, it is trivial to
+get the code portions of your document interpreted by the relevant program.
+(My rewrite of the scholium system is a nice example of this.)
+
+Just being actionable isn't much good - the real goal for the HDM programme is
+to make it so that there is no difference between normal mathematical writing
+and code.  There are already plenty of systems out there that let you write
+actionable mathematics.  The problem is, these systems are frequently hard to
+learn.  HDM swears by the [[file:PG.org][PG]] maxim, "Readable By Both Humans and By
+Computers".  Code, you might think, would be both -- but people are often
+somewhat code-illiterate.
+
+To get back to the broader MMA issue, I would be much more enthusiastic about a
+freeing of the MMA kernel than I would about a freeing of the interface.  A free
+mathematica kernel would be pretty nice.  And in the mean time, if they won't
+free their kernel, maybe someone should write a system that can process
+mathematica code, i.e. systemX:mathematica::octave:matlab.  But one ought to check
+and see if anyone has /asked/ them about the kernel recently before diving
+into that project.
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 00:40:23 2005 UTC

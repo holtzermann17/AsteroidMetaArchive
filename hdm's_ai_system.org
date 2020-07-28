@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We need something that will hold not only the [[file:hcode.org][hcode]] definitions, theorems,
+and proof sketches, but something that will hold various "amathematical" facts,
+for example, that a ring is a special example of a group, or that Fermat's Last
+Theorem was proved by Wiles, etc.
+
+The system should have some reasoning capabilites, for example, it should be
+capable of proof generation.  Furthermore, it will presumably play a role in (semantic) parsing, and
+also perform helpful tasks like telling the user about a "related" definition or
+theorem.
+
+Our current strategy is to build a general "semantic net" platform - see [[file:scholium system.org][scholium system]].   Eventually, heuristics, frames, and so on will probably appear within this system.  We need to make sure that the scholium system foundation will support these later developments.
+
+* Discussion
+
+** KM and the HDM project
+[[file:KM.org][KM]] is a frame-based knowledge representation and reasoning system.  These
+systems are related to object-oriented programming; if you know about objects
+but not about frames, you could probably just think of "frame" as another word
+for "object" and not get too confused.  Frame systems like KM tend to emphasize
+reasoning about the data in the frames rather than getting the "objects" to
+perform computation.  But it is hard for me to adequately distinguish
+between the two paradigms.
+
+To cut to the chase, we want to be able to represent data about various
+mathematical objects, their interrelationships, and their "physical presence" in
+our world (e.g. we want to know that if a triangle is resting on its base, its
+third corner points "up", or that "ten billion" is a lot bigger than "ten").
+You could think of each frame as a notecard that gives a thorough definition of
+some mathematical object; such a definition might include the object's formal
+definition, other objects that it is related to, and how to say its name in
+English and French (for instance).
+
+The reasoning engine in KM is at present fairly "common sense" oriented - it
+can't necessarily sort out the intricacies of a long "forall-exists..." chain.
+We would like our AI system to be able to 
+reason about mathematical expressions as well as or better than human
+mathematicians, so we need to be able to deal with these sorts of expressions.
+
+
+Following the general trend of "diving in" that has become our primary modus
+operandi at HDM central, here is a link to a page with some examples in KM - which may or may not be helpful.
+ * [[file:sample km files for hdm-p4.org][sample km files for hdm-p4]]
+
+** Semantic networks references
+ * http://en.wikipedia.org/wiki/Semantic_network
+ * http://en.wikipedia.org/wiki/Semantic_Web
+ * http://en.wikipedia.org/wiki/Lexical_semantics
+ * http://en.wikipedia.org/wiki/Information_space
+
+The above are some links to pages in wikipedia that relate to semantic networks.
+
+Here are a couple other links:
+
+ * http://pespmc1.vub.ac.be/SEMNET.html (more scholia-like systems)
+ * http://ai.eecs.umich.edu/cogarch0/common/prop/strips.html (STRIPS has an actionable component similar to what's used in semantic nets or frame systems)
+
+(Actionable nodes are important for our system! I'd like to have better documentation of this feature...)
+
+**  A McCarthy reference for programs with memory
+
+I've just skimmed it, but this looks to be a very well written (and
+HDM-relevant) paper: http://www-formal.stanford.edu/jmc/elephant.html
+
+It reminds me a bit of my post-nero thoughts about generalized history
+mechanisms (hint: I now call them "istrees").  A program that is interacting
+with the user a lot in a "tutorial" or "collegial" way might be good to write in
+a style like this.  (A more more full review should come later.)
+
+
+**  Thought Experiments :)
+
+Has everyone read *Diaspora* by Greg Egan? Science fiction now, but in 9 centuries, who knows? I found an excerpt of it, which includes the amazing first chapter:
+
+http://gregegan.customer.netspace.net.au/DIASPORA/01/Orphanogenesis.html
+
+Great stuff. Buy the book :) --[[file:ocat.org][ocat]] 18 September 2005

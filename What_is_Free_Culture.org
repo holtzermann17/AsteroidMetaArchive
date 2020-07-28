@@ -1,0 +1,434 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Intuitively, I like the merge "free content" + "culture" -> "free culture" on
+the [[file:Discussions.org][Discussions]] page, but I wanted to point out the way I think about the
+term "free culture" was as something to describe freely-modifiable culture "as a
+whole", not just specific cultural productions like "free content" usually seems
+to be talking about (nor the "culture" that goes into producing these
+productions).
+
+On the other hand, perhaps a culture is no more than the sum of its productions,
+and if that is the case, then the merge of "free content" and "free culture"
+seems pretty perfect.
+
+Some cultures may emphasize their freeness more than others that are also free -
+[[file:one week in october.org][one week in october]] (OWIO) is meant to look at one culture that at least on
+the surface emphasizes "freedom" - but that in fact the note shows that only
+certain kinds of activities are really socially acceptable, even within this
+"free culture".
+
+Let me also point out that the OWIO note is supposed to be "anthropological",
+whereas I feel that the other documents in that section seem to be somewhat more
+opinion-based.  Which is fine... presumably the different approaches can inform
+one another.
+
+But anyway, if we're going to use the term "free culture", let's try to get
+precise about what it means!
+--[[file:jcorneli.org][jcorneli]] Tue Apr 19 16:08:00 2005 UTC
+
+Temple Grandin wrote an interesting description of why some people find writing
+free software worthwhile in her essay 
+[http://trainland.tripod.com/temple.htm Genius May Be an Abnormality: Educating Students with Asperger's Syndrome, or High Functioning Autism]:
+
+"I have been reading, with great satisfaction, the many articles in magazines
+about Linux free software. People in the business world are not able to
+comprehend why the computer people give their work away. I am unable to think
+about this without becoming emotional. It is no mystery to me why they download
+their intellectual ideas into the vast, evolving and continually improving
+computer operating system. It is because their thoughts will live forever as
+part of the "genetic code" of the computer program. They are putting themselves
+into the program and their "intellectual DNA" will live forever in
+cyber-space. As the program evolves and changes, the code they wrote will
+probably remain hidden deep within it. It is almost like a living thing that is
+continually evolving and improving. For both me and for the programmers that
+contribute to Linux, we do it because it makes our lives more meaningful."
+
+--[[file:rspuzio.org][rspuzio]] 16 May 2005
+
+As I see it culture is not so much about productions as a system of relations
+and a plan for interactions between people.  To me, the term "culture" refers to
+the sum total of things like shared values and beliefs, institutions, laws and
+rules, social arrangements, economic systems, language, symbolism, sense of
+historical identity, traditions, customs, rituals, artistic expression, and the
+like.  Of course, production is relevant to culture even if I would disagree
+with the thesis that a culture is the sum total of its productions.  On the one
+hand, what a group of people produces is likely to influence various aspects of
+their culture.  On the other hand, a peoples' culture will also influence what
+is produced and how.
+
+As for "free", I understand that it is being used here in a restricted sense
+here to refer primarily to free distribution of intellectual content as opposed
+to, for instance, civil rights or human rights.  To study the subject properly,
+one should start with an exact definition of "free" such as was the subject of
+another discussion but, to get started, an approximate idea might suffice.
+
+With these interpretations of the component terms, I understand the phrase "free
+culture" to refer to a culture which is compatible with and conducive to the
+free distribution and use of intellectual content.  There are at least two ways
+that this issue can be studied -- the descriptive approach and the prescriptive
+approach.
+
+The descriptive approach consists of studying existing cultures.  In particular,
+there have arisen subcultures in connection with such projects as GNU,
+Wikipedia, and Planet Math.  Also, one could study how the notion of free
+intellectual content fits in or doesn't fit in with the norms of other cultures
+and how this idea has been recieved.
+
+The prescriptive approach consists of designing a culture in which free
+intellectual content plays a prominent role and, even harder, trying to
+implement one's visions and convince others to join the movement.  This has both
+a positive and a negative aspect.  The negative aspect consists of identifying
+aspects of cultures which are in opposition to free intellectual content and
+finding ways to eleminate these obstacles.  The positive aspect consists of
+trying to implement cultural norms and institutions which encourage and promote
+free intellectual content. --[[file:rspuzio.org][rspuzio]] 17 May 2005
+
+Along the vein of what Ray has said, Wikipedia has been called "alive".  
+
+Joe, I don't think free culture requires that cultural artifacts be freely modifiable
+/in place/.  However, you were always free (in the OWIO scenario) to take the entirety
+of PM, add your content, and create a derived work of your own, publishing it in potentially
+the exact same way.  This is what makes it free, I think, the "output" publishing of an 
+already-"published" cultural artifact is not limited from meeting or exceeding the publishing
+of the original artifact.
+
+--[[file:akrowne.org][akrowne]] Tue May 17 04:03:12 UTC 2005
+
+I definitely agree about OWIO, but there are
+[[file:towards a definition of freedom|many different kinds of freedom.org][towards a definition of freedom|many different kinds of freedom]] in general,
+and I should note that I wasn't referring to the standard free-as-in-software definition in
+the paragraph above but to a more general notion.
+
+Free software uptake is "pull" (just like market uptake is, um, supposed to be,
+"pull").  The issue with modification in place is that PM has an monopoly on
+being PM.  Within PM, each article has a monopoly on being that article.
+
+Wikipedia articles are modifiable in place, which gives users a different kind
+of freedom from that found on PM.  GNU is sort of in between - GNU software can
+be modified in place if your modifications are approved of by the maintainers.
+
+On the other hand, the culture of Wikipedia (like both PM and GNU cultures)
+doesn't permit just any kind of article to be created (google for Mediacrat to
+get an example).  Sure, one could (in theory) fork Wikipedia, or -- more likely,
+because it happened -- go and create some 
+[http://www.encyclopediadramatica.com/index.php/Main_Page other encyclopedia]
+where the non-wikipedia-approved topics can be discussed.
+
+That is the same outcome that was associated with OWIO.  
+
+I think these discussions are quite apposite.
+
+--[[file:jcorneli.org][jcorneli]] Tue May 17 04:45:01 2005 UTC
+
+I kind of glossed over what Ray said above, so I'll make up for that with some
+comments now.
+
+: culture is not so much about productions as a system of relations and a plan
+for interactions between people.  To me, the term "culture" refers to the sum
+total of things like shared values and beliefs, institutions, laws and rules,
+social arrangements, economic systems, language, symbolism, sense of historical
+identity, traditions, customs, rituals, artistic expression, and the like.
+
+Yes, I agree.  I meant the term "cultural productions" to denote /not/
+"production", but the "the sorts of things you're talking about" -- beliefs,
+institutions, etc. -- including, confusingly, "systems for production" --
+agriculture, industry, business, etc.!
+
+The closest usage I can think for the term "production" as I meant it in this
+context would be the way it is used to describe the productions of a grammar.  A
+grammar /is/ (pretty much) the sum of its productions.
+
+I was quite serious when I said that maybe a culture is the sum of its
+(cultural) productions.  The problem is that the terminology isn't that clear.
+Maybe the analogy to grammars will help.
+
+Suppose that a given group is presented with some event.  If you knew all of
+their "cultural productions", i.e., if you understood their culture, you could
+predict what they would do (like what happens when a sentence is passed to a
+parser).  Well, really you would probably only be able to come up with a rough
+prediction -- because a number of non-cultural factors that you might not
+understand are likely to come into play.
+
+One of the things I like best about culture is that you can't realistically say
+"what if we had the whole data feed" -- because human activities will mess with
+the data (aka anthropogenic change, feedback).
+
+The point of "free culture" as in /freely-modifiable culture "as a whole"/
+like I was talking about above is that this culture system itself is subject to
+culture change.  People invent "cars" or "civil rights" or "boolean algebra" and
+the culture changes.
+
+I was confused by the term "free culture" because it sounds a lot like "free
+software", right, or "free math", "free biology".  But, as we've been talking
+about, "culture" is pretty much at the top of the lattice, and it is pretty
+obvious that it /can/ be changed "freely".  In some sense of the word "free".
+Obviously it isn't easy, but it does happen.  (E.g. a recent smoking ban went
+into place here in Minneapolis recently; a lot of people worked hard to make
+this happen, and some people fought them.  But now the change has been effected,
+and there is no smoking in local bars and restaurants - its no longer an active
+part of our culture.)
+
+And of course culture is also changing simultaneously through a
+(co-)evolutionary process with the rest of the world.  (I'm assuming that
+whatever definition of "free" we choose depends on /agency/; culture change is
+not necessarily brought about /on purpose/.)
+
+So, like I said, I find the term "free culture" to be somewhat confusing.
+
+I see what you're saying about "free distribution of intellectual content" being
+the key thing... but the point that culture /itself/ could qualify as
+"intellectual content" shouldn't be ignored.  (Like I said, I'm not sure I want
+to distinguish between a culture and the sum of its cultural productions.)
+
+Does it mean /a culture which is compatible with and conducive to the free
+distribution and use of intellectual content/ or does it mean the productions
+of such a culture?  And what about a culture whose cultural productions include
+-- or at least, heavily influence -- the culture itself?
+
+Again, with "free math", we /are/ currently allowed to change, modify,
+reproduce, and redistribute the /ideas/.  Culture as a whole is pretty much
+the same.
+
+"Free biology" presumably /doesn't/ mean gene hackery -- although I suppose it
+could.  The "free culture" of this alternate definition that I've been circling
+in on here might be something like the weird, advanced, form of "free biology"
+that basically would involve editing DNA to create new lifeforms, and then
+making the results "free as in freedom".
+
+The idea that one might be able to do the same thing with culture isn't too
+impossible-seeming.  In addition to this distinction between "descriptive" and
+"prescriptive" cultural studies, another relevant distinction would be between
+"actionable" and "non-actionable".  
+
+If I can describe the DNA of a frog, for example, that's rather different from
+being able to create a blue and orange striped frog on a whim.  The DNA listing
+isn't actionable in and of itself.
+
+A "full description" of a culture might be actionable - in the sense of
+simulation.  (Well, maybe, maybe not.)
+
+And clearly, it is very different problem, to descibe a utopia and to create
+one... even a rather crummy one.  But people do manage to do things like
+manufacture corporate culture or start new countries or whatever, so certainly there
+is some precident for "actionable+prescriptive" culture-building.
+
+Anyway, to conclude... I'm still not really 100% comfortable with the /term/
+"free culture".  I personally think that it means /both/ "free cultural
+productions" /and/ "a culture that is compatible with and conducive to the
+free distribution and use of intellectual content" /and also/ "culture that
+supports free modification of itself by its participants."
+That's a loaded term for you.  I like all the ideas, but I worry that
+using this term may be confusing for me and other people!
+
+--[[file:jcorneli.org][jcorneli]] Tue May 17 23:42:07 2005 UTC
+
+Here is yet another example of "free culture". In this occasion, the spotlight is on the first "open source beer":
+
+http://news.bbc.co.uk/2/hi/technology/4718719.stm
+
+--[[file:alozano.org][alozano]] :D
+
+Does "free culture" have any meaning when freedom itself is 
+at an "undisclosed location" -- along with the Bill of Rights?
+
+"Mike Whitney: 'Drifting towards a Police State'
+Contributed by megsdad on Saturday, November 05 @ 08:56:20 EST
+This article has been read 1776 times."
+
+http://www.smirkingchimp.com/article.php?sid=23494&mode=nested&order=0
+
+P.S. For another less depressing perspective, if your brain is 
+weary from trekking the crystalline slopes of Mt. Metamath, try
+a *free* book about being free...in some other place (like a
+different planet :) A bit preachy but the first 6 chapters 
+are ok:
+
+http://www.webscription.net/10.1125/Baen/0743471792/0743471792.htm
+http://www.webscription.net/free/downloadSingle.asp?downloadCode=0743471792
+
+And the price is right (do we really want "freedom" or just 
+free stuff?)
+
+--[[file:ocat.org][ocat]]
+
+Obviously freedom, at least, around here.  Except, it may be even worse than "drifting
+towards a police state" -- maybe there is no free will whatsoever.  I don't
+know if that is depressing, but maybe it is interesting. --[[file:jcorneli.org][jcorneli]]
+
+Let me advance one suggested reading that I think helps illuminate
+what we're after here, on AM, and with this "free culture" idea
+more generally:  This is the
+[http://emoglen.law.columbia.edu/publications/dcm.html DotCommunist Manifesto]
+by Eben Moglen.  I think that in combination with the Coase's Penguin
+paper, this provides a solid introduction to what "free cbpp" is all
+about; whereas the Benkler article considers the economic aspects of
+the movement, the Moglen article looks at its political aspects.
+I'd like to be able to suggest one or two other short pieces like
+this by different authors, but nothing else is immediately coming to mind.
+
+I probably passed up this Moglen article a half-dozen times because of
+the title.  For some reason I didn't like the association of the free
+software movement with communism that the title implies.  But I think
+I've [[file:free culture as a labor issue|dabbled.org][free culture as a labor issue|dabbled]] enough with the
+revolutionary thinking behind the movement on my own to be willing to
+entertain someone else's conceptions of this stuff.  For what it is
+worth, here is a quote from the article I'm talking about that
+attempts to justify precisely this sort of speech:
+
+: /When people speak of ideas that revolutionise society, they do but
+express the fact, that within the old society, the elements of a new
+one have been created, and that the dissolution of the old ideas keeps
+even pace with the dissolution of the old conditions of existence./
+
+The basic point to take away from Moglen's article is that it isn't so
+much "free stuff" as "control over the means of production" that
+people in the free culture movement are after.  Sure,
+free-as-in-no-cost comes into play (this is the issue of
+ "zero marginal cost for digital works" ); already a physical fact but
+not yet a ubiquitous social reality.  The key thesis in the Moglen
+article seems to be, roughly -- that we don't want our work to be
+appropriated by the bosses and then sold back to us.  To me this seems
+like an issue of control more than an issue of cost, but it is
+certainly true that cost plays a role.
+
+Moglen ends the article with seven agenda items on issues of freedom
+and control:
+
+ 1. Abolition of all forms of private property in ideas.
+ 1. Withdrawal of all exclusive licenses, privileges and rights to use of electromagnetic spectrum. Nullification of all conveyances of permanent title to electromagnetic frequencies.
+ 1. Development of electromagnetic spectrum infrastructure that implements every person's equal right to communicate.
+ 1. Common social development of computer programs and all other forms of software, including genetic information, as public goods.         
+ 1. Full respect for freedom of speech, including all forms of technical speech.
+ 1. Protection for the integrity of creative works.
+ 1. Free and equal access to all publicly-produced information and all educational material used in all branches of the public education system. 
+
+Interesting that "private property in ideas" tops the bill here, since
+that is something that our discussions have often considered; even
+though we've been saying that copyright doesn't convey property rights
+in mathematical ideas, it has been a somewhat touchy issue all along the way.
+
+I can well imagine the following quote from the article being a major
+(legal) issue for the HDM project at some point (and if you think
+about this from the point of view of bottlenecks, it is already a
+major strategic issue):
+
+: /Scientists, artists, engineers and students are prevented from
+creating or sharing knowledge, on the ground that their ideas imperil
+the owners' property in the system of cultural production and
+distribution./
+
+Before signing off, I want to expand on my comment above about free
+will a bit.  The point I want to make is that the "liberties
+model" of freedom (advanced by me on the wiki page [[file:towards a definition of freedom.org][towards a definition of freedom]])
+seems to be compatible with a world in which free will
+does not exist.  The interesting conclusion is that freedom is important even
+in a deterministic model.  Because, freedom has to do with the pursuit
+of happiness.  When 
+someone exercises power over you and reduces your ability to pursue
+happiness, the landscape shifts, and your freedom is reduced by degrees,
+until, in the extreme case,  you have only one option for survival available
+to you.  According to this theory, free will was always irrelevant; supposing,
+for example, that when you had many options, you always chose the one
+you deemed "best", there is no real "free will" here, just mechanical
+rationality.  The person who appears to have many options
+may have no more "real" options than the zombie.  But I think that you
+will find that the person who gets to "make choices" is happier, in
+general, than the person who has no "choices" to make.  
+
+Bringing this back to bear on the subject at hand, Moglen (and others
+in the free software movement) are talking about abolishing
+technologies and systems for control (i.e., for the elimination of
+choice, or anyway, the elimination of "real choice").  
+
+People opposing the GNU view of things often say that they and their
+constituencies are "more free" in an environment that includes e.g. private
+property in software.  This seems similar in some ways to my saying that me
+and my loved ones are "more free" in an environment in which murder is
+legal.  I suppose that could be an interesting proposition to ponder.
+
+I'll close by noting that one part of the idea of "freedom" expressed by Moglen
+is that no one is free unless everyone is.  --[[file:jcorneli.org][jcorneli]]
+
+Joe, I think your "Before signing off" segment eloquently recaps the 
+argument for the "GNU definition of freedom".
+
+But the argument is missing something, and I think perhaps this is where 
+economics might come in, because involves the notion of incentives.  
+
+To continue in your language, what if your loved ones had an idea for software
+they could create, but without restricted distribution, there would be no
+funding (or recompense) to cover the effort for its creation?  In this sense,
+they would be less free.  Of course, this same freedom would be unavailable 
+to yourself.  If it helps, imagine that it would take more than two man-years
+to complete in a reasonable amount of time (say, two years), so you would need
+more than yourself to create the software; i.e., you couldn't just quit your job
+and create it.  In this sense, you would be less free. 
+
+I keep coming back to this "hypothetical" point because it is not so 
+hypothetical.  I can envision lots of software initiatives and situations
+which would require some restrictions to be put on access in able for them
+to be created.  And I don't see how anyone could prove that (a) an equivalent
+would be "provided by the world" otherwise, or (b) that the software wouldn't
+be worth what society is collectively "paying for it" anyway.
+
+The argument is particularly strong when the "target market" does not have the
+expertise, ability, or desire to help with the development of the software 
+instead of simply paying for it.
+
+We see this as a business model in reality all the time.
+
+When free/open source is a viable alternative, it tends to happen.  But the
+availability of this possibility hasn't eliminated commercial software.
+
+(BTW, I reject the murder analogy, because it is a purely negative "type of
+freedom", only involving taking something away, whereas creating software with
+some restriction on access is still additive).
+
+To switch to the non-executable content domain, I am not so sure I'd bother with
+scholarly publication if there was no defense for an "attribution" form of 
+copyright, or support for verbatim-only-dissemination licenses.   Perhaps 
+a little publication "theft" by academic pirates would not be so bad, but the
+possibility of this might be so de-motivating as to stunt my incentive to 
+create and distribute theses, essays, and other forms of written ideas.
+
+So, I still think "maximal freeness" comes from allowing some notion of 
+restricted access, /if it is so desired./
+
+To address some of Moglen's demands (most of which I agree with):
+
+ * Abolition of all forms of private property in ideas.
+
+Well, this is one of the things that worked worst about communism.  Private
+property is "less important" for ideas, but as I've illustrated above, I still
+think there is some sense in which conceptual works can be productively
+treated as property.  This is why I think Stallman's claim that "intellectual
+property is meaningless" is simply an in-defensible personal opinion; even
+/regular/ property is purely conceptual.  Law is purely conceptual.  These
+things "exist" in that we can create some /functional/ model for them, and 
+begin using it, and /it works for the greater common good./
+
+ * Common social development of computer programs and all other forms
+of software, including genetic information, as public goods.
+
+This of course follows from the above demand. I certainly believe that all such 
+development done with common resources should have no restriction on use.  But I would
+claim that public domain might even be going too far; you'd probably get more quality
+works if the authors, working for the government, could at least reliably attach their
+reputations to the works.
+
+ * Protection for the integrity of creative works.
+
+Well, ok, how are you going to protect the integrity of an essay of mine unless I can
+distribute it with a verbatim-only license?
+
+In conclusion, I don't think "free culture" requires the GNU notion of "free" in 
+order to be meaningful or socially useful.  In fact, I think it is less free than a model
+in which some restrictions are allowed.  Besides the fact that you'll never convince
+everyone to "play along" with the GNU-only model,  I think it ultimately comes down to
+subjective preferences.  And by this yardstick, allowing restrictions is in fact more 
+permissive.
+
+--[[file:akrowne.org][akrowne]] Thu Nov 10 02:45:05 UTC 2005
+
+This discussion forks: [[file:Free Culture - Discussion of Intellectual Property.org][Free Culture - Discussion of Intellectual Property]] / [[file:Free Culture - Debating DotCommunist Manifesto.org][Free Culture - Debating DotCommunist Manifesto]]

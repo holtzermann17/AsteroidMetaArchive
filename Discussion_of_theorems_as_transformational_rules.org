@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The inspiration for this essay comes from two sources.  First, there is the study of the usage of mathematicians.  When one looks in mathematical literature, one frequently comes up with statements like "By appying the law of cosines to the triangle abc, ..." in which one supplies arguments to a theorem.  This suggests that a theorem is thought of as an object which can take arguments.  To be sure, it is easy enough to formalize the current usage using the law of universal specification, but if one is looking for a formalization which reflects the usage of mathematicians, it makes sense to consider the idea of theorems which can take arguments.  It was with this observation in mind that the prototypes of h-code involve theorems which take arguments.
+
+Another argument in favor of such an approach comes from logic.  When one spends some time with proofs in logic, especially in sentential logic, one soon comes to see that, from a practical point of view, theorems, theorem schemata, and rules of inference are not all that different.  For example, the theorem
+
+: &#8870; (p &rarr; q) &rarr; ((q &rarr; r) &rarr; (p &rarr; r)), 
+
+the theorem schema
+
+: &#8870; &lceil;(&phi; &rarr; &psi;) &rarr; ((&psi; &rarr; &chi;) &rarr; (&phi; &rarr; &chi;))&rceil;,
+
+and the rule of inference 
+
+: &#8870; &lceil;(&phi; &rarr; &psi;)&rceil; &rArr; &#8870; &lceil;((&psi; &rarr; &chi;) &rarr; (&phi; &rarr; &chi;))&rceil;
+
+are three  variations on the same theme and it would be nice to have a formalism in which brings out this simlarity without confusing these different notions and makes it easy to switch from one to the other. --[[file:rspuzio.org][rspuzio]]
+
+Back to [[file:theorems as transformational rules.org][theorems as transformational rules]]

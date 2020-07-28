@@ -1,0 +1,471 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Below are Grammars extracted from Metamath databases by mmj2 (6/26/2005 versions of files). I thought these might be of interest.
+
+Newer information is available at [[file:metamath grammar.org][metamath grammar]].
+
+Non-terminals such as "wff" appear on the left of "=:" (and "|") in the displays below and appear in database statements as variables with appropriate Variable Hypotheses ($f statements). All of the other symbols (which may be multi-character symbols) are Terminals (Constants). 
+
+Note, correction to above paragraph: Non-terminal "set" has no "Syntax Constructor" axioms in set.mm. According to Norm Megill the explanation is:
+ * '...found 'on pp. 15-21 of Quine's _Set Theory and Its Logic_, in the section called "Virtual Classes."'  
+ *  '...the "x" in "$f set x" is not a fixed or atomic "element" or even a "set" really; it is a first-order logic (predicate calculus) variable.'
+ * '...x is a variable that ranges over the domain of the first-order theory, which for this particular theory (set theory) is the universe of sets.  x is not any specific object, nor can it be substituted with a specific fixed object (that we later construct "virtually" such as the empty set).'
+
+You can see that set.mm employs infix and prefix notation, as does ql.mm, while peano.mm employs polish notation. 
+
+: Note that ql.mm uses /postfix/ notation (for the orthocomplement).  In general, a database must commit to either postfix or prefix; they can't be mixed without ambiguity (if you want to avoid parentheses).  Also, peano.mm actually employs prefix notation, specifically "Polish prefix", which is what the terminology "Polish" abbreviates. - [[file:norm.org][norm]]
+
+In spite of the fact that Metamath files may use parentheses and function symbols (like "+" and "*"), things such as operator precedence, associativity, bracketing of expressions, and the like are not built-in. Syntactial analysis/grammatical parsing...and proof verification are based strictly on pattern matching. 
+
+
+
+SET.MM (Propositional Logic through Set Theory and ... ?)
+
+    The Grammar
+    =
+      wff =: ( wff \/ wff \/ wff ) 
+           | ( wff \/ wff ) 
+           | ( wff <-> wff ) 
+           | ( wff /\ wff /\ wff ) 
+           | ( wff /\ wff ) 
+           | ( wff -> wff ) 
+           | -. wff 
+           | A. set wff 
+           | A. set e. set wff 
+           | A. set e. class wff 
+           | E! set wff 
+           | E! set e. set wff 
+           | E! set e. class wff 
+           | E* set wff 
+           | E. set wff 
+           | E. set e. set wff 
+           | E. set e. class wff 
+           | Er set 
+           | Er class 
+           | Fun set 
+           | Fun class 
+           | Lim set 
+           | Lim class 
+           | Ord set 
+           | Ord class 
+           | Rel set 
+           | Rel class 
+           | Tr set 
+           | Tr class 
+           | [ set / set ] wff 
+           | [ class / set ] wff 
+           | class set set 
+           | class set class 
+           | class e/ set 
+           | class e/ class 
+           | class e. set 
+           | class e. class 
+           | class class set 
+           | class class class 
+           | class We set 
+           | class We class 
+           | class Po set 
+           | class Po class 
+           | class Or set 
+           | class Or class 
+           | class Isom set , set ( set , set ) 
+           | class Isom set , set ( set , class ) 
+           | class Isom set , set ( class , set ) 
+           | class Isom set , set ( class , class ) 
+           | class Isom set , class ( set , set ) 
+           | class Isom set , class ( set , class ) 
+           | class Isom set , class ( class , set ) 
+           | class Isom set , class ( class , class ) 
+           | class Isom class , set ( set , set ) 
+           | class Isom class , set ( set , class ) 
+           | class Isom class , set ( class , set ) 
+           | class Isom class , set ( class , class ) 
+           | class Isom class , class ( set , set ) 
+           | class Isom class , class ( set , class ) 
+           | class Isom class , class ( class , set ) 
+           | class Isom class , class ( class , class ) 
+           | class Fr set 
+           | class Fr class 
+           | class Fn set 
+           | class Fn class 
+           | class =/= set 
+           | class =/= class 
+           | class = set 
+           | class = class 
+           | class : set -onto-> set 
+           | class : set -onto-> class 
+           | class : set -1-1-onto-> set 
+           | class : set -1-1-onto-> class 
+           | class : set -1-1-> set 
+           | class : set -1-1-> class 
+           | class : set --> set 
+           | class : set --> class 
+           | class : class -onto-> set 
+           | class : class -onto-> class 
+           | class : class -1-1-onto-> set 
+           | class : class -1-1-onto-> class 
+           | class : class -1-1-> set 
+           | class : class -1-1-> class 
+           | class : class --> set 
+           | class : class --> class 
+           | class (_ set 
+           | class (_ class 
+           | class (. set 
+           | class (. class 
+           | set set set 
+           | set set class 
+           | set e/ set 
+           | set e/ class 
+           | set e. set 
+           | set e. class 
+           | set class set 
+           | set class class 
+           | set We set 
+           | set We class 
+           | set Po set 
+           | set Po class 
+           | set Or set 
+           | set Or class 
+           | set Isom set , set ( set , set ) 
+           | set Isom set , set ( set , class ) 
+           | set Isom set , set ( class , set ) 
+           | set Isom set , set ( class , class ) 
+           | set Isom set , class ( set , set ) 
+           | set Isom set , class ( set , class ) 
+           | set Isom set , class ( class , set ) 
+           | set Isom set , class ( class , class ) 
+           | set Isom class , set ( set , set ) 
+           | set Isom class , set ( set , class ) 
+           | set Isom class , set ( class , set ) 
+           | set Isom class , set ( class , class ) 
+           | set Isom class , class ( set , set ) 
+           | set Isom class , class ( set , class ) 
+           | set Isom class , class ( class , set ) 
+           | set Isom class , class ( class , class ) 
+           | set Fr set 
+           | set Fr class 
+           | set Fn set 
+           | set Fn class 
+           | set =/= set 
+           | set =/= class 
+           | set = set 
+           | set = class 
+           | set : set -onto-> set 
+           | set : set -onto-> class 
+           | set : set -1-1-onto-> set 
+           | set : set -1-1-onto-> class 
+           | set : set -1-1-> set 
+           | set : set -1-1-> class 
+           | set : set --> set 
+           | set : set --> class 
+           | set : class -onto-> set 
+           | set : class -onto-> class 
+           | set : class -1-1-onto-> set 
+           | set : class -1-1-onto-> class 
+           | set : class -1-1-> set 
+           | set : class -1-1-> class 
+           | set : class --> set 
+           | set : class --> class 
+           | set (_ set 
+           | set (_ class 
+           | set (. set 
+           | set (. class 
+ 
+      class =: ! 
+             | ( set |` set ) 
+             | ( set |` class ) 
+             | ( set u. set ) 
+             | ( set u. class ) 
+             | ( set set set ) 
+             | ( set set class ) 
+             | ( set o. set ) 
+             | ( set o. class ) 
+             | ( set i^i set ) 
+             | ( set i^i class ) 
+             | ( set class set ) 
+             | ( set class class ) 
+             | ( set ` set ) 
+             | ( set ` class ) 
+             | ( set \ set ) 
+             | ( set \ class ) 
+             | ( set X. set ) 
+             | ( set X. class ) 
+             | ( set /. set ) 
+             | ( set /. class ) 
+             | ( set " set ) 
+             | ( set " class ) 
+             | ( class |` set ) 
+             | ( class |` class ) 
+             | ( class u. set ) 
+             | ( class u. class ) 
+             | ( class set set ) 
+             | ( class set class ) 
+             | ( class o. set ) 
+             | ( class o. class ) 
+             | ( class i^i set ) 
+             | ( class i^i class ) 
+             | ( class class set ) 
+             | ( class class class ) 
+             | ( class ` set ) 
+             | ( class ` class ) 
+             | ( class \ set ) 
+             | ( class \ class ) 
+             | ( class X. set ) 
+             | ( class X. class ) 
+             | ( class /. set ) 
+             | ( class /. class ) 
+             | ( class " set ) 
+             | ( class " class ) 
+             | (/) 
+             | * 
+             | *Q 
+             | + 
+             | +H 
+             | +N 
+             | +P 
+             | +P. 
+             | +Q 
+             | +R 
+             | +c 
+             | +o 
+             | +pQ 
+             | +pR 
+             | +v 
+             | - 
+             | -1R 
+             | -P 
+             | -u set 
+             | -u class 
+             | -v 
+             | .N 
+             | .P 
+             | .Q 
+             | .R 
+             | .i 
+             | .o 
+             | .pQ 
+             | .pR 
+             | .s 
+             | / 
+             | 0 
+             | 0H 
+             | 0R 
+             | 0v 
+             | 1 
+             | 1P 
+             | 1Q 
+             | 1R 
+             | 1o 
+             | 1st 
+             | 2 
+             | 2nd 
+             | 2o 
+             | 3 
+             | 4 
+             | 5 
+             | 6 
+             | 7 
+             | 8 
+             | 9 
+             | < 
+             | <. set , set >. 
+             | <. set , class >. 
+             | <. class , set >. 
+             | <. class , class >. 
+             | <N 
+             | <P 
+             | <Q 
+             | <R 
+             | <_ 
+             | <o 
+             | Atoms 
+             | C. 
+             | CC 
+             | CH 
+             | C_H 
+             | Cauchy 
+             | E 
+             | H~ 
+             | I 
+             | Im 
+             | MH 
+             | N. 
+             | NN 
+             | NN0 
+             | On 
+             | P. 
+             | Proj 
+             | P~ set 
+             | P~ class 
+             | Q. 
+             | QQ 
+             | R. 
+             | R1 
+             | RR 
+             | Re 
+             | SH 
+             | States 
+             | U. set 
+             | U. set e. set set 
+             | U. set e. set class 
+             | U. set e. class set 
+             | U. set e. class class 
+             | U. class 
+             | V 
+             | ZZ 
+             | [ set ] set 
+             | [ set ] class 
+             | [ class ] set 
+             | [ class ] class 
+             | \/H 
+             | ^ 
+             | ^m 
+             | ^o 
+             | _|_ 
+             | `' set 
+             | `' class 
+             | abs 
+             | aleph 
+             | card 
+             | cf 
+             | cos 
+             | dom set 
+             | dom class 
+             | e 
+             | exp 
+             | floor 
+             | i 
+             | if ( wff , set , set ) 
+             | if ( wff , set , class ) 
+             | if ( wff , class , set ) 
+             | if ( wff , class , class ) 
+             | norm 
+             | om 
+             | pi 
+             | ran set 
+             | ran class 
+             | rank 
+             | rec ( set , set ) 
+             | rec ( set , class ) 
+             | rec ( class , set ) 
+             | rec ( class , class ) 
+             | seq 
+             | seq0 
+             | shift 
+             | sin 
+             | span 
+             | sqr 
+             | suc set 
+             | suc class 
+             | sum1oo 
+             | sup ( set , set , set ) 
+             | sup ( set , set , class ) 
+             | sup ( set , class , set ) 
+             | sup ( set , class , class ) 
+             | sup ( class , set , set ) 
+             | sup ( class , set , class ) 
+             | sup ( class , class , set ) 
+             | sup ( class , class , class ) 
+             | vH 
+             | x. 
+             | { set } 
+             | { set | wff } 
+             | { set e. set | wff } 
+             | { set e. class | wff } 
+             | { set , set } 
+             | { set , set , set } 
+             | { set , set , class } 
+             | { set , class } 
+             | { set , class , set } 
+             | { set , class , class } 
+             | { class } 
+             | { class , set } 
+             | { class , set , set } 
+             | { class , set , class } 
+             | { class , class } 
+             | { class , class , set } 
+             | { class , class , class } 
+             | { <. set , set >. | wff } 
+             | { <. <. set , set >. , set >. | wff } 
+             | |^| set 
+             | |^| set e. set set 
+             | |^| set e. set class 
+             | |^| set e. class set 
+             | |^| set e. class class 
+             | |^| class 
+             | ~< 
+             | ~<_ 
+             | ~Q 
+             | ~R 
+             | ~~ 
+             | ~~> 
+             | ~~>v 
+
+
+
+PEANO.MM (axioms for Peano arithmetic)
+
+    The Grammar
+    =
+      wff =: BINPRED var var 
+           | BINPRED var term 
+           | BINPRED term var 
+           | BINPRED term term 
+           | LOGBINOP wff wff 
+           | QUANT var wff 
+           | not wff 
+ 
+      term =: 0 
+            | BINOP var var 
+            | BINOP var term 
+            | BINOP term var 
+            | BINOP term term 
+            | S var 
+            | S term 
+ 
+      BINOP =: * 
+             | + 
+ 
+      LOGBINOP =: and 
+                | iff 
+                | implies 
+                | or 
+ 
+      BINPRED =: < 
+               | = 
+ 
+      QUANT =: exists 
+             | forall 
+ 
+
+
+QL.MM (Quantum Logic)
+
+    The Grammar
+    =
+      term =: ( term v term ) 
+            | ( term u3 term ) 
+            | ( term _|_ term ) 
+            | ( term ^3 term ) 
+            | ( term ^ term ) 
+            | ( term ==4 term ) 
+            | ( term ==3 term ) 
+            | ( term ==2 term ) 
+            | ( term ==1 term ) 
+            | ( term ==0 term ) 
+            | ( term == term ==OA term ) 
+            | ( term == term , term ==OA term ) 
+            | ( term == term ) 
+            | ( term =<2 term ) 
+            | ( term <->3 term ) 
+            | ( term ->5 term ) 
+            | ( term ->4 term ) 
+            | ( term ->3 term ) 
+            | ( term ->2 term ) 
+            | ( term ->1 term ) 
+            | ( term ->0 term ) 
+            | 0 
+            | 1 
+            | C ( term , term ) 
+            | term _|_ 

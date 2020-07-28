@@ -1,0 +1,64 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We could have an annual award ceremony to honor
+outstanding contribution to mathematics. Of course, any long-time
+contributor to PM would be a shoe-in for this award, but there are
+other people out there as well. For example, the differrential
+geometer Shlomo Sternberg has written a whole bunch of textbooks
+which are freely available online (including through the PM book
+section).
+
+I like this idea for two reasons. Firstly, it promotes free math.
+Secondly, there are already plenty of awards out there for
+excellence in research and teaching --- every learned society has
+at least one to offer. However, as far as I know, there are not
+yet any awards available for free math.  I would also point out 
+that awards play a big role in academia --- assuming we gain credibility, 
+one of our free math awards could be desirable on a professor's resume.
+
+* Nomination: Norman Megill
+
+I nominate Norman Megill for 10 years of sustained effort
+creating Metamath and its associated databases, set.mm and
+ql.mm. 
+
+Not only has Megill expended countless hours tutoring
+students and others interested in Metamath and logic
+programming, but all of his Metamath work is either 
+public domain or open source. 
+
+A review of the Bibliography sections of his webpages
+for the Metamath Set Explorer, Quantum Logic Explorer
+and Hilbert Space Explorer shows the theoretical backing
+for his work (which has been verified by 3 programmers
+coding independently using 3 different programming 
+languages!):
+
+http://us.metamath.org/mpegif/mmset.html#bib
+
+http://us.metamath.org/qlegif/mmql.html
+
+http://us.metamath.org/mpegif/mmhil.html
+
+I am just a simple code monkey, but perhaps you
+also find this list of papers co-authored by 
+Megill slightly impressive:
+
+ *  [Pavicic1993] M. Pavičić, "Nonordered Quantum Logic," Int. J. of Theor. Phys. 32, 1481-1505 (1993), ftp://m3k.grad.hr/pavicic/quantum-logic/1993-int-j-theor-phys-2.ps.gz [external].
+ * [PavMeg1998a] M. Pavičić and N. Megill, "Binary Orthologic with Modus Ponens Is either Orthomodular or Distributive," Helv. Phys. Acta 71, 610-628 (1998), ftp://m3k.grad.hr/pavicic/quantum-logic/1998-helv-phys-acta.ps.gz [external].
+ * [PavMeg1998b] M. Pavičić and N. Megill, "Quantum and Classical Implicational Algebras with Primitive Implication," Int. J. of Theor. Phys. 37, 2091-2098 (1998), ftp://m3k.grad.hr/pavicic/quantum-logic/1998-int-j-theor-phys-2.ps.gz [external].
+ * [PavMeg1999] M. Pavičić and N. Megill, "Non-Orthomodular Models for Both Standard Quantum Logic and Standard Classical Logic: Repercussions for Quantum Computers," Helv. Phys. Acta 72, 189-210 (1999), http://xxx.lanl.gov/abs/quant-ph/9906101 [external].
+ * [MegPav2000] N. Megill and M. Pavičić, "Equations, States, and Lattices of Infinite-Dimensional Hilbert Space," Int. J. Theor. Phys. 39, 2337–2379 (2000), http://xxx.lanl.gov/abs/quant-ph/0009038 [external].
+ * [McKMegPav] B. McKay, N. Megill, and M. Pavičić, "Algorithms for Greechie Diagrams," Int. J. Theor. Phys. 39, 2393-2417 (2000), http://xxx.lanl.gov/abs/quant-ph/0009039 [external].
+ * [MegPav2001] N. Megill and M. Pavičić, "Orthomodular Lattices and a Quantum Algebra," Int. J. Theor. Phys. 40, 1387-1410 (2001), http://xxx.lanl.gov/abs/quant-ph/0103135 [external].
+ * [MegPav2002] N. Megill and M. Pavičić "Deduction, ordering, and operations in quantum logic," Found. Phys. 32, 357-378 (2002), http://xxx.lanl.gov/abs/quant-ph/0108074 [external].
+ * [MegPav2003a] N. Megill and M. Pavičić, "Equivalences, Identities, Symmetric Differences, and Congruences in Orthomodular Lattices," Int. J. Theor. Phys. 42, 2797-2805 (2003), http://xxx.lanl.gov/abs/quant-ph/0310063 [external].
+ * [MegPav2003b] N. Megill and M. Pavičić, "Quantum Implication Algebras," Int. J. Theor. Phys. 42, 2807-2822 (2003), http://xxx.lanl.gov/abs/quant-ph/0310062 [external].
+ * [PavMerMcKMeg] M. Pavičić, J.-P. Merlet, B. McKay, and N. Megill, "Kochen-Specker Vectors," preprint (2004), http://arxiv.org/quant-ph/0409014 [external].
+
+I also note this fact: Metamath.org was given "Site of the
+Week" honors by American Scientist in 2005 (and it has
+only improved since then):
+
+http://www.americanscientist.org/template/SiteOfTheWeekTypeDetail/assetid/45840

@@ -1,0 +1,648 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Context
+
+There are plenty of things to look at and think about on the [[file:HDM.org][HDM]]
+page and on the [[file:Discussions.org][Discussions]] page.  But using this page as a place
+to put add new contextualizing material seems wise, so I'll list
+some new and closely related discussion pages here.
+
+ * [[file:ubiquitous subjectivity.org][ubiquitous subjectivity]]
+ * [[file:Deep Black.org][Deep Black]]
+ * [[file:metacommons manifesto.org][metacommons manifesto]]
+
+* Concept
+
+I'm not sure I like the concept of this HDM manifesto anymore.
+This is because I'm not so sure that it is a good idea to
+introduce the project with a manifesto.  I have always felt
+somewhat hesitant about writing an HDM manifesto (this sentiment
+is evidenced even in the [[file:original hdm essay.org][original hdm essay]]).  At this
+point, I'm not sure what to do about it.
+
+I did write no fewer than [[file:six draft preambles to a manifesto|six draft preambles to this manifesto.org][six draft preambles to a manifesto|six draft preambles to this manifesto]]
+recently (and I even typed them up).  Perhaps
+they will be some small help towards the project of debugging the
+concept of this manifesto project.
+
+Til that happens, while I think the content of this document is OK as a
+document, I'm rather suspicious of it as a manifesto.  I probably
+don't want to spend much more time worrying about it just now, so I
+consider this manifesto officially (although perhaps temporarily)
+abandoned, and in particular, I don't think I will submit it to the
+First Monday conference after all.
+
+Anyone who is interested in becoming a co-author and attempting to
+whip it into shape as a manifesto, please feel free.  Remember, the
+Communist Manifesto was by Marx /and/ Engles.
+
+Before I quit this "concept" statement, let me point out that my six
+preambles were not just about HDM as HDM!  They were also in a very
+big way about HDM as the "entre" to a Simulationist Movement.  In this
+sense (and perhaps in this sense only) I feel that a manifesto could
+be both appropriate and called for.
+
+--[[file:jcorneli.org][jcorneli]]
+
+ * [[file:Why I am frustrated by the idea of writing an HDM Manifesto.org][Why I am frustrated by the idea of writing an HDM Manifesto]]
+ * [[file:Why HDM is an integral part of a broader simulationist movement.org][Why HDM is an integral part of a broader simulationist movement]]
+ * [[file:Why mathematics is the one true prototype.org][Why mathematics is the one true prototype]]
+
+* Content
+
+:: The HDM Manifesto
+
+:: Joseph Corneli
+
+:: Dec 5, '05 (draft)
+
+
+: Abstract: Our working Borges-style plan for the HDM project.  That
+is to say, a map that will eventually cover the territory, the
+territory here being the Hyperreal Dictionary of Mathematics, or
+"mathematics" for short.  It is perhaps appropriate to call a
+snapshot of this plan a manifesto.  I am somewhat reluctant to do so,
+because it is neither a call to action nor a declaration of war.
+Perhaps a small sort of war, but the struggle is always against our
+own inadequacies.  This announcement of the HDM project is anything
+but reluctant, and certainly, if what you read here moves you to
+action, I would be pleased.
+
+*  Introduction
+
+** The Hyperreal Dictionary of Mathematics
+
+After about three years of work on making the Hyperreal Dictionary of
+Mathematics, it is appropriate to tell the world about our plans.
+
+I dreampt up the HDM project when I was a mathematics graduate student
+at the University of Texas.  Faced with practical and philosophical
+difficulties, I wondered: is there a better way [UNEF Strasbourg
+(1966)]?  The scope of this question broadened from reflections on my
+situation as a student to apply to the situation with mathematics as a
+whole.
+
+Is there a better way?  What can we do with contemporary technology to
+enhance human understanding of mathematics and improve the efficacy of
+the mathematical enterprise?  What can mathematicians learn from the
+efforts of those working in the free software field [Stallman (1985)]?
+
+
+* Topics
+
+** The simulationist programme
+
+The HDM is, for me, an important example in a broader simulationist
+programme (cf. [Baudrillard (1995)], or the review [Leonardo (2003)]).
+
+Whereas the GNU project began with the aim of making a free
+replacement for UNIX, the HDM project began with the aim of making a
+free replacement for mathematics as we know it.  Which is to say, a
+reexpression of the world's mathematical knowledge on the computer,
+without the impediments of copyright.
+
+Mathematical knowledge has the property of being
+expression-independent; changing the medium through which mathematics
+is communicated doesn't change the contents of the communication.
+Certainly the mathematical experience will change when expression
+changes, but mathematical facts themselves are invariant under
+reexpression.  It is important to recognize that this holds true of
+other sorts of facts as well.
+
+The logical sequel to the HDM project, then, is to do with other sorts
+of knowledge what we intend to do with mathematics.  The power of the
+simulation approach to have a positive effect on human life is to be
+demonstrated; we state here our view that simulation is most powerful
+when paired with freedom (see "The liberty thesis").  This Plan
+should make the case for simulation and freedom in mathematics.
+Further discussion of the programme as a whole will appear elsewhere.
+
+
+** Mathematical practices
+The subject area of the HDM project is mathematics, a term we
+won't attempt to define here.  Two processes are particularly
+important to mathematics, "Mathematical production" and
+"Mathematical communication".  Understanding what it means for these
+processes to occur in a free way is an important part of the
+HDM's background philosophy.
+
+
+** Mathematical production
+Producing new mathematical knowledege entails advancing personal
+and systemic knowledge of mathematics and any
+developments "meta" to mathematics that are relevant to the
+immediate knowledge-production task.
+
+In order for the project to make advances in mathematical production,
+it is helpful for the project participants to put in effort on
+both content- and meta-levels.  Hopefully neither of these will
+far outpace the other, since they have the potential to
+interfertilize.
+
+
+** Mathematical communication
+Communication forges connections between ideas.  Typically there is a
+listener and a speaker involved, and the speaker already knows the
+connections and tries to help the listener see these connections.
+Which in turn relies on making connections between the speaker's
+knowledge and the listener's knowledge.  Indeed, communication is
+perhaps by definition a multiagent process.  But we can also
+think of it as a subcategory of computational media.
+
+What we've said here applies to all forms of communication, not just
+mathematical communication.  Specializing to communication of
+mathematics we hope to simplify more general problems.  The aim here
+is also to better understand properties of free computational media by
+working with an example.
+
+
+** The liberty thesis
+What are the real advantages of freedom?  A precise answer depends the
+specific freedoms you're referring to.  But in fact, the "question of
+freedom" seems pretty dicey for a number of reasons.  In order to
+move forward, we'll simplify the issue and consider apparent
+possibilities, that is, the various courses of action that an agent
+might take, where the decision depends on some exogenous criteria.
+The several actions will have different results; sometimes these will
+be known to the agent in advance, sometimes they must be found out
+after the fact, and sometimes the results will never be known (at
+least, not to the agent).
+
+In human society, the results of an action are often interpreted in
+terms of costs and benefits, which, again, may or may
+not be known in advance (and if not, then we may speak of
+expected costs, etc.).  Since we're talking about "advantages
+of freedom", we're already working with this cost/benefit model.  We
+should note that within this model, the possibility of parties other
+than the acting agent benefiting or suffering from a given decision is
+frequently considered.
+
+Greater freedom means more, and more diverse, apparent
+possibilities, at lower overall a priori cost.  Greater freedom may
+benefit the free agent it applies to, or it may be a broader social
+good, or both (or neither, etc.).
+
+The liberty thesis says that when you take away impediments (costs)
+associated with different courses of action, or open up new courses of
+action which were previously unavailable to a given agent, the agent
+will come up with decisions with greater personal benefit than that
+obtained in the constrained model.  The case for individual liberty as
+a social good has yet to be made, but if we simply sum across the
+individuals in society, we obtain an intuitive (although of course not
+strictly logical) argument that general welfare increases as liberty
+increases.
+
+Even thinking simply like this, we can not immediately jump to
+conclusions about the benefits of regulation in the content- and
+knowledge-generation industries (through copyright, patents, etc.),
+since such regulation imposes restraints on some agents while
+enhancing the liberty of others.  For example, copyright gives an
+exclusive (but transferable) right to copy or modify a work to the
+original author of a written work; this takes away "natural" liberties
+of other members of society.
+
+Of course, so does the prohibition of murder.  We generally agree in
+this society that some regulation is a good thing.  Punishing
+murderers and rewarding authors have more or less opposite effects.
+The one decreases the chance that someone will commit acts that are
+presumed to have fairly broad negative effects (though obviously
+especially negative for some parties), whereas the other increases the
+chance that someone will commit acts that have fairly broad positive
+effects.  Or so the theory goes.
+
+The fact of the matter is that there is overwhelming evidence coming
+from the free software world that written works with significant and
+broad benefits to society will be produced under non-monopolistic
+conditions.
+
+The state of affairs with free software suggests that if there were
+other free project that could do what we can do, we would know about
+it (because anything that is as interesting as the HDM would have
+fairly widespread uptake!).  More importantly, coming right out of the
+liberty thesis, a corollary of sorts, that there are some things that
+only free projects can feasibly accomplish.
+
+
+** PlanetMath.org
+
+This is the governmentally-recognized non-profit organization under
+whose umbrella HDM mainly resides.  Which is to say, unless another
+host comes along, the HDM project's best financial hopes depend on
+PM.org.  Since PM.org intends to maintain its standing as the
+"premier Free Math site on the web" and HDM aims to produce a lot of
+free math, this partnership seems appropriate.
+
+We then ask, what resources does this organization have?  This relates
+to the more general problem that the HDM project must consider,
+"knowing what else is out there." (See "Arxana".)
+
+When thinking about the future growth of PM.org, we ask: "who
+stands to profit?"  What makes free math good, why is it something
+that people would be interested in having funded, and so forth.
+Certainly I think one potential beneficiary is "me", and
+elsewhere I say more about why (see "The liberty thesis" for a
+start).  Here I'll just mention that other members of my "orbit"
+under certain transformations would logically stand to benefit also.
+A solid case for the broader economical and philosophical benefits of
+supporting Free Math should be given at some point.
+
+Finally, if PM.org is to be a source of a livelihood for some of its
+major contributors, including HDM developers, the (rhetorical)
+question "How can we make Free Software-style Business work for Free
+Math?" must be asked, and answered.  HDM's role in the organization
+and the role of HDM developers must also be spelled out in detail
+(including financial/salary details).
+
+
+** The Free Encyclopedia of Mathematics
+
+A grassroots mathematics encyclopedia (actually the print compilation
+of PM.org's online encyclopedia).  It should be available for sale
+soon, assuming that the lead developer(s) can get their contributions
+in.
+
+The FEM is related to the broader problem of making surrogate works
+and encoding knowledge.  This in turn could be a good way to generate
+sustaining income for PlanetMath.org, and also relates to the HDM's
+core simulationist mission.
+
+** An economy of truth
+
+The business of mathematics is truth.  Truth, not as something that
+can be bought and sold or cleverly side-stepped or short-circuited,
+but as a service that can be provided (often for a fee).  Within the
+world of free mathematics, there is room for a myriad of services,
+including investigatory, expository, and pedagogical services, that
+could be offered for exchange.  The actual exchanges may be very
+subtle ones (as in a discussion); but sometimes mathematical services
+can simply be traded for money on the open market.  Creating "open
+markets" both for mathematical exchanges and economic exchanges
+related to mathematics is something that we'll need to consider
+[Carrasco-MuNoz (2003)].
+
+
+** Technical measures
+
+Encoding a body of knowledge is a tricky thing, and it would be
+tricky even if we had the full cooperation of the current maintainers
+of that body of knowledge.  In the case of the HDM, as much as we
+might like to secure the cooperation of mathematicians, publishers,
+and others interested in mathematical knowledge, we can't count on
+such cooperation.  With or without cooperation, there are certain
+technical measures that we are taking that will move the project
+along, and we describe these now.
+
+
+** Arxana
+
+A semantic network with hypertextual interpretations, inspired by GNU
+Emacs, Xanadu, and work in artificial intelligence [Nelson (1993)],
+[Minsky (1986)].  So far this is one of the larger contributions to
+the HDM project in terms of page-count.  It is still a work in
+progress, although it is becoming more useful.
+
+For example, we're increasingly able to think about how to make Arxana
+do AI proceedures.  It is facinating to envision a document such as
+this one becoming increasingly computational in nature.  The
+text/hypertext/artificial-intelligence trichotomy all but merges under
+the Arxana point of view (or perhaps I should say points of view, as
+one of the key features of the system is to offer many of these)
+[Corneli and Krowne (2005)].
+
+As the project develops, Arxana will be used to represent more and
+more facts about the production landscape -- both content and "meta"
+material.  This is assumed to be symbiotic with advancing the system
+itself.  As we learn things about the world (and record them as part
+of the system's contents), we will be able, eventually, to apply that
+knowledege to furthering the system's code.
+
+As we think of ways of extending the system, we would do well to keep
+in mind the duality of queries and knowledege.  Things we represent in
+the system support the for things that the system can accomplish.
+Note that "knowledge" can be encoded in the system software as well as
+its contents.
+
+If it isn't obvious, I should point out that Arxana's name is inspired
+by the famous quote from Arthur C. Clarke, "Any technology
+sufficiently advanced is indistinguishable from magic." [Clarke
+(2000)]
+
+
+
+** Hcode
+A universal language for mathematics.  Again in development; and here,
+subject to considerable theoretical challenges.  How do we represent
+mathematical information as a whole when the language is changing from
+sub-domain to sub-domain?  Does /fx/ mean /f(x)/ or /x(f)/, or
+something else -- and for that matter, what does /f(x)/ mean?  We'll
+need a way to navigate the semantically shifting sands of mathematical
+expression.
+
+This presumably will relate to Arxana representations of various
+ontologies.  Obviously, in order to define a language with sufficient
+flexibility, we will need to take a very "meta" approach.
+
+Note that we are assuming that in all but odd and extreme
+cases, translating from day-to-day mathematical language to hcode is
+legal.  We feel comfortable with this assumption because copyright
+applies at the level of expression, not at the level of ideas.
+
+
+** Metasystems
+
+In order to understand proofs, one must understand inference.  What
+does it mean to use or add an inference rule?  What are the basic
+examples of inference rules?  Quoting in Lisp (or logic) gives us the
+basic flavor of a "metasystem" (a system that is capable of talking
+about whether or not a given inference rule is coherent with a given
+logical system). Tensor analysis provides a more complicated
+mathematical example.  An example of a "human" inference rule is "but
+upon switching /x/ and /y/, the same argument applies, proving the
+theorem."
+
+
+** Proving
+We want to programmatically check some "humanly written" proofs,
+that is, proofs that use "human" inference rules.
+
+The theory is basically given by the previous two items (hcode and
+metasystems), with a little bit extra in the logic department.
+
+After we do some highly-abstract examples from Schuam's, we'll want to
+tackle some more geometrically challenging things like Pythagoras.
+
+
+** Parsing
+The development of the parsing subsystem should track the development
+of the proving subsystem (since, again, the prover is going to be
+working with "humanly written" proofs).  The basic point is to
+translate from the various mathematical vernaculars to the universal
+language of hcode.
+
+Our existing work on parsing mathematical expressions according to the
+"typical" grammar of mathematics has been doing just fine, but we will
+eventually want to be able to use a family of grammars, which we can
+switch between depending on context.  (Presumably Arxana will be able
+to help with establishing linguistic context.)
+
+
+** Progress
+
+Much in the same way it seems advisable to make system development
+track system use (dealing with both content- and meta- aspects of
+"Mathematical production"), it also seems advisable for these
+various technical subprojects to be kept roughly up to speed with
+one another.
+
+** Personnel
+
+Insofar as the HDM project is actually a project and more than just a
+social trend, the project's personnel (and materiel) are important
+considerations.  In addition to myself (who you have gotten to know
+through the first person voice in this document), we have Raymond
+Puzio, who has been making vital contributions to the logic and
+metamathematics components of the project.  I look forward to his
+voice being part of future versions of this document; his insights
+have already been (but he'll do a better job of explaining them than I
+have).  Other contributors and friends have been there since this
+projects earliest inception (and, indeed, before) and are thankfully
+too great in number to mention all at once here.
+
+There is room for more contributors, and perhaps we'll even go so far
+as to include a call to action in a later version.
+
+** A simulation of mathematics
+
+At this point it would be proper to confess: the HDM project is
+concerned not only with modeling mathematical content, but also
+mathematical processes.  That is, with automated or semi-automated
+mathematical production; with the "Deep Blues" of mathematics, and
+with greater things yet to come.
+
+
+* Questions
+
+** Killing machines
+/Have you seen "The Matrix"?/  
+
+Interestingly enough the answer is yes!  I've also read
+Frankenstein by Mary Shelley and The Machine Stops by
+E. M. Forster.  The idea that humans can create technologies that will
+destroy them in various nasty ways isn't a very new idea.  As our
+technologies become more sophisticated, the specific form given to
+fictional created-destroyers changes.  These stories are always
+metaphorical; nevertheless, killing machines exist in reality.  The
+question, I suppose, is whether such machines will turn or be turned
+against their creators.
+
+I actually prefer to sidestep even this question and say simply that
+knowledge is power.  Whether or not we become the victims of
+our own artifice is external to considerations of power.  We can lose
+or win or both (cf. Prospero in The Tempest).  Let us embrace
+the truth, that we may become honest; and righteousness, that we may
+become better shepherds.  With this attitude I think that we stand to better
+ourselves, and our condition [Minsky (1994)], [Dyson (1999)].
+
+
+** Licensing issues
+/How do we make sure that the works we are producing can be used
+for the purposes we or others will later wish?/
+
+By releasing HDM content to the public domain.  For now, in order to
+protect our investments, we're licensing the work on the project under
+GNU licenses.
+
+
+* References
+
+Joseph A. Corneli and Aaron P. Krowne.
+A scholia-based document model for commons-based peer production.
+Proceedings of the Emory University Symposium on Free Culture
+  and the Digital Library, 2005.
+
+Jordi Carrasco-Muoz.
+The open code market.
+First Monday, volume 8, number 11, November 2003.
+
+Theodor Holm Nelson.
+Literary Machines 93.1.
+Mindful Press, Sausalito, CA, 1993.
+
+Marvin Minsky.
+The Society of Mind.
+Simon and Schuster, New York, 1986.
+
+Marvin Minsky.
+Will Robots Inherit the Earth?
+Scientific American, Oct. 1994.
+http://web.media.mit.edu/minsky/papers/sciam.inherit.html
+
+Richard Stallman.
+The GNU Manifesto.
+Dr. Dobb's Journal of Software Tools, 10(3), March 1985.
+http://www.gnu.org/gnu/manifesto.html
+
+UNEF Strasbourg.
+On the poverty of student life: considered in its economic,
+  political, psychological, sexual, and particularly intellectual
+  aspects, and a modest proposal for its remedy.
+Strasbourg, 1966.
+Available in English translation at http://library.nothingness.org/articles/SI/en/display/4
+
+Freeman J. Dyson.
+The Sun, the Genome,  the Internet.
+Oxford University Press, 1999.
+
+Jean O Baudrillard and Sheila Faria Glaser (translator).
+Simulacra and Simulation (The Body, In Theory: Histories of Cultural Materialism).
+University of Michigan Press, 1995.
+
+Arthur C. Clarke.
+Profiles of the Future: An Inquiry into the Limits of the Possible.
+Phoenix mass market, 2000.
+
+Zeus Leonardo.
+Resisting Capital: Simulationist and Socialist Strategies.
+Critical Sociology, Volume 29, Issue 2.
+Koninklijke Brill NV, Leiden, 2003.
+
+* Discussion of content
+
+Only mistake I've noticed in the 17 or so minutes since I submitted
+the paper is that the SBDM4CBPP citation isn't mentioned in the
+Arxana segment.  Not huge.  Comments at this point are much appreciated,
+since as I mentioned to the First Monday editor, "The paper is in a rather early stage, and can easily be fleshed out or
+re-directed in various ways."  :) --[[file:jcorneli.org][jcorneli]]
+
+Upon finding a slew of other errors (mostly grammar sorts of things)
+I've given the document a revision.  To find the version I
+actually submitted, use the wiki's versioning system.  One more
+substantial point is that the analysis in "The liberty thesis"
+needs to be carried out a bit further.  I also added
+a "Personnel" segment. --[[file:jcorneli.org][jcorneli]]
+
+I was doing a little word-play and thought a fun slogan for 
+Arxana would be "what do you want to know today?"  I don't think
+this is really serious enough to be useable, but it is interesting
+that the first google hit for the search phrase "where do you want to 
+go today" turns up a web resource with my same twisted slogan as its
+title! --[[file:jcorneli.org][jcorneli]]
+
+The Leonardo reference gives a very enticing review of Baudrillard,
+saying in 5 pages or so what it might take several months to figure
+out on ones own.  Highly recommended.  Google for "hyperreal
+simulationist" to get a PDF copy! --[[file:jcorneli.org][jcorneli]]
+
+I think the question about "killing machines" won't be in top ten. I'll try to guess top 3 questions:
+ 1. Ain't it nuts?
+ 1. HDM vs. QED manifesto, Mizar, Isabelle, Hilbert II, etc; hcode vs !OpenMath
+ 1. So what's exactly been done?
+--[[file:alih.org][alih]]
+
+:) Thanks, yeah, those things are likely to come up.  (With my sister,
+however, the first thing is always "Are you sure this is a good idea?
+What if you end up creating machines that come to eat us & our next of
+kin?")
+
+Quick answers for conversational purposes:
+
+ 1. Its a lot less nuts than a lot of AI; in fact, if we look at the AI
+project as a whole, the HDM component is one of the most sensible
+things to try.  (Primarily I say this because of linguistic reasons,
+mathematical language is very dry.  It would be much easier to parse
+your standard math text book than it would be to parse this essay or
+this conversation, for example.)
+ 1. This is a deep question in some ways, but the keystone part of the answer
+is that we propose to understand math /as it is done by humans/.
+Unlike QED, it isn't just about formalizing math, but about understanding
+the thought & communication patterns of human mathematicians.  Since many
+of the other things you mentioned follow in the line of QED, this answer
+will have to suffice for all of them.  (However, a specific comparison
+of the languages on technical grounds could be done -- but better done
+once hcode is better developed; although we could get into it a bit
+[[file:hcode|elsewhere.org][hcode|elsewhere]] if you like, and that might help with language development!)
+Oh, and vs. !OpenMath, we're really after a computer language that can express
+everything in mathematics and be easy to write and read, in my non-technical view
+is that !OpenMath doesn't match these specs.
+ 1. I've written a lot of the [[file:Arxana.org][Arxana]] system.  We have some prototypical
+[[file:hcode.org][hcode]] and some reasonable strategies for proof checking and parsing
+(see [[file:HDM.org][HDM]]).  We've done some networking with PlanetMath, [[file:metamath.org][metamath]] and
+a few other relevant groups (which includes trying to work out some source
+of funding).  And (obviously ;)) we've thought a lot about the project from
+a philosophical standpoint.
+
+As to whether this "pales in the comparison of what's left to be done"
+or not, that will sort of depend on one's point of view.  Certainly
+there's more than enough left to work on to occupy a quantity of full-time
+help.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Supporting conversational purposes :)
+ 1. Parsing is feasible; playing with http://www.connexor.com/demo/syntax/ is convincing, despite the fact it's commercial. But that part about understanding math, that's more worrying. In other words, computers are much sillier than us and no amount of natural language processing seem to help.
+ 1. QED is not simply about formalizing math, but also about finding the simplest and most natural way to do it. So you can't dismiss it that easily. And yes, HDM and http://opennlp.sourceforge.net ?
+ 1. Oh, I got it, Arxana is in the [[file:HDM CVS.org][HDM CVS]]. I'll have a look. The "scholia-based document model" is too philosophical for me to read, however.
+
+And thanks for showing a couple of tricks with this wiki :)
+--[[file:alih.org][alih]]
+
+Thanks for the links!
+
+We've been interested in the Link parser; a URL
+for that, and some other words about linguistics stuff relevant to HDM
+is on
+[[file:Linguistics_research_and_programs_particularly_relevant_to_HDM|this.org][Linguistics_research_and_programs_particularly_relevant_to_HDM|this]]
+wikipage.  I hadn't heard of opennlp before, I'll check it out.
+
+Continuing our discussion: I have to agree with you, computers aren't
+very sensible about most things.  But they do have their strengths.
+
+When thinking about this issue, the first thing I'd ask you to do is think
+about how /you/ understand math.  If you can make an algorithm for
+parts of this process, then you can teach these parts to a computer.
+Computers are very good at working on things that have been
+formalized.
+
+Almost certainly, algorithms exist for lots and lots of mathematical
+thinking, since math itself is so algorithmatic.  Maybe there are some
+parts that rely on "intuition" or something will be hard to get onto
+the computer.  Maybe there are some thing (e.g. vision) that we'll
+have to wait a very long time for.  But that doesn't mean we can't go
+ahead and do the easy parts now.
+
+My guess is that by really understanding how it is that people /do/
+and /communicate/ mathematics, we'll get enough algorithms (and
+data) to make a very good computer mathematician.
+
+As for QED, I don't dismiss it.  HDM has a big formal math component.
+But I think the above gives a sense of how HDM's approach is
+different.  We're equally interested in "informal" mathematics.
+(Because this, too, can very likely be the source of useful algorithms
+& heuristics.)
+
+As for Arxana, you'll find the code is embedded in another somewhat
+philosophical document.  But you can just look at the code parts and
+its immediate documentation.  It isn't finished yet, of course -- and
+it won't get finished if I spend all the time chatting and writing.
+So after I hang up with you I'll likely get back to work on the code.
+
+Please trust me that we've been working quite hard on HDM.  Whether
+that helps make the project's goals seem any more realistic, I don't
+know!  But I'm not saying that it is going to be an easy project in
+any way; just that it is a worthwhile and somewhat important one.
+
+Thanks for talking it over with me, I'll look forward to more of that
+soon. --[[file:jcorneli.org][jcorneli]]
+
+Note, [[file:alih.org][alih]], I emailed one of the !OpenNLP guys.  They seem
+to have a nice project going, with ideas about coordinating open NLP sort of similar
+to the ideas about working on free CCBP that form part of the backbone for !AsteroidMeta.
+(I think it is interesting that math somehow seems to be a big and
+often-overlapping interest around here too; maybe because math
+is inherently a social activity?)
+
+This project reminded me of the important fact that free software
+is a "social movement".  (See [[file:Why I am frustrated by the idea of writing an HDM Manifesto.org][Why I am frustrated by the idea of writing an HDM Manifesto]].)
+
+--[[file:jcorneli.org][jcorneli]]

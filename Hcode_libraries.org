@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In [[file:Version Zero.org][Version Zero]] we lay out information that is converging to a spec of 
+the hcode language.  Here we should test the usability of the spec by building
+some "standard" libraries (e.g. for algebra, calculus, probability, logic, etc.)
+that can be used to test the spec -- specifically, by implementing proofs
+in these areas and then checking them.
+
+Of course, we can write the proofs without the relevant libraries (as sketches)
+but the best way to make the system "live" is to have the libraries, the proofs,
+and the proof checker all in order.  So, think of this as an important part of
+the regression suite.  On the other hand, don't get too carried away with it -
+because all of the other parts of the suite are important too.  --[[file:jcorneli.org][jcorneli]]
+
+If you don't know of a good definition for some term off the top of your head,
+you can always leave it blank.  This will automatically cause proofs that rely
+on that term to fail.  /These "standard" libraries are undergoing evolution,
+and haven't really been standardized yet!/ --[[file:jcorneli.org][jcorneli]] Fri Jul 08 17:20:55 2005 UTC
+
+* The libraries
+
+ * [[file:set-theory-lib.org][set-theory-lib]]
+ * [[file:basic-group-theory-lib.org][basic-group-theory-lib]]
+
+
+----
+Back to [[file:h-code.org][h-code]]

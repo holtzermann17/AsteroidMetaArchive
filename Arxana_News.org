@@ -1,0 +1,246 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+** Update 1
+Here's a link to a basic implementation:
+http://www.ma.utexas.edu/~jcorneli/a/elisp/scholia.el -- it has many limitations
+when compared with the all-powerful system described in the note.  However,
+I'll fill in some of the major missing details soon (wanted to upload /something/
+asap tho). --[[file:jcorneli.org][jcorneli]] Sun Mar 06 20:37:34 2005 UTC
+
+** Update 2
+
+I have begun to rewrite the program - hopefully it will be a bit more
+sophisticated this time around.  Furthermore, since I've been doing so much
+talking about [[file:literate programming.org][literate programming]] recently, I thought I should take a crack
+actually doing it.  So, without further ado, let me unveil the (DRAFT)
+code/paper:
+ * [http://www.ma.utexas.edu/~jcorneli/a/lit/scholium-rewrite.tex TeX]
+ * [http://www.ma.utexas.edu/~jcorneli/a/lit/scholium-rewrite.dvi DVI]
+
+I think it might be fun for other folks to look at, even though I am
+right now /in the middle/ of doing the revision.  The code, of course, is
+Emacs Lisp (like the original version).  Indeed, not a whole lot has changed
+since the initial code was written /yet/.  Enjoy, and stay tuned for updates.
+--[[file:jcorneli.org][jcorneli]] Mon Apr 04 08:04:38 2005 UTC
+
+** Update 3
+
+The latest working version is now in [[file:HDM CVS.org][HDM CVS]].
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 04:48:38 2005 UTC
+
+** Update 4
+
+An [[file:A scholia-based document model for commons-based peer production|abstract.org][A scholia-based document model for commons-based peer production|abstract]]
+describing the system has been submitted to the [[file:Emory Free Culture and the DL Symposium.org][Emory Free Culture and the DL Symposium]].
+--[[file:jcorneli.org][jcorneli]] Sat Apr 30 23:01:38 2005 UTC
+
+** Update 5
+
+The abstract was accepted, and the reviewers had some comments and suggestions that I will
+summarize [[file:reviewer comments on scholium submission|here.org][reviewer comments on scholium submission|here]]. --[[file:jcorneli.org][jcorneli]] Wed May 18 23:42:01 2005 UTC
+
+** Update 6
+
+In the process of preparing the paper, I've found it useful to prepare a
+[[file:detailed outline of the scholium system paper.org][detailed outline of the scholium system paper]] which I'm
+posting now.  (The paper is currently written in three parts, plus some
+ancillary files with code; the outline currently mainly covers the
+first part.)  Given the nearness of the due date for the paper and the
+fact that I haven't managed to get all the code working yet, 
+that is going to be my focus for this week (along with reconciling the paper
+with this outline, and adding a bit to parts 2 and 3, and perhaps compressing
+the whole thing to be more user friendly).  Since the paper is only
+somewhat readable, the best place to leave comments is probably on the
+outline.  The last few days before submission will be spent on a little more
+literature review and hopefully some micro-experiments!  --[[file:jcorneli.org][jcorneli]] Mon Jun 20 10:33:05 2005 UTC
+
+** Update 7
+
+The paper is now finished;
+[http://www.ma.utexas.edu/~jcorneli/a/lit/misc/scholia.pdf here] is the final
+version (in PDF, other file formats in same directory).  The system itself nears
+readiness; today's version of the code and report is 
+[http://www.ma.utexas.edu/~jcorneli/a/lit/sbdm4cbpp.pdf here] (in PDF)
+and [http://www.ma.utexas.edu/~jcorneli/a/lit/sbdm4cbpp.tex here] (in !TeX, 
+containing all relevant elisp and instructions for evaluation).  
+I will be making updates to this file over the next (insert favorite
+short term time unit) and with any luck the next update will be that "the code
+is more-or-less fully usable."  At this point, comments on the system and
+its documentation are welcome and even solicited - in particular,
+thoughts about how to structure the report will help make the release
+more useful to more people.  (Note: the following sigfile appeared
+on the help-gnu-emacs list today - /What is this talk of "release"?
+Klingons do not make software "releases".  Our software "escapes"
+leaving a bloody trail of designers and quality assurance people
+in its wake./)  --[[file:jcorneli.org][jcorneli]] Mon Aug 08 05:06:02 2005 UTC
+
+** Update 8
+
+The system is not yet complete; I was working on three issues
+over the course of the last couple of weeks (normal linking, committing
+edits, and transclusion).  Only the first one is "done"; and while
+the other two topics haven't exactly kicked my ass, I'll need
+more time to polish them off.  After that, there will be plenty of
+fine-tuning to do, but the end will be very close.  Since links are
+working now, I think I'll try to post a link to a converted version
+of this wiki at some point.  (Probably only the first of several
+prototypes of the same, until we get all the distributed updating
+working.)  --[[file:jcorneli.org][jcorneli]] Sat Sep 03 21:16:21 2005 UTC
+
+** Update 9
+
+A basic version of committing works in the latest CVS update.  Anyone
+who knows elisp fairly well and who reads through the material I've
+written to date should see how to finish the system, I think.
+Transclusion is next, and I'm hoping I'll be able to finish that
+a tout de suite (or allegretto, if you prefer). (Given that my talk on the system will take place only
+half a month from today, there's no time for messin' around.) --[[file:jcorneli.org][jcorneli]] Thu Sep 29 19:15:07 CDT 2005
+
+** Update 10
+
+I gave a successful talk and partial demo of the system at the
+Emory Free Culture and the Digital Libary symposium.
+I also published an announcement of the project on the
+GNU Emacs Sources newsgroup.  Things aren't "finished"
+but people should be able to get some use out of the
+system as it exists today, and hopefully the documentation
+will make for interesting reading.  On a technical note,
+I've skipped past transclusion for the time being, and
+implemented the "more powerful" (but simpler) /identification/.
+-- [[file:jcorneli.org][jcorneli]] Sat Oct 15 17:48:44 2005
+
+** Update 11
+
+I thought it worth mentioning that I've decided to work on
+extending the system through a series of practical experiments.
+These are varied, and they range from: using the system to
+help organize my kitchen, to importing APM-Xi, to continued
+work on the system's self-import.  Each use requires some small
+improvements to the system, but so far nothing as theoretically
+or technically challenging as the transclusion and identification stuff.
+I tried to post a notification about the system's existence
+to the appropriate Emacs mailing list shortly after the talk,
+but for some reason that I have yet to determine, the post
+did not go through.  So I'm chilling out with that until I have
+the self-import working just a little better; then I'll post.  But
+in the mean time, for people who know what is going on with the
+system from following its development on the wiki, I'd say its
+quite ready to test out and perhaps use for a few of experiments of
+your own, or tackle one or the other of the unfinished sections
+of the work.  I expect to attempt another announcement of the system
+within the week.  --[[file:jcorneli.org][jcorneli]] Mon Nov 7
+
+*** Update 11a
+This is a progress report on the tasks mentioned in the last
+update.  The text of the document and the import and export
+routines have all been adjusted to the point where text is stable
+under import followed by export.  Since the user can edit articles
+and then export the results, this means that the system can now
+(as claimed) be used to both browse and edit itself.  It is, however,
+a little brittle in these regards, as yet.  Several minor
+changes come to mind that will make the basic processes here
+work more smoothly.  Since I intend to leave subsequent major changes
+to the system out until after the release, there really isn't much
+to do before this release.  I don't anticipate that the system will
+be perfect in all of its minor details before release time, either;
+it wouldn't make sense to go completely hog-wild before the major
+structure settles down.  I want it to be usable enough to be interesting.
+I'm expecting that (partly because I don't think I'll have anything
+else to do tomorrow) this means that I will attempt to make the release
+tomorrow.  Should mention before signing off that since last week
+(seems like much less time!) I also did some pretty heavy rewriting
+in the introductory sections, in an effort to make them readable and
+to make sure that they do a reasonable job of spelling out what
+does and doesn't work in the system as it currently exists.  --[[file:jcorneli.org][jcorneli]] Mon Nov 14
+
+*** Update 11b
+
+Everything on my immediate list of things to do for the above "polishing"
+operation has been completed - only for me to find one more bug that
+I think really needs to be addressed.  This task *could* go on forever
+(in the sense that there is plenty left unfinished and even a
+thorough revision looking for small things would turn up a lot of
+changes to make); but I want to get this out for people to look at
+asap.  Part of the problem is that I've been finding it hard to
+focus on finishing the details for whatever reason.  I'm sure it has
+something to do with "separation anxiety", since it is somewhat
+scary to think about publishing this stuff especially in its unfinished
+state.  But the alternative of continuing to chug along with little
+outside input is also scary.  I do look forward to comments from a few
+"prerelease auditors" who have promised to look at the system.  --[[file:jcorneli.org][jcorneli]]
+
+*** Update 11c
+
+OK, tried to announce again.  (Both the above-mentioned bug &
+immediate list are finished; plenty of course to do /later/.)
+Let's hope that goes well.  Hello world & all that.  --[[file:jcorneli.org][jcorneli]] 11-22-79 to 11-22-05 and still counting
+
+** Update 12
+
+Somewhere along the line (between the end of November and the end of
+January, which quickly approaches), I realized that there are (a) a
+number of things about the internal structure & documentation that
+really ought to be fixed before the system will be understandable to
+people other than me; (b) that the brittleness mentioned in Update 11a
+is really also indicative of a lack of true functionality -- the
+"killer ap" in my opinion is /identification/, and I don't think it
+would be wise to release the program before that was finished.  (I now
+know why I was having technical difficulty with the mailing list --
+you either need a ".el" or a "Emacs" somewhere in the subject line of
+your email to post there -- but I suppose given these concerns, it is
+just as well that I didn't manage to publish the code earlier.)  I
+would very much like to get the business with (a) finished up soon;
+then I'll have to choose between focused work on (b) -- probably a
+good idea -- and (c) implementing other features that I know are
+fundamental for the program as a whole to be useful (and not just that
+one killer ap!).  In my view, this is not the "curse of Xanadu" at
+all, but continues to be incremental progress towards a well-defined
+goal; where we can see the the steps before us, and just have to be
+somewhat patient.  I need some time and some focus & they need to be
+correctly aligned with each other.  I think release isn't far off now.
+--[[file:jcorneli.org][jcorneli]] Wed Jan 25 2006
+
+** Update 13
+
+In preparation for immanent publication (whether or not I manage to
+get all the features I'd like to present ready in time for that or
+not), here's a link to the first publicly broadcast version of
+(almost) a year ago: http://lists.gnu.org/archive/html/gnu-emacs-sources/2005-03/msg00003.html 
+Things seem to have come quite a ways since then. --[[file:jcorneli.org][jcorneli]] Sun Mar 5 2006
+
+*** Update 13a
+
+True to my word I published the latest draft on gnu-emacs-sources late yesterday
+(after a few drinks).  There remains much to do.  --[[file:jcorneli.org][jcorneli]] Sun Mar 8 2006
+
+** Update 14
+
+I've been looking into multi-user operation of Arxana.  I had initially
+thought it would be straightforward to get several people using the
+same Emacs (running on a server somewhere), then I wasn't so sure.
+Then I learned about Ebby.  Now I'm still not sure, but at least I have
+something interesting to investigate (Ebby uses the Obby protocol, FYI).
+--[[file:jcorneli.org][jcorneli]] Mon Jun 5 2006
+
+*** Update 14a
+
+For those who have been wondering what a "releasable version of
+Arxana" might look like, I think the answer is as follows: It would
+include various and sundry improvements to the user-interface (several
+minor TODO items I have described elsewhere, and a few more major
+ones), and some nice set-up for collaborative editing (whether
+synchronous or asynchronous, server-based or peer-to-peer; whatever).
+
+I feel qualified to crank through the first list.  And I will have
+plenty to learn about with the second item.  (Ebby is just one of the
+things I've learned about in the course of a few days looking into
+this business.)  I hope very much to get both of these items taken
+care of this summer, and to have some releasable version of the
+program ready by the end of summer.
+
+One more thing to say about the releasable version is that it
+shouldn't be expected to be "done", but it should be the sort of thing
+that I can take to people and say "this thing works pretty well for
+what it does, and it is easy enough to extend if you want to make it
+do something else."  --[[file:jcorneli.org][jcorneli]] Wed Jun 7 2006

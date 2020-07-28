@@ -1,0 +1,66 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Date Posted: Mon Jan 23 15:09:46 UTC 2006
+
+Status: *available*
+
+Time: a week (40 hrs) (est.)
+
+Bounty Price: $1000 (US est.)
+
+Objective:
+
+Make the PM template system uniform and complete.  There should be no HTML in code.  CSS should be usable to do the majority of non-structural appearance changes.
+
+Skills needed:
+
+ * perl
+ * XSL
+ * CSS
+
+* Background
+
+Once upon a time, when Noosphere was first being written, but before it was called /Noosphere/, the output system was based on
+HTML templates (using a home-brew key-replacement system).  Very quickly, this was discovered to be insufficient, as any structure 
+or logic still had to be hardcoded before being output to the HTML.
+
+Then XSL was discovered, and a new, XSL-based template system was created.  This was much better: you would output your data in XML,
+and XSL would contain the presentation logic to convert that to HTML.  Most new Noosphere features started being coded to use this,
+and some old ones were as well.  However, there are still tons of HTML-templates-using operations, and even some hardcoded HTML.
+
+This scattered output system makes Noosphere's appearance difficult to customize.    We want to move all of the outputting
+over to the XSL-based system, so that deployers can simply change the XSL templates if they need to.
+
+However, a further benefit of this will be that CSS will be easier to apply.  We are using CSS now, but only minimally.  CSS should
+be extended into more of the site.  This won't be too difficult, as many of the "global" output functions are in a master
+XSL template, called *template.xsl*.   
+
+We expect the full integration of CSS will likely result in tweaks to the standard Noosphere appearance, which we are OK with.
+
+* Plan
+
+ 1. convert all old HTML output routines to XSL
+ 1. eliminate hardcoded HTML and move to XSL
+ 1. design a pretty good CSS layout
+ 1. integrate CSS with XML
+
+Considerations:
+
+ * The conversions from HTML to XSL are generally not too difficult; and even satisfyingly mindless work (you can get into
+a nice rhythm with this).
+ * The way the XSL template system works is that each operation selects an XSL /fragment/ (which is stored in a separate file)
+it would like applied to itself.   This fragment is combined with the master XSL template (template.xsl) which has global stuff,
+and then is executed to transform the XSL, and HTML is ultimately outputted by the operation.
+ * If the bounty hunter were really ambitious, they could improve this architecture so that Noosphere CGI operations generate
+only XML, not XSL, and HTML is only produced at the very end of the request handler, transforming XML for the entire page
+into HTML.
+ * Logan hanks and [[file:akrowne.org][akrowne]] have both worked extensively with the XSL template system (logan created it) and can answer
+questions.
+
+* Contact
+
+Contact feedback@planetmath.org to inquire about this bounty.  See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] for
+more on how bounties work.
+
+* Discussion

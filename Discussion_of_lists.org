@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+What do you think?
+
+----
+I'm not so sure about item 2.  Note that
+
+
+  (listp '()) => t
+
+but
+
+  (listp 'foo) => nil
+
+Is there a theoretical advantage to having elements of /S/ as lists in
+addition to having 1-tuples? --[[file:jcorneli.org][jcorneli]] Fri Feb 25 01:50:18 2005 UTC
+
+I was careless and will fix this hole in the definition.--[[file:rspuzio.org][rspuzio]]
+----
+
+Well now I don't know about item 3.  You are defining lists of elements *of*
+/S/ so it seems too general to allow these lists to contain lists.  I would
+think that a list really was just a tuple. (?) --[[file:jcorneli.org][jcorneli]] Fri Feb 25
+06:22:33 2005 UTC
+
+Think of LISP again.  We allow things like '(a (a b) (a (a b) (a b c))) as
+lists. As far as the computer is concerned
+
+ (listp '(a (a b) (a (a b) (a b c)))) => t
+
+even though the second item is a list '(a b) and the third item is a list '(a (a
+b) (a b c)) which, in turn contains two lists '(a b) and '(a b c).  What I meant
+to say was that if /S = {a b c}/, these beasts are lists, but I made a poor
+choice of terminology.  As you point out, the phrase *lists of elements of
+S* sounds like it means *tuplets of elements of S* so that was not a good
+name for what I ws trying to define.  Perhaps a more more furtunate terminology
+would be *lists constructed from S*.  I will try that to see if it is less
+confusing.
+
+You are right that a list is just a tuplet.  The only reason I used both words
+was because I wanted to somehow suggest this recursive aspect where the items of
+the tuplets are themselves tuplets, but ultimately we arrive at elements of the
+set /S/.  Perhaps this wasn't the best choice of words, but I'm sure that as
+we think about it more and dicuss it more, we will eventually find the right
+words.  --[[file:rspuzio.org][rspuzio]] 25 February 2005
+
+----
+OK, this time it looks just fine. --[[file:jcorneli.org][jcorneli]] Fri Feb 25 08:39:54 2005 UTC
+----
+Back to [[file:list.org][list]]

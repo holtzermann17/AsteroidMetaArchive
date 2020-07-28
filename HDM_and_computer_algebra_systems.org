@@ -1,0 +1,60 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The number of times when I say "HDM" and my interlocutor says "CAS" has been
+steadily increasing, to the point where I feel like I should make a definitive
+statement on the topic:
+
+: /HDM is not a computer algebra system./
+
+(Except maybe in the loosest sense of the word, if indeed "symbol processing" is the general term for computer algebra; I have my doubts.)
+
+It is unfortunate that this wasn't stated more clearly in the old versions of
+the "The HDM Project" essay.  I assumed that saying HDM is not contained in formal math
+(like QED) and not contained in AI (or "machine learning" or anything like that)
+either would be sufficient.  Well, its a bit much to assume that people will
+actually have read these essays, that's the first problem.  But even if they
+have, the statement about CAS's should probably have been made separately.
+
+There are many things that HDM is not, and there are also many things that it
+is; so, things are a bit confusing.
+
+One issue is that with the growth of CAS's to include everything from document
+preparation to programming languages, many people are likely to think that if
+you put math on a computer, what you get is a CAS or anyway some part of one.
+
+This is not actually the case: there are /non-interactive theorem provers/,
+for example, which are pretty much nothing like (modern, interactive) CAS's.
+There are /interactive theorem provers/ too.  Theorem provers in general don't
+do algebra problems per se, at least not unless the algebra problems are part of
+a proof.  There are also /proof checkers/, which will tell you whether a given
+proof is correct within a given formal system.  All of these systems, including
+CAS's, presumably use some version of [[file:template utilities.org][template utilities]], so they /do/ all
+have something in common; if that's what you mean by CAS, then perhaps I should
+be somewhat more lenient - but the thing is that HDM is fueled by more than
+"just" template utilities, unless maybe you take a really general sense of that
+word.  For instance, there are /parsers/ and /hypertext systems/ which in
+general need not have anything to do with math or templates except in passing,
+and which, if they do have something to do with math, need not have anything to
+do with computer algebra (e.g. they may not come up with answers to user
+queries).
+
+Not that I'm opposed to CAS's or the knowledge they contain!  At all!  In fact,
+these repeated CAS references are making me think that these may be a useful
+source of information to add to the HDM's KB as soon as possible.  After that,
+HDM /would/ be a CAS - among many other things.
+
+The point is /not/ to split hairs about what HDM is or isn't, but mainly to
+point out that it is meant to be as general as mathematics is, which is much
+more general than today's CAS.  If you want to think of it as the "CAS of the
+future" I guess that would be OK.  But there are probably a number of other more
+useful ways to think about it.
+
+Let me close by noting (without reference for right now) that there has been
+some work towards integrating CAS's and theorem provers.  This stuff is kind of
+interesting... but from what I remember, the stuff I was looking at seemed to be
+a bit bogged down in "standards creation", which is not my favorite topic to
+read about, so I temporarily shelved my inquiry.  It would be nice to have a
+better sketch of what's going on here (when the time is right).
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 18 01:42:00 2005 UTC

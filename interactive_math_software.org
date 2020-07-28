@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+In order to be concrete about the sorts of things we might 
+work on if we had a [[file:literate programming.org][literate programming]] system as part
+of PlanetMath, check out http://mathulator.com and 
+http://calc101.com.  These are for-pay services that you can
+use to get answers to various math questions.
+
+There is no reason why we couldn't also provide for-pay
+services using the same model, but with a free software
+backend.
+
+People who contend that PM shouldn't restrict access to
+site services might object to this, but we could argue
+that since the software is free, its use isn't really
+restricted.
+
+The hurdle of actually being able to compile and install
+the software may be too much for some people.  Or,
+some computer-savy person might make a stand-alone
+program using the code, and provide that.  But PM would
+still be in a good position to "advertise" its own service,
+since it is already a popular site.
+
+As the [[file:HDM.org][HDM]] tools develop, we should be able to provide
+increasingly sophisticated question-answering services.

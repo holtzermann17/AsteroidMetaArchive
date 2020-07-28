@@ -1,0 +1,109 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As it stands, Noosphere is currently being used for pure sciences
+(mostly mathematics, but physic and other sciences are starting up).
+I ([[file:rspuzio|Ray.org][rspuzio|Ray]]) thought that it might also be a good idea to set
+up [[file:Noosphere.org][Noosphere]] instances for the useful arts as well as for the
+sciences. Upon hearing this suggestion, Joe approved and proposed the
+name Planet Technae for the project, although I have a feeling that,
+given the amount of subject material to be covered it will be a solar
+system composed of several planets, so perhaps it will become "Solar
+System Technae" instead.
+
+What inspired me to conceive of this Planet Technae project is that I
+have been make use of the web to find information about metalworking,
+electronics, woodworking, and what not and have been highly impressed
+by both the quality and the quantity of information available.
+Unfortunately,this information is scattered all over the web, and it
+can take a lot of hit-or-miss searching to track it down.  To be sure,
+there is the Metal Web News and a few other such pages which bring
+together many links on the same themes, but these link pages do not
+cover most of what is out there, so it would be nice to bring all this
+knowledge under one roof in the form of a noosphere instance.
+
+At this point, it might be good to answer the question "Why do this
+when we already have Wikipedia?"  The answer is that Wikipedia is
+intended as a general purpose reference for the general non-technical
+reader whilst the project proposed is meant primarily as a technical
+reference for the craftsperson.  Thus, whilst the Wikipedia article
+"[http://en.wikipedia.org/wiki/Hammer hammer]" contains a good,
+all-around discussion of what a hammer is, what types of hammers
+there are, what they are used for, and hammers in general culture,
+this is not likely to be of use to the craftsperson who already is
+familiar with hammers and is looking for answers to specific technical
+questions such as: "What alloys are most suited for use as hammer
+heads and how should they be heat treated to make good hammers?" "What
+kind of wood is best for a hammer handle and how should the grain
+run?"  "What weight of hammer head is most suitable for the sort of
+work I plan to be doing?"  "What kind of hammer is best for repoussee
+work?"  I envision that the Planet Technae article on hammers would
+focus instead on providing detailed technical data which would allow
+one to answer such questions.
+
+Having argued for the usefulness of such a project, the next question
+is "How is it to come about?".  To begin, I would say that it might be
+worth waiting a while before starting so that Noosphere will be easier
+to install.  Then one will need to come up with a classification of
+types of entries and a classifications of the subject areas to be
+covered.  Finally, one will need to interest people in contributing
+information and using the new resource.  Also, one may want to
+consider the possibility of extending noosphere to accept file formats
+other than !TeX for the articles --- in particular, one might want to
+include support for various CAD formats for technical diagrams and
+schematic diagrams.  To begin the work of classifying the relevant
+information, I have begun the list below.  To identify possible
+sources of information, potential bibliographic links, and people to
+tap as potential authors, I have included the various links which I
+have come across while looking for such information.
+
+** Tentative Topics
+
+ * Stonework
+
+ * Metalwork
+
+## Metallurgy (perhaps much of this will be located on a more "pure science" planet)
+
+## Foundry
+
+## Forge
+
+## Machining
+
+## Sheet metal
+
+## Wires and springs
+
+ * Woodwork
+
+ * Glasswork
+
+ * Ceramics
+
+ * Plasticwork
+
+ * Electronics
+
+ * Working with fluids
+
+## Hydraulics
+
+## Plumbing
+
+ * Thermodynamic devices
+
+## Engines
+
+## Refrigerators
+
+* Discussion
+
+I like the idea of !TeX with simple but elegant line drawings (in a
+sort of classical style) as the main format for the work.  CAD and so
+on would be handy for color displays, and no doubt would add a lot to
+the work.  But formats that can be used to produce replicas of drawings by
+e.g. Leonardo would be an excellent format to emphasize IMO. (Not that CAD in some general sense of the word wouldn't be ideal for just that; just that usually it seems to mean something glitzy.) --[[file:jcorneli.org][jcorneli]]
+
+I agree completely.  In fact, I was thinking of the CAD primarily as a means of producing and describing the line drawings.  As you say, most CAD systems nowadays also offer much more, such as color and glitzy displays (maybe because I made my acquaintance with CAD sytems back when the only kind of graphics availble were monochrome line and wire frame drawings, I tend to forget the modern-day connotations of the term).  At any rate, I agree that the default mode of illustration should be engineering line drawings ([http://www.bekkoame.ne.jp/~khirata/english/mk_l01_s.htm like] [http://www.bekkoame.ne.jp/~khirata/english/l01_k2.htm these] [http://www.bekkoame.ne.jp/~khirata/english/l01_p01.htm examples]) and that extra frills (shades, color, three-dimesional graphics, photographs) should only be used when they serve a clear purpose in conveying information that could not be conveyed efficiently otherwise.  In other words, the purpose of illustrations is to convey essential information efficiently, not to
+dazzle the viewer with eye candy.  The primary reason for mentioning CAD was to standardize formats for graphics and it seems that some sort of CAD system is the standard format for drawings with most engineers and machinists nowadays. --[[file:rspuzio.org][rspuzio]]

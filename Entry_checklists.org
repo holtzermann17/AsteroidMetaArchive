@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To help authors create entries (and to improve old entries) we could have entry checklists.
+For example, for entries defining a topological property (say compact) 
+there are a natural questions that should be answered:
+ * How is the property preserved in subspaces?
+ * How is the property preserved under maps?
+ * Is it preserved under unions, intersections, products (finite, countable, arbitrary?)
+
+On the other hand, for matrix operations (say matrix inverse) we 
+could have another checklist
+ * Special cases for small matrices (n=1,2, 3) and diagonal matrices?
+ * What happens with eigenvalues, eigenvectors, norms, characteristic polynomial?
+ * Calculation rules (sum, product, Kronecker product, derivative)?
+
+--[[file:matte.org][matte]]
+
+This is a lot like the idea of a "frame" in AI.  A similar idea
+was used in the old mac program !HyperCard. --[[file:jcorneli.org][jcorneli]]

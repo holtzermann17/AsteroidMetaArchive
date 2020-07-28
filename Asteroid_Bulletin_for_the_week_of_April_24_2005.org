@@ -1,0 +1,125 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Feature: Free Math Books
+
+Matte has identified several electronically available math books which are
+either in the public domain or available under free license conditions.  In
+addition, Ray's work on identifying math books which are in the public domain by
+looking through the Library of Congress catalogue and comparing with the list of
+copyright renewals is slowly progressing --- several hundred candidate works
+have been identified.
+
+Identifying freely usable sources of mathematical information is important for
+projects like PlanetMath and the Hyperreal Dictionary of Mathematics because one
+can copy and adapt material without having to obtain permissions, puzzling over
+licensing terms, or worrying about where the line between fair use and
+infringement lies.  Even though it would be possible for these projects to
+proceed using by referring only non-free copyrighted material, it is more
+difficult and takes longer than working with existing Public Domain resources.
+
+*  Featurette: cvs access for HDM, FEM
+
+ * http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/FEM_CVS
+ * http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/HDM_CVS
+
+*  Featurette: letter-writing campaign
+
+We're working to establish connections and affiliations
+with individuals and organizations who can help us.
+Care to help us spread the word?
+
+ * http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Letter_writing_campaign
+
+*  Featurette: for-pay Q&A
+
+Would you like to participate in for-pay Q&A through PlanetMath, either as
+someone paying to get answers to your math questions, or as someone getting paid
+to answer questions?
+
+See discussion here:
+
+ * http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/for-pay_question_answering
+
+* Discussion of this week's Bulletin
+
+Thanks again for participating in this project guys.
+--[[file:jcorneli.org][jcorneli]] Sun Apr 17 22:06:20 2005 UTC
+
+Still plenty of time for expanding on these things
+or adding brand new stuff.
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 05:18:25 2005 UTC
+
+** Activities that didn't make it into the published version
+
+ * [[file:using template utilities to check proofs.org][using template utilities to check proofs]]
+ * discussion of UBI on [[file:PlanetMath Budget and Resources.org][PlanetMath Budget and Resources]]
+ * infopacks
+ * refactoring (and maybe soon finishing) scholium system
+ * quadrock
+
+----
+
+Can you explain why the UBI discussion, the quadrock grants, and
+the infopacks didn't make the published version?  These seem like
+they would be good things to solicit input on.  Especially the
+quadrock grants... --[[file:akrowne.org][akrowne]] Mon Apr 25 21:02:24 UTC 2005
+
+I assume it's because we didn't write anything about them.  If
+we want to be sure that a certain item makes it into the
+bulletin, we should write something about it and not assume
+that Joe will write about it if we don't. --[[file:rspuzio.org][rspuzio]] 25
+April 2005
+
+Ray is correct.  And the reason that the other "featurettes" did
+make it in is that I was (luckily) able to expand them without
+writing much.  I had completely forgotten about the Bulletin
+on Sunday, and had to rush (as I was on my way out the door)
+to get it out today.  I was glad to see the short article
+about Free Math Books - which helped give some substance to the
+publication.
+
+I would have been happy to write more about the omitted
+topics, but I simply didn't have enough to say about them
+(especially because I was in a rush).
+
+Basically the issue is that whatever you want to
+see in the bulletin, you have to put there.  And note
+in addition that that I'm not "really" the editor either:
+I like editing things, but anyone can edit the bulletins
+if they want to.
+
+My editorial decision this week was: It isn't good to
+include things without sufficient detail.  In the future,
+if something makes a big impression on me, I may be moved to
+expand a one-liner into an article, but there is no guarantee of
+that (even if it is something I've been working on).
+
+This ties into what Aaron was saying.  Getting feedback (I've
+realized) can be sort of hard.  You have to craft your
+statements carefully... and AFAIR, none of the bulletins have
+actually succeeded in getting feedback from anyone who wasn't
+already involved in AM.  I do assume people are reading them,
+so my main interest is in making the mini-articles
+/informative/.  If you think you can craft an article that
+will elicit feedback, great, but good luck.
+
+The one-liners are still useful as a record of what we did.
+The fact that no one expanded the other items this week may
+be a useful thing to have on record too.  Perhaps there we
+will (collectively) have more to say about these things next
+week. --[[file:jcorneli.org][jcorneli]] Tue Apr 26 00:14:47 2005 UTC
+
+OK.  Basically, I stopped writing about the items after the last 
+time I did this, and you totally rewrote what I wrote.  I figured
+(incorrectly) that you were taking over the entire process beyond
+the initial suggestion of items to include. --[[file:akrowne.org][akrowne]] 
+Tue Apr 26 03:41:27 UTC 2005
+
+I think that to make the bulletins as good as possible we should all be listing,
+writing, rewriting, and discussing.  The only thing I'm planning to do
+"different" is that I'll also post the article to PM (and maybe elsewhere if we
+think of anywhere else to post them).  Remember: this is partly just an exercise
+to make sure that we all actually know what we're personally & collectively
+doing.  It also enables us to "cheat" as we look back and try to recall what
+we've done. --[[file:jcorneli.org][jcorneli]] Tue Apr 26 15:21:22 2005 UTC

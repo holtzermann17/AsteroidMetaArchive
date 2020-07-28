@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Whether or not we have a working [[file:OCR Subsystem.org][OCR Subsystem]],
+we will need to manage unassimilated content.
+
+Since this content will typically (but certainly not always)
+be non-free, we will have to keep it in secret vaults or
+something like that (using Fair Use).  We can't publish
+transparent or non-transparent copies of non-free works,
+nor can we come "too close" to any one of these works.
+
+This means that until all the components of the system
+are working well enough together to be able to really
+"understand" things, we either have to copy from free
+works.
+
+I haven't thought of this before, but the kernel of the HDM
+may turn out to be free, not just by choice, but
+also because it may use copylefted free content.  Note that it should
+be fine to use a copylefted kernel that links to non-copylefted
+material, since the non-copylefted material is all going to
+be (C) Hyperreal Enterprises (or perhaps sometimes Deep Black).
+If needs be, the linked content can be dually released under
+whatever licenses these entities like.  In particular, I expect
+them to have a standing policy of releasing their creative works
+to the public domain.  (From whence the will be GPL and FDL
+compatible.)
+
+Since anything we don't get from a free work we will have
+to put together ourselves from our own free (but not zero-cost)
+thought, it is good to manage a collection of things we can
+use immediately.
+
+
+* See:
+
+This: [[file:Copyright renewals for math books.org][Copyright renewals for math books]]
+
+And the discussion at [[file:PG.org][PG]] is also at least somewhat related.
+
+
+* Specific related works
+
+[[file:Linguistic analysis of mathematics, by Arthur F. Bentley..org][Linguistic analysis of mathematics, by Arthur F. Bentley.]]

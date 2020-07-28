@@ -1,0 +1,177 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is to coordinate work on PlanetMath and other AsteroidMeta projects done
+through the Google Summer of Code programme (2005).
+
+I made an announcement soliciting participation on PM's home page and [http://groups-beta.google.com/group/summer-discuss/browse_thread/thread/71b083394be7d57b/06a8f4e255c46137#06a8f4e255c46137 here].
+
+----
+
+ *D'oh!* - So we didn't make it into the programme =( All bets are off, folks.
+Better luck next year, perhaps, but please do continue to check this site or with 
+me perodically for volunteer or funded opportunities. --[[file:akrowne.org][akrowne]] Thu Jun 2 07:05:46 UTC 2005
+
+----
+
+*  Summary of the Program
+
+(The home page is [http://code.google.com/summerofcode.html here].)
+
+Basically, for the summer of 2005, students may work on a summer project within an
+open source project, and Google will pay them $4500 upon successful completion. 
+Google will also donate $500 to the open source project, for each student
+participant.
+
+The project must well-define the programming task, and provide a mentor.  The mentor
+will appraise the student's progress at the end of the summer, and the award is
+contingent upon this appraisal.
+
+Basically, the program sets up "virtual internships" -- which are paid, at that!  Its a
+pretty good deal for everyone involved, extremely educational, and extremely beneficial
+to the open source (and open content, in our case) world.
+
+The signup deadline is June 14, 2005.
+
+*  Who Can Participate?
+
+Note that only /students/ are eligible to participate.  While there's some fuzziness
+regarding the definition of "student", it appears that you should be enrolled at an educational institution somewhere and in an "active" status (i.e. you are in the midst of
+taking courses, though you may not be for the summer).  It also appears that you can 
+be a part-time student, and working at levels above undergrad (say, master's or PhD).
+
+You must be at least 18 years old to participate, too, for understandable legal
+reasons.
+
+*  Who Wants to Participate?
+
+List yourself here if you're interested (remember, you have until June 14 2005),
+even if you dont know what you want to work on yet.
+
+**  Mentoring
+
+ * [[file:jcorneli.org][jcorneli]] (Work on HDM subproject or scholium systems or other collaborations or whatever)
+ * [[file:akrowne.org][akrowne]] (Work on PM, Noosphere, connections to FEM, and connected projects).
+ * [[file:rspuzio.org][rspuzio]] (Logic end of HDM -- [[file:h-code.org][h-code]], [[file:template utilities.org][template utilities]], automatic logic checking)
+
+**  Coding
+
+ * [[file:gregb.org][gregb]] (Word on Noosphere,PM,Login/User Management System,...)
+
+*  Who Will Do What?
+
+Check out [[file:Feature_Requests|this page.org][Feature_Requests|this page]] for ideas.  This section should turn into a fixed list,
+with links to project specs on this wiki, coupled with a name.
+
+*  Discussion
+
+Negotiation of projects and specs should go here.
+
+
+*  Meta
+
+Discussion of the programme and its application to PM and AsteroidMeta projects.
+
+----
+
+Neat idea. --[[file:jcorneli.org][jcorneli]] Wed Jun 01 18:53:08 2005 UTC
+
+I think this might be the opportunity we needed to get people from the coding world
+invovled. Its like your virtual internships idea, except paid =) 
+
+I think HDM and other AM projects are fine for inclusion, as long as they qualify as
+"open source projects" (basically, the code must be released openly, on a web-accessible
+source repository).  Check out [http://code.google.com/mentfaq.html this page] for a bit 
+more info on the organizational side of things.
+--[[file:akrowne.org][akrowne]] Wed Jun 1 18:55:20 UTC 2005
+
+We should try to get the word out.  If you can, propagate this page, or the announce
+I linked to at the beginning, to student mailing lists and such. --[[file:akrowne.org][akrowne]] Wed Jun 1 19:16:29 UTC 2005
+
+Too bad we didn't get to this earlier, or we could have listed HDM as a separate
+project; apparently google only wants to fund one coder per project.  So, while
+misc. AM projects could work, we'll likely only have one person-summer to work
+with. --[[file:jcorneli.org][jcorneli]] Wed Jun 01 21:18:11 2005 UTC
+
+I'm not sure what is meant by "project".   I don't think they mean like, one open source
+project.   I think they mean one separately-managed and mentored code item.  But maybe 
+I'm wrong!  I can't imagine them only putting one coder on, say, all of FreeBSD. 
+
+By the way I just sent in our info to Chris !DiBona, hopefully we'll get on "the list" tonight.
+
+--[[file:akrowne.org][akrowne]] Thu Jun 2 04:48:34 UTC 2005
+
+While it is unfortunate that we did not get in, it may not be surprising given how this happened so fast at the last minute.  Hopefully, this program will happen again next summer and we can get in on it next year.  By then, we should be a lot better organized also --- the PM non-profit status should be completely straightened out officially and the HDM and scholia projects should be further along with working versions already out.
+
+Of course, I would still be interested if a student (or anyone else, for that matter) wanted to work on the logic end of HDM!  Even though I might not be able to offer any money, it could certainly be a great educational opportunity to learn about formal logic.  (And depending on circumstances, an student might even find a way secure recompense in the form of academic credit.)
+
+I am pleased to see that somebody is willing to pay a million dollars to promote free software.  Even if we are not involved in the program, it still should be worth monitoring and trying to encourage programs like this one which support the writing of free software.  
+
+Also, this puts the debate on Google ads in a new light --- considering that Google is funding free software makes me think differently about supporting them.  Also, this suggests that, if they are willing to make a financial commitment to free software, they might also be willing to support Planet Math.  Perhaps, the controversial "Google Ads" icon could even be replaced by a "Google Matching Grant" icon? --[[file:rspuzio.org][rspuzio]] 2 June 2005
+
+I think Google has some work to do to make the organizational application process as open
+and transparent as the software development they are funding.  
+
+I've also had another thought: what could be done if, instead of Google solely funding a program like this,
+a consortia of companies (and perhaps non-commercial institutions) were to be formed?  I would
+like to pursue this idea, but of course, I would quickly run into the same problems I already
+have with failure to get funding for PlanetMath: lack of connections and influence.  This might be an idea to propagate, though.
+--[[file:akrowne.org][akrowne]] Thu Jun 2 17:41:06 UTC 2005
+
+There's something rather like this in France that I learned about on the FSB mailing list.
+http://adullact.org, and there's something /somewhat/ like this in Minneapolis,
+https://www.avalanchecorporatetechnology.net.  Avalanche is "gated" and therefore I think
+they are /not cool/.  Adullact is French, and I don't have the patience or fluency
+to read through much of their material.  Perhaps someone could do a review? (Ray?).
+
+I'll ask my stepmom about this, she has experience as the executive director of a nonprofit
+coalition that involved several different organiziations (both industry and nonprofit).
+
+I'm a little surprised that nothing like this exists.  (I guess, like the NSF
+but for free software.)  Maybe this would be a good project to bring up with
+Soros. :)  We could also ask RMS what he thinks - this would be a good potential
+place to collaborate, and he certainly has some of the connections and influence
+we lack -- and surely a similar interest.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jun 02 20:09:59 2005 UTC
+
+Note [http://groups-beta.google.com/group/summer-discuss/browse_thread/thread/caba211e75360663/2938e7121146b03b?q=alternative&rnum=1#2938e7121146b03b "Alternative for rejected projects"] thread on the SOC google group.
+--[[file:jcorneli.org][jcorneli]] Thu Jun 02 20:25:46 2005 UTC
+
+After having a good look at the Adullact webpage, I was rather pleased to see what they had there.  Among other things, they have an interesting spin on free software --- trying to persuade governments to switch over to using free software.  Also, they have a lot of interesting news, of which I will share two items.  The government of Taiwan is seriously looking into replacing all the software on government computers with free software because the licensing fees to M$ amount to a rather sizable portion of the budget which could be saved by switching to free software.  In India, the government will distribute several million disks filled with free programs to people in an attempt to popularize free software.
+
+Even cooler is the attitude of the president of the organization --- in his editorial, he uses math in his argument for free software.  He argues that, just as the fact that mathematical theorems are in the public domain and that, far from hindering the development of the subject, freedom of mathematical information has advanced the subject so too software should be free for about the same reasons.  Sounds familiar, doesn't it!  Of course, as we are finding out the hard way, math is not quite as free as it seems but, never mind, it is thrilling to find people who think the same way --- reading the article felt like rediscovering a lost friend or relative.
+
+Also, Adullact offers memberships for individuals and groups.  In particular, group memberships are free, so after looking into matter some more, maybe we could consider Planet Math and Asteroid applying for membership.  Also, as to the idea of forming some sort of consortium or organization, perhaps this might be a way to go. 
+--[[file:rspuzio.org][rspuzio]] 2 June 2005
+
+Another related link (from todays /.)  http://www.linuxfund.org/  
+(They got money by creating a special credit card; now they don't
+have anyone to administer dispersal of the funds!) --[[file:jcorneli.org][jcorneli]] Sat Jun 04 00:49:19 2005 UTC (Revised Sat Jun  4 12:47:36 2005)
+
+: I had a look at this discuission and the stroy which started it.  To me it looks like a confused mess.  The discussion is mostly about suggesting ways in which the money could be spent.  However, this seems to leave out one very important point.  The organization still exists and, while the bylaws might say (I haven't read them so I am just making a probable guess) that the money can only be spent on funding free software development and the costs of maintaining the organization, in particular, hiring someone to administer disperasal of funds, if they don't say that this *has* to be done (i.e. the fallacy of the converse), then there is nothing to stop them from simply keeping the money in the bank and not spending any of it.  Hopefully, this will get resolved.  However, given the feeding frenzy which seems to have developed, chances of getting any of this money in the event that the organization is dissolved may not be so good.  Moreover, as someonre pointed out in the discussion, the bylaws may already contain specific instructions on what is to be done with these funds in the event that the organization folds, so all the discussion as to where the money should be given may be irrelevant.  Finally, I would like to point out that not spending the money may not be as wasteful as it seems --- as time goes on and the fund increases as people use their Linux fund credit cards, a larger principal will produce a greater interest.  Then, if the organizaton gets itself back in order, they might be able to use the interest to support programmers and let the revenue from the credit cards increase the principal so that there will be more interest to give away in the future. --[[file:rspuzio.org][rspuzio]] 4 June 2005
+
+
+
+Another related link endeavor: http://www.affs.org.uk/grants/
+(Short summary: http://www.affs.org.uk/news/news0011.html).
+
+We could apply - they say they prefer a "UK focus" but PM's world-wide focus is
+probably relevant to the UK.  (Tho I don't know how many PM users are from there -
+it would be nice to have some statistics, maybe a map showing
+where registered users are from!)  We could also just write to ask them more about their program! --[[file:jcorneli.org][jcorneli]] Sat Jun 04 17:51:53 2005 UTC
+
+: They also say they prefer to give grants when there will be matching donations.
+This seems relevant WRT the new-found [[file:501(c)3 Saga|501(c)3 status.org][501(c)3 Saga|501(c)3 status]] of PM.
+(Also maybe this is something we could get Google interested in, in terms of
+"working together in other ways".) --[[file:jcorneli.org][jcorneli]] Sun Jun 05 01:05:27 2005 UTC
+
+There's something called the "Free Software Consortium" but it seems to be
+not-so-active.  --[[file:jcorneli.org][jcorneli]] Sat Jun 04 18:04:50 2005 UTC
+
+There's something called [http://www.eurolinux.org/ EUROLINUX] (you might have heard of them).
+I don't know to what extent they actually provide funding, but they do have several
+[http://www.eurolinux.org/sponsors/index.en.html corporate sponsors]. --[[file:jcorneli.org][jcorneli]] Sat Jun 04 18:07:26 2005 UTC
+
+----
+I submitted this [[file:HDM SOC proposal.org][HDM SOC proposal]] to lispNYC. --[[file:jcorneli.org][jcorneli]] Sat Jun 04 18:25:41 2005 UTC

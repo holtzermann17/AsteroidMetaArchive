@@ -1,0 +1,115 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Spurred by the conference proposal at http://www.fi.muni.cz/~sojka/dml-2008.xhtml
+(DML 2008), and specifically, the question
+
+ * Is there a model of a sustainable, interoperable, and extensible mathematical library that mathematicians can use in their everyday work?
+
+I thought it would be good to write a short paper describing the way
+we would currently answer this question at PlanetMath.  
+
+Since the due-dates for this paper are right on top of us, I don't
+know if this will be for them, or just for our own benefit.  Anyway,
+here goes.
+
+Please join in!  I've hit some of the highlights -- additional items,
+or 'fill-in' prose would be helpful. --[[file:jcorneli.org][jcorneli]]
+
+---
+
+*  The PlanetMath approach to DML == 
+
+**  Abstract
+
+This paper describes the concrete contributions towards realizing the
+DML "dream" that have grown up in and around the !PlanetMath project.
+!PlanetMath is safely "a sustainable, interoperable, and extensible
+mathematical library that mathematicians can use in their everyday
+work."  Our ability to build further towards the DML dream will depend
+on just how 'useful' we can be.
+
+**  Body
+
+ * Licencing.  !PlanetMath is built of user-contributed material that
+  has been made available under the terms of the GNU Free
+  Documentation Licence.  This has facilitated rapid development of a
+  core corpus (the encyclopedia) that was useful 'right away'.  
+
+ * Importing material.  Like anyone else with access to a scanner and
+  OCR technologies, we anticipate it being 'easy' to import material
+  that is already in the public domain.  That said, we have yet to set
+  up a viable production pathway.  We've identified Archive.org as a
+  possible source of material and partner for the scanning end, and
+  Dr. Suzuki's "Infty" program as a tool to use for the OCR end.
+  Importing tons of material into the !PlanetMath encyclopedia would
+  probably be a bad idea, so we expect to create a separate area of
+  the site for imported texts, and to attach encyclopedia entries to
+  them when relevant.
+
+ * Links.  Linking between corpora has been facilitated by the NNexus
+  program developed by Aaron Krowne and James Gardener.  This tool
+  will be useful for linking between newly-digitized texts and our
+  encyclopedia (as above), or between the encyclopedia and ArXiv, or,
+  potentially between any digital text (e.g. a research paper on ArXiv
+  or elsewhere) and any corpus that provides with suitable metadata
+  (e.g. Wikipedia.)
+
+ * Licensing reconsidered.  The legal situation with ArXiv preprints,
+  to say nothing about the 'postprint' world of standard publishing,
+  is a terrible mess from the point of view of open licensing.
+  Indeed, the current world of "open" publications is, if anything, a
+  further mess (see "The Fog of Copyleft").  Linking between corpora
+  is fine, but in order to do anything more substantial with a given
+  text, we presumably need the rights to do so.  The best step we can
+  think of towards realizing the DML dream would probably be to work
+  out an internation hacker-friendly copyright amnesty for math
+  content.  (There *is* a treaty in place that says mathematics can't
+  be copyrighted, so you'd think... but no.)
+
+ * Links reconsidered. Our ability to coorperate with other
+  organizations working both in mathematics and in other areas
+  relevant to the DML dream (e.g. linguistics, computer science) would
+  be massively enhanced by a considerably more flexible platform for
+  cooperation and development.  We're working on a hackable multi-user
+  interactive semantic hypertext platform that should be useful in any
+  disciplinary context.  !PlanetMath's current backend is an example of
+  "semantic hypertext" with relatively fixed semantics (despite being
+  open source).  Hackable semantic hypertext takes the 'wiki concept'
+  into the domain of code -- for example, it should facilitate the
+  (relatively) rapid development of extensible free curricular
+  material integrated with the rest of the !PlanetMath site. 
+
+The obvious question is "Who is going to this conference who might
+present this paper?"  Remember, the conference occurs the week before
+MathFest in England!  I, for one will surely not be there.
+--[[file:rspuzio.org][rspuzio]]
+
+Even if no one went, we still might get the paper in print if we
+get all the pieces in on time (big if!) --[[file:jcorneli.org][jcorneli]]
+
+Does their proceedings also include papers which were not presented
+at the conference?  It sounds unlikely, so I would want to check first.
+The reason that I care is that, if none of us is going and their
+proceedings only includes papers presented at the conference, then there 
+is no reason to rush.  Rather, we could take our time and get the paper
+in print at our own leisure, rather than trying to meet their deadlines.
+--[[file:rspuzio.org][rspuzio]]
+
+By way of critique, a issue that will likely need to be examined is 
+"multimodality" and PlanetMath.   We have encyclopedia entries, yes, but
+what about other works?  Joe somewhat touched on research papers by mentioning
+ArXiv, and certainly interlinking with them would be good.   Collaboration
+objects were not mentioned above, and they would probably be good to 
+mention.  But in the current incarnation of Noosphere, these objects are
+mostly in their own little silo and aren't really meaningfully meshed with
+the rest of the system (e.g., no automatic linking takes place).   
+
+Papers, books and expositions are minimally supported in terms of having
+their basic metadata encoded, but very little collaboration is supported 
+over top these objects.
+
+In conclusion, would we argue that Noosphere is an exceptionally good 
+platform for collaboration now, or perhaps a good starting point for something 
+even better, or perhaps a good member of a math collaboration "ecosystem"?  
+I think some level of emphasis could be put on all three. --[[file:akrowne.org][akrowne]]

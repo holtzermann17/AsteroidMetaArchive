@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I realize that PM's plans have a lot of contingencies to them,
+but I think it would be great if we could put together some
+ETAs for the PM [[file:Feature Requests.org][Feature Requests]] - perhaps several different
+projections, taking into account different (somewhat realistic) states of the world.
+
+For example, I'm a fan of the [[file:email posting to forums.org][email posting to forums]] feature request.
+Is completion of this request dependent on me getting Noosphere installed
+(1 wk?), learning how to hack it (n wks), and implementing the changes
+(1 wk?)?  (Indeed, this request may be a bit more complicated than that,
+because there are additional outside programs that one needs to interface
+with, namely mail programs.)
+
+I'm not sure what PM's "liquid" resources are, in terms of coding effort
+(despite the [[file:PlanetMath Budget and Resources.org][PlanetMath Budget and Resources]] page listing people
+who /have/ contributed).
+
+It seems to me that once we figure out what the liquid resources are,
+we might number the list of feature requests and other [[file:Tasks.org][Tasks]], and
+starting with the #1 priority, apply 100% of the available effort to these
+tasks.  --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:Plans.org][Plans]] / [[file:the way of the asteroid.org][the way of the asteroid]]

@@ -1,0 +1,396 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ 1. suppose * is a SET and * is a VECTOR SPACE over a FIELD *.
+
+ 1. let us denote by * the SET of MAPPINGS from * to *.
+
+ 1. now * is again a VECTOR SPACE if we equip it with POINTWISE MULTIPLICATION and ADDITION.
+
+ 1. in detail, if * and *, we set *.
+
+ 1. next, let * be another SET, let * be a MAPPING, and let * be the PULLBACK of * as defined in this entry.
+
+ 1. if * is not the ZERO VECTOR SPACE, then * is SURJECTIVE if and only if * is INJECTIVE.
+
+ 1. first, suppose *, *, and *.
+
+ 1. for the second claim, suppose * is SURJECTIVE, *, and *.
+
+ 1. if *, then for some *, we have *, and *, so *.
+
+ 1. hence, the KERNEL of * is zero, and * is an INJECTION.
+
+ 1. on the other hand, suppose * is a INJECTION, and * is not a SURJECTION. 
+
+ 1. then for some *, we have *. 
+
+ 1. also, as * is not the ZERO VECTOR SPACE, we can find a NON-ZERO VECTOR *, and define * as *
+
+ 1. now * for all *, so *, but *.
+
+ 1. suppose * is a LINEAR MAP between VECTOR SPACES * and *.
+
+ 1. then * is INJECTIVE if and only if if *.
+
+ 1. here, * is the KERNEL of the LINEAR MAP *.
+
+ 1. suppose * is INJECTIVE, and * for some VECTOR *. 
+
+ 1. then *, so *. 
+
+ 1. on the other hand, suppose *, and * for VECTORS *.
+
+ 1. then *, so *.
+
+ 1. for or *, the BINOMIAL COEFFICIENT * is an INTEGER.
+
+ 1. the proof is by induction on *. 
+
+ 1. for *, the claim is clear.
+
+ 1. thus, suppose the claim holds for *.
+
+ 1. for *, PASCAL'S RULE gives *.
+
+ 1. that is, * are INTEGERS.
+
+ 1. since *, the proof is complete.
+
+ 1. suppose * is a SEMINORM on a REAL (or COMPLEX) VECTOR SPACE *.
+
+ 1. Property 1 follows using HOMOGENEITY;
+
+ 1. Property 2 follows using SUBLINEARITY and Property 1;
+
+ 1. suppose * is an OPEN SET in *, and suppose * is a sequence of SMOOTH, COMPLEX valued FUNCTIONS on *.
+
+ 1. then there exists a SMOOTH FUNCTION * for all *, and *.
+
+ 1. suppose * is an OUTER MEASURE on a set *, and suppose * is the SET of all *-MEASURABLE sets in *.
+
+ 1. then * is a *-ALGEBRA, and * restricted to * is a MEASURE (on *).
+
+ 1. let * be a TOPOLOGICAL VECTOR SPACE, and let * be a SEQUENCE in *. 
+
+ 1. then * is a CAUCHY SEQUENCE if for every NEIGHBORHOOD * of * there exists a * such that * for all *.
+
+ 1. if * is a CAUCHY SEQUENCE, then * is BOUNDED.
+
+ 1. suppose * is a TOPOLOGICAL SPACE.
+
+ 1. then * is a *-SPACE if and only if for all *, we have *.
+
+ 1. by manipulating the definition using DE MORGAN'S LAWS, the claim can be rewritten as *.
+
+ 1. as * is a *-SPACE, there are OPEN SETS * such that *, and *.
+
+ 1. thus, the INCLUSION from left to right holds.
+
+ 1. on the other hand, suppose * for some OPEN * such that *.
+
+ 1. then * and the claim follows.
+
+ 1. if we adopt the notation that a NEIGHBORHOOD of * is any SET containing an OPEN SET containing *, then the Equation 1 can be written as *.
+
+ 1. suppose * is a TOPOLOGICAL SPACE. 
+
+ 1. then the following conditions are equivalent:
+
+ 1. the only SETS that are both OPEN and CLOSED are * and *.
+
+ 1. the only SETS with EMPTY BOUNDARY are * and *.
+
+ 1. the equivalence of conditions * and * is useful as it provides a way to
+show that a SUBSET of a CONNECTED TOPOLOGICAL SPACE is in fact the ENTIRE space.
+
+ 1. let us show that condition * implies *.
+
+ 1. suppose * is DISCONNECTED. 
+
+ 1. then there are OPEN, NON-EMPTY, DISJOINT SETS * such that *. 
+
+ 1. writing *, we see that * is both OPEN and CLOSED and * is neither * nor *. 
+
+ 1. thus condition * can not hold.
+
+ 1. next, let us show condition * implies condition *. 
+
+ 1. suppose there is a SET * that is both OPEN and CLOSED, but * and *. 
+
+ 1. then condition * can not hold as *.
+
+ 1. to prove that condition * implies condition *, suppose there exists a SET * such that *, *, and *.
+
+ 1. then DE MORGAN'S LAWS imply that *.
+
+ 1. clearly, * and * are OPEN, and by DE MORGAN'S LAWS and basic properties of the CLOSURE OPERATOR,we have *.
+
+ 1. hence condition * can not hold.
+
+ 1. all norms on FINITE-DIMENSIONAL VECTOR SPACES over * or * are equivalent.
+
+ 1. that is, any FINITE-DIMENSIONAL VECTOR SPACE over * or * is ISOMORPHIC to *
+for some *.
+
+ 1. note that * is just ISOMORPHIC to * as a VECTOR SPACE over *.
+
+ 1. first let's show that if two NORMS are equivalent on the UNIT SPHERE (with respect to some fixed NORM) then they are equivalent everywhere.
+
+ 1. we can write any * as a multiple of some SCALAR * and a VECTOR on the UNIT SPHERE, say *, that is *.
+
+ 1. then when suppose we have two equivalent NORMS, say * and *, on the UNIT SPHERE
+
+ 1. to see this, just write any ELEMENT of the SPACE in terms of the BASIS and then define the ISOMORPHISM to take that BASIS to the STANDARD BASIS in * and then extend LINEARLY.
+
+ 1. so the NORMS are equivalent everywhere.
+
+ 1. suppose we are working with the *-NORM. 
+
+ 1. now we want to show that any other NORM is a CONTINUOUS FUNCTION with respect to the *-NORM.
+
+ 1. take an arbitrary FINITE-DIMENSIONAL SPACE * and an arbitrary NORM *.
+
+ 1. also suppose that * is a BASIS of * and so an ELEMENT * may be written as *.
+
+ 1. now given an *, choose * such that *  (the EUCLIDEAN DISTANCE is less then *) implies that *.
+
+ 1. in fact we can just choose * to be the right side of the above inequality.
+
+ 1. now we note that the TRIANGLE INEQUALITY immediately also yields the inequality *.
+
+ 1. and so * is a CONTINUOUS FUNCTION.
+
+ 1. suppose we are given two NORMS * and *, we know that they are both CONTINUOUS FUNCTIONS with respect to the *-NORM.
+
+ 1. and so the FUNCTION defined as * is a CONTINUOUS FUNCTION on the UNIT SPHERE 
+(with respect to the *-NORM).
+
+ 1. this FUNCTION is CONTINUOUS except perhaps at *, but we don't care about the value at ZERO. 
+
+ 1. on the UNIT SPHERE however * is CONTINUOUS and thus achieves a MAXIMUM and a MINIMUM  since the UNIT SPHERE is COMPACT. 
+
+ 1. let's call the MINIMUM and MAXIMUM, * and * respectively.
+
+ 1. then for any * on the UNIT SPHERE we have *.
+
+ 1. and so the NORMS are equivalent on the UNIT SPHERE and thus, as we showed above, everywhere.
+
+ 1. suppose *$ is a DOMAIN and let * be an OPEN SET. 
+
+ 1. let * be HOLOMORPHIC FUNCTIONS. 
+
+ 1. then if the SET * is RELATIVELY COMPACT in *, we say that * is an ANALYTIC POLYHEDRON in *. 
+
+ 1. sometimes it is denoted *. 
+
+ 1. further, * is called the FRAME of the ANALYTIC POLYHEDRON.
+
+ 1. an ANALYTIC POLYHEDRON is automatically a DOMAIN OF HOLOMORPHY by using the FUNCTIONS that define it as * to show that * cannot be extended beyond a POINT where *.
+
+ 1. every BOUNDARY POINT of * is of that form for some *.
+
+ 1. furthermore, every DOMAIN OF HOLOMORPHY can be exhausted by ANALYTIC POLYHEDRA (that is, every COMPACT SUBSET is contained in an ANALYTIC POLYHEDRON) and in fact only DOMAINS OF holomorphy can be exhausted by ANALYTIC POLYHEDRA, see the BEHNKE-STEIN THEOREM.
+
+ 1. let * be an OPEN SET.
+
+ 1. note that sometimes * is required to be HOMEOMORPHIC to the UNIT BALL.
+
+ 1. a SET * is said to be LOCALLY ANALYTIC if for every POINT * there exists a NEIGHBOURHOOD * of * in * and HOLOMORPHIC FUNCTIONS * defined in * such that *.
+
+ 1. a SET * is said to be an ANALYTIC VARIETY in * (or ANALYTIC SET in *)
+if for every POINT * there exists a NEIGHBOURHOOD * of * in * and HOLOMORPHIC FUNCTIONS * such that *.
+
+ 1. a POINT * is called a REGULAR POINT if there is a NEIGHBOURHOOD * of * such that * is a COMPLEX ANALYTIC MANIFOLD. 
+
+ 1. any other POINT is called a SINGULAR POINT.
+
+ 1. the set of REGULAR POINTS of * is denoted by * or sometimes *.
+
+ 1. for any REGULAR POINT * we can define the DIMENSION as * where * is as above and thus * is a MANIFOLD with a  well defined DIMENSION. 
+
+ 1. let * be an ANALYTIC VARIETY, we define the DIMENSION of * by *.
+
+ 1. the REGULAR POINT * such that * is called a TOP SIMPLE POINT of *.
+
+ 1. a SET * where * is a LOCAL VARIETY is said to be a SUBVARIETY of *
+if for every POINT * there exists a NEIGHBOURHOOD * of * in * and HOLOMORPHIC FUNCTIONS * defined in * such that *.
+
+ 1. let * be RIEMANN INTEGRABLE and UNIFORMLY CONTINUOUS then *.
+
+ 1. note that if * is NON-NEGATIVE, then RIEMANN INTEGRABILITY is the same as being * in the sense of LEBESGUE, but if * oscillates then  the LEBESGUE INTEGRAL may not exist.
+
+ 1. suppose that * are DOMAINS OF HOLOMORPHY such that * whenever *. 
+
+ 1. then * is a DOMAIN OF HOLOMORPHY.
+
+ 1. suppose that * is a MEASURABLE FUNCTION, then the PARTIAL DIFFERENTIAL EQUATION * is called the BELTRAMI DIFFERENTIAL EQUATION.
+
+ 1. if furthermore * and in fact * has a UNIFORM BOUND less then * over the DOMAIN of definition, then the solution is a QUASICONFORMAL MAPPING with COMPLEX DILATION * and MAXIMAL SMALL DILATATION *.
+
+ 1. a CONFORMAL MAPPING has * and so the solution can be CONFORMAL if and only if *.
+
+ 1. the PARTIAL DERIVATIVES * and * (* is the COMPLEX CONJUGATE of *) can here be given in terms of the REAL and IMAGINARY PARTS of * as *.
+
+ 1. let * be a DOMAIN and let * be the BERGMAN KERNEL on *.
+
+ 1. we define a HERMITIAN METRIC on the TANGENT BUNDLE * by *, for *.
+
+ 1. then the LENGTH of a TANGENT VECTOR * is then given by *.
+
+ 1. this METRIC is called the BERGMAN METRIC on *.
+
+ 1. the length of a (PIECEWISE) * CURVE * is then computed as *.
+
+ 1. the DISTANCE * of two POINTS * is then defined as *.
+
+ 1. the DISTANCE * is called the BERGMAN DISTANCE.
+
+ 1. the BERGMAN METRIC is in fact a POSITIVE DEFINITE MATRIX at each POINT if * is a BOUNDED DOMAIN. 
+
+ 1. more importantly, the DISTANCE * is INVARIANT under BIHOLOMORPHIC MAPPINGS of * to another DOMAIN *. 
+
+ 1. that is if * is a BIHOLOMORPHISM of * and *, then *.
+
+ 1. let * be a DOMAIN and let * denote the VOLUME MEASURE on *.
+
+ 1. * is called the BERGMAN SPACE on *.
+
+ 1. the NORM on this SPACE is defined as *.
+
+ 1. further we define an INNER PRODUCT on * as *.
+
+ 1. the SPACE * is therefore a HILBERT SPACE.
+
+ 1. the INNER PRODUCT as defined above really is an INNER PRODUCT and
+further it can be shown that * is COMPLETE since CONVERGENCE in the
+above NORM can be shown to be the same as normal CONVERGENCE.
+
+ 1. there exists a QUASICONFORMAL MAPPING of the UPPER HALF PLANE to
+itself if and only if the BOUNDARY CORRESPONDENCE MAPPING * is
+ *-QUASISYMMETRIC.
+
+ 1. furthermore there exists an EXTENSION of *$ to a QUASICONFORMAL
+MAPPING of the UPPER HALF PLANES such that the MAXIMAL DILATATION of
+the EXTENSION depends only on * and not on *.
+
+ 1. that is, the EXTENSION is *-QUASICONFORMAL if and only if the BOUNDARY
+CORRESPONDENCE is *-QUASISYMMETRIC where * depends purely on *.
+
+ 1. supposing that we have the MAPPING * (where * is the UPPER HALF
+PLANE), then the MAPPING *, such that * where *, is the BOUNDARY
+CORRESPONDENCE of *.
+
+ 1. to prove the sufficiency of the above THEOREM OF BEURLING AND AHLFORS,
+define * as follows.
+
+ 1. given a * that is a QUASISYMMETRIC MAPPING of the REAL LINE onto
+itself and FIXES *, we define a MAP * where *.
+
+ 1. firstly note that if * is a SCHLICHT FUNCTION (* and *) then * has a
+POWER SERIES representation as *.
+
+ 1. suppose that * is a SCHLICHT FUNCTION, then * for all * and
+furthermore if there is some INTEGER * such that *, then * is some
+ROTATION of the KOEBE FUNCTION.
+
+ 1. in fact if * is a ROTATION of the KOEBE FUNCTION then * for all *.
+
+ 1. if there exists a ONE-TO-ONE and ONTO HOLOMORPHIC MAPPING * such that
+the INVERSE * exists and is also HOLOMORPHIC, then we say that * and *
+are BIHOLOMORPHICALLY EQUIVALENT or that they are BIHOLOMORPHIC.
+
+ 1. the mapping * is called a BIHOLOMORPHIC MAPPING.
+
+ 1. suppose that * is a SEQUENCE of COMPLEX NUMBERS with * and *, then *
+is called the BLASCHKE PRODUCT.
+
+ 1. this PRODUCT CONVERGES UNIFORMLY on COMPACT SUBSETS of the UNIT DISC,
+and thus * is a HOLOMORHIC FUNCTION on the UNIT DISC.
+
+ 1. furthermore for * in the UNIT DISC,*.
+
+ 1. sometimes * is called the BLASCHKE FACTOR.
+
+ 1. with this definition, the BLASCKE PRODUCT becomes *.
+
+ 1. suppose that * and * are two ORIENTED DIFFERENTIABLE MANIFOLDS of
+DIMENSION * (without BOUNDARY) with * COMPACT and * CONNECTED and
+suppose that * is a DIFFERENTIABLE MAPPING.
+
+ 1. let * denote the DIFFERENTIAL MAPPING at the POINT *, that is the
+LINEAR MAPPING *.
+
+ 1. let * denote the SIGN of the DETERMINANT of *. 
+
+ 1. that is, the SIGN is POSITIVE if * preserves ORIENTATION and NEGATIVE
+if * reverses ORIENTATION.
+
+ 1. let * be a REGULAR value, then we define the BROWER DEGREE (or just
+DEGREE) of * by *.
+
+ 1. it can be shown that the DEGREE does not depend on the REGULAR value *
+that we pick so that * is well defined.
+
+ 1. note that this DEGREE coincides with the DEGREE as defined for MAPS of
+SPHERES.
+
+ 1. let * be a CONTINUOUSLY DIFFERENTIABLE FUNCTION in the REAL sense,
+using * instead of *, identifying * with * where * and we also write *
+(the COMPLEX CONJUGATE).
+
+ 1. then we have the following PARTIAL DERIVATIVES:
+
+ 1. sometimes these are written as *and * respectively.
+
+ 1. the classical CAUCHY-RIEMANN EQUATIONS are equivalent to *.
+
+ 1. this can be seen if we write * for REAL valued * and * and then 
+the DIFFERENTIALS become *.
+
+ 1. then the CAUCHY-RIEMANN equations are given by *.
+
+ 1. in several COMPLEX DIMENSIONS, for a FUNCTION * which maps * where *
+we generalize simply by *.
+
+ 1. that is, * is HOLOMORPHIC if and only if it satisfies the above
+equations.
+
+ 1. a MANIFOLD * is called a COMPLEX ANALYTIC MANIFOLD (or sometimes just
+a COMPLEX MANIFOLD) if the TRANSITION FUNCTIONS are HOLOMORPHIC.
+
+ 1. a SUBSET * is called a COMPLEX ANALYTIC SUBMANIFOLD of * if * is
+CLOSED in * and if for every POINT * there is a COORDINATE
+NEIGHBOURHOOD * in * with COORDINATES * such that * for some INTEGER
+ *.
+
+ 1. obviously * is now also a COMPLEX ANALYTIC MANIFOLD itself.
+
+ 1. that is, * is of DIMENSION * when there are NEIGHBOURHOODS of every
+POINT HOMEOMORPHIC to *.
+
+ 1. such a MANIFOLD is of REAL DIMENSION * if we identify * with *. 
+
+ 1. of course the TANGENT BUNDLE is now also a COMPLEX VECTOR SPACE.
+
+ 1. a FUNCTION * is said to be HOLOMORPHIC on * if it is a HOLOMORPHIC
+FUNCTION when considered as a FUNCTION of the LOCAL COORDINATES.
+
+ 1. examples of COMPLEX ANALYTIC MANIFOLDS are for example the STEIN
+MANIFOLDS or the RIEMANN SURFACES.
+
+ 1. of course, any OPEN SET in * is also a COMPLEX ANALYTIC MANIFOLD. 
+
+ 1. another example may be the SET of REGULAR POINTS of an ANALYTIC SET.
+
+ 1. COMPLEX ANALYTIC MANIFOLDS can also be considered as a special 
+case of CR MANIFOLDS where the CR DIMENSION is MAXIMAL.
+
+ 1. suppose that * is twice DIFFERENTIABLE and let *.
+
+ 1. then the COMPLEX HESSIAN is the MATRIX *.
+
+ 1. a twice CONTINUOUSLY DIFFERENTIABLE REAL valued FUNCTION with a
+POSITIVE SEMIDEFINITE REAL HESSIAN MATRIX at every POINT is CONVEX, 
+but a FUNCTION with POSITIVE SEMIDEFINITE COMPLEX HESSIAN MATRIX at 
+every point is PLURISUBHARMONIC.

@@ -1,0 +1,11 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I think it would be nice to use the FEM code to make a "big book"
+containing all the documentation for the HDM project.  Ross has
+some other highly-multiply-authored works that he has going on, too.
+All in all, it would be pretty cool just to be able to drop something
+derived from the FEM into a collection of !TeX files and say "go"
+and have it spit out a compliation.  But porting to the HDM collection
+would be a nice, simple, step.
+--[[file:jcorneli.org][jcorneli]]

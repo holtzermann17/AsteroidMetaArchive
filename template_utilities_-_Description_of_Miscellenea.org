@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This section includes various subroutines which are used in constructing the template utilities.  None of these routines has very much to do with templates in particular --- they are general purpose routines to do thing like see if a list contains repetitions.
+
+Back to [[file:template utilities.org][template utilities]]

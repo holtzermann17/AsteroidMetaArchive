@@ -1,0 +1,15 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As a proof of concept, one could consider a miniature version of HDM which is restricted to propositional logic.  The components of this would include:
+
+ * A subset of h-code which is sufficient for encoding proofs and definition in propositional logic
+
+ * An automatic proof checker for propositional logic.
+
+ * A parser which can translate between conventional notations of symbolic logic and h-code.
+
+ * A database of results in propositional logic.  This can be obtained by processing the metamath database through the parser.
+
+----
+[[file:Focused HDM subprojects.org][Focused HDM subprojects]]

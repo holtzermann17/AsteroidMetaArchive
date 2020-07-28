@@ -1,0 +1,105 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+PlanetMath needs coding and administration stuff done, and we now have a little bit of money 
+to do some of these things.  Most are best modelled as short-term contract work, or "code bounties" as some call them.  This page will be the central location for organizing these
+jobs.  Available jobs will be linked here in the appropriate section, and they will be moved
+to "in-progress" and "completed" at appropriate times.
+
+** How It Works
+
+Each bounty will be defined on its own page.  The key pieces of metadata will be provided:
+
+ * Title of the bounty project.
+ * Posting date.
+ * Whether the bounty is available or accepted (under contract).
+ * Estimated time to complete (hours).
+ * Estimated fee/price for the work.
+ * Objective.
+ * General outline of the solution, inputs, outputs, data sources, etc.
+
+The bounty price is will roughly be based on, time, complexity, and vagaries such as the
+market and how much money we have in the PlanetMath coffers.  *However, the price is
+negotiable!* Keep in mind, though, if we receive multiple offers, you may have to accept 
+a lower fee to get the work =)
+
+Proceduralities:
+
+ * Contact us at *feedback@planetmath.org* if you are interested in a bounty, giving an
+alternate asking price if you feel you require more or could do the work for less.  
+ * If we don't know you, expect to send us a resume and code/design portfolio (as is pertinent).
+ * Expect to have to define a timetable for the work, with milestones (if pertinant), and stick to it.  Make some estimates.  If you aren't sure, give yourself wiggle room.
+ * On most bounties, you will be working with us (the .org officers or PlanetMath project volunteers) in some capacity.   So, be able to work with people (remotely, at that) is a must.
+ * At our option, we may wait a while (a week or two) to solicit more offers or evaluate more
+applicants.  Don't expect us to instantly choose you when you make an offer.
+ * *There will be a contract* covering the basic arrangements.  We are still working on it, but 
+don't expect there to be any real surprises.
+
+** Payment
+
+Except for extenuating circumstances, we will not pay any of the balance of
+short-term bounties until satisfactory completion of the work.  For longer-term jobs, we are
+more likely to assent to installments.
+
+Payment will be by check, mailed from us, for the agreed-upon fee.
+
+** Tax Implications and Entities
+
+The PlanetMath organization, PlanetMath.org, Ltd., will be the client of the contract work.
+By IRS regulations, we can pay an individual up to $600US per year without having to have
+them fill out a 1099 form.  
+
+It is the bounty-hunter's (contractor's) obligation to pay their taxes based on their 
+earnings from us.
+
+* Bounties
+
+** Available
+
+These are the available bounties.  
+
+ * [[file:PM Bounty--Outstanding questions list.org][PM Bounty--Outstanding questions list]]
+ * [[file:PM Bounty--Improvements to editorial aspects of Noosphere.org][PM Bounty--Improvements to editorial aspects of Noosphere]]
+
+ *Important note:* We will likely not be able to fund all of these 
+projects at once, so be prepared for that possibility when you inquire.  We want to do all of these bounties,
+but some may have to be on hold while others are being funded.
+
+Comment: I think this should be a two-column form, links and amount offered.  IMO some of the offers sound high.  --[[file:jcorneli.org][jcorneli]]
+
+That's OK, but I don't want to maintain that metadata in two places.  Have at it, if you wish.  Also, keep in mind those are
+not offers, just estimates.  Offers don't happen until the negotiation process.   I do feel, however, that the numbers are pretty
+accurate (and maybe even conservative) for high-quality work. --[[file:akrowne.org][akrowne]] Mon Jan 23 19:14:18 UTC 2006
+
+** In-Progress
+
+ * [[file:PM Bounty--Make Noosphere More Installable.org][PM Bounty--Make Noosphere More Installable]] (Steve Cheng)
+ * [[file:PM Bounty--Re-deriving Object Version Histories.org][PM Bounty--Re-deriving Object Version Histories]] (herbling)
+
+** Completed
+
+ * [[file:PM Bounty--Server Migration.org][PM Bounty--Server Migration]] (bloftin)
+ * [[file:PM Bounty--Fix Safari Bug.org][PM Bounty--Fix Safari Bug]] (bloftin)
+ * [[file:PM Bounty--Create PM Collaboration Whitepaper.org][PM Bounty--Create PM Collaboration Whitepaper]] ([[file:jcorneli.org][jcorneli]])
+ * [[file:PM Bounty--Better Handling of Donations.org][PM Bounty--Better Handling of Donations]] (whirix)
+ * [[file:PM Bounty--Create Membership Handling System.org][PM Bounty--Create Membership Handling System]] (whirix)
+
+** Cancelled
+
+ * [[file:PM Bounty--Sanitize Noosphere Templates.org][PM Bounty--Sanitize Noosphere Templates]] (this became a summer of code 2006 project)
+
+* Discussion
+
+[[file:akrowne.org][akrowne]], I'd like to request that we set aside some $ (as well as
+the requisite time) to support our planned hackfest (cf. [[file:Noosphere documentation.org][Noosphere documentation]]. 
+Even if no one gets paid, it could be moderately expensive in terms
+of travel (unless we find a way to get that all paid for, co-incidentally,
+by someone else).  Also, I think that if the task is successful it would
+warrant some pay.  We'd want to sketch the deliverables and criteria for
+success further than has been done on the referenced page.  --[[file:jcorneli.org][jcorneli]]
+
+Yeah.   Probably about $600-
+$800?  I think we'll be able to stay with people and
+so not need to pay for lodging, so most of the cost will be air travel. --[[file:akrowne.org][akrowne]] Mon Jan 23 19:19:40 UTC 2006

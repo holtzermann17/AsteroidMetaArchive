@@ -1,0 +1,76 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is based on http://us.metamath.org/mpegif/a1i.html
+
+ *Let us "derive" the proof starting with the hypothesis and successively applying inference rules:*
+
+We start with the premise of the theorem to be proven:
+
+ (setq step-1.1
+       (second (substitute-in-template '((p p) (q q)) ali-pr1)))
+ => p
+
+As our second step, we take axiom 1:
+
+ (setq step-1.2 
+       (second (substitute-in-template '((p p) (q q)) ax-1)))
+ => (if p (if q p))
+
+To derive the first step, we shall apply the rule of modus ponens to the first two steps.  The way this works is as follows:  First, we use match template to match the two hypotheses (step 1 and step 2) to the two premises of the rule of modus ponens.  Second, we combine the results of these matches using merge-assignments.  Third, we substitute the result into the appropriate template for the conclusion.
+
+ (setq step-1.3
+   (substitute-in-template
+       (merge-assignments 
+        (match-template mp-pr1 step-1.1)
+        (match-template mp-pr2 step-1.2)))
+    (second  mp-ccl)))
+ => (if q p)
+
+ (setq ali-ccl step-1.3)
+ => (if q p)
+
+ *Instead, let us check the proof a step at a time*
+
+Start by stating the theorem and its proof:
+
+ (setq ali-pr1 '((p q) p))
+ => ((p q) p)
+
+ (setq ali-ccl '((p q) (if q p)))
+ => ((p q) (if q p))
+
+ (setq step-1.1 'p)
+ => p
+
+ (setq step-1.2 '(if p (if q p))) 
+ => (if p (if q p))
+
+ (setq step-1.3 '(if q p))
+ => (if q p)
+
+Check that step 1 is the premise.  
+
+ (equal (second ali-pr1) step-1.1)
+ => t
+
+Chck that step 2 follows from axiom 1.  Since the answer is not "/nil/", this means that step 1 fits the template, and hence follows from the axiom.
+
+ (match-template ax-1 step-1.2)
+ => ((q q) (p p))
+
+Check that step 3 follows from steps 1 and 2 by modus ponens.  This involves several steps.  We check that the form of step 1 fits the template for the first premise of a modus ponens argument; that step 2 fits the template for the second premise; and that step 3 fits the template for the conclusion.  
+
+ (merge-assignments
+  (match-template mp-pr1 step-1.1)
+  (match-template mp-pr2 step-1.2)
+  (match-template mp-ccl step-1.3))
+ => ((p p) (q (if q p)))
+
+Make sure that step 3 is the conclusion.
+
+ (equal (second ali-ccl) step-1.3)
+ => t
+
+
+Back to [[file:using template utilities to check proofs.org][using template utilities to check proofs]]

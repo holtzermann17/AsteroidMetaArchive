@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Please revise entries to show relationships to [[file:HDM.org][HDM]]. --[[file:jcorneli.org][jcorneli]] Mon Jun 20 04:48:37 2005 UTC
+
+This page contains short descriptions of programs for formal math.
+For further reading on this subject, please consult the [[file:Formal maths bibliography.org][Formal maths bibliography]].
+
+; [http://www.cs.utexas.edu/users/moore/acl2/ ACL2] : lisp-based automatic theorem proving.
+
+; [[file:metamath.org][metamath]] : Metamath is a tiny language that can express theorems in
+  abstract mathematics, accompanied by proofs that can be verified by a computer
+  program.  ([[file:rmilson.org][rmilson]]) Is this the current foundation of HDM?  ([[file:jcorneli.org][jcorneli]])
+  It is the only real candidate we're considering as the basis of [[file:hdm's formal system.org][hdm's formal system]],
+  so it is the foundation of our foundations.  However, it is likely that some
+  porting and so forth will take place before we actually have a version of it
+  that we're able to actively use.
+
+; [http://mizar.uwb.edu.pl/project/ Mizar] : The Mizar project started about
+  1973 by A. Trybulec as an attempt to reconstruct mathematical vernacular.
+The project is based in Bialystok, Poland and has international partners.  (the main partners: Shinshu University
+  in Nagano and University of Alberta in Edmonton)  Since 1989, the
+  most important activity in the Mizar project, apart from continual improvement
+  of the Mizar System, is the development of a data base for
+  mathematics. To date, this
+  data base includes more than 2 thousands of definitions of mathematical
+  concepts and more than 30 thousands of theorems.
+
+; [http://isabelle.in.tum.de/Isar Isar] : The Intelligible semi-automated
+  reasoning (Isar) approach to readable formal proof documents sets out to
+  bridge the semantic gap between internal notions of proof given by
+  state-of-the-art interactive theorem proving systems and an appropriate level
+  of abstraction for user-level work. The Isar formal proof language has been
+  designed to satisfy quite contradictory requirements, being both 'declarative'
+  and immediately 'executable', by virtue of the Isar/VM interpreter. Compared
+  to existing declarative theorem proving systems (like Mizar), Isar avoids
+  several shortcomings: it is based on a few basic principles only, it is quite
+  independent of the underlying logic, and integrates a broad range of automated
+  proof methods. Interactive proof development is supported directly as well.
+
+
+; [http://isabelle.in.tum.de/overview.html Isabelle] : Isabelle is a generic
+  proof assistant. It allows mathematical formulas to be expressed in a formal
+  language and provides tools for proving those formulas in a logical
+  calculus. The main application is the formalization of mathematical proofs and
+  in particular formal verification, which includes proving the correctness of
+  computer hardware or software and proving properties of computer languages and
+  protocols. 
+
+: The Isabelle system offers Isar as an alternative proof language interface
+ layer, beyond traditional tactic scripts. The Isabelle/Isar system provides an
+ interpreter for the Isar formal proof document language. Isabelle/Isar input
+ consists either of proper document constructors, or improper auxiliary commands
+ (for diagnostics, exploration etc.). Proof texts consisting of proper document
+ constructors only admit a purely static reading, thus being intelligible later
+ without requiring dynamic replay that is so typical for traditional proof
+ scripts. Any of the Isabelle/Isar commands may be executed in single-steps, so
+ basically the interpreter has a proof text debugger already built-in.
+
+; [[file:The Archive of Formal Proofs.org][The Archive of Formal Proofs]] : (Submitted by [[file:rmilson.org][rmilson]].)  A free
+ database of proofs that have been checked with Isabelle.  Note ([[file:jcorneli.org][jcorneli]]):
+ this qualifies as a free CBPP project and the contents could presumably be used
+ directly by HDM.  I'm adding it to the list of [[file:Projects.org][Projects]]; see 
+ [[file:The Archive of Formal Proofs.org][The Archive of Formal Proofs]] for more detail.
+
+; IsarMathLib : A library of formalized mathematics for Isabelle/Isar proof assistant
+(ZF logic)
+
+; AUTOMATH by deBruijn : (I haven't checked it out yet, mentioned to me by Dr. Fateman; Freek is a fan)
+; nqthm : (also mentioned by Dr. Fateman -- before there was ACL2, there was nqthm)
+; otter : (mentioned by Fateman and Boyer)
+; work by Cornell's Prof. Constable : (p.c. Dr. Fateman)
+; [http://www.nuprl.org/FDLProject/ http://www.nuprl.org/FDLProject/] : Not the GNU [[file:FDL.org][FDL]].
+; [http://imps.mcmaster.ca/ http://imps.mcmaster.ca/] : (Found via websearch?)
+; [http://www.math.pitt.edu/~thales/flyspeck/ Flyspeck] : (formal proof of kepler conjecture -- a mathematician's formal math!)
+; [http://www.ghilbert.org/  Ghilbert ] : (derivative work of metamath; unlicensed)
+; [http://www.calculemus.net Calculemus] : project to integrate Computer Algebra Systems and Deduction Systems -- /note/
+I think this belongs on this page, but I'm not sure, maybe it should go on a theorem proving page?  How to distinguish
+between these two areas? Maybe we need to change the title of this page?/ --[[file:jcorneli.org][jcorneli]] Mon Jun 20 04:47:46 2005 UTC
+
+; [http://www.dfki.de/~zinn/Publications/AlexoudiZinnBundy.pdf English Summaries of Mathematical Proofs]
+; [http://www.cs.bham.ac.uk/~mmk/projects/AOTP/final-report-html/index.html Agent-Oriented Theorem Proving]
+; [http://users.rsise.anu.edu.au/~jiameng/papers/info-and-comp.pdf Automation For Interactive Proof: First Prototype]
+; [http://www.itee.uq.edu.au/~gwat/thesis/thesis.pdf A GENERIC PROOF CHECKER]

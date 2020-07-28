@@ -1,0 +1,96 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+My thought is that each section, whether top-MSC or leaf-MSC,
+should have a basically self-contained exposition of the
+ideas in that section.
+
+This is related to [[file:what to do with overview-style articles.org][what to do with overview-style articles]],
+because each overview article should contain a "map" for the
+section to which it applies.
+
+As an example of a (brief) critique of one of these
+overview-style articles, see 
+[[file:Discussion of ArithemeticOfEllipticCurves.org][Discussion of ArithemeticOfEllipticCurves]].  The article
+that is critiqued there is, I think, on the way to containing
+a map for the section 14H52, but I think both the article and
+the section have a ways to go before the section can be called
+self-contained.
+
+And just how self-contained can a section be?  Most branches
+of mathematics relate to groups in some ways, for example,
+and it would be silly to ask every section to include a
+definition of a "group".  Even a special result from group
+theory that is important to the particular area in question
+may be treated elsewhere.  But the reasons for the importance
+of this result in the particular area ought probably be given
+in this section.  Some repeated information might be given in
+the particular entry describing the group theoretic result,
+but it would be more general in nature; the specialist's
+description would relate the group theoretic result to the
+other elements of the section.
+
+To pick on 14H52 ("Elliptic Curves") a little bit more, the
+section ought to contain in addition to the definition of an
+Elliptic Curve some expository text explaining why one might
+care about Elliptic Curves.  And, of course, references to
+background material (presumably elsewhere in the
+encyclopedia, but, if necessary, in outside sources) that
+will enable one to understand the definitions and basic
+computations.
+
+Thus, when I say "self-contained sections", I do not mean
+that all of the relevant background material must be
+contained in the sections, but that a guide to the background
+material should be.  Similarly, if there are parallel or
+complementary advanced results in other areas of mathematics
+that are important to understanding the material in this
+section, their development need not be present in this
+particular MSC, but appropriate references and "hooks" for
+understanding that related material in the current context
+should be present.
+
+To further sum up:
+
+ * Each section should contain a map of the section.
+ * Each section should contain an overview-description of
+the content of the section, suitable for non-experts.
+ * Each section should contain a guide to understanding the
+background material, suitable for students or other initiates.
+ * Each section should contain contextualizing discussions
+for results not in that section that are nonetheless important
+to that section.
+ * Each section should contain the major definitions and results
+from the area of mathematics it is concerned with -- enough to
+give the sophisticated and attentive reader the words and ideas
+with which to hold a conversation with an expert in that
+field.
+
+* Discussion
+
+Sound OK? --[[file:jcorneli.org][jcorneli]] Mon Mar 07 23:22:50 2005 UTC
+
+--
+
+Although not perfectly congruent with my list of suggested coverage,
+the MSC's with dashes in them might conform to a certain degree
+to the structure I'm thinking about.  But...?
+
+; "General reference works (handbooks, dictionaries, bibliographies, etc.)" : 
+map of the subject and overview-description
+; "Instructional exposition (textbooks, tutorial papers, etc.)" :
+guide to background material
+; "Research exposition (monographs, survey articles)" :
+contextualizing discussions
+; "Historical" :
+I didn't include this in my list, but it might be a good idea
+; "Explicit machine computation and programs (not the theory of computation or programming)" :
+also a good idea
+; "Proceedings, conferences, collections, etc." :
+related to the idea of a shared bibliography for each section?
+
+
+----
+See also [[file:Discussion of the MSC system.org][Discussion of the MSC system]].
+
+[[file:FEM editorial policy.org][FEM editorial policy]]

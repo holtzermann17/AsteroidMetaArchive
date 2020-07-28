@@ -1,0 +1,43 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is where links to [[file:Bugs.org][Bugs]] that are no longer active, [[file:Feature Requests.org][Feature Requests]] that have been turned into features, and [[file:Tasks.org][Tasks]] that have been completed should reside.
+
+* Completed Tasks
+
+ * [[file:migrate to planetx server.org][migrate to planetx server]] (done as PlanetMath bounty by Ben Loftin, end of April 2006)
+ * re-create a PlanetMath/Noosphere OAI data provider (last one was lost in HD crash) (done in mid April 2005)
+ * [[file:batch correction system.org][batch correction system]] (Mon Feb 28 04:32:00 UTC 2005)
+ * [[file:make short displays inline.org][make short displays inline]]
+ * [[file:see about licensing conditions for ghilbert.org][see about licensing conditions for ghilbert]]
+
+* Squashed Bugs
+
+ * [[file:Puzzling behavior when adding a Feature Request.org][Puzzling behavior when adding a Feature Request]]
+
+
+----
+* Discussion
+When there is more stuff here, we can use the format like [[file:Bugs.org][Bugs]], [[file:Tasks.org][Tasks]], etc.
+
+I'm not so sure about keeping this separate page.  This means that when a task is completed, I have to edit two pages to record this fact.  --[[file:akrowne.org][akrowne]] 
+
+: I know, it totally sucks. --[[file:jcorneli.org][jcorneli]]
+: One thing to do would just be to mark the things *completed* on the task page, then a WikiGnome can come and take care of them en masse.  But for "thoughts" on a real solution, see [[file:the relative merits of wiki and other workflow management media.org][the relative merits of wiki and other workflow management media]]. --[[file:jcorneli.org][jcorneli]]
+:: Yes, I think I will do that. --[[file:akrowne.org][akrowne]]
+
+----
+
+* Specific discussion of page anchors (and why not to use them)
+
+Why have my efforts to separate completed tasks into projects been un-done?? This makes no sense to me. Anyway, it is irrelevant because (see above). --[[file:akrowne.org][akrowne]]
+
+: You coded it weirdly, that's all.  Instead of using <nowiki>[::FEM]</nowiki>, you should use <nowiki>[::FEM completed tasks]</nowiki> or just subsection headings, <nowiki>==FEM completed tasks==</nowiki>.  The <nowiki>[::FEM]</nowiki> tag redirected traffic for the [[file:FEM.org][FEM]] page to this page, which wasn't good.  HTH --[[file:jcorneli.org][jcorneli]]
+
+:: Ohhh.  So it is like an anchor?  --[[file:akrowne.org][akrowne]]
+
+#+BEGIN_VERSE <nods>, --[[file:jcorneli.org][jcorneli]] Thu Mar 03 04:01:18 2005 UTC
+
+ *Conclusion:* Please don't add the text <nowiki>[::FEM]</nowiki>
+to this page or any other page -- that's reserved for a shortcut to the actual [[file:FEM.org][FEM]]
+page. Indeed, you might as well not use page anchors at all! (Baby, bathwater.) --[[file:jcorneli.org][jcorneli]]

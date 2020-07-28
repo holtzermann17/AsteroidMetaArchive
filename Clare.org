@@ -1,0 +1,148 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Clare So
+
+Academic Homepage: http://www.cas.mcmaster.ca/~socm
+
+Email: socm (a) mcmaster.ca
+
+Blog: http://lacampanella.wordpress.com
+
+**  Summer of Code 2007 Proposal
+
+***  Title
+
+MaximaOnline: Integrating Maxima into PlanetMath
+
+***  Abstract
+
+MaximaOnline is a flexible, web-based application of the Maxima computer algebra system available in PlanetMath.  Its aim is to make Maxima to be freely available to the public.  This application is extensible so that it can be adopted to various functionalities of Maxima.  It also aims to minimize the amount of Maxima-specific syntax to be learned by the users:  Platform-independent formats such as MathML are accepted as inputs.  MaximaOnline should be available via the applicable entries of PlanetMath.  The PlanetMath community members should be able to appreciate the convenience that their non-trivial mathematical computations can be done via a web-based application.
+
+***  Executive Summary
+
+MaximaOnline is a flexible, web-based application of the Maxima computer algebra system available in PlanetMath.  It enables all PlanetMath users to freely use one of the most sophisticated computer algebra system available.  This application does not hard-wired the facilities of Maxima to be exposed.  In the way, the interface can be adopted to different types of computations.  To increase the usability of MaximaOnline to a wide range of audience, platform independent formats such as MathML can be used as inputs.  We aim to make MaximaOnline to the applicable entries of PlanetMath.  The PlanetMath community should be able to appreciate the convenience that their non-trivial mathematical computations can be done via a web-based application.
+
+***  Details
+
+PlanetMath is a free mathematical encyclopedia with entries reviewed and written by the PlanetMath community members.  At present, the wealth of mathematical knowledge is only available in print form.  It would be advantageous for all PlanetMath community members to be able to interact with the knowledge.  Software that aids computation is useful so that, for example, formulas are verified and large systems of equations are solved.
+
+Having a free computer algebra system as a web-based application benefit the PlanetMath community.  The PlanetMath community members have free access to computer algebra system without install extra software in their computers.  A web application for Maxima, which we call MaximaOnline, is developed to respond the need of the PlanetMath community.
+
+MaximaOnline generalize the interactions between the web application and the underlying Maxima system.  We should able to adopt the software to different kind of mathematical queries, possibly by using configuration files.  MaximaOnline should also minimize the Maxima syntax that the users have to learn.  The inputs can be in a platform independent format such as OpenMath.  MaximaOnline should gives outputs that help the users to better understand the mathematical concepts.  The outputs can include the result of the computation in various formats and, possibly, visualization of the result.
+
+We aim to make MaximaOnline available to the applicable PlanetMath entries.  For example, the PlanetMath entry for limit (Calculus) should have Maxima's limit calculating function available directly from the entry.
+
+
+***  Project Plan
+
+ * May 
+  * Week 4: Learn Maxima.  Figure out the mathematical computation to be available on PlanetMath
+ * June
+  * Week 1: Figure out how to host a computer algebra system on PlanetMath servers
+  * Week 2: Outline the requirements of configuration files
+  * Week 3: Write a command-line based MaximaOnline; Write a OpenMath/MathML-Maxima converter
+  * Week 4: Revise the command-line based MaximaOnline, if necessary
+ * July
+  * Week 1: Figure out how to create and use forms in PlanetMath
+  * Week 2: Finish first GUI prototype of MaximaOnline
+  * Week 3: Revise configuration files and first GUI prototype if necessary.  
+  * Week 4: Find all PlanetMath entries to put MaximaOnline into
+ * August
+  * Week 1: Find problems with integrating MaximaOnline into individual PlanetMath entries
+  * Week 2: Debug
+  * Week 3: Debug
+
+***  Bio/Qualifications
+
+I am currently a PhD student at Mc Master University (Hamilton,
+Canada).  I have been active in the mathematical
+knowledge management community since 2002.  When purusing my undergrad
+and masters degrees at the University of Western Ontario (London,
+Canada), one of my projects was to build software to expose the
+[http://www.maplesoft Maple] computer algebra system to the web as a
+web application.  I also have extensive experience in mathematical
+data formats.  Because of my work on Open Math and
+[[http://www.w3.org/Math MathML], I am a member of the
+[http://www.openmath.org OpenMath] society.  I believe my past
+experience in computer algebra systems, mathematical web application
+and mathematical data formats can contribute to the PlanetMath community.
+
+
+----
+
+* Comments
+
+Thank you for posting this sketch.
+
+Different people will have different feelings about support of
+commercial applications like Mathematica and Maple.  I, for one, am
+not hugely interested in these things -- I like the idea of supporting
+Maxima and other free software.  But your experience with Maple is
+certainly good background, and may help a lot when you think about what
+deliverables you'd produce on this project.  
+
+Here are some questions that might help as you think about how to
+expand the sketch.  I don't mean that you have to answer each question
+explicitly in your application, but please do think about them.  If
+you want to talk more about any of these questions or if you have
+further questions of your own, feel free to post more here.
+
+ * What sort of code would you need to write to a program like webMaxima?
+ * Could you write this code in such a way as to be re-used to make webGap
+easy to create? (Cf. !TeXMacs, which many different back-ends can hook
+into.)
+ * What would the user experience of someone (or ones) working on !PlanetMath
+who wanted to interact with the service you'd be working on be like?
+ * How does your proposal relate to the sketch at [[file:MUSN.org][MUSN]]?  (My guess
+is that hooking things together in a text-only mode is pretty easy, but
+getting graphics and things like that to work well is another story.)
+ * What is your view of the state of the art for free software for mathematics?
+How does an appropriately chosen suite of free software tools for math
+compare to the set of tools provided with Mathematica or Maple?
+
+--[[file:jcorneli.org][jcorneli]]
+
+
+[[file:jcorneli.org][jcorneli]], thanks for your quick response.  You are right that the implementation should be flexible that more than one software can be used.  I have been pondering the implementation as well.  At a basic level (aka the minimum requirement of the project), the users should be able to use maxima/gap by filling the arguments of the math function.  I have not thought of graphics and visualization yet.  The basic code should handle things such as start up maxima/gap, call the math functions with arguements, return the result and finally shut down maxima/gap.  If graphics is involved we should return the image(s) as well.
+
+(will write more later...)
+
+-- [[file:Clare.org][Clare]]
+
+
+A comment - you might want to look carefully at the Axiom system and specifically the work done by Bill Page on the axiom-developer.org website.  The integration of LaTeX, web displays, and computer algebra is among the most sophisticated available, and as Axiom is intending to become a literate program in the Knuth sense it might make a better fit for a project like planetmath.  I am involved with the Axiom project in a small way, but I fear I am not competent to describe the system in detail.  Tim Daly, the project lead, may be interested in discussing the possibilities of something like Planetmath with respect to literate Axiom programs.
+
+-- [[file:CY from the Axiom email lists.org][CY from the Axiom email lists]]
+
+I just try to fit my paragraphs into the GSoC application format (work more on this later!).  Thanks for CY's comment.  I have reworked my application that it is specific to one system.  This way my project is realistic to be finished in one summer.
+
+One important note: I am very interested in the OMDoc validator project.  Should I submit a separate application?
+: Hi -- I "blue-sky"ed that idea (and it is a good one :-) A separate application? I don't 
+know, but I recommend double-checking the proposal with M. Kohlhase. --[[file:ocat.org][ocat]]
+
+-- [[file:Clare.org][Clare]]
+
+It isn't obvious from skimming this page a few times whether some sort of meaningful integration will be done of Maxima functionality with 
+the "existing" PlanetMath knowledge-base.   We have discussed many times in the past the idea of making formally-encoded "translations" of extant
+entries, then allowing these to be used computationally/symbolically.   Might this be supported in this project?  In what other ways would the 
+formal and symbolic be meshed with or interact with the human-readable content? --[[file:akrowne.org][akrowne]]
+
+Since the entries in PlanetMath are encoded in a presentation-oriented format (LaTeX), my problem of integrating Maxima into PlanetMath may seem a bit disjoint here.  Any computer algebra system such as Maxima depends on Content-oriented inputs.  There is no good presentation to content translation strategies except for trivial mathematics.  I have added some description of what's in mind.  Hope the paragraphs/sentences give a clearer picture of what I try to accomplish.
+
+-- [[file:Clare.org][Clare]]
+
+While direct translations to symbolic representations would be nice and are a long-term research goal, I actually wasn't thinking of them for the above
+remarks.  I was thinking more along the lines of how to coordinate parallel symbolic and natural represenations of entries and the ideas therein.  For example
+think of any scenario where a user is browsing PlanetMath, sees an entry they need in their work, accesses the symbolic version, and integrates that version
+into a computation (as some sort of web service, like you describe).   Conversely, someone might be using the computational facilities in PlanetMath, then 
+load in some new formally-represented math, and the system allows them to contribute that math back to PlanetMath, where others can access it (indeed, those 
+who can understand a symbolic listing of that math could also learn from it by direct reading). 
+
+It seems to me that without this kind of integration, a computer algebra system in PlanetMath will never really go beyond a "curiosity".     Does this make
+sense?  This project wouldn't necessarily need to implement such integration facilities, but if they make sense, they should at least be planned for somewhat.
+--[[file:akrowne.org][akrowne]]
+
+[[file:akrowne.org][akrowne]], thanks for your comments and clarification.  Yes, I quite agree with your point on actually *integration*.  That's why I try to say that a particular computation can be attached to related entries.  Oops, I just realized that only the abstract can be modified after submission.  I have already submit what's in this page.  :(  I afraid that I would forget to hit the "submit" button later today!  Now I am not sure how the ranking is done.  Ok, all I can do is to cross my fingers.  Thanks again for your comments.
+
+--[[file:Clare.org][Clare]]

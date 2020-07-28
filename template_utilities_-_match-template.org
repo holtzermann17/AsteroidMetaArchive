@@ -1,0 +1,85 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* (match-template template expr)
+
+ *Input:* a template and an expression
+
+ *Output:* an assignment list
+
+ *Description:* This function returns a list of assignments to the placeholders if and only if it is possible to represent the expression using the template. If no placeholders appear in the template's expression, this function will return `t' if the expression of the schema matches the given list (this is the inverse of the "trivial" case of substitution).  Also, `nil' will always mean that no match was possible.
+
+ *Listing:*
+
+  (defun match-template (template expr)
+    (cond ((null (second template)) (null expr))
+	  ((member (second template) (first template))
+	   (list (list (second template) expr)))
+	  ((atom (second template))
+	   (equal (second template) expr))
+	  ((null expr) nil)
+	  ((atom expr) nil)
+	  (t (merge-assignments
+	      (match-template
+	       (list (first template) (car (second template)))
+	       (car expr))
+	      (match-template
+	       (list (first template) (cdr (second template)))
+	       (cdr expr))))))
+
+ *Discussion:*
+
+There are four possibilities for what the expression of the template (which is computed as /(second template)/) can be:
+
+ * nil
+
+: This will only match if and only if the expression to be matched also equals /nil/.
+
+ * a placeholder
+
+: This always matches, and we return the obvious assignment list having exactly one assignment which assigns the value of the argument of /match-template/ to the placeholder.
+
+ * an atom which is not a placeholder
+
+: This will only match if and only if the expression to be matched also equals the same atom.
+
+ * a cons cell
+
+: To have a match, three conditions need to be checked.  First, the expression to be matched must also be a cons cell.  Second, both the /car/ and /cdr/ of the expression must match the /car/ and /cdr/ of the template, respectively.  We call ourselves recursively to see if this is the case.  Third, if the preceeding conditions are met, then we still need to be sure that the assignment of values needed to match the /car/ 's is consistent with the assignment needed  to match the /cdr/ 's.
+
+ *Examples:*
+
+ ; (match-template '(nil nil) nil)
+ ; => t
+
+ ; (match-template '((a) nil) '(a b))
+ ; => nil
+
+ ; (match-template '((a b) a) '(x y z))
+ ; ((a (x y z)))
+
+ ; (match-template '((a b) c) 'c)
+ ; => t
+
+ ; (match-template '((a b) c) '(x y z))
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) nil)
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) 'x)
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) '(x y))
+ ; => nil
+
+ ; (match-template '((a b) (a (b a))) '((x y) (y (x y))))
+ ; => ((b y) (a (x y)))
+
+ *Navigation:*
+
+Back to
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

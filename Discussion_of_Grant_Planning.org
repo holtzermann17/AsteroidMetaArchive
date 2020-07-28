@@ -1,0 +1,174 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I don't know what you mean by the term "lay learners"
+in the overview of the NSF "ALT".  Are these people
+who learn just for fun (amateurs, I think is the
+term I've heard)?  
+
+I would suggest that the focus here should be on amping
+up the efficacy for /students/ (which class of persons
+also includes autodidacts).  
+
+Not sure about the idea of "extending the impact from
+specialists to students" either, since, in fact, I 
+don't know if we know where the impact really lies.
+(I would expect that in fact non-specialist students,
+i.e., undegrads and beginning grad students, are already 
+the most strongly affected group).
+
+Measures to assess the impact of PM could be good, as in my
+post in the forum about a Who Are You? poll.  
+(But I don't know if this is the sort of thing we want to
+focus on in a grant application of this sort - seems 
+better to connect it to the addition/population of 
+"level" metadata, and spin it that way -- which, in fact,
+makes perfectly good sense, at least from the point of view
+of answering the caterpillar's question: if we had level
+metadata and level settings, we could read off the number 
+of people who were browsing the "high school" level, the 
+"undergrad" level, and so on.
+
+Indeed, in addition to "level", it might be useful to have
+metadata for "specialty" as well (returning to the roots
+of this note!) -- just in case someone wanted to restrict
+themselves to an "algebra" view on the encyclopedia or whatever
+(for example).  This sort of metadata could be useful for
+controlling automatic linking behavior, searches, etc.
+
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 05:13:21 2005 UTC
+
+---- 
+
+I do owe you a definition there.  "Lay learners" may have been a bad term, but 
+what I meant was not necessarily amateur or "for fun" learners.  I was in fact thinking more of
+students, but considering that students these days are more generalists than 
+specialists (even through the undergraduate years, and increasingly, even masters-level studies).
+Generalists do not usually have the time or desire to get too involved 
+in the learning process.  It is even worse than this, actually, as college has
+become expected, planned, and even obligatory, both as part of suburban culture, and 
+as expected industrial training.  So, I cannot see such people really "delving in" to 
+literate programming with the HDM in order to learn mathematics.
+
+I think this situation is kind of a shame.  I think both amateur learners and 
+classically scholastic-minded persons (autodidactics who happen to be 
+taking advantage of a university environment) would be willing to take
+more initative over their education.  But the vast majority of learners are 
+formal students, whom the NSF is under a lot of pressure to serve, and whom need to be
+ "spoon fed".   So, while CBPP content creation and literate formal mathematics 
+clearly help the content producers learn better, institutions like NSF will want to
+know how this applies to the left-and-center portions of the Bell curve (distributed over both
+ability and motivation), and how to make this more so.
+
+In sum, I think I used the term "lay learners" because this now better describes your 
+typical formally-institutionalized student, along with the connotations of being
+"less involved" than an optimally motivated learner would be. --[[file:akrowne.org][akrowne]] 
+Mon Mar 28 15:48:38 UTC 2005
+
+
+----
+
+OK, I got ya.  And, while I don't particularly like "playing into" the system
+you're talking about, I can recognize that the system is pervasive, and
+culturally important in early-21st century america (i.e. right now!).
+
+And, for the purposes of the grant, I can see that positioning ourselves to
+explicitly serve this population is likely to be a Good Thing.  Especially (and
+you would probably say "only") if it can be done in a way that doesn't cut out
+the "right" side of that distribution, i.e., our "base", to quote someone famous
+;).
+
+Luckily, I think that we can do a lot of things that will likely serve the
+"lay-scholar" and the über-scholar.  Not to harp on it too much, but literate
+programming -- and its results -- comes to mind for me as an example.  On the
+one hand, literate programming is a great tool for hackers and aspirant-hackers
+and other folks in the top 80% or so of the motivation distribution.  On the
+other hand, if these folks are interested in working to support popular
+education, which many of them, including the two of us for example, are, then
+they will use these tools, in part, to build user-friendly (/not/ to say
+dopey) things that enhance the educational experience of the less
+motivated/trained.
+
+Gnome comes to mind as an example of this sort of thing.  Built by hackers,
+but geared towards the general population.  
+
+Note that I'm not saying that literate programming is magically going to make
+education better for everyone.  We'd still have the problem of 
+[[file:Getting programmers is hard|finding programmers.org][Getting programmers is hard|finding programmers]], helping guide the system
+along so that the content that is produced is good and useful, and so on -
+all the issues we're already familiar with, and some new (technical) ones.
+
+But I am saying that it seems to be an example of the sort of thing that makes
+it easier to cater to a wide population of students, and perhaps this is the
+way to pitch it: "!PlanetMath already supports the collaborative creation of
+expository articles, this new system would enable us to collaboratively create
+and attach interactive components to these articles.  This is recognized to
+be of significant positive educational value because of [bla bla bla] research
+studies."
+
+And I think this is actually true.
+
+There are a few points that may be worth discuss further, which spin off from
+here.  
+
+First, I said above that our base is on the right of the motivation curve.  I
+think that is true.  When I was talking with Joe Konstan, I estimated that most
+of the messages in the forums, for example, come from seasons site veterans, not
+from students asking questions or talking about homework or undergraduate-level
+research problems (and certainly not from professionals).  I'm definitely way in
+favor of figuring out ways to make the site actually be more useful for average
+mathematical folks to get use out of.  Enhancements to the forum system are
+certainly ahead of literate programming and interactive documents on the list of
+things to do to improve this situation, but I think these other features (which
+I'm personally "more interested in", largely because they are how /my/
+collaborations would be facilitated) are good as supporting items.  I.e., they
+are good for non-specialists (even in the short run).
+
+Second, I also think it would be good for us to think some (both now, and as
+time goes by) about "amateurs" (here the word is meant to be taken in a positive
+light) and other persons involved in "alternative education".  I think
+!PlanetMath already has some features that are great for this small, weird, but
+often highly motivatied group.  Just as a brainstormed idea, PM could host
+live/in-person minicourses, which would center around the discussion and
+exploration (using the noosphere system as well as live/in-person discussion
+media) of some chosen mathematical topic, led by some expert or experts.  The
+same sort of thing could be done on line too.  The KGS (Kisedo Go Server) does
+online Go instruction in a somewhat similar vein, using their software.  (And,
+in terms of money, only paid-up members are able to "attend" these classes.)
+
+This is not necessarily alternative education for people who "do" alternative
+education; it is an "alternative education"-like format that could work for lots
+of different groups.
+
+The class that you described to me that used Noosphere as a primary course
+resource was a great example of this.  And /this/ topic shows how increasing
+the ease with which Noosphere can be installed creates new educational
+opportunities, especially if taken in combination with some new/useful features.
+Furthermore, there is nothing (especially) that says that Noosphere couldn't be
+used in this way to help teach very middle-of-the-road students.  I definitely
+think that [[file:a course featuring very interactive online PM-like components.org][a course featuring very interactive online PM-like components]]
+would certainly have served me better when I was a grad student, insofar as I
+was at that time trying (to some extent) to actually learn material.  But of
+course, I think I am somewhat atypical in terms of accepting computers into my
+daily mathematical life - other students might not be as into it.  However, I
+think that the class you described shows that something along these lines
+can profitably be done.
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 16:56:13 2005 UTC
+
+----
+
+I think we should probably be looking at some books on grant writing.
+I found a few in my local library; I could start some pages about grant-writing
+strategies, using these books as the basis.  If we get good at grant-writing,
+then there's no reason we shouldn't be able to get grants... right? --[[file:jcorneli.org][jcorneli]]
+
+Certainly it can't hurt.  But I think past successes and the roster of names 
+involved exert a huge, if not majority, influence.  In terms of the technicals
+of writing, I think you can sum it all up as "explain things simply and clearly,
+and market your effort well."  But frankly, a lot of the awarded grants I've seen 
+were not the most amazing documents, technically.  --[[file:akrowne.org][akrowne]] Sat Jul 16 19:16:35 UTC 2005
+
+As you put it, it can't hurt.  A good strategy would consider this
+"meta" stuff you are talking about (names, past successes), and presumably
+good books would talk about this stuff, too.  When I say "grant writing",
+I really mean a much bigger process.  --[[file:jcorneli.org][jcorneli]]

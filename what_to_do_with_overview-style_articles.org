@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+For one thing, all the overview-style articles are probably going to
+have to go or be revised -- however, their content could be very
+useful in terms of building subsections within subject areas.  For
+example, the entry on "mathematics vocabulary" lists 60 items, many
+of which should be grouped together into a certain category.  I'm not
+sure what to make of the "overview of the content of PlanetMath"
+entry; perhaps it could be used as the basis of an introduction or
+guide.
+
+: Since Matte and I came out with these overview articles, let me explain how we view them.  Our idea was that, once complete, we would have a system of several levels; at the top level there would be the overview of Planet Math.  This would point to overview articles about rather broad areas.  These in turn would point to overview articles about narrower areas of mathematics, which would ultimately point to individual entries.
+
+: We saw these as serving two main purposes.  
+
+ 1. They would provide a hierarchical organization so that one could start with the top level overview and then click one's way down to any specific entry in the encyclopaedia.  As we envisioned it, this would make for a kind of "two-dimensional" organization --- on the vertical level there would be these overview entries of greater and lesser generality and, on the horizontal level, there would be the links between related entries.  We thought that this would help make the whole work tighter-knit, easier to access and make it possible to get some sort of "bird's eye view" of the work.
+
+ 1. They would provide a means of making sure that the coverage was thorough.  For instance, when I made up the entry on theorems in complex analysis I simply listed all the theorems I could come up with.  Many of them were not yet defined and hence did not link.  An entry like this is therefore useful for systematically trying to find out where are gaps in our coverage and pointing out what entries need to be written.
+
+: The biggest problem with these entries is that they are still nowhere near their goals.  At present, I would estimate that one can only arrive at something like 5% to 10% of the encyclopaedia by following links downwards from the overview.  Much of the reason that they are still in this state is that it takes a lot of work to develop such a tree of pages of links and interest of the Planet Math community to this sort of project has been underwhelming.  It seems to me that people are, by and large, more interested in writing articles on whatever topic interests them than than in looking at the big picture and trying to make the coverage even and comprehensive.  As another example of this, I remember how Matte's suggestion that there be a "subject of the month" club so that we could target specific areas to make sure they were covered reasonably thoroughly was pretty much ignored.  This being the case, I can't really recommend doing much with the existing overview entries in a printed version based on the
+current status of the encyclopaedia; I would say that, with a few exceptions, the best thing might be to leave them out of the printed version for the time being and use them in later editions when the online version is more complete.  (Unless it takes long enough to do other work on the printed edition that I can make them reasonably complete in the meanwhile.)
+
+: As for how they would fit in the printed edition were they more complete, here are some ideas.  When Matte and I came up with this idea of meta-entries, we saw that they would serve roughly the same purpose as tables of contents and indices in books.  Therefore, that would be an obvious way to use them.  One nice idea which might be worth imitating is what Encyclopaedia Brittanica does --- after all the entries, they have a huge outline of all knowledge in which the individual entries in the encyclopaedia are placed.  If our system of overview entries were more complete, it could easily be used to generate such a sprawling outline by piecing the overviews together, starting with the most general overview. --[[file:rspuzio.org][rspuzio]] 26 February 2005
+
+----
+
+I think they may be useful as the basis for section introductions. --[[file:jcorneli.org][jcorneli]] Sat Feb 26 15:23:14 2005 UTC

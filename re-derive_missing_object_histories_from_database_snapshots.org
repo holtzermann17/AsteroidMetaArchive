@@ -1,0 +1,22 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+After one of the recent hard drive crashes, we lost a large portion of encyclopedia object histories (this was before we were doing offsite backups of this data).  The information is not gone for good, however -- it is in principle (largely) derivable from database snapshots.  
+
+A rough plan for how to re-generate the snapshots is:
+
+ 1. create a dummy Noosphere instance
+ 1. iterate over the database snapshots
+## uncompress each snapshot
+## load snapshot into database
+## have Noosphere dump an XML version snapshot to disk for every object (this is an existing subroutine).
+ 1. Replace missing and broken snapshots in live versions/ directory with "synthetic" snapshots from previous step.
+
+There are two caveats to this plan:
+
+ * revision comments are lost forever; restored snapshots do not have them, as they are only stored in the original XML.
+ * multiple changes in the same day will be lost.
+
+However, I think most of the desired effect will be attained with this method.
+
+As a related project, the version history page should be improved so that missing intermediate versions are handled more elegantly (one should be able to diff between on-adjacent versions, or even arbitrary versions).

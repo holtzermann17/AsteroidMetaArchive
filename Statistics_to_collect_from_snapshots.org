@@ -1,0 +1,119 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+What kind of data could be harvested from the snapshots?
+What kind of data would be useful?
+
+See also: [[file:Growth of PM.org][Growth of PM]], [[file:Size and growth of PlanetMath.org][Size and growth of PlanetMath]], 
+[[file:PM snapshots.org][PM snapshots]], [[file:Statistics about new users during one year.org][Statistics about new users during one year]]
+
+* Monthly/Yearly
+ * New entries. New figures. Who contributed?
+ * Which entries was most visited last month. This could also be done
+  per user. For a user it would be useful to see how many hits his
+entries recieve -- on average -- per day. For example, the 
+[http://planetmath.org/encyclopedia/MathbbR.html real number]
+entry gets around 20 hits per day. The [http://planetmath.org/encyclopedia/MetricSpace.html metric space]
+entry around 40 hits. 
+
+* Analysis of whole corpus
+ * What is the distribution of proofs/theorems/topics/..
+ * Word/phrase count. What words are used the most? Are all these defined? 
+  For this to be useful, it we not only need count words, but phrases. 
+  For example, regular subset, harmonic function, if and only if, etc.
+ * Growth plot
+
+* Automated copyediting
+It should be possible to spell check the PM content in some automatic way. 
+Moreover, there are a lot of common mistakes that could be 
+found in a completely automatic way. 
+Many of these checks could eventually be done when the user submits an entry. However, this checker
+is something that can independentely be developed and tested on  snapshots. 
+When it is working it can be imported into Noosphere.
+
+ * $f:X\to Y$  should be $f\colon X\to Y$.
+ * \textbf{Definition}, \section{Definition}, {\bf Definition}, etc. should all
+  be \begin{def} \end{def}.
+ * \{ x\in X | x=0\} should be \{ x\in \mid x=0\} 
+ * Is the entry made out of complete sentences? This seems to be
+  contraversial. There is no agreement whether
+  periods should be present in displayed formulas that end a    
+  sentence. At a minimum we could check that the entry start 
+  with a sentence? 
+ * symbolic overload. Sentences made of \forall, \exists, :, are
+  difficult to read. 
+ * <a,b> should be \langle a, b\rangle
+ * || should be \lVert or \rVert 
+ * inf, sup, exp, max, min, etc. should be \inf, \sup, etc.
+ * the the should be the
+ * ( \frac{a}{b}) should be \left( ..\right)
+ * 2:nd could be converted into something like
+  $2^{\scriptsize{\mbox{nd}}}$. Maybe we could provide 
+  standard macroes for these.
+ * punctuation
+  * Punctuation in lists. If one entry ends with a comma, all  
+  (except the last) should end with a comma. 
+  * respectively, however, where, on the other hand, etc. 
+  It is relatively easy to check that terms like these are properly
+  punctuated. 
+ * References should be in a \thebibliography-environment. These
+  might be difficult to identify. Maybe search for years
+  near the end of the entry?
+ * Displayed formulas should be aligned. 
+
+ $$ a = b, $$
+ $$ b= c$$
+
+should be
+
+ \begin{eqnarray*}
+    a&=& b, \\
+    b&=& c
+ \end{eqnarray*}
+
+Some of these are quite minor. Some are also a matter of taste. 
+However, I think these demonstrate that copy-editing issues
+can be addressed completely automatically. 
+(By automatically, I mean automated corrections.)
+I also think that 
+it would be good to have clear recommendations on notation
+where many alternatives exist. For many authors it is one and 
+the same if they use \subset or \subseteq, ^c or ^\setcomplement,
+- or \setminus.
+But if all are in use on PM this will only lead to confusion. 
+In particular when entries start to grow closer to each other.
+
+Actually this sort of semantic rewriting is useful 
+if you are interested in any sort of processing
+of math expressions other than just display (e.g. text-to-speech)
+-- SteveCheng
+
+** Related software
+
+/Queequeg, A Tiny English Grammar Checker/, http://queequeg.sourceforge.net/index-e.html. 
+It is written in Python, released under GPL, and supports Latex.
+From the home page:
+
+: "Queequeg is a tiny English grammar checker for non-native speakers
+who are not used to verb conjugation and number agreement. We
+especially focus on people who're writing academic papers .."
+
+Hm, interesting.  I wonder whether such a grammar-checker could be
+twisted into a usable for [[file:HDM.org][HDM]]. --[[file:jcorneli.org][jcorneli]]
+
+* Analysis of data
+It would be good to have some idea how PM is growing at
+the moment. Is the growth linear or exponential? What will be its
+size in 2007, 2008? If we have some idea of the growth, we could
+start putting up goals also on a month to month basis.
+--[[file:matte.org][matte]]
+
+
+* Discussion
+
+By the way, [[file:matte.org][matte]], this "automatic copyediting" stuff is
+interesting and should probably go into the [[file:FEM.org][FEM]] project's pages.
+(We're already doing some automatic copyediting; and over-arching
+editing is a big part of what FEM does for PM.)  The topic doesn't
+seem to have much to do with collecting statistics, however.
+--[[file:jcorneli.org][jcorneli]]

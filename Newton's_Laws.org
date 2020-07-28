@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page will help organize the first summer collaborative topic for PlanetPhysics on Newton's Laws and applications of it.  Hopefully, this page will decrease duplicate efforts and help increase collaboration. 
+
+It would be great to see people use the collaboration feature for these entries or make them editable by all, but it is the choice of the author(s).
+
+* Tasks
+
+ * Create a banner for this Summer Topic  (a basic stub was added, it needs something fancier, but my templating sucks right now, I need practice)
+
+* Entries being worked on
+
+Please contact these users on PlanetPhysics if you would like to help out with an entry. 
+
+ * Newton's Laws of Motion - [[file:bloftin.org][bloftin]] http://planetphysics.org/?op=getobj&from=objects&name=NewtonsLawsOfMotion
+
+ * single stage rocket burnout height - [[file:bloftin.org][bloftin]]
+http://planetphysics.org/encyclopedia/SingleStageRocketBurnoutHeight.html
+
+ * frictionless inclined plane - [[file:bloftin.org][bloftin]] http://planetphysics.org/?op=getobj&from=objects&name=FrictionlessInclinedPlane
+ 
+ * difference between mass and weight - [[file:bloftin.org][bloftin]]
+http://planetphysics.org/?op=getobj&from=objects&name=DifferenceBetweenMassAndWeight
+
+ * relation between force and potential energy - [[file:mdo.org][mdo]]
+http://planetphysics.org/encyclopedia/RelationBetweenForceAndPotentialEnergy.html 
+
+ * path independence of work - [[file:mdo.org][mdo]]
+http://planetphysics.org/encyclopedia/PathIndependenceOfWork.html
+* Proofread entries
+
+Not sure how we will implement this for now, but if you have read over someone's entry in detail and 'sign-off' on it, meaning you are please with it and it does not need any corrections, add ons, etc.  As more users sign off on an article, the stronger rating it will have in the community. Ex.  I have signed off on the below entry and so as asar (Just an example)
+
+ * Newton's 2nd Law - [[file:bloftin.org][bloftin]], [[file:asar.org][asar]] 
+ * Newton's 3rd Law - [[file:bloftin.org][bloftin]], [[file:asar.org][asar]], [[file:metalac.org][metalac]]
+
+* Requests
+
+ * Tension
+ * Simple do it yourself experiments related to motion
+ * some friction problems
+ * examples, examples, examples
+ * the relation between force and potential (in the works)
+ * Newton's law of gravitation
+ * Kepler's law combined with Netwon's Laws
+ * Kepler's equation + derivation
+ * satellite orbit examples (gravity gradient, etc.)
+
+* Corrections

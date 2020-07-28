@@ -1,0 +1,287 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I have one more comment about the above topic - I think that before you get
+to the full power AI system for parsing you can consider a more powerful
+"standard" parser. Actually I have written one with similar problems in
+mind and you can have a look at it [http://www.speagram.org here]. It is
+experimental and very slow but it clearly shows that with some extensions
+of context free grammars and with support for disambiguation you can parse
+texts that look quite ok and are readable without additional effort
+(although you still need to concentrate when writing them, it's not NLP).
+What do you think about more powerful but not-AI parsers - don't you
+think that these can make HDM more readable?
+
+--lukaszkaiser
+
+It looks like a good project. However, the objective of the HDM parser should be
+to compile mathematical texts already written, and barring time travel, it's
+hard to make them conform to a standard. Thus I don't know how useful it would
+be to us. I'm a newcomer to this project though, some someone else might have
+other opinions. Joe, Ray?
+
+--[[file:shargestam.org][shargestam]]
+
+Lukasz: your parser looks like it could be made to work on mathematical
+notation and on the more "formulaic" mathematical writing 
+("/[[file:Let G be a group.org][Let G be a group]]/" etc.).  I am certainly in favor of parsers like this.
+The other "general" parser I've looked at is the 
+[http://bobo.link.cs.cmu.edu/link/ link grammar parser].  I had questions about
+the license and didn't follow up much further other than to ask the authors to
+make it GPL compatible (which
+[http://bobo.link.cs.cmu.edu/link/license.html they say they have done],
+though I think a little more investigation may be in order).
+We should probably be working on everything in parallel for several different
+parsers to decide which one has the best features.  Anyone (including me)
+is certainly welcome to take the [[file:What can the expression parser do|examples.org][What can the expression parser do|examples]]
+I've put together and redo them with another parser, and I'd like to see the
+results.  Presumably with a working parser this should be a project for an
+afternoon, whereas the special-purpose parser I'm writing takes a lot of time
+to write and debug.
+
+--[[file:jcorneli.org][jcorneli]] Sat Jun 25 00:39:54 2005 UTC
+
+Most of the examples from your page are going to work in speagram and it is very
+simple to code them. On our tutorial web
+[http://www.speagram.org/tutorial/sasha_logic_formulas.html page] we have a
+format for parsing logical formulas, but we use "-" instead of "\neg" and for
+example "/\" instead of \wedge (\land).  I see the following examples that can
+cause problems, but not really deep ones. One is ((a,b,c),d,e) ==> (tuple (tuple
+a b c) d e).  You use the same "tuple" constructor for 2 and 3 tuples which is
+not allowed in speagram (which is strongly typed). But if you can live with
+(tuple2 (tuple3 a b c) d e) instead then no problem.  The other point:
+a+b+c+d+e. You can declare a 5-ary "+" operator, but as said - in a well typed
+system for each arity you'll get a new one. What speagram can output for this
+expression is (+ (+ (+ (+ a b) c) d) e) but I do not know if that satisfies you.
+Anyway - you can also have a look at [http://www.program-transformation.org/Sdf
+SDF].
+
+--lukaszkaiser
+
+The parses you suggested wouldn't be particularly bad for us: we'll need to have
+separate code to do simplification anyway, presumably.  But I'm a tad surprised
+that you can't turn the strong typing off.  I'll take a look at your documentation and think about this!
+
+--[[file:jcorneli.org][jcorneli]] Sun Jun 26 00:51:53 2005 UTC  
+
+I'm not exactly sure what you realy want from your system, but I'm actually quite
+surprised you do not want to have strong typing in HDM. If you are going to let
+someone write about abstract groups and use 1 as group-one and then later someone
+will write about integers and use 1 - anytime you process the data you'll have
+to know which 1 it is. I can't see how to do that w/o types. I'll also read more
+about HDM and if you have any problems with speagram then just write :).
+
+--lukaszkaiser Mon Jun 27 20:30:47 2005 UTC
+
+There is a difference between not wanting typing in hcode and not wanting
+typing in the parser.  Clearly mathematicians use symbols in many different
+ways.  Thus we are exactly in the situation you described with "1" when
+it comes to parsing.  But the situation with "+" we were talking about is
+somewhat different.  The reason for making "+" have variable arity is that
+we want hcode to be useful to people, who are used to having variable arity
+style operations ("\sum" and so on).  But sure we'll use types in places.
+
+--[[file:jcorneli.org][jcorneli]]
+
+My opinions on the matter run against strong typing.  I think it is overly simplistic and restrictive.  Since I am too busy writing an essay for a deadline, I do not have the time to describe my opinions  fully so will simply make a few remarks in the context of your example.  The use of "1" to denote both an integer and the identity element of a group is not accidental --- it is a reflection of the fact that the positive integers form a semigroup under multiplication.  Moreover, the same symbol "1" can also denote a particular rational number, a particular real number, a particular matrix, a particular function, etc.  If one were to try to capture these different uses with a type system, the result would be that one would have to have thousands of types.  Also, one would have the typing be dynamically expandable since mathematicians invent new types as they go along.  Rather, I would say that a better approach would be a more subtle system based upon the nature of mathematical entities.
+
+As for the comment about variable number of arguments, I would say that means that one needs to implement a more flexible grammar which allows such things.
+
+--[[file:rspuzio.org][rspuzio]]
+
+First of all I want to address the problem of variable number of arguments. I did not understand you before
+and it seems that I described a problem that really does not exist. The thing is that you can of course
+simulate variable number of arguments by taking a list of them and it still has good type. So there is no
+problem to create a operator + that takes just a list of integers. It is also not a problem in speagram to
+define another binary "+" as a shorthand and then to make it work in such way that "a+b+c+d" will be parsed
+as "((a+b)+c)+d" but immediately inlined and therefore the final output will be "+ [a, b, c, d]" (whereas
+these two + are actually different, but in speagram you can use the same + symbol for both, no problem).
+
+The other problem mentioned is that you'll need to have a few types for "1" and for other symbols.
+You are writing "thoussands of types" but this is not true - you'll just have to have as many types
+as many different mathematical entities you really have. And I think you can not really avoid this,
+because from time to time you need to distinguish these objects. And typing is of course dynamically
+extendable, I have already long forgotten that indeed there were once type systems that were not extendable ;).
+
+As it seems that the "typing" problems do not really exist I could try to write down some grammar
+in speagram that could be of use for you. Do you have some other examples (other than the ones on the page)
+and do you have some preferences for the result output format? Perhaps it would be a good idea if you
+add some more grammar-like specification to the examples page, but perhaps it's not necessary.
+
+-- lukaszkaiser
+
+Lukasz: thanks for the clarification and the offer.  You'll find many examples
+more of math formulas on http://planetmath.org -
+more than enough - and from a range of different mathematical
+subject areas.  Just click on some of the Latest Additions and select the !TeX
+source view to see examples of the sorts of things we're aiming for.  
+
+The examples I've done so far are particularly simple, and I think it would
+be worth doing those as step 0.  If you can replicate the same results,
+with the same output, then we can get a good sense of what Speagram
+code looks like, and this would be a big help!  If you want to continue to work
+on the math parsing problem after that, I'd be happy to provide you
+with more examples to show how the parses should look, or take 
+over writing the code and ask you questions when I get stuck.  
+
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 01:04:05 2005 UTC
+
+Hi. Sorry for the long time you needed to wait - summer holidays and work
+keep me out of schedule and I'll most probably not be very active for the
+next 2-3 weeks. But I finally managed to sit down on hcode and write some
+speagram code to parse it. One stupid technical problem is that speagram
+outputs lists as "[a, b, c]" whereas you want them as "a b c". For now
+I made an ugly hack with sed that's not going to work in the long run,
+but I'll keep it in mind to add a command-line option in the next version
+of speagram to change the display of lists.
+
+You can see the speagram code and the results of some tests on speagram testsuite
+[http://cvs.sourceforge.net/viewcvs.py/speagram/speagram/src/testsuite/ cvs] page
+in the files hcode_zero.spg (code) and hcode_zero.log (results) (take version >= 1.3).
+Together with the parser there is a simplifier so for example the input
+
+\forall a b : \exists c : \neg a+34 = c*3*2 \wedge a^2 = c+0
+
+is parsed and simplified to
+
+(and (forall (a b) (exists c (not (eq (+ a 34) (* c 6))))) (eq (pow a 2) c)).
+
+I assume that quantifiers bind stronger than connectives and and binds stronger
+than or which in turn binds stronger than implies (I think this is the standard).
+The simplifier handles multiple-plus and multiple-times so for
+
+a+b+c = b+c+a
+
+you get the desired
+
+(eq (+ a b c) (+ b c a)) (instead of (+ (+ a b) c) stuff).
+
+While working on it I found the file http://planetx.cc.vt.edu/AsteroidMeta/Version_Zero
+quite useful, but I think there is a conceptual mistake in it.
+You write:
+
+Usage: (eq <expression> <expression>)
+
+so it seems that you can write (eq (forall a phi) (exists b psi)).
+This does not make sense and seems to be contrary to the standard
+in mathematical logic, where you distinguish terms and formulas.
+This is why in the speagram code I made two kinds of expressions,
+logical expressions and arithmetical expressions and "eq" creates
+a logical one from two arithmetical ones.
+
+I think it could make sense if you looked again at the spec for hcode
+and distinguished at least a few kinds of expressions, like logical,
+arithmetical and set-theoretical (in speagram code I stayed with arithmetical
+and logical expressions for the time being).
+
+The speagram code in hcode_zero.spg should be readable even with little
+prior knowledge of speagram so you are welcome to look at it and comment.
+The speagram code should work ok with the speagram version 0.1 available for
+download on sourceforge so you can try it yourself, but beware that it is
+very slow (the next version will be a lot faster but it is still some time off).
+Still any not slowness-related comments and bug-reports are welcome :).
+
+-- lukaszkaiser
+
+Hi Lukasz, Thanks for the files and comments!  This will give me (us) a good
+start for playing around with Speagram, so hopefully I'll have some comments for
+you in 2-3 weeks when you're back.
+
+: /I assume that quantifiers bind stronger than connectives and and binds
+stronger than or which in turn binds stronger than implies (I think this is the
+standard)./
+
+That seems right.  Some people may make a non-standard choice; you mentioned
+that Speagram can deal with ambiguity, this might be one place to consider
+non-standard alternatives.
+
+: /it seems that you can write (eq (forall a phi) (exists b psi)). 
+This does not make sense and seems to be contrary to the standard
+in mathematical logic, where you distinguish terms and formulas./
+
+Maybe.  I guess that if both /(forall a phi)/ and /(exists b psi)/ evaluated
+to the same thing (e.g., to /T/) then the statement could make sense.
+However, I'm quite sure that we haven't fully thought through the use of the
+/eq/ predicate for hcode, and like you say, there's been no attempt so far to
+distinguish between logic and math expressions.  As our work on proof checking
+and moves forward (together with the addition of libraries for things like
+set theory), the spec should evolve into a state where it makes more sense.
+
+Thanks again & I hope summer is going well for you.  I'll be in touch again
+after playing around with the Speagram/hcode examples.
+
+--[[file:jcorneli.org][jcorneli]] Tue Jul 26 21:14:57 2005 UTC
+
+
+Hi guys, I know this is a long time coming, but better late than never.  First of all I'd like to comment on the /eq/ operation.  I believe that logically, equivalence can be seen as the "if and only if" function or the negation of the xor function [that is (eq a b)==(not (eq a b)].  To take my point even further: [(eq (eq a b) (not (eq a b))] evaluates to /true/.  The other, more general /eq/ is object comparison.  For example, two integers can be compared, a complex and a natural, and two matrices, and of course two boolean values as well.  The equivalence operation is type-dependent (the second is valid of course, because the naturals are a subset of the complex numbers).  I see no problem in leaving (eq <expression><expression>) as is so long as there is some method of type checking (after parsing) that can make sure that the two expressions are the same type (or one a subtype of the other).  The question then lies in evaluating (eq (forall a phi) (exists b psi)).  Are the types the same?  Correct
+me if I'm wrong but /forall/ and /exists/ are both boolean expressions, and *only* boolean expressions.  Having something with a forall and no evaluating expression for its elements seems incomplete and therefore not a valid implementation of /forall/ in the first place.  I hope that helps.
+
+Lukasz, I will contact Joe to see if I can get a copy of your parser
+code and parser implementations.  I was looking at your site and saw
+that Speagram runs under Microsoft .NET, do you have a Unix/Linux
+compilable version that does not use .NET?  Can it be ported to
+Unix/Linux (this leads to the question of what language speagram is
+written in). Finally, I was wondering how does speagram compare in
+terms of power with Lex and YACC?
+
+Again, I'm sorry i've been slow to reply.  I have gotten pretty busy
+at grad school, but here and there I can get spurts of free time I can
+use to code other projects.  This, would be one of those spurts. :)
+
+-- [[file:stux.org][stux]]  Karli Lopez 9/23/05 7:49pm EST  (what tag lets me post a signature/timestamp?)
+
+Also, I looked at the license for the
+[http://bobo.link.cs.cmu.edu/link/license.html Link Grammar] and it
+seems that it indeed is free to modify and distribute as long as the
+copyright notice they provide is included with the distribution.  In
+other words, I believe that HDM would have to be published with this
+license attached to it.
+
+-- [[file:stux.org][stux]]
+
+: This may be the case, but I'm pretty sure we can at least *use* the
+code together with GPL code; the authors of the program *did* attempt
+to make it GPL compatible.  I think we can assume that it is OK to use
+this parser, but whoever does the investigation of its technical
+usability should also double check with GNU/FSF that it really is GPL
+compatible.  --[[file:jcorneli.org][jcorneli]]
+
+I was thinking about the problem today and realized that, if we want
+the parser to be flexible, we could use something akin to !LaTeX style
+sheets, but with parsing capabilities and where each production would
+just be an output of hCode.  This would of course have to be a new
+file format built from the ground up, but it would provide the most
+flexible system.
+
+-- [[file:stux.org][stux]] 9/25/05 12:56pm EST
+
+I don't know much about style sheets, but I agree that we don't just
+want one parser; what we really want are many small parsers, and some
+code that helps us to recognize which one gives the right answer in a
+given situation.  My guess is that this sort of "glue" can be added
+into the [[file:scholium system.org][scholium system]], a layer above the parsers.  Two things
+to do when working on the parsing subsystem would be to work on
+developing small parsers, each of which can probably be fairly rigid;
+and, work on developing the system that switches between the different
+parsers.  Many of the small parsers may be very similar to one
+another, which could help make writing new ones and swapping existing
+ones go fairly smoothly.  I think that if we come at this problem from
+the point of view of grammar design, this should be pretty clear: each
+domain will have its terminals (e.g. "\rightarrow" typically means
+something different in functional analysis than it does in elementary
+logic) and its non-terminals (the class of left-associative bijective
+operators, the class of delimiters, etc.).  The parser I started
+doesn't have a great design, but if you scrutinize it, you'll see that
+it is basically working from this point of view.  Something that
+probably shouldn't be too hard to do would be to write out the grammar
+that this parser handles (or, better, an improved version of the
+same).  From there, if I understand it correctly, it shouldn't be hard
+to move to a "standard parser" like Speagram or YACC or Link, or
+whatever.  (I think Link may be a good one to investigate, since they
+are already geared towards NLP -- which we'll be getting to pretty
+shortly, I think.)  Anyway, once one grammar is completed, it would be
+good to do another -- and so on, until we have a collection of parsers
+that make it worth the time to build the "glue" layer.  Incidentally,
+in terms of analogies, I'm reminded of GNU HURD.  (And BTW, I do think
+that the Speagram pages contain instructions for installing a FAIF
+.Net replacement under which it will run.) --[[file:jcorneli.org][jcorneli]]

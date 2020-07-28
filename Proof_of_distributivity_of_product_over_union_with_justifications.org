@@ -1,0 +1,218 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Still in progress &#215;
+
+1. /A &#215; (B &#8746; C) &#8838; (A &#215; B) &#8746; (A &#215; C)/
+
+: <u>Proof of 1:</u>
+
+: 1.1. /(x y) &#8712; A &#215; (B &#8746; C)/ &ensp; &#8596; &ensp;
+/x &#8712; A/ &thinsp; &#8743; &thinsp; /y &#8712; B &#8746; C/
+ &emsp; *definition of product*
+
+: 1.2. /y &#8712; B &#8746; C/ &ensp; &#8596; &ensp; /y &#8712; B/ &thinsp; &#8744; &thinsp; /y &#8712; C/
+  &emsp; *definition of union*
+
+: 1.3. If /x &#8712; A/ &thinsp; &#8743; &thinsp; /(y &#8712; B &thinsp; &#8744; &thinsp; y &#8712; C)/ then 
+/(x y) &#8712; (A &#215; B)/ &thinsp; &#8744; &thinsp; /(x y) &#8712; (A &#215; C)/
+
+: <u>Proof of 1.3:</u>
+
+:: 1.3.1. /x &#8712; A/ &#8743; /(y &#8712; B or y &#8712; C)/ &#8596; 
+/x &#8712; A and y &#8712; B/ &#8744; /x &#8712; A &#8743; y &#8712; C/
+ *distributive law of * /and/ *over* /or/
+
+:: 1.3.2. /x &#8712; A &#8743; y &#8712; B/ &#8596; /(x y) &#8712; (A &#215; B)/
+ *definition of product*
+
+:: 1.3.3. If /x &#8712; A &#8743; y &#8712; B/ &#8744; /x &#8712; A &#8743; y &#8712; C/ then 
+/(x y) &#8712; (A &#215; B)/ &#8744; /x &#8712; A &#8743; y &#8712; C/
+ *adding* /or/ *to both sides rule appled to preceding step*
+
+:: 1.3.4. /x &#8712; A and y &#8712; C/ &#8596; /(x y) &#8712; (A &#215; C)/
+ *definition of &#215;*
+
+:: 1.3.5. If /(x y) &#8712; (A &#215; B)/ or /x &#8712; A and y &#8712; C/
+then /(x y) &#8712; (A &#215; B)/ &#8744; /(x y) &#8712; (A &#215; C)/
+ *adding* /or/ *to both sides rule appled to preceding step*
+
+:: 1.3.6. If /x &#8712; A and y &#8712; B/ &#8744; /x &#8712; A and y &#8712; C/ then
+/(x y) &#8712; (A &#215; B)/ or /(x y) &#8712; (A &#215; C)/
+ *modus ponens appled to steps 3 and 5*
+
+:: 1.3.7. If /x &#8712; A/ and /(y &#8712; B or y &#8712; C)/ then 
+/(x y) &#8712; (A &#215; B)/ or /(x y) &#8712; (A &#215; C)/
+ *modus ponens*
+
+:: <u>Q.E.D. 1.3</u>
+
+: 1.4. If /(x y) &#8712; A &#215; (B &#8746; C)/ then 
+/(x y) &#8712; (A &#215; B) &#8746; (A &#215; C)/
+
+: <u>Proof of 1.4:</u>
+
+:: 1.4.1  /(x y) &#8712; (A &#215; B) &#8746; (A &#215; C)/ &#8596;
+/(x y) &#8712; (A &#215; B)/ or /(x y) &#8712; (A &#215; C)/
+ *definition of* /union/
+
+:: 1.4.2 If /(x y) &#8712; A &#215; (B &#8746; C)/ then 
+/(x y) &#8712; (A &#215; B) &#8746; (A times C)/
+ *modus ponens*
+
+:: <u>Q.E.D 1.4</u>
+
+: 1.5.  /A &#215; (B &#8746; C) &#8838; (A &#215; B) &#8746; (A &#215; C)/
+ *definition of* /subset/
+
+: <u>Q.E.D. 1</u>
+
+2. /(x y) &#8712; (A &#215; B) &#8746; (A &#215; C)/ &#8596;
+either /(x y) &#8712; (A &#215; B)/ or /(x y) &#8712; (A &#215; C)/
+ *definition of* /union/
+
+3. If /(x y) &#8712; (A &#215; B)/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+
+: <u>Proof of 3:</u>
+
+: 3.1. /(x y) &#8712; (A &#215; B)/ &#8596;
+/x &#8712; A/ and /y &#8712; B/ *definition of set product*
+
+: 3.2. If /y &#8712; B/ then /y &#8712; B &#8746; C/
+ 
+:: <u>Proof of 3.2:</u>
+
+:: 3.1.1. If /y &#8712; B/ then either /y &#8712; B/ or /y &#8712; C/
+ *arbitrary* /or/ *tautology*
+
+:: 3.1.2. If /y &#8712; B/ then /y &#8712; B &#8746; C/
+ *definition of* /union/
+
+:: <u>Q.E.D. 32</u>
+
+: 3.3. /x &#8712; A/ and /y &#8712; B &#8746; C/ &#8596;
+/(x y) elt A &#215; (B &#8746; C)/
+ *definition of* /product/
+
+: 3.4. If /(x y) &#8712; (A &#215; B)/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ 
+:: <u>Proof  of 3.4</u>
+
+:: 3.4.1 If /x &#8712; A/ and /y &#8712; B/ then
+/x &#8712; A/ and /y &#8712; B &#8746; C/
+  *adding* /and/ *to both sides rule*
+
+:: 3.4.2 /x &#8712; A/ and /y &#8712; B &#8746; C/ &#8596;
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *definition of* /times/
+
+:: 3.4.3 If /x &#8712; A/ and /y &#8712; B/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *modus ponens*
+
+:: 3.4.4. If /(x y) &#8712; (A &#215; B)/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *modus ponens*
+
+:: <u>Q.E.D. 3.4</u>
+
+: <u>Q.E.D. 3</u>
+
+4. If /(x y) &#8712; (A times C)/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *modus ponens*
+
+: <u>Proof of 4</u>
+
+: 4.1. /(x y) &#8712; (A &#215; C)/ &#8596;
+/x &#8712; A/ and /y &#8712; C/
+ *definition of* /&#215;/
+
+:: <u>Proof of 4.1</u>
+
+:: 4.1.1. If /y &#8712; C/ then either /y &#8712; B/ or /y &#8712; C/
+ *arbitrary* /or/ *tautology*
+
+:: 4.1.2. If /(x y) &#8712; (A &#215; C)/ then
+/x &#8712; A/ and /y &#8712; C/
+ *definition of* &#215;
+
+:: <u>Q.E.D. 4.1</u>
+
+: 4.2. If /y &#8712; C/ then /y &#8712; B &#8746; C/
+ *definition of/ /union/
+
+: 4.3. If /x &#8712; A/ and /y &#8712; B &#8746; C/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *definition of* /&#215;/
+
+: 4.4. If /(x y) &#8712; (A &#215; C)/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+
+:: <u>Proof of 4.4</u>
+
+:: 4.4.1. If /x &#8712; A/ and /y &#8712; C/ then
+/x &#8712; A/ and /y &#8712; B &#8746; C/
+ *adding* /and/ *to both sides rule*
+
+:: 4.4.2. If /x &#8712; A/ and /y &#8712; B &#8746; C/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *definition of* /times/
+
+:: 4.4.3. If /x &#8712; A/ and /y &#8712; C/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *modus ponens*
+
+:: 4.4.4. If /(x y) &#8712; (A &#215; C)/ then
+/(x y) &#8712; A &#215; (B &#8746; C)/
+ *modus ponens*
+
+:: <u> Q.E.D. 4.4</u>
+
+: <u>Q.E.D. 4</u>
+
+5. /(A &#215; B) union (A &#215; C) &#8838; A &#215; (B &#8746; C)/
+
+: <u>Proof of 5</u>
+
+
+: 5.1. /(x y) &#8712; (A &#215; B) &#8746; (A &#215; C)/ &8596;
+either /(x y) &#8712; (A &#215; B)/ or /(x y) &#8712; (A &#215; C)/
+ *definition of* /union/
+
+:: <u>Proof of 5.1</u>
+
+:: 5.1.1. /(x y) &#8712; (A &#215; B)/ &8596;
+ /x &#8712; A/ and /y &#8712; B/
+ *definition of* /&#215;/
+
+:: 5.1.2. /(x y) &#8712; (A &#215; B)/ &8596;
+/x &#8712; A/ and /y &#8712; B/
+ *definition of* /&#215;/
+
+:: 5.1.3. /(x y) &#8712; (A &#215; B)/ or /(x y) &#8712; (A &#215; C)/
+if and only if (/x &#8712; A/ and /y &#8712; B/) or
+(/x &#8712; A/ and /y &#8712; B/)
+ *disjunction of equals is equal*
+
+:: 5.1.4. (/x &#8712; A/ and /y &#8712; B/) or
+(/x &#8712; A/ and /y &#8712; C/) if and only if
+/x &#8712; A/ and (/y &#8712; B/ or /y &#8712; C/)
+ *distributive law of* /and/ *over* /or/
+
+:: <u>Q.E.D. 5.1</u>
+
+: 5.2. If /(x y) &#8712; (A &#215; B) &#8746; (A &#215; C)/ then
+/(x y) &#8712; A &#215;(B &#8746; C)/
+
+: 5.3. /(A &#215; B) union (A &#215; C) &#8838; A &#215; (B &#8746; C)/
+ *definition of* /subset/
+
+: <u>Q.E.D. 5</u>
+
+6. /A &#215; (B &#8746; C) = (A &#215; B) &#8746; (A &#215; C)/
+ *two sets are equal if one is a subset of the other*
+
+Back to [[file:Example of structured proof.org][Example of structured proof]]

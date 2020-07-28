@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Finally, we are in a position to write down match-schema.
+
+Recall that this function is a map that takes a schema and an arbitrary list to
+a list of assignments to the schema's wildcards that cause the schema's
+expression to match the list. (And also that we reserve the empty assignment,
+i.e., `nil', to mean that no assignment was possible, and the value `t' to mean
+that no assignment is needed, i.e. the schema's expression already matches the
+list exactly.)
+
+As before, consider the cases where the expression of the schema is a
+non-wildcard atom, an atom, or a list.  The first two cases are rather simple.
+If the expression is a non-wildcard atom or empty, then we can match the
+argument if and only if it equals the expression.  Therefore the value of
+match-schema will be the same as that of '(equal expression argument) in this
+case.  If the expression is a wildcard, then matching is trivial and we return
+the value '(<wildcard> argument).  Finally, if the expression is a list, then
+there must be the same number of items in the expression as in the argument,
+each item in the expression must match to the corresponding item in the
+argument, and these matches must be consistent, i.e. the wildcard must assume
+the same value no matter where it occurs in the schema.  From this description,
+we may define our function as follows:
+
+  (defun match-schema (schema argument)
+    (cond ((null (car schema)) (equal (cadr schema) argument))
+          ((null (cadr schema)) (null argument))
+          ((atom (cadr schema))
+           (if (member (cadr schema) (car schema))
+               (list (list (cadr schema) argument))
+             (equal (cadr schema) argument)))
+          ((atom argument) nil)
+          ((same-length (cadr schema) argument)
+           (check-consistency (zipper schema argument)))
+          (t nil)))
+
+** Examples
+
+ (match-schema '((x y) (if x y)) '(if a (if b a)))
+ ;=> ((x a) (y (if b a)))
+
+ (match-schema arbitrary-premise-rule '(if (if a b) (if c (if a b))))
+ ;=> ((y c) (x (if a b)))
+
+----
+
+* Comments
+
+I don't really understand about `check-consistency' -- is there an exmaple that
+shows why it would be needed? --[[file:jcorneli.org][jcorneli]] Tue Mar 01 14:59:50 2005 UTC

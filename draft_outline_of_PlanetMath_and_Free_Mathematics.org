@@ -1,0 +1,141 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * what do we mean by "free"?
+  * ability to create/contribute knowledge as well as consume for no-cost
+  * i.e. /libre/ free, not just /gratis/
+  * notions of commons-based peer production (CBPP), free culture
+ * talk about what planetmath *is* (now)
+  * broad description: 
+   * web site and virtual community for anyone interested in and/or doing mathematics
+   * students (at all levels), teachers, researchers, amateurs, people in industry, ...
+   * free (libre and gratis, with an emphasis on libre), GNU FDL license
+   * history:      
+    * dates back to 2001 (yes, even before Wikipedia!)
+    * founders: Krowne, Egge, while undergrads at Virginia Tech
+    * spurred by CRC's attack on MathWorld
+    ** wanted convenient online reference
+    ** needed quick production: collaborative system
+    ** needed appropriate licensing (legal protection): FDL license
+    * most coding: Krowne
+    ** others contributed minority portions later (we would like to change this)
+    * became Krowne's thesis project (at VT Digital Library lab for Master's)
+  * overview of site
+   * main section is encyclopedia
+    * entries contributed spontaneously by users
+    * written in LaTeX, rendered as HTML+images, page images, etc...
+    * entries automatically inter-linked
+    * third parties may submit corrections
+    * authority model: 
+    ** objects have an "owner" (starts as initial creator)
+    ** ownership transferrable (voluntarily or due to outstanding corrections)
+    ** owner can allow co-authors  
+    ** good balance of facilitating production + respecting intellectual property
+    * entries have types (definition, theorem, proof, etc)
+    * entries can be attached (i.e. proof to theorem, example to definition, etc...)
+    * organization by MSC (also used to facilitate autolinking)
+    * searchable w/search engine (lucene-based)
+   * requests section  
+    * entries people want to see in the encyclopedia (any user can add)
+    * some collaborative workflow for fulfilling requests 
+   * also have books, papers, expositions sections 
+    * also user-contributable
+    * emphasize free and electronic resources
+   * forums
+    * bulletin-board style (threaded, configurable views)
+    * attached to every major object
+    * notification for posts, replies (configurable)
+    * allow communication between learners, authors and readers
+   * notification 
+    * keep people integrated with relevant activity on the site
+    * based on "watches"-- can be placed on most major objects (+msg threads)
+    * web notices and email (configurable)
+   * scores
+    * used to keep track of productive activity
+    * provide some recognition of contribution
+    * encourage healthy competition
+   * ... anything else?
+  * studies and stats
+   * system stats:
+    * numer of entries (activity graphs)
+    * edit/revision activity
+    * number of users (all, active)
+    * number of contributors (authors, correctors, posters, etc)
+    * ... 
+   * rmilson study
+   * uptake of PM entries by Wikipedia
+
+ * talk about the benefits of /libre/ free ("FIAF")
+  * everyone knows whats so good about being digital/net-based and /gratis/ free (available everywhere, available to those without much money, lower overhead, etc.)
+  * but, /libre/ CBPP affords:
+   * massively-scalable economies of production
+    * low barrier to contribution includes more people
+   * high quality: "more eyes make errors shallow"
+   * blur line between info consumer and producer:
+    * "free culture" ideals: egalitarian, empowering
+    * help students/learners/readers become true scholars
+    * best way to learn is by teaching
+   * avoid "lock-out" in publishing:
+    * be judged by content, not credentials
+    * minimize political effects
+   * open review: reviewers subject to "review" themselves
+    * review not coercive (convince, not force!)
+    * review never stops (and why should it?)
+   * high diversity/coverage of content:
+    * review not a bottleneck
+    * no page count/space limitations
+   * ...      
+ * talk about where we want to *go* with planetmath (and Noosphere)
+  * "the home page for free math online"
+  * want to branch out into all sorts of free math activites:
+   * books (not just encyclopedic)
+    * writing new books
+    * scan in/OCR math books, start building upon them
+   * general mathematical collaborations (papers/expositions) 
+    * have collaborations section now
+  * become more of a one-stop-shop collaborative digital library:
+   * fold existing papers/expositions/books into a "DL" section
+   * "syndicate" other sources: Ask Dr. Math, Math Atlas (Pitman), arXiv, ...
+   * value-add for syndicated content, applying FIAF principles
+  * be more pedagogical
+   * learning object metadata, filtering, profiles
+   * versions of entries for different audiences
+   * more introductory/elementary content
+   * more/many parallel classification interfaces
+   * more figures/graphs/charts interactive apps (how to encourage?)
+  * be more "credible"
+   * encourage/support usage of real-world identities
+   * tie publication (as in FEM) to credibility (i.e. motivate identities)
+   * integrate explicit quality (ratings/reputations)
+   * ...
+  * work more with other collaborative sites
+   * wikipedia, Ask Dr. Math, Atlas (Pitman), etc...
+   * bi-directional updates of changes
+  * HDM
+   * computational/"actionable" math, using PlanetMath as "database"
+   * integrate AI/machine learning aspects
+   * actually enhance how mathematics is done 
+  * do some studies to determine how to better serve the user community
+  * spread Noosphere to other deployments 
+   * already starting PlanetPhysics
+   * soon: maybe PlanetComputing?     
+  * ...
+ * how you can help
+  * using the site:
+   * add entries
+   * critique entries
+   * participate in forums
+  * encourage others to use it ("evangelism")
+  * coding 
+   * help add the things above and those on our TODO list
+   * or just add features you want 
+  * re-deploy Noosphere for other subjects
+  * the .ORG of PM.org
+   * overview description (nonprofit, 501(c)(3), Krowne prez, etc.)
+   * financially supporting PM through the .ORG
+   * sponsoring us
+   * partnering with us
+   * getting grants
+  * help with planning and participate in "meta" discussions (go to AsteroidMeta)
+ * conclude
+  * something inspirational....

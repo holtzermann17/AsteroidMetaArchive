@@ -1,0 +1,301 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is supposed to give an overview of the [[file:HDM.org][HDM]] project.  Why a new
+overview, when the main HDM page also gives a continually-updating overview, and
+the [http://www.ma.utexas.edu/~jcorneli/d/ original HDM site] already states the
+goals of the HDM project?
+
+Because we want redundancy (seriously!) and also because (a) the style of the
+overview given on the main wiki page will be different from the style given
+here; (b) the goals and the state of the project continue to evolve, so it is
+good to have a non-static description.
+
+The style of the main HDM page should be less detailed (higher level) than the
+information given here.  In addition, this page may prove to be "meta" to that
+page, i.e., it may influence our decisions about what to put on that page.
+
+Unlike the "HDM essay", this page is not meant to be at all "canonical";
+actually, it is meant to be a free for all - so please: edit, revise, add,
+subtract, divide, and conquer.
+
+Further discussion may spin off from here, of course.
+
+*  Note = 
+
+Even though the title of this page says "Guide to the HDM", right now the fact
+that the HDM does not have a lot of content prevents anyone from writing a good
+guide /to the content/.
+
+Indeed, until we /really/ get things going, there won't really /be/ "HDM
+content": there will be "HDM infrastructure" (which will include some necessary
+and some sample/prototype content.  
+
+Any legitimate guide to the HDM should be a guide to the HDM project, the HDM
+infrastructure, and the HDM content, such as each exists (and possibly, has
+existed, is hoped to exist in the future).
+
+Eventually, of course, the HDM will contain a guide to its content /as part
+of/ its content.  That is part of the nature of hyperreal things.
+
+----
+
+*  What the HDM project is
+
+Officially begun in 2003, the HDM project is about:
+
+**  high level
+ * understanding mathematics as it is done by people
+ * building tools that will make it considerably easier to do/learn/produce mathematics that people value
+
+**  mid level
+
+ * building a "strong AI" (for the mathematics domain)
+ * building an electronic collection of mathematical information that becomes truly comprehensive
+
+**  low level
+
+ * artificial intelligence
+ * parsing
+ * proof checking
+ * theorem proving
+
+*  Motivations
+
+ * To make math (which is currently hard!) much easier
+ * To understand an interesting and weird aspect of human culture (math!)
+ * To make a positive impact on society
+ * In particular, to promote the spread of mathematical knowledge 
+and involvement in the mathematical process, including
+to people who have not historically had "access" to these things, 
+but really to everyone - to generally improve access to mathematical
+knowledge and process
+ * To topple information oligarchs and make mathematical knowledge FREE IN THE SENSE OF FREEDOM!
+ * To understand code better and help build better software
+ * To give a proof of concept for "strong AI" (assuming people didn't accept Deep Blue as proof of concept...)
+
+* Related work
+
+See [[file:HDM-related things to check out.org][HDM-related things to check out]].
+
+*  What people have to say about the HDM project
+
+Note: these are not actual quotes, but paraphrases, from some famous and
+not-so-famous people [[file:jcorneli.org][jcorneli]] has talked to either in person or by email
+about the project.  If I am misrepresenting what someone said (or now thinks),
+please let me know; it is quite likely.  
+
+The paraphrases are too short to do much justice to the very interesting
+interesting conversations I've had with people, but they capture some of the
+take-home points.
+
+Although I've made the effort to talk to a lot of people about HDM, I certainly
+haven't talked to everyone who's worth talking to.  Also, I don't recall the
+details of what some people had to say.  I should have taken better notes.
+
+Probably I am not the most "objective" reporter, but that's OK.
+
+I would like to suggest that other people who know about HDM stuff talk about it
+more... spread the word, that kind of thing.  It would be interesting to hear
+more of what people have to say, and I like the fact that the comments are now
+beginning to have comments on them.
+
+**  Somewhat negative sounding (but potentially true)
+
+ * That it is /[[file:Discussion of not really math |not really math.org][Discussion of not really math |not really math]]/. 
+(Reuben Hersh, author of "What is Mathematics Really")
+
+ * That it is /[[file:Discussion of not a good thing for a student to work on|not a good thing for a student to work on.org][Discussion of not a good thing for a student to work on|not a good thing for a student to work on]]/. 
+(Karen Uhlenbeck, world-class geometer)
+
+ * That /[[file:math OCR is hard | the OCR component is hard.org][math OCR is hard | the OCR component is hard]]/. 
+(Richard Fateman, computer scientist and OCR expert)
+
+**  Medium sounding (somewhat ambivalent)
+
+ * That it is a /"grand vision"/. 
+(Bruce Palka, editor of the American Mathematical Monthly)
+
+ * That the mathematical needs /go beyond what is provided in the [[file:KM.org][KM]] system/. 
+(Bruce Porter, KRR expert)
+
+ * That /no one has really done "digging down" before/. 
+(J Moore, theorem proving expert)
+
+ * That it /would be good to try to reproduce certain earlier results from AI/. 
+(Marvin Minsky, "father of AI")
+
+**  Good sounding (and motivating)
+
+ * That it /sounds interesting and worthwhile/. 
+(Noam Chomsky, "father of modern linguistics" and activist)
+
+ * That it is a /good project and worth supporting/. 
+(Richard Stallman, GNU founder and Emacs maintainer)
+
+ * That the linguistics component /seems basically feasible/. 
+(Rajesh Bhatt, linguist)
+
+*  Objections and stumbling blocks
+
+For general criticism and general responses, please see [[file:HDM criticism.org][HDM criticism]].
+For more specific items, see below.
+
+**  "in principle"
+
+***  Feasibility
+
+ * [[file:computers can't be made to think like humans.org][computers can't be made to think like humans]]
+
+***  Social
+
+ * that [[file:no one wants to have a computer for a teacher.org][no one wants to have a computer for a teacher]] anyway (at least, "I don't")
+ * [[file:mathematicians do not want to go out of their way to learn something new.org][mathematicians do not want to go out of their way to learn something new]] or different (yes, we know that, thank you!)
+
+**  "technical"
+
+None that I am aware of - yes!
+
+**  "circumstantial"
+
+Worse things have happened.
+
+ * no money
+ * no institutional support
+ * the people working on the project are perhaps not that qualified to get grants (yet/ever)
+ * it in an "R and D" project, not pure research (which actually might not be such a bad thing)
+
+*  Successes so far
+
+Limited, but there haven't been any failures either.  See sub-projects.
+
+But also note, we /have/ had some very modest successes:
+
+ * networked with [[file:PlanetMath.org][PlanetMath]]
+ * built a large collection of definitions
+ * realized that LISP-like languages are the way to go, and began development of [[file:hcode.org][hcode]]
+ * (tentative) some outreach by signing up to be part of Google's Summer of Code.
+
+*  Sub-projects
+
+**  things we're focusing on at present
+
+As of Spring 2005.
+
+ * parsing
+ * proof checking
+ * limited AI work
+
+**  immediate goals
+
+As of April 5, 2005.
+
+ * finish a working version of [[file:template utilities.org][template utilities]] (leave polishing and refining for later)
+ * check statements of propsitional logic
+ * make parser able to translate APM-Xi
+
+**  Timeline (short term)
+
+See [[file:Plans.org][Plans]].
+
+**  back burner
+
+ * math OCR
+
+*  Sub-Classifieds
+
+We could (in theory) use more discussions and interaction with people who know
+the following areas.  We aren't exactly trying to recruit people to work on
+topics in these areas, but we probably won't turn anyone away, either, if they
+want to help, especially on from about a 30% to a 100% DIY basis.  The HDM
+relates in its full realization to many different spheres of knowledge... over
+time, the list could get rather long.  Some of these things might be made into
+classifieds if we come to believe that doing so would improve our chances/rate
+of success.  If you (the reader) feel that you match one of these descriptions,
+feel free to spin off from here.  If you feel like your skills or some other
+skills would be helpful but have been left out, please add a short description
+to the list.
+
+; the philosophy of Jean Baudrilliard and hyperreality : discussions with an
+  expert in these "esoteric" continental philosophy topic could be helpful.
+
+; theorem proving : the world of theorem provers is large and complex (not to
+  say specious).  It would be nice to talk to someone who could talk more about
+  what's there, what isn't there, and make the discussion relevant for the HDM -
+  especially for planning our next moves.
+
+; computational linguistics : particularly a person or persons involved in
+  computer translations of "formal" text (e.g. instruction manuals for specific
+  domains).  But also people who have a good grasp on seemingly more abstract
+  things like long-range reference.
+
+; education, cognitive science, psychology : what can you tell us about the
+  state of the art of enhanced education?  What can /we/ do for you so as to
+  provide useful data to use in learning experiments?
+
+; economics : probably economic impacts of the HDM; where can we get funding to
+  work on the HDM?  More info on the economics of free software/content in
+  general.
+
+; code : we could probably always use some additional help from people who can
+  take big ideas and write the relevant associated code.
+
+; math and logic : work closely with current crew to build tools and corpus.  An
+  interest in linguistics would help, too.  Alternatively, work more on the
+  theory side of things.  Also, critique HDM's computer-generated text, when
+  there is some.  May also need to be good at writing for this last item to
+  work.
+
+; AI, ontology, non-continental philosophy : help work on structuring the KB.
+
+; antropology : discuss relationship between culture and computing; also discuss
+  applications of simulation in anthropology.
+
+; free software : how to do free software business?
+
+; business management : help us see what's missing from this list, for one
+  thing.
+
+**  Note
+
+Maybe some educational institution could put together an REU or a workshop or,
+heck, even an institute that could bring together people from these different
+areas to work.  Building a firm that brings these people together seems
+challenging - since a prerequisite would be understanding how to do free
+software business, which, presumably, means having a product of some sort.
+(Grants, subscriptions, memberships, etc., should all be looked into, as should
+cooperative business practices.)  Building a CBPP system that interests and is
+used by people from all of these different areas seems a bit tricky too.  Right
+now, [[file:AM.org][AM]] "works" because roles associated with many distinct categories are
+filled by the same people.  But I don't think AM would scale well even to the
+relatively small size where each area is primarily represented by one
+individual.  The [[file:Noosphere.org][Noosphere]] engine would probably work better, but still I
+wonder about how interactions between members of a rather non-homogeneous group
+would go there.  I guess it would probably be OK, if the people could be
+interested.  Stipends would be pretty sure to help.  More discussion of how
+volunteers can be involved would be good.  One approach (riffing off of what I
+said above about "better notes") would be for project developers/hackers simply
+to talk to people in these areas and then write up what they say.  If we go that
+route, we should probably do some more reading about journalism and and
+anthropology.  So, I hope I've hit most of the bases!
+
+* Timeline (long term)
+
+See [[file:Plans.org][Plans]].
+
+*  Hierarchy
+
+To the extent that it makes sense to look at things this way here is a
+hierarchy of the HDM's subprojects and related projects: [[file:HDM Hierarchy.org][HDM Hierarchy]].
+
+* Files
+
+In addition to the 
+"[http://www.ma.utexas.edu/~jcorneli/d/ original HDM site]"
+(which has some files that may be of interest, at least
+historical interest), AND the files on AsteroidMeta, there is now
+also a CVS tree: see [[file:HDM CVS.org][HDM CVS]] for checkout instructions.
+
+If anyone working on the project /wants/ CVS /write
+access/, just let me know, and it can be easily arranged; otherwise,
+post changes to me (on the wiki or by email).

@@ -1,0 +1,73 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* INTRODUCTION
+
+This is the simplest reasonable shared task manager.
+If we ever want any "features", perhaps we will switch to
+something like [https://we.riseup.net/planetmath this demo].
+At this point, "buy-in" is more important than features:
+Aaron's idea is to start with a "virtual piece of paper"
+(and I like that).
+
+To get a visual sense of our workflow, take a look at
+[http://metameso.org/~joe/pm/pm-mapped.html this diagram].
+Things are happening elsewhere -- indeed, this page is useful
+for things that aren't being managed somewhere else.
+
+In keeping with the "virtual piece of paper" design for this page, I'm
+not going to introduce any special semantics -- this is just a list of
+tasks.
+
+I do suggest that when the task is complete, whoever completes it should
+/announce the fact that the task has been completed at some appropriate location/.
+Feel free to delete tasks you're done with.  This is optional, because the
+admin will take care of that if you don't.
+
+It may be convenient to discuss the tasks here or elsewhere (e.g. "I'm working on it" or
+"I expect to be done by such and such a date").  Again, this is optional.
+
+
+* THE TASKS
+
+** President's tasks
+
+ * Supervise various programming tasks (below); coordinate with participating organizations. [ONGOING]
+ * Make sure snapshots are being made right.
+
+** Programmer's tasks
+
+ * implement new template system (coordinating with Pitman, Springer) [ONGOING]
+ * provide support for testing of editorial/content committee features 
+
+** Admin's tasks
+
+ * Maintain this tasklist and an overall organizational roadmap (the
+latter at [[file:PlanetMath_Admin.org][PlanetMath_Admin]]).  Assist other members of the
+organization in creating their own roadmaps. [ONGOING]
+
+ * Develop a member newsletter.
+ * Co-author documentation of PM organization.
+
+ * Figure out what's going on with the "email integration" feature that was
+developed some time ago.
+
+ * Assist with the next board meeting --- remind people of the date, manage the
+  agenda and circulate it to the board, take minutes and file them away where appropriate.
+
+ * Lead revision of our survey of metacommons-related projects in math
+and find a suitable venue for publication as part of our PR strategy
+(see [[file:Surveying the Math Metacommons.org][Surveying the Math Metacommons]]).
+
+
+** Board tasks
+
+ * Schedule the next board meeting sometime in January.
+ * Look for funding sources.
+ * Plan for PM presence at upcoming major math meetings.
+
+** R.S.P.'s tasks
+
+ * Co-author documentation of PM organization.
+
+** Unassigned tasks

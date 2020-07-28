@@ -1,0 +1,99 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* April 2005
+
+I often feel that I fritter away too much time.  None of the activities listed
+here have anything particularly wrong with them, but I think I could go about
+all of them with more forcefulness or "brutal efficiency".  Sometimes I'm fairly
+efficient - during an intense week-long hacking stint, I often can get a lot
+done.  But the problem is that eventually you have to come down from that, and
+then you're tired, or worse, sick.  And moreover, if you focus on one thing for
+a long period of time, then other priorities slide.  So, I would like to do what
+I can to ramp up to having the same sort of intensity I do when I'm focusing on
+one project at times when I'm focusing on several projects.  And I'd like to
+have one of those projects be maintaining my physical and mental health, i.e, so
+that I don't get totally wiped out and subsequently end up wasting time.
+
+As for how these activities relate to my goals - I need to be writing more
+useful software & getting more tip jars out there in public.  
+
+Working on AM seems like a decent way to secure some money in the long run, but
+I should be spending more time on the FEM, too, because that will make some
+(though only a little) money come in probably just about as soon as it is done.
+
+It would be good to see a plan come together on AM that would show how I could
+actually be making enough money to live on.  So far, that's still very much in
+the works.
+
+I also am noticing that my goals should be restated to include that my long-term
+goals - making the HDM project work, in particular.
+--[[file:jcorneli.org][jcorneli]] Sat Apr 09 03:21:14 2005 UTC
+
+I think I'm going to turn this into a proper schedule, something like: every
+weekday at 9 AM, go to the library; stay there until 6:00 PM, with a short break
+for lunch and a few other breaks for stretching and so on.  This would be
+complicated (interestingly) by the fact that one of the jobs I'm considering
+begins at Midnight and goes til 8 in the morning - which, of course wouldn't
+make this plan impossible, just a little bit weird.  (Now, I may not end up
+working that job.)
+
+I think that the plan is otherwise compatible with the rest of my work schedule;
+however, it would preclude some things, like working a second 9-5 job (for
+instance).  But I'm not sure that that is something I'd want to do, anyway.  It
+might be nice to make all the extra income, but if I did get such a job, then we
+might have to revise the plan into something like: go to the library every night
+at 6, work until close; this would pretty much rule out the midnight-8 job,
+unless I /really/ wanted to rock the no sleep world.
+
+The reason I'm suggesting a 8 hour "work day" is that I want to illustrate that
+while I didn't like working an 8 hour day when I was employed by an AI company,
+I have no problem working an 8+ hour day when I'm working for myself.  This is
+just a minor (competitive) point about motivation.
+
+Also, note that I don't consider writing on the wiki or doing email or
+installing files on my computer or things like that as "work hours".  Not that
+they are unimportant, but I intend to put in the "work time" doing things like
+coding.  Since I've lately been writing a literate program / paper, I suppose
+that ought to count as work.
+
+Oh, yes: and so far, without additional jobs, my actual (paid) work schedule is
+shaping up to be: midnight to 8 AM or so on Friday, and midnight to noon
+Saturday and Sunday -- during which time I'm actually going to be getting paid
+to sleep, part of the time.  Updates as things solidify.
+--[[file:jcorneli.org][jcorneli]] Thu Apr 28 23:12:15 2005 UTC
+
+Please do tell as to what kind of job runs midnight to morning (and noon) three
+nights per week, and pays to to sleep? My dream job (obligatory pun)! I'm dying
+to know. --[[file:akrowne.org][akrowne]] Fri Apr 29 01:36:14 UTC 2005
+
+Hang in there a little longer... I'll know more sometime tomorrow. :)
+--[[file:jcorneli.org][jcorneli]] Fri Apr 29 02:10:51 2005 UTC
+
+Guinea pig in an experiment in the Minnesota Regional Sleep Disorders Center? ---[[file:rspuzio.org][rspuzio]]
+
+* May 2005
+
+This week, I think I've been a bit "off" -- I'm not used to this much structure, and
+I've been sick.  I continue to think that the time allotment is about right, but I'm
+finding it hard to stay focused.  One effort that I'm planning to make to complement
+the time committment is to do a better job of logging my physical progress.  How
+many characters typed per day, etc. -- I think I might have mentioned something about
+this elsewhere on the wiki.
+
+Today I've been feeling a bit fried by my work on the parser, but excited that it seems
+to be coming along.  The latest regression suite reveals some more "fundamental problems",
+though, so I'm going to have to get back to that sometime soon.  And in the mean time,
+the scholium system has been stagnating, so it seems like time to stir that up a bit too.
+
+Clearly, it would be good to get more progress-tracking going on.
+
+Another thing that I think might be helpful to add to the list of activities -- that needs
+some activity partners -- would be weekly electronic conferences.  We could try it on an
+experimental basis at first.  But how about Friday afternoons at 4:30 PM, EST, schedule
+20-30 minutes to [[file:talk by IRC.org][talk by IRC]]?  If it seems like we don't get anything out of these
+meetings after a couple of weeks, we can scrap the idea.  (If the time is simply bad,
+please suggest a different time.) --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:Activities.org][Activities]] / [[file:the way of the asteroid.org][the way of the asteroid]]

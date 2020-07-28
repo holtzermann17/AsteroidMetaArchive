@@ -1,0 +1,108 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Fun stuff
+
+; http://en.wikipedia.org/wiki/Existential_graph : This seems like
+a reasonable place to start reading about C. S. Pierce.  Has apparently
+been expanded into "conceptual graphs", see http://www.research.ibm.com/journal/rd/204/ibmrd2004E.pdf
+
+* Classical mathematical logic
+
+; Enderton : (recommended by Boyer)
+; Kleene : (recommended by Boyer)
+; Mendelson : (recommended by Boyer)
+; Shoenfield : (recommended by Boyer)
+; /Principa Mathematica/ by Rusell and Whitehead: 
+; Hilbert, David and Ackermann, Wilhelm, 1928, /Grundzüge der theoretischen Logik,/ Berlin: Springer.
+; /Mathematical Logic/ by W. v. O. Quine: The inventor of quotation and quasi-quotation among other things
+; /First Order Logic/ by Raymond R. Smullyan: A nice discussion of natural deduction
+
+* Contemporary mathematical logic
+
+; Makarov's D-logic : Ray likes this, I don't know the details; basically, logic with definitions?
+: [[file:norm.org][norm]]: While I've only skimmed the 
+[[file:http://arxiv.org/PS_cache/cs/pdf/9906/9906010.pdf D-logic paper.org][http://arxiv.org/PS_cache/cs/pdf/9906/9906010.pdf D-logic paper]], one
+of its advantages seems to be that it
+[[http://www.cs.nyu.edu/pipermail/fom/1999-March/002857.html
+incorporates Hilbert's epsilon]] in the first-order logic.  However, it
+is also possible to emulate Hilbert's epsilon with ZFC set theory.  I
+have worked out the details for [[file:metamath.org][metamath]], which are described in a
+[[http://us2.metamath.org:8888/downloads/megillaward2005he.pdf slide
+show]] that I presented at the
+[[http://www-unix.mcs.anl.gov/~mccune/award-2005/ 2005 Argonne AR
+Workshop]].  As you can see in Slide 16, it seems that a trivial
+number of additional steps are needed for the emulation, in apparent
+conflict with the statement that the
+"[[http://www.cs.nyu.edu/pipermail/fom/1999-March/002850.html Hilbert
+operator...allows shorter proofs than the axiom of choice]]"
+(implying the difference is significant), although
+maybe there's something I'm overlooking.  I think [[file:raph.org][raph]] is using or will
+use the technique for translating HOL to [[file:Ghilbert.org][Ghilbert]], so his experience
+should reveal the practicality of the technique.--[[file:norm.org][norm]] 20-Nov-05
+
+
+* Metamathematics
+; /A Theory of Sets/ by A. P. Morse :  Morse was the Ph. D. advisor of Bledsoe
+ (Bledsoe was Boyer's advisor and this book was recommended by Boyer).  It would
+ be interesting to compare to [[file:metamath.org][metamath]].
+: [[file:norm.org][norm]]: I would like very much to hear a review from someone who has actually
+studied and understands it - it is hard to find knowledgeable opinions
+about it, pro or con.  I spent perhaps an hour with the book, and to be
+honest it wasn't enough time for me to "get it" or even understand the
+notation, which is highly unconventional and perhaps a reason it hasn't
+caught on.  So far I haven't been motivated to spend the day or more it
+might require me to "get it," but am open to becoming inspired if
+someone convinces me.  There's no denying that it is quite novel,
+and it seems to be deeper than just a
+different notation for first-order logic.  The notation is built up
+with a complex hierarchy of definitions with names that are quite
+colorful (as you'll see from the index) but that often correspond
+to nothing familiar I could mentally connect with conceptually.
+I had the vague
+feeling that it doesn't distinguish propositional variables and
+individual variables, which - if that is the case - might make it
+difficult
+to grasp.  The language is said to be amenable to computer
+implementation, which would be an advantage, and it would be interesting
+to compare the complexity of a Morse set theory verifier with the
+Metamath-type verifiers.  Or to determine whether Morse set theory is
+expressible in Metamath.
+What would be helpful to me would be some examples of its
+notation directly compared with their 
+standard first-order logic equivalents, which the author as far as
+I could tell did not provide.  In any case,
+I think Metamath's set.mm may be closer to conventional notation, and notationally
+easier to understand, than Morse set theory. --[[file:norm.org][norm]] 20-Nov-05
+
+
+; /Set Theory and Logic/ by Robert R. Stoll: A rather accessible treatment of the theory of axiomatic systems
+; Hilbert, David and Bernays, Paul, 1934, /Grundlagen der Mathematik,/ Berlin: Springer.
+
+; /Set Theory and Its Logic/ by W. v. O. Quine:
+: [[file:norm.org][norm]]: Quine's /Set Theory and Its Logic/ is a classic
+and a pleasure to read.  Pp. 15-21 are a "must read" for anyone who wants
+to understand the class variables (Quine's "virtual classes")
+used in Metamath and in set theory
+in general.  Under set theory, all common mathematical objects such
+as the number "1" can be IMO most simply defined as virtual classes.
+Virtual classes are so commonly used that it is
+important to understand them correctly (and many people don't)
+in order to connect standard objects to their
+set theoretical foundation.  I'm puzzled why so many introductory
+set theory books sometimes go to extremes to avoid the
+elegance of virtual class theory,
+making their notation in some cases quite awkward (e.g. Suppes, whose
+class builders collapse to the empty set when they get too big,
+leading to strange theorems like {x|x=x}=0).  In his set theory class
+in the early 90's
+(the text for which was Enderton with no virtual class theory), George Boolos quickly
+introduced virtual classes in his lectures for convenience - with 
+reference to Quine as "the best exposition" - and used them
+as his workhorse and in [[http://us2.metamath.org:8888/mpegif/setind2.html
+homework]].  --[[file:norm.org][norm]] 20-Nov-05
+
+
+
+* Discussion
+This page need some fleshing out! --[[file:jcorneli.org][jcorneli]] Wed Jul 13 12:52:31 2005 UTC

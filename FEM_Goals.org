@@ -1,0 +1,56 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here are my current recommendations on where the FEM
+project should go and how it should get there.
+
+See also: [[file:Old FEM Goal statement.org][Old FEM Goal statement]]
+
+ * Standard style files should exist
+- These can come partly from what we've written and
+  perhaps can also draw on Bruce Miller's files.
+
+ * Standard style files should be integrated with the site
+- People should be able to use them
+- People should be able to suggest changes
+- Someone should maintain them and review/incorporate requests.
+
+ * Improper style should be correctable on PM
+- To my mind, it would be best if the use of even non-standard
+  macros was discouraged, but I don't think it is a "correctable
+  offense" to use a non-standard macro that produces a 
+  standard-looking result.
+
+ * Criteria for style-compliance should be established
+
+ * A per-article "LaTeX/style validator" should exist
+- says which entries are good LaTeX
+- says which entries are style-compliant
+- runs in batch mode
+- If we know an FEM-editor-generated correction is still pending,
+  then we know the article is invalid, and we don't need further
+  analysis!
+- act as medic to invalid entries, proposing suggestions
+  on how to become valid (i.e. all *corrections* to articles
+  should generated in this stage)
+
+ * Everything that meets the validity requirements sketched above
+  should go into the FEM!
+
+ * First actual build step:
+  any minor article-text-level reformatting, e.g.
+     $$\mathrm{displays}$$
+  rewritten as
+     \begin{equation*}\mathrm{displays}\end{equation*}
+  (assuming that the first kind of display is considered
+  stylistically valid but the second works better for our
+  presentation -- the details would need to be hammered out)
+
+ * Second actual build step:
+  large-scale formatting from LaTeX.
+- Use local headers, give them local scope!
+
+ * Long term
+- Set it up so that people can easily make books on demand out
+  of arbitrary subsets of the Encyclopedia (and other PM
+  resources)

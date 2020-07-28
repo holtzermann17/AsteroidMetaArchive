@@ -1,0 +1,7 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+[http://imps.mcmaster.ca/ Interactive Mathematical Proof System],
+by William M. Farmer, J. D. Guttman, and F. Javier Thayer, actively developed
+from 1990 to 2001 at Mitre. It is interesting because of its use of
+[[file:Little Theories.org][Little Theories]].

@@ -1,0 +1,1593 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Requirements for an Alternate Version ("U2")
+of the Metamath Proof Verification Engine using
+Traditional Free/Bound Variable Concepts*
+
+-----
+
+* The Problem
+
+Metamath's use of "Distinct Variable Restrictions" ("$d" statements)
+has a strong theoretical foundation (1)(2) but differs from
+"traditional" mathematical logic formalizations employing "free" and
+"bound" variables. To an unknown extent the use of Distinct Variable
+Restrictions may have previously limited usage and acceptance of
+Metamath because:
+
+ * Students, particularly "self-learners", are confronted with an
+extra challenge and opportunity to stumble when translating textbook
+formulations to Metamath. (And isn't it easier to clone part of
+Metamath than to write new textbooks?)
+
+ * Academicians and professionals are confronted with a novel change
+to syntactical conventions that were long ago hardwired in their
+brains. Combined with Metamath's lack of a First order Prover, the
+use of Distinct Variable Restrictions may reduce the (apparent)
+attractiveness of Metamath over other systems for mechanical proof
+validation.
+
+
+* Goals
+
+ * To establish a workable mechanism within mmj2 allowing optional
+use of "traditional" free/bound variable concepts instead of, or
+optionally, in combination with Metamath's "Distinct Variable
+Restriction" ("$d"). Authors of Metamath .mm databases would have
+the option of not using $d statements while retaining the full set
+of tools available within Metamath and mmj2.
+
+ * To studiously apply the new mmj2 "U2" Proof Verification Engine to
+existing Metamath databases, such as set.mm and ql.mm, thus gaining
+a profound appreciation of the advantages and/or disadvantages of
+Metamath's Distinct Variable Restrictions based on the example of
+nearly 10,000 theorems and their accompanying Metamath proofs.
+
+
+* Benefits
+
+ * A nice Hilbert-style Proof Assistanting toolset that conforms to
+the typical textbook presentation of free vs. bound variables and
+substitutability.
+
+ * Discover precisely which, if any, statements in existing Metamath
+databases require modification for use in U2 (and vice-versa).
+
+ * Provide a simpler destination for translations of math/logic
+theorems to Metamath by eliminating the requirement that $d
+statements be generated for converted systems.
+
+ * Elimination of a key customer "objection" (in sales terminology an
+"objection" is a reason put forth by the potential customer for
+ *not* purchasing the product, and the good salesperson's job is to
+successfully counter each objection.)
+
+ * Provide additional empirical validation to the innovative $d mechanism. (I expect that we will discover that the use of Distinct
+Variable Restrictions simply makes it more convenient to use the Metamath
+language, and results in shorter proofs. In any case, we will have 
+some fun.)
+
+
+-----
+
+* (Optional Reading) Background and Discussion: mmj2 Precedent
+
+mmj2 enforces "meta" validation rules on Metamath .mm databases
+that go beyond the Metamath.pdf specification. These have the
+effect of restricting the allowable range of user-defined .mm
+logical systems to a subset that may (possibly) be successfully
+handled by mmj2's Grammatical Parser and its Proof Assistant.
+Similar sorts of meta-validation will likely be needed to
+implement Free/Bound variables within mmj2, but in general
+these meta-validation rules codify normal practice and, in
+general, safeguard rather than restrict the user.
+
+The specification of the Metamath .mm file format (syntax)
+allows for far more expressivity that is commonly used. Metamath
+does not require that a .mm file contain an unambiguous
+grammar (or that the axioms in the file be consistent.) For
+example, the sample file, "miu.mm" shows that it is possible
+to deduce an assertion that cannot be parsed using the
+given syntax (builder) axioms; and conversely, adding axiom
+"wxy" to miu.mm allows parsing but makes the (implied) grammar
+infinitely ambiguous (multiple equivalent syntax trees).
+
+Also, there are features of the Metamath language might be called
+"emergent" or implicit, as they are the direct result of the .mm
+file format but are not part of the Metamath.pdf language
+description. For example, the things mmj2 calls "Type Conversion",
+"Nulls Permitted" and "Named Typed Constant" Syntax Axioms *emerge*
+from the .mm format as standard idioms in writing logical systems
+using Metamath statements.
+
+All of these issues and topics are quietly handled by mmj2
+as it bootstraps a grammar from an input .mm file and then
+uses that grammar to analyze the syntax of the rest of
+the .mm file statements. It may seem presumpuous, or merely
+bold, but when mmj2 processes a .mm file it uses validation
+rules that *extend* the Metamath.pdf specification. An input
+.mm file that does not successfully pass mmj2's grammatical
+validation rules may be valid according to Metamath.exe. In
+this case, mmj2 refuses to start the mmj2 Proof Assistant;
+there is no point in even attempting to use the mmj2 Proof 
+Assistant until the grammatical errors are corrected.
+
+Here are a few of the grammar validation rules that mmj2 enforces:
+
+ * No variable may appear more than once in a Syntax Axiom.
+
+ * A Syntax Axiom must not be parseable using the Grammar Rules
+  produced using previously input Syntax Axioms.
+
+ * Grammatical loops of Type Conversions are illegal. 
+
+Each mmj2 grammar validation rule serves a specific, essential
+purpose. For example, a variable occurring more than once in
+a Syntax Axiom could result in incorrect processing by
+the Metamath Proof Verification Engine resulting from a
+proof stack hypothesis sequencing error. Curiously though,
+the mmj2 grammar validation rules merely codify what is
+already seen in the primary Metamath databases such as
+set.mm and ql.mm.(3)
+
+The expressiveness and self-defining qualities of the Metamath .mm
+file format combine simplicity with elegance. But, as with mmj2's
+grammatical bootstrapping gyrations, new processing to handle Free
+and Bound variables will require the imposition of additional
+syntactic constraints on input .mm files. These new syntactic
+constraints will extend -- constrain -- the existing Metamath
+specification. They will not, however, guarantee the correctness or
+consistency of an input .mm file -- any more than mmj2 can guarantee
+that a bootstrapped grammar is unambiguous. What they will do is
+provide well-defined mechanical limits that will provide assurances
+that the mechanical symbol manipulations produce technically valid
+arguments within a given axiom scheme according to the Metamath
+and U2 rules. 
+
+Furthermore, because the Metamath is agnostic concerning logic,
+and because it employs "metavariables", the new U2 rules cannot 
+exactly encode the Free/Bound and Substitutability rules of textbook 
+predicate logic. But the limitations of U2's rules should prove,
+as is the case with Metamath, to be an assets rather than
+liabilities.
+
+-----
+
+* Solution(s)
+ 
+ *I.   Syntax Axiom Bindings List*
+
+Additional input will be provided for each Metamath .mm file, either
+in the form of a separate file, or as embedded Metamath comments
+(not yet determined). The input will consist of one entry for each
+Syntax Axiom in the .mm file that binds variables. Each entry
+consists of a Syntax Axiom Label and one or more Variables that
+occur within the referenced Syntax Axiom and are "bound".
+
+    wal,x
+    wex,x
+    wsbc,x
+    weu,x
+    wmo,x
+    cab,x
+    wral,x
+    wrex,x
+    wreu,x
+    crab,x
+    csb,x
+    ciun,x
+    ciin,x
+    copab,x,y
+    copab2,x,y,z
+    
+
+ *II. Binding Scope*
+
+The scope of variable binding is defined as the subtree containing
+the binding Syntax Axiom as its root (note that variables occur
+only at leaf nodes of a syntax tree).
+
+1.  All occurrences of the variable(s) bound by the Syntax Axiom
+below the Syntax Axiom's node in the (parse) syntax tree are
+considered bound.
+
+2.  All non-bound variables in a syntax tree are defined as "free".
+
+
+ *III. Substitutability*
+
+Note: Metamath requires that the substituted variable and the
+substituting expression have matching Type Codes (i.e. "wff", "set",
+"class", etc.) Also, all Metamath substitutions are simultaneous
+across the assertion and its hypotheses, logical and variable. U2
+does not alter these provisions.
+
+Note: mmj2 requires that all substituting expressions be parseable
+-- that is, have a valid syntax (parse) subtree. Substitutions
+within the Proof Assistant Unification process are made only to leaf
+node variable hypothesis nodes. (And unification requires that all
+nodes be identical above the substituting/substituted nodes of two
+unified formulas.)
+
+1.  A bound variable may only be substituted with an expression
+consisting of a single variable. In effect, this amounts to renaming
+the variable. In set.mm this restriction is already accomplished
+via the syntax definition of "set" -- no Syntax Axiom has "set" as
+its Type Code, therefore it is impossible to construct a set
+expression with length greater than 1.
+ 
+2.  A bound variable may not be "rebound" or doubly-bound. In some
+cases a "rebind" may be harmless and redundant, such as 
+
+    '( A. x. ( A. x ph -> ps ) -> ( A. x ph -> A. x ps ) )',
+
+but for simplicity's sake it is best to prohibit this practice
+until informed by the Authorities that it is mandatory that we
+allow it (it might be treated either as "warning" or "severe"
+error based on a RunParm option.)
+
+3.  A free variable may not be substituted with an expression
+containing a free variable that becomes bound as a result of the
+substitution. That is, if free variable Y is substituted with
+expression T containing free variable Z, and Z is already bound in any
+syntax subtree containing Y, then the substitution is invalid.
+ 
+9.  If a substitution is not deemed impermissible by virtue of rules
+1, 2 or 3, then it is permissible.
+
+
+ *IV.  Modifications to mmj2 Parser and Proof Verification Engine*
+
+1.  A high-level RunParm will be provided to control whether to
+validate Distinct Variable Restrictions or Free/Bound 
+Substitutability validation -- or both. The default would be,
+of course, to perform *only* validation of Distinct Variable
+Restrictions, as it the case today.
+
+2.  Input formulas, via either the input .mm file or the Proof
+Assistant screen should be validated against the Substitutability
+rules in III above. In this case the substitutions to be checked are
+implicitly being made to variables in Syntax Axioms. The validations
+can be coded expediently, which would mean performing them after the
+existing grammatical parsing, as an entirely separate function. A
+separate RunParm could be provided to optionally perform these
+substitutability validations on the input .mm file formulas -- there
+being little reason to continuously revalidate unchanged formulas,
+day after day. Validation errors on the Proof Assistant screen could
+be treated as "warning" errors that do not prevent further
+processing of the Proof Worksheet (unparseable proof step formulas 
+do prevent further processing. Obviously, formulas with Free/Bound
+Substitutability errors would create difficulties for the user
+attempting a proof.
+ 
+3.  Both mmj2 and Metamath.exe treat Distinct Variable errors as
+"warnings", that can be rectified by the addition of $d statements
+for the mentioned variables. The $d edits are performed after all
+other verification as a separate process. mmj2 goes further during
+Unification and looks for alternate unifications if a $d error is
+encountered. In theory, U2 could perform analogously, with minimal
+impact to existing Unification and Proof Verification code.
+
+
+----- 
+
+* Footnotes
+
+(1) "A Simplified Formalization of Predicate Logic With Identity" --
+Alfred Tarski, 1965, Mathematische Logik und Grundlagenforschung.
+
+(2) "A Finitely Axiomatized Formalization of Predicate Calculus
+With Identity" -- Norman D. Megill, 1995, Notre Dame Journal of
+Formal Logic.
+
+(3) mmj2 is capable of handling grammars that use nulls, which
+set.mm and ql.mm do not. Some interesting mmj2 processing
+renders the input Syntax Axioms into "Chomsky Normal Form" --
+i.e. Context Free Grammar without nulls.
+
+
+-----
+
+* Discussion
+
+
+What happens to [http://us.metamath.org/mpegif/findes.html findes] in your proposal?
+I actually think it's a good idea to explore different base logics, but in this case
+I fear you're giving up real expressive power without gaining all that much in return.
+Please prove me wrong.
+
+-- Raph
+
+
+-----
+
+Elsewhere on this forum, I roughly outlined a way of forcing all
+variables to have $d's on them in order to be closer to the traditional
+approach.  See my 19-Jan-2006 and 21-Jan-2006 comments at
+[[file:mmj2Feedback.org][mmj2Feedback]] and my 18-Jan-2006 and 19-Jan-2006 comments at
+[[file:Notes_on_Various_Proof_Systems.org][Notes_on_Various_Proof_Systems]].  However, and Raph's example makes a
+good point, it is not intended as a complete solution, because it
+doesn't address free/bound variables.  All it does is make the statement
+of many or most theorems somewhat more palatable, possibly, for those
+used to the traditional approach (and also addresses some translation
+issues to other languages, that was really its main point).
+
+1. Regarding the "$d controversy" - as I point out in my
+[http://us.metamath.org/mpegif/mmset.html#axiomnote axiom note] (which I
+have just finished rewriting for, hopefully, more clarity), the $d
+concept is exactly what Tarski uses, no more and no less.  I don't know
+how controversial Tarski's system is, although it hasn't caught on as
+something to teach (which was one of his goals).
+
+The introduction to Tarski's "A simplified formalization..." reads (note
+that by "identity" he means "equality"):
+
+:  "Two of the notions commonly used in describing the formalism of
+(first-order) predicate logic exhibit less simple intuitive content and
+require definitions more careful and involved than the remaining ones.
+These are the notion of a variable occurring free at a given place in a
+formula and the related notion of the proper substitution (or
+replacement) of one variable for another in a given formula.  The
+relatively complicated character of these two notions is a source of
+certain inconveniences of both practical and theoretical nature; this is
+clearly experienced both in teaching an elementary course of
+mathematical logic and in formalizing the syntax of predicate logic for
+some theoretical purposes."
+
+: .
+
+:  "The notions discussed seem to be essentially involved in the
+formalization of predicate logic.  Nevertheless, we shall show in this
+paper that, by including identity in predicate logic and making
+essential use of its properties in the derivation of logical theorems,
+even of those in which identity is not involved, we can simplify the
+formalization in such a way that the use of the notions discussed proves
+to be considerably reduced or even entirely eliminated.
+
+This is exactly set.mm's system, except that set.mm also adds the
+notion of "metalogical completeness" in order to make Tarski's system
+practical with a (Metamath-style) proof language.
+
+(P.S., Raph, speaking of metalogical completeness, you might be interested that
+[http://us.metamath.org/mpegif/ax16.html ax-16 is redundant] in the
+presence of ax-17.  I proved it last week, after it eluded me
+for a decade, so I'm quite proud of it. :) )
+
+2. The traditional free/bound variable stuff is not necessarily easy
+to learn, in particular the "free for" concept, which makes my brain
+hurt.  :)  Read carefully the "free for" pages in Hirst and Hirst's
+[http://www.mathsci.appstate.edu/~jlh/primer/hirst.pdf /A Primer for
+Logic and Proof/] PDF pp. 54-57 that I mention under the
+[http://us.metamath.org/mpegif/mmset.html#traditional traditional
+axioms].  This is what you have to emulate/implement.  I think it is a
+more difficult concept than "variable not occurring in a wff", but
+perhaps a lot of people have already undergone the pain of learning it
+so that it may be second nature to them.
+
+3. Raph's example is a perfectly legitimate application of "free for"
+according to the requirements for it in Hirst and Hirst.  A correct
+emulation of "free for" would have to accept it.  (To understand Raph's
+example in the context of Hirst and Hirst, think "class variable"
+when they say "term".)
+
+4. An example of double binding in the literature is
+[http://us.metamath.org/mpegif/qexmid.html quantified excluded middle],
+which Boolos used to give as an exercise to confuse his students (and to help
+make sure they had the free/bound variable concept under their belts).
+Again, double binding is allowed by the traditional (Hirst and Hirst)
+formalization.
+
+5. As something of an aside, I'm half convinced that even Hirst and
+Hirst - and Mendelson, from which it was apparently copied - have the
+"free for" stuff not quite right in their axiom
+[http://www.mathsci.appstate.edu/~jlh/primer/hirst.pdf Axiom 7] PDF p.
+70, which states "provided that y is free for x in phi(x,x)".  Not only
+does my Metamath "translation"
+[http://us.metamath.org/mpegif/stdpc7.html stdpc7] have to end up having
+the substitution on the wrong wff to make sense (vs., for example,
+[http://us.metamath.org/mpegif/stdpc4.html stdpc4]), I find the
+description confusing, since there are two x's.  I am inclined to think
+that it should say - or at least would be much better to say - "provided
+that x is free for y in phi(x,y)", but maybe there is something subtle
+I'm not seeing that would cause problems if it were stated that way (if
+anyone knows, let me know).  In any case, to me this illustrates how
+confusing the "free for" concept can be.  Whatever is the correct
+statement, though, this is another example of something a "free for"
+emulation must handle.
+
+6. Several approaches have been put forth to attempt to avoid double
+binding by using different name spaces for free and bound variables,
+such as a,b,c for free ones and x,y,z for bound ones in Takeuti and
+Zaring's /Intro. to Axiomatic Set Theory./  I considered their
+approach carefully in pre-Metamath days, and was convinced that although
+it might make things clearer for simple cases, it offers no theoretical
+advantage and that double binding will still occur in the worst case, no
+matter how hard you try to avoid it.  However, that is a set theory book
+and the logic part is kind of confusing and ambiguous when you get down
+to the real details.  Another approach that separates free and bound
+variable namespaces is in Rasiowa and Sikorski's /The Methematics of
+Metamathematics./  Schechter, who was convinced that you'd never have
+double binding (analysts hate double binding), adopted it in his
+/Handbook of Analysis and Its Foundations./  I haven't studied it
+enough to have an informed opinion, but Schechter discusses R and S vs.
+traditional (allowing double-binding) approaches on p. 360 of HAF,
+advocating R and S, but he does say "A word of caution:  Even the R and
+S approach is not entirely trivial..." and gives an example of possible
+confusion.  (He then goes on to say that combinatory logic dispenses
+with variables altogether, but that is a whole different topic...
+BTW the Metamath Solitaire applet also dispenses with variables
+altogether, if you consider the proof - a list of axiom applications - to be the theorem; that is
+essentially what combinatory logic does.)  --
+[[file:norm.org][norm]] 16 Nov 2006
+
+OK, what I am receiving is that "double binding" is "ok". Not a
+problem. In programming languages (and apparently lambda calculus)
+an inner scope can have a local variable with the same name as
+a variable defined in an outer scope, and there are two actual
+variables, with the inner name taking precedence (being referred
+to); this tends to be a stylistic issue in programming, and a
+potential source of bugs, but we do our best :) 
+
+So, delete Rule III.2 which outlaws "double binding"?
+
+Any other rule changes, or additions? (I think I have the Hirst
+"free for" thing nailed already, so III.3 seems fine to me.)
+
+I am just a simple caveman unfrozen and brought forward in time 
+to a world I do not understand :) If we can get these rules
+nailed down then we can get some code, and see what happens...
+so...little help here?
+
+: I'm not sure what it is that you are asking that isn't covered
+by the rules in Hirst and Hirst.  Perhaps you could show specific examples
+of what you see as problems/questions, and we could discuss those.
+Perhaps your original rules were not written
+with Hirst and Hirst in mind, and now you are trying to
+retrofit them accordingly?  If so, that might be more difficult
+than taking a fresh look at the big picture, not sure. -- [[file:norm.org][norm]]
+
+My intuitive judgement is that $d will prove to be a superior 
+choice to free/bound substitutability rules -- in the sense that 
+there is a lot of hand-waving and many apparent differences in 
+the textbooks concerning the topic. But simplicity is not enough
+given that a) computers now are 1000 times faster than in 1995, and
+b) a bit of complexity in the code may help our potential 
+customers make the conversion from textbooks.
+
+: As Raph suggested, I sense that you are striving
+for a somewhat ill-defined "better" human presentation of logic,
+as opposed to a well-defined translation to another already-designed
+proof language.  That is a noble goal, but I think it is
+hard, like many ill-defined things.  (Although knowing you,
+you will probably
+take the preceding sentence as a challenge...)  Also, is the
+"$d controversy" real, or
+is it a myth that has somehow taken a life of its own?
+I am a little puzzled by it, since the concept is far
+easier to grasp than "free variable" and a very small
+hurdle for people unfamiliar with it to overcome.
+Of course I am too close to the subject and thus unqualified
+to talk about it from the perspective of an outsider, but
+I just don't understand why it is so hard, particularly for
+anyone who is capable of grasping "free for". 
+Perhaps we could pin down the nature of this controversy
+and provide clearer explanations in how-to's. -- [[file:norm.org][norm]]
+
+
+ 
+
+--[[file:ocat.org][ocat]] 16-Nov-2006
+
+No, "double binding" is not the fundamental problem. The more
+serious issue is that some of the binding constructions in set.mm
+have a mixed scope over which the variable binds. So in [ A / x ] ph,
+x is bound in ph, but is not bound in A. So you either have to
+make your "bindings list" mechanism more powerful to accommodate this
+kind of construction, or show how to translate all terms in which
+x occurs free in A into others in which it does not. (Hint:
+[ A / y ] [ y / x ] ph).
+
+: The question of which Syntax Axioms to include in the Bindings
+list for set.mm boiled down to looking at the definitions for
+Syntax Axioms such as wsbc and checking to see which variables
+are used in quantifiers (A., E., etc.) I see x as the bound
+variable in df-sb: 'df-sb $a |- ( [ y / x ] ph \leftrightarrow ( ( x = y \rightarrow ph ) \wedge E. x ( x = y \wedge ph ) ) ) $.' That is why I only included x in
+the Bindings list entry. --[[file:ocat.org][ocat]]
+
+:: Was !LaTeX intended above, or was that accidental?  Two $'s on one line
+triggers it, so such lines with Metamath code must be split.
+The default !LaTeX trigger (which was overridden) for the wiki
+!LaTeX mode is
+<nowiki>$$</nowiki>,
+which to me would seem a better choice
+since there is no convenient way such as \$
+to escape a single $.
+But of course we must be grateful to our overlords for providing this
+wiki at all, so I shouldn't complain too much. :)
+See the discussion at [[file:latex-test.org][latex-test]].  --[[file:norm.org][norm]]
+
+:: .
+
+:: It appears in both bound and unbound contexts in the RHS. That's
+what makes it interesting (perhaps in the Chinese curse sense of the
+word). In any case, you're right that x is the only variable under
+discussion here; y is most certainly not bound.
+
+You're also going to need, at the very least, a way to reflect the
+notion "x is effectively free in ph" from the metalogic to the logic, for
+example as a hypothesis in
+[http://us.metamath.org/mpegif/19.21.html 19.21].
+
+My sense is that you'll learn a lot from doing this translation, but
+I'm not wildly enthusiastic about the usefulness of the end result.
+If it were me, I'd pick an existing system, like HOL or Mizar, and
+show how you can translate in and out of that. That would do just as
+much to satisfy the $d skeptics, and have the additional benefit of
+enlarging the mm/gh web.
+
+-- [[file:raph.org][raph]]
+
+
+-----
+
+
+
+While the explicit appearance of y in
+[http://us.metamath.org/mpegif/df-sb.html df-sb] is not bound, there is
+nothing to prevent it from also appearing bound in ph, which can
+complicate things when trying to tie it to textbook presentations.  When
+connecting Metamath to textbook logic, one should never forget that ph is not a primitive of logic
+but merely a place holder for an arbitrary actual wff.  By the way, when a
+variable is both free and bound, it is essentially the same situation as
+if it were doubly bound, since implicitly all free variables can be
+considered universally quantified and therefore bound (which can be made
+explicit with [http://us.metamath.org/mpegif/ax-gen.html ax-gen]).
+
+A more "traditional" expression of df-sb would be Quine's
+[http://us.metamath.org/mpegif/sb7.html sb7].  My purpose in using df-sb
+instead of sb7 as the official definition was to show how far one can
+get in formulating a "mathematics without distinct variables" and to
+postpone the introduction of the $d as late as possible.
+Certainly we could switch to sb7 as the official definition, if it
+makes more sense, in a "closer-to-textbook" reformalization.
+
+One logician (who shall remain nameless) claimed in an email that df-sb was
+wrong.  When I convinced him otherwise, he went into an angry rant about
+how it should never be taught to students because few could understand
+it, and it would poison the minds of those who did.  :)
+Some people have surprisingly strong feelings about this.
+
+Anyway, let's talk about "free for".  Unfortunately textbooks insist on
+using this, when to me it would be a lot cleaner (and /exactly/ logically
+equivalent to Metamath) if they used the more powerful and general
+"proper substitution" instead.  I am puzzled by it.  Could it be that
+they consider "free for" a simplification over "proper substitution"
+that is easier for the student to grasp?  I don't know.  If anyone does
+I'd be interested.
+
+In the textbook sense, "y is free for x in ph" means "there is no free
+occurrence of x in ph that becomes a bound occurrence of y in ph(y|x),"
+where ph(y|x) is the result of replacing each free occurrence of x by an
+occurrence of y (Margaris,
+/First Order Mathematical Logic/ p. 48).  [I chose Margaris because he
+has an explicit notation, ph(y|x), unlike Hirst and Hirst.] This is a different kind
+of substitution than proper substitution, sort of halfway between
+simple direct substitution and full proper substitution.
+
+Consider [http://us.metamath.org/mpegif/stdpc4.html stdpc4].  Suppose ph
+is E.y x e. y, where x and y are distinct.  In this case, y is not free
+for x in ph, since the literal ph(y|x) that Margaris uses would result
+in E.y y e. y, which would certainly make stdpc4 wrong.  Yet with
+[y/x]ph, stdpc4 is correct as shown.  What it boils down to is that
+there is no way to emulate Margaris' ph(y|x) exactly in Metamath;
+[y/x]ph is a logical equivalent, not a structurally identical
+wff, and only when we satisfy the "free
+for" proviso.  The rough informal textbook translation I used in
+the comment of stdpc4, "A.x ph(x) -> ph(y), provided that y is free for
+x in ph(x)," is too weak; stdpc4 actually
+covers many more cases than that.  It is similar to saying "ph -> A. x
+ph" means "x is not free in ph": the former can be true in cases where
+the latter is not, such as when ph is x=x.  An exact translation of
+stdpc4 into textbook language would be "A.x ph(x) -> ph(y), where ph(y)
+results from the proper substitution of y for x in ph(x)," but for
+some reason most textbooks don't use that as an axiom scheme.
+
+Interestingly, the [suc x/x]ph in Raph's [http://us.metamath.org/mpegif/findes.html findes] is exactly equivalent to
+"ph(suc x|x) where suc x is free for x in ph", because all free
+occurences of x are guaranteed to remain free after the Margaris-type
+substitution.  -- [[file:norm.org][norm]] 17 Nov 2006
+
+-----
+
+re: Hirst and Hirst
+
+Hirst and Hirst seem to accord with 
+[http://euclid.trentu.ca/math/sb/pcml/pcml-16.pdf Bilaniuk's "A Problem Course in Mathematical Logic"] -- and with Wikipedia, which I think is easier to understand:
+
+    
+[http://en.wikipedia.org/wiki/Predicate_calculus Wikipedia Predicate Calculus]
+    
+    Substitution
+    
+    If t is a term and f(x) is a formula possibly containing x
+    as a free variable, then f(t) is defined to be the result
+    of replacing all free instances of x by t, provided that
+    no free variable of t becomes bound in this process. If
+    some free variable of t becomes bound, then to substitute
+    t for x it is first necessary to change the names of bound
+    variables of f to something other than the free variables
+    of t. To see why this condition is necessary, consider the
+    formula f(x) given by A. y y <= x ("x is maximal"). If t
+    is a term without y as a free variable, then f(t) just
+    means t is maximal. However if t is y the formula f(y) is
+    A. y y <= y which does not say that y is maximal. The
+    problem is that the free variable y of t (=y) became bound
+    when we substituted y for x in f(x). So to form f(y) we
+    must first change the bound variable y of f to something
+    else, say z, so that f(y) is then A. z z = y. Forgetting
+    this condition is a notorious cause of errors.
+    
+
+However, as U2 is intended as an *add-on* for Metamath's Proof
+Verification Engine, we are forced to discard the idea of replacing
+ *just* the free instances of x in f and leaving the bound instances
+as- is. Substitution during unification of an proof step is
+simultaneous across all occurrences of x in the Proof Work stack.
+That is, all occurrences of x in the logical hypotheses and the
+referenced assertion being unified a proof step's formula are
+replaced, not just *some* of them. So, in formula 1 below,
+
+     
+    1.  |- ( A. x ( y e. x /\ E. y e. z ) -> ph )
+    
+
+according to my rule 9 above, t can be substituted for y,
+but *all* of the y's are exchanged, as follows:
+
+     
+    2. |- ( A. x ( t e. x /\ E. t e. z ) -> ph )
+    
+
+(And y could not be substituted for z in formula 1, per rule 3.)
+
+-----
+
+The example above has to do with bound variable renaming.  In set.mm,
+this is accomplished with the cbv* family of theorems along with chvarv
+to rename free variables.  Typically this is done with a sequence of
+applications of <nowiki>*bi* and *eq*</nowiki> theorems to build up
+substitition instances, as you can see from applications of the cbv*
+theorems.  In textbooks (and in other proof verifiers, with more
+complicated underlying engines) this sequence is usually performed in
+one "step".  It can be automated; is that the goal you have in mind
+here?  Could that be one of the "automated prover plugins" you have
+talked about?  Should the proof language be enhanced to invoke a
+"macro" that mmj2 would expand to an actual mm proof? -- [[file:norm.org][norm]]
+
+: Well, in formula 1, variable y occurs free /and/ bound,
+
+:: Consider the transformation from formula 1 to formula 2.
+Two cases must be distinguished.  If formula 1 is a
+theorem that is referenced in a proof, the t for y substitution
+(both free and bound occurrences) happens automatically when
+the theorem is brought in.  Any distinct variable provisos must
+be met of course.  If formula 1 is a hypothesis or previous proof
+step, it must be transformed to formula 2.  First, 
+[http://us.metamath.org/mpegif/chvarv.html chvarv] would
+used to change the free y to the free t.  Then 
+[http://us.metamath.org/mpegif/cbvexv.html cbvexv] would be
+used to change the
+bound y to the bound t.  BTW I assume by E. y e. z you mean
+E. y y e. z, since the former is not defined. 
+
+
+: which
+is something the textbooks seem to dance around.
+
+:: Hirst and Hirst give quite a few examples and exercises that
+cover many cases in their "free variable" and
+"free for" sections.  
+
+: One thing is
+starting to come clear to me though is that (yes, rule 2 is dead,
+and double binding is ok, long live double binding...),
+
+:: Double-binding is needed to get the nitty-gritty development
+of the (Metamath in particular) 
+axioms out of the way, but once in set theory it is largely
+unnecessary and even undesirable in the presentation of
+theorems.  An important exception is the double binding that
+seems to arise necessarily in proofs using explicit substitition notation, but explicit substitution is rarely used in
+"final" theorems (infinity of primes etc.) and only occasionally
+in utility theorems (induction, etc.).  In an advanced 
+set theory application
+like analysis, double binding is almost nonexistent, and much
+hated by analysts. :)
+
+: the textbook "t is substitutable for x in y" refers to the /term/
+t, where t is not a predicate or wff.
+
+:: Yes, that is what textbooks normally
+refer to.  
+Note that a term cannot appear as a quantified variable (in
+traditional or Metamath logic), so t in formula 2 could only be a
+variable.  
+
+
+: So I think Rule 3 needs to
+be restricted to variables of "non-Logical Statement Type Code"
+types; i.e. class, set, widget. I do see the need for a serious
+attempt at justification (more paper work before coding...)
+--[[file:ocat.org][ocat]]
+
+:: Instead of
+"non-Logical Statement Type Code" (?) it should simply be
+"class expression", nothing else.  If
+for "term" in the literature
+you substitute "class expression", the rules are 
+identical, assuming that (for a class expression A) you have
+"A e. V" as a hypothesis. --[[file:norm.org][norm]]
+
+-----
+
+re: "As Raph suggested, I sense that you are striving for a 
+somewhat ill-defined "better" human presentation of logic, 
+as opposed to a well-defined translation to another 
+already-designed proof language."
+
+What I *am* striving for is to successfully complete an
+experiment showing that U2 can *or* cannot add-on free/bound
+substitutability processing (without adding '( ph -> A. x ph )'
+to thousands of formulas in set.mm :) Can this work, or
+not? And what needs to be tweaked to make it valid? If
+rules 1->9 don't cut it, then what is needed (perhaps
+"substitutability" has a different definition for type
+wff than for non-wff? 
+
+I *want* to be able to use Metamath *with* the textbooks.
+But there can only be one sensei -- not two -- and that
+sensei is, of course, Sensei Norm.
+
+The *other* motivation is that U2 and several other items
+are necessary preconditions for a (hopefully) popular
+graphical mmj2 proof assistant, employing (of course :) alternate
+input devices and displaying formulas using GMFF (graphics
+mode formula formatting) on a "whiteboard" metaphor GUI
+(and I think speech output is going to be a must have too...)
+
+----- 
+
+
+Does "free/bound substitutability processing" have to do with the
+display, or with generating proofs, or both?  The overall picture of
+this is a little unclear to me.  Is it just adding automated generation
+of proof steps to satisfy cbv* hypotheses?  It might be productive
+to look at a specific example of the overall "free/bound
+substitutability processing" that you would like to see, compared with
+the set.mm version.  Can you pick a specific theorem from set.mm and
+show us what you would like to see, compared to what is there now?  -- [[file:norm.org][norm]] 
+18 Nov 2006
+
+: See "Solutions.IV" for an overall picture, which is still a
+bit fuzzy on the warning vs. hard error and timing aspects of
+the process. But the new processing would change *nothing*
+in existing .mm formulas or input proof step formulas -- the
+new code would just spit out warning/error messages, just like
+$d errors generate now. So it is a set of /constraints/ that
+the user can choose to ignore or accept. As a practical matter
+I would see coding an experiment that runs through existing
+formulas and proof steps looking for "invalid" substitutions.
+Then if all goes well, the decision would be made whether or
+not to incorporate the code into mmj2 proper. --[[file:ocat.org][ocat]]
+
+-----
+
+Let me chime in with Norm about wanting to see a more specific example.
+In addition, I'd really appreciate it if we kept the discussion in terms
+of the logic and metalogic, rather than about any particular implementation
+of it. I've put some thought into bound vs. distinct variables, and would
+love to have a real discussion, but so far this discussion seems too vague
+for me to really get a foothold.
+
+Let me see if I can focus the discussion a bit by enumerating the multiple
+uses of $d information within Metamath and Ghilbert. By my count, there are
+no fewer than four separate contexts in Metamath that make use of distinct
+variable information. Ghilbert drops one of these and adds one more.
+
+1. Identifying dummy variables in proofs. A dummy variable is one that occurs
+in intermediate proof steps, but not in the hypotheses or conclusion. By
+convention, such variables are "fresh," meaning distinct from all others. In
+Metamath, it is always valid to add a $d constraint between a dummy and any
+other variable, and in many cases this constraint is needed. However, the
+informational value in such $d constraints is slim at best, as dummies can
+be identified from simple examination of the proof.
+
+2. Implementing a special case of "x not free in ph." In set.mm, the general
+statement "x not free in ph" is represented ( ph -> A. x ph ). See
+[http://us.metamath.org/mpegif/19.21ai.html 19.21ai] for a typical application
+of this pattern. However, in the special case where x does not occur
+syntactically in ph, the hypothesis can be replaced with a "$d x ph" constraint,
+as in the corresponding
+[http://us.metamath.org/mpegif/19.21aiv.html 19.21aiv].
+
+Note that any specific ph with x not free can be proved equivalent to another wff in
+which x has no syntactic occurrence, through alpha-conversion theorems such as
+[http://us.metamath.org/mpegif/cbvalv.html cbvalv]. This alpha-conversion proof is
+necessarily different for each specific ph. But 19.20ai is in fact a general
+metatheorem valid for /all/ ph, so it is more powerful in the expressive sense,
+even though any specific instance can be proved using a combination of
+alpha-conversion and 19.20aiv.
+
+This theme of increased generality is very similar to the status of
+[http://us.metamath.org/mpegif/ax-11.html ax-11], which is only given as an axiom
+in some statements of the predicate calculus. In Margaris, it is not given as an
+axiom, but the book contains a proof of the metatheorem that it is true for any
+given ph (the proof is by structural induction on ph).
+
+3. Representing term schemes with "holes". Many presentations of predicate
+calculus (including the Wikipedia excerpt quoted above) use notation similar to
+"ph(x)" to represent a scheme of terms, with the holes to be filled in with the
+subterms appearing inside the parentheses. A more systematic way to describe
+this pattern would be to say that the metalogic (perhaps presented only as
+argument, without a formal language to support it) has a mechanism for
+/abstraction/, similar to that in lambda-calculus.
+
+Metamath represents such term schemes by the /absence/ of a $d constraint. If
+a term appears in the scope of a bound variable, but there is no $d constraint
+between that term and the variable, then the variable may appear in the term,
+and thus the term is really a term scheme abstracted over that variable.
+
+Note that formal abstraction can be problematic, which helps explain why so many
+authors shy away from it. In HOL, the pattern of term schemes is represented
+quite directly by lambda abstraction, but that approach doesn't immediately
+generalize to other logics. Writing "lambda x . A" as a function is problematic
+in ZFC set theory, because functions can only map sets to sets, not to proper
+classes. But the lambda is a proper class (see
+[http://us.metamath.org/mpegif/dmi.html dmi] for a proof of a statement
+implying that "lambda x . x" is a proper class), so even nesting lambda's two
+deep doesn't really work.
+
+Other systems, such as Mizar, implement such abstraction by having a separate
+[http://mizar.org/language/pages/scheme.html scheme] concept. Because these schemes
+are in some sense "second-class citizens," some expressive power is lost, such
+as the ability to define new binders. As mentioned in [[file:Distinctors vs binders.org][Distinctors vs binders]],
+Freek Wiedijk has proposed an extension to Mizar to allow such definitions. In
+Metamath (and in Ghilbert), new binders can be defined quite freely.
+
+4. Bundling of a number of related theorems together into a single metatheorem.
+In particular, all such theorems in the "bundle" have to be identical except for
+collapsing variables together. For an example, see the discussion of alcom in
+[[file:Translation Systems.org][Translation Systems]].
+
+Note that the related theorems have quite different representations with
+[[file:de Bruijn Indexed Representation|de Bruijn indices.org][de Bruijn Indexed Representation|de Bruijn indices]]. Thus, in translating to a system equivalent to de Bruijn
+indices (such as HOL), each such instantiation must (in general) map to a
+separate theorem.
+
+For such metatheorems, there will be a "principal instance" in which the variables
+are maximally distinct. Almost all of the time, only this principal instance is of
+value, and the other instances can be considered artifacts of the Metamath
+metalogic. [[file:slawekk.org][slawekk]] reports that he only bothers translating the principal
+instance in his translation into Isabelle, and he hasn't run into problems.
+
+The axioms of set.mm do depend rather heavily on non-principal instances, largely
+to support the theoretical system of Norm's 
+[http://projecteuclid.org/Dienst/UI/1.0/Summarize/euclid.ndjfl/1040149359 "Finitely Axiomatized" paper].
+
+I pose a question: is it possible to formulate a system of equivalent power in
+which only principal instances are used? More precisely, all axioms and theorems
+of this proposed system would admit only a single representation using de Bruijn
+numbering. If such a system were practical, it might make the job of translating
+between mm/gh and other systems such as HOL quite a bit easier.
+
+As mentioned above, Ghilbert drops one of these uses of the $d information and
+adds one more. Ghilbert automatically identifies pure dummies as described in (1)
+above, and does not require the explicit statement of their distinctness. However,
+in order to support "definition dummies" safely but in a manner consistent with
+the Metamath style, Ghilbert adds another use for distinct variable information:
+
+: -> [[file:Principal instances of metatheorems.org][Principal instances of metatheorems]]
+
+5. Support for definition dummies. Ghilbert has fairly arcane rules regarding distinct
+variable conditions on such variables. A definition dummy is a variable occuring in the
+definiens (right hand side) but not definiendum (lhs) of a definition. These
+rules are stated in the [[file:Ghilbert specification discussion.org][Ghilbert specification discussion]], but obviously should
+move to the specification itself.
+
+A particular goal for the Ghilbert definition mechanism was to not depend on the
+correctness of alpha conversion in the logic. Thus, Ghilbert definitions involving
+def dummies require an explicit alpha conversion proof. Perhaps I'm being too
+rigorous here, as just about all logics of interest are alpha-convertible. Indeed,
+alpha-conversion is implicit in a translation to de Bruijn indices, because any
+two alpha-equivalent terms have the same de Bruijn representation.
+
+In sum, I think it's worthwhile to explore a variant of Metamath based on more
+traditional concepts of bound variables, rather than the statement of distinct
+variable conditions. However, I think such a system needs to have an answer for
+each of the uses of distinct variable information stated above. Some will be easy,
+but others (I'm thinking of abstraction in particular) may prove quite difficult,
+as designers of other systems have grappled with the questions and come up with
+somewhat unsatisfactory compromises.
+
+I recommend thinking about such a bound variable Metamath variant in terms of
+de Bruijn indices, which seems to me a particularly simple formalization of what
+the concept of variable binding is really all about.
+
+-- [[file:raph.org][raph]] 20 Nov 2006
+
+: Thank you for the input/clues. I am now thinking that only
+proof steps would be submitted to the U2 validation process --
+which generates only error/warning messages and does not alter
+the Metamath substitutions performed by its Proof Verification
+Engine. So in essence, we'll have an audit of existing proofs
+for testing/experimental purposes, and optional U2 validation
+during mmj2 processing according to rules III.1 -> III.9, however
+those end up being defined. I plan to figure out these rules
+during the next month or so, before coding anything. If you want
+to take a stab at writing the rules for section III, I will be
+happy, otherwise I will be busy suffering alone for 4-6 weeks...
+You and Norm have provided me enough clues now that I ought
+to be able to nail this down. Thx! --[[file:ocat.org][ocat]] 20-Nov-2006
+any suggestions for the Rules
+
+ocat: I really would like to be helpful, and I think I do have
+some understanding of the issues around bound variables, but I
+honestly can't figure out what you're trying to accomplish with
+your Rules. It doesn't seem likely to me that simply adding
+additional constraints on the existing Metamath language is
+going to bring about a system that will be recognized as a
+"traditional" logic, any more so than the existing Metamath
+(which, in practice, is perhaps not so far from traditional logics
+as you might fear). Perhaps what would be most helpful is if you
+could describe, as clearly as possible, exactly what these rules
+are supposed to do. -- [[file:raph.org][raph]] 25 Nov 2006
+
+I know you know that the $d's are implemented as what might be
+termed "constraints". That is, they are enforced as a separate,
+distinct part of the Proof Verification algorithm; metamath.exe's
+Proof Assistant doesn't even check $d's. Also, they provide no
+use in completing a theorem's proof, but rather, inform the
+"author" what $d statements must be added to the theorem being
+proved -- in case it is referenced in /other/ proofs. 
+
+So, the question I am exploring with the Syntax Axiom Bindings list
+and the Rules is how one would/could use Metamath without $d's. 
+Considerable machinery exists in mmj2 to read, validate, parse,
+verify proofs and unify proof steps. If that machinery can be 
+reused without $d's then I want to know how to do it -- or learn
+the reason why it is totally unreasonable to do Metamath without $d's.
+
+The Metamath language itself provides a clean mechanism for describing
+context free languages, using typed substitutions to generate
+formulas from other formulas, and to make metalogical statements
+about those formulas. I like it, but apparently few people in the
+world are conversant in the Tarski-Megill approach. I theorize
+that $d's have an effect upon user acceptance. By creating a clone
+or hybrid system that allows for $d's to be used or not used,
+I can eliminate this objection from consideration. My next goal
+is a graphical user interface Proof Assistant with alternate input
+and output media technology, but I am reluctant to rev up for
+another major effort until I discover more about the key customer
+issues (such as $d's.)
+
+--[[file:ocat.org][ocat]] 25-Nov-2006
+
+Thanks for clarifying the goals. I think I can more or less answer
+the question of whether your idea for a $d-free formulation is
+feasible.
+
+Let me break it down, actually, into sub-questions:
+
+1. Can you replace the $d constraints with a mechanism which
+automatically determines valid substitutions, and still have
+a viable system?
+
+2. Is it possible, at least theoretically, to build a variant
+which does not have $d constraints, but which is otherwise fairly
+similar?
+
+3. Is it necessary for users of an interactive proving tool to
+explicitly enter $d constraints, or can they be automatically
+synthesized?
+
+The short answers are: no, yes, and yes.
+
+1. If the only purpose of the $d constraints were to indicate
+valid substitutions and "not free in", then this would be
+possible. However, that still doesn't cover the term schemes
+with holes. I think you'd need to introduce another mechanism
+to handle these, and, based on experience with existing systems,
+it's likely that any such mechanism would be at least as painful
+as Norm's $d's.
+
+2. One of the theoretical systems proposed in Norm's "Finitely
+axiomatized" papers uses explicit "distinctors" rather than
+distinct variable constraints, and is conceptually quite simple.
+Unfortunately, the fly in the ointment is that explicit
+manipulation of the distinctors is very tedious, so this system
+is sadly only of theoretical interest.
+
+3. It's a fairly easy problem to synthesize the needed $d
+constraints from a proof. In fact, I believe the Solitaire applet
+does so.
+
+A consequence is that you could publish a set.mm variant with no
+$d constraints at all except for 
+[http://us.metamath.org/mpegif/ax-17.html ax-17], and such an
+automated tool could reconstitute all the $d information of the
+full version.
+
+Thus, accommodating $d constraints in your new input media
+technology may not be difficult at all.
+
+The marketing question is of course a lot fuzzier, so I can only
+hand-wave. I definitely agree that there is a perception that the
+$d mechanism is unintuitive and difficult to understand, but that
+may have more to do with Norm's skills at selling than with the
+mechanism itself.
+
+Perhaps the most intimidating thing about set.mm is the
+bizarre-looking formulation of the fundamental axioms. Norm has
+very recently improved this situation considerably by proving
+[http://us.metamath.org/mpegif/ax16.html ax16] from the remaining
+axioms, which is good news indeed. Without doubt, ax-16 was my
+least favorite axiom, and you'll note its absence from the
+[[file:Ghilbert Pax.org][Ghilbert Pax]] axiomatizations. It's nice to have theoretical
+confirmation of this design choice.
+
+But more fundamentally, I think we have collectively done a poor
+job convincing people that the terms in set.mm mean exactly the
+same as in the traditional bound-variable interpretation, the
+consequent relation is the same, and, once you get past the
+technical machinations needed to prove basic alpha-conversion
+theorems, proof techniques map easily from one system to the
+other. [Note: /proving/ all these claims is probably still
+an open problem.]
+
+Perhaps if Norm had sold Metamath as a simple repackaging of the
+old, familiar logic system, and the $d mechanism as a minor
+technical innovation that makes it all simple and practical,
+people's perceptions might be different. But, of course, when
+you're trying to get a paper published, you focus on what is new
+and different.
+
+But ultimately I don't see the distinct variable mechanism as a
+huge hurdle. As the Metamath/Ghilbert juggernaut gains momentum,
+people will just learn to deal with it. I think that learning the
+basic rules of mm/gh is quite simple, but learning how to actually
+string together the steps to make real proofs is difficult for
+most people. Compared with that, learning $d is but a minor bump,
+and many of the mechanisms that other systems have for addressing
+the fundamental issues (safe substitution and abstraction in
+particular) are much more painful.
+
+-- [[file:raph.org][raph]] 25 Nov 2006
+
+-----
+
+ocat: /Also, [$d's] provide no use in completing a theorem's proof, but rather,
+inform the "author" what $d statements must be added to the theorem
+being proved – in case it is referenced in other proofs./
+
+norm: This isn't quite correct.  Of course if a theorem is proved
+correctly, then they provide no use for completing the proof.  But if
+the theorem is proved correctly, one could also argue that a check that
+steps can be unified provides no use for completing the proof.  Perhaps
+it is useful to divide $d violations into "soft" and "hard" ones.  The
+former are ones that can be fixed by adding $d's to the theorem 
+being proved, and
+your comment would be correct when talking about those.  But the "hard"
+ones cannot - they occur when you've substituted the same variable for
+two variables that must be distinct in a referenced theorem.  They
+make a proof intrinsically invalid and are as severe an error as a
+theorem reference that doesn't unify.  I consider it a
+shortcoming that MM-PA doesn't do $d checks and someday hope to
+address it, although the problem is mitigated somewhat because the
+standard verifier will detect $d violations in partial proofs.  When
+building a long, difficult proof I will often save partial versions then
+use the standard verifier to make sure there are no "hard" $d violations
+in the work up to that point, to prevent having to scrap too much
+work if there are.
+
+raph: /in practice, [set.mm] is perhaps not
+so far from traditional logics as you might fear/
+
+norm: I might add that
+there are only 175 theorems of predicate calculus involving $d's (99 if
+you exclude existential uniqueness) out of the 7000+ theorems 
+in set.mm.  These
+have been stable for many years in the sense that they have pretty
+much all the utility theorems that one normally needs in practice, and
+it is rare to have to add new ones.  Most of the ones that are actually
+used later on are very close to or identical to textbook theorems (e.g.
+Margaris's 19.* theorem series).  Other than as an academic exercise,
+few people are going to have to get into the nitty-gritty of the exotic
+$d scenarios involved in transforming the weird set.mm axioms into the
+standard base theorems, since it has already been done.
+
+Once you get into "real" stuff like set theory, complex numbers,
+etc., the theorems are almost identical to their textbook versions.  It
+is rare for set theory books even to talk about "free" and "bound"
+variables.  Looking through a couple, I don't see any use of those terms
+at all.  Even when discussing a specific application of predicate
+calculus in a proof, they will almost always say things like a "new
+variable not appearing in the formula (or class term)" to introduce,
+say, a dummy variable, in other words Metamath's $d exactly.  What I'm
+saying, I guess, is that we should look at the big picture to make sure
+we're not making a mountain out of a molehill.  For example, it
+would be sad if a lot of effort was put into something
+whose main usefulness ended up being to
+assist proving Margaris' 19.* theorems, all of 
+which of course have already been proved.
+
+[[file:norm.org][norm]] 26 Nov 2006
+
+Norm, you are correct to point out the hard vs. soft error
+distinction between types of $d errors. The hard errors,
+which are "invalid" substitutions, are the principal
+topic of interest here, I think. As an /excuse/ for my
+imprecision, I would like to mention the relationship of
+unification to an unambiguous grammar. It was this that 
+perhaps motivated my remarks which you clarified...
+
+Suppose we have an assertion proof step (e.g. a Proof Worksheet
+Derivation Step as opposed to a syntax or hypothesis step).
+Now, if that step is fully determined, with no "dummy" variables
+or missing hypotheses, and if the Ref label is present, then
+if unification is possible between the step's formula and
+hypotheses and the Ref formula and its hypotheses, then
+the consistent set of simultaneous substitutions produced by
+the unification is unique. That means that there is only one
+way to perform the unification using the Metamath Proof Engine
+rules, and it has nothing to do with $d's or free/bound variables.
+
+-----
+
+:  I think a stronger parallel can be made between unification and $d
+restrictions than you are suggesting.  There is a unique set of $d
+requirements associated with any proof step that is minimal, in the same
+way that there is a unique "most general" unification.  Metamath
+Solitaire will show both of these.  Regular Metamath allows you to add
+additional $d restrictions to that minimal set for the final theorem if you want (mm
+Solitaire doesn't).  Similarly, regular Metamath lets you specify a more
+restrictive substitution instance of the "most general" possible theorem
+for the final theorem  if you want (mm Solitaire doesn't).
+
+:: It would be interesting to write an mmj2 !RunParm-triggered
+command to rederive all of the Distinct Variable ("$d") statements from the Axioms, and compare those to what are actually present in a .mm database. --[[file:ocat.org][ocat]]
+
+#+BEGIN_VERSE  While this would be an interesting exercise, and I would certainly
+"fine tune" set.mm with the results, my guess is that the payoff might
+be small, because I have tended to be pretty careful in that area.  I
+would be suprised if there are even half a dozen redundancies.  You can
+weigh that against the effort needed to add this functionality.
+--- [[file:norm.org][norm]] 29 Nov 2006
+
+I am thinking about everything, from first principles :) In fact,
+consider that, given that $d's for a theorem are dependent upon
+the assertions used in the theorem's proof, we could recompute
+the $d's /every/ time "Verify Proof *" is requested -- it really
+wouldn't be all that much more work because the table lookup is
+required /anyway/! 
+
+:  /norm:/ Yes, but if you change the language spec to omit them, it would be
+much more work if you want to verify the proof of a single theorem,
+since the proofs of all theorems it depends on (and all theorems they
+depend on, etc.) must be reverified.  Carrying this to an extreme,
+the statement of the theorem itself is not necessary, since it
+also can be recomputed by the proof.
+
+: .
+
+: On the other hand, $d's
+accompanying dummy variables can be recomputed "locally", so they can be
+omitted without affecting the ability to verify single proofs quickly.
+In fact, in the [[file:Hmm.org][Hmm]] verifier they are optional, and in the Ghilbert spec
+they are either optional or not allowed (not sure) - see "Distinct
+variable conditions on dummies" on the [[file:Ghilbert.org][Ghilbert]] page.  I keep going
+back and forth about whether I should make them optional in the Metamath
+spec; one drawback is that all verifiers up to now except Hmm would have
+to be fixed.  I would suggest that any future verifier have an option or
+internal flag to go one way or the other, in case I change the spec to
+make them optional.
+
+: .
+
+: To a certain extent, I see the problem of whether to require $d's on
+dummies as analogous to whether we should even require the syntax-building
+steps in a proof, since those can also, in principle, be computed "locally".
+One big difference from a practical point of view is that recomputing
+syntax-building steps requires more work than building temporary internal
+$d pairs for dummy variables, so making syntax-building steps optional
+might slow down the verification significantly, even though it would make the
+database smaller.
+
+
+
+But that brings up the topic of database design. In fact, theorem
+$d's are attributes of proofs. 
+
+
+:  If we make $d's on dummies optional, as they are in [[file:Hmm.org][Hmm]], then I
+would consider $d's to be an attribute of the final theorem and not the
+proof, unless you consider the final theorem to be an attribute of the
+proof.  :)
+
+
+So according to
+[http://en.wikipedia.org/wiki/Third_normal_form 3NF] we ought to
+associate the $d attributes with the Proof entity instead of the
+Theorem entity. That makes sense given that there is a 1 -> MANY
+relationship between Theorem and Proof. But...
+
+
+:  Just as you can state and/or prove a less or more specific
+substitution instance of a theorem, you can state and/or prove a version
+of the theorem with more or less restrictive $d's.  If (in the Metamath
+language) we specify more $d's than necessary, that is analogous to
+specifying a more restrictive theorem than necessary, e.g.  (x=y -> x=y)
+instead of the (ph -> ph) that the proof of
+[http://us.metamath.org/mpegif/id.html id] intrinsically produces.  Now,
+that isn't an exact analogue w.r.t. the Metamath language, because
+redundant $d's can be added to a theorem without changing its proof but the
+proof's syntax-building steps
+must correspond exactly to the substitution instance stated
+for the theorem.  But I believe the analogue is exact
+in the Metamath Solitaire approach,
+where the proof "is" the theorem (the theorem being a computed
+byproduct for human convenience), and every theorem (and every step
+of every proof) is represented by an ordered pair <wff,$d's>, with both
+wff and $d's being "the most general (least restrictive)" possible.
+
+:: I don't see any benefit in adding extra $d's beyond the 
+minimum required by the assertions used in a proof. The topic
+of dummy variables being distinct is interesting, also -- I
+seem to recall Raph stating that they are distinct by definition
+in ghilbert, and thus, do not require $d's. 
+Hypothetically -- whiteboard talk -- the fact that $d's result
+from proofs and that different proofs may result in different
+sets of $d's is a solid reason for a database being able to hold
+multiple proofs for a single theorem. I don't know how one would
+combine $d's from different proofs -- cannot take intersection or
+union, probably need to choose. Given Godel's incompleteness theorem
+-- we may not have a proof within our formal system -- the 
+default set of $d's for a theorem with no proof in hand must be
+all (mandatory) variables.  As far as not storing the formula
+itself, I would say that the 1 theorem -> 0 or more proofs
+relationship indicates that the theorem formula is
+primary, and should be stored (in a new system I would prefer
+to either the abstract syntax tree or the s-exp's than the
+rendered formula -- and I feel that the mathematical logic textbooks
+should begin with the tree forms and leave input/output expression
+renderings of the trees for later...the variations of parentheses and
+abbreviated forms just get in the way of the proving and 'splaining.)
+--[[file:ocat.org][ocat]] 30-Nov-2006
+
+But...here is the interesting point: what if two proofs for a
+single theorem have different $d's? 
+Which $d's apply? And what
+does that even /mean/? 
+
+
+: I don't see any issue here.
+The $d's present in the database accompanying the theorem apply,
+regardless of whether they were actually needed for the proof.
+
+
+
+
+If there is a way to prove a theorem 
+with no $d's, and another way to prove the theorem 
+with $d's,
+are $d's really necessary for the theorem? 
+
+
+: No.  Just as the theorem may be stated and/or proved
+as an unnecessarily restrictive
+substitution instance of the most general possible theorem. -- [[file:norm.org][norm]] 30 Nov 2006
+
+
+
+Is this a /problem/
+with the concept of $d's itself, or a feature -- consider that
+the free/bound/substitutability concept does not depend on
+the specific proof (or does it?) 
+
+--[[file:ocat.org][ocat]] 29-Nov-2006
+-----
+
+And, if $d errors result from the unification then there alternatives
+are to rename proof step formula variables or use a different Ref
+label (or add $d's to the theorem in the 
+case of "soft" $d errors.)
+
+:  Some $d violations can't be fixed in this way (if I understand you
+correctly).  Here is a proof that 0=1 using a $d violation:
+
+    0eq1 $p |- 0 = 1 $= vx vx weq vx wal wn vx vx weq vx wal cc0 c1 wceq
+    vx vx dtru vx stdpc6 vx vx weq vx wal cc0 c1 wceq pm2.21 mp2 $.
+
+: Here is a proof that 0=1 using a bad unification:
+
+    0eq1 $p |- 0 = 1 $= wph wph wph wi wph wph wph ax-1 wph wph wph wi
+    ax-1 mpd $.
+
+: I would say that both errors are equally severe. :)  -- [[file:norm.org][norm]]
+
+So in this sense, $d's are a /constraint/ on substitutions,
+just as are free/bound variable substitution rules. 
+
+Re set.mm's use of $d's, I take that point. However, in the
+larger picture of Metamath itself, set.mm is only indicative
+of one way to use the Metamath language. We may look forward to
+other uses as well, perhaps uses that are beyond what we
+conceive today as useful or reasonable. It may be that $d's
+are the optimal way to constrain variable substitutions. The
+topic interests me... 
+
+--[[file:ocat.org][ocat]] 26-Nov-2006
+
+
+-----
+
+Perhaps there is a psychological problem with the way $d's are
+introduced and presented.  Because the set of $d restrictions is empty
+in propositional calculus, for simplicity we pretend they don't exist.
+Then, in predicate calculus, we suddenly introduce them, not as an
+integral part of each theorem, perhaps shown on the same line as the
+theorem between the end of the wff and the $=, but as some kind of
+"floating" thing that mysteriously influences the theorem
+somehow.  This was done - perhaps misguidedly - to allow $d statements
+to be reused for efficiency.  But in principle, every theorem (and every
+|- step of a proof) should be thought of conceptually as an ordered pair
+consisting of a wff and a (possibly empty) set of $d
+provisos.  This is essentially the formal definition of "simple
+metatheorem" in my "Finitely Axiomatized..." paper, which is what
+set.mm is all about.  Ghilbert's presentation, by the way, is much
+better in this respect, because each theorem has its (possibly empty)
+set of $d's as an explicit part of it, even in propositional calculus.
+-- [[file:norm.org][norm]] 26 Nov 2006
+
+According to me provisos are completely ununderstandable in a text book 
+as well. In fact it is their (metalogical) nature that makes the whole 
+stuff hard to understand. I think the best psychological presentation 
+we can expect with this matter is to begin with the set of axioms without 
+provisos then to show that this makes the proof completely inhuman to deal 
+with and then to explain that we prefer to let the software manage 
+the provisos. 
+-- [[file:fl.org][fl]] 30-Nov-2006
+
+A minor English tip, [[file:fl.org][fl]]:  instead of "according to me", it might be better
+to say "in my opinion".  "According to" is usually used to report something
+said by someone else, such as "according to historians..."
+
+Thank you Norm. -- [[file:fl.org][fl]]
+
+-----
+
+** On ocat's 30 Nov 2006 remarks
+
+/ocat:  I don't see any benefit in adding extra $d's beyond the
+minimum required by the assertions used in a proof./
+
+norm:  Yes, in the same way there is no benefit to adding $e's beyond the
+minimum required by the assertions used in a proof.  In either
+case, you would weaken the theorem unnecessarily.
+
+/ocat: The topic of dummy
+variables being distinct is interesting, also – I seem to recall Raph
+stating that they are distinct by definition in ghilbert, and thus, do
+not require $d's./
+
+norm: I covered this in my discussion of Ghilbert and Hmm above.
+
+/ocat:  Hypothetically – whiteboard talk – the fact that $d's result
+from proofs and that different proofs may result in different sets of
+$d's is a solid reason for a database being able to hold multiple proofs
+for a single theorem./
+
+norm:  These would be two independent theorems.  While there are no
+theorems like that in set.mm otherwise, for the purpose of this
+discussion I just added the examples
+[http://us2.metamath.org:8888/mpegif/dvdemo1.html dvdemo1] and
+[http://us2.metamath.org:8888/mpegif/dvdemo2.html dvdemo2] to set.mm:
+
+  dvdemo1    x and y distinct   =>   |- E. x ( x = y -> z e. x )
+
+  dvdemo2    x and z distinct   =>   |- E. x ( x = y -> z e. x )
+
+These are two intrinsically different theorems, even though there is a
+special case of them where they coincide (when both distinct variable
+provisos are present).  But there is no way to combine them into one so
+that the original strength of each one is preserved.  The conclusion
+is not valid unless at least one of the distinct variable provisos is present.
+
+Similarly, consider
+[http://us.metamath.org/mpegif/pm3.26i.html pm3.26i] and
+[http://us.metamath.org/mpegif/pm3.27i.html pm3.27i], which
+have the same conclusion, just like dvdemo1 and dvdemo2:
+
+
+  pm3.26i   |- ( ph /\ ps )   =>   |- ph
+
+  pm3.27i   |- ( ps /\ ph )   =>   |- ph
+
+These are two intrinsically different theorems, even though there is a
+special case where they coincide (if you add |- ( ps /\ ph )
+as an additional $e to pm3.26i and |- ( ph /\ ps ) as an
+additional $e to pm3.27i).
+But there is no way to combine them into one so that the original strength
+of each one is preserved.  The conclusion is not valid unless at least one
+of the $e hypotheses is present.
+
+You should think of $d's in the same way as you think of
+$e's, i.e. as an inseparable part of the theorem itself.
+For better or worse, the Metamath language was designed so that they are
+specified in separate statements which can be reused by multiple
+theorems if desired.  Since this doesn't cause confusion for $e's, it
+also shouldn't cause confusion for $d's if you look at it this way.
+
+/ocat:  Given Godel's incompleteness theorem – we may not have a proof within
+our formal system – the default set of $d's for a theorem with no proof
+in hand must be all (mandatory) variables./
+
+I don't think that it "must be", it simply depends on whether it is true
+or not in the model.  In some cases you need $d "holes" to even express things
+like ph(x) meaningfully.  I don't see that there is any special requirement
+imposed on $d's in particular by GIT.
+
+/ocat:  As far as not storing the formula
+itself, I would say that the 1 theorem -> 0 or more proofs
+relationship indicates that the theorem formula is
+primary, and should be stored/
+
+norm: I don't know what you mean by "0 or more proofs."  Every
+theorem must have at least one proof to demonstrate it, so that
+should be "1 or more proofs", I guess.  Certainly different proofs
+can result in the same theorem, as the various shorter proofs
+people find from time to time demonstrate.
+
+Perhaps you are referring to a personal preference with the
+word "should", and that's fine.   The Metamath language will
+continue to require that, so that proofs can be efficiently verified
+locally, and it's essential for the purpose of
+developing a proof (unless you are a genius who could type in
+the proof without seeing its goal displayed).
+But there is no theoretical need to store the theorem itself,
+in exactly the same way as there is no theoretical need to store the
+$d's
+(or $e's for that matter):
+the proof has the complete
+information about what the theorem
+will say.  The Metamath language does allow you to have redundant
+$d's not required by the proof,
+just like you can have redundant $e's not
+required by the proof.  In both cases, we would weaken the theorem over
+what the proof itself produces. [[file:norm.org][norm]] 1 Dec 2006
+
+Ok, I like your argument. The theorems in metamath can be seen
+as theorem schemes with respect to $d's. 
+And the $d's assigned to the 
+$p or 
+$a statements define instances,
+with the zero-$d instances being the most general.
+
+I am glad that mmj2 goes to all of the work to continue the unification
+search looking for a "best" match after finding a unifying assertion
+that has $d errors. That is a nice touch, if I do say so myself :)
+
+Now, about Godel and 0->many proofs... 
+
+The way I read this [http://en.wikipedia.org/wiki/Godel_incompleteness_theorem#First_incompleteness_theorem
+ first incompleteness theorem], there may be a theorem that is true
+that is not ' ..."derivable from the axioms and primitive notions of the theory, using standard first order logic".'
+
+: OK, you win. :)  I misinterpreted "proof within
+our formal system" as the formal system talking about itself and 
+its own proofs - since that's what the proof of GIT does, feeding me
+a red herring for my mental breakfast - when you
+simply meant a proof /in/ the formal system, not something more
+exotic. You are right, there
+will be formulas that are true in the model but don't have proofs
+(although, as I state above in my revised response, I don't see how
+this relates in any way to $d's).
+But Metamath/Ghilbert are about proof, not truth, at this primitive
+stage of their development.  Currently,
+formulas in set.mm that are not provable will not verify, even if they
+are true, since, well, they have
+no proofs. :)  [[file:norm.org][norm]]
+
+:: The relation of $d's to Godel and 0->many proofs per theorem
+is that I was attempting to recall the discipline of database
+design to make the determination of chicken vs. egg with
+respect to: is the $d part of the theorem or an artifact of
+the proof. Since a theorem may not /have/ a proof, the $d
+should be treated as part of the statement of the theorem
+to which the proof must conform. Of course, your arguments
+make this case already, and the fact that the user may optionally
+add extra $d's (for some reason?) also contributes to placement
+of the data within the logical database. [[file:ocat.org][ocat]]
+
+So a computer database should regard the formula as a primary,
+given attribute of a theorem even though it can be reproduced
+via a proof except in certain instances. And of course, one 
+system's theorem may be another system's axiom.
+
+--[[file:ocat.org][ocat]] 1-Dec-2006
+
+A couple of quick followups.
+
+First, in the current version of Ghilbert, distinct variable conditions on
+dummies are optional. They are not required, but there is no error for
+including extra distinct variables, even if they are referenced nowhere.
+Definition dummies, however, in general do require distinct variable
+conditions and have special rules for checking whether they're justified.
+
+The discussion of whether $d's can be recomputed from scratch changes
+character entirely when you look at modules and interfaces, as Ghilbert
+has. They are absolutely required in .ghi (interface) files, because
+different sets of $d conditions really do mean different theorems. It's
+technically possible to include them /only/ in .ghi files but not .gh
+files (i.e. requiring them to be recomputed from scratch when a .gh file
+is verified), but this increases the discrepancies between .gh and .ghi
+files, and also makes the verification process less local, so I'm not at
+all inclined to actually make this change.
+
+-- [[file:raph.org][raph]] 1 Dec 2006
+
+-----
+
+I had another idea. Suppose we had
+a way to mechanically restrict substitutions
+in Metamath to validly typed expressions
+that satisfy the issue with free vs. bound
+wff's seen in ax-5:
+
+         
+     ax-5 $a |- (  A. x ( A. x ph -> ps ) 
+                -> ( A. x ph -> A. x ps ) ) $.
+     
+
+This axiom may be seen elsewhere without
+the double binding of x in the antectedent, and
+an English proviso "provided that x does not occur
+free in ph".
+
+We define:
+
+     
+          $c wffb     $.
+          $v phb      $.
+    wphb  $f wffB phb $.
+    cvphb $a wff  phb $.
+     
+    df-wffB $a |- ( phb <-> A. x phb ) $.
+    
+    ax-5    $a |- (  A. x ( phb -> ps ) 
+                  -> ( A. x phb -> A. x ps ) ) $.
+
+-----
+
+The idea behind wffb is intriguing, but as formulated here it's not going
+to work.
+
+The fundamental problem is that wffb doesn't say anything about /which/
+variable is "not free in". Thus, for the new ax-5 to be correct, the wffb syntax
+productions have to ensure that no variable appears free, i.e. it describes
+closed expressions.
+
+However, I don't see any clear way to write grammar productions that are
+closed formulas. In order to build a quantified expression such as A. x x = x,
+you need to start with a subexpression (x = x) that does contain free variables.
+How can you express, syntactically, that this subexpression has only x free and
+no other variable?
+
+-- [[file:raph.org][raph]] 11 Dec 2006
+
+: Thanks for the feedback. I am not quite sure /what/ wffb 
+actually means given the meta-variable situation. I was thinking
+it meant that an instance of a wffb is a /sentence/ -- no free
+variables, but now I am back to the drawing board. The "problem"
+seems to be that "wff"s are the basis of development and do not
+take into account set/class. --[[file:ocat.org][ocat]]

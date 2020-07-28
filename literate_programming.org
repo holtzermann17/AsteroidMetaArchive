@@ -1,0 +1,49 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Literate programming is the artform of making well-documented programs.  The
+term was coined by Donald Knuth, the inventor of !TeX.  In fact, he wrote the
+source code for !TeX and its sidekick, METAFONT as literate programs and
+published the source code as books entitled !TeX: The Program and METAFONT: The
+Program.
+
+----
+
+* Discussion
+
+** Emacs Muse
+Although it isn't really about literate programming per-se, I thought it might
+be worth including a link to this
+[http://www.emacswiki.org/cgi-bin/wiki/MuseMode description of the Muse package for Emacs]
+here.  The idea with Muse is to be able to seamlessly generate lots of different
+kinds of documents from one source document.
+
+As someone who has tried to convert from format to format (e.g. !LaTeX to
+Texinfo, or even !LaTeX to PDF (not usually very hard of course, but something
+of a challenge in a big project like [[file:FEM.org][FEM]])) I can appreciate what the Muse
+author is trying to do.  I thought this mode might be interesting for people
+thinking about how to improve [[file:Noösphere.org][Noösphere]] -- it would be cool to be able to
+instantly generate a [[file:PM.org][PM]] article or whole copy of PM in some preferred
+format.  Of course, the later is one of the long-term goals of the FEM.
+
+However, I think it is important for format-interchangability to be given more
+consideration in future versions of Noösphere as well.  --[[file:jcorneli.org][jcorneli]] Sun Feb 13 20:37:17 2005
+
+** Licensing
+
+It is useful to license literate programs under both the [[file:FDL.org][FDL]] and [[file:GPL.org][GPL]] so
+that both the text and program components are free. (The idea that [[file:AM.org][AM]] might be a good place for literate programming influenced my decision to use these licensing terms.)
+
+**  Tips on programming literately
+
+There's a section on Literate Programming in 
+the classic "Mathematical Writing" report by
+Donald E. Knuth, Tracy L. Larrabee, Paul M. Roberts.
+
+http://www-cs-faculty.stanford.edu/~knuth/klr.html
+
+The TeX source of the report is downloadable at this page.
+I would post a PDF version of it also, but 
+unfortunately there is explicit permission
+statement allowing me to do so, so you just have to manually run TeX
+on the file yourself.  --SteveCheng

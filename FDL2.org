@@ -1,0 +1,155 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* FDL Problems
+
+In sum:
+
+ * *license lock*.  you can only license derived works under the FDL,
+even though there may be other licenses in the same spirit that are
+later discovered to be more appropriate.  in the extreme case, even
+an identical license by a different name is forbidden (!!!)  but more
+broadly, I think the whole mindset of trying to anticipate all valid modes
+of future use is wrong-minded (our fog paper will go into more detail
+on this).  
+ * *the license itself is copyrighted*, all-rights reserved.  astoundingly,
+you aren't allowed to tweak it and make something similar but more 
+fitting.
+ * *future-versions relicensing*.  this gives the FSF some extra power
+indetermining how the work will be licensed in the future (chiefly derived
+works).  the default behavior---if the license statement doesn't give a 
+specific version---is to apply the latest version of the FSF license, which
+the author may not have ever read!   still, there may be unpalatable consequences
+if someone derives from your work choosing the latest version of the license
+knowingly.   An example by way of analogy to the GPL: I wouldn't want to use
+GPL for my work if GPL 3 turns out to ban use for web services (without code-release).
+Now imagine instead we are talking about the FDL, and instead of whether
+a work is closed or opened, whether an open work can be translated/transformed.
+ * *complexity*.  the specificity and complexity of the license makes
+it difficult to use, particularly for massively-distributed, scatter-gather
+projects like !PlanetMath and Wikipedia.
+
+--[[file:akrowne.org][akrowne]] Mon Jan 23 19:45:51 UTC 2006
+
+It just occurred to me that a lot of the form of the FDL (and GPL) is understandable
+if you take the perspective of a free culturist who is trying to protect against
+"traditional" proprietary culture (read: big publishers/media).  Given this point
+of view in designing a license, you want to place in as many intricacies and 
+specific requirements and clauses as possible, because you anticipate that when
+Big Media tries to co-opt the work, they will have the resources to follow all
+these things precisely (and to hence meet your demands [which presumably they won't want to do ;)]).
+
+But the tragic flip-side of this coin is that this very "protection" against abuse
+is a complete mis-match with free culture itself!  Informal, voluntary, shoe-string
+efforts don't deal in intricate proceduralities, legalese, coercion, etc.  At least
+not very easily or naturally!  And that leads us to where we are today...
+
+
+--[[file:akrowne.org][akrowne]] Mon Jan 23 22:20:33 UTC 2006
+
+Also, I would say that, in many ways, it also has a lot to do with the
+particular subjects and the communities involved.  In the case of the
+GNU licenses, the original audience was computer programmers, whilst
+we are thinking about scholars.
+
+A primary reason why Stallman wrote the GNU license in the first place
+was his concern that a proprietary software company would simply take
+GNU programs, add a few modifications, then sell the whole thing as a
+closed source program.  While this may be a reasonable concern with
+software, we need to ask how relevant this issue is for scholarship.
+
+Suppose that someone were to take the Planet Math encyclopedia, make a
+few changes and additions, then sell the thing as their own product.
+Unless they were clear about what they added as opposed to what they
+took over from Planet Math, they would immediately be accused of
+plagairism by the scholarly commmunity and this would have devastating
+consequences for the authors or editors --- they would lose whatever
+standing they had as scholars, lose any academic positions, honors,
+and memberships in learned socites which they might have had; in
+short, they would become outcasts in the scholrly community.  If they
+were clear about what was theirs and what was copied, then people
+could easily enough copy the Planet Math stuff (or go to our website)
+and skip over the proprietary additions.
+
+In summarry, the situation here differs in two improtant respects.
+First, in programming there is the issue of closed vs. open source,
+but this is not an issue with scholarly works.  (I suppose that
+overuse of technical jargon can have the effect of closing off a work
+from the general public, but this is not quite the same as the effect
+of only releasing compiled object code and forbidding disassembly.)
+Second, in the scholarly community, there is a very strong honour
+system which makes wholesale copying without careful crediting
+unthinkable as opposed to the software industry, where code can be
+reused without carefuly documenting sources as long as one does not
+violate the law.
+
+Having said this, it might be worth pointing out a sort of exception
+to the first point.  Even if a work is in the public domain, one could
+make an electronic distribution of that work which in an opaque format
+and claim some sort of control over it.  Given that digital libraries
+are doing this already, this is a real issue.  However, I think that
+using license conditions to prevent people from distributing a work in
+an opaque format may not be the right way to confront this problem.
+To the contrary, I think we need to challenge the legality of the thin
+copyrights which these institutions claim, maintain that it should be
+legal to extract the (public domain) content of these files and
+rerelease it in different formats, and that it is an abuse of
+non-circumvention laws to use them to treat public domain material as
+if one owned the copyright to it.  To me, stretching copyright and
+contract law in the same way in order to make free licenses might be
+counterproductive since it entails tacit approval of means which maybe
+one should be opposing.  If it's alright for Stallman to have users
+assent to future versions of an agreement which they haven't read yet
+and for the text of the agreement to be copyrighted, why would it be
+wrong for Gates to have users agree to future versions of contracts 
+for software they have already purchased?
+
+While we have raised the issue of splitting the commons, there is also
+the issue of whether this is more of a problem (from a narrowly
+pragmatic standpoint, not as a matter of principle or long-term goals)
+in some fields than in others.  I don't know, but I think that this is
+something that needs to be examined when deciding whether the use of
+copyleft is doing more good or harm.  On a similar note, I think that
+the license colleges more accurately reflect the community structure
+and ideological divisions of the hacker community than those of the
+scholarly community.  For instance, I have met many hackers who
+strongly believe in the GNU license or the BSD license or the Open
+Source license and the ideologies they embody and have few compuctions
+about splitting the commons along ideological lines or requiring
+people to write functional equivalents of code under different
+licenses rather than reuse existing code under a license with which
+they disagree.  Likewise, I have met a fair number of free-culture
+activists who actively endorse the ideals of CC licenses.  By
+contrast, when I talk to mathematicians, the impression that I get is
+that they consider the differences between licenses to be someone
+else's fight and see no reason to take sides. --[[file:rspuzio.org][rspuzio]]
+
+Good points, Ray.  I especially like the comparison to Gates: if Gates
+was asserting some of these types of license-based controls that Stallman
+is, would we be that much quicker to condemn, purely because his motives
+are plainly profit-centric?  Are they really so innocuous when they are 
+ostensibly altruistic? I think not. --[[file:akrowne.org][akrowne]] Tue Jan 24 05:13:04 UTC 2006
+
+* FDL Benefits
+
+The key thing is to define a commons that you get into by agreeing to
+the pact.  If you don't agree to the pact, you can't get into the
+commons.  This is a /benefit/ so long as there are people who you
+want to exclude from the commons.
+
+(This is not a particular benefit over any other copyleft license, and
+it has the by-now-well-understood, and presumably unintended, negative
+side-effects described above.)
+
+The broadest question to ask is, when is it good to build a commons
+with an exclusion rule?
+
+--[[file:jcorneli.org][jcorneli]]
+
+Let's not forget the first place the fog shows up: if you are setting
+up the boundary of your commons with a license that is so intricate,
+a large chunk of your commoners don't realize what they have gotten
+themselves into, how legitimate is this situation? --[[file:akrowne.org][akrowne]] Tue Jan 24 05:09:41 UTC 2006
+
+
+Reminds me of my friend's car where everytime he started it, he would have to accept the licensing terms for his GPS software to use the map/GPS unit.  How unbelievable is that? --[[file:bloftin.org][bloftin]]

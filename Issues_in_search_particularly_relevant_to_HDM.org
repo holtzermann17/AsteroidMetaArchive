@@ -1,0 +1,87 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* With preliminary reviews= 
+
+; [http://www.google.com google] : Google touts itself as "the search company".
+[[file:akrowne.org][akrowne]] has mentioned that their search algorithms are, for the most part, known.
+I think we should make an effort to publish this algorithm, even if we don't
+current have a computer system that can run the whole thing well.  It would
+simply be interesting to know what they do and how they do it.  One thing
+they can do (which seems especially relevant to HDM) is to gather a bunch
+of related documents together automatically, e.g. at [http://news.google.com/ Google News].
+
+
+; [[file:P2P search.org][P2P search]] : This is supposedly hard.  Since the HDM may
+be running in a distributed fashion (something like the current internet),
+and since we may not have access to super-powerful local networks on which to 
+implement a "Google-sized" system to take care of our search needs, it
+may be useful to spend some time investigating possibilities for P2P search.
+
+* References for Search Algorithms
+
+Peter M. Kruse, Andre Naujoks, Dietmar Roesner, Manuela Kunze. 2005. Clever Search: A WordNet Based Wrapper for Internet Search Engines. http://xxx.lanl.gov/abs/cs.AI/0501086
+
+Udayan Khurana , Anirudh Koul. 2005. Text Compression and Superfast
+Searching. http://xxx.lanl.gov/abs/cs.IR/0505056
+
+Judit Bar-Ilan, Mazlita Mat-Hassan, Mark Levene. 2005. Methods for comparing
+rankings of search engine results. http://xxx.lanl.gov/abs/cs.IR/0505039
+
+Sandeep Pandey, Sourashis Roy, Christopher Olston, Junghoo Cho, Soumen
+Chakrabarti. 2005. Shuffling a Stacked Deck: The Case for Partially Randomized
+Ranking of Search Engine Results. http://xxx.lanl.gov/abs/cs.IR/0503011
+
+Satya N. Majumdar, David S. Dean, P.L. Krapivsky. 2005. Understanding Search
+Trees via Statistical Physics. http://xxx.lanl.gov/abs/cond-mat/0410498
+
+--[[file:rspuzio.org][rspuzio]] 13 July 2005
+
+* Discussion
+
+We might distinguish (some) between the different kinds of search.
+Presumably search for the purposes of finding a "related theorem" (when constructing a research report)
+is going to be /somewhat/ different from search for the purposes of
+finding a "useful antecedent" (when constructing a proof).
+
+"Heuristics" is a topic that is related to search.
+
+The [[file:scholium system.org][scholium system]] considers different ways of limiting search
+(typically very simple approaches like "look on the one shelf that you
+know the object will be found on").  Eventually we'll likely get into
+more complicated heuristics (like used and created by Lenat's AM).
+I have no idea if this will be the right place to talk about such
+things; that's a topic for a later date. --[[file:jcorneli.org][jcorneli]] Jul 9 05
+
+The topics of sorting and searching are staples of computer science, so there is certainly no lack of literature.  Searching for "search" (how self-referential!), I already come up with the references listed above.  These are just a few examples, and it would not be hard to obtain more.
+
+I would think that the reason that P2P searching is hard is because it is some sort of parallel processing, and not much is yet known about parallel processing.
+
+As for searching with heuristics, that sounds to me like the search algorithms discussed in AI books, such as alpha-beta pruning and the A* algorithm.  I also think that they could prove rather useful when it will come to things like searching for missing steps in proofs, but I don't even want to think about that until we can deal with proofs which include all their steps. --[[file:rspuzio.org][rspuzio]] 13 July 2005
+
+As for the issue of Google's algorithm, see  
+
+Sergey Brin and Lawrence Page. The Anatomy of a Large-Scale Hypertextual Web
+Search Engine http://www-db.stanford.edu/~backrub/google.html
+
+This is the original paper written by the founders of Google.
+
+--[[file:rspuzio.org][rspuzio]] 13 July 2005
+
+On google: I guess I meant something stronger, which is: write all the code to
+run google, but as free software (mostly ignoring the fact that we don't have
+the heavy duty hardware to run the stuff on).  This would be one point of
+reference for other search tools.  Of course, we could start much simpler, and
+code up the basic AI algorithms.  As we develop different algorithms, our "search
+space" becomes bigger, which, in this case, is a good thing.
+
+On filling in missing steps: Its fine for you to ignore this stuff temporarily
+if you like, but some developer (e.g. someone taking an AI course) might want to
+push ahead here.  The more non-deterministically we work (as a collective), the
+faster we'll get done with the project.
+
+--[[file:jcorneli.org][jcorneli]] Wed Jul 13 18:11:22 2005 UTC
+
+The reason for the heavy duty harware is the sheer volume of data which Google is indexing.  If one wanted to deal with a smaller data set (say only the web pages of Asteroid) then surely one could run the program on a smaller computer.  I agree that it would be nice to have a free implementation.  Given that the algorithm is described in their paper, certainly someone who is interested should be able to write a free implementation.  For all I know, maybe someone already has, or is in the process of doing so.
+
+If and when such a person comes along, I'll worry about it it then.  Until such a person comes along or there is a proof checker capable of dealing with proofs that have all steps written in (whichever comes first) then I will leave this issue on the side.  At the least, I would like to first have a proof checker which will work on proofs in propositional logic so that one has something concrete to apply the search program to.  Given that such a program is around the corner (for instance, I know that I could write one in no more thn a week if I had nothing else to do) I definitely am talking about ignoring this temporarily rather than pushing it off forever.  At any rate, I think it is important to have priorities lest one get spread out too thin and nothing ever gets done; at the same time, I think that one needs to be flexible in changing priorities to adjust to circumstances (such as a search expert joining the project). ---[[file:rspuzio.org][rspuzio]] 13 July 2003

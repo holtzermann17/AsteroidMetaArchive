@@ -1,0 +1,114 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Draft of PlanetMath Contributor Pact
+
+1. This agreement is entered into between N (user) and PlanetMath.org Ltd. (service provider) on this day D for the purpose of obtaining access to the PlanetMath web site (service).  This agreement is to be construed under the laws of the State of Virginia.
+
+2. Service provider authorizes user to access the PlanetMath webserver under the username UN and agrees to provide user with a user account and password for this purpose.  This access is offered free of any charge.  This access shall begin upon DD and terminate when one of the conditions described in section 3 is met.  Upon termination of access, all of this agreement except for sections 13, 15, and 16 shall be rendered null and void.
+
+3.  The access authorized by this agreement shall end and the account UN shall be closed when one of the following circumstances arise:
+
+a.  User's access under the username UN shall terminate immediately should user declare to provider that he/she wishes to close his/her account.
+
+b.  User's access under the username UN shall be terminated in the event the service provider deems the account inactive (by some reasonable standard at the service provider's discretion).
+
+c.  If, in the sole opinion of service provider, user is making use of the service via the username UN, or via any other account owned by user, in an inappropriate manner, then provider may, temporarily or permanently, suspend, limit, or rescind any or all of the permissions granted in section 4 or terminate user's account.  In the event that service provider takes such action, service provider shall notify user of the reason for such action at their listed email address, and user shall have the option of appealing this action to the user community by a mechanism which service provider shall furnish for this purpose.
+
+4.  Personal information provided on the new user application shall be kept strictly confidential, is not to be sold or otherwise distributed, and will only be revealed under court order.  While service provider encourages users to use real world identities and encourages users to provide contact information in the biography section, it is to be understood that this is voluntary and user has the option remain anonymous and to be identified by a pseudonym.  User also agrees that if the route of anonymity is taken, user may forfeit inclusion of their contributed content in compilations, syndications, or any sort of derived work from PlanetMath, at the sole discretion of the service provider. 
+
+Under no circumstances will deliberately erroneous or misleading information be permitted in the biography section of the user's personal information.
+
+5.  PlanetMath mail shall be treated as confidential and only released under court order.  Upon termination of service, any remaining messages in user's mailbox shall be deleted.
+
+6.  User permits service provider to place user on an electronic mailing list for the purpose of sending notices on topics of interest to the PlanetMath community.  User has the option of requesting not to recieve said mailings, in which case said notices will only appear in the notices column of the homepage but not be sent to user's e-mail adress.
+
+7.  Service provider authorizes user to participate in any activities which they may access normally through the service, including but not limited to:
+
+a.  To post messages to fora.
+
+b.  To contribute to the documentation, encyclopaedia, papers, expositions, and book sections.
+
+c.  To send and recieve PlanetMath mail.
+
+d.  To acess the "members only" section of the website.
+
+e. To initiate and participate in collaborations.
+
+Any other form of access, if deemed by the service provider to be of malicious intent, may result in actions against the user under section 3(c), at the sole discretion of the service provider.
+
+8.  User agrees to abide by service provider's policies and conditions regarding ownership of entries, corrections, and access to texts.  Service provider is under no obligation to mediate in disputes between users with regards to topical content, including but not limited to corrections, access to entries, technical correctness of entries, et cetera.  User understands that his/her contributions may be edited, revised or deleted by other users and that situations may arise in which user is no longer permitted write and/or read access to user's contributions.
+
+The service provider also reserves the right to directly make changes to content supplied by the user, given at least a posteriori notification.
+
+9.   User shall be held responsible for all material posted under the username UN whether by user or by any other person permitted to do so by user.  In the event that a third party posts to user's account without the permission of user, responsibility for content thus posted shall devolve upon this third party.  In the case of co-authored texts, user shall only be held responsible for those portions of said texts contributed by user, as determined by said texts' version histories.
+
+10.  User shall retain copyright to all contributions, which shall become jointly held for all content artifacts which are composite of contributions from numerous persons (as in the case of ownership change or co-authoring).  
+
+11.  User agrees to license all of user's contributions to the PlanetMath encyclopaedia and to the documentation section under the GNU FDL, version 1.2 or later version.  User's contribution(s) to the books, expositions, and papers sections may be licensed under any terms the user sees fit provided that service provider is granted permission to distribute said contribution(s) or to provide a link(s) to a website at which said contribution(s) is(are) available.  
+
+12.  In the event that a contribution quotes from or is,  in part or in whole, derived from an existing work, user agrees to acknowledge source(s) and provide permission information.  User represents that all contributions are original work unless they contain an explicit acknowledgement to the contrary.
+
+13.  User represents that: 
+
+a. User's contributions to PlanetMath are fit to be released under the terms stipulated in section 11.
+
+b. User has performed due diligence in determining that user's contributions do not infringe on existing copyrights.
+
+c. User has obtained appropriate written permission from copyright holders for contributions which quote from or are, in part or in whole, derived from copyrighted material.  
+
+In the event that a contribution quotes from or is, in part or in whole, derived from an existing work issued under a license agreement (such as the GNU FDL) which permits use without explicit consent of the copyright holder, user shall inform service provider of this fact in order that service provider may ensure that inclusion of the contribution is done in a manner which does not violate the terms of the license.  
+
+14. Should it happen that user later discovers that, despite user's precautions to the contrary, one of user's contributions stands in violation of copyright law, user shall immediately remedy this situation by rewriting said contribution so as to bring it into conformity with copyright law, or by deleting it.  If this is not possible because user no longer has write access to said contribution, user shall inform service provider of this circumstance and service provider shall provide user with temporary access to user's contribution for the purpose of effecting the necessary changes.
+
+15.  User agrees to comply in a timely manner with requests by service provider (a) to provide an account of how a contribution was written or (b) to provide an account of how user came to know information which is described in a contribution or (c) to provide specific documents demonstrating that user had the right to quote from or derive all or part of a contribution from a particular source.  User agrees to make use of available site facilities designed for the reporting of information relevant to the copyright status of contributions.  Failure to comply with such requests for documentation or misuse of said facilities may be seen as inappropriate use of the service and lead to the consequences described in section 3c.
+
+16.  In the event that service provider is a party or is threatened to be made a party to any threatened, pending or completed action, suit or proceeding, whether civil, criminal, administrative or investigative on account of one or more of user's contributions user agrees to hold serivce provider harmless and to indemnify service provider Officer against expenses (including attorney’s fees), judgments, fines and amounts paid in settlement, actually and reasonable incurred by the person in connection with such threatened, pending or completed action, suite or proceeding. Indemnification under this section shall be to the fullest extent permitted by Virginia law.  Compliance with the provisions of this agreement or with the "New User's Guide" is not to be construed as implying any assumption of liability on the part of service provider for violations in contributions written by users who comply with said provisions.
+
+17. Service provider may, at any time, at service provider's sole discretion, render invisible to the general public or delete any or all contributions by user as long as service provider notifies user of the reason for such action.  User shall have the option to appeal any such action to the user community by a mechanism which service provider shall furnish for this purpose. 
+
+18.  This agreement constitutes the only agreement between the parties regarding this matter and supersedes any prior written or oral agreements or understandings.
+
+* Discussion
+
+I have made some changes, which you can "diff" to see in specific.  The only comment I have 
+is that I wonder if we shouldn't avoid talking about dispute resolution that involves 
+procedures at the nonprofit level, and things like nonprofit membership status.  Would it
+be too offensive to simply keep all interactions at the discretion of the service provider?
+Even if this is considered "autocratic", we know in practice it is very much informed by
+the community, plus we will eventually have members influencing the composition of the 
+board of directors.  I don't want us to get caught up in designing elaborate democratic
+procedures. --[[file:akrowne.org][akrowne]] Thu Nov 3 22:50:59 UTC 2005
+
+Your changes look good to me with the exception of one point which I am not so sure about (see III below).  While re-reading the document, I took the opportunity to suggest two changes (see I and II below; for the precise changes, use "diff") and two small technical niggles (what we would call a "super-minor correction" on PM; see IV below).
+
+I.
+
+You are right that designing elaborate democractic procedures is not the way to go.  While I thought was important that there be accountability and that arbitrary decisions should be open to review by the community, describing a particular procedure which involves the non-profit was not the way to express this intention.  It should have simply been stated that these decisions would be open to review by the community and details of how such a review might work in practise could then be spelled out elsewhere.  Accordingly, I have suggested a new wording in the two places where appealing to membership meetings was mentioned --- hopefully this is better, although I am quite open to the possibility of changing or even removing this wording altogether.
+
+In particular, I really liked the unelaborate democratic process that has been used in the past.  I am speaking of the cases of the Deletor, Apm-xi and of Smarandache, where there were forum discussions and/or polls.
+
+However, if there is a strong feeling among all of you (and I hope that more people than just Aaron and myself will take the time to examine this draft and offer comments) that nothing should be said about this topic in this document, I will not object further, but acquiesce to removing this.
+
+II.  
+
+In the spirit of generalizing to cover bases, I suggested a new wording (adapted from our by-laws) for the disclaimer.  Rather than limiting to libel, obscenity, and infringement, the new wording simply refers to lawsuits resulting from contributions without specifying exactly which law might be violated.  
+
+III.
+
+I question the wisdom of allowing staff to make changes to (as opposed to deleting or hiding) material.  The reasons for this apprehension are theoretical, practical, and technical.  On the theoretical side, this seems to blur the clear distinction (more a distinction of function since the same people may well fulfil both roles) we are trying to delineate between staff and users and seems to deviate unnecessarily from the hands-off common-carrier-like stance we are aiming for.
+
+On the technical side, the question arises "Who owns the copyright to the staff's changes (or the altered entry)?"  It is worth noting that the particular clause of the agreement which is being called into question refers solely to the ablility to make the changes _in_ _situ_ --- the license terms permit anyone to make changes to entries providing they follow a certain protocol.  It might be the case that the staff own the copyright or that the staff and the authours share it jointly or that only the authours have it.  To come up with a reasonable answer will surely require an expert's judgement, but I would point out that either answer could lead (in its own way) to undesirable ramifications in practise, as in the example below.
+
+On the practical side, I could envision a scenario in which a staff member makes clumsy changes to a suspect article with the result that the new version is infringing (For the sake of argument, we may further suppose that the original version, though suspicious-looking, actually was not infringing.).  What might happen then?  How will blame be assessed?  It might be held that the disclaimer of section 16 is no longer valid because staff took an active role in editing the entry.  In this case, the purpose of the indemnity pact has been defeated.  It might be the case that the disclaimer is held valid and authour is held solely liable.  While this would protect PlanetMath.org, it could be problematic in its own way --- it means that users might be held liable for changes to their contributions done without their  express consent.  This would undermine our original intention to make sure that all parties involved are held responsible for all the consequences of their own actions but for no consequences of any other parties' deliberate or negligent actions.
+
+I don't suggest any specific change here; I only suggest that we keep this issue in mind.  It might be worth asking ourselves whether allowing staff to make changes as opposed to deleting or hiding content really gives added ability to protect the organization and to weigh this against the potential risk.  I present this section primarily as an example of Good Questions to ask a Good Lawyer and an attempt to think through some of the issues we will need to adress and with respect to which we will want to seek advice.
+
+IV.
+
+Trivially minor niggles:
+
+The section number "16" appeared twice in a row, so the second section 16 is now section 17.
+
+The "N" in the first line was really meant to be an "N", not a "UN".  For instance, in my copy of the agreement, we would have N = "Raymond S. Puzio" and UN = "rspuzio" whilst Joe would sign two copies of the agreement; in both of these we would have N = "Joseph A. Corneli", but one would have UN = "apmxi" and the other would have UN = "jac".
+--[[file:rspuzio.org][rspuzio]] 

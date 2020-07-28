@@ -1,0 +1,55 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page contains a draft proposal for SOC 2008
+
+
+Improving rating system and users ranking in PM.org
+
+Pawel Jurczyk
+
+pjurczy@emory.edu
+
+* Abstract
+
+Last year’s Google Summer of code resulted in two modules developed for PlanetMath.org. First of those is ranking module which enables users to rank encyclopedia entries. Each user can rank entries based on such categories as correctness, clarity, pedagogy and language. Ratings for each category are in the range of 1 to 5. The second module consists of users’ reputation system. Reputations are estimated using a method based on the HITS algorithm. A network model is built which represents object owners/editors (past owners), objects, and corrections, and their interconnections. This data is used to infer which users are contributing more value to the content base. The output is a set of user confidence scores that are converted to ranks and mapped to a 1-5 scale.  This year, as these solutions have been around for some time, it seems more than appropriate to think about evaluating, updating and extending these subsystems.
+
+* Proposal
+
+As a consequence of observation of current objects ranking and users ranking systems developed under Google Summer of Code 2007, the most appropriate directions for further extending the system are as follows.
+
+ *1. Evaluation of current rating system*
+
+The goal of this year’s Google Summer of Code will be to deeply evaluate the results produced by last year’s algorithm. After a year of functioning, ranking system has gathered large number of rankings produced by users. In this case, it becomes very important to revise the ideas implemented last year and measure how accurate the current users’ reputation system is. The framework developed during last year gives many possibilities for tuning graph used as basis for HITS calculations. With large number of entries ratings, it is worth of revisiting last year ideas:
+ * How to use ratings for refining weights in HITS graph? Currently, the weights are computed using ratings of the objects; the higher the average rating of given entry, the higher the weight in graph is.
+ * Is HITS ranking good at all? To answer this question there is a need to evaluate the ranking produced by this algorithm with the ranking used currently by PM community and to get opinions of PM members. Last year's results may differ, as over last year many entries have been ranked what caused weights in the HITS graph to evolve.
+
+ *2. Extensions to the ratings*
+
+An important issue is to judge whether HITS is the best solution for finding best users in the system. The alternative idea would be to build graph similar to currently used by HITS and run the PageRank algorithm.
+
+ *3. Improvements of current entries ranking system*
+
+Current implementation of entries ranking system needs few corrections. Small correction which is worth of implementing is, for instance, hiding actual rankings from users who did not vote for particular entries. This will prevent bias of ratings. The other issue is to rethink the process of aging of the rankings. Currently, rankings decrease with every edit of an object in encyclopedia. This can cause that small object edits (correcting typos etc.) will cause older rankings to decrease in importance. Alternative approaches can be more beneficial. Especially, it seems appropriate to distinguish between minor and major edits. Therefore, it might be beneficial to implement methods which can distinguish between such changes automatically.
+
+ *4. Integration of ranking system with search module*
+
+Currently, rating and ranking systems do not reflect search results. Therefore, it seems appropriate to add option for users to change that behavior. Simply, when users selects that he wants to use rating/ranking subsystems to reflect the search results, score of entries will be combined with average author's ranking and average entry rating. Based on this idea, the user who issues the query will get the most legitimate results placed before other entries (probably entries of lower quality).
+
+* Deliverables
+2 week - Analyze current rankings of objects/see how HITS performs in comparison to native user's ranking
+
+2 week - Implementation upgrades to HITS graph (play with possible parameters of the framework developed last year)
+
+2 weeks - Test PageRank algorithm as a substitution of HITS
+
+3 weeks - implementation of updates in ranking system
+
+2 weeks - Testing and fine tuning
+
+* Qualifications
+My research includes information retrieval, finding experts in on-line communities, distributed databases and distributed systems. 
+
+Education: Emory University, Atlanta, GA, USA - PhD Candidate in Computer Science
+
+My full resume can be found at: http://mathcs.emory.edu/~pjurczy

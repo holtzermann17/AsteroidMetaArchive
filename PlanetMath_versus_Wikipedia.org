@@ -1,0 +1,65 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A new user on PlanetPhysics brought up a very valid question, why PP/PM when we have Wikipedia.  I tried to answer and give a few links, but I fear I did a poor job.  This page is to get the 'experts' to discuss this.  The main points I mentioned were
+
+ * Automatic linking
+ * Access Control
+ * Community
+
+Here is how I replied.
+
+This is a very valid point and many times I thought of giving up during the setup of PlanetPhysics (PP) and just contribute to wikipedia.  However, there are significant advantages over wiki.  If you would compare PP's (or PlanetMath's (PM)) encyclopedia to wiki's, then wiki would be the way to go since they already have the money and momentum.
+
+The two biggest advantages are automatic linking and access control that help foster an online physics community.  As wiki gets bigger it becomes quite a chore to keep an artile's links up to date.  Whether you are  maintaining an article or creating a new one.  As soon as an article is updated or created on PP/PM every other article is automatically updated.
+
+Access control is to help people create collaboration groups along with having their own research online.
+
+In short, PP wants to focus on the needs of the physics community to give better support to users and researchers.
+
+There has been a lot of discussion on this from the planetmath (www.planetmath.org) people and some more info see at following links
+
+http://planetx.cc.vt.edu/AsteroidMeta//Content_Exchange_With_Wikipedia
+http://www.dlib.org/dlib/october03/krowne/10krowne.html
+http://en.wikipedia.org/wiki/Wikipedia_talk:WikiProject_Mathematics
+http://en.wikipedia.org/wiki/Wikipedia:WikiProject_Mathematics/PlanetMath_Exchange
+
+
+*  Discussion
+
+All I can say right now is that you seem to have touched the two
+main points.  I'll add more later, but the question reminds me
+of "why do we need free software when we can get so much for
+so cheap from Microsoft?" ;).  --[[file:jcorneli.org][jcorneli]]
+
+Noosphere also has typed objects and attachments--i.e. you can attach
+"proofs"  and "derivations", and browse all these things accordingly.   
+This sets the groundwork for useful features like browsing un-proven 
+theorems.  Our rendering system is top-flight; no one else in the world
+has hyperlinked page images or syntax highlighted source views.  Then of
+course, the ownership-based authority model and !LaTeX format appeals to
+many who are of a more academic bent.  
+
+But perhaps the most important distinction is that Wikipedia strives
+to be a /general/ resource, whereas Noosphere sites are geared
+towards more depth in a subject domain, more rigour, and more technical
+detail. --[[file:akrowne.org][akrowne]]
+
+I wrote a little essay recently that relates to this last topic: see
+[[file:totalizing projects.org][totalizing projects]].  Ideally, Wikipedia would contain all the
+content from !PlanetMath (and a bunch of other content), and
+!PlanetMath would contain all the mathematical content there is.
+Moreover, all of this content would be interfaced with by users and
+contributers in as many different ways as you might wish.  The
+practical state of affairs is quite different from this info-utopia.
+
+I do think both projects are helping move humanity in this direction.
+At this point, any competition between the two projects is "friendly"
+(somewhat different from the competition between e.g. !PlanetMath and
+!MathWorld).  
+
+Nevertheless, I'll stand by my comment above: users may find their
+immediate needs satisfied by one project or the other, but they should
+never stop thinking about what advances can be made.  --[[file:jcorneli.org][jcorneli]]
+
+This topic could maybe be covered in the new user guide? At worst, a prospective contributor could get the idea that we wish to compete with WP by writing everything from scratch. It could also be good to mention that PM strives to coordinate the "Free Math Movement". -- [[file:matte.org][matte]]

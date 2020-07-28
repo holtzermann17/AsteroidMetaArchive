@@ -1,0 +1,133 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+Please see the discussion section on
+[[file:list of formal statements in natural language.org][list of formal statements in natural language]]
+for an overview of what this page is about (for now).
+
+See also [[file:Version Zero.org][Version Zero]].  I've gotten through the list of
+"logical" functions described there.  Still to go, 
+"metamathematical" (maybe) and "set-theoretical".
+(Note that the set-theoretical functions currently need
+to have some work done on them.)
+
+
+; let G be a group :
+;; hcode : (group G)
+;; NL template(s) : "let A be an instance of class B"
+;; Notes :  Note that in HDM-p3 (and perhaps in HDM-p2 - I don't remember right now), 
+we used predicates to both /test/ ("is G a group?") and assert ("G is a group").
+
+; All x in M are divisible by p :
+;; hcode : (forall x :in M :st (divides p x))
+;; NL template(s) : "all elements of A have property B"
+
+; Some prime number exists :
+;; hcode : (exists x :in natural-numbers :st (prime x))
+;; NL template(s) : "some element of A has property B", "set B has at least one element"
+;; Notes : The class A need not be mentioned explicitly (it isn't here).  Note that
+one can either describe B as a predicate or as a set.  
+
+; But G has only one identity element :
+;; hcode : (exists-unique x :in G :st (identity x))
+;; NL template(s) : "There exists exactly one element of A with property B"
+;; Notes : This is related to but /not/ the same as the following
+conjunction of if  and only if assertions:
+"G is a group if and only if it has an identity element e,
+and x' in G is an identity element if and only if x' is equal to e."
+The problem with these assertions is, of course, that the first
+one is /false/ (having a group element does not immediately imply
+that G is a group; it could be a semigroup, for example).  However,
+I think that "if and only if" conjunctions like this actually appear in
+mathematical writing fairly frequently (maybe I'm wrong... but I 
+definitely have the feeling that I've seen things like this before).
+It would be better to say
+"G is a group only if it has an identity element e,
+and x' in G is an identity element if and only if x' 
+is equal to e" -- though of course this statement isn't exactly
+equivalent to the original example either.
+
+; By Theorem 21, we conclude that G must be a group :
+
+;; hcode : (implies (theorem 21) (group G))
+;; NL template(s) : "[[file:result A implies result B.org][result A implies result B]]"
+;; Notes : Unless result A is equivalent to result B or B literally is
+entailed by result A (sort of silly to make a statement like we find
+in the example, then!), there is probably more to the story than
+is described in the NL template.  Also, this /explicit/ reference to
+Theorem 21 is different from the forms of /implicit/ reference mentioned
+in the discussion section below.  (However, the word "by" has a tinge
+of implicit Finally, the hcode translation
+is extremely tentative!
+
+; 10 is not prime :
+;; hcode : (not (prime 10))
+;; NL template(s) : "A is false"
+;; Notes : It is easier to say "A is false" than to prove it.
+Just saying it does not make it true.  Even simple assertions 
+like the example one are mini-theorems.  (Some theorems will
+be encoded in the HDM's basic library... other will have
+to be proved.)
+
+; 7 and 11 are prime :
+;; hcode : (and (prime 7) (prime 11))
+;; NL template(s) : "both A and B are true"
+
+; Either a or b must divide c :
+;; hcode : (or (divides a c) (divides b c))
+;; NL template(s) : "A is true or B is true"
+
+; If G is a group, then it must have at least one element :
+;; hcode : (if (group G) (exists x :st (elt x G)))
+;; NL template(s) : "If A is true, then B is true."
+;; Notes : Conditionals have a sort of gentle air, because they
+admit the possibility of their antecedent being false.  But,
+don't be tricked: they need not themselves be true, either.
+
+; Thus, X' is equal to the original set S. :
+;; hcode : (eq X' S)
+;; NL template(s) : "A is equal to B"
+;; Notes : Would it be good to use `equal' instead of `eq'?
+We should discuss different notions of "equality" at some point.
+
+; x=4 if and only if x = 5-1 :
+;; hcode : (iff (eq x 4) (eq x (- 5 1)))
+;; NL template(s) : "A is true when B is true, and only then",
+"A is true exactly when B is true", 
+"A is true if and only if B is true", "A is equivalent to B"
+
+[Add more!]
+
+
+*  Discussion
+
+**  abstract reference
+
+Mathematically "meaningless" (or "meaninglow") words like /thus/, /hence/,
+/then/, etc. are very linguistically and computationally useful.  And indeed,
+I think we will see that they are not mathematically meaningless at all.
+However, they are not dealt with on this page, for the sake of simplicity.
+(Eventually, of course, we will want to work on understanding these words and
+statements that use them!)
+
+As an example of how these statements might work (just to get the wheels
+turning), consider the statement
+
+: All x in M are then divisible by p.
+
+This asserts the same basic fact as "All x in M are divisible by p", but in
+addition it relates this fact to the ideas that appeared before (probably just
+before).
+
+**  Syntax of `exists'
+
+The syntax for `exists' used in the hcode in the "If G is a group, then it has
+at least one element" example isn't quite what I'm used to.  Usually I prefer to
+write hcode like in the "Some prime number exists" example.  See the notes and
+NL templates for the latter example.  I think it isn't too hard to write lisp
+functions that can take any of a variety of keyword arguments (see the common
+lisp function that have been implemented in emacs lisp), which would make it OK
+to leave out the ":in" keyword.  But further discussion about whether dropping
+":in" (hee hee) is OK may be warranted.

@@ -1,0 +1,99 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The simplest case is when we have to merge a single variable
+assigment with a list of assignments.  We shall accomplish this witho
+the function merge-assignment.
+
+ merge-assignment : (<atom> <list>) x <assignments> -> <assignments>
+
+ (defun merge-assignment (x y)
+   (cond ((null y) nil)
+         ((eq 't y) (list x))
+         ((not (assoc (car x) y)) (cons x y))
+         ((equal x (assoc (car x) y)) y)
+         (t nil)))
+
+Proof:  By definition of <assignments>, there are 3 cases to consider:
+1. y is nil  2. y is true 3. y is a list
+
+Case 1: In this case, the subschema did not match a sulblist.  Hence,
+there is no way that the whole schema could possibly match, so the
+program outputs nil.
+
+Case 2: In this case, the subschema matched a sublist, but it was not
+necessary to assign values to wildcards to make the match.  Hence, if
+it was necessary to assign a value to an atom make a match with a
+different sublist, we simply return the assignment that had to be made
+to the atom as a list of one assignment.
+
+Case 3: In this case, we could match one sublist by assigning a value
+to a single wildcard and match another sublist by matching one or more
+wildcards.  We need to make sure that the assignments of sublists to
+wildcards is consistent.  This breaks up into three subcases: a.  The
+wildcard (car x) does not show up in y. b. It does show up and is
+assigned to the same sublist c) It shows up but is assigned
+conflicting values.
+
+Case 3a:  In this case we obtain a complete list of assignments by
+combining x and y.
+
+Case 3b:  In this case, x only repeats something that is already
+present in y, so we return y since we agreed that <assignment>s were
+not supposed to contain redundancies.
+
+Case 3c:  There is an inconsistency, so we return nil.
+ Q.E.F
+
+** merge-assignments
+
+The function merge-assignments takes two assignments of wildcards and
+tries to merge them into a single list.  If it succeeds, it returns
+the merged list.  If it finds that there is an inconsistency, then it
+fails and returns nil.
+
+To define this function, we first note that if one of the lists
+contains but one item, we simply need to check whether the wildcard
+which that item defines appears in the other list.  If it does appear,
+and the definitions are the same, we return the second list, otherwise
+we return nil.  If the item does not appear in the second list, we
+return the second list with the item added.  In the case where the
+first list has more than one item, we may merge the first list with an
+item removed to the result of merging this item to the second list.
+
+ merge-assignments : <assignments> x <assignments> -> <assignments>
+
+ (defun merge-assignments (x y)
+   (cond ((null x) nil)
+         ((eq 't x) y)
+         ((cdr x) 
+          (merge-assignments (cdr x) (merge-assignment (car x) y)))
+         (t (merge-assignment (car x) y)))) 
+
+Proof: There are three possible cases, depending on the nature of x:
+
+Case 1. If x is nil, we have an inconsistency, so we output nil.
+
+Case 2. If x is t, then we simply output y because everything is
+consistent and we do not have any variable assignments in x that would
+need merging.
+
+3. If x is a non-empty list, then we will use merge-assignment to
+merge the variable assingnements in x with those in y recursively.
+Since x is a list, x has one or more items.  If x has one item, we
+simply merge that item with y.  If x has more than one item, we merge
+the first item and then call our function recursively to merge the
+resulting list with the remainder of x which, by hypothesis, is a
+non-empty list.
+  Q.E.F.               
+
+** Examples
+
+ (merge-assignments '((x a) (y (a b))) nil)
+ nil
+
+ (merge-assignments '((x a) (y (a b))) '((y c) (z a)))
+ nil
+
+ (merge-assignments '((x a) (y (a b))) '((x a) (z b)))
+ ((y (a b)) (x a) (z b))

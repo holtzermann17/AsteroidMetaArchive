@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+This request may be deceptively titled.  The point is that we need to organize
+the structure of each section.  Right now, we sometimes see proofs coming before
+theorems, and other weird things like that.
+
+Perhaps "attachment" metadata could be used to help sort things out.  It may or
+may not be sufficient.  More than likely some attachments are not in the same
+MSC as the things they are attached to, so trying to use attachment metadata
+could result in a big mess.
+
+The only other thing I can think of right now is to sit down with the list of
+entries and organize it by hand.
+--[[file:jcorneli.org][jcorneli]] Fri Apr 08 22:13:53 2005 UTC

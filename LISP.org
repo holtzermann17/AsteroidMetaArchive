@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+LISP uses lots of parentheses and makes life incredibly easy
+for the programmer.  Everything between paretheses is a program
+(some programs, of course will have bugs in them) and in a surprisingly
+large number of cases you can drop these programs in to some other
+context and have them work roughly as they did in their old context.
+
+One drawback of LISP is that it has essentially no useful (free) documentation outside
+of [[file:Emacs.org][Emacs]].  But the Emacs documentation is pretty good.
+
+I'm not so sure about that drawback --- see below ;) --[[file:rspuzio.org][rspuzio]]
+
+: This is certainly more documentation than I knew about, however, I think that
+if you check the licensing terms, most of these works will be seen to be
+non-free.  Fretting over the non-existence of free documentation for Common Lisp
+was one of my big hobbies last year.  It is still worrisome; at some point, if
+nothing dramatic happens, perhaps I'll get around to writing some (which would
+entail learning a lot of new things about LISP).  Of course, the non-free
+documentation is somewhat useful for learning the language.  But it isn't
+helping the GNU project directly.  Or the HDM project, for that matter.  If we
+can't edit and redistribute modified versions of documentation, its usefulness
+is severely limited.  Free documentation would be /much/ more useful for
+learning. --[[file:jcorneli.org][jcorneli]] Wed Mar 02 04:11:33 2005 UTC
+
+** Bibliography
+
+[http://www-formal.stanford.edu/jmc/recursive.html RECURSIVE FUNCTIONS OF SYMBOLIC EXPRESSIONS AND THEIR COMPUTATION BY MACHINE by John McCarthy] --- This was the original paper on LISP. 
+
+[http://www-formal.stanford.edu/jmc/lisp20th.html LISP---NOTES ON ITS PAST AND FUTURE---1980 by John McCarthy] --- Thoughts by the inventor 21 years later.
+
+[http://www.civilized.com/LispBook/ Interpreting Lisp] --- Civilized Software is making available a book entitled Interpreting Lisp which presents how LISP works and how to build a LISP interpreter.
+
+[http://www.apl.jhu.edu/~hall/lisp.html#Section1 An Introduction and Tutorial for Common Lisp] --- In addition to the tutorial, this webpage hase a large collections of reference for further information about LISP.
+
+[http://www.gnu.org/software/emacs/elisp-manual/html_mono/elisp.html GNU manual] --- Edition 2.8 of the GNU Emacs Lisp Reference Manual, corresponding to GNU Emacs version 21.2.
+
+[http://www.swiss.ai.mit.edu/~jaffer/r5rs_toc.html Revised(5) Report on the Algorithmic Language Scheme] --- Scheme is a popular dialect of LISP.  Also, in the parent directory [http://www.swiss.ai.mit.edu/~jaffer/] one can find the [http://www.swiss.ai.mit.edu/~jaffer/JACAL.html JACAL Symbolic Math System] which is written in scheme and other interesting free software as well as a [http://www.swiss.ai.mit.edu/~jaffer/Geometry/Marbling-1.html mathematical theory of marbeled paper]!
+
+[http://www.supelec.fr/docs/cltl/clm/clm.html Common Lisp the Language, 2nd Edition] --- As the name suggests, Common LISP is a popular, if somewhat large and clunky dialect of LISP.
+
+[http://webmaker.web.cern.ch/WebMaker/examples/xlisp/www/cldoc_1.html XLISP] --- XLISP is an object-oriented extesion of LISP by David Betz.  This manual is also useful as an introduction to the idea of object-oriented programming as well as a LISP manual.
+
+[http://www.flownet.com/gat/papers/lisp-java.pdf LISP as an Alternative to JAVA by Erann Gat ] --- In this article, the author presents data to suggest that LISP is superior to Java and C++ as a programming language.
+ 
+[http://www.cs.umaine.edu/~chaitin/lisp.html Elegant LISP Programs by G. J. Chaitin] --- In addition to metamathematics, this article provides a nice introduction to LISP for mathematicians.  To quote the author,
+
+: /But let me start telling you why I think LISP should be loved by mathematicians. I think it's the only computer programming language that is mathematically respectable, because it's the only one that I can prove theorems about!/
+
+: /So why do I love LISP?! Well, the answer is, because it's really set theory, and all mathematicians love set theory!/

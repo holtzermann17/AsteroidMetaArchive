@@ -1,0 +1,373 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* About this document
+
+I had initially called this a "whitepaper" (hence the name of the
+wikipage) based on the idea that we would be sending a
+whitepaper to various people who I met at [[file:2006 JMM.org][2006 JMM]].
+But it turned out that what we really needed was a stategic plan
+(see [[file:PlanetMath_Fundraising_strategy|this wiki page.org][PlanetMath_Fundraising_strategy|this wiki page]] for the terminology),
+which is something like a "meta-whitepaper".
+
+This is a collection of sections being slowly stiched together into one
+coherent presentation, according to the section-level organization 
+that is being hashed out using this
+[[file:Detailed PM whitepaper outline|outline.org][Detailed PM whitepaper outline|outline]]. 
+
+Many of the sections have most of the corresponding discussion and
+early draft material on separate pages.  This is so that we can keep
+the discussion on THIS page succinct! --[[file:jcorneli.org][jcorneli]]
+
+* Dates
+
+According to our [[file:PM Misc Meetings|meeting of 2006-02-13.org][PM Misc Meetings|meeting of 2006-02-13]], we would attempt to
+have a draft ready in a month, so, somewhat generously, by 2006-03-13.  We
+would then share this draft with "pre-partners" and make revisions over the course
+of the next half month.  Which puts us at a final release date of approximately
+2006-04-01.  Which is of a somewhat fortuitous date (though of course we don't want
+people to think we're joking!).  Of course, it would be /nice/ if we could get all of this done sooner.  In short, let's not push this to the last possible minute, but rather, the first possible minute (or at least some moderately early one)!  This document seems really important for the future of PM!  --[[file:jcorneli.org][jcorneli]] 
+
+Note, tomorrow is the deadline for the full draft mentioned above.
+I will take a stab at it and circulate the results tomorrow.
+--[[file:jcorneli.org][jcorneli]]
+
+** Contextualizing documents
+
+ * [[file:PlanetMath Goals.org][PlanetMath Goals]]
+ * [[file:2006 JMM.org][2006 JMM]]
+ * [[file:Detailed PM whitepaper outline.org][Detailed PM whitepaper outline]]
+ * [[file:Writing whitepapers.org][Writing whitepapers]]
+
+* Introduction
+
+* Scope and Scale of the project
+
+!PlanetMath is project for bringing mathematical content and access to
+a vibrant mathematical community to everyone on the internet.  It aims
+to be widely useful, and sometimes revolutionary.  Developing content,
+developing infrastructure, and building community are the three
+primary ways people contribute to the project.  In addition, research
+on all of these three processes and there interactions is taking
+place.
+
+Inside math, work on PM relates to both research and education.
+Some of our work (notably infrastructure and research on social
+aspects of the site) has implications for collaborative projects in areas
+outside of mathematics.
+
+(This is a quick introduction that hopefully gets at the major points.
+I'm linking to the "rebranding" page, because that has to do with the
+outside-of-math features of !PlanetMath.)  --[[file:jcorneli.org][jcorneli]]
+
+Note: some aspects of the scope (e.g. in time) are discussed on the
+2nd and 3rd page listed here.  Some of this content may be better
+stitched in on the Expenditures page, or in other places below.
+For now, it seems reasonable to link it in here.
+
+ * [[file:On rebranding PM.org.org][On rebranding PM.org]]
+ * [[file:Timetable for PlanetMath development.org][Timetable for PlanetMath development]]
+ * [[file:Vision for the future of PlanetMath.org][Vision for the future of PlanetMath]]
+
+* Overall themes and theses
+
+** push to get PlanetMath supported as a virtual community for developing mathematical scholars
+
+This capitalizes on our current strengths, plus seems to take us in
+the right direction (that which lets us evolve the site in a natural
+way, and takes us where the field is most open). Honestly, simply
+framing much of what we talked about in the NSF ALT grant proposal and
+in other conversations with this kind of language may get us seen in a
+whole new, positive light. ([[file:akrowne.org][akrowne]])
+
+I like this theme, and I think the rest can come in as "supporting
+material".  I think the theme will be attractive to people with
+Project NExt etc. (even though these organizations aren't always
+mentioned specifically in the below text).  --[[file:jcorneli.org][jcorneli]]
+
+Now, in recent conversation, you ([[file:akrowne.org][akrowne]]) seem to be having
+second thoughts about making this the premiere goal.  Care to
+expand on the new line of thinking here? --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:PlanetMath and Scholarship.org][PlanetMath and Scholarship]]
+ * [[file:PlanetMath and pre-college mathematics.org][PlanetMath and pre-college mathematics]]
+ * [[file:Mathematical Counter-cultural Appeal.org][Mathematical Counter-cultural Appeal]]
+
+** PlanetMath as a resource for world-wide mathematical communications (including in developing countries)
+
+Parallel the issue with developing scholars by talking about
+developing countries (and simply for developing improved world-wide
+math communications)!
+
+ * [[file:PlanetMath and math for the planet.org][PlanetMath and math for the planet]].
+
+** PlanetMath as a resource for community development (including community engineering)
+
+Building small or medium-sized communities within PM should be
+possible (working groups, interest groups, etc.).
+
+ * [[file:PlanetMath and community development.org][PlanetMath and community development]]
+
+* PlanetMath Community
+
+** Understanding free math
+
+I have advanced "understanding free math", or understanding the role
+of free math, the reasons for it to exist, and the particular
+implementation strategy wherein it subsists on !PlanetMath, as the
+number one issue for PM.org at this point in time.  Whether or not it
+actually is the key issue, I think that I owe it to others to give my
+beginning attempt at an answer, in order to help facilitate a
+conversation wherein we come up with our real (which is to say,
+working) answer. --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:Understanding free math.org][Understanding free math]]
+ * [[file:More Understanding free math.org][More Understanding free math]]
+
+** The role of individuals
+
+Both current and future possibilities.  Emphasizing current and
+long-run-consistent possibilities, per Aaron's comments; and saying
+some things how the same possibilities expand to be even more exciting
+for more people in the future (at least, I'd like to say something
+about that).  ---[[file:jcorneli.org][jcorneli]]
+
+There are many reasons it is good to make sure to emphasize short and 
+medium-term participation as well as long term.  
+
+Other than the fact that we can get more small-scale participation if
+more new people stop by, PM will "stick" in more people's heads if they 
+have some functional exposure to it in the near term.  Then later they 
+may either be around or come back for more grandiose, long-term projects.
+
+Then there is also the "network effect": people who have just contributed
+a little bit of content or done a little bit of work on PM might find
+themselves coming back more often as others do the same and they begin
+to work with these people, or are finding more useful content at PM.
+
+--[[file:akrowne.org][akrowne]] Sun Feb 12 22:43:46 UTC 2006
+
+***  PlanetMath and Mathematicians in the Public Eye
+
+There are at present a few "famous" and outspoken mathematicians out
+there in the world.  We might only need to get a few of them on our
+side in order to establish the killer PR team!
+
+: In addition to [http://www.math.pitt.edu/~thales/ Thomas Hales] the AAAS meeting of Feb. 18 will include
+"Beyond Pi: Grand Challenges in the Mathematical Sciences," featuring
+other mathematicians whose work challenges the very nature of proof:
+[http://www.stanford.edu/~kdevlin/ Keith Devlin] of Stanford University, [http://www.math.caltech.edu/people/asch.html Michael Aschbacher] of the
+California Institute of Technology, and [http://www.math.wustl.edu/~sk/ Steven Krantz] of Washington
+University.
+
+Some of these people may be good allies; some might not.  [http://www.math.rutgers.edu/~zeilberg/Opinion27.html According] to 
+[http://www.math.rutgers.edu/~zeilberg/ Zeilberger] Krantz ought to be written off.  I'd be curious to know more about why.
+Incidentally, Zeilberger himself has previously pledged his support for the HDM project!
+
+(Hales relates to the Formal Math thing below, I guess, if "proof
+checking" is an example of formal math.)  Any of them might make good
+allies for the HDM project (if they learn about it). So, we should get
+in touch with them (and maybe send a copy of the whitepaper their
+way).
+
+--[[file:jcorneli.org][jcorneli]]
+
+**  PlanetMath, multimedia, and math education networks
+
+The idea of connecting PM to existing math education material distribution networks -- or starting new ones --
+is interesting.  It may have the potential to foster a community of math-oriented, PM-disposed, researchers.
+
+--[[file:jcorneli.org][jcorneli]]
+
+ * [[file:Growing a research community.org][Growing a research community]]
+
+** PlanetMath as E-Institute
+
+This is a place for sketching out a pitch to places like MSRI.  It
+concerns both using PM for mathematical research (cf. "Two promises)
+and it also concerns doing DL and math-anthro research; continued work
+on PM and on the HDM project, for example!  This item may be relevant
+both to MSRI and NSDL.  --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:PlanetMath as E-Institute.org][PlanetMath as E-Institute]]
+ * [[file:PlanetMath and Bourbaki.org][PlanetMath and Bourbaki]]
+
+** PlanetMath and the Undergraduate Research Experience
+
+This issue will be meaningful to people interested in REU's (my friend
+Frank Morgan, for example).  It will presumably be interesting to
+other folks who like undergraduate research, but aren't tapped into
+the official NSF REU pipelines.  --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:PlanetMath and Undergraduate Research.org][PlanetMath and Undergraduate Research]]
+
+* PlanetMath Research
+
+This section describes three special PM-related (and mutually related)
+areas that PM-affiliated folks are already doing research on.  We may
+expect (1) this research will continue; (2) it may be of interest to
+outside parties; (3) it may benefit from partnerships with outside
+parties. --[[file:jcorneli.org][jcorneli]]
+
+** PlanetMath, NSDL, and other math-DL initiatives
+
+We can focus on our pitch(es) for NSDL and friends.  I'm not sure
+whether it is best to talk about partnerships (e.g. !EduWorks) 
+with other organizations that are part of these initiatives /here/ or
+elsewhere.  I suppose they can go here /as a general category/ (?). --[[file:jcorneli.org][jcorneli]] 
+
+** PlanetMath and Mathematical Knowledege Management
+
+The [[file:HDM.org][HDM]] project could be viewed as a sub-project of PM (if that
+was fruitful).  This stuff is research-oriented, fits in to some
+extent with the digital library stuff above, but also relates to
+artificial intelligence and formal mathematics.  I don't know /what/
+partners we might find who would be interested in this stuff (and/or
+interested in helping to pay for this stuff), but I think we should
+keep an open mind about their possible existence!  --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:PlanetMath and MKM.org][PlanetMath and MKM]]
+ * [[file:Relationship of PlanetMath and HDM.org][Relationship of PlanetMath and HDM]]
+
+** PlanetMath and Formal Mathematics
+
+This is a related category to the one above.  (I tend to think of MKM
+as being more about "large structure" and formal math as being about
+"fine structure" -- but that's just my own point of view.) --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:PlanetMath and Formal Mathematics.org][PlanetMath and Formal Mathematics]]
+
+** PlanetMath and Free Software for Math in general
+
+There are things like Maxima, gnuplot, etc., that fall into the
+category of free software used for math.  We should get in touch with
+the developers of these things and see what we can offer each other.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* PlanetMath Finances
+
+** Long-term financial sustainability
+
+This is important for most organizations that would partner with us or
+give us grants -- will we be around for the long term, and will we
+stop depending on outside support.  I didn't mention this issue
+specially on the "followthrough" page, but I do think it is important!
+This topic relates (of course) to questions about the "economics in
+the free model" -- some of which are probably being addressed in the
+"understanding free math" section; but the topics can be taken up
+again (or moved entirely) here.  --[[file:jcorneli.org][jcorneli]]
+
+This is why I can't get too excited about grants.  They are great for
+some of our development ideas, but may do little for sustainability 
+(unless the grant monies are carefully spent on things that enable 
+the community to better-support the site).  
+
+What I am more excited about are ideas like doing corporate-matching
+donation funding drives amongst our corporate user base, establishing
+sponsorships and partnerships, selling PM-based products (like the
+FEM), and so forth.
+
+--[[file:akrowne.org][akrowne]] Sun Feb 12 22:45:38 UTC 2006
+
+Part of /sustainability/ has to do with /expenses/.
+
+--[[file:jcorneli.org][jcorneli]]
+
+ * [[file:PlanetMath Fundraising strategy.org][PlanetMath Fundraising strategy]]
+ * [[file:PlanetMath Expenditures.org][PlanetMath Expenditures]]
+ * [[file:PlanetMath Salaries.org][PlanetMath Salaries]]
+ * [[file:PlanetMath Roles.org][PlanetMath Roles]]
+ * [[file:Advertising on PlanetMath.org][Advertising on PlanetMath]]
+ * [[file:How to get funding from PlanetMath.org][How to get funding from PlanetMath]]
+
+**  PlanetMath Membership
+
+This has been an issue we have been discussing for a while, and I
+think we should get it sorted out.  Membership may quite possibly play
+a role in long-term financial sustainability, and in that case it can
+become a sub-part of the following subsection.
+
+It would be good to do some /research/ on the viability of membership
+as a source of funding.  Easy to make analogies to things like public
+radio or public television (which offer purely voluntary memberships,
+actually just donations), but I don't know if these analogies are much
+good.  This will take some thought/work.
+--[[file:jcorneli.org][jcorneli]]
+
+Note also that membership could be completely divorced from finances,
+e.g. if every user with a score above 10000 automatically becomes
+a member.  That could be fun too!  --[[file:jcorneli.org][jcorneli]]
+
+Actually, Wikipedia does something like this with their Active Members ---
+see their bylaws for details.  In fact, looking at their bylaws might be
+useful for getting ideas on how to rewrite our own bylaws.
+--[[file:rspuzio.org][rspuzio]]
+
+**  Selling products
+
+Talk about the FEM and anything else relevant (e.g. other pending
+printed works). --[[file:jcorneli.org][jcorneli]]
+
+**  Start-up grants
+
+We shouldn't beat around the bush -- one of the big ways that we want
+partners to help is to give us grants.  We don't need to go into great
+detail in this whitepaper, but we should be prepared to give specifics
+in the various cover letters we'll be sending out.  And we should
+present a general idea of the sorts of things we want to do with grant
+support.  While I wouldn't want this section to be boring, it may end
+up recapping a number of the major ideas discussed throughout the
+document. --[[file:jcorneli.org][jcorneli]]
+
+----
+
+* Homeless sections
+
+This stuff was in earlier drafts, and while I don't think it needs to
+be deleted (and may still be very important), I'm not sure how best to
+work these things in right now.
+
+** Two promises
+
+As I've mentioned in several places, I see PM as having two key
+promises for mathematics.  These are: to be useful for mathematics
+research, and to be useful for mathematics teaching.  (Usefulness in
+the general category, /mathematical communication/, is implied.)
+We should spell out how PM shows potential in these areas,
+and what sorts of things we think would need to happen before
+the potential is fully realized on the page [[file:Two major promises of PlanetMath.org][Two major promises of PlanetMath]]. --[[file:jcorneli.org][jcorneli]]
+
+These are, I think, the specific categories of improvements needed in order
+to implement the grandiose social ideas of the above items. --[[file:akrowne.org][akrowne]] Sat Feb 11 06:09:36 UTC 2006
+
+----
+* Discussion
+
+Well, I've layed out most of the things that I think might go into the
+outline.  What should we do about actually coming up with a draft?
+Maybe it would help focus the work if we came up with a concrete list
+of entities we would like to send the whitepaper to.  Then I think
+either a detailed outline or we just write the thing.  Thoughts?
+Timeline?  Who can contribute to this?
+
+Oh, and another axis along which organization can go: What can be done
+& with how much effort?  As I said above, it is good to deal with both
+current and future possibilities.  So, e.g., when we pitch using PM
+for REU stuff, what sorts of changes would have to be made before this
+could actually be done?  (I'm proposing this mostly as a way to help
+think about the issues... cf. for instance the discussion at
+[[file:PM_Bounty--Make_Noosphere_More_Installable.org][PM_Bounty--Make_Noosphere_More_Installable]].)
+
+--[[file:jcorneli.org][jcorneli]]
+
+Now that we're thinking of this as a "strategic plan" or "meta-whitepaper",
+we still may want to think about sharing the whole thing with some
+particularly important partners -- individuals or groups who really
+want to know our whole plan for one reason or another.  We'll 
+eventually want some strategy for writing individually-tuned whitepapers
+for other groups.  Hopefully we'll get pretty good at cranking
+those out ;). --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:2006 JMM Followthrough.org][2006 JMM Followthrough]] 

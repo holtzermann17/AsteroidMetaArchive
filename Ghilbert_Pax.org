@@ -1,0 +1,134 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+An important part of the greater [[file:Ghilbert.org][Ghilbert]] project is Ghilbert Pax: the "portable axiomatization."
+
+Why are proofs so difficult to port from one formal proof system to another? Pax attempts to address this question. The core principle behind a "portable proof" is that it only imports the concepts it needs. Thus, basic number theory proofs shouldn't need to import axiomatic set theory, much less the axiom of choice.
+
+I've identified something of a lattice of theories of varying strengths, and plan to implement each major node in the lattice as a .ghi (Ghilbert interface) file. The spine of this lattice consists of (in order of increasing strength):
+
+ * Peano arithmetic
+
+ * Second order arithmetic (Z2)
+
+ * Higher order logic (HOL)
+
+ * ZFC set theory 
+
+Beneath all of these theories lie the propositional calculus and pure predicate calculus with equality. My axiomatization of the predicate calculus, unlike that of Metamath, is typed. This
+should help when porting pax proofs over to typed logic systems such as HOL.
+
+There are other interesting points in the lattice besides the spine described above. HOL
+splits into variants with and without a choice (epsilon) function. Similarly, ZF set theory
+(without the axiom of choice) sits below ZFC and above HOL without choice. Steve Simpson
+describes a number of arithmetic systems below Z2 in his book,
+[http://www.math.psu.edu/simpson/sosoa/ Subsystems of Second Order Arithmetic].
+
+I'm not sure how fine-grained to go, though, in representing this lattice. The main motivation
+is to make it easy to port proofs, so as long as I'm representing enough detail that proofs
+aren't blocked when importing to other systems, that should be good enough.
+
+**  prop
+
+The basis of all of Pax is "prop", which just represents the classical propositional
+calculus, introducing -. (negation) and -> (implication) as standard operators, the
+modus ponens as an inference rule, and the usual /\ \/ <-> operators built as definitions.
+The axiomatization is taken directly from Metamath.
+
+**  pred
+
+The axiomatization of predicate calculus with equality roughly follows Metamath's, but
+with some significant differences.
+
+First, quantifiers specify an explicit type. The main purpose of this change is to allow
+theorems written in the Pax framework to verify in other, typed systems such as HOL.
+
+Pax also defines an explicit "nfi" (not free in) operator, defined similarly to Metamath's
+"ph -> A. x ph", but with biconditional instead of implication. This technical change
+allows more flexibility in eliminating type assumptions.
+
+There are a few other differences. For example, pred defines substitution with values
+directly, while in Metamath this concept waits for class abstraction (the definition is
+similar to Metamath's
+[http://us.metamath.org/mpegif/sbc5.html sbc5] but crafted to avoid a distinct variable
+constraint.
+
+One significant feature of "pred" is the iota (definite description) operator. This
+operator adds no logical strength, but is very convenient notationally.
+
+The pred-thms module defines a great many standard predicate calculus theorems, following
+both the Margaris 19.xx naming system and a number of additional names borrowed from
+Metamath. These theorems generally take an explicit "istype T" hypothesis, and, when
+variables appear free, generally have an additional "x : T" assumption.
+
+**  peano
+
+The Pax axiomatization of numbers is fairly standard, using the Peano axioms defining
+0 (zero), S (successor), + (addition), and * (multiplication), with an axiom introducing
+induction.
+
+The peano-thms module proves the usual primitive properties of arithmetic, such as the
+commutativity and associativity of addition and multiplication. Future development in
+the peano-thms module will use iota to define more standard operations such as division
+and remainder, gcd, and other number-theoretic operators as needed.
+
+**  higher order types
+
+The heart of the Pax framework is a series of interfaces that build up higher order types
+from primitives such as peano arithmetic. The "pair" and "set" interfaces are currently
+in the repository (complete with a zfc construction of "pair"), and functions are to follow
+soon.
+
+Because of the importance of Z2, here is the Ghilbert code needed to import a complete
+axiomatization:
+
+  import (PROP pax/prop () "")
+  import (PRED pax/pred (PROP) "")
+  import (PEANO pax/peano (PROP PRED) "")
+  export (N pax/basetype (PROP PRED) "N.")
+  import (PN pax/basetype (PROP PRED) "PN.")
+  import (N-SET pax/set (PROP PRED N PN) "")
+
+Quantification over numbers is then represented as (A. x (N.T) ph), and quantification over
+sets of numbers is (A. X (PN.T) ph).
+
+(These interfaces may be refactored a bit, so that peano imports its basetype, rather than
+introducing the constant (N.T) which is then exported into a basetype.)
+
+These higher order types correspond very closely to those of HOL. It should be straightforward
+to convert proofs written in this part of the Pax framework into HOL.
+
+**  set theory
+
+Pax does not yet have an axiomatization of set theory, although it should be fairly
+straightforward to just introduce a type corresponding to Metamath's V, so that
+(A. x V ph) is equivalent to "A. x ph" in set.mm, and then introduce the ZFC axioms
+much as in set.mm.
+
+Note that the typed "set" interface is not suitable for set theory, because it contains
+an axiom of unrestricted comprehension. That's valid when the universe is "small", but
+would lead to inconsistencies when combined with other set-theoretic axioms such as
+powerset and regularity.
+
+**  Above ZFC
+
+Metamath's set.mm recently adopted
+[http://us.metamath.org/mpegif/ax-groth.html Grothendieck's axiom], which states the existence
+ofhttp://us.metamath.org/mpegif/sbc5.html inaccessible cardinals. This axiom was borrowed from Mizar, and is useful for constructing
+category theory.
+
+There are other standard set theories stronger than ZFC, including Morse-Kelley. MK may be notationally convenient in the Ghilbert Pax framework, because it allows unrestricted quantification over both set and class variables. Class abstraction is then represented as
+a standard "iota" (definite description) operator.
+
+I don't know the relative strength of ZFC+Grothendieck and MK, but I suspect that the former
+is stronger. [It is. --Bob Solovay]
+
+**  An arithmetic question
+
+My current axiomatization of Peano arithmetic includes addition and multiplication but not
+exponentiation. A standard construction of exponentiation in PA exists, but can the properties
+of this construction be proved in PA itself? I currently give more details on this question on
+the [http://ghilbert.org/ Ghilbert home page], and would love an expert to weigh in.
+
+
+Comment. There is no trouble formalizing the treatment of exponentiation in Peano. Boolos discusses this at length in Chapter 2 of his book "The Logic of Provability". The basic idea in avoiding the use of the factorial function is to prove the easy lemma that for every positive integer m there is a number n which is divisible by all the numbers less than m. (The proof is an easy induction on m.)  --Bob Solovay

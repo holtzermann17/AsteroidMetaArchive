@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We could greatly improve the growth rate of PM by relying on 
+already written public domain works. However, finding these works, 
+checking that it is legal, checking that it is current, 
+and actually coordinating such an project requires coordination. 
+
+*  Finding content
+See [[file:finding new content for PM.org][finding new content for PM]], and also, [[file:Copyright renewals for math books.org][Copyright renewals for math books]].
+
+
+*  Coordination
+I think that any such book-project should somehow be scrutinized on PM beforehand. 
+When a project begins, one could create  a Wiki page from the TOC. After material
+is moved into PM, could could check sections, examples, theorems, etc. This way,
+many authors can work on the same book. 
+
+For the source's author, it could be useful to have a list of entries 
+based on source. He could then incorporate changes made on PM back into his own 
+book. 
+-- [[file:matte.org][matte]] 23 April 2005
+
+
+*  Copyright laws around the world
+According to http://onlinebooks.library.upenn.edu/okbooks.html#whatpd,
+anything copyrighted before 1923 is in the public domain in the US. 
+As the PM server is located in the US, does US copyright laws apply?
+
+: I think that is correct. --[[file:jcorneli.org][jcorneli]]
+
+Is there some problem for non-US PM authors? Having each contributer check his 
+local copyright laws seems like quite  a lot of work. There
+is always the possibility of a mistake. The last thing we 
+would want is a large scale dumping of copyrighted material into PM. 
+
+: compare Project Gutenberg of Australia; laws are different all over the
+world. --[[file:jcorneli.org][jcorneli]]
+
+I believe that what is relevant here is the location of the "publisher", Planet Math, Ltd., which is incorporated in the U.S.  At least that is how it works in the world of print. 
+
+Project Gutenberg is in fact an example of this principle appled to the world of electronic publishing.  On the one hand, the example you cite of the Australian Project Guttenberg is a case in which the publisher is located in a different country and therefore has to go by different rules.  On the other hand, the American project Guttenberg goes by American law even when determining whether to publish books by foreign authors.
+
+As an example, they cite "Peter Pan".  This book was written by a British author.  Under British law, it is still copyrighted but, under American law, it is in the public domain.  Therefore, Project Guttenberg only distributes "Peter Pan" in the United States but not in Great Brittain. 
+
+Therefore, if we follow Project Guttenberg's example, we should be able to post entries based on books whose copright has expired under American law, even if it is in force elsewhere.  However, if Drini were to set up a mirror site in Mexico, then it might not be possible to mirror all of the content there.
+-- [[file:rspuzio.org][rspuzio]] 23 April 2005
+
+----
+[[file:PlanetMath.org][PlanetMath]]

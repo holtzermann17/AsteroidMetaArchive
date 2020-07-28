@@ -1,0 +1,118 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+For the remainder of this page, let $R$ denote a locally cyclic ring of characteristic zero.
+
+ *Theorem*: Suppose that $\alpha$ and $\beta$ are two non-zero elements of a locally cyclic ring $R$ of characteristic zero.  Then there exist non-zero integers $m,n$ such that $m \alpha = n \beta$.  Furthermore,
+if $p \alpha = q \beta$, for any two non-zero integers $p$ and $q$, then $p/q = m/n$.
+
+ *Proof*: By definition of local cyclicity, there will exist an element $\gamma$ of $R$ and integers $m$ 
+and $n$ such that $\alpha = n \gamma$ and $\beta = m \gamma$.  Since $\alpha \neq 0$, we have $n \neq 0$;
+Likewise, since $\beta \neq 0$, we have $m \neq 0$.  We have $m \alpha = mn \gamma = n \beta$.  Now suppose 
+that $p$ and $q$ are any two nonzero integers so that $p \alpha = q \beta$.  Then we have the following:
+$$m q \alpha = n q \beta$$
+$$n p \alpha = n q \beta$$
+$$(m q - n p) \alpha = 0$$
+Since $R$ has zero characteristic and $\alpha \neq 0$, it follows that $mq = np$.  Because none of
+$m, n, p, q$ equal zero, this is equivalent to $m/n = p/q$. *Q.E.D.*
+
+Because of this result, the following definition makes sense:  
+
+ *Definition*: If $\alpha$ and $\beta$ are elements of a locally cyclic ring $R$ of characteristic zero, 
+define their /ratio/ as $\alpha \div \beta = p / q$ where $p$ and $q$ are any integers such that
+$q \alpha = p \beta$.  We may extend this notion by decreeing that $0 \div \beta = 0$ for aany non-zero
+elements $\beta$ of $R$.
+
+We now consider a few basic properties of this operation:
+
+ *Theorem*:  Suppose that $\alpha, \beta \in R$ and that $\beta \neq 0$.  Then 
+$(- \alpha) \div \beta = -(\alpha \div \beta)$.
+
+ *Proof*:  If $\alpha = 0$, then $-\alpha = 0$ as well.  Since $0 \div \beta = 0$ and $0 = -0$,
+we have $(- \alpha) \div \beta = -(\alpha \div \beta)$.
+
+Suppose, then, that $\alpha \neq 0$.  Then there exist non-zero integers $m,n$ such that
+$m \alpha = n \beta$.  since two minuses make a plus, $(- m) (-\alpha) = n \beta$.
+By definition, $\alpha \div \beta = m/n$ and $(-\alpha) \div \beta = -m/n$.  Hence
+$(- \alpha) \div \beta = -(\alpha \div \beta)$.
+ *Q.E.D.*
+
+ *Theorem*:  Suppose that $\alpha, \beta, \gamma \in R$ and that $\gamma \neq 0$.  Then
+$(\alpha + \beta) \div \gamma = (\alpha \div \gamma) + (\beta \div \gamma)$.
+
+ *Proof*:  Let us begin with the trivial cases.  If $\alpha = 0$, then we have 
+$\alpha + \beta = \beta$ and $\alpha \div \gamma = 0$, so
+$$(\alpha + \beta) \div \gamma = \alpha \div \gamma = (\alpha \div \gamma) + 0 = (\alpha \div \gamma) + (\beta \div \gamma)$$.  
+Likewise, if $\beta = 0$, then $\alpha + \beta = \alpha$ and $\beta \div \gamma = 0$, so
+$$(\alpha + \beta) \div \gamma = \beta \div \gamma = 0 + (\beta \div \gamma + 0 = (\alpha \div \gamma) + (\beta \div \gamma)$$.
+If $\alpha + \beta = 0$, then we have $(\alpha + \beta) \div \gamma = 0$ so, by the
+foregoing theorem,
+$$(\alpha \div \gamma) + (\beta \div \gamma) = (\alpha \div \gamma) + (-\alpha \div \gamma)
+(\alpha \div \gamma) - (\alpha \div \gamma) = 0 = (\alpha + \beta) \div \gamma$$.
+
+Suppose now that none of $\alpha, \beta, \alpha + \beta$ equals zero.  Then we have non-zero integers
+$p,q,s,t$ such that $p \alpha = q \gamma$ and $s \beta = t \gamma$.  We calculate as follows:
+$$ps \alpha = qs \gamma$$
+$$ps \beta = pt \gamma$$
+$$ps (\alpha + \beta) = (qs + pt) \gamma$$.
+Since none of $\alpha + \beta$, $ps$, $\gamma$ equal zero, it follows that $qs + pt \neq 0$.  Hence
+we have 
+$$(\alpha + \beta) \div \gamma = {qs + pt \over ps} = {q \over p} + {t \over s}
+{\alpha \over \gamma} + {\beta \over \gamma}.$$
+ *Q.E.D.*
+
+ *Theorem*: Suppose that $\alpha, \beta, \gamma, \delta \in R$ and that 
+$\gamma, \delta \neq 0$.  Then
+$(\alpha \beta) \div (\gamma \delta) = (\alpha \div \gamma) \cdot (\beta \div \delta)$.
+
+ *Proof*:  If $\alpha = 0$ or $\beta = 0$, then both sides of the conclusion equal zero.
+Henceforth, asssume that $\alpha, \beta \neq 0$ as well.
+
+We then have non-zero integers $p,q,s,t$ such that $s \alpha = t \gamma$ and $p \beta = q \delta$.
+Multiplyng, $ps \alpha \beta = qt \gamma \delta$.  By definition, $\alpha \div \gamma = t/s$ and
+$\beta \div delta = q/p$ and $(\alpha \beta) \div (\gamma delta) =  (qt)/(ps)$.  The conclusion
+follows from the fact that $(qt)/(ps) = (q/p) \cdot (t/s)$.
+ *Q.E.D.*
+
+ *Theorem*: Suppose that $\alpha, \beta \in R \setminus \{0\}$.  Then
+$\alpha \div \beta = {1 \over \beta \div \alpha}$.
+
+ *Proof*:  Thewre exist non-zero integers $m,n$ such that $n \alpha = m \beta$.
+By definition, $\alpha \div \beta = m/n$ and $\beta \div \alpha = n/m$.
+These ratios are reciprocals.
+ *Q.E.D.*
+
+ *Theorem*:  Suppose that $\alpha, \beta \in R$ and that $\beta \neq 0$.
+For every integer $n$, we have $(n \alpha) \div \beta = n (\alpha \div \beta)$.
+
+ *Proof*:  If $n = 0$, both sides of the equation equal zero, hence each other.
+Suppose that, for some $n$, we have $(n \alpha) \div \beta = n (\alpha \div \beta)$.  Then 
+$$((n+1) \alpha) \div \beta = (n \alpha + \alpha) \div \beta
+(n \alpha) \div \beta + \alpha \div \beta = n (\alpha \div \beta) + (\alpha \div \beta)
+(n + 1) (\alpha \div \beta).$$
+The conclusion follows by induction.
+ *'Q.E.D.*
+
+ *Theorem*: Suppose that 
+
+ 1. $\alpha, \beta, \gamma \in R$ 
+
+ 1. $\gamma \neq 0$
+
+ 1. $\alpha \div \gamma = \beta \div \gamma$.
+
+Then $\alpha = \beta$.
+
+ *Proof*:  It is only possible that $\alpha = 0$ when $\alpha \div \gamma = 0$, 
+which is equivalennt to $\beta \div \gamma = 0$, which, in turn, is equivalent to
+$\beta = 0$.  Suppose henceforth that neither $\alpha$ nor $\beta$ equal zero.
+
+There exist non-zero integers $p,q,s,t$ such that $p \alpha = q \gamma$ and
+$s \beta = t \gamma$.  By definition, $\alpha \div \gamma = q/p$ and
+$\beta \div \gamma = t/s$.  By the third hypothesis, $q/p = t/s$.
+Cross multiplying, $qs = pt$.  Thus, we have
+$$ps \alpha = qs \gamma = pt \gamma = ps \beta.$$
+Since $ps \neq 0$ and $R$ has zero characteristic, this implies that $\alpha = \beta$.
+ *Q.E.D.*
+
+Back to [[file:Locally Cyclic Rings.org][Locally Cyclic Rings]]

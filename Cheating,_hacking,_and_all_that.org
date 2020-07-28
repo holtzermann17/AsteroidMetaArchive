@@ -1,0 +1,159 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the profs I spoke to at the [[file:2006 JMM|JMM.org][2006 JMM|JMM]] asked me
+about how much potential PM has for abuse by students who
+would plagiarize answers to homework problems from the site.
+I told  him that since it is mainly a generic reference work,
+there isn't much chance of a given problem being on the site,
+but if the problem is a proof of some known theorem, an
+instructor who was very worried about plagiarism would be wise
+to hunt around on the web first to see whether the thing had
+been written up anywhere.  Of course, this isn't a great
+solution, because if the result is /known/ than certainly
+it has been written up /somewhere/, so even if it isn't
+available on the web, a dedicated student could find
+it somewhere else to plagiarize it.  (One shouldn't underestimate
+the hard workd some people will devote to cheating.)  But
+this brings up an interesting point -- that "cheating" is
+only defined relative to the standards set in the course.
+If the  student isn't supposed to consult outside references,
+then any reading whatsoever is "cheating".  Etc.  
+
+I think it would be good if some research was done to really
+illustrate what "cheating" is, in the sense of "if you do XYZ, you'll
+really be cheating yourself."  My sense is that this condition may
+vary a lot from person to person and scenario to scenario.  On the
+flip side, a student who doesn't "cheat" and gets worse grades than e
+might have by "cheating" should perhaps have eir grades re-calculated.
+There are lots of interesting theoretical questions here.
+
+For the short-term pragmatic approach, we should ask: what are
+acceptable levels of "help" to offer on homework questions?
+My feeling as a math hacker is that we should be basically
+indiscriminate, i.e., we should try to answer all questions,
+and furthermore, try to make our answers as accessible as
+possible.  There should be no "DRM" on mathematical knowledge.
+
+But these are points of belief; as I mentioned above, some
+studies should be undertaken to see what the effects of
+following the various possible beliefs on this matter
+really are. --[[file:jcorneli.org][jcorneli]]
+
+I think an obsession with cheating is largely the effect of 
+an attempt to "mechanize" teaching.  You keep the inputs 
+consistent and expect a specific output that can be evaluated
+with respect to some objective function.  Simple, and more 
+importantly, scalable!
+
+But teaching isn't supposed to be to get a specific set of 
+outputs (the "right" answers).  It is supposed to
+achieve an understanding in the minds of the students, primarily,
+and secondarily, to make them into scholars who could concievably
+come up with novel concepts of the same or greater calibre.  
+
+So the laziness is really more on the part of the teachers/eduational
+complex than the students!   Imagine if they were really engaged
+in the learning process and didn't /want/ to cheat...
+
+Maybe reminding teachers that /this/ is their actual
+objective would help to re-direct effort towards actual 
+teaching and away from the "cheating arms race."
+
+For example in CS, where you'd think copying code to solve 
+assigned problems would be rampant, this cheating is relatively
+easy to defeat by making courses project-based.  Projects are
+so nuanced that even if you get to "steal" portions of code
+from elsewhere, all you're really doing is demonstrating partial
+code-reuse, which is actually a virtue.
+
+Philosophy of teaching aside, I think PMers have been very
+good about how they have handled question-answering in the forums.
+I see a lot more "what do you know? ok, then try going in this 
+direction next" than "here's your answer."   --[[file:akrowne.org][akrowne]] Tue Jan 17 06:50:26 UTC 2006
+
+I think that the best answer to the question of "how much potential PM
+has for abuse by students who would plagiarize answers to homework
+problems from the site" is "about as much as any other mathematical
+library".  When I was a graduate student, I knew a fair number of
+students who, when assigned a problem would immediattely go to the
+library to see if they couldn't find a solution in some book.  Given
+that there is a limited number of problems which are approachable by
+beginners (not counting trivial modifications such as changing
+numerical values) the solutions to most of them will appear in the
+literature somewhere.
+
+As a teacher, I don't worry too much about the fact that answers to
+most problems can be found in a book because, as I see it, the
+cheaters cheat themselves.  The main reason one invests time and money
+to study mathematics in a university is because one wants to become a
+mathematician.  When a teacher assigns a problem to students, the
+reason is that this gives them an opportunity to improve their
+mathematical skills by practising --- as mature mathematicians, they
+will be able to find problems on their own and be able to grapple with
+rather dificult problems but, as beginners, the teacher helps them out
+by pointing out relatively simple problems which are approachable at
+their level.  If a student decides to by-pass this important part of
+the learning process by copying someone else's answer, the result is
+that the student will not develop the skills necessarry to solve
+problems and prove theorems, and hence will be a failure as a
+mathematician, so will have cheated himself out the time and money put
+into studying mathematics and cheat himself out of the possibility of
+living up to his potential as a mathematician.  (In fact, most of the
+students I knew who were so keen to copy answers from books either
+dropped out of the program or else turned out to be mediocre
+hangers-on who were incapable of carrying out original research.)
+
+As for the help fora, by and large all people get there is pretty much
+what they would get were they to ask the instructor or go to the help
+desk --- hints and explanaton of the principles involved.  In fact,
+when someone makes a blatant request for answers to a problem without
+having made any effort first, the usual reaction seems to be that that
+person gets flamed badly enough to learn not to try such stunts on PM
+again but rather make some effort to solve the problem before turning
+to PM for help. --[[file:rspuzio.org][rspuzio]]
+
+----
+
+I think there is may be a way that we can all be right.  I don't see a
+problem with copying answers from books, if you can find them (and,
+yes, I got kicked out of grad school, which is far "worse" than just
+dropping out; and I'm glad your /then/ clause was disjunctive).
+Indeed, generaly speaking I have more of a problem with "problems" than I do with any
+particular strategy for answering them.  But I do think that students
+are responsible for developing relevant skills (I'd rather not
+insist on all students of math, even at the grad level, actually
+becoming mathematicians, so "relevance" is relative).  Since students are responsible for
+developing relevant skills, anyone who avoids doing this has failed.
+If the relevant skills include selective re-use of existing material,
+then getting good at finding materials to reuse could be a great
+skill.  Similarly with Q&A.  There are many ways to do math research,
+probably as many as there are ways to write literature.  I don't think
+that students shouldn't solve problems; but if they get stuck, seeing
+someone else solve it can probably help with the learning process just
+as much as getting a "hint" would.  
+
+So: I think that the only way to "cheat yourself" is to fail to learn.
+Both learning and failure are long-term enterprises.  However, if
+someone is in a Moore method class, then they can certainly break the
+Moore method rules -- and since the point of the class is (largely) to
+be an experiment in Moore method (for the student to see how that
+suits em), it is obvious that breaking the rules of the class
+constitutes an abridgment of that particular experiment.  I wouldn't
+deign to say that /that/ constituted a failure to learn, just a
+change of plans.
+
+I don't think students should be flamed, nor do I think querying a KB
+or forum constitutes a stunt.  Perhaps it is an opportunity to try to
+teach problem solving; but if the student gets an answer in a hurry, I
+don't really see a problem with that.  For me, the problem lies in the
+expense and difficulty of the querying process.  If the KB was
+properly encoded, the student could just put the query to the machine,
+rather than to the forum.  If doing this throws a bomb into the works
+of another machine (the homework machine), I won't be very sad.
+
+Indeed, it may well be the case that only after this machine is
+destroyed can we actually do scientific research on learning.  As to
+whether this research can be done humanely... that is another question.
+
+--[[file:jcorneli.org][jcorneli]]

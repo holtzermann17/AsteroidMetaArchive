@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page contains previous trend reports/statistics from the PlanetMath Google AdSense data.
+
+* April 1 2005 Report
+
+All the following charts are /daily/ from March 6 2004 to *April 1 2005*.  
+
+Note: moving averages are done on a natural scale to make trends apparent. 
+
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-04-01/impressions-moving-7.png A chart of impressions] (hits) trends (daily basis, 7-day moving average).   The weekly cycles of the old-style daily chart are smoothed over for clarity.  Periodic dips during system crashes and subsequent jumps after repair/optimization are more clearly visible.  Here is the [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-04-01/impressions.png  raw daily version].
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-04-01/earnings-moving-60.png A chart of earnings] trends.  Overall rise in earnings is very apparent.  Catastrophic incidents also show up clearly.  Here is the [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-04-01/earnings.png raw daily version].
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-04-01/clickthrough-moving-30.png A chart of the clickthrough rate].  With the moving average view, it is clear what is going on with clickthrough.  An initial "honeymoon" phase wore off after about 100 days, and now the rate seems to be oscillating around somewhere close to .18%.  The raw daily view is [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-04-01/clickthrough.png here].
+
+Trends seem to be continuing as before, except they are more visible under the moving average view.  Things continue to progress positively! --[[file:akrowne.org][akrowne]] Sat Apr 9 04:19:00 UTC 2005
+* March 4 2005 Report
+
+All the following charts are /daily/ from March 6 2004 to March 4 2005.
+
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-03-04/impressions.png A chart of impressions] (hits) trends.   Note the clear weekly cycles.  Also note the 
+periodic dips during system crashes, which are often followed by a higher plateau, as the system was 
+repaired and optimized in response.  Note how we are now serving up more pages than ever.  Also note 
+that the y-axis is only in units of single dollars.
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-03-04/earnings.png A chart of earnings] trends.  Earnings also roughly follow weekly cycles, but are much more erratic than impressions,
+due to the low number of clickthroughs per day (20-40) and the unpredictable amount each click will be worth (a couple cents to approaching
+a dollar).  However, it is clear earnings are trending up.
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-03-04/clickthrough.png A chart of the clickthrough rate].  Note that this seems to be converging on .2%.  This explains why earnings are trending up: impressions are rising, but the clickthrough rate multiple is holding steady.
+
+The encouraging thing about these charts is that it appears things are "trending better".  I am most pleased about the increased traffic, which we have an increased ability to support.  It is nice that ad revenue is increasing, but it is still barely enough to sneeze at.  
+
+Later I will generate charts of monthly averages, so longer-term trends are more
+apparent.  I'd also like to study the weekly and monthly effects, by getting
+averages for each week-day and month-day and charting these.  These would likely
+give us more insight and more ability to anticipate what we face.  --[[file:akrowne.org][akrowne]]

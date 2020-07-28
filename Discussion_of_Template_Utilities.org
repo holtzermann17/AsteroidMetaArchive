@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since templates are turning out to play such an important role in proving theorems and the like, I thought it would make sense to spend some time organizing the library of routines to deal with these entities.  I am thinking that the time put into this could pay off later by making it easier to code proof checking programs and the like since most of the "nuts and bolts" issues would have been taken care of and one could simply combine library functions in the right way to produce the desired effect.
+
+In particular, I am taking care of loose ends like utilities to check that a particular object is really a template or an assignment list and thinking of what the routines will do if you feed them the wrong sort of data.
+--[[file:rspuzio.org][rspuzio]]24 March 2005
+
+Back to [[file:template utilities.org][template utilities]]

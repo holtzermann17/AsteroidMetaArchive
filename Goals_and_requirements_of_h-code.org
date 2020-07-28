@@ -1,0 +1,79 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We have several guiding principles; these are the two main ones:
+
+; Comprehensiveness : Our goal is to develop a linguistically clear system for
+ expressing mathematics, based on the everyday usage of mathematicians.  It
+ should be possible to express any precise mathematical idea that can be
+ expressed in mathematical notation in h-code.  To acheive this, we must examine
+ many examples many different fields of mathematics to make sure we have not
+ left anything out.
+
+; Simplicity : We plan for h-code to be based on the consistent application of a
+ simple linguistic pattern, not on the accretion of ad-hoc constructions.  The
+ language will be built around a somewhat austere core subset with relatively
+ few commands and a simple syntax.
+
+In order to accommodate the potentially conflicting demands of these first two
+goals, we are working on the problem from both ends, like miners who dig a
+tunnel through a mountain range from its two sides, meeting in the middle.  On
+the one hand, we employ the "top-down" approach of studying mathematical
+literature and trying to translate it by hand into a hcode-like language.  On
+the other hand, we simultaneously employ the "bottom-up" approach of starting
+with general principles and developing the syntax and semantics of our language
+rigorously based on these principles.  Just as the two teams of miners must be
+in constant communication and adjust to each other if they are to meet, so too
+must these two approaches inform each other - transcriptions will be revised as
+we understand the the theoretical foundations of our notation better and,
+conversely, study of mathematical usage will indicate areas in which the
+theoretical foundation could be improved.
+
+These additional goals are entailed, to some extent, by the first two:
+
+; Uniformity : In the mathematical literature, one finds several notations for
+ the same notion or similar notions due to historical accidents, different
+ schools of mathematics, and usage in different subbranches of mathematics.  In
+ h-code, on the other hand, we want the notation to be based on uniform
+ principles applied to the whole of mathematics.  For example, in the
+ mathematics literature, one customarily finds certain functions indicated as
+ prefixes (such a trigonometric functions), others as infixes (such as addition
+ and multiplication), yet others by specially shaped brackets (such as the
+ "floor" and "ceiling" functions of number theory) or superscripts (such as
+ exponentiation).  By contrast, in h-code, we adopt a uniform syntax.  This will
+ keep the language definition simple and, to paraphrase Gauss, allow us to focus
+ on "notions" rather than "notations".
+
+; Extensibility : For the sake of making h-code expressions better resemble the
+ modes of expression to which mathematicians are accustomed, we will allow the
+ creation of new commands.  Users can write code however they like, but the
+ language will have official "libraries" that will be managed so as to preserve
+ uniformity.
+
+; Formality : The language of h-code should be completely formal, which is to
+ say, it should have a syntax and a semantics which can be described rigorously
+ in mathematical terms.  The syntax will be described by a type 2
+ (context-independent) grammar.  The semantics will be given by recursively
+ defined functions which map syntactically correct sentences into expressions of
+ first-order logic and sets.  (However, different semantics can be supplied if
+ the user wishes; any reasonably robust formal language should work as an hcode
+ backend.)
+
+Finally, these considerations lead us to one overarching design principle.
+
+; LISP style : The style of h-code is based as closely as possible on the
+ programming language LISP and we require that the syntax be such that any
+ statement h-code be a syntactically correct LISP s-expression so that we can
+ easily write the programs to analyze h-code in LISP.  The reason for this
+ choice of programming language has to do with the peculiar nature of LISP: (1)
+ It was devised by !McCarthy as an implementation of Church's lambda calculus of
+ formal logic; (2) linked lists can be seen as an adaptation of set theory to
+ computers and several LISP functions are the natural counterpart of
+ set-theoretic operations; (3) the syntax of LISP is based on function
+ evaluation and (parentheses aside) is essentially Lukasiewicz logic notation.
+ For these three reasons, and because it is so elegant, the LISP language is
+ adapted to the foundations of mathematics in a way that few other computer
+ languages are, and it is surprisingly easy and natural to express mathematics
+ in a LISP-inspired formalism.
+
+Back to [[file:h-code.org][h-code]]

@@ -1,0 +1,33 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To do schema substitution, we were given a schema and assignment of
+values to variables, and produced the resulting expression.  We now
+consider a sort of "inverse problem", namely, given a schema and a
+list, is there some assignment of values to the wildcards of the
+schema from which the list can be obtained by substitution?  (In
+other words, does the schema represent the list?)
+
+We will provide a function `match-schema' which takes as input a
+schema and a list and returns a list of assignments to the
+wildcards if and only if it is possible to represent the list using
+the schema.  If no wildcards appear in the schema's expression, our
+function will return `t' if the expression of the schema matches
+the given list (this is the inverse of the "trivial" case of
+substitution).  Thus `nil' will always mean that no match was
+possible.
+
+To program the function match-schema, we shall first consider how
+to combine lists of assignments.  The reason for doing this is
+that, in order to match a schema to a list, we first try to match
+subschemas to items of the list.  This produces a number of
+tentative assignments of lists to wildcards.  We must then check
+these tentative assgnments are consistent and merge them.  By
+solvng this problem first, it will be much easier to write the
+schema matching program.
+
+---- 
+
+The last paragraph is rather confusing.  I don't feel motivated by
+it... why not just spell out the high-level algorithm and then
+write the subroutine? --[[file:jcorneli.org][jcorneli]] Tue Mar 01 04:14:03 2005 UTC

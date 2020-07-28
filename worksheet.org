@@ -1,0 +1,593 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+!DeletedPage
+
+$( <MM> <PROOF_ASST> THEOREM=dedNEW  LOC_AFTER=?
+
+ * Properties of a "deductive system".
+
+h1::dedNEW.1       |- D = ( dom_ ` T )
+h2::dedNEW.2       |- C = ( cod_ ` T )
+h3::dedNEW.3       |- J = ( id_ ` T )
+h4::dedNEW.4       |- R = ( o_ ` T )
+h5::dedNEW.5       |- M = dom D
+h6::dedNEW.6       |- O = dom J
+
+>>> After Ctrl-U
+3006::df-dedNEW    |-   Ded
+                      = { x
+                        | E. d
+                             E. c
+                                E. j
+                                   E. r
+                                      (  x = <. <. d , c >. , <. j , r >. >.
+                                      /\ (  (     <. <. d , c >.
+                                                  ,  <. j , r >. >.
+                                               e. Alg
+                                            /\ A. a
+                                               e. dom j
+                                                  (  ( d ` ( j ` a ) ) = a
+                                                  /\ ( c ` ( j ` a ) ) = a )
+                                            /\ A. f
+                                               e. dom d
+                                                  A. g
+                                                  e. dom d
+                                                     (   <. g , f >. e. dom r
+                                                     <-> ( d ` g ) = ( c ` f )
+                                                     ) )
+                                         /\ (  A. f
+                                               e. dom d
+                                                  A. g
+                                                  e. dom d
+                                                     (  ( d ` g ) = ( c ` f )
+                                                     ->   ( d ` ( g r f ) )
+                                                        = ( d ` f ) )
+                                            /\ A. f
+                                               e. dom d
+                                                  A. g
+                                                  e. dom d
+                                                     (  ( d ` g ) = ( c ` f )
+                                                     ->   ( c ` ( g r f ) )
+                                                        = ( c ` g ) ) ) ) ) }
+1006:3006:eleq2i   |- (   T e. Ded
+                      <->    T
+                          e. { x
+                             | E. d
+                                  E. c
+                                     E. j
+                                        E. r
+                                           (    x
+                                              = <. <. d , c >. , <. j , r >. >.
+                                           /\ (  (     <. <. d , c >.
+                                                       ,  <. j , r >. >.
+                                                    e. Alg
+                                                 /\ A. a
+                                                    e. dom j
+                                                       (  ( d ` ( j ` a ) ) = a
+                                                       /\ ( c ` ( j ` a ) ) = a
+                                                       )
+                                                 /\ A. f
+                                                    e. dom d
+                                                       A. g
+                                                       e. dom d
+                                                          (      <. g , f >.
+                                                              e. dom r
+                                                          <->   ( d ` g )
+                                                              = ( c ` f ) ) )
+                                              /\ (  A. f
+                                                    e. dom d
+                                                       A. g
+                                                       e. dom d
+                                                          (    ( d ` g )
+                                                             = ( c ` f )
+                                                          ->   ( d
+                                                               ` ( g r f ) )
+                                                             = ( d ` f ) )
+                                                 /\ A. f
+                                                    e. dom d
+                                                       A. g
+                                                       e. dom d
+                                                          (    ( d ` g )
+                                                             = ( c ` f )
+                                                          ->   ( c
+                                                               ` ( g r f ) )
+                                                             = ( c ` g ) ) ) )
+                                           ) } )
+
+16006:?:           |- (  d = ( 1st ` ( 1st ` T ) )
+                      -> d = D )
+17006:?:           |- (  d = D
+                      -> (   (  (  <. <. d , c >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( d ` ( j ` a ) ) = a
+                                      /\ ( c ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. dom d
+                                      A. g
+                                      e. dom d
+                                         (   <. g , f >. e. dom r
+                                         <-> ( d ` g ) = ( c ` f ) ) )
+                             /\ (  A. f
+                                   e. dom d
+                                      A. g
+                                      e. dom d
+                                         (  ( d ` g ) = ( c ` f )
+                                         -> ( d ` ( g r f ) ) = ( d ` f ) )
+                                /\ A. f
+                                   e. dom d
+                                      A. g
+                                      e. dom d
+                                         (  ( d ` g ) = ( c ` f )
+                                         -> ( c ` ( g r f ) ) = ( c ` g ) ) ) )
+                         <-> (  (  <. <. D , c >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( c ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( c ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( c ` ( g r f ) ) = ( c ` g ) ) ) )
+                         ) )
+4006:16006,17006:syl |- (  d = ( 1st ` ( 1st ` T ) )
+                      -> (   (  (  <. <. d , c >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( d ` ( j ` a ) ) = a
+                                      /\ ( c ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. dom d
+                                      A. g
+                                      e. dom d
+                                         (   <. g , f >. e. dom r
+                                         <-> ( d ` g ) = ( c ` f ) ) )
+                             /\ (  A. f
+                                   e. dom d
+                                      A. g
+                                      e. dom d
+                                         (  ( d ` g ) = ( c ` f )
+                                         -> ( d ` ( g r f ) ) = ( d ` f ) )
+                                /\ A. f
+                                   e. dom d
+                                      A. g
+                                      e. dom d
+                                         (  ( d ` g ) = ( c ` f )
+                                         -> ( c ` ( g r f ) ) = ( c ` g ) ) ) )
+                         <-> (  (  <. <. D , c >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( c ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( c ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( c ` ( g r f ) ) = ( c ` g ) ) ) )
+                         ) )
+
+
+>>>> Before Ctrl-U
+10006:?:biimp       |- (  c = ( 2nd ` ( 1st ` T ) )
+                      -> c = C  )
+
+11006:?:           |- (  c = C
+                      -> (   (  (  <. <. D , c >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( c ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( c ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( c ` ( g r f ) ) = ( c ` g ) ) ) )
+                         <-> (  (  <. <. D , C >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( C ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) ) ) )
+
+5006:10006,11006:syl 
+                   |- (  c = ( 2nd ` ( 1st ` T ) )
+                      -> (   (  (  <. <. D , c >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( c ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( c ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( c ` f )
+                                         -> ( c ` ( g r f ) ) = ( c ` g ) ) ) )
+                         <-> (  (  <. <. D , C >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( C ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) )
+                         ) )
+
+
+
+12006:?:           |- (  j = ( 1st ` ( 2nd ` T ) )
+                      -> j = J )
+
+13006:?:           |- (  j = J
+                      -> (   (  (  <. <. D , C >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( C ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) )
+                         <-> (  (  <. <. D , C >. , <. J , r >. >. e. Alg
+                                /\ A. a
+                                   e. O
+                                      (  ( D ` ( J ` a ) ) = a
+                                      /\ ( C ` ( J ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) ) ) )
+
+6006:12006,13006:syl 
+                   |- (  j = ( 1st ` ( 2nd ` T ) )
+                      -> (   (  (  <. <. D , C >. , <. j , r >. >. e. Alg
+                                /\ A. a
+                                   e. dom j
+                                      (  ( D ` ( j ` a ) ) = a
+                                      /\ ( C ` ( j ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) )
+                         <-> (  (  <. <. D , C >. , <. J , r >. >. e. Alg
+                                /\ A. a
+                                   e. O
+                                      (  ( D ` ( J ` a ) ) = a
+                                      /\ ( C ` ( J ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) )
+                         ) )
+
+
+18006:?:           |- (  r = ( 2nd ` ( 2nd ` T ) )
+                      -> &W2 )
+19006:?:           |- (  &W2
+                      -> (   (  (  <. <. D , C >. , <. J , r >. >. e. Alg
+                                /\ A. a
+                                   e. O
+                                      (  ( D ` ( J ` a ) ) = a
+                                      /\ ( C ` ( J ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) )
+                         <-> (  (  <. <. D , C >. , <. J , R >. >. e. Alg
+                                /\ A. a
+                                   e. O
+                                      (  ( D ` ( J ` a ) ) = a
+                                      /\ ( C ` ( J ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom R
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g R f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g R f ) ) = ( C ` g ) ) ) )
+                         ) )
+7006:18006,19006:syl |- (  r = ( 2nd ` ( 2nd ` T ) )
+                      -> (   (  (  <. <. D , C >. , <. J , r >. >. e. Alg
+                                /\ A. a
+                                   e. O
+                                      (  ( D ` ( J ` a ) ) = a
+                                      /\ ( C ` ( J ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom r
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g r f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g r f ) ) = ( C ` g ) ) ) )
+                         <-> (  (  <. <. D , C >. , <. J , R >. >. e. Alg
+                                /\ A. a
+                                   e. O
+                                      (  ( D ` ( J ` a ) ) = a
+                                      /\ ( C ` ( J ` a ) ) = a )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (   <. g , f >. e. dom R
+                                         <-> ( D ` g ) = ( C ` f ) ) )
+                             /\ (  A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( D ` ( g R f ) ) = ( D ` f ) )
+                                /\ A. f
+                                   e. M
+                                      A. g
+                                      e. M
+                                         (  ( D ` g ) = ( C ` f )
+                                         -> ( C ` ( g R f ) ) = ( C ` g ) ) ) )
+                         ) )
+2006:4006,5006,6006,7006:eloi |- (     T
+                         e. { x
+                            | E. d
+                                 E. c
+                                    E. j
+                                       E. r
+                                          (    x
+                                             = <. <. d , c >. , <. j , r >. >.
+                                          /\ (  (     <. <. d , c >.
+                                                      ,  <. j , r >. >.
+                                                   e. Alg
+                                                /\ A. a
+                                                   e. dom j
+                                                      (  ( d ` ( j ` a ) ) = a
+                                                      /\ ( c ` ( j ` a ) ) = a
+                                                      )
+                                                /\ A. f
+                                                   e. dom d
+                                                      A. g
+                                                      e. dom d
+                                                         (      <. g , f >.
+                                                             e. dom r
+                                                         <->   ( d ` g )
+                                                             = ( c ` f ) ) )
+                                             /\ (  A. f
+                                                   e. dom d
+                                                      A. g
+                                                      e. dom d
+                                                         (    ( d ` g )
+                                                            = ( c ` f )
+                                                         ->   ( d ` ( g r f ) )
+                                                            = ( d ` f ) )
+                                                /\ A. f
+                                                   e. dom d
+                                                      A. g
+                                                      e. dom d
+                                                         (    ( d ` g )
+                                                            = ( c ` f )
+                                                         ->   ( c ` ( g r f ) )
+                                                            = ( c ` g ) ) ) ) )
+                            }
+                      -> (  (  <. <. D , C >. , <. J , R >. >. e. Alg
+                            /\ A. a
+                               e. O
+                                  (  ( D ` ( J ` a ) ) = a
+                                  /\ ( C ` ( J ` a ) ) = a )
+                            /\ A. f
+                               e. M
+                                  A. g
+                                  e. M
+                                     (   <. g , f >. e. dom R
+                                     <-> ( D ` g ) = ( C ` f ) ) )
+                         /\ (  A. f
+                               e. M
+                                  A. g
+                                  e. M
+                                     (  ( D ` g ) = ( C ` f )
+                                     -> ( D ` ( g R f ) ) = ( D ` f ) )
+                            /\ A. f
+                               e. M
+                                  A. g
+                                  e. M
+                                     (  ( D ` g ) = ( C ` f )
+                                     -> ( C ` ( g R f ) ) = ( C ` g ) ) ) ) )
+
+
+qed:1006,2006:sylbi      |- (  T e. Ded
+                      -> (  (  <. <. D , C >. , <. J , R >. >. e. Alg
+                            /\ A. a
+                               e. O
+                                  (  ( D ` ( J ` a ) ) = a
+                                  /\ ( C ` ( J ` a ) ) = a )
+                            /\ A. f
+                               e. M
+                                  A. g
+                                  e. M
+                                     (   <. g , f >. e. dom R
+                                     <-> ( D ` g ) = ( C ` f ) ) )
+                         /\ (  A. f
+                               e. M
+                                  A. g
+                                  e. M
+                                     (  ( D ` g ) = ( C ` f )
+                                     -> ( D ` ( g R f ) ) = ( D ` f ) )
+                            /\ A. f
+                               e. M
+                                  A. g
+                                  e. M
+                                     (  ( D ` g ) = ( C ` f )
+                                     -> ( C ` ( g R f ) ) = ( C ` g ) ) ) ) )
+
+$)

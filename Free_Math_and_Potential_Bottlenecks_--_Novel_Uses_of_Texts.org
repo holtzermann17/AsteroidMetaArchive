@@ -1,0 +1,100 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Advances in computer technology make it possible for machines to perform
+operations on texts which hitherto could only be performed by humans and one can
+confidently predict that, as time goes on, they will be able to perform more
+such operations.  For instance, it is relatively easy to use a computer to
+search for occurrences of a phrase in a text, to find the differences between
+different editions of the same text, and even to automatically generate
+concordances and frequency tables.  One can also do such things as read in
+mathematical expressions found in an article into a computer algebra program to
+use them for a computation or translate between notations.  In the foreseeable
+future, it should be possible to perform such tasks as verify the soundness of
+logical arguments and have computers draw simple conclusions based information
+found in texts.
+
+While the use of machines to perform such tasks is certainly desirable because
+it eliminates drudgework and human error, copyright restrictions can restrict
+one's ability to make use of such labor saving devices.  To have a computer
+perform such operations on texts, it is first necessary to store a digital
+representation of the text in the computer's memory.  Since memory circuits are
+considered a tangible medium of expression, this is not legal without the
+premission of the copyright owner.
+
+This can lead to some curious situations in which the same use of a text may or
+may not be legal depending on whether it was done by hand or by machine.  For
+instance, suppose one were to copy a large number of mathematical formulas from
+a mathematical handbook into a mathematical encyclopaedia or a textbook or even
+a more comprehensive handbook.  The precedent of Feist Publications v. Rural
+Telephone Service Co. makes it clear in no uncertain terms that this would not
+infringe on the copyright of the handbook.  However, using a computer to prepare
+such a text may not be permissible if it means that one needs to prepare an
+electronic version of the text by scanning it or, if an electronic version is
+available but the licensing conditions do not permit such use.
+
+In particular, such a scenario is especially worrisome for such projects as the
+Hyperreal Dictionary of Mathematics, which feature a database of mathematical
+knowledge in a suitable format and tools for manipulating this knowledge.  In
+order to produce a comprehensive database, one will need to scour thousands of
+mathematical books for content.  The only practical way to accomplish this is to
+have a machine automatically extract the data from the texts.  However, if one
+cannot do so without first obtaining permissions and likely paying licensing
+fees to do so.  In such a situation, the costs in labor and money involved in
+obtaining permissions can easily dwarf the costs actaully involved in the
+production of the database.
+
+* Discussion
+
+I don't think I get the "curious situation".  (?)
+
+Furthermore I was under the (possibly quite mistaken) impression that you can do
+whatever you want in the privacy of your own home.  E.g. OCR some Springer text
+and make concordances or check it for accuracy or write electronic scholia or
+whatever.  The problem (in my otherwise happy little world) begins to surface if
+I send copies to all my friends, and it gets much worse if I post copies on the
+internet. (?)
+
+--[[file:jcorneli.org][jcorneli]] Tue Jun 28 07:24:29 2005 UTC
+
+Of course, you can't get it (unless you read my mind), because I am still in the
+process of writing it :)
+
+As for your example, strictly speaking, the answer is that, if the text is
+copyrighted under the usual terms Springer uses, it is illegal to do so unless
+you first contact Springer's permission department and get their consent in
+writing (an probably pay a fee to do so).  To be sure, if you do it in the
+privacy of your home and tell noone about it, you will be safe because how could
+they obtain evidence without invading your privacy or having you incriminate
+yourself?  But suppose that a professor or a student does this on the
+university's computer or a mathematician in Bell labs does this at work or that
+you publicize the fact that you are doing this and maybe even give a detailed
+description of how you do it (perhaps as a service to other mathematicians who
+also find that the margins are too small).  Even if one only keeps the
+electronic copy to oneself for private research purposes, there is good
+precedent for Springer to sue for infringement.  As you can read elsewhere in
+this essay, scientists at Texaco were sued for photocopying jornal articles for
+their own personal use.  Even thought they did not distribute these copies to
+anyone else, the court nevertheless ruled that this did not constitute fair use
+and that they would have to pay the copyright owner back royalties.  Likewise,
+it is accepted that videotaping television broadcasts for later viewing is not
+legal; in fact manufacturers of videotape machines have even been sued for
+producing equipment which encourages such illegal acts!  Examining licensing
+terms make it quite clear that Springer would not approve --- if you look at
+their electronic books, they state that the user is only permitted to view the
+file using the browser program but not to print it out or do anything else with
+it.  The fact of the matter seems to be that scanning in a Springer text into
+your computer so can add scholia or search the text would likely not be
+considered fair use even if you didn't distribute the result to anyone else.
+This business of shrinking fair use is a real
+problem. http://www.umuc.edu/distance/odell/cip/links_fairuse.html#commentary
+
+--[[file:rspuzio.org][rspuzio]] 28 June 2005
+
+That's somewhat disgusting, and it seems like a somewhat serious threat to HDM
+(and intellectual processes in general).  
+
+--[[file:jcorneli.org][jcorneli]] Tue Jun 28 19:45:32 2005 UTC
+
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

@@ -1,0 +1,39 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+; [http://www.cs.ru.nl/~freek/qed/qed.html QED] : an apparently defunct math archiving project with some striking
+similarities to the HDM, but with a greater emphasis on formality.  A full
+critique/comparison would be nice to see.
+
+; [http://www.cs.ru.nl/~freek/pubs/romantic.pdf A comparison of Mizar and Isar] :
+  by Wenzel and Wiedijk.  The bibliography and the /Related Work/ work subsection
+  in the intro may be useful for survey and literature search purposes.
+
+: /Abstract./ In this paper we compare Mizar and Isar. A small example, Euclid's proof of
+the existence of infinitely many primes, is shown in both systems. We also include
+slightly higher-level views of formal proof sketches. Moreover a list of differences
+between Mizar and Isar is presented, highlighting the strengths of both systems
+from the perspective of end-users. Finally, we point out some key differences of the
+internal mechanisms of structured proof processing in either system.
+
+; [http://www.cs.ru.nl/~freek/comparison/diffs.pdf Comparing mathematical provers] : by Freek Wiedijk.  A nice summary of the currently available engines and projects.
+: /Abstract./ We compare fiffteen systems for the formalizations of math-
+ematics with the computer. We present several tables that list various
+properties of these programs. The three main dimensions on which we
+compare these systems are: the size of their library, the strength of their
+logic and their level of automation.
+
+; [http://www.cl.cam.ac.uk/Research/Reports/TR143-lcp-experience.pdf The foundation of a generic theorem prover] : by L. Paulson.  A useful resource for learning about theoretical aspects of formal maths. Discusses meta-logic, higher order logics, inference, and the LCF deduction system.   More of Paulson's papers are available [http://www.cl.cam.ac.uk/users/lcp/papers/isabelle.html here]
+
+: /Abstract./ Isabelle is an interactive theorem prover that supports a variety of logics. It represents rules as propositions (not as functions) and builds proofs by combining rules. These operations constitute a meta-logic (or `logical framework') in which the object-logics are formalized. 
+
+----
+I happened to stop in at Barnes and Noble yesterday and I spotted a new paperback 
+called "Meta Math!" by [http://www.cs.auckland.ac.nz/CDMTCS/chaitin/ Gregory Chaitin].  I didn't buy it (I was already buying
+Minsky's new book and a paperback copy of Adams's /Long Dark Teatime/ and
+couldn't justify the further $14 expense without checking at my local library
+first) but I can certainly recommend it.  Chaitin uses a wide-gauge topic-filter,
+so, about half the book is about his thoughts about philosophy and his
+personal life and like that, whereas the other half is mathematics and
+metamathematics and Lisp and such.  I figure people around here are into that sort
+of mixture, so I'll pass along the recommendation.  --[[file:jcorneli.org][jcorneli]]

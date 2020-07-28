@@ -1,0 +1,83 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Public Markets (Jan 6, 2006)
+
+This issue of /mathematical markets/ is described in 
+[[file:First Monday Paper--The HDM Manifesto|the HDM Manifesto.org][First Monday Paper--The HDM Manifesto|the HDM Manifesto]]. 
+I closed out the recent page on [[file:stallman adventure|public domain vs copyleft.org][stallman adventure|public domain vs copyleft]]
+(and copyright) with a theoretical scheme for
+developing a market for public domain software.  While we
+haven't really begun an analysis of the effect that a large
+body of public domain software might have, this scheme lends
+some support to the idea that we could, potentially, foster the
+creation of a lot of public domain code -- through essentially
+purely economic means.  If this worked, the market would be
+taking over a large part of the work currently being
+accomplished through licensing instruments.  Which is fairly
+interesting (and, of course, this is one possible future
+direction for investigations of free software licenses).
+
+One of the more exciting [[file:social, political, and economic scholium systems|pages.org][social, political, and economic scholium systems|pages]]
+on the scholium system concerns
+some potential business and economics applications.  The idea
+here is to make more information about various goods available
+to consumers, with the notion that, often times, a good is
+little more than the sum of all information appertaining to it.
+
+A can of Coca-Cola, for example, is 39 grams of sugar, 12 fluid
+ounces of carbonated water, with a dash each of flavoring,
+coloring, and caffeine, which is then covered in red and white
+painted aluminum and buttressed by a whole lot of advertising.
+But what you /actually/ buy when you buy a can of Coca-Cola
+is much more complicated; the effects of that purchase on the
+local and global environment, economy, your own health, the
+world political situation, the Atlanta school system, etc., all
+could be spelled out to amount to something much more than "140
+kCal".
+
+Notice that paying an artist to create a statue amounts to
+something rather different from paying a musician to compose or
+record a song.  Because, the former artwork is locked up in a
+readily-excludable medium, copyright and royalties (while they
+might apply) are typically less important for sculptors than
+they are for recording artists.
+
+However, we propose to apply a uniform principle that
+compensates creators for producing deliverables based on
+informational aspect of the work!  (Works can include things
+like sculptures and bridges as well as programs, novels, and
+sound recordings.)  The fact that public domain works aren't
+excludable doesn't mean that the producers of such property
+can't be compensated for their work.
+
+Sometimes the transactions aren't monetary and sometimes they
+are.  So, for example, a [[file:Project Gutenberg.org][Project Gutenberg]]-based library might
+contain many side-discussions _not_ done for hire, but for the
+joy of discussing interesting literature with other interesting
+people, or for purposes of answering homework questions, or
+whatever.  Of course, such a library might also contain some
+works done for hire; and the different kinds of transactions
+can be mixed, some handled more formally (through the market)
+and others more informally (though out-of-market voluntary
+contributions or other non-market transactions).  But the
+general idea is that the "market" (in a broad interpretation)
+grows to include many different kinds of transactions.
+
+The example of code bounties and [[file:Feature Requests|feature requests.org][Feature Requests|feature requests]] for
+!PlanetMath makes this concrete.  In this case, people
+requesting new features can say what they will offer to help
+with the development of those features (which could money or
+time etc.), and also what might be required to implement the
+new feature.  Several people might participate in these sorts
+of transactions (an initial requester, a project manager, a
+programmer, and an outside expert, for example); and the final
+result would be that the feature would be implement.
+
+And the nice thing about this, is that we can actually go ahead
+and implement a basic, skeletal, market using very simple
+technologies -- like this wiki, for example.  Later, this thing
+could be fleshed out and brought to bear on a much wider range
+of products and services.
+
+--[[file:jcorneli.org][jcorneli]] (with [[file:rspuzio.org][rspuzio]]), Jan 6

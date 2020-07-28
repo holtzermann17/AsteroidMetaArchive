@@ -1,0 +1,20 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+PlanetMath, Noösphere, databases, login accounts,
+encyclopedias... I'm confused.  If I want to add something to the
+encyclopedia, I know how to do that, but suppose I wanted to add a
+new forum or add some new code that makes a new feature available
+or (gasp) change the way something is done on the site?  What code
+do I need to look at?
+
+A lot of admin/deployer functions are performable from the "admin" menu.
+However, Noösphere is an unfinished product, and things like adding forums
+(which tend to be done very infrequently) have no web front-end.  To do this,
+you'd need to add a row directly to the "forums" table of the database.  There
+is no quick answer to how to change the way something is done on on the site.
+For interface tweaks, you might be able to just edit something in the
+stemplates/ subdir of the Noösphere distro.  To make functional changes or
+enhancements, you would need to get a feel for the Noösphere code in general.
+See http://aux.planetmath.org/noosphere/ to get the code.  --[[file:akrowne.org][akrowne]] Thu Feb
+17 16:12:29 UTC 2005

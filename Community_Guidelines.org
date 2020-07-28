@@ -1,0 +1,577 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is here as a place for interested PlanetMath users to
+develop a guideline (in the form of a reader-friendly
+overview together with specific rules and regulations) on
+
+ 1. code of conduct in the PM community
+ 1. PM entry content
+ 1. PM entry standard
+ 1. rules and regulations concerning interactions between PM users with
+ regard to PM entries. These include
+## entry requests
+## orphaned entries
+## ... other things??
+ 1. PM members' rights
+
+* Other things to talk about
+
+** Rights
+
+In addition to laws that people must obey, I think we should have some
+laws that say what people *can* do (and who can do them).  For
+example, since I was talking above about editing the homepage -- who
+can do that, and under which conditions?  Who can make subsequent
+changes to the community guidelines; etc.
+
+I see this as connected with the business of membership --- basically, the
+members will be the ones who have these rights and will either carry these
+things out or delegate the responsibility.  One thought about how this might
+happen is that these tasks would be divided amongst different people.  For
+instance, one person might take care of the news box, another might take
+care of the request list, a third might moderate discussion, etc.  This way,
+no one person is overburdened so things should get done in a more timely
+fashion with less stress and burnout. --[[file:rspuzio.org][rspuzio]]
+
+Note that this style of division of labor by delegation is very
+different in spirit from the standard one, where person /A/ is
+responsible for task /a/ and person /B/ is responsible for task
+/b/, and $b \cap a$ is empty, and if /B/ happens to work on
+something from /a/, then /B/ gets fired!  If membership is a good
+enough criterion for deciding whether someone is likely to act
+responsibly, then I agree that it is OK for membership to secure
+people the rights we are talking about.  Instead of being like a
+public wiki, PlanetMath's homepage would be like a private wiki.
+However, not everyone will want to do everything -- e.g. not everyone
+will want to change the software.  So, maybe people should have
+permission to *sign themselves up* for certain permissions at will,
+rather than being given these core permissions directly?  --[[file:jcorneli.org][jcorneli]]
+
+An important way that our situation differs from the usual one is
+that, on PM, people are doing things things in their spare time so
+there is a good chance that someone will be busy at any given time.
+Hence, a strict division of labor is likely to lead to delays, so
+a more flexible approach might be better to keep things tunning
+smoothly.  For instance, consider an  approach in which person /A/
+ *usually* does task /a/ and person /B/ *usually* does
+task /b/, but both people can do both tasks and, in a pinch, we
+might find person /A/ doing task /b/ or vice versa.  Furthermore,
+there is a fair amount of turnover --- person /A/ might lose
+interest in PM or become so busy with other things on a regular basis
+that there is simply not enough time to do task /a/, in which case
+person /B/ might wind up doing both task /a/ and task /b/
+until a person /C/ shows up who is interested in task /a/, at 
+which time person /B/ goes back to doing only task /b/.  (Or
+worse, as happens all to often nowadays, task /a/ might not get
+done at all with the result that, as the consequences of neglect of
+task /a/ become apparrent (Think of the smell of garbage which has
+piled up for a few weeks because nobody cared to empty the trashbin!),
+people get upset and complain, leading to yet another gratuitous
+flame war.)
+
+In order for such an approach to be plausible, person /A/ need to
+know how to do task /b/ or be able to learn how to do it rather
+easily.  Should the task be of such a nature that it requires a lot
+of practise or a lot of specialized knowledge, there is not much that
+could be done, but fortunately this is not the case for a lot of the
+tasks we have in mind here, such as maintaining the request list or
+posting news.  What is still required, however, is good documentation
+so that someone can easily reaf up on how to do an unfamiliar task.
+
+--[[file:rspuzio.org][rspuzio]]
+
+Speaking of PM members' rights, I have thought of at least four types of rights:
+ 1. rights to change member's personal attributes on PM
+ 1. rights to participate in forum discussions
+ 1. rights to contribute
+ 1. administrative rights
+
+The last two types may be further classified as we continue our discussion.
+
+I think when someone signs onto PM, he should be automatically given the 
+first three types of rights, in keeping with the *spirit of PM*, as it is 
+for the people, by the people.  However, the fourth type should only be 
+obtained by *earning* it.  I am not sure what this *earning* means exactly, 
+but this is something we can discuss.
+
+Also, having these rights is not permanent.  A person with a certain right 
+can lose that right if certain *violation* occurs.  Loss of rights can 
+be temporary, or permanent.  Again, this *violation* is at this moment not 
+yet defined, and is something that will become more apparent as the 
+discussion moves along.  --[[file:CWoo.org][CWoo]]
+
+*** Specific Member Rights
+
+ * To turn off !AdSense when browsing PlanetMath.
+ * ...
+
+** Roles
+
+I'm thinking about rights, and their "filling-out" by people who
+actually use them.  I think that there is probably some optimal set of
+rights and /roles/ -- the rights being there to help people fulfill
+certain roles, as well as to help indicate which roles should be taken
+on.
+
+Roles, in turn, are taken on relative to a bunch of tasks -- it
+wouldn't be quite right to say that they are "made up of a bunch of
+tasks", since those objects would be task-sets.  Perhaps we would say
+roles are made up of a bunch of task-completion objects; roles are the
+"$\Delta$" of tasks.
+
+"Tasks" themselves are conducted relative to resources.  In an
+over-simplification, each "." here could be a task that is effected
+relative to /one/ resource.  (In a more realistic picture, most
+tasks would be carried out relative to several resources.)
+
+  ROLE ROLE ROLE 
+   .    .    .   RESOURCE
+   .    .    .   RESOURCE
+   .    .    .   RESOURCE 
+
+For example, one "resource" might be "The !PlanetMath homepage".  And
+there appear to be three roles that can be taken relative to that
+resource:
+
+ * Admin role
+ * Passive viewer role
+ * User role
+
+(The "user" will do things like post messages to the forums, which
+will appear on the homepage, so users do update the homepage -- but in
+a "mediated" way.)
+
+While I'm not sure that this picture /quite/ captures the idea I am
+getting at, it is a place to start.  When I was talking above "optimal
+roles" above, I mean that we should be able to analyze the roles that
+are taken relative to different resources, and look at the social
+benefits and social costs of the way things are broken up -- both
+looking at the division of resources by roles, and looking at the
+division of roles among people using the site.
+
+The reason for thinking about this is that a poor division (at any
+stage in the chain) will lead to inefficiencies.  We should get good
+at finding these inefficiencies and reducing or eliminating them.
+
+Guidelines that include a treatment of roles along these lines will
+very likely boost our productivity and our "community spirit"
+significantly.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Here are some roles which I could imagine being filled by the commuinity.
+
+ * Forum moderator
+
+ * Maintain the homepage (content on top of page and post news items).
+
+ * Request list moderator
+
+ * Newsletter writer
+
+Of course, many of these roles would ideally filled by several people.
+For instance, in order to produce a good newsletter without burdening
+anyone unduly, several people should likely be contributing content
+on a regular basis.
+--[[file:rspuzio.org][rspuzio]]
+
+** Enforcement
+
+Enforceability of rules will probably have to come later, like when we have
+either more money or better tools for programming.  Luckily both of these
+things are in the works.  In the mean time, the draft guideline can indicate
+which things we want to have reflected in computer code, and roughly, how.
+
+I say that this depends on what sort of enforcement there will be.  For instance, 
+if the consequences of violating a rule about acceptable content is having
+the entry deleted or the consequences of insulting someone in a public forum is
+having one's account suspended, there is no reason this sort of enforcement
+could not happen right now.  In fact, Aaron and I have done things like this
+with respect to copyright violations, so it would be a matter of clarifying
+existing practise (making it a matter of law rather than whim) and extending it 
+beyond copyright issues or spamming. --[[file:rspuzio.org][rspuzio]]
+
+** Tutoring
+
+This is one of the many "roles" people could take (see above), and I think
+a particularly interesting one, since it could generate income for the site.
+The reason I was reminded of this today is that I saw math tutors listed in the
+Google !AdSense area.  It seems a little weird to advertise for someone else
+when perhaps without too much trouble, we could provide the service ourselves.
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Process for this document
+
+I suggest we come up with some process that will see our ideas above
+through to their most useful conclusion.  I'll put an "unordered list"
+here for now -- you can read it in the order I write, but we can
+rearrange the order later.
+
+ * Settle more details about who does what in next telephone conference.
+ * Prepare a somewhat better draft document
+ * Share draft with relevant parties for further suggestions/changes
+ * Get the draft plugged into !PlanetMath in a prominent location --
+e.g. on the homepage, or even on the little list of items that appears
+on the top of every page (which now says "Encyclopedia | Requests | Forums
+| Docs | Wiki | Random | RSS" -- maybe replace "Docs" with "Guidelines"
+and then index the relevant docs from within the guidelines.
+
+--[[file:jcorneli.org][jcorneli]]
+
+** Meeting Schedule
+
+What time works for the next meeting(s)?
+Maybe pick some day that is 7N days after
+the last meeting?
+
+--[[file:jcorneli.org][jcorneli]]
+
+I think it is time for our next meeting.  It can be a Monday, maybe next week on April 9, 2007?
+
+--[[file:CWoo.org][CWoo]]
+
+April 9 works for me.  I'll look over this material and everything
+you sen{d,t} before then. --[[file:jcorneli.org][jcorneli]]
+
+----
+
+* Chi's draft of Rules and Regulations
+
+Revisions 
+
+ 1. Putting PM Members' Rights to the top of the list (4-10-2007)  --[[file:CWoo.org][CWoo]]
+
+ 1. Putting the PM Point System to the top of the list; revised 
+  the "entry content" portion of the community guideline; titled 
+  the last item on the list to "governing body..." (4-17-2007)  --[[file:CWoo.org][CWoo]]
+
+ 1. Revision in Section IV (PM entry content) to exand the list of 
+  encyclopedic entry exclusions: "frivolous numerical tables and lists"
+  (6-7-2007) --[[file:CWoo.org][CWoo]]
+
+**  I. The PM Point system.
+
+ 1. This portion contains the various rules on how points are awarded to or deducted from 
+  users.  (mostly adapted from http://planetmath.org/?op=getobj&from=collab&id=30)
+
+ 1. +100: 
+## addition of an "encyclopedic" entry
+## addition of a book
+## reclassification of a "non-encyclopedic" entry to an "encyclopedic" entry
+
+ 1. +75: 
+## addition of an exposition
+
+ 1. +50:
+## addition of a paper
+## adoption of an "encyclopedic" entry
+
+ 1. +20:
+## original authorship of an "encyclopedic" entry
+
+ 1. +10: 
+## acceptance of a correction on an "encyclopedic" entry
+
+ 1. +5: 
+## revision of an "encyclopedic entry"
+## addition of a "non-encyclopedic entry"
+## minor edit (for admins)
+## reclassification of an "encyclopedic" entry to a "non-encyclopedic" entry
+
+ 1. +1: 
+## message posting in forum
+## voting in a poll
+
+ 1. -5:
+## deletion of a "non-encyclopedic entry"
+## reclassification of a "non-encyclopedic" entry to an "encyclopedic" entry
+
+ 1. -100:
+## deletion of an "encyclopedic entry"
+## transfer of an "encyclopedic entry"
+## orphaning an "encyclopedic entry"
+## reclassification of an "encyclopedic" entry to a "non-encyclopedic" entry
+
+ 1. -all:
+## permanent suspension of user account
+
+
+**  II. PM members' rights
+
+ 1. This pertains to the definitions of various rights and types of
+   rights a PM member has, as well as rules and regulations pertaining
+   to this item.
+
+ 1.  When anyone becomes a PM member, he/she is automatically granted the following three types of rights:
+
+## rights on personal attributes
+
+## rights on participation of PM forums
+
+## rights on contributions of PM entries - which can be subdivided
+   into rights to contribute new entries, rights to fulfill requests,
+   and rights to adopt orphaned entries. Let's call these three types
+   "basic rights".
+
+ 1. A fourth type of rights - administration, is only given to people
+  who have substantial contributions to the website and have vested
+  interest in the development and improvement of the website (this is
+  to be qualified later).  People in this group may or may not be PM
+  users.
+
+ 1. Finally, a fifth type of rights - regulation, is a subset of the
+  administrators who have the authority on matters regarding various
+  regulation type of issues (entry content, standard, etc..., as
+  discussed above).  People belonging to this group must be PM users.
+  An administrator who is not a regulator will only have adminitrative
+  rights.
+
+ 1. Users with any of the rights may lose those rights.  For example, if
+  a user violates rules listed under the PM code of conduct, he/she
+  may lose the 2nd and 3rd "basic rights".  As another example, if a
+  user violates rules regarding PM entry content or PM entry standard,
+  he/she may lose the 3rd "basic rights".
+                                                                    
+**  III. Code of Conduct on PlanetMath community
+
+ 1. Basically, this spells out the ground rules on how users should
+  treat one another, and what actions are to be taken if these rules
+  are broken.
+
+ 1. As rspuzio had suggested to me, we may look into ubuntu community
+   code of conduct (http://www.ubuntu.com/community/conduct) for some
+   guidance and adapt some or all of its rules for PM.  Basically, we
+   ask the users to be
+
+## respectful and considerate of one another; 
+
+## when there are disagreements, consult the rest of the planetmath
+   users for additional input, or agree to disagree..
+
+## etc...
+
+ 1.  As far as regulations go, if a rule is broken, depending on the severity of the case, a user's privilege to use the website may be suspended outright in the case of maximum severity (to be discussed?).  However, a typical offence may result in the issuance of a warning by the admin.  Subsequence offences may result in suspension without notice.
+
+**  IV. PM entry content
+
+ 1. This spells out what should be included in the PM encyclopedia, and,
+  when specific cases can be spelled out, what should be excluded
+  from the encyclopedia.
+
+ 1. Entries that are permitted on PM include: mathematical constructs
+  (things you find in algebra, geometry, etc..., definitions,
+  theorems, etc...) that are well established; biographies on
+  well-known mathematicians; mathematics education; recreational
+  mathematics (puzzles, instructional, etc...); meaningful
+  mathematical tables (tables of values of well-known statistical
+  distributions, etc...), others??
+
+ 1. Things that do not belong to PM include: well, anything not
+  mathematical; but what this entails is that anything that "appears"
+  to contains mathematics but in fact are not math, or anything that
+  is so broad and general that any connections to mathematics is only
+  tangential at best.  These items include:
+
+## historical or geographical facts (what does USA have to do with
+   math? If that is the case, should we also include China and Russia?
+   Nonsense!)
+
+## Numbers that are used for non-math purposes, which include special
+   dates and times, numbering of musical works, numerical codes used
+   in various industries, etc...
+
+## Other scientific disciplines where math is used.  This is tricky,
+   but I think the distinction should be that only the mathematics
+   portion of the disciplines may be accepted.  For example,
+   applications of diff geometry to physics can be part of PM, but
+   physics should not be (so an entry on Newton's Laws would not be
+   appropriate on PM).  Another example, Boolean algebra, Turing
+   machines, and abstract concepts in database design are part of PM,
+   but specific programming and scripting languages like PASCAL,
+   COBOL, and HTML are not (they belong to PlanetComputing).
+
+## frivolous numerical tables and lists.  A list of numerical 
+   evaluations of a function, or successive approximations of a 
+   mathematical constant (pi or e, etc...), is considered frivolous 
+   if it can be easily derived by a calculator, or by a simple computer 
+   algorithm, unless sufficient explanations are given in the body of the 
+   entry as to its significance.  If a numerical list is well-known, whose 
+   usefulness (pedagogical or whatever else) is clear, it is not 
+   considered a frivolous table.  Some examples of non-frivolous tables or 
+   lists are the statistical tables (useful in academia and industry) and 
+   simple multiplication table (useful in teaching and pedagogy).
+
+## mathematical constructs that are invented by the author and that
+   are not found anywhere else (not well-established).  We may
+   establish a separate place where people can put their personal
+   ideas on PM (and I think this is something we should follow up
+   on... because as far as I know, there is no place on the internet
+   that allows "amateur" mathematicians to share their personal math
+   ideas with each other, and PM could be the first one to launch this
+   idea!!)
+
+## Anything that is incidental to the development of PM entries.
+    These include the various "sandboxes" that exist as PM entries, as
+    well as lists of to-do items on PM, and what not... Again, there
+    are other places where these items belong, and they may be an
+    improvement goal for us.
+
+## Content containing insults and objectionable language.  (The discovery 
+   of such entries will be immediately removed and the author's 
+   rights and privileges on PM permanently suspended.)
+
+ 1. If an entry is deemed to be a non-PM entry by any user, the entry
+  may be deleted outright by the admin, if the case is severe enough.
+   However, the general procedure should be that the user will appeal
+   to a select group of PM users (to be formed later??) about the
+   inappropriateness of the entry.  The group will decide on the case.
+   If the group concludes that the entry is indeed inappropriate, it
+   will issue a notice to the author of the entry in question to
+   remove the entry voluntarily in a given time period.  If the author
+   does not remove the entry in that time period, the entry will be
+   removed by the admin.  The violating author may face temporary
+   suspension, if the offence is repeated enough times.
+
+
+**   V. PM entry standard
+
+ 1. This spells out that, given a PM entry, what standard is to be
+   expected from the entry.
+
+ 1. The entry should be written in plain English.  It should be clear
+  and informative (but this is quite subjective, and we can elaborate
+  on this during our meeting too).  Entries including unfamiliar
+  concepts should contain examples and illustrations, and definitely
+  references.
+
+ 1. Duplicate entries are allowed, as long as they illustrate the
+  various aspects of the same thing.  In case when duplicate entries
+  are exact, or almost exact duplicas of one another.  Only one such
+  entry should be kept and the rest deleted.  The group (as mentioned
+  above) will have the final say as to which one to keep.
+
+ 1. Copy-righted or plagirized material is not permitted.  If such an
+  entry is found, it will be deleted automatically by the admin
+  without notice of the author.  Furthermore, author's right to
+  contribute may be suspended (temporarily or indefinitely for repeat
+  offenders).
+
+ 1. As far as regulation of entry standard is concerned, this should
+  mirror the regulation on the content portion of PM entries, see 2.d
+  for detail.
+
+ 1. In some cases (as to what cases, this is to be determined), removal
+  of entries may be too severe.  Instead, entries that fall short on
+  standard may be turned world-editable.  The procedures should go as
+  follows: if a user finds that an entry falls short on standard,
+  he/she will file a correction notice.  However, if the correction
+  notice is ignored or rejected by the author repeatedly, the user may
+  appeal to the "group".  The group will decide on the case.  If the
+  group concludes that the case is enforceable, a notice will be
+  issued to the author to make changes to the entry in a provided time
+  frame.  If no changes are made, the entry will be turned
+  world-editable, and the author will forfeit exclusive control over
+  this entry.
+
+**   VI. PM entry requests
+ 1.  This spells out how a request can be made, and the rules and regulations that are related to this item.
+ 1.  A request can simply be made by any user... blah blah blah on how  The user making the request is called a requester.
+ 1.  A requester has some rights over his/her requests.  These rights include deletion of his/her own requests, fulfilling his/her own requests automatically.
+ 1.  Any user can fulfill any outstanding request.  However, the requester has the final say as to whether the request has been fulfilled.  The requester will be given a period of time (1-3 months??) to respond to the fulfillment.  During this time period, no points will be awarded to the person fulfilling the request.  Three things can happen:
+## If the requester accepts the fulfillment, full points will be awarded and the request will be deemed fulfilled and be deleted from the request list.   
+## On the other hand, if the requeter rejects it, no points will be awarded.  The request will remain on the request list.  However, the alleged fulfilling entry will also remain on PM as a legitimate PM entry unless it is discovered otherwise at a later time.  
+## Finally If the requester does not respond in that time period, the request is deemed fulfilled by default.  The remaining rules follow 4.d.i (item i above).
+
+**   VII. PM orphaned entries
+ 1.  This spells out what an orphaned entry is and how it is to be treated.
+ 1.  Definition of an orphaned entry: 
+
+##  completely orphaned entry - the author has given up his/her ownership on the entry unconditionally.
+
+##  partially orphaned entry - the author is conditionally giving up his/her ownership on the entry.  Here, conditionally means if someone is interested in adopting this orphaned entry, he/she must be given permission from the author to adopt it.
+
+ 1.  If the entry is completely orphaned, anyone can adopt it and the adoption takes effect immediately.
+
+ 1.  If the entry is partially orphaned, anyone who is interested in adopting will seeks permission from the original owner.  The way it works is: a notice will be sent to the original owner of the orphaned entry.  The owner will be given a period of time to respond to the notice.  Three things can happen:
+
+##  If the owner gives the permission, the ownership of the orphaned entry will be transferred to the seeker.
+
+## If the owner refuses, the entry will remain partially orphaned.
+##  If the owner does not respond in the given time frame, the orphaned entry will become completely orphaned.
+
+ 1.  An Entry can become orphaned only in the circumstance when a correction notice is outstanding on the entry for a given period of time.  In this case, however, the entry only becomes partially orphaned.
+
+ 1. Whenever an orphaned entry is transferred from the original owner to
+   the new owner, some of the corresponding points accumulated on the
+   entry will be transferred as well.  Here, "some of the
+   corresponding points" could be a fixed number or a fixed percentage
+   on the entry.  Also, "transfer of points" means that if original
+   owner loses x points, then x points are gained by the new owner.
+
+**  VIII. Content Committee - Formation, Rights, Rules and Regulations
+
+ 1. The Board of Directors shall appoint an initial content committee.  The procedure for choosing
+subsequent content committees will be decided later, likely in connection with membership.
+
+ 1. The content comittee shall make its official decisions by a system of quora an treshholds.  When a 
+member of the committee makes a motion for something which requires a vote, an voting period of four days
+will begin, during which committee members cast their ballots.  If, at the end of this period, the number 
+of ballots cast is greater than or equal to the quorum, then the matter is decided, otherwise it is 
+undecided.  If the matter is decided and the proportion of votes in favor of the measure is greater than 
+the treshhold, then the decision was in favor of the motion, the motion passes, otherwise it fails.  For
+ordinary business, the quorum is 10 and the treshhold is 1/2.  For judging disputes and entries, the
+procedure is somewhat different, as described below.
+
+*** Procedure for Resolving Disputes and Judging Entries
+
+ 1. If two users have a dispute regarding matters of content such as, but not limited to, disagreements 
+about corrections which they cannot resolve amongst themselves, then they may ask the content committee
+to resolve the dispute.
+
+ 1. When a user finds that an entry does meet the criteria set above, said user may ask the committee
+to take appropriate action.  This action may take one of the following forms:
+
+## Reclassify an entry.
+
+## Take ownership of an entry and make it invisible until certain changes are made.
+
+## Delete the entry.
+
+ 1. Upon recieving notification from a user about a dispute or a questionable entry, the chairperson of the
+committee shall begin a proceeding as soon as possible.  Ordinarily, this should happen the same day that 
+the complaint is recieved but, if the committee is too busy with other work or otherwise not able to take 
+action immediately, the chairperson may wait until the committee is ready to begin.
+
+ 1. Once the chairperson has officially announced that the committee shall investigate a complaint, the
+following will happen:
+
+## There shall be a three day period during which the committee will discuss the matter and solicit
+input from the community, particularly those inveolved in the matter being discussed (such as disputants
+or authors of entries under consideration).
+
+## For the next four days, there will be a voting period during which members of the committee shall cast
+their ballots.
+
+## If, at the end of this four day period (seven days since the beginnning of the proceeding), a quorum
+of the committee has voted, then a decision will be reached based on whether or not the treshhold has
+been attained.  If a quorum is not attained, the proceeding will continue until a quorum of votes has
+been cast.  For the purposes of such proceedings, the following quora and treshholds will
+be used:
+
+### Dispute: Quorum 8, Treshhold 1/2
+
+### Reclassification: Quorum 4, Treshhold 1/2
+
+### Takeover: Quorum 12, Tresshold 2/3
+
+### Deletion: Quorum 12, Tresshold 1
+
+ 1. No member of the content committee is party to a dispute or author of an entry being investigated
+may vote in the proceeding.
+
+ 1. Any member of the committee who is not disqualified by the above clause may ask for an extension of the
+discussion period or of the voting period.  The reason for this extension must be given explicitly and the
+extension may be no longer than a week.  If two other members of the committee who are also not disqualified
+second such a motion, the proceeding will be extended.

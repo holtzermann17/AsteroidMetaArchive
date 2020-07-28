@@ -1,0 +1,94 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is "bi-directional content exchange and updating"?
+
+Two /different/ productive digital library projects (say [http://www.wikipedia.org Wikipedia] and [[file:PM.org][PM]], or
+the [[file:FEM.org][FEM]] and PM, or PM and one of its mirrors, or AsteroidMeta and one of its
+mirrors) may have different versions of entries on the same topic.  How can these
+entries, which are leading potentially diverging lives, be kept in synch, or at
+least how can the content or changes be conveyed to the person or persons who
+may be interested in them?  A system for bi-directional content exchange and
+updating (a "[[file:bidi system.org][bidi system]]") would help automate this process.
+
+The ramifications of such a system are wide.  A bi-di updating system would be like an
+Open Archives OAI-PMH, but for content which is changing and potentially changing in /both/
+directions.  Not only would it keep harvests from getting "stale", it would allow productive
+efforts of different communities to leverage each other inasmuch as they overlap.  For example,
+PlanetMath could benefit from improvements to Wikipedia math entries, and vice versa.  PlanetMath 
+could benefit from future work on PlanetComputing (CS theory entries are basically math) or PlanetPhysics 
+(the language of physics is math) sites, and vice versa.  Even 
+PlanetComputing and PlanetPhysics might want a bi-di exchange, as the theoretical area of the 
+fundamental limits of computing and the implementation of computers are basically physics!
+
+* Bi-Di Exchange Scenarios
+
+The following are content sharing scenarios in which a bi-di exchange system would be useful.
+
+ * Wikipedia and PlanetMath
+ * PlanetMath and PlanetPhysics
+ * PlanetMath and PlanetComputing
+ * PlanetPhysics and PlanetComputing
+ * The FEM and PlanetMath
+
+See below for some comments on differences between some of these scenarios.
+
+* Quick Links
+
+ * [[file:bi-directional updating bibliography.org][bi-directional updating bibliography]]
+ * [[file:bidi system tasks.org][bidi system tasks]]
+ * [[file:bidi system bugs.org][bidi system bugs]]
+ * [[file:bidi system feature requests.org][bidi system feature requests]]
+ * [[file:bidi licensing concerns.org][bidi licensing concerns]]
+
+* Tools
+
+ * [http://www.wikinfo.org/wiki.php?title=GetWiki GetWiki] Could be useful for synching with Wikipedia.  It could be
+interfaced with the bidi system, abstracting away the fact that Wikipedia doesn't have an Open-Archives-Like 
+interface, and our prospects of getting Wikipedia to install such a system are slim.
+ * [http://dumps.wikimedia.org/ Wikipedia database dumps].  Of course, everything is here.  The periodicity of these 
+dumps is in question (and the lack of frequent, or at least consistently-defied exports), may technically be a 
+FDL violation (it certainly is in spirit).  At any rate, we could load this database and then create an interface
+layer to a bidi system.
+
+* Discussion
+
+** Differences between different scenarios
+
+The various scenarios described here are somewhat different. The [[file:FEM.org][FEM]] is for
+the made up primarily of entries from [[file:PM.org][PM]] with some edits and a few
+additions, whereas Wikipedia, at present, does not have a whole of content lot
+in common with PM.  Two PM mirrors would have to be kept more or less in synch
+with one another, but Wikipedia and PM would be expected to diverge.  The FEM
+wants everything coming from PM, but PM certainly doesn't want everything coming
+from Wikipedia (and presumably Wikipedia doesn't want everything coming from
+PM).  So there are some complexities here.
+
+** Note on a related discussion
+
+See the thread "[[file:A scholia-based document model.org][A scholia-based document model]]," which includes some
+thoughts on bidi updating, though the sketch given there is quite incomplete.
+
+Putting everything on one computer has a single point of failure.
+It would be nice to implement techniques for avoiding a single point of failure, creating a
+[http://wikifeatures.wiki.taoriver.net/moin.cgi/FailSafeWiki WikiFeatures:FailSafeWiki]
+
+** (Possibly) relevant software
+
+[http://www.gnu.org/software/gnu-arch/ GNU Arch] is useful software for keeping
+two collections in synch, as well as for maintaining multiply branched projects.
+
+** How do translations fit in?
+
+Translated versions of PM are another interesting scenario: I'm not sure whether
+they are a perfect example of bi-di updating, or a degenerate case, or what.
+But with translation, the goal is to have something sort of like a mirror, where
+each entry has been changed quite a bit (textually) - and presumably not changed
+that much semantically.  (Hofstadter has a relatively recent book about
+semantics and translation out, by the way.)  So, anyway, to me it seems that
+even if translations are not an example of bidi systems, they are very similar,
+and working on bidi would tend to produce things that would spin off to help
+with translation (and vice versa). --[[file:jcorneli.org][jcorneli]] Fri Mar 25 04:45:48 2005 UTC
+
+----
+[[file:Projects.org][Projects]]

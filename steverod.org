@@ -1,0 +1,297 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since March 2006 I have contributed some theorems to the [[file:set.mm discussion|set.mm.org][set.mm discussion|set.mm]] database for [[file:Metamath.org][Metamath]], including [http://us.metamath.org/mpegif/demoivre.html De Moivre's Formula].  I believe that a computer-verified database like set will become crucial to solving increasingly challenging problems in math and beyond.
+
+I use Mel O'Cat's [[file:mmj2.org][mmj2]].  It's very helpful.
+
+** Graph theory addon for set.mm
+
+Just an experiment with graph theory on a symbolic level.
+
+I hereby place this in the public domain, and release all rights to it.
+
+This continues from the set.mm proofs preceding the Dedekind-cut real
+construction. It is best placed or included before the "End of set.mm"
+comment there.
+
+I very likely won't work on this much anymore. 
+
+*** Graph theory
+
+**** Hypergraphs
+
+  $c HypGrph $. $( class of hypergraphs $)
+
+  $( Extend class notation with the class of all hypergraphs. $)
+  chgra $a class HypGrph $.
+
+  $(
+  [Diestel] Diestel, Reinhard, "Graph Theory, Electronic Edition,"
+  Springer-Verlag, Heidelberg, 2005 [QA166.D51413]
+  URL: http://www.math.uni-hamburg.de/home/diestel/books/graph.theory/ [external]
+  $)
+
+  $(
+  [McKMegPav] B. McKay, N. Megill, and M. Pavicic,
+  "Algorithms for Greechie Diagrams," Int. J. Theor. Phys. 39,
+  2393-2417 (2000), http://xxx.lanl.gov/abs/quant-ph/0009039 [external].
+  $)
+
+  ${
+    $d a b $.
+    $( Define the class of all hypergraphs.  For a textbook
+       definition of a hypergraph and more information,
+       see ~ ishgrag . $)
+    df-hgra $a |- HypGrph = { <. a , b >. | ( ( a i^i b ) = (/)
+           /\ b (_ ( P~ a \ { (/) } ) ) } $.
+  $}
+
+  ${
+    $d b A $. $d b B $.
+    $( Two ways of saying "the blocks in a hypergraph
+       are each non-empty subsets of the set of atoms
+       in the hypergraph." $)
+    blkssatm $p |- ( B (_ ( P~ A \ { (/) } ) <->
+                    A. b e. B ( b (_ A /\ b =/= (/) ) ) $
+      ( cpw c0 csn cdif wss cv wcel wn wa cab wral wne df-dif sseq2i ssabral
+      visset elpw wceq elsn negbii df-ne bitr4 anbi12i ralbii 3bitr ) BADZEFZGZ
+      HBCIZUIJZULUJJZKZLZCMZHUPCBNULAHZULEOZLZCBNUKUQBCUIUJPQUPCBRUPUTCBUMURUOU
+      SULACSTUOULEUAZKUSUNVACEUBUCULEUDUEUFUGUH $.
+      $( [16-Dec-2006] $) $( [16-Dec-2006] $)
+  $}
+
+  ${
+    $d x y $.
+    $( The class of all hypergraphs is a relation. $)
+    hgrarel $p |- Rel HypGrph $
+      ( vx vy chgra wrel cv cin c0 wceq cpw csn cdif wss wa copab relopab
+      df-hgra releqi mpbir ) CDAEZBEZFGHTSIGJKLMZABNZDUAABOCUBABPQR $.
+      $( [16-Dec-2006] $) $( [15-Dec-2006] $)
+  $}
+
+  ${
+    $d x y A $. $d x B $. $d y B $. $d b A $. $d b B $.
+    $( x and y are dummy. $)
+    ishgrag.1 $e |- H = <. A , B >. $.
+    $( Express the predicate "` H ` is a hypergraph."
+       Definition of hypergraph in [Diestel] p. 28, which states
+       "A hypergraph is a pair (_V_, _E_) of disjoint sets, where
+       the elements of _E_ are non-empty subsets (of any cardinality)
+       of _V_."
+       
+       Because _V_ and _E_ are both used as symbols
+       (for the universal class ~ df-v and the epsilon relation
+       ~ df-eprel , respectively) in Metamath, we instead use ` A `
+       to represent _V_, the set of _vertices_ or _atoms_ of
+       the hypergraph, and ` B ` to represent _E_, the set of _edges_
+       or _blocks_ that each connect one or more atoms
+       in ` A `.  (See Definition 2.1 in [McKMegPav] for an
+       analogous use of _atom_ and _block_ in Greechie diagrams.) $)
+    ishgrag $p |- ( ( A e. C /\ B e. D ) ->
+                   ( H e. HypGrph <->
+                     ( ( A i^i B ) = (/) /\
+                       A. b e. B ( b (_ A /\ b =/= (/) ) ) ) ) $
+      ( vx vy wcel wa chgra cin c0 wceq cpw csn cdif wss cv wne wral cop copab
+      ineq1 eqeq1d pweq difeq1d sseq2d anbi12d ineq2 sseq1 opelopabg df-hgra
+      eleq2i syl5bb eleq1i blkssatm anbi2i syl6bb ) ACJBDJKZELJZABMZNOZBAPZNQZR
+      ZSZKZVDFTZASVJNUAKFBUBZKVAABUCZLJZVIVBVAVLHTZITZMZNOZVOVNPZVFRZSZKZHIUDZJ
+      VIVMWAAVOMZNOZVOVGSZKVIHIABCDVNAOZVQWDVTWEWFVPWCNVNAVOUEUFWFVSVGVOWFVRVEV
+      FVNAUGUHUIUJVOBOZWDVDWEVHWGWCVCNVOBAUKUFVOBVGULUJUMLWBVLHIUNUOUPEVLLGUQUP
+      VHVKVDABFURUSUT $.
+      $( [16-Dec-2006] $) $( [16-Dec-2006] $)
+  $}
+
+  ${
+    $d x y A $. $d x B $. $d y B $. $d x H $. $d y H $.
+    $( x and y are dummy. $)
+    hgralem.1 $e |- A = ( 1st ` H ) $.
+    hgralem.2 $e |- B = ( 2nd ` H ) $.
+    $( Lemma for various hypergraph theorems. $)
+    hgralem $p |- ( H e. HypGrph ->
+                    ( ( A i^i B ) = (/) /\
+                      B (_ ( P~ A \ { (/) } ) ) ) $
+      ( vx vy chgra wcel cv cin c0 wceq cpw csn cdif wss wa copab df-hgra
+      eleq2i c1st cfv eqeq2i ineq1 sylbir eqeq1d wb pweq difeq1d sseq2d
+      anbi12d c2nd ineq2 sseq1 elopabi sylbi ) CHICFJZGJZKZLMZUSURNZLOZPZQZRZFG
+      SZIABKZLMZBANZVCPZQZRZHVGCFGTUAVFAUSKZLMZUSVKQZRVMFGCURCUBUCZMZVAVOVEVPVR
+      UTVNLVRURAMZUTVNMAVQURDUDZURAUSUEUFUGVRVSVEVPUHVTVSVDVKUSVSVBVJVCURAUIUJU
+      KUFULUSCUMUCZMZVOVIVPVLWBVNVHLWBUSBMZVNVHMBWAUSEUDZUSBAUNUFUGWBWCVPVLUHWD
+      USBVKUOUFULUPUQ $.
+      $( [16-Dec-2006] $) $( [15-Dec-2006] $)
+  $}
+
+  ${
+    hgradj.1 $e |- A = ( 1st ` H ) $.
+    hgradj.2 $e |- B = ( 2nd ` H ) $.
+    $( The sets of atoms and blocks in a hypergraph are disjoint. $)
+    hgradj $p |- ( H e. HypGrph -> ( A i^i B ) = (/) ) $
+      ( chgra wcel cin c0 wceq cpw csn cdif wss hgralem pm3.26d ) CFGABHIJBAKIL
+      MNABCDEOP $.
+      $( [17-Dec-2006] $) $( [17-Dec-2006] $)
+  $}
+
+  ${
+    hgrablkconn.1 $e |- A = ( 1st ` H ) $.
+    hgrablkconn.2 $e |- B = ( 2nd ` H ) $.
+    $( The blocks in a hypergraph each connect to one or more atoms. $)
+    hgrablkconn $p |- ( H e. HypGrph -> B (_ ( P~ A \ { (/) } ) ) $
+      ( chgra wcel cin c0 wceq cpw csn cdif wss hgralem pm3.27d ) CFGABHIJBAKIL
+      MNABCDEOP $.
+      $( [17-Dec-2006] $) $( [17-Dec-2006] $)
+  $}
+
+  ${
+    $d H b $. $d B b $.
+    hgrablkne0.1 $e |- B = ( 2nd ` H ) $.
+    $( The empty set cannot be a block in a hypergraph. $)
+    hgrablkne0 $p |- ( H e. HypGrph -> A. b e. B b =/= (/) ) $
+      ( chgra wcel cv c0 wne c1st cfv wss wa wral wi cpw csn cdif eqid
+      hgrablkconn blkssatm sylib ra4 pm3.27 imim2i 3syl r19.21aiv ) BEFZCGZHIZC
+      AUHUIBJKZLZUJMZCANZUIAFZUMOUOUJOUHAUKPHQRLUNUKABUKSDTUKACUAUBUMCAUCUMUJUO
+      ULUJUDUEUFUG $.
+      $( [17-Dec-2006] $) $( [17-Dec-2006] $)
+
+    $( The number of atoms incident to each block of a hypergraph
+       is greater than zero. $)
+    hgrablkcard $p |- ( H e. HypGrph ->
+                        A. b e. B (/) e. ( card ` b ) ) $
+      ( chgra wcel c0 cv ccrd cfv wne wi wral hgrablkne0 ra4 syl csdm wbr cvv
+      wb 0ex cardsdom mpan card0 eleq1i syl5bbr 0sdomg bitrd pm5.74i sylibr
+      r19.21aiv ) BEFZGCHZIJZFZCAULUMAFZUMGKZLZUPUOLULUQCAMURABCDNUQCAOPUPUOUQU
+      PUOGUMQRZUQUPGIJZUNFZUSUOGSFUPVAUSTUAGUMSAUBUCUTGUNUDUEUFUMAUGUHUIUJUK $.
+      $( [17-Dec-2006] $) $( [17-Dec-2006] $)
+  $}
+*** Examples of hypergraphs
+
+  ${
+    $d A b $. $( b is dummy. $)
+    $( An ordered pair with an empty second element is a hypergraph
+       (with no blocks/edges). $)
+    emhgrat $p |- ( A e. B -> <. A , (/) >. e. HypGrph ) $
+      ( vb wcel c0 cop chgra cin wceq cv wss wne wa wral in0 ral0 pm3.2i cvv
+      wb 0ex eqid ishgrag mpan2 mpbiri ) ABDZAEFZGDZAEHEIZCJZAKUIELMZCENZMZUHUK
+      AOUJCPQUEERDUGULSTAEBRUFCUFUAUBUCUD $.
+      $( [16-Dec-2006] $) $( [16-Dec-2006] $)
+  $}
+
+  $( The null hypergraph ` <. (/) , (/) >.`. $)
+  0hgra $p |- <. (/) , (/) >. e. HypGrph $
+    ( c0 cvv wcel cop chgra 0ex emhgrat ax-mp ) ABCAADECFABGH $.
+    $( [16-Dec-2006] $) $( [16-Dec-2006] $)
+
+*** Pseudographs
+
+  $c PsGrph $. $( class of pseudographs
+                 (graphs with one- or two-vertex edges) $)
+
+  $( Extend class notation with the class of all pseudographs. $)
+  cpgra $a class PsGrph $.
+
+  ${
+    $d a b $.
+    $( Define the class of all pseudographs (hypergraphs with _edges_
+       that connect only one or two _vertices_ each).
+       Based on definition in [Diestel] p. 28, which uses the
+       name "multigraph".  (MathWorld's Eric Weisstein recommends against
+       using the term _multigraph_ because of differing meanings in
+       the literature; see ~ http://mathworld.wolfram.com/Multigraph.html .) $)
+    df-pgra $a |- PsGrph = { <. a , b >. | ( ( a i^i b ) = (/)
+           /\ b (_ ( a u. ( a ^m 2o ) ) ) } $.
+  $}
+
+  ${
+    $d a b P $. $d L a $. $d L b $.
+    $( a and b are dummy, but correspond to P and L in the final result. $)
+    ispgrag.1 $e |- G = <. P , L >. $.
+    $( Express the predicate "` G ` is a pseudograph."
+       
+       Because _V_ and _E_ are both used as symbols
+       (for the universal class ~ df-v and the epsilon relation
+       ~ df-eprel , respectively) in Metamath, we instead use ` P `
+       to represent _V_, the set of _vertices_ or _points_ of
+       the hypergraph, and ` L ` to represent _E_, the set of
+       _edges_ or _lines_ that each connect one or two vertices
+       in ` P `. $)
+    ispgrag $p |- ( ( P e. A /\ L e. B ) ->
+                    ( G e. PsGrph <->
+                      ( ( P i^i L ) = (/) /\
+                        L (_ ( P u. ( P ^m 2o ) ) ) ) ) $
+      ( va vb wcel wa cop cv cin c0 wceq c2o cm co cun wss copab cpgra ineq1 
+      eqeq1d id opreq1 uneq12d sseq2d anbi12d ineq2 sseq1 opelopabg df-pgra 
+      eleq12i syl5bb ) CAIEBIJCEKZGLZHLZMZNOZURUQUQPQRZSZTZJZGHUAZICEMZNOZECCPQ
+      RZSZTZJZDUBIVDCURMZNOZURVITZJVKGHCEABUQCOZUTVMVCVNVOUSVLNUQCURUCUDVOVBVIU
+      RVOUQCVAVHVOUEUQCPQUFUGUHUIUREOZVMVGVNVJVPVLVFNURECUJUDUREVIUKUIULDUPUBVE
+      FGHUMUNUO $.
+      $( [17-Dec-2006] $) $( [17-Dec-2006] $)
+  $}
+
+*** Examples of pseudographs
+
+/empty/
+
+*** Simple graphs
+
+  $c SmpGrph $. $( class of simple graphs
+                 (pseudographs with two-vertex edges) $)
+
+  $( Extend class notation with the class of all simple graphs. $)
+  csgra $a class SmpGrph $.
+
+  ${
+    $d a b $.
+    $( Define the class of all simple graphs (pseudographs whose edges
+       connect exactly two vertices each).
+       Definition in [Diestel] p. 2, which simply calls them
+       "graphs". $)
+    df-sgra $a |- SmpGrph = { <. a , b >. | ( ( a i^i b ) = (/)
+           /\ b (_ ( a ^m 2o ) ) } $.
+  $}
+
+*** Examples of simple graphs
+
+/empty/
+
+-----
+
+I think !HypGrph could also be defined as
+
+    df-hgra $a |- HypGrph = { <. x , y >. | ( ( x i^i y ) = (/)
+           /\ y (_ ( P~ x \ { (/) } ) ) } $.
+
+: Ah, the power set.  How could I forget /that?/  I'll try it out.
+
+Also, for theorems, you may want to consider the method of separating
+out the 1st and 2nds as hypotheses in the way
+that I am using for other kinds of
+structures such as groups and metric spaces, which I settled on after
+trying different methods.  I discuss the benefits of this approach in the
+[http://us.metamath.org/mpegif/mmnotes.txt mmnotes.txt] entry of
+4-Sep-2006.
+
+Unfortunately, both V and E are reserved constant symbols in set.mm, but
+perhaps you could use P and L (points and lines) or G and R (German
+Gipfel und Ränder) or S and B (French sommet et bord?[yes: several pages on the net 
+use this term; the terms "arête" and perhaps "arc" are also used for hypergraph --fl]) or
+A and B ("atom" and "block"; see the quantum logic
+connection in Definition 2.1 p. 4 of
+[http://xxx.lanl.gov/abs/quant-ph//0009039 Algorithms for Greechie
+Diagrams]).  Anyway, using P and L, we would structure theorems like this:
+
+    hyp.1 $e |- P = ( 1st ` H ) $.
+    hyp.2 $e |- L = ( 2nd ` H ) $.
+    xxx   $p |- ( H e. HypGrph -> (...theorem w/ Ps and Ls...) $=...
+
+: I think I'll use A/B for hypergraphs, and switch to P/L once
+I start dealing with typical 2-vertex edges; hypergraph "edges"
+can connect more than two vertices, so (to me) they're harder
+to associate with the "line" concept. -- [[file:steverod.org][steverod]] 15 Dec 2006
+
+Metamath will always be awkward compared with textbooks because it has
+to make explicit what in textbooks can be implicit, but so far this
+approach seems like a reasonable compromise:  e.g. you can instantly
+recover your pure 1st and 2nd versions by eliminating the hypotheses
+with [http://us.metamath.org/mpegif/eqid.html eqid].
+-- [[file:norm.org][norm]] 15 Dec 2006
+
+-----

@@ -1,0 +1,128 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I seem to remember a free software map that you could get display various cities.  Is there a way to merge this software with
+a database of locations to get it to show all the locations with
+hand-crafted population-size markers to show where people are concentrated?
+It would be pretty cool to be able to click on a location (say NYC,
+Minneapolis, or Atlanta, or Sweden, or wherever) and find out the contact info
+for people in that area.
+
+This relates to a fairly important "guerrilla organizing" tactic that
+I think we should be making use of.  Namely, we should have trusted
+"leadership" personel working in various places around the world.  These
+people can go talk to local people who we have messages for (for example,
+if we had a contact at Stanford, this person could probably arrange to
+speak with Knuth).  The map could be used to depict this kind of
+"leadership structure" in an easy to understand graphical way.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Do it as a Google Maps hack!  For example, there's the [http://www.ahding.com/cheapgas/ cheap gas Google Maps Hack]. 
+One could probably use this guy's code and feed in different coordinates (i.e., of people).
+
+--[[file:akrowne.org][akrowne]] Sun Jun 5 18:55:52 UTC 2005
+
+I'm almost certainly not going to do it that way... Google maps requires
+javascript, which I don't like; it isn't free software, which I don't like.
+I made a simple example with Xearth that I think is just fine.  Aside from
+the fact that the Xearth display isn't hypertexted (unlike page images in
+Noosphere which are), this seems pretty much sufficient.  I think it would be easy
+enough to use Xearth - the only trick is to get the latitude/longitude
+data, and to look it up by placename, and I suppose that isn't much of
+a trick at all.  Adding hypertext output to Xearth might be even more tricky,
+but the rest of the web interface is probably very easy to write.
+
+Here's the example I produced with the following data:
+[http://www.ma.utexas.edu/~jcorneli/n/viewfromhere.png view from here].
+
+  45.07   -93.38   "Minneapolis"
+  33.65   -84.42   "Atlanta"
+  40.77   -73.98   "New York"
+  19.42   -101.07  "Morelia"
+  32.12   -110.93  "Tucson"
+  60.36     22.18  "Vahto"
+  42.37   -71.03   "Boston"
+  44.55   -69.632  "Waterville"
+  37.75   -122.68  "San Francisco"
+ -22.54    -43.14  "Rio de Janeiro"
+
+
+--[[file:jcorneli.org][jcorneli]] Sun Jun 05 21:35:32 2005 
+
+What you did looks nice.  
+
+I am very attracted to lightweight, platform-agnostic, web-based applications these days.  
+
+I don't really see Google as "closed".  Google the application is implemented in a closed manner, yes, but 
+the APIs or interfaces to the Google /services/ are sufficiently open that you can build upon
+them in a way Google never thought of.   
+
+In terms of Google Maps, its unlikely any of us would really want to run the /application/ locally, so 
+as a /web service/, it is pretty open and useful.
+
+Anyway, it doesn't matter much, as long as the end result is the same (people can see a visual rendering of
+where project contributors are).  It looks like you've basically got the system built, though -- what is left
+to be done?
+
+--[[file:akrowne.org][akrowne]] Mon Jun 6 01:25:56 UTC 2005
+
+Associate names to the locations :) --[[file:rspuzio.org][rspuzio]] 5 June 2005
+
+Hypertext markers instead of text markers in the picture would be nice,
+though they aren't especially lightweight, and they aren't really necessary.
+
+We could also provide that info separately (e.g. with a pull-down menu that
+allows you to select from an alphabetized list of cities with appended
+parenthetical headcounts) and just use a non-clickable map to display the
+/number/ of users in a given area.
+
+For a minimally working solution, we'd want
+
+ * city name to latitude/longitude lookup
+ * counting the users associated with different cities
+ * an interface that makes it possible to rotate the view by
+choosing a city from a pull-down menu (easy enough to add - you specify the viewpoint on
+the commandline).
+
+This is pretty darn light-weight and platform agnostic.  And if we go this
+route, it shouldn't be too hard to finish!  
+
+I also worry that the display might get somewhat crowded (even just the names of
+70 cities in the default Xearth display are a bit overlapped) so perhaps
+something should be done to allow people to filter names out?
+
+As for Google, I think that web services should provide their source code and if
+they aren't likely to be used on other servers for one reason or another,
+pathways for in situ modification should be set up.  I have to allow myself to
+hold a few extreme views! :)  --[[file:jcorneli.org][jcorneli]] Mon Jun 06 06:59:40 2005 UTC
+
+Actually I think we could use the MAP program (which generates PM's hyperlinked page
+images) to hyperlinkify Xearth output, perhaps with some minor tweaking.
+
+I'm not sure what good your web services idea would do, except set up contention for
+who gets to control the state of a single instance system.  For instance, if someone 
+commits a change to Noosphere that I dont like or don't want to run as a part of PM, I
+will make sure to roll it back in the running instance, which I control (someone
+has to).
+
+--[[file:akrowne.org][akrowne]] Mon Jun 6 14:21:04 UTC 2005
+
+One added issue for the Xearth output is that you may have overlapping text.
+Implementing a hyperlinked version of this seems somewhat high-tech.  Maybe more
+challenging than page images.  A non-hypertexted version combined with a
+hypertext (but not map-based) location browser would end up accomplishing the
+same ends, basically, and would be more browser independent (e.g. one can't
+really use page images with Lynx).  So, I think we could just go for a simple
+display.  If you can send me the location array from the PM database, I'll hunt
+around for corresponding (and setwise-containing) latitude/longitude data and
+write some code to create maps given this input.  (One problem I ran into at
+Cycorp was that people would write locations in different ways, so you sometimes
+need a location parser! - hopefully things won't be that complicated here.)  The
+only thing we'd want after that would be a web interface, which I assume you
+could write later.  We can continue up discussion of the webservices stuff at
+[[file:merits and demerits of non-free webservices.org][merits and demerits of non-free webservices]] if you like.
+
+--[[file:jcorneli.org][jcorneli]] Mon Jun 06 17:01:50 2005 UTC
+
+Note also that google maps has legal restrictions so masher-b-ware:  http://slashdot.org/articles/05/06/08/203208.shtml?tid=217&tid=1 --[[file:jcorneli.org][jcorneli]]

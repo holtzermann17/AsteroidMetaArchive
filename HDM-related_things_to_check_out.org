@@ -1,0 +1,172 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Preface
+
+This page is (as the name says) related to [[file:HDM.org][HDM]].  If you don't know
+what that is, follow the link and then come back to this page.  Note
+to all helpful humanoids acquainted with HDM: fixing up this pages is one of
+the [[file:Focused HDM subprojects.org][Focused HDM subprojects]].
+
+For further discussion of this page, please see [[file:Discussion of HDM-related things.org][Discussion of HDM-related things]].
+
+*  Introduction
+
+One can look at the long list of [http://www.cs.kun.nl/~freek/digimath/ Digital
+Math by Alphabet] to see that the HDM project is a new entry on a already
+well-developed field of research (but it's old enough to be on the list!).  Some
+of the projects/resources that I have heard about from other sources and that
+have caught my attention are listed here.
+
+* Sorted items
+
+; [[file:Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM.org][Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM]] :
+HDM includes a formal math component.  The page linked to above describes /some/
+of the related work in this area that has caught our attention.  For a description our own
+efforts in this area, see [[file:hdm's formal system.org][hdm's formal system]].
+
+; [[file:Linguistics research and programs particularly relevant to HDM.org][Linguistics research and programs particularly relevant to HDM]] : HDM
+includes a linguistics component.  The page linked to above describes /some/
+of the related work in this area that has caught our attention.  For a
+description our own efforts in this area, see [[file:hdm's parsing system.org][hdm's parsing system]].
+
+; [[file:Issues in search particularly relevant to HDM.org][Issues in search particularly relevant to HDM]] : Search
+is often called the "fundamental operation" of AI.  (Or something like
+that.)  But can also stand on its own as a topic of inquiry.  The page linked to above describes /some/
+of the related work in this area that has caught our attention.
+
+; [[file:Digital libraries and DL projects particularly relevant to HDM.org][Digital libraries and DL projects particularly relevant to HDM]] : HDM is going to
+be a "digital library" (or maybe more accurately, a [[file:scholium system|scholia-based document.org][scholium system|scholia-based document]]).
+We take a somewhat broad view on what it means to be a "digital library", basically,
+any browsable online collection of documents or data qualifies.  The overlap with
+other areas is sometimes large (e.g. a DL related to linguistics might be categorized
+under linguistics, if it is mostly interesting from the linguistics point of view).
+In addition to digital library research, we're also interested in DL's that contain 
+a significant amount of mathematical content.  Mathematics /retrodigitization/ will
+be discussed in another section.
+The page linked to above describes /some/ of the related work in this area that has caught our attention.
+
+; [[file:Artificial intelligence work particularly relevant to HDM.org][Artificial intelligence work particularly relevant to HDM]] : The HDM
+project includes an AI component.  The subject area of mathematics is
+sufficiently large to make an "expert system" for math a daunting task 
+(but it is part of the project nonetheless!).  Furthermore, connections to AI
+exist through intersections with linguistics (and probably other areas as well).
+This section does not treat everything that might be classified as "AI" but
+rather, the projects and topics that can't be classified any other way.
+For a description our own efforts in this area, see [[file:hdm's ai system.org][hdm's ai system]].
+
+; [[file:Hypertext work particularly relevant to HDM.org][Hypertext work particularly relevant to HDM]] : Hypertext and AI are
+closely related in HDM; see [[file:Arxana.org][Arxana]].
+
+
+; [[file:Mathematical logic particularly relevant to HDM.org][Mathematical logic particularly relevant to HDM]] : The distinction between
+"mathematical logic" and "formal mathematics" may be a matter of taste, but
+I consider the mathematical logic stuff to be more "foundational" (and the other
+to be more computational).  Both are relevant to [[file:hdm's formal system.org][hdm's formal system]].
+
+; [[file:Representation language developments particularly relevant to HDM.org][Representation language developments particularly relevant to HDM]] : The
+"correct" way of representing math on a computer probably depends on the kind of
+math, its intended use, and perhaps a few other issues.  A number of groups are
+working on different ways of representing mathematics, for humans and machines.
+Some of the languages are those used by provers (see earlier section).  Our
+multipurpose math representation language is called [[file:h-code.org][h-code]].  This page talks
+about other math representation languages and theory thereof.
+
+; [[file:Educational issues particularly relevant to HDM.org][Educational issues particularly relevant to HDM]] : 
+When we have significant mathematical content on line, we want to write
+programs that will help people learn this content.  One of the
+topics that comes in here is automatic tutoring, but more angles can
+certainly be included.
+
+; [[file:Communication issues particularly relevant to HDM.org][Communication issues particularly relevant to HDM]] :
+Unlike the section on linguistics above, this section has more of a social
+component; it looks at communication within social contexts.   Certainly
+this relates to linguistics, but also to education and research, and a number of
+other things.
+
+; [[file:Philosophical issues particularly relevant to HDM.org][Philosophical issues particularly relevant to HDM]] :
+Philosophy is another catch-all; this section deals with self-proclaimed
+philosophers and writings about them.
+
+* Unsorted items
+
+; [http://www.math.gatech.edu/~belinfan/research/autoreas/index.html work] by [http://www.math.gatech.edu/~belinfan/research/ Johan G. F. Belinfante] : on set theory
+; computer algebra and symbolic manipulation systems : (mentioned by Ron Boisvert)
+; general field of Mathematical Knowledge Management : (mentioned by Ron Boisvert; this name was coined by Bruno Buchberger)
+; Symbolic Computing with LISP and PROLOG : (this just seemed like a reasonable textbook)
+; "Growing a Language" by Guy L. Steele, Jr. : (assigned in Dr. Lavender's programming languages class)
+; [http://zoe.nu/ zoe] :
+ "like google for email" (mentioned by Sacha Chua; note that google is now coming out with gmail...)
+; [http://leo.sourceforge.net/ Leo] :
+(rather like [http://www.ma.utexas.edu/~jcorneli/y/todl/notes my TODL idea] in some ways; mentioned by Sacha Chua)
+; [http://www.remem.org/ the rememberance agent] : (mentioned by Sacha Chua)
+; Syntax-directed program editors :
+search google or [http://citeseer.ist.psu.edu/cis?cs=1&q=Syntax-directed+and+editor&submit=Citations&co=Citations CiteSeer]
+ (mentioned by William Cook)
+; Intentional Programming : ([http://intentsoft.com/ example] mentioned by William Cook)
+; program development environments : most mainstream ones find all references to a given piece of code (mentioned by William Cook)
+; [http://www.acm.org/classics/dec95/ Program development by Stepwise refinement] : (mentioned by William Cook)
+; [http://www.usemod.com/cgi-bin/mb.pl?WikiMarkupStandard some (idle?) talk about making a standard for wiki] :
+; [http://www.cs.utexas.edu/users/kbarker/ Ken Barker]'s [http://www.cs.utexas.edu/users/kbarker/thesis/thesis.zip thesis] :
+; [http://www.isi.edu/research.html#Autonomous_Agents autonomous agents] : (mentioned by Karen Fullam)
+; [http://www.comp.leeds.ac.uk/qsr/ QSR group at Leeds] : (mentioned by Chip Masters)
+; [http://www.cecm.sfu.ca/~pborwein/ Borwein] : (mentioned by Joel Foisy -- actually these guys come up a lot)
+; [http://www.cs.northwestern.edu/~forbus/ Forbus] : (works with Cycorp on NSF grants)
+; [http://www.opencyc.org OpenCyc] : (part of Cyc, under a free license)
+; book-mode by Wm. Schelter :
+; [http://sourceforge.net/projects/maxima Maxima] : Quote from !SourceForge: "Maxima is a fairly complete computer algebra system written in lisp with an emphasis on symbolic computation. It is based on DOE-MACSYMA and licensed under the GPL. Its abilities include symbolic integration, 3D plotting, and an ODE solver."
+; [http://www-db.stanford.edu/~ullman/ialc.html "Introduction to Automata Theory, Languages, and Computation"] : "A completely revised edition of the Hopcroft-Ullman automata book from 1979 (Addison-Wesley) was published in November, 2000. Rajeev Motwani is a new coauthor. The revised edition features more explanations and intuition, more applications, and a selection of topics with an eye toward balancing the need for relevance with the need to master the foundations of computer science." A review of the Table of Contents suggests that this is an excellent source of foundational material. Unfortunately, this textbook is not available without remuneration in Planet Dirt (Earth?) currency units. However, the enterprising scholar should encounter few difficulties obtaining sufficient currency units within the ludicrously primitive economic system used on the planet.
+**  other contacts
+
+; [http://ttic.uchicago.edu/~dmcallester/ David McAllester's Personal WWW Page] :
+; [http://www.ece.purdue.edu/~qobi/ Jeffrey Mark Siskind's Personal WWW Page] :
+
+**  Links from the original HDM essay
+
+; [http://www.gnu.org/home.html GNU] : (free software)
+; [http://www.cs.berkeley.edu/~fateman/ Richard Fateman] et al.'s OCR project
+; [http://infty.math.kyushu-u.ac.jp/index-e.html Infty] research project, Masakazu Suzuki et al.
+; [http://bbdb.sourceforge.net The Insidious Big Brother DataBase ] : (simple program that "notices" and stores contact information found in emai
+; [http://dev.null.org/dadaengine The Dada Engine] : (automated text generation, albeit random)
+
+**  Black sheep
+
+related things but the relationships and/or the things themselves are seen, at least by some, as being somewhat dubious.
+
+; chatbots :
+; [http://casl.csa.iisc.ernet.in/Standards/I2O/TechBack.htm I2O] : (for the other important definition of HDM in computing)
+; [http://www.msu.edu/user/corcora5/velo/velodict.html Towards a bicyclist dictionary] : (comes up in websearch for "hyperreal dictionary")
+
+**  O'cat-contributed links (re: Feasibility)
+
+
+; [http://math.nist.gov/mcsd/highlights/mkm2004.html Lozier Presents Keynote Lecture on Mathematical Knowledge Management February 2004] :
+; [http://math.nist.gov/~DLozier/ Dr. Daniel W. Lozier] :
+; [http://dlmf.nist.gov/ Digital Library of Mathematical Functions] :
+
+**  Newspaper clippings
+
+; NYT Chess column by Robert Byrne, Dec. 11, 2005 "With Everything in Databases, Top Players Must Work Harder" : 
+An interesting take on the role of computers in the way people play chess.  "One product of all of this scholarship
+is that the most talented players are getting fewer free rides."
+
+; Chicago Tribune, Nov 27, 2005, "Plugged-in Proust; Has e-lit come of age?" :
+Mentions [http://caxton.stockton.edu/rettberg/ Scott Rettberg] (New Media Studies at Richard Stockton College of NJ) and
+[http://web.media.mit.edu/~wjm/ William J. Mitchell] (Media Arts and Sciences at MIT).  Quote: "The idea of
+the book as an inert entity is gradually giving way to the idea of the book as a fluid, formless repository for an 
+ever-changing variety of words and ideas by a constantly modified cast of writers."  Also mentions
+an Amazon service where people can order portions of a book rather than the whole thing (reminiscent of Ted Nelson stuff). 
+
+**  New or new-ish
+
+; [http://theory.uwinnipeg.ca/gnu/calc/calc_175.html TeX language mode for Emacs Calc] : 
+
+
+; AI repository : http://www.cs.cmu.edu/afs/cs.cmu.edu/project/ai-repository/ai/0.html
+
+; http://electricsheep.org : Distributed android dreams.
+
+; http://en.wikipedia.org/wiki/Total_Information_Awareness : These folks were getting set
+up to do good work in citizen surveillance, etc., when they were prematurely shut down. 
+Their work has allegedly been taken over by the Disruptive Technology Office
+(see [http://kurtnimmo.com/?p=247 this]).  

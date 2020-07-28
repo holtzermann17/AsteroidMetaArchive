@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+This is an overview of Noosphere, following up on R. Milson's article about
+[[file:Adapting CBPP platforms for instructional delivery.org][Adapting CBPP platforms for instructional delivery]].  We can orient some
+sections towards people who might like to use Noosphere in an instructional
+or other specially-deployed setting, and other sections towards people
+who might be interested in doing R&D that would enhance Noosphere's
+usability in this regard (and perhaps the development of other tools
+for similar things, like the [[file:scholium system.org][scholium system]]).
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 04:30:34 2005 UTC
+
+Note: it might be nice to get material from R. Milson to add here.
+
+Here's what I can come up with on short notice and by myself:
+
+* Using Noosphere as an educational tool
+
+Noosphere, the software that underlies PlanetMath, can be added to a
+math-education environment, to use in creating a shared knowledge base about a
+given topic.  Like on PM, the software automatically links related terms (which
+can make writing useful documents easier).  It also provides correction and
+discussion facilities, which can can complement in-class discussions, and which
+provide a more dynamic and interactive experience than traditional course notes.
+
+* Improving ease of installation
+
+While Noosphere can be be installed on any "reasonable" system today, it takes a
+bit of set-up work.  We hope to be able to improve the situation in the future,
+but funding to support improvements to the Noosphere installation process would
+help more people get started using the system.
+
+----
+[[file:AM Infopacks.org][AM Infopacks]]

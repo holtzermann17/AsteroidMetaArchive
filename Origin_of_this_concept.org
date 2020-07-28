@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+When examining how theorems are used by mathematicians, one notices an interesting fact.  Not only are they statements of fact, but they are also used as a device for generating further truths.  This is especially true for the special kind of theorem called a lemma whose chief value lies exactly in its use as a stepping-stone to further results.  In this entry, we shall examine how this works more closely in practise with an eye to formalizing the concept involved.
+
+To start, consider a a simple example, the law of cosines.  This theorem may be stated as follows:
+
+Let /a/, /b/, /c/ be the sides of a triangle and let /A/ be the angle opposite to A.  Then
+/a&sup2; = b&sup2; + c&sup2; - 2 b c/ cos /A/.
+
+In practise, this theorem might be used in the following circumstance:  In the course of a geometrical demonstration, we might prove that a certain polygon /P/ is a triangle and that the lengths of the sides of this triangle are /x + y/, /x + 3 y/, and /3 y + x/ and, furthermore that the angle opposite the side of length /x + y/ equals /&theta; - &phi;/.  From this information, we would conclude that
+
+: (x + y)&sup2; = (x + 3 y)&sup2; + (3 y + x)&sup2; - (x + 3 y) (3 x + y) cos (&theta; - &phi;)
+
+Let us replay that in slow motion.  In the course of our geometrical demonstartion, we arrived the following facts:
+
+ 1. /P/ is a triangle.
+
+ 1. The length of the first side of /P/ equals /x + y/.
+
+ 1. The length of the second side of /P/ equals /x + 3 y/.
+
+ 1. The length of the third side of /P/ equals /3 x + y/.
+
+ 1. The size of the angle opposite the first side equals /&theta; - &phi;/.
+
+From these statements, we drew the following conclusion using the law of cosines:
+
+&there4; /(x + y)&sup2; = (x + 3 y)&sup2; + (3 y + x)&sup2; - (x + 3 y) (3 x + y)/ cos /(&theta; - &phi;)/
+
+In light of this usage, we may view the law of cosines as a recipe for coming up with new geometric statements from old geometric statements.  In light of this interpretation, we may restate the law of cosines as follows:
+
+Suppose that you know five premises of the following form:
+
+ 1. *T* is a triangle.
+
+ 1. The length of the first side of *T* equals *a*.
+
+ 1. The length of the second side of *T* equals *b*.
+
+ 1. The length of the third side of *T* equals *c*.
+
+ 1. The size of the angle opposite the first side equals *C*
+
+Then you may draw the following conclusion:
+
+: &there4; *a*&sup2; = *b*&sup2; + *c*&sup2; - 2 *b c* cos *A*
+
+Notice that in this version of the theorem, certain symbols appear in boldface.  This is to indicate that these symbols are some kind of placeholder or wildcard which can stand for the name of a mathematical object or a description of an object.  All that is important is that these placeholders be filled consistently --- if one substitutes 15 for *a* in premise 2, then one is obliged to substitute 15 for *a* in the conclusion as well.  To do otherwise is trickery more becoming a fast talking salesman who talks a customer into buying a nice shiny car and delivers a rusty lemon than a mathematician.  Viewed this way a theorem is a template for deductions.  Colloquially, it is like a order form in which one fills in the blanks with the appropriate information.
+
+[[file:Discussion of origin of the concept of theorem as transformational rule | Discussion.org][Discussion of origin of the concept of theorem as transformational rule | Discussion]]
+
+Back to [[file:theorems as transformational rules.org][theorems as transformational rules]]

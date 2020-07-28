@@ -1,0 +1,982 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+
+* Essay
+
+I've been thinking about using scholium system ideas in the political and
+business arenas.  Here are a few of the thoughts about this.
+
+First, let's imagine a store like !WalMart or Amazon or Ebay or whatever.  But
+let's imagine it as being run more like a co-op and less like a "corporation".
+Let's imagine that it is run as free software, with maintainers instead of
+"managers".
+
+At some future point in time, like !WalMart, it might have its own distribution
+network and even its own suppliers and producers.  But we'll start small and
+think about how to get good food that you want at a good price.  Say, some oats,
+because - as I heard the story - that's how co-ops got started: a bunch of
+hippies going in on a big bag of oats so that they all could get some more
+cheaply than they would if they each bought a canister of the Quaker variety.
+
+(Of course, co-ops then and now also cater to people with "special" tastes -
+they usually like organic foods, social justice, etc. -- but I'm going to ignore
+these things for now.)
+
+How do you get the oats for cheap?  Well, you could buy them at a local co-op.
+If there is no local co-op, you could see if there is some distributor that you
+could use to start a local co-op.  Oh yeah, and you might need to find some
+friends to go in on the oats with you if you want it to be really
+cheap...  there is some cost-benefit analysis to do, like, would it be better to
+buy the amount you personally want to use at the local co-op, or would it be
+better to go through a distributor yourself?  Maybe the only way the distributor
+could make things cheaper would be if you bought 100 sacks, and you might not
+want to do that.
+
+So, there are various things to coordinate, both understanding the supply side
+and understanding (and amassing) the demand side.
+
+This is just working through the historical example of co-ops.
+
+Now... let's say that you decided that the best way to get oats for cheap was to
+start your own co-op.  But you say, this worked so well for oats, let's do it
+for soap, and oil, and cleaning products, and... all sorts of stuff.  So now
+we're in the business of coordinating lots of different products, different
+people, different tastes; we'll probably need some space to store things locally
+or at least a good way to get the stuff delivered or picked up.  Its
+complicated, but this is what co-ops do.  So.
+
+OK, how are we going to coordinate things?  This is where the model diverges
+somewhat from the historical co-op model.  Instead of having management who gets
+paid, we have some hackers who design a system that the whole co-op community
+can easily use to say what they want to buy -- and to give feedback on products
+in general.
+
+So, for example, someone says "Well, I want to buy Coca-Cola".  So, Coca-Cola
+appears in the system.  Poof.  Someone else says, you know, there is supposed to
+be an international boycott on Coca-Cola for such-and-such reasons, I'd
+personally much rather not have this co-op carry Coca-Cola and I certainly won't
+buy any if it is carried, however, I can suggest a related product that is not
+too much more expensive that, people generally agree, is better.  Then these
+folks hash things out.  If there is sufficient demand for Coca-Cola, it probably
+gets stocked, otherwise, it doesn't.  But the detractors get a chance (because
+we're using a scholia-based model) to make everyone who buys Coca-Cola aware of
+the implications.  And they can do their best (as they feel motivated) to find
+and provide other alternatives.
+
+And so on and so forth.  If something is a health hazard, people can say "hey,
+don't buy this, it could kill you!", and after sufficient debate, maybe the
+thing won't be stocked any more.  If something is great, people can say "hey,
+this is great, you should buy it!", and then, presumably, people will.
+
+The important thing about this model is that it is knowledge-based.  If you want
+to find out about where, say, your place-setting came from, you can do research
+and find out, and add this information to the system.
+
+It has potential to be a very hyperreal thing - like the HDM, but for shopping,
+and, more generally, for world economics.
+
+After a while, techniques for production can be explained, social justice issues
+can be hashed out by the people who care about them.  And so on - this thing has
+the potential to be a very big deal.
+
+Now, one question is, how can such a system actually change patterns in the real
+world?  Well, one thing is by helping awareness about different products grow.
+E.g. you might be able to buy something that is a health hazard or the cause of
+some great social or environmental bruhaha /elsewhere/, but the product and
+its implications can still be discussed in "Co-opMart".  So, it increases public
+awareness.  Another way is simply by undercutting.  If this store can provide
+things that people want more cheaply than the competition, they will buy things
+at this store.  If these things are made in a way that people like for other
+reasons too (e.g. social justice) that comes as a hidden bonus.
+
+It is also a very democratic system - if enough people want to buy, say,
+non-recycled paper, it will get bought, even though others may raise an outcry.
+"Social justice" is not to be determined by tyrannies of the minority, but by an
+algorithm that takes demand into account, and, indeed, is essentially just
+driven by demand.  Now, for the person who lives down-wind from a papermill and
+hates this, they can do their damndest to make buying non-recycled paper seem
+like a bad thing.  But other people are free to ignore them or to say "you don't
+like it?  why don't you move?" or whatever.
+
+And thus we recover all of the complexities of "real world" politics in this
+system.  And these too should be worked out by a "democratic" system.
+Politicians may be people who care especially about some issues, but anyone
+should be able to get their voice heard by people who wish to hear it.
+
+End of story.
+
+* Postscript
+
+Note: this essay doesn't necessarily make it 100% clear that "buying locally"
+would often be a "good thing" in the system that is described.  I figured that
+was obvious, but then all my examples made it seem otherwise.  Thinking about
+designing this system so that it works well in lots of diverse locations and for
+many different people with different tastes /is/ something like 99% of the
+point.  So, please keep these things in mind as you read.  Also, if you're reading this and you get stuck on the first sentence with the question "what is a scholium system?" you might want to read [[file:first introduction to scholium systems.org][first introduction to scholium systems]] before diving into the rest.
+
+* Links of interest
+
+I don't agree with everything, but this is remarkably close, so
+check it out: http://www.strangelove.com/
+
+* Discussion
+
+Compare [[file:free culture as a labor issue.org][free culture as a labor issue]] for another essay on a similar
+theme coming from a different perspective. --[[file:jcorneli.org][jcorneli]] Mon May 23 20:34:44 2005 UTC
+
+A couple points, for an extremely brief (sorry) reading:
+
+ 1. Why should coordination of general activity be "democratic"?  
+
+ 1. Why should a product most consider harmful be made unavailable to me if I
+still want it and it can be provided to me at a non-loss?
+
+A tyranny of the minority is not the end of our worries in a democracy, indeed,
+if it is functioning optimally, the tyranny is of the majority.  The fact that
+one is also usually in the majority should be little comfort when one takes into
+account the fact that the co-op system makes decisions along many dimensions,
+therefore the probability that one ends up in the minority of a minority of
+these dimensions is essentially guaranteed.  And a tyranny is not any less so if
+the decision is made by an algorithm after factoring individual inputs.
+
+Basically, I find no solace in democracy where it can be avoided.  I consider it
+a necessary (which is debatable) evil in arenas where it seems there is no
+option other than universal standardization on some solution.
+
+The second point is that I think for the most part, what you are saying is a
+very good idea.  You are saying that scholia could be used to improve the
+information that fuels economic coordination.  Yet, I would also point out that
+this is already happening.  Thinking about this scholia stuff recently, I
+realized that the web itself is already a scholium system.  Any part of the web
+can consist of superimposed information about any other part of it, through the
+mechanism of hyperlinks.  True, there is no formal "marking" or "typing", but
+these things can usually be done informally.
+
+I've noticed in the past few years that the web has exploded with scholia-like
+information which seems to have as its goal the provision of more perfect
+information in the marketplace (or you can generalize, to more perfect
+information about decision-making in life in general).  The internet is
+overflowing with meta-services which rate, recommend, establish reputations
+(just look at eBay), review, aggregate, filter, and select.  Most of these are
+commercial innovations, often because some third party can always profit by
+helping consumers to make more efficient decisions about other products and
+services.
+
+Anyway, I've been glad to see this, and hoping for more
+scholia-like/superimposed-value-addition activity, especially on the part of
+consumers.  In effect these things are better than unions or co-ops, because
+they provide all the information needed for individuals to make decisions that
+save money or protect themselves, but do not force them to do anything.  I would
+certainly like to see more of these things that are truly independent from large
+corporate players (relative to various markets).
+
+--[[file:akrowne.org][akrowne]] Mon May 23 23:23:16 UTC 2005
+
+Let me add also that I think the explosion of "more perfect market information"
+on the web is also improving and transforming markets, and dare I say
+capitalism, in general.  I think there was a lot of pent-up potential for this
+kind of activity, because no low-cost, universal, scholium-like system existed
+for consumers to use previously.  The web provided this, and I think this is
+being subconsciously recognized as one of the key values of the web, as opposed
+to the mere "digital relocation" of services that seemed to fuel the dot-com
+bubble.  Why a company was going to get filthy rich because it was selling cat
+food online instead of off is beyond me, but why a third party company might
+profit from providing consumer's forum rating and reviewing cat foods is pretty
+obvious (and more importantly, that the consumers themselves will profit).
+
+--[[file:akrowne.org][akrowne]] Mon May 23 23:34:38 UTC 2005
+
+
+The way I'd address your questions are as follows.  The answer to questions 1
+and 2 is really the same at its basic level, but the expansions can go in two
+different directions.
+
+First though, /nota bene/ - just like you don't much care for the word
+/encyclopedia/ to describe PM's "encyclopedia", /democracy/ in a traditional
+sense is only an approximation of what would be going on in the system I'm
+thinking about.
+
+But the reason for deciding things /democratically/ (bearing in mind that this
+is a somewhat different use of the term than you might initially think of) is to
+assemble some "bulk buying leverage" after discovering what it is that people
+want to buy.
+
+The reason for /not/ stocking something that most people consider harmful
+something that if used as directed kills you /and/ (unlike cigarettes) has an
+otherwise-perfect substitute that doesn't have this effect -- is that most
+people won't want to buy such stuff once they /know/ that it will have this
+effect.  Basically it comes down to bulk buying again.
+
+That's the simple cop-out answer (but still, it packs a bit of a punch).
+
+The other way I can think of to look at the question about "buying at a
+non-loss" is more complicated: it basically boils down to the question of
+/regulation/ in general.  For example, let's say we were considering the
+product adrenalchrome, which, as legend has it, can only be obtained by
+sacrificing a live, terrified, human being.  
+
+So, if I was in charge, I might say "fine" - you want it, it can be bought, its
+gonna cost you, but sure, no problem, if you want to pay, we'll find you some
+adrenalchrome.  But there would very likely be a huge outcry, I would be hunted
+down by the police, and it would probably be good-bye Co-opMart.
+
+Other than extreme cases like this, the basic point is that if /you/ are the
+only person buying some good, there is really no added benefit of going through
+a middle-man (unless it was to arrange shipping or something like that).  In
+general, if something comes at a "non loss" and isn't illegal, then, yes, it
+would probably be available in the system.  But maybe not forever; you might
+look at this system as a way of shaping future laws -- if people object to the
+presence of some product on social justice grounds, for example, it might drive
+demand for that product down to the point where the product is no longer
+available at a non-loss.  In a way, the scholium system and its particular
+version of "democracy" act as a "certificate" that people can use to assure
+themselves that the thing they are buying is something they want to buy.
+
+I'm confused about your comments on "tyranny" in general.  I'd like to get a
+more clearly-spelled-out transcript of your thoughts on this and on "democracy"
+and/or alternatives - it seems like you have some alternatives in mind that you
+like better.  Maybe you don't object so much to the version of democracy I'm
+talking about here?   You certainly don't seem to be arguing against the main
+point of this scholium-system-for-business, which is that making more
+information available will help people make better buying choices.  You seem to
+agree that this is a good thing.  And this is the principle that is at the root
+of what I meant when I said "democracy" in the essay.
+
+You are saying that "this sort of thing is already happening", and I think the
+Strangelove link I provided above says something similar.  I'd agree that you
+can get more information now than before, and that much of it is scholia-like.
+But this is a bit like saying that "math is already a prototypical hyperreality"
+- sure, I agree, but I also think that the future has much more to offer.
+Whether you call this stuff "the web" or a "scholium system" or a "semantic
+web", it seems fairly inevitable that lots and lots more information of all
+sorts and all sorts of structures will be available to more people, more
+readily.
+
+However, I don't think that the co-operative nature of the business that I'm
+talking about in this essay is inevitable, indeed, I think that it would be a
+lot of work to put something like this together.  I'd personally like to advance
+the hypothesis that
+
+  This : WalMart :: GNU : Microsoft
+
+but time (and maybe some more & deeper theoretical investigations!) will tell.
+
+--[[file:jcorneli.org][jcorneli]] Tue May 24 02:49:30 2005 UTC
+
+"Democracy" is a slippery word.  I wasn't at first sure whether you were using it in a 
+global context, e.g., what can a scholium environment do for /government/; or a micro
+context, as in how can scholium facilitate /democratic organizations/.
+I tend to think it matters because one of these contexts is voluntary and free,
+and the other isn't.  A lot of my comments assumed the former, but it seems you were 
+talking about the latter, voluntary one.  So you can discard most of my comments.
+
+I like the "this:WalMart::GNU:Microsoft" association.  It does get across succinctly
+what you are saying.  
+Its interesting what is going on here-- it is almost like "DIY vs. having someone else do
+the work for you" (including the thinking.  Perhaps /especially/ the thinking.)  If you
+are interested in taking on more work or thinking harder instead of paying more money, you 
+go with the DIY method.  
+
+I also think that the role juxtaposition of WalMart and Microsoft is apt in many
+ways.  They're both huge.  They both exploit economies of scale and have a lot
+of bargaining power.  They both tend to crush smaller competitors in overlapping
+markets.  However, there are a few crucial differences.  One is how much the
+middle man actually makes.  In businesses like WalMart's, profit margins are
+razor-slim; 3.65% to be exact.  Theirs are toward the lower end for a consumer
+goods retailer, since their gimmick is being super-low-cost.  On the other hand,
+Microsoft's margins are huge-- 28.89%.  It is intuitively obvious why this is
+so: Microsoft has one sunk cost for development, then every additional "unit" it
+sells costs them almost zero.  They have no cost of goods sold!  I'm not sure
+how they settled on a reasonable profit-margin; maybe they threw darts at a
+board.  Maybe they had complex models to tell them how much they could make
+before grandma would opt not to have a computer at all, to say nothing of
+switching to GNU.
+
+Immediately, this  begs the question of what exactly the point would be to co-oping in 
+place of shopping at WalMart (replace here any other retail business with a similar profile).  
+3.65% doesn't exactly sound like an unreasonable price for the logistics and delivery WalMart
+affords.  Also built into that is /their/ bulk bargaining power.  I would be impressed if 
+you could co-op on something WalMart does and actually beat them overall, even leaving out
+your extra work expenditure.
+
+The point is, I think, that the market is already very efficient, via price signals alone.
+In certain sectors, you may be able to optimize by using scholium systems to coordinate 
+collective bargaining, but I think perhaps the real potential of these systems is 
+reinforcing the same dynamics that start with price signals and are amplified via
+competition.  But I haven't thought about this enough to clearly justify this claim.
+
+There are more ways that WalMart is nothing like Microsoft.  For example, since Microsoft
+has no cost-of-goods-sold, obviously there is nothing producer-side on which to use its
+bargaining power (to lower costs).  So instead they use their bargaining power on the
+consumer-side-- to raise costs!  They do this by choking OEMs ("The Microsoft Tax" you get
+when you buy a new computer), corporations, and governments (bulk buyers).  This is all enabled by the 
+extreme viral nature of their software (forced obsolescence and network effects), which is
+enabled by the digital nature of the space they thrive in (or shall I say, "infect"...)
+
+As I see it, there are many more reasons to find alternatives to Microsoft than for WalMart.
+Its actually quite sad that the anti-corporate corporate crowd cannot see how much worse one
+is than the other, and additionally sad given how much more important the digital world
+is becoming.  
+
+So what am I getting at?  That I think there is less hope, and less impetus for, the
+application of scholium methods to the (partial or total) replacement of real-world markets
+with noncommercial cooperation, in a fashion similar to how free/open source replaces
+commercial software.
+
+I do, however, think that they could really go to the core of government
+systems.  Right now citizen participation in the deliberatory processes of
+government are a humongous joke.  This could be changed radically.  Consider the
+problem of corporations being in bed with government.  I think that in large
+part this is because it is simply impossible to interact in a meaningful way
+with the huge regular-person populous.  It is much easier to meet with
+representatives of the largest corporations, with the weak excuse that helping
+them also helps their consumers, whom are the citizens.  Digital government
+could really start to change this.
+
+--[[file:akrowne.org][akrowne]] Tue May 24 03:13:26 UTC 2005
+
+Actually, the book on strangelove.com looks really bad.  It is so gleeful in its distain
+for capitalism that it blinds itself and misses some critical things that utterly undermine its claims and
+predictions.  It takes grains of truth and makes a sandhill out of them.  It takes new things
+and construes them as every thing.  The book highlights discrete examples as "proof" of
+the deprecation of "the old system", repeating the classic fallacy of using anecdotes as
+a proof of some universal truth.
+
+Comments on some excerpts:
+ 
+: the Internet and new digital communication technology actually undermine the power of
+ capital,  producing an alternative symbolic economy.
+
+To some extent.  But all I think this often does is create commerical opportunities with lower start-up
+costs.  There are still "territories" to be occupied by corporations, except their 
+boundaries are now demarcated by interest, attention, and memes.  There is still a place for
+capital in "scaling up" an effort to handle delivery with a high, professional quality of
+service, and cover that pesky minority set of service provision that you can't reach without 
+a /lot/ more in terms of human resources (hiring developers, hiring customer service
+staff, hiring systems support staff, hiring salespersons, promotional people, lawyers,
+ad nauseum).
+
+I've directly encountered a lot of these issues on PlanetMath.   If there were no need for 
+capital, we wouldn't be desperately searching for funding right now.
+
+The dynamics are different in cyberspace, but capitalism is still inherently necessary
+and useful because there /still are costs/.  The goal has shifted from product sales to
+service provision.  In service provision, the steepest costs are human resources.  And they
+are steep indeed.  The book completely misses the boat.
+
+: the Internet breaks with the capitalist logic of commodification 
+
+Yes, but only for intellectual property.  eBay is still very useful and very capitalist
+and very commodified, and it ain't goin' away.  In fact, its one of the killer apps of the
+internet.
+
+: while television produces a passive consumer audience, Internet audiences are more active,
+ creative, and subversive.
+
+Not really.  While the internet enables /some/ people to act more in this fashion,
+most don't seem interested in going beyond being passive consumers.  I would argue that it is 
+very important and socially-transformational that these motivated, creative people-- the
+tail of the bell curve-- have been empowered and enabled.  These people make CBPP a success.
+But most people use the internet as a platform for cheap communication, playing games, and
+viewing virus-laden diversional email attachments, not being creative or subversive.
+
+: Writers, activists, and artists on the Internet undermine commercial media and its
+ management of consumer behaviour
+
+They create a strong /alternative/.  There is a lot of truth here.  Bloggers
+managed to chase Trent Lott out of politics and Dan Rather out of broadcasting.
+This is a good thing.  People with different values and points of view are no
+longer /excluded/ from broadcasting and having mass influence.  But commercial
+media is free to respond, and it has, and it will.  Emergent media, lets call
+it, is only a competitor.  And it turns out there is a really easy way to be a
+crappy media outlet and still rake in the bucks: tell people what they want to
+hear.  Politics suffers the same problem.  Politicians are only half of the
+problem: the other problem is that most people want to be lied to.
+
+: .. the Web's tendency toward the disintegration of intellectual property rights.
+ Case studies describe the invention of new meaning given to cultural and consumer icons  
+ like Barbie and McDonald's ...
+
+What a funny thing to waste time on.  I've never heard of any new meaning given by subversive
+internet people to Barbie and McDonald's, and I'm practically in the super-internet-user
+category.  When something "makes it big" on the internet, I know about it.  This comes back
+to what I said earlier: attention and interest are still limitations.  
+
+: The Empire of Mind also makes apparent that digital piracy will not be eliminated. The 
+ Internet community effectively converts private property into public, thereby presenting 
+ serious obstacles for the management of consumer behaviour and significantly eroding brand  
+ value. 
+
+Correct, piracy won't be eliminated.  This is the nature of the internet.  Its not that 
+people are distainful of IP, its that its impossible to /force/ any digital IP on people
+which they aren't willing to voluntarily accept.  But commerce has always operated largely
+/without being able to assume deadly force to meet its ends; the recent regime of coercive 
+over-IP is just that-- recent.  I would like to see it rolled back, and the realities of
+the internet are challenging it.  
+
+But I don't see how any of this erodes brand value.  Brands provide convenient cognitive
+affordance.  They bind notions of quality to a product and provider.  Cognitive affordance 
+is a pillar of Human Computer Interaction, even, which I think says something about how 
+branding is a result of psychological constants that the internet isn't eliminating.
+
+: Much to the dismay of the corporate sector, online communities are disinterested in the
+ ethics of private property. In fact, the entire philosophical framework on which 
+ capitalism is based is threatened by these alternative means of cultural production
+
+Come again?  Most people in "online communities" (who are also in offline communities)
+will still not want you to take their physical property from them.  As for intellectual
+property, most would agree that a "no IP rights" situation is bad, with even the most
+rudimentary understanding of what IP is supposed to do (encourage creation).  
+
+The book does not even take a very "scholiumific" view of IP, where creations become permanent artifacts
+and change and commentary create new ones.  In this model, a creator is a permanent attribute
+of an intellectual creation, and thus they have permanent and perpetual ownership of the
+"goodwill" benefits that flow forth from them, such as reputation, recognition, and fame.
+
+--[[file:akrowne.org][akrowne]] Tue May 24 04:39:58 UTC 2005
+
+Since it is late I will confine myself to a few brief observations, thoughts,
+and anecdotes.
+
+In a way, a scholium system for merchandise is a lot like what we already have.
+Pick up a random box of stuff in a store and you will see a lot more on it than
+simply a label of the contents and the name of the manufacturer.  You will find
+things like nutrition listings, ingredients, suggested recipies, health risk
+warnings, disclaimers, OSHA data, seals of approval from organizations such as
+Good Housekeepinng and Underwriter's Laboratory, advertisements for other
+products, coupons, proofs of purchase, comments from buyers, etc.  These
+constitute scholia.  As I see it, what your proposal would do is to automate and
+hopefuly expedite the procedure of attaching such scholia to products and do
+away with selection by the manufacturer so that even negative comments will
+appear.  Now, the only way that negative comments appear is when they are forced
+to appear by law.
+
+As for "democracy", the term has been used by so many people in so many
+different ways that its meaning is about as fixed as the meaning of "a" in
+algebra.  Unless one's aim is to bamboozle people by using one meaning while
+using another, it is a good idea to to specify which definition is being used.
+
+From my personal experience in activism and observation, here is part of my
+perspective on coroprations, politicians, and citizen involvement.  To stay in
+office, a politician needs two things --- funds and votes.  To obtain the fomer,
+politicians court businesses.  The politician knows that it is imperative to
+meet at least some of the companies' demands or they will cut off funding.  To
+obtain the latter, politicians court the people.  However, in this case, if they
+do not meet the peoples' demands, it is not so certain that they will suffer.
+Too many people are apathetic, they won't vote, or they will forget about the
+issue in question which offended them, or they can easily be persuaded otherwise
+with ease.  Therefore, there is typically little to be lost in ignoring the
+demands of the people.
+
+As a counterexample, I will cite the increasing influence of fundamentalist
+Christians in American politics.  As I see it, the reason for this is simply
+that it is clear that, if fundamentalists disapprove of a certain politician's
+policy, they will turn out to vote and cast their ballots against the politician
+in question.  Hence, they have an influence disproportionate to their proportion
+of the population.
+
+However, when it comes to other groups and interests, such as labor or civil
+rights, it is not so clear that ignoring their demands will have such an adverse
+effect.  Remember that these groups also have leaders who routinely meet with
+officials.  However, the politician doesn't fear them like the fundamentalists
+because crossing their agendas is not likely to have the same dire consequences
+in most cases.  For instance, if a hypothetical politician decides to vote for
+business aganst labor, the reasoning might run as follows: "If I vote against
+labor, sure the union will not endorse me.  But so what?  Many of the union
+members don't come out to vote and, of the ones that do, it is not so clear that
+they will feel sufficiently motivated by the issue to vote against me.  On the
+other hand, if I vote for labor, business will be offended, and they are rather
+likely to cut off their generous donations to my campaign."
+
+On a related note, I find it alarming how few people take an interest in local
+politics.  The election for the mayor a month ago and the school board a month
+before that here looked like non-events.  There were no lines of people waiting
+outside the polling place.  In this case, the "vague amorphous mass" is much
+less of an issue since the population involved is much smaller, yet the problem
+is worse.
+
+Changing topic, I would say that a lot of the reason the likes of Micro$oft get
+away with what they do is the abyssymal ignorance of the general public when it
+comes to computers.  For Joe Average, computer literacy means being being able
+to push the right buttons on the mouse to get an application to launch.
+Therefore, it is not so hard to fool the general public into thinking that
+charging an arm and a leg for operating systems and snooping on users to make
+sure that noone tries to look at the source code are normal and acceptable
+activities and believing that "You get what you pay for, so obviously free
+software has gotta be pretty lame.  If you want the bleeding competitive edge,
+you'll have to pay us dearly for it.".
+
+By contrast, the constituency for free software consists largely of elite
+hackers who know too much to be fooled by this rhetoric and to whom the
+shortcomings of Windoze and Word are painfully obvious.  As I see it, a good
+part of the blame surely must go to the deplorable state of computer education.
+I mean, when I went to school in the age of the 16k personal computer, computing
+class consisted of writing programs in BASIC with DO loops in all their glory.
+A little later, I got my Timex Sinclair computer and graduated from BASIC to
+machine code.  I learned the memory map of the system, wrote bytes to output
+ports, and slogged my way through a book on machine language which included such
+fun projects as writing a disassembler and using it to figure out the code in
+the ROM.  The instruction manuals were written for cognoscenti, complete with
+schematics of the circuit board as opposed to the books with the silly cartoons
+aimed at the intellectual level of a 5-year old one gets nowadays.  As a
+consequence, I was able to write a memory tester for circuit boards in a
+particle detector when I was a freshman in college.  Now, however, computer
+class means learning which magic buttons to push to send the e-mail and print a
+copy of the document one is writing and computer literacy means being able to
+use one or more popular applications as opposed to knowing a computer language
+and being able to write a program.  As long as this is how kids are taught in
+school, it is easy to see why M$ has such an edge.  And it's a vicious cycle.
+Businesses use Word so clearly that's what the kids should be learning in
+school.  GNU, by contrast, is squeezed out, because relatively few businesses
+use it, so why teach it to kids?  And how many business owners will put GNU on
+their machines when they can't find a technician in the phone book who knows how
+to install GNU or hire a typist who is familiar with Emacs?  As long as people
+don't care to even show up for local school board elections, let alone go to
+school board meetings and voice their opinions, this status quo is likely stay
+pretty static.
+
+Another consequence is that people without much of a clue about computers are
+not going to appreciate the potential of computers to revolutionize whatever
+they are doing or react out of fear instead of knowledge.  We have all seen some
+pretty reactionary attitudes towards computers, even among people who are rather
+knowledgable in technical fields.  To the random user, a computer is simply a
+glorified television, typewriter, and fax machine, and game machine conveniently
+rollled into one package.  Hence, it is not so surprising, although extremely
+distressing, to me that most people see it reasonable that electronic books
+should be licensed on terms that allow the luser the cyber-equivalent of what
+can be done with a normal book, that many people are thinking of the internet in
+terms of an irrelevant "centralized source" paradigm which was relevant to
+printing, radio, phonographs, movies, and television, and acting accordingly by
+being passive consumers, that such ideas as electronic voting will go over
+people's heads.  Part of the theme of my bottlenecks essay (if I don't forget to
+write it :) ) is how these new uses (as opposed to simpy simulating old uses in
+electronic form) can run up into trouble with legal safeguards which might have
+been rather reasonable in the days of the older technology.
+
+Finally, the anecdote.  A few years ago, I tried to convince the local food
+co-op to switch to GNU/Linux.  The appeal fell on deaf ears.  While an appeal to
+switch to free trade coffee would have been preaching to the choir, its
+equivelant in the domain of software was considered irrelevant.  I see this sad
+situation as a combination of the computer illiteracy cited above and the
+prevelance of specialized thought which frowns upon going outside one's
+specialty, whether it be groceries or computers.  In particular, it means that
+we are easy to conquer since we are already divided.
+
+--[[file:rspuzio.org][rspuzio]] 24 May 2005
+
+Ray, I don't agree that education is to blame for the state of the situation with M$'s 
+dominance.  I appeal back to what I said about their using their bargaining power to 
+keep the tax for their product high, as well as the viral effects.  I don't think its
+reasonable to expect everyone to be able to debug circuit boards in particle accelerators.
+This is not a reasonable prereq to being a lay person in a market that contains general
+purpose computers.  I think consumers have every right to expect computers to be basically
+appliances that "just work".  Most people have jobs other than hacking at their computers.
+
+I think everyone feels a tinge of pain every time they're forced to shell out to upgrade
+office, or they don't save any money by opting not to have their Dell shipped with windows.
+But the standard way to solve this problem -- collective action -- doesn't really work.
+The collective action would be towards free software, but free software is inherently DIY.
+It betrays the notion that a computer should be an appliance.  Microsoft understands this
+notion well, on the other hand.  
+
+What I am saying is that there's no good alternative. 
+
+Also on education, I would point out that for most markets to operate, vast quantities of
+formal education are not required.  People use folk theories, lay knowledge, and indirect
+knowledge.  The judgements of those who are able to make expert distinctions spread quickly
+to those who cannot.  Is this not happening with free software vs. MS?  I would argue it is
+(I remember a few years ago when my friend's non-computer-geek dad was telling me about how 
+he thought he needed to be running linux), but that the very nature of the alternative rules
+it out for most of the market.
+
+Switching gears, I think you are right that the dynamics of local politics are
+different.  There is much more potential there for individuals to get involved.
+I still think digitizing it would help immensely, as it puts politics in the
+"track" of things we do daily (using email, the web...).  Of course, scholia
+would help foster actual discourse.
+
+On the Fundamentalist Christians point, this is indeed a real phenomenon.  But I am not sure
+of its real impact.  I think fundamentalists are being duped; that they are being used as 
+pawns for votes through the manipulation of so-called "important" issues in the political
+environment.  Whether or not gays can marry is not a real issue.  Whether or not Terry Shiavo
+is allowed to be a vegetable or die is not a real issue.  Real political issues are of
+universal importance (they dont just effect a handful of people or 5% of people) and have to 
+do with the general distribution and use of wealth and power in society.  But these flimsy 
+non-issues that politicians quite gratuitously elevate get the fundamentalists interested.
+
+And all the while, in the background, politicians are continuing to play their old game of
+lining their own pockets and sealing their own power.
+
+So, I don't think the fundamentalist phenomenon is an exception to the rule that citizens
+really do not have a voice or meaningful participation in government.
+
+--[[file:akrowne.org][akrowne]] Tue May 24 14:03:16 UTC 2005
+
+Going way back, .0365 is not a big number, but if you multiply it by a /very/ big number,
+you get a big number again.  There's no question that !WalMart is worth a lot -- a lot -- of
+money.  But the point isn't to get rich off of this scheme: it is to introduce freedom and -- yes definitely -- 
+DIY ideas, to a sector that currently swings very far the other way.  
+
+Even modern co-ops offer relatively little freedom -- maybe a comment book,
+maybe you can place some special orders -- but you can't do as much within the
+modern co-op to determine your own fate as a consumer as I'd like.  You can
+choose what to buy from what they offer: that's a good thing!  But you can't
+necessarily have much impact on the collection of goods that they offer without
+becoming highly involved, and even then, I'd argue, you can't ever be sure that
+you are getting things people want.  Sure, you can keep track of inventories,
+you can read the suggestion book, you can get by.  But there's little effort to
+make the consumer informed.  Tons of metadata is dumped the instant the product
+hits the shelf.
+
+There's a company (based in Austin, actually) called Whole Foods, that competes
+with co-ops.  They offer natural foods, and try to do things like provide local
+produce at their stores around the nation, they pay their employees well, etc.,
+and all-in-all they are a pretty nice place to shop.  They have earned the
+nickname "Whole Paycheck", though, because they are somewhat expensive -- but
+of course, so are co-ops.  But they do everything in a "closed" model, so I can't
+be sure /why/ such-and-such a product at WF is expensive, or why it is
+cheaper than the same thing at a co-op (because the co-ops are closed too --
+everyone is).
+
+If the question is "can this be done in a way that beats !WalMart's profit margin",
+I suppose the answer is probably yes, but I'm not sure exactly what the concern
+is there.  
+
+I agree that "free software" can easily undercut Microsoft and cut into their
+market share.  These are good things, but recall that the point is, free as
+in freedom, not as in beer.  The fact that !WalMart has a thin profit margin
+shouldn't somehow lead you to believe that they are a "good company" -- personally, 
+I have no idea, and accordingly I don't want to weigh in on it.
+
+But one thing I know is that they are not "free as in freedom", and that's my
+concern.  Like I said, no one is.  I'm actually rather attracted to some things
+about the !WalMart system -- but Whole Foods, and the various Fair Trade
+alliances probably have many things to offer too (as do unions and co-ops
+themselves, etc.).
+
+Accordingly, I would really say that the impetus for 
+"application of scholium methods" in real-world markets
+is the /same/ as the impetus for creating and using free software.
+After the crops leave the field and the widgets leave the factory,
+trade is just information processing and transportation; its
+not so different from software.  
+
+This is pretty far from being the first
+proposal saying that it would be good to hack and/or free this system
+([http://wmf.editthispage.com hack the planet] is the name of a web log,
+and they have a [http://hack-the-planet.felter.org/meta/manifesto.html manifesto]
+to boot; the US was born with the idea of the right to self-determination).
+The motivation to be educated, informed, and to have agency in the
+particulars of your life seem to be pretty universal.
+
+My other comments:  about the Strangelove thing -- basically, I think
+that there is a lot of revolutionary potential here on Earth.  Some
+of it has to do with the internet, some of it has to do with other things.
+I like my own [[file:free culture as a labor issue.org][free culture as a labor issue]], but someone near
+and dear to me has said that it smacks of bullshit, so go figure.  My
+sense is that the current proposal, rather than smashing capitalism or
+commodification, transforms them to some extent - into something that
+even anti-capitalist, anti-commodificationist folks could get into.
+
+On the topic of the far right in the US and its connection to fundamentalism,
+my step-mom was reading a book... I'd like to recommend it, but I can't
+remember the title.  Apparently it has some interesting things to say that
+sort of show how the "machine" works.  My step-mom found it to be quite
+unsettling.
+
+On the topic of Microsoft, I think the main issue is "vendor lock in".
+I've posted a link on the wiki a couple of times that talks about how
+people who would otherwise actually /like/ to change to free software
+can't do so, because it would disturb the whole system (a system --
+government in this case -- that is getting some "good deals" from
+Microsoft, and who doesn't want to irk them).  The article is worth reading.
+
+On the politics thing... I'm afraid that that theme is kind of getting
+swept away by the stream of conversations about business applications,
+but I'd like to reiterate that there is a heavy "political" or "self-governmental"
+side to the way I'm imagining the scholium system would work.  
+On the other hand, there are lots of things where the "politics of
+the marketplace" aren't really enough -- gay marriage, school board
+elections, the right to life, and the right to death are examples
+of things that may not have a whole heck of a lot to do with what people
+buy or sell!  And yet, I don't think these things are non-issues.  
+I don't know if the war in Iraq, for example, is actually a "real issue"
+either -- but it does at least have some fairly overt connections to
+the economy (Halliburton etc.).  I'm not sure what the real issues
+are, and when it comes to politics/government I feel like my agency
+in pretty much all of them (real or not) has been sapped.  Even for
+school board stuff, where I suppose my vote might actually make
+a difference, and where I could go talk to the candidates, etc.  The
+problem, for me, is information; how to establish relevance, how
+to know that people are actually doing the best they can, etc.
+
+I think that the scholium system has the chance to (a) be applied to all of
+these "non-economic" issues in approximately the same way it is applied to the
+economic matters in the essay.  "Gay marriage" can be a commodity; "so-and-so
+for school board" can be a commodity; "the right to life" and "the right to
+death" can be whole sub-economies.  Like when I go shopping, I can pick the
+things that matter to me.  If I care about schools, for example, I may be
+quickly led to school boards (or maybe to home-schooling associations or
+the university or who knows what).  If I find social practices or patterns of
+governmental spending (or whatever) that seem repellent to me, I can more easily
+figure out what the "real issues" are, and add my insights back into the mix.
+The scholium system is there to help keep the issues in the fore, and help push
+noise into the background.  Clearly there is a lot of design that would have to
+go into making a system where you could find out the /relevant/ things about
+abortion, as opposed to a bunch of screaming and yelling.  But I think it can be
+done.  And one nice thing about the system as I hope it could be implemented is
+that it would de-couple issues.  What does abortion have to do with the war in
+Iraq?  What does a raven have to do with a writing desk!
+
+Coherence and agency; a free and informed populace.
+
+--[[file:jcorneli.org][jcorneli]] Tue May 24 16:03:54 2005 UTC
+
+I generally like what you are saying, and where you are going with this.   
+
+On !WalMart and profit margins of .0356, of course, multiplying this by a big
+number gives a big number again, but that may not be too relevant.  A profit 
+margin is relative to each unit of productive activity.  So, I think the evidence
+is strong that !WalMart, and the lion's share of the retail markets, operate with 
+a high level of efficiency.  
+
+But you rightly point out that /libre/-style freedom is also important, not
+just /gratis/-style, and this is an interesting point.  Potentially even
+!WalMart could benefit from more perfect information about how consumers feel
+and what they think.
+
+You say:
+
+: The problem, for me, is information; how to establish relevance, how to 
+ know that people are actually doing the best they can, etc.
+
+Just to disambiguate this, I think "doing the best they can" generally comes back to
+questions of efficiency, which I think more sorely needs attention in the public as 
+opposed to the private sphere.  However, establishing relevance is more of a issue
+of goals and purpose, which could probably be better addressed through digital feedback
+mechanisms in all arenas.
+
+It would be useful to see scenarios or other illustrations of how the kind of
+system you are thinking about would help.  I'd want to see how these would go
+beyond the existing informal "scholium" of the web in general, which are already
+multiplying rapidly.
+
+--[[file:akrowne.org][akrowne]] Thu May 26 17:03:23 UTC 2005
+
+Of course, when we talk about "efficiency", we should always be saying
+"efficiency WRT what"; its sort of a "G_X" [group action] thing.  
+
+I'm not quite sure what a unit of Productive-Activity looks like.  Never took
+any kind of macroeconomics.  My sense is that a "low profit margin" means that
+the company isn't raking consumers over the coals.  Also it /probably/ implies
+that it is hard to find better prices on the things that that company sells
+elsewhere.  But this is all kind of a mish-mash for me.
+
+If we assume that /efficiency/ means "the consumer gets the deliverables at
+the lowest cost possible", then the introduction of free-software-style
+interactions in the marketplace tends first and foremost to enhance the
+/deliverables/ end of things.  You have a better sense of what you're really
+buying when you buy a Coke for example :).  (Some people might "prefer not to
+know" I suppose, but I think that's sort of pathological.)  Eventually it may be
+able to impact the /low cost/ side of things too - !WalMart allegedly
+optimizes for low price, but there may still be more that can be done with more
+information.
+
+As for /relevance/, I think I meant: how do I figure out whether such-and-such
+an action matters to me, or whether it will have a positive impact on humanity.
+In Austin politics, for example, there was a referendum on the introduction of
+light-rail transit.  Austin has a terrible traffic problem (think Boston, but
+smaller) and the light-rail was supposed to solve the problem.  But how do I
+know that that's a good way to spend money?  It would involve a major research
+study to even begin to have a clue -- and here the powers that be are asking me
+for my opinion.  How is /my/ uninformed opinion relevant to the matter?
+Perhaps they are hoping that the
+ "[http://www.kk.org/outofcontrol/ch2-b.html hive mind]" will be able to answer the question better than a study done by a
+group of "relevant" experts.  I don't deny that there's something to this way of
+thinking, but it seems a little bit weird to base a decision on the "gut
+feelings" of a bunch of regular old Austinites.  Maybe many of them knew things
+I didn't; perhaps I should have abstained to vote on the issue; and then again,
+maybe a bunch of parallelized guts have good computation properties, I don't
+know.  In any event, my preference in this case would be to decide the matter in
+a more /informed/ way, by discussion.  If I had been able to log onto a
+website and read all the "relevant" pros and cons that people had thought of,
+and maybe add my own two cents, that would have been great.  Much less mystery.
+
+One might argue that I could find out all this information without a scholium
+system - but the costs of gathering such information would be prohibitive.  The
+scholium system is supposed to serve the purpose of /synthesizing/ a
+state-of-the-art "syncretic" view on the topics under consideration.
+
+The main /example/ that comes to mind for me is (of course) the [[file:HDM.org][HDM]].  Can
+the hyperreal stylings of the WWW setminus HDM do anything to compete with HDM
+itself?  I doubt it - but they may be able to do a bunch of other really cool
+things before the HDM is ready to ship.
+
+One thing to keep in mind with this proposal is that it isn't just about
+"superimposed information" (document + scholia), it is something that I think is
+considerably more powerful (document as scholia).  Looking at the set of
+/products/ as the base data, it is a little bit tempting to assume that the
+document+scholia model can provide enough information; and, it is easy to
+imagine a service like Amazon adding more and more information to each of its
+product pages (or to pages One Click (TM) away).  But with the HDM, "there is no
+top and no bottom" - you might sign on to learn about one topic, and quickly
+find yourself swept down an underground river to some completely new topic area.
+(One challenge is to be able to have "controlled" experiences in a space with a
+hyperbolic metric!)  One can "rotate" the HDM so that the topic "group" is
+temporarily on top, but it would be ridiculous to say that all mathematics is
+superimposed on the notion of "group".
+
+The WWW shares these properties with the HDM.  I'd tend to say that these things
+are fundamentally different from a document+scholium model like the one used by
+Amazon.
+
+One reason that the scholia-based document model system doesn't jive 100% with
+the traditional "digital library" model is that it is a somewhat different sort
+of digital library than the one that people are used to -- specifically, a lot
+of its organization is implicit to itself, i.e., it is weblike.  Sure, one could
+extract all the metadata into a "catalog", but that'd be more like making a
+"map" of the deployed system more than like making an "index".  And it would be
+possible to make an index too -- but one would be missing out on a lot of
+"cheap" extra organizational info in doing so.
+
+Anyway, I list several other potential (simple) applications in my draft of Part
+2 of the paper, and I'll flesh this out more... but I have to finish Part 1
+first.  Part 3 (if I ever get a chance to write it) will be about other grand
+"social theory" things like we've been engaging with on this page.
+
+--[[file:jcorneli.org][jcorneli]] Thu May 26 18:07:53 2005 UTC
+
+Interesting.  When I use the term "superimposed information", people always seem
+to be implicitly envisioning such information as "second-class".  I had this
+discussion with the NSF ALT proposal PIs as well.   
+
+This is not how I mean to use it, or how I conceptualize it.   Noosphere and the
+web are indeed examples of how scholia and superimposed information can also
+be /primary information/.   What's more, information superimposed over one 
+artifact can eventually, through one or more steps, create a "loop closing" whereby
+the original artifact changes.
+
+So for example, in Noosphere, a correction object is superimposed.  Some would 
+consider it secondary.  But if this artifact is searchable, browsable, has its own
+discussions, and will probably lead to transforming the object it is attached to,
+in what sense is it not "primary"?  Indeed, part of my idea in keeping correction
+objects around is that they can be /learning objects/ (or at least, /knowledge 
+objects/) just as much as an entry can be.
+
+What I really mean to highlight when I use the term "superimposed information" is 
+a model whereby value-added artifacts can freely be created and linked to other
+artifacts by third parties.  This linking, integrated with some sort of "viewing"
+mechanism (could just be hyperlinking, but it could also be displaying in some 
+combined context) "superimposes" the later artifacts over the earlier ones.
+
+It's the value-addition I'm trying to get people to recognize.  I reject any notion
+of "secondaryness"; I don't even see any point to it.  
+
+The real power for digital libraries is in /not/ relegating superimposed 
+objects to some secondary status.  By treating superimposed information or scholia
+as first-class objects, the digital library can be continually enhanced, and at a 
+low cost to boot (and as in the case of PM, entirely constructed).
+
+So in sum, document /as/ scholia /is/ what I mean.
+
+--[[file:akrowne.org][akrowne]] Fri May 27 00:05:25 UTC 2005
+
+This relates to the issue of /in situ/ modification we've been talking about
+now and again.  And especially to the matter of implementing semantics of
+modifications in a way that makes sense to viewers & preserves rights of
+original author & subsequent critics/co-authors/correctors in a "sensible way".
+
+This could be something as simple as putting a bold *there is a correction
+pending on this article* flag on pages that are under dispute.
+
+One of the most challenging questions for scholia-based documents is how to
+expose this sort of information in the most useful and fair way possible.
+Ownership models (or lack thereof) are an attempt at making the "spirit" of
+multiple-authorship work well.  We've talked about several possible ways to
+synthesize improvements to PM documents out of existing data, including the
+"dispute flag" idea mentioned above.
+
+Some extant CBPP systems put more work into explicit semantics-handling than
+others.  
+
+Review: Usenet and WWW rely on users to decide what "on-topic" means and uses
+social control to keep things on topic or to go with the flow depending on
+people's mood; Slashdot has a 2+ tiered mechanism, aka posting+scoring;
+PlanetMath has several different types of objects with some explicit semantics
+encoded in metadata; most objects in Emacs have explicit semantics that go "all
+the way to the bottom", with "human-readable" views on these objects provided in
+comments and with a fairly simple metadata structure thrown over the whole
+collection.
+
+Just to reiterate: a major technical challenge is synthesis.  But another
+related issue is /analysis/ (in the sense of breaking things up into component
+parts).  As I was talking about above, it is good to distinguish
+loosely-connected issues from one another -- yes, it is good to show the
+connections when they exist.  ("Potatoes aren't necessarily a greasy food,
+though there any many popular ways to eat fried potatoes, and its a fact at some
+dining establishments you can't buy potatoes that aren't greasy.")  But IMO
+democracy shouldn't be about plea bargains and package deals ("vote for Gore if
+you want to get rid of Bush"), it should be about actual issues.
+
+I'm not totally sure what to think about things like "support the war and we
+will give you more money, but if you don't support the war, we will take away
+the money we already gave you and do our best to make you look bad".  I suppose
+this is a reasonable bargaining tactic and isn't something that can be gotten
+rid of by analysis or synthesis.  I'd feel more comfortable if I knew that
+statements like this were really coming from "we the people" -- but on the other
+hand, I realize that I'm coming close to contradicting what I said about
+light-rail above, here.  The point, however, is not that it comes from "we the
+people" blindly, but that the strategy really is acknowledged to be the best
+thing that our country can come up with.  Sure, there's the possibility for
+spin-doctoring but that's why the synthesis has to go to somewhat deep levels,
+insofar as possible, people's stakes in the issues they are talking about should
+be made clear ("Oh you think so, do you? And just who are you to say so?").
+
+Just as an example (going back to cereal boxes, because I had cereal for
+breakfast today).  Suppose you measure the actual amount of cereal you eat, as
+opposed to the amount that is listed on the box.  Then you get a new read-out on
+the dietary components of what you just ate.  Then you get a listing of additional
+items you could eat throughout the rest of the day to keep a balanced diet.  The
+program NUT does something like this, and I'm sure that there are other programs
+that do similar things, probably some no-cost web services, even.  But do these
+things track the cost of the food you eat?  Do they say "you know, you like this
+food, you might like to try this other one for XYZ reasons?"  Maybe.  Do they
+say everything there is to say about the food-substance in question?  Probably
+not.
+
+--[[file:jcorneli.org][jcorneli]] Fri May 27 16:44:01 2005 UTC
+
+* Goodbye to MoveOn.org
+
+I've been getting a bunch of email from !MoveOn.org and I had to unsubscribe
+again.  This is what I said in the feedback that accompanied my unsubscription
+request:
+
+: "Democracy" is an n way street, not a broadcast medium.  If you want to
+represent "democracy", you might consider using a medium such as an *open
+mailing list* or a set of such mailing lists (or newsgroups etc.).
+
+--[[file:jcorneli.org][jcorneli]] Fri Jul 08 23:50:52 2005 UTC
+
+Giving them the benefit of the doubt, I thought I'd take a look at their
+"[http://www.actionforum.com unique action forum]".  This is a sort
+of scholia-based document (of course it is: its CBPP).  But it is currently
+rather weak.  Although they [http://www.actionforum.com/general/uniquefeatures.html claim] 
+to support textual feedback, for example, in the 
+[http://www.actionforum.com/forum/index.html?forum_id=266 current implementation]
+the only kind of feedback is a rating!  How lame is that!  Both
+slashdot and craigslist offer quite a few more dimensions for
+interaction (followups, namespaces, and in the case of slashdot,
+various kinds of ratings).  The !MoveOn.org forum seems to contain
+a bunch of people mouthing off in (dis)unison, all agreeing with
+each other.  Talk about ditto-heads.  Where's the debate?  Where's
+the context?  It is almost sickening that these pages have the
+phrase "democracy in action" on them.  
+
+--[[file:jcorneli.org][jcorneli]] Sat Jul 09 00:14:00 2005 UTC
+
+----
+
+[[file:scholium system.org][scholium system]]

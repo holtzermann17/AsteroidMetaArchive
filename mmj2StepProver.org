@@ -1,0 +1,836 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Next mmj2 Release: Step Prover
+
+ETA? 1-Apr-2009?
+
+* User-Design Doc
+[http://us2.metamath.org:8888/ocat/mmj2/StepProverDoc.zip StepProverDoc.zip] -- documentation and untested source code
+for Step Prover (README.txt inside explains).
+
+* User-Design Doc Comments
+
+1. The specification of the "givens" for the designated
+proof step is wrong. It says that an empty, ("" -- null string), 
+value in the step's Hyp field means "use the theorem's logical
+hypotheses as the Givens". Doing this would mean that there 
+would be no way to specify zero Givens for the subproof.
+So, there are, again, just two options, a) specify a "?"
+designating all prior steps in the Proof Worksheet as Givens;
+and b) explicitly list the Givens, chosen from among the
+previous steps (e.g. "1,4,5").
+
+2. It may not be clear, but the SearchWith parameter is
+redundant unless a MaxSearchStmt is specified *and* the
+assertion labels in the SearchWith parameter are beyond
+the MaxSearchStmt label. If the SearchWith assertions are
+inside the MaxSearchStmt range then there is no need to
+list them -- they will be searched in the normal course
+of events. The purpose of SearchWith is to list assertions
+to be used while also restricting the normal search for
+justifying assertions. Examples are, say lemmas, or new and
+improved theorems. It would be possible to specify a
+SearchMaxStmt of "ax-1" -- the first assertion, and to
+specify a "?" (all) in the Hyp field, designating all
+prior proof steps as Givens. Then the Step Prover would
+be forced to use just the SearchWith theorem to reprove
+the designated step using the Givens and the SearchWith
+assertion(s).
+
+3. A strategy for using the Step Prover would be to
+prove a theorem bottom-up, which is the way Step Prover
+goes about the job, but to input a proof step above
+the step in progress and to specify it as a Given.
+This would mean that you know you can prove your
+formula if you can prove the previous step. The previous
+step can be input with a "?" in the Hyp field meaning
+"Incomplete Hypotheses", and need not itself be 
+proven yet. 
+
+4. I reworked the order of the proof search for hypotheses of a
+given subproof step.
+
+The original version (source uploaded with the user specs)
+created the children in the proof subtree in Reverse Polish
+order according to the order of the hypotheses in
+Assrt.logHypArray.
+
+To speed up proof search the order used is now given by
+Assrt.sortedLogHypArray, (which is already loaded by mmj2 when the
+Assrt is loaded into LogicalSystem,) and the steps are derived
+in Polish Prefix order (to simplify the code).
+
+The sort sequence is descending order by formula length
+(number of Metamath math symbols), and in the case of a tie,
+the LogHyp formula which has at least one variable in common
+with the Assrt.formula is first.
+
+The only drawback to this approach is that when the
+CandidateProof is output, the children of each subproof step
+must be "desorted" and output in RPN order. That adds a
+tricky bit of code :-)
+
+The advantage is a very significant pruning of the search
+tree in the average case and a major disaster avoided (we
+hope) in the worst case scenario. Previous, mmj2 has used the
+sortedLogHypArray throughout the Proof Assistant unification
+search and StepUnifier search. I didn't seriously consider
+using the sortedLogHypArray until I started thinking...
+Performance is expected to be dramatically not as bad
+as it would have been using unsorted hypotheses :-)
+
+* First Results From Testing
+
+I am still checking results of the initial tests. pm2.18,
+for example, is running for a long time with MaxDepth = 3.
+But I am pretty jazzed that this finite state machine
+in the SubproofSearcher class is working! It proved
+very tricky to debug because the program flow is non-linear
+and it is hard to maintain a gestalt, especially given
+the many state variables.
+
+1) One problem I discovered is that [[file:PrecomputationOfLogHypUnifiers.org][PrecomputationOfLogHypUnifiers]]
+does not work as documented. The problem is that a LogHyp
+formula's variables *must* be treated as Work Variables
+in the unification with the input assertions. The reason
+is that we want to see if a formula of the form of the
+LogHyp's formula is potentially unifiable with a given
+assertion's formula -- not that the LogHyp formula itself
+is unifiable. The LogHyp variables are expressions which
+will be substituted with proof step formula expressions
+prior to proof step unification. 
+
+The upshot is that I needed to relax the [[file:PrecomputationOfLogHypUnifiers.org][PrecomputationOfLogHypUnifiers]] syntactic consistency
+checking and not perform a full unification with Work
+Variables (or with an equivalent algorithm). As a result,
+instead of 1.2 million pre-computed answers -- the "unifiable
+assertions" -- there end up being 6 million. And the 
+time required to perform the computations is about 54
+seconds instead of 20. 
+
+So, this is a harsh blow. But 6 million unifiable assertions
+given 10,000 input assertions and 12,000 logical hypotheses
+gives an improvement over the possible 128 million unifications --
+it works out to about 600 assertions to check, on average,
+instead of 10000. So that is an order of magnitude improvement...
+which should mean that if you could compute MaxDepth = 2
+proofs with your computer and patience, then using the
+precomputation method should allow you to find proofs using
+MaxDepth = 3. (That's my story anyway.)
+
+2) A proof discovery algorithm is remarkably like a black hole.
+It is hard to say whether or not it is finding every proof -- 
+because it is hard for us humans to find even one proof
+using only our mental powers -- and it is hard to even know
+what the algorithm is doing. So I have been running some
+"display" commands (like traces) to see what's going on
+during the searches. As a result I discovered one optimization
+which is true for all logical systems.
+
+When "next proof" is requested for a given subproof step
+at a leaf node in the proof tree, and the current status
+of the step is "proven", and the justification for the
+proof of the step is one of the "Given" hypotheses, then
+there is no point in looking at other Given justifications
+for that step -- or in looking at assertions to justify
+the step! That would amount to trying to prove one of
+the Givens, which might be of some interest, but is
+not particularly useful in this context (and the program
+would just extend the proof branch to the MaxDepth limit
+using ax-1 + ax-mp, over and over :-)
+
+I am hoping to discover other general optimizations of this
+sort (though it is impossible to predict when a new
+idea will penetrate my skull...)
+
+All in all, it appears that MaxDepth = 2 is workable.
+If that turns out to be true then it will be worthwhile
+to implement StepProver because that would allow the
+Proof Assistant GUI to aid users in completing short
+mechanical sequences of proof steps. 
+
+More results when I get a better handle on things!
+
+* Shorter proof of pm2.01 discovered by Step Prover
+
+    
+new-->
+    
+    $( <MM> <PROOF_ASST> THEOREM=pm2.01  LOC_AFTER=?
+    1000::pm2.18       |- ( ( -. ph -> ph ) -> ph )
+    2000::looinv       |- (  ( ( -. ph -> ph ) -> ph )
+                          -> ( ( ph -> -. ph ) -> -. ph ) )
+    qed:1000,2000:ax-mp 
+                       |- ( ( ph -> -. ph ) -> -. ph )
+    $)
+    
+old-->
+
+    
+    $( <MM> <PROOF_ASST> THEOREM=pm2.01  LOC_AFTER=?
+    1::nega            |- ( -. -. ph -> ph )
+    2:1:imim1i         |- (  ( ph -> -. ph )
+                          -> ( -. -. ph -> -. ph ) )
+    3::pm2.18          |- (  ( -. -. ph -> -. ph )
+                          -> -. ph )
+    qed:2,3:syl        |- ( ( ph -> -. ph ) -> -. ph )
+    $)
+    
+
+* The Curious Case of idd
+
+I was puzzled by the extreme runtime for theorem "idd".
+A trace showed the code was working as expected, but
+using "ReturnShortest=Yes", "DepthFirst=Yes", "MaxDepth=2",
+and "MaxAnswers=1" returned proof "id a1i" after performing 
+more than 160,000,000 formula unifications! 
+
+After doing more code optimization I retried the test
+using "MaxAnswers=10" and was surprised to learn that
+idd has a bazillion proofs!
+
+    
+    I-SP-0501 Theorem idd Step qed Number of proofs found = 10
+      Length = 16  RPN = id a1i
+      Length = 20  RPN = ax-1 com12
+      Length = 26  RPN = id a1d com12
+      Length = 28  RPN = id id syl a1i
+      Length = 32  RPN = id ax-1 mpd a1i
+      Length = 32  RPN = id id a1i syl
+      Length = 32  RPN = id ax-1 mpcom a1i
+      Length = 34  RPN = id id id 3syl a1i
+      Length = 34  RPN = id ax-1 ax-mp
+      Length = 36  RPN = id id ax-mp a1i
+    
+
+(The "length" reported above is the number of Metamath
+math symbols in the proof formulas, including hypotheses
+and conclusion.)
+
+So what I believe was happening is that a) the precomputation
+of LogHyp unifiers is -- still -- broken and allowing 
+too many unification candidates through the net; and
+b) idd has a very general formula that is easy to 
+prove given its location in set.mm: "|- (ph -> (ps -> ps))".
+
+One interesting thing about the Step Prover and its
+exhaustive search for proofs is that if it can complete
+its search for a theorem at a given proof depth then
+we can definitively say that we have found all possible
+proofs of that depth or less -- given the arrangement
+of assertions in the input Metamath file. 
+
+By rearranging the input file we can eliminate
+many possible proofs -- most of which are redundant
+or useless -- and speed up the proof search process.
+
+In theory, moving "idd" forward in set.mm by the
+maximum amount given the current proof could result
+in a new, shorter proof for subsequent theorems --
+we would have to see about that. 
+
+Philosophically we might think that the more proofs 
+a theorem has the more fundamental it is, and by
+moving it to as early as possible in the development
+of the logical system we are according it its
+proper respect. The way to find out which theorems
+are most "fundamental" is to run an exhaustive
+proof search and see which theorems have the most
+proofs at a given proof depth, given the arrangement of
+the input Metamath file.
+
+* ToDo as of 11/22/2008
+
+Summary: I figured out how to add an "Improve" option
+to the ReturnShortest RunParm, presently a Yes/No 
+parameter. And I believe that with a fair amount of
+additional work the Step Prover can perform an
+exhaustive depth 2 proof search on set.mm in
+about 17 (to 30) seconds (that number improves with
+multicore processors.) 
+
+    
+    Below are my to-do items which I must attempt prior to
+    considering updating the GUI and proceeding to the
+    final implementation version of the mmj2 Step Prover.
+    
+    The good news is that as computer hardware gets faster
+    with more processing cores and RAM per computer, the
+    estimated runtimes get better. The algorithms I am
+    using are massively parallel -- up to the basic unit
+    of work, which is a single candidate proof tree with
+    one of the input assertions at the root node (there
+    are presently 10,000 assertions in set.mm and about
+    1.2 logical hypotheses per assertion.) Within a
+    unit of work, checking out one candidate proof tree,
+    the opportunities for parallelism are much more 
+    difficult to find and implement (due to the
+    interrelationship of the nodes in a proof tree.)
+    
+    Where N = number of assertions in the input file,
+    and H = average number of logical hypotheses per
+    assertion, the two main computations are:
+    
+        -- Precomputation of LogHyp Unifiers:
+           (H * N) unification computations
+    
+        -- Unifications for exhaustive search for
+           an average proof of depth = MaxDepth:
+           N * H**(MaxDepth - 1).
+    
+    So, with a dual core processor, divide these
+    process runtimes by two. With quad-core, divide
+    by four, and so on, up to some number, like
+    32. Initially the Step Prover will be able to
+    handle depth 1 searches very quickly, and depth 2
+    searches in about one minute or less (I'm guessing
+    that it might be as little as 17 seconds, but
+    more likely 30 seconds, and as much as 1 minute...)
+    In four years the average user will have a
+    quad core machine, or even 8-way. With a 16 core
+    computer, I think I can almost guarantee a depth 3
+    search in 30 seconds (we assume that set.mm 
+    grows at 10% a year too.)
+        
+    TODO (11/22):
+    
+    The key todo item is fixing the pre-computation of LogHyp
+    unifiers to rigourously screen out the assertions which cannot
+    be unified with specific logical hypotheses. The new algorithm
+    must use mmj2's Work Variable unification algorithm in full,
+    cloned from the StepUnifier code -- as opposed to the 
+    rudimentary checking done now in Step Prover which is
+    allowing far too many assertions to be searched in the
+    proof search process. 
+    
+    The way this works is that Step Prover is building proofs
+    from the bottom up. So for a given proof step it tests an
+    assertion to see if it is unifiable with the proof step
+    formula. If it is, then the logical hypotheses of the assertion 
+    are used to generate new proof steps which will be used
+    as hypotheses for the current proof step -- and each of 
+    those new proof steps goes through the process of seeking
+    a unifiable assertion, generating new proof steps, and
+    so on, recursively, up to the MaxDepth requested by the
+    user. (Proof Depth equals the maximum length of the 
+    proof tree from the root node -- the "provee" step -- 
+    to the leaf nodes, and at the leaf nodes the only valid
+    justifications for a proof step are the Given hypotheses
+    and assertions which have zero logical hypotheses.)
+    
+    The reason it is so critical to weed out assertions in
+    advance, so that they aren't even fed into the proof
+    search algorithm is that the problem of combinatorial
+    explosion occurs as proof steps trigger generation of
+    additional proof steps, which require more proof steps
+    and so on...
+    
+    Assume that each assertion has, on average, 1.2 logical
+    hypotheses, and that there are 10,000 assertions. Then, 
+    if no pre-computation of LogHyp unifiers were used and
+    Step Prover had to check each of the 10,000 assertions
+    for each proof step, there would be, at MaxDepth = 2,
+    (1.2 * 10**4)**3 = 1.75 trillion required unifications 
+    for an exhaustive proof search (meaning to examine all 
+    possibilities even after finding *a* proof -- to look at 
+    all proofs and find the shortest proof.)
+    
+    That number, 1.76 trillion unifications for a depth 2
+    exhaustive search, is undoable, not without a supercomputer.
+    And yet, we really, really want to be able to do, at least,
+    a depth 2 proof search.
+    
+    So, assume that pre-computation of LogHyp unifiers 
+    requires about 120 million unifications
+    (10**4 * 1.2** * 10**4). 
+    And assume that this can be done at the rate of 1/2 million per   second,
+    for a total run time of about 4 minutes (less if the
+    user has a multicore processor.) This data will be
+    stored in a data file and will be recomputed whenever
+    the user requests (needed only when new theorems are
+    added, if the user wants the new theorems included
+    in proof searches.) 
+    
+    And, assume that with these precomptuted results we
+    only need to do check an average of 100 assertions
+    per logical hypothesis. That means that a depth two 
+    search requires, on average, (1.2 * 10**2)**3 = 1.76 
+    million unifications! At the rate of 100,000 per
+    second (slower in the context of the full proof 
+    search process), the depth 2 search would require
+    about 17 seconds -- which is really quite OK.
+    
+    So that is the payoff for using persistent data storage
+    of precomputed logical hypothesis unifications. It is
+    a trade-off between hassle for the user, telling the 
+    computer to re-do the computations and making sure that
+    the data file is installed correctly; versus the 
+    impossibly long runtime to do 1.76 trillion unifications
+    for an exhaustive depth 2 search. This must be attempted!
+    
+    1. (11/22) - Set up StepProverBatchTest1 RunParm to provide
+                 output results suitable for regression testing
+                 including:
+                     - for each theorem
+                         - theorem label
+                         - elapsed milliseconds
+                         - number of unifications attempted
+                         - number of proofs returned
+                         - sorted list of proofs
+                         - error message if search timed out
+                     - for all of one RunParm's processing
+                         - elapsed milliseconds
+                         - number of unifications attempted
+                         - number of proofs returned
+    
+    2. (11/22) - fix error in NextKey processing: do NOT bypass
+                 SearchWith assertions which have more logical
+                 hypotheses than the MaxSearchHyps parameter.
+    
+    3. (11/22) - Modify StepProverBatchTest1 to accept "h*"
+                 as an hypothesis. This will mean use all of
+                 the theorem's hypotheses as Givens. At present
+                 "?" must be used, meaning "all previous steps
+                 are Given", and this provides only the theorem
+                 hypotheses when RunParm "LoadProofs" is set to
+                 No. It may be that "h*" will be accepted in
+                 the ProofWorksheet for a Provee step, but
+                 don't write the code now to expect that. 
+        
+    4. (11/22) - Modify StepProverReturnShortest RunParm to
+                 accept Improve, in addition to Yes and No
+                 and create an internal parameter, 
+                 returnShortestTarget.
+    
+                 - Convert ReturnShortest internally to 
+                   "returnShortestTarget" where -1 means 
+                   ReturnShortest = No, 0 means ReturnShortest 
+                   = Yes, and > 0 means Improve.
+    
+                   - the value of returnShortestTarget is to be
+                     computed using the provee step's proof if
+                     possible; if cannot compute set to 999999999.
+                     The value equals the length of the provee's
+                     formula (number of Metamath math symbols) plus
+                     the length of its hypotheses and their 
+                     hypotheses -- but do not count hypotheses
+                     which are hypotheses of the Given for the
+                     proof step. 
+    
+                 - Modify SubproofSearcher to do "return shortest"
+                   processing as today, looking for the shortest
+                   proofs when returnShortestTarget > -1. BUT...
+                   when "Improve" is in use, a found proof is retained
+                   and output only if its length is less than 
+                   returnShortestTarget and returnShortestTarget > 0;
+                   In addition, once the MaxAnswers number of proofs 
+                   have been found, if ReturnShortestTarget > 0
+                   the search is terminated (returnShortest = Yes
+                   means search all possibilities even after
+                   finding MaxAnswers number of proofs.) 
+   
+         
+    5. (11/22) - Modify the StepProverPrecomputeLogHypUnifiers" 
+                 RunParm' to use a filename instead of Yes/No. 
+                 The filename specifies the pathname (relative 
+                 to StepProverFolder, if input, where computed 
+                 LogHyp unifiers are stored.
+              
+                 "StepProverPrecomputeLogHypUnifiers,LogHypUnifiers.zip"
+                     
+                 - If the designated file exists, it will be used 
+                   as input when the Proof Asst search data is 
+                   initialized and loaded. 
+    
+                 - If the designated file does not exist, it will be 
+                   created or overwritten -- when the Proof Asst
+                   search data is initialized and loaded (not 
+                   immediately.) 
+                     
+                 - Thus, to make mmj2 recompute the LogHyp unifiers, 
+                   simply delete or rename the old file and re-run
+                   mmj2.bat. 
+    
+                 - A menu option will be added to the Proof Assistant
+                   GUI to trigger re-computation and update of the
+                   file upon request. 
+    
+                     - The new computation algorithm should use
+                       Work Var unification. Use the code in 
+                       mmj.prover.SubproofStep -- which, ideally, 
+                       will be moved into its own class for reuse.
+    
+                     - multi-threaded logic should be used to
+                       do the computations as fast as possible,
+                       taking advantage of multicore processors.
+                         
+                     - Move the original ComputeLogHypUnifications.java
+                       class from package "mmj.pa" to "mmj.provers".
+                         
+                     - Modify StepProverPreferences to keep track
+                       of whether or not the LogHyp unifiers have
+                       been loaded into memory. An attempt to
+                       run a StepProver search should force an
+                       error message if the LogHyp unifiers have
+                       not been loaded... In the ProofAsst GUI
+                       this error message should just be a pop-up
+                       but in batch testing, it should be output
+                       to the Messages object and terminate the
+                       StepProver request (as it will be impossible
+                       to run StepProver without this data.) 
+    
+                       NOTE: the only way the data wouldn't already
+                             be loaded would be if the user did not
+                             input a StepProverPrecomputeLogHypUnifiers
+                             RunParm at all. The RunParm is optional,
+                             because, after all, we're not forcing
+                             people to use the Step Prover. At the
+                             time the Proof Assistant search data 
+                             is initialized and loaded, if the 
+                             LogHyp Unifiers file name is not present,
+                             the load process is bypassed. 
+                     
+                  
+                 
+* Depth-first Exhaustive Search: problem found!
+
+Theorem "peirce" has given me a bit of trouble. An
+exhaustive depth 2 search for the shortest proof conducted
+"depth first" ran for 10 minutes and performed
+more than 18,000,000 unifications! This number is
+far greater than my original -- wrong -- estimates,
+and renders almost irrelevant the question of how
+fast the unification algorithm is!
+
+To be fair, the Step Prover discovered more than 2000
+proofs with depth = 2 for "peirce". And, the Step Prover
+can find the first proof of "peirce" in less than
+one second using a depth first search with MaxDepth = 2.
+
+But I didn't have
+the patience to let the job go longer as it has only
+gotten as far as assertion "3syl" at the root level
+before timing out!
+
+I now see that the large number of unifications is
+due to the fact that the number of possibilities at
+each leaf node multiple across subsequent leaf
+nodes within that set of permutations -- so 5 leaf
+nodes are, in effect, multiplying to the 5th power.
+
+This wouldn't be so grievous except that in depth first
+searching, each subsequent proof tree node applies
+additional constraints which subsequent nodes must be
+consistent with. AND... going depth first means that
+not every mandatory variable is assigned constraints
+during the search of the first branches of the tree --
+so the number of possibilities increases at a huge
+exponential rate! 
+
+The Step Prover is building these proofs bottom up
+and is assigning work variables to any mandatory
+variables which have not yet received substitutions
+during the search. Thus, I think that the most
+efficient search will be a breadth first search...
+
+Unfortunately, the way I coded "breadth first" in
+Step Prover is to do a depth 1 "depth first" search,
+then a depth 2 "depth first" search, and so on.
+That is wrong and will have to be recoded.
+
+Suppose we have a root assertion with two hypotheses.
+In the new breadth first search Step Prover will
+find unifying assertions for each level 1 hypothesis.
+Then it will proceed to level 2 and repeat, and
+so on, stopping when each branch has been proven.
+The benefit of doing it this way is that the
+maximal constraints are applied at the lowest
+levels of the proof tree, thus pruning the search
+tree by a dramatic amount (I believe.)
+
+So...I guess it is good news that I discovered
+this "bug" (it works as coded but doesn't do what
+the user expects.)
+
+The Gist Of This: contrary to my initial assumption,
+the search space for a Depth First search is not
+(usually) the same size as the search space for a
+Breadth First search -- in the mmj2 Step Prover
+process which uses Work Variables (undetermined
+sub-expressions) for unassigned variables in the
+Mandatory Frame of the assertion being proved. 
+
+In the worst case scenario the size difference
+is dramatic and deadly because the number of
+possibilities grows exponentially according to
+the number of possibilities at each leaf node
+of the parse tree (multiply across the leaf nodes,
+so 5 leaf nodes means a power of 5). 
+
+As a result of this "discovery" after I run some
+tests I will likely remove the option to run
+a Depth First search from the Proof Assistant
+GUI (spec), and I will quite possibly remove
+the code altogether as it seems to serves no 
+need -- except to satisfy curiousity about whether 
+or not it works (it is a horrible thing and
+I ought to degauss my hard drive to make sure
+it isn't in the mmj2 development code ever
+again!)
+
+* Back to the drawing board?
+
+Well, I designed the new finite state machine
+for true breadth-first searching and ran one 
+parallel test. Time spent? About 4+ days
+writing code and documentation, complete with
+diagrams :-) Haha.
+
+I need to finish reviewing the first test and
+run the rest of the tests, but it sure looks
+like the breadth-first approach is worse!
+About twice as many unifications are being
+performed, but they are happening faster, with
+the net result being that the run time is
+almost twice as long in the worst case, and
+just slightly longer in the best cases...
+
+My interpretation of this "effect" is that
+say we have a root whose justification is an
+assertion with two logical hypotheses. In
+depth first we don't fool around with the
+second hypothesis until we have a proven
+branch of the proof tree for the first 
+hypothesis -- even if this branch terminates
+with Work Variables (meaning that the search
+criteria are not completely specified.) Thus,
+for every search attempt for the second
+logical hypothesis, we're only looking at
+realistic combinations of assertions for
+hypotheses 1 and 2. Contrast that with 
+breadth-first where we are mindlessly
+checking every combination of justifications
+for hypotheses 1 and 2 without regard for
+whether one or both can possibly lead to
+a branch with a proof. Also, it is true
+that the unifications/second is faster for
+breadth-first, and I interpret this as being
+a result of more completely specifying the
+search criteria for deeper level searches
+in the proof tree -- unification fails faster
+on average with more complete unification
+criteria... 
+
+So, it is a damn good thing that I backed
+up the original code on Nov 30... I'll be
+taking more time to think this through but
+it sure looks like my great idea was a dead
+end. (This is sooo.... typical for experimental
+coding, I shouldn't be surprised to fail
+a few times --- the key thing is to figure
+out The Truth and then try again...)
+
+
+* Yep! Back to the drawing board
+
+I went back to look at the first algorithm, which
+I now call "depth first by levels" and noticed
+that the "skip ahead if given" option was not 
+implemented in the "breadth first" search.
+
+The "skip ahead if given" option says that if
+a proof branch is "proved" using a Given hypothesis
+as justification (at the leaf node of the branch),
+then a Find Next on that branch should terminate
+immediately -- in other words, there is no point
+in trying to find a different proof of that branch
+of the proof if it is GIVEN to us in the first
+place. 
+
+So I installed the "skip ahead if given" in the
+"breadth first" search algorithm and the results
+were much better. In fact, in some cases it is
+much faster than "depth first". But in other cases
+it is much slower. In practice, the "skip ahead"
+option avoids looking at longer proofs, which
+we aren't generally interested in if we have a shorter
+proof already. But I have no theoretical backing
+for always eliminating these search possibilities
+from all searches, so I created a RunParm allowing
+"skip ahead if given" to be controlled by the user.
+
+I also considered revising the Step Prover to
+be able to use either the "breadth first" or
+"depth first" algorithms even though this means
+doing some extra coding at this point with
+subclassing, etc. It seems academically interesting
+to be able to run either algorithm in test mode
+because more can be learned, I am sure -- and also
+the need to re-examine the question is sure to
+arise. 
+
+Also, I decided to run a depth 1 search on theorem
+"cdj3i", which is just prior to "sandbox" (at the
+end) of set.mm. I was shocked to see it spending
+more than 1 minute -- not even getting half way 
+through! 
+
+So I am "gretched" about that. It appears that the
+unification algorithm I am using is wretchedly 
+slow (it stinks!) 
+
+Really, it looks like I need a computer 1000 times
+faster to achieve the goal of a depth 2 search
+for an arbitrary proof step. If I can't meet that
+goal then I don't see the reason to install the 
+Step Prover in the Proof Assistant GUI screen...it
+would just benefit beginners working on the very
+early proofs in set.mm, and having a prover available
+would actually not benefit students much -- it would
+be a crutch, not an aid.
+
+An interesting idea I just had is that it might
+be useful -- hardware resources available -- to
+use a "shotgun" approach to an individual proof
+step. That would mean initiating multiple proof
+algorithms simultaneously in different threads
+and then terminating the search when the first
+proof is found (the termination part is already
+in the code.) That way, if a theorem proves to
+be a worst case for one algorithm, then a 
+different algorithm rides to the rescue and 
+delivers some results (before the heat death
+of the universe......)
+
+I'm going to have to rethink this whole thing.
+The various options include: 1) implement Step Prover
+in batch mode only; 1b) implement as an external
+"service" so that it doesn't pollute the mainline
+mmj2 (I don't want to install something in the
+heart of mmj2 that obviously is unacceptable);
+3) rewrite Step Prover to run outside of the
+mmj2 process -- in cluster mode with an option
+for receiving results over the internet; 4) think
+about just scratching Step Prover completely
+(since it doesn't pay any bills and obviously
+will not result in Fame or Glory :-)
+
+-----
+
+* Drawing Board...
+
+This morning received an email seeking "acl2" paper submissions.
+Ironic... It makes me think though that the initial
+"brute force" approach of the mmj2 "Step Prover" is doomed.
+
+For one thing, if the program is going to spend 15 seconds
+computing an answer then that justifies an immense amount
+of highly knowledgeable and specialized code for the user's
+specific logical system -- it doesn't make a whole lot of
+sense to waste CPU cycles using a totally ignorant search
+process on something like set.mm which is pretty much cast
+in concrete (as in, who plans to re-invent propositional
+logic and predicate logic?) 
+
+OTOH, "StepProver.java" is just an interface and my
+particular implementation can be dynamically replaced
+at run-time with an mmj2 RunParm command, so the fact
+that this implementation stinks doesn't mean that a
+superior implementation can't be written later, still
+using the framework built now.
+
+There are several things which I can do to eke out some
+marginal performance improvements. Though this may be
+doomed, it isn't unreasonable to expect that Quad Core
+processors will be widely available in 2009 for not too
+much money, and a Quad Core with mucho RAM will benefit
+mmj2's Step Prover by a factor of 4 (approx., I think.)
+
+One improvement might be possible in the Step Prover's
+custom unification algorithm, which I think is still
+pretty raw. Also, the Given hypotheses can be sorted,
+or possibly searched in reverse order -- the latter idea
+would help in some cases, while sorting hypotheses is
+known to reduce worst-case runtimes by massive amounts...
+Also, searching the Assertion List in reverse order
+will be helpful in some cases, I think -- though only 
+in special cases. Finally, in expectation of Quad Cores
+I can go ahead an code the "shotgun" idea which would
+submit multiple simultaneous searches using different
+algorithms in order to cut short worst case scenarios,
+since each algorithm seems to have its own weak points.
+
+Right now I am leaning towards implementing Step Prover
+as just a batch option (triggered by RunParms), and
+not implementing it in the GUI. Delivering it as an
+external "service" has a certain merit too, I suppose,
+but unless someone is actually running Step Prover
+the overhead is minimal -- and the only drawback
+is polluting the mainline with doomed code...but a
+mentioned, "StepProver.java" is a replaceable 
+interace so a savior may appear one day...)
+
+* Pull the plug...
+
+My view today is that this project cannot meet its
+objectives with any reasonable amount of effort,
+so it should be shelved (perhaps pending new theory
+and/or financial sponsorship :-) 
+
+* Post Mortem
+
+The idea that got me started coding was the Precomputation
+of LogHyp Unifiers. Still a good idea. But even at its best
+it doesn't solve the problem of combinatorial explosion
+in proof searching -- which I did not precompute accurately!
+Example: assume depth 2 proof and that each subproof step
+has two logical hypotheses. That means the subproof of depth
+2 has seven steps. Now assume that the precomputation of
+LogHyp unifiers works perfectly and that each of the seven
+steps has a mere 100 assertions to examine -- a mere 10**2
+sub-searches. That means that we have seven steps and 10**2
+searches for each step = (10**2)**7 = 10**14, for an
+exhaustive search! So, really, that is a problem for 
+us and a re-think from first principles is needed.
+
+* Re-try
+
+I have a new plan. The Step Prover will not be implemented
+inside the Proof Assistant GUI. It will be a batch function
+ *and* addressable via the mmj2 Service feature, which will
+allow the Step Prover to be called by external programs
+to prove a theorem or Proof Worksheet.
+
+As part of this I will implement a couple of tiny tweaks
+to make it faster:
+
+ * the Given hypotheses and conclusion
+formulas will be cloned to be in Most General Form by
+converting their variables and variable hypotheses to
+Work Variables and Work Variable Hypotheses. This will
+accomplish a de-facto variable renaming which will
+enable the Step Prover to know the difference between
+Source variables (from the proof steps) and Target variables
+(the justifying assertion variables.) This will provide
+an opportunity to optimize the Step Prover's unification
+algorithm, which sucks up at least 40% of the total 
+CPU cycles.
+
+ * The Step Selector assertion list will be used instead
+of the regular Proof Assistant assertion list. The Step Selector
+assertion list is sorted by 1) ascending number of logical
+hypotheses, and 2) MObj.seq number (position in the input
+.mm file). This will provide shorter proofs faster in many
+cases, assuming that the search parameters are set to
+stop the search when the first proof is found and that
+DepthFirst = No (meaning that depth 1 is searched, then
+depth 2, etc.) 
+
+Even though brute-force proving is not feasible in the
+general case, the code I have written has some utility --
+for example, look at how it ripped through ql.mm. And,
+the StepProver interface is dynamically pluggable via
+a RunParm so a smart search could be implemented without
+recoding mmj2. (Plus this gives me something to tinker
+with during the long winter nights...)

@@ -1,0 +1,230 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Purpose
+
+The purpose of the bounty commitee is to further the development of
+Noosphsere and benefit PlanetMath by identifying particular projects which
+could be done to improve the platform, offer monetary bounties for the
+completion of said projects, advertise these bounties and solicit
+programmers, then oversee the completion of these projects.
+Currently, the committee consists of three members --- Logan Hanks,
+Aaron Krowne, and Raymond Puzio.
+
+* Projects
+
+See the public bounty page at: [[file:PlanetMath_Code_Bounties.org][PlanetMath_Code_Bounties]]
+
+
+* Advertising
+
+Currently, we have only advertised our bounty on the PM homepage.
+Unfotunately, after three months, there have been no takers, so we may
+need to think about getting the news out to a wider audience.  Since
+the bounties themselves already take up a significant part of our
+budget, this will have to be done with an advertising budget of $0, so
+putting an ad in the wanted section of the newspaper is not an option
+at this time ;(  Possibilities include various newsgroups and bulletin
+boards where programmers congregate.
+
+(list possible sites)
+
+A suggestion made at the board meeting was that we make a Noosphere
+page on Savannah (and/or similar websites like Sourceforge).  Given
+that these sites have high visibility in the open source community,
+this could also help us attract hackers for hire, especially since
+some of these sites have "contribute to this project" links.
+
+* Application
+
+To make this more business-like, a simple application form may be
+in order:
+
+ Date: ____________________________
+ .
+ Name: ____________________________
+ .
+ E-mail: __________________________
+ .
+ Programming Exprience: 
+
+
+Also, we should state a policy of how the applications will be handled.  
+For now, I asume that the best policy would be to accept applications until 
+a suitably qualified applicant is found but, in the future, if get swamped
+with applications, we might want to impose deadlines.
+
+
+If this bounty thing gets off the ground and becomes a PlanetMath
+institution, maybe we could even make an online version so that
+interested programmers could click a button on the bottom of the
+page describing the bounty project, fill the form out online and
+submit it at the click of a mouse (or key in Ratpoison ;) )
+
+* Contract
+
+To avert potential misundestandings, it would be wise to sign a
+contract.  A possible outline of what might go into such a contract
+might be as follows:
+
+ * *Introduction*
+: Name parties to and purpose of this agreement. 
+
+ * *Time limit*
+: Unless the finished work is finished and delivered by a certain date, the
+contract becomes null and void, PlanetMath doesn't owe any money and
+is free to hire someone else to do the job.  At its discretion,
+PlanetMath may choose to pay part of the money for partially finished
+work and/or extend the deadline, but is under no obligation to do so.
+
+ * *Specification* 
+: In order for the programmer to recieve payment, the deliverable must
+meet certain minimal standards (i.e. the program should at least
+compile, run, and work on a few basic test cases).  Obvously, the
+exact criteria will depend on the particular project and should be
+spelled out in the contract.  PlanetMath will have three days form the
+deadline to check that these criteria are met.  If they are met, then
+the payment will be sent on the next business day, otherwise
+PlanetMath will return the code along with an explanation of why the
+work was unacceptable. (OK, one can't literally return code the way
+one can return a cracked axle, but one could agree not to use the code
+and not keep a copy.  The point is to prevent us from swindling
+somebody saying that his code was no good so as not to pay him but
+then turning around and using the fruit of his labor anyway.  Since
+the programmer will retain exclusive copyright until the check is in
+the mail, we wouldn't be able to use it unless we payed him for his
+work first.)
+
+ * *Warranty*
+:  The programmer warrants that the code is free of defects (bugs) for
+a certain time, say a month.  In that time, if a bug is discovered,
+the programmer will either fix the bug or return the money. After that
+time, the programmer is under no obligation whatsoever to maintain the code.
+
+ * *Indemnity*
+: The programmer represents that the work is fit to be released under
+our free license and that it does not infringe on copyrights or patents.
+In the case that a court of competent jurisdiction declares otherwise,
+the programmer agrees to indemnify and hold PlanetMath harmless.
+
+I presume that much of this will be negotiable --- for instance,
+someone might prefer to paid a bounty in pieces upon completing
+different parts of the project according to a timetable to our 
+mutual satisfaction. --[[file:rspuzio.org][rspuzio]]
+
+On a more persomal note, much of my inspiration for this comes
+from dealing with contractors while renovating my house.  (Joe,
+in particular, will have a first hand knowledge of this.)  The
+idea of having the programmer retain copyright until payment is
+recieved go back to converstaions with Joe about the code market
+and avoiding sunk costs at that house.  Generally speaking, this
+whole idea fits well with the idea of the code market and avoiding
+sunk costs in creating publiic goods which we discussed then.  --[[file:rspuzio.org][rspuzio]]
+
+I've linked above to the bounty page I already made a few months ago.
+We should consider making that the public face of the bounties, and 
+maybe retaining this as a coordination page amongst the committee. 
+I will work now on defining a couple more bounties and linking them in
+there. --[[file:akrowne.org][akrowne]] Mon Jan 23 14:31:47 UTC 2006
+
+Of course.  This page was intended as exactly that --- a place for the
+committee to coordinate some of its public activities (asopposed to, say, 
+discussing the relative merits of applicants, which should be done privately) 
+in a way which is transparent to the general public and where other
+"members" of the organization could add their suggestions, cruitiques, and 
+opinions to the committee.  In particular, one thing that I definitely think 
+needs to be coordinated right now is the contract.  While we might consider 
+it acceptable to take a chance with $100 bounties, what about the $1000 bounties?  
+Suppose that someone comes along with a serious offer to make Noosphere more 
+installable.  Given that we would be offering this person nearly half our budget, 
+this is definitely a situation where I would like to see some sort of contractual 
+guarantee to make sure that we get what we paid for in a timely fashion.
+
+Another issue has me a bit troubled.  On the main bounty page, you list 
+four projects, all of which are advertised as available.  Suppose that some
+time in the near future, four or more serious applicants come to us and
+offer to do all four projects.  What would our response be?  Suppose, for the
+sake of this argument, that all four applicants are qualified to carry out
+their respective projects and that we have every reason to believe that they
+will come through and do quality work.
+
+One possibility would be to agree to all four projects, but that could put us
+in a bad situation because the sum of the four bounties is $2400, which would mean
+that we empty out our entire treasury.
+
+Another posibility would be for us to decide to fund only one or two of the
+bounties and tell the remaining applicants "Sorry, we can't fund all the bounties
+now, so we can't pay you to do this project now."  I would say that this can only
+be acceptable if we make it abundantly clear ahead of time that this is how our
+system works on the main public bounty page.
+
+I mean, if I knew nothing about PM, were looking to make some money this way,
+learned about PM bounties and read the main bounty page as it stands now, the
+understanding I would come away with is that there are four differnt jobs 
+which I could apply for and that the organization has the money available to
+pay for them.
+
+If, after submitting an application, I was told that there was not enough money
+to pay for the job I had applied for, the result would be that I would avoid 
+doing any business with that organization in the future.  To me, this would send
+a signal to me that there is something not quite right with the organization ---
+maybe they're flaky or finincially irresponsible or shady --- but whatever it
+was, I would come away with the impression that they are not conducting their
+affairs in a businesslike manner and are not to be trusted.
+
+So, I would say, if this is the was we intend to operate (and I would
+be willing to assent to it (subject to the upcoming proviso) if the
+other committe members agree) then we need to make that clear up
+front.  We should state that the way that the bounty program works is
+as follows: Anyone who is interested can apply for one of the bounty
+projects.  The committee will look at the applications as they come
+in.  While we will fund at least one project if we get a serious offer
+from a qualified applicant, we would not be able to fund all projects.
+Rather, we will make a choice of which projects to fund based on the
+portion of the budget allotted to the bounty program, the relative
+merits of the applicants who have applied for the different projects
+(If noone has applied for a particular bounty, clearly we cannot fund
+it; if two people have applied for two bounties and one is more
+qualified than the other, we may choose to fund the project associated
+with the more qualified applicant.), and the relative importance and
+urgence of these various projects.  I think it is vital that we make
+it clear exactly how this market operates to so that potential
+applicants can decide if they are willing to accept the possibility
+that the project they apply for may not be available if someone else
+applies for a different project.
+
+Also, there is a third option.  If we do not want to potentially spend
+all our budget on bounties or have applicants not be sure whether the
+bounty they apply for is available, we could simply choose to make
+some of the projects unavailable and only have as many available
+projects at any time as we have the resources to fund.  --[[file:rspuzio.org][rspuzio]]
+
+
+I think we should go with the disclaimer option for now.  I don't want
+us to stall or dissuade people from looking into these jobs.  However,
+we can make it clear we will likely not be able to fund them all at
+once.
+
+And yes, we need to work out the contract.  So far I'm pretty much
+with you on all the main points.  Should we get and customize an
+existing work-for-hire contract, or do the legalese ourselves from
+scratch? --[[file:akrowne.org][akrowne]] Mon Jan 23 19:10:40 UTC 2006
+
+Since, as I said, I've had experience with work-for-hire vis-a-vis
+construction contractors, what I thought I would do is to dig up some
+of the contracts that we've signed and base a draft on them which
+incorporates the main points descried above.  Hopefully, I will have
+this draft here sometime this week.  Then you and Logan can look it
+over and weigh in with your opinions and Bonnie can proofread it from
+the legal standpoint.
+
+While we may not have people knocking at our door asking for bounties
+yet, the situation could change and when we start advertising.  I
+would hate to see us caught unawares --- it would suck if a good
+applicant were to show up but had to wait before getting started
+because we didn't have all our ducks in a row.  To continue the avian
+metaphor, while I wouldn't count my chickens before they were hatched,
+I would also want to make sure that I had good homes for the chicks
+before laying the eggs.  --[[file:rspuzio.org][rspuzio]]
+
+Ok, that sounds good, I agree. --[[file:akrowne.org][akrowne]] Mon Jan 23 21:20:06 UTC 2006

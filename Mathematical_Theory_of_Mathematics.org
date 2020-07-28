@@ -1,0 +1,10 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a rigorous account of some mathematical theory I have been studying,
+a more impressionistic account of which is to be found in my essay 
+[[file:Two years later.org][Two years later]].  The introverted name of this essay refers to the
+fact that the purpose in assembling this theory was to provide a mathematical
+account of some aspects of mathematics, with intended applications to such
+topics as repreesentation of mathematical information, knowledge management
+for mathematics, and automatic verification of reasoning.

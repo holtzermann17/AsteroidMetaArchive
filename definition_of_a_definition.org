@@ -1,0 +1,103 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I was thinking that perhaps the definition of "free software" (or "free math")
+is related, somehow, to the definition of a definition.
+
+What follow are musings and brainstorms on this topic.  They aren't meant to
+be taken too seriously, but maybe something can be learned from them.
+
+Before diving in, my guesses about what that might be:
+
+A long while ago I first
+started talking about math being like software; around the same time, I
+started talking about how a theorem could sometimes be treated like a definition
+(especially if you wanted to accept the proof without thinking).
+
+The main thing I was thinking about when I went through this exercise was
+that definitions exist in a sort of "isotropic ether" -- they can be moved
+from place to place without changing their meaning.  But you have to be careful --
+because constituting terms may be differently defined in different contexts!
+
+So, moving a definition typically means maintaining pointers to the things it is defined
+in terms of.  (You can do it both ways, but watch out if you drop the pointers,
+because per usual, you likely don't know what they will end up pointing at! -- however,
+in the cases where you /do/ know, then moving definitions can be a pretty powerful
+tool.)
+
+* 0
+
+/The freedom to use D, for any purpose./
+
+Here "freedom" is relative to primarily mathematical, not social, constraints.
+I can introduce the definition D into any discourse at any time:
+
+: *D:* A /foo/ is: /bar baz/.
+
+"Freedom" doesn't imply that the definition is going to be useful in
+this context (or any context).
+
+Notice that none of the terms in the definition need to be defined
+within the current context (especially /foo/ probably shouldn't
+be), although it is perhaps a good social
+practice to form definitions in terms of things your reader is likely
+to know /or can figure or find out/.  (It is factors like this which make
+definitions particularly similar to free software.)
+
+* 1
+
+/The freedom to study how D works, and adapt it to your needs./
+
+As I just mentioned above, this typically requires access to each of
+the terms that D is defined in terms of.  Otherwise, it isn't a (very)
+"good" definition.  Now, even without access to sub-terms, you can still
+study any /internal/ mechanics that have been expressed in D:
+
+: *D:* A /foo/ is a /bar/ restricted to range over /baz/.
+
+"Adapting" is ready enough, mathematically:
+
+: *D':* A /qux/ is a /bar/ restricted to range over the complement of /baz/.
+
+(It would be confusing to do it within the same context, but I could of
+course "adapt" the definition so that /foo/ itself meant something different,
+if I wanted.)
+
+: *D/:* A /foo/ is a /bar/ restricted to range over /quux/.
+
+** Note on access
+
+In the software world, access to source code is needed before
+modification can take place.  In the world of definitions,
+access to some statement of the definition is needed.  You get a nice
+"automatic freedom" with definitions in that every definition
+must be presented in some source format.  (However, subsequent uses
+of, say, a symbol, such as /foo/, are not always directly associated
+with any one previously existing definition.  This is one of the reasons
+"context" is so important in mathematics -- /foo/ is supposed to
+point to the same definition throughout some suitable context.)
+
+* 2
+
+/The freedom to make a representation of D available for use in other contexts./
+
+Remember, we are talking about mathematical freedom, not social freedom.
+Once you have formulated your definition, can it be /effectively/ reused?
+Only if other contexts can see into your context well enough to extract D.
+Substantially, this probably means that those contexts have to share
+definitions of the terms from which D is constituted.
+
+But again, I think this is basically an "automatic freedom".
+
+* 3
+
+/The freedom to improve D/. 
+
+This seems to be implied by the others -- assuming you can figure out how to
+"improve" the definition!  If you want to improve its natural language formulation,
+or other aspects of its exposition, that's fine.
+
+However, note that if you "modify" a definition, at some level of abstraction you
+are producing a new definition.  (It is interesting to think about which 
+theories say that two given variants are the same and which say they are
+different.)

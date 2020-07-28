@@ -1,0 +1,4 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Currently a user must manual add a default ACL rule to enable others to view their entry.  This shouldn't be too hard, but I need to find where this is done.

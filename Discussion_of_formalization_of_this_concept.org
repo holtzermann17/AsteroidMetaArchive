@@ -1,0 +1,54 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+What I am calling a template here is what I have elsewhere termed a schema.
+While the word schema is common among logicians (axiom schema, theorem schema,
+proof schema ...), I now prefer the word "template" and plan to term the next
+version of the suite of programs for manipulating such objects "template
+matching utilities".  Not only am I doing this because the word "template" is
+more familiar to the average reader and expresses the notion described here
+well, but I also am making this change to prevent future confusion --- the word
+"scheme" denotes a construction in category theory which I plan to use in my
+theory of mathematical entities, and it would be most unfortunate to to have two
+variants of the same word denote two rather different concepts.  The situation
+would be as when one speaks of "a vector /field/ with coefficients in the /field/ of
+real numbers" so it makes sense to avert a head-on collision ahead of time.
+
+: the thought occurred to me that these "templates" are also "binders" with the
+`car' lopped off.  It might make a theorem like the law of cosines more readable
+to insert some suitable binder in front of the current `car'.  On the other
+hand, if you remove the current `car' then you appear, at least in this case, to
+be left simply with predicates.  I might have written the theorem
+
+  (defthm law-of-cosines (triangle T)
+    (equal (length (side 1 T)) a)
+    (equal (length (side 2 T)) b)
+    (equal (length (side 3 T)) c)
+    (equal (size (angle 2 3 T)) A)
+    (equal (power 2 a) (minus (plus (power 2 b)
+                                    (power 2 c)
+                                    (times 2 b c)
+                                    (cos A)))))
+
+: not to divert you from further investigations into templates -- but I think it
+may be helpful, as time goes by, to discuss the [[file:relationship of templates to other ideas in hcode.org][relationship of templates to other ideas in hcode]].
+For example, I can imagine that the hcode interpreter might take in something like
+the above `defthm' form, and find all the "wildcard" leaves, rewrite it in terms
+of "templates" and then do something.  But I don't know!  Keep me posted on this one.
+--[[file:jcorneli.org][jcorneli]] Sun Mar 06 00:47:44 2005 UTC
+
+:: What you mention here about templates as headless binders is *precisely* what Makarov does in his article [http://arxiv.org/abs/cs.LO/9906010 Predicate Logic with definitions] (see next comment).  I agree with you that this business of how templates relate to binders is interesting and an important topic and I defintely plan to look into it soon.  What you are saying about rewriting the wildcards sounds right to me but, unfortunately, I'm not too clear on exactly how to do it either :(  Maybe I will have clearer ideas after writing the miniature logic checking program. --[[file:rspuzio.org][rspuzio]] 6 March 2005
+ 
+:: I will also stick the symbol "/theorem/" in fornt and collect all the variables into one place to make the thing easier to read.  It really is a mess as it stands!  --[[file:rspuzio.org][rspuzio]] 6 March 2005
+
+It should be noted that the notions formalized here are rather similar to
+several notions in logic.  First, there is the common notion of schema (axiom
+schema, theorem schema, proof schema ...).  Second, our templates can be seen as
+a variation of Quine's quasi-quote notation.  In fact, if one examines how Quine
+uses his quasi-quotation in expressing metatheorems and rules of inference, one
+will see that his usage is very similar to what is being done here.  The chief
+way that the notation employed here differs from that of Quine is that it
+explicitly specify which symbols are placeholders.  Third, there is what Makarov
+terms a "definition of variables" which is, for all intents and purposes, identical with the notion of "template" defined here.  In particular, Makarov develops a formalism called D-logic in which such entities are introduced as fundamental objects alongside terms and formulas and operations involving them are defined.  One of the chief motivations underlying Makarov's work is the attempt to formalize mathematics in a way that is conducive to computer implementation and Makarov's work was an important influence in the development the concepts presented here. --[[file:rspuzio.org][rspuzio]] 5 March 2005
+
+Back to [[file:Formalization of this concept.org][Formalization of this concept]]

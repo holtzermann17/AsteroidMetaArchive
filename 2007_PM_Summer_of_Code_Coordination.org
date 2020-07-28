@@ -1,0 +1,139 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back to [[file:PM_Summers_of_Code|main PM SoC page.org][PM_Summers_of_Code|main PM SoC page]].
+
+Up to [[file:SoC metapage.org][SoC metapage]].
+
+*  Intro
+
+Are you a student?  Do you want to help out PlanetMath /and/ get paid for it??  Well, perhaps you can, through this year's Google "Summer of Code" program.  Through !SoC, you can get a paid internship to work on a !PlanetMath project for the summer.   The projects are listed below (the detailed ones have links to more information).  Please make add a link to a user page next to the project(s) that most interest
+you.  Then, if you want comments from us, describe
+your proposal on your user page.  Feel free to engage us in dialog on other pages
+on the wiki, or to propose brand new projects if you think they will fit in.
+
+You can use what you learn here when you prepare your official application for Google.  The wiki is a good place to discuss things and get multiple
+viewpoints on a proposal, and so you'll want to keep an eye on developments
+here.
+
+Tip: for best feedback, start with a short summary of your proposal and give
+us a chance to comment on that before launching into a fully detailed proposal.
+
+*  Mentors
+
+ * [[file:akrowne.org][akrowne]]
+ * [[file:jcorneli.org][jcorneli]]
+ * ...
+
+/Note/: those who want to be mentors should [http://code.google.com/soc/mentor_step1.html sign up here].
+
+*  Important Dates
+
+ * March 14: List of accepted mentoring organizations published on code.google.com; *student application period opens*
+ * March 26: *Student application deadline* ([http://groups.google.com/group/google-summer-of-code-announce/browse_thread/thread/72f227109321bba5 Deadline updated])
+ * April 11: List of accepted student applications published on code.google.com
+ * May 28: *Students begin coding for their projects*; Google begins issuing initial student payments
+
+The complete list of important dates can be found in [http://code.google.com/support/bin/answer.py?answer=60325&topic=10729 SoC timeline].
+
+*  Funded Projects
+
+This section consists of projects which we have recieved confirmation (so far) will actually be funded by Google.
+
+ * [http://code.google.com/soc/planetmath/app.html?csaid=KBYGEQdUQQECNRINH0VSXCxfbhVUFVoDBCBfOkEHQV4FC3k%3D%0A Generalized/multiple classification scheme handling in the autolinker] ([[file:James.org][James]])
+ * [http://code.google.com/soc/planetmath/app.html?csaid=LB8BHQJEQAECNRINH0VSXCxfYUMFF11UCydfYRAGR14ABnA%3D%0A Building A MUSN/Arxana/the Scholium system]  (Tom Lenius; on the wiki?)
+ * [http://code.google.com/soc/planetmath/app.html?csaid=KBkRAQhLSgECNRINH0VSXCxfYBIFSlxXBiVfPURWR1lSACQ%3D%0A Applying reputations systems to PM] ([[file:Pawel.org][Pawel]])
+
+*  Project Ideas
+
+/Please feel free to add your own ideas!/  See the 
+[[file:Feature Requests.org][Feature Requests]] page if you're looking for some quick inspiration.
+
+Note that a student project could focus on the details of *one* of the
+items mentioned below, or it could combine aspects of *several*.
+
+Preference will be given to students who can produce a well put
+together proposal, whatever it is about.
+
+** CBPP Hacking Track
+
+*** Noosphere
+
+ * make Noosphere system more deployable and configurable
+ * create a ratings and reputation system for Noosphere; apply to PlanetMath (Interested: [[file:Mithilesh.org][Mithilesh]], [[file:Pawel.org][Pawel]])
+ * Noosphere interface nificiation (CSS, AJAX, better layout, better theme...)
+ * develop Noosphere translations/i18n infrastructure
+ * develop improved notifications/updating systems for Noosphere
+ * develop improved editorial and collaborative facilities for Noosphere (direct-edit corrections with revert; editorial message areas, owner control over request fulfillment, mutability of messages to corrections etc)
+ * develop non-web (e.g. CVS-, email-based) interfaces to Noosphere
+ * streamlining/optimizing the Noosphere rendering subsystem (speed up latex2html or apply alternatives;  apply jsMath; etc.) (Interested: [[file:Stephen.org][Stephen]])
+ * credibility/community features in Noosphere: infrastructure for real names/real-world identities, people map (e.g. with Google Maps), etc.
+ * generate small visualization of local link structure of Noosphere documents (Interested: [[file:Stephen.org][Stephen]], I added this project idea)  
+
+*** NNexus
+
+ * abstractify handling of classification schemes; disciplines other than math; multiple schemes; mapping between schemes (Check this out -> [[file:James.org][James]])
+ * better morphology (possibly re-using an existing module; likely paired with other work)
+ * improved parsing for NNexus; e.g. with [http://cpan.uwinnipeg.ca/dist/LaTeX-TOM LaTeX::TOM] or LaTeXML
+ * combine jsMath with latex2html to integrate client-side, accessible rendering with NNexus and Noosphere (cross-listed with Noosphere, above).  (Interested: [[file:Stephen.org][Stephen]])
+  (possibly pair this project with improved parsing for NNexus if the jsMath integration isn't enough)
+ * abstractify document handling (need a !crossReference, not just !crossReferenceLaTeX) (Check this out -> [[file:James.org][James]])
+
+*** Arxana
+
+ * Work on the [[file:MUSN.org][MUSN]] project
+ * help complete/extend [[file:Arxana.org][Arxana]], the "scholium based" content management system, 
+e.g. get Arxana to a stage where it can re-implement a better version of !AsteroidMeta (this wiki), or more...
+ * help re-write Noosphere using a scholiumific framework
+ * write a stand-alone, easy-to-use, scholium-based editor that interfaces with Arxana
+
+*** Other/Miscellaneous
+
+ * create a !PlanetMath "digital library" of papers, books etc.
+ * create a "code market" system for coordinating funded/semi-funded projects 
+ * Set up PlanetComputing (PlanetEconomics, etc...)
+ * integrate maxima with !PlanetMath in some useful way (webMaxima?) (Interested: [[file:Clare.org][Clare]])
+ * create distributed/grid computing systems that can do useful things for PM (e.g., rendering, linking)
+ * create a validator for [http://www.omdoc.org OMDoc] similar to
+[http://www.openmath.org/software/validate.html OpenMath Validation (XSLT)]. (Interested: [[file:Clare.org][Clare]])
+
+
+** Math Hacking Track
+
+ * Any of the items above mentioning Arxana may involve math
+hacking, depending on what you want to do with it.
+ * Parsing "natural language" math, written in !LaTeX, into
+computer-friendly math written in LISP (see [[file:hcode.org][hcode]]). (interested [[file:Leno.org][Leno]], see [[file:Parsing_natural_math.org][Parsing_natural_math]])
+ * Developing proof-checking (and proof-authoring) tools that operate using the language mentioned above. (interested [[file:Shaneal.org][Shaneal]])
+ * Anything else related to [[file:HDM.org][HDM]] that strikes your fancy.
+ * ...
+
+** Content Hacking Track
+
+ * "ingest" Wikipedia content PlanetMath doesn't have.  build a system to automate this as much as possible.
+ * use focused crawling or other technologies to find math content on the web and get it on PM in some capacity
+
+** IR Hacking Track
+
+ * enhancement of Lucene (the search engine system PM is using).  Things that could be added: run-time field-based boosting, storing citation links to the index and scoring based on them.
+ * Add additional tokenizers and front-ends to allow search for text including mathematical symbols.
+
+** Other
+
+ * Optical character recognition, especially OCR that works for math content 
+ * ...
+
+* Discussion
+
+This list is largely recycled from last year and needs some updating. --[[file:akrowne.org][akrowne]]
+
+Would be good to have: overview text (keep people from being lost in the details),
+including some description of how things are supposed to proceed (telling people
+what we expect from them), including the *key dates* (so no one gets surprised).
+I can help with this, but can't do all of it. --[[file:jcorneli.org][jcorneli]]
+
+I have put some important dates.  In terms of telling people how things are proceed, do you want some paragraphs similar to the ones in http://live.gnome.org/SummerOfCode2007? --[[file:Clare.org][Clare]]
+
+Thanks for adding the section with dates.  The link you provided is also a nice
+point of reference, but I have in mind something more specific.  Please see revised
+intro text, where I'll hopefully get down what's on my mind!  --[[file:jcorneli.org][jcorneli]]

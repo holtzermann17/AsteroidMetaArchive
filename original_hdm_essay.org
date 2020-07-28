@@ -1,0 +1,372 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Forward (Jan 30, 2006)
+
+I wrote this essay about three years ago.  It is still an
+OK essay, but I think that my thinking on these topics
+has matured somewhat.  The project certainly has.
+For a more up-to-date document of what the HDM
+project is all about, please see
+[[file:First Monday Paper--The HDM Manifesto|The HDM Manifesto (a draft).org][First Monday Paper--The HDM Manifesto|The HDM Manifesto (a draft)]].
+
+
+
+* Introduction
+
+What exactly the Hyperreal Dictionary of Mathematics is meant to be
+is this: a free and comprehensive database of mathematics together
+with tools that enable efficient interaction with this database. To
+introduce more colorful terms, the goal of the HDM project is to
+make a simulation of mathematics that surpasses "real" mathematics
+in possibility.
+
+The first objective of the project is to systematically transpose
+all extant mathematics into free hypertext. Optical character
+recognition software that works on mathematical text, mathematical
+language parsing software, and hypertext generating software are
+three stepping stones that I think could help achieve this
+objective. These tools would allow one to transform print-based
+mathematical text into electronic hypertext automatically.
+
+Human-generated hypertext is not meant to be excluded, but given the
+quantity of extant mathematics, and the fact that much of the text
+falls under copyright, and the need for some standards for the
+database entries, automation of many parts of the process will be
+critical.
+
+The underlying reason why such a project might be expected to work
+at all is that math is highly modular, or outline-based. By this I
+mean that you can read math on many levels; you can get the outline
+of an argument and then later fill in the details. You can follow up
+on related ideas if you wish, or ignore them.  You can seek an
+in-depth understanding of a theorem or definition, or you can just
+use it and see that it works. Above all, you do not have to
+understand all the details of a problem to have a good understanding
+of one of its minor aspects.
+
+This phenomenon of modularity means that the database can grow by
+small steps and that any electronic aids used in its production
+(such as a parser or hypertext generator) can be made to work
+without a terribly huge scope.
+
+As time goes by and the database grows, more knowledge-intensive
+tasks can be carried out.  Among these is the development of a
+library of new free mathematical works.  Sometimes these works will
+take the form of collections of dictionary entries, sometimes
+documentation that explains how to use some aspect of the dictionary
+effectively. Some will contain original mathematics.  The semantic
+content of all of these works, whether technical or expository,
+should be added to the HDM.
+
+
+* On developing the HDM
+
+Since we currently do not have robust math-ready OCR, extant
+transparent texts are our only testing ground for the parsing tools
+we will develop (1).  It isn't clear yet whether it will be possible
+to create the kernel of the HDM any other way than "by hand".
+Nonetheless, the more high-quality transparent mathematical text we
+have to work with, the better.
+
+We should now ask: what exactly is the kernel supposed to be?  The
+HDM kernel is what needs to exist for the HDM to autonomously
+support creation and linking of new entries from transparent
+source. In other words, the HDM kernel is whatever software and
+mathematical content we need to prime the pump. However, once a
+kernel is ready, that is not the end of the story. On the one hand,
+no doubt the kernel will run into trouble a lot, especially at
+first, and it will have to be fixed. On the other hand, even once it
+is running quite smoothly, its behavior should be continually
+improved. For instance, as the HDM grows, the kernel will have to be
+used to refactor entries into more useful forms, and we will want to
+implement new and better ways to do this.
+
+It should be clear that while the HDM is motivated by formal
+mathematics, in contrast to proposed systems like QED, the HDM does
+not lie properly within formal mathematics.  While people working on
+the core of the kernel will certainly have to be comfortable working
+with formal mathematics, later we will write software that will make
+it relatively easy for anyone to write for the HDM.
+
+Similarly, while the HDM is motivated by mainstream AI, we do not
+intend to stick to AI methods. In particular, we do not expect to
+produce an artificial system that will learn math the same way
+people do -- at least not for a very long time.  It will also be a
+long time before the HDM will be able to parse a whole paper
+automatically.  Prerelease versions of the kernel will require a
+human operator to answer questions as it runs, and dialog with human
+users will be an important part of the system for the foreseeable
+future.
+
+OCR is considered separately from the other tools for a few reasons.
+First, producing a robust math OCR program seems to be particularly
+challenging, and second, it isn't completely clear that it will be
+necessary.  While I am fairly confident that OCR will eventually
+become far more efficient than typing, the fact of the matter is
+that a lot of important math has been typed into the computer
+already. We can begin with this body of work. Before too long,
+someone else may develop a free OCR engine -- perhaps the people
+working on the Digital Mathematics Library at Cornell University
+(2).  It is even conceivable that, working together with their
+colleagues around the world, the DML group will transform all, or
+most, extant mathematics into a transparent form. If they do, their
+methods will almost certainly differ from the ones we would have
+employed.  In particular, it is not clear at this point how they
+will deal with the fact that most mathematical writing is currently
+under copyright protection.  If they choose the route of simply
+digitizing the portion of mathematical writing that lies in the
+public domain, then their product will be free in the sense of
+freedom, but not comprehensive in any concrete sense.
+
+
+* On freedom as it relates to the HDM
+
+All the content that is generated automatically by the HDM software
+will be placed in the public domain. The code for the kernel of the
+HDM will be developed and released under the GNU General Public
+License.
+
+The HDM will make freedoms akin to those guaranteed by free software
+licenses part of day-to-day mathematics, but it will do this in a
+hithertofore unprecedented way (3).  The success of the HDM project
+hinges upon the basic freedom to write about any idea whatsoever. As
+we improve the kernel, all mathematics that is understandable to
+humans will eventually become part of the HDM. The HDM will catch up
+with the frontiers of mathematical knowledge.  As this comes about,
+people will still be able to publish mathematics in a traditional
+medium, but they typically will not be able to distribute their
+writing without their ideas quickly being improved upon inside the
+HDM.
+
+It is not our ambition to put all publishers of mathematics out of
+business any more than it is our ambition to disenfranchise teachers
+or producers of mathematics; on the contrary, the HDM will create
+new opportunities in all of these areas, even as it transforms them.
+
+
+* Some fundamentals, or, this is not the HDM manifesto
+
+Math is very much like software. But there are also many
+differences.
+
+Math is in many ways like an operating system for human minds (and
+it also works very well on distributed networks of human
+processors). It is even more like a "complete Unix-compatible
+software system" to quote Stallman's description of GNU (4). But
+again, there are many differences.
+
+To continue the analogy, we might say that if math was software,
+it would be a very special kind of software, namely software that
+lends itself to performing simulations. We could say that the
+mind, when thinking about math, engages with a prototypical
+hyperreality.
+
+There is software that can "do math for you" -- for example,
+software that can row reduce a matrix. This software engages with
+the same hyperreality that your mind engages with when you do
+math. Accordingly, a free version of all such software belongs in
+the HDM.
+
+Furthermore, there is a lot of "code" in math that hasn't been
+written in a language that a computer can compile, much less
+execute. For example, there is an algorithm for determining the
+canonical form of a 2-D surface that is specified by identifying
+pairs of edges from a planar polygon in a given way. Is there a
+version of this algorithm that a computer can execute?  Yes there
+is: I know, because I wrote a version of this algorithm in C (not
+the best implementation, but it works).  There are lots of
+mathematical algorithms for which there is no computer
+code. Indeed, many proofs are algorithms: "If epsilon is greater
+than zero, then there is some delta such that..." -- if the proof
+tells you how to get an appropriate delta, it is an
+algorithm. Ideally, all such "software" would be included in the
+HDM. Certainly any math that is a self-proclaimed algorithm that
+does something potentially useful (e.g.  polynomial-time primality
+testing) should be included in the HDM in an actionable form.
+
+The body of extant mathematics is vast and largely unknown. To the
+best of my knowledge, there is no systematic catalog or census of
+mathematical results.
+
+As far as I can tell, anyone has the right to think or write about
+anything in mathematics, but one is typically not allowed to
+redistribute the writing of other people (i.e. copyright law
+restricts copying of mathematical writing).  It would appear that
+while mathematics itself is close to being free, encodings of
+mathematics are in general not free. (This applies to both text
+and code.)
+
+However (and that is a big however) the mathematical analogue of
+"source code" can not be said to be all that readily
+available. Nor can it be said to be totally unavailable. The fact
+of the matter is that it is not available to many people.
+
+The primary reason that mathematical source is not readily
+available is that most mathematical source code is currently
+stored in opaque formats (books in particular) (5). Another reason
+is that mathematical writing is sometimes rather turgid, and a
+third reason is that scope problems frequently make it hard to get
+the information you're looking for when you want it.
+
+The issue of "capital formation" applies to mathematics. It
+appears that (if one is unlucky) one can study math without
+establishing any mathematical capital. For individuals,
+mathematical capital seems to exists on two levels -- there is
+"real" capital, which gets embodied in things like books and
+journal articles (i.e. including in particular the ones you see in
+vitas) and there is "hyperreal" capital, which is knowledge,
+that one can use to exploit the resources of mathematics in order
+to produce new mathematics or related mathematical commodities.
+
+The issue of the "gap between developed and developing
+countries" is mirrored in mathematics by the gap between
+established mathematicians and students. Students (and, I suppose,
+others) who are capable of establishing sufficient mathematical
+capital have a chance of "making it" as mathematicians.
+
+
+* The HDM and the "Moore method"
+
+I am writing this note from the University of Texas at Austin. Much
+of it was written at the Robert Lee Moore Mathematics, Physics, and
+Astronomy building, where I was literally surrounded by reminders of
+Moore. I've often asked myself whether the HDM is compatible with
+Moore's problem-solving method of instruction.  Moore's method is an
+extension of Socrates' method of instruction by
+questioning. According to the strictest interpretation of this
+method, students are not allowed to look at books or even talk to
+each other about the problems they are assigned.  Moore's idea was
+that you gain strength by figuring things out for yourself and that
+you are made weak by having someone else tell you the answers.
+
+The HDM would make all the answers to basic problems available to
+anyone who would want to use them.  This seems to suggest that the
+existence of the HDM would lead to there being more weak
+mathematicians.  Though, of course, in a context where the answers
+are available, the artificial restraining of oneself from looking at
+the answers is also always available.
+
+Is it a good idea to restrain oneself in this way? Moore thought
+so. I'm not so sure. For one thing, even if the answers to many
+questions are known, the answers to many other harder questions
+remain unknown. If it is confronting the unknown that makes you a
+stronger mathematician, then why not confront the unknown that
+nobody knows, rather than the unknown that lots of people know?
+
+On the other hand, there is the possibility that confronting the
+basics as unknowns (even though they are actually known to lots of
+people) is what makes for strong mathematicians. In fact, this seems
+very likely to me.  Nevertheless, students can not learn in a
+vacuum.
+
+In sum, the HDM would not force people to learn by the Moore method
+or the "anti-Moore method" or any other method. It would make it
+easier for students to search for the method they felt suited them
+the best and work towards the goals that they found most
+worthwhile. It would also make many more resources available to
+people who are interested in learning what kinds of educational
+methods are most effective.
+
+
+* Obstacles, real and imagined
+
+We must ask whether it is legal to produce the HDM.  Though we will
+not copy directly from texts, we will endeavor to copy all of the
+ideas from a large set of texts. I imagine that this activity is
+legally safe because it is something that people do all the
+time. Indeed,
+
+  In no case does copyright protection for an original work of
+  authorship extend to any idea, procedure, process, system, method
+  of operation, concept, principle, or discovery, regardless of the
+  form in which it is described, explained, illustrated, or embodied
+  in such work (6).
+
+Some concern has arisen over the possibility that the particular
+selection of ideas in a given book might be subject to copyright
+protection. More generally, it isn't perfectly clear how far
+copyright protection for a particular way of expressing an idea or
+collection of ideas actually goes.
+
+A recently proposed bill, HR 3261, would go beyond copyright to make
+it illegal to copy collections of facts that appear in
+databases. According to HR 3261,
+
+  the term `database' means a collection of a large number of
+  discrete items of information produced for the purpose of bringing
+  such discrete items of information together in one place or
+  through one source so that persons may access them (7).
+
+For purposes of enforcement, a periodical issue, anthology, or
+encyclopedia would be considered to be a database.  I hope that this
+bill does not pass into law.
+
+Another concern is what to do about the fact that people are taking
+out patents on math (in the form of software patents).
+
+One extra-legal concern has to do with proofs or theorems that are
+in some sense inaccessible to computers. Perhaps there are proofs
+that can not be written down in a sensible way (though I doubt if
+any such proof would be acceptable to human mathematicians), or that
+rely on ideas or perceptions that can not be formalized (though I
+wonder if such things could qualify as mathematics).  Going to the
+other extreme, there are computer proofs that are inaccessible to
+humans in some sense.  If private companies or individuals keep
+details of such proofs a secret, they may remain inaccessible to the
+HDM for some time.
+
+
+* Acknowledgments
+
+The following people have had particularly helpful comments on the
+HDM project or on the contents of this essay; they are listed here
+approximately in reverse chronological order from the time I first
+talked with them about the project: Bob Boyer, Madeleine Corneli,
+Karl Berry, Lawrence Lessig, Richard Stallman, David Jao, Daniel
+Ford, Frank Morgan, Richard Fateman, Rajesh Bhatt, Tandy Warnow,
+Gordon Novak, Luther Gerlach, Reuben Hersch, Aaron Krowne, Greg
+Newby, Michael Hart, Steve Corneli, Zoe Corneli, Timothy Teravainen.
+Don Simon kindly sent me a copy of his thesis and associated code
+related to proof-checking proofs written in natural
+language. Richard Fateman kindly sent me a code-base he had
+developed for doing math OCR.
+
+
+Notes
+
+ 1. A "Transparent" copy of [a] Document means a machine-readable
+copy, represented in a format whose specification is available to the
+general public, whose contents can be viewed and edited
+directly and straightforwardly with generic text editors or (for
+images composed of pixels) generic paint programs or (for
+drawings) some widely available drawing editor, and that is
+suitable for input to text formatters or for automatic
+translation to a variety of formats suitable for input to text
+formatters. A copy made in an otherwise Transparent file format
+whose markup has been designed to thwart or discourage
+subsequent modification by readers is not Transparent. (Source:
+the GNU Free Documentation License Version 1.2.).
+
+ 1. To get a sense of this project's goals, please see Twenty
+centuries of mathematics: Digitizing and disseminating the past
+mathematical literature, by John Ewing. The current version of
+this document is http://www.ams.org/ewing/Twentycenturies.pdf.
+
+ 1. Free software is defined in terms of the following four freedoms:
+(0) The freedom to run the program, for any purpose.  (1) The freedom to study
+how the program works, and adapt it to your needs.  (2) The freedom to
+redistribute copies so you can help your neighbor.  (3) The freedom to
+improve the program, and release your improvements to the public.
+(Source: The Free Software Definition, as published by the Free
+Software Foundation.).
+
+ 1. (Source: The GNU Manifesto.).
+
+ 1. A copy that is not "Transparent" is called "Opaque". (Source: the GNU Free Documentation License Version 1.2.).
+
+ 1. (Source: Title 17 of the United States Code.) Thanks go to David Jao
+for bringing this particular passage my attention.
+
+ 1. (Source: HR 3261, Database and Collections of Information
+Misappropriation Act.)

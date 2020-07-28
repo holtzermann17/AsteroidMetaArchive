@@ -1,0 +1,172 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I read the IRC log of the recent board meeting and
+came away with the impression that the coin of the
+realm is in short supply. Not only that, but the major
+initiatives for obtaining the necessary wherewithal involve
+putting out the begging bowl in front of various
+institutions and civic minded individuals -- and that even
+the tasks involved in begging are costly in terms of
+personpower; sometimes it is necessary to spend lots
+of money to obtain money!
+
+"Galois" mentioned the need for a technical
+sysadmin/programmer -- an expensive proposition -- and
+he/she was quite interested in the challenges involved
+in obtaining volunteer programmers.
+
+Putting all of this together, without money there
+still remains the Work. And this work has many parts,
+from public relations, to grant writing, to
+programming, to system maintenance, web nannying, etc.
+However, in spite of a deficiency of dollars
+PlanetMath is a going concern, with a good name and a
+considerable membership of highly reputable, talented
+and knowledgable individuals. Therefore, one coin of
+the realm that ought not be overlooked or
+underestimated is the value of a solid job reference
+on the resume/application of an individual who is
+looking for work and the opportunity to work with
+individuals that are already successful in business
+and academia.
+
+In the hard knocks world of business, the last
+reference is often the most important. "What have you
+done lately?" is a key point. Potential employers want
+to know how "J. Q. Hiree" performs now, not
+how he performed three years ago; after all, many
+things can take place in a short period of time and
+employers expect immediate satisfaction, not excuses.
+
+So what I would propose is a multi-step plan to
+supplement the workforce of PlanetMath using unpaid
+interns. PlanetMath would be responsible for expenses
+involved in carrying out authorized activities, and
+would provide informational assistance and mentoring
+to the "interns" (who might be anyone looking for
+work, not just). Then upon satisfactory completion of
+some significant amount of work stretching over at
+least a 3 month period, PlanetMath would provide
+references upon request concerning the interns'
+stellar performances which exceeded all expectations,
+blah-blah.
+
+Step 1: broken down by area of specialization
+corresponding to college study (legal, computer
+science, business, advertising, marketing, management,
+accounting, publishing, etc.), list in detail every
+task required for the ongoing maintenance, support and
+development of PlanetMath, Inc. and associated
+websites, products, fundraising, etc.
+
+These task descriptions should be brief, but complete.
+For example: "Check disk fragmentation on Server X
+every week to ensure it does not exceed 15%" or,
+"Write 15 grant proposals every year", or "Create a
+publicity campaign for PlanetMath's new internship
+program".
+
+Also list who is now responsible for performing these
+tasks.
+
+Step 2: Create a secure database to hold information
+about interns, their work assignments and performance.
+Particular attention should be paid to security,
+perhaps even to the point of keeping this database
+offline.
+
+Step 3: Determine the optimal number of interns within
+each area of specialization, paying heed to the fact
+that each individual will represent an investment of
+time and may perform at a trainee level for a
+considerable period of time.
+
+Step 4: Begin the publicity campaign seeking an intern
+to carry out publicity campaigns, but mention that
+other key positions are available (!) in the areas of
+organizational management, public relations, fund
+raising, grant writing, and information technology.
+
+These initial set of interns will be critical to
+effectively managing the load of managing more interns
+to carry out other duties of a less public nature
+(design/coding, sysadmin'ing, etc.)
+
+It might be that the amount of work involve in
+implementing Steps 1-4 is too large for existing
+PlanetMath officers to carry out. Then, it might be
+most effective to begin the outreach seeking a single
+individual, a "Vice President of Business Development"
+-- who would then create and carry out the necessary
+plans to find, vet and place the interns at the next
+level down and carry forward the program.
+
+Step 5. Sit back and watch the fun!
+
+ * * *
+
+----
+
+Seems like a good suggestion.  This is the sort of opportunity
+that can be advertised through Idealist.org.  However, I don't
+know if we'll be able to reach our target audience that way.
+One interesting option along these lines would be to run a
+"fake REU".  I did one of these when I was an undergrad, during
+the summer after my freshman year, when I didn't get into
+any real REUs.  So, instead I studied with a math professor
+in my home town who also happened to be friends with my
+advisor, which is how I got the gig.  It was essentially
+just like an REU, but there was no money involved, and it was
+a little more freeform than either of the 2 REUs I did eventually
+end up doing.  
+
+Since !PlanetMath can be worked on from anywhere, any student
+could join in from his or her home town, living at home with
+parents or whatever, and so not really needing a summer job.
+(Assuming said student is privileged enough to have full
+financial aid or rich relatives or whatever and doesn't actually
+need to work to raise tuition money.)
+
+Again, I bring this up because the problem of reaching
+potential interns and getting them excited about this program
+is the #1 challenge (in at least 2 ways).
+
+Maybe we could make some cool posters (in the style of
+Russian Revolutionary posters or band posters or something
+else eye-catching) to have people post at departments around
+the country/world.  That might help.  It would also be
+good to have seed personnel (like union organizers) at different
+departments who would take the initiative with recruiting people.
+Presumably many members of PM's current volunteer crew would
+be willing to play that role, especially if we give them
+some support (e.g. in the form of free posters as described
+above).
+
+--[[file:jcorneli.org][jcorneli]]
+
+I know there was little mention of it in the log, but isn't
+this basically what we've already begun
+with the Summer of Code program?  There is always a standing offer to 
+work with unpaid "interns", and there is basically an unlimited supply of 
+useful projects to provide them with.  Perhaps this fact needs to 
+be communicated better.  However my impression has been that thus far,
+potential candidates have not been banging down the doors.  With
+the visibility of SoC, this may be changing.  
+
+I might also add we've had TODO items posted for ages; but that hasn't
+done much in terms of getting people to "sign up" for them.  However
+taking the intern concept to actual faculty members in the relevant areas
+might be worthwhile.   Again, though, prior activity here has not been
+zero: Ed Fox has been trying to get his CS students to do PM-related
+projects for years, and I've been shopping the notion around to various
+people in academia.
+
+--[[file:akrowne.org][akrowne]] 
+
+----
+
+In terms of "cons": managing interns does not come at nonzero cost!
+This shouldn't be fatal, but it should be taken into consideration.
+
+--[[file:jcorneli.org][jcorneli]]

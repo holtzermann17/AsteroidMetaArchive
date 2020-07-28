@@ -1,0 +1,23 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is GNU? = 
+
+GNU's not UNIX!
+
+* Interesting CBPP quote
+
+From the GNU manifesto:
+
+I have found very many programmers eager to contribute part-time work for
+GNU. For most projects, such part-time distributed work would be very hard to
+coordinate; the independently-written parts would not work together. But for the
+particular task of replacing Unix, this problem is absent. A complete Unix
+system contains hundreds of utility programs, each of which is documented
+separately. Most interface specifications are fixed by Unix compatibility. If
+each contributor can write a compatible replacement for a single Unix utility,
+and make it work properly in place of the original on a Unix system, then these
+utilities will work right when put together. Even allowing for Murphy to create
+a few unexpected problems, assembling these components will be a feasible
+task. (The kernel will require closer communication and will be worked on by a
+small, tight group.)

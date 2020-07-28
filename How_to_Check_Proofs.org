@@ -1,0 +1,237 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is meant to give a description of the technique I plan to
+implement for checking proofs for correctness.  For now, I am
+focussing on proofs in which all steps have been provided and reasons
+have been given for the different steps.  Checking proofs with missing
+steps will involve issues such as searching which are different from
+the issues involved in what is being discussed here.
+
+A theorem or axiom (schema) or rule of inference can be described as a
+device which allows one to derive conclusions from premises.
+Statements which can serve as premises and conclusions will be
+[[file:How to Check Proofs - expressed in a suitable formalism | expressed in a suitable formalism.org][How to Check Proofs - expressed in a suitable formalism | expressed in a suitable formalism]].
+Corresponding to any theorem or axiom or rule
+of inference there will be a program which takes several such
+expressions as inputs and checks whether they are of the right lexical
+forms such that the last statement could be considered as a conclusion
+of the preceeding expressions.
+
+A proof consist of a statements, and inferences.  To check that the
+proof is correct, we need to check these things:
+
+ 1. Each inference needs to be correct.  This can be verified by running
+  the program corresponding to the inference rule used with the
+  alleged hypotheses and conclusions as input.
+
+ 1. Each step needs to be justified.  That is to say, each statement
+  must either have been assumed or proven to be true and every rule
+  used to draw conclusions must either have been assumed true or
+  proven valid.
+
+ 1. There must be no circular reasoning --- the proof of a statement
+  cannot assume the truth of a statement which it is proving.
+
+** Proof Formats
+
+*** Advantages of Modularity
+
+Rather than devising a particular format for presenting formats, we
+shall instead focus on features which are common to any presentation
+of a proof.  The advantages of proceeding in such a fashion are
+modularity and flexibility:
+
+ * Modularity --- one separates the issue of how the data is stored
+from the issue of how it is used.  Not only does this make life easier
+by allowing one to restrict focus to one part of the problem at a
+given time, it also makes it easier to extend the program.  If, for
+instance, one wants to support different formats for presenting proofs
+or change the algorithm for checking proofs, one only needs to make
+changes to the relevant modules rather than revise the whole program.
+
+ * Flexibility --- once storage is separated from usage, one can rather
+easily change one's format in the future if, say, one determines that
+some other way of storing the infomation is more efficient or that it
+is useful to store other types of information along with than what one
+had originally envisioned as useful.
+
+In actual practise, what will be done is to manipulate the data by
+means of access functions which look up the relevant piece of
+information in whatever structure one has or enter a particular piece
+of information into one's knowledge base.  In addition to the two
+advantages cited above, this leads to a third advantage:
+
+ * Comprehensibility --- by writing things in terms of access functions
+which deal with the reason for a specific operation rather than the
+details of how such an operation is carried out, it is a lot easier
+for someone to read the program and understand it.  For instance,
+while an instruction to look at the third element of a list can appear
+opaque (why do we care for the third element?)  but an instruction to
+look at the conclusion of an inference (which just so happens to be
+stored as the third element of a list associated with said inference)
+makes more sense to the reader.
+
+*** Features of Proofs
+
+ * Name --- Every proof should have a unique name by which it can be
+  referred to.  Quotation makes it possible to refer to a proof once
+  by using it as its own name.
+
+ * Hypotheses and Conclusions --- Certain assertions (see below) in the
+  proof will be singled out as hypotheses of the proof and others as
+  conclusios of the proof.
+
+ * Assertions --- A proof consists of a certain number of assertions,
+  which may either be assumed to be true (e.g. axioms or hypotheses)
+  or proven elsewhere or deduced from other assertions.
+
+  * Labels of Assertions --- Each assertion must have some sort of
+   label by which it can be refrerred to; this label must be unique
+   within the proof.  This could take various forms.  One possibility
+   would be to attach a name to each assertion.  Another would be to
+   use the number of an assertion when the assertions are presented in
+   a list.  (These numbers could be automatically generated and even
+   updated when a user edits the proof and inserts or deletes new
+   statements.)  Yet another possibility would be to use an access
+   function which retrieves the data pertinent to a particular
+   assertion from whatever data structure happens to be used to store
+   proofs.
+
+  * Statements of Assertions --- There will be a statement of what is
+   being asserted in an assertion in some formal system.  As mentioned
+   earlier, the author primarily has [[file:h-code.org][h-code]] in mind, but this
+   framework is general, so one could use any other formal system
+   (metamath, mizar, etc.) just as well.
+
+  * Justifications of Assertions --- Each assertion will have
+   associated to it an explanation of why that assertion is justified.
+   This explanation could take various forms, depending on the
+   circumstances:
+
+   * Assertion Justified as Assumption --- If the asserion is an axiom
+    or a hypothesis of the theorem, then it is justified.
+
+   * Assertion Justified as Conclusion --- If the assertion is the
+    conlusion of an inference, then it is justified.
+
+   * Assertion is Justified Elsewhere --- If an assertion is the
+    conclusion of a theorem, then that assertion is justified if the
+    theorem is valid and its hypotheses are satisfied.  This can be
+    viewed as a special case of justification as conclusion if one
+    takes the viewpoint of theorems as inference rules or can be
+    subsumed if one makes an inference rule "by-theorem".
+
+ * Infereneces --- an inference is a step in which some statement is
+  deduced from other ststements (or possibly none as in the case of
+  axiom schemata).
+
+  * Labels of Inferences --- An inference must have some sort of label
+   by which it can uniqiely be identified.  As with assertions, this
+   label can come in various forms.
+
+  * Rules of Inferences --- Each inference must proceed by means of a
+   rule of inference.
+
+   * Labels of Rules of Inference --- Each rule of inference will be
+    given a label by which it can be referenced.  Quotation can be
+    used for rules which will only be used a few times.
+
+   * Symbols of Rules of Inference --- Corresponding to each rule of
+    inference there is a list of the symbols which are recognized as
+    having special meaning in that rule.
+
+   * Verification Predicate --- This is a function which takes supposed
+    hypotheses and supposed conclusions and auxiliary parameters as
+    input and outputs "yes" or "no" depending on whether a correct
+    application of the rule of inference to the purported hypotheses
+    would imply the purported conclusions.
+
+  * Hypotheses of Inferences --- Each inference involves some
+   hypotheses, the labels of which should be specified.  As noted
+   above, a particular inference may not have hypotheses, in which
+   case we have an empty list of inferences.
+
+  * Conclusions of Inferences ---  Each inference proves one or more
+   inclusions, the labels of which should be specified.
+
+* Discussion
+
+Hi Ray,
+
+You may find some useful tidbits here:
+
+[http://planetx.cc.vt.edu/AsteroidMeta/mmj2ProofAssistantUnification mmj2ProofAssistantUnification]
+
+I wrote that as part of my initial design for the mmj2 Proof
+Assistant.  Quite a bit is obsolete now that I figured it out and
+tested everything, but the section, "Sketch of Unification Process" is
+relevant to your checking process. The tree diagram for unification is
+especially helpful, I think. The final code is in
+mmj.pa.ProofUnifier.java.
+
+Interesting stuff. Hypotheses must be unified with the justification
+rule's hypotheses -- in addition to the formula -- making sure we have
+a consistent set of substitutions over all. In Metamath there is a
+theorem with 19 hypotheses, so another problem is what to do if the
+referenced hypotheses are in the wrong order -- a worst case scenario
+of combinatorial explosion looking for the right sequence could then
+involve 19! (factorial) attempted unifications, so mmj2 is forced to
+prevent that from happening using certain techniques :)
+
+The mmj2 proof assistant does the lookup for the justifying theorem or
+assertion, so every attempt was made to make unification speedy (each
+candidate assertion must undergo a trial unification). With about 6000
+theorems and axioms in set.mm, the average unification time for an
+entire proof is around 1/10 second, and that includes unification of
+all proof steps plus the search process (worst case is around .35
+seconds).
+
+An enhancement, request by Raph was to generate the proof step formula
+using an input theorem or axiom label plus hypotheses. That also
+involves unification *also*, which may be incomplete.
+
+An interesting technical point is that generating a missing proof step
+could be short or longer than the hours in a day -- absolutely huge
+worst case scenarios are possible in the realm beyond straight
+propositional logic (and even that requires specialized techniques for
+efficient proving). Essentially, each proof step *is* a proof, so
+being able to fill in "a missing step" is logically equivalent to
+being able to derive proofs.
+
+Hope something here is useful to you. You've got a fun task ahead!
+
+--[[file:ocat.org][ocat]] 4-Jun-2006
+
+
+Think of this as an exercise in query/knowlege-base duality.  In order
+to consider what sort of a knowledge base is suitable for representing
+mathematical proofs, we consider what sort of questions we would want
+to put to such a knowledge base.  For instance, we should be able to
+answer the questions "What are the hypotheses of this proof?" and "Why
+is assertion X justified?".  Based on the answers to these questions
+and the ability to answer questions like "Is this a valid application
+of De Morgan's law?", it should be possible to answer more
+sophisticated questions like "Is there circular reasoning in this
+argument?" and ulitmately "Is this proof correct?"
+
+Thinking this way, one can see a proof-checker as an agent which is
+able to ask low-level questions about a proof and answer higher-level
+questions based on them.  We of course would like to make this agent
+as intelligent as possible, ultimately have it answer questions much
+as a human mathematician might.  For instance, we might at least want
+it to be the case that, if a proof is wrong, it doesn't simply output
+"DOES NOT COMPUTE" and flash a red light but says something more
+helpful like "Step 5 is not justified because induction was
+incorrectly applied.  However, if one tentatively assumes the validity
+of this step, then the rest of the proof is correct."  Also, it would
+be nice to have it answer questions such as "Does this proof require
+the Axiom of Choice (and, if so, where is it used)?".
+
+As you see, these notions of query/knowledge base duality, agents, the
+functional definition of understanding as someting like a Turing test
+are informing my thinking on this.
+--[[file:rspuzio.org][rspuzio]] 13 June 2006
+
+You might be interested in my description of Ghilbert's
+[[file:Core Proof Language.org][Core Proof Language]].  --[[file:marnix.org][marnix]] 15 June 2006

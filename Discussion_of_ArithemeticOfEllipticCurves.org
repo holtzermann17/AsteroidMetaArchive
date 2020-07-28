@@ -1,0 +1,158 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+From http://www.ma.utexas.edu/~jcorneli/e/ find a [http://www.ma.utexas.edu/~jcorneli/e/arithmetic-of-elliptic-curves.dvi DVI file]
+and a [http://www.ma.utexas.edu/~jcorneli/e/arithmetic-of-elliptic-curves.dvi TeX file]. 
+These files contain my rendered version of Alvaro's article.
+
+I've marked up the links (they won't work in this version of the document, it is
+just visual).  These are especially important.
+
+I like the introduction of the document, which seems to put the subject in its
+broader mathematical context quite nicely.  (I wonder a little bit about the
+relationship to other things within the 14-XX section -- maybe more could be
+said about these relationships.) There is one broken link in this section, to an
+object called "Identity" that doesn't seem to exist.  There are a few other
+broken links in the document that are a bit annoying.
+
+In terms of assessing how well the article does in its job of imposing an order
+or structure on the elements of MSC 14H52, we have to look at links to things in
+that section.
+
+I'm assuming the articles would be ordered roughly according to their appearance
+in this article in sections after the introduction, perhaps organized into
+sections using the subsection structure of this article as a guide.  The
+structure, therefore, would be as follows (discounting files that are linked to
+by broken links):
+
+ * Basic Definitions
+  * !EllipticCurve
+  * JInvariant
+  * !JInvariantClassifiesEllipticCurvesUpToIsomorphism
+  * !BadReduction
+  * !LSeriesOfAnEllipticCurve
+  * !ConductorOfAnEllipticCurve
+ * Elliptic Curves over Finite Fields
+  * Supersingular
+  * !HassesBoundForEllipticCurvesOverFiniteFields
+ * The Mordell-Weil Group $E(K)$
+  * !MordellWeilTheorem
+  * !RankOfAnEllipticCurve
+  * !HeightFunction
+  * !SelmerGroup
+  * !MordellCurve
+ * The Torsion Subgroup of $E(K)$
+  * !NagellLutzTheorem
+  * !MazursTheoremOnTorsionOfEllipticCurves
+  * !ExamplesOfTorsionSubgroupsOfEllipticCurves
+  * !TorsionSubgroupOfAnEllipticCurveInjectsInTheReductionOfTheCurve
+ * Computing the Rank
+  * !BoundForTheRankOfAnEllipticCurve
+ * Famous Problems and Conjectures
+  * !BirchAndSwinnertonDyerConjecture
+
+This list has the very agreeable quality of actually including every
+encyclopedia entry in this MSC! Good job!  I know virtually nothing about
+elliptic curvse, but having this outline before me makes me feel somewhat
+confident about approaching the subject and learning something.
+
+To really be able to judge the quality of this article (and the other articles
+it references) I would actually have to go through the process of reading these
+things (and necessary tangential references) and seeing if they made sense to
+me.  I suspect this would constitute a considerable challenge for me.  I look
+forward to giving it a shot!
+
+One closing comment: I think that it would be good to include an outline like
+the one given above with the article somehow (it need not be a part of the
+article proper, but could be an attachment or %'ed comment block).  The outline
+is what we would use to actually order the documents within the section.
+
+I'm curious to know what other editors think about introducing sections at the
+level of "Basic Definitions", "Elliptic Curves over Finite Fields", etc., from
+this article.  Would that be a good idea, or should we just put the articles in
+the given order?
+
+Note that if this article is to be maintained as /the/ guide to this MSC, it
+has a very special status within both PM and FEM -- I don't know if we have an
+official metadata characteristic to describe this special status, but we
+probably should.
+
+Thanks for the article, --[[file:jcorneli.org][jcorneli]] Fri Mar 04 01:08:14 2005 UTC
+
+As Matte and I envisioned it, the Planet Math encyclopedia would be indexed by a
+system of entries like this one and these entries could serve for organizing
+material in the printed version of the encyclopaedia.  This particular entry on
+elliptic curves is a fine and particularly finished example of such an entry.
+Therefore, I would agree with the idea of using this entry to organize the
+entries to which it points.  Likewise, I would consider using the entries
+/index of properties of topological spaces/, /matrices of special form/ and
+/index of special functions/ to organize the entries which they catalog.
+
+As I have said earlier, the main problem is that there are so few of these
+meta-entries.  Out of the 4000-odd entries in the encyclopaedia, maybe 200 at
+best are so indexed.  Therefore, if we were to adopt this plan of organization
+now, 5% of the entries could be organized this way and the remaining 95% would
+be left in the cold.  Moreover, Planet Math users seem not to consider writing
+such meta-entries as a particularly high priority as evidenced by the fact that,
+in the six months since the first meta-entry appeared, something like 1000 new
+regular entries have been written but there are only a dozen meta-entries.  By
+contrast, something like 100 meta-entries would be required to cover the whole
+encyclopaedia.  When Matte first suggested the idea of meta-entries, the
+response was not enthusiastic and his suggestion of a topic-of-the-month club in
+order to organize and fill in gaps in the coverage in a particular area of
+mathematics has fallen by the wayside.
+
+As I understand it, the goal is to try to come out with a first edition of the
+printed encyclopedia in the near future.  More specifically, I understand that
+the time frame is on the order of a few months.  As things stand, I think it is
+unrealistic to assume that more than 10% or, at most 20%, of the encyclopaedia
+will be indexed by meta-entries within the next few months.  Therefore, I think
+a more realistic plan would be to keep the current system of organization for
+the first edition but work towards the goal of building a system of meta-entries
+in place which we can use to organize later editions. --[[file:rspuzio.org][rspuzio]] 4 March 2005
+
+: I'm not sure what the timeline is for the first edition.  The working version
+was supposed to be ready this week, according to my ambitious plan; I don't know
+if we'll make it by the end of the week or not, but it will be soon.  Since I
+don't have control over many aspects of the editorial process /after/ version
+0.1.0. is released, I can't really guess when the real first edition will come
+out.  (We do hope to have cheaply made printed copies of prerelease versions
+available for editors and anyone else who wants them, however.)  Thus, I'd say
+we have some time.  If one requirement for inclusion in the FEM is being indexed
+by one a meta-entries, as I think it should be, then I think we will see a surge
+in their popularity, or frequency anyway (since they could be massively
+unpopular and written only by FEM editors and still there would be enough).  As
+for the number needed, I'm surprised it wouldn't be more than 100.  There are
+actually about 5000 leaf-level MSC's -- obviously not all of them have been used
+on PM (e.g. 97U70 -- "Technological tools (computers, calculators, software,
+etc.) and their use in the classroom" isn't, I bet, though of course I think it
+should be!).  I'd assume that we'd want a meta-entry to order the articles
+within each leaf-MSC that includes more two or more regular entries.  Well, OK,
+we could default to alpha-numeric order and that ought to be OK for short
+sections, but still, in principle, each section should have a meta-entry.  But I
+do think we're going to have to give up on having these entries come "from the
+people" (at least, the normal people).  I think that such entries are not the
+number one stumbling block as we look ahead towards version 1.0.0., however, I
+do think that they are important and that their creation will entail a lot of
+work. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 14:34:09 2005 UTC
+
+Thanks a lot for the detailed comments, I don't have much time now, but I will
+come back and reply more throughly and apply some of the suggested
+changes/comments on broken links, etc. For now, I just wanted to point out that
+I was able to make this entry because (a) most of the entries that exist on
+elliptic curves are mine, so I know what is out there (b) there are few entries
+on elliptic curves, which made the task "easy" (still, it took about two
+hours). In general, I think making an entry like this is a colossal task, so I
+don't expect people to contribute many of these, at least not at once. They will
+appear, gradually. So I don't think we should count on having meta-entries for
+every MSC for a long time. As PlanetMath improves its contents, more meta
+entries will also be in place. PlanetMath is a growing and expanding source, so
+we shouldn't expect the early releases of FEM to be complete, but improving
+versions. I am starting to work on several meta entries on algebraic number
+theory, but these will be tougher to create, so it will take me some
+time. However, they are way worth it to create! --[[file:alozano.org][alozano]], Friday Morning
+
+----
+See also [[file:Discussion of the MSC system.org][Discussion of the MSC system]].
+
+Back to [[file:FEM editorial policy.org][FEM editorial policy]].

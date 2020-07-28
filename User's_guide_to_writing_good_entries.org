@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The aim of the present entry is form the basis for a user's guide 
+about how to write good PM entries. 
+Both in view of content and copyrightwise.
+
+* Choosing topics
+If you are a professional mathematician, or a full time student there
+is surely small problems that pop up when reading mathematical 
+works. These can form an ideal source for good topics for PM entries. 
+
+A few things to keep in mind
+ * Avoid too esoteric topics. Changes are, they will be of little use.
+ * This is an encyclopaedia and should contain math that is well
+  established, not the latest research. 
+ * The first draft does not need to be perfect. PM has plenty of users.
+  Over time (months, years) the entry will expand. 
+ * Currently PM resembles the Cantor set; it is full of holes. 
+  These gaps provide an endless source for new entries.
+
+* Copyright issues
+
+See
+ * http://planetmath.org/?op=getobj&from=collab&id=36
+ * http://meta.wikimedia.org/wiki/Avoid_Copyright_Paranoia
+
+** Citing
+
+Keep in mind that under the FDL, the next user might remove all 
+citations. 
+
+* When is citing good
+ * For a treatment of the case when X is a Banach space, see [1]
+
+* When is citing bad
+ * An entry full of citations will be difficult to maintain. 
+
+** Merging entries
+
+** Copying text and pictures from other entries
+
+** Writing entries based on forum discussions
+
+** Writing entries based on an Wikipedia entry
+ * [[file:Content Exchange With Wikipedia.org][Content Exchange With Wikipedia]]
+
+** Writing entries based on public domain text
+ * [[file:finding new content for PM.org][finding new content for PM]]
+ * [[file:Public domain content and PM.org][Public domain content and PM]]
+ * [[file:notes on integrating works into PM.org][notes on integrating works into PM]]

@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: Admin.pm
+
+pm added subroutine addSiteDoc()
+
+pp line 1009:
+(empty)
+
+pm line 1009:
+$admin .= "<a href=\"".getConfig("main_url")."/?op=linkinvalidate&amp;from=$from&amp;id=$id\">invalidate inlinks</a> | ";
+
+pp line 1027:
+(empty)
+
+pm line 1027:
+$menu .= "$bullet&nbsp;<a href=\"".getConfig("main_url")."/?op=addsitedoc\">add site doc</a><br>";
+
+pp line 1054:
+subroutine reRenderObj removed
+
+pp/pm 1318:
+adnubDBStats significantly altered

@@ -1,0 +1,52 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(add-assignment item assignments)/
+
+ *Input:* an s-expression /item/ and an [[file:Definition of assignment list | assignment list.org][Definition of assignment list | assignment list]] /assignments/
+
+ *Output:* an assignment list
+
+ *Description:*  If /item/ is not an assignment, this function returns /assignments/.  Otherwise, it tries to add item to /assignments/ to obtain an assignment list which includes /item/.  If this is not possible because it would lead to an inconsistency, (or /assignment/ is already /nil/, indicating that an inconsistency occurred earlier), it returns /nil/.
+
+ *Dependencies:* [[file:template utilities - assignment-p | assignment-p.org][template utilities - assignment-p | assignment-p]]
+
+ *Listing:*
+
+ (defun add-assignment (item assignments)
+   (cond ((null assignments) nil)
+         ((not (assignment-p item)) assignments)
+         ((equal assignments t) (list item))
+         ((not (member (car item) (mapcar 'car assignments)))
+          (cons item assignments))
+         ((member item assignments) assignments)
+         (t nil)))
+
+ *Discussion:*  Right off the bat, we take care of the possibility that /assignments/ equals /nil/.  If so, this would mean that there is an inconsistency, so it really doesn't matter what we are trying to add, hence we return nil and go home.  Next, we check to make sure that /item/ is the sort of item that belongs in an assignment list.  If it isn't such an object, we simply return assignments without adding anything to it.  
+
+If /item/ is an assignment, there are four possibilities.  The remaining four conditions deal with these possibilities.  If /assignments/ equals /t/ (remember that the option /nil/ was ruled out right at the outset) then this means that no assignments have yet been made so we create a list with item as its sole item.   If /(car item)/ does not appear in /assignments/, we simply add item to assignments.  If /item/ is already an element of /assignments/, we have a redundancy, so there is nothing to do but return /assignments/ as is.  If not, we have an inconsistency (/item/ disagrees with an assignment already found in /assignments/), hence we return /nil/.
+
+ *Examples:*
+
+ ; (add-assignment '(a x) nil)
+ ; => nil
+
+ ; (add-assignment 'a t)
+ ; => t
+
+ ; (add-assignment '(a x) t)
+ ; => ((a x))
+
+ ; (add-assignment 'a '((b y)))
+ ; ((b y))
+
+ ; (add-assignment '(a x) '((b y)))
+ ; => ((a x) (b y))
+
+ ; (add-assignment '(a x) '((a x)))
+ ; => ((a x))
+
+ ; (add-assignment '(a x) '((a y)))
+ ; => nil
+
+Up to [[file:template utilities.org][template utilities]]

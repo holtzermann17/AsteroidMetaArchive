@@ -1,0 +1,62 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+; [http://www.cse.buffalo.edu/sneps/ SNePS] : !SNePS stands for
+  "semantic network processing system".  There's a lot in that name.  Since our
+  AI system is also based on the idea of a semantic network, this long-running
+  project seems particularly relevant to us.  For example, their work on
+  [http://www.cse.buffalo.edu/sneps/snerg.prospectus/node19.html#SECTION00024100000000000000 language acquisition]
+  seems similar to our problem of having the computer learn math as it goes along.
+  (And of course, there is an explitic language acquisition aspect of this problem
+  too.)  !SNePS is [http://www.cse.buffalo.edu/sneps/Downloads/ available] under the GPL.
+  They describe their (current?) research programme in a 
+  [http://www.cse.buffalo.edu/sneps/snerg.prospectus/ prospectus].
+
+; [http://www.cyc.com cyc] : Cyc is an AI system that knows a lot about the
+  world.  Lots and lots of human-hours have gone into its development.  Much of
+  the system is proprietary, but see FreeCyc.  Some of the current development
+  effort at Cycorp deals with the problem of making the computer learn on its
+  own that was mentioned above.
+
+; [[file:Lenat's AM.org][Lenat's AM]] : AM predated Cyc and came up with conjectures in mathematics.
+  Lenat describes the program in some interesting papers.  We'll want to talk
+  more about this.
+
+; [http://www.cs.utexas.edu/users/mfkb/RKF/km.html KM: The Knowledge Machine ] : 
+  KM shares some history with Cyc, both came out of work done at the 
+  Microelectronics and Computer Technology Corporation (MCC) in Austin.
+
+; User Centered System Design, New Perspectives on Human-Computer Interaction (Erlbaum press):
+Or at least it was new in 1986.  What is the state of the art today?
+
+Microelectronics+and+Computer+Technology+Corporation brief history]
+  of this corporation would be interesting to see.)  The two languages used by these programs have
+  different feels to them, in particular, KM is not completely s-exp based.  
+  Both are "frame-based" languages.  The reasoning engine for KM is released 
+  (along with the whole system) under a free software license.  This engine,
+  however, is not currently capable of dealing adequately with some of
+  the complicated logic that comes up in day-to-day mathematics.  The lead
+  developers are [http://www.cs.utexas.edu/users/porter/ Bruce Porter] and
+  [http://www.cs.utexas.edu/users/pclark/ Peter Clark].
+
+; ("wild stuff" link removed.) :  A mention of it is likely to attract the
+author of that material to this forum once it shows up in Google, and that
+would not be a good thing per the FAQ I linked to, available in this page's
+history.
+
+; [https://www.new-ties.org/mambo/index.php?option=com_content&task=view&id=17&Itemid=26 New Ties] : Evolving an artificial society -- much like we might evolve
+artifical society of math agents at some point?
+
+----
+
+I took a look at the original wild ("mind") link, I didn't see anything there that particularly
+jumped out at me as "particularly relevant".  Maybe I missed something.  In future please post summary
+descriptions of why things posted to this page are particularly relevant, otherwise
+it may not be clear!
+
+--[[file:jcorneli.org][jcorneli]]
+
+; http://www.20Q.net : This is just fun.  I have a handheld game version of it
+that people are spending time with in my bathroom... it is curiously smart.
+
+--[[file:jcorneli.org][jcorneli]]

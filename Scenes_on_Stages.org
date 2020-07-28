@@ -1,0 +1,87 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: All the world's a stage,
+: And all the men and women merely players:
+: They have their exits and their entrances;
+: And one man in his time plays many parts,
+ -- W. Shakespeare
+
+**  Scenes
+
+The ideas I am going to describe here have their origin in thoughts about relational systems, metatheories, D-logic, relativity theory and the like.  Basically, the idea is that statements can only be understood properly in context, and mathematical statements are no exception to this rule.  This is an attempt to formalize a certain sort of context dependence which one finds in mathematics hopefully in a concrete way which can be implemented on a computer.
+
+To acknowledge this dependence on context in as dramatic a fashion as possible, I shall introduce the terms "stage" and "scene".  Just as one actor can in his time play many parts in different scenes, being virtuous Hamlet in one play and treacherous Iago in the next, so too can a single statement play different roles in different scenes, true in one and false in another.
+
+Descending from the heights of flowery conceit to the terra firmissima of formal logic, we will define our terms as follows:  A scene consists of a triplet (*V A R*) where *V* is the vocabulary (i.e. the words whose meaning is defined) /A/ is the set of assumptions (statements assumed true) and *R* are the acceptable rules of inference.   In order for a triple to form a valid scene, the following conditions should be satisfied:
+
+ * *A* should consist of statements constructed using only the vocabulary *V*.
+
+ * *R* consists of relations  between finite subsets of *A* and *A*
+
+A statement /s/ will be said to follow from the scene (*V A R*) if /s/ is constructed using the vocabulary *V* and can be obtained by successively enlarging the set *A* by adding statements related to existing elements by the relations of *R*.   This state of affairs will be denoted with the turnstile notation:
+
+: (*V A R*) &#8870; s
+
+or, using LISP prefix syntax:
+
+: (&#8870; (*V A R*) s)
+
+This defining property of "&#8870;" can be expressed formally as follows:
+
+: (&forall; /S/ &sub; L (*V*))  (&forall; /x/ &isin; /S/) (*V A R*) &#8870; x &and; (&exist; /r/ &isin; *R*) /r/ (/S/ y) &rArr; (*V A R*) &#8870; y
+
+Here, "L(*V*)" denotes the set of all phrases constructed from the symbols of *V*.  
+
+**  Exits and Entrances
+
+While a specialist mathematician might spend all one's time working within a single theory, working out the consequences of its axioms, interesting things happen when one considers the relations between theories and applies results from one theory in the context of some different theory.  For instance, consider algebraic geometry.
+
+In order to do something like this, one needs to be able to take a result form one scene and convert it into a result in another scene.  In general, there is no reason that this should be the case, but one can find scenarios in which this is possible.  Here are some common ones:
+
+***  Proof by Contradiction
+
+Here one passes to a scene in which the negation of a statement is added to the list of assumptions, derives a contradiction, then concludes that the negation of the original statement holds in the original scene.
+
+: (*V* *A* &cup; {&#8988; &#9490; P &#8989;} *R*) &#8870; F  &rArr;  (*V A R*) &#8870; P
+
+***  Proof with Assumption
+
+To prove &#8988; P &rArr; Q &#8989;, one might proceed by adding P to the list of assumptions, then deriving Q.
+
+: (*V* *A* &cup; {P} *R*) &#8870; Q &rArr; (*V A R*) &#8870; &#8988; P  &rArr;  Q &#8989;
+
+Note that these cases we presume that *V* contains the usual symbols of standard logic and that *R* contains the inference rules of standard logic.  For instance, if we had only included intuitionistic logic, then proof by contradiction would not work.
+
+Also note that this is not the usual way in which these methods of proof would be formalized --- more typically, one would not bother changing scenes but simply rewrite the proof.  The main advantage of this approach is that it reflects the way which mathematicians typically think when using these techniques.
+
+***  Existential Generalization
+
+Given a statement to the effect that there exists an object having a property P and a term t which has not been assigned a meaning, one may add P(t);
+
+/t/ &notin; *V* &and; (*V A R*) &#8870; "(&exist; x) P(x)"  &rArr;  ( (&forall; Q \in L(*V*))  (*V* &cup; {t} *A* &cup; "(&exist; x) P(x)") &#8870; Q &hArr; (*V A R*) &#8870; Q )
+
+***  Subscenes
+
+A useful notion is that of a subscene.  We shall say that (*V' A' R' *) is a subscene of (*V A R*) if the following conditions are satisfied:
+
+ * V' &sub; V
+
+ * 
+ 
+***  Modelling
+
+**  Metatheories
+
+: If the whole world as idea is only the visibility of will, the work of art is to render this visibility more distinct. It is the camera obscura which shows the objects more purely, and enables us to survey them and comprehend them better. It is the play within the play, the stage upon the stage in 'Hamlet.'
+-- Schopenhauer
+
+----
+
+* Discussion
+
+It is inherently interesting that your motivational quote is from /As
+you like it/, but also interesting to consider the "play within a
+play" effect as featured in /Hamlet/.
+
+--[[file:jcorneli.org][jcorneli]]

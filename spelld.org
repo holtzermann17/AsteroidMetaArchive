@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/spelld
+
+pp line 34:
+$server=IO::Socket::INET->new (Proto => 'tcp',LocalPort => Noosphere::getConfig('spell_port'),Listen => SOMAXCONN,Reuse => 1);
+$server = IO::Socket::INET->new( LocalPort=>3060,Proto=>'tcp',Listen=>SOMAXCONN,Reuse => 1);
+
+pm line 34:
+$server=IO::Socket::INET->new (Proto => 'tcp',
+                               LocalPort => Noosphere::getConfig('spell_port'),Listen => SOMAXCONN,Reuse => 1); 
+
+pp line 40:
+print "Connected 3060\n";
+
+pm line 40:
+print "\n";
+
+pp line 50:
+print "Begin lexicon\n";
+
+pm line 50:
+(removed)
+
+pp line 55:
+print "enter in a string of words to look up. 'stop' to quit.\n\n";
+
+pm line 55:
+#print "enter in a string of words to look up. 'stop' to quit.\n\n";
+
+pp line 59:
+print "Before client while\n"; 
+
+pm line 59:
+(removed)

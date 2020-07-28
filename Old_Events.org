@@ -1,0 +1,147 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Things that have already happened.
+
+* 2007
+
+** January
+ * (Over) NSF Cyberinfrastructure Grant proposal.
+** February
+ * Strategic planning.
+ * Board meeting (hopefully)
+ * Subscription system kickoff? (currently in beta)
+ * Port AsteroidMeta to new location
+ * Begin work on MUSN test (point person: [[file:jcorneli.org][jcorneli]])
+** March
+ * finish work on MUSN test
+** April
+ * [[file:2007 MKM Meeting At Dalhousie University.org][2007 MKM Meeting At Dalhousie University]] (26-28)
+** May
+ * Q2 board meeting?
+** June
+ * JCDL conference (Vancouver) ([[file:akrowne.org][akrowne]] will go; paper on linking system [[file:NNexus.org][NNexus]] has been submitted)
+** July
+** August
+ * !MathFest at San Jose, California (3-5)
+ * Visiting the bay area
+** September
+ * Humanities conference, panel (Atlanta): [[file:akrowne.org][akrowne]] to represent CBPP encyclopedias.   Invited by [http://www.historians.org/pubs/careers/zainaldin.htmJamil Zainaldin], pres of Georgia Humanities Council and contributor to [http://www.georgiaencyclopedia.org/ The New Georgia Encyclopedia].
+ * Q3 board meeting?
+** October
+** November
+ * Q4 board meeting?
+** December
+
+----
+
+** Papers for Free Culture and the Digital Library: July 1
+
+[[file:Emory_Free_Culture_and_the_DL_Symposium.org][Emory_Free_Culture_and_the_DL_Symposium]]
+
+Yay, a firm deadline for once! --[[file:jcorneli.org][jcorneli]] Thu May 12 18:57:13 2005 UTC
+
+*  Old Deadline for Free Culture and The DL Conference (Abstracts): March 31
+
+Deadline pushed back, see above. --[[file:jcorneli.org][jcorneli]] Sun Apr 03 07:15:32 2005 UTC
+
+*  Visit to Wolfram Research
+
+By Aaron.  See [[file:Wolfram Visit.org][Wolfram Visit]].
+
+
+
+*  Deadline for NSDL: April 11
+
+[[file:NSDL 2005 Grant Planning Page.org][NSDL 2005 Grant Planning Page]]
+
+The deadline for a letter of intent has passed.  I guess
+that doesn't really matter?  April 11 is pretty soon.
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 19:26:21 2005 UTC
+
+: The program chair (Lee Zia) informed me that it was not
+critical.  If someone happens to write one before April 11,
+I don't see how it could hurt to send it in.
+--[[file:akrowne.org][akrowne]] Sun Apr 3 00:11:43 UTC 2005
+
+
+*  nero.el Released: April 14
+
+[http://www.ma.utexas.edu/~jcorneli/a/elisp/nero.el nero]
+is a free web browser that runs under emacs, written by
+[[file:jcorneli.org][jcorneli]].  The current stable version is available
+at the aforementioned link.
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 19:30:02 2005 UTC
+
+It is pretty much done now, and quite usable.
+I'm happy to be moving on to other things.
+(But glad to have a new default browser!)
+--[[file:jcorneli.org][jcorneli]] Thu Apr 14 22:55:29 2005 UTC
+
+
+
+*  (New) Deadline for Free Culture and The DL Conference (Abstracts): April 29
+
+See: [[file:Emory_Free_Culture_and_the_DL_Symposium.org][Emory_Free_Culture_and_the_DL_Symposium]]
+
+I'm not sure I'm going to be able to get anything together
+by March 31.  Maybe?  Seems a little unlikely.
+Any other interesting !MetaScholar news?
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 19:24:24 2005 UTC
+
+/Deadline shifted from March 31 to April 29./ --[[file:akrowne.org][akrowne]] Sun Apr 3 00:12:48 UTC 2005
+
+Hm... an extension.  Tempting! --[[file:jcorneli.org][jcorneli]] Sun Apr 03 07:14:51 2005 UTC
+
+*  Deadline for NSF ALT: May 26
+
+[[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]]
+
+Note, at some point we're going to have to /switch/
+from brainstorming and freeform discussion to a more
+structured outline of things to include, and actually
+writing the grant.
+--[[file:jcorneli.org][jcorneli]] Mon Mar 28 19:37:41 2005 UTC (revised Sun Apr  3 10:19:02 2005)
+
+This is coming up pretty quickly, given that the 10th
+seems positively immanent. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 00:01:28 2005 UTC
+
+Yes, and I am still trying to find local interest.  --[[file:akrowne.org][akrowne]] Fri Apr 29 01:41:36 UTC 2005
+
+I assume that it is impossible to apply for this now? --[[file:jcorneli.org][jcorneli]] Tue May 10 04:30:53 2005 UTC
+
+No, I don't think so.  Without some Ph. D.'d partners, I think it will be 
+difficult, but I can count on the library here at Emory, and PM.org as 
+partners.  And I think we can get some pretty weighty letters of support,
+if we (I) sketch out a plan for the proposal and go a-beggin'.  I
+think I will start working on this stuff this weekend and through next
+week. --[[file:akrowne.org][akrowne]] Thu May 12 22:50:27 UTC 2005
+
+Well, there are already a lot of notes and ideas on the linked-to page; if you
+put together a page-long abstract of a proposal, the rest of us could critique
+that, and then you could circulate it more widely.  How long do you think the
+actual proposal is going to be?  The main weakness of all of the things we've
+talked about so far seems to be /implementation details/, like, how much money
+each thing would cost.  Maybe your abstract could include a "financial abstract"
+too (a suggested bottom line and little low-granularity itemization).
+--[[file:jcorneli.org][jcorneli]] Thu May 12 23:47:47 2005 UTC
+
+** 2006 Joint Mathematical Meeting (San Antonio, Texas)
+
+We're scheduled to give a couple of talks in the "Math on the Web"
+Pavilion.  The titles are:
+
+ * [[file:PlanetMath and Free Mathematics.org][PlanetMath and Free Mathematics]]
+ * [[file:Metamathematical Visions - metadata, learning, and knowledge communities.org][Metamathematical Visions - metadata, learning, and knowledge communities]]
+
+An overarching summarizing blurb is:
+
+The "free math" talk will tell the audience what PM.org is all about,
+and the "visions" talk will deal ongoing research work in this area,
+and sketch future directions.
+
+Anyone who wants to help write the talks can!  The speaker will get
+final say, of course.  The speaker is tentatively going to be Aaron
+because that is what is down on the official forms, but this may
+change.  Any PMers who are going to be going to the JMM should at
+least make a note about it on the [[file:2006 JMM.org][2006 JMM]] wiki page so we can meet up!

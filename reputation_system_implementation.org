@@ -1,0 +1,6 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+If and when we know what sort of reputation system
+we'd like to implement (see [[file:reputation systems research.org][reputation systems research]]) someone
+is going to have to implement it.

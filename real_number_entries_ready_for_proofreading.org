@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page is part of the real number project on PM. Part of this project is to proofread content related to real numbers. To 
+accomplish this, two issues need to be addressed: 1) we need to proofread entries in some order; we should not spend time proofreading entries that might still change, or, entries that rest upon material that has not yet been written. 2) We also need to coordinate the effort of proofreading. Who is doing what? Which entries have been proofread?
+
+
+See [[file:Real numbers on PM.org][Real numbers on PM]], [[file:Proofreader's checklist.org][Proofreader's checklist]].
+
+
+** Stage 1: Entries ready for proofreading
+The below entries are ready for proofreading. In other words, they do not depend on content/entries that might change during the project. 
+
+ * Basic properties of rings: 
+[http://planetmath.org/encyclopedia/UniquenessOfAdditiveIdentityInARing2.html],
+[http://planetmath.org/encyclopedia/1cdotAA.html],
+[http://planetmath.org/encyclopedia/XcdotYXcdotY.html],
+[http://planetmath.org/encyclopedia/0cdotA0.html]. These are needed in the 
+axiomatic definition of the reals.       
+ * [http://planetmath.org/encyclopedia/InverseOfInverseInAGroup.html inverse of inverse in a group ]
+
+ *  [http://planetmath.org/encyclopedia/InverseOfOneElementTimeAnotherElementIsTheInverseOfTheirProduct.html inverse of one element time another element is the inverse of their product ]
+ * uniqueness of inverse (for groups) [http://planetmath.org/?op=getobj&from=objects&id=5687]. This is needed to show that 1 is a unique real number. 
+ * proof that Q is the prime subfield of any field of characteristic 0 [http://planetmath.org/?op=getobj&from=objects&id=7600].
+This result is needed to prove that the axioms of R determine R uniquely. This result is given 
+[http://planetmath.org/encyclopedia/EveryOrderedFieldWithTheLeastUpperBoundPropertyIsIsomorphicToTheRealNumbers.html here]. However, the latter result is not yet ready for proofreading as we first need to proofread the real number axioms.
+
+
+** Stage 2: Correction filed
+Corrections have been filed for the below entries. 
+
+** Stage 3: Corrections accepted
+The author has accepted the proofreader report in the below entries. 
+However, these still need to be checked. 
+
+ * uniqueness of additive inverse in a ring [http://planetmath.org/encyclopedia/UniquenessOfAdditiveIdentityInARing.html],
+. Correction filed [http://planetmath.org/?op=getobj&from=corrections&id=7533], 10 Feb, 2006 --[[file:matte.org][matte]]
+ 
+
+** Stage 4: Done
+The below entries are done. They 
+have been proofread, the author has has accepted the corrections, 
+   and the corrections have been verified. 
+ * (a.b)^{-1} = b^{-1} a^{-1} [http://planetmath.org/?op=getobj&from=objects&id=6575]
+Correction filed [http://planetmath.org/?op=getobj&from=corrections&id=7537], 12 Feb. 2006,  Accepted 13 Feb. 2006--[[file:matte.org][matte]]

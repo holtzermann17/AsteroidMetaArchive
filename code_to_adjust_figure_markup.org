@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+PM authors have used various markup conventions for inserting figures.
+Figure out what is being used, and write code that will adjust
+their !TeX files so that each figure has a proper \begin{figure}...
+\end{figure} environment thrown around it.  Submit diffs to authors.
+
+For the long term, appropriate figure environments should be part
+of the PM style guide.
+
+Drini has been wroking on the business of inserting pictures.  As I understand
+it, there are still a few issues that haven't been completely sorted out to make
+the pictures come out right (or maybe they have been solved by now, I certainly
+know that he ws still morking on them a few weeks ago.)  Also, he is writing a
+giude to PM graphics which will presumably discuss this.  --[[file:rspuzio.org][rspuzio]]
+
+: Most of the issues with graphics are related with PSTricks and teTex on PM
+being a bit old. However for external inclusion there's practically no
+problem. I still don't know if I succedeed in making the graphics guide world
+editable since noone seems ever to help writing ;). The idea of having the
+graphics coded directly on the code appealed to me due to its portability and
+not having to manage fileboxes, but then I realized it was too much trouble and
+researched on how to export PSTricks to PDF, which has already been added to the
+grahics guide.
+
+Notice also that what I use and what I've seen most people also uses is
+
+     \begin{center}
+     \includegraphics{file}
+     \\Possibly some caption, seldom used
+     \end{center}
+
+--[[file:drini.org][drini]]
+
+
+:: Probably this is fine, but it might be better if one of the PM provided some
+standard function that would do exactly the right thing for including graphics,
+and everyone used exactly the same thing (and this function should be discussed
+in the style guide so people know what to do).  I will take a look at the
+graphics guide before I go writing any code for transforming things on the FEM
+side, though. --[[file:jcorneli.org][jcorneli]] Fri Feb 25 01:55:16 2005 UTC
+
+
+#+BEGIN_VERSE I actually have a macron in my default preamble that expands to that (well two macros)
+
+    \newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+    \newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+
+where the second is a "extended" version that lets me pass parameters to includegraphics.
+I don't think my solution is optimal, however --[[file:drini.org][drini]]

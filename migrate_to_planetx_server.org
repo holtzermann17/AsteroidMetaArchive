@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+** Background
+
+We have a new server awaiting planet* usage: *planetx.cc.vt.edu* (currently we are using *planetmath.cc.vt.edu*).  A comparison of stats of these machines:
+
+Planetx.cc stats:
+
+ * 3ghz Xeon processors (x4)
+ * 2gb RAM
+ * 70gb SCSI disc (x2, in RAID-1 configuration)
+
+Planetmath.cc stats:
+
+ * 650mhz PIII processors (x2)
+ * 1gb RAM
+ * 120gb IDE disc (x1)
+
+Thus, planetx is a considerable improvement in both raw power and redundancy.
+
+We plan to host PlanetMath, AsteroidMeta, and (the upcoming) PlanetPhysics on planetx.  In order to isolate the Noosphere instances administratively ("jailing"), we have evaluated the following options (given with their drawbacks):
+
+ * [http://user-mode-linux.sourceforge.net/ usermode linux] (slow)
+ * [http://www.cl.cam.ac.uk/Research/SRG/netos/xen/ Xen] (can only put one instance on each CPU)
+ * [http://br.endernet.org/~akrowne/elaine/vinstall/index.html vinstall] (only file-level, not very polished)
+ * BSD jails (BSD incurs large start-up costs for us, and perhaps Noosphere porting)
+
+We have selected vinstall, as we are familiar with how to get by with only file-level isolation, and it does not impede taking full advantage of all memory, processor, and disk resources available on planetx.
+
+References:
+
+ * [http://www.cl.cam.ac.uk/Research/SRG/netos/xen/performance.html Xen performance] (compare with UML, VMWare, etc.)
+
+** The Migration
+
+The migration should be relatively simple.  What we should do is:
+
+ 1. get vinstall set up on the new machine.
+ 1. start the process of getting the IPs to planetmath hosts changed over
+ 1. shut down PlanetMath
+ 1. copy PlanetMath's virtual installation to the new machine (scp should suffice)
+ 1. optionally, coordindate tasks between servers, as in the next section.
+ 1. start up PlanetMath on new server
+
+The annoying part of all of this will be the non-uniform propagation of the new DNS information.  So, PM will probably be inaccessable for some people for up to a day. 
+
+** Distribution of Server Tasks
+
+We should start thinking about how to distribute the computational burden of PlanetMath across many servers, since we already have multiple available servers we cannot concurrently use, and it looks like the one thing we will definitely be able to get is more machines.  In specific, it'd be nice to parallelize rendering.  If we could develop a way to render on a dedicated rendering machine and run OpenSSI clustering on it, we could extend the rendering cluster with additional new machines (as we receive them) with very little work.
+
+Note: old discussion of improving the image serving situation is now deprecated.  Logan installed thttpd just to handle images.planetmath.org traffic, which is separate from apache, lighter, and doesn't use multiple threads or processes to parallelize requests.  So now image serving is unbound from web app serving, and doesn't contend for its resources.  --[[file:akrowne.org][akrowne]] Thu Mar  3 03:35:30 UTC 2005

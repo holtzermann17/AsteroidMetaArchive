@@ -1,0 +1,358 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Warning:  This page is in the middle of a rather heavy reorganization so it
+may not all make that much sense.*
+
+
+Look at almost any piece of mathematical writing and you will see that it is
+bristling with formulas.  Indeed, this is one of the features which
+distinguishes mathematical from non-mathematical writing --- mathematicians
+convey much of their meaning through equations.  Therefore, if we can understand
+something of how mathematical expressions function and are to be interpreted,
+we will have come a long way towards understanding mathematical writing.  In
+this essay, we shall examine at least some of the simpler aspects of
+mathematical expressions.
+
+* Background Material
+
+ 1. Syntax
+
+## [[file:IntroductionToSyntax|Introduction.org][IntroductionToSyntax|Introduction]]
+
+## [[file:Definition of Context-free Grammar.org][Definition of Context-free Grammar]]
+
+## [[file:DerivationsSectionOfSyntax|Derivations.org][DerivationsSectionOfSyntax|Derivations]]
+
+## [[file:ParseTreesSectionOfSyntax|Parses.org][ParseTreesSectionOfSyntax|Parses]]
+
+## [[file:ExamplesForSyntax|Examples.org][ExamplesForSyntax|Examples]]
+
+## [[file:CategoricalInterpretationOfSyntax|Categorical Interpretation.org][CategoricalInterpretationOfSyntax|Categorical Interpretation]]
+
+** Semantics
+
+In this article, the term "semantics" shall be used in a specific technical
+sense.  For us, a semantic shall be a map from strings of syntactically correct
+tokens to a set of values which we shall call /Val/.  In logic, this set
+consists of the truth values; however, we are also interested in branches of
+mathematics other than logic, so we shall allow for a more general sets as sets
+of values.
+
+A simple example may help illustrate what is intended here; suppose we restrict
+attention to a formal language in which the only acceptable tokens are /(/,
+/)/, operations such as /plus/, /times/, ..., and numerals and the grammar rules are as follows:
+
+ <expression> -> <numeral>
+
+ <expression> -> (<operation> <expression> <expresssion>)
+
+A typical sentence of this language is the following:
+
+ (plus (times 2 4) (times 3 6))
+
+One possible semantic for this language is one in which /Val/ is the set of
+integers and the symbols /plus/ and /times/ and the numerals have their
+usual interpretation.  In terms of this semantic, the value of the above
+expression is the integer 26.  Of course, other semantics are possible; for
+instance, if one wanted to interpret the numerals as Von Neumann ordinals and
+/plus/ and /times/ as suitable set-theoretic operations, then we could have
+a semantic which maps strings in our simple language to very large sets.
+
+To specify the grammar, we gave a number of rules of the form
+
+  A --> B1 ... Bn
+
+in which A is a non-terminal symbol, and the B's are be either terminal or
+non-terminal.  In many of the cases we will be interested in, the semantics
+closely follows the grammar.  We can make this notion precise by the following
+definition:
+
+ *A semantic /Eval : sentences -> Val/ will be called /contravariant to the
+grammar/ if, to every grammar rule which sends a symbol A into a string which
+involves evaluable symbols B1, ...Bn, there corresponds a function /f : Val^n
+-> Val/ such that*
+
+ Eval (a) = f ( Eval (b1), ..., Eval (bn) )
+
+ *when /a = b1 ... bn/ with /bi in Bi/ for /i = 1 ... n/.*
+
+The integer-valued semantic for our simple example is contravariant to the
+grammar because, corresponding to the second grammar rule we have
+
+ Eval[(plus <expression1> <expression2>)] = Eval[<expression1>] +
+                                            Eval[<expression2>]
+
+and corresonding the the third we have
+
+ Eval [(times <expression1> <expression2>)] = Eval[<expression1>] *            
+                                              Eval[<expression2>] 
+
+** Types and Arity
+
+In discussing semantics of expressions, it is convenient to introduce the notions of *type* and *arity*.   Roughly speaking, the notion of types refers to the different types of mathematical objects (numbers, functions, sets, ...) which we must distinguish in order to implement our semantics and arity is a gadget to keeps track of the range and domain of functions.  More specifically and arity will consist of a set of lists of types.  The first item in the list refers to the type of the result of evaluating the function with arguments whose types correspond to the remaining items in the list.
+
+Since this description can be vague and the formal description can be confusing, it might be best to bridge the gap with some exampes at this point.  Let us reconsider our simple example of arithmetic.  We could  have two types -- /n/ (for number) and /f/ (for function).  Numerals would have type /n/ whilst the tokens /plus/ and /times/ would have type /f/.  We could also assign types to expressions.  For instance, the expression /(+ 1 1)/ wold have type /n/ because it represents a number.  In fact, we could type /(+ 1 1)/ in anywhere that we would type /2/.  If we really wanted to, we could even take this expression as a definition of /2/, but that is another story and let's not get off-topic here.
+
+In order to deduce the type of an expression /(+ 1 1)/ from the types of the elements which compose the expression, we will introduce arities.  To the tokens /plus/ and /times/, we assign the arities /{(n n n)}/ and to each numeral we assign the arity /{(n)}/.  This means that /plus/ and /times/ take two arguments, both of which are numbers and return a number.  On the other hand, numerals take no agruments and return a number.  
+
+Since this example is a bit simple to illustrate all features of types and arities, let us enlarge it gradually to illustrate more features.  One thing that our example could use is an equals sign, so we could write things like
+
+ (eq (plus 1 1) 2)
+
+Likewise, we could use inequality signs. While we're at it, it wouldn't also hurt to throw in some logical connectives so we could reason about arithmetic and say things like
+
+ (if (and (lt 1 2) (lt 2 3)) (lt 1 3))
+
+To accomodate such expressions, we could add more tokens to our language.  As far as the grammar goes, these extra tokens will be considered as operations.  That will make expressions like the above parse correctly.  However, it will also mean that we will have some expressions like
+
+ (plus 3 (eq 1 1))
+
+which, though syntactically correct are nonsense.  The system of types and arities will help us sort these problems out.  The problem with the above expression is that we should be adding a number to 3, and /(eq 1 1)/ does not specify a number.  What it specifies is a truth value --- /(eq 1 1)/ is true, whilst /(eq 1 2)/ is false --- and it simply doesn't make much sense to add 3 and /true/!  To avoid such gaffes in the future, we shall call such an expression *mismatched* and will add three new types --- /l/ (logical truth value), /p/ (predicate), and /c/ (connective).  We shall assign type /l/ to entities like /(gt 2 3)/ specify logical truth values, type /p/ to   predicates like /eq/, /lt/, ..., and type /c/ to logical connectives like /if/, /and/, ... .
+
+Furthermore, we will update our arities.  To predicates, we shall assign the arity /{(l n n)}/ because they take two numbers as input and to connectives we shall assicn the arity /{(l l l)}/. because they take two logical values as input and emit a logical value as output.  Using these arities, it is easy to describe what went wrong.  In the subexpression /(eq 1 1)/, /eq/ has arity /{(l n n)}/ and /1/ has type /n/.  Hence the artity of /eq/ matches the types of its arguments, the subexpression makes sense, and its type is /l/.  On the other hand, in the full expression /(plus 3 (eq 1 1))/, /plus/ has arity /{(n n n)}/ whilst ist arguments have types /n/ and /l/, respectively.  Hence there is a mismatch between types and arities, so the expression makes no sense.  To obtain an expression that made sense, we would need an object with an arity like /{(n n l)}/ which could take a number and a logical value as arguments.
+
+To illustrate further aspects of this system, let us move from first grade arithmetic to second grade arithmetic.  In the second grade, we learn that not all numbers are whole numbers (integers), but that thre are also fractions (rational numbers) and (in the third grade)  decimals (real numbers).  To take these into account, we might want to upgrade our example.  We could enlarge our set of numerals to include things like /2/7/ and /2.5939534/.  Likewise, we could add types /q/ and /r/ to stand for rational and real values.
+
+With this latest extension of our system, a new phenomenon emerges.  Consider the three examples
+
+ (plus 1 2)
+
+ (plus 3 8/3)
+
+ (plus 1/3 2/5)
+
+Even though the arguments to plus all have different types, still all these expressions make sense.  However, the type of the value of the expression will depend on the type of the arguments --- in the first example, it is and integer whilst, in the second and third examples, it is a rational number.  To encode this, we need to have our arity be a set.  For instance, to describe the behavior of /plus/ in second grade arithmetic, we would say that its arity is /{(n n n), (q n q), (q q n), (q q q)}/.  In the third grade, when we learn the type /r/, this would grow to
+
+ {(n n n), (q n q), (q q n), (q q q), (r n r), (r r n), (r q r), (r r q), (r r r)}
+
+For an expression to be matched, we only require that the types of the arguments match up with one of the lists in the set of arities.  The first item in the list which happened to match will then determine the type of the whole expression.
+
+It should also be noted that one can accomplish the same end that we achieved by introducing types by refining the grammar.  For example, we could accomplish the same end as we accomplished by introducing the type /l/ by expanding the grammar like so:
+
+ <logical-expression> -> (<connective> <logical-expression> <logical-expression>)
+
+ <logical-expression> -> (<predicate> <numerical-expression> <numerical-expression>)
+
+ <numerical-expression> -> (<operation> <numerical-expression> <numerical-expression>)
+
+ <numerical-expression> -> <numeral>
+
+In this sense, types and arities sit somewhere in a no-man's land between syntax and semantics and could be dispensed with entirely by making the grammar more complicated.  The reason for preferring them is that we may wish to understand the same mathematical expression using more than one possible semantic.  Rather than having to parse it using a different grammar each time we wanted to reinterpret it, we prefer to write it in a uniformized notation, parse it once and use different systems of types and arities to refine this parse so as to provide the extra information which is needed to interpret the expression according to a particular semantic.
+
+Finally, since our grammar allows for the possiblity of binders, a few words about biders and types may be in order.  As before, let us start with an example.  Let us move on to high-school math.  In calculus, one encounters expressions like
+
+  integral x^2 + 3 x dx
+
+which involve a token /integral/, a bound variable /x/ and an expression /x^2 + 3 x/ which involves /x/.   The variable should be assigned the type /r/ and likewise the expression should be assigned the type /r/ as well.  A naive proposal would be to assign the arity /{(r r r)}/.  However, this can't be right because it makes it look as if integral was a real function of two real variables, like /plus/ or /times/, which is not the case.
+
+To see what the integral is, let us skip forward a level to college math.  In analysis class, we consider calculus more critically and write things like
+
+ integral (g).
+
+In terms of types, we would say that integral is a functional (abbreviate this to /F/) and g has type /f/.  Hence we should assign to the symbol /integral/ the arity /{(n f)}/.  
+
+To understand the connection between the two notations for integrals, we need to notice that in the calculus notation, the function was specified implicitly by the bound variable and the expression, rather than given explicitly as in the analysis notation.  This suggests a modification to our notation --- we shall use an apostrophe to denote the types of bound variables.  With this change, the arity if /integral/ would be /{(n f), (n r' r)}/.  Now there is no chance of mixing it up with a function of two real variables since one of the "/r/"'s comes with an apostrophe to indicate that it refers to a bound variable, not a function.  Also, the connection between the two versions is clear --- from a real varaible and a real expression involving that variable, one can construct a real function to which the functional "/integral/" can be applied.
+
+Also, it might be pointed out that this system of types and arities is somewhat simple, and one should be careful not to expect too much of it.  For example, in the case of the expression
+
+ (plus 1/2 3/2)
+
+the result turns out to be an integer, even though all we learn from looking at types and arities is that it is a rational number.  To find out that it is actually an integer and not just any old rational number, we need to make a more detaied analysis of the arguments.  Rather, types and arities should be seen as a sort of triage to sort out obvious nonsense (like /(plus 3 (eq 1 1))/) and provide some basic information to the parse which will be of use in a  more detailed semantic analysis.
+
+In order to come out with a formal description, let us summarize some of the main points of what we have considered:
+
+ 1. To every expression, we shall assign a type.
+
+ 1. To each type, we assign an arity.
+
+ 1. Given an expression, we shall say that it is *type-matched* if the types of the arguments match one of the list in the arity of the type of the first subexpression.
+
+ 1. The type of an expression is given by the first element in the list which matched.
+
+To implement this formally, we assume that there is a set /Types/ of possible types and a subset /Matched/ of the set of syntactically correct sentences.  Define an *arity list* to be a set of lists of types.  We then will have a map /type/ which assigns and element of /Types/ to every expression and a map /arity-of/ which assigns an arity list to every type.  Given an expression
+
+ (<subexpression 0> <subexpression 1> ... <subexpression n>)
+
+we shall require that the type of this list is X if and only if 
+
+ (elt (X (type <subexpression 1>) ... (type <subexpression n>)) (arity-of (type <subexpression 0>)))
+
+* Set-theoretical Semantics
+
+In most areas of mathematics, one may adopt a set-theoretic interpretation.  In
+such an interpretation, we regard mathematical objects as elements of a
+suitably chosen universal set U and define notions in set-theoretic terms.  (For
+more detail see the [http://planetmath.org/encyclopedia/Universe.html Planet
+Math entry "universe"] or [http://www.math.mcgill.ca/~archibal/SGA/SGA.html
+SGA4].)  In the context of such an interpretation, mathematical expressions may
+be used as a means for specifying sets.  We shall see that there is a systematic
+formal procedure for obtaining the set associated to a particular expression.
+
+If we adopt this interpretation, it is natural to adopt a few conventions.  We
+shall assume that the symbols of logic (/exists/, /and/, /if/, etc.) and set 
+theory (/union/, /elt/, /subset/, etc.) are among the symbols of our language.  Likewise, we assume that a system of axioms for set theory has been included along with the rules of logic so that we only need to explicitly define non-set-theoretic notions like, for example, group and manifold.  We shall assume two types, set and logical.  
+
+** Interpretation of Predicates
+
+(I just realized that there are some holes in the proofs, so take this with a grain of salt until I patch the holes and take down this notice.)
+
+Under a set-theoretic interpretaton, it is possible to replace predicates with sets.  For example, if we have a one-place predicate /P/, we can associate to it the set /Pset/ of all elements of /U/ which satisfy /P/:
+
+ Pset = { x elt U | P (x) }
+
+For instance to the predicate /irrational/, we would associate the set of irrational numbers.  Then, we may replace all occurences of /P(x)/ with /x elt Pset/.  Given an /n/-place predicate /Q/, we can do likewise --- we simply form the set n-tuplets of elements of U which satisfy /Q/:
+
+ Qset = { (x1, ..., xn) elt U^n | Q (x1, ..., xn) }
+
+Since it will play a role in the way we interpret binders set-theoretically, we shall elaborate a little more on this topic of replacing predicates by sets.  Before proceeding further, let us start with a trivial but useful observation.  One can regard a predicate of /n/ variables as a predicate of more than /n/ variables by the simple expedient of having it depend trivially on the extra variables.  This silly observation comes in handy when dealing with formulae like
+
+ P (x,y) and Q (y,z).
+
+By letting /P/ depend trivially on /z/ and letting /Q/ depend trivially on /x/, we can rewrite this as
+
+ P (x,y,z) and  Q (x,y,z).
+
+The advantage of this is that, as we shall see, it is technically easier to deal with the conjunction of two predicates if they happen to depend on the same variables.  However, this comes with a caveat: if a predicate of /n/ variables is representable (this term will be defined in the next paragraph), then the same predicate regarded as depending on more than /n/ variables will be irrepresentable, so we must use this device with some caution.
+
+For the purpose at hand, it is useful to classify predicates into two classes which we shall term *representable predicates* and *irrepresentable predicates*.  We will call a  predicate representable if the set associated to it is an element of U.  For example, the predicate /irrational/ would be an example of a representable predicate (assuming a customary choice of a universe for real analysis).  By contrast, we call a predicate irrepresentable if the associated set is not a subset of U.  An example of an irrepresenable predicate would be "set".  The set associated associated to this predicate would be the set of all sets which are elments of U.  This had better not be an element of U if we are to avoid Cantor's paradox.
+
+We can combine predicates using the operations of (first-order) logic.  These come in two types, connectives (/and/, /or/, /not/) and quantifiers (/exists/ /forall/).  Moreover, by 
+simple logic operations, any logical matrix can be re-expressed as an equivalent matrix in which 
+all the quantifiers appear in front and only the three connectives /and/, (inculsive) /or/, /not/ appear.
+
+We will begin by considering connectives first.  The correspondence between logical connectives and set-theoretic operations is well-known --- "and" corresponds to "intersection", "or" corresponds to "union", and "not" corresponds to "complement".  We will now consider these operations from the standpoint of our classification of predicates.  We start with four easy lemmas:
+
+**** Lemma 1
+
+If /P/ and /Q/ are representable predicates, then /P and Q/ and /P or Q/ are also representatble predicates.
+
+ *Proof:* It is a simple consequence of the definition of universe that the union and intersection of two elements of U belongs to U.  Hence, if the predicates /P/ and /Q/ are representable, then /P and Q/ and /P or Q/ are also representable.  *Q.E.D.*
+
+**** Lemma 2
+
+If /B/ is representable, then /not B/ is irrepresentable.
+
+ *Proof:* We can prove this by contradiction.  Assume that /not B/ were representable.  By the conclusion presented in the last paragraph, /B or not B/ would also be representable.  However, the set corresponding to the the predicate /B or not B/ is /U^n/.  If this predicate were representable, then we would have /U^n elt U/ which would lead to Cantor's paradox.  To avoid this paradox, we must conclude that /not B/ is an irrepresentable predicate.  Maybe this discussion of /B or not B/ will interest Hamlet :)  *Q.E.D.*
+
+**** Lemma 3
+
+If /P/ is representable and /Q/ is any predicate, then /P and Q/ is representable.
+
+ *Proof:*  The set which corresponds to /P and Q/ is /Pset intersect Qset/, which is a subset of /Pset/.  Since /P/ is representable, /Pset elt U/.  It is a simple consequence of the definition of a universe that every subset of and element of /U/ must be an element of /U/.  Hence /Pset intersect Qset elt U/, so /P and Q/ is representable.  *Q.E.D.*
+
+**** Lemma 4
+
+If /P/ is irrepresentable and /Q/ is any predicate, then /P or Q/ is irrespresentable.
+
+ *Proof:*  Assume that /P or Q/ were representable.  This would imply that /Pset union Qset elt U/.  Also, /Pset subset Pset union Qset/.  As we noted in the proof of the last lemma, every subset of and element of /U/ is an element of /U/.  Hence, we wold have /Pset in U/, which contradicts the fact that /P/ is irrepresentable.  Hence, /P or Q/ must be irrespresentable. *Q.E.D.*
+
+Now, let us consider more complicated combination of several representable predicates and see if we can arrive at some criterion for determining when a more complicated combination of representable predicates is representable.  To accomplish this, it will be desirable to make use of the *disjunctive normal form*.  Recall that a logical formula is said to be in conjunctive normal form if it can be expressed as a number of terms connected by /or/ with each term consisting of a number of predicalet and denial of predicates connected by /and/.   Let us first consider a single term.  Such a term looks like
+
+ P1 and P2 and ... Pm and (not Q1) and (not Q2) and ... (not Qn)
+
+By !DeMorgan's law, this is equivalent to
+
+ P1 and P2 and ... Pm and not (Q1 or Q1 or ... Qn)
+
+By lemma 3, if /m neq 0/, then this term is a representable predicate.  On the other hand, if /m m = 0/, then it is reepresentible --- by lemma 1, /Q1 or Q1 or ... Qn/ is representable, so lemma 2 implies that /not (Q1 or Q1 or ... Qn)/ is irrepresentable.  To settle the question of whether a disjunction of such terms is is representable, we may use lemmata 1 and 4.  Together, they imply that a disjunction of terms is representable if and only if all the terms are representable.  Hence, we have the following theorem:
+
+**** Theorem
+
+A logical formula constructed from constructible predicates using only connectives (no quantifiers) is a constructible predicate if and only if it can be expressed in the form
+
+ (P1 and X1) or (P2 and X2) or ...
+
+where the /Pi/s are constructible predicates and the /Xi/s are arbitrary formulas.
+
+** Informal description
+
+In order to arrive at a formal construction, let us start with an
+informal description of how a mathematician might evaluate an expression.  To
+begin with, one must understand the symbols other than bound variables which
+appear in the expression. (The meaning of the bound variables is determined
+entirely by the binder to which they are attached and the conditions imposed on
+them by this binder.)  Exactly how a symbol appearing in a formula is to be interpreted is a not a completely trivial problem and will be dealt with elsewhere; for our current purposes, it suffices to assume that we have an assignment of values to symbols.
+
+We next come to the question of how to
+evaluate expressions constructed from our symbols.  To accomplish this, a mathematician
+breaks down an expression into its sub-expressions and deduces its value from
+the values of its sub-expressions.  Of course, if we do not know the value of a
+subexpression, then we must break up that subexpression into the subexpressions
+of which it is constructed and apply the same procedure to them.  We may have to
+repeat this procedure with our the sub-expressions of our sub-expression, and so
+on, but eventually it will terminate when we arrive at symbols, and then we can
+combine the values of the subexpressions to arrive at the value of the whole
+formula.  Thus, we are dealing with some sort of a recursive process here and,
+in fact, our formalization will be in terms of a recursively defined function.
+
+We can be more explicit with reference to the language whose grammar is given
+above.  We see that an expression consists of a subexpression followed by a list
+(possibly empty) of "arguments".  The interpretation is that the value of the
+first subexpression is a function and that each of the entities called
+"arguments" in our grammar specifies an argument of this function.  Evaluating
+the expression amounts to applying the function to which the first subexpression
+evaluates to the mathematical objects specified by the "arguments".  Therefore,
+all that remains to be understood how these "arguments" specify mathematical
+objects.
+
+If the "argument" is an expression, then the object it specifies is simply the
+value of the expression.  However, if the "argument" begins with the token
+/:bind/, then there are bound variables present, and it represents a function
+which must be determined form the three items which follow --- the first item is
+an /n/-tuplet of symbols, which are known as the bound variables; the second
+item is a list of expressions which are known as the conditions; the third item
+is an expression.  To determine this function, we first build the set
+
+ { (x_1 ... x_n) in U^n | conditions }
+
+Then our function is the function which maps each element of this set into the
+value of the expression when the values of the bound variables occurring in the
+expression are taken to be the elements of the /n/-tuplet.
+
+** A Simple Case
+
+Before formulating a formal definition that will work in general, let us first consider a simple case.  We shall restrict our attention to a theory for which the universe U consists of finite sets.  This way, we can concentrate on the main ideas involved and not have to worry about technicalities which are necessary if we are to avoid antimonies when dealing with infinite sets.  Another nice feature is that we can provide very explicit examples, and even write computer programs to enumerate certain sets which would, in general, be infinite.
+
+
+
+** Formal description
+ 
+Suppose that we are given an expression /F/ and an assignment of an
+appropriate element of our universal set to each symbol /S/ which appears in
+/F/.  Let us call the set that corresponds to a given symbol /S/ "(EVAL S)".
+We shall now show how to construct a function EVAL which maps subformulas of
+/F/ to sets.
+
+*** Note!
+A few words of caution may be in order here.  Even though the name "EVAL" has
+been chosen so as to be suggestive of the gizmo that evaluates LISP expressions,
+this analogy, like all analogies, should not be taken too seriously.  First, the
+range of our EVAL is sets, not mathematical expressions (as opposed to LISP,
+where the output, like the input is a s-expression).  Second, the sets with
+which we are dealing can be infinite.
+
+*** The construction
+
+To construct EVAL, we shall proceed by recursion on subformulas.  To simplify
+the discussion, let us assume for now that this expression contains no quotes
+and no binders.  Later on, we will see how to deal with quotes and binders.
+
+Assume that EVAL has already been defined for all subformulas of /F/.  Then,
+by syntax rules 1, 2, and 4 in the [[file:grammar for hcode.org][grammar for hcode]], /F/ must either be a
+name or a list of expressions.  If /F/ is a name then, since we have assumed
+that quote signs do not appear, the only possibility is given by rule 10, but
+since we have assumed that we know how to evaluate symbols, we are done.  If it
+is a list of expressions, we know how to evaluate each of the subformulas by our
+hypothesis.  Upon evaluating them, we obtain a list of sets.  This list is to be
+interpreted as follows: the first set in the list is to be interpreted as a
+function and the remaining sets as arguments.
+
+To describe EVAL in more detail, we need to consider how functions are
+represented as sets.
+
+(More to come after I have dinner!)
+
+[[file:Discussion of On the Syntax and Semantics of Mathematical Expressions.org][Discussion of On the Syntax and Semantics of Mathematical Expressions]]
+
+Back to [[file:h-code.org][h-code]]

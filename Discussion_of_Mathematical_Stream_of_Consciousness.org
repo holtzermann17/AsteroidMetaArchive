@@ -1,0 +1,70 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+First, wow!  That's quite the stream of consciousness you had going there.  You
+applied a lot of mathematical knowledge that certainly wouldn't have come to
+mind for me.  But I also think you captured the basic "feeling" of mathematical
+streams of consciousness in general, which is good.
+
+When I was reading the text, I was thinking that it would be great to mark it up
+with some scholia -- which would actually mostly be questions, on my part, but
+which, for you, could also be abstractions or formalizations of things you were
+thinking about.
+
+Your scholia would combine to produce an "outline" of the document -- compare
+the outline-structured proofs we were discussing.  This, in turn, could be used
+to write a "clean" proof of the result, of the sort that one might see in a book
+or paper.
+
+Even though writing the proof up in that fashion adds something, it also takes
+something away -- at least, traditionally it does.  I don't see any reason why
+an author wouldn't want to publish stream of consciousness writing like this, as
+long as the formal writing could be published too.  Would it be "embarassing"?
+I personally don't think so -- it would be much more embarassing to have a
+mistake in a formally written proof, for example.
+
+When I think about the mathematical "structure" you've illustrated one piece of,
+first, I think of the result.  Then, out from there are several different ways
+of thinking about the result -- some of which may lead nowhere, others of which
+may connect up with each other, and some of which may eventually lead to a proof
+of the result.  On the way, they connect with a lot of other known theorems --
+sort of like a high-dimensional connect-the-dots.
+
+In terms of thinking about how this could be used, a few things come to mind.
+One would be to finish a "formal" proof based on this... maybe using the idea of
+scholia to assemble the outline from the stream.  I'm not sure why I'm so keen
+on the idea of formal mathematical proof... but it seems like a natural
+suggestion.  After that, the task would be to figure out how the
+connect-the-dots steps work.
+
+Of course, the dots (pieces of existing mathematical knowledge) need to be
+there, for the most part.  So there is some KB building involved.  In order to
+get good at theorem proving, it might be worth picking some relatively simple
+domain, and building a massive KB about it.  Like I said above, the same stream
+of consciousness "feeling" is likely to apply in just about any area.  Thus, the
+"technique" should work just fine.  Indeed, the stream of consciousness approach
+could be applied to building the KB: one would write up proofs, and find the
+facts that they rely on, then write up proofs of those facts, and so on, and by
+an (abstract) "method of descent" eventually arrive at certain axioms.  At which
+point, one can then begin to work backwards (upwards), and see how the most
+basic results might have been discovered, etc.
+
+--[[file:jcorneli.org][jcorneli]] Wed May 04 03:23:29 2005 UTC
+
+Another thing to consider is using the scholium system on-the-fly to help create
+the proof structure.  I'm using the term "hook" (familiar from elisp) to talk
+about pieces of text that you use to get back to things that you thought were
+important as you go through a stream of conciousness process.  These things are
+rather effective (as long as you remember to supply them).  Thus, you'd be
+documenting the specific leaps of conciousness with specific scholia (probably
+of different types).  I'm not sure if brainstorming within the scholium system
+would help or get in the way.  Probably like literate programming it would help
+with some things and slow you down with other things.  (A potential similarity
+between literate programming and structured proofs, which is a neat thing, even
+if the comparison is a sort of trivial one.)
+
+--[[file:jcorneli.org][jcorneli]] Sun Jun 19 01:50:49 2005 UTC
+
+----
+
+[[file:Mathematical Stream of Consciousness.org][Mathematical Stream of Consciousness]]

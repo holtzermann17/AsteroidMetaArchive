@@ -1,0 +1,150 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(I've already been over this idea with Ray and Aaron by phone, so I'll
+keep it short here.)
+
+Let me start by saying that I'm not strongly /opposed/ to concepts.
+Actually, I think they're great, or at least, they can be.  It's
+just that we have so many interesting concepts floating around that
+have not gone anywhere beyond the stage of conceptual development.
+
+What I think we need is a strategy for /pairing/ concepts with the
+implementations, experiments, or other actions that will test them
+out, and get them out of the conceptual realm.  
+
+All too frequently in the past, the different parties in our discussions
+will agree about a suitable course of action -- and then appear to
+call it a day, as the action in question is put on ice indefinitely.
+This needs to change.  A course of action is not all that suitable unless
+it includes a strategy for deployment.
+
+It is fine and good for users to come up with [[file:Feature Requests.org][Feature Requests]], for
+example, but it would be way better to have a way to translate these
+requests into filled requests.
+
+Just to make it clear that I am not speaking in 
+hot air balloons right now, let me mention that this strategy of pairing concepts
+with actions -- and forming realistic goals and expectations about
+our actions -- is precisely what we are working on now with our new
+[[file:Schedule.org][Schedule]].
+
+I hope we can keep the good concepts coming -- but I also hope we can
+focus this year on pairing our existing conceptual work with practical
+action.  (Cf. Ray's [[file:Focussing Inward.org][Focussing Inward]] essay.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+I think of this as a flow issue --- under healthy circumstances, there is a 
+steady flow of projects from concepts to deliverables.  However, if something
+goes wrong then the usual problem shows up --- stuff piles up at some point
+and stagnation sets in.  In this case, one might wind up with a backlog of
+concepts or plans or unfinished projects depending on which location along
+the pipeline has the mismatch.
+
+For me, I find priorities to be an important issue.  In my personal life, I
+don't really mind having projects on ice indefinitely as long as I am sure 
+that important items are moving along at a reasonable pace.  For instance, I
+have some plans for a dream shop in my basement.  While I think about this
+from time to time and have all sorts of ideas about how I would like it to
+look, these plans are all on ice.  The reason this doesn't bother me is that
+I know that there are much more urgent things pulling on my attention and it
+is pretty clear to me that there is no time left for these other items.  At
+the same time, I don't consider it a waste to put spare hours when I am too
+tired to do much else to thinking about these things conceptually becasue
+I expect it will pay off when I finally get a chance to do things like 
+actually work on building my dream shop in the form of a much better planned
+shop. 
+
+Put another way, I have no problem with putting concepts on ice indefinitely
+as long as it is done strategically as part of a larger plan as opposed to
+something that just happens.  Whilst I have no problem postponing my dream
+shop indefinitely, I have a real problem with the way HDM development has been
+postponed because all sorts of other stuff came up for the last year and a 
+half.  This is why I find it important in our planning to identify the important
+items such as HDM research and deveolpment and fundraising and be sure to
+have a sane schedule which allots enough time to make reasonable progress on
+those items.  While it would be nice to get other stuff done as well, it won't
+bother me if other stuff stays on the back burner or even in the refrigerator
+should it turn out that the high priority items required more attention than 
+originally anticipated.
+
+Another factor to consider which Aaron mentioned last night is means.  Obviously,
+something will have to stay at the conceptual stage if the means to bring it about
+are lacking.  For instance, the reason the feature requests haven't been done is
+because a. we don't have programers b. we don't have the money to hire programmers
+and c. the Noosphere code needs to be documented better.  This doesn't really bother
+me anymore, it doesn't even bother me that new requests are still being added, because 
+we are aware of these issues and actively working on remedying the problems.  It was
+different two years ago when I saw the bugs and feature requests piling up but no
+realistic plan for how to deal with them, which is why I decided that, in addition
+to adding content, I might have to take a role in the organizational side of PM.
+--[[file:rspuzio.org][rspuzio]]
+
+I agree with your point that progress freezing at the concept level is only
+one of several ways that deliverables can fail to appear.  Also that one
+should be aware of the whole pipeline (even to the point of coming up with
+a better metaphor!).  
+
+Yet, the reason I wrote as I did above is that I think I've seen frighteningly consistent
+stalling at (or, more precisely, just after) the conceptual phase, 
+in both PM and some HDM efforts (although in somewhat different ways and maybe
+for different reasons).  There are many different scenarios that have
+come up, with different sets of agents involved, and so there is a lot
+of diversity that is getting lumped into one aggregated lump sum in my
+comment.  Certainly, different agents have taken different courses with
+respect to the conceptual landmarks we've identified.  For example, you
+and me working on organizational and networking efforts shouldn't really be
+construed as "stagnation" of concepts, just that it is part of a somewhat complex
+approach.  Which is only natural.
+
+As a scholium to your theme of "popping" the PM community off of the stack
+now that we've processed some important intermediate goals, my theme here is to
+pop the set of concepts we've previously identified as "worth working on eventually"
+and see if now might be the strategically appropriate time for some of them, and if so, do that work (again strategically).
+
+We are in the process of carrying out this plan.  But I wanted to give a new
+conceptual label to that process, i.e., "against concepts" :).
+
+Notice the difference between just saying we "should" carry out a given process, and pointing
+out that we /are/ carrying it out!  Now, if I was to go on to give a big
+spiel about this stuff from a philosophy standpoint, I'd be generating or
+linking in a bunch of new concepts, which would be hungry for pairs that they
+don't have and might not get for the forseeable future.  So, I won't go on about that
+just now.
+
+I would like to say a little more about "flow".  I think it is very good to "follow through"
+on thoughts or ideas you might have.  E.g. I might note that the philosophical
+idea I wanted to explore above is called "ecology".  But one doesn't want
+to follow through too far on each tangent, or one gets sidetracked.  So I'll leave this
+comment at that one word and we can come back to it later if that seems valuable.
+The way this relates to flow is that flow is about follow-through, and
+a project that flows all the way to the end has complete follow-through -- if "end" is even a meaningful concept!.
+At the other end (i.e. the beginning) of the spectrum -- a contribution that doesn't even have a vector showing where the flow
+can go to doesn't lead so easily to follow through, whereas one that
+comes with a vector does.  (E.g. the next step for your dream shop
+might be clear to you, even if you don't anticipate yourself taking this
+step right away.)  Continuing work on some vectorless contribution amounts to
+figuring out and then attaching a suitable vector.  More developed contributions 
+will typically have many dimensions, and vectors pointing all
+over the place.  This is the status of something like PM or HDM, for example.
+For something simpler like [[file:MUSN.org][MUSN]], there are only a handful of "next steps"
+involved.  We'll almost surely have to take these steps in order to see what the next next steps will be.
+
+My hypothesis is that one reason so many discussions at PM don't have
+a sufficient supply of next steps attached to them all the time is that
+the PM contributors are mathematicians who are used to working in
+the abstract realm.  If they work something out conceptually,
+then they think it is "right" and that they can stop there.
+But programmers and physicists know that this just isn't how the
+world works (even though frequently they are willing to work with various idealized
+models)!  Not to be too self-congratulatory or too self-deprecatory, 
+I get the sense that we are taking good steps at present, and I
+think we have learned a lot about how to keep this process flowing
+along in the future.
+
+--[[file:jcorneli.org][jcorneli]]
+
+** further reading
+
+ * [[file:Links_and_Morphisms.org][Links_and_Morphisms]]

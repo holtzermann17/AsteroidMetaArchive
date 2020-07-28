@@ -1,0 +1,110 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+An operation is an entity which does not bind any variables and can take arguments.
+
+This definition is purely syntactic; semantically, many different sorts of entities can be expressed as operations.  For example, in logic both conjunctions and predicates are operations.   Functions are represented as operations.
+
+In h-code, we employ a uniform notation for operations: we simply make a list in which the first item is the operation and subsequent entries are its arguments.   As discussed in the section on goals, this stands in stark contrast to the usual situation in mathmatics.
+
+Back to [[file:h-code.org][h-code]]
+
+----
+* Comments
+
+/I'm (mildly) confused; operations aren't allowed to bind to bind variables, but
+then functions are operations.  But isn't an integral a function? (if not, why
+not?)/ --[[file:jcorneli.org][jcorneli]] Thu Feb 10 00:13:30 2005
+
+The distinction between operations and binders makes sense only in the context
+of mathematical expressions.  Indeed, the same mathematical object (such as
+integral) can appear both as an operation and a binder.  For instance, in a
+calculus text, we might find someting like
+
+  int_0^2 (x^3 + 3x) dx
+
+in which the integral appears as a binder.  However, in a book on functional analysis, we might find
+
+  int (f)
+
+in which it appears as an operation.  The distinction is a syntactic one, not a
+semantic one.  In fact, when we interpret both the expression in the calculus
+book and the one in the functional analysis book, integral will denote precisely
+the same function which maps real functions into real numbers.  --[[file:rspuzio.org][rspuzio]]
+
+/The second instance of integral actually gets expanded to be something like
+the first instance (where we're binding to the whole space, probably of real
+numbers, or whatever); so, the functional analysis version is a binder with no
+more free variables left for us to fill in; the code would behave in the same
+way as the code for the first example./  --[[file:jcorneli.org][jcorneli]] Thu Feb 10 11:53:28
+2005
+
+Exactly.  In fact, this illustrates and explains the cryptic remark I made in the letter a few days ago such as "lambda is the mother of all binders" or "lambda is the universal binder through which all other binders factor".  To interpret the calculus example, which could be written as
+
+ (int :wrt (x) :st(< 0 x 3) (+ (power 3 x) (times 3 x)))
+
+we could convert it to
+
+ (int (lambda (x) :st(< 0 x 3) (+ (power 3 x) (times 3 x)))).
+
+At least as far as the set-theoretic interpretation of expressions involving binders goes, this is absolutely certainly correct and is the way that one interprets binders set-theoretically.  I will say no more about it here because there is (or will be, once I type it in) a detailed discussion of this point in the entry [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]].  In fact, I would suggest that one could allow the use of lambda as a "core" notation for binders provinding two provisos are met.
+
+ 1. We allow lambda to take two "arguments" --- a list of variables and a list of conditions to be imposed on them.  My reason for suggesting this is simply that, in a "core" notation, it would be nice to have as few symbols as possible. 
+
+ 1. We take care to understand lambda simply as a sign that variables are being bound.  The interpretation as a maker of functions is only appropriate in a situation where we are considering a set-theoretical interpretation of our expressions.  You can see this as a concession to my delicate set-theoretic sensibilities.
+
+Anyway, there are several possibilities for a "unified core notation", but perhaps that issue is not so important.  What may be more important for now is that the notations used are clear and unambiguous; fine-tuning and standardization are nice, but perhaps they need to happen at their own rate, as we explore and experiment with notations.  --[[file:rspuzio.org][rspuzio]]
+
+/In this and in the discussion at [[file:Discussion of On the Syntax and Semantics of Mathematical Expressions.org][Discussion of On the Syntax and Semantics of Mathematical Expressions]],
+it seems like we're dropping into fairly metamathematical issues.  It is fine to discuss them,
+but if we're going to do that, I think we should put some work in on [[file:hdm's formal system.org][hdm's formal system]],
+in light of your "two tunnels" metaphor.  For instance, while I am happy with this:/
+
+ (int (x) ((< 0 x 3)) (+ (power 3 x) (times 3 x)))
+
+/as an example of [[file:hcode.org][hcode]], I don't really know how to interpret it as a
+lambda expression, nor whether such an interpretation should be part of hcode at
+all.  Maybe the interpretation as a lambda expression is part of the formal
+system -- I honestly don't know.  But I do know that we haven't put a whole lot
+of effort yet into the "assembly code", and I wonder if we shouldn't divert our
+effort over there a bit, so we can see, for example, what integrals like this
+are going to get compiled to.  I am sorry that I haven't finished the task 
+[[file:see about licensing conditions for ghilbert.org][see about licensing conditions for ghilbert]] yet; I think ghilbert would be a great
+resource if we could use it.  Maybe I'll be able to finish/resolve that task
+tonight./ --[[file:jcorneli.org][jcorneli]] Thu Feb 10 17:55:38 2005
+
+You have a point that too much of abstract formal logic and metamathematics can
+get somewhat unbalanced, so it might be good to balance it with some more
+concrete problems as well.  I certainly plan to keep on working out and writing
+up my metamathematical ideas, especially since it seems to be going surprisingly
+well and am afraid that I might forget some things if I don't write them down
+very soon before I forget the details.  As I know from exteremely painful past
+experiences, it can be very difficult, nearly impossible for me to write
+something up if I wait too long until after the initial inspiration and ideas
+are gone.
+
+As for something more concrete, integrals might not be the best thing to start
+with because they can be rather nasty objects!  Just remeber, it took more than
+100 years to come up with a corect definition of integral --- it involves real
+numbers, limits, measure theory, and is rather complicated.  Maybe a better
+starting example would be something like finite sums of integers.  What do you
+think about looking at finite sums of integers?  For example, look at the proofs
+of such results as
+
+ sum_{m=1}^n m = n (n-1) /2
+
+Maybe start with the proofs of some such facts, translate them into h-code as
+best we know how, and then work on developing the algorithms to compile them
+into formal logic?
+
+Please don't take the above comments in the wrong way.  I don't mean them to
+give the impression that I'm being stubborn and inflexible.  I would be glad to
+work on some more down-to-earth stuff right now as well.  --[[file:rspuzio.org][rspuzio]]
+
+/Don't worry, and don't take my comments the wrong way either (i.e. they aren't
+a criticism of your basic approach).  I definitely think you should write about
+whatever moves you.  Now is a great time for exploring whatever seems
+interesting.  I'll see if I have anything to add to the discussion from the
+formal math angle after looking more into [[file:metamath.org][metamath]].  And I also like your
+suggestion of the summation example.  I'll probably try to satsify my penchant
+for examples by working on one or two pretty soon./ --[[file:jcorneli.org][jcorneli]]

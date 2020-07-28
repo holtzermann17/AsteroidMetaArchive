@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+AMS MCS codes related to real numbers:
+
+* 11-XX - Number theory
+** 11Jxx 	- 	Diophantine approximation, transcendental number theory
+ * 11J72 	- 	Irrationality; linear independence over a field
+ * 11J81 	- 	Transcendence (general theory)
+ * 11J82 	- 	Measures of irrationality and of transcendence
+
+
+* 13-XX  -   Commutative rings and algebras
+ * 13-00 -   General reference works: handbooks, dictionaries, bibliographies, etc.
+
+* 16-XX 	- 	Associative rings and algebras
+ * 16-00 	- General reference works (handbooks, dictionaries, bibliographies, etc.)
+
+* 26-XX  -    Real functions
+
+** 26Axx - Functions of one variable
+ * 26A03 	- 	Foundations: limits and generalizations, elementary topology of the line
+ * 26A06 	- 	One-variable calculus
+
+** 26Dxx - Inequalities
+ * 26D05 	- 	Inequalities for trigonometric functions and polynomials
+ * 26D07 	- 	Inequalities involving other types of functions
+ * 26D10 	- 	Inequalities involving derivatives and differential and integral operators
+ * 26D15 	- 	Inequalities for sums, series and integrals
+
+**  26Exx - Miscellaneous topics
+ * 26E60 	- 	Means
+
+* 54-XX - General topology
+** 54Cxx 	- 	Maps and general types of spaces defined by maps
+ * 54C30 	- 	Real-valued functions

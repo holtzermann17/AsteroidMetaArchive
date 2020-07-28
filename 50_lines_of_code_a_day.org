@@ -1,0 +1,32 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: A standard rule of thumb is that a good programmer can produce 50 lines of
+code a day; for a language like LISP, this is rather high.  By this standard,
+1000 lines of code require at least 20 days of full-time work.  --rspuzio, on [[file:HDM criticism.org][HDM criticism]] page
+
+I'm not sure where this estimate comes from, nor how well my own coding output
+matches lives up to it.  Also, I'm not sure whether the language really matters;
+LISP lines aren't typically any longer than other lines, they just have more
+parens ;).  The one thing I do want to mention is that I'm not "just" a
+programmer; I'm also an administrator, philosopher, young adult, writer, amateur
+mathematician, and so on.  I'm noticing in my current efforts on the scholium
+system that /design/ and /documentation/ take up tons of time.  It isn't a
+matter of whether these things are "worth it" or not; they are /necessary/.
+(I'm echoing my own comments about sufficiency over efficiency.)  Furthermore,
+they are fun, and a great complement to programming which is also fun!  Several
+days can go by when I don't write any code at all, but when I'm still improving
+the program and formulating a plan for the next coding task to tackle.  Also, I
+tend to revise my code, so any given 50 lines of code might be expected to
+change several times before it was completed.  Note that working on multiple
+roles with a program doesn't really present the same problems as the issue of
+bifurcated attention we were talking about - at least, not all of them.  When
+you work on the same problem from several directions, you get a good
+understanding of it!  But each of the individual jobs goes slower.  I think that
+if I was co-coding this particular program, I'd want my coding partner(s) to
+work on all aspects of the program too, I wouldn't just want a "codemonkey" (nor
+would such a thing really make sense given the nature of the program).
+
+Just in case you're listening, shargestam. (J/K).
+
+--[[file:jcorneli.org][jcorneli]] Thu Jul 21 21:20:53 2005 UTC

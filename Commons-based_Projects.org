@@ -1,0 +1,132 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the defining features of PlanetMath is that it is based
+around a commons.  Currently, this commons takes the form of
+several sections --- encyclopedia, forum, papers, expositions,
+books.  Over time, several drawbacks of this scheme have come
+to light.  The current arrangement is somewhat rigid, in that
+there is little way to shift content between these areas, share
+content, or link between them.  Rather frequently, there arise
+disputes over what belongs in the encyclopaedia section.
+
+In a recent discussion on this topic of what does or does not 
+belong in the encylopaedia section, Chi Woo proposed that there
+be a place for material which may not belong in the encyclopaedia.
+Combining this suggestion with thoughts about how to redo PM 
+using the scholium system and various ideas and suggestions
+which have been raised over the years, I came up with the 
+following proposal for how to re-organize PM.
+
+In this scheme, there would be two main components, the commons and
+projects organized about the commons.  The commons would be a
+rather undifferentiated area to which any user could submit content
+subject to some minimal restrictions:
+
+ * The content should not be insulting to other individuals or groups.
+
+ * Submitted material should not infringe on copyrights.
+
+ * The copyright owner has granted permission to redistribute and reuse the 
+content under suitable terms.
+
+However, there would not be restrictions placed based upon appropriateness
+of subject matter.  
+
+On top of this commons, there would be a number of projects.  These 
+projects would take materials from the commons, organize it in various ways,
+and present it to the general public.  An example of such a project might
+be the encyclopaedia.  This project would be owned by some group, the
+governing body of which Chi spoke, who would make decide what belongs in
+the encyclopaedia and what does not.  Based on their rules, there would
+be an encyclopaedia section which contains material from the commons
+which they consider fit for inclusion in an encyclopaedia.
+
+In this scheme, there would be no one official encyclopaedia.  Rather, any
+member or collection of members would be free to build a project on top of
+the commons provided that they are willing to put in the effort required to
+maintain that project.  The PM official organization and staff would take
+a hands-off, common carrier attitude and let members sort out matters of
+how to run their projects between themnselves as long as they do so in a
+civil fashion.  For instance, if someone had a serious disagreement with
+the governing body of the encyclopaedia but, despite repeated discussion,
+it became clear that that person and the governing body could not reach
+an agreement, then that person would be free to make an alternative
+encyclopaedia section which would include content selected according to
+differrent criteria.  Both projects would draw upon material from the same
+commons, but would make differrent selections and display it differrently.
+
+In addition to encyclopaedias, there could be all sorts of content projects.
+For instance, there could be textbook projects, handbooks, frequently asked
+questions, problem books, and whatever other genres clever people think up.
+--[[file:rspuzio.org][rspuzio]]
+
+A pretty good description of how the [[file:scholium system.org][scholium system]] would work in practice,
+I think!  Of your three conditions, (1) is too vague, and (2) is subsumed within
+(3).  --[[file:jcorneli.org][jcorneli]]
+
+I don't think that 1 is really much more vague than Chi's guidelines about
+not insulting other users or posting offensive content.  Of course, in 
+actual practise, any such guideline will need to be made more specific,
+just as we are now doing with Chi's guidelines.  As for 2 and 3, I reworded
+3 to make clear what I was getting at.
+
+The fundamental point I was trying to make with this is that there is really no
+good reason to assume that there has to be just one encyclopaedia or one
+rating system and no reason to fight about what belongs there but that there could 
+be multiple such entities sharing the same commons.  For instance, rather than
+squabbling endlessly over whether Smarandache stuff belongs in the encyclopaedia or 
+what to do with the entry on 42, maybe a saner approach would be to trifurcate the
+encyclopaedia.  One branch might be a straight and narrow mathematical 
+encyclopaedia which only includes material which is cited in established textbooks,
+another might be an encyclopedia of mathematics according to Smarandache, and
+yet another would be a popular encyclopaedia of mathematics which leaves out the
+abstruse, ivory tower stuff, but includes material at which professional 
+mathematicians would thumb their noses and consider irrelevant.  However, all three 
+of these projects would build upon the same commons, so if a particular entry is 
+deemed suitable for inclusion in more than one of these projects, one doesn't have 
+to rewrite it in order to include it in one's project.
+
+I also think that friendly forking could be used in other potentially contentious
+places.  In particular, I have in mind the issue of people not being able to come
+to agreement about a correction.  Rather than having this be settled by one side
+forcing ownership away from the other, a more amiable appproach might be to bifurcate
+the entry; in addition to the original version, there would be the version with the
+contentious changes made.  In the case where the entry were used in the encyclopaedia,
+what would happen is that the changed version would be included rather than the
+original version, but the origianal version would stay in the commons where anybody
+could access it or reuse it as they saw fit.  To me this approach seems most consistent
+with the fact that people retain copyright to their contributions but permit reuse.
+
+--[[file:rspuzio.org][rspuzio]]
+
+I would suggest (based on my experiences with this subject!) to be
+careful about possibly confusing blending of layers -- there are some
+abstract principles here ("we could put things in different
+collections"); and there are some specific proposals ("modified
+entries would go into the encyclopedia").
+
+The first proposed guideline is an example of one such specific
+proposal.  I am happy to discuss these sorts of considerations, but I
+do want to be clear that they are a rather different kind of "axiom"
+than the ones that describe the more abstract systems they refer to.
+
+Specifically, with regard to this potential social axiom: I don't
+really give a shit about being non-offensive!  I envision the scholium
+system being used for all kinds of things, not just the ones that
+people find decorous.  One of the nicest things about the scholium
+system is that people can decide pretty easily what sorts things they
+want to see, and then avoid everything else most of the time.  Thus,
+the design of the scholium system should obviate the implementor from
+trying to enforce (or even require) impossible puritanical standards
+like thou shalt not insult another person or group.  That's what I was
+getting at when I said that the condition was "too vague".
+
+I would like to be able to connect the discussion to fundamental
+issues like this as much as we can.  For example, how can we make
+sense of the requirement that submitted content be FAIF?  What are
+"suitable terms"?  At what level is the ambiguity in your choice of
+phrasing intentional?  How is the social principle of FAIF reflected
+in the technology itself?
+
+--[[file:jcorneli.org][jcorneli]]

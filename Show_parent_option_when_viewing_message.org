@@ -1,0 +1,13 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+This could be like a progressive version of 
+[[file:expand-all option when viewing messages.org][expand-all option when viewing messages]].
+
+The point being that it is sometimes quite convenient to see what a 
+followup is talking about on the same screen!  These two requests
+could be integrated into one... if the thread listing (hierarchy) was provided,
+and each branch had "expand this message" or "expand this branch" buttons attached to it.
+
+--[[file:jcorneli.org][jcorneli]]

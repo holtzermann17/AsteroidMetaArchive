@@ -1,0 +1,53 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Ray and I were recently talking about some fascinating postmodern geometry
+stuff related to semantic networks and geometry of texts.  I'll hold
+off a little on writing about that stuff for the time being, because
+I have (like) 2 minutes, and 2 questions.
+
+ * Does anyone know of a good theory of graph-like structures where in
+addition to having edges between nodes, you can also have edges between
+an edge and a node, or an edge and another edge?  Multi-edges are also
+interesting: these are edge-like things that connect many other graph
+elements.  (I know something about simplicial geometry, and multi-edges
+seem to fit in there, but I hadn't ever heard of edges that point at other
+edges before that I know of...)
+
+: The former structure is isomorphic to an 
+[http://planetmath.org/encyclopedia/AlgebraicSystem.html algebraic system]
+with two unary operations.  As for multi-edges, have a look at
+[http://planetmath.org/encyclopedia/FiniteAffinePlane.html incidence
+structures], also known as 
+[http://planetmath.org/encyclopedia/Hypergraph.html hypergraphs].
+
+:: I don't think I see the isomorphism.  I think instead, it would be an algebraic
+system with one unary operation (edges from node to node) and one binary operation (edges
+from edge to node).  But even this seems wrong, since I also want edges from edge
+to edge.  Maybe I just need it spelled out for me in greater detail.
+
+ * Easier question.  Does anyone remember off hand how to compute curvature
+in graphs?  (There is an R. K. Fan book that I used to look at from time to time
+that dealt with this issue.)  One weird question related to this, is:
+curvature is supposed to be local, but are there any global analogues?
+(Look out throughout the whole graph for data that contributes to your
+local statistic?) --[[file:jcorneli.org][jcorneli]]
+
+: In order to speak of curvature, you need to specify some sort of
+[http://planetmath.org/encyclopedia/Connection.html connection]
+on your graph.  Then, the analogue of curvature would be 
+the holonomy about a closed loop.  (More elaborately, one could 
+impose a topology on the graph and take curvature as a limit of
+holonomy to germs.) The global analogue of curvature is holonomy.
+In particular, one can have situations in which the local curvatures
+are all zero, yet the space is globally curved --- for example,
+consider a torus as a quotient of a plane with the usual metric
+by a lattice. --[[file:rspuzio.org][rspuzio]]
+
+:: OK, sounds good, and maybe I'll locate the RK Fan book to figure
+out what the usual connection is. --[[file:jcorneli.org][jcorneli]]
+
+#+BEGIN_VERSE You may also want to have a look at my PM entry on connection.  
+Especially since I wrote it, it will explain my point of view, 
+which may make it easier to see what I had in mind above.  
+--[[file:rspuzio.org][rspuzio]]

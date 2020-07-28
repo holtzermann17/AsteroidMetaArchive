@@ -1,0 +1,126 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Use a summary line and sign your edits
+
+When engaging in a discussion or filing a bug report or feature request, please
+sign your edits so that people will know who to follow up to. If you sign your edits, you can add the date immediately behind your username, and that can be handy too.
+
+Even if you don't sign your edits in the wiki page, we'd really, really
+appreciate it if you would attach your username to the page edits you make.
+This is easy to do:
+
+   Summary: describe your edits here!____________________________________
+
+   [ ] This change is a minor edit.
+
+   Username: jcorneli____________
+
+   Save Preview
+
+Of course, you should use your username, not mine.
+
+* General organization
+
+This wiki is currently mainly about [[file:What is Free Math|Free Math.org][What is Free Math|Free Math]] and some
+Free Math [[file:Projects.org][Projects]], as well as some related projects that aren't about math
+at all.  We'd like to see more different projects start using this wiki to share
+ideas.
+
+Also note that projects are typically full of [[file:Tasks.org][Tasks]] that you can help out
+with.
+
+Users of the wiki should make an effort to record the tasks they are working on on their
+[[file:AsteroidMeta:Users|AsteroidMeta homepages.org][AsteroidMeta:Users|AsteroidMeta homepages]].
+
+* Adding a new project
+
+To add a new project, please make sure first of all that it qualifies as a free
+project (see [[file:What is Free Math.org][What is Free Math]] for some ideas about what "free" means in
+this context).  It is advisable to give us a few days to corroborate your claim
+before going wild with the edits (links to the project's homepage and licensing
+terms would be nice).  If it looks like it is all systems are go, update the
+[[file:Tasks.org][Tasks]], [[file:Bugs.org][Bugs]], and [[file:Feature Requests.org][Feature Requests]] pages with sections for your
+project.
+
+"Made up" free projects are OK to add. (Brainstorming is good.)
+
+* Todo items= 
+
+Maintain a list of your todo items on your user page so that people can know
+what you are working on.  If you're looking for something to do, check out the
+[[file:Tasks.org][Tasks]] page.
+
+**  Note
+This policy item is somewhat obsolete, since it is a bit of a pain to
+use the wiki system to do this.  Maybe you can help us design a 
+[[file:the relative merits of wiki and other workflow management media|better system.org][the relative merits of wiki and other workflow management media|better system]].
+
+*  Commons
+
+You can also use the [[file:Commons.org][Commons]] for general announcements about your
+activities, or for other random questions.  For things that you want to take
+in-depth, use the [[file:Discussions.org][Discussions]] page.
+
+*  Bulletins
+
+Weekly [[file:Bulletins.org][Bulletins]] of activities on the Asteroid will be published.
+It is strongly encouraged that users add at least a short summary
+of their activities and a few comments on how things are going to these
+bulletins.  Additional content (editorials or whatever) is welcomed
+too.  (The bulletins are edited by [[file:jcorneli.org][jcorneli]].)
+
+* Spam deterrents
+
+You can use, but don't please don't bookmark this page: [[file:HomePage2.org][HomePage2]].
+I don't really care if people spam the homepage (if it doesn't get
+beyond that).  I'm curious to see what happens if we let them fight
+it out.
+
+In the mean time, please send a copy of all spams you remove to
+[[file:jcorneli.org][jcorneli]] via email.  This way their content can get blocked
+in the future (from AsteroidMeta and other Oddmuse wikis that 
+use the Emacswiki BannedContent page).
+
+
+---- 
+
+* Note on Enforcement
+
+As much as it pains me to do it, I may begin rolling back edits that are made
+that do not comply to these rules, unless the author can justify their reasons
+for not adhering to this policy. (In which case I might change the policy...)
+
+----
+
+* Discussion
+
+I really wonder if we should switch to a bit more convenient wiki software, like mediawiki.  For one, I find the "toolbox" it has for edits very handy, as well as some really handy things in markup.  For example, there is a shorthand code for "sign here with a link to my user page /and/ the current date and time" (upon saving).  I don't think it is effective to chide people for not complying with policy that the system lacks features to support.  Even if they comply with the policy, without convenience, it is like a little punishment every time they do so, and negative reinforcement is a /bad/ thing.  Anyway, I am trying various wikis out on a number of projects now, and will keep the folks here abreast of what I discover.  --[[file:akrowne.org][akrowne]]  Wed Feb 23 21:10:03 UTC 2005
+
+: There is an extension to do the specific example you brought up with Oddmuse,
+see 
+[http://www.oddmuse.org/cgi-bin/wiki/Signature_Extension Oddmuse:Signature_Extension].  
+And there are various other extensions as well.  Of course, we can't install any
+of these on the current AM site.  I would tend to agree that it would be better
+to make AM more convenient.  I think the first step would be to migrate it to
+the "planetx" server (see 
+[http://oddwiki.taoriver.net/wiki.pl/Migration Oddwiki:Migration] and 
+[[file:Copying AsteroidMeta.org][Copying AsteroidMeta]].)  From there we can either modify the Oddmuse settings
+to make the site more convenient or port to some other platform or both.  I'm
+not opposed to porting to another platform, however, I don't have any gripes
+against Oddmuse /per se/ either.  If you want to talk about specific wiki (or
+non-wiki) features that you think would be good, I've got a discussion started
+about that, I'd love to get more feedback from you -- see 
+[[file:the relative merits of wiki and other workflow management media.org][the relative merits of wiki and other workflow management media]].  Thanks,
+--[[file:jcorneli.org][jcorneli]] Wed Feb 23 22:41:00 2005 UTC PS. In the mean time, whatever
+platform we use, we should probably have a page that gives some usability tips.
+
+Maybe when Matt's and Brian's collaborative hypertext system comes out (perhaps
+cross-fertilized with the scholium system) that woud be the way to go.  In the
+meanwhile, we seem to be getting along not too badly with the curent platform.
+--[[file:rspuzio.org][rspuzio]] 15 June 2005
+
+: Another thing to check out is [http://www.xwiki.org Xwiki] - but I like the simplicity
+of oddmuse as a wiki.  I also think that when the scholium system is ready we
+should try to use that!  It combines simplicity with extensibility...
+--[[file:jcorneli.org][jcorneli]] Wed Jun 15 16:21:15 2005 UTC

@@ -1,0 +1,46 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Math reference works
+; PlanetMath : This is in some sense a "parent project" for HDM at this point.
+For example, the PM organization hosts this wiki and provides other material
+resources to the project.  In itself, PM is "the home for free math on
+the internet."  One of its main features is the [[file:Noosphere.org][Noosphere]] engine, which
+is used to maintain much of the PM website, including their online
+mathematics encyclopedia.  Improvements and extensions to this digital library
+(e.g. integration with curriculum development and research communications)
+are "in the works", and at some point, HDM software and content is likely
+to be integrated into the collection as well.
+
+; [http://mathworld.wolfram.com/ "Eric Weisstein's World of Mathematics"] :
+More commonly known as "!MathWorld" this is a (non-free) project
+with some similarities to !PlanetMath, notably the main feature is
+an online math encyclopedia.  Their history shows one motivation for
+using free content (and moreover for reading contracts carefully).
+
+; NIST Digital Library of Mathematical Functions project :  (also mentioned by Dr. Fateman)
+
+; automated Encyclopedia of Special Functions at INRIA : (also mentioned by Dr. Fateman)
+
+* Digital mathematics collections
+
+; [http://www.library.cornell.edu/dmlib/index.html Cornell Digital Mathematics Library] : 
+public domain works under a restrictive license - woo hoo!
+
+; [http://www.wdml.org/ World digital mathematics library] : This effort is
+described by Ewing in a [http://www.ams.org/ewing/Twenty_centuries.pdf "vision" document].
+
+* Miscellaneous
+
+; [[file:Project Gutenberg.org][Project Gutenberg]] : Interesting example of CBPP. (Local link)
+
+; [http://www.lexisnexis.com LexisNexis] : (full text from various sources available online)
+
+; The [http://www.oed.com/ Oxford English Dictionary] : Interesting largely
+for historical reasons: this was an early and successful CBPP project.  The
+website requires registration; if you want to read this resource, typically
+you must look for it in a local library.  The fact they are online now is
+somewhat interesting.
+
+; [http://www.hyperdictionary.com/ Hyperdictionary] : This is a "born digital"
+dictionary

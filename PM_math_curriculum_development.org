@@ -1,0 +1,50 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Perhaps there is a way to share some of
+[http://www.itcep.umn.edu/umtymp/ UMPTYMP]'s collective knowledge with PM and make a modified version of the
+UMPTYMP curriculum available to more people around the world.  (Presumably we
+could find people who would be interested in helping teach the classes on a
+volunteer basis?)  Indeed, there's no reason to stop with UMPTYMP - why not
+work on some curriculum development for all math classes, and organize 
+/gratis/ online instruction in all of them?
+
+We could do something similar for PlanetComputing when it gets started up.
+
+The actual amount of curriculum development required would vary: sometimes it
+would just be a matter of porting an existing curriculum to the online
+environment.  Sometimes this would be hard, especially if we want to use a free
+textbook.  However, if this was made into a focused task on PM and people
+contributed effort, I think we could make it happen.
+
+Accordingly, I'm not sure what the curriculum development would /cost/ - we
+would probably need some new /infrastructure/ to support development (this
+crosses over with the recent grant we've already applied for and presumably
+other grants as well).  We may be able to find partners in the academic
+community (e.g. at UMPTYMP or elsewhere) who would like to be involved with this
+project.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jun 16 15:44:14 2005 UTC
+
+
+----
+* Discussion
+
+One cheap and easy way to do something similar would be to simply 
+create a forum for each class (Beginning Algebra, Geometry, Calculus I, Calculus II, Abstract Algebra, etc.).
+This granularity would enable more specific posting and email subscription
+(compare [[file:email notification by keyword, metadata.org][email notification by keyword, metadata]] - this is similar but easier).  
+
+Presumably the postings would continue to be integrated up to the main page, but
+we could create pages with certain partial integrals (e.g. all of the
+high-school level fora could integrate to a high school page, all of the
+calculus fora could integrate to a calculus page - or whatever).
+
+The idea is that each forum is something like a "class".  Students should ask
+each other questions, feel free to discuss homework questions (at least, I think
+so!), and "teachers" may drop in from time to time to help with specific
+problems.
+
+As the site improves, we can build curricula around these forums.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jun 16 15:56:17 2005 UTC

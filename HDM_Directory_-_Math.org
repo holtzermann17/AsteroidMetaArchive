@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/This page is part of the [[file:HDM Directory.org][HDM Directory]]./
+
+/See also: [[file:Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM.org][Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM]], [[file:Mathematical logic particularly relevant to HDM.org][Mathematical logic particularly relevant to HDM]]/.
+
+We need some formal system which can represent any mathematical result
+(NB, this high-level system must be able to represent results about
+other "formal systems"). [[file:rspuzio.org][rspuzio]] has been at work on the various
+components of such a system, and you can find an extensive
+overview of his thoughts on the issue at the page [[file:Two years later.org][Two years later]].
+
+To sum up very briefly, the way he describes it,
+there are at minimum three parts of the picture:
+
+ * grammar (or, how to represent mathematical statements, both simple and composite -- for
+our early investigations in this direction, see [[file:hcode.org][hcode]]; see also [[file:mathematical grammar.org][mathematical grammar]]);
+ * logic (or, how to reason formally about mathematical statements - noting that "proofs" are themselves another sort of
+  mathematical statement);
+ * dialectics (or, how to translate between mathematical theories).
+
+Presumably these topics will be heading in the direction of increasing formality
+and computer-implementability.
+
+In the mean time, coming from another direction, it is probably a good idea
+to give some extensive analysis to the way we think about mathematical
+things in concrete examples.  Here is an
+[[file:Example_of_structured_proof|early simple example.org][Example_of_structured_proof|early simple example]].  See also this
+[[file:collection of sketches in hcode.org][collection of sketches in hcode]].

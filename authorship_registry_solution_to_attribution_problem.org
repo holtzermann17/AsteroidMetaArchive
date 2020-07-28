@@ -1,0 +1,83 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I have been encouraging people to think about [[file:Public Domain.org][Public Domain]] as a
+reasonable choice of terms under which to make their publications
+available.
+
+I meet with almost universal resistance when I advance this idea.
+Either people refuse to consider it, or they claim to have already
+considered it and found it unsuitable.  Or perhaps they don't
+understand the statement.  Public domain?  What!?
+
+Either way, I'm going to stand by my guns, and try to get a short
+argument written down as to why Public Domain is useful and why it isn't 
+necessarily going to wreck anyone's life.
+
+* The Case For
+
+** Positive Features
+
+You can do whatever you want with public domain resources !  Anything.
+Really.
+
+** Absence of Negative Features
+
+With an appropriately put together authorship registry, you can
+get "credit" for your published works while still allowing other
+people to do whatever they want with these works.
+
+* Considering the Case Against
+
+** But what if someone else plagiarises my work and claims it is theirs?
+
+A plagiarist who registers a plagiarised work as original is
+only going to make themselves look worse when they are found out.
+It's all about the timestamps.
+
+** Someone can take my work, make closed source software out of it, and sell it!
+
+That's true, but consider this: Maybe the Software Freedom battle
+isn't going to be won with coercion (of any kind).  Maybe it will
+be won with quality products and convincing ethical arguments.
+
+Someone who publishes a real whiz-bang closed source program based
+on your work may get ahead for a while.  They will attract users
+who like the features of their program.  Meanwhile, your program
+has a feature that theirs doesn't -- the source is available!
+
+Surely there is a game-theoretic stable point where everyone just
+goes to use the proprietary program.  But this is the tragedy
+of the commons!  There are ways to avoid such tragedies, and
+the mere possibility of a sad ending doesn't mean we should
+avoid playing the game.
+
+Finally and perhaps most convincingly, this Argument Against
+also applies to [[file:BSD.org][BSD]]-style-licensed works!
+
+** I could never make money be releasing my works to the public domain
+
+I disagree.  See the [[file:Code Market.org][Code Market]] page for some reasons why.
+
+** Your "authorship registry" in infeasible
+
+Piffle.  This is, essentially, an /old technology/: indeed, it was
+the way copyright used to work.  People who failed to register
+for copyright immediately sent their works into the public
+domain (I think -- I'll need to fact-check that).
+
+Authorship designation is really not any different.  Of course
+things could be souped up with PGP and the like these days if
+that's what people wanted.
+
+* A tentative conclusion
+
+The Public Domain is the way to go!  Everything else is totally whack (i.e. bogus)!
+
+* Note
+
+The conclusion is only tentative because 
+this matter really needs more consideration.
+Thank you for /your/ consideration.  Pleasant wishes,
+
+--[[file:jcorneli.org][jcorneli]]

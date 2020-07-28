@@ -1,0 +1,92 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This page describes a paper by Daniel Mayer to appear in the Emory "Free Culture and 
+the Digital Library" symposium in October 2005. Mayer is Chief Financial Officer of the Wikimedia Foundation and a long-time and very active Wikipedia user. 
+----
+
+ *Title:* Trusting the user: Wikipedia as an example
+
+ *Status:* Abstract created, submitted, paper in production (as of Fri 29 Apr 2005)
+
+ *Abstract:*
+
+Traditional reference works have a top down approach: Their authority
+comes from being built by a select few and quality is controlled by
+creating barriers to user participation.  Mistakes are very often
+caught before publication but when published are difficult to remove.
+Wikipedia is a collaboratively-created encyclopedia that works in the
+opposite direction: There are no immediate barriers to participation
+beyond having an Internet connection but mistakes are very easy to
+fix.  And yet in apparent contradiction to common sense a great many
+and constantly growing number of people and organizations find
+Wikipedia useful.
+
+We will explore the possible reasons why Wikipedia has become a
+popular success with particular focus on trusting the user by
+empowering them to share their knowledge.  The lecture will then
+discuss the basic reliability issues that confront the open system
+employed by Wikipedia and what may be done to help overcome those
+limitations.  One such solution that may work is an expansion of the
+trust-based system: trusting readers and empowering them to rate
+content.
+
+* Discussion= 
+
+The fact that Wikipedia is actually a collection of separate (FDL'ed)
+documents seems to make its emergent order and usefulness all the more
+interesting.  The idea of collection-as-document seems important for
+many instances of CBPP (but some of these do have a top-down
+structure).  I wouldn't say that Wikipedia's success contradicts
+common sense: knowledge, in general, isn't top-down (or even
+"treelike").  But it does seem to go against an element of
+conventional wisdom, e.g., the thing about writing a paper from an
+outline.  (But Wikipedia is NOT a paper.) Maybe there is a "phase
+shift" that takes place when you move from a document with a few
+authors to one with many authors.  (Who may or may not "locally" have
+their own top-down plans.)  Certainly, some writing behaviors don't
+/need/ to be top-down (e.g. often editing can be almost purely
+local).  I'll look forward to see the discussion of rating behavior
+vs. text-editing behavior as a way of improving and handling
+reliablity.  Discussion of the "grass-roots" top-down efforts that do
+exist on the site would also be interesting.  --[[file:jcorneli.org][jcorneli]]
+
+: I think the reason Wikipedia's success is contrary to intuition is
+that people expect chaos to dominate in social environments where
+there is no centralized control, not that it has this or that
+format. --[[file:akrowne.org][akrowne]] Fri Apr 29 17:07:05 UTC 2005
+
+:: Hm... do "people" ever stop to think about how knowledge is
+actually produced? ;) Its almost totally decentralized, and any
+central powers (like the NSF) are probably just Brownian particles.
+Maybe it is "chaos"; who said chaos was bad (or, more relevantly, who
+said chaos was unstructured ;))?  If knowledge, and knowledge
+production, are loosely structured & not subject to central control,
+then it might make /more/ sense for an encyclopedia to follow a
+similar model.  Even something like the OED (which was centrally
+controlled) came into being through the action of a lot of independent
+volunteers.  --[[file:jcorneli.org][jcorneli]] Fri Apr 29 17:22:25 2005 UTC
+
+:: And although OED did have central control, so do PM and Wikipedia,
+to some extent: the leadership groups!  By creating site policies and
+fixing the site technology, the leadership does exercise some top-down
+influence on the site.  (E.g. I don't think I could get away with
+creating a Wikipedia page that is extremely profane or pornographic in
+nature.)  And users can also choose to initiate FEM-like endeavors to
+"simulate" some OED-like central control over content.  Such control
+is rather transitory, but if you combine it with other aspects of
+leadership (like those I've mentioned), I think rather strong top-down
+effects on content can be achieved. --[[file:jcorneli.org][jcorneli]] Fri Apr 29 23:50:30
+2005 UTC
+
+Something I've been thinking about WRT the [[file:scholium system.org][scholium system]] lately
+is the question of how a work makes the jump from
+individually-authored to massively-multiply co-authored.  I'm hoping
+that my work will have a broad user base that also contributes to the
+development of the system -- but of course, I need something
+attractive to release first.  I don't know if this paper will talk
+about the motivations for getting involved with a given text or
+project in the first place -- but I think these would be worth
+discussing.  I'm not sure if Benkler (even) does an adequate job
+describing the pay-off of participating in CBPP.  To sum up, "trust"
+isn't the only currency; motivation is also important.  --[[file:jcorneli.org][jcorneli]]

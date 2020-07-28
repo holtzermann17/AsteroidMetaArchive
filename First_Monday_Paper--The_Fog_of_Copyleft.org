@@ -1,0 +1,155 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Full Article
+
+In LaTeX, tarballed:
+
+ * draft 1: [http://br.endernet.org/~akrowne/planetmath/papers/fog_copyleft/fog_copyleft-draft1.tar.gz source]/[http://br.endernet.org/~akrowne/planetmath/papers/fog_copyleft/fog_copyleft-draft1.pdf pdf], Mon Jan 9 00:36:33 UTC 2006
+
+* The Proposal
+
+The submitted version of the proposal is available from [http://br.endernet.org/~akrowne/planetmath/papers/fog_copyleft/proposal-draft3.txt here].
+
+* Discussion
+
+Draft 1 still missing discussion of code markets and more extensive background history.  General smoothing of vestiges of proposal and some reorganization/clarification could also likely be done. --[[file:akrowne.org][akrowne]] Mon Jan 9 00:36:33 UTC 2006
+
+I have a few general comments based on a cursory reading of the draft.
+Try to treat simplest case (public domain) with diamond clarity.  Why doesn't GNU/CC etc.
+publish to the public domain?  And given the motivations you outline in answer to 1,
+how exactly would you imagine many GNU/CCists to give up their licences and switch to
+PD publication?  Or, do you expect PD to appeal to a new group of authors?  Or, can
+you propose specific conditions that you can put in a non-copyleft license that
+would meet the demands/interests of whomever this paper is expected to reach/convince/excite/etc.?
+Unless you can do the above or similar, I think the claim you make
+in the paper, that copyleft has served its term of usefulness, is not justified.
+Furthermore, the anti-copyleft /tone/ you take in the paper is all the more
+difficult to accept, without a strong argument along the lines of the above!
+The paragraphs on a "dystopian" future in which AI is curtailed might help
+support such an argument, but IMO it is the opinions of our contemps
+(humans) that matter.  If you want to use HDM as an example, give a more
+detailed introduction to the project's goals and the legal issues involved --
+and of course, make sure the HDM part supports your overall thesis! --[[file:jcorneli.org][jcorneli]]
+
+I think these are good comments.  But I'd like to see what you say after a more in-depth
+reading, because pretty much all of these points are addressed at least /somewhat/ 
+(certainly, some may need to be re-weighted, moved, or emphasized more).
+
+One important point is that extant "copyleft" doesn't even really implement the notion
+of copyleft as /forcing openness/.  Instead, it implements the more specific notion
+of /forcing the same license/.  The first step in progress is to better match the 
+free culture ideal, rather than to trap ourselves in a recursive legal technicality.
+
+I would be happy to redefine copyleft as this wider notion.  
+
+Secondly, the paper attempts to challenge the community to think beyond even this
+more expansive notion of copyleft as to whether /forcing/ is even really needed.
+
+We'll have to work on where and how to say these things clearer.  --[[file:akrowne.org][akrowne]] Tue Jan 10 20:16:27 UTC 2006
+
+If you're going to talk about "'forcing openness' versus 'forcing the
+same license'", you will have to present a clear (semi-formal)
+definition of these terms; it isn't even clear a priori that you could
+have the former without the later.  It would certainly be confusing to
+talk in terms of ideals without supporting definitions.  However, on a
+basic/intuitive level, I think it is just fine (actually, great!) to
+challenge the idea that forcing is necessary.  Pursuing this angle in
+the paper would emphasize market solutions, public domain, etc., and
+that is good.  My comments above were meant to highlight the question:
+how will dedicated GNU/CC people /feel/ about a market solution?
+The evidence suggests that they don't like it.  If this feeling is
+both strong enough and wide-spread enough, it could tend to undermine
+the effectiveness of a market solution.  Accordingly, I think it is a
+central question for you to take up in the paper. --[[file:jcorneli.org][jcorneli]]
+
+I am not going to re-read the paper until you tell me that there is
+another draft of it, because the current version has a tone that shuts
+down my cognitive circuits.  In short, you frequently seem to be
+thumbing your nose at copyleft.  This is quite different from the
+strictly logical /critique/ of copyleft that I think forms the
+(strong) basis for the paper.  Perhaps I didn't make this point
+forceful enough: my comments are based on my understanding of the
+logic of the paper more than on its text -- and this is because I
+can't read much of the paper without becoming upset by it (much moreso
+than the /ideas/ in the paper, which in fact, I find compelling).
+I'm not saying this to diminish the paper (which, one more time, I
+think is an important one), but to encourage you to be respectful of
+the views and moral sentiments of other people in the readership.  In
+order for the paper to have its full impact, it must be palatable to
+the readership.  While I don't expect your arguments to convert
+zealots, I think it would be mistaken to believe that "zealousness"
+actually characterizes very many people in the audience.  Most will
+respond to reasoned argument, and be "shut down" (like me) if they
+detect even a hint of invective.  (And, most likely, reasoned argument
+is the only hope you have with any zealots who are in the audience,
+even if it is a small hope.) This is my honest opinion and I hope
+I have managed to follow my own advice in writing it up.  The main
+thing to say about the paper is keep up the good work on the ideas
+of the paper, and try to nudge the writing into a more detached
+and cerebral direction.  This is of course a matter of personal taste,
+but I feel I share this taste with others who will be interested
+in the ideas you are discussing. --[[file:jcorneli.org][jcorneli]] 
+
+I like the 'hostile nature' of the paper against copyleft, but I do have
+one problem.  I think copyleft still serves a 'desperate' need for the
+free software world.  This is the notion of keeping derivative works 
+of software free/locked in.  There should be more distinction between this and 
+content that is just words/equations like Wiki/PM/PP.  If a commerical
+entitiy wants to take software and make it proprietary, the ability to
+make binaries takes away from free software significantly.  For 'writing'
+works if a publisher takes free content and publishes the content with its
+own additions, free content has lost some, but not as much as the software world since
+the free commmunity still has the ability to gain knowledge from the 'closed'
+work. Essentially, there is a less hostile environment for content producers
+compared to software writers.  When is the last time you rexpressed a 
+proprietary algorithm that is in binary?  When is the last time you rexpressed 
+a copyrighted work of content such as The fundamental theorem of calculus. I 
+guess I would like to see more separation between licenses for software versus
+content. One solution for the free software world, might be only the restriction of open
+source, but not neccessarily having to adopt the parent's license to
+put it at the same level with free content. --[[file:bloftin.org][bloftin]]
+
+**  Real life examples
+Examples of Fog of Copyleft in action.
+
+ * Synaptics touchpad driver: http://web.telia.com/~u89404340/touchpad/
+
+: /When will the driver be included in the XOrg distribution?/
+: This is unlikely to happen because of copyright issues. Although the GPL license is compatible with the license used by the XOrg X server, the XOrg project doesn't want to include GPL code in their source code, because it would effectively make the whole XOrg project GPL. The synaptics license can't be changed unless all copyright holders agree to change the license, but previous attempts to find all copyright holders for the synaptics source code have failed.
+
+: So unfortunately, the best we can currently hope for is that the synaptics driver is included as a separate package by the major distributions.
+
+ * Wikitravel isn't compatible with Wikipedia: http://wikitravel.org/en/Wikitravel:Why_Wikitravel_isn%27t_GFDL
+
+: "These (FDL) requirements aren't really all that onerous for large
+volumes of text. But for Wikitravel, we really want to have each
+article redistributable on its own. Wikitravel articles can be as
+small as 1-2 printed pages. For such small documents, it just doesn't
+make sense to require people to pass out another 10 pages of legalese
+text, as well as floppy disks or CDs full of Wiki markup.
+...Burdening these publishers with restrictions meant for software
+documentation or textbooks would mean that they'd either ignore our
+license -- a bad precedent to set -- or, more likely, just not use our
+work."
+
+
+----
+
+Comment: Examining some specific examples in depth may be helpful, but
+I think it is good to remind people that this fog is omnipresent and
+so seems to go beyond specific examples.  One reason for this is that
+copyleft is based on copyright, which is extremely confusing.
+
+E.g. the half-gallon container of milk I was looking at today said
+"this entire package is copyrighted by Kemps".  What does it mean for
+a package to be copyrighted?  Along these lines, I don't understand
+why comic book companies, like DC and Marvel, can argue over the names
+used by the characters.  How exactly is it that a name or a character
+can be copyrighted?
+
+I don't say there aren't good answers to these questions.  The point
+is that understanding copyright will, in general, be "prior" to
+understanding copyleft, and will also be hard.
+
+--[[file:jcorneli.org][jcorneli]]

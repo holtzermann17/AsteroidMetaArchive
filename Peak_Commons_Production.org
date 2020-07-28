@@ -1,0 +1,134 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In preparation for our planning meeting, I would like to put forward
+some thoughts which have occurred to me for your consideration. These
+relate to two areas, online communities and books.
+
+In the discussion, it was pointed out how, on Wikipedia, the identity of
+the individual user is subsumed under a collective identity and the
+suggestion was made "move to "agora"". Along these lines, I would like
+to relate some personal observations on how the social web has changed
+in the last few years.
+
+Half a decade or a decade ago, there were a lot of social websites
+focused on a particular topic. Typically, these sites would consist of
+a discussion forum or listserver, perhaps with some area for storing and
+sharing files or the like. Each community had its users, at
+the centre of which was a core of long-term users who give it
+stability. overall, the picture I got was one like coordinate
+patches tiling a manifold, with different communities being connected by
+users who were common to both.
+
+Now, the situation looks different. While the many of the forum sites
+are still around, overall it seems that they have seen their
+prime. The overall feeling I get is that the curve peaking around 2007
+is not unique to PM. It seems that the focus is shifting to the
+blogosphere and social media. These are only vague impressions which
+should be checked. However, whatever the case may be, I think it's
+worth somehow finding out and properly taking such circumstances into
+consideration.
+
+--rspuzio
+
+I think it sounds about right. Note, this seems like a case-in-point
+of the Marx/Situationist/Baudrillard stuff we were talking about in
+the other thread. The key concept in the Marxist "critique" of
+capitalism is "value", i.e. Marxists endlessly repeat that capitalism
+is about producing and extracting value from labor. Well, blogs and
+social media do that quite well, typically via ad revenue.
+Baudrillard goes further, though, and says that by now, value and
+Marxist critique is passé, and what's really important is something
+like "programming". Thus, everyone "needs" a blog or a twitter or
+facebook account, even if they aren't making any money with the damn
+things (for instance, even if they are using them to blog about
+Marxist theory).
+
+What I find appealing about the Baudrillardian agenda, as far as I
+understand it, is that he seems to develop some inklings of a
+counter-system. Maybe the best way to illustrate this is with an
+example from what you just said:
+
+--jcorneli
+
+I was thinking of how to go beyond that and instead link all those
+books together into one big hypertext, making apparent the
+multitude of rhizomic connections between them. A first step is
+what the autolinker now does, but I would hope to go far beyond
+that. I also thought of two catchy names to go with this: "live
+tree books" and "forest of knowledge".
+
+--rspuzio
+
+Up to approximation, this is already what things like Facebook and
+Google do, although I think they tend to do it rather badly (from a
+user point of view), possibly because they are mainly serving an
+agenda focused on money and/or social control. But what would a
+somewhat similar technology with an potentially antithetical aim look
+like? I sketched one example of a counter-Kickstarter project at
+http://nonstarter.org/ but the "forest of knowledge" might be more of
+a counter-Social Media thing.
+
+More concreteness would be great! I know I was already thinking about
+Badrillardian counter-systems 10 years ago, and I wonder if I've
+learned anything usable in the mean time!
+
+--jcorneli
+
+As a first attempt quantitatively checking the observations made above, I gathered some data on activity of three websites during the last decade:
+
+ * PlanetMath -- Entries written per year, messages posted per year
+
+ * Wikipedia -- Entries written per year
+
+ * Taig Machine Tools group on Yahoo -- Posts per year
+
+||Year ||PM entries ||PM messages ||WP entries ||TAIGTOOLS ||
+||2012 || 163|| 317|| 298000|| 2560||
+||2011 || 92|| 533|| 317000|| 2276||
+||2010 || 151|| 1462|| 374000|| 2574||
+||2009 || 529|| 2459|| 465000|| 3664||
+||2008 || 1114|| 3620|| 526000|| 3286||
+||2007 || 1435|| 4529|| 593000|| 2708||
+||2006 || 1119|| 3861|| 665000|| 3165||
+||2005 || 829|| 3651|| 456500|| 4490||
+||2004 || 1001|| 2933|| 249700|| 3674||
+||2003 || 917|| 1437|| 92300|| 3428||
+||2002 || 1530|| 746|| 76800|| 3110||
+
+Looking at this table, all four columns show the same overall trend --- initial growth, a peak in the period around 2005-2007, then decline.  While three examples is not a lot, the fact that these are three separate websites running different programs with quite different communities supports the assertion made above.
+
+With at least this little bit of qualitative data in hand, we can start to ask what this trend means for projects of the sort discussed here on the asteroid.  Traditionally, online CBPP content projects have been centred about some sort of wiki or forum site.  Since these sorts of sites seem to be on the decline,  the following questions arise:
+
+ * What sorts of new settings for online CBPP are emerging?
+
+ * What can CBPP organizations do to transition to the new state of affairs?
+
+--rspuzio 
+
+Briefly, this is similar to the question I asked in my thesis: "What
+is required to transform this peer produced reference resource into a
+peer produced learning environment?" - because I think that's the Next
+Generation - if not the Final Frontier.
+
+The summary here: http://metameso.org/dev/ (only visible when not
+logged in at the moment) mentions both "learning" and "problems", but
+I feel like it's still done in a way that doesn't really emphasize
+these things. Can we take this and sum it up in one or two or perhaps
+three sentences that say what people can DO at PlanetMath, and why
+that's important? I think this would be a good follow-up to the Peak
+Commons Production article (but I don't think that we've really hit
+Peak Commons Production, just, maybe, Peak Encyclopedia Production).
+The current text that's there now would be great to save and move to
+an "/about" page.
+
+Basically, I think we have about 3 seconds to grab people's attention
+on the front page, and get them to think "this is new, important, and
+useful." We can back up our argument at length in the click-through
+About page.
+
+--jcorneli
+
+After thinking further about this and talking it over with Joe this Saturday, I am seeing it from a broader techno-historical perspective which I am writing up in [[file:Social Epochs of the Web.org][Social Epochs of the Web]].
+
+--rspuzio

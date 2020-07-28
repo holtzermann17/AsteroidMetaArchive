@@ -1,0 +1,36 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/This page is part of the [[file:HDM Directory.org][HDM Directory]]./
+
+/See also: [[file:Hypertext work particularly relevant to HDM.org][Hypertext work particularly relevant to HDM]]/.
+
+We need a system for interfacing with the computer, in order to
+program it, in order to encode mathematical knowledge, and in order to
+access and annotate any information in the system. We are working with
+a subject-domain with contents that are both highly "interconnected"
+and highly "context-sensitive", and our interface should reflect
+this. jcorneli has been at work developing what is essentially a
+Glorified Semantic Network embedded within an extensible Emacs
+interface, together with some theory describing interrelationships and
+mappings between the constituents of this network. The history of
+this project is documented on the page [[file:Arxana.org][Arxana]].
+
+; Simple backend : A system of "nodes" and "links" which
+can be manipulated in some useful way with the computer.  See [[file:Arxana overview.org][Arxana overview]].
+; At least one demo front-end interface : A system for displaying documents
+(or, more typically, parts of documents) rendered with suitable
+markup; also, tools for browsing and editing these documents.
+(Note: one of the main reasons for using Emacs is that it has
+a fairly powerful built-in system of /text properties/, which we use in
+markup.  However, similar systems or even much less exciting ones,
+like HTML, can work as front-ends too.)
+; Theory and implementation for "clusions" : One of the features
+of a "scholium-based document model" (which is what Arxana is based
+on) is that the user is frequently presented with views into a document
+which include many different, disparate, parts of the document.  Data
+describing these views can be saved, and these data can be chained
+together to get parts of the document flowing all over when the document
+is rendered.  We call the various pipes and transforms through which this content
+flows to its destination "clusions", generalizing Ted Nelson's "transclusions".
+Actually these things are not so different from your typical links.

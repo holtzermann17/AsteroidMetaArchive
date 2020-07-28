@@ -1,0 +1,195 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A more relevent analogy than a phone company might be a copy shop.  As long as
+all the copy shop does is maintain and operate the copying machines and not poke
+its nose into exactly what is being copied make decisions about what can and can
+not be copied, they are relatively safe.  I say relatively because copy shops
+have been sued for their role in copyright infringement and, as a result, many
+copy shops have adopted such policies as not copying books.  However, when it
+comes to self-service copying, even this is not so much of a problem because the
+customer presses the button on the machine.  The responsibility for only copying
+what is permissible lies with the customer; the copy shop staff's responsibility
+is to make sure that the copy machine works and produces clear copies.
+
+The analogy with Planet Math is that, one the one hand, there is the Planet Math
+team, whose purpose is to provide a computer running noosphere and the Planet
+Math community whose responsibility is to provide mathematical content which is
+accurate and can be freely released.  There already is a hands-off policy --- as
+stated in the new users' guide, the Planet Math staff will *not* delete
+articles or arbitrate in matters regarding corrections to entries.  Therefore,
+implementing this proposal would be a matter of extending this policy and
+institutionalizing a distinction which already exists in a certain form.
+
+There are also some significant differences.  In the case of the phone company
+and the copy shop, there is another justification for the hands-off policy.
+Often, the content of telephone calls and papers to be copied is private.
+Therefore, a hands-off policy protects the privacy of law-abiding customers and
+can be argued that this offsets the possibility that illegal misuse will go on
+undetected.  On the other hand, the licensing arrangement is delibrately
+designed to make everything on Planet Math as public as possible, so such a
+rationale will not work.
+
+(more to come) --[[file:rspuzio.org][rspuzio]]
+
+[[file:Discussion about copyshops.org][Discussion about copyshops]]
+
+----
+
+It was basically my intent at the beginning to position PlanetMath this way.
+However, I know that no court will smile upon us (as an organization) unless we
+do things to discourage the use of our site as a vehicle for copyright
+violation.  It is a matter of balance: we cannot /guarantee/ copyright
+"cleanliness", nor can we claim to be perfectly free of responsibility to
+exercise diligence. --[[file:akrowne.org][akrowne]] Fri Mar 18 17:34:06 UTC 2005
+
+----
+
+I do think that CBPP projects need to be afforded many of the protections of
+common carriers.  However, the recognition of CBPP as a valid and important mode
+of production is very new, and has not permeated the legal universe at all.  If
+the law does not change, we may at least need some rulings precedents to
+establish a basis for how copy rights are treated relative to
+CBPP. --[[file:akrowne.org][akrowne]]
+
+
+----
+
+I think the idea as expressed by Joe Konstan was to get the PM community to be
+in charge of certification.  This is different from say a copy shop, or Napster,
+in that there, no one is even invited to do certification.
+
+In fact, I think just about everyone knew that a lot of the content on Napster
+could not be legally shared, but there were no vigilante users out there
+blacklisting offending servers or files or whatever.  Or if there /were/, then
+they sure didn't keep up with the growth of non-legal content.
+
+I'm reminded here of the arguments for why Wikipedia works - people acknowledge
+the existence of spam, trolls, and other bad stuff (they have to), but they say,
+as long as the quantity of positive contributions is more than the quantity of
+negative contributions, then the resource will become better over time, not
+worse.
+
+It /seems/ to me that if PM the organization provided the infrastructure for
+peer review, certification, blacklisting and/or whitelisting, PM the community
+would use the tools, and we would find the availability of positive
+contributions to outweigh the quantity of negative contributions.  There is no
+guarantee, but it seems to me that the number of copyright infringements would
+be "managed down" to be a very small portion of the site, small enough that the
+odds of a Napster-like lawsuit being pressed (or being won) would be small
+(resp. very small).
+
+I think that this approach would work well with the current "division of labor"
+we see on the site.  Currently, PM the organization really isn't responsible for
+content, only for code.  
+
+If PM adopts FEM as a subproject, that situation might change somewhat, but I
+don't know whether PM will adopt FEM as a subproject.  (If PM publishes the FEM,
+that might be enough.)  Even if it PM does adopt FEM, it is entirely conceivable
+that people involved with FEM would not really be particularly responsible for
+making decisions about copyright or other content matters, and specifically
+about what goes and what stays on the site.  Rather, FEM editors would simply
+make suggestions and other positive contributions using the same tools as other
+PM community members.  FEM would be something like a "PM-sponsored community
+project" -- just like the PM encyclopedia itself.
+
+To me, whether or not PM takes a 100% hands-off "common carrier" stance seems
+somewhat less important than it making the right tools available to the
+community.  I don't necessarily understand all the legal details, but it seems
+pretty certain to me on social grounds that if the right tools are there,
+infringements would be squashed before they had a chance to become problems.
+--[[file:jcorneli.org][jcorneli]] Fri Mar 18 17:57:46 2005 UTC
+
+Unfortunately, since it was late and I didn't get to typing the part about the
+differences (that was part of what the "more to come" referred to) and had only
+written about the similarities so far, the comments above might have given the
+wrong impression.  I apologize if there was any such misunderstanding.
+
+As for the points you both raised, this is what I would say.  First, just as a
+perpetual motion machine or a procedure for squaring the circle is bound to fail
+on general grounds so too any scheme which allows violations of copyright law
+without anyone to blame is destined to fail.  I would think that the only way
+that Planet Math could get away with a hands-off policy is if somebody else were
+to assume the responsibility.  As Joe points out, this would be the users.  At
+the very least, it would make sense for Planet Math not to assume any more
+responsibility than necessary.  As Aaron points out, a completely hands-off
+policy is unrealistic, but a policy of not sticking hands out more than
+necessarry might be possible.  In particular, I am thinking that it should be
+made crystal clear that authors are responsible for making sure that whatever
+they post *can* be released under the terms of the GNU FDL.  While Planet
+Math agrees to exercise due diligence in ascertaining that whatever it posts
+conforms to copyright law, it also will not cover for author's shortcomings.
+This should mean that, for instance, if push comes to shove and a publisher sues
+over an entry which contains a copyright violation, the author of that entry
+should not be able to turn around and put the blame on us by saying that, for
+instance, he followed the guidelines in the user's guide and therefore is not
+responsible for the fact that his borrowing exceeds fair use.  No, by posting
+the material to Planet Math, the author implied that the material was fit to be
+released under free license and that he hade exercised due diligence in
+ascertaining that it does not infringe on anyone's copyright.  The guidelines
+were meant to help in this process, but there was no implied guarantee that
+following these guidelines suffices let alone that Planet Math will assume
+responsibility in cases where the guidelines fail to catch a problem.  I think
+this is in line with the stance Planet Math already takes, but I also think it
+wouldn't hurt (and would likely help) to state it a bit more clearly in a few
+places.  I have a few concrete proposals for how to do this; if you're
+interested let me know and I'll be glad to provide the details.
+
+As Aaron once said, there is no crisis.  Noone is threatening to sue Planet Math
+or anything of the sort.  Rather, this is more like a fire inspection.  We are
+going through the building, making sure that accessible exits are available and
+checking that there are no fire hazards lying around or other disasters waiting
+to happen.  While the dangers are somewhat hypothetical now and we would likely
+be able to deal with any copyright problems by removing the offending entries
+should a publisher point out that they infringe on a copyright, there is the
+possibility that the circumstances might not be so forgiving in the future.  In
+particular, I see two ways in which the situation might heat up.
+
+ 1. If a derivative work based on the Planet Math content (such as a textbook or
+the FEM) appears in print, then simply pulling the offending content off the
+website might not be good enough since this content is still floating around
+bookstores and libraries.
+
+ 1. There are already a number of publishers offering e-books under a condition
+that they not be printed or redistributed without permission.  There are even
+some math books available under such an arrangement --- see the books section of
+Planet Math for links to a few examples.  Whether or not posting these links
+sends the wrong message was last week's topic for debate.  Right now I am not
+going to take a stance on this but simply point out that, if the trend
+continues, and perhaps it becomes standard practise for mathematical publishers
+to release books in parallel electronic editions, and they start making money
+off of this practise, then publishers might start considering online free math
+as competition and start taking the issue of infringement on sites like Planet
+Math seriously.
+
+As for the suggestions that the community be provided with tools to deal with
+copyright infringement and that there be a division of responsibility between
+providing the code and content which reflects the division of labor, I think
+that these are a good ideas and we should work to implement them.  However, it
+also seems that we might be running into a problem which perennially plagues
+social reformers and innovators --- how to interface with an "outside world"
+which is based on radically different premises and values.  In the case at hand,
+I see the potential problem as follows: the way the legal system is set up, one
+sues individiuals and organizations.  While it may be fine for us to adopt the
+policy that the Planet Math team takes care of the the code and the Planet Math
+community takes care of the content, how would this reflect in a legal system
+which as yet has no provision for Commons Peer Based Production.  If someone
+wanted to sue for infringement, who would be named as defendant in the suit?  To
+be sure, when it comes to the actual act of infringement, surely the author must
+answer for his actions.  True, but who will be held accountable for allowing the
+document be available on the web?  Even if we say that the Planet Math community
+is responsible, nobody is going to sue a nebulous entity like "the Planet Math
+Community".  (Who exactly would pay the damages if the suit is won?)  Rather,
+they would sue Planet Math ltd. and see how far we get saying "It's not our
+fault; we only provide the hardware and software support for the site and it is
+up to the Planet Math community to monitor the content and remove entries which
+violate copyright law." in court.  Therefore, if this strategy is going to be
+good all the way up to courthouse, it might be necessary to set up something
+like an official "Planet Math user's group" which assumes the legal
+responsibility for the content.  I am not suggesting that anybody do this
+anytime soon.  It is hard enough trying to get Planet Math ltd. set up as a
+non-profit organization as is.  Rather, it might be a better suggestion to work
+towards the goal of making the user community responsible for the content and
+forge the tools needed to do this job while at the same time recognizing that,
+if anything goes wrong, Planet Math ltd. will have to answer for it; this will
+make some compromises necessary.  -- [[file:rspuzio.org][rspuzio]] 18 March 2005

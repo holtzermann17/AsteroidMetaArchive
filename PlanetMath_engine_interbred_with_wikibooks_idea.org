@@ -1,0 +1,132 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+I think that it would be useful to create a section of PlanetMath where
+everybody can post just any content (not only Encylopaedia entries), just like
+on wikibooks. The difference from wikibooks is that one can take advantage of
+LaTeX.  There are a lot of (mathematical) courses and books that aleady exist,
+and they are written in LaTeX.
+
+In fact, I am proposing this because I am personally interested in putting a
+course on PM. This course is in Russian and I think it is worth translating into
+English. I have the LaTeX source and I try to translate it. However, it would
+take a lot of time to translate it if I work alone. Another problem I am not a
+native English speaker and I do not have many around to ask them to proof-read
+the translation, moreover, native english speakers I can get in contact with are
+either busy or they are not mathematicians. Putting it on PM would give such
+advantages:
+
+ * people would report errors
+ * eventually I can find somebody who can help me translate the course and the translation would be accomplished faster
+ * eventually someone can try to translate it in other languages
+
+The Exposition section only lets you to post links to books and courses situated
+elsewhere and does not allow for collaborative creation of content. On the other
+hand Encycopaedia is not the right place to post courses. I think that PM has
+all the technical tools necesarry to run Expostion-like section capable of
+Encyclapadia-like editing. Why doesn't someone just create it ? :)
+
+--[[file:dmitri83.org][dmitri83]]
+
+*  Initial reaction
+
+I completely and whole-heartedly agree that this would be a good thing to do.
+See also the [[file:PlanetMath Goals.org][PlanetMath Goals]] page, where I mentioned (in the goal tree)
+that it would be good for PM to move to support the creation of free math works
+in general.  You've very nicely spelled out some of the benefits of doing this.
+I personally think that the book and exposition sections should be completely
+revamped to only support the creation of free content, but some people do find
+the links to off-site non-free resources valuable -- perhaps these links could
+be moved to another section of the site.  Also see the [[file:Grant planning.org][Grant planning]] and
+[[file:bidi_system.org][bidi_system]] pages, where there is a little more discussion of translation in
+general.  Anyway, you have my vote that this would be a worthwhile thing to do.
+I think probably most people will agree that this is a good thing to do, and any
+delays will mainly be due to lack of programming time...  --[[file:jcorneli.org][jcorneli]] Fri Mar
+25 16:56:20 2005 UTC
+
+: Is it possible to just create an (empty) copy of Encyclopaedia and name it
+something like "Free courses" ? by the way, those users that want to leave links
+to non-free courses, can always create a course entry and leave a link. The
+wiki-style engine is more flexible in my opinion, since can do with it anything
+that you already can do in Books and Expositions section and /something else/
+--[[file:dmitri83.org][dmitri83]]
+
+:: Yes, sure, you can put references to non-free stuff in the Encyclopedia too.
+I'm certainly not saying that PM should forbid mention of non-free works, just
+that it should focus on creating more free works!  It would be ultra-super-cool
+if PM became a sort of collaborative version of Arxiv, so, people would be using
+it to create research papers collaboratively, but then they might get some
+corrections, create a revised version of the paper adding the new contributor to
+the list of authors, and so on.  Doing this all really well would seem to
+require some new tools.  For example, I'm not entirely sure linking between
+separate resources should be done.  Maybe site users should have the /option/
+to have linking turned on, thus, when reading a research paper or book, they
+could either see only internal links that were put there by the original author,
+or they could see additional links to other resources on the PM site that were
+put there by the Noosphere engine.  Also, for creating books and papers it would
+probably be good to have outline views of articles.  Maybe even the possibility
+of turning each book or paper into a "micro" noosphere instance, with each
+important object in the paper (definitions and theorems and such) being a
+noosphere Object.  This is beginning to sound pretty heavy, but could be worth
+considering.  Then these objects could be adopted into the encyclopedia, or
+other papers, too (and we use a bidi system of some sort to keep them in
+sync...).  Yow! --[[file:jcorneli.org][jcorneli]] Fri Mar 25 19:06:34 2005 UTC
+
+
+I like this idea too.  We should extend PlanetMath into a place people can collaborate
+on *any* type of mathematical text.  I should point out that there are "collaborations"
+right now, but they don't really have corrections workflow.  We should plan out how 
+some of this would work. It is big and important enough that we should also think about 
+including it in grant proposals.  --[[file:akrowne.org][akrowne]] Fri Mar 25 17:49:48 UTC 2005
+
+*  Use wikibooks?
+
+Guys, would it make sense to just /use/ the wikibooks software (I don't know much about 
+it)? --[[file:akrowne.org][akrowne]] Fri Mar 25 21:50:53 UTC 2005
+
+: We should consider it (discussion of these tools in and of themselves should
+take place on the [[file:Wikipedia.org][Wikipedia]] or a new "Wikibooks" page), but it seems pretty
+essential that !LaTeX be available, and (as I indicated in the comment above) it
+would be good to integrate the books/etc. with the PM encyclopedia.  Perhaps
+Wikibooks could be used as a stopgap measure?  It probably wouldn't hurt to have
+links for them on the site.  But I have doubts about the long-term usefulness.
+--[[file:jcorneli.org][jcorneli]] Fri Mar 25 22:43:09 2005 UTC
+
+*  Comparison to an existing Oddwiki feature
+
+Let me note that in addition to the idea of making "an empty copy of
+Encyclopaedia and name it something like 'Free courses'", we should also
+/consider/ this idea: making "an empty copy" for /each book/.  This would
+result in a system /very much like/ the Oddwiki system that we are currently
+using (see link on HomePage).  Oddwiki makes a new namespace, new recentchanges
+page, etc., for each separate childwiki.  But in fact there is only /one/
+Oddmuse engine running the whole system.  It is really quite sophisticated.
+
+An implementation like this would easily enable us to add AsteroidMeta as a
+"book".  And (phenomenally) it would just as easily enable us to add things like
+PlanetPhysics or PlanetComputing /directly to the active Noosphere implementation
+on !PlanetMath/.  Wow!
+
+Of course, some people wouldn't want or need the full power of a "Noosphere
+system" for their project.  Some people might just want one single !TeX file,
+and this should be supported too.  Other might want something more like what you
+get with out-of-the-box latex2html.  (This would really just be a variant on the
+single !TeX file.)
+
+This reminds me of the stuff that [[file:logan.org][logan]] was talking about on the
+[[file:Object Adaptation.org][Object Adaptation]] page.  If we can consider messages and corrections as
+protocols, we can certainly consider "book" or "mini-noosphere-instance"
+as protocols, too.  We could also (presumably) define some protocols (or
+maybe I mean procedures) that would transform one of these other objects
+into an object of the other class.  (Maybe we can even get the FEM code
+involved, so that we could transparently produce nice PDF output for any
+one of the objects.)
+
+Other extensions (e.g. my favorite, [[file:literate programming.org][literate programming]], but also
+a [[file:bidi system.org][bidi system]]) would make the ensemble really, really powerful...
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 02:58:01 2005 UTC
+
+Note also that if mini-instances could also add further child-instances,
+we could resolve the issue with naming that [[file:drini.org][drini]] mentioned on
+the [[file:AsteroidMeta.org][AsteroidMeta]] page today. --[[file:jcorneli.org][jcorneli]] Thu Mar 31 03:02:20 2005 UTC

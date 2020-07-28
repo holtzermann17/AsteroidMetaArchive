@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Eventually, it would be nice for the computer to be able to read mathematical
+text as it appears in a book and extract the content.  Learning how to do this
+will take a lot of work, and as a start I have begun compiling a list of formal
+mathematical statements in natural language.
+
+The idea behing this is as follows: Mathematical writing may be categorized into
+formal and informal.  By /formal mathematical writing/ we mean writing whose
+content can be expressed as a mathematical expression, and by /informal
+mathematical writing/ (or /expository mathematical writing/) we mean
+everything else.  A typical mathematical work will be composed of both types of
+writing. Formal mathematical writing typically occurs in such places as
+definitions and proofs whilst informal writing occurs in intuitive explanation
+of results, summarries of techniques used, and the like.
+
+The reason for making this distinction is that there is quite a difference of
+style between formal and informal mathematical writing.  While informal writing
+is a lot like writing of any other sort, formal mathematical writing has a few
+peculiarities of its own which make it worth studying in its own right and which
+may make the task of translating formal writing into a machine-readable format
+much easier.
+
+Formal mathematical writing typically mixes mathematical expressions with text.
+Th vocabulary used is a subset of the whole vocabulary of the language, most of
+the the vocabulary is technical terms, and formal writing abounds in such idioms
+as "if and only if" and "without loss of generality".
+
+In order to facilitate the study of formal mathematical writing, I provide the
+following examples of sentences which were taken for Planet Math entries.  In
+each case, sentences have been isolated, expressions occurring in text have been
+replaced by asterisks, and technical terms have been capitalized.
+
+The reason for this exercise is to provide raw data which a linguist may
+hopefully find useful in forming a grammatical description of formal
+mathematical writing which could then form the basis for a computer program to
+translate formal mathematical writing to h-code.  Even before a detailed
+analysis is begun, this could serve for simpler purposes such as counting
+frequencies of words.
+
+The sample shown here is rather short.  As time goes on, it would be nice to add
+to this until one obtains a list of several thousand sentences by differenta
+authors writing on different branches of mathematics.  That way, one would have
+a reasonably representative selection which is large enough for meaningful
+statistical analysis and which is varied enough that one feel confident in
+saying that a lingiuistic theory which can explain this selection is general
+enough to encompass all or most of formal mathematical writing.
+
+[[file:samples of formal mathematical writing.org][samples of formal mathematical writing]]
+
+[[file:frequency counts of words.org][frequency counts of words]]
+
+*  Discussion = 
+
+I think it would be good to begin, as an additional but related HDM subproject,
+the task of creating a somewhat definitive list of the mathematical idioms
+people use.  The idea is somewhere in between logic and linguistics.  We would
+start off with example statements, and eventually try to think of other ways to
+say the same thing.
+
+Note that this project has the air of being a little bit "un-Chomskian", in the
+sense that we all know that there are a virtually infinite number of things that
+you can say about math, and an even more highly virtually infinite number of
+ways you can say them (compare the
+[http://www.ma.utexas.edu/~jcorneli/d/etc/ZIPPYISM HDM zippyism]).
+
+But it is also somewhat "Chomskian" (if I understand the theory correctly, which
+is a Big If) in that it gets at the idea that there are certain basic
+"thoughtforms" (to use a somewhat unscientific term) present in all languages;
+here, specifically, in all mathematical vernaculars.
+
+Logicians have already spent a lot of time working on this sort of thing -
+indeed, mathematical logic as we know (or don't know it, as the case may be)
+might be their answer to these questions.  But, to us, mathematical logic is
+just another vernacular.
+
+So, I'm kicking the page off (with a zesty name), now.  Again, this effort
+should take place in parallel with the one described on this page.
+
+[[file:Let G be a group.org][Let G be a group]]
+
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 03:15:22 2005 UTC

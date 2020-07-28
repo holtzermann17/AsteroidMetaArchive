@@ -1,0 +1,25 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the things that the HDM is supposed to do is: make
+math easier to learn (and communicate).  One simple way to do this --
+I think -- would be to show the learner the context in which the
+object being studied fits.  For example, the definitions on which
+the current definition relies, the theorems that rely on the current definition,
+examples, problems, overviews, etc. (similarly for other objects, like proof steps or whatever) -- a map of the relevant knowledge, if you will.
+
+One nice way to present this information would be as a graph - it could
+also be done as a text-based hierarchy (as long as we ignore links between
+the various objects in question).  
+
+These graphs and hierarchies should be generated on demand.  They may be
+useful to [[file:hdm's ai system.org][hdm's ai system]], not just to people.
+
+----
+
+It would be very easy to use GraphViz to generate "local neighborhood" graphs from any PM (Noosphere) object.  In fact, we could probably hyperlink these nodes, and shift the display based on the current node, allowing a user to traverse PM entirely through these graphs! --[[file:akrowne.org][akrowne]] Fri Mar  4 18:01:20 UTC 2005
+
+
+
+----
+[[file:Feature Requests.org][Feature Requests]]

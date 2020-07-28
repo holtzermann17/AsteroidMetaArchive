@@ -1,0 +1,304 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Back up to [[file:grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007.org][grant_planning--NSF_Software_Development_for_Cyberinfrastructure_2007]]
+
+* New location for draft materials
+
+I did an initial transformation of this material and the material from
+draft 1 into !TeX.  The results are available on my webpage:
+
+ * ([http://planetmath.cc.vt.edu/~jcorneli/draft2.tex tex])
+([http://planetmath.cc.vt.edu/~jcorneli/draft2.dvi dvi]) 
+([http://planetmath.cc.vt.edu/~jcorneli/draft2.pdf pdf]) 
+([http://planetmath.cc.vt.edu/~jcorneli/draft2.ps ps])
+
+Since this is just an assembly of all the data we've produced
+(together with a few tiny revisions from last night's phone
+conversation), and as such it is bulky and yet not complete /vis a
+vis/ the plan I have described below.  However, I thought it would be
+good to post these links.  I figure we can call this "draft 2" (I
+did!) and move on to [[file:NSF Cyberinf 2007 Grant Draft 3|draft 3.org][NSF Cyberinf 2007 Grant Draft 3|draft 3]].  (I
+may very well post another new draft later today.)
+
+It won't be too difficult to translate additional wikitext into
+subsequent version of the document, but I'd say that now the preferred
+format is !LaTeX or !LaTeX-compatible patches.  
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Plan
+
+I envision this grant being rewritten with three parts.
+
+ 1. A response to writings of the NSF CIO -- which of their issues
+will we be tackling?  (Bridge the gap to their understanding!
+Note that their understanding is spelled out on 
+[http://www.nsf.gov/dir/index.jsp?org=OCI their homepage]
+through reports, which we've looked at, and also through
+the information on already-funded projects.  The NSF grant application format
+is discussed on [[file:NSF grant application format|this wiki page.org][NSF grant application format|this wiki page]].
+Some already-funded projects that strike me as being
+particularly closely-related-looking
+are described on 
+[[file:NSF CIO related funded project|this page.org][NSF CIO related funded project|this page]].)
+
+ 1. A statement of our plans -- this part will be 
+based, more or less directly, on [[file:NSF Cyberinf 2007 Grant Draft 1.org][NSF Cyberinf 2007 Grant Draft 1]].
+
+ 1. Second-order problems and solutions that arise out of Step 2
+above -- how can we know that our efforts will be effective and
+the results of lasting value?  (Here we include details on
+schedule and budget, among other descriptions of resources and
+high-level strategy.)
+
+Before I get too invested in this structure, I want to check
+out how it meshes with NSF's requested format for submissions.
+Will do that and get back to you shortly. 
+
+(BTW, the current plan is to get a version of Draft 2 ready
+by Jan 1, share it with friends, get comments back by Jan 15,
+and do tweaks based on these comments before submission Jan 22.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+Interesting to note that this outline is similar to Polya's
+description of how to solve problems (in general) from "How to Solve
+It".  His list is:
+
+ * Understand the problem
+ * Come up with a plan
+ * Apply the plan
+ * Check your result
+
+--[[file:jcorneli.org][jcorneli]]
+
+* Ontology of Work Items
+
+Just getting this down here for now, from some notes of mine ([[file:akrowne.org][akrowne]]'s):
+
+** Core Development
+
+ * build math atlas infrastructure
+  * linking
+  * rendering/previewing
+  * offline rendering
+  * content sharing
+ * continue to build out, improve linking system (nnexus)
+ * develop bidi content exchange system, at least between planets
+ * enhancements to noosphere
+  * installability
+  * editorial/credibility features
+  
+** Core Research
+
+ * Develop infrastructure for (math and science-aware) discursive authoring activity (the scholium system)
+ * Explore applying the above for linking, bidi content exchange, etc.
+
+** Other Desired R&D
+
+ * apply bidi system to FEM?
+ * symbolic math:
+  * being applying OMDoc and/or other formats to PM entries?
+  * join up with MBase?
+  * other HDM dev?
+
+** Deliverables
+
+/Software/:
+
+ * Atlas system, which will be linked, content made available on planetmath and other systems
+ * Easier-to-install, reputation/credibility-aware Noosphere
+ * More flexible, complete linking system (nnexus)
+ * Implementation of scholium system able to behave as a wiki
+  * maybe also the beginnings of a noosphere reimplementation in it
+
+/Sites/content demo/:
+
+ * linked lecture notes (pitman)
+ * linked IMS (& friends) information environment
+ * content exchange between -planet sites (and potentially others, like Wikipedia)
+
+(please fill or discuss things you think are missing in the above)
+
+* Staff & Budget
+
+A rough breakdown of about 2-2.5 FTEs for two years from our discussion last night:
+
+ * Senior Dev/Researcher (Joe) - full time - $30k/yr
+ * Research advisor (Ray) - 1/8th time - $5k/yr
+ * Junior programmer (non-student) - $50k/yr
+ * Contracting - $20k/yr
+ * PI/managerial (Pitman, Krowne) - 1/8th time - $10k
+ * Travel, meetings, and other overhead - $10k
+ * *total:* $125k/yr -> 
+  $250k/2 years
+
+Note also we would likely have a few SoC interns twice during this period (assuming we get just 2 per year that is about .5 FTE/yr 
+we can use to compliment the grant).  Hopefully we'll also have more core funding by then too, to move more dev to the core funding
+and keep the grant activities more "researchy".
+
+Here is a slimmed-down version of the above, which doesn't leave a lot of wiggle room but stays under the $200k barrier:
+
+ * Senior Dev/Researcher (Joe) - full time - $30k/yr
+ * Research advisor (Ray) - 1/8th time - $5k/yr
+ * Junior programmer (likely a student) - $30k/yr
+ * Contracting - $10k/yr
+ * PI/managerial (Pitman, Krowne) - $5k
+ * Travel, meetings, and other overhead - $10k
+ * *total:* $90k/yr -> 
+  $180k/2 years
+
+Note that this assumes no large-scale organizational overhead anywhere, except perhaps involving the student,
+if we were to support one e.g. through Emory or Berkeley.  However it may be difficult to get the right person
+and I tend to suspect getting a "real" developer full-time (as in budget #1) would be wiser.
+
+* Big Questions
+
+*** Why?
+
+*** What?
+
+*** Where?
+
+In cyberspace --- PM is a virual organization.  While we will meet
+in person from time to time, most of the contact will take place
+electronically via such channels as e-mail, telephone, internet chat,
+listserver, and wiki.  In order to maintain accountability, decisions
+will be made openly and records will be available to the general
+public via AM.  Deliverables will be made available on publically
+accessible servers unde free license terms.
+
+*** When?
+
+The grant would cover three years.  As for how the work would proceed
+during that time, that can be expressed in terms of expected dates
+of completion for various deliverables:
+
+:: *Middle of First Year*
+
+ * Report on underlying theoretical model and data structure
+
+ * Techincal specifications
+
+ * Prototype
+
+:: *End of First Year*
+
+ * Implementation of back-end which manages data and provides core 
+functionality of scholium system
+
+:: *Middle of Second Year*
+
+ * Implementation of basic functionality of Noosphere in a 
+scholiumific fashion on top (as a schoium to) the backend
+
+:: *End of Second Year*
+
+ * Implementation of more advanced features 
+
+:: *Middle of Third Year*
+
+ * Study of user community
+
+ * Design for user interface
+
+:: *End of Third Year*
+
+ * Stable versions of programs
+
+ * User-friendly interfaces
+
+ * Documentation
+
+  * Thorough documentation of code -- The core routines will be literate 
+programs, other routines shall be profusely commented so as to make it 
+easy for future users to maintain the code, customize it, and extend its 
+functionality
+
+  * Technical reference manuals
+
+  * User manuals
+
+  * High-level account of how system works, data structures, and 
+algorithms used
+
+  * Finished presentation of theory in form of articles or monograph
+
+*** Who?
+
+PM/HDM
+
+ * Digital library scientist --- Aaron P. Krowne
+
+  * Study methods for organizing, searching, and accessing information.
+
+  * Devise techniques for coordinating collections perhaps stored in 
+different formats by different types of knowledge communities.
+
+  * Facilitate the growth and well-being of the PM library, not merely
+as a collection of electronic documents maintatined upon a certain
+platform, but as the locus of activity for a community of scholars 
+who produce, study, discuss, and teach that material and as a.
+resource for society at large.
+
+ * System analyst --- Joseph A. Corneli
+
+  * Develop suitable data structures and algorithms.
+
+  * Design the architecture of the knowledge management system.
+
+  * Write specifications for program modules, data, and commands.
+
+  * Implement some of the routines, especially those which provide
+the basic functionality.
+
+ * Mathematical theoretician --- Raymond S. Puzio
+
+  * Develop a mathematical theory of interlinked documents composed from
+subdocuments and their evolution in time as they are edited.
+
+  * Develop a general framework for checking validity of arguments which
+would be the basis for a system of markup which would instruct the
+computer how to check the validity of derivations or insert steps
+(generalized spreadsheet).
+
+  * Analyze data structures and algorithms mathematically.
+
+  * Prove the validity of important routines which provide basic 
+functionality rigorously.
+
+ * Anthropologist --- ? ?. ? 
+
+  * Study the PM community via observation, surveys, interviews,
+focus groups, etc.
+
+  * Determine the needs, wants and preferences of users.
+
+  * Advise the geeks how to make a user-friendly interface.
+
+  * Help produce user guides and learning materials such
+as tutorials which are accessible and useful to the average
+user, not just the power users (who can read the technical
+manuals instead).
+
+ * Programmer(s) --- ? ?. ?
+
+  * Write routines as per specifications.
+
+  * Debug code.
+
+  * Check that programs work properly and are stable by
+running test cases.
+
+  * Document and comment on code.
+
+Math Atlas / Math Web
+
+Jim Pitman
+
+?
+
+Outside Collaborators
+
+?

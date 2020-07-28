@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Replace any /short/ $$ $$ or \begin{equation} \end{equation} etc. environment with \[\] delimiters.
+Probably a good idea to replace /non-short/ \[\] with dollar signs!  The semantics of \[\] will be changed for [[file:FEM.org][FEM]] but preserved for [[file:PM.org][PM]].  Coding short-to-medium displays in \[\] will become part of the PM style guide.
+
+
+: I have finished a version of the code that should do this.  The function to look at is `modify-display-environments'. --[[file:jcorneli.org][jcorneli]] Thu Feb 17 21:21:57 2005
+
+
+----
+[[file:Case Closed.org][Case Closed]]

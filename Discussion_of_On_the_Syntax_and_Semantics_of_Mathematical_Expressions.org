@@ -1,0 +1,251 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I plan to add quasi-quotation to to the syntax soon.  When I get to this, it
+might be convenient to drop the quote readmacro notation and go back to the old
+LISP notation (quote <expression>).  However, even though this does allow one to
+describe the grammar by treating quote as just another symbol, I would prefer to
+keep it as a special token simply because quotation has to do with treating the
+written symbolism as an object in its own right.  [[file:rspuzio.org][rspuzio]]
+
+: I'm not sure we need quasiquote in hcode, don't binders already take care of
+anything remotely macrolike that would come up?  I'd need to think more about
+this, but at present I think parentheses (aka order of operations) are
+sufficient.  I'm not even sure about using `quote' in hcode.  Well, we can talk
+about it more. --[[file:jcorneli.org][jcorneli]]
+
+:: As you say, this is a topic for further discussion, and perhaps this note is
+not the best place for it, especially since this article will deal with some
+more elementary topics where quotation will not be used and I only included
+quotation in the notation for the sake of completeness.  I am convinced that
+quotation and quasiquotation are necessary in any formal system which will
+adequately represent mathematics.  For instance, as I see it, abstract algebra
+is based upon quotation --- if one is to discourse coherently about multipliying
+and factoring polynomials as opposed to multiplying and factoring their values,
+some notion of quotation is necessary.  I will say more about that in some other
+place.  --[[file:rspuzio.org][rspuzio]]
+
+ * [[file:discussion of quote.org][discussion of quote]]
+
+I do not see what you mean when you say that set-theory is a "formal description
+of how mathematicians understand expressions."  Why is it that "understanding a
+symbol means being able to associate to it an element of the universe U"?
+
+But I am happy to say that all of a sudden I think I'm finally catching on to
+what you're doing in this section -- you are working on a description or
+definition of "semantics" using set theory as your driving metaphor.  I was
+confused by the section heading; I thought you were talking about something
+else, "Set-theoretical Semantics", something I don't really know what to make
+of.  Maybe you can adjust the title and the sentences quoted above to make it
+easier for the reader (me, for example) to understand what you're doing here
+right away.  My sense is that the ideas are quite good, but the exposition
+(particularly in some of this rhetoric) still leaves something to be
+desired. --[[file:jcorneli.org][jcorneli]]
+
+
+Please be patient because it may take a while for me to straighten out the
+exposition.  Since I have a lot to still say, it might be a while before I get
+back to polishing up what I said.  "Understand" can be something of a vague
+word, which is why I went back and removed most of the occurences of it.  The
+idea I had in mind might be better put like this: If you really understand
+something then you should be able to certain things with it.  If you understand
+a newspaper article, for instance, that implies that you should be able to
+answer questions about it and rewrite it in your own words.  So, understanding a
+mathematical expression should mean things like being able to say what set it
+describes and rewrite the expression in formal logic.  This is a grown-up
+version of the idea that, if you understand 2*4 + 3*6, then you should be able
+to say that it equals 26.  In fact, that is one of the ways we test
+first-graders understanding of arithmetic.  Likewise, a 26-year old who claims
+to understands an expression in a textbook in abstract algebra should be able to
+say what set it equals, or else he flunks his math test.
+
+However, now that you point it out, the statement about set theory as an
+understanding of math is too strong and definitely needs to be rewritten.
+Already, writing out what I had in mind points the way to improvements which I
+will make right now.
+
+It also might help if I point out that, at least in the more formal sections, I
+am using the word "semantics" in a strict technical sense.  For me, a semantic
+is a mapping from a formal language to a set of values which is contravariant to
+the grammar rules of the language. In this case, the formal language is the
+language of mathematical expressions and the set of values is the universe U and
+the mapping is the function EVAL.  I really should write something about the
+definition of semantics too, but don't hold your breath waiting because it might
+be a while before I do so.
+
+I appreciate your comments and criticisms very much and look forward to seeng
+more of them. --[[file:rspuzio.org][rspuzio]]
+
+I rewrote the stuff on understanding math set-theoretically.  I hope it's better
+now, but I suspect it will still have to go through a few more revisions.
+
+Because of our discussions about sums and integrals, I figured out a way to
+improve the syntax that brings to the fore the point that, say, sum and integral
+are the same function and the bound variables have to do with how its argument
+is presented in a way that's a bit better than, say
+
+ (forall (lambda x .....
+
+as I suggested and makes the rest of the discussion make more sense.
+--[[file:rspuzio.org][rspuzio]]
+
+I did a little editing/honing as I went through the article this time, and I
+have to say, now the article seems very clear, and even fun to read!  I took out
+a few expository passages that seemed too long (you might want to check the diff
+to be sure I wasn't overzealous with the knife).
+
+: The only place where I but something back was when I added a sentence pointing
+out that figuring out what a symbol means can be a non-trivial problem, but that
+we are not dealing with that problem here.  Before, I started talking about the
+techniques one might use to deal with that problem; you were right to chop it
+out, because there was no sense in talking about something that I wasn't
+intending to discuss.  However, I didn't want to the reader to walk away with
+the impression that something had been swept under the rug or that things are
+simpler than they really are, so I added the sentence.  After all, when
+something as basic as the symbol "2" can stand for an integer, a set, a rational
+number, a real number, or a complex number, the problem of assigning the correct
+interpretation to a symbol is not completely trivial. --[[file:rspuzio.org][rspuzio]]
+
+One thing that occured to me is that we don't have any examples of /:bind/ per
+se.  I think the arithmetic example did me a lot of good, maybe a similarly
+simple example of binders that explicitly uses /:bind/ would help.
+
+: Oh, they're coming in the new section I decided to add in-between the
+intuitive definition and the general formal definition!  In addition, I plan to
+embellish it with actual computer programs. --[[file:rspuzio.org][rspuzio]]
+
+I'm curious to know whether or how binders would handle weird forms of
+iteration.  I guess this sort of thing would go under the hood.  For instance,
+if I wanted to define a function /esum/ such that /(esum (x) ((< x 10) (> x
+0)) x)/ was equal to /2+4+6+8=20/, I could program this function in a way
+that was similar to the treatment of /sum/.  But I should get the same results
+by writing/evaluating /(sum (x) ((< x 10) (> x 0) (not (odd x))) x)/.  So I'm
+not sure if my question is really about iteration; maybe I'm just wondering how
+these functions are going to be implemented in general. --[[file:jcorneli.org][jcorneli]]
+
+: As I see it, this is a good place to distinguish syntax issues from semantic
+isues.  Syntactically, there doesn't seem to be a problem; I feel pretty
+confident in asserting that all the content of the mathematical literature I've
+read can be adequately encoded in a binder syntax.  As for semantics, that's
+another ballgame altogether and I don't feel all that confident either --- there
+very well might be different sorts of objects which can be expressed in binder
+syntax but perhaps need to be interpreted rather differently because of weird
+forms of iteration or something like that.  A case that comes for mind for me to
+check are Henkin's quantifiers.  Also, it is worth keeping in mind that a good
+part of the reason thst set-theoretical formalism is so general is because it
+doesn't always say very much!  In the case of binders, all that is needed is the
+condition that all the informataion needed to evaluate an expression involving a
+binder is contained in the function which maps allowed values of the bound
+variable to values of the expression in which the variable appears.  That
+doesn't say all that much.  It says nothing about how that information is stored
+in the function; in your case it is only stored in the even elements of the
+domain and the odd elements are irrelevant.  In a way, all we've done with the
+binder notation is to say that the value of our binder is determined by the
+values of an expression for all values of the bound variable which satify some
+conditions.  However, we have made no statement about HOW it may be
+determined.--[[file:rspuzio.org][rspuzio]]
+
+Here, we're basically in the position of someone trying to describe the EVAL
+function you've been talking about!  We need to also know what to do when the
+system is asked to do something that it oughtn't, like /(sum (x) ((< x 10) (> x
+0) (irrational x))) x)/ -- well, actually, the answer here would probably be
+zero, since /sum/ would, presumably, be interested in summing integers by
+default, and it should know that no integer is irrational.  But then we need to
+think of some decent way to encode /1.1+1.2+1.3+1.4+...+101.1/.  The LOOP
+construct in Common Lisp has all sorts of keywords that can be used to control
+the values of the variables that are bound...
+
+  for VAR from/upfrom/downfrom NUM to/upto/downto/above/below NUM by NUM,
+  for VAR in LIST by FUNC, for VAR on LIST by FUNC, for VAR = INIT then EXPR,
+  for VAR across ARRAY, repeat NUM, with VAR = INIT, while COND, until COND,
+  always COND, never COND, thereis COND, collect EXPR into VAR,
+  append EXPR into VAR, nconc EXPR into VAR, sum EXPR into VAR,
+  count EXPR into VAR, maximize EXPR into VAR, minimize EXPR into VAR,
+  if COND clause [and clause]... else clause [and clause...],
+  unless COND clause [and clause]... else clause [and clause...],
+  do EXPRS..., initially EXPRS..., finally EXPRS..., return EXPR,
+  finally return EXPR, named NAME.
+
+This might seem like overkill, but at least the /by NUM/ is relevant to us,
+and maybe all of the rest of it (and more) is too. --[[file:jcorneli.org][jcorneli]]
+
+Here are some thoughts.  First, I would like to address the specific example,
+since I believe it is a good idea to keep firmly anchored to specific examples
+as a reality check.  (This reminds me of a nice quote by Von Neumann.)  As for
+your example, I could think of several possible answers, depending on exactly
+how the sum function is defined.  (I am not necessarily assuming the definition
+in the paper now.)
+
+Let's analyze /(sum (x) ((< x 10) (> x 0) (irrational x)) x)/ step-by-step
+according to the recipe given in the text.  The first thing our recipe says to
+do is consider the set
+
+ (setof (x) ((< x 10) (> x 0) (irrational x)))
+
+This produces for us the set of all irrational numbers in the interval (0,10).
+The next step says to construct a function on this set.  In this case, we obtain
+the identity function on this set.  The last step says to apply the sum function
+to this function (the identity function on (0,10)).
+
+Exactly what happens now will depend on how the sum function is defined.  If the
+domain of the sum function is defined to only include functions of integers,
+then we will have a mismatch and the quantity is undefined.  If the sum function
+automatically restricts its domain to the integers, there is nothing left to sum
+over after restricting, and the sum is zero.  Another possibility (which I shall
+say more about below) is that the sum requires that the domain of the function
+to be summed is finite.  In this case, we would also conclude that the quantity
+is undefined.
+
+The question arises "How is a computer to figure this out?"  First, I would
+suggest that in compiling h-code into symbolic logic, it also needs to output
+statements to the effect that the arguments of functions lie in the domains of
+the functions.  If it cannot figure out what the domain of a function is, it
+should alert the author that the author has forgoten to provide this crucial
+information.  (I have recieved corrections on this point, so it sounds like a
+legitimate concern.  In fact, now that I think of it, that was also a problem
+with my sum thingy --- I forgot to sprcify the range and domain of the function
+sum which made it confusing to figure out what was going on.)  Then, in the two
+cases above where a mismatch occurs the logic checker will either notice a
+contradiction in the proof (if it figures out the set of irrationals in the
+interval (0,10) contains no integers or that it is infinite) or point out that
+there it cannot prove certain statements.  Either way, the author would be
+alerted that there is a problem.
+
+As for your example of how to encode /1.1+1.2+1.3+1.4+...+101.1/, I can think
+of two suggestions.  We could sum n/10 over integers or we could define a sum
+functon which sums over finite sets which are not necessarily integers.
+
+Your example with the LOOP in Common LISP makes me think more and more that,
+when we come out with h-code, it will look something like !TeX in that there
+will be a simple core and surrounded by more complicated stuff in outer shells
+an that most of what the user will type will likely be the more complicated
+statements.  As fot the question of whether there will arise cases where a more
+complicated syntax or semantics will be required in an essential way as opposed
+to as a convenience to the user, I won't attempt to say anything now because I
+haven't looked at enough examples yet. --[[file:rspuzio.org][rspuzio]]
+
+----
+
+I am now in the process of rewriting the article and, because of the length am
+turning it into a bunch of hyperlinked pages.  In the end, the main page will
+become a table of contents and the actual contents will be
+elsewhere. --[[file:rspuzio.org][rspuzio]] 23 February 2005
+
+Now that I have an idea what direction this article is headed in, allow me to explain.  Bear with me, gentle reader, because it may be weeks if not months before this article is finished and it will surely be something of a confusing mess while it is being rewritten.  Therefore, take this as a sort of architect's rendering of the edifice which is under construction.
+
+As I see it, the article will be divided into two main parts framed by an introduction (which is already written) and a concluding section (which can not yet be written).  The first part will deal with the background material from formal linguistics and set theory which is needed for our project.  Already, the chapter on syntax is rather complete so from it you may get an idea what the whole monograph will look like.
+
+The second part will deal with the study of mathematical expressions.  The chapters in this section will gradually progress in difficulty.  In the first chapter, we will examine rather simple mathematical expressions like what one might encounter in elementary arithmetic and algebra.  From there we will gradually increase the power of our formalism until it is capable of explaining most, if not all mathematical expressions encountered in the literature.  A tentative listing of chapters is as follows:
+
+ 1. Operations only
+ 1. Functionals
+ 1. Bound variables
+ 1. Functionals and bound variables
+
+In each chapter, we will introduce a syntax and then discuss a set-theoretical semantic for this syntax.  The basic premise underlying the set-theoretical semantic is that a mathematical expression may be seen as naming a particular set, so if we can give rules that allow us to find which set this is, then we have a good understanding of what mathematical expressions mean.  Naturally, understanding is a many faceted thing and has other aspects than this set-theoretical aspect.  To describe other aspects, we will require other semantics.  However, at this point, the author is not sure that he will say much about other semantics, not at least in the first edition since there is already much material that needs to be written to explain the set-theoretic semantic, so it may be best to leave other semantics for later editions.
+
+When complete, this work will be illustrated with examples.  However, gentle reader, please do not hold your breath waiting lest you turn blue in the face and pass out.  The authour finds it easiest an best to first establish the main outlines of a chapter and ennunciate the definitions and theorems and sketch in the proofs of the main theorems and only later return to flesh out the proofs, add proofs of minor results, and add examples. --[[file:rspuzio.org][rspuzio]] 23 February 2005
+
+
+
+Back to [[file:On the Syntax and Semantics of Mathematical Expressions.org][On the Syntax and Semantics of Mathematical Expressions]]

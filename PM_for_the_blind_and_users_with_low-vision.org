@@ -1,0 +1,30 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Create a way for blind mathematicians/low-vision users to view and contribute to PM. 
+
+For the blind, there are systems for representing math formulas for the blind. 
+However, I don't know if it is possible to easily translate latex into this format.  
+For low-vision users, the solution is probably much easier. We only need to render 
+the entries in really large fonts (?). Preferably user selectable.
+
+See http://www.panix.com/~kestrell/math.html
+
+Someone seriously interested in implementing this should maybe first email the 
+maintainer/mailing list in the above page and ask for more info?
+
+This would open up a new niche for PM. I can't even image how difficult math is
+if you can't see. --[[file:matte.org][matte]] 17 March 2005
+
+No-vision math is actually pretty popular, historically speaking.  Euler and
+Plateau are two famous examples, and I'm sure there are many more.  Studying
+late at night by candlelight can't be great on the eyes.
+
+I'm hoping that we'll eventually publish the FEM in texinfo format, at which
+point browsing it using Emacspeak may become easy.
+
+While not necessarily sufficient, the [[file:Text-only webpage.org][Text-only webpage]] idea seems like a
+good step towards helping low-vision folks.  Presumably blind/low-vision
+computer users already have their own favorite generically useful accessibility
+tools.
+--[[file:jcorneli.org][jcorneli]] Sun Apr 17 21:30:44 2005 UTC

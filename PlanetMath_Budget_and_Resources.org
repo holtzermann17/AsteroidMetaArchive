@@ -1,0 +1,242 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+This page is the official home page of !PlanetMath.org, Ltd., the legal entity 
+for PlanetMath (planetmath.org).  
+
+The purpose of having such an entity is to provide a formal interface between
+PlanetMath, other organizations (both for-profit and nonprofit), the government,
+and society in general.
+Such an interface is necessary to "scale up" the PlanetMath effort, in terms of
+funding, personnel, and publicity.   This page serves as a description of, and 
+vehicle for coordinating such efforts, as well as a locus for transparency and
+disclosure for the organization.
+
+Other portions of [[file:AsteroidMeta.org][AsteroidMeta]] are designed to help make know-how available
+to anyone who wants to participate.  Here, we will talk about organizational
+aspects of PM, including an overview of resources, interests, skills, and a 
+discussion of PM's finances.
+
+* Organizational Structure
+
+PlanetMath is run by PlanetMath.org, Ltd., an Alexandria, VA, USA-based nonprofit 
+corporation, incorporated in September, 2003.  Aaron Krowne ([[file:akrowne.org][akrowne]]) is the 
+president, and there is a board of directors, consisting of:
+
+ * Joe Corneli
+ * Roger Lipsett
+ * Raymond Puzio
+ * Chi Woo
+
+The [[file:PlanetMath board.org][PlanetMath board]] has so far had only one official meeting, by IRC (see [[file:PM Board Meetings.org][PM Board Meetings]]).
+
+As of *May, 2005*, PlanetMath.org, Ltd is a 501(c)3 tax-exempt public charity!  This means:
+
+ * Donations to PlanetMath are now tax-deductable.
+ * PlanetMath is more attractive to foundations for disbursal of grants.
+ * Many corporations will make matching contributions for their employees who donate to PM.
+
+An important note related to this is that 501(c)3 status was granted back-dated to Nov, 2003.  
+Therefore, any monetary contributions made by individuals to PM since then can be processed 
+for tax deduction.  If this means you, please get in contact with [[file:akrowne.org][akrowne]] or Bonnie.
+
+[[file:Discussion of PM Organizational Structure.org][Discussion of PM Organizational Structure]]
+
+* Org News and Goings-On
+
+Current business of the nonprofit org will be linked-in here. 
+
+What's going on now?
+
+ * *Fri Jan 13 10:16:44 EST 2006* - The first PM board meeting, which is open to the general public, will be *Sunday, January 22nd, 2006, 9pm EST,* held via IRC.  See [[file:PlanetMath_Board_Meeting--Q1_2006.org][PlanetMath_Board_Meeting--Q1_2006]].
+ * *Sat Jul 23 20:04:45 UTC 2005* - Yesterday I finalized the paperwork to have
+Bonnie added as a co-signer on the PM corporate account, as well as got my own copies 
+of the check card and checks to expedite PM.org business.
+ * *Tue Jul 5 16.57.09 UTC 2005* - Today I had PlanetMath's checking account converted
+from a personal account under my name (Aaron Krowne) to a separate nonprofit corporate 
+account (also with Wachovia).  Bank statements will now go to Bonnie Rabichow, our 
+treasurer.  This all affords an extra level of independence and transparency.
+ * [[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]] (grantseeking) - *Update,
+May 26, 2005:* Submitted!
+ * [[file:501(c)3 Saga.org][501(c)3 Saga]] - *Update, June 4, 2005:* Case closed! We are a 501(c)3!!!!
+
+* Interacting
+
+How you can interact with our community and organization:
+
+ * This wiki is actually quite central.
+ * Use Internet Relay Chat (IRC) - See [[file:PM Real Time Chat.org][PM Real Time Chat]].
+ * Of course, many  discussions take place on the http://planetmath.org site.
+
+* Meetings
+
+** Board Meetings
+
+See [[file:PlanetMath Board Meetings.org][PlanetMath Board Meetings]].
+
+** Other Meetings
+
+ * [[file:PM Conf Call 20060419.org][PM Conf Call 20060419]]
+
+* By-Laws
+
+Please see PMByLaws.
+
+* Budgets
+
+ * [[file:PlanetMath 2008 Q4 Budget.org][PlanetMath 2008 Q4 Budget]]
+ * [[file:PlanetMath 2009 Budget.org][PlanetMath 2009 Budget]]
+
+* Finances
+
+ * [[file:Overview of current PlanetMath finances.org][Overview of current PlanetMath finances]].
+ * See also [[file:PM startup loans from akrowne.org][PM startup loans from akrowne]].
+
+** Fundraising Efforts
+
+See [[file:PlanetMath Fundraising.org][PlanetMath Fundraising]].
+
+** Needs
+
+Some of the things we would like to do are currently constrained because of
+lacking finances (e.g. buying faster servers).  Some of the things are
+constrained by lack of know-how, diverging interests, or the presence of other
+priorities among otherwise willing volunteers (for example, it would be nice to
+have someone working full time to fix bugs in the PM/[[file:Noösphere.org][Noösphere]] system, but
+we'd probably need to either hire someone to do this, or find and train a
+willing, knowledgeable volunteer or group of volunteers, who in turn would have
+to have enough time to actually do the work required.)  We could also do some
+things we already do, but better, with greater funding (such as delivering the web
+site with higher quality-of-service).  Thus, serious funds are required to do 
+serious things.  
+
+** Discussion
+
+
+* Reports
+
+This section contains some reports on various aspects of the PlanetMath project, with an emphasis
+on charts and tables of various figures and statistics.  Only the latest versions of a certain
+kind of report item will be posted here.
+
+Items available now:
+
+** AdSense Trends
+
+This is the most current report.  See also [[file:Previous Adsense Trends.org][Previous Adsense Trends]].
+
+All the following charts are /daily/ from March 6 2004 to *May 1 2005*.  
+
+This month, a change was introduced in how moving averages were calculated, which 
+effects the edge regions. Instead of essentially extending the border value to fill
+the moving average bracket, the value of the /last full moving average/ is used to
+pad border moving averages that go off the edge.  The reason this was introduced was
+that it was noticed that trends seemed magnified at the edge reasons.  To see why
+consider the case where the moving average window contains only the last point: if
+you average this point with itself, you get itself, which isn't much of an average
+and isn't useful for studying trends.
+
+Note: moving averages are done on an appropriate scale to make trends apparent.  Image
+files are named with the moving average window size (in days) included.
+
+ * [http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-05-01/earnings-moving-60.png Earnings] trends ([http://br.endernet.org/~akrowne/planetmath/adsense_stats/2005-05-01/earnings.png raw version]). Earnings seem to be continuing their climb, though it looks like they are peaking.
+
+Sadly, most of the trend detail (impressions and clickthrough) have been removed from public view due to the terms of service. --[[file:akrowne.org][akrowne]] Tue Nov 1 21:58:12 UTC 2005
+
+* Resources= 
+
+This is a place to describe the non-monetary resources that make PM work,
+including volunteer effort, hardware, software, and know-how.
+
+Currently PlanetMath has the following donated "tangible" resources:
+
+ * networking at the Virginia Tech computing center (provided by Ed Fox and the VT Digital Library Research Lab)
+ * a server (provided by Logan Hanks), dual pIII-650. (planetmath.cc.vt.edu)
+ * a server to upgrade to (provided by the VT DLRL), a quad Xeon 3ghz (planetx.cc.vt.edu)
+
+As far as volunteers who have directly contributed to building the site's
+infrastructure, so far we've had work done by:
+
+ * Aaron Krowne (principle architect)
+ * Logan Hanks (the XSL templates system, the file caching system, other misc portions)
+ * Boris Bukh (Slavic internationalization and some bug fixes)
+ * Joel Irby (wrote the page image rendering system)
+ * Karli Lopez (performance profiling)
+ * Bonnie Rabichow (paralegal and clerical, currently the treasurer on the board of directors)
+ * Natalie Lonsberry (graphics, and running the PlanetMath Cafepress store)
+ * John Cathcart (graphics, esp. the current PlanetMath logo)
+
+We have had more infrastructure-related work volunteered (but not yet finished):
+
+ * Aaron Krowne (continuing as principle architect)
+ * Gabe Weaver (extending Noosphere to TEI metadata for the Perseus project)
+ * Joel Irby (fixing bugs in the ESSEX search engine)
+ * Logan Hanks (who hopes to use research time at Google to re-architect Noosphere)
+ * Karli Lopez (general enhancements)
+
+Persons who have installed or are installing Noosphere, who can provide feedback
+on this "adventure" and who may eventually submit some additional patches or
+documentation:
+
+ * Ben Loftin (bloftin@phys-x.org)
+ * Gabe Weaver (gabealfw@yahoo.com)
+ * Boris Bukh (bbukh@hotpop.com)
+ * Joe Corneli ([[file:jcorneli.org][jcorneli]])
+ * Craig Jones (craig@brechmos.org)
+ * Suleiman Souhlal (reffie@segfaulted.org)
+
+Partnerships, affiliates, friends, etc.:
+
+ * [[file:The Free Encyclopedia of Mathematics.org][The Free Encyclopedia of Mathematics]] is a print version of the PM
+  encyclopedia that is in the works; its creation should have an overall
+  positive effect on the site (see the wiki page for details)
+ * [[file:AsteroidMeta.org][AsteroidMeta]] is a place to talk about PM (like we're doing now)
+ * Wikimedia (Aaron knows people there...)
+ * VT Digital Library Research Lab
+ * Emory University Libraries
+
+Non-infrastructure-related volunteer authors have built the PM encyclopedia (and
+in the process have extensively tested and critiqued Noosphere):
+
+ * add details on the encyclopedia-building effort here
+
+Organizational and community support for the site provided by:
+
+ * president and board of directors, as described above
+ * user feedback, handled through the PM site, email, bugzilla, and IRC
+ * discussions external to PM among community members
+
+* Plans
+
+In this section, we will list things we would like to do, and focus on plans for
+drumming up the resources we'll need.
+
+We have actually done quite a bit of planning on [[file:Grant_planning.org][Grant_planning]]. --[[file:akrowne.org][akrowne]] Mon Nov 21 21:29:26 UTC 2005
+
+* Trips
+
+This section gets you to info on official trips taking place on behalf of the PM org; for networking, outreach, planning, collaboration, or perhaps more.  
+The following page indexes has current, future, and past trips.
+
+ * [[file:PM.org Trips.org][PM.org Trips]]
+
+* Development
+
+** Work for Hire
+
+See [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] (new, Mon Nov 21 21:32:03 UTC 2005!).
+
+See also [[file:Finding Bounty-Hunters.org][Finding Bounty-Hunters]].
+
+* Internships/Scholarships
+
+** Google "Summer of Code" Program
+
+See [[file:PM Summers of Code.org][PM Summers of Code]].
+
+* Discussion
+
+ * [[file:PM.org general discussion.org][PM.org general discussion]]
+ * [[file:PM.org branded product sales discussion.org][PM.org branded product sales discussion]]

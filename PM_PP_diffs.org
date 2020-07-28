@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+List of files
+
+noosphere/lib/Noosphere
+
+ * [[file:Admin.pm.org][Admin.pm]]
+ * [[file:Cache.pm.org][Cache.pm]]
+ * [[file:Config.pm.org][Config.pm]]
+
+noosphere/db
+
+ * [[file:init.sql.org][init.sql]]
+ * [[file:schema.mysql.sql.org][schema.mysql.sql]]
+
+
+noosphere/bin/convert
+
+ * [[file:add_missing_default_acls.org][add_missing_default_acls]]
+ * inval_index_update.pl (new file)
+ * irreindex.pl (new file)
+ * [[file:irunindex.pl.org][irunindex.pl]]
+ * [[file:makethreads.org][makethreads]]
+ * [[file:mkcatlinks.pl.org][mkcatlinks.pl]]
+
+noosphere/bin/test
+
+ * [[file:testsearch.pl.org][testsearch.pl]]
+
+noosphere/bin
+
+ * batch_file_corrections.pl (new file)
+ * buildsets.pl (new file)
+ * [[file:clean_rendering_disk_cache.pl.org][clean_rendering_disk_cache.pl]]
+ * [[file:cleansearchresults.org][cleansearchresults]]
+ * [[file:cleantemp.org][cleantemp]]
+ * [[file:init.sh.org][init.sh]]
+ * [[file:ir_index.pl.org][ir_index.pl]]
+ * latex2html (removed)
+ * [[file:logchange.pl.org][logchange.pl]]
+ * [[file:make_browsable_snapshot.pl.org][make_browsable_snapshot.pl]]
+ * [[file:outstandingcor.org][outstandingcor]]
+ * [[file:renderall.org][renderall]]
+ * [[file:spelld.org][spelld]]

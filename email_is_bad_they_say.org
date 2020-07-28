@@ -1,0 +1,63 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+http://blog.centraldesktop.com/comments.php?y=06&m=05&entry=entry060501-194015
+
+Certainly it isn't good without some better system of organization
+associated with it.  We were at one point talking about creating
+such a thing...
+
+-----
+
+Email is pretty bad. Aside from the fact that it is
+insecure (no one wants to PGP) -- and the fact that it
+is convenient for the NSA to scan and archive -- the
+real problem with email is that there is no way of
+knowing for sure if an email gets through, except maybe
+to send another email asking... A vital
+communication could just disappear and both parties
+might be clueless about the disappearance. The wiki
+approach is good -- the info is there right away
+and it is possible to see that it is there. 
+
+--[[file:ocat.org][ocat]] 
+
+As for wikis, there is also a definite advantage when
+it comes to conversations involving several people.
+With e-mail, what one gets are a lot of messages sent
+between a lot of people (perhaps with the assistance
+of a centralized listserver) and one has to dig through
+all those messages to piece together the conversation.
+With wiki, however, everything occurs in a centralized
+location.  For a good example, look at the conversation
+which arose from my [[file:Two years later.org][Two years later]] last week.
+I found it much easier to participate in that 
+conversation exactly because it had a central page
+so I could see the various remarks people posted in 
+the context of the whole and reply to various points
+raised by various people together rather than as 
+separate replies to separate points.
+
+Indeed this is pretty much the reason why this wiki
+was created in the first place.  Two years ago, Joe,
+Aaron and I were carrying on a number of conversations
+on HDM, copyright, PM, and the like via e-mail.  This
+was getting a bit hectic and confusing, so Joe put up 
+this wiki as an alternative venue.
+--[[file:rspuzio.org][rspuzio]]
+
+----
+
+See also: [[file:the relative merits of wiki and other workflow management media.org][the relative merits of wiki and other workflow management media]]
+
+FYI, now that my laptop computer is (temporarily) broken again, I have to
+use a library computer to do work.  I have access to email, and I also
+have access to all of the files that we backed up on Savannah with CVS --
+thank goodness!  However, what I don't have is the !TeXed copies of
+the documentation we wrote, and I'm not sure I'll be able to run !TeX
+in the library (even though it is a math library).  It's times like these
+that make me wish for a central place to do development work -- like a
+PlanetComputing -- with both support for version management via CVS
+and support for user-friendly views of literate documentation. 
+
+--[[file:jcorneli.org][jcorneli]]

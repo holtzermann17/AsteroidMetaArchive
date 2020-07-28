@@ -1,0 +1,33 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It seems that there is a candidate (for at least partial) work-around to copyright on the net after all.
+This is what is called pass-by-reference in computer programming.
+Instead of passing a given /expression/ around, you pass only
+a /pointer/ to the expression.  This technique is used, for example,
+by the  "dpans2texi" package: see http://www.ifa.au.dk/~harder/dpans.html
+for details.  Basically this package helps you turn a (presumed) copyrighted
+set of documents into a new, browsable Texinfo document.  I say
+"presumed" because the actual copyright status of this work happens to be
+unknown at present; the technique would work just as well on a known-to-be
+copyrighted document -- I think!  Anyone think anything different?
+
+This method can be extended to extremely complicated cut-up-technique
+programs that take various copyrighted documents from all over the net,
+do various things, and spit them back out in some new form.  In a peer-to-peer
+setting, these documents can again be redistributed, by reference --
+and it would seem that no one has violated any copyright laws, because
+everything was passed by reference, not expression.  The only thing
+that has been passed around is a set of instructions for making a derivative work.
+These instructions do not appear to encourage copyright infringement, because
+everyone makes their own copies under fair use.  Furthermore, the tool
+that processes these instructions (say, some future version of [[file:Arxana.org][Arxana]])
+does not encourage infringement either -- for the same reason!
+
+This will need more analysis, I'm sure, but if I'm right, it seems that
+copyright has been rendered essentially irrelevant by the combination of p2p
+infrastructure and sophisticated hypertext tools.
+
+Comments?
+
+--[[file:jcorneli.org][jcorneli]] Sat Mar 11, 2006

@@ -1,0 +1,82 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Research
+
+; [[file:Don Simon's thesis project.org][Don Simon's thesis project]] : This was a project that combined theorem proving, proof checking, and parsing.
+It worked with one book as a test case.  See the linked page for details.
+(Mentioned by Gordon Novak; the code was contributed by the author and is now maintained by [[file:jcorneli.org][jcorneli]].)
+
+; Claus Zinn's thesis project : takes the torch from Don Simon and seems to carry it
+forward a reasonable way.
+
+; [[file:Serge Autexier's work on formalising text book proofs.org][Serge Autexier's work on formalising text book proofs]] : This project sounds similar
+to Don Simon's project: we need to find the actual reference! (Contributed by [[file:shargestam.org][shargestam]].) 
+
+; Vivi Nastase's thesis and research :
+[http://www.site.uottawa.ca/~vnastase/ Vivi Nastase] talks
+finding connections between concepts that surface in language in various syntactic forms
+in her [http://www.site.uottawa.ca/~vnastase/thesis.pdf thesis] (PDF file)
+and other [http://www.site.uottawa.ca/~vnastase/stuff.html research].  This topic is sort of in between linguistics and AI.  (Mentioned by Ken Barker.)
+
+; Work by Magdalena Wolska and Ivana Kruijff-Korbayova :
+They have written a
+[http://acl.ldc.upenn.edu/acl2004/main/pdf/373_pdf_2-col.pdf paper]
+called Analysis of Mixed Natural and Symbolic Language Input in
+Mathematical Dialogs.  (This was mentioned to me by Jason Baldridge, who helps
+maintain !OpenNLP; see below.)
+
+*  Books
+
+; Semantics in Generative Grammar by Heim and Kratzer : Supposed to be a good introduction to linguistic theory.
+; Type-logical semantics by Carpenter : (mentioned by Bhatt)
+; Reference to abstract objects in discourse by Asher : 
+Discourse analysis seems particularly relevant to any real NL parsing task; this is supposed
+to be a good book for this are (mentioned by Bhatt)
+; Syntactic theory and the structure of English by Radford : (mentioned by Bhatt)
+
+; Helbig, Hermann Knowledge Representation and the Semantics of Natural Language, (2006) Springer, Berlin, Heidelberg, New York : See also "[http://pi7.fernuni-hagen.de/forschung/multinet/multinet_en.html MultiNet]" for cool pictures and links to more
+references.  (I don't know about available software..., the 
+[http://en.wikipedia.org/wiki/MultiNet wikipedia article] does
+say software implementing these ideas exists.)
+
+* Programs
+
+; [http://www.link.cs.cmu.edu/link/ The Link Grammar Parser] : an English parser with a handy API, 
+it should be GNU GPL compatible now (but we might check this with the GNU people one more time).
+; [http://www.speagram.org Speagram] : is a program that is supposed to be very easy to write code
+for.  Suggested as a reference by one of its authors, Lukasz Kaiser.
+; [http://dlmf.nist.gov/LaTeXML/ LaTeXML] : is a special-purpose parsing
+tool for mathematical expressions.  Can we drop it into our toolset and use it
+directly? (Liscensing terms are perfect: Public domain software, produced as part
+of work done by the United States Government & not subject to copyright in the US.)
+(This suggests that maybe the DLMF is also public domain -- does anyone know?) Here is a [http://www.mel.nist.gov/msid/sima/07_math.htm research proposal] that talks about extending !LaTeXML.
+; Affix Grammars over a Finite Lattice, or [http://www.agfl.cs.ru.nl/ AGFL] : Parsers for natural language, [http://www.agfl.cs.ru.nl/agflandgnu.html under the GPL].  (I don't
+know how it compares to the Link Grammar Parser mentioned above.)
+; [http://web.media.mit.edu/~eslick/langutils/ langutils] : common lisp language tools written by Ian Eslick 
+
+* Misc
+
+; [http://opennlp.sourceforge.net OpenNLP] : A collection of F/LOSS tools for natural language
+processing. (Mentioned by [[file:alih.org][alih]].)
+; [http://ttic.uchicago.edu/~dmcallester/course/index.html Graduate course in mathematical foundations of comptuational linguistics] :
+by [http://ttic.uchicago.edu/~dmcallester/ David McAllester].
+
+*  Other Lists of Linguistics References
+
+; [http://cf.linguistlist.org/ The LINGUIST List] :
+Marketing itself as the "The world's largest online linguistic resource",
+it describes (in general terms) various computational linguistics projects etc.;
+of particular interest is its list of [http://linguistlist.org/sp/Software.html related software] (/note:/ not separated
+into "free and non-free") and several search tools available
+from its [http://linguistlist.org/ main page], which you can use to search for
+different kinds of material (e.g., mailing lists) in various areas of linguistics.
+; http://www-nlp.stanford.edu/links/linguistics.html :
+Just a general list of computational linguistics stuff -- it MIGHT contain something
+especially relevant, I don't know yet.  Not in the usual sense...
+
+
+* Local
+
+ * [[file:minneapolis local linguistics.org][minneapolis local linguistics]]
+ * ...

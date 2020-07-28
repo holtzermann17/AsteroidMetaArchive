@@ -1,0 +1,40 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+/This is based on the axioms found on the following pages:/
+ * http://us.metamath.org/mpegif/ax-1.html
+ * http://us.metamath.org/mpegif/ax-2.html
+ * http://us.metamath.org/mpegif/ax-3.html
+ * http://us.metamath.org/mpegif/ax-mp.html
+
+Axiom (schemas) are stored as templates --- the placeholders in the templates can be filled with any propositions whatsoever to yield a valid statement.
+
+The law of arbitrary antecedent:
+
+ (setq ax-1 '((p q) (if p (if q p))))
+ => ((p q) (if p (if q p)))
+
+Frege's law (distributivity of implication over itself):
+
+ (setq ax-2 '((p q r) (if (if p (if q r)) ((if p q) (if p r)))))
+ => ((p q r) (if (if p (if q r)) ((if p q) (if p r))))
+
+The law of the contrapositive:
+
+ (setq ax-3 '((p q) (if (if (not q) (not p)) (if p q))))
+ => ((p q) (if (if (not q) (not p)) (if p q)))
+
+Next, we introduce our law of inference, modus ponens.  This will be handled as three templates, two for the premises, one for the conclusion.  The idea is that, if a statement /P/ satisfies the template /mp-pr1/ with a certain assignment of the placeholders and a statement /Q/ satisfies the template /mp-pr1/ with the same assignment of the placeholders, then we can substitute these values into the placeholders of the template /mp-ccl/ to obtain a valid conclusion.
+
+In general, rules of inference and theorems which assume hypotheses (which amount to essentially the same thing) will be specified as a set of templates for the premises (which we shall indicate with the suffix /-prn/ with /n/ a number) and a template for the conclusion (which we shall indicate witht he suffix /-ccl/).  The idea will always be that, if the premise templates can be matched with a consistent set of values for the placeholders, then those values can be substituted into the conclusion template to obtain a valid conclusion.
+
+ (setq mp-pr1 '((p q) p))
+ => ((p q) p)
+
+ (setq mp-pr2 '((p q) (if p q)))
+ => ((p q) (if p q))
+
+ (setq mp-ccl '((p q) q))
+ => ((p q) q)
+
+Back to [[file:using template utilities to check proofs.org][using template utilities to check proofs]]

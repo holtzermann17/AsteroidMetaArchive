@@ -1,0 +1,51 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  Noösphere Protocols
+
+This page is an attempt to capture all the various /protocols/ that are implicitly or explicitly defined in Noösphere.
+A protocol is any specification (whether formal or informal) of behavior for particular objects.  By making explicit some
+of the protocols we deal with (or expect to deal with), we will have a head start on the design of any Noösphere enhancement
+or replacement.
+
+Some examples are in order,
+so I will start the list with a few of the obvious protocols.
+
+**  Users
+
+An object that supports the user protocol can represent the author of any PM content.
+At the very least, any user must have a name.  Are there other requirements?
+
+**  Discussables
+
+A discussable object is any object that messages can be attached to.  What is required to be discussable?
+At the very least, a way of cheaply and uniquely identifying the object is needed (so we know which discussable
+each message is attached to) and constructing a link to that object.  A discussable is associated with a collection of messages.
+
+**  Messages
+
+A message is a body of text, with a subject text.  It is also associated with a user (its author), and it is always
+attached to a discussable.  A message might also be attached to another message that is attached to the same discussable
+(in such cases, the set of relationships among messages associated with a particular discussable must be representable
+by a forest, or collection of trees).
+
+**  Articles
+
+An article is an entry with history, collaborative editing, automatic cross-referencing, etc.  This protocol may have to be specialized
+to cover encyclopedia articles, books, papers, and expositions more specifically.  An article has markup content, and is associated with
+a method for rendering that content.  There are many other attributes as well.  There is a lot of rich behavior for articles, so I know I'm
+rushing over a lot of details here.
+
+**  Corrections
+
+A correction is an object that is attached to an article.  It contains a body of text, is associated with an author, and provides operations
+for rejection or acceptance.
+
+
+*  Mixing
+
+Most objects in Noösphere support multiple protocols.  For example, we would want just about every object to be discussable.  An encyclopedia entry would be an article and a discussable at the same time.  Other objects might support the correction and discussable protocols.
+
+*  Advantages
+
+With separation of the notion of a protocol from that of classes, it becomes possible to put together a much richer system.  For example, a design goal might be to maximize the number of pages and elements that can have discussions attached to them.  Instead of having to plan ahead in great detail how we're going to make every conceivable object in the system discussable, we can focus on what it means to be discussable instead.  We would use ObjectAdaptation to deal with the implementation issues of making arbitrary objects discussable.

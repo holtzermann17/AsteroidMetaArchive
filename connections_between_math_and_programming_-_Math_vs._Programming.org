@@ -1,0 +1,65 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Since this whole discussion started with the connections between math vs. programming, I thought it might be worthwhile to point out what I see as the sinmilarities and differences between the two activities.  As I see it, both math and programming are about formal statements, the primary difference being that, in math, the formal statements are declarative whilst, in programming, they are imperative.
+
+Let me illustrate this remark with some examples.  For a mathematician, "2+3" deontes a number "the sum of two and three" whilst for a programmer, it is a command "add two and three".  Likewise, for the mathematician "x = 4" is a declarative sentence "The value of x is three." whilst for a programmer it means "Check if the value of x is four or not." or "Is the value of x four?".
+
+Just as with natural languages, so too formal languages come in different, mutually incomprehensible dialects.  Just consider all the different programming languages out there or look at an old math book to see the different variations.  For instance, the following three expressions:
+
+ 1. x&sup2; = 3 x - 2
+
+ 1. Q aeq. 3 L m 2
+
+ 1. (eq (power x 2) (difference (times 3 x) 2))
+
+all mean the same thing in different "formal languages" -- (1) is standard contemporary notation, (2) is Rennaissance (16th century) algebraic notation, (3) is LISP.  Yet the difference between them is as great as the difference between the following three sentences in natural languages:
+
+ 1. We can solve the differential equation in two dimensions by means of an integral.
+
+ 1. Aequationem differentialem in dimensiones duo integrale solvere possumus.
+
+ 1. Mozemy rozwiazac dwuwymiarowy rownanie roznickowy calkiem.
+ 
+(1) is English, (2) is Latin, (3) is Polish.
+
+Therefore, even familiar mathematical ideas expressed in an unfamiliar notation can look foreign.  Likewise, there is a learning curve associated with acquiring understanding of a new notation, much less becoming fluent in it.
+
+Unfotunately, mathematicians can also be as parochial and intolerant about their formal languages as other people are about their natural languages.  As an example, let me tell a silly but true story.  I was once at a seminar on curvature of symmetric spaces.  As it happened, the speaker used index notation.  This infuriated a prominent mathematician who happened to think that index notation was an ugly insect which ought to be exterminated and that only index-free notations should be allowed.  So the mathematician got up, interrupted the speaker yelling "Use an intelligent notation!" and forced the poor speaker to rewrite all his transparencies in index-free notation!  Needless to say, this slowed the whole lecture to a crawl and the speaker was unable to get to presenting the results which he came to explain.
+
+I suspect that something similar was the reason why hardened mathematicians were so vigorously opposed to APM-Xi --- the point might have not been so much that it looked like computer code as that it was an unfamiliar formal language which differs significalntly from the usual formal language and that the entries were purely formal without any natural language to explain what was being expressed formally.  I suspect that if one were to submit an entry to Planet Math which was written in a combination of old algebraic notation and Lukasiewicz logic notation with little or no text to explain what was going on (execpt for a reference to a f.a.q. describing the notation), seasoned mathematicians on Planet Math would also find it just as incomprehensible as APM-Xi and complain every bit as vigorously and ask that it be removed or written in more conventional notation with natural language text.  Therefore, I suspect that the fact that the APM-Xi notation was based on computer programming and intended to be machine-readable had litle to do with the hostile reception that the APM-Xi entries recieved.  Any unfamiliar formal language is bound to look like a secret code to someone who is not familiar with it --- just have a look at nineteeenth century invariant theory or sixteenth century algebra in the original notation and compare it with a treatment of the same topic in a recent book.
+
+As for programming being tedious, my experience has been that both programming and math can be tedious --- it all depends on the subject matter, not on the subject.  For instance, in studying the zeros of Mittag-Leffer functions, I had to find bounds for a whole bunch of expressions involving trigonometric functions.  That was a boring and tedious pain in the neck and checking the result was every bit as annoying as debugging a suite of programs to move cursors around.  On the other hand, writing the code to match templates was fun and challenging and debugging it felt exciting like solving a crossword puzzle.  For me, what determines whether something is tedious or exciting is the ration of drudgework to ingenuity and has little to do with whether the project is mathematical or programming in nature.
+
+As I see it, part of the reason that mathematics and programming might seem so different is that they employ different formal languages.  In a way, this reminds me of the situation in the Macedonia 2300 years ago or the situation in Germany 300 years ago.  While Alexander spoke with his courtiers and with Aristotle in Greek, he gave orders to his army and servants in Macedonian.  While Leibniz spoke with the ordinary man in the street in German, he spoke in French with cultured gentlemen and discussed philosophy and mathematics with learned scholars in Latin.  Likewise, someone today writing about numerical analysis might write in contemporary algebraic notation when describing the theory underlying an algorithm, but then re-express the same expressions in FORTRAN or C when discussing the algorithm to do the computation.  This means that someone has to be bilingual to follow the work and this will necessarily cut down on the number of potential readers.  In the historical examples mentioned, this was considered as desirable since fluency in Greek or French was regarded as a status symbol, but here it only serves to set up artificial walls between programmers and mathematicians, thereby deepening the growing rifts between different academic disciplines and accelerating the fragmentation of knowledge.  Thus, perhaps it would not be so bad an idea to design formal languages for programming computers with a synatax which is as close as possible to what mathematicians use. --[[file:rspuzio.org][rspuzio]]
+
+
+*  Discussion
+
+Just a few words about the conclusion.  Mathematicians use natural languages to
+talk about math.  Often the base natural language has been significantly altered
+through the addition of technical and/or formal language and symbols, but the
+language is still, fundamentally, natural.
+
+I think the long-term goal is to do programming in NL or something about as
+NL-like as normal mathematical writing.  Or direct thought, skip the language
+all together!
+
+For the short term, I don't think "syntax" (within reasonable bounds) is going
+to solve any problems.  Indeed, I think that the LISP-like languages are nice,
+especially because they are so simple and the syntax is so uniform.  It seems to
+me that this feature would makes these languages easy to learn (like Esperanto).
+
+We can't escape from the fact that good programming requires good thinking,
+organization, and communication.  We can escape from the particular languages
+people use, by writing code that will convert between them.  But if we want
+people to be writing programs, and in particular, if we want them to be writing
+good programs, we need to emphasize the "basic skills", I think, more than we
+need to emphasize some particular choice of programming language.  People with
+the right training and background will naturally gravitate towards the language
+that's right for the job they're working on.  And if they write good
+documentation, just about anyone can follow along.
+--[[file:jcorneli.org][jcorneli]] Thu Mar 31 08:55:23 2005 UTC
+
+
+Back to [[file:connections between math and programming.org][connections between math and programming]]

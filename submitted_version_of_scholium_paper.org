@@ -1,0 +1,558 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Note
+
+This is the version after Aaron joined up and improved the writing,
+and quite close to the version that was submitted.
+--[[file:jcorneli.org][jcorneli]] Thu Jul 07 03:49:24 2005 UTC
+
+* Abstract
+
+Commons-based peer production is a term that describes authorship of shared
+information resources. It is a term that could apply to several people working
+on a paper together, hundreds of people developing a complicated computer
+program, thousands of people writing Wikipedia, or millions of people producing
+and improving complex knowledge systems with impressive names like "modern
+science" (or even "the state of human knowledge").
+
+Without hoping to complete articulate the complex and varied social phenomena
+that go on in commons-based peer production, in this paper we pursue the more
+modest goal of understanding the technical aspects of writing-in-common. We
+begin with a simple model: that of text and commentary-- and commentary on that
+commentary --and so on.
+
+This scholia-based model emphasizes ownership of speech and freedom of speech.
+We then consider what happens when the freedom to create derivative versions is
+added to the mix.  The resulting model proves to be quite sophisticated, and
+flexible enough to describe many different commons-based peer production
+systems.
+
+We provide an overview of our implementation of this model, and suggest some
+ideas for subsequent work.  We conclude by discussing the implications of our
+model for distributed authorship and writing-partly-in-common, and describe the
+advantages that full adoption of the scholia-based document model offers us.
+
+
+
+* Introduction
+
+The simplest model of a document is a list of characters; a string,
+file, or buffer.  This model is not diachronic.  A diachronic model
+keeps track of editing operations, or summarizes them as a sequence of
+differences between document versions.
+
+Many texts have features which can not be modeled adequately without
+still more information: markup or metadata.  Compilations,
+hypertext, and collaboratively written documents are examples.  In
+this essay, we advance the idea that it can be useful to treat such
+documents and document ensembles as collections of scholia.
+
+
+** The digital library and the document
+
+For our purposes, the document and the library are essentially the
+same.  In other words, the traditional library-document dichotomy can
+be viewed as a smooth spectrum, which we consider as a whole.
+
+Towards one end of the spectrum, the number of authors decreases and
+the topics under discussion become more integrated, and information
+artifacts look more document-like.  Towards the other end, the number
+of authors grows and the semantic gaps between topics increase, and
+information artifacts become more library-like.  
+
+To be clear, when we wish to refer to elements of a given information
+artifact in a generic way, we will call them articles.  We will
+use the term "scholium" to describe an article that is about another
+article.  While a given article need not be about another article in
+general, our view is that it is about something, or perhaps
+about many things.  An article that does not express these
+relationships explicitly is a degenerate scholium.
+
+** Scholia
+
+According to
+Webster{{http://www.ibiblio.org/webster/.}},
+a scholium (pluralized scholia) is,
+
+ 1. A marginal annotation; an explanatory remark or comment;
+  specifically, an explanatory comment on the text of a classic
+  author by an early grammarian;
+ 1. A remark or observation subjoined to a demonstration or a
+  train of reasoning.
+
+
+The Talmud is an example of a document that is comprised of
+scholia.  This document is a collection of interconnected
+commentaries and reflections on Jewish law (Torah, and
+subsequently, Talmud), composed by generations of Jewish
+religious scholars.  There is an obvious and often noted
+comparison between the internet and the Talmud: we readily see
+ancient scholia-based documents as primitive hypertext.  However,
+a deeper comparison is not simply technological but
+psycho-social{{See "The Talmud and the Internet" Rosen.  You
+can also find the Talmud on the internet, at
+http://www.sacred-texts.com/jud/talmud.htm.}}.  There are
+similarities between our experiences of "culturally
+comprehensive" documents, whether secular or religious in
+nature.  Of course, if you subscribe to the McLuhan view of
+media ("the medium is the message"), you would expect to see
+similarities McLuhan, McLuhanCondensed.
+
+Scholia also appear in the writings of mathematical scientists
+(e.g. Euclid, Galileo, and Newton) or philosophers writing in a
+similar style (e.g. Spinoza).  Today, mathematicians typically call
+peripheral observations (frequently, of secondary importance)
+"corollaries" or "remarks".  Mathematicians also mark up parts of
+their texts as "axioms", "definitions", "propositions",
+"theorems", "lemmas", or "proofs".  Markup, in general, can be
+thought of as scholia-based, i.e., as commentary that instructs
+the typesetter or the reader to treat a given piece of content in a
+certain way.
+
+
+
+
+** Free culture and the scholia-based document
+
+This paper, and the system it describes, are a response to certain
+concerns that face us when we work with and think about shared information
+resources.  These concerns have to do with the issues of
+intersubjectivity, ownership, and freedom.
+
+Content in a shared document is typically of non-trivial
+intersubjective importance.  However, it is more than likely that
+different parties will have some different ideas about the information
+that is presented in a given text (it is no coincidence that the
+root of intersubjective is subjective)!
+
+Free content (i.e. free as in freedom, libre content) is one
+way to nurture difference.  Free content can be modified and
+redistributed (and, in particular, forked) without permission or
+apology.  Nevertheless, free content typically manifests aspects of a
+common resource as well as an open access resource; while anyone can
+do essentially whatever they wish with the content offline, in its
+online life, the content is managed.  In particular, rights to
+in situ modification tend to be strictly controlled.  The
+details differ from ownership model to ownership model, e.g.,
+PlanetMath has its article owners and access control lists, software
+projects like Emacs have a limited number of developers with commit
+privileges, members of the Wikipedia community enforce rules about
+what kinds of content are allowed, and so forth.  In these instances
+and generally, difference comes with risks; forking may come at the
+cost of community, whereas freedoms may be severely limited the social
+contract.
+
+By finding new ways to support freedom of speech within CBPP
+documents, we use subjectivity as a way to enhance the content of an
+intersubjectively valued corpus.  In the context of "hackable" media
+and maintenance protocols, the semantics with which scholia are
+handled can be improved upon indefinitely on a user-by-user basis and
+a resource-wide basis.  Free culture is the next step after free
+content.
+
+
+
+
+
+
+
+
+
+
+** Hyperreal texts
+Our interest in scholia-based documents largely derives from an
+interest in helping assemble a human-friendly, AI-enriched mathematics
+learning and communication interface.  The immediate goal is a system
+in which text and code are both supported well.  Qualitatively, we
+want want to be able to represent and work with complex ontological
+relationships between objects that are encoded in the system.  The
+system should be useful for both humans and programs -- balance along
+the human/artificial axis is as important toward this end as balance
+along the freedom/ownership axis or the intersubjective/subjective
+axis.  In short, we seem to have been lead inexorably to using a
+scholia-based platform as the foundation of our Hyperreal
+  Dictionary of Mathematics project{{See
+  http://planetx.cc.vt.edu/AsteroidMeta/HDM.}}.  Applications in
+other areas of intellectual inquiry, as well as in business,
+government, and day-to-day life seem to hold equal promise.
+
+
+** Inspiration
+
+We've already seen glimpses of the ideology informing this paper (in
+particular, we've touched on free software, commons-based peer
+production, the Talmud, and mathematics).  We'll come to more of this 
+later on.  Here, we would like to describe certain key
+technological inspirations.  These should serve to illustrate the
+naturality of a scholia-based document model, and they help
+contextualize our system.
+
+Usenet, Slashdot, the World Wide Web and WikiWikiWeb are all
+inspirations.  In the first two, the most obvious type of scholium is
+the followup.  In the latter two, it is the link.
+
+PlanetMath{{http://planetmath.org/}}. uses several types of
+scholia.  Discussion fora are attached to pretty much every
+"substantial" object in the system; there are auto-generated invocation links
+between articles; and attachment relationships can be asserted to
+apply to between objects.  Objects can themselves be distinguished as
+being one of several different types and belonging to one of a number
+of different subject categories.  Also, and most importantly for the
+current paper, PlanetMath employs an explicit article ownership model.
+
+Emacs text properties provide a facility for unlimited markup of
+strings, buffers, and files (info "elisp(Text Properties)").
+Text properties are hierarchical (treelike), whereas we are looking
+for something web-like.  Of course, locally, text properties are great
+(and, indeed, we use them in our implementation).
+
+The semantic web project is exploring ways in which to make metadata
+about web pages available to computers with reasoning
+capabilities{{http://www.w3.org/DesignIssues/Semantic.html}}.
+Our scholia-based documents are small "semantic webs" with a
+particular flavor, though it may be more appropriate to use the older
+and more generic term "semantic network" Quillain to describe them.  As a data
+structure, a scholia-based document is a network with arbitrary text
+(and metadata) on its nodes and arbitrary annotations on the
+connections between nodes.  This also closely resembles the notion of a
+concept map Novak, albeit with significant text content attached 
+to each node.
+
+Semantic networks and concept maps are just two of the many different
+strategies for knowledge representation.
+Cyc{{http://www.cyc.com/cyc/technology/whatiscyc}}. and
+KM{{http://www.cs.utexas.edu/users/mfkb/RKF/km.html}}. are two
+other systems we've studied.  Our goal is a system with with similar expressive
+power, but which is more human-friendly (with reasoning capabilities to come eventually).
+
+The first author's earlier hypertext experiments were heavily inspired by LISP,
+and the results ended up resembling Gopher Gopher.  The current
+system is meant to be much richer, but it is still LISP-inspired,
+particularly in terms of support for self-modification.
+
+Indeed, one of the key inspirations for the current system are the
+text-based "game" environments (MUDs{{Marshal McLuhan's
+  theory ties in very nicely with MUD-like systems.  Those with a
+  user-hackable infrastructure embody a distinctly free "message".
+  For cultural materialists, the upshot is hackable superstructure.
+  The fact that the MUD is virtual to begin with adds an interesting
+  twist in this analysis.}}, etc.), in which people are able to hack
+the text-based virtual worlds that they are interacting in and with,
+in real time{{It is interesting to compare the experience of
+  these immersive worlds to the experience of internet or Talmudic
+  scholars, mentioned previously.  See Rheingold}}.  Scholia
+can include actionable features, and with appropriate support,
+contributing authors can modify the medium in which the scholia
+reside, not just its content.
+
+** Survey
+
+The scholium-based document is not a new idea.  Here, we are referring
+not to classical works, but to Ted Nelson's project and document model
+entitled Xanadu, which is described in his book Literary
+  Machines Nelson, originally published in 1982.  His
+development strategy was quite different from the one taken here,
+however -- in particular, while he and his cohorts were focused on
+developing powerful server-side technology, we focus on implementing
+user-ware with a simple p2p extension.  Importantly, while at least
+some of Nelson's ideas have been implemented and released under a free
+software license, the code didn't compile for us{{Xanadu
+  development seems to be going slowly at present; see
+  http://udanax.com/ and the mailing list at
+  http://xanadu.com.au/mail/ .}}.  A biography of sorts together
+with a history of the Xanadu project has been published in
+Wired{{See
+  http://www.wired.com/wired/archive/3.06/xanadu_pr.html, but
+  note that this work is not endorsed by Nelson, who writes at
+  http://ted.hyperland.com/whatsay/ "I believe the piece is a
+  study in cunning and deliberate dishonesty, the most dastardly piece
+  of dirty journalism I have ever seen."}}.  Nelson is admired by Eben
+Moglen for "identifying the predicament of information ownership in
+the digital age" Williams.
+
+One rather important difference between Nelson's vision (as
+expressed in Literary Machines) and the present one is that he
+de-prioritizes artificial intelligence in favor of human
+intelligence.  As remarked above, actionable features and
+artificial intelligence occupy an important place in the scholium
+system.  Our situation with regard to artificial intelligence is
+similar to the one described by Minsky in The Society of Mind.
+The connection between ideas and agents is not so dissimilar;
+only the the translation to actionable form is missing to make an
+idea into an agent.  Meaning clusters translate to complex
+agencies.  As time goes by, we expect to find actionable and
+non-actionable worlds paralleling one another along some
+dimensions, intertwining along others, and diverging on others.
+
+The idea of "superimposed information" mentioned earlier is a
+subject of current research in the field of digital libraries.  Papers
+concerned with the theory of superimposed information have been
+published Maier and projects conducted See for
+  example
+  http://nsdl.org/community/projects.php?this_sort=start_date&keyword=&project_id=0435496
+  or http://datalab.cs.pdx.edu/sparce/..  Note that while this
+model is locally similar to the scholia-based document model,
+this branch of research focuses on one superimposed layer.  This makes
+a certain amount of sense for traditional libraries, which hold a
+specific collections of information.  The superimposed information
+model emphasizes making this primary artifact more useful via
+value-added attachments (annotations and so forth).  However, for us,
+neither library nor document is static, and annotations are an
+integral part of both.  Scholia-based documents are more "community"
+than "collection".
+
+We find it compelling that, in the context of a digital library,
+marginal conversations within a text provide a chance for readers to
+interact with primary authors and with each other, and to become
+primary authors themselves, all at once.  While marginalia are
+considered to be vandalism in physical library books, in a
+digital library, there is no reason to fear them -- they can easily be
+hidden away.  The scholia-based document model reflects the standard
+postmodern pun which says that writing on a text or subject
+(i.e. criticism, discourse) is writing on the text (making ones
+mark).  We expect meaning to accumulate in the "margins" of texts,
+and for meaning complexes to grow by stitching documents together
+along their margins.
+
+* Implementation overview
+
+In this section we give a tour of our implementation of the scholium
+system.  The critical elements of the system are described in general
+terms here.  Details, including code (and literate markup of the code)
+may be found at Scholium.
+
+** Articles
+
+The foundation of the scholium system is a catalog of articles (list or
+hash table).  Adding or updating the reference for an article to the
+catalog is the fundamental operation in the system.  This operation
+stores
+
+ * the article's name; 
+ * its text or a pointer to its text;
+ * a record of what it is about -- nothing if it is degenerate,
+  otherwise, some article(s) or passage(s) of articles in the
+  collection;
+ * the designation of a type (link, followup, forum, action to take
+  if a certain event happens at the parent, etc.);
+ * and bookkeeping information to keep track of ownership
+  information and editing history.
+
+
+In Figure 1, we illustrate the conceptual model of the
+scholium system with a hypothetical content instance.  Shown are the key 
+entities of people, articles,  and references.
+
+** Environment
+
+The current prototype system runs under GNU Emacs.  We try to conform
+to the Emacs Way to the greatest extent possible.  Typically, scholia are
+written about files and buffers, and are displayed alongside them.
+The default display uses color to associate displayed scholia with
+regions that are being commented on, but delimiters can be used for
+this purpose as well (for the benefit of those working without
+fontlock).  Color can also be used to distinguish between different
+types of scholia (e.g. comments by different authors).
+
+Our ability to render articles is limited to things Emacs can display:
+plain text, code, and pictures all work, but special proprietary
+formats are not supported in this implementation, nor do we have
+support for making scholia about specific pieces of a rendered
+diagram, for example.
+
+The user can navigate the display in various ways, e.g., by scrolling
+between marked-up regions of the main article, or finding the
+region(s) associated with a given scholium or the scholia associated
+with a given region.  Additional browsing methods are described below.
+
+** Displaying scholia
+
+When an article is displayed, the system finds attached scholia and
+displays them too.  Selective displays are possible (e.g. just show
+all the links attached to a given article).  Finding scholia in
+the catalog requires search; sometimes we can limit the search to make
+it faster (this will be described further below).
+
+In Figure 2, we show a number of ways in which the
+underlying content from Figure  can be displayed.
+
+** Adding to the library
+
+We support various convenient ways to add articles.  Different kinds
+of articles need different treatment.  For example, the content of a
+buffer is lost if the buffer is killed, so a backup of the buffer's
+contents should be made immediately.  In addition to specifying the
+article's text and stating what (if anything) it is about, one can
+specify the article's type.  We provide built-in functions for
+creating scholia about the current buffer, and for creating scholia
+about mixed collections of other articles and passages.
+
+** Browsing
+
+We provide several different browsing mechanisms.  Simple local
+navigation features (scrolling etc.) were mentioned above.
+"Following" a scholium to make it into the new current article is
+supported.  Browsing by catalog (i.e., by list) is supported;
+we use a generic menu mechanism that make it easy to select different
+collections of articles matching different criteria, and perform
+various actions on them.  Finally, web-browser-like history-based
+navigation is provided.
+
+** Editing, deleting, saving, restoring
+
+Articles are versioned and entire document versions or, alternatively,
+a collection of patches sufficient to move between versions, is
+maintained for each article.
+
+When articles change, it is typically necessary to propagate data to
+attached scholia in order to maintain coherence of references.
+Propagated changes need not be accepted, which which case the
+attachment relationship is fixed at the previous version.
+
+Similarly, permission is typically requested whenever a portion of an
+article that has been transcluded changes.  ("Transclusion"
+is Nelson's term for "included by reference"; both transclusion and
+inclusion of pieces of other articles are supported.)
+
+Changes that take place to articles outside of the system (e.g. moving
+a file from the shell) are of course nearly impossible to deal with.
+However, scholia can be saved in explicit, invariant forms. (CVS is
+natively supported Code Versioning System, an extremely
+  popular free software program to collaborative manage software
+  codebases{{See http://www.gnu.org/software/cvs/.}}.)  Saved
+articles can be read back in selectively.
+
+Currently, name conflicts pose a bit of a problem; if every scholium
+has a unique name, then the problem goes away.  In general, we can
+approximate a solution by asking the user to uniquify names when
+conflicts are encountered.
+
+** Namespaces
+
+Another solution to the problem of name conflicts is provided by
+namespaces.  For example, if article  has type "sublibrary" and
+we read in scholium of type "member of sublibrary ", then we
+don't have to worry about name conflicts with articles not in
+sublibrary .  Namespaces can be used to make search convenient.
+For example, we can store all assertions of type  in a given
+namespace; then if we are building a display that only relates to
+objects of type .  In other words, we need only search one
+namespace instead of the whole library.
+
+* Distributed authorship
+
+Distributed authorship is actually very easy using this system.  Each
+contributing author posts her or his contributions to the document at
+their own chosen location.  Then the other authors download the
+articles stored in all of locations they want to use.  (All authors
+don't necessarily need to have all of the articles.)  In the case of
+document revision, changed versions are simply posted, and other
+authors learn of the changes whenever they sync.
+
+** Derivative versions
+
+In general, the the author may be the only person with permission to
+create modified versions, but we can also distribute this permission
+over a wider group of people.  As we've already mentioned, derivative
+versions can be put together using two principles, inclusion and
+transclusion.  Inclusion tends to reduce search but increase storage.
+
+Here we illustrate tracking of derivative versions with a scenario.
+Suppose that a series of definitions was quoted in a textbook-style
+entry.  The author of the textbook might receive a question from a
+reader and then adjust one of these definitions to include more
+expository text.  If the original author was tracking derivative
+versions, the new expository text could be added as a scholium
+attached directly to the original, or the original could be modified.
+
+These sorts of exchanges should still be possible even if one of the
+agents is working outside of the scholia-based system.  In order to
+make bi-directional updating work in this case, both
+content-sharing parties need to be able to read a stream of diffs
+generated by edits taking place in another system and decide how to
+incorporate the modifications.
+
+These issues should be of interest to anyone maintaining a
+collaborative digital library; information-sharing between such
+entities typically needs to support content that can change on both
+ends of the pipeline.
+
+*  Future Work
+
+Some ideas for explorations to undertake with the scholium system and
+related concepts follow.  Note that some of these could be considered
+feasibility or proof-of-utility experiments:
+
+
+ * Import a wiki and build a wiki-like interface to the scholium 
+  system.
+
+ * Use the scholium system to write a synchronous or asynchronous
+  multiplayer game.
+
+ * Use the scholium system to maintain a text-based forum or set
+  of fora, as found on PlanetMath or Slashdot.
+
+ * Implement a Slashdot-like scoring system for quality control.
+
+ * Use the scholium system to manage an evolving codebase (i.e.,
+  take advantage of the functionality which subsumes a system like
+  CVS).
+
+ * Use the scholium system to manage TODO lists.
+
+ * Port the GNU Collaborative Dictionary of English (GCIDE) to
+  Emacs and give instant access to definitions as scholia.
+
+ * Implement code to make an index or do autolinking as you type.
+
+ * Port WordNet{{WordNet is a "lexical database for the
+  English language"-- essentially a semantic network of words and
+  relationships, which can be used as a dictionary or thesaurus.  See
+  http://wordnet.princeton.edu/}}. to the scholium system and use
+  the system to collaboratively improve the database.
+
+ * Implement semi-automated content sharing between two collaborative
+  digital libraries, for instance, PlanetMath and Wikipedia.
+
+This list should give some idea of the range of capabilities the
+scholium system, in theory, encompasses.
+
+Long term investigations under conditions of fairly wide uptake would
+shed light on broader social implications of the system.  We imagine
+that social institutions from peer review to popular science, and
+online shopping to citizen action would tend to be transformed by
+widespread use of these systems, but at present we can only speculate
+as to how.
+
+To be sure, the results of the system are already beginning to be seen
+in the various systems that have inspired this work, but many further
+experiments will have to be carried out before we will have a firm
+grasp on the broader social theory of scholia.  One thing we can say
+at this point is that the model seems to be the basic kit that is
+needed to explore the design and implications of social contracts in
+general.  We hope future work will take up this issue.
+
+* Conclusion
+
+In this article, we have described a scholia-based document model and
+outlined an implementation of a system that supports this model.  We
+have discussed some ramifications of scholia-based documents.  We have
+have also outlined some explorations which would facilitate powerful
+collaboration dynamics in a wide array of scenarios and social groups.
+In a scholia-based document, alternative perspectives are fostered and
+managed, responsible maintainership is encouraged, and readers can
+routinely make useful contributions.
+
+The scholia-based document model corresponds to a culture with
+empowering conceptualizations of freedom and ownership.  It is both a
+model and something of a manifesto: we hope to see these ideas take
+off, as we and others work to push the limits of the model.
+
+* Acknowledgments
+
+Thanks to Ray Puzio for helpful comments and encouragement as the scholium
+system developed.  Thanks also to Thien-Thi Nguyen and Sacha Chua for their
+comments on free software and hypertext, including comments an earlier
+prototype of the system by the first author.

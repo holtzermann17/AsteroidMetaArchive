@@ -1,0 +1,33 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+On the [[file:connections between math and programming.org][connections between math and programming]] page, Aaron linked to a page
+giving the text of a talk by Adam Bosworth.  I wanted to respond, but in a new
+spot, because the issues here seem somewhat different.
+
+The link text on the aforementioned page was
+
+: there might be something inherently repugnant to most human beings about formal interfaces
+
+The Bosworth article was mentioned in a discussion about literate programming.
+We can agree that literate programming tools in Noosphere would be used primarily
+by fairly "non-average" PM users.  As Knuth has said, literate programming caters to the
+"elite" group of people, who can both write and program and, especially, those
+who can (or who want to) do both well.
+
+But I don't think that it is any more "formal" than other programming
+interfaces, indeed, it may be a bit less formal, since you can always break into
+prose - and have that work.  Furthermore, doing /collaborative/ literate
+programming is something else again.  I don't think that collaborative literate
+programming is "formal" in the sense that Bosworth meant by that word.  Rather,
+it is "sloppy" - it promotes things like discussions about the code, branching
+off (in a hypertext environment, especially) to look at other examples, and
+other very "natural" ways of doing, thinking about, and interacting with others
+about programming.
+
+As long as you're willing to accept the idea that some software tool need not be
+that popular to be good, I think literate programming is way up on the list of
+/good interfaces/.  Furthermore, I think that if it was added to Noosphere,
+its popularity as an interface would tend to grow -- e.g. to everyone involved
+with writing [[file:PlanetComputing.org][PlanetComputing]]!  --[[file:jcorneli.org][jcorneli]] Tue Mar 29 16:31:05 2005 UTC

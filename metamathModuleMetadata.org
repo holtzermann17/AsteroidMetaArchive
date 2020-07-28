@@ -1,0 +1,177 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here is the proposal I sent to Norm Megill about adding "metadata" statements to .mm files such as set.mm so that programs can more easily convert from .mm format to other formats such as Ghilbert or HCodebert.
+I recommend downloading the latest metamath.zip to see set.mm's newest statements. (Uppercase is used to make the metadata statements stand out, but an extract program should look for lower or upper.) Comments/feedback/etc.? Now is the time to provide input!
+
+http://us2.metamath.org:8888/index.html#downloads
+
+Also check out the "#*#*#*#" and "=-=-=" that existed previously. You will find that the "modules" (books) already have chapter/section breakdowns (I can see (someone) creating a new webpage showing a Table of Contents based on the module/section breakdown of set.mm which would not only pull out the theorem labels but the first sentence of the comment preceding each theorem. More than 10 years of work are embedded in set.mm and it is impressive, to say the least.)
+
+[Note: conversion of set.mm to another system may be more challenging than first imagined. The issue of overloaded operators and conversions of kinds/grammatical type codes comes into play (see weq vs. wceq, for example.) Overloaded operators are dealt with in mmj2 which constructs a set of Grammar Rules from Metamath syntax axioms and deals with combinations of Nulls and Type Conversions at the same time.]
+
+-----
+ 
+    After due consideration of multiple factors,
+    especially Occam's Rule, I conclude that there
+    is no need to add anything to break-out set.mm
+    according to Book/Chapter/Section, or to 
+    distinguish between the MODULE break-out and
+    Book/Chapter/Section. (I think MODULE (see below)
+    metadata comment lines will do just fine as
+    Book markers/delimiters.)
+ 
+    I see that the comments beginning with 
+ 
+        $(
+        #*#*#*#*#*#*#*
+ 
+    are the intended "modules" from the author's 
+    viewpoint, and that comments beginning with
+ 
+        $(
+        =-=-=-=-=-=-=-
+ 
+    designate "sections" within those modules. 
+ 
+    Assuming that you continue to maintain 
+    consistency, an extract program should have 
+    no problem automatically breaking out a 
+    file into modules and sections, which can then
+    be automatically numbered -- and captions can
+    be pulled from the module/section header 
+    comments. 
+ 
+    So what I did was create the minimal set of
+    metadata to add to set.mm, in the form of
+    Metamath comments that begin with "$( <MM>".
+    In the future, when we see "$( <MM>" we can
+    *know* that the comment is metadata for 
+    post-processors, such as the Ghilbert extract,
+    or perhaps an html page builder program. Here
+    is how the MODULE metadata looks:
+ 
+    $( <MM> <MODULE> <ID>LOGICB</ID> <PREREQ> </PREREQ> </MODULE> </MM> $)
+ 
+    <MODULE> -- Identifies as "MODULE" Metadata, which
+                contains attributes "ID" and "PREREQ"
+                (multiple prerequisites are possible).
+ 
+                Ideally, Module ID should be 7 characters
+                in length, or less, and should be composed
+                of letters; digits are permitted but not
+                as the first character (the goal is to
+                support 8 character file names on all
+                platforms and to reserve the 8th character
+                position to distringuish between axiom
+                and theorem files -- the Ghilbert extract
+                will append an "A" or a "T" to the module
+                name...)
+ 
+                As you can see from the automated file
+                comparison below there are these modules:
+ 
+        __ID__   _PREREQ_  __comments________________________________________
+        PREFACE            (contains only comments, so null Ghilbert extract)
+        LOGICB   
+        LOGICP   LOGICB
+        ZFC      LOGICP
+        NUMBERS  ZFC
+        TYPESET  HILBERT   (contains only comments, so null Ghilbert extract)
+        HILBERT  ZFC
+ 
+    The convention should be that the "$( <MM>" 
+    metadata header comment identifies the 
+    start of a module, and that the module continues
+    until the start of the next module or the
+    end of the file. AND... if the "$( <MM>" 
+    comment is immediately followed by a
+        $(
+        #*#*#*#*#*#*#*
+    comment, then the module's Caption will be
+    pulled from the "#*#*#*" comment; otherwise
+    the module caption will be blank -- note that
+    I changed the Typesetting module's Caption
+    comment from 
+        $(
+        =-=-=-=-=-=-=-
+    to 
+        $(
+        #*#*#*#*#*#*#*
+ 
+    because TYPESET is logically a separate module,
+    not a section within NUMBERS. 
+ 
+    The way the PREREQ data will work is that when
+    building a Ghilbert extract from set.mm (or
+    whichever .mm file), the PREREQ will be used
+    to import the prerequisite interface file(s). In
+    Ghilbert, prerequisites are cumulative, so
+    if ZFC's prequisites are LOGICB and LOGICP, and 
+    LOGICP's prerequisite is LOGICB, then only
+    LOGICP needs to be specified as a prerequisite
+    for ZFC. 
+ 
+    Also, just as a preliminary idea unsupported by
+    experimentation, each MODULE's Ghilbert extract
+    will result in two ".gh" files, one for axioms
+    and one for theorems/proofs. 
+ 
+    NOTE: the file comparison below is hard to read,
+    so in English, what I did was precede every
+    "#*#*#*" header comment in set.mm with a "$( <MM>"
+    module metadata comment (even at the start of
+    set.mm!!!) And, I changed the "=-=-=-" characters
+    in the Typesetting section of set.mm to 
+    "#*#*#*", thus giving Typesetting module-level
+    status. (And I changed the file date to 9/14.)
+ 
+    NOTE2: I wasn't sure whether HILBERT's prerequisite
+    was ZFC or NUMBERS, but I picked ZFC (guessing.)
+ 
+    NOTE3: I have no investment in the MODULE ID values,
+    so adjust however seems correct to you. It will
+    be (probably) a few months before I have coded
+    the Ghilbert extract enhancement to mmj2 anyway...
+ 
+    Thanks!
+ 
+ 
+    ============================================
+    P.S. "1a1" below means line 1 of new file
+    inserted before line 1 of old file. "6c7" means 
+    line 7 of new file replaces line 6 of old file. Etc.
+    =============================================
+ 
+    Compare: (<)\temp\metamath\set.mm (3819672 bytes)
+       with: (>)\temp\metamath\setMODULES.mm (3820189 bytes)
+ 
+    1a1
+    > $( <MM> <MODULE> <ID>PREFACE</ID> <PREREQ> </PREREQ> </MODULE> </MM> $)
+    6c7
+    < set.mm - Version of 13-Sep-2005
+    ---
+    > set.mm - Version of 14-Sep-2005
+    865a866
+    > $( <MM> <MODULE> <ID>LOGICB</ID> <PREREQ> </PREREQ> </MODULE> </MM> $)
+    7357a7359
+    > $( <MM> <MODULE> <ID>LOGICP</ID> <PREREQ>LOGICB</PREREQ> </MODULE> </MM> $)
+    11252c11255
+    < 
+    ---
+    > $( <MM> <MODULE> <ID>ZFC</ID> <PREREQ>LOGICP</PREREQ> </MODULE> </MM> $)
+    48260a48263
+    > $( <MM> <MODULE> <ID>NUMBERS</ID> <PREREQ>ZFC</PREREQ> </MODULE> </MM> $)
+    67163,67166c67167,67171
+    < $(
+    < =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    <        Appendix:  Typesetting definitions for the tokens in this file
+    < =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+    ---
+    > $( <MM> <MODULE> <ID>TYPESET</ID> <PREREQ>HILBERT</PREREQ> </MODULE> </MM> $)
+    > $(
+    > #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+    >        Appendix:  Typesetting definitions for the tokens in this file
+    > #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+    68105a68110
+    > $( <MM> <MODULE> <ID>HILBERT</ID> <PREREQ>ZFC</PREREQ> </MODULE> </MM> $)

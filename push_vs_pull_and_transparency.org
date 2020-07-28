@@ -1,0 +1,41 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+* Pull vs Push vs ...
+
+In [[file:Asteroid Bulletin for the week of May 1 2005|a conversation.org][Asteroid Bulletin for the week of May 1 2005|a conversation]]
+about [[file:the way of the asteroid.org][the way of the asteroid]], [[file:akrowne.org][akrowne]] described a "pull-based
+model for coordination" and contrasted it with a "push-based model".
+
+To sum up:
+
+; push-based model : you see my schedule, and give me a task, because you know I
+   can handle it
+
+; pull-based model : you ask me if I can take on a task, or list the task
+   publicly, and I can take it on if I want
+
+I would like to note that listing your schedule, interests, availability, etc.,
+doesn't imply working with a push-based model.
+
+The main reason for sharing relevant portions of your schedule (task lists,
+etc.) in a pull-based model, is that when you're collaborating with (or working
+for) other people, these people will typically want to know when they can expect
+the results of your work.
+
+Sometimes a set of tasks will have a sufficient degree of orthogonality to make
+them irrelevant to each other.  But other sets of tasks depend on each other in
+complex, time-sensitive ways.  In this latter situation, just saying "I think
+I'll adopt task A" without (a) stating this publicly, (b) giving some estimate
+on time-to-completion... could have unpleasant results.  Certainly for grants,
+up-front time and money estimates are key.
+
+Whatever model is used, whether participants say "these are your tasks" or
+"could you consider doing these tasks?" or "I'm going to do these tasks!",
+relevant details about scheduling, available skills, available time, etc., seem
+likely to be helpful or even necessary for a group of people to work together to
+[[file:Difficulty of getting anything done|get things done.org][Difficulty of getting anything done|get things done]].  --[[file:jcorneli.org][jcorneli]] Sat May 14 20:30:12 2005 UTC
+
+----
+[[file:Discussions.org][Discussions]]

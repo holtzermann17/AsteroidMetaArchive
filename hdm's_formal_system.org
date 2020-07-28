@@ -1,0 +1,82 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+For now, you should see [[file:metamath.org][metamath]].  We will probably re-implement the
+metamath proof checker and metamath language in LISP way (something similar has
+already been done once, but not yet in a free-software way).  Check this page
+for updates on proof-checking and translating [[file:hcode.org][hcode]] to formal math - or go
+ahead and chime in.
+
+*  Proof checking
+
+The metamath project has checked lots of proofs - we can start by going through
+this collection again.  We should also consider translating these formal proofs
+"up" into hcode when relevant.
+
+[[file:Levels of Proof Checking.org][Levels of Proof Checking]]
+[[file:Metamathematics and Quotation.org][Metamathematics and Quotation]]
+
+*  Translation hcode to formal math
+
+Translation from hcode to other language is fairly easy.  Translations will in
+general depend on the choice of formal language!
+
+*  Logic agnosticism
+
+We want something that is logic-agnostic.  This will stop people from fighting
+over which logic to use (they can choose their pick) and will make it so we can
+treat various different branches of metamathematics within one system.
+
+*  Expressing formal math in hcode
+
+Of course, we should also be able to express formal languages in hcode.  This is
+seems like challenging issue, with the potential to get circular and start
+frying brains like something out of a bad science fiction movie.
+
+But actually, this is what metamathematics is about.  If we provide one
+metamathematical formalism, people should be able to build different logics and
+so forth on top of that.  On the other hand, after we have put together a given
+metamathematical backend, anyone with the desire to do so should be able to
+re-express the higher levels of hcode within another metamathematical backend.
+Thus, there are two kinds of backends, in a hierarchy: metamathematical
+backends, and logic backends.  At each level, the pieces should be
+interchangable.
+
+/NOTE/ to people thinking about [[file:hcode.org][hcode]] and [[file:hdm's parsing system|parser.org][hdm's parsing system|parser]] design: 
+take a look at a book or journal on formal math and stare at it for a while.
+We need to be able to handle this stuff!  The /foralls/ and /exists/ you
+know so well may have been thrown out the window.  OK, I admit: we're in an Ernst room in
+an Esher house on a Dali block.  But that doesn't change the fact that hcode should be logic
+agnostic.  Proceed with care.
+
+* HDM and ACL2 (and other systems)
+
+As different as hcode and ACL2 may be, they have the commonality of being LISP-
+and sexp-based.  Some comparison of the two systems could be worthwhile.  As in
+the above section, one goal would be to be able to express ACL2 (or HOL or
+whatever) inside of hcode.  This sort of porting been done before with different
+systems (but I forget what the exacct example that I have in mind is).  
+
+Porting is probably not a huge research priority, however as hcode and the
+formal backend evolve, it will be possible to understand their relationship to
+other formal systems in increasing amounts of detail, and this will be somewhat
+fruitful.
+
+(For someone who happens to be an expert in one of these systems, this could be
+a reasonable "starting point", along with the other starting points we have laid
+out in the project.)
+
+*  Computational mathematical foundations.
+
+From gmail kibitzing on my correspondence with an HDM SOC appilicant,
+we have [http://www-formal.stanford.edu/jmc/basis1/basis1.html a 1963 paper by John McCarthy]
+about foundations.  This is part of the site http://www-formal.stanford.edu, which
+may have some other things for us.  It may be worth getting in touch with !McCarthy
+soon, once we have a serious proposal or sketch of something to talk about.
+
+*  Context Dependence
+
+[[file:Scenes on Stages.org][Scenes on Stages]]
+
+----
+[[file:HDM.org][HDM]]

@@ -1,0 +1,69 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Links to pages for tasks related to the [[file:Projects.org][Projects]] we're talking about on this
+wiki should be posted here.  If you are working on a task, link to it from your
+[http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/Users user page] and link to yourself from the task here.  If you know
+what you're doing and you think it is /worth/ doing, feel free to reclassify
+the tasks as appropriate (i.e. move them to below a different project heading).
+If you finish a task, move the link to the [[file:Case Closed.org][Case Closed]] page (or mark as /case closed/ and a !WikiGnome will move it for you at an appropriate time).
+
+ *metamath tasks* ([[file:metamath|project page.org][metamath|project page]])
+
+ *Noösphere tasks*  ([[file:Noösphere|project page.org][Noösphere|project page]])
+ * [[file:deployment.org][deployment]] make Noösphere more deployable (produce linux packages, configuration programs, clean up configurations layout) *(urgent!)*
+ * fix ESSEX (the Noösphere search engine)
+ * finish migration from HTML (in templates and code) to XSL templates
+ * [[file:help with Noösphere (re)design.org][help with Noösphere (re)design]]
+ * [[file:fix Noösphere-PM bugs.org][fix Noösphere-PM bugs]]
+ * (please add more if you remember items from old TODO list!)
+
+ *!PlanetMath tasks*  ([[file:PlanetMath|project page.org][PlanetMath|project page]]) (see also [[file:PlanetMath_Code_Bounties.org][PlanetMath_Code_Bounties]])
+
+ * [[file:re-derive missing object histories from database snapshots.org][re-derive missing object histories from database snapshots]] *(urgent!)*
+ * [[file:full integration of CSS and better theme.org][full integration of CSS and better theme]]
+ * [[file:temporary entry workspace.org][temporary entry workspace]]
+ * [[file:reputation systems research.org][reputation systems research]]
+ * [[file:reputation system implementation.org][reputation system implementation]]
+ * [[file:real-world credibility improvements.org][real-world credibility improvements]]
+ * [[file:go through forums and import suggestions to AM or database.org][go through forums and import suggestions to AM or database]]
+
+ *AsteroidMeta tasks*  ([[file:AsteroidMeta|project page.org][AsteroidMeta|project page]])
+ * [[file:create system for backing up AsteroidMeta.org][create system for backing up AsteroidMeta]]
+
+ *!PlanetPhysics tasks* ([[file:PlanetPhysics|project page.org][PlanetPhysics|project page]])
+ * [[file:Fix mysql error.org][Fix mysql error]] ""(urgent!)"" (temporarily fixed and in testing phase but it looks promising)
+ * [[file:Add default ACL rule.org][Add default ACL rule]] ""(high-priority)""
+ * [[file:Add physics entry types.org][Add physics entry types]] (added Law, Experiment, Quantity and Unit)
+ * [[file:Add FAQ page.org][Add FAQ page]] (added a link to PM FAQ page for now)
+ * [[file:Fix Browse by subject.org][Fix Browse by subject]]
+
+ *!PlanetComputing tasks* ([[file:PlanetComputing|project page.org][PlanetComputing|project page]])
+
+ *!PlanetEconomics tasks* ([[file:PlanetEconomics|project page.org][PlanetEconomics|project page]])
+
+ *!PlanetLinguistics tasks* ([[file:PlanetLinguistics|project page.org][PlanetLinguistics|project page]])
+ 
+ *FEM tasks* ([[file:The Free Encyclopedia of Mathematics|project page.org][The Free Encyclopedia of Mathematics|project page]])
+ * [[file:history in PM tarballs.org][history in PM tarballs]] *(high-priority)*
+ * [[file:method for flagging and removing non-latex-compliant files.org][method for flagging and removing non-latex-compliant files]]
+ * [[file:add instructions for increasing TeX memory to FEM page.org][add instructions for increasing TeX memory to FEM page]]
+ * [[file:revise modded inline markup.org][revise modded inline markup]]
+ * [[file:code to adjust figure markup.org][code to adjust figure markup]]
+ * [[file:work on shared style files.org][work on shared style files]]
+ * [[file:Make FEM code more deployable.org][Make FEM code more deployable]]
+
+ *HDM tasks* ([[file:The Hyperreal Dictionary of Mathematics|project page.org][The Hyperreal Dictionary of Mathematics|project page]])
+ * [[file:make instructions for changing the HDM archive and updating by GNU Arch.org][make instructions for changing the HDM archive and updating by GNU Arch]]
+ * [[file:experiment with automated proofs of various interesting facts.org][experiment with automated proofs of various interesting facts]]
+ * [[file:port metamath to something our ai will like.org][port metamath to something our ai will like]]
+ * [[file:write the basis of a math-friendly frame system.org][write the basis of a math-friendly frame system]]
+ * [[file:write parser for LaTeX math to sexps.org][write parser for LaTeX math to sexps]]
+ * [[file:a dozen proofs.org][a dozen proofs]]
+ * [[file:start working on a KB for geometry.org][start working on a KB for geometry]]
+ * [[file:write or obtain a prover.org][write or obtain a prover]]
+ * [[file:list of formal statements in natural language.org][list of formal statements in natural language]]
+ * [[file:free, open source search engine.org][free, open source search engine]]
+
+ *bidi system tasks* ([[file:bi-directional_content_exchange_and_updating|project page.org][bi-directional_content_exchange_and_updating|project page]])
+ * [[file:Wikipedia-PlanetMath Content Exchange.org][Wikipedia-PlanetMath Content Exchange]] 

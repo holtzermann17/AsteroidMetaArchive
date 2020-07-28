@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Note: the relationship of representation languages to the field of KRR (knowledge
+representation and reasoning) is important; a language by itself can't do a whole
+lot.  Furthermore, languages relate to pretty much everything else.  The treatment
+here is partial.  Both the section on [[file:Artificial intelligence work particularly relevant to HDM|AI.org][Artificial intelligence work particularly relevant to HDM|AI]]
+and the section on [[file:Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM|provers.org][Mathematical Provers, Proof Assistants, and Formal Math particularly relevant to HDM|provers]]
+should have additional information of interest.
+
+--[[file:jcorneli.org][jcorneli]] Thu Jul 14 17:48:35 2005 UTC
+
+* Theoretical
+
+; early [http://logic.stanford.edu/people/genesereth/journals.html papers] and 
+[http://logic.stanford.edu/people/genesereth/conferences.html talks] of Mike Genesereth : From the first set, one called
+"Expressiveness and Language Choice" seems likely to be relevant.  From the second set, "The Advanced Scientific Computing Environment Project",
+among several others, seems worth looking at.  (P.C. Dr Fateman)
+
+* Machine-to-machine
+
+; !MathML : !MathML (http://www.w3.org/Math/) is a language for
+machine-to-machine communication of human mathematics.  In other words, it is
+supposed to be fully unambiguous, and also fully expressive.  Except, it only
+covers the "equation part" of human math.  Since it is designed
+for machine-to-machine communication, it is hard for humans to read!  (Mentioned by Ron Boisvert.)
+
+; !OpenMath : [http://www.openmath.org/cocoon/openmath/overview/om-mml.html Somewhat similar] to MathML in style (hard to read), but designed
+for representing "semantics".  They have a certain amount of [http://www.openmath.org/cocoon/openmath/cdfiles2/cdnames.html code]
+available under a by-attribution-style license. This 
+[http://www.openmath.org/cocoon/openmath/overview/technical.html technical overview] states
+that there was once a lisp-like markup style, which would presumably have been somewhat
+easier to read.  The standard is [http://www.openmath.org/cocoon/openmath/standard/om20/index.html here].  
+Perhaps someone can offer a more full review; I'm not sure how relevant either of these
+projects actually is to HDM at this point. (Mentioned by Ron Boisvert.)
+
+* Miscellaneous
+
+; !OpenDOC : The [http://en.wikipedia.org/wiki/OpenDoc Wikipedia page] about
+this project is informative.  The project reminds me a lot of the [[scholium
+system]] in its more actionable mode, in particular, this project was concerned
+with a "document-based rather than application-based computing experience".
+Documents would be built of of smaller actionable parts.  Of course, [[file:Emacs.org][Emacs]]
+and a number of other things, some I'm sure !OpenDoc inspired, do this and are
+alive.  Some relevance to math is described in
+[http://www.mactech.com/articles/mactech/Vol.12/12.08/ODDynamicUpdating/ this article].
+As I understand it, the relevance is that  educator would be using "component software and modular design."
+I'm not sure if this is relevant to [[file:hcode.org][hcode]], but, again, it is relevant to the large-scale
+document model from the [[file:scholium system.org][scholium system]]. (Mentioned by Ron Boisvert.)
+
+; [http://www.stixfonts.org/project.html STYX fonts] : These are fonts for
+rendering unicode math.  It is my understanding (which has been subject
+to debate) that these fonts will help with representing !MathML etc. on
+standard web browsers.
+
+; [http://www.iagora.com/~espel/pleng Plain English Compiler] : This
+is the simplest case of computer "understanding" of natural language -
+simple  understanding of a simple subset of natural language.

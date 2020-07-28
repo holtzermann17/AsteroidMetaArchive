@@ -1,0 +1,43 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: It gets rid of your gambling debts, it quits smoking,
+  It's a friend, and it's a companion,
+  And it's the only product you will ever need.
+
+:: -- Tom Waits, Step right up
+
+
+I won't try to define this program for you here - you'd have to
+use it to believe it anyway.  But basically, it is a LISP engine
+geared towards editing.  You should check it out!
+
+Thinking about the program as an example of free CBPP - well,
+it certainly is an example.  But thinking about it as an example
+of CBPP of free content -- is a little funky.  The "contents"
+of Emacs primarily consist of its code.
+
+Emacs is marketed as being "self-documenting" which means that
+included in this code is some documentation (not quite
+literate programming level documentation) that becomes accessible
+to the user from within the program when the program is compiled
+and run.
+
+Furthermore, accessing (and, if you wish to, modifying) the source
+documents from within the program is relatively easy.  Immediate
+access to its own source documents is something that sets Emacs
+apart from most software projects, free as well as non-free. 
+
+Whereas many programs provide online help, Emacs is one of the
+few that I can think of that actually provides a guide to its
+own source code.  (Eventually, the [[file:HDM.org][HDM]] will include a 
+comprehensive [[file:Guide to the HDM.org][Guide to the HDM]], and probably numerous 
+increasingly complicated nested guides that help you "drill down"
+to bottom layers of mathematics.)
+
+So, despite being kind of funky, I think that the perspective
+of the Emacs project being about CBBB of free content
+as valid, as long as you accept the idea that source code can
+be content.
+----
+[[file:Projects.org][Projects]]

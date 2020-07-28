@@ -1,0 +1,40 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I am envisioning a future system in which you can move between
+computer-friendly code representations of mathematical objects
+and corresponding human-friendly descriptions.  This would be
+an application of the literate programming approach to mathematics.
+
+Eventually, creating a way to switch "views" of an object
+may become a useful task for [[file:PM.org][PM]].  Such a tool would also
+make it possible to easily switch between different natural
+language representations of an object.
+
+We might expect to see the [[file:HDM.org][HDM]] arise as a substratum of
+PM by following this path.  Eventually HDM would contain PM,
+perhaps that means that in the future they will really be the
+same project.
+
+Literate programming would also be relevant to PlanetComputing,
+if examples of functioning code are added to that system.
+Again, immediate translation between different languages
+would be an interesting feature, since it would allow a
+LISP programmer to learn the appropriate Perl idioms for
+doing some known task without much trouble, for example.
+
+--[[file:jcorneli.org][jcorneli]] Mon Jan 31 23:42:01 2005
+----
+
+Actually, HDM and PM can't be the same project in the end unless we change the
+licensing of PM, because the HDM will have a large public domain component.  Of
+course, it wouldn't kill us to make a new piece of PM with different licensing
+terms. Indeed, if PM or [[file:PC.org][PC]] is going to have a large code component, we would
+want to adjust the licensing terms so that the [[file:GPL.org][GPL]] terms apply to the the
+code.  --[[file:jcorneli.org][jcorneli]] Mon Jan 31 23:47:21 2005
+
+It is misleading to talk about HDM containing PM; actually, it would just
+contain a semantic equivalent. --[[file:jcorneli.org][jcorneli]] Fri Feb  4 01:44:21 2005
+
+----
+[[file:Discussions.org][Discussions]]

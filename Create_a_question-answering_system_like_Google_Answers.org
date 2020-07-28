@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+A tip-based question-answering system sort of like
+[http://answers.google.com/answers/ Google Answers] would give users a chance to
+pick up some money by answering math questions.  The content of these answers
+would be available under the [[file:FDL.org][FDL]] and could be used in the encyclopedia.
+Furthermore, if [[file:PM.org][PM]] took some percentage of each tip, this could be a way to
+generate revenue for the site.
+
+We could combine this idea with a membership drive, so that only a member could
+collect tips by answering questions. --[[file:jcorneli.org][jcorneli]]

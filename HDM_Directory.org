@@ -1,0 +1,76 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Here you will find short snippets describing the major components of
+the [[file:HDM|HDM project.org][HDM|HDM project]], supplemented with links to pages that fill in
+the details.  The links lead to more detailed descriptions.  (Note:
+The several various components overlap!)
+
+Update as of August 2009: I'm working on a similar page on a separate
+wiki, see [http://metameso.org/cgi-bin/wiki.pl/Reengineering_Mathematics this page]
+(and contact [[file:jcorneli|me.org][jcorneli|me]] if you want permission to edit that page).
+The new page is more of a strategic overview of the project, and
+does not depreciate the information here.  Eventually I'll sync up
+the two pages.
+
+* The Directory
+
+; [[file:HDM Directory - Math.org][HDM Directory - Math]] : 
+
+We need some formal system which can represent any mathematical result
+(/NB/, this high-level system must be able to represent results
+about other "formal systems").  [[file:rspuzio.org][rspuzio]] has been at work on the
+various components of such a system, and you can find a more extensive
+overview of his thoughts on the issue "[[file:Two years later.org][Two years later]]".  The
+way he describes it, there are at minimum three parts of the picture:
+grammar (or, how to represent mathematical statements, both simple and
+composite); logic (or, how to reason formally about mathematical
+statements -- noting that "proofs" are themselves another sort of
+mathematical statement); and, dialectics (or, how to translate between
+mathematical theories).
+
+; [[file:HDM Directory - AI.org][HDM Directory - AI]] :
+
+The AI sub-system is supposed to take care of everything "about math"
+that isn't dealt with by the formal system.  These issues include
+issues of "quality", particularly as relevant to proof heuristics;
+information about the "real world" and the "informal" thinking of
+human mathematicians; and, drivers for all of the system's components.
+
+; [[file:HDM Directory - HCI.org][HDM Directory - HCI]]:
+
+We need a system for interfacing with the computer, in order to
+program it, in order to encode mathematical knowledge, and in order to
+access and annotate any information in the system.  We are working
+with a subject-domain with contents that are both highly
+"interconnected" and highly "context-sensitive", and our interface
+should reflect this.  [[file:jcorneli.org][jcorneli]] has been at work developing what is
+essentially a Glorified Semantic Network embedded within an extensible
+Emacs interface, together with some theory describing
+interrelationships and mappings between the constituents of this
+network.  This subproject is called [[file:Arxana.org][Arxana]], and it itself has a
+sub-project, called [[file:MUSN.org][MUSN]].
+
+; [[file:HDM Directory - Linguistics.org][HDM Directory - Linguistics]]:
+
+We need some programs that can read and understand mathematical
+writing.  These programs can of course exist and operate at different
+levels of sophistication; in long run, we want "total coverage". So
+far, we have some partial results on parsing mathematical formulas
+(the stuff in-between dollar signs in !TeX); we need a lot more work
+on everything else -- especially "discourse understanding".
+
+; [[file:HDM Directory - General.org][HDM Directory - General]]:
+
+I don't see any reason to keep this section a secret, although I wish
+to be clear that it is not quite the same sort of section as the
+others; whereas those are target domains in which we have goals
+(especially mathematics, of course), this section blows like reeds in
+the wind, this way and that, depending on what's needed.  While it is
+not associated with any high-level goals, it may at times have
+sub-goals, as we try to figure out some practical issue or other
+associated with what's needed to make the project (as represented in
+the other four sections) a success.  If this was chemistry, this
+section could be regarded as a collection of necessary catalysts.
+Otherwise, it constitutes a sort of "practical philosophy" of the
+project.

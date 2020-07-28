@@ -1,0 +1,105 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Links to pages describing feature requests for the [[file:Projects.org][Projects]] we're talking
+about on this wiki should be posted here.  If you're actually working on the
+feature request, it should probably be a [[file:Tasks|Task.org][Tasks|Task]].  Once a
+feature has been added, move the link to the [[file:Case Closed.org][Case Closed]] page.  If you know
+what you're doing and you think it is /worth/ doing, feel free to reclassify
+the feature requests as appropriate (i.e. move them to below a different project
+heading).
+
+ *metamath feature requests* ([[file:metamath|project page.org][metamath|project page]])
+ * [[file:Logo.org][Logo]]
+ * [[file:Metamath readline support.org][Metamath readline support]]
+ * [[file:Open and closed intervals in R.org][Open and closed intervals in R]]
+ * [[file:closed and closure.org][closed and closure]]
+ * [[file:antecedents.org][antecedents]]
+ * [[file:references.org][references]]
+
+ *Noösphere feature requests*  ([[file:Noösphere|project page.org][Noösphere|project page]])
+ * [[file:improved task management features.org][improved task management features]]
+ * [[file:nested noosphere instances.org][nested noosphere instances]]
+ * [[file:CVS support for projects.org][CVS support for projects]]
+ * [[file:Noosphere documentation.org][Noosphere documentation]]
+
+ *!PlanetMath feature requests*  ([[file:PlanetMath|project page.org][PlanetMath|project page]])
+ * [[file:PlanetMath engine interbred with wikibooks idea.org][PlanetMath engine interbred with wikibooks idea]]
+ * [[file:Login box after a 'you must be logged' message.org][Login box after a 'you must be logged' message]]
+ * [[file:Create a question-answering system like Google Answers.org][Create a question-answering system like Google Answers]]
+ * [[file:Site membership.org][Site membership]]
+ * [[file:Mass-uploading.org][Mass-uploading]]
+ * [[file:non-mass downloading.org][non-mass downloading]]
+ * [[file:Text-only webpage.org][Text-only webpage]]
+ * [[file:Page with threaded discussion.org][Page with threaded discussion]]
+ * [[file:Search the forums.org][Search the forums]]
+ * [[file:Search the documentation.org][Search the documentation]]
+ * [[file:Index the forum by date.org][Index the forum by date]]
+ * [[file:expand-all option when viewing messages.org][expand-all option when viewing messages]]
+ * [[file:graph showing growth of encyclopedia.org][graph showing growth of encyclopedia]]
+ * [[file:shared style files.org][shared style files]]
+ * [[file:change link format in tarballs.org][change link format in tarballs]]
+ * [[file:tex source marked-up-by-noosphere view.org][tex source marked-up-by-noosphere view]]
+ * [[file:email posting to forums.org][email posting to forums]]
+ * [[file:PM for the blind and users with low-vision.org][PM for the blind and users with low-vision]]
+ * [[file:Latex rendering in forums.org][Latex rendering in forums]]
+ * [[file:Talk forum for entries.org][Talk forum for entries]]
+ * [[file:List of rejected correction.org][List of rejected correction]]
+ * [[file:Public domain content and PM.org][Public domain content and PM]] 
+ * [[file:Show rejected corrections on a per-user basis.org][Show rejected corrections on a per-user basis]]
+ * [[file:Show most-corrected articles and maybe users.org][Show most-corrected articles and maybe users]]
+ * [[file:Show most-correcting users.org][Show most-correcting users]]
+ * [[file:expand all for attached fora, corrections, other lists.org][expand all for attached fora, corrections, other lists]]
+ * [[file:reject rejections and acceptances.org][reject rejections and acceptances]]
+ * [[file:email notification by keyword, metadata.org][email notification by keyword, metadata]]
+ * [[file:User's guide to writing good entries.org][User's guide to writing good entries]]
+ * [[file:Centralized figure database.org][Centralized figure database]]
+ * [[file:Show parent option when viewing message.org][Show parent option when viewing message]]
+ * [[file:hitcounter for messages and other objects.org][hitcounter for messages and other objects]]
+ * [[file:Add message or comment when transfering entries.org][Add message or comment when transfering entries]]
+ * [[file:Design a Free-Math logo-banner-concept.org][Design a Free-Math logo-banner-concept]]
+ * [[file:Classification for requests.org][Classification for requests]]
+ * [[file:Transforming forum discussions into PM entries.org][Transforming forum discussions into PM entries]]
+ * [[file:User pages for PM.org][User pages for PM]]
+ * [[file:Personalized pending corrections.org][Personalized pending corrections]]
+ * [[file:Stand-alone autolinker.org][Stand-alone autolinker]]
+ * [[file:Entry copyright field.org][Entry copyright field]]
+ * [[file:Retirement Home.org][Retirement Home]]
+ * [[file:electronic map tackboard.org][electronic map tackboard]]
+ * [[file:Finding entry of the day.org][Finding entry of the day]]
+ * [[file:Entry checklists.org][Entry checklists]]
+ * [[file:www-links in requests.org][www-links in requests]]
+ * [[file:Noosphere sources online.org][Noosphere sources online]]
+ * [[file:Noosphere UI.org][Noosphere UI]]
+ * [[file:Verification endorsement data | Verification/endorsement data.org][Verification endorsement data | Verification/endorsement data]]
+ * [[file:Better redirect after login.org][Better redirect after login]]
+ * [[file:Latest everything in one place.org][Latest everything in one place]]
+ * [[file:Centralized Bibliographic Database.org][Centralized Bibliographic Database]]
+ * [[file:PM-Xi.org][PM-Xi]]
+ * [[file:OCR entry process for out-of-copyright works.org][OCR entry process for out-of-copyright works]]
+ * [[file:Unanswered Questions.org][Unanswered Questions]]
+ * PM Calendar: birthdays of famous mathematicians, math events, PM meetings, etc...
+
+ *!AsteroidMeta feature requests*  ([[file:AsteroidMeta|project page.org][AsteroidMeta|project page]])
+ * [[file:Administrivia.org][Administrivia]]
+ * [[file:more WikiGnoming.org][more WikiGnoming]]
+ * [[file:install footnotes module.org][install footnotes module]]
+ * [[file:lower profile redirect boxes.org][lower profile redirect boxes]]
+ * [[file:marketize feature requests.org][marketize feature requests]]
+
+ *!PlanetPhysics feature requests* ([[file:PlanetPhysics|project page.org][PlanetPhysics|project page]])
+
+ *!PlanetComputing feature requests* ([[file:PlanetComputing|project page.org][PlanetComputing|project page]])
+ * [[file:free documentation for common lisp.org][free documentation for common lisp]]
+
+ *!PlanetEconomics feature requests* ([[file:PlanetEconomics|project page.org][PlanetEconomics|project page]])
+
+ *!PlanetLinguistics feature requests* ([[file:PlanetLinguistics|project page.org][PlanetLinguistics|project page]])
+ 
+ *FEM feature requests* ([[file:The Free Encyclopedia of Mathematics|project page.org][The Free Encyclopedia of Mathematics|project page]])
+ * [[file:add 'attachment' metadata to FEM snapshots.org][add 'attachment' metadata to FEM snapshots]]
+
+ *HDM feature requests* ([[file:The Hyperreal Dictionary of Mathematics|project page.org][The Hyperreal Dictionary of Mathematics|project page]])
+ * [[file:graphs of relationships between objects.org][graphs of relationships between objects]]
+
+ *bidi system feature requests* ([[file:bi-directional_content_exchange_and_updating|project page.org][bi-directional_content_exchange_and_updating|project page]])

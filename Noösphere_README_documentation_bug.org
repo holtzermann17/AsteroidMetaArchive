@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+  % cat README                                                                                                                                    
+  see install/INSTALL for instructions                                                                                                            
+                                                                                                                                                  
+Bug: This is not descriptive enough. Here is a new [[file:Noösphere README.org][Noösphere README]] to be written collaboratively that will hopefully resolve this
+issue. --jcorneli  

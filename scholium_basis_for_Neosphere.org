@@ -1,0 +1,634 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Background Summary
+
+Of the various people around here, I seem to have the unique
+distinction of being heavily involved in both PM and HDM.  This gives
+me a peculiar perspective on things and one of the things I have
+noticed is how Noosphere and Arxana could successfully be hybridized.
+
+To see where I am coming from, let me start by comparing and
+contrasting both programs, their strengths and weaknesses.
+
+** Noosphere
+
+*** Back-end
+
+At the core of Noosphere, there is a collection of data objects.  To
+characterize a data object completely, the following information is
+required: canonical name and object id, type, date of creation, number
+of hits, and the data peculiar to that object (which depends on type).
+This information is stored in various tables (information pertinent to
+one object may be located in more than one table; the type of the
+object is stored implicitly through the choice of primary table for
+said object).
+
+To interface with this database, there are a number of application
+modules.  These take requests and return the results as XML files.  To
+do their processing, these routines make use of the data objects and
+may make changes to these objects (such as changing the text of an
+entry when someone edits it.)
+
+*** Front-end
+
+The user accesses this system through a web interface. In order to
+translate between the XML files coming from the application modules
+and the web pages which the user will recieve, there is a template
+module and a collection of templates; XML files are combined with XSL
+templates to provide XHTML pages.  To coordinate the activities of
+these different modules, there is a dispatcher and there is a handler
+which recieves requests from users and sends them back the appropriate
+webpages.
+
+*** Advantages
+
+ * User friendly, easy to learn for the average person
+ * Many web services
+ * Workflow management
+
+*** Disadvantages
+
+ * Relatively simplistic hypertext model
+ * Rigid categories --- making apparently simple changes like 
+   introducing new fora or linking posts to changing forum
+   posts to encyclopedia articles is somewhat involved, so
+   such projects have been put off.
+ * No provision for automation and changes en masse
+
+** Arxana
+
+*** Back End
+
+The core of the scholium system is a single table of data objects
+called articles.  Each data object is characterized by the quintuplet
+which represents it in this table --- its name, type, bookkeeping
+data, data peculiar to the object, and "about" data, which expresses
+what other nodes that particular node may happen to be a scholium to.
+
+Also, it should be mentioned that, in this system, associated to an
+article,there can be another article called its "metadata article".
+Metadata articles are stored as quintuplets just like any other
+article and are distinguished from normal articles by their type and
+name (which is of the form "(meta name)").  These contain various
+metadata that become associated with the original article as the
+collection as a whole evolves.
+
+(It is also worth mentioning that other tables can appear nested
+within the main table, and so a "filesystem" for basic objects is one
+of the possible organizational strategies; there are a few other
+interesting ones!)
+
+To access this database, one has various basic functions.  These do
+things like create new nodes, attach a node as a scholium to a
+particular part of the text, and the like.  These are LISP functions
+which interact with this database.
+
+*** Front End
+
+Currently, Arxana uses emacs as its interface.  To display the various
+items in the database, there are rendering routines which turn the
+information into the "about" data into hyperlinks and otherwise process
+articles to make something displayable.
+
+*** Advantages
+
+ * Sophisticated hypertext model
+ * Flexible --- easy to model other systems, add new types, different
+    sorts of metadata, &c.
+ * Can use LISP to automate operations and perform mass operations
+
+*** Disadvantages
+
+ * Emacs interface is unfamiliar and dificult for the average person.
+ * No web interface, much less web services
+
+* The Switcheroo
+
+As one can see by reading the above, I see the advantages and
+disadvantages of Noosphere and Arxana as complementary.  This suggests
+to me that one could obtain a better system by combining bits and
+pieces of the two packages judiciously.  The question then arises
+whether this is feasible and how it might be accomplished.  Looking at
+the above a bit closer, I see that the stregths of Arxana chiefly lie
+in its back end and the strengths of Noosphere lie in its front end,
+hence the thingto do would be to graft the front end of Noosphere onto
+the backend of Arxana.  The question then becomes how feasible is this
+would be and exactly how could it be done.
+
+*** Data Objects
+
+To answer this question, let me start by looking at the building
+blocks of the two systems.  When one looks at the data objects, one
+sees that they are specified by rather similar information, even
+though this is stored in different forms (many tables in Noosphere,
+one table in Arxana) and formats (SQL for Noosphere, hash table for
+Arxana).  In order to transform the data contained in a Noosphere
+instanced such as PM, I would proceed something as follows:
+
+ name -> canonical name and object id
+
+ text -> this will be generated by combining data in the various
+         tables associated to an object (this could be done in
+         real-time by using transclusion)
+
+ type -> the name of the object's primary table
+
+ book -> owner, access permissions, revision version, date of
+         creation
+
+This is meant as a rough first approximation --- much is negotiable.
+One could choose to store only the canonical name or the id number or
+both the canonical name and id as the name of the quintuplet and then
+one would have different utility functions to take care of the
+correspondence between canonical name and id.  (For example, we could
+simply maintain this information as an associate list.)  Some of this
+information might be better stored in the meta-article (in particular,
+much of what I tentatively placed in the bookkeeping division likely
+belong there; also what counts as metadata for encyclopaedia entries
+should be stored in the meta-article).
+
+(In Arxana, metadata articles store "communal data", whereas the data
+in articles themselves are owned.  This distinction can be used to
+decide where a particular data field gets mapped.)
+
+Since Aaron does not go into detail in his thesis, I am not sure how
+the information associated with a Noosphere object is scattered in
+secondary table entries.  Depending on how, it might be more natural
+not to combine all this information to make the text of the Arxana
+article corresponding to that object, but rather to mirror the
+original distribution of that materia by puting the information in
+separate articles and transclude it into the main article.
+
+(IMO, whether the components of an article are stored locally or in
+disparate places shouldn't be of much significance.)
+
+A significant omission in the above table is the "about" entry (!).
+To see how this is to be generated, we need to think about
+hyperlinking in Noosphere since linking in the scholium system is
+determined by the "about" field.
+
+For the encyclopaedia, there are two cases to consider:
+Linking of terms is indicated by the link steering commands, and the
+markup which the autolinker produces.  The naive idea would be to
+store these in the about data of the entries to which it would link.
+
+In other words, the cross-references of an entry would sit in its
+quintuple's "about" list.
+
+(While that isn't quite how I implemented things, it would be easy
+enough to change it so that references are in fact handled this way.
+Indeed, now that I've standardized on a reasonable format for links in
+general, this seems like something that could be considered.  To
+elucidate for the not-yet-initiated -- in the system as it exists
+today, each reference is a stand-alone object, and references can
+overlayed on an article's text by anyone, so they aren't part of the
+about data, which as described above, is controlled by the article's
+owner.)
+
+Of course, we could also simply follow the current state of affairs
+(which is to store sufficient data to reconstitute references at
+rendertime in each article's metadata, via backlinks, masking and
+other such pleasant tropes).
+
+The other case for about data is that of entries attached to other
+entries, which is obvious --- the about field of such an entry is the
+entry includes a suitably-typed link to the article it it is attached
+to.
+
+Likewise, in the fora, follow-ups to posts would be scholia to the
+original posts.  In general, where one now sees a "post" button that
+would mean to create a scholium.  
+
+A useful generalization of this idea would presumably be how both fora
+and sections such as the encyclopaedia could be stored.  One could
+simply make all posts to a particular forum be scholia to the mention
+of the forum in the main forum page.  Instead of distinguishing
+between, say, lecture notes and books by which table the Noosphere
+objects happen to be suituated in, one would distinguish by what the
+corresponding articles are scholia of.
+
+(It can also be helpful to use "labels" -- which are a simple way of
+amortizing a sort process in which individual articles are to be
+placed in each of several categories at once.)
+
+*** Formats
+
+As for the format of the data, I do not see that as too important ---
+any format capable of storing a set of quintuplets will suffice.
+There is nothing particularly important about a hash table.  In the
+interest of modularity, one could replace all references to this table
+by suitable access functions which could then be redefined as needed
+to suit whatever database format one chooses.
+
+There is the issue of languages.  Noosphere is written in Perl (and
+will likely be rewritten in Python unless something drastic happens)
+whilst Arxana is written in LISP.  This can be dealt with in two ways:
+one could recode everything in a single language or one could make
+sure the program was highly modular and had standard interfaces which
+would allow data and control flow interchange between modules to
+proceed in the same way irregardless of what language the modules
+happened to be written in.
+
+(In theory this shouldn't be much of a problem for Arxana, since
+programs and calls to external programs can be treated as scholia just
+like anything else.)
+
+Along similar lines, there is the consideration that Noosphere
+back-end functions put their output in XML (so that it can be
+converted into webpages via templates) whilst Arxana functions output
+LISP objects (most frequently, strings).  This, too, sounds like it
+should be possible to handle in simple ways.
+
+*** Hybridization
+
+Having examined these points, I will now look at the big picture and
+sketch out what a possible Nooxana might look like.  What I am trying
+to describe here is analagous to what one finds on page 63 of Aaron's
+thesis.  I really should draw the picture, but I am too tired now, so
+you might want to look at his fig. 7.1 while reading this.
+
+As I envision it, the top two rows in the figure --- handler and
+dispatch --- would be the same. So would the templates and the
+template module.  The bottom row --- the tables --- would be replaced
+by two rows, the set of quintuplets and basic access functions.
+
+The middle row where the application modules sit is the overlap region
+where the hybridization would take place.  Since I didn't see specific
+informations and examples of application modules on the thesis (or
+maybe they are there and I just looked in the wrong place) I am
+guessing and so might quite off here, but Aaron can put things
+straight.
+
+As I see it, in order to make the "Noo-" of "Noosphere" and the
+"-xana" of "Arxana" mesh into a functional "Nooxana" here, what would
+be needed would primarily be to replace references to the current
+database with suitable access functions which would either be the
+basic access functions of Arxana or the compositions of these
+functions with some reformatting to put things in the form which the
+data would have come from the Noosphere tables.
+
+Instead of the rendering routines making emacs documents out of raw
+quintuiplets, they would make web pages out of them.
+
+I think that doing something like this would allow one to convert
+Noosphere to using a scholium based document as its data structure in
+such a way that one could access the database through the current
+Arxana interface and would still have all the web services available
+through the web interface.
+
+What was outlined above would provide a web interface that does
+exactly what the current web interface does.  However, I think it
+would also offer a better starting point for implementing improvements
+and feature requests.  Because of the flexibility of the scholium
+system, I doubt that it would be ever necessarry to twiddle with the
+fundamental data structure or the basic access functions in order to
+add new functionality.  Rather, one would only have to deal with the
+contents of this database and add new nodes.  Given that the scholium
+system is a rather sophisticated hypertext system, one could envision
+writing application modules which exploit the capabilities of the
+scholium system.
+
+--[[file:rspuzio.org][rspuzio]] (with some minor edits and parenthetical remarks by
+  [[file:jcorneli.org][jcorneli]])
+
+* Discussion
+
+The above description does indeed seem to show a workable familiarity
+with both Noosphere and Arxana -- Ray has apparently done his homework
+on both systems, and he was able to say quite a bit more about the
+former than I could have.  What he says suggests to me that -- at
+least at the level of basic data structure & elementary processes --
+we could w/o /too/ much trouble emulate Noosphere in Arxana.
+
+What Aaron said on [[file:PM_Bounty--Make_Noosphere_More_Installable.org][PM_Bounty--Make_Noosphere_More_Installable]] vis
+a vis Noosphere being "an extremely rich set of layered services"
+maybe /begins/ to be reflected on this page.  I suppose I'd have to
+actually take a look at the code (and maybe have it explained to me)
+before I could understand the structure.  One thing I can say is that
+probably at bottom Noosphere really is "just a bunch of nodes and
+links" ;) -- I haven't run into anything that can't be modeled that
+way :).
+
+As for whether this plan outlines a "good idea" -- again I'd probably
+have to look at the code to say what doing such a rewrite, port, or
+partial port would accomplish.
+
+The advantage of Arxana at present is that once one understands the
+model it is (probably) relatively easy to extend the code -- it is,
+after all, a literate ELisp program, and there is probably nothing
+easier to hack on (in terms of these abstract categories)... at least,
+that's true for me ;).  This statement can be put to the test
+somewhat, when Arxana is actually released.  Which is RSN, y'know.
+
+--[[file:jcorneli.org][jcorneli]]
+
+I agree with both of you --- I would characterize Noosphere as a layer
+of services built upon a foundation of nodes and links.  The reason I
+didn't say much about the services here was that my focus was on the
+nodes and links at the bottom.
+
+As I understand it, in the context of fig. 7.1, these services sit
+inside the "applications modules" box.  Unfortunately, while Aaron
+meticulously lists the different tables in his thesis and delineates
+their mutual relation in figure 7.2, I couldn't find a corresponding
+detailed listing and explanation of the applications modules or how
+they are layered, so the best I do is make educated guesses based upon
+experience using the program.  In fact, on page 83 of his thesis he
+says that he is treating the modules as an unstructured set, so the
+layering seems to be ignored there (presumably it is not important
+forthe purpose at hand).
+
+My basic contention here is that while the layers of services are
+rather sophisticated, the foundation of nodes and links on which they
+sit is not quite so sophisticated.  Joe and I  have been in the
+business of nodes and links for the past few months and have come up
+with a rather more sophisticated type of nodes and links.  Hence, when
+redoing Noosphere, it might be a good idea to place these sophisticated
+layers of services on a more sophisticated foundation.  
+
+Since it's late and I've been very busy with PM- and AM- related stuff 
+all day (for something like 15 hours with few breaks) please look kindly 
+if I break down into fuzzy metaphors and vague feelings.
+
+The reason for my enthusiasm for this idea goes back to the
+frustrations and limitations I have felt with Noosphere as a user.
+While I was happy with the variety and richness of services available,
+at the same time I always felt cramped by a basic poverty of what I
+was accessing with those services and equally cramped by what I felt
+was the rigid framework within which it was confined.  It seemed that
+this was keeping those services from living up to their fullest
+potential.
+
+I love the way in which, as a document, the Planet Math encyclopaedia
+is alive and growing.  At the same time, I have felt that, at a higher
+meta-level, it was not all that different from a dead-tree book.
+Somehow, it reminded me of an arthropod whose growth is rigidly
+delineated by a stiff shell.
+
+By contrast with this unsettling feeling, I took to Asteroid like a
+fish to water exactly because of the opposite feeling of life at the
+meta-level.  While wiki is almost completely lacking in services and
+it can be downright frustrating putting in by hand functional
+equivalents of what one takes for granted on Noosphere, at the same
+time the complete amorphousness of the medium allows unparalleled
+freedom all levels, including higher levels of organization.
+
+I wonder if there is not some sort of McLuhanesque effect here, some
+correlation between users being interested in meta-issues and the
+medium being [[file:alive at the meta-level.org][alive at the meta-level]].
+
+For the most part, these were vague feelings of uneasiness and
+frustration, but then when I started figuring out the operation of
+Noosphere, it started dawning on me where they were coming from.  For
+instance, when I look at fig 7.2, that looks to me like some
+scholium-based document in the process of growth, but I find that this
+referes to tables which have been hard-wired into the package.
+Likewise, in the second paragraph of section 7.2 on p.83, Aaron
+states that the hash table of modules needs to be updated by hand.
+This all suggests to me that what I was experiencing came from the
+fact that the basic structures underlying the package weren't alive. 
+--[[file:rspuzio.org][rspuzio]]
+
+I have only had time to skim the above, but I think it would probably
+help to enumermate the services, characterize them, and think about
+how they could be rendered in Arxana.  I'll begin here:
+
+ * *Messages/Discussions*. Really just simple, non-updatable
+scholia, with a parent (which can either be a "forum", object or
+another message).  The scholium system does well here by automatically
+accomodating the "anywhere attachability" of a discussion.  And if
+notification and watches are as infrastructural to the scholium system
+as to Noosphere, we get this part "for free". 
+ * *Requests.* Much like messages, except attached to a specific,
+unitary object: the requests forum.  Further, the requests have a
+fulfilled/unfilfilled status, which can be set along with a link to
+some entry which satisfies the fulfillment.  Further, this status is
+acceptable or rejectable by the owner of the destination of the
+fulfillment link.  This part seems like it may take a little bit of
+layering above the base scholium system.
+ * *Scoring.*  This seems like it would have
+to be layered; scores are an attribute of users which is emergent from
+their basal activities within the scholium system (objects created of
+various types...)  Also, sophisticated versions may not be updatable
+in real-time, requiring a batch/offline computation process (such as a
+ratings-aware version of reputation/scores).  
+ * *Corrections.*  Corrections are clearly simple scholium.
+However they have an opened/closed status and a manner of being
+closed.  All these things change how they are typically viewed.  
+ * *Mutability of Ownership/ACLs.*  This encompasses co-authors,
+orphaning, adoption, and transfers.  It seems like this could all be
+part of the base scholium system, except orphaning would need to have
+some sort of triggering defined (i.e. how long an opened correction
+has been attached to an entry object).  
+ * *Caching/Rendering.*  Rendering and caching seems like something
+that should be foundational to arxana.  Default, renderable views for
+object types would probably need to be globally defined.  But a "view"
+operation should be sensitive to cache state and the render mode
+desired.
+ * *Automatic linking.*  This seems to be one of the most
+incongruous things to the classical, manually-driven conception of a
+scholium-based artifact.  Indeed, Wikipedia sticks to the
+manual-linkage paradigm for sheer simplicity, despite the n^2 nature
+of the complete-linkage problem.  Perhaps something like the ability
+to plug in a chain of processors to an update event for an object;
+which can return an "ehanced" object (plus metadata).  The user would
+have it at their option to customize this chain (though there would
+probably be a global default for each object type).  Right now
+Noosphere has: invalidate cache, automatically link, update
+bi-directional "related" links, re-index, notify feeds (such as latest
+revised/added objects), send notifications for watches.
+
+After writing the above, it seems to me like arxana would need to
+abstract its basic data type from document to document+metadata, and
+factor in metadata mutability.  A sequence of characters is not
+enough, and in fact, links may not even be attached at the content
+level, but rather, at the metadata level.
+
+It also seems like we actually need formalize the distinction between
+"object" ownership and CBPP project-space ownership.  The admin-level
+persons who set up a project space should be able to determine
+defaults of behavior and organization that regular participants in
+this space simply have to accept if they wish to participate (this is
+the implicit social contract).  Perhaps this could be implemented in
+the base authority model itself, having the permissions "cascade"
+appropriately.  So maybe PlanetMath could be modelled even without
+something like a distinct "project" space: it simply happens that I
+"own" the top node, and then set up under this an "encyclopedia" node,
+a "requests" node, a "forums" node, and so forth, with specific object
+types, and mutability rules based on how PlanetMath works, giving
+third parties only the ability to make changes below certain points
+(thus, the permissions would "cascade" below this point).
+
+Hmm....
+
+--[[file:akrowne.org][akrowne]] Thu Jan 26 20:55:53 UTC 2006
+
+
+Remember: "everything is a scholium", so layering takes place entirely
+within the system.  This is just the usual object oriented approach.
+For example, if some code is supposed to run after a certain type of
+scholium gets added to a given scholium, the scholium-adding operation
+will end up triggering that code.
+
+Perhaps it is important to be clearer on the point that Arxana already
+has "document+metadata" as the basic type.  I divide the metadata into
+two parts, the metadata owned by the object's owner, and the metadata
+owned by the system.  (FYI, system-owned data can sometimes override
+user-owned data.)
+
+As for feasibility of this project, I think about two months would do
+it.  One to get all Arxana itself ironed out and figure out how to
+port the data structures and so forth; the other to implement these
+various services.  On the [[file:Code Market.org][Code Market]] page, I advertise the cost
+of running this experiment at $1000 plus two months of fully focused
+effort on my part.  Indeed, I think the $1000 probably isn't necessary
+(since I do have considerable free time in my day-to-day life as-is,
+and two months isn't a lot of job security), but the focus part is
+indispensible!
+
+--[[file:jcorneli.org][jcorneli]]
+
+Thank you, Aaron --- that certainly does help in clarifying Noosphere.
+On a more general note, I see that a lot of the process of documenting
+Noosphere could take place like this --- it is much more natural to
+expain something in the course of a discussion than to sit down with a
+program and say to one self "I have to document this.".
+
+Here are some quick replies to point you raise:
+
+/Rendering and caching seems like something that should be
+foundational to arxana./
+
+Presently, the rendering in Arxana is as emacs objects. In discussing
+this, I think it is important to keep clear at what level the
+rendering routines lie and dismbiguate them from the basic functions
+for interacting with the database.  Borrowing intuition from
+differential geometry, the basic functions pertain to the intrinsic
+geometry of the knowledge space whilst the rendering routines deal
+with the extrinsic issue of how it is embedded in the viewing space
+(such as an emacs buffer or a webpage).  Keeping this distinction
+clear makes it easy to offer multiple interfaces and even support
+things like having users make their own private interfaces suited to
+their tastes.
+
+/it seems to me like arxana would need to abstract its basic data
+type from document to document+metadata/
+
+Actually, this is pretty much a good description of the current state
+of affairs.  Whilst it is true that the meta-node of a node is just
+another quintuplet in the table, when considers document+metadata are
+treated as a unit.  As for why the metadata is stored as a separate
+node, one answer is that this approach makes it possible to have types
+of metadata be as flexible and mutable as types of documents and to
+link to metadata as easy to attach links at the content level as at
+the metadata level using the same means.
+
+/Automatic linking. This seems to be one of the most incongruous
+things to the classical, manually-driven conception of a
+scholium-based artifact./
+
+My point of view would be to think of the autolinker as a user, an
+automated wiki-gnome whose purpose is to point out links between
+entries.  The point of view here is similar to Unix, where one has all
+sorts of demons who are treated just like users, getting home pages,
+owning files, having priveleges, &c.  I would also consider
+implementing orphaning and scoring in a similar manner.
+
+/Perhaps this could be implemented in the base authority model
+itself, having the permissions "cascade" appropriately. So maybe
+PlanetMath could be modelled even without something like a distinct
+"project" space: it simply happens that I "own" the top node, and then
+set up under this an "encyclopedia" node, a "requests" node, a
+"forums" node, and so forth, with specific object types, and
+mutability rules/
+
+I very much like this point of view for both philosophical and
+technical reasons and hope that this is how things will be done in the
+future.  
+
+Philosophically, this fits wonderfully with the egalitarian, anarchic
+point of view.  The owner of the top node could be the Planet Math
+community and edits to this node need to be approved by the community.
+Perhaps, at present, this will be done by means of an administrator
+who represents the interests of the people.  As time goes on, it would
+love to see this evolve away from representatives and even voting
+towards consensus-based decision making.  While the administrator may
+still be necessarry to carry out the actual editing operations on the
+node, this role should very much be that of a public servant who
+carries out the will of the people, not a position of authority.  To
+keep from falling into some sort of master/servant dichotomy here and
+avoid exploitation, I think it is important that this administrator be
+properly compensated and that this individual have an equal voice with
+everybody else when it comes to deciding policy and only be constrained
+when acting in the capacity of administrator.
+
+Practically, implementing things this way would make it easy to do
+things like make nested instances.  It would simplify matters both
+conceptually and implementationally by unifying project-space ownership
+and object ownership as two instances of the same basic construct.
+For instance, one might start a private instance of some feature,
+other people might like it and use and, in the end, it might become a
+feature of the commons by transferring ownership to the community.
+Likewise, the demons and automated gnomes of whom I spoke would
+participate in this ownership model.
+
+I think we need to spend some time studing ownership models and
+generalizing the model in a recursive way.  Also, this reminds me of
+the topic of "agents" in AI --- maybe we should look that up.
+--[[file:rspuzio.org][rspuzio]]
+
+For agents in AI, note that Minsky's "Society of Mind" is one of the 2
+key references for the work (the other being Nelson's "Literary
+Machines").
+
+I haven't had much to say about agents yet it in the current version
+of Arxana, but the note "Anthropogenic Change" does include this:
+
+: Humans are just part of a much broader world.  Our "will" and
+"agency" are brought into question in the context in which "everything
+is connected."
+
+Something to ponder. :) --[[file:jcorneli.org][jcorneli]]
+
+A rewrite of the Noosphere would be a very challenging and
+educational project, but one which should probably be approached
+with caution and rigor: it is the core asset of the organization,
+along with the Planet Math entries.
+
+The short description of re-engineering is that one documents,
+catalogs and analyzes the external design -- the external
+manifestations -- then the internals. Then the new system's
+external and internal designs are created. It should be possible
+to diagram the data structure and populate it with examples to
+make clear how it works and to provide insight into the 
+performance characteristics under real-world projected volumes.
+You will want a plan for implementation, including testing and conversion. 
+
+I will also note that a multi-user updating system has special
+requirements for maintaining data integrity. The cases of 
+simultaneous updates to the same object(s), transaction failure/
+rollback and recovery should be considered. And you'll want a 
+plan for recovering your data in a worst case scenario involving
+a corrupted database. These functions and scenarios are normally
+the responsibility of a DBMS -- if your data is valuable, then
+care should be taken to handle the inevitable. 
+
+--[[file:ocat.org][ocat]] 28-Jan-2006
+
+Hmm... I assume Aaron has Noosphere set up to use "locks" for pages
+that could otherwise end up with editing conflicts.  The theory of
+multiple users editing the same object came up only a little for me, a
+while ago, basically when I was first thinking about Arxana.  But I
+haven't really thought too much about it yet (except to say that
+things get complicated when everything is distributed).
+
+In terms of the other pragmatic points you raise, somehow I'm reminded
+of the [[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]].  Some of
+the software engineering questions may be interesting to NSDL people.
+But in general when we think about adding new features, we'll want
+to think in terms like those you've laid out here.  (E.g. what
+would localization support really mean, etc.?)  If we can really
+spell out what sort of coding is going to be involved with new feature
+implementation and/or various rewriting ideas, then I think we'll
+be in good shape moving forward... --[[file:jcorneli.org][jcorneli]] Jan 31

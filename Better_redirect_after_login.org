@@ -1,0 +1,8 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+On PM, if I'm logged out, after I log in I get redirected to the main
+page.  I'd strongly prefer to be redirected back to the page from which
+I logged in.
+
+--[[file:jcorneli.org][jcorneli]]

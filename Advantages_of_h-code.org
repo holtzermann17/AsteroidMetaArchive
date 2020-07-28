@@ -1,0 +1,28 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We think there are two advantages to be gained by the two-phase procedure of
+translating to h-code and from there to formal logic.
+
+ * Since the two steps in the translation procedure deal with rather different
+issues, it may be better to consider them separately.  The first step
+primarily will involve issues from artificial (or human) intelligence such as
+parsing natural language and dealing with the context-dependence, ambiguities,
+and shades of meaning which occur in natural language.  The second step, by
+contrast, will be much more a formal and precise procedure based on set theory
+and logic.
+
+ * We think that h-code may provide a happy medium between human and
+machine, between mathematical notation and symbolic logic.  On the one hand, it
+will represent mathematical concepts formally at a higher level than symbolic
+logic, so it should be easy for a human mathematician to express ideas in h-code
+and to understand mathematics expressed in h-code.  On the other hand, it will
+be every bit as formal as any programming language, so a machine will have no
+difficulty parsing and manipulating it.
+
+To get an idea what h-code looks like, the reader may want to examine some of
+the examples linked to from the main [[file:h-code.org][h-code]] page.  Since the language is
+still under development, these examples should not be taken to be definitive,
+but they give an idea what the finished version of h-code will look like.
+
+Back to [[file:h-code.org][h-code]]

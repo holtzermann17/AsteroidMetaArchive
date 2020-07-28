@@ -1,0 +1,164 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+    $( <MM> <MODULE> <ID>NATDED</ID> <PREREQ> </PREREQ> </MODULE> </MM> $)
+ 
+    $(
+    #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+    Metamath source file for elementary symbolic logic using natural
+    deduction techniques.
+
+    We begin using words instead of operators, for clarity.
+    Later, when everyone is tired of writing out long formulas, 
+    we will convert to logical operator symbols.
+
+    The "rules" of natural deduction are presented as theorems
+    without Metamath proofs -- initially, the proofs are
+    provided in English, with lots of arm waving and examples.
+
+    natded.mm - Version of 24-Feb-2006
+
+                             PUBLIC DOMAIN
+
+    This file -- specifically, the version of this file with the above
+    date -- is placed in the public domain per the Creative Commons
+    Public Domain Dedication:
+    http://creativecommons.org/licenses/publicdomain/
+
+
+    #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
+    $)
+
+              $c (       $.
+              $c )       $.
+              $c wff     $.
+              $c |-      $.
+
+              $c implies $.
+              $c and     $.
+              $c or      $.
+              $c not     $.
+              $c equiv   $.
+
+              $v p       $.
+              $v q       $.
+              $v r       $.
+              $v s       $.
+              $v t       $.
+
+    P             $f wff p                 $.
+    Q             $f wff q                 $.
+    R             $f wff r                 $.
+    S             $f wff s                 $.
+    T             $f wff t                 $.
+
+    IMP           $a wff ( p implies q )   $.
+    AND           $a wff ( p and q )       $.
+    OR            $a wff ( p or q )        $.
+    NOT           $a wff not p             $.
+    EQV           $a wff ( p equiv q )     $.
+
+    ${
+        REIT          $e |- p                  $.
+        REIT          $p |- p                  $= ? $.
+    $}
+
+    ${
+        IMP-INT.1     $e |- p                  $.
+        IMP-INT       $p |- ( q implies p )    $= ? $.
+    $}
+
+    ${
+        IMP-ELIM.1    $e |- ( p implies q )    $.
+        IMP-ELIM.2    $e |- p                  $.
+        IMP-ELIM      $p |- q                  $= ? $.
+    $}
+
+    ${
+        AND-INT.1     $e |- p                  $.
+        AND-INT.2     $e |- q                  $.
+        AND-INT       $p |- ( p and q )        $= ? $.
+    $}
+
+    ${
+        AND-ELIM.1    $e |- ( p and q )        $.
+        AND-ELIM      $p |- p                  $= ? $.
+    $}
+
+    ${
+        AND-ELIM-L.1  $e |- ( p and q )        $.
+        AND-ELIM-L    $p |- q                  $= ? $.
+    $}
+
+    ${
+        OR-INT.1      $e |- p                  $.
+        OR-INT        $p |- ( p or q )         $= ? $.
+    $}
+
+    ${
+        OR-INT.L.1    $e |- p                  $.
+        OR-INT.L      $p |- ( q or p )         $= ? $.
+    $}
+
+    ${
+        OR-ELIM.1     $e |- ( p or q )         $.
+        OR-ELIM.2     $e |- ( p implies r )    $.
+        OR-ELIM.3     $e |- ( q implies r )    $.
+        OR-ELIM       $p |- r                  $= ? $.
+    $}
+
+    ${
+        NOT-INT.1     $e |- ( p implies q )    $.
+        NOT-INT.2     $e |- not q              $.
+        NOT-INT       $p |- not p              $= ? $.
+    $}
+
+    ${
+        NOT-ELIM.1    $e |- not not p          $.
+        NOT-ELIM      $p |- p                  $= ? $.
+    $}
+
+    ${
+        EQV-INT.1     $e |- ( p implies q )    $.
+        EQV-INT.2     $e |- ( q implies p )    $.
+        EQV-INT       $p |- ( p equiv q )      $= ? $.
+    $}
+
+    ${
+        EQV-ELIM.1    $e |- ( p equiv q )      $.
+        EQV-ELIM.2    $e |- q                  $.
+        EQV-ELIM      $p |- p                  $= ? $.
+    $}
+
+    ${
+        EQV-ELIM-L.1  $e |- ( p equiv q )      $.
+        EQV-ELIM-L.2  $e |- p                  $.
+        EQV-ELIM-L    $p |- q                  $= ? $.
+    $}
+
+$(
+
+According to me O'Cat to have a natural deduction system you need a context (i.-e. a list of hypotheses ). When the system is designed for, the context can be independant from the formulas but with metamath you have to append it to your formulas. -- [[file:frl.org][frl]] 24-Feb-2006
+
+: Perhaps the term "natural deduction" is often taken as "Gentzen" or
+"sequent calculus"? Should I change the wording to make it clear
+that this is a "Natural Deduction" system transported into 
+a Hilbert-style system (i.e. Metamath) without use of Contexts?
+--[[file:ocat.org][ocat]]
+
+:: But your system can't work. There is absolutely no axiom. Try to prove `( ph -> ( ps -> ph ) )'
+for instance and you will soon experience a big problem. According to me you can transport an 
+Hilbert-style system into a Gentzen-style system but not the contrary. -- [[file:frl.org][frl]] 24-Feb-2006
+
+#+BEGIN_VERSE You make a stunningly good point! I am reminded of the old saying,
+"When the student is ready, the teacher will appear." The intent of 
+this file is pedagogical, and it is not a final version. With the
+file as intended, inferences can be made from hypotheses and students
+can become familiar with using the rules. Later, the axioms and
+definitions can be copied from set.mm -- for advanced students :)
+In the meantime, a given set of hypotheses can be regarded as a
+"context", eh? So once the students are familiar with what can be
+done with a set of hypotheses, it should be easy to make the switch
+from a list of hypotheses to a *set* of given assertions. --[[file:ocat.org][ocat]]
+
+$)

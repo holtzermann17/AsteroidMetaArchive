@@ -1,0 +1,241 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One of the main reasons I've been so insistent that [[file:Ghilbert.org][Ghilbert]] be simple is so that some
+of the more tedious tasks of building proofs can be automated.
+
+On the [[file:Ghilbert is not AI-complete.org][Ghilbert is not AI-complete]] page, I set forth a number of possibilities for
+such automation. What I'd like to do now is outline my current thinking on what I
+personally consider a practical yet pleasant environment for producing Ghilbert proofs.
+
+First, though, I'll say a bit about what I /don't/ think is necessary.
+
+ * Integrating [[file:First order provers.org][First order provers]]. These are a very mature area of proof technology,
+but from what I've seen, converting a resolution-based proof into Metamath steps is not
+trivial, and doing so simplistically may result in hugely expanded proofs. Note that
+I'm not talking about Norm's approach of using first-order provers to address the
+meta-question of "is X provable in a sequence of metamath steps", but in direct
+translation.
+
+ * [[file:Mathematical Vernacular.org][Mathematical Vernacular]]. These are interesting proposals, but I'm not yet convinced
+that their complexity pays off. For one, several people have observed that Mizar proofs
+are fairly large. Bob Solovay reimplemented my Metamath proof of
+[http://us.metamath.org/mpegif/nn0opth.html nn0opth] in Mizar, and found it to be
+quite comparable in size, even though Mizar is supposed to take "big steps", as opposed
+to the exacting detail of Metamath proofs. For two, MV, seems to emphasize implication
+as opposed to the often more powerful biconditional. See [[file:metamathCalculationalProofs.org][metamathCalculationalProofs]]
+for discussion of how a computational proof style in the manner of Dijkstra might be
+integrated with the metamath universe.
+
+On to what I think /is/ useful.
+
+***  Calculation
+
+To me, the Ghilbert language is useful not only for deep mathematical results as you'd
+find in mathematics textbooks, but also for "shallow" results that would be considered
+calculations rather than theorems.
+
+A typical example would be the calculation of pi to 10 decimal places. Doing such a
+proof by hand would be quite ridiculous, although Norm has done a similar proof of e to
+one decimal place by hand:
+[http://us.metamath.org/mpegif/ege2le3.html ege2le3].
+
+Clearly, the best way to do such calculations is to write programs encoding specific
+knowledge about what's being calculated, the output of which is a Ghilbert proof of
+the calculation, not just the answer as in most computer algebra systems.
+
+I've written a few such programs, and what I have now can add and multiply binary
+numbers using reasonably efficient algorithms. My idea of a good approach for computing
+pi would be to prove the correctness of a
+[http://en.wikipedia.org/wiki/Spigot_algorithm spigot algorithm], then write a
+program to emit Ghilbert proofs encoding the steps of such an algorithm. The resulting
+proofs would be very small compared to what a dumb, generic solver might do.
+--[[file:raph.org][raph]]
+
+-----
+
+One concern is that many types of calculations involve enormous amounts
+of CPU time, and the conversion of each iteration through the algorithm
+to steps in a Ghilbert proof might result in an unfeasible proof size.
+We might be converting 10^12 iterations of an algorithm to a proof of
+10^12 steps (times some constant).  Even if physical disk space were
+available to hold it, it would be considered a huge waste of resources.
+
+So, practically speaking, we would have to trust the algorithm, or prove
+the algorithm correct and trust the code and machine that implements it,
+or verify the corresponding proof "on the fly" without actually storing
+it.  Each of these approaches introduces additional elements, outside of
+the basic Ghilbert proof engine, that have to be trusted.
+
+In many cases we can distinguish "finding the result" from "verifying it
+is correct."  Some kinds of algorithms have independent ways of
+verifying their computations were correct.  For example, finding a
+factor of a large number may involve an enormous number of steps, but
+verifying the result is a simple multiplication.  Proving that a number
+is prime can be similarly intensive, but there exists a method of
+verifying the result once it is found:
+
+:  Carl Pomerance, "Very Short Primality Proofs," /Math.  Comp./ 48 (1987)
+pp 315-322
+
+To summarize Pomerance's paper:  All primes p > 34 have
+what Pomerance calls a "Type 1 certificate."  This certificate is a list
+of 6 non-negative integers, each less than p. Given these 6 integers,
+you can verify that p is a prime with O(log p) multiplications mod p,
+using a simple algorithm contained in Theorem 3.1.
+
+Pomerance's proof exploits deep results on elliptic curves, and names
+such as Weil, Tate, and Hasse (whose results also figure into Wile's
+proof of Fermat's last theorem) are mentioned in Pomerance's paper.
+
+Now finding primality certificates is another matter; Pomerance gives no
+algorithm but mentions it "may well take exponential time."
+--[[file:norm.org][norm]] 28-Aug-2006
+
+-----
+
+Dan Bernstein has a page summarizing the state of the art in
+[http://cr.yp.to/primetests.html primality tests]. I think it would be a
+great project to prove the correctness of one of these primality tests
+in MM/Gh, then write code that will translate any given certificate into
+a Ghilbert proof of the statement "x is prime." I was intrigued by bug
+reports on earlier versions of
+[http://www.ellipsa.net/primo/index.html Primo]. Perhaps the code is now
+bug-free, but successful translation into Ghilbert proofs would raise
+confidence in Primo certificates even further.
+
+10^12 proof steps may be considered a huge waste of resources, but I believe
+it is (barely) within the scope of what's practical for a motivated individual.
+Figuring one byte and one microsecond for each proof step, it would take about
+$400 worth of disk to store such a proof and about two weeks of CPU time. I
+think that 10^15 steps is probably the practical limit for an organization,
+and that below 10^9 or so, it's hardly worth human effort to shrink proofs.
+
+--[[file:raph.org][raph]] 28 Aug 2006
+
+-----
+
+All of the primality tests listed in Bernstein's paper seem to involve some
+power > 1 of lg n to verify the certificate.  But Pomerance's is listed
+as "(lg n)^(2+O(1))" in Bernstein's paper, whereas Pomerance states (Th.
+3.3) that his certificate "may be verified in (7/2)(lg n)+O(1)
+multiplications mod n, (5/2)(lg n)+O(1) additions mod n, and one g.c.d.
+computation with n and a natural number smaller than n^7."  So unless I
+am misunderstanding, Bernstein's table is in error, and Pomerance's
+primality proofs would be by far the most efficient, once the
+certificate is found.  Or, what am I misunderstanding?
+
+The problem with Pomerance's method is obtaining the certificate to
+begin with, which in the naive worst case might require O(n^6)
+brute-force trials (i.e. trying every possible certificate).  But that
+is a computational problem independent of the Ghilbert proof, for the
+quantum computers of the future.  :)
+
+I like the idea of having a shortest possible proof, independent of what
+effort was needed to find it in the first place.  An analogous case
+might be the effort to find a shortest Ghilbert proof by exhaustive
+trial-and-error.  Some obsessive fool might spend a lifetime of
+resources finding it, but it's a one-time effort, and once found, all
+the work finding it becomes irrelevant, with the incremental efficiency
+it affords available to everyone for the rest of time.  To me, there is
+something satisfying or even beautiful about that.  (The list of
+[http://us.metamath.org/mmsolitaire/pmproofs.txt shortest known
+propositional proofs] that I maintain comes to mind as a minor
+example.)
+
+I can see where you are coming from in a practical
+sense, for formal verification of industrial computer circuits, etc.
+Economics vs. art.
+You may not be bothered by a 10^9-step proof, but what about its
+Metamath Proof Explorer page?  :)
+
+--[[file:norm.org][norm]] 28 Aug 2006
+
+
+
+***  Straightforward proof tasks
+
+I've found that certain proof tasks, such as alpha-conversion (used very frequently
+in making definitions), substitutions, etc., take a fair amount of labor. These
+should be quite easy to automate, and don't require any theorem proving technology
+in the usual sense.
+
+I'm thinking in particular of allowing these simple computations inside Ghilbert proofs,
+using the same basic proof structure -- already proved statements on a stack, extra
+terms (called "mandatory hypotheses" in Metamath jargon), and one statement remaining.
+However, instead of being restricted to pure
+syntactic substitution, the step executes a little program (the output of which, as
+above, is a sequence of Ghilbert steps).
+
+For example, [0/x](x+A = A+x) id, using only syntactic substitution, results in the
+statement [0/x](x+A = A+x) -> [0/x](x+A = A+x). (syntax is sugared here). If we had
+an "expand-subst" proof step, then the result of [0/x](x+A = A+x) expand-subst would
+be [0/x](x+A = A+x) <-> x+0 = 0+x. Similarly, (A. x x+A = A+x) y alphaconv might result
+in (A. x x+A = A+x) <-> (A. y y+A = A+y). The expanded versions (the result of executing
+the programs corresponding to expand-subst and alphaconv) would each be proofs on the
+order of a dozen steps.
+
+In the online proof repository, proofs would be stored in this enhanced format, because
+there's little value in the expanded version. Obviously, there would be a batch tool
+(primarily an implementation of the chosen programming language) that would produce
+the extended versions when needed (for example, for use in a simple checker), but
+most people would just get the results directly on the proof stack and not bother with
+the expansion into primitive Ghilbert steps.
+
+For simplicity, I'm considering a dialect of pure Lisp for these programs. Thus, the
+resulting system will bear a striking resemblance to the [[file:Bourbaki proof checker.org][Bourbaki proof checker]].
+
+Obviously, this mechanism would be quite capable of simple calculations as mentioned
+above. But for very sophisticated calculations (such as you'd see in a computer
+algebra system, say), pure Lisp would probably feel too restrictive, and implementors
+would choose a more congenial, full-featured programming language.
+
+***  Fast and dumb search
+
+Neither of the above really provides "big steps" in the sense of an integrated first
+order solver or some such. Over the long term, I think there is potential for sophisticated
+theorem proving technology, or even AI, to make bigger and bigger steps more practical,
+but for now I think a very simple, brute-force approach will yield the best
+"bang for the buck."
+
+Conceptually, what I propose is a straightforward extension of ocat's [[file:mmj2.org][mmj2]] approach.
+In that system, instead of primarily keying in proof steps (as a person writing a Ghilbert
+proof in a text editor would do), the user inputs statements, each of which (hopefully)
+has a simple proof from previous steps. In fact, mmj2's search finds proofs of exactly
+/one/ step. What I'd like to see is a fast and dumb search that can in practice find
+proofs up to, say, ten steps or so, iff such a proof exists.
+
+From the reading I've done, I believe such a thing is feasible. It's certainly in line
+with Norm's experiment with Otter (search [[file:metamathMathQuestions.org][metamathMathQuestions]] for "Otter").
+Much of the success of more advanced systems such as Waldmeister seems to be the use
+of clever data structures to reduce memory use, which tends to define the limitations
+of such solvers.
+
+One advantage of a brute force solver is that it would work in all axiom systems; it would
+not be tied to any one form of logic.
+
+When the search succeeds, what gets stored in the proof file is the proof fragment found.
+This means that checkers don't have to implement a potentially expensive search themselves.
+I'm also not particularly concerned about the size of the proof file, because this search
+technique finds short proof fragments, and Metamath proofs tend to be short anyway
+(see [[file:WhyAreMetamathProofsSoShort.org][WhyAreMetamathProofsSoShort]] for discussion). Of course, for human-readable
+presentation there should probably be a "short form" in which the automatically found
+proof steps are elided, but there may well be contexts in which these steps are interesting
+as well.
+
+Incidentally, a good brute search technique would also be very useful for shortening existing
+proofs, not just finding new ones. Very short proofs could be found in one gulp, longer
+ones by using existing intermediate terms on the proof stack, and finding short proof
+fragments between those.
+
+: -> [[file:Ghilbert fast and dumb.org][Ghilbert fast and dumb]]
+
+***  Automation of type assumptions
+
+Especially in the Pax framework, but also in set.mm, a significant fraction of proof
+bulk is concerned with manipulating assumptions stating that the terms have correct
+type (or, in the case of set.mm, are elements of V and thus not proper classes). Much
+of this should be automatable, again without any sophisticated proof technology.
+
+One reasonable approach would be to write proofs using a much less strictly typed axiomatic
+system, and have an automatic translation into Pax.

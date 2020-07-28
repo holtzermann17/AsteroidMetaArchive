@@ -1,0 +1,34 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Something I remember thinking about when I was first kicking the idea of the
+scholium system around in my head (before I wrote anything down) is the notion
+that it would be nice to be able to create arbitrary types, and define arbitrary
+operations using the type data.
+
+For (what should be a familiar) example, if a given word had a scholium of type
+BLINK attached to it, maybe it would blink in the on-screen display.  (Yay
+Netscape!)
+
+Now, the ability to create types OTF isn't all that amazing.  I mean, people are
+quite used to using pull-down menus to classify things.  Some programming
+languages let you do this, too, right!  (Golly, it would be nice if I knew more
+about programming languages...)
+
+But the real-time-hackable nature of the display, through user-defined syntax on
+types... that is /somewhat more novel/ -- but of course not completely!
+
+What I'm thinking of here are MUDs and such, which sometimes have rather robust
+real-time-hackable features (which is pretty cool, right?).
+
+Now, clearly, there should be some editorial control, for example, probably no
+one should be able to write a doomsday scholium (i.e. a scholium such that
+whenever it is attached to anything else, it deletes everything).  And so on.
+
+But the flexibility of an extensible type system, which includes some levels of
+control over the display and the general behavior of the database (especially
+local behavior), if set up correctly & with appropriate social controls, should
+do a lot to enhance the feeling of freedom (and power) for users of the scholium
+system.
+--[[file:jcorneli.org][jcorneli]] Thu Apr 21 08:33:51 2005 UTC

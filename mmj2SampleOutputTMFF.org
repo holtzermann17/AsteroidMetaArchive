@@ -1,0 +1,868 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(back to [[file:mmj2.org][mmj2]])
+
+
+Below is a sample of my new Text Mode Formula Formatting
+(TMFF) using method TMFFAlignColumn with parameters
+
+     
+    lineWrapOn=false,
+    maxDepth = 3,
+    leftmostColNbr = 2,
+    rightmostColNbr = 70,
+    alignAtValue=Var,
+    alignAtNbr=1,
+    alignByValue=Var
+     
+
+The formatting "TMFF Methods", such as "AlignColumn"
+and "Flat" can be instantiated multiple times with 
+various sets of parameters.
+
+These instantiations are called "TMFF Schemes".
+
+Right now I am using a single TMFF Scheme, but I
+envision needing to assign a default scheme as well as 
+at the level of the individual syntax axioms (possibly
+for each individual .mm file.)
+
+This will give rise to the need to have "TMFF Formats",
+which will be numbered: 1, 2, and 3. The Proof Assistant
+user will normally use Format 1, but will have the
+option of switching to a different TMFF Format, as well
+as "unformatting" to revert to the existing format
+(higgledy-piggledy).
+
+
+-----
+ 
+Now rendering Stmt = lnopmulsub
+ 
+Rendered Stmt = lnopmulsub in 3 lines:
+
+     
+     |- ( ( A e. CC /\ B e. H~ /\ C e. H~ ) ->
+          ( T ` ( ( A .s B ) -v C ) )
+          ( ( A .s ( T ` B ) ) -v ( T ` C ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( A e. CC /\ B e. H~ /\ C e. H~ ) -> ( T ` ( ( A .s B ) -v C ) )
+        = ( ( A .s ( T ` B ) ) -v ( T ` C ) ) ) 
+     
+ 
+-----
+ 
+Now rendering Stmt = 5oalem3
+ 
+Rendered Stmt = 5oalem3 in 7 lines:
+
+      
+     |- ( ( ( ( ( x e. A /\ y e. B ) /\ ( z e. C /\ w e. D ) ) /\
+              ( f e. F /\ g e. G ) ) /\
+            ( ( x +v y ) = ( f +v g ) /\ ( z +v w ) = ( f +v g ) ) ) ->
+          ( x -v z ) e.
+          ( ( ( A +H F ) i^i ( B +H G ) )
+            +H
+            ( ( C +H F ) i^i ( D +H G ) ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( ( ( ( x e. A /\ y e. B ) /\ ( z e. C /\ w e. D ) ) /\ ( f e. F
+        /\ g e. G ) ) /\ ( ( x +v y ) = ( f +v g ) /\ ( z +v w ) = ( f +v g 
+        ) ) ) -> ( x -v z ) e. ( ( ( A +H F ) i^i ( B +H G ) ) +H ( ( C +H 
+        F ) i^i ( D +H G ) ) ) ) 
+     
+-----
+ 
+Now rendering Stmt = aceq1
+ 
+Rendered Stmt = aceq1 in 16 lines:
+
+
+     |- ( E. y
+             A. z e.
+                x
+                A. w e.
+                   z
+                   E! v e. z E. u e. y ( z e. u /\ v e. u ) <->
+          E. y
+             A. z
+                A. w
+                   ( ( z e. w /\ w e. x ) ->
+                     E. x
+                        A. z
+                           ( E. x
+                                ( ( z e. w /\ w e. x ) /\
+                                  ( z e. x /\ x e. y ) ) <->
+                             z = x ) ) )
+
+ 
+Now printing the old way:
+
+
+     |- ( E. y A. z e. x A. w e. z E! v e. z E. u e. y ( z e. u /\ v e. u 
+        ) <-> E. y A. z A. w ( ( z e. w /\ w e. x ) -> E. x A. z ( E. x ( (
+        z e. w /\ w e. x ) /\ ( z e. x /\ x e. y ) ) <-> z = x ) ) ) 
+
+: FYI, the 10 longest theorems in set.mm are, in increasing size:
+[http://us.metamath.org/mpegif/mdslmd1lem4.html mdslmd1lem4],
+[http://us.metamath.org/mpegif/mdslmd1lem1.html mdslmd1lem1],
+[http://us.metamath.org/mpegif/mdslmd1lem3.html mdslmd1lem3],
+[http://us.metamath.org/mpegif/5oa.html 5oa],
+[http://us.metamath.org/mpegif/5oalem7.html 5oalem7],
+[http://us.metamath.org/mpegif/fsum0diaglem2.html fsum0diaglem2],
+[http://us.metamath.org/mpegif/ruclem4.html ruclem4],
+[http://us.metamath.org/mpegif/5oalem5.html 5oalem5],
+[http://us.metamath.org/mpegif/5oalem6.html 5oalem6],
+and
+[http://us.metamath.org/mpegif/grothprim.html grothprim],
+the last having 817 characters.
+That should give you some test cases to play with. :)  --[[file:norm.org][norm]]
+29 Aug 2006
+
+ 
+-----
+
+This is nice!  I have a question about the algorithm.  In the second
+example, you don't split the = in the antecedent, whereas in the first
+example you do split the = in the consequent.  Similarly, the /\'s are not
+split in the antecedent.  How is the behavior determined?
+
+[[file:norm.org][norm]] 29 Aug 2006
+
+A split occurs when maxDepth or rightmostColNbr are exceeded
+during rendering of a syntax axiom. 
+
+When the split occurs, the symbols, constants or variables of that
+syntax axiom are aligned into a column according to the alignAtNbr,
+alignAtValue and alignByValue parameters,
+where alignAtValue and alignByValue may be "Cnst", "Var" or
+"Sym", and alignAtNbr may be 1, 2 or 3. In effect these make up a little language so that you can
+say, "align syntax axiom 'xyz's Variables into a column starting with the
+2nd Symbol in 'xyz'". Or, in the samples, "align each syntax axiom's
+Variables into a column starting with the first Variable in
+each Syntax Axiom".
+
+What makes this algorithm puzzling at first (even to me!) is
+that we want to look at the entire formula and think of a way to 
+break it up across lines. That is the wrong way to look at it.
+
+Instead, look at the formula's parse tree and apply the algorithm
+top down, starting at the root. So in example 1, the root node's
+syntax axiom is "wi" -- "( ph -> ps )". That node's sub-expression
+requires splitting! And note that ph did not require further
+splitting but ps did. The next node down in ps is 
+"wceq" -- "A = B"...and that node also requires splitting.
+--[[file:ocat.org][ocat]]
+
+* eXtreme eXamples from Norm
+
+(These demonstrate the one flaw in the algorithm I am using.
+It does not use lookahead when placing a constant(s) after
+an aligned variable, and if the variable's sub-expression
+completely fills the line, the constant is left dangling on
+the next line down -- indented by 4 columns from the alignment
+column. The lookahead code is possible but would require 
+narrowing the rendering frame for the variable's sub-expression,
+however large it is...and I don't feel like doing it (anyone
+who wants to code AlignColumnWithLookahead will one day have
+the chance.)
+
+P.S. I find these formulas to be overly simplistic.
+Isn't there anything complicated in set.mm? :)
+
+-----
+
+Now rendering Stmt = mdslmd1lem4
+ 
+Rendered Stmt = mdslmd1lem4 in 9 lines:
+
+     
+     |- ( ( x e. CH /\
+            ( ( A MH B /\ B MH* A ) /\
+              ( ( A (_ C /\ A (_ D ) /\
+                ( C (_ ( A vH B ) /\ D (_ ( A vH B ) ) ) ) ) ->
+          ( ( ( x i^i B ) (_ ( D i^i B ) ->
+              ( ( ( x i^i B ) vH ( C i^i B ) ) i^i ( D i^i B ) ) (_
+              ( ( x i^i B ) vH ( ( C i^i B ) i^i ( D i^i B ) ) ) ) ->
+            ( ( ( C i^i D ) (_ x /\ x (_ D ) ->
+              ( ( x vH C ) i^i D ) (_ ( x vH ( C i^i D ) ) ) ) )
+    
+
+Now printing the old way:
+
+    
+ |- ( ( x e. CH /\ ( ( A MH B /\ B MH* A ) /\ ( ( A (_ C /\ A (_ D ) 
+    /\ ( C (_ ( A vH B ) /\ D (_ ( A vH B ) ) ) ) ) -> ( ( ( x i^i B ) 
+    (_ ( D i^i B ) -> ( ( ( x i^i B ) vH ( C i^i B ) ) i^i ( D i^i B ) )
+    (_ ( ( x i^i B ) vH ( ( C i^i B ) i^i ( D i^i B ) ) ) ) -> ( ( ( C 
+    i^i D ) (_ x /\ x (_ D ) -> ( ( x vH C ) i^i D ) (_ ( x vH ( C i^i D 
+    ) ) ) ) ) 
+    
+
+-----
+
+Now rendering Stmt = mdslmd1lem1
+
+Rendered Stmt = mdslmd1lem1 in 10 lines:
+
+     
+     |- ( ( ( A MH B /\ B MH* A ) /\
+            ( ( A (_ C /\ A (_ D ) /\
+              ( C (_ ( A vH B ) /\ D (_ ( A vH B ) ) ) ) ->
+          ( ( ( R vH A ) (_ D ->
+              ( ( ( R vH A ) vH C ) i^i D ) (_
+              ( ( R vH A ) vH ( C i^i D ) ) ) ->
+            ( ( ( ( C i^i B ) i^i ( D i^i B ) ) (_ R /\ R (_ ( D i^i B ) )
+                  ->
+              ( ( R vH ( C i^i B ) ) i^i ( D i^i B ) ) (_
+              ( R vH ( ( C i^i B ) i^i ( D i^i B ) ) ) ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( ( A MH B /\ B MH* A ) /\ ( ( A (_ C /\ A (_ D ) /\ ( C (_ ( A 
+        vH B ) /\ D (_ ( A vH B ) ) ) ) -> ( ( ( R vH A ) (_ D -> ( ( ( R vH
+        A ) vH C ) i^i D ) (_ ( ( R vH A ) vH ( C i^i D ) ) ) -> ( ( ( ( C 
+        i^i B ) i^i ( D i^i B ) ) (_ R /\ R (_ ( D i^i B ) ) -> ( ( R vH ( C 
+        i^i B ) ) i^i ( D i^i B ) ) (_ ( R vH ( ( C i^i B ) i^i ( D i^i B ) )
+        ) ) ) ) 
+     
+ 
+-----
+
+Now rendering Stmt = mdslmd1lem3
+
+Rendered Stmt = mdslmd1lem3 in 11 lines:
+
+     
+     |- ( ( x e. CH /\
+            ( ( A MH B /\ B MH* A ) /\
+              ( ( A (_ C /\ A (_ D ) /\
+                ( C (_ ( A vH B ) /\ D (_ ( A vH B ) ) ) ) ) ->
+          ( ( ( x vH A ) (_ D ->
+              ( ( ( x vH A ) vH C ) i^i D ) (_
+              ( ( x vH A ) vH ( C i^i D ) ) ) ->
+            ( ( ( ( C i^i B ) i^i ( D i^i B ) ) (_ x /\ x (_ ( D i^i B ) )
+                  ->
+              ( ( x vH ( C i^i B ) ) i^i ( D i^i B ) ) (_
+              ( x vH ( ( C i^i B ) i^i ( D i^i B ) ) ) ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( x e. CH /\ ( ( A MH B /\ B MH* A ) /\ ( ( A (_ C /\ A (_ D ) 
+        /\ ( C (_ ( A vH B ) /\ D (_ ( A vH B ) ) ) ) ) -> ( ( ( x vH A ) (_
+        D -> ( ( ( x vH A ) vH C ) i^i D ) (_ ( ( x vH A ) vH ( C i^i D ) )
+        ) -> ( ( ( ( C i^i B ) i^i ( D i^i B ) ) (_ x /\ x (_ ( D i^i B ) )
+        -> ( ( x vH ( C i^i B ) ) i^i ( D i^i B ) ) (_ ( x vH ( ( C i^i B ) 
+        i^i ( D i^i B ) ) ) ) ) ) 
+     
+
+-----
+
+Now rendering Stmt = 5oa
+
+Rendered Stmt = 5oa in 20 lines:
+
+     
+     |- ( ( ( A vH B ) i^i ( C vH D ) ) i^i
+          ( ( F vH G ) i^i ( R vH S ) ) ) (_
+        ( B
+          vH
+          ( A i^i
+            ( C
+              vH
+              ( ( ( ( A vH C ) i^i ( B vH D ) ) i^i
+                  ( ( ( A vH R ) i^i ( B vH S ) )
+                    vH
+                    ( ( C vH R ) i^i ( D vH S ) ) ) ) i^i
+                ( ( ( ( A vH F ) i^i ( B vH G ) ) i^i
+                    ( ( ( A vH R ) i^i ( B vH S ) )
+                      vH
+                      ( ( F vH R ) i^i ( G vH S ) ) ) )
+                  vH
+                  ( ( ( C vH F ) i^i ( D vH G ) ) i^i
+                    ( ( ( C vH R ) i^i ( D vH S ) )
+                      vH
+                      ( ( F vH R ) i^i ( G vH S ) ) ) ) ) ) ) ) )
+     
+
+Now printing the old way:
+
+          
+     |- ( ( ( A vH B ) i^i ( C vH D ) ) i^i ( ( F vH G ) i^i ( R vH S ) ) 
+        ) (_ ( B vH ( A i^i ( C vH ( ( ( ( A vH C ) i^i ( B vH D ) ) i^i ( 
+        ( ( A vH R ) i^i ( B vH S ) ) vH ( ( C vH R ) i^i ( D vH S ) ) ) ) 
+        i^i ( ( ( ( A vH F ) i^i ( B vH G ) ) i^i ( ( ( A vH R ) i^i ( B vH S
+        ) ) vH ( ( F vH R ) i^i ( G vH S ) ) ) ) vH ( ( ( C vH F ) i^i ( D 
+        vH G ) ) i^i ( ( ( C vH R ) i^i ( D vH S ) ) vH ( ( F vH R ) i^i ( G
+        vH S ) ) ) ) ) ) ) ) ) 
+     
+
+-----
+
+Now rendering Stmt = 5oalem7
+
+Rendered Stmt = 5oalem7 in 20 lines:
+
+     
+     |- ( ( ( A +H B ) i^i ( C +H D ) ) i^i
+          ( ( F +H G ) i^i ( R +H S ) ) ) (_
+        ( B
+          +H
+          ( A i^i
+            ( C
+              +H
+              ( ( ( ( A +H C ) i^i ( B +H D ) ) i^i
+                  ( ( ( A +H R ) i^i ( B +H S ) )
+                    +H
+                    ( ( C +H R ) i^i ( D +H S ) ) ) ) i^i
+                ( ( ( ( A +H F ) i^i ( B +H G ) ) i^i
+                    ( ( ( A +H R ) i^i ( B +H S ) )
+                      +H
+                      ( ( F +H R ) i^i ( G +H S ) ) ) )
+                  +H
+                  ( ( ( C +H F ) i^i ( D +H G ) ) i^i
+                    ( ( ( C +H R ) i^i ( D +H S ) )
+                      +H
+                      ( ( F +H R ) i^i ( G +H S ) ) ) ) ) ) ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( ( A +H B ) i^i ( C +H D ) ) i^i ( ( F +H G ) i^i ( R +H S ) ) 
+        ) (_ ( B +H ( A i^i ( C +H ( ( ( ( A +H C ) i^i ( B +H D ) ) i^i ( 
+        ( ( A +H R ) i^i ( B +H S ) ) +H ( ( C +H R ) i^i ( D +H S ) ) ) ) 
+        i^i ( ( ( ( A +H F ) i^i ( B +H G ) ) i^i ( ( ( A +H R ) i^i ( B +H S
+        ) ) +H ( ( F +H R ) i^i ( G +H S ) ) ) ) +H ( ( ( C +H F ) i^i ( D 
+        +H G ) ) i^i ( ( ( C +H R ) i^i ( D +H S ) ) +H ( ( F +H R ) i^i ( G
+        +H S ) ) ) ) ) ) ) ) ) 
+     
+
+-----
+
+Now rendering Stmt = fsum0diaglem2
+
+Rendered Stmt = fsum0diaglem2 in 19 lines:
+
+     
+     |- ( n e. NN0 ->
+          ( ( ( A. j e. ( 0 ... n ) A e. CC /\
+                A. k e. ( 0 ... n ) B e. CC ) ->
+              sum_ j e.
+                   ( 0 ... n )
+                   sum_ k e. ( 0 ... ( n - j ) ) ( A x. B )
+              sum_ k e.
+                   ( 0 ... n )
+                   sum_ j e. ( 0 ... k ) ( A x. [_ ( k - j ) / k ]_ B ) )
+                ->
+            ( ( A. j e. ( 0 ... ( n + 1 ) ) A e. CC /\
+                A. k e. ( 0 ... ( n + 1 ) ) B e. CC ) ->
+              sum_ j e.
+                   ( 0 ... ( n + 1 ) )
+                   sum_ k e. ( 0 ... ( ( n + 1 ) - j ) ) ( A x. B )
+              sum_ k e.
+                   ( 0 ... ( n + 1 ) )
+                   sum_ j e. ( 0 ... k ) ( A x. [_ ( k - j ) / k ]_ B ) )
+                ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( n e. NN0 -> ( ( ( A. j e. ( 0 ... n ) A e. CC /\ A. k e. ( 0 ...
+        n ) B e. CC ) -> sum_ j e. ( 0 ... n ) sum_ k e. ( 0 ... ( n - j ) 
+        ) ( A x. B ) = sum_ k e. ( 0 ... n ) sum_ j e. ( 0 ... k ) ( A x. 
+        [_ ( k - j ) / k ]_ B ) ) -> ( ( A. j e. ( 0 ... ( n + 1 ) ) A e. CC
+        /\ A. k e. ( 0 ... ( n + 1 ) ) B e. CC ) -> sum_ j e. ( 0 ... ( n + 
+        1 ) ) sum_ k e. ( 0 ... ( ( n + 1 ) - j ) ) ( A x. B ) = sum_ k e. 
+        ( 0 ... ( n + 1 ) ) sum_ j e. ( 0 ... k ) ( A x. [_ ( k - j ) / k 
+        ]_ B ) ) ) ) 
+     
+
+-----
+
+Now rendering Stmt = ruclem4
+
+Rendered Stmt = ruclem4 in 11 lines:
+
+     
+     |- ( ( A = C /\ B = D ) ->
+          if ( ( ( 1st ` A ) < B /\ B < ( 2nd ` A ) ) ,
+               <. ( ( ( 2 x. B ) + ( 2nd ` A ) ) / 3 ) ,
+                  ( ( B + ( 2 x. ( 2nd ` A ) ) ) / 3 ) >. ,
+               <. ( ( ( 2 x. ( 1st ` A ) ) + ( 2nd ` A ) ) / 3 ) ,
+                  ( ( ( 1st ` A ) + ( 2 x. ( 2nd ` A ) ) ) / 3 ) >. )
+          if ( ( ( 1st ` C ) < D /\ D < ( 2nd ` C ) ) ,
+               <. ( ( ( 2 x. D ) + ( 2nd ` C ) ) / 3 ) ,
+                  ( ( D + ( 2 x. ( 2nd ` C ) ) ) / 3 ) >. ,
+               <. ( ( ( 2 x. ( 1st ` C ) ) + ( 2nd ` C ) ) / 3 ) ,
+                  ( ( ( 1st ` C ) + ( 2 x. ( 2nd ` C ) ) ) / 3 ) >. ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( A = C /\ B = D ) -> if ( ( ( 1st ` A ) < B /\ B < ( 2nd ` A ) 
+        ) , <. ( ( ( 2 x. B ) + ( 2nd ` A ) ) / 3 ) , ( ( B + ( 2 x. ( 2nd 
+        ` A ) ) ) / 3 ) >. , <. ( ( ( 2 x. ( 1st ` A ) ) + ( 2nd ` A ) ) / 
+        3 ) , ( ( ( 1st ` A ) + ( 2 x. ( 2nd ` A ) ) ) / 3 ) >. ) = if ( ( 
+        ( 1st ` C ) < D /\ D < ( 2nd ` C ) ) , <. ( ( ( 2 x. D ) + ( 2nd ` 
+        C ) ) / 3 ) , ( ( D + ( 2 x. ( 2nd ` C ) ) ) / 3 ) >. , <. ( ( ( 2 
+        x. ( 1st ` C ) ) + ( 2nd ` C ) ) / 3 ) , ( ( ( 1st ` C ) + ( 2 x. ( 
+        2nd ` C ) ) ) / 3 ) >. ) ) 
+     
+
+-----
+
+Now rendering Stmt = 5oalem5
+
+Rendered Stmt = 5oalem5 in 18 lines:
+
+     
+     |- ( ( ( ( ( x e. A /\ y e. B ) /\ ( z e. C /\ w e. D ) ) /\
+              ( ( f e. F /\ g e. G ) /\ ( v e. R /\ u e. S ) ) ) /\
+            ( ( ( x +v y ) = ( v +v u ) /\ ( z +v w ) = ( v +v u ) ) /\
+              ( f +v g ) = ( v +v u ) ) ) ->
+          ( x -v z ) e.
+          ( ( ( ( A +H C ) i^i ( B +H D ) ) i^i
+              ( ( ( A +H R ) i^i ( B +H S ) )
+                +H
+                ( ( C +H R ) i^i ( D +H S ) ) ) ) i^i
+            ( ( ( ( A +H F ) i^i ( B +H G ) ) i^i
+                ( ( ( A +H R ) i^i ( B +H S ) )
+                  +H
+                  ( ( F +H R ) i^i ( G +H S ) ) ) )
+              +H
+              ( ( ( C +H F ) i^i ( D +H G ) ) i^i
+                ( ( ( C +H R ) i^i ( D +H S ) )
+                  +H
+                  ( ( F +H R ) i^i ( G +H S ) ) ) ) ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( ( ( ( x e. A /\ y e. B ) /\ ( z e. C /\ w e. D ) ) /\ ( ( f e.
+        F /\ g e. G ) /\ ( v e. R /\ u e. S ) ) ) /\ ( ( ( x +v y ) = ( v 
+        +v u ) /\ ( z +v w ) = ( v +v u ) ) /\ ( f +v g ) = ( v +v u ) ) ) 
+        -> ( x -v z ) e. ( ( ( ( A +H C ) i^i ( B +H D ) ) i^i ( ( ( A +H R 
+        ) i^i ( B +H S ) ) +H ( ( C +H R ) i^i ( D +H S ) ) ) ) i^i ( ( ( (
+        A +H F ) i^i ( B +H G ) ) i^i ( ( ( A +H R ) i^i ( B +H S ) ) +H ( 
+        ( F +H R ) i^i ( G +H S ) ) ) ) +H ( ( ( C +H F ) i^i ( D +H G ) ) 
+        i^i ( ( ( C +H R ) i^i ( D +H S ) ) +H ( ( F +H R ) i^i ( G +H S ) ) 
+        ) ) ) ) ) 
+     
+
+-----
+
+Now rendering Stmt = 5oalem6
+
+Rendered Stmt = 5oalem6 in 23 lines:
+
+     
+     |- ( ( ( ( ( x e. A /\ y e. B ) /\ h = ( x +v y ) ) /\
+              ( ( z e. C /\ w e. D ) /\ h = ( z +v w ) ) ) /\
+            ( ( ( f e. F /\ g e. G ) /\ h = ( f +v g ) ) /\
+              ( ( v e. R /\ u e. S ) /\ h = ( v +v u ) ) ) ) ->
+          h e.
+          ( B
+            +H
+            ( A i^i
+              ( C
+                +H
+                ( ( ( ( A +H C ) i^i ( B +H D ) ) i^i
+                    ( ( ( A +H R ) i^i ( B +H S ) )
+                      +H
+                      ( ( C +H R ) i^i ( D +H S ) ) ) ) i^i
+                  ( ( ( ( A +H F ) i^i ( B +H G ) ) i^i
+                      ( ( ( A +H R ) i^i ( B +H S ) )
+                        +H
+                        ( ( F +H R ) i^i ( G +H S ) ) ) )
+                    +H
+                    ( ( ( C +H F ) i^i ( D +H G ) ) i^i
+                      ( ( ( C +H R ) i^i ( D +H S ) )
+                        +H
+                        ( ( F +H R ) i^i ( G +H S ) ) ) ) ) ) ) ) ) )
+     
+
+Now printing the old way:
+
+     
+     |- ( ( ( ( ( x e. A /\ y e. B ) /\ h = ( x +v y ) ) /\ ( ( z e. C /\ 
+        w e. D ) /\ h = ( z +v w ) ) ) /\ ( ( ( f e. F /\ g e. G ) /\ h = (
+        f +v g ) ) /\ ( ( v e. R /\ u e. S ) /\ h = ( v +v u ) ) ) ) -> h 
+        e. ( B +H ( A i^i ( C +H ( ( ( ( A +H C ) i^i ( B +H D ) ) i^i ( ( (
+        A +H R ) i^i ( B +H S ) ) +H ( ( C +H R ) i^i ( D +H S ) ) ) ) i^i 
+        ( ( ( ( A +H F ) i^i ( B +H G ) ) i^i ( ( ( A +H R ) i^i ( B +H S )
+        ) +H ( ( F +H R ) i^i ( G +H S ) ) ) ) +H ( ( ( C +H F ) i^i ( D +H
+        G ) ) i^i ( ( ( C +H R ) i^i ( D +H S ) ) +H ( ( F +H R ) i^i ( G 
+        +H S ) ) ) ) ) ) ) ) ) ) 
+     
+
+-----
+
+Now rendering Stmt = grothprim
+
+Rendered Stmt = grothprim in 76 lines:
+
+     
+     |- E. y
+           ( x e. y /\
+             ( A. z
+                  ( z e. y ->
+                    ( A. w
+                         ( A. v ( v e. w -> v e. z ) -> w e. y ) /\
+                      E. w
+                         ( w e. y /\
+                           A. v
+                              ( A. u ( u e. v -> u e. z ) -> v e. w ) ) )
+                        ) /\
+               A. z
+                  ( A. w ( w e. z -> w e. y ) ->
+                    ( E. w
+                         ( ( A. v
+                                ( v e. z ->
+                                  E. u
+                                     ( u e. y /\
+                                       E. g
+                                          ( g e. w /\
+                                            A. h
+                                               ( h e. g <->
+                                                 ( A. f
+                                                      ( f e. h <-> f = v )
+                                                       \/
+                                                   A. f
+                                                      ( f e. h <->
+                                                        ( f = v \/ f = u )
+                                                            ) ) ) ) ) )
+                                 /\
+                             A. v
+                                ( v e. y ->
+                                  E. u
+                                     ( u e. z /\
+                                       E. g
+                                          ( g e. w /\
+                                            A. h
+                                               ( h e. g <->
+                                                 ( A. f
+                                                      ( f e. h <-> f = u )
+                                                       \/
+                                                   A. f
+                                                      ( f e. h <->
+                                                        ( f = u \/ f = v )
+                                                            ) ) ) ) ) ) )
+                               /\
+                           A. v
+                              A. u
+                                 A. t
+                                    A. k
+                                       ( ( E. g
+                                              ( g e. w /\
+                                                A. h
+                                                   ( h e. g <->
+                                                     ( A. f
+                                                          ( f e. h <->
+                                                            f = v ) \/
+                                                       A. f
+                                                          ( f e. h <->
+                                                            ( f = v \/
+                                                              f = u ) ) )
+                                                         ) ) /\
+                                           E. g
+                                              ( g e. w /\
+                                                A. h
+                                                   ( h e. g <->
+                                                     ( A. f
+                                                          ( f e. h <->
+                                                            f = t ) \/
+                                                       A. f
+                                                          ( f e. h <->
+                                                            ( f = t \/
+                                                              f = k ) ) )
+                                                         ) ) ) ->
+                                         ( v = t <-> u = k ) ) ) \/
+                      z e. y ) ) ) )
+     
+
+Now printing the old way:
+
+     
+ |- E. y ( x e. y /\ ( A. z ( z e. y -> ( A. w ( A. v ( v e. w -> v e.
+    z ) -> w e. y ) /\ E. w ( w e. y /\ A. v ( A. u ( u e. v -> u e. z 
+    ) -> v e. w ) ) ) ) /\ A. z ( A. w ( w e. z -> w e. y ) -> ( E. w (
+    ( A. v ( v e. z -> E. u ( u e. y /\ E. g ( g e. w /\ A. h ( h e. g 
+    <-> ( A. f ( f e. h <-> f = v ) \/ A. f ( f e. h <-> ( f = v \/ f = u
+    ) ) ) ) ) ) ) /\ A. v ( v e. y -> E. u ( u e. z /\ E. g ( g e. w /\
+    A. h ( h e. g <-> ( A. f ( f e. h <-> f = u ) \/ A. f ( f e. h <-> (
+    f = u \/ f = v ) ) ) ) ) ) ) ) /\ A. v A. u A. t A. k ( ( E. g ( g 
+    e. w /\ A. h ( h e. g <-> ( A. f ( f e. h <-> f = v ) \/ A. f ( f e.
+    h <-> ( f = v \/ f = u ) ) ) ) ) /\ E. g ( g e. w /\ A. h ( h e. g 
+    <-> ( A. f ( f e. h <-> f = t ) \/ A. f ( f e. h <-> ( f = t \/ f = k
+    ) ) ) ) ) ) -> ( v = t <-> u = k ) ) ) \/ z e. y ) ) ) ) 
+     
+
+-----
+
+
+Well, that is very interesting.  It certainly shows a diversity of
+structures that aren't apparent in the raw symbol strings.  It is almost
+like they have "signatures" that would almost let you recognize the
+nature of the formula from a distance without looking at the individual
+symbols.  Each one has a kind of beauty of its own - a gallery of them
+might be interesting.
+
+In the case of 5oa, which I have spent countless hours studying, I would
+have recognized its structure immediately (from a distance) because of the big
+square block that is tenuously connected to main equation by a thin
+strand and almost isolated from it several layers deep.  This block is
+what mainly distinguishes it from a related equation, 3oa, and exerts a
+subtle influence that "travels" up the strand and
+makes it strictly stronger than 3oa while at the
+same time pushing, but not actually violating,
+the limits of what Hilbert space is capable of.  5oa
+was one of my very few actual mathematical discoveries (and led to a
+published paper).  Your display certainly brings out the way I visualize
+this thing in my head.  --[[file:norm.org][norm]] 29 Aug 2006
+
+Yes, the structures are interesting. And helpful. Very, very
+similar to program code with indented, nested "if" statements
+and the like. For maintenance coding work structures and
+long variable names are essential; they enable someone to come
+in off the street and go to work on a million line system
+without any documentation...and a short deadline (with implicit
+threat: "you will never work in this town again if you screw
+this one up" :) Ha. 
+
+I think that maxDepth = 3 and a 70 character wide line is
+somewhere near the sweet spot for human comprehension of
+these formulas. maxDepth = 4 would be too much, and a line
+shorter than, say, 60, would be too little. The objective
+is to avoid the need to scan the eyes right to left, but
+to be able to read line at a time -- within the structure.
+
+I also think that there might not be a benefit in TMFF
+to having different "TMFF Schemes" at the level of the
+individual syntax axiom. Perhaps. While there may be 
+syntax that benefits from custom schemes (and what I have
+now will *not* deal with RPN syntax), the user will benefit
+from consistency and knowing that everything is "pretty-printed"
+with a single format. (Knowing the syntax well is the main
+ingredient for comprehension, obviously; anyone who is 
+unfamiliar with set.mm's little tricks will see a TMFF-formatted
+formula as Greek.)
+
+P.S. I am planning to add a new option to the mmj2 Proof Asst GUI
+"File" menu. I think "get", to *get* a proof and build a 
+Proof Worksheet. That will be handier than having to do a
+batch export command. 
+
+--[[file:ocat.org][ocat]]
+
+-----
+
+09-Sep-2006: Exciting mmj2 Status Update for TMFF (Text Mode Formula
+Formatting) Enhancement!
+
+I have installed TMFF into the system, including the Proof
+Assistant GUI! Beautiful...
+
+More exciting, even, I have added three File Menu items "Get
+Proof", "Forward Get Proof", and "Backward Get Proof". These
+three items retrieve an existing proof from the .mm database
+loaded in memory and display the corresponding Proof
+Worksheet. "Get" retrieves a specific Theorem's proof, while
+Forward and Backward browse in the corresponding direction
+from the location in the database of the current Proof
+Worksheet. This means that the mmj2 Proof Assistant GUI can
+be used as a Theorem+Proof viewer! And since the formulas are
+nicely "pretty-printed", the value is much enhanced (next
+someone will ask for each Theorem's .mm database comments to
+be shown along with the proof, LOL!)
+
+-----
+
+There are a few other interesting bells and whistles included
+in the TMFF enhancement:
+
+ * "Flat" TMFF formatting: displays a formula on a single
+screen line extending beyond the screen window to the right.
+This option speeds up navigation within long proofs (am
+hoping to enable re-formatting of a single proof step via a
+right-mouse click menu item, as requested).
+
+ * "Line Wrap" On/Off Setting: this option causes lines that
+are longer than the column width of the screen window to wrap
+around. To accomodate formatting, TMFF uses spaces instead of
+ *newline* to accomplish line breaks inside of a formula
+(though a *newline* at the end of a formula is mandatory due
+to the specifications of the Proof Worksheet format.) The
+purpose of this option is to facilitate copying of formulas
+into DOS/Command Line windows, which generally consider a
+ *newline* to indicate end of input.)
+
+ * Screen window number of columns can be set by a RunParm
+command at start-up. This option may be useful for individual
+customization of Proof Assistant settings. My screen can
+handle 100 columns in font size 12, so a user might wish to
+use a very wide window and set the AlignColumn Format's
+"maxDepth" parameter to a high number ( > 4) to minimize the
+number of lines required to display a proof while still
+retaining TMFF formatting. Curiously, Java Swing can
+accomodate a 200 column window even though the screen can
+only show 100. in this case the user needs to manually move
+the window; scroll bars only operate on the contents of a
+window, not on the position of a window on the screen!
+
+-----
+
+An interesting aspect of the TMFF coding is that four TMFF
+Formats will be provided "out of the box". These include
+Format 0, Unformatted; Format 1, AlignColumn-Depth3; Format
+2, Flat; and Format 3, AlignColumn-Depth1. Formats 1 -> 3 can
+be customized using RunParm commands, but Format 0 is fixed
+and corresponds to the old, unformatted display format.
+Format 0 is also the default setting, out-of-the-box. (If
+anyone wants to complain I could increase the number of
+Formats available for use in a single execution, say, to 10.
+I think 4 will be enough for the serious user, but I could be
+wrong. Again...)
+
+-----
+
+Also interesting, since TMFF is totally integrated into mmj2,
+existing functions such as the RunParm command
+"PrintStatementDetails" require no changes by the user.
+Simply change the "TMFFUseFormat" setting to the desired
+Format Number prior to executing the mmj2 function and
+formulas are output in the requested format! This is
+particularly useful with the "Export" RunParm command, which
+can be used to print a proof as well as to create a Proof
+Worksheet file.
+
+-----
+
+My next bit of coding will be to add the following Edit Menu
+Items to the Proof Assistant GUI:
+
+ * Set LineWrap On/Off 
+ * Select Format Number 
+ * Reformat Proof
+
+(I am deliberately keeping the number of options minimal.
+Some options such as the number of screen window columns will
+be settable only via RunParms at start-up (columns can be set
+by tweaking the GUI window borders anyway...))
+
+-----
+
+I will also attempt to add a right-mouse button window to the
+Proof Assistant GUI. The challenge there is that the GUI
+regards the Proof Worksheet as a humongous blob of text and
+it knows nothing about the contents without parsing -- so it
+has difficulty providing "context sensitive" menu displays.
+My idea to compensate is that the user can *select* some text
+and *then* hold down the right-mouse button. The user could
+select either a proof step number or a Ref label, and the
+context sensitive menu would figure out what to show
+accordingly.
+
+The first choice for the right-mouse button window is to
+reformat a single proof step. Norm requested this feature.
+Another idea I have, which might not be too hard is to
+trigger an query window...
+
+One query I have in mind is a view of unifying assertions for
+the current proof step's formula without regard for unifying
+its hypotheses. The current Unification code matches
+assertions to each Derivation proof step's hypotheses *and*
+formula. But what if the user runs into trouble and needs a
+clue, perhaps while working the proof backwards? This would
+provide a list of assertions -- perhaps just the labels --
+that might be reviewed by the S.O.L. user. Of course, ax-mp
+would *always* be in the resulting list, but who knows, ax-mp
+might actually be the best choice!
+
+-----
+
+Any suggestions for the planned Nov. 1 release speak up
+now... 
+
+(I will be reviewing and implementing doable comments
+presented previously, as well as working on big improvements
+to the cursor positioning code, so no need to flog those
+dead horses there... AND, I am thinking about providing a
+separate download of just an executable Jar file within a
+separate directory. The idea is that you would store
+your working .mm file and Proof Worksheets in a single "work"
+directory for maximum simplicity and firewalling of work
+in progress. This Jar feature would still require a recent
+installation of the Sun Java JRE, but I think many people
+would be more inclined to attempt using mmj2 if they
+had an executable download in hand (particularly given 
+the elephantine size of the Sun Java SDK.))
+
+* Status Update 13-Sep
+
+I have integrated TMFF into the Proof Assistant GUI
+and added Edit Menu options for Font Family and Style
+selection, along with the new Set Format Nbr and
+Reformat items on the Edit menu. Works great, especially
+in conjunction with the Get, Get Forward and Get Backward
+File Menu items that enable browsing through the input
+.mm database's theorems and proofs. 
+
+I ran into difficulties implementing LineWrap=On
+with the Java Swing JTextArea. It works great unless
+the user dynamically resizes the window -- in that
+case the JTextArea "columns" field doesn't get updated
+and TMFF has problems computing the correct number
+of spaces to pad on the end of each line. So I am
+"commenting out" that feature for now.
+
+-----
+
+Today I am adding a new enhancement to the Proof Assistant
+that is unrelated to TMFF. It will be added to the
+Unify Menu as "Unify And Get Hints". What it will do
+is return a message containing a list of the assertions
+in the database whose formulas can be unified with
+each proof derivation step's formula, disregarding
+the hypotheses of the assertions and step. The message will be
+displayed only for derivation steps that fail to 
+unify successfully (and will not be produced for proof
+steps derived during this Unification operation.)
+
+What makes this enhancement great is that you might get
+stuck on a proof step and need a bit of help figuring
+out possible ways to derive the step under consideration.
+This will give you a list of theorems/axioms to look
+at, and depending on what you are trying to prove
+the list might be very specific consisting of just,
+say, ax-mp plus one or two other assertions!
+
+I am making this a separate menu item from the normal
+StartUnification item because the response time may
+be considerably slower. The normal unification process
+uses heuristics based on computed signatures of 
+formulas and hypotheses to "fast fail" an assertion
+unification candidate. But with this enhancement, we
+are forced to go through the tedious parse tree node
+matching process in many more cases. 
+
+--[[file:ocat.org][ocat]] 13-Sep-2006
+-----
+
+
+(back to [[file:mmj2.org][mmj2]])

@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Phase 1 HDM Deliverables:
+
+ * Language Specification
+ * Standard Math Symbol/Object Ontology for HDM
+ * Parsers/Reverse Parsers
+ * Proof Verification Engine
+ * Scholium/Math Text Input-Update Facility
+ * GUI Proof Assistant
+ * Conversion of set.mm and ql.mm to HDM "database"
+ * Web Access and/or Client-Server install package
+for Linux.
+ * Query/Report Utilities.
+
+* Comments
+
+I'm somewhat hesitant about the word "ontology"; I might prefer to say "core standard library of definitions, theorems, proofs, and metamathematics".
+I don't think a GUI is particularly important for any early phase of the project;
+Emacs (via souped-up scholium system) should be sufficient.  The "install packages" for now
+are just a tarball of elisp (and elisp-compatible) files; hence OS-independent but Emacs-dependent.  I'm not sure what you mean by Query/Report utilities (is this for updating the global database?) --[[file:jcorneli.org][jcorneli]]
+
+-----
+
+Reply: I added the Ontology item on a whim at the end :) There
+is a problem with creating a new system like this -- relating its
+object to objects outside the system. And it should be possible
+to go from outside the system to find the corresponding things
+inside the system -- though they may not yet exist. Maybe this
+should be a Phase II item...
+
+By query/report I was referring to utility functions allowing
+queries and reports: searching, sorting and displaying. 
+
+--[[file:ocat.org][ocat]]
+
+forward [[file:MMHDM1_enclosures.org][MMHDM1_enclosures]]

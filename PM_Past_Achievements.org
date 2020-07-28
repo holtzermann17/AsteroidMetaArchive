@@ -1,0 +1,87 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Historical events related to PM
+
+** 2006
+
+ * First board meeting.
+ * Created PlanetMath Google group; had some shall we say "spirited" discussion on licensing.
+ * Started the PM Whitepaper.
+ * Implemented RSS feeds for various streams of PlanetMath activity.
+ * Rspuzio and akrowne meet in ATL and start work on "The Fog of Copyleft".
+ * Rspuzio and jcorneli meet in NJ for various collaborations.
+ * Server migration initiated ([[file:bloftin.org][bloftin]]).
+ * Figured out a conference call arrangement.
+
+** 2005
+
+ * Got tax-exempt status for the nonprofit, after an arduous travail.
+ * Got a paralegal volunteer as treasurer and board member (Bonnie).
+ * Invaded the Emory "Free Culture and the Digital Library" conference with four papers related to PM, and Dan Mayer's attendance.  Rmilson, akrowne, jcorneli, rspuzio and others meet at the conference for first informal "PlanetMath summit".
+ * Massive improvements in rendering system, fixing longstanding performance problems ([[file:akrowne.org][akrowne]]).
+ * Major updates to the autolinking system to make it more efficient (implemented link invalidation index), by [[file:akrowne.org][akrowne]].
+ * Grant discussions with Quadrock (did not pan out)
+ * NSF ALT grant proposal, with Virginia Tech (did not get funded).
+ * [[file:akrowne.org][akrowne]] article "The FUD-Based Encyclopedia", defending CBPP, comes out.
+ * Got linkback from Wikipedia funding drives, helping PM to get public donations at the same time.
+ * PlanetPhysics set up ([[file:bloftin.org][bloftin]]).
+ * Switch  PM search engine to Lucene.
+
+** 2004
+
+ * Transition away from expensive legal counsel.
+ * started the FEM project; created the production system ([[file:jcorneli.org][jcorneli]], Ross Moore, [[file:akrowne.org][akrowne]]).
+ * Promotion of PM effort in digital library community by [[file:akrowne.org][akrowne]].
+ * Google AdSense set up; our first regular revenue source.
+ * Unfinished attempt at setting up PlanetComputing ([[file:akrowne.org][akrowne]] and students at Virginia Tech).
+ * Noosphere courseware study by [[file:rmilson.org][rmilson]].
+
+** 2003
+
+ * Form the nonprofit corporation.
+ * "One Week In October"---try experiment with importing pseudo-coded entries ([[file:jcorneli.org][jcorneli]] and [[file:akrowne.org][akrowne]]).
+ * Thesis work on PM.
+ * [[file:akrowne.org][akrowne]] thesis on PM/Noosphere; graduation (heads to Atlanta to continue work at Emory on DLs).
+ * Publish capstone of akrowne thesis in D-lib magazine: "Building a Digital Library the Commons-Based Peer Production Way".
+ * Noosphere comes into existence.
+
+** 2002
+
+ * Thesis work on PM.
+ * End of PM basic development.
+
+** 2001
+
+ * !PlanetMath project begun.
+ * Development on basic system.
+ * Major content authoring and importing.
+ * [[file:akrowne.org][akrowne]] gets digital library master's studies support.
+
+** 2000
+
+ * !PlanetMath concept (Nathan Egge and [[file:akrowne.org][akrowne]]).
+
+* Discussion
+
+I realize that this is supposed to be about PM, but the early history
+seems to ignore plenty of potentially interesting things.  E.g. there
+is no mention of HDM (so, why did we think to try OWIO), no mention of
+!MathWorld going offline, no mention of Puzio's CRATE project, the
+creation of the Internet, !TeX, GNU FDL, etc.
+
+I also realize that any history has to be selective, but given the
+interconnectedness of all things, it is also important to lay out some
+meta-historical principles that explain exactly how information is
+selected for the history.  Otherwise, the document causes ?'s to be
+emitted.
+
+This is not a purely academic exercise, since knowing where we've
+been says something about where we will be going (as everyone
+is accutely aware right now, since it is currently Black History Month).
+A reasonable history should include not only discussion of the 
+motivation for writing the history, but the motivations of the
+persons described in the history at the various points in time
+that are mentioned.
+
+--[[file:jcorneli.org][jcorneli]]

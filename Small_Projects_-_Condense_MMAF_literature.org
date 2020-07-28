@@ -1,0 +1,9 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Now that [[file:metamath.org][metamath]] creator/users have joined onto this site, we
+have a good chance to ask them questions.  I think it would be handy
+for the HDM project to have a metamath and friends (MMAF) quick-start
+guide.  Since AFAIK all of the documentation of these programs has been released under the FDL,
+we should be able to create this overview/summary document.  Possible
+relationships to [[file:hcode.org][hcode]] should be spelled out.

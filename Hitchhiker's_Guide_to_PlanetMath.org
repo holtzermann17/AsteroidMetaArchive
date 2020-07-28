@@ -1,0 +1,115 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(Unofficial/working title, of course!)
+
+I plan to collect existing documentation into one unified
+text... this should include some relevant steps towards
+"knowledge transfer" for !PlanetMath.
+
+* Outline
+
+**  Website documentation
+
+(This list is based on the list of existing site docs)
+
+ * Internationalization
+ * PlanetMath/Noosphere Scoring
+ * PlanetMath Content and Style Guide
+ * PlanetMath Automatic Reference Linking
+ * Controlling Linking
+ * Noosphere's Authority Model
+ * The PlanetMath FAQ
+ * New User Guide
+ * Graphics and PlanetMath
+ * Forum Policy
+ * !TeX Mathematical Formula Quick Reference
+ * Content Committee Charter
+ * PlanetMath Community Guidelines
+ * PM Rules of Compliance and Enforcement
+
+**  Nonprofit documentation/transparency)
+
+(This is based on a list created by Ray; see below.
+There may be things to add to this list from Joe's
+"transparency-enhancing" project from earlier in 2009,
+see for example http://aux.planetmath.org/doc/sponsor.html.)
+
+ * A half-page executive summary
+ * Table of contents
+ * Goals and mission
+ * Contact information
+ * Governance and authority
+ * Policies and procedures
+ * Organizational roles and responsibilities
+ * Current personnel (board, administrators, staff, etc.)
+ * Membership
+ * Member statistics
+ * Foundational documents (articles of incorporation, bylaws, CC charter, etc.)
+ * Current finances and budget
+ * Annual report, 990, and the like
+ * Agendas and minutes of meetings
+
+**  Noosphere documentation
+
+ * In addition to the [http://code.google.com/p/noosphere/ Noosphere Google Code] website (which is the site of active development)
+ * there is also [http://scholar.lib.vt.edu/theses/available/etd-09022003-150851/ Aaron's thesis]
+ * And a few other pages around the wiki, starting with the [[file:Noösphere.org][Noösphere]] page.
+
+
+----
+
+* Initial Project Description (by Ray)
+
+One thing I have been thinking of for a while is a document of
+about 20-30 pages which would describe how the PM organization
+operates. Such a document wold put information which is currently
+scattered in various places, including in our brains, not all of it
+up to date, in a centralized, current, coherent form. Publishing
+such a document would do much to increase organizational
+transparency and should be valuable for raising funds because
+it would make it easy for prospective donors to gain an
+understanding of where their money would be going (or,
+more to the point, how it would get there).
+
+As for the form such a document might assume, I am thinking of a
+suite of webpages which could be linked prominently from the
+home page, say via a link in the "information" part of the menu
+bar or from within the blurb at the top or wherever else might be
+appropriate once the home page is redesigned. Since preparing
+such a document would primarily be a matter of reassembling bits
+and pieces from already written texts and editing, it shouldn't take
+that long, so a month of part-time work should suffice. Also, I would
+be willing to help with this project as my schedule permits.
+
+Here are some items (not meant as an exhaustive list) which I
+think such a document should have:
+
+ * A half-page executive summary
+ * Table of contents
+ * Goals and mission
+ * Contact information
+ * Governance and authority
+ * Policies and procedures
+ * Organizational roles and responsibilities
+ * Current personnel (board, administrators, staff, etc.)
+ * Membership
+ * Member statistics
+ * Foundational documents (articles of incorporation, bylaws, CC charter, etc.)
+ * Current finances and budget
+ * Annual report, 990, and the like
+ * Agendas and minutes of meetings
+
+To be clear, I am not saying that the document needs to be
+organized in this way, but I would expect all this information
+to be in there and organized so as to make it easy to find a
+particular item, say, to find out who is currently a director
+or who hires programmers.
+
+Thinking about this, I am remembering back to the discussions
+we were having a few years back about roles in the organization,
+Joe brought up the importance of knowledge management. This
+project fits exactly into that notion and I think it would be a good
+place to start implementing some of those ideas.
+
+----

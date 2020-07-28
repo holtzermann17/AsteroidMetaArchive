@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/clean_rendering_disk_cache.pl
+
+pp line 10:  
+use lib '/var/www/pp/noosphere/lib';
+
+pm line 10:
+use lib '/var/www/noosphere/lib';
+
+ 1. Is it possible to have directory for library as a config variable

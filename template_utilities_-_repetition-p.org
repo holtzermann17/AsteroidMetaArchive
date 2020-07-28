@@ -1,0 +1,47 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ *Usage:* /(repetition-p x)/
+
+ *Input:* an s-expression /x/
+
+ *Output:* /t/ or /nil/
+
+ *Description:* If /x/ is a list which contains one or more repeated elements, /repetition-p/ returns /t/; otherwise it returns /nil/.
+
+ *Dependencies:* none
+
+ *Listing:*
+
+ (defun repetition-p (x)
+   (cond ((null x) nil)
+ 	 ((atom x) nil)
+	 ((member (car x) (cdr x)) t)
+	 (t (repetition-p (cdr x)))))
+
+ *Discussion:*  First, we get two trivial cases out of the way.  If /x/ is empty or an atom, then it cannot have any repetitions, so we report that there are no repetitions and go home.  Otherwise, /x/ must be a list with at least one item.  In this case, we look to see if the first item occurs more than once in the list, i.e. if it is an element of /(cdr x)/.  If so, we report that the list /x/ has a repetition and are done.  If not, then the first item occurs only once and /x/ will contain a repetition if and only if /(cdr x)/ contains a repetition, so /repeptition-p/ calls itself recursively to check out this possibility.  Since /(cdr x)/ is strictly smaller than /x/ unless /x/ is /nil/, this procedure will terminate.
+
+ *Examples:*
+
+ (repetition-p 'a)
+ => nil
+
+Since / 'a/ is not a list, there can be no repetitions.
+
+ (repetition-p '(a b))
+ => nil
+
+This list contains no repeated elements.
+
+ (repetition-p '(a b a))
+ => t
+
+Here the element /a/ is repeated.
+
+[[file:Disussion of template utilities - repetition-p | Discussion.org][Disussion of template utilities - repetition-p | Discussion]]
+
+Back to 
+
+Up to [[file:template utilities.org][template utilities]]
+
+Forward to

@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+: "Love me or hate me, it's still an obsession" -- Lady Sovereign, 2006
+
+* Arxana
+
+Arxana is a content management and hypertext editing platform, based
+on the idea of robust and universal annotation.
+
+Arxana can do a number of useful things the current [[file:Noösphere.org][Noösphere]]
+can't do.  However, the reverse is also true (for now).  Our current development
+objective is to bridge the gaps between these two systems, and in so
+doing, prepare Arxana for full-scale deployment.
+
+The current development version of the system is available for
+preliminary testing, experimentation, and constructive criticism.
+
+For a quick "tech notes"-style summary of where this project is at right now (as of Dec 18, 2006),
+see [[file:Arxana overview.org][Arxana overview]]!
+
+----
+
+[[file:HDM CVS|How to get the latest version.org][HDM CVS|How to get the latest version]] | [[file:first introduction to scholium systems.org][first introduction to scholium systems]] | [http://br.endernet.org/~akrowne/planetmath/papers/corneli_fcdl/ an introductory conference paper] | [[file:Arxana News.org][Arxana News]] | [[file:old draft of scholium system|preliminary writeup.org][old draft of scholium system|preliminary writeup]] | [[file:discussion of old draft of scholium system|comments on preliminary writeup.org][discussion of old draft of scholium system|comments on preliminary writeup]]
+
+----
+
+* Related discussions
+
+ * [[file:the spirit of the scholium system.org][the spirit of the scholium system]]
+ * [[file:using the scholium system.org][using the scholium system]]
+ * [[file:type creation and the scholium system.org][type creation and the scholium system]]
+ * [[file:discussion of the submitted scholium system abstract.org][discussion of the submitted scholium system abstract]]
+ * [[file:scholia and knowledge communities.org][scholia and knowledge communities]]
+ * [[file:the scholium system and AI.org][the scholium system and AI]]
+ * [[file:social, political, and economic scholium systems.org][social, political, and economic scholium systems]]
+ * [[file:inspirations for the scholium system.org][inspirations for the scholium system]]
+ * [[file:scholia and literary machines.org][scholia and literary machines]]
+ * [[file:historical scholia systems.org][historical scholia systems]]
+ * [[file:submitted version of scholium paper.org][submitted version of scholium paper]]
+ * [[file:software patents and the scholium system.org][software patents and the scholium system]]
+ * [[file:text property problems.org][text property problems]]
+ * [[file:scholium system and free software.org][scholium system and free software]]
+ * [[file:arxana, the scholium system.org][arxana, the scholium system]]
+ * [[file:consistency conditions as social contract.org][consistency conditions as social contract]]
+ * [[file:bridled vs unbridled complexity.org][bridled vs unbridled complexity]]
+ * [[file:in the beginning.org][in the beginning]]
+ * [[file:Arxana's linking model.org][Arxana's linking model]]
+ * [[file:SimpleNet.org][SimpleNet]]
+ * [[file:editing distributed semantic networks.org][editing distributed semantic networks]]
+ * [[file:mathematical theories of semantic networks.org][mathematical theories of semantic networks]]
+ * [[file:MUSN.org][MUSN]]
+ * [[file:MUSN's linking model.org][MUSN's linking model]]
+ * [[file:RelativisticNet.org][RelativisticNet]]
+ * [[file:A scholium-based programming model.org][A scholium-based programming model]]
+
+----
+[[file:Discussions.org][Discussions]]

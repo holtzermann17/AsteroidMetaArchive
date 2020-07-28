@@ -1,0 +1,43 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In order to implement match-schema, we shall require two relatively
+simple subroutines, one of which intertwines recursively with
+match-schema.
+
+The first subroutine simply checks if two lists are of the same
+length. It may be defined recursively as follows:
+
+ (defun same-length (x y)
+   (cond ((null x) (null y))
+         ((null y) (null x))
+         (t (same-length (cdr x) (cdr y)))))
+
+The second subroutine simply applies match-schema to corresponding items in the
+expression and the argument and returns a list of the results.  It may be
+defined recursively as follows:
+
+ (defun zipper (schema argument)
+   (if (car argument) 
+       (cons
+        (match-schema (list (car schema) (caadr schema)) 
+                      (car argument))
+        (zipper (list (car schema) (cdadr schema)) 
+                (cdr argument)))))
+
+----
+
+(Here caadr and cdadr are defined as follows --
+
+ (defun caadr (x) (car (car (cdr x))))
+
+ (defun cdadr (x) (cdr (car (cdr x))))
+
+they are part of most lisp distributions however!)
+
+: But not emacs LISP!! --[[file:rspuzio.org][rspuzio]]
+
+----
+
+Some more comments on `zipper' would be good -- any time you start using caadrs
+and cdadrs, people are bound to need a little extra help. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 15:49:50 2005 UTC

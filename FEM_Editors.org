@@ -1,0 +1,139 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The lead editors for the Free Encyclopedia of Mathematics project are:
+
+; Joe Corneli ([[file:jcorneli.org][jcorneli]]) : elisp, editorial process, content editing...
+; Ross Moore : latex, layout/design, content editing...
+; Aaron Krowne ([[file:akrowne.org][akrowne]]) : perl (interface to PM/Noosphere), business/publication, content editing...
+
+The associate editors are:
+
+; Ray Puzio ([[file:rspuzio.org][rspuzio]]) : differential geometry, differential equations, special functions, ...
+; Alvaro Lozano-Robledo ([[file:alozano.org][alozano]]) : number theory, algebraic geometry, abstract algebra (group theory, ring theory, field theory)...
+; Oscar Masaveu ([[file:omasaveu.org][omasaveu]]) : topology, topological groups, nonstandard logics, ...
+
+We are currently looking for additional associate editors.  If you are
+interested, please get in touch.  Feel free to add thoughts here about how you
+would like the editorial process to work, or ask questions about how things have
+been going so far.
+
+* Assignments
+
+Dear editors,
+
+I would like to ask all of you to try to find someone who is currently outside
+of PlanetMath to join on as an associate editor.  Your candidate should possess
+some expertise in her or his field, and should be know for good
+writing/editing/math skills and an interest (or potential interest) in free
+software and free documentation (and free math in particular).  After version
+0.1.0. is released, a team of 10 should be about right.  I would prefer to limit
+the number of editors from inside the PM system - which is not to say that PM
+people shouldn't participate in the editorial process.  But I would like most of
+the editors to have a dispassionate view towards the material; to be able to say
+things like "it would be good to see some articles about XYZ" without feeling
+like they have to go and write that material themselves.
+
+For now, please just think about people you would like to ask.  When we have the
+release ready, you can show it to them, and talk the project over with them to
+see what thy think.  I'd be interested to hear back about these experiences,
+whatever happens.
+
+Thanks, --[[file:jcorneli.org][jcorneli]] Tue Mar 01 16:06:40 2005 UTC
+
+: Ummm, I'll try to think of somebody, but I can't think of an ideal person right now. --[[file:alozano.org][alozano]]
+
+:: That's fine.  Just think about it.  By the way, I don't know if you've seen
+the draft that's going to become the release (once we get a few more details
+worked out)?  Its here: http://www-texdev.ics.mq.edu.au/FEM/book.pdf -- maybe it
+will remind you of someone who might be interested ;).  I have a couple of
+people in mind to ask myself, so if not everyone is able to come up with
+someone, that will be fine. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 19:16:43 2005 UTC
+
+----
+
+*  The plan...
+
+As the project of the FEM takes shape, I would like the lead editors to write
+assignments here and propose a distribution of the assignments, i.e. we need a
+manager (is that Joe?). For now, I am not very sure how the editorial process is
+going to happen. Maybe we can split the FEM in chapters and assign a bunch of
+chapters to each one of us, who can browse over it and list the specific
+problems one sees, together with the general problems of the whole FEM. One of
+the tasks I am interested in and willing to undertake is organizing the entries
+in a reasonable order (inside each MSC group). -- [[file:alozano.org][alozano]]
+
+: Remember that most everything on Planet Math is based on the principle of "if
+you see something to be done, go ahead and do it".  I would assume that this
+also applies to this particular project.  For instance, the other day, I decided
+to do something about the fact that there were entries filed under -XX
+classifications and Joe decided to do something similar about quotation marks.
+I would say, if you have an idea for organizing entries, go ahead and start
+organizing.  The important thing here is for us to stay in communication so we
+don't keep bumping into each other.  -- [[file:rspuzio.org][rspuzio]] 2 March 2005
+
+:: I think you are both right.  The lead editors are going to work on creating
+assignments for associate editors, but associate editors are also free to work
+on things out of their own motivation.  Basically anything that can be done on
+through the PM site is 100% fair game for anyone to work on, and I won't object
+to anything constructive that takes place there.  The FEM core documents, the
+Emacs file that compiles things, and the parts of PM/Noosphere that relate to
+this project will be maintained by Ross, me, and Aaron, respectively; we may or
+may not agree with certain changes that might be suggested.  So if you're
+thinking about working on something that requires changing one of these pieces
+of the build pipeline, it would be best to be in touch with us throughout the
+process.  Also, if you wish to make use of our streamlined way to submit
+corrections in bulk (highly recommended!), I'd like it if you would send the
+corrections (marked up using the bulk submission format that I will describe
+shortly) to me for review & possible discussion with the other lead editors,
+first.  In terms of Alvaro's specific thought about organizing entries, and
+Ray's comment about just get started - I tend to agree, that's the right thing
+to do.  What I'd like to see would be a document that imposes an
+order/organization on /one/ MSC, for now.  I also agree with the point that
+keeping up communication is very important.  The [[file:Tasks.org][Tasks]] page can be helpful
+for this. Thanks, --[[file:jcorneli.org][jcorneli]] Wed Mar 02 23:35:04 2005 UTC
+
+#+BEGIN_VERSE For an example of a document which imposes an order on one MSC look at
+http://planetmath.org/encyclopedia/ArithmeticOfEllipticCurves.html which links
+to all entries in MSC 14H52 ( and 11G05 which is pretty much the same), and a
+couple related others. I am not sure if this is what you are looking for, but
+this is the idea in my head of how every MSC section should start in the FEM:
+some kind of Meta-Entry written in prose (as much as one can do but brief and
+concise) that gives hints of the theory and where to go (as opposed to a bare
+list of names of concepts/entries). -- [[file:alozano.org][alozano]]
+
+#+BEGIN_VERSE: It may be a while til I can take a good look at this and give my critique
+-- I'll need the relevant PM snapshot, and the snapshot system is currently
+broken. --[[file:jcorneli.org][jcorneli]] Thu Mar 03 02:41:54 2005 UTC
+
+#+BEGIN_VERSE: See [[file:Discussion of ArithemeticOfEllipticCurves.org][Discussion of ArithemeticOfEllipticCurves]]. --[[file:jcorneli.org][jcorneli]] Fri Mar 04 00:31:17 2005 UTC
+
+----
+* Discussion
+
+I would like to collaborate in the FEM project. I do not have immense amounts of
+free time, but I think this is worth it and I wouldn't mind helping out as much
+as I can. I would prefer to do tasks content-related rather than tex or coding
+related, such as review of content, or logic organization of content (which
+seems to be a big issue in the pre-release). -- [[file:alozano.org][alozano]]
+
+: Sure! Thanks! I'm adding you to the list (which I am just now making).  If you
+know anyone else who might like to be involved as a content-editor, please refer
+them to this page. --[[file:jcorneli.org][jcorneli]] Mon Feb 28 22:55:47 2005 UTC
+
+:: Thank you! I downloaded the book. Oh boy, this thing is big. :D --[[file:alozano.org][alozano]]
+
+I would also like to help out with the FEM project. Like Alvaro I do not have
+much free time but I am also willing to help out as much as I can. I would also
+prefer to do content related tasks. On the internet I am better known as
+loner. --[[file:omasaveu.org][omasaveu]]
+
+: Oscar - I read a little bit more about you on your homepage.  The IRC classes
+certainly sound interesting - I'd like to know more about them.  I'm adding you
+to the list of associate editors.  Please create a user page on this wiki for
+messages, and sign in when your submit things here next time (see the
+[[file:Policy.org][Policy]])! Thanks.  The wiki is (for now anyway) our primary means of
+communication about the FEM.  Welcome aboard. --[[file:jcorneli.org][jcorneli]] Tue Mar 01 23:35:11 2005 UTC
+
+----
+[[file:FEM.org][FEM]]

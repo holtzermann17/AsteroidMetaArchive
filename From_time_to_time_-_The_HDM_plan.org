@@ -1,0 +1,95 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In light of the comments on the [[file:HDM planning.org][HDM planning]] page and the follow-up
+page on an [[file:HDM Feasibility Study discussion|HDM Feasibility Study.org][HDM Feasibility Study discussion|HDM Feasibility Study]],
+and also in light of the fact that the [[file:scholium system.org][scholium system]] is now actually
+usable, I think that it is high time that we kick the "[[file:Guide to the HDM.org][Guide to the HDM]]"
+concept into high gear and make an HDM Plan that does the project justice.  In
+other words, a plan that can eventually cover the territory that we're
+here to survey.
+
+I haven't yet figured out the details of what will go into the first draft
+of this plan; presumably a bunch of the content can be drawn from this wiki.
+Since we're going to want to use the scholium system, for now that means
+that the plan will live in [[file:HDM CVS.org][HDM CVS]], so I advise anyone who wants to
+get involved with this project in any way to become familiar with that
+technology.
+
+--[[file:jcorneli.org][jcorneli]], (Nov 21 05)
+
+A snapshot of the plan has appeared on the wiki as [[file:First Monday Paper--The HDM Manifesto|The HDM Manifesto.org][First Monday Paper--The HDM Manifesto|The HDM Manifesto]].
+This version will hopefully evolve into something publishable and understandable to
+folks versed in "internet culture".  Plenty of stuff can be added to this plan (and, if it is desired, some of it
+can be hidden in the published version).  I'm curious to think about exactly
+what should go into the plan and what shouldn't.
+
+On the one one hand, it seems a waste to leave anything out of the
+plan!  On the other hand, unless plan is expressed in some fairly
+sophisticated way, putting too much stuff in will be confusing for
+most (if not all) observers.  The [[file:scholium system.org][scholium system]] is supposed
+to be sophisticated enough to accomplish this goal, but there will
+be more work involved getting it to that point.
+
+On the subject on not leaving things out, I've been considering using
+the scholium system to make annotations on just about everything I
+read.  (I'll add this to the Experiments section.)  The system has
+plenty of potential applications far outside of mathematics itself.
+(The "AI complete" hypothesis is that you can't make anything with
+human-like intelligence in one area of endeavor without making
+something with human-like intelligence in all areas.  I don't
+necessarily believe this hypothesis, but it is interesting anyway.
+Basically it says that you can't leave anything out!)
+
+Focusing on math stuff for the HDM project is probably a very good
+idea, but I know that I often get wrapped up in more "philosophical"
+questions, and I think that is OK too.  The HDM isn't just about
+mathematical content, but also about math-production processes -
+sorting out the philosophy of free math is just one complication here,
+another would be sorting out the issues with CBPP, and "how we think",
+and "how we get things done", and "how we communicate", and so on -
+the sorts of things we've been discussing on this wiki for a while.
+And (as mentioned in the Manifesto), the HDM is just one part of a
+broader "simulationist programme".
+
+It may be the case that my efforts would be best spent working on 
+a good tool for organizing this broad range of material (instead of
+spending my time generating the material itself - although content
+and systems are often inextricably linked, at least for me).
+This relates to the business with "users" and "superusers"
+I've been talking about on the [[file:Comical tragedies of the info commons.org][Comical tragedies of the info commons]]
+page & related pages.  Superusers are supposed to take care of
+the operation of the system whereas regular users take care
+that the system is populated with content.  One can of course wear both
+hats (in some cases, simultaneously, I think!).
+
+Remember that we've been talking about things being defined by their
+attachments (including the attachments, recursing to atoms).  And
+therein, intersubjectivity arising from multiple subjectivity.  You
+need those different points of view, but you also need a system that
+allows them to stick together coherently.  ("K'nex of the mind"? - or
+more basically, "graph theory"?)
+
+This Plan should certainly grow to accomodate all these sorts of points
+and issues.  Which means soon, I think, me getting back to work on the
+system, since perhaps this narration and musing has gone about as far
+as it is going to go on its own.
+
+Thank you for listening, --[[file:jcorneli.org][jcorneli]] Dec 8 05
+
+I will write more on this and add my contribution when I return next
+week.  My primary interest in this plan is not so much the general
+aspects discussed here (which is not be construed as saying that I
+consider these aspects as irrelevant) but the more specific practical
+aims of structuring the projects I have been interested in, deciding
+where to focus effort, ordering priorities and come out with a
+plausible schedule for finishing particular subprojects along the way.
+We have been discussing and working on a lot of interesting things and
+am concerned about making good use of limited time, making sure that
+things which have been largely figured out get done soon and that
+stuff doesn't fall between the cracks. --[[file:rspuzio.org][rspuzio]]
+
+It is good to get into specifics and I am all in support of you
+tackling the topics you've mentioned here.  The generalities above are
+an OK contribution, but I think it would be good if I, too, got into
+more specifics. --[[file:jcorneli.org][jcorneli]]

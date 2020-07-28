@@ -1,0 +1,37 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To illustrate the ideas presented here, let us consider the proof of the distributivity of Cartesian product over union in set theory.
+
+/A times (B union C) = (A times B) union (A times C)/
+
+Let us start with an unstructured proof:
+
+[[file:First proof of distributivity of product over union | Unstructured proof.org][First proof of distributivity of product over union | Unstructured proof]]
+
+This proof is particularly long because we have not skipped any intermediate steps.  In acutal practise, as written in a math book, one would typically leave out a few intermediate steps for clarity.  However, for our current purposes, the point to note is that this proof is virtually impossible to follow.  While one can verify that each statement follows by a rule of logical inference, the reader does not feel particularly illuminated as to how the proof works.
+
+To make for a more illuminating proof, we will structure this proof.  As a first step, we separate the important "milestones" in the proof to obtain an outline:
+
+[[file:First outline of proof of distributivity of product over union | Coarse outline.org][First outline of proof of distributivity of product over union | Coarse outline]]
+
+Looking at this outline, one can get a feel of where the general flow of the logic even if it is not clear how, say, one got from step 1 to step 2.  To make this clear, let us fill in some more details.  We shall fill in these leaps of insight by placing outlines of the reasoning whereby we deduced each step below the step.  Having done so, we obtain a finer outline like so:
+
+[[file:Second outline of proof of distributivity of product over union | Fine outline.org][Second outline of proof of distributivity of product over union | Fine outline]]
+
+At this point, the reader can follow the proof and it is not hard to see how each step follows.  In particular, the big gaps in the outline have been filled.  The remaining steps are sufficiently trivial that the reader can easily fill them in, perhaps subliminally.  
+
+This is essentialy the level of detail at which the proof would ordinarily apear in mathematical literature.  To be sure, in a math book one rarely finds proofs presented as numbered lists.  Rather, a paragraph would correspond to each of the headings in the coarse outline.  The main sentence of the paragraph would be the statement listed in the outline and the subordinate items in the outline would correspond to the remaining sentences in the paragraph.  Also, there might be a few sentences added here and there so as to make the proof easier to read.  In the case of a longer proof, higher levels of organization would appear as chapters and sections and paragraphs would correspond to lower levels of organization.
+
+However, if we want to fill in the last few remaining gaps so that it compares to the original unstructured proof and we can verify it using basic rules of inference, we can add the remaining steps as the next level in the outline to obtain the following:
+
+[[file:Second proof of distributivity of product over union | Structured proof.org][Second proof of distributivity of product over union | Structured proof]]
+
+Since this proof goes into sufficient detail, we can also supply the reasons why the different steps in the proof are correct.  Usually, one would present this by writing the statements of the proof in one column and the justifications for the statements in another column.  Since this is not feasible here, we will present them on separate lines in boldface here
+
+[[file:Proof of distributivity of product over union with justifications | Structured proof with justifications.org][Proof of distributivity of product over union with justifications | Structured proof with justifications]]
+
+
+--------
+
+[[file:Discussion of example of structured proof.org][Discussion of example of structured proof]]

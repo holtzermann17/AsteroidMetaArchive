@@ -1,0 +1,58 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+In his [http://planetmath.org/?op=getobj&from=papers&id=336 thesis], Warren Buck studies rings 
+whose additive groups are cyclic.  Upon reading this, I wondered to what extent the results
+there would extend to rings whose additive groups are 
+[http://planetmath.org/encyclopedia/GeneralizedCyclicGroup.html locally cyclic].  A motivation 
+for this is that $\mathbb{Q}$ is locally cyclic, so there is at least one interesting example.
+
+A point worth noting from the get-go is that locally cyclic rings, like cyclic rings are
+Abelian.  This is because, in order to check whether two elements commute, we need only a 
+generator for those elements and not necessarily for the whole group.  To the point, if
+$\phi$ and $\psi$ are elements of $g$ then, by definition of local cyclicity, there must 
+exist $\omega \in R$ and $m,n \in \mathbb{Z}$ such that $\phi = m \omega$ and $\psi = n \omega$,
+but then we have $\phi \psi = mn \omega^2 = mn \omega^2 = \psi \phi$.
+
+To begin, locally cyclic rings may be divided into two classes, zero characteristic and finite
+characteristic, as described below:
+[[file:Locally Cyclic Rings --- Characteristic.org][Locally Cyclic Rings --- Characteristic]]
+
+In the terminology described above, we now focus attention on rings of characteristic zero.
+In order to study them, we will introduce the notion of ratios of elements.
+[[file:Locally Cyclic Rings --- Ratios of Elements.org][Locally Cyclic Rings --- Ratios of Elements]]
+
+An important application of ratio of elements is to define behavior of elements.  The behavior
+of an element is a rational number which uniquely labels elements of locally cyclic rings of
+characteristic zero and behaves nucely under the ring operations.
+[[file:Locally Cyclic Rings --- Behavior of Elements.org][Locally Cyclic Rings --- Behavior of Elements]]
+
+By making use of the behavior, we can obtain a taxonomy of locally cyclic rings of characteristic zero.
+It turns out that such rings are classified up to isomorphism by two invariants --- the behavior of the 
+ring (as opposed to the behaviors of individual elements within that ring) ,which is an integer; and the
+repetoire, which is a set of prime numbers.
+[[file:Locally Cyclic Rings --- Classification by Behavior and Repetoire.org][Locally Cyclic Rings --- Classification by Behavior and Repetoire]]
+
+Next, we turn our attention to locally cyclic rings of finite characteristic.  We begin by
+expressing these rings as limits of finite rings.
+[[file:Locally Cyclic Rings --- Finite Chracteristic as Limit.org][Locally Cyclic Rings --- Finite Chracteristic as Limit]]
+
+-----
+
+After writing this, I noted a few things which should simplify and clarify the exposition.
+The behavior of a ring $R$ can be defined quite generally as $[R^2 : R]$.  This gives the
+correct answer for the cases of cyclic rings and locally cyclic rings of zero characteristic.
+As for finite characteristic, it is not so clear what is needed, but the definition makes sense
+there and it would be good to see what one obtains for the behavior of the class of examples
+presented above.
+
+Also, the repertoire may be defined purely in terms of the additive structure.  Instead of
+introducing the subring of integral elements, we define the repertoire to be the set of all
+prime numbers $p$ such that, for every element $x$ of the ring, there exists $y$ such that
+$py = y$.  Once this is recognized, we can reformulate our theorem as follows: two locally
+cyclic rings of zero characteristic are isomorphic if and only if their additive groups are
+isomorphic and they have the same behavior.  This is exactly the same as the formulation for
+cyclic rings and one can speculate whether it also holds for finite characteristic.
+
+
+  

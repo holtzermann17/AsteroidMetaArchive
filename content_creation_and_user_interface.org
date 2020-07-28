@@ -1,0 +1,52 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+Both [[file:Noosphere.org][Noosphere]] and the
+[[file:A scholium-based document model|scholium system.org][A scholium-based document model|scholium system]]
+have potential for being useful to the HDM project.
+
+The interest we have in Noosphere development is related
+to our interest in [[file:PM.org][PM]], but not entirely the
+same.  If PM can be used as a place to manage HDM content
+with minimal changes to the actual Noosphere engine
+(e.g. by hosting a CVS tree for the project), we may find
+that to be quite useful.  The great ideas about 
+[[file:literate programming.org][literate programming]] and [[file:nested noosphere instances.org][nested noosphere instances]]
+that we've been talking about have analogues inside
+[[file:Emacs.org][Emacs]] - so we don't strictly need to use Noosphere.
+
+I imagine that PM would be interested in the HDM content
+at some point, so discussion of things like nested noosphere
+instances has to do with that: how can we share HDM content
+with people on PM?
+
+The fact that there isn't much content now shouldn't stand
+in the way of our planning.  There will be increasing quantities
+of content soon, I'm fairly sure.
+
+Of course, if HDM is available through some future fancy version of
+Noosphere on PM, then all the snazzy tools for creating
+new content that we've been talking about can be used "over
+the web."  To me, creating these tools doesn't seem to be
+that huge of a priority for HDM, since for the forseeable future
+I think HDM people will be hacker types who would be just
+fine with doing everything in [[file:Emacs.org][Emacs]] without a web browser
+involved.
+
+Of course, some user interface tools will presumably have to be
+made in either event, and sometimes the tools we'd use in Emacs
+entirely analogous to tools we'd use over the web; sometimes
+they are different.
+
+I'm certainly in favor of the Noosphere project developing
+tools that have broader application than just to HDM.  Literate
+programming and nested instances certainly seem like generally
+applicable ideas.
+
+In keeping with the [[file:one week in october.org][one week in october]] conclusion, I think
+that it is best for HDM to be an essentially distinct project
+until it gets rolling along pretty well.  But it may be that some
+file management tools and adoption of an Emacs-based literate
+programming environment would help the project in the near
+future.

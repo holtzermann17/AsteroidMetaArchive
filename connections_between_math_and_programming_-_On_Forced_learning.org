@@ -1,0 +1,45 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+
+I just wanted to remark that I think it is not a very good idea to force
+learners to do anything.  Learning is something that should be done
+freely.  On the page 
+"[[file:mathematicians do not want to go out of their way to learn something new.org][mathematicians do not want to go out of their way to learn something new]]",
+it talks about the HDM project's /support/ for the normal way of doing math.
+The HDM isn't about forcing people to do something, it is about creating 
+something that they will (hopefully) want to adopt, i.e., something
+useful.
+
+----
+
+I totally agree. In fact I feel that this is among the greatest benefits of PM and 
+other CBPP sites --- they provide more opportunities for the self-driven learner. 
+But remember the context of my original comments (the NSF ADL grant program).  I 
+think programming for mathematics education would be a tough sell, thats all.  In 
+general, I am all for more of this kind of effort, because it can only potentially
+add value to the world.  --[[file:akrowne.org][akrowne]] Mon Mar 28 01:18:09 UTC 2005
+
+If it was to be added to this proposal, I would pitch it mainly as a
+contribution to the development of [[file:PlanetComputing.org][PlanetComputing]].  But also, I'm pretty
+sure that CAS and web services are "hot" for math education right now.  I could
+certainly be biased!  Personally, I think symbolic math /is/ a big
+contribution to learning.  When I'm tutoring my calculus student, for example,
+he'll often plot something that we're talking about in mathematica.  This helps
+give intuition for things like why the integral of tangent is /ln|sec x|/ (or
+whatever it is).  CAS also makes it so that you can watch derivations like this:
+
+ (d/dx) ln |sec x| 
+ = (1 / sec x) (sec x)'
+ = (cos x) (cos x * 0 + sin x / cos^2 x)
+ = sin x / cos x
+ = tan x
+
+unfold before your very eyes -- which I think is helpful, because one doesn't
+want to have to rederive everything all the time!  So I would say that it
+/shouldn't/ be too hard to sell programming-for-mathematics-education for this
+grant, especially if we also put in something about developing a CAS or CAS
+interface.  (That "/shouldn't/" is normative, but it would like to be
+predictive...)  --[[file:jcorneli.org][jcorneli]] Mon Mar 28 03:55:46 2005 UTC
+
+[[file:connections between math and programming | Back.org][connections between math and programming | Back]]

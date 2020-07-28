@@ -1,0 +1,182 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+links related to this page:
+
+ * [[file:NSF Advanced Learning Technologies Grant Planning Page.org][NSF Advanced Learning Technologies Grant Planning Page]]
+ * [[file:NSF_ALT_2005_Grant_Proposal_Draft|original proposal draft.org][NSF_ALT_2005_Grant_Proposal_Draft|original proposal draft]]
+ * [[file:Collaborative_Version_Of_NSF_ALT_2005_Proposal_Introduction|proposal introduction for this version.org][Collaborative_Version_Of_NSF_ALT_2005_Proposal_Introduction|proposal introduction for this version]]
+
+*  Plan of Work
+
+In this section we discuss specific work items for this grant.  We give some ideas for starting 
+points and technical directions, which will have to be further investigated once the project 
+activities begin.  
+
+**  Improved Deployability of Noosphere
+
+Current efforts to extend Noosphere to other instances, establishing new virtual communities, have been
+significantly retarded by the fact that it is difficult to deploy.  The problem is that it was designed
+around a single instance, the PlanetMath site.  While it was quickly realized that the collaborative
+digital library system concepts could be applied to many math and science digital library settings, the
+project has thus far lacked the resources to appropriately package and generalize Noosphere.
+
+Thus, we propose to make Noosphere easy to deploy, including the aspects of:
+
+ * packaging it for easy installation (rpms, debs, self-extracting installers)
+ * making it easy to configure (unified location configuration, "configurator" interfaces)
+ * making it easy to customize (uniform templating, proper stylesheeting, PlanetMath-instance-specific 
+  things removed from the distribution)
+ * more complete documentation
+ * fewer dependencies
+
+PlanetComputing will serve as a test case for the deployability of Noosphere.
+
+
+**  Improvements to Educational Metadata and Organization, and Community Support
+
+Noosphere currently lacks support for standard learning object metadata fields, such as educational level, 
+difficulty, time to learn, and intended audience (e.g. teacher, student, practitioner, etc.).   The value
+of these fields is that they can be connected up to browsing, searching, and filtering services, saving
+a lot of time for learners and preventing information overload.   It should be obvious that, for example,
+elementary school students should not have to see the same content as researchers.  In this spirit, profiles
+could be saved for each user which automate the filtering and in general give them a personalized "view"
+of the digital library (as in CITIDEL).
+
+In addition, while the MSC-based subject organization (currently built into PlanetMath and Noosphere) is 
+comprehensive and excellent for researchers, it is too advanced and daunting for students and not quite what 
+is needed for teachers.  Other subject based organizations should be produced and mapped in, and Noosphere
+should be more fully generalized to support any classification scheme (cite akrowne work on multischeming).
+
+Content-based filtering should be combined with subject organization and attached to notification, to create 
+"filtering and routing" services that forward new content and activity in particular subject areas to interested 
+parties.   This could be combined with forums which track subject hierarchies designed for different
+subcommunities (for example, it should be easy to subscribe to a notification for a forum in high-school-level
+geometry, or one for research-level topology).
+
+Finally, a common complaint we have heard from users is that web-based forums are a pain to use because they 
+are not integrated with email.  Currently, notification of activity on web-based virtual communities
+typically goes one way: from the web site to email.  But there is no reason why in principle it cannot
+go both ways, with users gaining the ability to send replies or initial commentary from email to the web-based 
+system.  This would allow the web-based virtual community to capitalize on the high priority today's internet users
+place on email.   We propose to add such a "bridge" system to Noosphere to help foster more collaboration
+and communication with the community.
+
+
+**  Integrating Feedback for Quality Control
+
+To assist in controlling the quality of artifacts in Noosphere, feedback consisting of user judgements
+(implicit or explicit) should be integrated into the system.  Aggregated, derived, or inferred metadata about 
+quality can be used not only for filtering, but to put pressure on content creators and other 
+contributors to improve where quality is lacking and direct their attention to where it is most 
+needed.
+
+Candidates for solutions include:
+
+ * Explicit ratings of content artifacts (potentially including messages) used as the
+  basis of a collaborative filtering system (for example, Slashdot's karma system)
+ * A "card-based" system to determine which content to include or exclude by default
+ * Tracking of dispute and controversy, and alerting users to it
+
+(cite some things on CF)
+
+**  Strengthening of Reputations
+
+Integrating reputations explicitly into virtual communities creates an incentive to meet higher
+quality standards and act with a greater sense of social responsibility.  
+Binding of creative activities to reputations allows for the 
+automatic integration of reputation metrics into quality control tasks, like filtering.  
+
+While Noosphere currently has scores and user identities (full anonymity is not allowed), the 
+reputation architecture could be improved.  The current reputation system is based on the metric of /score/, 
+which is rigid and does not take into
+account the actual value of contributed content.  Rather, it assumes each type of object has
+a fixed value.  As anyone who has experienced teaching materials with different values can
+attest to, this is good only as the roughest of approximations.
+
+The utility of an automated reputations system is highlighted by the intuitive fact that
+not all ratings should be equal.  A rating of an object by a new user should not be counted the same as a
+rating from a long-time, highly-reputable user.   In the former case, we can make only a small 
+claim of certainty about the object's quality, while in the latter case, we can basically assume
+the object has been moderated and approved by an expert.
+
+A few important things could be done to enhance reputations and foster social responsibility:
+
+ * Start allowing, facilitating, and encouraging, the use of real-world identities.   
+ * Replace the scoring system with a holistic one which integrates collective feedback about artifact quality
+  into reptuations, and reputations into artifact quality.  
+
+(cite some things on reputation systems and reputations in online communities, incl. kelly/sung/farnham paper)
+
+**  Improved Editorial Features
+
+In a system in which informating is taking place, care must be taken to separate more ethereal
+components of community interaction from those with lasting value.  In other words, the "signal"
+must be separated from the "noise".  Deliberation which could be misleading or time-consuming to
+sort through should be clearly separated.  Along these lines, we propose to provide the following
+system extensions:
+
+ * editorial discussion areas (as apart from generic discussion areas attached to each object, see
+  kuro5hin.org as an example)
+ * the ability for object owners to move messages to more appropriate areas (i.e. from main to "editorial")
+ * the ability for object owners to change superimposed objects from one type to another (i.e. message to
+  correction, message to request, etc.)
+ * the requests system, which currently requires a verification step by admins, could be more fully 
+  distributed, with object owners performing verification of fulfilled requests.
+
+(point out how other collaborative systems, such as mediawiki or scoop do some of this)
+
+**  Collaborative Content-Sharing Framework
+
+Currently in the digital library world, generalized content sharing is performed using the Open Archives
+Protocol for Metadata Harvesting (OAI-PMH).  It has been a great success in allowing for the sharing
+and syndication of library and digital library content, especially as evidenced by its use as the basis
+of the core integration effort of the National STEM Digital Library (NSDL).  
+
+Yet, OAI-PMH was designed with the assumption that the records being shared are static and that each 
+sharing relationship is one-way, with a provider and a harvester.  In the case that the harvester 
+periodically updates records, OAI-PMH still works, assuming the harvester expects mutable records.  However,
+in the case where the the sharing relationship is two-way (or bi-directional), with both participants
+updating the same content base, OAI-PMH breaks down.  In this situation-- where two productive digital
+libraries are collaborating at the same authoritative level-- no solution exists to coordinate the production
+or sharing activities.
+
+We can no longer ignore this problem, as our effort concerns not only productive digital libraries, but
+a situation wherein such digital libraries have the opportunity to share overlapping portions of content.
+For example:
+
+ * PlanetMath should share CS theory entries with PlanetComputing (and vice versa)
+ * PlanetMath should share entries with ramifications for physics with PlanetPhysics (e.g. Green's
+  theorem, Stokes' law, Gauss' law, etc.) (and vice versa)
+ * PlanetComputing should share computational physics entries with PlanetPhysics (e.g. limits of 
+  computing, quantum computing, etc.) (and vice versa)
+
+It is key to note that all of these sites have differing-enough communities and focii that they are 
+better off managed and technically established as separate entities.   Yet, it would be a great shame 
+if they could not easily share content and productive effort when appropriate.
+
+To date, there have been efforts to share content with the PlanetMath instance of Noosphere, but
+all of these efforts have been one-way:
+
+ * All of PlanetMath's content is harvested via OAI-PMH by NSDL
+ * The CS theory subset of PlanetMath's content is harvested via OAI-PMH by CITIDEL
+ * Wikipedia is selectively ingesting and porting PlanetMath's entire collection /manually/
+
+In the last instance in particular, a bi-directional content sharing system would add great value.  
+Once Wikipedians have modified entries or portions thereof acquired from PlanetMath, these changes
+should be candidates for application back at the source on PlanetMath.  However, there is no framework
+currently available to automate this process, so it is unclear whether the enhancements will ever make
+it back to PlanetMath.
+
+**  User Studies
+
+Much of PlanetMath's success thus far can be ascribed to its origins as a grassroots effort. That is, members of the user community took a part in most formative discussions about how to build PlanetMath (and Noosphere), as well as took a strong role in testing it through real-world use. However, this participatory design and development was naturally limited to a "colloquial" format, and could not extend much further than the circle of users the lead developers directly knew. Today, PlanetMath has over 10,000 registered users, and countless tens of thousands of readers. 
+
+To get a good reading of the needs of this vast user community, and even more importantly, who it is, real resources are needed and an explicit, formal study must be conducted.  In addition, we propose to study learners and teachers in formal settings as well, to discover
+the use of, the potential for, and utility of Noosphere-based systems in formal education
+environments.
+
+The user study will have many components, e.g., a survey-style study, an in-person
+(or other synchronous, such as telephone-based) one-on-one interview study, and perhaps
+a focus-group style study.  Each type of interaction has the potential to yield unique insights, and multiple methods are needed to cover the various overlapping benefits and
+drawbacks, given costs.

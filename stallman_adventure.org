@@ -1,0 +1,107 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Written Jan 6, 2006, describing events of Jan 5, 2006.
+
+* Outline
+
+Ray and I went to see Richard Stallman talk in New York City.
+We hoped to get some feedback from him on the questions about
+licenses that Ray and Aaron and discussing in their paper.
+We thought we would be able to ask one question after his
+talk, and then follow up at dinner, but it turned out that
+Stallman did not go to dinner with the group, so we only got
+in the one question.
+
+* The question
+
+Consider the situation of a person trying to reproduce some
+work in mathematics, and some work in GNU.  Noting that works
+in both of the domains are copyrighted, but ideas are not
+subject to copyright.  In mathematics, the ideas are summed
+up in mathematical notation and in accompanying mathematical
+prose.  In code, the ideas are summed up in some formal
+computer language, perhaps with an accompanying spec, and
+possibly some ancillary comments, and (assuming the code
+runs), in the program's behavior.  Someone who tries to
+do to math what GNU did to UNIX must approach the mathematical
+literature and reproduce the ideas without copying or even
+translating the expression, since non-permitted copies and
+translations are forbidden under copyright.  Someone who
+tries to do to GNU what GNU did to UNIX has the opportunity
+to repeat the experiment exactly, namely, to work from
+specs and observed program behavior, and avoid reading the
+code altogether.  In mathematics, there is no such option;
+one can't view mathematics except through mathematical
+source code.  So "understanding" some given piece of
+mathematics means the ability to put some mathematical
+source code into a new expression.  By any other name, this
+is translation and a violation of copyright.  However,
+we generally take mental understanding to be a sufficiently
+different form of expression from mathematical writing for
+it to not be illegal; and, besides, re-expressing mathematical
+ideas in writing is typically done, in practice, with a sufficient
+originality of expression to make it non-illegal as well.
+The author of a mathematics text book is certainly not "tainted"
+by having read other mathematics text books, and can blithely
+go ahead and write from his/her understanding.  IS
+THE SITUATION SO DIFFERENT WITH CODE?  For example, if I am
+working on describing the way characters are inserted into
+a text buffer within the formalism of Emacs, and if I am
+to be precise in my description, I can hardly get away from
+writing down some variant on the source code for the 
+`insert-char' function.  The fact that the source code for
+Emacs has, in fact, been published, means that I have the
+right to read that code.  The fact that a given function
+_is_ written in code gives very particular constraints to its
+(re)expression, much in the same way that the expression of
+a mathematical concept (e.g. of the definition of a group, or
+of the definition a real number) must also fall within certain
+tight semantic boundaries.  The question then becomes, what is the
+difference between translation and re-expression, especially
+in the context of formal writing?
+
+* Why this question?
+
+The question was supposed to capture the spirit of Ray and Aaron's
+critique of free software licenses, which highlights the curious
+mutually-exclusive nature of these devices, in the context of a drive
+to share and to promote freedom.  My understanding is that the only
+universally compatible "copyright license" is transfer to public
+domain.
+
+The GNU project uses a copyleft license, which is something 
+very different from transfer to public domain.  The intention
+with the copyleft license is to prevent people from taking
+free software and converting it into non-free software.  A
+(perhaps) un-intended consequence of the copyleft principle
+together with the other specifics of the license is that it is
+often incompatible with other copyleft licenses.  Ray and
+Aaron go into some detail about this.
+
+The question strikes right at the heart of the copyright/copyleft
+principle.  It isn't so much a question about the legitimacy
+of constraints on reproduction, but of their relevance for
+the long term.  If we are able to convert the whole of the
+mathematical literature to public domain status by re-expressing
+and re-releasing, shouldn't we be able to do the same thing
+with GNU?  If so, what are the ramifications of that?  But
+first, is it so?
+
+
+* A public domain software market
+
+The broad issue of software in the public domain is a thread to
+consider independently of the question about porting GNU software
+_into_ the public domain.  The idea of a market for free software has
+been discussed elsewhere (Mu\~{n}oz), and this idea in turn relates to
+similar economic considerations (for example, using a scholium-based
+system to make more information about goods in the market available).
+The specific idea of a market for software in which all the software
+bought and sold was released directly to the public domain at the time
+of the transaction.  Such a market is a purely economic mechanism for
+encouraging the development of free software.
+
+Of course, the existence of a large body of public domain software
+goes directly counter to the GNU anti-hoarding ideas!  So, we need
+to consider the ramifications of doing this.

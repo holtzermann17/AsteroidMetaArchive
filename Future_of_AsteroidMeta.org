@@ -1,0 +1,90 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+At some point in the future, when [[file:Noosphere.org][Noosphere]] has been worked on sufficiently,
+we may decide to make AsteroidMeta into a Planet after all -- i.e. once Noosphere
+can be used as a platform for [[file:literate programming.org][literate programming]].
+
+Actually, why wait!  I think that Noosphere can be used to simulate a Wiki
+without much trouble.  It might be good for us to have some !TeX formatting
+features for the work that we're doing for the [[file:HDM.org][HDM]] project.  If it isn't too
+hard to add another Noosphere instance, maybe when planetx is up and running we
+could convert AsteroidMeta to Noosphere? --[[file:jcorneli.org][jcorneli]] Thu Mar 03 07:42:21 2005 UTC
+
+Maybe a super-wiki would be better, drawing on our earlier discussion.  It could
+be built on an extant, light wiki framework, but also add some structural link
+types, as well as automatic linking.   Or, can joe make the scholium system do this,
+as a web app...? --[[file:akrowne.org][akrowne]] Sat Jul 9 22:44:59 UTC 2005
+
+I've thought some about hooking the "backend" of the scholium system into other
+frontends.  In order to accomplish this, it might be most effective to rewrite
+the backend in something like Scheme instead of Elisp, at least, I tend to have
+the sense that Scheme is "more compatible" with other programs, e.g, other
+"frontends".  But I don't know Scheme, nor do I know much about this issue of
+software compatibility.  
+
+Of course, the backend of the system is pretty light weight at present.
+
+Ideally, we'd have one scholium system that could be accessed by any means that
+we chose (i.e. the same system could be accessed by web or by a standard editing
+program such as Emacs through CVS).  The Emacs implementation itself should be
+usable as a wiki but without a web interface: instead of loading the recent
+changes pages, each end user would just synch various CVS repositories so as to
+have all the scholia stored locally, they would then be browsed from within
+Emacs.
+
+I'm not at all opposed to getting some web system up and running, but I don't
+want to get too involved with anything that doesn't offer all of the features
+outlined in the paper.
+
+If you're interested in working on making the system more interoperable, then
+I'd be quite happy to work with you on that task.  But I want to make sure to
+complete some system; Emacs interface should be useful in most conditions (even
+for VI users, with Viper installed), so I think it is worthwhile to focus on
+that.  But if part of the program can be split off into a small, separate,
+more-compatible backend, I see no problems with that, and I'd be happy to help.
+
+Of course, just about any web interface would be somewhat out of my league, even
+a very simple one.  But I do think that something such as what the "super-wiki"
+system you described (even one with a very simple interface) should be pretty
+much /interoperable/ with a live scholium system.  If you want to work on
+something lightweight like this, I don't think it would detract from the
+scholium system any.  
+
+I personally would prefer something with all the free culture (MUDlike) aspects
+running, and to me that basically means working in LISP.  But I also recognize
+that it may be some time before that's all put together, even if I had extra
+developer(s) helping me out.  So even if it is an "intermediary" measure, a
+"superwiki" could be a useful thing to have.  On the other hand, we'll probably
+be able to do all the same things a superwiki could do in the scholium system
+quite soon (but without a web interface for the time being).  Does this help answer the question :)?
+
+--[[file:jcorneli.org][jcorneli]] Sat Jul 09 23:24:05 2005 
+
+Yeah.   I'm toying with the idea of hacking away at some existing wiki software;
+perhaps frankensteining it with parts of Noosphere.  We can approach this problem
+from multiple angles =) --[[file:akrowne.org][akrowne]] Sat Jul 9 23:53:11 UTC 2005
+
+I'm inclined to think that if we can actually share code, that would be good.
+But experimenting around could also be fun/useful/instructive.  --[[file:jcorneli.org][jcorneli]]
+
+----
+
+We ([[file:jcorneli.org][jcorneli]] and [[file:rspuzio.org][rspuzio]]) are working on an "Asteroid2" that will
+appear in the [[file:HDM CVS.org][HDM CVS]] archive for now (potentially taking in other datasources later), and that is based on the
+[[file:scholium system.org][scholium system]].  There is no particular reason not to have a 
+whole "asteroid belt" if that seemed fruitful; indeed, this Asteroid2
+will contain discussions mostly relevant to the [[file:HDM.org][HDM]] project,
+whereas Asteroid1 (i.e. the current one) will continue to be a good
+place for networking between projects from a more "neutral" point of
+view (not to be cliched or anything).  --[[file:jcorneli.org][jcorneli]] Jan 11 06
+
+---
+
+OK, that seems to be taking a bit longer than expected.  We should be
+looking for another platform for the meantime.  (Maybe Asteroid 1A;
+these things always have funny names!).  We need calendars and spam-prevention most seriously, and some kind of semantic-markup would be nice too!
+
+For fun: see [[file:Science-Fiction Future of AsteroidMeta.org][Science-Fiction Future of AsteroidMeta]].
+
+--[[file:jcorneli.org][jcorneli]] Jan 4 2007

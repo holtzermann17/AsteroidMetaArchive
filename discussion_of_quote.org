@@ -1,0 +1,107 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Even though I said I wouldn't say more on this topic of quotes, allow me to
+change my mind some and at least present a simple example.  Suppose we want to
+translate the following the sentence into [[file:h-code.org][h-code]]:
+
+ The polynomial x + 2 is a factor of x^2 + 3 x + 1.
+
+How to proceed?  The naive guess might be
+
+ (factor (plus x 2) (plus (power 2 x) (times 3 x) 1))
+
+but this isn't quite right since, taken literally (which is the only way
+computers take things!) it asserts that the number gotten by adding 2 to a
+certain number x is a factor of another number which is obtained by a different
+number which is obtained from x by squaring x, adding three times x and one to
+the result.  That is definitely not what we were trying to say --- in fact it
+sounds like a common mistake that a lot of beginning algebra students who havent
+quite yet grasped the concept of polynomial make!  A correct translation would
+be
+
+ (factor '(plus x 2) '(plus (power 2 x) (times 3 x) 1))
+
+That's better.  Now it is clear that we are asserting that an expression is the
+factor of another expression, not that the value of an expression is the factor
+of the value of another expression.  --[[file:rspuzio.org][rspuzio]]
+
+/I definitely see what you're saying, but my thought on this is that maybe this
+behavior should be built into the semantics of `factor'.  Reason being that,
+personally, I don't think in terms of `quote' when I think about factoring, I
+just do it.  I know the factoring example is just an example, and there might be
+overwhelming quantities of other examples that are even more compelling (indeed,
+I'm now pretty well convinced that quote should be a part of hcode, because
+quote is part of many mathematical vernaculars).  But at least for now, I'm not
+convinced that it should have a special role in hcode.  Yes we definitely want
+it at the metamathematical level.  And maybe we do want it to be special, like
+how you've used it here.  I'm just annoyed by the idea that we would have to put
+quotes into something that we usually don't put quotes into.  Sorry to have to
+come at this from a position of annoyance!  Like I said, I do see where you're
+coming from.  We'll talk more about this as time goes by, I'm sure!/ --[[file:jcorneli.org][jcorneli]]
+
+First, I must say that your idea of putting this discussion in a separate place
+by itself is a good one.  One point that I have been convinced of by Quine is
+that it is not possible to properly translate mathematics into logic unless is
+clear on use and mention.  If this is true, then the quotation marks are going
+to have to go in at some point in the process of translation from math book to
+sybolic logic, and the only question is "Where?".
+
+As for `factor' not having to quote its argument, my answer would be that maybe
+there should be two versions of factor in h-code, just as many dialects of LISP
+have both `set' and `setq' or both `mem' and `memq'.  This way, for everyday
+discussions of factorization of polynomials, it would be convenient to use the
+version which have the quoting behavior built into its semantics, whilst the
+other version would be available for those special cases where this feature is
+restrictive or otherwise undesirable.  For example, if I wanted to have the
+variables p and q stand for a certain polynomials and assert that, say pq + q^2
+is a factor of x^4 + 3 y^2 + 2y + 1, then the version of factor which
+automatically takes its arguments as if they hadn't been quoted won't do because
+I don't want to quote the first argument, but do want to quote the second
+argument, so I'd rather have the other version.
+
+Your annoyance reminds me of how a physicist was once annoyed when a
+mathematician criticized him for being sloppy by not indicating the range and
+domain of his functions.  As I see, both were right.  The mathematician had a
+valid point that one can make fallacious arguments if one ignores issues of
+domain and range.  The physicist also had a good point that, for the simple
+cases he was studying, the domains and ranges were obvious from the context and
+the difficulties which the mathematician mentioned would not occur in these
+simple cases, so why worry about them.  Indeed, most math books written 100
+years ago are vague on issues such as specifying the ranges and domains of
+functions or distinguishing between a vector field, its coordinate
+representation, and its pushforward.  On the other hand, modern mathematicians
+would never dream of being sloppy with these issues, especially because they are
+dealing with more advanced parts of the subject where such sloppiness routinely
+leads to mistakes.  Likewise, I am very meticuluous when it comes to
+distinguishing use and mention because in some mathematical topics I think
+about, sloppiness on this point can be fatal.
+
+Since this discussion started with comments about my article on syntax and
+semantics, let me point out once more that the syntax and the semantics
+discussed there are that of a core subset of h-code, but that the full h-code
+will certainly be much more complicated than the core subset both syntactically
+and semantically.  In particular, I wanted to set up the core subset in such a
+way that the only way for a function to take an argument literally as opposed to
+taking its value is to quote the argument because that saves me from having
+discuss numerous special cases in my proofs (how do we evaluate this formula if
+the semantics of the function requires that we take the second argument
+literally ... what to do with `:from' and `:to', ....).  In many ways the
+difference between this core h-code and the full-blown h-code is a lot like the
+difference between !McCarthy's original theoretical LISP with seven commands and
+something like Common LISP.  When it comes to proving things about LISP,
+!McCarthy's dialect is better because the proofs do not involve all kinds of
+irritating special cases to deal with.  On the other hand, Common LISP is a lot
+more convenient for everyday programming.  Yet, !McCarthy's theorems apply to
+programs written in Common LISP because the extra knicks and knacks added to the
+syntax and the semantics of core !McCarthy LISP can, in principle, be
+re-expressed in terms the core functions.  --[[file:rspuzio.org][rspuzio]]
+
+/I agree with what you're saying here.  I especially like the example/
+
+  pq + q^2 is a factor of x^4 + 3 y^2 + 2y + 1
+
+/and looking at it I have to agree that your idea about forced quoting in the
+core language makes sense and is inescapable.  We may even end up needing
+quasiquote or all of vanilla LISP in the core language, I don't know.  But I'm
+now pretty well convinced about quote./ --[[file:jcorneli.org][jcorneli]]

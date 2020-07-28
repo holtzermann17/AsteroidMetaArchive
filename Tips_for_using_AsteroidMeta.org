@@ -1,0 +1,129 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+First of all, read the [[file:Policy.org][Policy]]!  That will make the simple things work well.
+Once you've mastered the policy items, you'll want to do some other things...
+
+These things may be more obvious if you've had experience with wikis before.
+
+*  To create a page
+
+There are two ways. The first way (which is the one I always use) is to type
+something like "Take a look at my new page about [[file:bumblebee mating rituals.org][bumblebee mating rituals]]!"
+Then, when you reload the current page, you'll see a questionmark behind the
+"link" you're creating. Once you *edit* and *save* the new page, the link from
+the old page will not be a questionmark anymore, but rather, will just be the
+text you've put inbetween the double square brackets.  The other way is to visit
+a URL of the form http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta/my_new_page
+Your browser will bring you to the page (pointing out that it doesn't exist yet)
+and you will then have the chance to edit it.  But if you do things this way,
+your page won't be linked to any other pages, which would be sort of a shame.
+
+*  To sign your entries with a date
+
+If AsteroidMeta was running /elsewhere/, we could install extensions that
+would make this easy.  However, right now you can also make it easy by
+/editing your wiki pages with emacs/!  Here's how I do that.
+ 1. Lynx is my main browser.
+ 1. I have the Lynx editor set up to be emacsclient.
+ 1. I have an emacs open and an emacs "server" running.
+ 1. Every time I want to edit a text field for the wiki, I type C-x C-e, and
+the text field opens up as a new buffer in Emacs.  Editing buffers with Emacs
+is a good thing (eversomuch more convenient than the text fields of normal
+browsers).
+ 1. I wrote a little function that inserts my signature and the date (and I 
+have this bound to a convenient keystroke):
+
+   (defun insert-wiki-sig ()
+     (interactive)
+     (insert "--[[file:jcorneli.org][jcorneli]] ")
+     (insert-utc))
+   
+   (defun insert-utc ()
+     (interactive)
+     (insert (format-time-string "%a %b %d %T %Y UTC" nil t)))
+
+If anyone is interested in further details about any of the steps above, just
+ask.  It is my understanding that Mozilla/Firefox also has an extension that can
+be used to edit wiki pages in the editor of your choice, but I don't recall what
+this extension is.
+
+: It's MozEX but I couldn't find it for the latest versions of firefox. --[[file:drini.org][drini]]
+
+For the sake of completeness, here is the code for Vim:
+
+    :iab firma  ^O:r!date^M--[[file:drini.org][drini]]
+
+where ^O is obtained pressiong Control-V and then Control-O, and ^M is Control-V and then Enter. Thus, anytime the user writes firma it gets expanded as 
+    
+    --[[file:drini.org][drini]] Tue Mar  1 22:32:27 CST 2005
+
+--[[file:drini.org][drini]]
+
+
+*  To leave a message for someone
+
+Just make a note on their user page -- they'll see the editing event on the
+RecentChanges page and know they have a message waiting.
+
+*  To make the RecentChanges page load faster
+
+I link to the page that shows just the last day's editing events.  This wiki is
+currently in a state of quick expansion, there are rather a lot of edits each
+day.  The link to the shorter form of the !RecentChanges page is given on the
+main recent changes page, but I'll repeat it here: http://oddwiki.taoriver.net/wiki.pl/AsteroidMeta?action=rc;days=1;all=0;showedit=0
+
+----
+
+That's all I can think of for now - enjoy - and feel free to add your own tips.
+--[[file:jcorneli.org][jcorneli]] Wed Mar 02 01:50:58 2005 UTC
+
+
+*  How to add a blank line between indented paragraphs?
+
+At the bottom of the [[file:metamathMathQuestions.org][metamathMathQuestions]] page, I added
+a long quotation that I want indented, which I
+accomplished with an ": " before
+each paragraph.  The problem is that the paragraphs don't
+have a blank line between them, so they seem to merge together,
+making them hard to distinguish.  In fact they can be
+impossible to distinguish
+if the paragraph coincidentally ends where the line break would
+happen anyway.  Example:
+
+: Indented paragraph 1
+
+: Indented paragraph 2
+
+As you see, there is no blank line between the indented paragraphs.
+
+As a workaround, I put an almost-empty paragraph with a period,
+": .", between paragraphs, but that looks ugly.
+
+So this is not a tip yet, but a question I hope someone will
+turn into a tip:  how can a blank line be added between
+indented paragraphs? 
+
+--[[file:norm.org][norm]] 7-Mar-06
+
+If !HtmlTags are enabled, you should be able to do a <br/>,
+but someone would need to turn that feature on.  See http://www.oddmuse.org/cgi-bin/wiki/HTML  
+
+--[[file:jcorneli.org][jcorneli]]
+
+Yes, that feature could be used to solve the problem, and I hope
+someone will turn it on.
+
+But there is another puzzle.
+
+On the [http://www.oddmuse.org/cgi-bin/wiki/Usemod_Markup_Extension
+Usemod Markup Extension] instructions page, under "Indented Paragraphs",
+the example /does/ have a blank line between two successive
+paragraphs with the same indentation level.  If you edit that page and
+look at the wiki source, the markup is the same as my example above.
+Why is the behavior different?  
+
+--[[file:norm.org][norm]]
+
+I suggest asking there!  Its a wiki, and the admins are very responsive.
+--[[file:jcorneli.org][jcorneli]]

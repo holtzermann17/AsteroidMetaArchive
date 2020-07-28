@@ -1,0 +1,203 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Introduction
+
+The free culture community has existed so far on a basis of extending
+congressional law through the ad hoc "law" of licenses.
+
+In this approach is an implicit or explicit assumption that it is in
+fact a workable solution.  That is, the assumption is that it is
+possible to make up for the shortcomings of copyright law through
+clever licensing.
+
+After considerable experience with !PlanetMath and research for "The
+Fog of Copyleft", we now know this is not true.  This page exists as a
+point of documentation for serious flaws and shortcomings in copyright
+law, most of which threaten to undermine free culture, /irrespective
+of licensing/.
+
+* The problems
+
+** Missing Notions
+
+These notions are absent in any formal manner from copyright law, to
+ill effect.  It is not necessarily the fault of the authors of the law
+that some of them are absent; the passage of time and drastic changes
+in technology and society have simply changed the circumstances.
+Still, this is no excuse not to enshrine the notions in law as needed.
+
+ 1. *User's Rights.*  There is absolutely no notion of "user's
+rights" in copyright law, because copyright only dealt with the
+dichotomy of /author and publisher/.  Publishers /were/ the only
+users.  This is a serious problem because the typical free culture
+user these days does not at all resemble the kind of entity that a
+publisher is.  A publisher has lots of money, people paid to handle
+the legal end of things, the ability to advertise, the ability to
+print on a wide scale, people that can be paid to perform all kinds of
+due diligence, and necessarily a profit motive.  Instead, we are stuck
+with the rather foggy concept of "fair use", which is also deficient
+in that "use" is defined to be a class of relatively passive,
+consumerist "slave" uses (e.g. if "The Simpsons" happens to be showing
+on a background television for a few seconds in an independent film
+you produce, your film is not covered by fair use).
+ 1. *A notion of CBPP projects.* Copyright law deals with the
+definition and ownership of copy rights and how they can be shared
+through licensing.  It does not really deal with the authoring
+process: there is a "before publication" and "after publication"
+transition, but either side of the transition is generally untreated.
+Yet, CBPP projects are emergent from a central, meta-entity, composed
+of a shifting population of authors and particular (sometimes
+evolving) workflow practices and norms.  Since this meta-entity is
+built on distinct people, it deals with interactions between people
+and transformations of content, which allows traditional copyright law
+to come into play, but because the meta-entity operates in a way
+distinct from the copyright law "black box authorship, publication"
+scenario, there is fog and friction produced when trying to apply
+content-based copyright rules to the situation.
+ 1. *Continuous Relicensing and Massively-Shared Copyright.*  In
+CBPP scenarios, there is continuous "relicensing" as a work becomes
+more derived by more people, and this produces massively-shared
+copyright.  The continuous relicensing is the other half of the above
+problem: it is what happens after the "point of publication" when
+re-use occurs; a situation which was not a high priority in extant
+copyright law.  The failure to clearly treat these phenomenon render
+previously lucid copyright law rather foggy (especially relative to
+the "bugs" below).
+
+** Serious "Bugs"
+
+ 1. *Copyright/License take-back.* This clause, which states that
+the author of a work has a 5-year window 35 years after publication
+(or any license or copyright agreement) to "take that work back",
+irrespective of the stipulations of any of these agreements.  There is
+a cottage industry of laywers who will help authors take back full
+ownership and rights to works they have already signed away, to
+perhaps find some new angle to squeeze more royalties out of them.
+This all seems very sensible as an "escape hatch" for content
+creators, in the face of a powerful, aggressive, and abusive
+publishing industry.  But the provision is turned on its head when
+copyright /users/ become regular people, as in free culture.  In
+this situation, you have the possibility that an original author may
+suddenly decide they'd like royalties out of a work they had already
+released in some free culture capacity (perhaps after it turns out
+popular), in which case it is clear they can take back agreements
+they've made with first-order users of the work (however, see the
+below second item in "vagaries" for how it is unclear if second and
+further-order users are exposed).  Even worse, because estates/next of
+kin automatically take over copyright, one is exposed to the
+possibility that people with completely different value systems may
+acquire rights to a free culture work, then decide to make it un-free.
+ 1. *Attribution take-back.*  The law says that derived-works
+authors have to remove attribution if an earlier author does not want
+it on derived works (this clause is echoed in the Creative Commons
+licenses).  This does not seem at all to be a critical clause, and its
+existence provides a snake-in-the-grass of potential work for writers
+and maintainers of free culture content.
+
+** Major Vagaries
+
+ 1. *Public Domain.* The law refers exclusively to how works can
+fail to be copyrighted and slip into the public domain, but does not
+really give reasonable instructions on how to /intentionally/ put it
+there (except the silly requirement of filing it at the copyright
+office---a requirement no other class of content has anymore).
+Further, since the law was recently changed to make the default state
+of any work /copyright, all rights reserved/, it is unclear what the
+status of public domains with no mark is, as by virtue of being public
+domain, users can remove any license or attribution marks (the issue
+is not that users can re-copyright the works if they /want to/,
+which they can by definition, but that they might /accidentally/ do
+so by virtue of forgetting to inclue a public domain mark).
+ 1. *Does the Law Refer to The Original Work or Derived Works?*  Not
+having thought much of modes of usage based heavily on derivation (see
+above), the law is often unclear whether provisions (such as
+take-back) apply to only first-stage license agreements or to second
+and further-stage agreements as a derived work further evolves.
+ 1. *Legal Protection of Ideas*  It is a fundamental principle that
+one cannot claim legal expression for a mere idea or plan --- one
+needs to have done some creative work to express that idea and then
+one can only claim legal protection (copyright, patent, or trademark)
+for one's particular expression of that idea (as a work of literature
+or an invention or a logo or whatever) but that the idea is free for
+all to use.  Nowadays, this principle has been severly undermined.
+For instance, a restaurant successfully sued a rival for also
+enclosing it's bakery in glass walls, having a checkered tile floor
+and neon wall displays.  Software firms have claimed that programs
+with a similar "look and feel" were infringing.  Digital libraries
+have restricted users' access via licenses on the pretext of a thin
+copyright interest in their collection and presentation of works, even
+thought the works themselves were in the public domain (but,
+thankfully, the courts are not (yet, hopefully never) buying this ---
+consider this cases of Feist vs. Rural Telphone and Corell
+vs. Bridgman).  Were Stallman launching his GNU project in today's
+circumstances, the main threat might not so much be Symbolics
+co-opting code as Bell suing GNU for infringing their thin
+copyright interest in the arrangement and names of the modules and the
+"look and feel" of the Unix operating system.  (In fact, SCO is trying
+to sue GNU for this today.)
+
+* Possible Solutions
+
+** Reviving Mandatory Notice
+
+Actually, copyright law used to contain a very important user rights
+measure which, unfortunately, was undone when the change from
+mandatory registration to automatic copyrighting took place.  Before 1978,
+it was required that, in to retain copyright on a work, one needed to
+include a copyright notice with the work.  If one did not include this
+notice or if the notice was inaccurate, one forfeited copyright
+interest and the work passed into the public domain.
+
+This served an important function in protecting users rights.  By
+looking at the notice, one could determine the copyright status of a
+work and locate the copyright owner(s) at a glance.  In the case where
+only part of a work was copyrighted (say, if a book involved a
+significant amountof material taken from government works, which
+cannot be copyrighted) the notice needed to state this as well.  More
+than once it happened that a publisher unwittingly infringed on a
+copyright on account of an inaccurate copyright notice and successfully
+defended himself in court by pointing out inaccuracy in the notice.
+As testimony to the lasting value of this now defunct law, consider
+the fact that Project Gutenberg maintains a file of copyright notices
+as proof that the books it distributes are indeed in the public
+domain.
+
+I suggest that it is time to bring back the mandatory copyright
+notice.  To be sure, the original form of the notification requirement
+would be unworkable today becasue it was closely tied to regisration
+and hence the two were repealed together.  Also, while in
+circumstances where a publisher has sole distribution rights, it makes
+sense that the consequence of misnotification would be forfeiture of
+copyright, this no longer makes sense in a setting like the internet
+where many different sources are distributing the same work.
+
+To adapt to these circumstances, consider the following modified
+version of mandatory notification.  In order to distribute a work
+commercially, one must attach a copyright notice.  Failure to provide
+a notice or providing an incorrect or misleading notice or tampering
+with the notice would be illegal (say, fraud or perjury).  In this way,
+copyright notices would be very much like "Do not remove under penalty
+of law" labels on matteresses.  Should a user in good faith infringe a
+copyright based on eroneous information on a copyright notice, the
+distributor (or whoever tampered with the notice) would be liable for
+the consequences of such an infringement.
+
+This proposal would restore users' rights to copyright law.  It would
+put the emphasis in the right place.  Nowadays, in order to guarantee
+users' rights via licensing, an author needs to assume a fictitous
+interest in the work so as to force distributors to attach a suitable
+notice.  As we outlined elsewhere, this can be very confusing --- why
+is an author whose intent is to make a work freely distributable and
+usable reserving all rights?  Under this proposal, however, it would
+be the prosecutor, representing the interests of the public, who would
+sue deviant publishers who claim copyright interest in a work in the
+public domain.  Since it is the public, not the author, whose rights
+are being violated in this case, this would be a more appropriate
+solution.  --[[file:rspuzio.org][rspuzio]]  (Aaron, if you agree with this proposal,
+please change the "I" to "we" and add your name.)
+
+I do indeed agree!  I have felt that way ever since I started learning
+about intellectual property whackiness.   We have thrown away a lot
+of law that was right in the first place (ok, not "we", but those who can 
+afford to buy their own congressmen...) --[[file:akrowne.org][akrowne]] Sat Feb 4 09:42:10 UTC 2006

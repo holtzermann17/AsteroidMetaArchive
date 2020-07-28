@@ -1,0 +1,170 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The inspiration for Pangloss from Candide.  I don't know if that's
+a good thing or a bad thing to have on your resume.
+
+: Not exactly. In this short novel, I think Voltaire portrayed some
+german people ( among them some of his friends ) who used Leibniz's
+theory in a ridiculous way. For example Pangloss's motto is :
+/everything is at the best in the best world/ whereas Leibniz's
+motto was : /everything is at the best in the best *possible*
+world/. It's not exactly the same. [[file:frl.org][frl]]
+
+:: Well, that would explain it.  Similar to the way in which
+"followers" of Derrida manage (so frequently) to be ridiculous. --[[file:jcorneli.org][jcorneli]]
+
+** Alphabets etc.
+
+From the wikipedia article:
+: Leibniz thought symbols to be very important for the
+understanding of things. He also tried to develop an alphabet of
+human thought, in which he tried to represent all fundamental
+concepts using symbols and combined these symbols to represent
+more complex thoughts. Leibniz never finished this. A related
+concept is mathesis universalis. Toki Pona is an example of a
+modern constructed language with the same idea.
+
+:: Leibniz was published in Europe in the nineteenth century. His ideas about symbols is one of the source for Peano's work. [[file:frl.org][frl]]
+
+The page [[file:Let G be a group.org][Let G be a group]] takes a similar approach.
+(And see also [[file:jcorneli.org][jcorneli]]'s homepage... funny!)
+
+The idea of "real signs" (mentioned in the article) is a nice
+hyperreal sort of idea. (Even though to him Chinese was supposed
+to be an example!)  
+
+He was apparently very motivated about these matters... I wonder
+if his writings on this stuff were ever translated to English.  Oh
+wait, he never published them?  I wonder, then if perhaps they
+have been posthumously published?  They can't be completely
+lost to the ages, because someone was talking about them
+on the wikipedia page
+
+An anti-dictionary quote: "It would be very difficult to invent
+this language or characteristic, but very easy to learn it without
+any dictionaries."  That seems a little odd.
+
+Timeline: "I think that some chosen men could finish the matter
+within five years."  A man after my own heart.
+
+: Much of Leibniz's output was in the form of letters and journal articles.  (There's no telling what would have happened if he and his contemporares had access to e-mail =) )  A listing of published editions of his works can be found at http://philosophy2.ucsd.edu/~rutherford/Leibniz/edition.htm .
+
+***  Other alphabets
+
+Note that George Bernard Shaw posthumously commissioned the development
+of a phonetic alphabet for English.  This isn't quite as impressive
+as an alphabet for human thought, but it does have a nice map-as-territory
+feel to it; see for example http://members.aol.com/RSRICHMOND/shavian.html.
+
+**  monads
+
+I don't understand them, but they sound a little bit like frames.
+A down-to-earth metaphysics and the notion of hyperreality could
+certainly be related.
+
+: You can read the monadology for yourself at [http://www.rbjones.com/rbjpub/philos/classics/leibniz/monad.htm this web site].  Being in the form of 90 statements, this work would also be a perfect starting point for making a scholium based document.  
+
+*** Inspiration for software authors
+From [http://en.wikipedia.org/wiki/MSH_(shell) wikipedia]:
+: MSH's (Microsoft Command Shell) codename, Monad, comes from Gottfried Leibniz's Monadology, a philosophy which says that everything is a composition of
+fundamental elements called 'Monads', which are all integrated together in 'pre-established harmony'. Similarly, the focus of MSH is on
+composition of complex tasks from a series of components. In this case, the components are special programs called commandlets (or
+cmdlets), which are .NET classes designed to use the features of the environment. The key difference between the usual Unix approach and
+the MSH one is that rather than creating a "pipeline" based on textual input and output, MSH passes data between the various commandlets
+as arbitrary objects. Unix does not preclude the use of arbitrary streams of data being passed between command line utilities, but
+textual input and output is the primary and most popular model. Microsoft is writing the shell to be entirely object-oriented from the
+start.
+:: /Monads have no windows and no doors/, Leibniz said. And a friend of mine added /but nowadays they have television/. [[file:frl.org][frl]]
+
+Similar to [[file:scholium system|something else....org][scholium system|something else...]]
+
+Incidentally, I think it is interesting to contrast Leibniz's
+[http://en.wikipedia.org/wiki/Pre-established_harmony theory of pre-established harmony] 
+with a more down-to-earth approach to metadata.  He might not be so
+far off; its hard to tell exactly how crazy his theory was from the
+wikipedia writeup.  Certainly every object in a reasonable programmed
+system /has/ been programmed to interact well with other objects;
+but that just means that they need some common interface protocol, not
+that they all need to contain all the information about everything.
+
+After reading the above link, I continue to think this is interesting.
+Actually, Leibniz's writing really is very interesting, and despite the
+fact that it is steeped in "God stuff", it seems to be evidence of deep
+scientifico-philosphical reflection on the nature of reality.  I'd say
+more but after one reading I'm not really qualified.  I continue to think
+that this question of metadata is important, and I'd simply suggest that
+we think about "monadology of the game of Go" or some other simplified case
+that gets everything stated in terms of data and metadata.  Ray's mathematical
+discussions of this topic may also be part of a solid beginning, although
+at this point I'd really say anything could and should go onto the table.  --[[file:jcorneli.org][jcorneli]]
+
+If there's one thing about the /monadology/ that is pretty clear,
+it's that this work is definitely not easy reading --- it represents a
+condensation of years of thought by a deep thinker.  Certainly, the
+approach is interesting --- Leibniz starts out with the basis thesis
+of atomism --- that the universe is ultimately composed of indivisible
+units --- but the kinds of atoms Leibniz suggests are nothing at all
+like the sorts of atoms anyone else would think of.  Here are some
+thoughts about the work, both my own and those I have heard elsewhere:
+
+ 1. It represents an extreme form of Cartesianism --- while Descartes taught that there exists parallel mental and physical worlds which agree because of a "pre-established harmony" (indeed this notion was first introduced by Guelincx as a solution to the mind-body problem), Leibniz takes this notion of duality to an extreme of plurality by proposing that, in fact, there are a plethora of monads between which there subsists the same realtion as that of mind and matter.
+
+ 1. While Leibniz starts out with the notion of atomism, what he ends up with is much closer to Plato's ideas than Democritus' atoms (and void).
+
+ 1. This vision of monads all representing the whole universe (and hence each other) (section 62) reminds me very much of the image of "Indira's necklace" in Indian philosophy.  Indeed, the importance of interbeing in the monadology gives it very much an Eastern flavour and may be profitably compared with Buddhist, Jaina, and Advaita thought.  Likewise, section 70 seems like something that would come out of the mouth of Mahavira or Empedocles and section 71 sounds like Buddha or Heraclitus. 
+
+ 1. I believe that it is very much in the nature of this philosophy that "anything could and should go onto the table" --- one of the main points of it seems to be that things can be understood from multiple viewpoints.
+
+I like very much this idea of trying to understand monadology by
+restricting to a particular domain.  Also, I will reiterate that the
+mature of the work is crying out for scholia! --[[file:rspuzio.org][rspuzio]]
+
+If we're going to do scholia, we should try to get our hands on an
+electronic version of the original text (which would be in the PD).
+I'd be happy to add a subdirectory to the HDM tree for discussion of
+this essay.
+
+As for restricting to a particular domain, here's [[file:a tentative introduction to Go|one thought.org][a tentative introduction to Go|one thought]] --[[file:jcorneli.org][jcorneli]]
+
+And as for the "Indian philosophy" idea, consider this.  There is a
+book called "[http://www.press.umich.edu/titleDetailDesc.do?id=1990 The Tower of Myriad Mirrors]" (English translation) that
+fits somewhere in the middle of the book "The Journey to the West".
+If I remember correctly, this tower is sort of like the forest with
+pools in C.S. Lewis, and not quite like (but approaching) "the aleph"
+from Borges.  I'd like to re-read it.  (Furthermore in Borges there
+are plenty of different rehashings of Eastern ideas, both "near" and
+"further", e.g. the thirty-bird
+[http://en.wikipedia.org/wiki/Farid_od-Din_Mohammad_ebn_Ebrahim_'Attar Simorgh]
+shows up somewhere in there; incidentally drawn from another tale of pilgrimage.)
+OK (pause for breath).  
+
+These stories (which in fact I've read, even though
+it was a while ago) remind me somewhat of a later-day pilgrimage story 
+(which I think I probably have not have read), called
+[http://www.transparencynow.com/eco.htm Travels in Hyperreality].  
+
+The point being that the ideas of simulation and/or simulacra seem to
+be important to these early tales as well as in the contemporary one.
+In the case of the Monkey story, it is a matter of being trapped in a
+world of illusion, and in the Bird story, more a matter of
+transcendent enlightenment (if you're willing to buy that).  If you
+haven't read these stories, I suppose "Through the Looking-glass"
+might be an acceptable substitute reference (I'm thinking particularly
+of the Red King bit).
+
+I really know very little about mysticism, and I'm citing probably the
+two books I've read on the subject.  But this idea of hyperreality as
+a state of mind seems important, worth getting out of bed for.
+Indeed, if you (re-)read the Wikipedia [http://en.wikipedia.org/wiki/Hyperreality article on hyperreality] with
+this discussion in mind, I think you may get a little bit of something new out of the treatment.
+
+(For example, our discussion here casts into doubt the claim that
+hyperreality /is simply a way of describing the information to which
+the consciousness is subject/ and posits that conciousness's take on
+information may sometimes be more important.)
+
+On the other hand, neo-Buddhistic and other related interpretations of
+"The Matrix" are nothing new.  But this discussion does seem to tie
+various threads together (or at least demonstrate how one might
+make the attempt). --[[file:jcorneli.org][jcorneli]]

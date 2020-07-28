@@ -1,0 +1,226 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Is Ruby on Rails a possible solution for a Noosphere rewrite?  This
+page will explore this web development framework.  I love perl and
+python and they are great for certain programming projects, but I am
+not impressed from a modular and extensible point of view.
+
+* Rails Introduction
+
+
+The best introduction I found was from ONLamp.com,
+http://www.onlamp.com/pub/a/onlamp/2005/10/13/what_is_rails.html.  The
+article definately leaves a fuzzy feeling with you and it leaves you
+yearning for more.
+
+* Installation
+
+Before compiling, I installed some obvious prerequisites under Ubuntu
+
+ * ruby1.9
+ * ruby1.9-dev
+ * ruby1.9-elisp
+ * libruby1.9
+
+Next I downloaded RubyGems, which is a package manager, more info is
+given here, http://www.rubyonrails.org/down.
+
+For Ubuntu, I had to create a symbolic link from /usr/bin/ruby1.9 to
+/usr/bin/ruby and then run
+
+sudo ruby setup.rb
+
+to install RubyGems.  Then use RubyGems to install RoR
+
+gem install rails --include-dependencies
+
+* Discussion
+
+I am very averse to the idea of using AJAX as any sort of basis for
+the site.  I see it as entirely unnecessary, abandoning the
+"page-based" model which makes a lot of sense for our kind of site.
+
+See: http://www.usabilityviews.com/ajaxsucks.html
+
+Actually this is basically the same objection to using SOAP-based web
+services instead of trusty old URLs-and-CGI (the !ReST methodology):
+you are "burying" web content when you dont need to, making it
+unlinkable and hence less integrable with the rest of the web.
+
+That said, there are subsystems of Noosphere where AJAX could maybe
+prove useful (like the mini-definition mouseover snippets idea I told
+you about). --[[file:akrowne.org][akrowne]] Tue Jan 24 05:01:25 UTC 2006
+
+I don't know much about Ajax, but looking at that article, I think
+Aaron's interpretation is correct.  Ajax shouldn't be used for
+fundamental objects; pages should.  Indeed, this relates to a previous
+conversation Aaron and I were having about an essay by Jaron Lanier;
+Jaron was calling for the demise of files, and I pointed out (turns
+out, thinking similarly to ESR) that the data needs to be stored
+somehow.  For day-to-day computation, the natural storage format is
+files, and for web presentation purposes, its pages.
+
+This doesn't mean that I think that the actual "metaphysics" of the
+datastructure should be pages or files.  Rather, I see some value in
+what the essay on Ajax says about the foundation being navigational
+sequences (basically, I'm plugging the [[file:Arxana|scholiumific.org][Arxana|scholiumific]]
+approach).  However, it doesn't seem like Ajax has it quite right.
+But I know almost nothing about Ajax besides what I just read in that
+essay, so I could be quite wrong; maybe if "done properly", it would
+be a useful part of a web-scholium system.  On that open-ended point,
+I'll await further discussion!
+
+--[[file:jcorneli.org][jcorneli]]
+
+This idea of "navigational sequences" reminds me quite a bit of
+[[file:duality of queries and databases.org][duality of queries and databases]] --- if your database happens to be a
+website, then the way you ask for a particular page is by means of a
+navigational sequence that takes you there.
+
+Transposed into the key of L (we lispers, like mathematicians and
+Frenchmen, translate everything into our own language, and and
+forthwith it is something entirely different), if our database is an
+S-expression, then queries/navigational sequences would be beasts like
+CAR, CADADR, CDDDDADAAADADAR, &c.
+
+More generally, this issue of query/database duality seems to be one
+that would be worth considering when thinking how best to store the PM
+database.  Having said this, I feel inspired to go and write up more
+about this topic --- now it is mostly locked up in correspondence with
+Joe and in my notes.  --[[file:rspuzio.org][rspuzio]]
+
+It seems we need to make a page for Ajax, since it is different than Ruby on Rails. --[[file:bloftin.org][bloftin]]
+
+In the article cited above it says
+
+: In the long term, we will need a richer model for hypertext nodes on
+the Web than can be supported by frames. For example, composite nodes,
+typed nodes, hierarchical nesting of nodes, nodes with different
+views, and nodes with actions that influence other nodes are all ideas
+that have been explored in hypertext research. It will be important to
+retain the positive attributes of the Web as we move toward these
+richer information structures.
+
+Well, we have such a model --- the scholium system.  The various
+futuristic furistic features mentioned in the quote are already part
+of the scholium based document model; most of them have been
+implemented and the rest are in the process of being
+implemented. --[[file:rspuzio.org][rspuzio]]
+
+Lanier wasn't calling for the demise of files; he was just pointing out that their 
+use seems to have been rather uncritically adopted.  Logically, what we are doing in
+digital libraries, and quite explicitly with the scholium system, is abandoning a file-based
+mode of interpreting data.  Yes, ultimately, the scholia may be represented with files,
+but users will likely never see this "view" of the data.  And really, the fact that you can 
+plug-in any back-end you want belies the claim that a scholium system is not really
+anything new.
+
+As for whether operating systems could even work based on such a model, consider that 
+an "operating system" is a concept that requires some notion of the "machine" you are 
+operating.  In a sense, the web has become a machine, which has its own, high-level
+operating system (much to Microsoft's dismay!)  Here, the traditional notion of files is
+already outdated, because you have links internally between objects (web pages).  Digital
+libraries and scholia are simply extensions of this.
+
+So, I view the scholium system as precisely the kind of thing Lanier would have liked to
+see gain some wider adoptance earlier on.  This is what he was talking about.  And as you
+have shown, there were precedents from quite a while ago which simply didn't make it into
+mass use.
+
+Of course, this is all a bit of a tangent on the AJAX question. =)
+
+--[[file:akrowne.org][akrowne]] Tue Jan 24 18:28:10 UTC 2006
+
+I love the quote above, thanks Ray.  It does nicely sum up the
+scholium system model.  I agree with Aaron, this model isn't exactly
+new; as a system for computation, it is at least as old as the
+"semantic net" idea.  As an idea for HCI, it is at least as old as
+"the web".  But remember, the key thing about the scholium system is
+that it marries AI and hypertext -- probably the best example of a
+scholium system precursor in this sense is /Emacs itself/!
+
+Aaron, I don't really understand your interpretation of the statement
+that "you can plug in any backend."  I don't know whether this
+statement is deep or trivial.  One can envision many different kinds
+of "scholium systems" (semantic nets, hypertexts, and interactive
+programs are all examples that fit within the general model; even
+things like push-down automata and graphs fit within the model --
+because the model really is very general).  A "backend" is just a
+representation of one of these datastructures on the computer,
+probably together with some kind of data-access functionality.  In
+this sense, "scholium computation" is as old as computation itself.
+
+But I don't want to trivialize the relevance of "my" scholium system.
+It is /intended/ to be(come) analogous to the difference between /a
+Turing machine/ and /the Universal Turing Machine/.  I freely admit
+that I have quite a ways to go towards achieving that goal!
+
+By "universal" basically I mean that we can move (automatically) from
+a description of /a/ scholium system to a live implementation of
+that system within "the" scholium system.
+
+This is where the rubber (scholium metaphysics) hits the road (liquid
+code).
+
+I can't realistically claim credit for coming up with the idea of a
+general scholium system: I'd assign that credit to Church & Turing &
+their peers (if not Leibniz & his peers (if not ...)).  Managing to
+come up with an implementation of /this/ scholium system is not any
+more exciting than coming up with an implementation of Emacs, and it
+may in many ways be less exciting (from a philosophical point of
+view).
+
+Nevertheless, it may have certain very practical ramifications.
+
+As for Lanier and files: using files as an example of lock-in is
+tantamount to calling for their demise or their reconsideration.
+(Compare the treatment of copyleft developed by you and Ray; the
+rhetoric is such that something being "locked" begs us to look for a
+"key".)  This is even though he says they "have become too fundamental
+to reconsider."  I don't think it would be /wrong/ to reconsider the
+use of files; they may become relatively unimportant (I can imagine
+one large file or buffer replacing /files/ and I can also imagine a
+somewhat amorphous flowing display replacing /pages/).
+
+Nevertheless, I stand by what I said about files as the "natural
+storage format".  In the context in which I said this (/Ajax
+shouldn't be used for fundamental objects; pages should./)  I was
+trying to deal with the day-to-day realities of building useful
+systems.  
+
+Grounding our discussion in these practical realities, I don't think
+that it is quite true that /what we are doing in digital libraries,
+and quite explicitly with the scholium system, is abandoning a
+file-based mode of interpreting data./  We continue to use files, and
+in that sense, I think these modes of working with data are as much a
+"file-based mode of interpreting data" as there has ever been.  But at
+least in my experiences with computers, a "file-based mode of
+interpreting data" has never been all that important!
+
+Files are essentially just blocks of data; probably essential for
+computation (though of course I could be wrong about that!) but never
+very "interesting".
+
+The question of their use or their abandonment (as a design question)
+has been worked over, and I think we can all agree that there are
+other useful ways of looking at data.  On the other hand, this same
+question (as a question about implemenatation) will be answered by the
+technology at hand.  I can't argue either side, because the two points
+are entirely compatible with one another.  Just as a final piece of
+evidence on that point, files are relevant to Emacs users (that is
+where the data that describes its source code is stored, found,
+edited, and saved), but are not of any particular significance in its
+actual operation.  Files are not any more "outdated" than runnable
+programs are "something new".
+
+Anyway, I hope you'll forgive me for going on about this point (I'm
+hoping to get things to a point where it is clear that we don't need
+to discuss the matter any further!).
+
+--[[file:jcorneli.org][jcorneli]]
+
+BTW, so as not to be accused of false modesty ;), I do think that "the
+scholium system" (Arxana) is "philosophically interesting" from the
+free/culture perspective.  This is also where the "practical
+ramifications" come into play.  --[[file:jcorneli.org][jcorneli]]

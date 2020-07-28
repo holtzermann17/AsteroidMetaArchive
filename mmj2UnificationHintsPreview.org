@@ -1,0 +1,115 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+(back to [[file:mmj2.org][mmj2]])
+
+
+* Preview of new MMJ2 Unification Hints Feature
+
+mmj2's Proof Assistant will display a Hint message
+for each step that fails to unify if:
+
+    
+ * the user selects menu item Unify/Unify+GetHints;
+
+ * the step's formula is not derived during 
+  unification;
+
+ * the step itself is not derived during 
+  unification;
+
+ * there exists an assertion in the loaded .mm
+  database with sequence number < the proof
+  theorem's sequence number whose formula
+  successfully unifies with the step's formula,
+  disregarding hypotheses on the assertion and
+  proof step.
+    
+
+Here is an example from theorem "cdj3" and its "qed"
+step (the last step of the proof):
+
+1) here is the actual step from the completed proof:
+
+    
+    qed:12,138:impbi
+        |- ( E. v e.
+               RR
+               ( 0 < v /\
+                 A. x e.
+                    A
+                    A. y e.
+                       B
+                       ( ( norm ` x ) + ( norm ` y ) )
+                       <_
+                       ( v x. ( norm ` ( x +v y ) ) ) ) <->
+            ( ( A i^i B ) = 0H /\ ph /\ ps ) )
+    
+
+2) We erase the Hyp and Ref fields so that the Step/Hyp/Ref 
+appears as follows:
+
+    
+    qed:
+    
+
+3) Select Unify/Unify+GetHints and the following messages 
+appear on the Request Errors frame:
+
+    
+    E-PA-0411 Theorem cdj3 Step qed: Unification failure in 
+    derivation proof step. The step's formula and/or its 
+    hypotheses could not be reconciled with an Assertion 
+    (axiom or theorem) in the loaded Metamath file(s).
+     --------------------------------------------------------- 
+    I-PA-0413 Theorem cdj3 Step qed: Hint(s): The step's 
+    formula unified with the following assertion formulas, 
+    disregarding hypotheses: ax-mp, mp2, mt3, pm2.61i, 
+    pm2.61ii, pm2.61nii, pm2.61iii, impbi, bicomi, bitr, 
+    bitr2, bitr3, bitr4, 3bitr, 3bitr3, 3bitr3r, 3bitr4, 
+    3bitr4r, mpbi, mpbir, pm3.26i, pm3.27i, con4bii, 
+    pm5.21nii, mp2an, 2th, 2false, mpbiran, mpbiran2, 
+    mpbir2an, ecase3, ecase, 4cases, elimh, 3simp1i, 3simp2i, 
+    3simp3i, mp3an, 3ecase, a4i, mpg, mpgbi, mpgbir, chvar, 
+    chvarv, mprg, mprgbir, vtoclf, vtocl, vtocl2
+     --------------------------------------------------------- 
+    
+
+4) Now, just as a test, we use the derive feature and
+plug in *any* of the I-PA-0413 Hints. To trigger Derive
+we must put in a valid Ref label. To ask for hypothesis
+derivation, we put a "?" in the Hyp field. Thus the
+Step/Hyp/Ref field looks like this:
+
+    
+    qed:?:impbi
+    
+
+5) "Derive" is part of Unification so Unify/Unify works,
+or Ctrl-U:
+
+    
+    qed:12,138:impbi                
+        |- ( E. v e.
+               RR
+               ( 0 < v /\
+           etc.
+    
+
+Lo and behold, "Derive" has generated hypotheses from
+the input Ref impbi, and furthermore, it noticed that
+identical hypotheses already existed in the proof,
+so it just linked to those -- thereby recreating the
+original proof step!
+
+What is interesting is that any of the Hint labels 
+can be plugged into the Step/Hyp/Ref and used with
+Derive. That is because the formulas unify with the
+step's formula! If the formulas did not unify
+then Derive would complain instead of generating 
+hypotheses (p.s. As a refresher -- "Derive" can
+generate a step's formula too; just leave the formula
+field blank and input a Ref label!)
+
+
+(back to [[file:mmj2.org][mmj2]])

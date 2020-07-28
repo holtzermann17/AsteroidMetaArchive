@@ -1,0 +1,111 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The idea here is to provide a question-answering service that people can pay to
+use.
+
+For discussion of /automated/ question-answering, see [[file:interactive math software.org][interactive math software]].
+
+The specific design of a non-automated model is something we would have to talk
+more about.  
+
+For me, it seems nice to link the idea to the idea of "membership" - so, site
+users could pay a membership fee (or have it waived in light of high score) and
+then be qualified to answer questions in the question-answering service and take
+a cut of whatever proceeds come in through the service.
+
+Alternatively, we could simply make it so that anyone logged in could answer
+questions, and any profit would go directly to the site.  But, personally, I
+think participants would be more motivated if they were getting some kickbacks.
+Also, limiting participation to site members might help make the service less of
+a free-for-all.
+
+Of course, questions and answers would be fair game to add into the
+encyclopedia, and presumably anyone should be able to comment on the
+question-answering session.
+
+Many details to hash out - which might be expensive.  But as we think about ways
+to [[file:make AM projects financially independent.org][make AM projects financially independent]], we should probably put some
+more thought into this one.
+
+----
+
+Huh! People pay money to see how to differentiate tan x^2?  I
+think it would be great if we could attach some kind of "smart
+entries" to PM where one can perform basic math operations over
+the web. For example, plot simple functions, differentiate,
+integrate, maybe simple sums, etc? This would make add a lot of
+value to PM.  Currently we have no traditional "tables" of
+integrals. For more involved questions like "how do I prove
+this.." (that is, user's homework), the issue is (morally)
+somewhat more complicated.  Of course we can ask money for this,
+but is this a good way to earn a reputation as an "academic"
+resource? Do we would we want to be academic? Maybe not? The
+question forums I think are a key part of PM. We should do
+everything we can to improve their usability.  ---[[file:matte.org][matte]] 19
+April 2005
+
+In terms of the "moral dilemma" posed by helping people with
+their homework for money (or not for money), I have to say, as a
+tutor, I do as much as I can.  Teachers, too, are in the
+business of getting paid to help kids learn.  The "moral
+responsibility" is really all on the student.  For example, if
+their assignment (or the general policy of the school) is to "do
+this without help" and then they are found out, /they/ are the
+ones who risk getting expelled.  PM would actually be providing
+a service to the "education cops", by putting a log of all the
+questions that had been asked on public display (much like
+google answers does now).
+
+So I don't see it having a negative impact on our reputation.
+
+I also agree that the no-cost forums should be developed & used
+further.  The for-cost Q&A section would help to give people a
+feeling of "security", that makes them feel more confident in
+the answers they are getting.
+
+We would want to come up with some terms of service that include
+something like "if you are not satisfied, you don't pay" - but
+also, that there is no guarantee that we'll even answer the
+questions people pose.  Google Answers does this too.
+--[[file:jcorneli.org][jcorneli]] Tue Apr 19 22:08:33 2005 UTC
+
+I see for-cost question answering as much (if not more) an issue of
+reliability than security.  If you get an answer for free with the
+general forums, it may be at a great delay.  But quite often, you
+won't get an answer.  This is because free question answering is
+optional, as is all voluntary collaborative activity.  You're more
+likely to get an answer for free if someone is /interested/ in 
+your question.  Thus, in the answering, they get something out of 
+the transaction without pay from the asker.  
+
+When no one is interested, or interested soon enough, it might make
+sense to offer a payment.  This then might provide motivation when
+there was not previously enough.  So economically, I think there is
+a niche for for-pay question answering. 
+
+I'd be worried whether we have critical mass of participants to
+make such a venture viable, considering management overhead.  --[[file:akrowne.org][akrowne]] Wed Apr 20 03:44:19 UTC 2005
+
+If I could get $5/hr doing this, I'd probably be willing to spend 50 hours a
+week on it, at least until something better came along, and make basically all
+my money that way.  I think I'd stand to learn a lot of math.
+
+The question for me is whether there would be a critical mass of clients.
+50 hours or 250 dollars per week is a lot of time and a lot of requests,
+I'm sure.
+
+Another thing to note is that to some extent this is, or SHOULD be,
+a line of work who's job it is to put itself out of business.  By
+which I mean, questions and answers should be incorporated into
+the database, and hooks (of various sorts) should be created that
+will help users find the answers they are looking for if those
+answers already exist.
+
+Question-answering (whether no-cost or yes-cost) is thereby seen to be
+an important part of building a good mathematical knowledge base.  
+
+The hard part here is not just business management, but post-facto coding
+overhead (i.e. "knowledge management").  Budget another 50 hours a week for
+that, and bam, my schedule would be pretty much full.  I think it would
+be a great way to work, though, for a while. --[[file:jcorneli.org][jcorneli]] Wed Apr 20 04:23:31 2005 UTC

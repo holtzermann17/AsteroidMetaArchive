@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It has been a while since any HDM planning have been posted in
+a public place.  Ray has posted some thoughts on HDM research
+topics at [[file:Two years later.org][Two years later]], and I'm glad he did.  His plan
+seems to be to flesh out the topics written there, and I also
+think this is a good idea.  He mentioned that finishing writeups
+on these topics may take another year, and I suppose that
+that is probably a good estimate of time required.
+
+This leaves as an open question the matter of HDM for the rest
+of us (to twist Apple's catchphrase to my own personal tastes).
+What should we do to help the project, and in particular I'm
+wondering what should I do? (This sub-topic may be more interesting
+to me than to others but I don't see why I shouldn't write some
+about it here as it may be the partial answer to the aforementioned broader
+question that I'm most qualified to make.)
+
+My recent investigations into potential academic homes for myself
+have further solidified in my mind just how inter-disciplinary
+the HDM project is going to have to be.  There's math, linguistics,
+and computer science -- to say the very least; economics (of
+collaborative work), (educational) psychology, (digital) library science and who knows
+how many other subject areas are at least tangentially involved.
+Then there's all the basic philosophical thinking that goes into trying to do
+something that's somewhat ground-breaking!  All in all, it is rather a
+lot to think about.
+
+This has its plusses and minuses.  On the plus side, after having thought
+about a bunch of different aspects of the HDM project, one comes closer
+to having something to say to just about anyone, about the project, that's
+likely to hold their attention long enough for the exchange to be fruitful.
+On the minus side, it is probably not possible to make more than vague and
+ephemeral progress in all of these directions at once.
+
+Instead, one might hope to create some work which further enhances ones ability
+to discuss the project on all of its subsidiary dimensions.  A published
+work here (i.e. something that one can subsequently talk about and gesture at); a common
+language in use there -- these are the sorts of things that can help.
+
+I have run into difficulty once already, trying to publish "half-baked" ideas
+about the project, without the "results" needed to back those ideas up.  Maybe
+I am closer to getting some results I could talk about.  E.g. a deployed version
+of [[file:Arxana.org][Arxana]] seems to be the sort of thing that one could write a paper about.
+This will be something to think about.  However, I am not completely sure that
+Arxana (despite all of its scholia) hits the HDM nail directly on the head.
+Arxana is, generically, about human-computer interface, and there is way more
+to HDM than that.
+
+Perhaps the best thing to write about would be some HDM implementation, however
+partial.  Indeed, this is the sort of thing that perhaps we can work towards.
+
+Does this require making progress in many directions?  Not necessarily.  What
+we might do, instead, is simply work on mapping out the existing state-of-the
+art -- a sort of prolegomenon to any future hyperreal dictionary (or
+just go whole hog and say "A prolegomenon to any future hyperreality", period).  Perhaps Arxana
+could be used to this end (although no doubt off-the-shelf products like !EndNote
+could in theory be applied, for a while).
+
+Thus, I propose (at least in the heat of this moment), to make "weak" progress
+in each of the many directions required for work on HDM, by updating, expanding,
+and otherwise making ready for the 21st century the information on the [[file:HDM refs.org][HDM refs]] page.
+Luckily enough this is the sort of thing that anyone who is interested in helping
+out HDM can also work on. (So you see my answer for myself does indeed generalize
+somewhat!)
+
+As for the "specialized" work of Ray or Raph or others -- these efforts I highly
+endorse, and indeed I plan to continue my own specialist work (Arxana) as part
+of the effort mentioned above.  However, I would encourage all of us to think
+about how our specialist work relates to the work of others -- in particular, to the
+work being done by other specialists.  Raph championed this angle on
+the "two years later" page when he asked us to examine the relationship between
+HDM and Ghilbert (a particularly nice example).
+
+As has been remarked to me by a trusted advisor (me own dad), one must position
+oneself within a cultural matrix in order to do effective work.  Going on from
+here: adequate language and a good audience are important, for without these, one either
+can not report ones findings, or else they fall on unlistening or otherwise devoted ears.
+
+On that note, I hope these plans have not fallen on unlistening ears, and
+I await and welcome your criticisms.
+
+--[[file:jcorneli.org][jcorneli]]

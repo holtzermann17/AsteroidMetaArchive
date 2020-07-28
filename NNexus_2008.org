@@ -1,0 +1,85 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+*  NNexus Noosphere Integration and Interface Improvements
+
+In order to extend the breadth and details of PlanetMath.org it is necessary that
+PlanetMath link to the content of multiple sites. Since NNexus now provides
+multiple domain functionality it is now time to incorporate full NNexus
+functionality into the Noosphere encyclopedic system.
+
+This summer I propose to write a Noosphere-NNexus bridge. That is remove the
+existing linking code of Noosphere and substitute with calls to a stand-alone
+NNexus server to provide all linking and indexing functionality. This also includes
+adding functionality to automatically create a new PlanetMath entry if it only exists
+in an external domain. It is also of interest to add in new disambiguation pages
+to PlanetMath rather than assuming that NNexus also chooses the best link. If NNexus
+cannot determine the best link a page can be displayed that will display the top
+link targets. By logging the click information provided by the community we can further
+enhance the linking precision.
+
+Due to the emergence of NNexus as a standalone project it would also be useful
+to provide a web-based GUI for interacting with NNexus. This GUI would allow
+authors to easily modify the existing linking policies, mark automatic links as good
+or bad links. By logging this information provided by the community we can further
+enhance the linking precision.
+
+Finally at the core level it would be nice to remove or modify the latex2html processing
+to include jsMath. This would remove some of the bottleneck on the server side
+and allow the client browsers to process some of the image generation for the mathematical
+formulae. This is an optional component and will be completed time permitting.
+
+*  Background
+
+NNexus is a generalization of the
+automatic linking engine of Noosphere (at PlanetMath.org) and the
+first system that automates the process of linking disparate
+"encyclopedia" entries into a fully-connected conceptual network.
+NNexus facilitates the extension of this functionality to multiple
+knowledge bases of this sort (such as Wikipedia and MathWorld) and
+to web-based information environments in general. NNexus is based
+on the concept of automatic invocation linking, where invocation
+refers to the use of a concept in text. If the concept is defined
+in the NNexus concept database (and the target satisfies certain
+constraints) a link will be made in the source article to the best
+target article. The best target article is decided based on the
+classification of both the source and target articles. The article
+that is closest in classification will be the target.
+
+
+**  Current Functionality/Features:
+
+The key features of NNexus include:
+
+ 1. an automatic linking system that links a source to a target article based on the classification of the source and target. Realtime updates of links between articles is supported by an invalidation index. This allows articles to automatically be re-linked when a new article is added to the system that defines a term mentioned in the pre-existing articles.
+ 1. support for multiple domains. This allows a corpus to be linked to other knowledge defined on the web.  Each object in the NNexus database is associated with a particular domain. When a source article can link to multiple domains a javascript drop down list of the best article to link to for each domain is displayed (when output is in html mode). The domain configurations are	specified in XML and can be used by NNexus as long as they can be accessed by the NNexus server by a URL. Global CSS info (such as hyperlink color) can be specified in the configuration files.
+ 1. a set of declarative linking policies that control the linking system at the global, domain, and object level. These linking policies include what classifications a source article must or must not be to link into a target article, and which terms are never to be linked automatically  (blacklist).  domains can also be prioritized relative to each other.
+ 1. a simple xml interface (over a socket) for interacting with the server.
+
+----
+* Discussion
+
+Without getting into technical details right now, let
+me say that the main thing I care about with this
+project, personally, is uptake.  One idea that has
+been circulated is the idea of getting !ArXiv papers
+linked in to !PlanetMath.  Of course, we could also
+send links in the other direction.  We NEED to see
+results like this!  If I'm not mistaken, so far,
+after two years, everything is still just being built,
+nothing is actually deployed yet?  
+
+--[[file:jcorneli.org][jcorneli]]
+
+It is true that mostly development has been done on NNexus and the only deployment has been as a separate server. This summer we will have NNexus deployed on PlanetMath.
+
+--[[file:jgardner.org][jgardner]]
+
+I think we should strongly consider finding useful ways to add links
+from PlanetMath into the ArXiv corpus.  That is something we can
+(probably) do right now, without (much) permission needed from the
+ArXiv people.  If we get links working in that direction, then ArXiv
+may be more interested in a project to get links running the other way
+too, later.
+
+--[[file:jcorneli.org][jcorneli]]

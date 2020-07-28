@@ -1,0 +1,84 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I don't expect this to be completey finished until there is a community around PlanetPhysics, however some basic types are needed.  Please add suggestions.
+
+Sergiy Pereverzyev (mathforever) suggested the following in PP forums:
+
+I would like to discuss the types which are used for PP-entries. For the moment the types of the entries in PP corresponds to the types used in PM, i.e.
+
+Axiom
+Corollary
+Definition
+Data Structure
+Result
+Conjecture
+Example
+Biography
+Topic
+Application
+Derivation
+Proof
+Theorem
+Algorithm
+
+Let us group these types according to some criteria.
+
+-----
+BASIC THINGS:
+  Axiom
+  Definition
+  Biography
+  Topic
+
+what is missing in the above list is
+  Law - Like Newton's law, Hooke's law, Planck's law, etc....
+  Experiment - Like Michelson-Morley experiment
+-----
+DERIVED THINGS:
+(in the sense that the information located in below types is derived from information in the BASIC)
+
+  Derivation
+  Example
+  Application
+
+  Theorem
+  Conjecture
+  Proof
+  Corollary
+  Result
+-----
+
+The types which are ussual for math but probably are not needed for phys:
+
+Data Structure
+Algorithm
+
+    ************************
+
+So, to summarize, one needs Law, Experiment type and could throw "Data Structure" and "Algorithm". There are probably also other types which are specific for phys and I have missed, but Law and Experiment should be added, and some existing entries should be already typed as Law instead of Theorem.
+
+------------------------
+
+I like the suggestions, but I would not throw away Algorithm for sure, since computational physics can use it.  Data Structure is a maybe, but I will keep it around just in case.  --[[file:bloftin.org][bloftin]]
+
+pbruin suggested adding types physical quantities and units.  --bloftin
+
+To add new types I did the following:
+
+1)  In Config.pm line 32, I added
+
+use constant LAW=>27;
+
+2) Added entry for single characters to represent types
+ 
+line 271: 
+27=>'l'
+
+3) Added typestrings
+
+line 299
+27=>'Law'
+
+
+This is all I did, and need to know if there is more.

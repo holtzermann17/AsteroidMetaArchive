@@ -1,0 +1,82 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* What is PlanetComputing?
+PlanetComputing WAS a planned [[file:Noösphere.org][Noösphere]]-based digital library project. It is now jumping off the drawing board and onto a web portal near you.  Before it is made public please help us test it by adding the server's IP to your host file.
+
+198.82.160.76   www.planetcomputing.org planetcomputing.org images.planetcomputing.org aux.planetcomputing.org oai.planetcomputing.org
+
+Then point your browser to www.planetcomputing.org.  Enjoy!
+
+: BTW, for most people, "host file" means /etc/hosts/ --[[file:jcorneli.org][jcorneli]]
+
+: Maybe finding your host file should be a prerequisite for using PlanetComputing :) --[[file:bloftin.org][bloftin]]
+
+* Quick Links
+ * [[file:PlanetComputing tasks.org][PlanetComputing tasks]]
+ * [[file:PlanetComputing bugs.org][PlanetComputing bugs]]
+ * [[file:PlanetComputing feature requests.org][PlanetComputing feature requests]]
+
+* News
+ *Sat Oct 15 21:20:55 UTC 2005* - Apparently Ed Fox's group has received a grant for follow-up work to CITIDEL that would put some muscle behind PlanetComputing.  Expect to see some students helping out with this project eventually.  Also, we already own the domain name, and in the coming days will have it pointed at the instance Ben has set up. --[[file:akrowne.org][akrowne]]
+
+* Discussion
+
+** What about "PlanetCode"?
+
+Whereas PlanetComputing would be an encyclopedia of computing, a sort of
+in-depth version of FOLDOC, "!PlanetCode" would be a compendium of reusable code
+components embedded in some organizing structure.  Perhaps thes two projects
+could be merged, in the same way in which I sometimes imagine [[file:HDM.org][HDM]] existing
+at first as a substratum of [[file:PlanetMath.org][PlanetMath]]. --[[file:jcorneli.org][jcorneli]] Sun Jan 30 12:50:48
+2005
+
+My vision was for the sites to always be merged.  Trivially speaking, there could be code entries, that render syntax highlighted.  Literate code handled in some nice way would be even better for instructional purposes.   Large code libraries could be rendered in some other way. --[[file:akrowne.org][akrowne]] Sat Oct 15 21:20:55 UTC 2005
+
+** Further thought about PlanetCode
+
+Just like we might want to create a market for answers to math questions on
+[[file:PlanetMath.org][PlanetMath]], we might want a market for answers to programming problems on
+PC.  
+
+In other words, an [http://www.firstmonday.dk/issues/issue8_11/munoz/ open code market].  
+
+For more discussion of this sort of thing, see the
+[http://oddwiki.taoriver.net/wiki.pl/SoftwareBazaar/HomePage SoftwareBazaar]
+page on Oddwiki. --[[file:jcorneli.org][jcorneli]] Wed Feb 2 00:35:57 2005
+
+** Still more
+
+More generally, !PlanetCode could be a really, really neat environment for doing
+collaborative [[file:literate programming.org][literate programming]], which I suppose is the whole point of
+bringing it up to begin with.  I imagine that such a resource would have a huge
+impact on the free software world. --[[file:jcorneli.org][jcorneli]] Sun Feb 13 14:25:46 2005
+
+----
+
+According to me it would be highly desirable. But I wonder how it can done.
+
+I have always been surprised that so many program are perfectly out of reach because there are not enough comments. According to me software quality is essentially a motto : /understand your program/
+
+-- [[file:frl.org][frl]] 16-Oct-05
+
+My sentiment on this is another motto: /whoever has the most documentation, wins./
+--[[file:jcorneli.org][jcorneli]] Sun Oct 16, 10PM Washington DC
+
+: [http://www.cfcl.com/Meta This project] seems to be going in a similar vein.  --[[file:jcorneli.org][jcorneli]]
+
+These sorts of things are pretty useful/interesting.
+(Example: http://paste.lisp.org/display/20035)
+
+Happens to makes me wish that I knew how to use IRC better.  It seems to me that
+the PM developer/author community might benefit from some training
+in IRC (among other things).
+
+As for these pastes, although they have optional annotations, I think
+it would be great if there was some autolinker-style or other quick
+method for contextualization.
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:Projects.org][Projects]]

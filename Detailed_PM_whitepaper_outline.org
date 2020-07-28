@@ -1,0 +1,146 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is a bare-bones detailed outline for [[file:PlanetMath whitepaper for potential partners.org][PlanetMath whitepaper for potential partners]].
+
+* The outline
+
+Ground rule: each item no more than one line long!
+
+ * Introduction
+  * Scope and scale of the project
+   * Relationship to things in math
+   * Relationship to things outside of math (e.g. !PlanetPhysics etc., Noosphere/Arxana)
+
+ * Overall themes and theses
+  * push to get !PlanetMath supported as a virtual community for developing mathematical scholars *(Project !NExT, REUs)*
+   * A special audience: "young mathematicians", various levels (/why?/)
+   * !PlanetMath as a (non-exclusive) alternative math-learning environment (like REUs, institutes, seminars)
+   * !PlanetMath emphasizes "active learning" and "user as creator"
+  * !PlanetMath as a resource for world-wide mathematical communications (including in developing countries)
+   * Building internationalization/translation infrastructure
+   * Send a copy to UNESCO (and compare with their existing Greenstone effort)
+   * Note language migration
+  * !PlanetMath as a resource for community and curriculum development *(MAA, AMS)*
+   * Mention some specific R&D efforts (this is primarily addressed in the "PM Research" section below)
+   * Note that PM/Noosphere/Arxana can be used /flexibly/, to develop specific environments for specific concerns 
+    * E.g. rmilson experiment
+   * Note the fact that the site itself is run by the community
+
+ * !PlanetMath Community
+  * Understanding free math *(GNU, Creative Commons)*
+   * spirit of sharing
+   * Distinguish ourselves from "open access"
+  * The role of individuals -- "what you can do to help" 
+   * if you're a math student
+   * if you're a mathematician
+   * if you're famous
+   * if you're a philanthropist
+   * if you're a free content activist
+   * if you're a programmer
+   * (etc.)
+  * !PlanetMath as E-Institute *(MSRI etc., NDSL)*
+   * for math research
+   * for DL research
+   * Special as a place to /combine/ math research with DL research
+   * compare with Bourbaki
+  * !PlanetMath and the Undergraduate Research Experience *(various institutions)/
+   * REUs, specifically
+   * compare to Networked DL of Theses and Dissertations (NDLTD)
+
+ * !PlanetMath Software Development *(Wikimedia)*
+  * Free Math needs free math software
+   * The benefits of a hackable platform (this isrelated to so-called free meta-culture)
+   * Note applications exist outside mathematics for both the tools and the platforms developed here
+  * !PlanetMath, NSDL, and other math-DL initiatives
+   * Possible (and any concrete?) partnerships with other organizations in the math-DL field
+  * !PlanetMath and Artificial Intelligence *(!ArXiv)*
+   * Relationship of AI to Digital Libraries, MKM, and other math software
+   * Specific projects, both short and long-term
+  * !PlanetMath and Formal Mathematics
+   * economic and pedagogical benefits of proof-checking
+   * specific relevance to the specific form of peer review used on PM
+  * !PlanetMath and Free Software for math (in general)
+   * Outreach to free software developers *(Maxima)*
+   * Development of a content- and functionality-rich math hacking platform
+
+ * !PlanetMath Finances
+  * PlanetMath membership
+  * long-term sustainability
+   * selling products
+    * FEM
+   * corporate matching donations
+  * start-up grant funding (and requests)
+
+ * Summary/Conclusion
+
+* Discussion
+
+** Redundancy
+Should be sorted out eventually. --[[file:jcorneli.org][jcorneli]]
+
+** Community
+
+I don't want to separate "research" and "finances" from the
+"community" -- because these are things that members of the community
+do -- but I wanted to divide the document up into several big
+sections, and these dividing lines made sense.  Maybe the "community"
+section should be called something else, that would make it seem less
+separate from the others? --[[file:jcorneli.org][jcorneli]]
+
+** Specific partners
+
+It may be helpful to think about the specific organizations we are
+going to pitch each section to, and perhaps mention those groups
+parenthetically in the outline, as I have done /just for example/
+with Project !NExT in the "developing scholars" section.  (If this
+proves distracting or annoying, we can get rid of the remarks.) --[[file:jcorneli.org][jcorneli]]
+
+Also, while we currently have a section on "The role of individuals",
+we don't have anything specific yet on the relationship between PM and
+existing math organizations and institutions (e.g. the professional
+societies, universities, as well as things like NSF, Dept. of
+Education, UNESCO).  I think that we should create such a section, and
+as we develop this document, we should get in touch with some folks in
+these institutions to talk over a few specifics before we make a real
+draft of that section or (as follows) a final version of the
+whitepaper as a whole.  --[[file:jcorneli.org][jcorneli]]
+
+** PlanetMath Software
+
+Here is an interesting idea.  Instead of having a major section
+called "!PlanetMath Research", we could have that section be called
+"!PlanetMath Software" or "!PlanetMath Software Development".  This might
+be a cleaner way to separate "community" from the more technical stuff
+we're talking about in the current Research section.  Of course, community
+can't be separate from software /or/ research, but still, the idea
+of "things people do" and "things computers do" is still a viable distinction
+to make.
+
+On the Software note, I think we might want to pitch PM as a place to
+develop any kind of free math software, and e.g. send a copy to the
+Maxima people & developers of other extant free math software
+platforms.
+
+Noted, they already have places where they do development; however, if
+we can find useful ways to integrate their products into PM, or vice
+versa, then I think that would make everyone reasonably happy. --[[file:jcorneli.org][jcorneli]]
+
+I effected the above change in the outline.
+
+** How to deal with "PM meta-culture"?
+
+Somewhere we should describe PM's organizational infrastructure,
+member statistics, member rights, and /how decisions actually get
+made/ (which, by the way, is not completely clear to me; but which
+certainly involves AM, as well as things like the board).  It would be
+good to sketch the /specific/ kinds of "meta" involvement we have a
+strong demand for at present.  One of the #1 types here is
+/fundraising/.  We kind of hope that things like system
+administration and basic hacking will follow to some extent from that;
+but it would also be great to get people involved with these things
+w/o having to spend money on them.  So outreach to volunteers for
+programming tasks is a #2 issue.  It seems like we could benefit from
+more active involvement in generic organizational oversight, so
+outreach to volunteers (including potential board members) in this
+area would also be helpful; make that #3.  --[[file:jcorneli.org][jcorneli]]

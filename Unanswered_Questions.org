@@ -1,0 +1,88 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+When someone asks a question to a help forum, it appears on
+the front page.  Within a day or two, the question scrolls
+off the bottom of the screen into oblivion.  Unless someone
+answers it within that two day window, it is highly unlikely
+it will ever be answered.  Examining the last year of the
+University level help forum, 30% of the questions scrolled
+off the screen without reply.
+
+This is abominable workflow management.  Given that our
+answer fora are not only a main service we offer but also
+serve as first impression which attracts new members, this
+is utterly inacceptable.  To remedy this defect, I propose
+that we add a new type of view of the fora.  In additional
+to the existing view in chronological order, we should 
+offer a view which shows only posts which have not recieved
+replies in reverse chronological order.  This way, questions 
+which have not been answred for a long time will stick out 
+like a sore thumbs and attract the attention they need.  One 
+could put a link "unanswered" in the main menu with a number
+after it in parentheses indicating how many posts to help
+fora have not recieved replies yet, much as we now do with 
+corrections, requests, orphanage, unclassified entries, 
+unproven theorems.  Even better, the entry for unclassified
+entries ought to be removed since the system does not allow
+one to add an entry unless the classification box is filled
+and put the link to a combined list of unanswered questions
+there.
+--[[file:rspuzio.org][rspuzio]]
+
+Cool idea! --[[file:akrowne.org][akrowne]]
+
+So then the next question is: what is needed to implement it.
+One possibility is to wait for the next version of noosphere,
+at which time this would simply be incorpotaed into the 
+design.  However, even if all goes well and we recieve the
+grant, that isn't going to happen for something like two 
+years.  In that time, several hundred questions are likely
+to go unadressed, so a short term solution might be worth
+considering.  I would say that if this is something which
+could be adressed with an outlay of $200 or less, then it
+is worth doing in the near future.
+
+Since this addition I propose would be quite similar to
+what we already have for outstanding corrections, it 
+would seem that code could be reused.  The primary 
+difference semms to be which interrupts trigger the 
+module --- posting to an appropriate forum (the
+general questions fora, the competition questions
+forum, and the !TeX help forum) causes a link to 
+the posting to be added to the queue and replying
+to a post which happens to be mentioned in the queue
+causes it to be removed from the queue.  I assume there 
+would also be some effort to generate a new table for 
+outstanding questions and populate it with suitable
+initial content.  To me, this sounds like the sort 
+of thing that a suitably qualified person could do 
+in half a week FTE (= 20 hrs -> $200 bounty), but it
+would be appreciated if the sole expert on the
+noosphere code on the face of the planet could weigh 
+with his opinion.
+-[[file:rspuzio.org][rspuzio]]
+
+To make the scheme work, you should probably need a facility to
+classify the posting as a *question*, otherwise someone who posts
+
+Subject: something dumb
+Content: this is funny LOL
+
+and who doesn't get a reply because there really isn't anything to say
+will dominate this particular conversation.  (In the simpler version,
+I guess someone could just say "there isn't much to say in response to
+that", but this seems to create a rather hefty load of "busy work",
+something we'd really prefer to avoid.)
+
+--[[file:jcorneli.org][jcorneli]]
+
+In principle, this could arise, but in reality it is a non-issue.
+While confused people will from time to time post something which is
+not a question to a question forum --- however, that happens extremely
+infrequently --- in the sample I surveyed last night, there were less
+than 1% inappropriate posts.  The "rather hefty load of work" would be
+marking up 99% of the stuff as legitimate questions in order to
+guard against the 1% of neer-do-wells.
+
+--[[file:rspuzio.org][rspuzio]]

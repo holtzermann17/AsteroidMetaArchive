@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+How can Noosphere represent data in a more useful or more user friendly way?
+
+*  Timezones and dates
+PM has users from all over the world. Yet all dates and times are
+represented in only one format and timezone. 
+For example, for international readers,  2006-03-05 can 
+mean either 5 March or 3 May.
+
+*  Entry
+
+**  Parent
+Currently, there is a red arrow before the name of an entry
+if it is attached to another entry. It could be good to somehow
+display where this is linking. Maybe as an alt=".." tag?
+This would put the entry in context when browsing random entries.
+
+
+**  Statistics and information
+
+ * How popular is the entry? What is its position on the 
+[http://planetmath.org/?op=enlist&mode=hits PM ranking list]?
+ * How many hits does the entry recieve per hour/day/month?
+
+It could also be good to have a link to the entry's directory 
+on the aux.planetmath server containing uploaded .eps files, 
+source files, etc. 
+
+**  File correction
+
+Sometimes it is useful to file corrections to more than
+one entry at a time. Then it would make sense to 
+have the entry's name displayed somewhere on the [http://planetmath.org/?op=correct&from=objects&id=146 "File correction"-page].

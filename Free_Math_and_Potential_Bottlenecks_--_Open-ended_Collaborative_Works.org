@@ -1,0 +1,64 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+While collaborative multi-author works such as encyclopaedias, journals, handbooks, and newspapers have long been common, computer technology has made possible new modes of production of collaborative content which can pose special challenges with respect to copyright.  In the print world, the only feasible way to produce such a work was to first gather the contributions then arrange and edit them, typeset the whole, and fianlly print the whole.  In the virtual world, however, one can instead produce a collaborative work by running a computer program which allows users to add their contributions to a website interactively.  
+
+As an illustrative example of such a collaborative work, one may consider the Planet Math encyclopaedia of mathematics.  This work is maintained by an online community of mathematicians, membership in which is open to the general public.  The articles are written by members of this community.  As soon as an entry is submitted, it immediately becomes available to the general public.  The editorial function is assumed by the same community by means of a procedure whereby members review each other's articles and submit errata and editorial suggestions.  All this happens in the open; the entries and the corrections and comments posted to them are all accessible to anyone with a connection to the internet.
+
+Such an arrangement has several advantatges over the traditional procedure for writing an encyclopaedia such as more rapid dissemination of knowledge and lower overhead costs.  At the same time, it is open to the possibility of various sorts of legal difficulties.  To a large extent, this is due to the fact that copyright law has evolved in an environment where such means of collaboration were not available and hence it is no surprise that existing law may not suit their needs well.  The major problem has to do with the all too real possibility that a mailcious, negligent or misguided user may submit material which infringes on an existing copyright.  This can put the entire project in jeopardy should the the owner of the copyright press suit.  At best, it might mean that the website, or significant portions thereof are taken offline while their legality is investigated and contested.  At worst, it might mean that the website goes offline for good if the entity which maintains it does not have the means to go through with a lawsuit.  
+
+Also, the question arises of who can be held liable.  To be sure, the author of the offending entry is responsible.  However, other parties may also be held liable for their role in allowing such a violaton to happen.  The organization who hosts the website may be held liable for disseminating the work.  If the community of users takes upon itself the responsibility of policing the website for violations of copyright law, users may found responsible for failing to exercise due diligence.  Until precedents are established or laws are enacted, one cannot be sure what will be the extent of liability for these different parties and, in the meanwhile, people who would otherwise be willing to participate in such undertakings may be reticent to do so because of the possibility of having to pay for the indiscretions of careless users.
+
+The role of an entity such as Planet Math Ltd. which maintain such a website is not so clear.  At first sight, it may be likened to a publisher, but the analogy is seen to be of limited validity on closer inspection.  In the world of print, a publisher decides which works they will print and supplies or finances the labor which is required to produce books such as layout, editing, typesetting, printing, storage, and distribution.  Here, however, the analagous operations are either automatized or provided by the community of users.  The role of Planet Math Ltd. is merely to provide the infrastructure needed by the community and the organization takes a hands-off policy when it comes to content.  In this respect, the role resembles more that of a common carrier such as as a telephone company but this analogy too has its limitations --- such an organization does not fit into any of the categories recognized by the FCC.
+
+In the current political climate it is highly unlikely that a claim to such a status would be accepted.  Even as this essay is being written, the Supreme court has ruled that programmers whose software which induces users to violate copyright can be held liable for these violations.  Should mathematical publishers feel that Noosphere, the software package underlying Planet Math is somehow undermining their business and encouraging illegal copying from their books, they could use this precedent to agrue that Planet Math Ltd. is liable for acts of infringement performed by its users.
+
+Even if they would not be able to force the site to close, it is still plausible that they might be able to force major changes to be made to the Noosphere program and the policies of Planet Math.  For instance, while the court stated that technologies could not be outlawed if they were capable of substantial non-infringing uses, it also accepted the fact that Grokster did not incorporate filtering tools into its software as evidence of intentional facilitation of infringement.  Therefore, a publisher might insist that Noosphere incorporate such filtering as a sign of good faith.  This would represent a great hardship in more than one sense --- not only would filtering require much work to implement, but it might require the use of proprietary components.  In addition to putting an extra burden on the already strained budget of Planet Math Ltd., this would conflict with the free, open source nature of the program.
+
+While Planet Math should get by relatively unscathed, this ruling is a serious threat to preprint servers like Paul Ginsparg's !ArXiv because they are set up on a basis which could be legitimately be construed as
+encouraging users to violate copyright law. The purpose of such 
+websites is for scientists to distribute copies of articles which they
+intend to publish in journals. It is well known that these preprints
+will stay avalilable online long after they are published in the
+journals and that this is in violation of the terms spelled out in the
+transfer-of-copyright agreement which most journals require.
+Furthermore, far from filtering the content for copyright violation,
+the maintainers of the !ArXiv site acknowledge infringing uses by adding
+metadata which states that this paper was published in so-and-so
+journal and even encourge authors to update their submissions to
+reflect changes made in the printed version. They try to save
+themselves by a statement in their disclaimer that they do not
+represent that the use of their product would not infringe property
+rights. In light of the  Supreme Court ruling, this disclaimer is worthless; the authors of the underlying software and the maintainers of the website
+can be held liable for each and every article in their archive whose
+copyrighted is owned by a publisher who distributes it under terms
+which prohibit dissemination other than through the journal. Looked
+at objectively, they seem to be in the same untenable position as
+Napster or Grokster --- the contention that the website *could* or
+ *should* only be used to distribute articles which are released under
+a free license whereas, in actuality, there are few such articles to
+be found on the website would fall flat on its face. The fact that the
+primary purpose of this website is the promotion of scientific
+research rather than entertainment sounds rather irrelevant as a
+defense in light of American Geophysical Union vs. Texaco.
+
+The loss of preprint servers would have a negative impact on the scientific community.  In some fields of physics, preprint servers have become the primary means of communicating ideas between researchers and journals only serve secondary purposes such as peer review and establishing reputations.  These servers have accelerated progress in these fields by allowing rapid dissemination of results.  Were they to disappear, these fields would grind to a halt until a suitable replacement would be found.
+
+* Discussion
+
+One should maybe explain the advantages as those of lowered transaction costs, and the gain
+of hypermedia functionality.  The real-time nature of the site, along with notification, 
+means that productivity happens as fast as those involved can keep up (compare this to a 
+situation where manuscript fragments have to be individually mailed around, or centrally 
+managed).  The collaborative protocol also clarifies interaction and encourages efficient
+behavior.  The hypermedia element adds value without really costing anything extra, since 
+the PM system does the majority of the linking automatically.  This illustrates how CBPP
+systems perform a valuable /contribution integration/ function.  --[[file:akrowne.org][akrowne]] Tue Jun 28 02:30:46 UTC 2005
+
+Unfortunately, I had to remove the discussion of the benefits of PM and similar systems, because it is somewhat off the main topic, which is how copyright law can interfere with the production of the resource.  I see that the discussion of how copyright issues interfere with the production of such a resource is going to be rather long so I need to make room for it somehow lest the essay overflow its appointed bounds (12 pages in the appropriate format).  However, your post will stay here at the bottom of the page as a reward for those who read the essay here.  Moreover, the intended audience at the conference is likely to accept the premise that such a system is superior to the traditional mode of publishing and, at any rate, it looks like a lengthy discussion of these benefits might be more appropriate in a different contribution than this one.  --[[file:rspuzio.org][rspuzio]]
+
+I am still deciding what to make of the recent verdict of the Supreme Court.  While it upheld the Sony verdict, I am still rather uneasy with it.  It allows programmers to be held liable for infringing uses of their programs under certain conditions and it admitted the lack of filtering for copyright violation in the software as evidence that its authors intended it to be used for illegal purposes.  To me this sounds like trouble even if it isn't nearly as serious as if the Sony verdict had been overturned.  For example, it seems that if math publishers pressed the issue, we might have to defend Noosphere as not inducing illegal copying and perhaps be forced to add filtering to the program or the website.  This would sound like quite a burden and might undo some of the benefits mentioned above.   When I think about this some more, I will add something to the essay.  --[[file:rspuzio.org][rspuzio]]
+
+I wrote a preliminary version which I expect will be revised, perhaps significantly.  --[[file:rspuzio.org][rspuzio]] bedtime, 29 june 2005
+
+Back to [[file:Free Math and Potential Bottlenecks.org][Free Math and Potential Bottlenecks]]

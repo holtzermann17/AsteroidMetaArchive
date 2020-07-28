@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We should think more about creating "nested [[file:Noosphere.org][Noosphere]] instances" or
+something like that.  This would allow us to do all of the [[file:Noosphere.org][Noosphere]]
+projects on one server - and it would presumably let people create a new
+instance very easily, like you can now do with wikis on Oddwiki @ Taoriver.
+
+Exploring this idea of nested instances could be useful for future work with
+books, papers, expositions, etc.
+
+See also [[file:noosphere literate programming.org][noosphere literate programming]].
+
+----
+
+That is a neat idea.  I hadn't realized the power of what Taoriver does until now.
+It really lets you get started easily.  
+
+In terms of multiple Noospheres on one server, we are actually planning on running
+PlanetMath and PlanetPhysics on one machine, planetx.cc.vt.edu.  This would be 
+done with my [http://br.endernet.org/~akrowne/elaine/vinstall/index.html vinstall] system for virtual servers.  However it is worth thinking
+about how to design Noosphere itself so it could manage multiple instances.  I 
+doubt we could expect to see this until the rewrite, though. --[[file:akrowne.org][akrowne]] Sat Apr 9 14:37:28 UTC 2005
+
+I wouldn't expect the idea to be implemented immediately, but I do think it
+should be considered for the rewrite.
+
+If you look at the latest draft of the scholium system paper, you'll see that I
+talk there (in a footnote) about eventually supporting entire digital libraries
+as "documents" within a given library.  This seems to relate to things you study
+professionally.  I note that access mechanisms for a system of this sort might
+be more complicated.  Instead of just having ABOUT, BEG and END -- assuming the
+sub-library was also a scholium system -- you would want to have ABOUT be a list
+that would tell you "first go to the sublibrary, then go to the sub-document,
+and /then/ look for BEG and END".  Or you could just fill in ABOUT, not as a
+list, and make a comment on the sub-library as a whole.
+
+The point I wanted to make (before I got distracted talking about the scholium
+system) is that one nice feature of nested instances would be that we could
+recategorize things easily.  For example, the recent interesting [[file:Discussions|Discussion.org][Discussions|Discussion]]
+about [[file:Bibliographies and Amazon referrals.org][Bibliographies and Amazon referrals]] could perhaps be recategorized as a
+PlanetMath feature request, rather than a project-nonspecific discussion.
+(Though it is no problem to leave it where it is, either, because the principles
+/are/ actually quite general -- so I don't think I would want to recategorize it.)
+It would be very convenient for such recategorizations to be semi-automatic.
+
+On the topic of the [[file:Noosphere rewrite.org][Noosphere rewrite]] generally... well, maybe we should create
+a page for it?  --[[file:jcorneli.org][jcorneli]] Sat Apr 09 15:49:16 2005 UTC

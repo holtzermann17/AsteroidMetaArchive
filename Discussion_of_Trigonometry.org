@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+to my surprise there wasn't an entry defining and dealing and defining the  elementary trigonometric functions, so I went and created this.
+
+I know this entry is the kind of entry that will generate a long thread about comments, suggestions criticism and all that jazz, so why don't someone better sets up an asteroidmeta page for this so we can avoid polluting the page (and making it a lot larger and slower to load ;)
+
+It's incomplete as it stands right now, but I'm making it world editable so anyone can work on it directly. Ah, and I'd like it to keep it as real trig mostly entru, so please do not dwell too much into complex analysis (perhaps just some mention and references)
+
+    f
+ G -----> H   G
+ p \    /_   -----  ~ f(G)       
+    \  / f   ker f         
+  G/ker f           
+
+[[file:drini.org][drini]]

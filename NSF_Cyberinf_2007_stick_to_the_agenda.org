@@ -1,0 +1,181 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+I would say that the most important thing here is to make it clear
+how what we are asking to be paid to do fits in with the NSF's agenda.
+The purpose of the cyberifrastructure office is not to promote 
+cyberinfrastructure in some broad sense, but to implement a specific
+agenda laid out by the Advisory Panel on Cyberinfrastructure.
+
+Therefore, I would say that that, in order to succeed at obtining a
+grant from them, we need to convincingly argue the following points:
+
+ 1.  What we propose to do is an item on their to-do list.
+
+ 1.  We have the qualifacations and resorurces necessarry to
+successfully do what we propose,
+
+ 1.  We are the best candidate for this particular job.
+
+Now I will say a few words how I think we can meet these requirements.
+
+1.
+
+As a general rule, it is good to use the same language which is
+found in the panel report and elsewhere to make it obvious how what
+we are trying to do is part of what they want done.  Remember, we
+are writing for bureaucrats, not for a literary journal.  Looking
+at the list of successful applications, what struck me at first was
+how the titles of the proposals are almost quoted form the report.
+
+The panel has its own definition of cyberinfrasructure and their own 
+ideas of what are its core components.  Likewise, they mention 
+problems which they would like to see solved so, when formulating 
+problem-solution pairs, I think we should take care to make it clear
+that the problems in question are ones they are interested in solving.
+Also, the challenges in section 4.3 should be adressed.  We should 
+make a strong case that we are uniquely qualified to meet these 
+challenges.
+
+As for where we fit into their big picture, I would recommend looking
+at sections 2.6, 2.8, and 2.9.  While we have little to offer in the
+way of massive supercomputers to crunch numbers and are not involved
+in big science, we do have something to offer in the way of social
+dimensions (likely not the kind of social structure they envsion, but
+we don't have to make a fuss over the fact that we take such terms as
+"revolution", "democratic", "egalitarian", and "participatory" rather
+serously.), education, and faciilitating collaboration.
+
+2.
+
+Certainly, the fact that PM has been up and running for 5 years ought
+to count as experience.  Another point which we ought to empahasize is
+the diverse backgrounds of the members of the collaboration.  In several
+place in the report, the authors (who now are the grant administrators) 
+emphasize the importance of interdisciplinary collaborration and, in
+particular, the desirability of having scientists collaborrate closely
+with programmers.  This is one of our strong points, and we should make
+it clear.  For instance, Aaron's degree is in computer science, mine is 
+in theoretical physics, but we have been successfully collaborating for
+some time.
+
+3.
+
+Our advantage here might be our uniqueness.  To the extent that what we
+are doing is sufficiently different from what other people are up to and
+that our organization is quite different from the usual, we likely will 
+not have much in the way of direct competition.
+
+Alright, there is a lot more to read and say and all this needs to be better 
+thought out, but at least here are some items to consider.
+--[[file:rspuzio.org][rspuzio]]
+
+You never specified a link so I'm not completely sure what agenda
+you are talking about -- do you mean the CI Vision version 7.1 (at  http://www.nsf.gov/od/oci/ci-v7.pdf)
+(e.g. linked to from  http://www.nsf.gov/od/oci/advisory.jsp)?
+
+--[[file:jcorneli.org][jcorneli]]
+
+Oh, you meant Revolutionizing Science and Engineering Through Cyberinfrastructure
+as at http://www.communitytechnology.org/nsf_ci_report/  (cf. http://www.nsf.gov/od/lpa/news/03/pr0318.htm).  Anyway, yes I think it is important to read and these
+things and connect to them in what we write.
+
+--[[file:jcorneli.org][jcorneli]]
+
+When reading the CI Vision document, I noted two things which might be worth considering.  First,
+there is the term "virtual organization", which they define as "group of individuals whose members
+and resources may be dispersed geographically, yet who function as a coherent unit through the use
+of end-to-end cybrainfrastructure systems".  This description fits PM and AM quite well.  Since the 
+NSF is quite enthusistic about virtual organizations and boasts about having helped establish a 
+bunch of them with its funds, I suggest that we should call ourselves "virtual organization" and
+point out that the purpose of the work which we would like them to fund is to develop basic 
+cyberinfrastructure which we, based on our experience as a virtual organization, have found 
+important for our future growth.  
+
+Second, there is the stuff about "Citizens at large" on p.33.  Well, that is right up our alley.
+Even more to the point, elsewhere, the panel has also stated the desirability of citizens also
+being involved in scientific research.  Also, they talk about cyberlearning networks and call for
+interactive, participatory modes of learning and inquiry. This sounds to me like the U.S. working 
+as it should for a change and I think we should let them know that we share this goal.
+--[[file:rspuzio.org][rspuzio]]
+
+----
+
+All of these items are important, and eventually I'd like to return to
+this mostly-unsorted list and fold it in upon itself, identifying the
+major themes.  But for now the reader can find those themes
+independently.  To sum way up: think long term! --[[file:jcorneli.org][jcorneli]]
+
+ * [[file:NSF CIO disiderata long list.org][NSF CIO disiderata long list]]
+
+----
+
+OK, [[file:NSF CIO desiderata shortlist|here is a mix-down of the above list.org][NSF CIO desiderata shortlist|here is a mix-down of the above list]] (still not the end of my process) --[[file:jcorneli.org][jcorneli]]
+
+----
+
+Overall my impression from reading the vision document was that we're pretty "on-target" for what they want to 
+do.  I was pleased to see "& education" placed almost everywhere there was "research" -- which I take to mean not
+that research and education are "separate but equal" but rather that they are /highly-overlapping./  Thus,
+it seems the CI folks recognize the way to enhance research is by making it more
+educational and connecting it to students and educators, and the way to enhance education is by connecting it to research and 
+"research people."  The appropriate infrastructure can deliver both.
+
+Now, this realization implies a lot more about the productive/discursive milieux of the research and education worlds, along the lines of scholia and linking and content exchange,
+which the CI folks didn't get into too much detail about.  I found this rather interesting:
+they seem to acknowledge the connection of education and research and believe cyberinfrastructure will foster both and more interplay between them, but never talk much
+about the "knowledge production process" and discourse.  Instead, they focus on things like
+grid computation and managing large collaborative projects and datasets (which are, of course,
+a major part of the picture).  My guess is this is probably an "accident" of the Atkins Commission team, as these people dealt primarily in these areas (or are at 
+least specifically interested in them).  So, it would probably make sense
+for us to detail the discursive side of things in our proposal, and express what we want to do as filling this
+need, which is generally (but strongly) implied by the very things OCI called for in the vision document. 
+
+Another way of saying all that is that we want to make sure what we propose is well-situated
+in the entire research and dissemination "pipeline".
+
+Other than that, I see a lot of very positive and promising things about collaboration itself -- very manifesto-esque.  It would be great if NSF would support collaborations materially -- specifically those building CI -- as they say they well.  And it was encouraging that the
+theme of sustainability was all over the place, I guess as a sanity check, because in what
+sense is something "infrastructure" if it is utterly fleeting?
+
+Other significant points:
+
+ * there is lots of reference to "broadening participation".  Good.  That's what we do, and that's why openness -- not just for consumption but also production -- is so important.  We need more citizen-mathematicians, citizen-scientists, etc.  
+ * they spend a fair amount of time discussing doing things with a "minimum of disruption".  I think this is important: we can't just demand everyone move to a "new framework" -- the transitions must be smoother and more natural (e.g., not "use our blogging software", but "here's a plugin or new page that links your blog entries to definitions and makes the math look right", or "we've re-implemented your wiki in a scholium system so it can do more, and have ported over your old wiki already" ...)
+ * the OCI seems to recognize that things that overlap should be connected and "coalesced" -- "balkanization" is explicitly named as something to work against.
+ * they acknowledge both continuing learning, and supporting informal learning.  further, they point out that "online" learning will become the dominant operating mode for individuals (p.33).  this is good stuff.
+ * "free culture productive dynamics" are strongly hinted at in "promoting and sustaining programs that  exploit existing resources and encourage creation of new resources in order     to continually improve the science literacy of society in general" (5.III).  It's good to see this!
+
+More detailed notes available [http://br.endernet.org/~akrowne/planetmath/proposals/nsf_cyberinf_2007/ci-vision_notes.txt here].
+
+--[[file:akrowne.org][akrowne]]
+
+Hi Aaron: I agree, we're on track (or "on target" might be better, I'll say
+why in a moment). I felt way more confident after
+reading their materials than I did before.  The "take" (as in "give
+and take") is that we'll have to talk fairly comprehensively in our
+pitch to them.  Thus, while we're "on target", we're actually on many
+different targets simultaneously.  Still another way to say this is
+that we're already fighting a major part of the CIO's "war".  (Perhaps
+for Christmas I'll rewrite this in peacenik terminology.)  Rhetorically,
+we have to convince them of that point AND ALSO that we need their support
+in order to be victorious on our chosen battlegrounds.  This will require
+some "diplomacy" -- which, practically speaking, is another
+peaceful war of letters!  This one we fight without their support --
+indeed, here they play the role of friendly antagonist; not exactly
+a sparring partner, since it is a real contest -- but they will play by
+the rules; maybe this is some of that old-school wrestling with an
+angel stuff.
+
+Anyway, enough with that sort of metaphor.  When you talked about the
+research pipeline, I had the funny thought that it flows both ways --
+like the storm sewer system!  Careful what happens when it backs up :).
+Actually, most likely it flows many ways -- between many communities.
+Not just a pipeline or even a water-cycle; not so much a "grid" (like
+the electrical grid that MIGHT be a metaphor in the "classical" view
+of education); but omni-directional and massively multi-valanced.  The
+highway system would probably be a better candidate as analogue than
+the electrical system -- but maybe if I sleep on it I'll come up with
+an even better candidate!
+
+--[[file:jcorneli.org][jcorneli]] /in jersey/

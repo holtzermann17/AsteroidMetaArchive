@@ -1,0 +1,80 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* mmj2 Directory Structure
+
+The following directories are empty when
+downloaded, and are later created by
+running javac (compiler) and javadoc
+(creates html documentation):
+
+c:\mmj2\classes
+
+c:\mmj2\doc\mmj
+
+c:\mmj2\doc\resources
+
+c:\mmj2\doc\src-html
+
+
+
+** Directories:
+(if dest, "c:\mmj2" is changed then
+ \windows and \runparm files 
+will/may need to be updated.)
+
+c:\mmj2 
+
+    \classes  (output of compilation)
+        \mmj
+            \lang               (package mmj.lang)
+            \mmio               (package mmj.mmio)
+            \util               (package mmj.util)
+            \verify             (package mmj.verify)
+
+    \compile                    (compile procs -- .bat's etc.)
+        \mmj
+            \lang               (hand coded class list file)
+            \mmio               (hand coded class list file)
+            \util               (hand coded class list file)
+            \verify             (hand coded class list file)
+        \windows                (.bat + javac options)
+
+    \data
+        \mm                     (.mm files)
+        \result                 (BatchMMJ2 output)
+        \runparm              
+            \windows            (BatchMMJ2 runparm files)
+
+    \doc                        (hand-written + javadoc output)
+        \mmj                    (only output of javadoc goes here)
+            \lang               (only output of javadoc goes here)
+            \mmio               (only output of javadoc goes here)
+            \util               (only output of javadoc goes here)
+            \verify             (only output of javadoc goes here)
+        \resources              (created by javadoc)
+        \src-html               (created by javadoc)
+            \mmj                (created by javadoc)
+                \lang           (created by javadoc)
+                \mmio           (created by javadoc)
+                \util           (created by javadoc)
+                \verify         (created by javadoc)
+        \windows                (.bat files etc. to run javadoc)
+
+    \junit                      (junit test code stuff)
+
+    \src                        (java source code)
+        \mmj
+            \lang               (package mmj.lang)
+            \mmio               (package mmj.mmio)
+            \util               (package mmj.util)
+            \verify             (package mmj.verify)
+
+    \test                       (test procs -- .bat's etc.)
+        \windows                (BatchMMJ2 test procs -- .bat's etc.)
+
+
+* Discussion
+
+Looks reasonable to me, but then again, I haven't seen the code yet :).
+--[[file:jcorneli.org][jcorneli]]

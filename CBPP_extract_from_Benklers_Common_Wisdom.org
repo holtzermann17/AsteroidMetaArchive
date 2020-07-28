@@ -1,0 +1,116 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The following is an extract from [[file:Yochai_Benkler.org][Yochai_Benkler]]'s "Common Wisdom: Peer Production of
+Educational Materials", distributed under a [http://creativecommons.org/licenses/by-nc/2.5/ Creative Commons Attribution, Non-commercial License].  The full text is available
+from [http://www.lulu.com/browse/book_view.php?fCID=162436 lulu.com].
+
+* Of Commons-based Production and Peer Production
+
+Information, knowledge, and culture are "public goods" in the strict
+economic sense. That is, information is a nonrival good. Once
+information is created, the marginal cost of its use is zero. Tolstoy
+need not spend a second more on War and Peace in order to satisfy the
+one hundred millionth reader than he did to provide the book to its
+first reader. From a technical economic perspective, this means that
+information, once produced, should be available at its marginal
+cost--zero--if it is to be utilized efficiently. Regulatory systems like
+copyright or patent, that allow private parties to exclude others from
+using information unless they pay a price that is above zero, are
+therefore justified in terms of their dynamic effects. That is, while
+it is inefficient to have existing information goods priced at a
+positive price, it is nonetheless efficient to have these kinds of
+exclusion rights so that market-based producers will engage in the
+useful activity of creating new information, knowledge, and
+culture. Even dynamically, however, this argument is only partially
+correct, because information is both input and output of its own
+production process. This is known as the "on the shoulders of giants"
+effect. To the extent that information is a public good, the efficient
+price for information as input is also zero. Pricing information at
+above this price retards new creation, as well as "consumption," to
+less-than-efficient levels. The tradeoff therefore is between how
+much, at any given level of regulation-created exclusivity, new
+incentives to produce are created from the ability to charge higher
+prices on more uses of the information, relative to how much the cost
+of creating information is increased because of the expanded
+exclusivity. This is the basic economic tradeoff involved in designing
+systems of exclusivity, like copyrights and patents.
+
+The reason for this brief primer on the economics of information is
+that it explains quite easily why we have continued to observe,
+throughout the industrial revolution and the rise of market economies,
+a large and stable component of information production that has been
+based on strategies that do not depend on proprietary exclusion from
+their outputs. We do not have large nonprofits dedicated to the
+production of cars or steel. But universities have not only survived,
+but grown and thrived as centers of research, writing, and
+education. We do not have amateurs coming together to make furniture
+or build buildings (Amish barn raisings notwithstanding), and yet
+amateur choirs, reading groups, news-focused conversations and similar
+social activities have been central to how we create and exchange
+information and culture. Nonmarket action based on taking information
+that is available in the public domain, not subject to exclusivity,
+mixing it with new creativity, wisdom, and time, and making new moves
+in the conversation that is our knowledge production system has been,
+and continues to be a central part of how that 5 system
+functions. This is, broadly speaking, "commons-based" production ---
+production that uses inputs from a commons over which no one has
+exclusive rights, and that releases its outputs back into the commons,
+to enrich both its creators and anyone else who, like them, follows
+the same patterns of production.
+
+Peer production is a narrower subset of commons-based production. The
+critical defining characteristic is that, in addition to being
+commons-based the activity involves at least concordant coordinated
+action of larger numbers of individuals, and, more often, actual
+cooperation among participants in a project or enterprise. The
+coordination or cooperation is then not achieved, as in markets,
+through price signaling based on property rights and contracts.
+Motivation too, is not achieved primarily through material rewards
+measurable in crisp amounts --- like salaries or bonuses. Neither are
+coordination, cooperation, or motivation achieved as they are in firms
+or bureaucracies, through a system of command and control, the sending
+of orders and the monitoring and rewarding or punishing of
+compliance. Instead, peer production enterprises rely on a set of
+social signals and social-psychological motivations to both motivate
+and direct or organize the disparate productive efforts of the many
+contributors. For example, the free software movement includes both
+commons-based and peer production efforts. Some free software
+development projects include only one or a small number of
+developers. They release their code under the common license used by
+most projects of this sort --- the GNU GPL (General Public License),
+thereby releasing their outputs into a self-binding commons. But they
+are not a large-scale enterprise coordinated through social signals
+and motivations. On the other hand, some of the most visible projects,
+like the Linux kernel development project or Apache web server, are
+peer production enterprises, comprising thousands of volunteers
+organized through a combination of licensing provisions, social norms,
+and communications platforms like message boards.
+
+The distinction is important because it pertains to what sort of
+behavior is likely to be necessary for what outcome. For many digital
+learning objects, a well-searchable space in which individuals simply
+make objects and make them available freely is enough to generate a
+wealth of components that teachers can then mix and match to create
+their own collection. In this regard, a commonsbased effort like the
+Web at large is likely to be the best source, ultimately, of digital
+learning objects. If peer production is necessary, it is likely to be
+focused on the filtering and accreditation of the universe of objects
+that will be created and accrete in the network as a whole. Deciding
+which of these objects is of high quality, or mapping which objects
+will be good for which educational activities, are likely to be the
+kinds of activities that will necessitate peer production --- the
+collective efforts of a large group of users who will look, try, and
+report on the quality of various objects. On the other hand, more
+comprehensive educational materials, like sophisticated immersive
+games or textbooks, are likely to require large scale efforts, and
+therefore large scale cooperation, if they are going to be produced
+outside of the market, proprietary system. It is here, then, that it
+begins to be important to understand the anatomy of peer production,
+how these projects are organized, and what are the characteristic
+pitfalls and solutions.
+
+* Discussion
+
+Great reference and quote!  It makes me think that it would be a very
+good idea to get Benkler "on board" PM! --[[file:jcorneli.org][jcorneli]]

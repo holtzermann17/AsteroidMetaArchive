@@ -1,0 +1,67 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+As we ([[file:akrowne.org][akrowne]], [[file:jcorneli.org][jcorneli]], [[file:rspuzio.org][rspuzio]]) discussed on the phone,
+it would be nice to make a "code market" for feature requests related
+to the AM projects.  This page describes and advocates the "marketization"
+task.
+
+* Supporting Documents
+
+ * [[file:PlanetMath Code Bounties.org][PlanetMath Code Bounties]] offering up to $600 per year per person for "odd jobs" for !PlanetMath.org.
+ * [[file:public markets.org][public markets]] summarizes the general idea and relates to other "theory" documents on the wiki.
+
+* What needs to be done
+
+ * Better document the feature requests in terms of "what's needed" and
+"who says?" pairs, together with "what's offered" and "who's
+offering?" pairs.  (For short, we'll speak of /needed/ and
+/offered/ data.)
+
+ * It would be nice to have some system for keeping track of which
+features have been documented in this way.  For example, we could mark
+items that have some feedback of the above sort with a /*/ on the
+[[file:Feature Requests.org][Feature Requests]] page.  However, as certain feature requests
+become better populated with needed and/or offered data, that will may
+change their do-ability and we may want to use some other tool to
+distinguish between feature requests with different sorts of
+populations.
+  *  For example, a feature request that has some
+heavily weighted "needed" data (e.g. "[[file:jcorneli.org][jcorneli]] says we'll
+need about 12 full time person-years to get the HDM to solve
+grad-level math problems, but he can only offer 4 person-years
+over the next 4 years") might show up as one type of "help wanted!" item;
+  * whereas items that are heavily weighted with "offered" data
+(e.g. "!PlanetMath is offering a $200 bounty to anyone who can
+satisfactorily complete this task") would also show up as a "help
+wanted!" item, but of a somewhat different sort.  
+
+ * Hopefully we can find some suitable formalism for dealing with the
+difference between these kinds of feature requests, and expressing the
+relevant data (in summary form) to interested consumers of such data.
+
+Just for example, I think that the /current/ feature request has
+this profile:
+
+* Profile
+
+** Needs
+
+General discussion of the problem and development of a suitable basis
+on which to further decompose needed/offered data (for a total of 1
+person hour for each of 3 people, presumably "the usual suspects", to be
+put forth asynchronously over the wiki),
+then, on average, 15 minutes per item to create an initial profile for
+each, optimally followed by another 15 minutes of checking/review by
+some other party. --[[file:jcorneli.org][jcorneli]]
+
+** Offered
+
+I'd be happy to participate in the initial discussion I mentioned
+above, and after that engage in a test run of profile-creation for
+some (say 5 to 10) of the feature requests that I have personally
+created.  Also, I'd be happy to review a corresponding number of
+profiles created by someone else. --[[file:jcorneli.org][jcorneli]]
+
+----
+[[file:Feature Requests.org][Feature Requests]]

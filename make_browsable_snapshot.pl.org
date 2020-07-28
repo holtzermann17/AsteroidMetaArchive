@@ -1,0 +1,16 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+file: bin/make_browsable_snapshot.pl
+
+pp line 9:
+$signature = "Aaron Krowne and the entire team of PlanetPhysics contributors.";
+
+pm line 9:
+$signature = "Aaron Krowne and the entire team of PlanetMath contributors.";
+
+pp line 85:
+(empty)
+
+pm line 85:
+Noosphere::initNoosphere();

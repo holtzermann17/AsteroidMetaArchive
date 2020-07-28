@@ -1,0 +1,35 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+* Basic problem
+
+While \[ .... \] is !LaTeX markup, $$ .... $$ involves lower-level !TeX
+structures.  The former can easily be redefined to suit the book's layout.
+
+* Solution
+
+A basic system for doing replacements has been completed.
+It should be adjusted slightly to keep things *really* consistent.
+
+Use
+
+     \begin{oldbracketdisplay}...\end{oldbracketdisplay};
+
+to replace old brackets (used innocently enough by PM authors), and
+
+     \begin{doubledollars}...\end{doubledollars};
+
+to replace all double dollars (these can then be adjusted later).
+
+** Comments
+Realize also that $$ $$ should we *avoided* when working with LaTeX. As it was mentioned, this is plain !TeX, and causes vertical spacing inside the formula to become inconsistent, breaks fleqn option for amsmath. The proper way is to use
+\[ and \] or 
+     \begin{displaymath}...\end{displaymath}
+
+More references:  [l2tabuen -- An essential guide to LaTeX2e usage] ( http://www.tug.org/teTeX/tetex-texmfdist/doc/latex/general/l2tabuen.pdf ) under the Deadly sins section.
+--[[file:drini.org][drini]]
+
+** Long-Term Strategy
+Some changes will have to be put into the PM style guide to get authors
+to agree to use the "correct" mark up (and to make FEM-originating 
+corrections kosher).

@@ -1,0 +1,128 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+One part of the [[file:Real numbers on PM.org][Real numbers on PM]] project is proofreading entries
+on PlanetMath related to real numbers and closely related entries
+needed to developing this subject. To make this as effective as
+possible we could have a proofreader's checklist. Hence this draft.
+
+**  Proofreader's checklist
+
+To start with, please read the PlanetMath style guide
+[http://planetmath.org/?op=getobj&from=collab&id=28].
+
+For proofreading entries, it is a good idea to print the
+entry. Entries should make sense also as printed. Besides, it is
+easier to catch mathematical mistakes with pen and paper at hand. With
+notes on the original entry, it will also be easier to write the
+correction.
+
+*** Meta issues
+ * Read through old corrections and make sure that all additions have been added to the entry, or otherwise dealt with. 
+ * Read the posts. 
+ * Are mathematically central autolinks correct? Currently the autolinker tend to add numerous spurious links to 'mean', 'natural', etc. This is currently in the process of being fixed, so don't spend too much time on this. 
+ * Are the related entries up to date? 
+
+*** Questions to consider:
+ * Does the entry need graphics. For example, any entry that defines a function, curve, or surface, should probably have at least one picture. 
+ * Does the entry fix the setting for itself? 
+ * Should the entry have an introduction shortly explaining what the entry contains? 
+ * Are there examples?
+ * Does the entry make sense? 
+ * Should the entry have a reference/references? If references are provided, check these. At least, are the names correct?
+ * Does the entry raise copyright concerns?
+ * Could things be said more shortly? more elegantly? is the entry bloated? is the language crisp?
+
+ * Does the entry raise natural questions? File these as requests.
+For example, if the entry is a theorem, is it relevant to study the
+converse direction? Are there easy counterexamples? What about the
+assumptions? Can one show that none of these can be relaxed?
+
+*** Write correction
+Please name you correction 'Proofreader's report', and be sure to
+include all you comments. Also things that not necessarily require any
+editing. This is not only useful feedback to the author, but it might
+be useful later if the entry needs to be proofread again. However,
+make sure the author adresses all your points. If necessary, iterate.
+
+*** When the entry is proofread and corrected
+At a minimum we could have a wiki page with canonical names of all
+proofread entries.
+
+
+** Discussion
+
+ * How far we should take correcting bad links?
+: I would advise not taking this very far.  The process of rewriting
+Noosphere has started, so one needs to take into account that we don't
+want to put ourselves at cross-purposes by trying to make ad-hoc fixes
+to the database and fix the linker at the same time.  If the problem
+is something like an incorrect classification or improper linking
+priorities, then that should be corrected.  However, it is a
+shortcoming of the linker, then the better cource of action might be
+for us to make a note of that somewhere and figure out how our linking
+algorithm could be improved to make proper links in these cases.  Now
+that I mentioned this, I'll make an autlinker page to get this
+subproject going.--[[file:rspuzio.org][rspuzio]] 
+:: Good. I tend to agree. We will have
+have a list of proofread entries. So when the autolinker is fixed, we
+can go through this list manually. --[[file:matte.org][matte]]
+
+ * Should the entry have a reference/references? If references are
+  provided, check these. At least, are the names correct?
+
+I would suggest going about this issue of refernces in a centralized
+manner.  Even without implementing anything new, we could start by
+building up an annotated biliography for real analysis.  Then, rather
+than people having to keep looking up and typing in bibliographic data
+all the time (this can waste a lot of time in duplicated effort), they
+could simply refer to this bibliography.  Such an approach also has
+the advantage of making for a division of labor --- maybe someone who
+is more of a librarian might want to contribute to PlanetMath by
+adding material to the bibliography, standardizing the forms of
+references, and organizing it.  Also, typing in bibliographic data is
+a way that a beginner who may not know too much math but is interested
+in helping the project could do something.  Perhaps, we cold even
+devise some sort of standard identifier, so that someone could simply
+say something like "see Knopp 1951a in the bibliography for real
+anaysis." --[[file:rspuzio.org][rspuzio]]
+
+A central reference database would be a natural way to go. There is a
+lot of new things to do with such a feature. For example, we could ask
+publishers for a list of all their works. Maybe we could also get
+permission to import the references for papers? If we have a
+'copyright status'-field for each entry, the database would
+automatically maintain a list of all 'Free Math'-resources out
+there. Another things to consider is reference 'lists'. For example, a
+researcher in number theory could subscribe to a number theory list
+and every time a new result appears, there will be a notification via
+email or RSS.  Like mathematical news. -- [[file:matte.org][matte]]
+
+
+ * "At a minimum we could have a wiki page with canonical names of all
+proofread entries."
+
+Since I'm not sure where that page is, I will add my comment here and
+you can move it to the correct place.
+
+I had a look at the entry "axoimatic dedinition of real numbers".  It
+looked good to me, and I only made one small change.  In it's original
+form, it described < as a mapping from R &times; R into the truth
+values.  I changed this to say it is a subset of  R &times; R in the
+interest of simplicity.  As Quine put it (Quiddities, mathematosis):
+
+: "given some class K, is reference to "the functions from K to the
+truth values", that is, the functions whose arguments comprise K and
+whose values are truth values.  Those functions correspond one-to-one
+with the subclasses of K, and can serve no purpose not served more
+simply by the subclasses themselves.  There is no call here for truth
+values, for functions, for anything beyond class inclusion."
+
+Let's not come down with a case of mathematosis here :) --[[file:rspuzio.org][rspuzio]]
+
+Thank you. Your edit is much appreciated. Things are much clearer now. It is also
+good feedback to know that you have checked the entry. But, unfortunately,
+I am still writing the entry: I just added quite a few properties.
+
+The page for coordinating proofreads is [[file:real number entries ready for proofreading.org][real number entries ready for proofreading]].
+At least entries related to real numbers. --[[file:matte.org][matte]]

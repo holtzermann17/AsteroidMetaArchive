@@ -1,0 +1,17 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+ * [[file:What is a structured proof.org][What is a structured proof]]
+
+ * [[file:Example of structured proof.org][Example of structured proof]]
+
+ * [[file:Mechanically structuring readable proofs.org][Mechanically structuring readable proofs]]
+
+ * ... more content to appear soon (including an hcode version of the proof; see also [[file:designing proof structures for hcode.org][designing proof structures for hcode]])
+
+** Bibliography
+
+[http://research.microsoft.com/users/lamport/pubs/pubs.html#lamport-how-to-write /How To Write a Proof/ by Leslie Lamport] --- [http://research.microsoft.com/users/lamport/pubs/pubs.html Lamport] is famous for !LaTeX, but seems quite a fan of formatting
+for the sake of clarity.  In particular, the material presented here may be seen as an adaptation of his ideas to h-code.
+----
+Back to [[file:h-code.org][h-code]]

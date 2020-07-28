@@ -1,0 +1,215 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+The site currently uses Google ads as a source of extra funding.  I'm not sure I
+like this.  I'm curious to know, first, how much revenue they provide, and
+second, whether the same amount of revenue couldn't be generated using
+[http://www.marcolange.de/gnugle/gnugle-wiki/index.php/Gnugle_Ads Gnugle ads],
+which have the added benefit of promoting the important Gnugle project. --[[file:jcorneli.org][jcorneli]] Sun Feb  6 01:14:09 2005
+
+: I like it.  The ads are relatively benign, require almost no management overhead, are context-sensitive, and are relatively profitable.  While revenue fluctuates, I estimate they provide around $60-$100/mo to PlanetMath.org, Ltd., or about $100 per 400,000 impressions.  It is not much in the grand scheme of things, but it is a lot for PM, and our traffic is rising.  This kind of money pays for incidentals, and would pay for facilities (were this not already being donated).   As for the GNUgle ads, well, they don't even exist yet.  Besides, even if the GNUgle project is successful, I imagine it would be years until the ads generated as much revenue for publishers as Google ads already do.  Oh yeah, and GNUgle will never /replace/ Google, because decentralized search is inherently slow. --[[file:akrowne.org][akrowne]] Thu Feb 17 16:25:16 UTC 2005
+
+:: Well, it would be nice to get /more/ money out of that much traffic.  I
+wonder what would happen if the Google ad was taken down and an image was put up
+that said "Donate to PlanetMath" or something like that was put up (made as
+compelling as possible, of course).  If/when I have some extra money, I'd be willing to
+contribute the difference between what was raised through this "PlanetMathSense"
+program and the $100 that would have been raised by the Google ads.  Note that
+if we did $30 memberships and made them the subject of the banner, all it would
+take would be 3 people signing up per month and you'd be right around where
+you're at now.  (And as for Gnugle, I'm not convinced; I'm thinking of
+bittorrent... and even if what you're saying about slowness was true, final, and
+devastating for the distributed version, there's no guarantee that people
+wouldn't be willing to pay for a /centralized/ free-software-based search
+engine.  Indeed, webservices seem to be one of the things that a free software
+business model would really work well for.) --[[file:jcorneli.org][jcorneli]] Thu Feb 17 18:32:41 2005
+
+#+BEGIN_VERSE Well, there already /is/ a permanent "donate" solicitation on the header of PlanetMath.  Also, while I would like to set up memberships eventually, I don't have much faith in their ability to make up a shortfall in adsense.  This is based on the /always/ tepid response to what should be strong fundraising settings, when the site has clearly been unavailable for a while due to crashing and I post news to the effect of "please donate to help prevent this in the future!".  I think it needs to be acknowledged that there is some characteristic of the PlanetMath community which makes it [[file:a poor target for its own fundraising.org][a poor target for its own fundraising]].  Finally, I think the burden of proof should not be on me to defend AdSense.  It is unobtrusive, almost no overhead, and relatively lucrative.  Can you explain to me what you find so unacceptable about it?  Other than this, I think it is pointless to debate the merits of GNUgle when there is no product yet anyway.  --[[file:akrowne.org][akrowne]] Sun Feb 20 19:45:05 UTC 2005
+
+#+BEGIN_VERSE: Nothing is "so unacceptable" about !AdSense -- I was wondering about it,
+that's all.  I don't even see the ads, because Lynx blocks them out!  The point
+(not criticism) is that perhaps more money could be made some other way --
+perhaps by bombarding the PM users with pictoral propaganda.  I don't think that
+we should give up on PM user community as a target for its own fundraising --
+maybe there has just been a failure to communicate thus far.  I for one did not
+know that PM was in such bad financial shape until you added the info on this
+page. (I knew there was debt because you told me that before, but I imagined
+that the users would have given more money throughout history than they actually
+did.)  So, for one thing, I don't think this info is common knowledge on PM.
+I'm not saying that every user would care if they knew the numbers, but surely
+some of them would.  Personally, I find them kind of shocking!  I also find the
+coincidental closeness between the !AdSense income and the donations to be
+intriguing, though it is presumably just a fluke.  Really, this "debate"
+shouldn't be about !AdSense - it should be about why PM users are apparently so
+cheap.  Sure, many are students, and many are very infrequent users: however, to
+the extent that PM really is a valued resource, I think users should be willing
+to back it financially.  A friend suggested that PM is a "mutual benefit
+society" -- and as such it makes sense that people should want to back it with
+their bucks.  The only thing I don't like about !Adsense is that it only
+"passive" involvement in raising funds for the site, whereas it is my impression
+that people should be actively involved.  But, again, the problem as I see it
+doesn't lie with !AdSense but with the fact that PM isn't financially "self
+sufficient."  Maybe you're right that, for whatever reason, it can't be.  But I
+think that would be sort of sad -- however, if we knew if with certitude, we
+would then know that we had to redouble our efforts towards finding a different
+"active" sponsor to foot the bills.  Google works OK - but doesn't it seem like
+there might be some other party out there that was even more directly interested
+in our endeavor and our financial predicament than they are (like CMI... too bad
+they apparently were not interested)?  Nevertheless, I just can't get over the
+fact that PM users haven't given more.  I think that if they felt a greater
+responsibility for the future of the site, they would. --[[file:jcorneli.org][jcorneli]] Sun Feb 20 23:14:15 2005 UTC
+
+#+BEGIN_VERSE:: Ok, thanks for clarifying.  But I don't think its quite fair to call PM's users "cheap".   People /have/ given back a lot, in the form of very impressive contributions to the content.  It would seem strange to suggest these people should also pay money.   Also consider that the typical fundraising drive on Wikipedia brings in about $60,000.  Adjusting for the difference in traffic on the two sites, that would translate to about $200 for PM (at best).  This is hardly enough to do anything better than cover a few more incidentals.   This tells me that PM simply isn't "big" enough to have critical mass for financial support through the user base. The traffic numbers should continue to improve with upgrades to the site's infrastructure and more evangelizing, but "critical mass" is probably at least a factor of 10 in traffic growth away.  --[[file:akrowne.org][akrowne]] Sun Feb 20 23:36:09 UTC 2005
+
+#+BEGIN_VERSE#+BEGIN_VERSE (Wow that's a lot of colons.)  Anthropologically speaking, or whatever, I
+don't think it is too unreasonable to ask people who contribute to the content
+to contribute financially as well.  Indeed, it might well be that people who
+contribute the most content also get the most benefit from the site.  (People
+say, about math, that you get back what you put in.)  Users benefit from the
+site, and the site benefits from them -- you might think that was a fair trade.
+However, the site can not continue to grow or even exist without financial
+contributions as well.  It is like union dues, or membership at a food co-op.
+Most organizations simply can not function purely on volunteer effort.  You
+typically have to pay to play.  It is funny that I'm realizing this more fully
+at a time in my life when I have less money than ever before.  But assuming I
+can make rent this month, I'm going to definitely send some of the leftovers to
+PM.  And I think it is safe to say that I've put in a lot of volunteer effort
+with content and "meta" stuff for the site.  That doesn't excuse me from
+financial participation; look at you: on the high scores list, the top coder,
+and also, thus far, the bankroll.  --[[file:jcorneli.org][jcorneli]] Mon Feb 21 00:08:45 2005 UTC
+
+
+Indeed (I'm continuing the above post over here...) I think it is wrongly
+anthropomorphizing to say "the site benefits from them."  It is really only
+users of the site (and its content) who benefit.  So users who contribute are
+creating benefits for others (and probably themselves).  But the site is sort of
+like a catalyst in this reaction.  It can't really "benefit" -- yes, it can
+improve, but that just means that it is going to be more useful to more people.
+I hear what you're saying about "critical mass", but the fact is, we don't have
+financial support from outside of the user base right now either (at least not
+as far as I know).  So we need to make do with what we have.  That probably
+means some combination of trying to drum up more user contributions, spending
+volunteer hours on grantwriting, working on code and content to make the site
+more attractive, and probably some other useful things I haven't thought
+of. --[[file:jcorneli.org][jcorneli]] Mon Feb 21 00:17:19 2005 UTC
+
+Let me ([[file:rspuzio.org][rspuzio]]) elaborate some on what I see as the chief "characteristic
+of the PlanetMath community which makes it a poor target for its own
+fundraising".  It is the simple fact that mathematics is not the most lucrative
+of occupations.  Just read the biographies of Riemann and Wieirestrass for an
+idea of the typical financial situation of a mathematician.  In particular, from
+the impression that I get, most of the members of Planet Math are young
+mathematicians, either students or else receved their Ph D within the last 15
+years.  I belong to the latter group.  Neither of these groups of people are
+really able to contribute financially in more than a token fashion.
+
+Let me elaborate more on the situation of recent graduates since I can speak
+from personal experience, both my own and that of others whom I know.  Given the
+way that the academic situation has declined, one has to scramble to obtain any
+sort of position, typically the positions one gets for the first decade of one's
+academic career are temporary appointments of no more than five years, although
+even those are getting rarer now and one-year appointments are becoming the
+norm.  In such a situation where one practically has to start applying for one's
+next job when one is hired, where competition is fierce, and tenure-track
+positions have become an endangered species, there is little or no job security
+and people need to save away for a rainy day in addition to paying for living
+expneses, mortgages, college loans and other costs.  Therefore, you really can't
+blame these people if they're "cheap".
+
+Also, in dealing with this group, there is a dilemma that one needs to take into
+account.  Typically, the people who can contribute content are exactly the same
+people who cannot contribute money.  As a junior faculty member, so much of
+one's time and energy is taken up by teaching, tutoring, faculty meetings,
+departmental reviews and other bureaucracy, reseach group meetings, hosting
+seminar speakers, and what not that there is hardly enough time to pursue one's
+research interests, much less contribute to Planet Math.  In fact, the only
+reason I am able to contribute so enthusiastically and prolifically to Planet
+Math is because my current tie to academia is in the form of and adjunct
+professorship --- it was in this capacity that I met Aaron's father at a recent
+conference.  Unfortunately, this is an unpaid position, so I have to support
+myself from savings from when I had a paid position at the university and other
+means.  On the other hand, it does provide me the time needed pursue my research
+goals. (Not just the computer math stuff, but also studies of the zeros of
+Mittag-Leffler functions and projects related to C* algebras and non-standard
+analysis in quantum gravity.)--[[file:rspuzio.org][rspuzio]]
+
+/W/ell, I don't mean to "blame" anyone about being cheap.  I'm cheap too,
+first of all.  But I do think that PM, and its users, need to understand that
+the site isn't free, and that the time we put in on the site isn't exactly free
+either.  On the latter topic, speaking for myself ([[file:jcorneli.org][jcorneli]]), I'd say that
+opportunity cost is not exactly due to "participation", but rather, it is seems
+better to associate it with the mindset that makes me want to participate.  I
+had a job as a programmer making double what I /hope/ to make these days, and
+if I was working for that company now, I'd be making even more than I was then.
+But for a combination of idealistic and some more objective reasons, I choose to
+be doing something else (i.e. what I'm doing now).  And I would love to be able
+to make a living doing this, but it seems I can't (yet), so I do something else
+related that is fun and makes me (/hopefully/) enough money to get by on.  But
+still, I recognize that there is "added value" from my work, as there is from
+yours and Aaron's and everyone else who has helped build PM.  A big part of that
+value comes back to us -- in the form of critiques, contacts, inspirations,
+practice space, pride in our work, etc.  Another part goes off into the Internet
+at large, where it is enjoyed by casual browsers of the site.  Economically
+speaking, I think the volunteers must get at least as much benefit from
+participating in the development of the site as they experience a "cost"
+(whether it is a time-cost or money-cost or cost in some other units) due to
+this participation.  I would say the same is true for dollars: if people saw
+added benefits from contributing a given dollar to the site versus those that
+could be gotten by spending it on other things, then they would contribute that
+dollar.  It was probably a mistake to say that PM users are "cheap", since it
+could well be that collectively they just don't have money that they are at
+liberty to divert to PM's coffers.  OTOH, maybe they do have some money that
+they would be able to contribute if they saw that there would be a big enough
+benefit (e.g. a monetary return on their investment - could happen in theory).
+Again, this doesn't seem to say that PM users are cheap -- it could be that the
+benefit isn't there right now, or is there but isn't evidenced clearly enough to
+be convincing.  Elsewhere on AM, I've talked about the idea of adding a for-pay
+question-answering service to PM, one that would be open to anyone to use, but
+that only PM "members" could staff.  If as a site member I could get kickbacks
+for answering math questions over the internet and have my answers turned into a
+useful part of the PM site, I'd almost certainly be willing to shell out the
+membership fee.  (Especially if it cost less than a taxicab license ;).)  Maybe
+instead of calling PM users "cheap" I ought to have called them "insufficiently
+motivated to contribute financially."  This wording change should help put some
+perspective into my claim.  PM users do need to recognize that the site isn't
+free, but when it comes to money, most people want to know the answer to "what's
+in it for me?" /in terms of money/.  Still, again, speaking for myself, I
+think that PM does provide a great service that I enjoy a lot, and if a $5 or
+$20 contribution on my part meant the difference between the site folding and
+the site staying afloat, with no cash return promised, I could probably scape
+together that much.  I don't know what the actual real-world situation is vis a
+vis PM folding, but you've seen the numbers; net debt isn't good.  (I have net
+debt too of course, so I'm not going to say that it is untenable!)  In my state
+of ignorance, I would just say don't underestimate the potential usefulness of
+even a "token contribution."  Perhaps Aaron can add more information to this
+page that would spell out in detail exactly what sort of difference a $5
+contribution to the site would make, or, say, 100 of them. --[[file:jcorneli.org][jcorneli]]
+
+My attitude towards this is somewhat pragmatic and bottom-line oriented, based more on what most people do than what they ought to do.  I don't question the points you raised; I more or less agree with your sentiments, but I also think that putting too much effort towards the direction of raising money from members may not be the wisest use of time and effort as far as fundraising goes.  Sure, every penny counts in a tight situation like this and it would definitely would help if users would do their best to contribute and perhaps there are a few more things that can be done to encourage users to contribute and make them more aware of the need.  At the same time, if my assesssment is right, one has to recognize that, even if may of our users were highly motivated to contribute financially, they would have to balance this motivation against the severe financial pressures and limitations that they are under and the likely result is that they would not be able to contribute much even when they would give all
+that they could.
+
+Therefore, I think it makes sense to think seriously about focussing our fundraising efforts towards other groups who might be a bit more able to give.  One group I would seriously think of targeting is older and more settled mathematicians such as tenure-track mathematicians and scientists with more-or-less permanent positions in research labs and industry.  Here, as I see the it, the main problem is in convincing them that Planet Math is a trustworthy and respectable mathematical resource as opposed to a crackpot website.  If this barrier can be overcome, then I think that some of them will use Planet Math and it would be a relatively easy matter to solicit donations from people who have a reasonable measure of job security and already spend several hundred dollars annually on membership in professional organizations and  journal subscriptions, especially if they realize that it might be a matter of life or death for a fledgling new resource which they find useful.
+
+In relation to this, I think it is important to work towards gaining the elusive quality of "prestige and respectibility" which is so important in the academic world while not becoming snobbish and compromising the democratic qualities ("math for the people, by the people") which make Planet Math what it is.  While it may require a bit of work, this is by no means impossible.  Many (if not most) of our articles are of the same calibre that one would find in  a mathematical journal, we have a peer review system in place to ensure quality, and many members have reasonable academic credentials.  What we need to work towards in this regard are things like getting Planet Math cited in mathematical journals (when I finally get around to ship out some of my (yet unfinished :( ) papers to the publisher, they will have references to Planet Math articles in the bibliographies) mentioning Planet Math in talks at conferences (The Emory conference is an example, but it would be even sweeter if we could get it mentioned
+in specifically mathematical conferences; at the Oak Ridge conference a few months back, I saw someone do a poster presentation about a materials science website as a service to let the scientific community where information is available, so why not talk up our website the same way.) and find out if there is some way to get Planet Math listed in something like the Math Reviews listing of journals once at least a few people start regularly including it as a reference in their papers.
+
+On a related note, I personally think that Planet Math is (or if it isn't already, has the potential to soon become) "le Bourbaki de la XXIe siecle".  Let's not forget that Cartan and Weil were not all that much different than us when they started out.  Not only should this be a great inspiration for us, but I am wondering if there would be a way to get somebody to write an article in some publication like the Mathematical Monthly or the Mathematical intelligencer which talked about us in this way.  If so, that might be just the coup de genie that would to bring our planet from the cold periphery of the mathematical universe to the center of attention.  Less grandiosely, if we could get the attention of a well known, respected, and sufficiently broad minded mathematician like Knuth and if he would make some public remarks on our favour, that might also help in breaking the ice.
+
+I also think that the published free encyclopaedia will be helpful, but perhaps not in quite the manner that some people have envisioned.  As I see it, if we succeed in selling copies, the majority of buyers would be university libraries rather than individuals.  In fact, it is not that hard to get a book into a university library --- if someone in a university requests the acqusition of a technical reference, it will almost always be purchased.  Also, does someone know if there are some standard resources which university libraries use to decide which books to purchase?  If so, we need to get our encyclopaedia listed there.  Anothe side benefit of this is that it will definitely help bring us into the mathematical mainstream.  In fact if this succeeds, we might be able to frorget about membership fees or any other hare-brained scheme to generate revenue and simply count the cash from sale of the printed version to libraries.  Presumably we will come out with a new version each year or so to reflect
+improvements to the online version.  Suppose that we keep the price low, say $30 and make only $3 per purchase.  That may not seem like much.  However, at that price, it isn't unreasonable to imagine that 3333 universities purchase it, especially since $30 is a drop in the bucket compared to the institutional rates that journals charge or the price of a math book.  If so, that would mean a steady income of $10000 per annum.
+
+Another point worth noting is that the situation is about to changed drastically when Aaron has gotten tax-exempt status.  As I know from experience working with and being around other non-profit ventures, having official status can make a humongous difference in what one can do as far as raising funds.  The most important fact is that it allows donors to deduct donations from their taxes and this the key to obtaining donations from businesses.  The reason that businesses give to non-profit organizations is because they can write it off at tax time and use it for publicity and public relations.  Naturally, in dealing with donations from businesses one has to be careful that they don't have strings attached, but if one is willing to humour the businesses some in giving them a measure of good publicity and advertisement in return for their contributions while at the same time refusing to compromise on certain basic ethical principles or "sell out" it should be possible to raise some money this way. 
+--[[file:rspuzio.org][rspuzio]] 22 February 2005
+
+I want to add to the discussion the student point of view. First, even if I could donate regularly, I'm not really concerned (nor I had considered) obtaining some monetary reward /from/ Planetmath, nor tt has ever ocurred me to see it as an investment. I do it because I feel identified with the project and goals. NO, I have never donated, but I've intended it from a long time. Yes it could be said that if I really wanted I should have visited banks and gotten information (I even did some research, discovered some 18 number CCC I had to use but it's still a bit confusing to me). 
+
+On the other hand, although I want to help in that sense, I know it's not much what I could do. I don't know what's the average situation of the grad student there, but I can say that in respect to the help and benefits a *mathematics* grad student can have here in Mexico, I'm certainly in the upper side of the spectrum on my level: I get a bit less than the equivalent of $600 USD a month to cover the total of my expenses (rent, food, services, etc) and so I know if I try, I could destiny a few dollars a month for PM, but I'm also aware that my possible contribution would be only a grain of sand on the whole picture (that doesn't change my intention).
+
+On the other hand I had no idea until I saw this page about what the current state of finances were. I always knew that money was needed in order to improve the site, but I had always thought that was a plus wanted. I didn't know how much money Aaron had put from his pocket either. The most information I had was from brief talks I catched on IRC, but this page indeed helps putting things on perspective. Perhaps this information should have been disclosed much earlier.
+
+Again, I'm sorry if I appeared to be a bit lazy, but you also need to understand that "sending money" it's a really different issue when you're in a country with a really good economic and communication networks, from bank accounts in the same country, to the situation in foreign countries where students dont' usually have credit cards (I checked, and only one of all the grad students in this institute has a credit card), the information needed is not common knowledge, etc. I tried joining !PayPal with my debit card, but I'm still waiting to see if they will accept it (did you know you cannot just go to a bank and add money to your !PayPal account here in Mexico?) 
+
+(I see that this thread isn't anymore about google ads ;) 
+--[[file:drini.org][drini]]
+
+Drini, I implore you to keep your money =)  Your time and money would not be better spent working with the banks and Western Unions to send the equivalent of a few dollars US =) --[[file:akrowne.org][akrowne]] Sat Feb 26 07:58:29 UTC 2005

@@ -1,0 +1,12 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It would be convenient for everyone involved if a set of standard style files
+was used on [[file:PM.org][PM]].  This would make notation consistent throughout the site,
+and would prevent lots of potential !LaTeX errors when we go to combine the
+various entries in the [[file:FEM.org][FEM]].  
+
+I think it would be ideal if people always added new definitions to these
+central files, though a more liberal approach would allow a mixture of standard
+style file inclusions and ad hoc definitions in the file itself.  We can talk
+more about the relative merits of these two approaches.

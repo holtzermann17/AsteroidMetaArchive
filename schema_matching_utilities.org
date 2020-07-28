@@ -1,0 +1,48 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is an article about /schemata/, originally by [[file:rspuzio.org][rspuzio]],
+with refactoring and some editing by [[file:jcorneli.org][jcorneli]].
+
+----
+* Matching Schemata
+
+This a suite of utilities to match expressions and schemata.
+
+A "schema" can be considered to be a list template.  A schema is said to
+/represent/ a list if that list can be obtained by substituting suitable lists
+for the wildcards.  For example, the list /(if (if a b) (if (c (if a b))))/ is
+represented by the "arbitrary premise rule" /(if x (if y x))/.
+
+We see this is the case because it can be obtained from the rule by the
+substitutions
+
+ (if a b)  for  x
+ 
+     c     for  y.
+
+In this article, we make the notion of a schema and schema substitution precise,
+and then present some code that can "match" a list to a schema in the manner
+illustrated here.
+
+** Outline
+
+ 1. [[file:Definition of Schema.org][Definition of Schema]]
+ 1. [[file:Representation of Lists by Schemata.org][Representation of Lists by Schemata]]
+ 1. [[file:The inverse problem to schema substitution.org][The inverse problem to schema substitution]]
+ 1. [[file:merge-assignment.org][merge-assignment]]
+ 1. [[file:checking the consistency of a list of matches.org][checking the consistency of a list of matches]]
+ 1. [[file:Two simple subroutines.org][Two simple subroutines]]
+ 1. [[file:Implementation of match-schema.org][Implementation of match-schema]]
+ 1. [[file:various rewritings using schema.org][various rewritings using schema]]
+
+
+And here, for your convenience, is a file that contains [http://www.ma.utexas.edu/~jcorneli/d/prototype%204/hcode/match-schema.el the collected code from the schemata-matching paper].
+  
+ 
+----
+
+[[file:Discussion of schema matching utilities.org][Discussion of schema matching utilities]]
+
+
+Back to [[file:h-code.org][h-code]]

@@ -1,0 +1,24 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+Some people are skeptical about whether the [[file:HDM|HDM project.org][HDM|HDM project]]
+can be made to work either "at all" or "in the current social climate"
+or whatever.
+
+To them we say:
+
+/Most formal math systems (theorem provers) do not come up with the theorems they
+are to prove by themselves.  One relatively famous program, called AM (not the
+same as our [[file:AM.org][AM]]) written by Doug Lenat, did come up with mathematical
+/conjectures/, but it didn't try to prove them.  Our AI system should be able
+to come up with conjectures and proofs.  These proofs will be written in hcode.
+These coded proofs will be "compiled" into the format accepted by the formal
+system, where they will be verified.  The AI system will need a down-to-earth
+way to check and reason about proofs and other mathematical things on its own;
+we don't expect all of its reasoning to be done in the formal realm.
+Eventually, for example, it will have to work with the parsing system to
+generate viable translations of standard mathematical text into its own
+preferred format./
+
+(Note: This explanation is totally partial and for all I know, off topic.  Maybe
+I'll come back and fix it later.)

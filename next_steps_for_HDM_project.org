@@ -1,0 +1,185 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+After our essentially groundbreaking meeting, I'm left wondering what
+the next steps for the HDM project should be.  The notes from the PM
+mini-symposium give me some ideas about things I can work on,
+certainly; however, I'd also like to try to identify where we are at
+on the "rhetorical arc" of HDM.  Oddly enough, I feel almost at a loss
+about this.  Not that there aren't a thousand things to do, per usual
+- but choosing among them is always hard, and right now it seems
+especially so.
+
+The following possibilities have occured to me.
+
+ * continue to work on the scholium system, emphasizing its usefulness
+  to HDM contributors.
+
+ * undertake a study of the game of Go as a micro example of
+  mathematics.
+
+ * try to understand Metamath and closely related programs.
+
+ * import APM-Xi into the scholium system.
+
+ * import PM/FEM into the scholium system.
+
+ * work on understanding the ontological and linguistic problems
+  attendant upon "the parsing problem" (aka: hypertrophied logical
+  agnosticism).
+
+ * work to further spell out the "political" agenda of the HDM project
+
+ * conduct psycho-social investigations into the role of writing in
+  human thought, as part of a broader investigation of the role of
+  memory and the nature of intelligence.
+
+ * roughly as above, subst. "motivation" for "memory" -- that is, try
+  to understand motivation as it relates to CBPP projects.
+
+ * simply work on typing up my old marginalia from the (n-1)th
+  iteration of the scholium system.
+
+ * work (in some as-yet unidentified fashion) on further "recruitment"
+  efforts.
+
+ * take up, again, my efforts at "networking" with local AI personae.
+
+ * use the scholium system to write some not-so-mathematical
+  literature, specifically, the "Barkov's Hamlet" project that I've
+  been thinking about for a while.
+
+ * attempt to understand the Moore/anti-Moore paradox, as illuminated
+  for example by rmilson's comments on the next iteration of his
+  Noosphere experiment.
+
+ * do some focused thinking about "incremental markup" for the scholium
+  system.
+
+ * work with Ray on the Schuam's Algebra project, h-code spec,
+  and metamathematical/theorem-proving research.
+
+This is only a partial list.  And of course, most of these items do
+not "exclude" other items on the list except insofar as I would
+typically have to divide my time between them in some fashion.
+However, from the point of view of Pragmatics, it might be best to
+choose one or two items to focus on.  It may even be that I should
+give HDM a rest for a while and divert my focus to FEM temporarily,
+letting HDM sort itself out until the next direction is clear.  
+
+Having seen some of what Ray calls "the big picture" or,
+physics-for-poets-ically speaking, having sent quantum feelers out
+into various possible worlds, I am somewhat afraid of losing my
+strident sense of what's next.  On the other hand, I seem to have had
+some modest success with the Stallmanesque "work on what comes
+naturally" approach, i.e., putting one foot in front of the other.
+Moreover, _all_ of the items mentioned are probably at least somewhat
+worthwhile.  And, my ex-advisor's sage response to the "quantum
+feeler" metaphor, namely "you should be working on everything every
+day" is indubitably relevant (if only it was so easy; lately all I
+seem to have managed is to work on something that I think _relates_ to
+everything else, which of course isn't the same thing).
+
+One of the things that's been bugging me is that my "alpha release" of
+the scholium system to the GNU Emacs Sources mailing list apparently
+did not go through.  I was hoping to get some interest from outsiders
+through this announcement, and so I'm going to try to make it again
+and see if that works and if anything comes of it.  I worry that the
+scholium system, despite, or perhaps because of, my efforts at
+documentation, has become semantically unwieldy even before being
+completely finished.  I hope that some steps can be taken to correct
+this, especially as the system becomes more usable (and, in
+particular, more used); so that shorter and more accessible versions
+of the report can be developed and worked into the overall treatment.
+
+Per usual, I've probably had too much coffee and maybe the problems
+here seem more intense than they warrant; and maybe, on top of that,
+I've also done a poor job of explaining exactly what the problems are.
+I'll try to sum up.  
+
+There are many possible "next directions" and the apparent complexity
+on the field (like Leibniz's apparently noisy pond) is somewhat
+confusing to me.  This stuff has the bizarre-seeming property of
+seeming to be related to everything -- and, Gee, maybe everything is
+like that if you spend enough time on it.  It would be nice to be able
+to subsume this complexity within a larger meta-thematic arc, but I'm
+not sure if that's possible; besides, sometimes the threads show in
+the weave (its inescapable).  Nevertheless, I do not want to lose
+sight of the forest for the trees.
+
+The scholium system seems to teach of a sort of positivistic
+pointilism -- the more you add to the system, the more clarity you
+find.  We've already been over the fact that this goes counter to
+thermodynamical intuition -- the same intuition, apparently, on which
+various internet pundits base their dubious arguments.  Having seen,
+again, the big picture, and having noticed that it seems to be full of
+a great many & identifiable smaller pieces ("its full of
+stars")... yipes!... it seems that we've "ascended."  But the actual
+advantages of this ascendancy are most unclear.
+
+Presumably I _will_ simply continue with the put one foot in front of
+the other approach, but I would also like to solicit your help with
+the problems of "leadership."  Where do we go from here, in this
+multi-dimensional setting, is an increasingly tough question to answer
+both concretely and convincingly.  It was different when HDM had five
+items on its agenda.  Probably questions of rhetoric are at this point
+less important than questions of actual fact (echoes here of Leibniz
+again, specifically, his "necessary" and "contingent" truths).  But
+rhetoric is presumably still somewhat important.  E.g. if we're to
+secure any "outside" support.
+
+Some of my concerns are also personal - the compounded relationships
+make my brain want to take a step back, but progress seems to demand
+always moving forward.  I don't want to blow any fuses.  My experience
+with the scholium system so far, in which something mindblowingly-
+complicated-seeming became more manageable-seeming though diligent
+effort may be instructive.  Or it may be an illusion; it will remain
+hard to tell until the system is really put to some serious test.
+
+Perhaps that's a good note to leave off on -- since your help
+with preparing a test of this sort would be... very helpful.  But
+so would progress in any of the other thousand related directions.
+
+To sum up, again, in closure -- please take the soonest opportunity to
+put some concerted energy into the "HDM leadership problem", whether
+it is at the large or small scale.  We are only a few people, and the
+project is very immense.  Moreover, what we call "the project" is also
+part of a broader historical trend.  Perhaps a big part of the
+emphasis should be on understanding what other people are and have
+been doing (working on the hyperreal dictionary of HDM-related
+topics).  With that curiously self-reflexive thought, I had
+best subscribe myself & sign off for the night, --[[file:jcorneli.org][jcorneli]]
+
+As for me, the answer is rather obvious, especially after the discussions we had at Princeton --- develop the "monadology of systems" theory and work on the examples of proofs in algebra (and  other examples taken from other sources).  If you  interested, feel free to join me, but don't feel obligated either.
+
+Perhaps the best thing for us now would be to catch up to each other.  For the last month or two, each of us has been focussing on our own projects --- you on the scholium system and I on the proof checking.  Now that each of us has made reasonable progress and has a reasonably self-contained body of work to report on, we can fill each other in on the details of what we have been up to.  Already I have started writing up a bit on what I have been doing and you have your writings on the scholium system (both the general article for Emorry and the more technical document).  I think it would not be a bad idea for us to spend the next few weeks (shorter or longer, depending on how things go and what else we are doing) catching up to each other.
+
+Also, since both your project and my project are rather extensive, it might not be a bad idea for us to put a bit of effort into tying up loose ends.  As I remember, there were still some points regarding text properties which needed to be cleared up in the scholium system.  As for my project, I believe that it will take at least anothe month until I have enough done that I would feel alright leaving the project sit on the shelf for an extended period of time.
+
+The idea of having some sort of "test" of "demonstration" or "proof of concept" for the system is a good one already.  As for my piece, a few proofs of non-trivial theorems in algebra (such as group isomorphism theorems, or Sylow's theorems) would serve that purpose.  As for your project, I suppose that any one of the projects you mention (scholium versions of Apm-Xi, PM, or not-so-mathematical literature) would serve this purpose handsomely.  Not only will this give us a sense of closure about what we have already, but it will help nicely with another of your points --- recruiting new people.  It is a lot easier to interest someone in the project when one has some such concrete demos to show and goes a long way toward dispelling the uneasy impression that all we do is talk about unrealistic goals.
+
+As for all the other projects you mention (theory of Go, more work on the parser, studies of natural language,...) here are my thoughts on how to proceed.  First, one should always write down one's ideas even if it not clear when or how they will be done.  This already has been done above.  That way, one does not forget ideas and has a place to add relevant information even when one is not yet working actively on an idea (for instance, we definitely need to make a note of the the book on natural language querying we saw at Aaron's place).  Second, I would say that we should feel free to postpone these projects indefinitely in the short term.  That is to say, more concretely, that we should not think much about it is a month or two go by and we do nothing about these projects, but we should reconsider our priorities if a year or two goes by during which these projects are completely ignored.  Third, I would say that it might be good to regard these projects as sitting on the back burner for the time being,
+but be ready to move them on up to the front burner if circumstances change.  For instance, while we are both definitely of the opinion that natural language processing for mathematics is important for HDM, we have not really done much with respect to this aspect.  However, it could happen that one day, one of us obtians an insight or really feels motivated to work on this topic or we run into a linguist who finds this topic interesting.  Should that happen, we should be prepared to move this project up in our list of priorities (and concomittantly lower the priority on other projects to make room for it).  Fourth, unless and until some such compelling reason comes up, I would say that the best thing is to continue with the projects one already has on the front burner until they are in a reaonably complete and stable state (which is not to say that there is not necessarily more that could be done to improve them, just that there is nothing begging to be done immediately).  in particular, I would say that,
+unless one of us has a brilliant insight on some other aspect of HDM or an expert in a particular field shows up with an interest in HDM, we should work on finishing up what we are now doing with respect to the scholium system and the expression parser and only then shift attention to some other project.  As for a choice of project to work on next, I would suggest the expression parser since a. we have already done some work on it and made progress and b. after showing how a few proofs can be verified automatically, we will have a better idea what sort of output we would like to produce.
+
+Finally, I would like to point out that, by its very nature, HDM is _not_ the sort of project where one can necessarily carefully plan or _should_ necessarily feel obliged to stick to plans.  It would be one thing if we were setting out to do something which already has been done already, but we are seeting out into the unknown to do new things.  If we were going to, say, simply set up another noosphere instance, then we could draw up a list of things to be done and, based on past experience, make a schedule based on estimates of the time involved in the various steps.  Here, however, we are trying to do something new, cannot even say how it will be done or even guarantee that it is possible ahead of time (although we have some ideas how to proceed and feel reasonably confident in success).  Therefore, it doesn't make sense to make too definite plans only to scrap them part way through the project when one finds out that things go differently that planned or feel obliged to stick to the plans even though one
+has learned of a better way.  Rather, I would say that the best thing to do is to proceed as we have been doing, one day at a time, with the understanding that plans are tentative and be ready to change course as we learn from experience.  
+
+To summarize: while any plans need to be taken with the appropriate size of lump of salt, here is a proposal for how to proceed: Right now, we continue with the projects we have been working on (scholium system and proof checking) and work towards having reasonably well-finished products and non-trivial examples to illustrates them (i.e. a scholium-based document and automatically verified proofs).  As we do this, each of us will make an effort to understand what the other has done so that we will be on the next page.  I guesstimate that this will take a month or two.  Then we could shift our attention to the parser.  With some progress in that department, I think we would have something worthwhile to show for our efforts in the form of a version of HDM in the form of a mathematical scholium-based document which has been generated from equations in !TeX, can be displayed as !TeX or as s-expressions, and which is capable of automatic verification.  --[[file:rspuzio.org][rspuzio]]
+
+Very brief response: this sounds like a good plan, and I think when
+you start putting your stuff into HDM CVS & I start marking it up with
+scholia, then you start using the scholium system to respond, we'll be
+moving forward very well on this integrative plan you proposed.
+
+A couple more notes: I realized last night when I sat down with my
+latest printout of the code that in addition to "more clarity",
+working (particularly in a scholiumific way) also helps add "more
+abstraction" - in the sense that many related things can get tied
+together.  This is helpful in a situation in which there are many
+loose ends.  It also helped remind me that I was planning to use the
+scholium system to "do AI", which means... I've got my work cut out
+for me. (If I decide to follow this route, which I probably will.)
+
+Hope to hear from you about CVS startup soon.  (And same goes for
+others who are interested in contributing work.)  --[[file:jcorneli.org][jcorneli]]

@@ -1,0 +1,117 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+It is my sense that the [[file:Noosphere.org][Noosphere]] project could use more programmers.
+[[file:HDM.org][HDM]] could also use more programmers, but the reason seems somewhat
+different.  Noosphere is associated with a fairly high-profile project
+([[file:PlanetMath.org][PlanetMath]]), whereas HDM is fairly unknown, doesn't yet have a
+proof-of-concept, etc.  For this essay (and in general) we accept PM as a "well
+established" project, and focus our attention on it and other well established
+projects that could use more coding volunteers.  However, the results of these
+considerations apply (with some modifications) to projects that are not well
+established.
+
+Now, I'm sure that every free software project could (in theory) use more
+volunteers.  Even a very well established project like [[file:Emacs.org][Emacs]].  More
+programmers means more features, more bug fixes, and so on.
+
+For well established projects, there are a variety of reasons why more
+programmers are not submitting code /right now/.  Sometimes it is just
+exposure - someone who hasn't heard of the project is not likely to submit code.
+Other times, it has to do with interests or skill level - for example, most PM
+of the users are not programmers, so it is understandable that they wouldn't be
+contributing code.
+
+An analogous situation obtains when thinking about contributions to PM.  We see
+many people join the site, and many more casually browse it, and then move
+without making a mark.  Making contribution takes effort, interest, and ability.
+
+So one would assume that a lack of programmers is due, in part, to the low
+frequency of people with programming ability in the user population, and the
+dissipated attentions of those who do have programming ability.  Unless
+something weird happens, this is probably not going to change.
+
+However, this is only part of the story.  For one thing, people who aren't
+/site users/ could presumably be attracted to the programing aspects of the
+project.  Attracting outside people seems like it would require pretty
+significant effort.  Similarly, getting more programming time out of currently
+involved persons will itself require effort.
+
+Another, distinct, possibility would be to work would be to work on "creating" new programmers
+from the collection of site users.  This is a fairly long-term project: learning
+to program really well typically takes a few years.  (That said, intellectually
+sophisticated folks can ofter learn how to program fairly well in a month or
+so.)  The effort associated with recruiting and training site users also seems
+like it would require significant effort.  The interest might be there, but in
+many cases, most of the skills are lacking.
+
+In either of these cases, making the code easy to use and install seems like a
+high priority.  Even a skilled hacker may become relatively useless if the
+project is hard to install.  It could be that people find it harder to get
+conceptualize and get excited about "meta" projects (like getting code into a
+state where it is easy to install) than first-tier projects (like building new
+features into the system).  And of course building new features is "meta" to
+actually using the system - there is always going to be some leap of faith (or
+leap of /something/) required.
+
+I think that brings what I had to say here to a close.  My conclusions would be
+that we ought to make a concerted effort to get Noosphere into an immediately
+usable state.  I hope to return to the ideas here when the time comes for
+seeking more widespread involvement in [[file:HDM.org][HDM]].  (Hopefully those who have been
+following developments on this wiki see the relationship to [[file:FreeCyc.org][FreeCyc]], for
+example.)
+
+As always with these [[file:Discussions.org][Discussions]], feedback and further thoughts are welcome
+- or, solicited, rather! --[[file:jcorneli.org][jcorneli]] Sat Mar 26 00:08:31 2005 UTC
+
+----
+
+Follow up: we might be able to get some coding done through the [[file:Google Summer of Code 2005 Programme.org][Google Summer of Code 2005 Programme]].
+
+--[[file:akrowne.org][akrowne]] Wed Jun 1 18:32:42 UTC 2005
+
+Your point about "'creating' new programmers from the collection of site users"
+seems like an argument to literate programming to me.  Making the program easier
+to read and understand should lower the barrier to be crossed and hence increase
+the tunnelling probability.  Also, this possibility of transitions serves as a
+counter-argument to Aaron's contention that literate programming makes an
+already hard and drugy job only harder --- since literately programmed projects
+are easier to understand, they are more likely to be worked on by more
+programmers.  Of course, this arguent only works for open source projects, but
+that is the type of project we are considering here. --[[file:rspuzio.org][rspuzio]] 6 June 2005
+
+Hmm, good point.  But literate programming has been around so long, if it really makes 
+things so much easier, why haven't programmers adopted it?  Actually, part of the answer
+is that they /have/ -- things like perldoc and javadoc especially implement many key 
+literate programming concepts.  But literate programming does trivially take more effort
+and seem like more work at the outset of programming.  Also, the benefit of literate 
+programming might not be readily visible to someone before they've had to work on some
+code/content portion for a long time or engage in a lot of /maintenance/ or effort of
+a collaborative nature.  I'm not saying its not worth it, but the fact that the payoff
+is altruistic/long-term makes literate programming a challenge to get people to do.
+
+--[[file:akrowne.org][akrowne]] Mon Jun 6 05:40:07 UTC 2005
+
+Knuth has said that literate programming will only become a popular practice
+with people who are both good at coding and writing, and that this is a pretty
+small group of people.  But I think Ray is right about the learning curve.  I
+don't think one can expect everyone to be able to write good literate programs,
+but one /can/ set the tone (by supplying some as one is able) and one can also
+enforce some documentation standards.  Emacs isn't exactly "literate", but all
+of the functions are supposed to be documented, and usually they are - so it is
+at least "self documenting".  I think this and the examples Aaron cited suggest
+that Knuth was being overly pessimistic.
+
+Ray has also remarked that LP saves time and energy.  I think this is true in
+some ways, but not across the board.  Either way, I'm finding it to be an
+enjoyable style to use.  Soon the first draft of the first part of the scholium
+system paper will be ready & you can judge the output for yourself.  I've been
+revising the paper part - now its time to make the corrections I noted - the
+paper looks like its been through a scholium system, let me tell you! - and then
+do another round of debugging.  Then switch gears and work on the second (and
+maybe third) part of the paper and ther merge and revise for final publication.
+I think the moral of the story here is that there's really no way to avoid
+things being hard, the question is how to make them reasonably enjoyable along
+the way.
+
+--[[file:jcorneli.org][jcorneli]] Mon Jun 06 07:14:18 2005 UTC

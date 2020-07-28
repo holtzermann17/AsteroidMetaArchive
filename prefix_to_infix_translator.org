@@ -1,0 +1,142 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+This is the first version of a program for converting logic expressed as h-code to the more usual midfix notation and typesetting it.  Note that, so far, only sentential logic is supported, but predicates will come soon.  Also, in future versions, there will be better documentation.
+
+
+ ;;; to-infix.el - translates s-exp notation to infix notation
+
+ ;; Copyright (c) 2005 Ray Puzio and Joe Corneli
+
+ ;;; General comments:
+
+ ;; Converts sexp notation for logic to infix or TeX notation.
+
+ ;;; Code:
+
+ ;; converts an expression from prefix to infix notation
+ (defun prefix-to-infix (arg)
+ (cond ((atom arg)
+ arg)
+ ((eq (car arg) 'not)
+ (list 'not (prefix-to-infix (cadr arg))))
+ ((is-connective (car arg))
+ (infixer (car arg) (cdr arg)))
+ (t
+ arg)))
+
+ ;; takes a list of expressions, converts each expression into infix notation,
+ ;; and sticks the infix form of the symbol between the items in the list
+ (defun infixer (symbol string)
+ (cond ((null string) nil)
+ ((atom string) (prefix-to-infix string))
+ (t (cons (prefix-to-infix (car string))
+ (cond ((null (cdr string))
+ nil)
+ (t
+ (cons (infix symbol)
+ (infixer symbol (cdr string)))))))))
+
+ ;; checks if the argument is a connective
+ (defun is-connective (arg)
+ (cond ((not (atom arg)) nil)
+ ((eq arg 'if) t)
+ ((eq arg 'iff) t)
+ ((eq arg 'and) t)
+ ((eq arg 'or) t)
+ (t nil)))
+
+ ;; translates the prefix to a suitable infix
+ (defun infix (arg)
+ ;; actually, I think that the translation for `if' is more
+ ;; complicated, since if can have an "else clause". However, `when'
+ ;; should basically translate directly to "implies". However again
+ ;; -- it is certainly acceptable to translate `if' to "implies" in
+ ;; the case when it has only one argument.
+ ;;
+ ;; This makes me wonder a little bit about how `nil' is going to
+ ;; work in our system. For example, if we say
+ ;;
+ ;; (when (eq nil t) t)
+ ;;
+ ;; the "answer" is `nil'. I guess that is something that the prover 
+ ;; would be able to figure out. However, I think this result is at
+ ;; variance with the usual behavior of implication: "If Hitler is a
+ ;; nice guy, then monkeys will fly out of my ass" is a "valid"
+ ;; (true) statement, if I remember by basic logic correctly (which
+ ;; might not be the case). Sat Feb 19 03:29:21 2005
+ (cond ((eq arg 'if) 'implies)
+ ((eq arg 'iff) 'equiv)
+ (t arg)))
+
+ (defun hcode-symbol-to-tex-symbol (arg)
+ (cond ((eq arg 'implies) " \\rightarrow ")
+ ((eq arg 'not) " \\neg ")
+ ((eq arg 'equiv) " \\leftrightarrow ")
+ ((eq arg 'or) " \\vee ")
+ ((eq arg 'and) " \\wedge ")
+ ;; this translates `nil' to "nil";
+ ;; but I don't think the function should ever
+ ;; be called with a nil argument.
+ (t (format "%s" arg))))
+
+ (defun infix-expression-to-tex-expression (arg)
+ (cond ((null arg)
+ nil)
+ ((atom arg)
+ (hcode-symbol-to-tex-symbol arg))
+ ((eq (car arg) 'not)
+ (concat "\\neg " (infix-expression-to-tex-expression (cadr arg))))
+ (t
+ (concat "("
+ ;; I've always wanted to know a shorter form for this
+ ;; idiom..
+ (eval (append (list 'concat)
+ (mapcar 'infix-expression-to-tex-expression arg)))
+ ")"))))
+
+ (defun sexp-to-tex (arg)
+ (concat "$$" (infix-expression-to-tex-expression (prefix-to-infix arg)) "$$"))
+
+ ;;; Regression/examples:
+
+ (defun test-fun (fun obj)
+ (concat (format "%s" obj)
+ "\n ==> "
+ (format "%s" (funcall fun obj))
+ "\n\n"))
+
+ (defun to-infix-testing ()
+ (pop-to-buffer (get-buffer-create "*Testing*"))
+ (delete-region (point-min) (point-max))
+ (insert ;;;"***testing `prefix-to-infix'***\n"
+ ;;;(test-fun 'prefix-to-infix '(if (not a) b))
+ ;;;(test-fun 'prefix-to-infix '(if a (if (not a) b)))
+ ;;;(test-fun 'prefix-to-infix '(if (if b a) (if (not a) b)))
+ ;;;(test-fun 'prefix-to-infix '(and a b c (if a b) (if b c)))
+
+ "***testing `prefix-to-infix'***\n"
+ ;; arbitrary premise
+ (test-fun 'prefix-to-infix '(if p (if q p)))
+ ;; Frege's law
+ (test-fun 'prefix-to-infix '(if (if p (if q r)) (if (if p q) (if q r))))
+ ;; contrapositive
+ (test-fun 'prefix-to-infix '(iff (if p q) (if (not p) (not q))))
+ ;; modus ponens
+ (test-fun 'prefix-to-infix '(if (and p (if p q)) q))
+
+ "\n***testing `sexp-to-tex'***\n"
+ ;; arbitrary premise
+ (test-fun 'sexp-to-tex '(if p (if q p)))
+ ;; Frege's law
+ (test-fun 'sexp-to-tex '(if (if p (if q r)) (if (if p q) (if q r))))
+ ;; contrapositive
+ (test-fun 'sexp-to-tex '(iff (if p q) (if (not p) (not q))))
+ ;; modus ponens
+ (test-fun 'sexp-to-tex '(if (and p (if p q)) q))))
+
+ (to-infix-testing)
+
+ ;;; to-infix.el ends here
+
+Back to [[file:h-code.org][h-code]]

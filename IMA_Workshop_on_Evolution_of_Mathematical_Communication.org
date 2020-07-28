@@ -1,0 +1,74 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We need to submit an abstract by June 30, which is coming up soon.
+Probably we should draft it here.
+
+--[[file:jcorneli.org][jcorneli]]
+
+Note that they *may*  not have room for us to give a talk, but
+there is at least a poster session.  I think we should submit an
+abstract anyway.
+
+The continually updating list of confirmed participants is
+here: http://www.ima.umn.edu/2006-2007/SW12.8-9.06/index.html.
+I think we should do a little net-work and snarf up all of
+the relevant publications so that I can say "I've read your work" etc.
+
+Very excited to be able to go.  I may be able to borrow a video camera and
+v-blog the whole thing, which would be cool.
+
+I have to admit, I felt a little put off by the initially anti-non-Ph.D. tone
+of their admittance committee (what, these people don't know who I AM?), but I assume I will have forgotten about
+this by the time December rolls around.  In the mean time, I'm at least
+glad that the U of MN is sponsoring a cool event like this.
+
+So long space cowboys,
+
+--[[file:jcorneli.org][jcorneli]]
+
+----
+
+Here is the abstract I submitted.
+
+* The open mathematics environment
+
+Knowledge is a public good, but typically encodings of knowledge are
+not.  Moreover, time investments by knowledge producers never are.
+
+If we can produce knowledge resources that are encoded in such a way
+that people have access to them -- not just to read, but also to
+contribute -- then we will be moving closer to truly /common/
+knowledge.  The hope is that as more people add to the resource, its
+quality and coverage improve (arguments related to Wikipedia cut both 
+ways. http://www.theregister.co.uk/2005/10/18/wikipedia_quality_problem/  
+http://www.tcsdaily.com/article.aspx?id=111504A
+http://www.freesoftwaremagazine.com/articles/fud_based_encyclopedia/)
+
+In mathematics, /results/ are formally verifiable.  Moreover, most
+of mathematics is written in a simple, logical language -- the subject
+is, after all, the model for /effective computation/.
+
+There is accordingly a reasonable hope that the big concerns about
+digital library correctness can be resolved \emph{formally} in the
+mathematics domain.  (Cf. work in mathematical knowledge management.)
+In order to achieve this goal, we will have work to do in both formal
+mathematics, but particularly in natural language processing. 
+(http://www.dfki.de/~zinn/Publications/37_04.pdf http://acl.ldc.upenn.edu/acl2004/main/pdf/373_pdf_2-col.pdf http://www.inftyproject.org/files/2003_MKM_Baba.pdf)
+
+PlanetMath's approach to building a mathematics digital library seems
+to be unique: it relies heavily on open, commons-based,
+peer-production.  We benefit from a significant body of volunteer
+contributors.  However, this doesn't come risk-free -- precisely
+because anyone can contribute.  In the open model, concerns over
+quality rise to the fore.  Our approach to resolving these concerns,
+includes efforts in both formal and socially-based quality control. (http://www.levien.com/thesis/compact.pdf)
+
+PlanetMath's community has played, and will continue to play, a vital
+role in helping us developing software; whether this is outlining the
+core features required in a collaborative website for mathematics, or
+collaborating on NLP and formal math software that makes working with
+the site easier.
+
+We will discuss these and other benefits and challenges associated
+with working in the open mathematics environment.

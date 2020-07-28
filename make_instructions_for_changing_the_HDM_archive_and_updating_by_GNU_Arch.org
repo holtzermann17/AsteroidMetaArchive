@@ -1,0 +1,38 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+We know how to make copies of the main HDM archive, but it would be good to have
+a clear set of instructions for how to make modifications and get them
+incorporated into the main site.  --[[file:jcorneli.org][jcorneli]] Sun Jan 30 19:30:14 2005
+
+Suppose you notice an error or omission in the HDM code.  For example, in
+/~/hdm-site/prototype\ 3/100.tex/, the expression
+
+  (defn irrational-number (x)
+    (real x)
+    (forall a b :in Z :st (neq q (/ a b))))
+
+should say 
+
+  (defn irrational-number (x)
+    (real x)
+    (forall a b :in Z :st (neq x (/ a b))))
+
+We need to replace the /q/ with an /x/.  (We'll get to what to do if you
+want to add a whole new file in a minute.)
+
+* Changing things locally
+** First, make a log
+
+   % cd ~/wd/hello-world
+
+   tla make-log
+   ++log.hello-world--mainline--0.1--lord@emf.net--2003-example
+
+** Then make the update
+
+Do what it says you're doing in the log entry.
+
+Finally, type
+
+  tla commit

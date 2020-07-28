@@ -1,0 +1,26 @@
+#+STARTUP: showeverything logdone
+#+options: num:nil
+
+To illustrate, the idea, it is easiest if we re-express our statement in prenex form.  Recall that a statement is said to be in /prenex form/ if all occurrences of quantifiers occur in the front, before any predicates or connectives occur.  Schematically, a statement in prenex form will appear as follows
+
+: (/Q/&#8321; x&#8321;) (/Q/&#8322; x&#8322;) ... <matrix>
+
+where each "/Q/" stands for either "&forall;" or "&exist;" and the <matrix> is constructed from predicates and connectives.  For example, the statement
+
+: (&forall; x) (&exist; y) (&forall; z) &thinsp; (x > z) &rarr; (y > z)
+
+is in prenex form whilst the statement
+
+: (&forall; x) (x > 0) &rarr; (&exist; y) (x = y&sup2;)
+
+is not in prenex form, but is equivalent to the statement
+
+: (&forall; x) (&exist; y) &thinsp; (x > 0) &rarr; (x = y&sup2;)
+
+which is in prenex form.
+
+This requirement that the statement be expressed in prenex form puts no real restriction on the statements which we may consider because it is possible to systematically express any statement in prenex form by a systematic use of several equivalences.  Since having the quantifiers in the front will simplify the ensuing discussion, we may assume that this has been done.  Once we have understood how to interpret statements in prenex form in terms of input and output, we may work backwards and extend this understanding to statements which are not in prenex form.
+
+[[file:Discussion of prenex form.org][Discussion of prenex form]]
+
+Back to [[file:Quantifiers in terms of input and output.org][Quantifiers in terms of input and output]]
