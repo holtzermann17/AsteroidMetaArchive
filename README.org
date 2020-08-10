@@ -3,6 +3,8 @@ Archive of an old Oddmuse wiki (converted to Org mode).
 
 The conversion script I used was om2org.pl, found [[https://lists.gnu.org/archive/html/emacs-orgmode/2013-10/msg00891.html][here]].
 
+* Contents 
+
 Github doesn’t index all of the pages so here’s a list of all of them:
 
 - [[file:2005-04-28.org][2005-04-28]]
@@ -42,7 +44,7 @@ Github doesn’t index all of the pages so here’s a list of all of them:
 - [[file:aceq5_wolf.org][aceq5_wolf]]
 - [[file:Activities.org][Activities]]
 - [[file:Adapting_CBPP_platforms_for_instructional_use.org][Adapting_CBPP_platforms_for_instructional_use]]
-- [[file:add_'attachment'_metadata_to_FEM_snapshots.org][add_'attachment'_metadata_to_FEM_snapshots]]
+- [[https://github.com/holtzermann17/AsteroidMetaArchive/blob/master/add_'attachment'_metadata_to_FEM_snapshots.org][add_attachment_metadata_to_FEM_snapshots]]
 - [[file:Add_default_ACL_rule.org][Add_default_ACL_rule]]
 - [[file:Add_FAQ_page.org][Add_FAQ_page]]
 - [[file:add_instructions_for_increasing_TeX_memory_to_FEM_page.org][add_instructions_for_increasing_TeX_memory_to_FEM_page]]
